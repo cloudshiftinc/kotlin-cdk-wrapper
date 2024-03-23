@@ -735,8 +735,7 @@ public interface NetworkLoadBalancedServiceBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBaseProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBaseProps,
   ) : CdkObject(cdkObject), NetworkLoadBalancedServiceBaseProps {
     /**
      * A list of Capacity Provider strategies used to place a service.

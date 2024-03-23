@@ -24,8 +24,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html)
  */
-public open class ProvisionedModel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.bedrock.ProvisionedModel,
+public open class ProvisionedModel(
+  cdkObject: software.amazon.awscdk.services.bedrock.ProvisionedModel,
 ) : CdkObject(cdkObject), IModel {
   /**
    * The ARN of the provisioned model.
@@ -45,6 +45,7 @@ public open class ProvisionedModel internal constructor(
         ProvisionedModel = ProvisionedModel(cdkObject)
 
     internal fun unwrap(wrapped: ProvisionedModel):
-        software.amazon.awscdk.services.bedrock.ProvisionedModel = wrapped.cdkObject
+        software.amazon.awscdk.services.bedrock.ProvisionedModel = wrapped.cdkObject as
+        software.amazon.awscdk.services.bedrock.ProvisionedModel
   }
 }

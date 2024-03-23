@@ -47,12 +47,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .manageAdminPassword(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
  * .redshiftIdcApplicationArn("redshiftIdcApplicationArn")
- * .snapshotCopyConfigurations(List.of(SnapshotCopyConfigurationProperty.builder()
- * .destinationRegion("destinationRegion")
- * // the properties below are optional
- * .destinationKmsKeyId("destinationKmsKeyId")
- * .snapshotRetentionPeriod(123)
- * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -62,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html)
  */
-public open class CfnNamespace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace,
+public open class CfnNamespace(
+  cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -352,31 +346,6 @@ public open class CfnNamespace internal constructor(
   }
 
   /**
-   * The snapshot copy configurations for the namespace.
-   */
-  public open fun snapshotCopyConfigurations(): Any? = unwrap(this).getSnapshotCopyConfigurations()
-
-  /**
-   * The snapshot copy configurations for the namespace.
-   */
-  public open fun snapshotCopyConfigurations(`value`: IResolvable) {
-    unwrap(this).setSnapshotCopyConfigurations(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The snapshot copy configurations for the namespace.
-   */
-  public open fun snapshotCopyConfigurations(`value`: List<Any>) {
-    unwrap(this).setSnapshotCopyConfigurations(`value`)
-  }
-
-  /**
-   * The snapshot copy configurations for the namespace.
-   */
-  public open fun snapshotCopyConfigurations(vararg `value`: Any): Unit =
-      snapshotCopyConfigurations(`value`.toList())
-
-  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -569,30 +538,6 @@ public open class CfnNamespace internal constructor(
      * IAM Identity Center. 
      */
     public fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String)
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable)
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>)
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    public fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any)
 
     /**
      * The map of the key-value pairs used to tag the namespace.
@@ -815,35 +760,6 @@ public open class CfnNamespace internal constructor(
     }
 
     /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations)
-    }
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
-     */
-    override fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any): Unit =
-        snapshotCopyConfigurations(snapshotCopyConfigurations.toList())
-
-    /**
      * The map of the key-value pairs used to tag the namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-tags)
@@ -882,7 +798,8 @@ public open class CfnNamespace internal constructor(
         CfnNamespace = CfnNamespace(cdkObject)
 
     internal fun unwrap(wrapped: CfnNamespace):
-        software.amazon.awscdk.services.redshiftserverless.CfnNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.redshiftserverless.CfnNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshiftserverless.CfnNamespace
   }
 
   /**
@@ -1228,8 +1145,7 @@ public open class CfnNamespace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty,
+      cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty,
     ) : CdkObject(cdkObject), NamespaceProperty {
       /**
        * The Amazon Resource Name (ARN) for the namespace's admin user credentials secret.
@@ -1347,132 +1263,6 @@ public open class CfnNamespace internal constructor(
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
-   * SnapshotCopyConfigurationProperty snapshotCopyConfigurationProperty =
-   * SnapshotCopyConfigurationProperty.builder()
-   * .destinationRegion("destinationRegion")
-   * // the properties below are optional
-   * .destinationKmsKeyId("destinationKmsKeyId")
-   * .snapshotRetentionPeriod(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html)
-   */
-  public interface SnapshotCopyConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationkmskeyid)
-     */
-    public fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationregion)
-     */
-    public fun destinationRegion(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-snapshotretentionperiod)
-     */
-    public fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()
-
-    /**
-     * A builder for [SnapshotCopyConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationKmsKeyId the value to be set.
-       */
-      public fun destinationKmsKeyId(destinationKmsKeyId: String)
-
-      /**
-       * @param destinationRegion the value to be set. 
-       */
-      public fun destinationRegion(destinationRegion: String)
-
-      /**
-       * @param snapshotRetentionPeriod the value to be set.
-       */
-      public fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty.builder()
-
-      /**
-       * @param destinationKmsKeyId the value to be set.
-       */
-      override fun destinationKmsKeyId(destinationKmsKeyId: String) {
-        cdkBuilder.destinationKmsKeyId(destinationKmsKeyId)
-      }
-
-      /**
-       * @param destinationRegion the value to be set. 
-       */
-      override fun destinationRegion(destinationRegion: String) {
-        cdkBuilder.destinationRegion(destinationRegion)
-      }
-
-      /**
-       * @param snapshotRetentionPeriod the value to be set.
-       */
-      override fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number) {
-        cdkBuilder.snapshotRetentionPeriod(snapshotRetentionPeriod)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty,
-    ) : CdkObject(cdkObject), SnapshotCopyConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationkmskeyid)
-       */
-      override fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationregion)
-       */
-      override fun destinationRegion(): String = unwrap(this).getDestinationRegion()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-snapshotretentionperiod)
-       */
-      override fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SnapshotCopyConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty):
-          SnapshotCopyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnapshotCopyConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnapshotCopyConfigurationProperty):
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty
     }
   }
 }

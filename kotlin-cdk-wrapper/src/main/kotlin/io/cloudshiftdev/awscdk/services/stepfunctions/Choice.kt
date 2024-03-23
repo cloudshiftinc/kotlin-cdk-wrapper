@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * map.itemProcessor(definition);
  * ```
  */
-public open class Choice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Choice,
+public open class Choice(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Choice,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -282,6 +282,6 @@ public open class Choice internal constructor(
         Choice(cdkObject)
 
     internal fun unwrap(wrapped: Choice): software.amazon.awscdk.services.stepfunctions.Choice =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Choice
   }
 }

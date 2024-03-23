@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)
  */
-public open class CfnClusterPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnClusterPolicy,
+public open class CfnClusterPolicy(
+  cdkObject: software.amazon.awscdk.services.msk.CfnClusterPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -156,6 +156,7 @@ public open class CfnClusterPolicy internal constructor(
         CfnClusterPolicy = CfnClusterPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterPolicy):
-        software.amazon.awscdk.services.msk.CfnClusterPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.msk.CfnClusterPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.msk.CfnClusterPolicy
   }
 }

@@ -35,9 +35,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class CacheQueryStringBehavior internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior,
+public open class CacheQueryStringBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * The behavior of query strings -- allow all, none, only an allow list, or a deny list.
@@ -67,6 +66,7 @@ public open class CacheQueryStringBehavior internal constructor(
         CacheQueryStringBehavior = CacheQueryStringBehavior(cdkObject)
 
     internal fun unwrap(wrapped: CacheQueryStringBehavior):
-        software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior
   }
 }

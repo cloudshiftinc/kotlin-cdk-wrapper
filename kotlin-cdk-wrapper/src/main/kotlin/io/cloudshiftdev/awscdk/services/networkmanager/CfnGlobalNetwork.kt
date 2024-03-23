@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html)
  */
-public open class CfnGlobalNetwork internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork,
+public open class CfnGlobalNetwork(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -270,6 +270,7 @@ public open class CfnGlobalNetwork internal constructor(
         CfnGlobalNetwork = CfnGlobalNetwork(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalNetwork):
-        software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork
   }
 }

@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class Runtime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.Runtime,
+public open class Runtime(
+  cdkObject: software.amazon.awscdk.services.synthetics.Runtime,
 ) : CdkObject(cdkObject) {
   public constructor(name: String, family: RuntimeFamily) :
       this(software.amazon.awscdk.services.synthetics.Runtime(name,
@@ -100,6 +100,6 @@ public open class Runtime internal constructor(
         Runtime(cdkObject)
 
     internal fun unwrap(wrapped: Runtime): software.amazon.awscdk.services.synthetics.Runtime =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.Runtime
   }
 }

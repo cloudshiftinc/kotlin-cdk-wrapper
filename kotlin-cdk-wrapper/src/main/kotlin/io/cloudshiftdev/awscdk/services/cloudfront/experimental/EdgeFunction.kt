@@ -95,9 +95,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EdgeFunction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction,
+public open class EdgeFunction(
+  cdkObject: software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction,
 ) : Resource(cdkObject), IVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2083,6 +2082,7 @@ public open class EdgeFunction internal constructor(
         EdgeFunction = EdgeFunction(cdkObject)
 
     internal fun unwrap(wrapped: EdgeFunction):
-        software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction
   }
 }

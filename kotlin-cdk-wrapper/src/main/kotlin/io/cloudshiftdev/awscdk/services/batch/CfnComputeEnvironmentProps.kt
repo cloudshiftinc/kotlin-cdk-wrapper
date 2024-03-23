@@ -871,7 +871,7 @@ public interface CfnComputeEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps,
   ) : CdkObject(cdkObject), CfnComputeEnvironmentProps {
     /**
      * The name for your compute environment.

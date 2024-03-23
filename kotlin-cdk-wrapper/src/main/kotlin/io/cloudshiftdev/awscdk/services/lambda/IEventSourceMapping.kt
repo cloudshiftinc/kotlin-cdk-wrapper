@@ -29,7 +29,7 @@ public interface IEventSourceMapping : IResource {
   public fun eventSourceMappingId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IEventSourceMapping,
+    cdkObject: software.amazon.awscdk.services.lambda.IEventSourceMapping,
   ) : CdkObject(cdkObject), IEventSourceMapping {
     /**
      * Apply the given removal policy to this resource.

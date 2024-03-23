@@ -121,8 +121,7 @@ public interface CfnLifecyclePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicyProps,
+    cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicyProps,
   ) : CdkObject(cdkObject), CfnLifecyclePolicyProps {
     /**
      * The description of the lifecycle policy.

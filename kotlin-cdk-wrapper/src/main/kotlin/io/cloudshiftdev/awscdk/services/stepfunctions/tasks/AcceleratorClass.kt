@@ -19,9 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ei.html)
  */
-public open class AcceleratorClass internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
+public open class AcceleratorClass(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
 ) : CdkObject(cdkObject) {
   /**
    * * Elastic Inference accelerator generation.
@@ -43,6 +42,7 @@ public open class AcceleratorClass internal constructor(
         AcceleratorClass = AcceleratorClass(cdkObject)
 
     internal fun unwrap(wrapped: AcceleratorClass):
-        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass
   }
 }

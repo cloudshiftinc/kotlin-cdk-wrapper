@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpointpolicy.html)
  */
-public open class CfnOriginEndpointPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy,
+public open class CfnOriginEndpointPolicy(
+  cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,5 +224,6 @@ public open class CfnOriginEndpointPolicy internal constructor(
 
     internal fun unwrap(wrapped: CfnOriginEndpointPolicy):
         software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy = wrapped.cdkObject
+        as software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy
   }
 }

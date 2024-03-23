@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)
  */
-public open class CfnVirtualCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
+public open class CfnVirtualCluster(
+  cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -316,11 +316,12 @@ public open class CfnVirtualCluster internal constructor(
         CfnVirtualCluster = CfnVirtualCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualCluster):
-        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
   }
 
   /**
-   * The information about the Amazon EKS cluster.
+   * The information about the container used for a job run or a managed endpoint.
    *
    * Example:
    *
@@ -328,98 +329,105 @@ public open class CfnVirtualCluster internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emrcontainers.*;
-   * EksInfoProperty eksInfoProperty = EksInfoProperty.builder()
+   * ContainerInfoProperty containerInfoProperty = ContainerInfoProperty.builder()
+   * .eksInfo(EksInfoProperty.builder()
    * .namespace("namespace")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html)
    */
-  public interface EksInfoProperty {
+  public interface ContainerInfoProperty {
     /**
-     * The namespaces of the EKS cluster.
+     * The information about the Amazon EKS cluster.
      *
-     * *Minimum* : 1
-     *
-     * *Maximum* : 63
-     *
-     * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html#cfn-emrcontainers-virtualcluster-eksinfo-namespace)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html#cfn-emrcontainers-virtualcluster-containerinfo-eksinfo)
      */
-    public fun namespace(): String
+    public fun eksInfo(): Any
 
     /**
-     * A builder for [EksInfoProperty]
+     * A builder for [ContainerInfoProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param namespace The namespaces of the EKS cluster. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 63
-       *
-       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
+       * @param eksInfo The information about the Amazon EKS cluster. 
        */
-      public fun namespace(namespace: String)
+      public fun eksInfo(eksInfo: IResolvable)
+
+      /**
+       * @param eksInfo The information about the Amazon EKS cluster. 
+       */
+      public fun eksInfo(eksInfo: EksInfoProperty)
+
+      /**
+       * @param eksInfo The information about the Amazon EKS cluster. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
+      public fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.Builder =
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.builder()
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty.builder()
 
       /**
-       * @param namespace The namespaces of the EKS cluster. 
-       * *Minimum* : 1
-       *
-       * *Maximum* : 63
-       *
-       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
+       * @param eksInfo The information about the Amazon EKS cluster. 
        */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
+      override fun eksInfo(eksInfo: IResolvable) {
+        cdkBuilder.eksInfo(eksInfo.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param eksInfo The information about the Amazon EKS cluster. 
+       */
+      override fun eksInfo(eksInfo: EksInfoProperty) {
+        cdkBuilder.eksInfo(eksInfo.let(EksInfoProperty::unwrap))
+      }
+
+      /**
+       * @param eksInfo The information about the Amazon EKS cluster. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
+      override fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit): Unit =
+          eksInfo(EksInfoProperty(eksInfo))
+
       public fun build():
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty =
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
-    ) : CdkObject(cdkObject), EksInfoProperty {
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
+    ) : CdkObject(cdkObject), ContainerInfoProperty {
       /**
-       * The namespaces of the EKS cluster.
+       * The information about the Amazon EKS cluster.
        *
-       * *Minimum* : 1
-       *
-       * *Maximum* : 63
-       *
-       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html#cfn-emrcontainers-virtualcluster-eksinfo-namespace)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html#cfn-emrcontainers-virtualcluster-containerinfo-eksinfo)
        */
-      override fun namespace(): String = unwrap(this).getNamespace()
+      override fun eksInfo(): Any = unwrap(this).getEksInfo()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EksInfoProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContainerInfoProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty):
-          EksInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? EksInfoProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty):
+          ContainerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ContainerInfoProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EksInfoProperty):
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty
+      internal fun unwrap(wrapped: ContainerInfoProperty):
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty
     }
   }
 
@@ -568,8 +576,7 @@ public open class CfnVirtualCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
     ) : CdkObject(cdkObject), ContainerProviderProperty {
       /**
        * The ID of the container cluster.
@@ -620,7 +627,7 @@ public open class CfnVirtualCluster internal constructor(
   }
 
   /**
-   * The information about the container used for a job run or a managed endpoint.
+   * The information about the Amazon EKS cluster.
    *
    * Example:
    *
@@ -628,106 +635,97 @@ public open class CfnVirtualCluster internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emrcontainers.*;
-   * ContainerInfoProperty containerInfoProperty = ContainerInfoProperty.builder()
-   * .eksInfo(EksInfoProperty.builder()
+   * EksInfoProperty eksInfoProperty = EksInfoProperty.builder()
    * .namespace("namespace")
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html)
    */
-  public interface ContainerInfoProperty {
+  public interface EksInfoProperty {
     /**
-     * The information about the Amazon EKS cluster.
+     * The namespaces of the EKS cluster.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html#cfn-emrcontainers-virtualcluster-containerinfo-eksinfo)
+     * *Minimum* : 1
+     *
+     * *Maximum* : 63
+     *
+     * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html#cfn-emrcontainers-virtualcluster-eksinfo-namespace)
      */
-    public fun eksInfo(): Any
+    public fun namespace(): String
 
     /**
-     * A builder for [ContainerInfoProperty]
+     * A builder for [EksInfoProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
+       * @param namespace The namespaces of the EKS cluster. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 63
+       *
+       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
        */
-      public fun eksInfo(eksInfo: IResolvable)
-
-      /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
-       */
-      public fun eksInfo(eksInfo: EksInfoProperty)
-
-      /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
-      public fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit)
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty.Builder
-          =
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty.builder()
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.Builder =
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.builder()
 
       /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
+       * @param namespace The namespaces of the EKS cluster. 
+       * *Minimum* : 1
+       *
+       * *Maximum* : 63
+       *
+       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
        */
-      override fun eksInfo(eksInfo: IResolvable) {
-        cdkBuilder.eksInfo(eksInfo.let(IResolvable::unwrap))
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
       }
-
-      /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
-       */
-      override fun eksInfo(eksInfo: EksInfoProperty) {
-        cdkBuilder.eksInfo(eksInfo.let(EksInfoProperty::unwrap))
-      }
-
-      /**
-       * @param eksInfo The information about the Amazon EKS cluster. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
-      override fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit): Unit =
-          eksInfo(EksInfoProperty(eksInfo))
 
       public fun build():
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
-    ) : CdkObject(cdkObject), ContainerInfoProperty {
+      cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
+    ) : CdkObject(cdkObject), EksInfoProperty {
       /**
-       * The information about the Amazon EKS cluster.
+       * The namespaces of the EKS cluster.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerinfo.html#cfn-emrcontainers-virtualcluster-containerinfo-eksinfo)
+       * *Minimum* : 1
+       *
+       * *Maximum* : 63
+       *
+       * *Pattern* : `[a-z0-9]([-a-z0-9]*[a-z0-9])?`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-eksinfo.html#cfn-emrcontainers-virtualcluster-eksinfo-namespace)
        */
-      override fun eksInfo(): Any = unwrap(this).getEksInfo()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContainerInfoProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EksInfoProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty):
-          ContainerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ContainerInfoProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty):
+          EksInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? EksInfoProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ContainerInfoProperty):
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty
+      internal fun unwrap(wrapped: EksInfoProperty):
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty
     }
   }
 }

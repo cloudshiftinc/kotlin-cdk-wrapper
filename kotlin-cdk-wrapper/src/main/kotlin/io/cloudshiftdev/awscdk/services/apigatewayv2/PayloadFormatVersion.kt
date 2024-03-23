@@ -19,9 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
  */
-public open class PayloadFormatVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion,
+public open class PayloadFormatVersion(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion,
 ) : CdkObject(cdkObject) {
   /**
    * version as a string.
@@ -42,6 +41,7 @@ public open class PayloadFormatVersion internal constructor(
         PayloadFormatVersion = PayloadFormatVersion(cdkObject)
 
     internal fun unwrap(wrapped: PayloadFormatVersion):
-        software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion
   }
 }

@@ -73,8 +73,7 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
   public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer,
   ) : CdkObject(cdkObject), IApplicationLoadBalancer {
     /**
      * Add a new listener to this load balancer.

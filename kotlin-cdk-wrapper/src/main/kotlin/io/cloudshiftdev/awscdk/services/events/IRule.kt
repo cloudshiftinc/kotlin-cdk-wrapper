@@ -27,7 +27,7 @@ public interface IRule : IResource {
   public fun ruleName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.IRule,
+    cdkObject: software.amazon.awscdk.services.events.IRule,
   ) : CdkObject(cdkObject), IRule {
     /**
      * Apply the given removal policy to this resource.

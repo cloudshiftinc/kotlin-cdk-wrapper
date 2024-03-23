@@ -476,7 +476,7 @@ public interface CfnDistributionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDistributionProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnDistributionProps,
   ) : CdkObject(cdkObject), CfnDistributionProps {
     /**
      * The ID of the bundle applied to the distribution.

@@ -105,7 +105,7 @@ public interface Transition {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.Transition,
+    cdkObject: software.amazon.awscdk.services.s3.Transition,
   ) : CdkObject(cdkObject), Transition {
     /**
      * The storage class to which you want the object to transition.

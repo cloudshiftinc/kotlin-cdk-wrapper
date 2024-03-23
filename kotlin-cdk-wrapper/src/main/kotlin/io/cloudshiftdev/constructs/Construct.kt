@@ -7,8 +7,8 @@ import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 
-public open class Construct internal constructor(
-  internal override val cdkObject: software.constructs.Construct,
+public open class Construct(
+  cdkObject: software.constructs.Construct,
 ) : CdkObject(cdkObject), IConstruct {
   public constructor(scope: Construct, id: String) :
       this(software.constructs.Construct(scope.let(Construct::unwrap), id)
@@ -21,6 +21,7 @@ public open class Construct internal constructor(
 
     internal fun wrap(cdkObject: software.constructs.Construct): Construct = Construct(cdkObject)
 
-    internal fun unwrap(wrapped: Construct): software.constructs.Construct = wrapped.cdkObject
+    internal fun unwrap(wrapped: Construct): software.constructs.Construct = wrapped.cdkObject as
+        software.constructs.Construct
   }
 }

@@ -58,7 +58,7 @@ public interface IReceiptRuleSet : IResource {
   public fun receiptRuleSetName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleSet,
+    cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleSet,
   ) : CdkObject(cdkObject), IReceiptRuleSet {
     /**
      * Adds a new receipt rule in this rule set.

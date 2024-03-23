@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "bucket", deployment.getDeployedBucket()));
  * ```
  */
-public open class BucketDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeployment,
+public open class BucketDeployment(
+  cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeployment,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1099,6 +1099,7 @@ public open class BucketDeployment internal constructor(
         BucketDeployment = BucketDeployment(cdkObject)
 
     internal fun unwrap(wrapped: BucketDeployment):
-        software.amazon.awscdk.services.s3.deployment.BucketDeployment = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.deployment.BucketDeployment = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.deployment.BucketDeployment
   }
 }

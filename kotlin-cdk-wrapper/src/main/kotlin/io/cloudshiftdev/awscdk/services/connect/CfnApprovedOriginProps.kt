@@ -93,7 +93,7 @@ public interface CfnApprovedOriginProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOriginProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOriginProps,
   ) : CdkObject(cdkObject), CfnApprovedOriginProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.

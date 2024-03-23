@@ -279,7 +279,7 @@ public interface CfnFlowEntitlementProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps,
   ) : CdkObject(cdkObject), CfnFlowEntitlementProps {
     /**
      * The percentage of the entitlement data transfer fee that you want the subscriber to be

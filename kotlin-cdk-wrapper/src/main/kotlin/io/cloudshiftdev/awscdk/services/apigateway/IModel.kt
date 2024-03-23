@@ -16,7 +16,7 @@ public interface IModel {
   public fun modelId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IModel,
+    cdkObject: software.amazon.awscdk.services.apigateway.IModel,
   ) : CdkObject(cdkObject), IModel {
     /**
      * Returns the model name, such as 'myModel'.

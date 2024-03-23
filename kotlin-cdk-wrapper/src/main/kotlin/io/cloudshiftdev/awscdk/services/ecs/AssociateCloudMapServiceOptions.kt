@@ -95,7 +95,7 @@ public interface AssociateCloudMapServiceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions,
   ) : CdkObject(cdkObject), AssociateCloudMapServiceOptions {
     /**
      * The container to point to for a SRV record.

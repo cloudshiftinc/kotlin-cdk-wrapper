@@ -220,7 +220,7 @@ public interface LogGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.LogGroupProps,
+    cdkObject: software.amazon.awscdk.services.logs.LogGroupProps,
   ) : CdkObject(cdkObject), LogGroupProps {
     /**
      * Data Protection Policy for this log group.

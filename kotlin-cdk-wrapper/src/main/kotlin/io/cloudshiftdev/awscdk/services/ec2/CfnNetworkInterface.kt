@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html)
  */
-public open class CfnNetworkInterface internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface,
+public open class CfnNetworkInterface(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1324,243 +1324,8 @@ public open class CfnNetworkInterface internal constructor(
         CfnNetworkInterface = CfnNetworkInterface(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterface):
-        software.amazon.awscdk.services.ec2.CfnNetworkInterface = wrapped.cdkObject
-  }
-
-  /**
-   * Describes a secondary private IPv4 address for a network interface.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
-   * PrivateIpAddressSpecificationProperty.builder()
-   * .primary(false)
-   * .privateIpAddress("privateIpAddress")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html)
-   */
-  public interface PrivateIpAddressSpecificationProperty {
-    /**
-     * Sets the private IP address as the primary private address.
-     *
-     * You can set only one primary private IP address. If you don't specify a primary private IP
-     * address, Amazon EC2 automatically assigns a primary private IP address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-primary)
-     */
-    public fun primary(): Any
-
-    /**
-     * The private IP address of the network interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-privateipaddress)
-     */
-    public fun privateIpAddress(): String
-
-    /**
-     * A builder for [PrivateIpAddressSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primary Sets the private IP address as the primary private address. 
-       * You can set only one primary private IP address. If you don't specify a primary private IP
-       * address, Amazon EC2 automatically assigns a primary private IP address.
-       */
-      public fun primary(primary: Boolean)
-
-      /**
-       * @param primary Sets the private IP address as the primary private address. 
-       * You can set only one primary private IP address. If you don't specify a primary private IP
-       * address, Amazon EC2 automatically assigns a primary private IP address.
-       */
-      public fun primary(primary: IResolvable)
-
-      /**
-       * @param privateIpAddress The private IP address of the network interface. 
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty.builder()
-
-      /**
-       * @param primary Sets the private IP address as the primary private address. 
-       * You can set only one primary private IP address. If you don't specify a primary private IP
-       * address, Amazon EC2 automatically assigns a primary private IP address.
-       */
-      override fun primary(primary: Boolean) {
-        cdkBuilder.primary(primary)
-      }
-
-      /**
-       * @param primary Sets the private IP address as the primary private address. 
-       * You can set only one primary private IP address. If you don't specify a primary private IP
-       * address, Amazon EC2 automatically assigns a primary private IP address.
-       */
-      override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param privateIpAddress The private IP address of the network interface. 
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
-      /**
-       * Sets the private IP address as the primary private address.
-       *
-       * You can set only one primary private IP address. If you don't specify a primary private IP
-       * address, Amazon EC2 automatically assigns a primary private IP address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-primary)
-       */
-      override fun primary(): Any = unwrap(this).getPrimary()
-
-      /**
-       * The private IP address of the network interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-privateipaddress)
-       */
-      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PrivateIpAddressSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty):
-          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
-    }
-  }
-
-  /**
-   * Describes the IPv6 prefix.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * Ipv6PrefixSpecificationProperty ipv6PrefixSpecificationProperty =
-   * Ipv6PrefixSpecificationProperty.builder()
-   * .ipv6Prefix("ipv6Prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html)
-   */
-  public interface Ipv6PrefixSpecificationProperty {
-    /**
-     * The IPv6 prefix.
-     *
-     * For information, see [Assigning prefixes to Amazon EC2 network
-     * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html#cfn-ec2-networkinterface-ipv6prefixspecification-ipv6prefix)
-     */
-    public fun ipv6Prefix(): String
-
-    /**
-     * A builder for [Ipv6PrefixSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6Prefix The IPv6 prefix. 
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun ipv6Prefix(ipv6Prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty.builder()
-
-      /**
-       * @param ipv6Prefix The IPv6 prefix. 
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun ipv6Prefix(ipv6Prefix: String) {
-        cdkBuilder.ipv6Prefix(ipv6Prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
-      /**
-       * The IPv6 prefix.
-       *
-       * For information, see [Assigning prefixes to Amazon EC2 network
-       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html#cfn-ec2-networkinterface-ipv6prefixspecification-ipv6prefix)
-       */
-      override fun ipv6Prefix(): String = unwrap(this).getIpv6Prefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6PrefixSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty):
-          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Ipv6PrefixSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Ipv6PrefixSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty
-    }
+        software.amazon.awscdk.services.ec2.CfnNetworkInterface = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInterface
   }
 
   /**
@@ -1685,8 +1450,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
     ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
       /**
        * Timeout (in seconds) for idle TCP connections in an established state.
@@ -1792,8 +1556,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
     ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
       /**
        * An IPv6 address to associate with the network interface.
@@ -1886,8 +1649,7 @@ public open class CfnNetworkInterface internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
     ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
       /**
        * The IPv4 prefix.
@@ -1916,6 +1678,240 @@ public open class CfnNetworkInterface internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty
+    }
+  }
+
+  /**
+   * Describes the IPv6 prefix.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * Ipv6PrefixSpecificationProperty ipv6PrefixSpecificationProperty =
+   * Ipv6PrefixSpecificationProperty.builder()
+   * .ipv6Prefix("ipv6Prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html)
+   */
+  public interface Ipv6PrefixSpecificationProperty {
+    /**
+     * The IPv6 prefix.
+     *
+     * For information, see [Assigning prefixes to Amazon EC2 network
+     * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html#cfn-ec2-networkinterface-ipv6prefixspecification-ipv6prefix)
+     */
+    public fun ipv6Prefix(): String
+
+    /**
+     * A builder for [Ipv6PrefixSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6Prefix The IPv6 prefix. 
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      public fun ipv6Prefix(ipv6Prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty.builder()
+
+      /**
+       * @param ipv6Prefix The IPv6 prefix. 
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       */
+      override fun ipv6Prefix(ipv6Prefix: String) {
+        cdkBuilder.ipv6Prefix(ipv6Prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
+    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
+      /**
+       * The IPv6 prefix.
+       *
+       * For information, see [Assigning prefixes to Amazon EC2 network
+       * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv6prefixspecification.html#cfn-ec2-networkinterface-ipv6prefixspecification-ipv6prefix)
+       */
+      override fun ipv6Prefix(): String = unwrap(this).getIpv6Prefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Ipv6PrefixSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty):
+          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ipv6PrefixSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Ipv6PrefixSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty
+    }
+  }
+
+  /**
+   * Describes a secondary private IPv4 address for a network interface.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
+   * PrivateIpAddressSpecificationProperty.builder()
+   * .primary(false)
+   * .privateIpAddress("privateIpAddress")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html)
+   */
+  public interface PrivateIpAddressSpecificationProperty {
+    /**
+     * Sets the private IP address as the primary private address.
+     *
+     * You can set only one primary private IP address. If you don't specify a primary private IP
+     * address, Amazon EC2 automatically assigns a primary private IP address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-primary)
+     */
+    public fun primary(): Any
+
+    /**
+     * The private IP address of the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-privateipaddress)
+     */
+    public fun privateIpAddress(): String
+
+    /**
+     * A builder for [PrivateIpAddressSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primary Sets the private IP address as the primary private address. 
+       * You can set only one primary private IP address. If you don't specify a primary private IP
+       * address, Amazon EC2 automatically assigns a primary private IP address.
+       */
+      public fun primary(primary: Boolean)
+
+      /**
+       * @param primary Sets the private IP address as the primary private address. 
+       * You can set only one primary private IP address. If you don't specify a primary private IP
+       * address, Amazon EC2 automatically assigns a primary private IP address.
+       */
+      public fun primary(primary: IResolvable)
+
+      /**
+       * @param privateIpAddress The private IP address of the network interface. 
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty.builder()
+
+      /**
+       * @param primary Sets the private IP address as the primary private address. 
+       * You can set only one primary private IP address. If you don't specify a primary private IP
+       * address, Amazon EC2 automatically assigns a primary private IP address.
+       */
+      override fun primary(primary: Boolean) {
+        cdkBuilder.primary(primary)
+      }
+
+      /**
+       * @param primary Sets the private IP address as the primary private address. 
+       * You can set only one primary private IP address. If you don't specify a primary private IP
+       * address, Amazon EC2 automatically assigns a primary private IP address.
+       */
+      override fun primary(primary: IResolvable) {
+        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param privateIpAddress The private IP address of the network interface. 
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
+    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+      /**
+       * Sets the private IP address as the primary private address.
+       *
+       * You can set only one primary private IP address. If you don't specify a primary private IP
+       * address, Amazon EC2 automatically assigns a primary private IP address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-primary)
+       */
+      override fun primary(): Any = unwrap(this).getPrimary()
+
+      /**
+       * The private IP address of the network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-privateipaddressspecification.html#cfn-ec2-networkinterface-privateipaddressspecification-privateipaddress)
+       */
+      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateIpAddressSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty):
+          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
     }
   }
 }

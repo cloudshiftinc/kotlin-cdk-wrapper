@@ -57,7 +57,7 @@ public interface MariaDbInstanceEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps,
   ) : CdkObject(cdkObject), MariaDbInstanceEngineProps {
     /**
      * The exact version of the engine to use.

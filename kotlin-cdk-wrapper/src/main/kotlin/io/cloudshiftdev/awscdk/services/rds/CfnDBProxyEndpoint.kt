@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html)
  */
-public open class CfnDBProxyEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint,
+public open class CfnDBProxyEndpoint(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -434,7 +434,8 @@ public open class CfnDBProxyEndpoint internal constructor(
         CfnDBProxyEndpoint = CfnDBProxyEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxyEndpoint):
-        software.amazon.awscdk.services.rds.CfnDBProxyEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnDBProxyEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnDBProxyEndpoint
   }
 
   /**
@@ -519,8 +520,7 @@ public open class CfnDBProxyEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty,
     ) : CdkObject(cdkObject), TagFormatProperty {
       /**
        * A value is the optional value of the tag.

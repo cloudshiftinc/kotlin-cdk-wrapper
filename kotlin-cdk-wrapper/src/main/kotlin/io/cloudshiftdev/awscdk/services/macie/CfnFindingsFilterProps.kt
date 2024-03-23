@@ -270,7 +270,7 @@ public interface CfnFindingsFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilterProps,
+    cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilterProps,
   ) : CdkObject(cdkObject), CfnFindingsFilterProps {
     /**
      * The action to perform on findings that match the filter criteria ( `FindingCriteria` ). Valid

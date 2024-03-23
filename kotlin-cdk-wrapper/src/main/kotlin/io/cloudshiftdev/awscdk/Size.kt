@@ -40,8 +40,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class Size internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Size,
+public open class Size(
+  cdkObject: software.amazon.awscdk.Size,
 ) : CdkObject(cdkObject) {
   /**
    * Checks if size is a token or a resolvable object.
@@ -237,6 +237,7 @@ public open class Size internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Size): Size = Size(cdkObject)
 
-    internal fun unwrap(wrapped: Size): software.amazon.awscdk.Size = wrapped.cdkObject
+    internal fun unwrap(wrapped: Size): software.amazon.awscdk.Size = wrapped.cdkObject as
+        software.amazon.awscdk.Size
   }
 }

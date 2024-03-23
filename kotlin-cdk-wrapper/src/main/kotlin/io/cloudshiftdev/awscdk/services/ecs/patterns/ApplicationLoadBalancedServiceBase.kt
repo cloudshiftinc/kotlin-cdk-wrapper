@@ -16,9 +16,8 @@ import kotlin.Number
  * The base class for ApplicationLoadBalancedEc2Service and ApplicationLoadBalancedFargateService
  * services.
  */
-public abstract class ApplicationLoadBalancedServiceBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase,
+public abstract class ApplicationLoadBalancedServiceBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase,
 ) : Construct(cdkObject) {
   /**
    * Certificate Manager certificate to associate with the load balancer.
@@ -64,8 +63,7 @@ public abstract class ApplicationLoadBalancedServiceBase internal constructor(
       unwrap(this).getTargetGroup().let(ApplicationTargetGroup::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase,
   ) : ApplicationLoadBalancedServiceBase(cdkObject)
 
   public companion object {

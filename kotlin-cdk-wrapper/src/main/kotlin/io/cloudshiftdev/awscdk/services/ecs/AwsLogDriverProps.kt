@@ -244,7 +244,7 @@ public interface AwsLogDriverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriverProps,
+    cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriverProps,
   ) : CdkObject(cdkObject), AwsLogDriverProps {
     /**
      * This option defines a multiline start pattern in Python strftime format.

@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html)
  */
-public open class CfnUserPoolIdentityProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider,
+public open class CfnUserPoolIdentityProvider(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -386,6 +385,7 @@ public open class CfnUserPoolIdentityProvider internal constructor(
         CfnUserPoolIdentityProvider = CfnUserPoolIdentityProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolIdentityProvider):
-        software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider
   }
 }

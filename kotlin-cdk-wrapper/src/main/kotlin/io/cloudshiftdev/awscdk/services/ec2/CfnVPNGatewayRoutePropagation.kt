@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html)
  */
-public open class CfnVPNGatewayRoutePropagation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation,
+public open class CfnVPNGatewayRoutePropagation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +207,7 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
         CfnVPNGatewayRoutePropagation = CfnVPNGatewayRoutePropagation(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNGatewayRoutePropagation):
-        software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation
   }
 }

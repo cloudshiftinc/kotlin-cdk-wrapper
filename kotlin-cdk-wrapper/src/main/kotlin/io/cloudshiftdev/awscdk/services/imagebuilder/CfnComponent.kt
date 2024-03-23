@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html)
  */
-public open class CfnComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnComponent,
+public open class CfnComponent(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -514,6 +514,7 @@ public open class CfnComponent internal constructor(
         CfnComponent = CfnComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponent):
-        software.amazon.awscdk.services.imagebuilder.CfnComponent = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnComponent
   }
 }

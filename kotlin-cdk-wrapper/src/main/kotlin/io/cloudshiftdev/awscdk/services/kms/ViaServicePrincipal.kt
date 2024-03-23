@@ -21,8 +21,8 @@ import kotlin.String
  * ViaServicePrincipal viaServicePrincipal = new ViaServicePrincipal("serviceName", principal);
  * ```
  */
-public open class ViaServicePrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kms.ViaServicePrincipal,
+public open class ViaServicePrincipal(
+  cdkObject: software.amazon.awscdk.services.kms.ViaServicePrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(serviceName: String) :
       this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName)
@@ -49,6 +49,7 @@ public open class ViaServicePrincipal internal constructor(
         ViaServicePrincipal = ViaServicePrincipal(cdkObject)
 
     internal fun unwrap(wrapped: ViaServicePrincipal):
-        software.amazon.awscdk.services.kms.ViaServicePrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.kms.ViaServicePrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.kms.ViaServicePrincipal
   }
 }

@@ -29,7 +29,7 @@ public interface IUserPoolClient : IResource {
   public fun userPoolClientSecret(): SecretValue
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.IUserPoolClient,
+    cdkObject: software.amazon.awscdk.services.cognito.IUserPoolClient,
   ) : CdkObject(cdkObject), IUserPoolClient {
     /**
      * Apply the given removal policy to this resource.

@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-sourceapiassociation.html)
  */
-public open class CfnSourceApiAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation,
+public open class CfnSourceApiAssociation(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -361,7 +361,8 @@ public open class CfnSourceApiAssociation internal constructor(
         CfnSourceApiAssociation = CfnSourceApiAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceApiAssociation):
-        software.amazon.awscdk.services.appsync.CfnSourceApiAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnSourceApiAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnSourceApiAssociation
   }
 
   /**
@@ -451,8 +452,7 @@ public open class CfnSourceApiAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty,
     ) : CdkObject(cdkObject), SourceApiAssociationConfigProperty {
       /**
        * The property that indicates which merging option is enabled in the source API association.

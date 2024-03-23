@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html)
  */
-public open class CfnSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroup,
+public open class CfnSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +208,6 @@ public open class CfnSubnetGroup internal constructor(
         = CfnSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetGroup): software.amazon.awscdk.services.dax.CfnSubnetGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.dax.CfnSubnetGroup
   }
 }

@@ -54,7 +54,7 @@ public interface EcsApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplicationProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplicationProps,
   ) : CdkObject(cdkObject), EcsApplicationProps {
     /**
      * The physical, human-readable name of the CodeDeploy Application.

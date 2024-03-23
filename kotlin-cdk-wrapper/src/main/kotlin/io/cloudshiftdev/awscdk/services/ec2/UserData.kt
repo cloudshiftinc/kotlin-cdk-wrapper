@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * commandsUserData.addCommands("touch /root/userdata.txt");
  * ```
  */
-public abstract class UserData internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.UserData,
+public abstract class UserData(
+  cdkObject: software.amazon.awscdk.services.ec2.UserData,
 ) : CdkObject(cdkObject) {
   /**
    * Add one or more commands to the user data.
@@ -98,7 +98,7 @@ public abstract class UserData internal constructor(
   public open fun render(): String = unwrap(this).render()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.UserData,
+    cdkObject: software.amazon.awscdk.services.ec2.UserData,
   ) : UserData(cdkObject)
 
   public companion object {

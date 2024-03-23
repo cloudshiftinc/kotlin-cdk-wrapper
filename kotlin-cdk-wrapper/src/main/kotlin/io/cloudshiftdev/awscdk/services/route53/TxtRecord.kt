@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class TxtRecord internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.TxtRecord,
+public open class TxtRecord(
+  cdkObject: software.amazon.awscdk.services.route53.TxtRecord,
 ) : RecordSet(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -401,6 +401,6 @@ public open class TxtRecord internal constructor(
         TxtRecord(cdkObject)
 
     internal fun unwrap(wrapped: TxtRecord): software.amazon.awscdk.services.route53.TxtRecord =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.TxtRecord
   }
 }

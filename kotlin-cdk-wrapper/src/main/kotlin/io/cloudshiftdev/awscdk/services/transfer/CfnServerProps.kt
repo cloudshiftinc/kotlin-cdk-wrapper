@@ -1237,7 +1237,7 @@ public interface CfnServerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.transfer.CfnServerProps,
+    cdkObject: software.amazon.awscdk.services.transfer.CfnServerProps,
   ) : CdkObject(cdkObject), CfnServerProps {
     /**
      * The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate.

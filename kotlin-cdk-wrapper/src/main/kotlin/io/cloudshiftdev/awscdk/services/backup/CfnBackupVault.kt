@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html)
  */
-public open class CfnBackupVault internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
+public open class CfnBackupVault(
+  cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,162 +490,8 @@ public open class CfnBackupVault internal constructor(
         CfnBackupVault = CfnBackupVault(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupVault):
-        software.amazon.awscdk.services.backup.CfnBackupVault = wrapped.cdkObject
-  }
-
-  /**
-   * Specifies an object containing SNS event notification properties for the target backup vault.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.backup.*;
-   * NotificationObjectTypeProperty notificationObjectTypeProperty =
-   * NotificationObjectTypeProperty.builder()
-   * .backupVaultEvents(List.of("backupVaultEvents"))
-   * .snsTopicArn("snsTopicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html)
-   */
-  public interface NotificationObjectTypeProperty {
-    /**
-     * An array of events that indicate the status of jobs to back up resources to the backup vault.
-     *
-     * For valid events, see
-     * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-     * in the *AWS Backup API Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-backupvaultevents)
-     */
-    public fun backupVaultEvents(): List<String>
-
-    /**
-     * An ARN that uniquely identifies an Amazon Simple Notification Service (Amazon SNS) topic;
-     *
-     * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn)
-     */
-    public fun snsTopicArn(): String
-
-    /**
-     * A builder for [NotificationObjectTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
-       * resources to the backup vault. 
-       * For valid events, see
-       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-       * in the *AWS Backup API Guide* .
-       */
-      public fun backupVaultEvents(backupVaultEvents: List<String>)
-
-      /**
-       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
-       * resources to the backup vault. 
-       * For valid events, see
-       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-       * in the *AWS Backup API Guide* .
-       */
-      public fun backupVaultEvents(vararg backupVaultEvents: String)
-
-      /**
-       * @param snsTopicArn An ARN that uniquely identifies an Amazon Simple Notification Service
-       * (Amazon SNS) topic;. 
-       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
-       */
-      public fun snsTopicArn(snsTopicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty.builder()
-
-      /**
-       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
-       * resources to the backup vault. 
-       * For valid events, see
-       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-       * in the *AWS Backup API Guide* .
-       */
-      override fun backupVaultEvents(backupVaultEvents: List<String>) {
-        cdkBuilder.backupVaultEvents(backupVaultEvents)
-      }
-
-      /**
-       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
-       * resources to the backup vault. 
-       * For valid events, see
-       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-       * in the *AWS Backup API Guide* .
-       */
-      override fun backupVaultEvents(vararg backupVaultEvents: String): Unit =
-          backupVaultEvents(backupVaultEvents.toList())
-
-      /**
-       * @param snsTopicArn An ARN that uniquely identifies an Amazon Simple Notification Service
-       * (Amazon SNS) topic;. 
-       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
-       */
-      override fun snsTopicArn(snsTopicArn: String) {
-        cdkBuilder.snsTopicArn(snsTopicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
-    ) : CdkObject(cdkObject), NotificationObjectTypeProperty {
-      /**
-       * An array of events that indicate the status of jobs to back up resources to the backup
-       * vault.
-       *
-       * For valid events, see
-       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
-       * in the *AWS Backup API Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-backupvaultevents)
-       */
-      override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents()
-
-      /**
-       * An ARN that uniquely identifies an Amazon Simple Notification Service (Amazon SNS) topic;
-       *
-       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn)
-       */
-      override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationObjectTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty):
-          NotificationObjectTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationObjectTypeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationObjectTypeProperty):
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty
-    }
+        software.amazon.awscdk.services.backup.CfnBackupVault = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnBackupVault
   }
 
   /**
@@ -867,8 +713,7 @@ public open class CfnBackupVault internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
     ) : CdkObject(cdkObject), LockConfigurationTypeProperty {
       /**
        * The AWS Backup Vault Lock configuration that specifies the number of days before the lock
@@ -950,6 +795,160 @@ public open class CfnBackupVault internal constructor(
           software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty
+    }
+  }
+
+  /**
+   * Specifies an object containing SNS event notification properties for the target backup vault.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.backup.*;
+   * NotificationObjectTypeProperty notificationObjectTypeProperty =
+   * NotificationObjectTypeProperty.builder()
+   * .backupVaultEvents(List.of("backupVaultEvents"))
+   * .snsTopicArn("snsTopicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html)
+   */
+  public interface NotificationObjectTypeProperty {
+    /**
+     * An array of events that indicate the status of jobs to back up resources to the backup vault.
+     *
+     * For valid events, see
+     * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+     * in the *AWS Backup API Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-backupvaultevents)
+     */
+    public fun backupVaultEvents(): List<String>
+
+    /**
+     * An ARN that uniquely identifies an Amazon Simple Notification Service (Amazon SNS) topic;
+     *
+     * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn)
+     */
+    public fun snsTopicArn(): String
+
+    /**
+     * A builder for [NotificationObjectTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
+       * resources to the backup vault. 
+       * For valid events, see
+       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+       * in the *AWS Backup API Guide* .
+       */
+      public fun backupVaultEvents(backupVaultEvents: List<String>)
+
+      /**
+       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
+       * resources to the backup vault. 
+       * For valid events, see
+       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+       * in the *AWS Backup API Guide* .
+       */
+      public fun backupVaultEvents(vararg backupVaultEvents: String)
+
+      /**
+       * @param snsTopicArn An ARN that uniquely identifies an Amazon Simple Notification Service
+       * (Amazon SNS) topic;. 
+       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
+       */
+      public fun snsTopicArn(snsTopicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty.builder()
+
+      /**
+       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
+       * resources to the backup vault. 
+       * For valid events, see
+       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+       * in the *AWS Backup API Guide* .
+       */
+      override fun backupVaultEvents(backupVaultEvents: List<String>) {
+        cdkBuilder.backupVaultEvents(backupVaultEvents)
+      }
+
+      /**
+       * @param backupVaultEvents An array of events that indicate the status of jobs to back up
+       * resources to the backup vault. 
+       * For valid events, see
+       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+       * in the *AWS Backup API Guide* .
+       */
+      override fun backupVaultEvents(vararg backupVaultEvents: String): Unit =
+          backupVaultEvents(backupVaultEvents.toList())
+
+      /**
+       * @param snsTopicArn An ARN that uniquely identifies an Amazon Simple Notification Service
+       * (Amazon SNS) topic;. 
+       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
+       */
+      override fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
+    ) : CdkObject(cdkObject), NotificationObjectTypeProperty {
+      /**
+       * An array of events that indicate the status of jobs to back up resources to the backup
+       * vault.
+       *
+       * For valid events, see
+       * [BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax)
+       * in the *AWS Backup API Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-backupvaultevents)
+       */
+      override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents()
+
+      /**
+       * An ARN that uniquely identifies an Amazon Simple Notification Service (Amazon SNS) topic;
+       *
+       * for example, `arn:aws:sns:us-west-2:111122223333:MyTopic` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn)
+       */
+      override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationObjectTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty):
+          NotificationObjectTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationObjectTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationObjectTypeProperty):
+          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty
     }
   }
 }

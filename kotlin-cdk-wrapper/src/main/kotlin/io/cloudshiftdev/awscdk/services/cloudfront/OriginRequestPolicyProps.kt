@@ -157,7 +157,7 @@ public interface OriginRequestPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps,
   ) : CdkObject(cdkObject), OriginRequestPolicyProps {
     /**
      * A comment to describe the origin request policy.

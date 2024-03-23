@@ -272,7 +272,7 @@ public interface CfnLocationNFSProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFSProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFSProps,
   ) : CdkObject(cdkObject), CfnLocationNFSProps {
     /**
      * Specifies the options that DataSync can use to mount your NFS file server.

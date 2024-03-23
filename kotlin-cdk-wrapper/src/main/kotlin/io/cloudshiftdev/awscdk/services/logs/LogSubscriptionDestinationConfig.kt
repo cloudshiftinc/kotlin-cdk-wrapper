@@ -81,7 +81,7 @@ public interface LogSubscriptionDestinationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig,
+    cdkObject: software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig,
   ) : CdkObject(cdkObject), LogSubscriptionDestinationConfig {
     /**
      * The ARN of the subscription's destination.

@@ -50,7 +50,7 @@ public interface MetadataEntry {
   }
 
   private class Wrapper(
-    override val cdkObject: software.constructs.MetadataEntry,
+    cdkObject: software.constructs.MetadataEntry,
   ) : CdkObject(cdkObject), MetadataEntry {
     override fun `data`(): Any = unwrap(this).getData()
 

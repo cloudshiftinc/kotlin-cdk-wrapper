@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-eventintegration.html)
  */
-public open class CfnEventIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appintegrations.CfnEventIntegration,
+public open class CfnEventIntegration(
+  cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -369,7 +368,8 @@ public open class CfnEventIntegration internal constructor(
         CfnEventIntegration = CfnEventIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventIntegration):
-        software.amazon.awscdk.services.appintegrations.CfnEventIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.appintegrations.CfnEventIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appintegrations.CfnEventIntegration
   }
 
   /**
@@ -426,8 +426,7 @@ public open class CfnEventIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty,
+      cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty,
     ) : CdkObject(cdkObject), EventFilterProperty {
       /**
        * The source of the events.

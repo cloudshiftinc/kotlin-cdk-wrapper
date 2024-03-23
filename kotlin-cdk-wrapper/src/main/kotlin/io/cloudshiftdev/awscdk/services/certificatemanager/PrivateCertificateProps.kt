@@ -154,8 +154,7 @@ public interface PrivateCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.certificatemanager.PrivateCertificateProps,
+    cdkObject: software.amazon.awscdk.services.certificatemanager.PrivateCertificateProps,
   ) : CdkObject(cdkObject), PrivateCertificateProps {
     /**
      * Private certificate authority (CA) that will be used to issue the certificate.

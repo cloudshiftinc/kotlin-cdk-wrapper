@@ -140,7 +140,7 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceProps,
   ) : CdkObject(cdkObject), HttpDataSourceProps {
     /**
      * The API to attach this data source to.

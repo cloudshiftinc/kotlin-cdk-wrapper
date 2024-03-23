@@ -112,8 +112,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html)
  */
-public open class CfnOriginEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
+public open class CfnOriginEndpoint(
+  cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -684,7 +684,168 @@ public open class CfnOriginEndpoint internal constructor(
         CfnOriginEndpoint = CfnOriginEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginEndpoint):
-        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint
+  }
+
+  /**
+   * Use `encryptionContractConfiguration` to configure one or more content encryption keys for your
+   * endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys are used
+   * to encrypt the audio and video tracks in your stream. To configure the encryption contract,
+   * specify which audio and video encryption presets to use.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * EncryptionContractConfigurationProperty encryptionContractConfigurationProperty =
+   * EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html)
+   */
+  public interface EncryptionContractConfigurationProperty {
+    /**
+     * A collection of audio encryption presets.
+     *
+     * Value description:
+     *
+     * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+     * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+     * content key to encrypt all of the multichannel audio tracks.
+     * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+     * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+     * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+     * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
+     */
+    public fun presetSpeke20Audio(): String
+
+    /**
+     * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
+     * the origin endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
+     */
+    public fun presetSpeke20Video(): String
+
+    /**
+     * A builder for [EncryptionContractConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param presetSpeke20Audio A collection of audio encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       */
+      public fun presetSpeke20Audio(presetSpeke20Audio: String)
+
+      /**
+       * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
+       * contract configuration of the origin endpoint. 
+       */
+      public fun presetSpeke20Video(presetSpeke20Video: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
+
+      /**
+       * @param presetSpeke20Audio A collection of audio encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       */
+      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
+        cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
+      }
+
+      /**
+       * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
+       * contract configuration of the origin endpoint. 
+       */
+      override fun presetSpeke20Video(presetSpeke20Video: String) {
+        cdkBuilder.presetSpeke20Video(presetSpeke20Video)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
+    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
+      /**
+       * A collection of audio encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
+       */
+      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
+
+      /**
+       * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
+       * the origin endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
+       */
+      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EncryptionContractConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
+          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+    }
   }
 
   /**
@@ -761,8 +922,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty,
     ) : CdkObject(cdkObject), EncryptionMethodProperty {
       /**
        * The encryption method to use.
@@ -794,6 +954,279 @@ public open class CfnOriginEndpoint internal constructor(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty
+    }
+  }
+
+  /**
+   * A collection of video encryption presets.
+   *
+   * Value description:
+   *
+   * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+   * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one content
+   * key for all HD and higher resolutions video tracks.
+   * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content key
+   * for HD video tracks and one content key for all UHD video tracks.
+   * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content key
+   * for HD video tracks, one content key for all UHD1 video tracks and one content key for all UHD2
+   * video tracks.
+   * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content key
+   * for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1 video
+   * tracks and one content key for all UHD2 video tracks.
+   * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content key
+   * for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD video
+   * tracks.
+   * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
+   * key for HD2 video tracks and one content key for all UHD video tracks.
+   * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
+   * key for HD2 video tracks, one content key for all UHD1 video tracks and one content key for all
+   * UHD2 video tracks.
+   * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+   * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
+   * .encryptionMethod(EncryptionMethodProperty.builder()
+   * .cmafEncryptionMethod("cmafEncryptionMethod")
+   * .tsEncryptionMethod("tsEncryptionMethod")
+   * .build())
+   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+   * .drmSystems(List.of("drmSystems"))
+   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build())
+   * .resourceId("resourceId")
+   * .roleArn("roleArn")
+   * .url("url")
+   * .build())
+   * // the properties below are optional
+   * .constantInitializationVector("constantInitializationVector")
+   * .keyRotationIntervalSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html)
+   */
+  public interface EncryptionProperty {
+    /**
+     * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
+     * the key for encrypting content.
+     *
+     * If you don't specify a value, then MediaPackage creates the constant initialization vector
+     * (IV).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-constantinitializationvector)
+     */
+    public fun constantInitializationVector(): String? =
+        unwrap(this).getConstantInitializationVector()
+
+    /**
+     * The encryption method to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-encryptionmethod)
+     */
+    public fun encryptionMethod(): Any
+
+    /**
+     * The interval, in seconds, to rotate encryption keys for the origin endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-keyrotationintervalseconds)
+     */
+    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
+
+    /**
+     * The SPEKE key provider to use for encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-spekekeyprovider)
+     */
+    public fun spekeKeyProvider(): Any
+
+    /**
+     * A builder for [EncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
+       * 32-character string, used in conjunction with the key for encrypting content.
+       * If you don't specify a value, then MediaPackage creates the constant initialization vector
+       * (IV).
+       */
+      public fun constantInitializationVector(constantInitializationVector: String)
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      public fun encryptionMethod(encryptionMethod: IResolvable)
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      public fun encryptionMethod(encryptionMethod: EncryptionMethodProperty)
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1b82338da2eb0244c9f97d1e7cf2e2ef5ef53f5c835bb6a06264c958e9fd7ab2")
+      public fun encryptionMethod(encryptionMethod: EncryptionMethodProperty.Builder.() -> Unit)
+
+      /**
+       * @param keyRotationIntervalSeconds The interval, in seconds, to rotate encryption keys for
+       * the origin endpoint.
+       */
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("339a27bb3e0ef9f95e7b6f49e755e4597fbf8f1c92ea9044619c2c2b14273e17")
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty.builder()
+
+      /**
+       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
+       * 32-character string, used in conjunction with the key for encrypting content.
+       * If you don't specify a value, then MediaPackage creates the constant initialization vector
+       * (IV).
+       */
+      override fun constantInitializationVector(constantInitializationVector: String) {
+        cdkBuilder.constantInitializationVector(constantInitializationVector)
+      }
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      override fun encryptionMethod(encryptionMethod: IResolvable) {
+        cdkBuilder.encryptionMethod(encryptionMethod.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      override fun encryptionMethod(encryptionMethod: EncryptionMethodProperty) {
+        cdkBuilder.encryptionMethod(encryptionMethod.let(EncryptionMethodProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionMethod The encryption method to use. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1b82338da2eb0244c9f97d1e7cf2e2ef5ef53f5c835bb6a06264c958e9fd7ab2")
+      override fun encryptionMethod(encryptionMethod: EncryptionMethodProperty.Builder.() -> Unit):
+          Unit = encryptionMethod(EncryptionMethodProperty(encryptionMethod))
+
+      /**
+       * @param keyRotationIntervalSeconds The interval, in seconds, to rotate encryption keys for
+       * the origin endpoint.
+       */
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
+      }
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("339a27bb3e0ef9f95e7b6f49e755e4597fbf8f1c92ea9044619c2c2b14273e17")
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty,
+    ) : CdkObject(cdkObject), EncryptionProperty {
+      /**
+       * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
+       * the key for encrypting content.
+       *
+       * If you don't specify a value, then MediaPackage creates the constant initialization vector
+       * (IV).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-constantinitializationvector)
+       */
+      override fun constantInitializationVector(): String? =
+          unwrap(this).getConstantInitializationVector()
+
+      /**
+       * The encryption method to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-encryptionmethod)
+       */
+      override fun encryptionMethod(): Any = unwrap(this).getEncryptionMethod()
+
+      /**
+       * The interval, in seconds, to rotate encryption keys for the origin endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-keyrotationintervalseconds)
+       */
+      override fun keyRotationIntervalSeconds(): Number? =
+          unwrap(this).getKeyRotationIntervalSeconds()
+
+      /**
+       * The SPEKE key provider to use for encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-spekekeyprovider)
+       */
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty):
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty
     }
   }
 
@@ -949,8 +1382,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
     ) : CdkObject(cdkObject), FilterConfigurationProperty {
       /**
        * Optionally specify the end time for all of your manifest egress requests.
@@ -1009,552 +1441,6 @@ public open class CfnOriginEndpoint internal constructor(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty
-    }
-  }
-
-  /**
-   * The parameters for the SPEKE key provider.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
-   * SpekeKeyProviderProperty spekeKeyProviderProperty = SpekeKeyProviderProperty.builder()
-   * .drmSystems(List.of("drmSystems"))
-   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build())
-   * .resourceId("resourceId")
-   * .roleArn("roleArn")
-   * .url("url")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html)
-   */
-  public interface SpekeKeyProviderProperty {
-    /**
-     * The DRM solution provider you're using to protect your content during distribution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-drmsystems)
-     */
-    public fun drmSystems(): List<String>
-
-    /**
-     * The encryption contract configuration associated with the SPEKE key provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
-     */
-    public fun encryptionContractConfiguration(): Any
-
-    /**
-     * The unique identifier for the content.
-     *
-     * The service sends this identifier to the key server to identify the current endpoint. How
-     * unique you make this identifier depends on how fine-grained you want access controls to be. The
-     * service does not permit you to use the same ID for two simultaneous encryption processes. The
-     * resource ID is also known as the content ID.
-     *
-     * The following example shows a resource ID: `MovieNight20171126093045`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-resourceid)
-     */
-    public fun resourceId(): String
-
-    /**
-     * The ARN for the IAM role granted by the key provider that provides access to the key provider
-     * API.
-     *
-     * This role must have a trust policy that allows MediaPackage to assume the role, and it must
-     * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get this
-     * from your DRM solution provider.
-     *
-     * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
-     * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * The URL of the SPEKE key provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-url)
-     */
-    public fun url(): String
-
-    /**
-     * A builder for [SpekeKeyProviderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param drmSystems The DRM solution provider you're using to protect your content during
-       * distribution. 
-       */
-      public fun drmSystems(drmSystems: List<String>)
-
-      /**
-       * @param drmSystems The DRM solution provider you're using to protect your content during
-       * distribution. 
-       */
-      public fun drmSystems(vararg drmSystems: String)
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9db9cff9bfbd8728fd67b1051dc3470d4e32793577b17a37cad937f99ec96867")
-      public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param resourceId The unique identifier for the content. 
-       * The service sends this identifier to the key server to identify the current endpoint. How
-       * unique you make this identifier depends on how fine-grained you want access controls to be.
-       * The service does not permit you to use the same ID for two simultaneous encryption processes.
-       * The resource ID is also known as the content ID.
-       *
-       * The following example shows a resource ID: `MovieNight20171126093045`
-       */
-      public fun resourceId(resourceId: String)
-
-      /**
-       * @param roleArn The ARN for the IAM role granted by the key provider that provides access to
-       * the key provider API. 
-       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
-       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
-       * this from your DRM solution provider.
-       *
-       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
-       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param url The URL of the SPEKE key provider. 
-       */
-      public fun url(url: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty.builder()
-
-      /**
-       * @param drmSystems The DRM solution provider you're using to protect your content during
-       * distribution. 
-       */
-      override fun drmSystems(drmSystems: List<String>) {
-        cdkBuilder.drmSystems(drmSystems)
-      }
-
-      /**
-       * @param drmSystems The DRM solution provider you're using to protect your content during
-       * distribution. 
-       */
-      override fun drmSystems(vararg drmSystems: String): Unit = drmSystems(drmSystems.toList())
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionContractConfiguration The encryption contract configuration associated
-       * with the SPEKE key provider. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9db9cff9bfbd8728fd67b1051dc3470d4e32793577b17a37cad937f99ec96867")
-      override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
-
-      /**
-       * @param resourceId The unique identifier for the content. 
-       * The service sends this identifier to the key server to identify the current endpoint. How
-       * unique you make this identifier depends on how fine-grained you want access controls to be.
-       * The service does not permit you to use the same ID for two simultaneous encryption processes.
-       * The resource ID is also known as the content ID.
-       *
-       * The following example shows a resource ID: `MovieNight20171126093045`
-       */
-      override fun resourceId(resourceId: String) {
-        cdkBuilder.resourceId(resourceId)
-      }
-
-      /**
-       * @param roleArn The ARN for the IAM role granted by the key provider that provides access to
-       * the key provider API. 
-       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
-       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
-       * this from your DRM solution provider.
-       *
-       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
-       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param url The URL of the SPEKE key provider. 
-       */
-      override fun url(url: String) {
-        cdkBuilder.url(url)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
-    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
-      /**
-       * The DRM solution provider you're using to protect your content during distribution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-drmsystems)
-       */
-      override fun drmSystems(): List<String> = unwrap(this).getDrmSystems()
-
-      /**
-       * The encryption contract configuration associated with the SPEKE key provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
-       */
-      override fun encryptionContractConfiguration(): Any =
-          unwrap(this).getEncryptionContractConfiguration()
-
-      /**
-       * The unique identifier for the content.
-       *
-       * The service sends this identifier to the key server to identify the current endpoint. How
-       * unique you make this identifier depends on how fine-grained you want access controls to be.
-       * The service does not permit you to use the same ID for two simultaneous encryption processes.
-       * The resource ID is also known as the content ID.
-       *
-       * The following example shows a resource ID: `MovieNight20171126093045`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-resourceid)
-       */
-      override fun resourceId(): String = unwrap(this).getResourceId()
-
-      /**
-       * The ARN for the IAM role granted by the key provider that provides access to the key
-       * provider API.
-       *
-       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
-       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
-       * this from your DRM solution provider.
-       *
-       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
-       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * The URL of the SPEKE key provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-url)
-       */
-      override fun url(): String = unwrap(this).getUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpekeKeyProviderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty):
-          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SpekeKeyProviderProperty):
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
-    }
-  }
-
-  /**
-   * The SCTE-35 HLS configuration associated with the origin endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
-   * ScteHlsProperty scteHlsProperty = ScteHlsProperty.builder()
-   * .adMarkerHls("adMarkerHls")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html)
-   */
-  public interface ScteHlsProperty {
-    /**
-     * The SCTE-35 HLS ad-marker configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html#cfn-mediapackagev2-originendpoint-sctehls-admarkerhls)
-     */
-    public fun adMarkerHls(): String? = unwrap(this).getAdMarkerHls()
-
-    /**
-     * A builder for [ScteHlsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adMarkerHls The SCTE-35 HLS ad-marker configuration.
-       */
-      public fun adMarkerHls(adMarkerHls: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty.Builder =
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty.builder()
-
-      /**
-       * @param adMarkerHls The SCTE-35 HLS ad-marker configuration.
-       */
-      override fun adMarkerHls(adMarkerHls: String) {
-        cdkBuilder.adMarkerHls(adMarkerHls)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty,
-    ) : CdkObject(cdkObject), ScteHlsProperty {
-      /**
-       * The SCTE-35 HLS ad-marker configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html#cfn-mediapackagev2-originendpoint-sctehls-admarkerhls)
-       */
-      override fun adMarkerHls(): String? = unwrap(this).getAdMarkerHls()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScteHlsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty):
-          ScteHlsProperty = CdkObjectWrappers.wrap(cdkObject) as? ScteHlsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScteHlsProperty):
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty
-    }
-  }
-
-  /**
-   * Use `encryptionContractConfiguration` to configure one or more content encryption keys for your
-   * endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys are used
-   * to encrypt the audio and video tracks in your stream. To configure the encryption contract,
-   * specify which audio and video encryption presets to use.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
-   * EncryptionContractConfigurationProperty encryptionContractConfigurationProperty =
-   * EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html)
-   */
-  public interface EncryptionContractConfigurationProperty {
-    /**
-     * A collection of audio encryption presets.
-     *
-     * Value description:
-     *
-     * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-     * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-     * content key to encrypt all of the multichannel audio tracks.
-     * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-     * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-     * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-     * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-     * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
-     */
-    public fun presetSpeke20Audio(): String
-
-    /**
-     * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
-     * the origin endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
-     */
-    public fun presetSpeke20Video(): String
-
-    /**
-     * A builder for [EncryptionContractConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param presetSpeke20Audio A collection of audio encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       */
-      public fun presetSpeke20Audio(presetSpeke20Audio: String)
-
-      /**
-       * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
-       * contract configuration of the origin endpoint. 
-       */
-      public fun presetSpeke20Video(presetSpeke20Video: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
-
-      /**
-       * @param presetSpeke20Audio A collection of audio encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       */
-      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
-        cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
-      }
-
-      /**
-       * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
-       * contract configuration of the origin endpoint. 
-       */
-      override fun presetSpeke20Video(presetSpeke20Video: String) {
-        cdkBuilder.presetSpeke20Video(presetSpeke20Video)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
-      /**
-       * A collection of audio encryption presets.
-       *
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
-       */
-      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
-
-      /**
-       * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
-       * the origin endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
-       */
-      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EncryptionContractConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
-          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
     }
   }
 
@@ -1834,8 +1720,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty,
     ) : CdkObject(cdkObject), HlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the HLS manifest configuration.
@@ -1907,360 +1792,6 @@ public open class CfnOriginEndpoint internal constructor(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty
-    }
-  }
-
-  /**
-   * The segment configuration, including the segment name, duration, and other configuration
-   * values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
-   * SegmentProperty segmentProperty = SegmentProperty.builder()
-   * .encryption(EncryptionProperty.builder()
-   * .encryptionMethod(EncryptionMethodProperty.builder()
-   * .cmafEncryptionMethod("cmafEncryptionMethod")
-   * .tsEncryptionMethod("tsEncryptionMethod")
-   * .build())
-   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
-   * .drmSystems(List.of("drmSystems"))
-   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build())
-   * .resourceId("resourceId")
-   * .roleArn("roleArn")
-   * .url("url")
-   * .build())
-   * // the properties below are optional
-   * .constantInitializationVector("constantInitializationVector")
-   * .keyRotationIntervalSeconds(123)
-   * .build())
-   * .includeIframeOnlyStreams(false)
-   * .scte(ScteProperty.builder()
-   * .scteFilter(List.of("scteFilter"))
-   * .build())
-   * .segmentDurationSeconds(123)
-   * .segmentName("segmentName")
-   * .tsIncludeDvbSubtitles(false)
-   * .tsUseAudioRenditionGroup(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html)
-   */
-  public interface SegmentProperty {
-    /**
-     * Whether to use encryption for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-encryption)
-     */
-    public fun encryption(): Any? = unwrap(this).getEncryption()
-
-    /**
-     * Whether the segment includes I-frame-only streams.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-includeiframeonlystreams)
-     */
-    public fun includeIframeOnlyStreams(): Any? = unwrap(this).getIncludeIframeOnlyStreams()
-
-    /**
-     * The SCTE-35 configuration associated with the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-scte)
-     */
-    public fun scte(): Any? = unwrap(this).getScte()
-
-    /**
-     * The duration of the segment, in seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentdurationseconds)
-     */
-    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
-
-    /**
-     * The name of the segment associated with the origin endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentname)
-     */
-    public fun segmentName(): String? = unwrap(this).getSegmentName()
-
-    /**
-     * Whether the segment includes DVB subtitles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsincludedvbsubtitles)
-     */
-    public fun tsIncludeDvbSubtitles(): Any? = unwrap(this).getTsIncludeDvbSubtitles()
-
-    /**
-     * Whether the segment is an audio rendition group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsuseaudiorenditiongroup)
-     */
-    public fun tsUseAudioRenditionGroup(): Any? = unwrap(this).getTsUseAudioRenditionGroup()
-
-    /**
-     * A builder for [SegmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      public fun encryption(encryption: IResolvable)
-
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      public fun encryption(encryption: EncryptionProperty)
-
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5d1bec01a89747d6578cae965850636a5d90e9195105ca0248e95860ef7b6bd1")
-      public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
-       */
-      public fun includeIframeOnlyStreams(includeIframeOnlyStreams: Boolean)
-
-      /**
-       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
-       */
-      public fun includeIframeOnlyStreams(includeIframeOnlyStreams: IResolvable)
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      public fun scte(scte: IResolvable)
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      public fun scte(scte: ScteProperty)
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2dfdadafc1cbc1040d7aee7c3c4106e426cdf53444c360acf09caa8bd35ba364")
-      public fun scte(scte: ScteProperty.Builder.() -> Unit)
-
-      /**
-       * @param segmentDurationSeconds The duration of the segment, in seconds.
-       */
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
-
-      /**
-       * @param segmentName The name of the segment associated with the origin endpoint.
-       */
-      public fun segmentName(segmentName: String)
-
-      /**
-       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
-       */
-      public fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: Boolean)
-
-      /**
-       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
-       */
-      public fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: IResolvable)
-
-      /**
-       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
-       */
-      public fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: Boolean)
-
-      /**
-       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
-       */
-      public fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty.Builder =
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty.builder()
-
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      override fun encryption(encryption: EncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
-      }
-
-      /**
-       * @param encryption Whether to use encryption for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5d1bec01a89747d6578cae965850636a5d90e9195105ca0248e95860ef7b6bd1")
-      override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
-          encryption(EncryptionProperty(encryption))
-
-      /**
-       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
-       */
-      override fun includeIframeOnlyStreams(includeIframeOnlyStreams: Boolean) {
-        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams)
-      }
-
-      /**
-       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
-       */
-      override fun includeIframeOnlyStreams(includeIframeOnlyStreams: IResolvable) {
-        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      override fun scte(scte: IResolvable) {
-        cdkBuilder.scte(scte.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      override fun scte(scte: ScteProperty) {
-        cdkBuilder.scte(scte.let(ScteProperty::unwrap))
-      }
-
-      /**
-       * @param scte The SCTE-35 configuration associated with the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2dfdadafc1cbc1040d7aee7c3c4106e426cdf53444c360acf09caa8bd35ba364")
-      override fun scte(scte: ScteProperty.Builder.() -> Unit): Unit = scte(ScteProperty(scte))
-
-      /**
-       * @param segmentDurationSeconds The duration of the segment, in seconds.
-       */
-      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
-      }
-
-      /**
-       * @param segmentName The name of the segment associated with the origin endpoint.
-       */
-      override fun segmentName(segmentName: String) {
-        cdkBuilder.segmentName(segmentName)
-      }
-
-      /**
-       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
-       */
-      override fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: Boolean) {
-        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles)
-      }
-
-      /**
-       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
-       */
-      override fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: IResolvable) {
-        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
-       */
-      override fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: Boolean) {
-        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup)
-      }
-
-      /**
-       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
-       */
-      override fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: IResolvable) {
-        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty,
-    ) : CdkObject(cdkObject), SegmentProperty {
-      /**
-       * Whether to use encryption for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-encryption)
-       */
-      override fun encryption(): Any? = unwrap(this).getEncryption()
-
-      /**
-       * Whether the segment includes I-frame-only streams.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-includeiframeonlystreams)
-       */
-      override fun includeIframeOnlyStreams(): Any? = unwrap(this).getIncludeIframeOnlyStreams()
-
-      /**
-       * The SCTE-35 configuration associated with the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-scte)
-       */
-      override fun scte(): Any? = unwrap(this).getScte()
-
-      /**
-       * The duration of the segment, in seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentdurationseconds)
-       */
-      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
-
-      /**
-       * The name of the segment associated with the origin endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentname)
-       */
-      override fun segmentName(): String? = unwrap(this).getSegmentName()
-
-      /**
-       * Whether the segment includes DVB subtitles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsincludedvbsubtitles)
-       */
-      override fun tsIncludeDvbSubtitles(): Any? = unwrap(this).getTsIncludeDvbSubtitles()
-
-      /**
-       * Whether the segment is an audio rendition group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsuseaudiorenditiongroup)
-       */
-      override fun tsUseAudioRenditionGroup(): Any? = unwrap(this).getTsUseAudioRenditionGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty):
-          SegmentProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SegmentProperty):
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty
     }
   }
 
@@ -2578,8 +2109,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty,
     ) : CdkObject(cdkObject), LowLatencyHlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the low-latency HLS (LL-HLS) manifest
@@ -2672,6 +2202,87 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   /**
+   * The SCTE-35 HLS configuration associated with the origin endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * ScteHlsProperty scteHlsProperty = ScteHlsProperty.builder()
+   * .adMarkerHls("adMarkerHls")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html)
+   */
+  public interface ScteHlsProperty {
+    /**
+     * The SCTE-35 HLS ad-marker configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html#cfn-mediapackagev2-originendpoint-sctehls-admarkerhls)
+     */
+    public fun adMarkerHls(): String? = unwrap(this).getAdMarkerHls()
+
+    /**
+     * A builder for [ScteHlsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adMarkerHls The SCTE-35 HLS ad-marker configuration.
+       */
+      public fun adMarkerHls(adMarkerHls: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty.Builder =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty.builder()
+
+      /**
+       * @param adMarkerHls The SCTE-35 HLS ad-marker configuration.
+       */
+      override fun adMarkerHls(adMarkerHls: String) {
+        cdkBuilder.adMarkerHls(adMarkerHls)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty,
+    ) : CdkObject(cdkObject), ScteHlsProperty {
+      /**
+       * The SCTE-35 HLS ad-marker configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctehls.html#cfn-mediapackagev2-originendpoint-sctehls-admarkerhls)
+       */
+      override fun adMarkerHls(): String? = unwrap(this).getAdMarkerHls()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScteHlsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty):
+          ScteHlsProperty = CdkObjectWrappers.wrap(cdkObject) as? ScteHlsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScteHlsProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty
+    }
+  }
+
+  /**
    * The SCTE-35 configuration associated with the origin endpoint.
    *
    * Example:
@@ -2734,8 +2345,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty,
     ) : CdkObject(cdkObject), ScteProperty {
       /**
        * The filter associated with the SCTE-35 configuration.
@@ -2763,31 +2373,8 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   /**
-   * A collection of video encryption presets.
-   *
-   * Value description:
-   *
-   * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-   * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one content
-   * key for all HD and higher resolutions video tracks.
-   * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD video tracks and one content key for all UHD video tracks.
-   * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD video tracks, one content key for all UHD1 video tracks and one content key for all UHD2
-   * video tracks.
-   * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1 video
-   * tracks and one content key for all UHD2 video tracks.
-   * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD video
-   * tracks.
-   * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
-   * key for HD2 video tracks and one content key for all UHD video tracks.
-   * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
-   * key for HD2 video tracks, one content key for all UHD1 video tracks and one content key for all
-   * UHD2 video tracks.
-   * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-   * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+   * The segment configuration, including the segment name, duration, and other configuration
+   * values.
    *
    * Example:
    *
@@ -2795,7 +2382,8 @@ public open class CfnOriginEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
-   * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
+   * SegmentProperty segmentProperty = SegmentProperty.builder()
+   * .encryption(EncryptionProperty.builder()
    * .encryptionMethod(EncryptionMethodProperty.builder()
    * .cmafEncryptionMethod("cmafEncryptionMethod")
    * .tsEncryptionMethod("tsEncryptionMethod")
@@ -2813,226 +2401,629 @@ public open class CfnOriginEndpoint internal constructor(
    * // the properties below are optional
    * .constantInitializationVector("constantInitializationVector")
    * .keyRotationIntervalSeconds(123)
+   * .build())
+   * .includeIframeOnlyStreams(false)
+   * .scte(ScteProperty.builder()
+   * .scteFilter(List.of("scteFilter"))
+   * .build())
+   * .segmentDurationSeconds(123)
+   * .segmentName("segmentName")
+   * .tsIncludeDvbSubtitles(false)
+   * .tsUseAudioRenditionGroup(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html)
    */
-  public interface EncryptionProperty {
+  public interface SegmentProperty {
     /**
-     * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
-     * the key for encrypting content.
+     * Whether to use encryption for the segment.
      *
-     * If you don't specify a value, then MediaPackage creates the constant initialization vector
-     * (IV).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-constantinitializationvector)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-encryption)
      */
-    public fun constantInitializationVector(): String? =
-        unwrap(this).getConstantInitializationVector()
+    public fun encryption(): Any? = unwrap(this).getEncryption()
 
     /**
-     * The encryption method to use.
+     * Whether the segment includes I-frame-only streams.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-encryptionmethod)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-includeiframeonlystreams)
      */
-    public fun encryptionMethod(): Any
+    public fun includeIframeOnlyStreams(): Any? = unwrap(this).getIncludeIframeOnlyStreams()
 
     /**
-     * The interval, in seconds, to rotate encryption keys for the origin endpoint.
+     * The SCTE-35 configuration associated with the segment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-keyrotationintervalseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-scte)
      */
-    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
+    public fun scte(): Any? = unwrap(this).getScte()
 
     /**
-     * The SPEKE key provider to use for encryption.
+     * The duration of the segment, in seconds.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-spekekeyprovider)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentdurationseconds)
      */
-    public fun spekeKeyProvider(): Any
+    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
     /**
-     * A builder for [EncryptionProperty]
+     * The name of the segment associated with the origin endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentname)
+     */
+    public fun segmentName(): String? = unwrap(this).getSegmentName()
+
+    /**
+     * Whether the segment includes DVB subtitles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsincludedvbsubtitles)
+     */
+    public fun tsIncludeDvbSubtitles(): Any? = unwrap(this).getTsIncludeDvbSubtitles()
+
+    /**
+     * Whether the segment is an audio rendition group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsuseaudiorenditiongroup)
+     */
+    public fun tsUseAudioRenditionGroup(): Any? = unwrap(this).getTsUseAudioRenditionGroup()
+
+    /**
+     * A builder for [SegmentProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
-       * 32-character string, used in conjunction with the key for encrypting content.
-       * If you don't specify a value, then MediaPackage creates the constant initialization vector
-       * (IV).
+       * @param encryption Whether to use encryption for the segment.
        */
-      public fun constantInitializationVector(constantInitializationVector: String)
+      public fun encryption(encryption: IResolvable)
 
       /**
-       * @param encryptionMethod The encryption method to use. 
+       * @param encryption Whether to use encryption for the segment.
        */
-      public fun encryptionMethod(encryptionMethod: IResolvable)
+      public fun encryption(encryption: EncryptionProperty)
 
       /**
-       * @param encryptionMethod The encryption method to use. 
-       */
-      public fun encryptionMethod(encryptionMethod: EncryptionMethodProperty)
-
-      /**
-       * @param encryptionMethod The encryption method to use. 
+       * @param encryption Whether to use encryption for the segment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1b82338da2eb0244c9f97d1e7cf2e2ef5ef53f5c835bb6a06264c958e9fd7ab2")
-      public fun encryptionMethod(encryptionMethod: EncryptionMethodProperty.Builder.() -> Unit)
+      @JvmName("5d1bec01a89747d6578cae965850636a5d90e9195105ca0248e95860ef7b6bd1")
+      public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit)
 
       /**
-       * @param keyRotationIntervalSeconds The interval, in seconds, to rotate encryption keys for
-       * the origin endpoint.
+       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
        */
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
+      public fun includeIframeOnlyStreams(includeIframeOnlyStreams: Boolean)
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
        */
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
+      public fun includeIframeOnlyStreams(includeIframeOnlyStreams: IResolvable)
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param scte The SCTE-35 configuration associated with the segment.
        */
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
+      public fun scte(scte: IResolvable)
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param scte The SCTE-35 configuration associated with the segment.
+       */
+      public fun scte(scte: ScteProperty)
+
+      /**
+       * @param scte The SCTE-35 configuration associated with the segment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("339a27bb3e0ef9f95e7b6f49e755e4597fbf8f1c92ea9044619c2c2b14273e17")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
+      @JvmName("2dfdadafc1cbc1040d7aee7c3c4106e426cdf53444c360acf09caa8bd35ba364")
+      public fun scte(scte: ScteProperty.Builder.() -> Unit)
+
+      /**
+       * @param segmentDurationSeconds The duration of the segment, in seconds.
+       */
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
+
+      /**
+       * @param segmentName The name of the segment associated with the origin endpoint.
+       */
+      public fun segmentName(segmentName: String)
+
+      /**
+       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
+       */
+      public fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: Boolean)
+
+      /**
+       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
+       */
+      public fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: IResolvable)
+
+      /**
+       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
+       */
+      public fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: Boolean)
+
+      /**
+       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
+       */
+      public fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty.builder()
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty.Builder =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty.builder()
 
       /**
-       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
-       * 32-character string, used in conjunction with the key for encrypting content.
-       * If you don't specify a value, then MediaPackage creates the constant initialization vector
-       * (IV).
+       * @param encryption Whether to use encryption for the segment.
        */
-      override fun constantInitializationVector(constantInitializationVector: String) {
-        cdkBuilder.constantInitializationVector(constantInitializationVector)
+      override fun encryption(encryption: IResolvable) {
+        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
       /**
-       * @param encryptionMethod The encryption method to use. 
+       * @param encryption Whether to use encryption for the segment.
        */
-      override fun encryptionMethod(encryptionMethod: IResolvable) {
-        cdkBuilder.encryptionMethod(encryptionMethod.let(IResolvable::unwrap))
+      override fun encryption(encryption: EncryptionProperty) {
+        cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
       }
 
       /**
-       * @param encryptionMethod The encryption method to use. 
-       */
-      override fun encryptionMethod(encryptionMethod: EncryptionMethodProperty) {
-        cdkBuilder.encryptionMethod(encryptionMethod.let(EncryptionMethodProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionMethod The encryption method to use. 
+       * @param encryption Whether to use encryption for the segment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1b82338da2eb0244c9f97d1e7cf2e2ef5ef53f5c835bb6a06264c958e9fd7ab2")
-      override fun encryptionMethod(encryptionMethod: EncryptionMethodProperty.Builder.() -> Unit):
-          Unit = encryptionMethod(EncryptionMethodProperty(encryptionMethod))
+      @JvmName("5d1bec01a89747d6578cae965850636a5d90e9195105ca0248e95860ef7b6bd1")
+      override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
+          encryption(EncryptionProperty(encryption))
 
       /**
-       * @param keyRotationIntervalSeconds The interval, in seconds, to rotate encryption keys for
-       * the origin endpoint.
+       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
        */
-      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
+      override fun includeIframeOnlyStreams(includeIframeOnlyStreams: Boolean) {
+        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams)
       }
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
        */
-      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+      override fun includeIframeOnlyStreams(includeIframeOnlyStreams: IResolvable) {
+        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams.let(IResolvable::unwrap))
       }
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param scte The SCTE-35 configuration associated with the segment.
        */
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+      override fun scte(scte: IResolvable) {
+        cdkBuilder.scte(scte.let(IResolvable::unwrap))
       }
 
       /**
-       * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
+       * @param scte The SCTE-35 configuration associated with the segment.
+       */
+      override fun scte(scte: ScteProperty) {
+        cdkBuilder.scte(scte.let(ScteProperty::unwrap))
+      }
+
+      /**
+       * @param scte The SCTE-35 configuration associated with the segment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("339a27bb3e0ef9f95e7b6f49e755e4597fbf8f1c92ea9044619c2c2b14273e17")
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
-          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      @JvmName("2dfdadafc1cbc1040d7aee7c3c4106e426cdf53444c360acf09caa8bd35ba364")
+      override fun scte(scte: ScteProperty.Builder.() -> Unit): Unit = scte(ScteProperty(scte))
+
+      /**
+       * @param segmentDurationSeconds The duration of the segment, in seconds.
+       */
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
+      }
+
+      /**
+       * @param segmentName The name of the segment associated with the origin endpoint.
+       */
+      override fun segmentName(segmentName: String) {
+        cdkBuilder.segmentName(segmentName)
+      }
+
+      /**
+       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
+       */
+      override fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: Boolean) {
+        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles)
+      }
+
+      /**
+       * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
+       */
+      override fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: IResolvable) {
+        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
+       */
+      override fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: Boolean) {
+        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup)
+      }
+
+      /**
+       * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
+       */
+      override fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: IResolvable) {
+        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup.let(IResolvable::unwrap))
+      }
 
       public fun build():
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty,
+    ) : CdkObject(cdkObject), SegmentProperty {
       /**
-       * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
-       * the key for encrypting content.
+       * Whether to use encryption for the segment.
        *
-       * If you don't specify a value, then MediaPackage creates the constant initialization vector
-       * (IV).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-constantinitializationvector)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-encryption)
        */
-      override fun constantInitializationVector(): String? =
-          unwrap(this).getConstantInitializationVector()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
       /**
-       * The encryption method to use.
+       * Whether the segment includes I-frame-only streams.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-encryptionmethod)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-includeiframeonlystreams)
        */
-      override fun encryptionMethod(): Any = unwrap(this).getEncryptionMethod()
+      override fun includeIframeOnlyStreams(): Any? = unwrap(this).getIncludeIframeOnlyStreams()
 
       /**
-       * The interval, in seconds, to rotate encryption keys for the origin endpoint.
+       * The SCTE-35 configuration associated with the segment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-keyrotationintervalseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-scte)
        */
-      override fun keyRotationIntervalSeconds(): Number? =
-          unwrap(this).getKeyRotationIntervalSeconds()
+      override fun scte(): Any? = unwrap(this).getScte()
 
       /**
-       * The SPEKE key provider to use for encryption.
+       * The duration of the segment, in seconds.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryption.html#cfn-mediapackagev2-originendpoint-encryption-spekekeyprovider)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentdurationseconds)
        */
-      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+
+      /**
+       * The name of the segment associated with the origin endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-segmentname)
+       */
+      override fun segmentName(): String? = unwrap(this).getSegmentName()
+
+      /**
+       * Whether the segment includes DVB subtitles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsincludedvbsubtitles)
+       */
+      override fun tsIncludeDvbSubtitles(): Any? = unwrap(this).getTsIncludeDvbSubtitles()
+
+      /**
+       * Whether the segment is an audio rendition group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-tsuseaudiorenditiongroup)
+       */
+      override fun tsUseAudioRenditionGroup(): Any? = unwrap(this).getTsUseAudioRenditionGroup()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty):
+          SegmentProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EncryptionProperty):
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty =
+      internal fun unwrap(wrapped: SegmentProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty
+    }
+  }
+
+  /**
+   * The parameters for the SPEKE key provider.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * SpekeKeyProviderProperty spekeKeyProviderProperty = SpekeKeyProviderProperty.builder()
+   * .drmSystems(List.of("drmSystems"))
+   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build())
+   * .resourceId("resourceId")
+   * .roleArn("roleArn")
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html)
+   */
+  public interface SpekeKeyProviderProperty {
+    /**
+     * The DRM solution provider you're using to protect your content during distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-drmsystems)
+     */
+    public fun drmSystems(): List<String>
+
+    /**
+     * The encryption contract configuration associated with the SPEKE key provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
+     */
+    public fun encryptionContractConfiguration(): Any
+
+    /**
+     * The unique identifier for the content.
+     *
+     * The service sends this identifier to the key server to identify the current endpoint. How
+     * unique you make this identifier depends on how fine-grained you want access controls to be. The
+     * service does not permit you to use the same ID for two simultaneous encryption processes. The
+     * resource ID is also known as the content ID.
+     *
+     * The following example shows a resource ID: `MovieNight20171126093045`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-resourceid)
+     */
+    public fun resourceId(): String
+
+    /**
+     * The ARN for the IAM role granted by the key provider that provides access to the key provider
+     * API.
+     *
+     * This role must have a trust policy that allows MediaPackage to assume the role, and it must
+     * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get this
+     * from your DRM solution provider.
+     *
+     * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
+     * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The URL of the SPEKE key provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-url)
+     */
+    public fun url(): String
+
+    /**
+     * A builder for [SpekeKeyProviderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param drmSystems The DRM solution provider you're using to protect your content during
+       * distribution. 
+       */
+      public fun drmSystems(drmSystems: List<String>)
+
+      /**
+       * @param drmSystems The DRM solution provider you're using to protect your content during
+       * distribution. 
+       */
+      public fun drmSystems(vararg drmSystems: String)
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      public
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9db9cff9bfbd8728fd67b1051dc3470d4e32793577b17a37cad937f99ec96867")
+      public
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourceId The unique identifier for the content. 
+       * The service sends this identifier to the key server to identify the current endpoint. How
+       * unique you make this identifier depends on how fine-grained you want access controls to be.
+       * The service does not permit you to use the same ID for two simultaneous encryption processes.
+       * The resource ID is also known as the content ID.
+       *
+       * The following example shows a resource ID: `MovieNight20171126093045`
+       */
+      public fun resourceId(resourceId: String)
+
+      /**
+       * @param roleArn The ARN for the IAM role granted by the key provider that provides access to
+       * the key provider API. 
+       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
+       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
+       * this from your DRM solution provider.
+       *
+       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
+       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param url The URL of the SPEKE key provider. 
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty.builder()
+
+      /**
+       * @param drmSystems The DRM solution provider you're using to protect your content during
+       * distribution. 
+       */
+      override fun drmSystems(drmSystems: List<String>) {
+        cdkBuilder.drmSystems(drmSystems)
+      }
+
+      /**
+       * @param drmSystems The DRM solution provider you're using to protect your content during
+       * distribution. 
+       */
+      override fun drmSystems(vararg drmSystems: String): Unit = drmSystems(drmSystems.toList())
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      override
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionContractConfiguration The encryption contract configuration associated
+       * with the SPEKE key provider. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9db9cff9bfbd8728fd67b1051dc3470d4e32793577b17a37cad937f99ec96867")
+      override
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
+
+      /**
+       * @param resourceId The unique identifier for the content. 
+       * The service sends this identifier to the key server to identify the current endpoint. How
+       * unique you make this identifier depends on how fine-grained you want access controls to be.
+       * The service does not permit you to use the same ID for two simultaneous encryption processes.
+       * The resource ID is also known as the content ID.
+       *
+       * The following example shows a resource ID: `MovieNight20171126093045`
+       */
+      override fun resourceId(resourceId: String) {
+        cdkBuilder.resourceId(resourceId)
+      }
+
+      /**
+       * @param roleArn The ARN for the IAM role granted by the key provider that provides access to
+       * the key provider API. 
+       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
+       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
+       * this from your DRM solution provider.
+       *
+       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
+       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param url The URL of the SPEKE key provider. 
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
+    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
+      /**
+       * The DRM solution provider you're using to protect your content during distribution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-drmsystems)
+       */
+      override fun drmSystems(): List<String> = unwrap(this).getDrmSystems()
+
+      /**
+       * The encryption contract configuration associated with the SPEKE key provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
+       */
+      override fun encryptionContractConfiguration(): Any =
+          unwrap(this).getEncryptionContractConfiguration()
+
+      /**
+       * The unique identifier for the content.
+       *
+       * The service sends this identifier to the key server to identify the current endpoint. How
+       * unique you make this identifier depends on how fine-grained you want access controls to be.
+       * The service does not permit you to use the same ID for two simultaneous encryption processes.
+       * The resource ID is also known as the content ID.
+       *
+       * The following example shows a resource ID: `MovieNight20171126093045`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-resourceid)
+       */
+      override fun resourceId(): String = unwrap(this).getResourceId()
+
+      /**
+       * The ARN for the IAM role granted by the key provider that provides access to the key
+       * provider API.
+       *
+       * This role must have a trust policy that allows MediaPackage to assume the role, and it must
+       * have a sufficient permissions policy to allow access to the specific key retrieval URL. Get
+       * this from your DRM solution provider.
+       *
+       * Valid format: `arn:aws:iam::{accountID}:role/{name}` . The following example shows a role
+       * ARN: `arn:aws:iam::444455556666:role/SpekeAccess`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The URL of the SPEKE key provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-spekekeyprovider.html#cfn-mediapackagev2-originendpoint-spekekeyprovider-url)
+       */
+      override fun url(): String = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpekeKeyProviderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty):
+          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpekeKeyProviderProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
     }
   }
 }

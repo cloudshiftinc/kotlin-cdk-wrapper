@@ -296,8 +296,7 @@ public interface SageMakerUpdateEndpointProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpointProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpointProps,
   ) : CdkObject(cdkObject), SageMakerUpdateEndpointProps {
     /**
      * An optional description for this state.

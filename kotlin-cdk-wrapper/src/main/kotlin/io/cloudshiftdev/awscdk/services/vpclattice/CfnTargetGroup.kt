@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html)
  */
-public open class CfnTargetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
+public open class CfnTargetGroup(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -457,7 +457,8 @@ public open class CfnTargetGroup internal constructor(
         CfnTargetGroup = CfnTargetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetGroup):
-        software.amazon.awscdk.services.vpclattice.CfnTargetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnTargetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnTargetGroup
   }
 
   /**
@@ -785,8 +786,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
     ) : CdkObject(cdkObject), HealthCheckConfigProperty {
       /**
        * Indicates whether health checking is enabled.
@@ -954,8 +954,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
     ) : CdkObject(cdkObject), MatcherProperty {
       /**
        * The HTTP code to use when checking for a successful response from a target.
@@ -980,138 +979,6 @@ public open class CfnTargetGroup internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty
-    }
-  }
-
-  /**
-   * Describes a target.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
-   * TargetProperty targetProperty = TargetProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .port(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html)
-   */
-  public interface TargetProperty {
-    /**
-     * The ID of the target.
-     *
-     * If the target group type is `INSTANCE` , this is an instance ID. If the target group type is
-     * `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a Lambda
-     * function. If the target group type is `ALB` , this is the ARN of an Application Load Balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-id)
-     */
-    public fun id(): String
-
-    /**
-     * The port on which the target is listening.
-     *
-     * For HTTP, the default is 80. For HTTPS, the default is 443.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * A builder for [TargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID of the target. 
-       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
-       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
-       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
-       * Balancer.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param port The port on which the target is listening.
-       * For HTTP, the default is 80. For HTTPS, the default is 443.
-       */
-      public fun port(port: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.Builder =
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.builder()
-
-      /**
-       * @param id The ID of the target. 
-       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
-       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
-       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
-       * Balancer.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param port The port on which the target is listening.
-       * For HTTP, the default is 80. For HTTPS, the default is 443.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      public fun build(): software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
-      /**
-       * The ID of the target.
-       *
-       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
-       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
-       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
-       * Balancer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The port on which the target is listening.
-       *
-       * For HTTP, the default is 80. For HTTPS, the default is 443.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty):
-          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetProperty):
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty
     }
   }
 
@@ -1378,8 +1245,7 @@ public open class CfnTargetGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
     ) : CdkObject(cdkObject), TargetGroupConfigProperty {
       /**
        * The health check configuration.
@@ -1467,6 +1333,137 @@ public open class CfnTargetGroup internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty
+    }
+  }
+
+  /**
+   * Describes a target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * TargetProperty targetProperty = TargetProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html)
+   */
+  public interface TargetProperty {
+    /**
+     * The ID of the target.
+     *
+     * If the target group type is `INSTANCE` , this is an instance ID. If the target group type is
+     * `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a Lambda
+     * function. If the target group type is `ALB` , this is the ARN of an Application Load Balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-id)
+     */
+    public fun id(): String
+
+    /**
+     * The port on which the target is listening.
+     *
+     * For HTTP, the default is 80. For HTTPS, the default is 443.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * A builder for [TargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the target. 
+       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
+       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
+       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
+       * Balancer.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param port The port on which the target is listening.
+       * For HTTP, the default is 80. For HTTPS, the default is 443.
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.Builder =
+          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.builder()
+
+      /**
+       * @param id The ID of the target. 
+       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
+       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
+       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
+       * Balancer.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param port The port on which the target is listening.
+       * For HTTP, the default is 80. For HTTPS, the default is 443.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build(): software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
+    ) : CdkObject(cdkObject), TargetProperty {
+      /**
+       * The ID of the target.
+       *
+       * If the target group type is `INSTANCE` , this is an instance ID. If the target group type
+       * is `IP` , this is an IP address. If the target group type is `LAMBDA` , this is the ARN of a
+       * Lambda function. If the target group type is `ALB` , this is the ARN of an Application Load
+       * Balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The port on which the target is listening.
+       *
+       * For HTTP, the default is 80. For HTTPS, the default is 443.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-target.html#cfn-vpclattice-targetgroup-target-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty):
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetProperty):
+          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty
     }
   }
 }

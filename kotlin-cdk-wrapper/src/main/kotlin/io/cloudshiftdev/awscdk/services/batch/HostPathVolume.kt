@@ -28,8 +28,8 @@ import kotlin.Unit
  *
  * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath)
  */
-public open class HostPathVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.HostPathVolume,
+public open class HostPathVolume(
+  cdkObject: software.amazon.awscdk.services.batch.HostPathVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: HostPathVolumeOptions) :
       this(software.amazon.awscdk.services.batch.HostPathVolume(options.let(HostPathVolumeOptions::unwrap))
@@ -164,6 +164,7 @@ public open class HostPathVolume internal constructor(
         HostPathVolume = HostPathVolume(cdkObject)
 
     internal fun unwrap(wrapped: HostPathVolume):
-        software.amazon.awscdk.services.batch.HostPathVolume = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.HostPathVolume = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.HostPathVolume
   }
 }

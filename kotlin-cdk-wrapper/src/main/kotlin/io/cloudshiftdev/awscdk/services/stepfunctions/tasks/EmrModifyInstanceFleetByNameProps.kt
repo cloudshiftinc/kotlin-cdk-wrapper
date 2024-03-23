@@ -340,8 +340,7 @@ public interface EmrModifyInstanceFleetByNameProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps,
   ) : CdkObject(cdkObject), EmrModifyInstanceFleetByNameProps {
     /**
      * The ClusterId to update.

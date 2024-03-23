@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html)
  */
-public open class CfnEnabledBaseline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline,
+public open class CfnEnabledBaseline(
+  cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -353,7 +353,8 @@ public open class CfnEnabledBaseline internal constructor(
         CfnEnabledBaseline = CfnEnabledBaseline(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnabledBaseline):
-        software.amazon.awscdk.services.controltower.CfnEnabledBaseline = wrapped.cdkObject
+        software.amazon.awscdk.services.controltower.CfnEnabledBaseline = wrapped.cdkObject as
+        software.amazon.awscdk.services.controltower.CfnEnabledBaseline
   }
 
   /**
@@ -431,8 +432,7 @@ public open class CfnEnabledBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty,
+      cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty,
     ) : CdkObject(cdkObject), ParameterProperty {
       /**
        * A string denoting the parameter key.

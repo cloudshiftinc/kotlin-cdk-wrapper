@@ -54,9 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html)
  */
-public open class CfnIpAccessSettings internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings,
+public open class CfnIpAccessSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -425,7 +424,8 @@ public open class CfnIpAccessSettings internal constructor(
         CfnIpAccessSettings = CfnIpAccessSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnIpAccessSettings):
-        software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings
   }
 
   /**
@@ -506,8 +506,7 @@ public open class CfnIpAccessSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty,
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty,
     ) : CdkObject(cdkObject), IpRuleProperty {
       /**
        * The description of the IP rule.

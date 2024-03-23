@@ -320,7 +320,7 @@ public interface CfnFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.guardduty.CfnFilterProps,
+    cdkObject: software.amazon.awscdk.services.guardduty.CfnFilterProps,
   ) : CdkObject(cdkObject), CfnFilterProps {
     /**
      * Specifies the action that is to be applied to the findings that match the filter.

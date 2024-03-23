@@ -82,9 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html)
  */
-public open class CfnPlaybackConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration,
+public open class CfnPlaybackConfiguration(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1244,7 +1243,380 @@ public open class CfnPlaybackConfiguration internal constructor(
         CfnPlaybackConfiguration = CfnPlaybackConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaybackConfiguration):
-        software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
+  }
+
+  /**
+   * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` , and
+   * `EXT-X-SPLICEPOINT-SCTE35` ad markers from the origin manifest to the MediaTailor personalized
+   * manifest.
+   *
+   * No logic is applied to these ad markers. For example, if `EXT-X-CUE-OUT` has a value of `60` ,
+   * but no ads are filled for that ad break, MediaTailor will not set the value to `0` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * AdMarkerPassthroughProperty adMarkerPassthroughProperty = AdMarkerPassthroughProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html)
+   */
+  public interface AdMarkerPassthroughProperty {
+    /**
+     * Enables ad marker passthrough for your configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html#cfn-mediatailor-playbackconfiguration-admarkerpassthrough-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [AdMarkerPassthroughProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Enables ad marker passthrough for your configuration.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Enables ad marker passthrough for your configuration.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
+
+      /**
+       * @param enabled Enables ad marker passthrough for your configuration.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Enables ad marker passthrough for your configuration.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty,
+    ) : CdkObject(cdkObject), AdMarkerPassthroughProperty {
+      /**
+       * Enables ad marker passthrough for your configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html#cfn-mediatailor-playbackconfiguration-admarkerpassthrough-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdMarkerPassthroughProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty):
+          AdMarkerPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdMarkerPassthroughProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdMarkerPassthroughProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
+    }
+  }
+
+  /**
+   * The configuration for avail suppression, also known as ad suppression.
+   *
+   * For more information about ad suppression, see [Ad
+   * Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * AvailSuppressionProperty availSuppressionProperty = AvailSuppressionProperty.builder()
+   * .mode("mode")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html)
+   */
+  public interface AvailSuppressionProperty {
+    /**
+     * Sets the ad suppression mode.
+     *
+     * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
+     * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks on
+     * or behind the ad suppression Value time in the manifest lookback window. When Mode is set to
+     * `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
+     * within the live edge plus the avail suppression value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * A live edge offset time in HH:MM:SS.
+     *
+     * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
+     * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
+     * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad breaks
+     * on or behind this time in the manifest lookback window. For example, if you set 00:45:00, then
+     * MediaTailor will fill ad breaks that occur within 45 minutes behind the live edge, but won't
+     * fill ad breaks on or behind 45 minutes behind the live edge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [AvailSuppressionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mode Sets the ad suppression mode.
+       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
+       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
+       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
+       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
+       * within the live edge plus the avail suppression value.
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param value A live edge offset time in HH:MM:SS.
+       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
+       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
+       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
+       * breaks on or behind this time in the manifest lookback window. For example, if you set
+       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
+       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.builder()
+
+      /**
+       * @param mode Sets the ad suppression mode.
+       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
+       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
+       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
+       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
+       * within the live edge plus the avail suppression value.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param value A live edge offset time in HH:MM:SS.
+       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
+       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
+       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
+       * breaks on or behind this time in the manifest lookback window. For example, if you set
+       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
+       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty,
+    ) : CdkObject(cdkObject), AvailSuppressionProperty {
+      /**
+       * Sets the ad suppression mode.
+       *
+       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
+       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
+       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
+       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
+       * within the live edge plus the avail suppression value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+
+      /**
+       * A live edge offset time in HH:MM:SS.
+       *
+       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
+       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
+       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
+       * breaks on or behind this time in the manifest lookback window. For example, if you set
+       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
+       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AvailSuppressionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty):
+          AvailSuppressionProperty = CdkObjectWrappers.wrap(cdkObject) as? AvailSuppressionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AvailSuppressionProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+    }
+  }
+
+  /**
+   * The configuration for bumpers.
+   *
+   * Bumpers are short audio or video clips that play at the start or before the end of an ad break.
+   * To learn more about bumpers, see
+   * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * BumperProperty bumperProperty = BumperProperty.builder()
+   * .endUrl("endUrl")
+   * .startUrl("startUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html)
+   */
+  public interface BumperProperty {
+    /**
+     * The URL for the end bumper asset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-endurl)
+     */
+    public fun endUrl(): String? = unwrap(this).getEndUrl()
+
+    /**
+     * The URL for the start bumper asset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-starturl)
+     */
+    public fun startUrl(): String? = unwrap(this).getStartUrl()
+
+    /**
+     * A builder for [BumperProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endUrl The URL for the end bumper asset.
+       */
+      public fun endUrl(endUrl: String)
+
+      /**
+       * @param startUrl The URL for the start bumper asset.
+       */
+      public fun startUrl(startUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty.builder()
+
+      /**
+       * @param endUrl The URL for the end bumper asset.
+       */
+      override fun endUrl(endUrl: String) {
+        cdkBuilder.endUrl(endUrl)
+      }
+
+      /**
+       * @param startUrl The URL for the start bumper asset.
+       */
+      override fun startUrl(startUrl: String) {
+        cdkBuilder.startUrl(startUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty,
+    ) : CdkObject(cdkObject), BumperProperty {
+      /**
+       * The URL for the end bumper asset.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-endurl)
+       */
+      override fun endUrl(): String? = unwrap(this).getEndUrl()
+
+      /**
+       * The URL for the start bumper asset.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-starturl)
+       */
+      override fun startUrl(): String? = unwrap(this).getStartUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BumperProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty):
+          BumperProperty = CdkObjectWrappers.wrap(cdkObject) as? BumperProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BumperProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty
+    }
   }
 
   /**
@@ -1353,8 +1725,7 @@ public open class CfnPlaybackConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty,
     ) : CdkObject(cdkObject), CdnConfigurationProperty {
       /**
        * A non-default content delivery network (CDN) to serve ad segments.
@@ -1397,145 +1768,6 @@ public open class CfnPlaybackConfiguration internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration for pre-roll ad insertion.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * LivePreRollConfigurationProperty livePreRollConfigurationProperty =
-   * LivePreRollConfigurationProperty.builder()
-   * .adDecisionServerUrl("adDecisionServerUrl")
-   * .maxDurationSeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html)
-   */
-  public interface LivePreRollConfigurationProperty {
-    /**
-     * The URL for the ad decision server (ADS) for pre-roll ads.
-     *
-     * This includes the specification of static parameters and placeholders for dynamic parameters.
-     * AWS Elemental MediaTailor substitutes player-specific and session-specific parameters as needed
-     * when calling the ADS. Alternately, for testing, you can provide a static VAST URL. The maximum
-     * length is 25,000 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-addecisionserverurl)
-     */
-    public fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
-
-    /**
-     * The maximum allowed duration for the pre-roll ad avail.
-     *
-     * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of the
-     * total duration of ads that the ADS returns.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-maxdurationseconds)
-     */
-    public fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
-
-    /**
-     * A builder for [LivePreRollConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adDecisionServerUrl The URL for the ad decision server (ADS) for pre-roll ads.
-       * This includes the specification of static parameters and placeholders for dynamic
-       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
-       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
-       * VAST URL. The maximum length is 25,000 characters.
-       */
-      public fun adDecisionServerUrl(adDecisionServerUrl: String)
-
-      /**
-       * @param maxDurationSeconds The maximum allowed duration for the pre-roll ad avail.
-       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
-       * the total duration of ads that the ADS returns.
-       */
-      public fun maxDurationSeconds(maxDurationSeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty.builder()
-
-      /**
-       * @param adDecisionServerUrl The URL for the ad decision server (ADS) for pre-roll ads.
-       * This includes the specification of static parameters and placeholders for dynamic
-       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
-       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
-       * VAST URL. The maximum length is 25,000 characters.
-       */
-      override fun adDecisionServerUrl(adDecisionServerUrl: String) {
-        cdkBuilder.adDecisionServerUrl(adDecisionServerUrl)
-      }
-
-      /**
-       * @param maxDurationSeconds The maximum allowed duration for the pre-roll ad avail.
-       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
-       * the total duration of ads that the ADS returns.
-       */
-      override fun maxDurationSeconds(maxDurationSeconds: Number) {
-        cdkBuilder.maxDurationSeconds(maxDurationSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty,
-    ) : CdkObject(cdkObject), LivePreRollConfigurationProperty {
-      /**
-       * The URL for the ad decision server (ADS) for pre-roll ads.
-       *
-       * This includes the specification of static parameters and placeholders for dynamic
-       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
-       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
-       * VAST URL. The maximum length is 25,000 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-addecisionserverurl)
-       */
-      override fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
-
-      /**
-       * The maximum allowed duration for the pre-roll ad avail.
-       *
-       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
-       * the total duration of ads that the ADS returns.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-maxdurationseconds)
-       */
-      override fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LivePreRollConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty):
-          LivePreRollConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LivePreRollConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LivePreRollConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
     }
   }
 
@@ -1672,8 +1904,7 @@ public open class CfnPlaybackConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty,
     ) : CdkObject(cdkObject), DashConfigurationProperty {
       /**
        * The URL generated by MediaTailor to initiate a playback session.
@@ -1789,8 +2020,7 @@ public open class CfnPlaybackConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty,
     ) : CdkObject(cdkObject), HlsConfigurationProperty {
       /**
        * The URL that is used to initiate a playback session for devices that support Apple HLS.
@@ -1821,11 +2051,7 @@ public open class CfnPlaybackConfiguration internal constructor(
   }
 
   /**
-   * The configuration for bumpers.
-   *
-   * Bumpers are short audio or video clips that play at the start or before the end of an ad break.
-   * To learn more about bumpers, see
-   * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
+   * The configuration for pre-roll ad insertion.
    *
    * Example:
    *
@@ -1833,265 +2059,132 @@ public open class CfnPlaybackConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * BumperProperty bumperProperty = BumperProperty.builder()
-   * .endUrl("endUrl")
-   * .startUrl("startUrl")
+   * LivePreRollConfigurationProperty livePreRollConfigurationProperty =
+   * LivePreRollConfigurationProperty.builder()
+   * .adDecisionServerUrl("adDecisionServerUrl")
+   * .maxDurationSeconds(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html)
    */
-  public interface BumperProperty {
+  public interface LivePreRollConfigurationProperty {
     /**
-     * The URL for the end bumper asset.
+     * The URL for the ad decision server (ADS) for pre-roll ads.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-endurl)
+     * This includes the specification of static parameters and placeholders for dynamic parameters.
+     * AWS Elemental MediaTailor substitutes player-specific and session-specific parameters as needed
+     * when calling the ADS. Alternately, for testing, you can provide a static VAST URL. The maximum
+     * length is 25,000 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-addecisionserverurl)
      */
-    public fun endUrl(): String? = unwrap(this).getEndUrl()
+    public fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
 
     /**
-     * The URL for the start bumper asset.
+     * The maximum allowed duration for the pre-roll ad avail.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-starturl)
+     * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of the
+     * total duration of ads that the ADS returns.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-maxdurationseconds)
      */
-    public fun startUrl(): String? = unwrap(this).getStartUrl()
+    public fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
 
     /**
-     * A builder for [BumperProperty]
+     * A builder for [LivePreRollConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endUrl The URL for the end bumper asset.
+       * @param adDecisionServerUrl The URL for the ad decision server (ADS) for pre-roll ads.
+       * This includes the specification of static parameters and placeholders for dynamic
+       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
+       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
+       * VAST URL. The maximum length is 25,000 characters.
        */
-      public fun endUrl(endUrl: String)
+      public fun adDecisionServerUrl(adDecisionServerUrl: String)
 
       /**
-       * @param startUrl The URL for the start bumper asset.
+       * @param maxDurationSeconds The maximum allowed duration for the pre-roll ad avail.
+       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
+       * the total duration of ads that the ADS returns.
        */
-      public fun startUrl(startUrl: String)
+      public fun maxDurationSeconds(maxDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty.Builder
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty.builder()
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty.builder()
 
       /**
-       * @param endUrl The URL for the end bumper asset.
+       * @param adDecisionServerUrl The URL for the ad decision server (ADS) for pre-roll ads.
+       * This includes the specification of static parameters and placeholders for dynamic
+       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
+       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
+       * VAST URL. The maximum length is 25,000 characters.
        */
-      override fun endUrl(endUrl: String) {
-        cdkBuilder.endUrl(endUrl)
+      override fun adDecisionServerUrl(adDecisionServerUrl: String) {
+        cdkBuilder.adDecisionServerUrl(adDecisionServerUrl)
       }
 
       /**
-       * @param startUrl The URL for the start bumper asset.
+       * @param maxDurationSeconds The maximum allowed duration for the pre-roll ad avail.
+       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
+       * the total duration of ads that the ADS returns.
        */
-      override fun startUrl(startUrl: String) {
-        cdkBuilder.startUrl(startUrl)
+      override fun maxDurationSeconds(maxDurationSeconds: Number) {
+        cdkBuilder.maxDurationSeconds(maxDurationSeconds)
       }
 
       public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty,
-    ) : CdkObject(cdkObject), BumperProperty {
-      /**
-       * The URL for the end bumper asset.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-endurl)
-       */
-      override fun endUrl(): String? = unwrap(this).getEndUrl()
-
-      /**
-       * The URL for the start bumper asset.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-bumper.html#cfn-mediatailor-playbackconfiguration-bumper-starturl)
-       */
-      override fun startUrl(): String? = unwrap(this).getStartUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BumperProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty):
-          BumperProperty = CdkObjectWrappers.wrap(cdkObject) as? BumperProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BumperProperty):
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty
-    }
-  }
-
-  /**
-   * The configuration for avail suppression, also known as ad suppression.
-   *
-   * For more information about ad suppression, see [Ad
-   * Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * AvailSuppressionProperty availSuppressionProperty = AvailSuppressionProperty.builder()
-   * .mode("mode")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html)
-   */
-  public interface AvailSuppressionProperty {
-    /**
-     * Sets the ad suppression mode.
-     *
-     * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
-     * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks on
-     * or behind the ad suppression Value time in the manifest lookback window. When Mode is set to
-     * `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
-     * within the live edge plus the avail suppression value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * A live edge offset time in HH:MM:SS.
-     *
-     * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
-     * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
-     * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad breaks
-     * on or behind this time in the manifest lookback window. For example, if you set 00:45:00, then
-     * MediaTailor will fill ad breaks that occur within 45 minutes behind the live edge, but won't
-     * fill ad breaks on or behind 45 minutes behind the live edge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [AvailSuppressionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mode Sets the ad suppression mode.
-       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
-       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
-       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
-       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
-       * within the live edge plus the avail suppression value.
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param value A live edge offset time in HH:MM:SS.
-       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
-       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
-       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
-       * breaks on or behind this time in the manifest lookback window. For example, if you set
-       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
-       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.builder()
-
-      /**
-       * @param mode Sets the ad suppression mode.
-       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
-       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
-       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
-       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
-       * within the live edge plus the avail suppression value.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param value A live edge offset time in HH:MM:SS.
-       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
-       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
-       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
-       * breaks on or behind this time in the manifest lookback window. For example, if you set
-       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
-       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty,
-    ) : CdkObject(cdkObject), AvailSuppressionProperty {
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty,
+    ) : CdkObject(cdkObject), LivePreRollConfigurationProperty {
       /**
-       * Sets the ad suppression mode.
+       * The URL for the ad decision server (ADS) for pre-roll ads.
        *
-       * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
-       * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
-       * on or behind the ad suppression Value time in the manifest lookback window. When Mode is set
-       * to `AFTER_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks that are
-       * within the live edge plus the avail suppression value.
+       * This includes the specification of static parameters and placeholders for dynamic
+       * parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific
+       * parameters as needed when calling the ADS. Alternately, for testing, you can provide a static
+       * VAST URL. The maximum length is 25,000 characters.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-mode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-addecisionserverurl)
        */
-      override fun mode(): String? = unwrap(this).getMode()
+      override fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
 
       /**
-       * A live edge offset time in HH:MM:SS.
+       * The maximum allowed duration for the pre-roll ad avail.
        *
-       * MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If
-       * Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad
-       * breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad
-       * breaks on or behind this time in the manifest lookback window. For example, if you set
-       * 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live
-       * edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.
+       * AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of
+       * the total duration of ads that the ADS returns.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration-maxdurationseconds)
        */
-      override fun `value`(): String? = unwrap(this).getValue()
+      override fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AvailSuppressionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LivePreRollConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty):
-          AvailSuppressionProperty = CdkObjectWrappers.wrap(cdkObject) as? AvailSuppressionProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty):
+          LivePreRollConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LivePreRollConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AvailSuppressionProperty):
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+      internal fun unwrap(wrapped: LivePreRollConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
     }
   }
 
@@ -2213,8 +2306,7 @@ public open class CfnPlaybackConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty,
     ) : CdkObject(cdkObject), ManifestProcessingRulesProperty {
       /**
        * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` ,
@@ -2244,106 +2336,6 @@ public open class CfnPlaybackConfiguration internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty
-    }
-  }
-
-  /**
-   * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` , and
-   * `EXT-X-SPLICEPOINT-SCTE35` ad markers from the origin manifest to the MediaTailor personalized
-   * manifest.
-   *
-   * No logic is applied to these ad markers. For example, if `EXT-X-CUE-OUT` has a value of `60` ,
-   * but no ads are filled for that ad break, MediaTailor will not set the value to `0` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * AdMarkerPassthroughProperty adMarkerPassthroughProperty = AdMarkerPassthroughProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html)
-   */
-  public interface AdMarkerPassthroughProperty {
-    /**
-     * Enables ad marker passthrough for your configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html#cfn-mediatailor-playbackconfiguration-admarkerpassthrough-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [AdMarkerPassthroughProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Enables ad marker passthrough for your configuration.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Enables ad marker passthrough for your configuration.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
-
-      /**
-       * @param enabled Enables ad marker passthrough for your configuration.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Enables ad marker passthrough for your configuration.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty,
-    ) : CdkObject(cdkObject), AdMarkerPassthroughProperty {
-      /**
-       * Enables ad marker passthrough for your configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-admarkerpassthrough.html#cfn-mediatailor-playbackconfiguration-admarkerpassthrough-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AdMarkerPassthroughProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty):
-          AdMarkerPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdMarkerPassthroughProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdMarkerPassthroughProperty):
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
     }
   }
 }

@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class BackupSelection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.BackupSelection,
+public open class BackupSelection(
+  cdkObject: software.amazon.awscdk.services.backup.BackupSelection,
 ) : Resource(cdkObject), IGrantable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -265,6 +265,7 @@ public open class BackupSelection internal constructor(
         BackupSelection = BackupSelection(cdkObject)
 
     internal fun unwrap(wrapped: BackupSelection):
-        software.amazon.awscdk.services.backup.BackupSelection = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.BackupSelection = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.BackupSelection
   }
 }

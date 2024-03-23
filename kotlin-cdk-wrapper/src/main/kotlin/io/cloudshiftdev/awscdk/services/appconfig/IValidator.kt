@@ -21,7 +21,7 @@ public interface IValidator {
   public fun type(): ValidatorType
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IValidator,
+    cdkObject: software.amazon.awscdk.services.appconfig.IValidator,
   ) : CdkObject(cdkObject), IValidator {
     /**
      * The content of the validator.

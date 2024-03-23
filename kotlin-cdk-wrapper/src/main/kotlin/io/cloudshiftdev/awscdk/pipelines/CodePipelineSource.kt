@@ -34,8 +34,8 @@ import io.cloudshiftdev.awscdk.services.ecr.IRepository as EcrIRepository
  * .build();
  * ```
  */
-public abstract class CodePipelineSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
+public abstract class CodePipelineSource(
+  cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
 ) : Step(cdkObject), ICodePipelineActionFactory {
   /**
    * Whether or not this is a Source step.
@@ -96,7 +96,7 @@ public abstract class CodePipelineSource internal constructor(
   public open fun sourceAttribute(name: String): String = unwrap(this).sourceAttribute(name)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
+    cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
   ) : CodePipelineSource(cdkObject)
 
   public companion object {

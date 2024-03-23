@@ -82,7 +82,7 @@ public interface AuroraPostgresEngineFeatures {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures,
+    cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures,
   ) : CdkObject(cdkObject), AuroraPostgresEngineFeatures {
     /**
      * Whether this version of the Aurora Postgres cluster engine supports the S3 data export

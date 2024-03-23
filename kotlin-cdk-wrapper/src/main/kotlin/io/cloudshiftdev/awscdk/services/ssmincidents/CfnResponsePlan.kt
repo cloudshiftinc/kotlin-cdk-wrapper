@@ -90,8 +90,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html)
  */
-public open class CfnResponsePlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
+public open class CfnResponsePlan(
+  cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -678,714 +678,8 @@ public open class CfnResponsePlan internal constructor(
         CfnResponsePlan = CfnResponsePlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnResponsePlan):
-        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan = wrapped.cdkObject
-  }
-
-  /**
-   * The key-value pair parameters to use when running the Automation runbook.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * SsmParameterProperty ssmParameterProperty = SsmParameterProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html)
-   */
-  public interface SsmParameterProperty {
-    /**
-     * The key parameter to use when running the Automation runbook.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value parameter to use when running the Automation runbook.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values)
-     */
-    public fun values(): List<String>
-
-    /**
-     * A builder for [SsmParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key parameter to use when running the Automation runbook. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param values The value parameter to use when running the Automation runbook. 
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The value parameter to use when running the Automation runbook. 
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty.builder()
-
-      /**
-       * @param key The key parameter to use when running the Automation runbook. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param values The value parameter to use when running the Automation runbook. 
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The value parameter to use when running the Automation runbook. 
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
-    ) : CdkObject(cdkObject), SsmParameterProperty {
-      /**
-       * The key parameter to use when running the Automation runbook.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value parameter to use when running the Automation runbook.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SsmParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty):
-          SsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmParameterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SsmParameterProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty
-    }
-  }
-
-  /**
-   * The Amazon SNS topic that's used by AWS Chatbot to notify the incidents chat channel.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * NotificationTargetItemProperty notificationTargetItemProperty =
-   * NotificationTargetItemProperty.builder()
-   * .snsTopicArn("snsTopicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html)
-   */
-  public interface NotificationTargetItemProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html#cfn-ssmincidents-responseplan-notificationtargetitem-snstopicarn)
-     */
-    public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
-
-    /**
-     * A builder for [NotificationTargetItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic.
-       */
-      public fun snsTopicArn(snsTopicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty.Builder
-          =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty.builder()
-
-      /**
-       * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic.
-       */
-      override fun snsTopicArn(snsTopicArn: String) {
-        cdkBuilder.snsTopicArn(snsTopicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
-    ) : CdkObject(cdkObject), NotificationTargetItemProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon SNS topic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html#cfn-ssmincidents-responseplan-notificationtargetitem-snstopicarn)
-       */
-      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationTargetItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty):
-          NotificationTargetItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationTargetItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationTargetItemProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
-    }
-  }
-
-  /**
-   * Information about third-party services integrated into a response plan.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * IntegrationProperty integrationProperty = IntegrationProperty.builder()
-   * .pagerDutyConfiguration(PagerDutyConfigurationProperty.builder()
-   * .name("name")
-   * .pagerDutyIncidentConfiguration(PagerDutyIncidentConfigurationProperty.builder()
-   * .serviceId("serviceId")
-   * .build())
-   * .secretId("secretId")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html)
-   */
-  public interface IntegrationProperty {
-    /**
-     * Information about the PagerDuty service where the response plan creates an incident.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html#cfn-ssmincidents-responseplan-integration-pagerdutyconfiguration)
-     */
-    public fun pagerDutyConfiguration(): Any
-
-    /**
-     * A builder for [IntegrationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      public fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable)
-
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      public fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty)
-
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
-      public
-          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.Builder =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.builder()
-
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      override fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
-        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      override fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
-        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(PagerDutyConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
-       * plan creates an incident. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
-      override
-          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit):
-          Unit = pagerDutyConfiguration(PagerDutyConfigurationProperty(pagerDutyConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
-    ) : CdkObject(cdkObject), IntegrationProperty {
-      /**
-       * Information about the PagerDuty service where the response plan creates an incident.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html#cfn-ssmincidents-responseplan-integration-pagerdutyconfiguration)
-       */
-      override fun pagerDutyConfiguration(): Any = unwrap(this).getPagerDutyConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IntegrationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty):
-          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegrationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IntegrationProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty
-    }
-  }
-
-  /**
-   * The `SsmAutomation` property type specifies details about the Systems Manager Automation
-   * runbook that will be used as the runbook during an incident.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * SsmAutomationProperty ssmAutomationProperty = SsmAutomationProperty.builder()
-   * .documentName("documentName")
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .documentVersion("documentVersion")
-   * .dynamicParameters(List.of(DynamicSsmParameterProperty.builder()
-   * .key("key")
-   * .value(DynamicSsmParameterValueProperty.builder()
-   * .variable("variable")
-   * .build())
-   * .build()))
-   * .parameters(List.of(SsmParameterProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build()))
-   * .targetAccount("targetAccount")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html)
-   */
-  public interface SsmAutomationProperty {
-    /**
-     * The automation document's name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentname)
-     */
-    public fun documentName(): String
-
-    /**
-     * The version of the runbook to use when running.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion)
-     */
-    public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
-
-    /**
-     * The key-value pairs to resolve dynamic parameter values when processing a Systems Manager
-     * Automation runbook.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters)
-     */
-    public fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
-
-    /**
-     * The key-value pair parameters to use when running the runbook.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * The Amazon Resource Name (ARN) of the role that the automation document will assume when
-     * running commands.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * The account that the automation document will be run in.
-     *
-     * This can be in either the management account or an application account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount)
-     */
-    public fun targetAccount(): String? = unwrap(this).getTargetAccount()
-
-    /**
-     * A builder for [SsmAutomationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param documentName The automation document's name. 
-       */
-      public fun documentName(documentName: String)
-
-      /**
-       * @param documentVersion The version of the runbook to use when running.
-       */
-      public fun documentVersion(documentVersion: String)
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      public fun dynamicParameters(dynamicParameters: IResolvable)
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      public fun dynamicParameters(dynamicParameters: List<Any>)
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      public fun dynamicParameters(vararg dynamicParameters: Any)
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      public fun parameters(parameters: List<Any>)
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      public fun parameters(vararg parameters: Any)
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that the automation document will
-       * assume when running commands. 
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param targetAccount The account that the automation document will be run in.
-       * This can be in either the management account or an application account.
-       */
-      public fun targetAccount(targetAccount: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty.Builder
-          =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty.builder()
-
-      /**
-       * @param documentName The automation document's name. 
-       */
-      override fun documentName(documentName: String) {
-        cdkBuilder.documentName(documentName)
-      }
-
-      /**
-       * @param documentVersion The version of the runbook to use when running.
-       */
-      override fun documentVersion(documentVersion: String) {
-        cdkBuilder.documentVersion(documentVersion)
-      }
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      override fun dynamicParameters(dynamicParameters: IResolvable) {
-        cdkBuilder.dynamicParameters(dynamicParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      override fun dynamicParameters(dynamicParameters: List<Any>) {
-        cdkBuilder.dynamicParameters(dynamicParameters)
-      }
-
-      /**
-       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
-       * processing a Systems Manager Automation runbook.
-       */
-      override fun dynamicParameters(vararg dynamicParameters: Any): Unit =
-          dynamicParameters(dynamicParameters.toList())
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param parameters The key-value pair parameters to use when running the runbook.
-       */
-      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that the automation document will
-       * assume when running commands. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param targetAccount The account that the automation document will be run in.
-       * This can be in either the management account or an application account.
-       */
-      override fun targetAccount(targetAccount: String) {
-        cdkBuilder.targetAccount(targetAccount)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
-    ) : CdkObject(cdkObject), SsmAutomationProperty {
-      /**
-       * The automation document's name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentname)
-       */
-      override fun documentName(): String = unwrap(this).getDocumentName()
-
-      /**
-       * The version of the runbook to use when running.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion)
-       */
-      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
-
-      /**
-       * The key-value pairs to resolve dynamic parameter values when processing a Systems Manager
-       * Automation runbook.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters)
-       */
-      override fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
-
-      /**
-       * The key-value pair parameters to use when running the runbook.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * The Amazon Resource Name (ARN) of the role that the automation document will assume when
-       * running commands.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * The account that the automation document will be run in.
-       *
-       * This can be in either the management account or an application account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount)
-       */
-      override fun targetAccount(): String? = unwrap(this).getTargetAccount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SsmAutomationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty):
-          SsmAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmAutomationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SsmAutomationProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty
-    }
-  }
-
-  /**
-   * Details about the PagerDuty service where the response plan creates an incident.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * PagerDutyIncidentConfigurationProperty pagerDutyIncidentConfigurationProperty =
-   * PagerDutyIncidentConfigurationProperty.builder()
-   * .serviceId("serviceId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html)
-   */
-  public interface PagerDutyIncidentConfigurationProperty {
-    /**
-     * The ID of the PagerDuty service that the response plan associates with an incident when it
-     * launches.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html#cfn-ssmincidents-responseplan-pagerdutyincidentconfiguration-serviceid)
-     */
-    public fun serviceId(): String
-
-    /**
-     * A builder for [PagerDutyIncidentConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serviceId The ID of the PagerDuty service that the response plan associates with an
-       * incident when it launches. 
-       */
-      public fun serviceId(serviceId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty.builder()
-
-      /**
-       * @param serviceId The ID of the PagerDuty service that the response plan associates with an
-       * incident when it launches. 
-       */
-      override fun serviceId(serviceId: String) {
-        cdkBuilder.serviceId(serviceId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
-    ) : CdkObject(cdkObject), PagerDutyIncidentConfigurationProperty {
-      /**
-       * The ID of the PagerDuty service that the response plan associates with an incident when it
-       * launches.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html#cfn-ssmincidents-responseplan-pagerdutyincidentconfiguration-serviceid)
-       */
-      override fun serviceId(): String = unwrap(this).getServiceId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PagerDutyIncidentConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty):
-          PagerDutyIncidentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PagerDutyIncidentConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PagerDutyIncidentConfigurationProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
-    }
+        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
   }
 
   /**
@@ -1491,8 +785,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Details about the Systems Manager automation document that will be used as a runbook during
@@ -1518,6 +811,117 @@ public open class CfnResponsePlan internal constructor(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty
+    }
+  }
+
+  /**
+   * The AWS Chatbot chat channel used for collaboration during an incident.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
+   * ChatChannelProperty chatChannelProperty = ChatChannelProperty.builder()
+   * .chatbotSns(List.of("chatbotSns"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html)
+   */
+  public interface ChatChannelProperty {
+    /**
+     * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
+     * incident.
+     *
+     * You can also make updates to the incident through the chat channel by using the Amazon SNS
+     * topics
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html#cfn-ssmincidents-responseplan-chatchannel-chatbotsns)
+     */
+    public fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
+
+    /**
+     * A builder for [ChatChannelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
+       * of updates to an incident.
+       * You can also make updates to the incident through the chat channel by using the Amazon SNS
+       * topics
+       */
+      public fun chatbotSns(chatbotSns: List<String>)
+
+      /**
+       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
+       * of updates to an incident.
+       * You can also make updates to the incident through the chat channel by using the Amazon SNS
+       * topics
+       */
+      public fun chatbotSns(vararg chatbotSns: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.Builder =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.builder()
+
+      /**
+       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
+       * of updates to an incident.
+       * You can also make updates to the incident through the chat channel by using the Amazon SNS
+       * topics
+       */
+      override fun chatbotSns(chatbotSns: List<String>) {
+        cdkBuilder.chatbotSns(chatbotSns)
+      }
+
+      /**
+       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
+       * of updates to an incident.
+       * You can also make updates to the incident through the chat channel by using the Amazon SNS
+       * topics
+       */
+      override fun chatbotSns(vararg chatbotSns: String): Unit = chatbotSns(chatbotSns.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
+    ) : CdkObject(cdkObject), ChatChannelProperty {
+      /**
+       * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
+       * incident.
+       *
+       * You can also make updates to the incident through the chat channel by using the Amazon SNS
+       * topics
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html#cfn-ssmincidents-responseplan-chatchannel-chatbotsns)
+       */
+      override fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ChatChannelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty):
+          ChatChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChatChannelProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ChatChannelProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty
     }
   }
 
@@ -1650,8 +1054,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
     ) : CdkObject(cdkObject), DynamicSsmParameterProperty {
       /**
        * The key parameter to use when running the Systems Manager Automation runbook.
@@ -1745,8 +1148,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
     ) : CdkObject(cdkObject), DynamicSsmParameterValueProperty {
       /**
        * Variable dynamic parameters.
@@ -2048,8 +1450,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
     ) : CdkObject(cdkObject), IncidentTemplateProperty {
       /**
        * Used to create only one incident record for an incident.
@@ -2130,7 +1531,7 @@ public open class CfnResponsePlan internal constructor(
   }
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * Information about third-party services integrated into a response plan.
    *
    * Example:
    *
@@ -2138,106 +1539,199 @@ public open class CfnResponsePlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
-   * ChatChannelProperty chatChannelProperty = ChatChannelProperty.builder()
-   * .chatbotSns(List.of("chatbotSns"))
+   * IntegrationProperty integrationProperty = IntegrationProperty.builder()
+   * .pagerDutyConfiguration(PagerDutyConfigurationProperty.builder()
+   * .name("name")
+   * .pagerDutyIncidentConfiguration(PagerDutyIncidentConfigurationProperty.builder()
+   * .serviceId("serviceId")
+   * .build())
+   * .secretId("secretId")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html)
    */
-  public interface ChatChannelProperty {
+  public interface IntegrationProperty {
     /**
-     * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
-     * incident.
+     * Information about the PagerDuty service where the response plan creates an incident.
      *
-     * You can also make updates to the incident through the chat channel by using the Amazon SNS
-     * topics
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html#cfn-ssmincidents-responseplan-chatchannel-chatbotsns)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html#cfn-ssmincidents-responseplan-integration-pagerdutyconfiguration)
      */
-    public fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
+    public fun pagerDutyConfiguration(): Any
 
     /**
-     * A builder for [ChatChannelProperty]
+     * A builder for [IntegrationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
-       * You can also make updates to the incident through the chat channel by using the Amazon SNS
-       * topics
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
        */
-      public fun chatbotSns(chatbotSns: List<String>)
+      public fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable)
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
-       * You can also make updates to the incident through the chat channel by using the Amazon SNS
-       * topics
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
        */
-      public fun chatbotSns(vararg chatbotSns: String)
+      public fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty)
+
+      /**
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
+      public
+          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.Builder =
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.builder()
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.Builder =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.builder()
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
-       * You can also make updates to the incident through the chat channel by using the Amazon SNS
-       * topics
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
        */
-      override fun chatbotSns(chatbotSns: List<String>) {
-        cdkBuilder.chatbotSns(chatbotSns)
+      override fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
+        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
-       * You can also make updates to the incident through the chat channel by using the Amazon SNS
-       * topics
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
        */
-      override fun chatbotSns(vararg chatbotSns: String): Unit = chatbotSns(chatbotSns.toList())
+      override fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
+        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(PagerDutyConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param pagerDutyConfiguration Information about the PagerDuty service where the response
+       * plan creates an incident. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
+      override
+          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit):
+          Unit = pagerDutyConfiguration(PagerDutyConfigurationProperty(pagerDutyConfiguration))
 
       public fun build():
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
-    ) : CdkObject(cdkObject), ChatChannelProperty {
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
+    ) : CdkObject(cdkObject), IntegrationProperty {
       /**
-       * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
-       * incident.
+       * Information about the PagerDuty service where the response plan creates an incident.
        *
-       * You can also make updates to the incident through the chat channel by using the Amazon SNS
-       * topics
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html#cfn-ssmincidents-responseplan-chatchannel-chatbotsns)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-integration.html#cfn-ssmincidents-responseplan-integration-pagerdutyconfiguration)
        */
-      override fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
+      override fun pagerDutyConfiguration(): Any = unwrap(this).getPagerDutyConfiguration()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ChatChannelProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IntegrationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty):
-          ChatChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChatChannelProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty):
+          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegrationProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ChatChannelProperty):
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =
+      internal fun unwrap(wrapped: IntegrationProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty
+    }
+  }
+
+  /**
+   * The Amazon SNS topic that's used by AWS Chatbot to notify the incidents chat channel.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
+   * NotificationTargetItemProperty notificationTargetItemProperty =
+   * NotificationTargetItemProperty.builder()
+   * .snsTopicArn("snsTopicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html)
+   */
+  public interface NotificationTargetItemProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html#cfn-ssmincidents-responseplan-notificationtargetitem-snstopicarn)
+     */
+    public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+
+    /**
+     * A builder for [NotificationTargetItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic.
+       */
+      public fun snsTopicArn(snsTopicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty.Builder
+          =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty.builder()
+
+      /**
+       * @param snsTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic.
+       */
+      override fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
+    ) : CdkObject(cdkObject), NotificationTargetItemProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-notificationtargetitem.html#cfn-ssmincidents-responseplan-notificationtargetitem-snstopicarn)
+       */
+      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationTargetItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty):
+          NotificationTargetItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationTargetItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationTargetItemProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
     }
   }
 
@@ -2379,8 +1873,7 @@ public open class CfnResponsePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
     ) : CdkObject(cdkObject), PagerDutyConfigurationProperty {
       /**
        * The name of the PagerDuty configuration.
@@ -2421,6 +1914,503 @@ public open class CfnResponsePlan internal constructor(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty
+    }
+  }
+
+  /**
+   * Details about the PagerDuty service where the response plan creates an incident.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
+   * PagerDutyIncidentConfigurationProperty pagerDutyIncidentConfigurationProperty =
+   * PagerDutyIncidentConfigurationProperty.builder()
+   * .serviceId("serviceId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html)
+   */
+  public interface PagerDutyIncidentConfigurationProperty {
+    /**
+     * The ID of the PagerDuty service that the response plan associates with an incident when it
+     * launches.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html#cfn-ssmincidents-responseplan-pagerdutyincidentconfiguration-serviceid)
+     */
+    public fun serviceId(): String
+
+    /**
+     * A builder for [PagerDutyIncidentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param serviceId The ID of the PagerDuty service that the response plan associates with an
+       * incident when it launches. 
+       */
+      public fun serviceId(serviceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty.builder()
+
+      /**
+       * @param serviceId The ID of the PagerDuty service that the response plan associates with an
+       * incident when it launches. 
+       */
+      override fun serviceId(serviceId: String) {
+        cdkBuilder.serviceId(serviceId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
+    ) : CdkObject(cdkObject), PagerDutyIncidentConfigurationProperty {
+      /**
+       * The ID of the PagerDuty service that the response plan associates with an incident when it
+       * launches.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration.html#cfn-ssmincidents-responseplan-pagerdutyincidentconfiguration-serviceid)
+       */
+      override fun serviceId(): String = unwrap(this).getServiceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PagerDutyIncidentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty):
+          PagerDutyIncidentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PagerDutyIncidentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PagerDutyIncidentConfigurationProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
+    }
+  }
+
+  /**
+   * The `SsmAutomation` property type specifies details about the Systems Manager Automation
+   * runbook that will be used as the runbook during an incident.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
+   * SsmAutomationProperty ssmAutomationProperty = SsmAutomationProperty.builder()
+   * .documentName("documentName")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .documentVersion("documentVersion")
+   * .dynamicParameters(List.of(DynamicSsmParameterProperty.builder()
+   * .key("key")
+   * .value(DynamicSsmParameterValueProperty.builder()
+   * .variable("variable")
+   * .build())
+   * .build()))
+   * .parameters(List.of(SsmParameterProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build()))
+   * .targetAccount("targetAccount")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html)
+   */
+  public interface SsmAutomationProperty {
+    /**
+     * The automation document's name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentname)
+     */
+    public fun documentName(): String
+
+    /**
+     * The version of the runbook to use when running.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion)
+     */
+    public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+
+    /**
+     * The key-value pairs to resolve dynamic parameter values when processing a Systems Manager
+     * Automation runbook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters)
+     */
+    public fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
+
+    /**
+     * The key-value pair parameters to use when running the runbook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * The Amazon Resource Name (ARN) of the role that the automation document will assume when
+     * running commands.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The account that the automation document will be run in.
+     *
+     * This can be in either the management account or an application account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount)
+     */
+    public fun targetAccount(): String? = unwrap(this).getTargetAccount()
+
+    /**
+     * A builder for [SsmAutomationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param documentName The automation document's name. 
+       */
+      public fun documentName(documentName: String)
+
+      /**
+       * @param documentVersion The version of the runbook to use when running.
+       */
+      public fun documentVersion(documentVersion: String)
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      public fun dynamicParameters(dynamicParameters: IResolvable)
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      public fun dynamicParameters(dynamicParameters: List<Any>)
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      public fun dynamicParameters(vararg dynamicParameters: Any)
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      public fun parameters(parameters: List<Any>)
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      public fun parameters(vararg parameters: Any)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the role that the automation document will
+       * assume when running commands. 
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param targetAccount The account that the automation document will be run in.
+       * This can be in either the management account or an application account.
+       */
+      public fun targetAccount(targetAccount: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty.Builder
+          =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty.builder()
+
+      /**
+       * @param documentName The automation document's name. 
+       */
+      override fun documentName(documentName: String) {
+        cdkBuilder.documentName(documentName)
+      }
+
+      /**
+       * @param documentVersion The version of the runbook to use when running.
+       */
+      override fun documentVersion(documentVersion: String) {
+        cdkBuilder.documentVersion(documentVersion)
+      }
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      override fun dynamicParameters(dynamicParameters: IResolvable) {
+        cdkBuilder.dynamicParameters(dynamicParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      override fun dynamicParameters(dynamicParameters: List<Any>) {
+        cdkBuilder.dynamicParameters(dynamicParameters)
+      }
+
+      /**
+       * @param dynamicParameters The key-value pairs to resolve dynamic parameter values when
+       * processing a Systems Manager Automation runbook.
+       */
+      override fun dynamicParameters(vararg dynamicParameters: Any): Unit =
+          dynamicParameters(dynamicParameters.toList())
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      override fun parameters(parameters: List<Any>) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param parameters The key-value pair parameters to use when running the runbook.
+       */
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the role that the automation document will
+       * assume when running commands. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param targetAccount The account that the automation document will be run in.
+       * This can be in either the management account or an application account.
+       */
+      override fun targetAccount(targetAccount: String) {
+        cdkBuilder.targetAccount(targetAccount)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
+    ) : CdkObject(cdkObject), SsmAutomationProperty {
+      /**
+       * The automation document's name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentname)
+       */
+      override fun documentName(): String = unwrap(this).getDocumentName()
+
+      /**
+       * The version of the runbook to use when running.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion)
+       */
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+
+      /**
+       * The key-value pairs to resolve dynamic parameter values when processing a Systems Manager
+       * Automation runbook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters)
+       */
+      override fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
+
+      /**
+       * The key-value pair parameters to use when running the runbook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * The Amazon Resource Name (ARN) of the role that the automation document will assume when
+       * running commands.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The account that the automation document will be run in.
+       *
+       * This can be in either the management account or an application account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount)
+       */
+      override fun targetAccount(): String? = unwrap(this).getTargetAccount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SsmAutomationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty):
+          SsmAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmAutomationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmAutomationProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty
+    }
+  }
+
+  /**
+   * The key-value pair parameters to use when running the Automation runbook.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssmincidents.*;
+   * SsmParameterProperty ssmParameterProperty = SsmParameterProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html)
+   */
+  public interface SsmParameterProperty {
+    /**
+     * The key parameter to use when running the Automation runbook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value parameter to use when running the Automation runbook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [SsmParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key parameter to use when running the Automation runbook. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param values The value parameter to use when running the Automation runbook. 
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The value parameter to use when running the Automation runbook. 
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty.builder()
+
+      /**
+       * @param key The key parameter to use when running the Automation runbook. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param values The value parameter to use when running the Automation runbook. 
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The value parameter to use when running the Automation runbook. 
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
+    ) : CdkObject(cdkObject), SsmParameterProperty {
+      /**
+       * The key parameter to use when running the Automation runbook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value parameter to use when running the Automation runbook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SsmParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty):
+          SsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmParameterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmParameterProperty):
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty
     }
   }
 }

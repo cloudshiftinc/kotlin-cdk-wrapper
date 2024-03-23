@@ -173,11 +173,20 @@ import kotlin.collections.List
  */
 public interface CfnAssetModelProps {
   /**
-   * The composite asset models that are part of this asset model.
+   * The composite models that are part of this asset model.
    *
-   * Composite asset models are asset models that contain specific properties. Each composite model
-   * has a type that defines the properties that the composite model supports. You can use composite
-   * asset models to define alarms on this asset model.
+   * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+   * composite models that model parts of your industrial equipment. Each composite model has a type
+   * that defines the properties that the composite model supports. Use composite models to define
+   * alarms on this asset model.
+   *
+   *
+   * When creating custom composite models, you need to use
+   * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+   * . For more information, see [Creating custom composite models
+   * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+   * in the *AWS IoT SiteWise User Guide* .
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelcompositemodels)
    */
@@ -201,9 +210,9 @@ public interface CfnAssetModelProps {
    * The hierarchy definitions of the asset model.
    *
    * Each hierarchy specifies an asset model whose assets can be children of any other assets
-   * created from this asset model. For more information, see [Defining relationships between
-   * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-   * *AWS IoT SiteWise User Guide* .
+   * created from this asset model. For more information, see [Asset
+   * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in
+   * the *AWS IoT SiteWise User Guide* .
    *
    * You can specify up to 10 hierarchies per asset model. For more information, see
    * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -216,8 +225,6 @@ public interface CfnAssetModelProps {
   /**
    * A unique, friendly name for the asset model.
    *
-   * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
    */
   public fun assetModelName(): String
@@ -225,7 +232,7 @@ public interface CfnAssetModelProps {
   /**
    * The property definitions of the asset model.
    *
-   * For more information, see [Defining data
+   * For more information, see [Asset
    * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
    * the *AWS IoT SiteWise User Guide* .
    *
@@ -261,29 +268,50 @@ public interface CfnAssetModelProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     public fun assetModelCompositeModels(assetModelCompositeModels: IResolvable)
 
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     public fun assetModelCompositeModels(assetModelCompositeModels: List<Any>)
 
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     public fun assetModelCompositeModels(vararg assetModelCompositeModels: Any)
 
@@ -300,9 +328,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -313,9 +341,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -326,9 +354,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -338,13 +366,12 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelName A unique, friendly name for the asset model. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
      */
     public fun assetModelName(assetModelName: String)
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -356,7 +383,7 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -368,7 +395,7 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -405,33 +432,54 @@ public interface CfnAssetModelProps {
         software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps.builder()
 
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
       cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable::unwrap))
     }
 
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
       cdkBuilder.assetModelCompositeModels(assetModelCompositeModels)
     }
 
     /**
-     * @param assetModelCompositeModels The composite asset models that are part of this asset
-     * model.
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * @param assetModelCompositeModels The composite models that are part of this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelCompositeModels(vararg assetModelCompositeModels: Any): Unit =
         assetModelCompositeModels(assetModelCompositeModels.toList())
@@ -453,9 +501,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -468,9 +516,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -483,9 +531,9 @@ public interface CfnAssetModelProps {
     /**
      * @param assetModelHierarchies The hierarchy definitions of the asset model.
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -496,7 +544,6 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelName A unique, friendly name for the asset model. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
      */
     override fun assetModelName(assetModelName: String) {
       cdkBuilder.assetModelName(assetModelName)
@@ -504,7 +551,7 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -518,7 +565,7 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -532,7 +579,7 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelProperties The property definitions of the asset model.
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *
@@ -573,14 +620,23 @@ public interface CfnAssetModelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps,
+    cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps,
   ) : CdkObject(cdkObject), CfnAssetModelProps {
     /**
-     * The composite asset models that are part of this asset model.
+     * The composite models that are part of this asset model.
      *
-     * Composite asset models are asset models that contain specific properties. Each composite
-     * model has a type that defines the properties that the composite model supports. You can use
-     * composite asset models to define alarms on this asset model.
+     * It groups properties (such as attributes, measurements, transforms, and metrics) and child
+     * composite models that model parts of your industrial equipment. Each composite model has a type
+     * that defines the properties that the composite model supports. Use composite models to define
+     * alarms on this asset model.
+     *
+     *
+     * When creating custom composite models, you need to use
+     * [CreateAssetModelCompositeModel](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html)
+     * . For more information, see [Creating custom composite models
+     * (Components)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html)
+     * in the *AWS IoT SiteWise User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelcompositemodels)
      */
@@ -604,9 +660,9 @@ public interface CfnAssetModelProps {
      * The hierarchy definitions of the asset model.
      *
      * Each hierarchy specifies an asset model whose assets can be children of any other assets
-     * created from this asset model. For more information, see [Defining relationships between
-     * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the
-     * *AWS IoT SiteWise User Guide* .
+     * created from this asset model. For more information, see [Asset
+     * hierarchies](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html)
+     * in the *AWS IoT SiteWise User Guide* .
      *
      * You can specify up to 10 hierarchies per asset model. For more information, see
      * [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT
@@ -619,8 +675,6 @@ public interface CfnAssetModelProps {
     /**
      * A unique, friendly name for the asset model.
      *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
      */
     override fun assetModelName(): String = unwrap(this).getAssetModelName()
@@ -628,7 +682,7 @@ public interface CfnAssetModelProps {
     /**
      * The property definitions of the asset model.
      *
-     * For more information, see [Defining data
+     * For more information, see [Asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html) in
      * the *AWS IoT SiteWise User Guide* .
      *

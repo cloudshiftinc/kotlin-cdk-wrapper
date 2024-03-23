@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
  */
-public open class CfnDistribution internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution,
+public open class CfnDistribution(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -809,7 +809,279 @@ public open class CfnDistribution internal constructor(
         CfnDistribution = CfnDistribution(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistribution):
-        software.amazon.awscdk.services.lightsail.CfnDistribution = wrapped.cdkObject
+        software.amazon.awscdk.services.lightsail.CfnDistribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.lightsail.CfnDistribution
+  }
+
+  /**
+   * `CacheBehaviorPerPath` is a property of the
+   * [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
+   * resource. It describes the per-path cache behavior of an Amazon Lightsail content delivery network
+   * (CDN) distribution.
+   *
+   * Use a per-path cache behavior to override the default cache behavior of a distribution, or to
+   * add an exception to it. For example, if you set the `CacheBehavior` to `cache` , you can use a
+   * per-path cache behavior to specify a directory, file, or file type that your distribution will
+   * cache. If you don’t want your distribution to cache a specified directory, file, or file type, set
+   * the per-path cache behavior to `dont-cache` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * CacheBehaviorPerPathProperty cacheBehaviorPerPathProperty =
+   * CacheBehaviorPerPathProperty.builder()
+   * .behavior("behavior")
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html)
+   */
+  public interface CacheBehaviorPerPathProperty {
+    /**
+     * The cache behavior for the specified path.
+     *
+     * You can specify one of the following per-path cache behaviors:
+     *
+     * * *`cache`* - This behavior caches the specified path.
+     * * *`dont-cache`* - This behavior doesn't cache the specified path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-behavior)
+     */
+    public fun behavior(): String? = unwrap(this).getBehavior()
+
+    /**
+     * The path to a directory or file to cache, or not cache.
+     *
+     * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
+     * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
+     *
+     * Examples:
+     *
+     * * Specify the following to cache all files in the document root of an Apache web server
+     * running on a instance.
+     *
+     * `var/www/html/`
+     *
+     * * Specify the following file to cache only the index page in the document root of an Apache
+     * web server.
+     *
+     * `var/www/html/index.html`
+     *
+     * * Specify the following to cache only the .html files in the document root of an Apache web
+     * server.
+     *
+     * `var/www/html/ *.html`
+     *
+     * * Specify the following to cache only the .jpg, .png, and .gif files in the images
+     * sub-directory of the document root of an Apache web server.
+     *
+     * `var/www/html/images/ *.jpg`
+     *
+     * `var/www/html/images/ *.png`
+     *
+     * `var/www/html/images/ *.gif`
+     *
+     * Specify the following to cache all files in the images subdirectory of the document root of
+     * an Apache web server.
+     *
+     * `var/www/html/images/`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [CacheBehaviorPerPathProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param behavior The cache behavior for the specified path.
+       * You can specify one of the following per-path cache behaviors:
+       *
+       * * *`cache`* - This behavior caches the specified path.
+       * * *`dont-cache`* - This behavior doesn't cache the specified path.
+       */
+      public fun behavior(behavior: String)
+
+      /**
+       * @param path The path to a directory or file to cache, or not cache.
+       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
+       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
+       *
+       * Examples:
+       *
+       * * Specify the following to cache all files in the document root of an Apache web server
+       * running on a instance.
+       *
+       * `var/www/html/`
+       *
+       * * Specify the following file to cache only the index page in the document root of an Apache
+       * web server.
+       *
+       * `var/www/html/index.html`
+       *
+       * * Specify the following to cache only the .html files in the document root of an Apache web
+       * server.
+       *
+       * `var/www/html/ *.html`
+       *
+       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
+       * sub-directory of the document root of an Apache web server.
+       *
+       * `var/www/html/images/ *.jpg`
+       *
+       * `var/www/html/images/ *.png`
+       *
+       * `var/www/html/images/ *.gif`
+       *
+       * Specify the following to cache all files in the images subdirectory of the document root of
+       * an Apache web server.
+       *
+       * `var/www/html/images/`
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty.Builder
+          =
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty.builder()
+
+      /**
+       * @param behavior The cache behavior for the specified path.
+       * You can specify one of the following per-path cache behaviors:
+       *
+       * * *`cache`* - This behavior caches the specified path.
+       * * *`dont-cache`* - This behavior doesn't cache the specified path.
+       */
+      override fun behavior(behavior: String) {
+        cdkBuilder.behavior(behavior)
+      }
+
+      /**
+       * @param path The path to a directory or file to cache, or not cache.
+       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
+       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
+       *
+       * Examples:
+       *
+       * * Specify the following to cache all files in the document root of an Apache web server
+       * running on a instance.
+       *
+       * `var/www/html/`
+       *
+       * * Specify the following file to cache only the index page in the document root of an Apache
+       * web server.
+       *
+       * `var/www/html/index.html`
+       *
+       * * Specify the following to cache only the .html files in the document root of an Apache web
+       * server.
+       *
+       * `var/www/html/ *.html`
+       *
+       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
+       * sub-directory of the document root of an Apache web server.
+       *
+       * `var/www/html/images/ *.jpg`
+       *
+       * `var/www/html/images/ *.png`
+       *
+       * `var/www/html/images/ *.gif`
+       *
+       * Specify the following to cache all files in the images subdirectory of the document root of
+       * an Apache web server.
+       *
+       * `var/www/html/images/`
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty,
+    ) : CdkObject(cdkObject), CacheBehaviorPerPathProperty {
+      /**
+       * The cache behavior for the specified path.
+       *
+       * You can specify one of the following per-path cache behaviors:
+       *
+       * * *`cache`* - This behavior caches the specified path.
+       * * *`dont-cache`* - This behavior doesn't cache the specified path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-behavior)
+       */
+      override fun behavior(): String? = unwrap(this).getBehavior()
+
+      /**
+       * The path to a directory or file to cache, or not cache.
+       *
+       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
+       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
+       *
+       * Examples:
+       *
+       * * Specify the following to cache all files in the document root of an Apache web server
+       * running on a instance.
+       *
+       * `var/www/html/`
+       *
+       * * Specify the following file to cache only the index page in the document root of an Apache
+       * web server.
+       *
+       * `var/www/html/index.html`
+       *
+       * * Specify the following to cache only the .html files in the document root of an Apache web
+       * server.
+       *
+       * `var/www/html/ *.html`
+       *
+       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
+       * sub-directory of the document root of an Apache web server.
+       *
+       * `var/www/html/images/ *.jpg`
+       *
+       * `var/www/html/images/ *.png`
+       *
+       * `var/www/html/images/ *.gif`
+       *
+       * Specify the following to cache all files in the images subdirectory of the document root of
+       * an Apache web server.
+       *
+       * `var/www/html/images/`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CacheBehaviorPerPathProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty):
+          CacheBehaviorPerPathProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CacheBehaviorPerPathProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CacheBehaviorPerPathProperty):
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty
+    }
   }
 
   /**
@@ -902,8 +1174,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty,
     ) : CdkObject(cdkObject), CacheBehaviorProperty {
       /**
        * The cache behavior of the distribution.
@@ -940,326 +1211,6 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty
-    }
-  }
-
-  /**
-   * `CookieObject` is a property of the
-   * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
-   * property. It describes whether an Amazon Lightsail content delivery network (CDN) distribution
-   * forwards cookies to the origin and, if so, which ones.
-   *
-   * For the cookies that you specify, your distribution caches separate versions of the specified
-   * content based on the cookie values in viewer requests.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * CookieObjectProperty cookieObjectProperty = CookieObjectProperty.builder()
-   * .cookiesAllowList(List.of("cookiesAllowList"))
-   * .option("option")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html)
-   */
-  public interface CookieObjectProperty {
-    /**
-     * The specific cookies to forward to your distribution's origin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-cookiesallowlist)
-     */
-    public fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?: emptyList()
-
-    /**
-     * Specifies which cookies to forward to the distribution's origin for a cache behavior.
-     *
-     * Use one of the following configurations for your distribution:
-     *
-     * * *`all`* - Forwards all cookies to your origin.
-     * * *`none`* - Doesn’t forward cookies to your origin.
-     * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
-     * parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-option)
-     */
-    public fun option(): String? = unwrap(this).getOption()
-
-    /**
-     * A builder for [CookieObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
-       */
-      public fun cookiesAllowList(cookiesAllowList: List<String>)
-
-      /**
-       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
-       */
-      public fun cookiesAllowList(vararg cookiesAllowList: String)
-
-      /**
-       * @param option Specifies which cookies to forward to the distribution's origin for a cache
-       * behavior.
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all cookies to your origin.
-       * * *`none`* - Doesn’t forward cookies to your origin.
-       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
-       * parameter.
-       */
-      public fun option(option: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.builder()
-
-      /**
-       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
-       */
-      override fun cookiesAllowList(cookiesAllowList: List<String>) {
-        cdkBuilder.cookiesAllowList(cookiesAllowList)
-      }
-
-      /**
-       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
-       */
-      override fun cookiesAllowList(vararg cookiesAllowList: String): Unit =
-          cookiesAllowList(cookiesAllowList.toList())
-
-      /**
-       * @param option Specifies which cookies to forward to the distribution's origin for a cache
-       * behavior.
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all cookies to your origin.
-       * * *`none`* - Doesn’t forward cookies to your origin.
-       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
-       * parameter.
-       */
-      override fun option(option: String) {
-        cdkBuilder.option(option)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty,
-    ) : CdkObject(cdkObject), CookieObjectProperty {
-      /**
-       * The specific cookies to forward to your distribution's origin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-cookiesallowlist)
-       */
-      override fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?:
-          emptyList()
-
-      /**
-       * Specifies which cookies to forward to the distribution's origin for a cache behavior.
-       *
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all cookies to your origin.
-       * * *`none`* - Doesn’t forward cookies to your origin.
-       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
-       * parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-option)
-       */
-      override fun option(): String? = unwrap(this).getOption()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CookieObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty):
-          CookieObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? CookieObjectProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CookieObjectProperty):
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty
-    }
-  }
-
-  /**
-   * `HeaderObject` is a property of the
-   * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
-   * property. It describes the request headers used by your distribution, which caches your content
-   * based on the request headers.
-   *
-   * For the headers that you specify, your distribution caches separate versions of the specified
-   * content based on the header values in viewer requests. For example, suppose that viewer requests
-   * for logo.jpg contain a custom product header that has a value of either acme or apex. Also,
-   * suppose that you configure your distribution to cache your content based on values in the product
-   * header. Your distribution forwards the product header to the origin and caches the response from
-   * the origin once for each header value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * HeaderObjectProperty headerObjectProperty = HeaderObjectProperty.builder()
-   * .headersAllowList(List.of("headersAllowList"))
-   * .option("option")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html)
-   */
-  public interface HeaderObjectProperty {
-    /**
-     * The specific headers to forward to your distribution's origin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-headersallowlist)
-     */
-    public fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?: emptyList()
-
-    /**
-     * The headers that you want your distribution to forward to your origin.
-     *
-     * Your distribution caches your content based on these headers.
-     *
-     * Use one of the following configurations for your distribution:
-     *
-     * * *`all`* - Forwards all headers to your origin..
-     * * *`none`* - Forwards only the default headers.
-     * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
-     * parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-option)
-     */
-    public fun option(): String? = unwrap(this).getOption()
-
-    /**
-     * A builder for [HeaderObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param headersAllowList The specific headers to forward to your distribution's origin.
-       */
-      public fun headersAllowList(headersAllowList: List<String>)
-
-      /**
-       * @param headersAllowList The specific headers to forward to your distribution's origin.
-       */
-      public fun headersAllowList(vararg headersAllowList: String)
-
-      /**
-       * @param option The headers that you want your distribution to forward to your origin.
-       * Your distribution caches your content based on these headers.
-       *
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all headers to your origin..
-       * * *`none`* - Forwards only the default headers.
-       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
-       * parameter.
-       */
-      public fun option(option: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.builder()
-
-      /**
-       * @param headersAllowList The specific headers to forward to your distribution's origin.
-       */
-      override fun headersAllowList(headersAllowList: List<String>) {
-        cdkBuilder.headersAllowList(headersAllowList)
-      }
-
-      /**
-       * @param headersAllowList The specific headers to forward to your distribution's origin.
-       */
-      override fun headersAllowList(vararg headersAllowList: String): Unit =
-          headersAllowList(headersAllowList.toList())
-
-      /**
-       * @param option The headers that you want your distribution to forward to your origin.
-       * Your distribution caches your content based on these headers.
-       *
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all headers to your origin..
-       * * *`none`* - Forwards only the default headers.
-       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
-       * parameter.
-       */
-      override fun option(option: String) {
-        cdkBuilder.option(option)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty,
-    ) : CdkObject(cdkObject), HeaderObjectProperty {
-      /**
-       * The specific headers to forward to your distribution's origin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-headersallowlist)
-       */
-      override fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?:
-          emptyList()
-
-      /**
-       * The headers that you want your distribution to forward to your origin.
-       *
-       * Your distribution caches your content based on these headers.
-       *
-       * Use one of the following configurations for your distribution:
-       *
-       * * *`all`* - Forwards all headers to your origin..
-       * * *`none`* - Forwards only the default headers.
-       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
-       * parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-option)
-       */
-      override fun option(): String? = unwrap(this).getOption()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty):
-          HeaderObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderObjectProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HeaderObjectProperty):
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty
     }
   }
 
@@ -1690,8 +1641,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty,
     ) : CdkObject(cdkObject), CacheSettingsProperty {
       /**
        * The HTTP methods that are processed and forwarded to the distribution's origin.
@@ -1810,6 +1760,324 @@ public open class CfnDistribution internal constructor(
   }
 
   /**
+   * `CookieObject` is a property of the
+   * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
+   * property. It describes whether an Amazon Lightsail content delivery network (CDN) distribution
+   * forwards cookies to the origin and, if so, which ones.
+   *
+   * For the cookies that you specify, your distribution caches separate versions of the specified
+   * content based on the cookie values in viewer requests.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * CookieObjectProperty cookieObjectProperty = CookieObjectProperty.builder()
+   * .cookiesAllowList(List.of("cookiesAllowList"))
+   * .option("option")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html)
+   */
+  public interface CookieObjectProperty {
+    /**
+     * The specific cookies to forward to your distribution's origin.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-cookiesallowlist)
+     */
+    public fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?: emptyList()
+
+    /**
+     * Specifies which cookies to forward to the distribution's origin for a cache behavior.
+     *
+     * Use one of the following configurations for your distribution:
+     *
+     * * *`all`* - Forwards all cookies to your origin.
+     * * *`none`* - Doesn’t forward cookies to your origin.
+     * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
+     * parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-option)
+     */
+    public fun option(): String? = unwrap(this).getOption()
+
+    /**
+     * A builder for [CookieObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
+       */
+      public fun cookiesAllowList(cookiesAllowList: List<String>)
+
+      /**
+       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
+       */
+      public fun cookiesAllowList(vararg cookiesAllowList: String)
+
+      /**
+       * @param option Specifies which cookies to forward to the distribution's origin for a cache
+       * behavior.
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all cookies to your origin.
+       * * *`none`* - Doesn’t forward cookies to your origin.
+       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
+       * parameter.
+       */
+      public fun option(option: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.builder()
+
+      /**
+       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
+       */
+      override fun cookiesAllowList(cookiesAllowList: List<String>) {
+        cdkBuilder.cookiesAllowList(cookiesAllowList)
+      }
+
+      /**
+       * @param cookiesAllowList The specific cookies to forward to your distribution's origin.
+       */
+      override fun cookiesAllowList(vararg cookiesAllowList: String): Unit =
+          cookiesAllowList(cookiesAllowList.toList())
+
+      /**
+       * @param option Specifies which cookies to forward to the distribution's origin for a cache
+       * behavior.
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all cookies to your origin.
+       * * *`none`* - Doesn’t forward cookies to your origin.
+       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
+       * parameter.
+       */
+      override fun option(option: String) {
+        cdkBuilder.option(option)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty,
+    ) : CdkObject(cdkObject), CookieObjectProperty {
+      /**
+       * The specific cookies to forward to your distribution's origin.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-cookiesallowlist)
+       */
+      override fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?:
+          emptyList()
+
+      /**
+       * Specifies which cookies to forward to the distribution's origin for a cache behavior.
+       *
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all cookies to your origin.
+       * * *`none`* - Doesn’t forward cookies to your origin.
+       * * *`allow-list`* - Forwards only the cookies that you specify using the `CookiesAllowList`
+       * parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html#cfn-lightsail-distribution-cookieobject-option)
+       */
+      override fun option(): String? = unwrap(this).getOption()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CookieObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty):
+          CookieObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? CookieObjectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CookieObjectProperty):
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty
+    }
+  }
+
+  /**
+   * `HeaderObject` is a property of the
+   * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
+   * property. It describes the request headers used by your distribution, which caches your content
+   * based on the request headers.
+   *
+   * For the headers that you specify, your distribution caches separate versions of the specified
+   * content based on the header values in viewer requests. For example, suppose that viewer requests
+   * for logo.jpg contain a custom product header that has a value of either acme or apex. Also,
+   * suppose that you configure your distribution to cache your content based on values in the product
+   * header. Your distribution forwards the product header to the origin and caches the response from
+   * the origin once for each header value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * HeaderObjectProperty headerObjectProperty = HeaderObjectProperty.builder()
+   * .headersAllowList(List.of("headersAllowList"))
+   * .option("option")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html)
+   */
+  public interface HeaderObjectProperty {
+    /**
+     * The specific headers to forward to your distribution's origin.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-headersallowlist)
+     */
+    public fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?: emptyList()
+
+    /**
+     * The headers that you want your distribution to forward to your origin.
+     *
+     * Your distribution caches your content based on these headers.
+     *
+     * Use one of the following configurations for your distribution:
+     *
+     * * *`all`* - Forwards all headers to your origin..
+     * * *`none`* - Forwards only the default headers.
+     * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
+     * parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-option)
+     */
+    public fun option(): String? = unwrap(this).getOption()
+
+    /**
+     * A builder for [HeaderObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param headersAllowList The specific headers to forward to your distribution's origin.
+       */
+      public fun headersAllowList(headersAllowList: List<String>)
+
+      /**
+       * @param headersAllowList The specific headers to forward to your distribution's origin.
+       */
+      public fun headersAllowList(vararg headersAllowList: String)
+
+      /**
+       * @param option The headers that you want your distribution to forward to your origin.
+       * Your distribution caches your content based on these headers.
+       *
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all headers to your origin..
+       * * *`none`* - Forwards only the default headers.
+       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
+       * parameter.
+       */
+      public fun option(option: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.builder()
+
+      /**
+       * @param headersAllowList The specific headers to forward to your distribution's origin.
+       */
+      override fun headersAllowList(headersAllowList: List<String>) {
+        cdkBuilder.headersAllowList(headersAllowList)
+      }
+
+      /**
+       * @param headersAllowList The specific headers to forward to your distribution's origin.
+       */
+      override fun headersAllowList(vararg headersAllowList: String): Unit =
+          headersAllowList(headersAllowList.toList())
+
+      /**
+       * @param option The headers that you want your distribution to forward to your origin.
+       * Your distribution caches your content based on these headers.
+       *
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all headers to your origin..
+       * * *`none`* - Forwards only the default headers.
+       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
+       * parameter.
+       */
+      override fun option(option: String) {
+        cdkBuilder.option(option)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty,
+    ) : CdkObject(cdkObject), HeaderObjectProperty {
+      /**
+       * The specific headers to forward to your distribution's origin.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-headersallowlist)
+       */
+      override fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?:
+          emptyList()
+
+      /**
+       * The headers that you want your distribution to forward to your origin.
+       *
+       * Your distribution caches your content based on these headers.
+       *
+       * Use one of the following configurations for your distribution:
+       *
+       * * *`all`* - Forwards all headers to your origin..
+       * * *`none`* - Forwards only the default headers.
+       * * *`allow-list`* - Forwards only the headers that you specify using the `HeadersAllowList`
+       * parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-headerobject.html#cfn-lightsail-distribution-headerobject-option)
+       */
+      override fun option(): String? = unwrap(this).getOption()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty):
+          HeaderObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderObjectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HeaderObjectProperty):
+          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty
+    }
+  }
+
+  /**
    * `InputOrigin` is a property of the
    * [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
    * resource. It describes the origin resource of an Amazon Lightsail content delivery network (CDN)
@@ -1911,8 +2179,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty,
     ) : CdkObject(cdkObject), InputOriginProperty {
       /**
        * The name of the origin resource.
@@ -2088,8 +2355,7 @@ public open class CfnDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty,
     ) : CdkObject(cdkObject), QueryStringObjectProperty {
       /**
        * Indicates whether the distribution forwards and caches based on query strings.
@@ -2127,278 +2393,6 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty
-    }
-  }
-
-  /**
-   * `CacheBehaviorPerPath` is a property of the
-   * [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
-   * resource. It describes the per-path cache behavior of an Amazon Lightsail content delivery network
-   * (CDN) distribution.
-   *
-   * Use a per-path cache behavior to override the default cache behavior of a distribution, or to
-   * add an exception to it. For example, if you set the `CacheBehavior` to `cache` , you can use a
-   * per-path cache behavior to specify a directory, file, or file type that your distribution will
-   * cache. If you don’t want your distribution to cache a specified directory, file, or file type, set
-   * the per-path cache behavior to `dont-cache` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * CacheBehaviorPerPathProperty cacheBehaviorPerPathProperty =
-   * CacheBehaviorPerPathProperty.builder()
-   * .behavior("behavior")
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html)
-   */
-  public interface CacheBehaviorPerPathProperty {
-    /**
-     * The cache behavior for the specified path.
-     *
-     * You can specify one of the following per-path cache behaviors:
-     *
-     * * *`cache`* - This behavior caches the specified path.
-     * * *`dont-cache`* - This behavior doesn't cache the specified path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-behavior)
-     */
-    public fun behavior(): String? = unwrap(this).getBehavior()
-
-    /**
-     * The path to a directory or file to cache, or not cache.
-     *
-     * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
-     * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
-     *
-     * Examples:
-     *
-     * * Specify the following to cache all files in the document root of an Apache web server
-     * running on a instance.
-     *
-     * `var/www/html/`
-     *
-     * * Specify the following file to cache only the index page in the document root of an Apache
-     * web server.
-     *
-     * `var/www/html/index.html`
-     *
-     * * Specify the following to cache only the .html files in the document root of an Apache web
-     * server.
-     *
-     * `var/www/html/ *.html`
-     *
-     * * Specify the following to cache only the .jpg, .png, and .gif files in the images
-     * sub-directory of the document root of an Apache web server.
-     *
-     * `var/www/html/images/ *.jpg`
-     *
-     * `var/www/html/images/ *.png`
-     *
-     * `var/www/html/images/ *.gif`
-     *
-     * Specify the following to cache all files in the images subdirectory of the document root of
-     * an Apache web server.
-     *
-     * `var/www/html/images/`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [CacheBehaviorPerPathProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param behavior The cache behavior for the specified path.
-       * You can specify one of the following per-path cache behaviors:
-       *
-       * * *`cache`* - This behavior caches the specified path.
-       * * *`dont-cache`* - This behavior doesn't cache the specified path.
-       */
-      public fun behavior(behavior: String)
-
-      /**
-       * @param path The path to a directory or file to cache, or not cache.
-       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
-       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
-       *
-       * Examples:
-       *
-       * * Specify the following to cache all files in the document root of an Apache web server
-       * running on a instance.
-       *
-       * `var/www/html/`
-       *
-       * * Specify the following file to cache only the index page in the document root of an Apache
-       * web server.
-       *
-       * `var/www/html/index.html`
-       *
-       * * Specify the following to cache only the .html files in the document root of an Apache web
-       * server.
-       *
-       * `var/www/html/ *.html`
-       *
-       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
-       * sub-directory of the document root of an Apache web server.
-       *
-       * `var/www/html/images/ *.jpg`
-       *
-       * `var/www/html/images/ *.png`
-       *
-       * `var/www/html/images/ *.gif`
-       *
-       * Specify the following to cache all files in the images subdirectory of the document root of
-       * an Apache web server.
-       *
-       * `var/www/html/images/`
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty.Builder
-          =
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty.builder()
-
-      /**
-       * @param behavior The cache behavior for the specified path.
-       * You can specify one of the following per-path cache behaviors:
-       *
-       * * *`cache`* - This behavior caches the specified path.
-       * * *`dont-cache`* - This behavior doesn't cache the specified path.
-       */
-      override fun behavior(behavior: String) {
-        cdkBuilder.behavior(behavior)
-      }
-
-      /**
-       * @param path The path to a directory or file to cache, or not cache.
-       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
-       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
-       *
-       * Examples:
-       *
-       * * Specify the following to cache all files in the document root of an Apache web server
-       * running on a instance.
-       *
-       * `var/www/html/`
-       *
-       * * Specify the following file to cache only the index page in the document root of an Apache
-       * web server.
-       *
-       * `var/www/html/index.html`
-       *
-       * * Specify the following to cache only the .html files in the document root of an Apache web
-       * server.
-       *
-       * `var/www/html/ *.html`
-       *
-       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
-       * sub-directory of the document root of an Apache web server.
-       *
-       * `var/www/html/images/ *.jpg`
-       *
-       * `var/www/html/images/ *.png`
-       *
-       * `var/www/html/images/ *.gif`
-       *
-       * Specify the following to cache all files in the images subdirectory of the document root of
-       * an Apache web server.
-       *
-       * `var/www/html/images/`
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty,
-    ) : CdkObject(cdkObject), CacheBehaviorPerPathProperty {
-      /**
-       * The cache behavior for the specified path.
-       *
-       * You can specify one of the following per-path cache behaviors:
-       *
-       * * *`cache`* - This behavior caches the specified path.
-       * * *`dont-cache`* - This behavior doesn't cache the specified path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-behavior)
-       */
-      override fun behavior(): String? = unwrap(this).getBehavior()
-
-      /**
-       * The path to a directory or file to cache, or not cache.
-       *
-       * Use an asterisk symbol to specify wildcard directories ( `path/to/assets/ *` ), and file
-       * types ( `*.html` , `*jpg` , `*js` ). Directories and file paths are case-sensitive.
-       *
-       * Examples:
-       *
-       * * Specify the following to cache all files in the document root of an Apache web server
-       * running on a instance.
-       *
-       * `var/www/html/`
-       *
-       * * Specify the following file to cache only the index page in the document root of an Apache
-       * web server.
-       *
-       * `var/www/html/index.html`
-       *
-       * * Specify the following to cache only the .html files in the document root of an Apache web
-       * server.
-       *
-       * `var/www/html/ *.html`
-       *
-       * * Specify the following to cache only the .jpg, .png, and .gif files in the images
-       * sub-directory of the document root of an Apache web server.
-       *
-       * `var/www/html/images/ *.jpg`
-       *
-       * `var/www/html/images/ *.png`
-       *
-       * `var/www/html/images/ *.gif`
-       *
-       * Specify the following to cache all files in the images subdirectory of the document root of
-       * an Apache web server.
-       *
-       * `var/www/html/images/`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehaviorperpath.html#cfn-lightsail-distribution-cachebehaviorperpath-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CacheBehaviorPerPathProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty):
-          CacheBehaviorPerPathProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CacheBehaviorPerPathProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CacheBehaviorPerPathProperty):
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty
     }
   }
 }

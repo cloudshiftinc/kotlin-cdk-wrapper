@@ -123,7 +123,7 @@ public interface ScalableTaskCountProps : BaseScalableAttributeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCountProps,
+    cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCountProps,
   ) : CdkObject(cdkObject), ScalableTaskCountProps {
     /**
      * Scalable dimension of the attribute.

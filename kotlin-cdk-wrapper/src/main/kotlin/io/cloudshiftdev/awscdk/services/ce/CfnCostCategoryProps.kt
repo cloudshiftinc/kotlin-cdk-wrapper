@@ -153,7 +153,7 @@ public interface CfnCostCategoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ce.CfnCostCategoryProps,
+    cdkObject: software.amazon.awscdk.services.ce.CfnCostCategoryProps,
   ) : CdkObject(cdkObject), CfnCostCategoryProps {
     /**
      * The default value for the cost category.

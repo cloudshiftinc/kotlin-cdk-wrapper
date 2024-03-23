@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html)
  */
-public open class CfnDataset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.personalize.CfnDataset,
+public open class CfnDataset(
+  cdkObject: software.amazon.awscdk.services.personalize.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -391,7 +391,7 @@ public open class CfnDataset internal constructor(
         = CfnDataset(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataset): software.amazon.awscdk.services.personalize.CfnDataset
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.personalize.CfnDataset
   }
 
   /**
@@ -459,8 +459,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty,
     ) : CdkObject(cdkObject), DataSourceProperty {
       /**
        * The path to the Amazon S3 bucket where the data that you want to upload to your dataset is
@@ -639,8 +638,7 @@ public open class CfnDataset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty,
+      cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty,
     ) : CdkObject(cdkObject), DatasetImportJobProperty {
       /**
        * The Amazon S3 bucket that contains the training data to import.

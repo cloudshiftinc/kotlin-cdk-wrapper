@@ -64,8 +64,7 @@ public interface KinesisFirehoseStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps,
   ) : CdkObject(cdkObject), KinesisFirehoseStreamProps {
     /**
      * The message to send to the stream.

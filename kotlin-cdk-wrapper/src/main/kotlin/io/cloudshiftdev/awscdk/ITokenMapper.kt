@@ -20,7 +20,7 @@ public interface ITokenMapper {
   public fun mapToken(t: IResolvable): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ITokenMapper,
+    cdkObject: software.amazon.awscdk.ITokenMapper,
   ) : CdkObject(cdkObject), ITokenMapper {
     /**
      * Replace a single token.

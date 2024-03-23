@@ -34,8 +34,8 @@ import kotlin.collections.List
  * distributedMap.itemProcessor(new Pass(this, "Pass State"));
  * ```
  */
-public open class S3JsonItemReader internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.S3JsonItemReader,
+public open class S3JsonItemReader(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.S3JsonItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3FileItemReaderProps) :
       this(software.amazon.awscdk.services.stepfunctions.S3JsonItemReader(props.let(S3FileItemReaderProps::unwrap))
@@ -160,6 +160,7 @@ public open class S3JsonItemReader internal constructor(
         S3JsonItemReader = S3JsonItemReader(cdkObject)
 
     internal fun unwrap(wrapped: S3JsonItemReader):
-        software.amazon.awscdk.services.stepfunctions.S3JsonItemReader = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.S3JsonItemReader = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.S3JsonItemReader
   }
 }

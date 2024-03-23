@@ -200,8 +200,7 @@ public interface CfnSuiteDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps,
   ) : CdkObject(cdkObject), CfnSuiteDefinitionProps {
     /**
      * The configuration of the Suite Definition. Listed below are the required elements of the

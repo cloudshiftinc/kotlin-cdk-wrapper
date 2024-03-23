@@ -106,7 +106,7 @@ public interface CdkCommand {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommand,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommand,
   ) : CdkObject(cdkObject), CdkCommand {
     /**
      * Whether or not to run this command as part of the workflow This can be used if you only want

@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html)
  */
-public open class CfnLaunchTemplateConstraint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint,
+public open class CfnLaunchTemplateConstraint(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -262,6 +261,7 @@ public open class CfnLaunchTemplateConstraint internal constructor(
 
     internal fun unwrap(wrapped: CfnLaunchTemplateConstraint):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint
   }
 }

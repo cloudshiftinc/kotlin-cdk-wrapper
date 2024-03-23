@@ -127,8 +127,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)
  */
-public open class CfnDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector,
+public open class CfnDetector(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -701,11 +701,12 @@ public open class CfnDetector internal constructor(
         CfnDetector = CfnDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnDetector):
-        software.amazon.awscdk.services.frauddetector.CfnDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.frauddetector.CfnDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.frauddetector.CfnDetector
   }
 
   /**
-   * The label details.
+   * The entity type details.
    *
    * Example:
    *
@@ -713,7 +714,7 @@ public open class CfnDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.frauddetector.*;
-   * LabelProperty labelProperty = LabelProperty.builder()
+   * EntityTypeProperty entityTypeProperty = EntityTypeProperty.builder()
    * .arn("arn")
    * .createdTime("createdTime")
    * .description("description")
@@ -727,27 +728,27 @@ public open class CfnDetector internal constructor(
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html)
    */
-  public interface LabelProperty {
+  public interface EntityTypeProperty {
     /**
-     * The label ARN.
+     * The entity type ARN.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-arn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-arn)
      */
     public fun arn(): String? = unwrap(this).getArn()
 
     /**
-     * Timestamp of when the event type was created.
+     * Timestamp of when the entity type was created.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-createdtime)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-createdtime)
      */
     public fun createdTime(): String? = unwrap(this).getCreatedTime()
 
     /**
-     * The label description.
+     * The entity type description.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-description)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-description)
      */
     public fun description(): String? = unwrap(this).getDescription()
 
@@ -760,26 +761,26 @@ public open class CfnDetector internal constructor(
      * that the object exists and then use it within the resource without making changes to the object.
      *
      * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-     * variables. You can set `Inline=true` for these variables and CloudFormation will
+     * variables. You can set `Inline=true` for these Variables and CloudFormation will
      * create/update/delete the variables as part of stack operations. However, if you set
      * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
      * any changes to the variables.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-inline)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-inline)
      */
     public fun `inline`(): Any? = unwrap(this).getInline()
 
     /**
-     * Timestamp of when the label was last updated.
+     * Timestamp of when the entity type was last updated.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-lastupdatedtime)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-lastupdatedtime)
      */
     public fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
     /**
-     * The label name.
+     * The entity type name.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
@@ -790,27 +791,27 @@ public open class CfnDetector internal constructor(
      * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
      * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-tags)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-tags)
      */
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * A builder for [LabelProperty]
+     * A builder for [EntityTypeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param arn The label ARN.
+       * @param arn The entity type ARN.
        */
       public fun arn(arn: String)
 
       /**
-       * @param createdTime Timestamp of when the event type was created.
+       * @param createdTime Timestamp of when the entity type was created.
        */
       public fun createdTime(createdTime: String)
 
       /**
-       * @param description The label description.
+       * @param description The entity type description.
        */
       public fun description(description: String)
 
@@ -823,7 +824,7 @@ public open class CfnDetector internal constructor(
        * object.
        *
        * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * variables. You can set `Inline=true` for these Variables and CloudFormation will
        * create/update/delete the variables as part of stack operations. However, if you set
        * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
        * any changes to the variables.
@@ -839,7 +840,7 @@ public open class CfnDetector internal constructor(
        * object.
        *
        * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * variables. You can set `Inline=true` for these Variables and CloudFormation will
        * create/update/delete the variables as part of stack operations. However, if you set
        * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
        * any changes to the variables.
@@ -847,12 +848,12 @@ public open class CfnDetector internal constructor(
       public fun `inline`(`inline`: IResolvable)
 
       /**
-       * @param lastUpdatedTime Timestamp of when the label was last updated.
+       * @param lastUpdatedTime Timestamp of when the entity type was last updated.
        */
       public fun lastUpdatedTime(lastUpdatedTime: String)
 
       /**
-       * @param name The label name.
+       * @param name The entity type name.
        */
       public fun name(name: String)
 
@@ -875,25 +876,25 @@ public open class CfnDetector internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.Builder =
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.builder()
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.Builder =
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.builder()
 
       /**
-       * @param arn The label ARN.
+       * @param arn The entity type ARN.
        */
       override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
       /**
-       * @param createdTime Timestamp of when the event type was created.
+       * @param createdTime Timestamp of when the entity type was created.
        */
       override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
       /**
-       * @param description The label description.
+       * @param description The entity type description.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -908,7 +909,7 @@ public open class CfnDetector internal constructor(
        * object.
        *
        * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * variables. You can set `Inline=true` for these Variables and CloudFormation will
        * create/update/delete the variables as part of stack operations. However, if you set
        * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
        * any changes to the variables.
@@ -926,7 +927,7 @@ public open class CfnDetector internal constructor(
        * object.
        *
        * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * variables. You can set `Inline=true` for these Variables and CloudFormation will
        * create/update/delete the variables as part of stack operations. However, if you set
        * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
        * any changes to the variables.
@@ -936,14 +937,14 @@ public open class CfnDetector internal constructor(
       }
 
       /**
-       * @param lastUpdatedTime Timestamp of when the label was last updated.
+       * @param lastUpdatedTime Timestamp of when the entity type was last updated.
        */
       override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
       /**
-       * @param name The label name.
+       * @param name The entity type name.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -967,32 +968,32 @@ public open class CfnDetector internal constructor(
        */
       override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-      public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty =
+      public fun build():
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty,
-    ) : CdkObject(cdkObject), LabelProperty {
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty,
+    ) : CdkObject(cdkObject), EntityTypeProperty {
       /**
-       * The label ARN.
+       * The entity type ARN.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-arn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-arn)
        */
       override fun arn(): String? = unwrap(this).getArn()
 
       /**
-       * Timestamp of when the event type was created.
+       * Timestamp of when the entity type was created.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-createdtime)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-createdtime)
        */
       override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
       /**
-       * The label description.
+       * The entity type description.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-description)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-description)
        */
       override fun description(): String? = unwrap(this).getDescription()
 
@@ -1006,26 +1007,26 @@ public open class CfnDetector internal constructor(
        * object.
        *
        * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * variables. You can set `Inline=true` for these Variables and CloudFormation will
        * create/update/delete the variables as part of stack operations. However, if you set
        * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
        * any changes to the variables.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-inline)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-inline)
        */
       override fun `inline`(): Any? = unwrap(this).getInline()
 
       /**
-       * Timestamp of when the label was last updated.
+       * Timestamp of when the entity type was last updated.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-lastupdatedtime)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-lastupdatedtime)
        */
       override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
       /**
-       * The label name.
+       * The entity type name.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-name)
        */
       override fun name(): String? = unwrap(this).getName()
 
@@ -1036,25 +1037,26 @@ public open class CfnDetector internal constructor(
        * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
        * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-tags)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-tags)
        */
       override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LabelProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EntityTypeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty):
-          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty):
+          EntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EntityTypeProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LabelProperty):
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty = (wrapped as
+      internal fun unwrap(wrapped: EntityTypeProperty):
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty
     }
   }
 
@@ -1491,8 +1493,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty,
     ) : CdkObject(cdkObject), EventTypeProperty {
       /**
        * The entity type ARN.
@@ -1596,6 +1597,949 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty
+    }
+  }
+
+  /**
+   * The event type variable for the detector.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
+   * EventVariableProperty eventVariableProperty = EventVariableProperty.builder()
+   * .arn("arn")
+   * .createdTime("createdTime")
+   * .dataSource("dataSource")
+   * .dataType("dataType")
+   * .defaultValue("defaultValue")
+   * .description("description")
+   * .inline(false)
+   * .lastUpdatedTime("lastUpdatedTime")
+   * .name("name")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .variableType("variableType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html)
+   */
+  public interface EventVariableProperty {
+    /**
+     * The event variable ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * Timestamp for when the event variable was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-createdtime)
+     */
+    public fun createdTime(): String? = unwrap(this).getCreatedTime()
+
+    /**
+     * The data source of the event variable.
+     *
+     * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
+     *
+     * When defining a variable within a detector, you can only use the `EVENT` value for DataSource
+     * when the *Inline* property is set to true. If the *Inline* property is set false, you can use
+     * either `EVENT` or `MODEL_SCORE` for DataSource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datasource)
+     */
+    public fun dataSource(): String? = unwrap(this).getDataSource()
+
+    /**
+     * The data type of the event variable.
+     *
+     * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datatype)
+     */
+    public fun dataType(): String? = unwrap(this).getDataType()
+
+    /**
+     * The default value of the event variable.
+     *
+     * This is required if you are providing the details of your variables instead of the ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * The description of the event variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Indicates whether the resource is defined within this CloudFormation template and impacts the
+     * create, update, and delete behavior of the stack.
+     *
+     * If the value is `true` , CloudFormation will create/update/delete the resource when
+     * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+     * that the object exists and then use it within the resource without making changes to the object.
+     *
+     * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+     * variables. You can set `Inline=true` for these variables and CloudFormation will
+     * create/update/delete the variables as part of stack operations. However, if you set
+     * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+     * any changes to the variables.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-inline)
+     */
+    public fun `inline`(): Any? = unwrap(this).getInline()
+
+    /**
+     * Timestamp for when the event variable was last updated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-lastupdatedtime)
+     */
+    public fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+
+    /**
+     * The name of the event variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * The type of event variable.
+     *
+     * For more information, see [Variable
+     * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-variabletype)
+     */
+    public fun variableType(): String? = unwrap(this).getVariableType()
+
+    /**
+     * A builder for [EventVariableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The event variable ARN.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param createdTime Timestamp for when the event variable was created.
+       */
+      public fun createdTime(createdTime: String)
+
+      /**
+       * @param dataSource The data source of the event variable.
+       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
+       *
+       * When defining a variable within a detector, you can only use the `EVENT` value for
+       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
+       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
+       */
+      public fun dataSource(dataSource: String)
+
+      /**
+       * @param dataType The data type of the event variable.
+       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
+       */
+      public fun dataType(dataType: String)
+
+      /**
+       * @param defaultValue The default value of the event variable.
+       * This is required if you are providing the details of your variables instead of the ARN.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param description The description of the event variable.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      public fun `inline`(`inline`: Boolean)
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      public fun `inline`(`inline`: IResolvable)
+
+      /**
+       * @param lastUpdatedTime Timestamp for when the event variable was last updated.
+       */
+      public fun lastUpdatedTime(lastUpdatedTime: String)
+
+      /**
+       * @param name The name of the event variable.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      public fun tags(vararg tags: CfnTag)
+
+      /**
+       * @param variableType The type of event variable.
+       * For more information, see [Variable
+       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
+       * .
+       */
+      public fun variableType(variableType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.Builder =
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.builder()
+
+      /**
+       * @param arn The event variable ARN.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param createdTime Timestamp for when the event variable was created.
+       */
+      override fun createdTime(createdTime: String) {
+        cdkBuilder.createdTime(createdTime)
+      }
+
+      /**
+       * @param dataSource The data source of the event variable.
+       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
+       *
+       * When defining a variable within a detector, you can only use the `EVENT` value for
+       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
+       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
+       */
+      override fun dataSource(dataSource: String) {
+        cdkBuilder.dataSource(dataSource)
+      }
+
+      /**
+       * @param dataType The data type of the event variable.
+       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
+       */
+      override fun dataType(dataType: String) {
+        cdkBuilder.dataType(dataType)
+      }
+
+      /**
+       * @param defaultValue The default value of the event variable.
+       * This is required if you are providing the details of your variables instead of the ARN.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param description The description of the event variable.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      override fun `inline`(`inline`: Boolean) {
+        cdkBuilder.`inline`(`inline`)
+      }
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      override fun `inline`(`inline`: IResolvable) {
+        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lastUpdatedTime Timestamp for when the event variable was last updated.
+       */
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
+        cdkBuilder.lastUpdatedTime(lastUpdatedTime)
+      }
+
+      /**
+       * @param name The name of the event variable.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      /**
+       * @param variableType The type of event variable.
+       * For more information, see [Variable
+       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
+       * .
+       */
+      override fun variableType(variableType: String) {
+        cdkBuilder.variableType(variableType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty,
+    ) : CdkObject(cdkObject), EventVariableProperty {
+      /**
+       * The event variable ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * Timestamp for when the event variable was created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-createdtime)
+       */
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
+
+      /**
+       * The data source of the event variable.
+       *
+       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
+       *
+       * When defining a variable within a detector, you can only use the `EVENT` value for
+       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
+       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datasource)
+       */
+      override fun dataSource(): String? = unwrap(this).getDataSource()
+
+      /**
+       * The data type of the event variable.
+       *
+       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datatype)
+       */
+      override fun dataType(): String? = unwrap(this).getDataType()
+
+      /**
+       * The default value of the event variable.
+       *
+       * This is required if you are providing the details of your variables instead of the ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * The description of the event variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Indicates whether the resource is defined within this CloudFormation template and impacts
+       * the create, update, and delete behavior of the stack.
+       *
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-inline)
+       */
+      override fun `inline`(): Any? = unwrap(this).getInline()
+
+      /**
+       * Timestamp for when the event variable was last updated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-lastupdatedtime)
+       */
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+
+      /**
+       * The name of the event variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * An array of key-value pairs to apply to this resource.
+       *
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+      /**
+       * The type of event variable.
+       *
+       * For more information, see [Variable
+       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-variabletype)
+       */
+      override fun variableType(): String? = unwrap(this).getVariableType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventVariableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty):
+          EventVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? EventVariableProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventVariableProperty):
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty
+    }
+  }
+
+  /**
+   * The label details.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
+   * LabelProperty labelProperty = LabelProperty.builder()
+   * .arn("arn")
+   * .createdTime("createdTime")
+   * .description("description")
+   * .inline(false)
+   * .lastUpdatedTime("lastUpdatedTime")
+   * .name("name")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html)
+   */
+  public interface LabelProperty {
+    /**
+     * The label ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * Timestamp of when the event type was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-createdtime)
+     */
+    public fun createdTime(): String? = unwrap(this).getCreatedTime()
+
+    /**
+     * The label description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Indicates whether the resource is defined within this CloudFormation template and impacts the
+     * create, update, and delete behavior of the stack.
+     *
+     * If the value is `true` , CloudFormation will create/update/delete the resource when
+     * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+     * that the object exists and then use it within the resource without making changes to the object.
+     *
+     * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+     * variables. You can set `Inline=true` for these variables and CloudFormation will
+     * create/update/delete the variables as part of stack operations. However, if you set
+     * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+     * any changes to the variables.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-inline)
+     */
+    public fun `inline`(): Any? = unwrap(this).getInline()
+
+    /**
+     * Timestamp of when the label was last updated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-lastupdatedtime)
+     */
+    public fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+
+    /**
+     * The label name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [LabelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The label ARN.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param createdTime Timestamp of when the event type was created.
+       */
+      public fun createdTime(createdTime: String)
+
+      /**
+       * @param description The label description.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      public fun `inline`(`inline`: Boolean)
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      public fun `inline`(`inline`: IResolvable)
+
+      /**
+       * @param lastUpdatedTime Timestamp of when the label was last updated.
+       */
+      public fun lastUpdatedTime(lastUpdatedTime: String)
+
+      /**
+       * @param name The label name.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.Builder =
+          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.builder()
+
+      /**
+       * @param arn The label ARN.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param createdTime Timestamp of when the event type was created.
+       */
+      override fun createdTime(createdTime: String) {
+        cdkBuilder.createdTime(createdTime)
+      }
+
+      /**
+       * @param description The label description.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      override fun `inline`(`inline`: Boolean) {
+        cdkBuilder.`inline`(`inline`)
+      }
+
+      /**
+       * @param inline Indicates whether the resource is defined within this CloudFormation template
+       * and impacts the create, update, and delete behavior of the stack.
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       */
+      override fun `inline`(`inline`: IResolvable) {
+        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lastUpdatedTime Timestamp of when the label was last updated.
+       */
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
+        cdkBuilder.lastUpdatedTime(lastUpdatedTime)
+      }
+
+      /**
+       * @param name The label name.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags An array of key-value pairs to apply to this resource.
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty,
+    ) : CdkObject(cdkObject), LabelProperty {
+      /**
+       * The label ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * Timestamp of when the event type was created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-createdtime)
+       */
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
+
+      /**
+       * The label description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Indicates whether the resource is defined within this CloudFormation template and impacts
+       * the create, update, and delete behavior of the stack.
+       *
+       * If the value is `true` , CloudFormation will create/update/delete the resource when
+       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
+       * that the object exists and then use it within the resource without making changes to the
+       * object.
+       *
+       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
+       * variables. You can set `Inline=true` for these variables and CloudFormation will
+       * create/update/delete the variables as part of stack operations. However, if you set
+       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
+       * any changes to the variables.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-inline)
+       */
+      override fun `inline`(): Any? = unwrap(this).getInline()
+
+      /**
+       * Timestamp of when the label was last updated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-lastupdatedtime)
+       */
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+
+      /**
+       * The label name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * An array of key-value pairs to apply to this resource.
+       *
+       * For more information, see
+       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-label.html#cfn-frauddetector-detector-label-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LabelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty):
+          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LabelProperty):
+          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty
+    }
+  }
+
+  /**
+   * The model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
+   * ModelProperty modelProperty = ModelProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html)
+   */
+  public interface ModelProperty {
+    /**
+     * The ARN of the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html#cfn-frauddetector-detector-model-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [ModelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The ARN of the model.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.Builder =
+          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.builder()
+
+      /**
+       * @param arn The ARN of the model.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty,
+    ) : CdkObject(cdkObject), ModelProperty {
+      /**
+       * The ARN of the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html#cfn-frauddetector-detector-model-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty):
+          ModelProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelProperty):
+          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty
     }
   }
 
@@ -1867,8 +2811,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty,
     ) : CdkObject(cdkObject), OutcomeProperty {
       /**
        * The outcome ARN.
@@ -2279,8 +3222,7 @@ public open class CfnDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The rule ARN.
@@ -2383,954 +3325,6 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty
-    }
-  }
-
-  /**
-   * The model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
-   * ModelProperty modelProperty = ModelProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html)
-   */
-  public interface ModelProperty {
-    /**
-     * The ARN of the model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html#cfn-frauddetector-detector-model-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * A builder for [ModelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The ARN of the model.
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.Builder =
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.builder()
-
-      /**
-       * @param arn The ARN of the model.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty,
-    ) : CdkObject(cdkObject), ModelProperty {
-      /**
-       * The ARN of the model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-model.html#cfn-frauddetector-detector-model-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty):
-          ModelProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelProperty):
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty
-    }
-  }
-
-  /**
-   * The entity type details.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
-   * EntityTypeProperty entityTypeProperty = EntityTypeProperty.builder()
-   * .arn("arn")
-   * .createdTime("createdTime")
-   * .description("description")
-   * .inline(false)
-   * .lastUpdatedTime("lastUpdatedTime")
-   * .name("name")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html)
-   */
-  public interface EntityTypeProperty {
-    /**
-     * The entity type ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * Timestamp of when the entity type was created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-createdtime)
-     */
-    public fun createdTime(): String? = unwrap(this).getCreatedTime()
-
-    /**
-     * The entity type description.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * Indicates whether the resource is defined within this CloudFormation template and impacts the
-     * create, update, and delete behavior of the stack.
-     *
-     * If the value is `true` , CloudFormation will create/update/delete the resource when
-     * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-     * that the object exists and then use it within the resource without making changes to the object.
-     *
-     * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-     * variables. You can set `Inline=true` for these Variables and CloudFormation will
-     * create/update/delete the variables as part of stack operations. However, if you set
-     * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-     * any changes to the variables.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-inline)
-     */
-    public fun `inline`(): Any? = unwrap(this).getInline()
-
-    /**
-     * Timestamp of when the entity type was last updated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-lastupdatedtime)
-     */
-    public fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
-
-    /**
-     * The entity type name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [EntityTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The entity type ARN.
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param createdTime Timestamp of when the entity type was created.
-       */
-      public fun createdTime(createdTime: String)
-
-      /**
-       * @param description The entity type description.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these Variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      public fun `inline`(`inline`: Boolean)
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these Variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      public fun `inline`(`inline`: IResolvable)
-
-      /**
-       * @param lastUpdatedTime Timestamp of when the entity type was last updated.
-       */
-      public fun lastUpdatedTime(lastUpdatedTime: String)
-
-      /**
-       * @param name The entity type name.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.Builder =
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.builder()
-
-      /**
-       * @param arn The entity type ARN.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param createdTime Timestamp of when the entity type was created.
-       */
-      override fun createdTime(createdTime: String) {
-        cdkBuilder.createdTime(createdTime)
-      }
-
-      /**
-       * @param description The entity type description.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these Variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      override fun `inline`(`inline`: Boolean) {
-        cdkBuilder.`inline`(`inline`)
-      }
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these Variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lastUpdatedTime Timestamp of when the entity type was last updated.
-       */
-      override fun lastUpdatedTime(lastUpdatedTime: String) {
-        cdkBuilder.lastUpdatedTime(lastUpdatedTime)
-      }
-
-      /**
-       * @param name The entity type name.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty,
-    ) : CdkObject(cdkObject), EntityTypeProperty {
-      /**
-       * The entity type ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-
-      /**
-       * Timestamp of when the entity type was created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-createdtime)
-       */
-      override fun createdTime(): String? = unwrap(this).getCreatedTime()
-
-      /**
-       * The entity type description.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * Indicates whether the resource is defined within this CloudFormation template and impacts
-       * the create, update, and delete behavior of the stack.
-       *
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these Variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-inline)
-       */
-      override fun `inline`(): Any? = unwrap(this).getInline()
-
-      /**
-       * Timestamp of when the entity type was last updated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-lastupdatedtime)
-       */
-      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
-
-      /**
-       * The entity type name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * An array of key-value pairs to apply to this resource.
-       *
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-entitytype.html#cfn-frauddetector-detector-entitytype-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EntityTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty):
-          EntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EntityTypeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EntityTypeProperty):
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty
-    }
-  }
-
-  /**
-   * The event type variable for the detector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.frauddetector.*;
-   * EventVariableProperty eventVariableProperty = EventVariableProperty.builder()
-   * .arn("arn")
-   * .createdTime("createdTime")
-   * .dataSource("dataSource")
-   * .dataType("dataType")
-   * .defaultValue("defaultValue")
-   * .description("description")
-   * .inline(false)
-   * .lastUpdatedTime("lastUpdatedTime")
-   * .name("name")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .variableType("variableType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html)
-   */
-  public interface EventVariableProperty {
-    /**
-     * The event variable ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * Timestamp for when the event variable was created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-createdtime)
-     */
-    public fun createdTime(): String? = unwrap(this).getCreatedTime()
-
-    /**
-     * The data source of the event variable.
-     *
-     * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
-     *
-     * When defining a variable within a detector, you can only use the `EVENT` value for DataSource
-     * when the *Inline* property is set to true. If the *Inline* property is set false, you can use
-     * either `EVENT` or `MODEL_SCORE` for DataSource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datasource)
-     */
-    public fun dataSource(): String? = unwrap(this).getDataSource()
-
-    /**
-     * The data type of the event variable.
-     *
-     * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datatype)
-     */
-    public fun dataType(): String? = unwrap(this).getDataType()
-
-    /**
-     * The default value of the event variable.
-     *
-     * This is required if you are providing the details of your variables instead of the ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-defaultvalue)
-     */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-    /**
-     * The description of the event variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * Indicates whether the resource is defined within this CloudFormation template and impacts the
-     * create, update, and delete behavior of the stack.
-     *
-     * If the value is `true` , CloudFormation will create/update/delete the resource when
-     * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-     * that the object exists and then use it within the resource without making changes to the object.
-     *
-     * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-     * variables. You can set `Inline=true` for these variables and CloudFormation will
-     * create/update/delete the variables as part of stack operations. However, if you set
-     * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-     * any changes to the variables.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-inline)
-     */
-    public fun `inline`(): Any? = unwrap(this).getInline()
-
-    /**
-     * Timestamp for when the event variable was last updated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-lastupdatedtime)
-     */
-    public fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
-
-    /**
-     * The name of the event variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * The type of event variable.
-     *
-     * For more information, see [Variable
-     * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-variabletype)
-     */
-    public fun variableType(): String? = unwrap(this).getVariableType()
-
-    /**
-     * A builder for [EventVariableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The event variable ARN.
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param createdTime Timestamp for when the event variable was created.
-       */
-      public fun createdTime(createdTime: String)
-
-      /**
-       * @param dataSource The data source of the event variable.
-       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
-       *
-       * When defining a variable within a detector, you can only use the `EVENT` value for
-       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
-       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
-       */
-      public fun dataSource(dataSource: String)
-
-      /**
-       * @param dataType The data type of the event variable.
-       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
-       */
-      public fun dataType(dataType: String)
-
-      /**
-       * @param defaultValue The default value of the event variable.
-       * This is required if you are providing the details of your variables instead of the ARN.
-       */
-      public fun defaultValue(defaultValue: String)
-
-      /**
-       * @param description The description of the event variable.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      public fun `inline`(`inline`: Boolean)
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      public fun `inline`(`inline`: IResolvable)
-
-      /**
-       * @param lastUpdatedTime Timestamp for when the event variable was last updated.
-       */
-      public fun lastUpdatedTime(lastUpdatedTime: String)
-
-      /**
-       * @param name The name of the event variable.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      public fun tags(vararg tags: CfnTag)
-
-      /**
-       * @param variableType The type of event variable.
-       * For more information, see [Variable
-       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
-       * .
-       */
-      public fun variableType(variableType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.Builder =
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.builder()
-
-      /**
-       * @param arn The event variable ARN.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param createdTime Timestamp for when the event variable was created.
-       */
-      override fun createdTime(createdTime: String) {
-        cdkBuilder.createdTime(createdTime)
-      }
-
-      /**
-       * @param dataSource The data source of the event variable.
-       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
-       *
-       * When defining a variable within a detector, you can only use the `EVENT` value for
-       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
-       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
-       */
-      override fun dataSource(dataSource: String) {
-        cdkBuilder.dataSource(dataSource)
-      }
-
-      /**
-       * @param dataType The data type of the event variable.
-       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
-       */
-      override fun dataType(dataType: String) {
-        cdkBuilder.dataType(dataType)
-      }
-
-      /**
-       * @param defaultValue The default value of the event variable.
-       * This is required if you are providing the details of your variables instead of the ARN.
-       */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
-      }
-
-      /**
-       * @param description The description of the event variable.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      override fun `inline`(`inline`: Boolean) {
-        cdkBuilder.`inline`(`inline`)
-      }
-
-      /**
-       * @param inline Indicates whether the resource is defined within this CloudFormation template
-       * and impacts the create, update, and delete behavior of the stack.
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       */
-      override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lastUpdatedTime Timestamp for when the event variable was last updated.
-       */
-      override fun lastUpdatedTime(lastUpdatedTime: String) {
-        cdkBuilder.lastUpdatedTime(lastUpdatedTime)
-      }
-
-      /**
-       * @param name The name of the event variable.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags An array of key-value pairs to apply to this resource.
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      /**
-       * @param variableType The type of event variable.
-       * For more information, see [Variable
-       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
-       * .
-       */
-      override fun variableType(variableType: String) {
-        cdkBuilder.variableType(variableType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty,
-    ) : CdkObject(cdkObject), EventVariableProperty {
-      /**
-       * The event variable ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-
-      /**
-       * Timestamp for when the event variable was created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-createdtime)
-       */
-      override fun createdTime(): String? = unwrap(this).getCreatedTime()
-
-      /**
-       * The data source of the event variable.
-       *
-       * Valid values: `EVENT | EXTERNAL_MODEL_SCORE`
-       *
-       * When defining a variable within a detector, you can only use the `EVENT` value for
-       * DataSource when the *Inline* property is set to true. If the *Inline* property is set false,
-       * you can use either `EVENT` or `MODEL_SCORE` for DataSource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datasource)
-       */
-      override fun dataSource(): String? = unwrap(this).getDataSource()
-
-      /**
-       * The data type of the event variable.
-       *
-       * Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-datatype)
-       */
-      override fun dataType(): String? = unwrap(this).getDataType()
-
-      /**
-       * The default value of the event variable.
-       *
-       * This is required if you are providing the details of your variables instead of the ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-defaultvalue)
-       */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-      /**
-       * The description of the event variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * Indicates whether the resource is defined within this CloudFormation template and impacts
-       * the create, update, and delete behavior of the stack.
-       *
-       * If the value is `true` , CloudFormation will create/update/delete the resource when
-       * creating/updating/deleting the stack. If the value is `false` , CloudFormation will validate
-       * that the object exists and then use it within the resource without making changes to the
-       * object.
-       *
-       * For example, when creating `AWS::FraudDetector::Detector` you must define at least two
-       * variables. You can set `Inline=true` for these variables and CloudFormation will
-       * create/update/delete the variables as part of stack operations. However, if you set
-       * `Inline=false` , CloudFormation will associate the variables to your detector but not execute
-       * any changes to the variables.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-inline)
-       */
-      override fun `inline`(): Any? = unwrap(this).getInline()
-
-      /**
-       * Timestamp for when the event variable was last updated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-lastupdatedtime)
-       */
-      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
-
-      /**
-       * The name of the event variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * An array of key-value pairs to apply to this resource.
-       *
-       * For more information, see
-       * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-      /**
-       * The type of event variable.
-       *
-       * For more information, see [Variable
-       * types](https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-eventvariable.html#cfn-frauddetector-detector-eventvariable-variabletype)
-       */
-      override fun variableType(): String? = unwrap(this).getVariableType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventVariableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty):
-          EventVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? EventVariableProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventVariableProperty):
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty
     }
   }
 }

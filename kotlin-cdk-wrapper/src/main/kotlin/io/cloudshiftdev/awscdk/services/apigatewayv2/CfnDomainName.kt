@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html)
  */
-public open class CfnDomainName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName,
+public open class CfnDomainName(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -371,7 +371,8 @@ public open class CfnDomainName internal constructor(
         CfnDomainName = CfnDomainName(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainName):
-        software.amazon.awscdk.services.apigatewayv2.CfnDomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnDomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnDomainName
   }
 
   /**
@@ -544,8 +545,7 @@ public open class CfnDomainName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
     ) : CdkObject(cdkObject), DomainNameConfigurationProperty {
       /**
        * An AWS -managed certificate that will be used by the edge-optimized endpoint for this
@@ -710,8 +710,7 @@ public open class CfnDomainName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
       /**
        * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example,

@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html)
  */
-public open class CfnBucketPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketPolicy,
+public open class CfnBucketPolicy(
+  cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -188,6 +188,7 @@ public open class CfnBucketPolicy internal constructor(
         CfnBucketPolicy = CfnBucketPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucketPolicy):
-        software.amazon.awscdk.services.s3outposts.CfnBucketPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.s3outposts.CfnBucketPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3outposts.CfnBucketPolicy
   }
 }

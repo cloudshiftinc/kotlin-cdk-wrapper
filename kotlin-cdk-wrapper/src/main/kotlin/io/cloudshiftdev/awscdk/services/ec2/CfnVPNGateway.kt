@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html)
  */
-public open class CfnVPNGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGateway,
+public open class CfnVPNGateway(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -230,6 +230,6 @@ public open class CfnVPNGateway internal constructor(
         CfnVPNGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNGateway): software.amazon.awscdk.services.ec2.CfnVPNGateway =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnVPNGateway
   }
 }

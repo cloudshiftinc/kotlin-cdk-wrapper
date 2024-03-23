@@ -53,7 +53,7 @@ public interface GetContextValueResult {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.GetContextValueResult,
+    cdkObject: software.amazon.awscdk.GetContextValueResult,
   ) : CdkObject(cdkObject), GetContextValueResult {
     /**
      *

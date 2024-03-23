@@ -64,8 +64,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetEnvironmentFile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.AssetEnvironmentFile,
+public open class AssetEnvironmentFile(
+  cdkObject: software.amazon.awscdk.services.ecs.AssetEnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
   public constructor(path: String) :
       this(software.amazon.awscdk.services.ecs.AssetEnvironmentFile(path)
@@ -436,6 +436,7 @@ public open class AssetEnvironmentFile internal constructor(
         AssetEnvironmentFile = AssetEnvironmentFile(cdkObject)
 
     internal fun unwrap(wrapped: AssetEnvironmentFile):
-        software.amazon.awscdk.services.ecs.AssetEnvironmentFile = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.AssetEnvironmentFile = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.AssetEnvironmentFile
   }
 }

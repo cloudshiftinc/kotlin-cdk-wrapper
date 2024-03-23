@@ -35,9 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * @deprecated CloudFormation now supports Lambda deployment configurations without custom
  * resources. Use `LambdaDeploymentConfig`.
  */
-public open class CustomLambdaDeploymentConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig,
+public open class CustomLambdaDeploymentConfig(
+  cdkObject: software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig,
 ) : Resource(cdkObject), ILambdaDeploymentConfig {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
@@ -212,5 +211,6 @@ public open class CustomLambdaDeploymentConfig internal constructor(
 
     internal fun unwrap(wrapped: CustomLambdaDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig = wrapped.cdkObject
+        as software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig
   }
 }

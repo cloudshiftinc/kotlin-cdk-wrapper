@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html)
  */
-public open class CfnPodIdentityAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociation,
+public open class CfnPodIdentityAssociation(
+  cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -363,6 +363,7 @@ public open class CfnPodIdentityAssociation internal constructor(
         CfnPodIdentityAssociation = CfnPodIdentityAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnPodIdentityAssociation):
-        software.amazon.awscdk.services.eks.CfnPodIdentityAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.CfnPodIdentityAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.CfnPodIdentityAssociation
   }
 }

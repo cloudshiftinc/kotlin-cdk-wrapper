@@ -33,8 +33,8 @@ import kotlin.collections.List
  * distributedMap.itemProcessor(new Pass(this, "Pass State"));
  * ```
  */
-public open class ResultWriter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriter,
+public open class ResultWriter(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriter,
 ) : CdkObject(cdkObject) {
   public constructor(props: ResultWriterProps) :
       this(software.amazon.awscdk.services.stepfunctions.ResultWriter(props.let(ResultWriterProps::unwrap))
@@ -126,6 +126,7 @@ public open class ResultWriter internal constructor(
         ResultWriter = ResultWriter(cdkObject)
 
     internal fun unwrap(wrapped: ResultWriter):
-        software.amazon.awscdk.services.stepfunctions.ResultWriter = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.ResultWriter = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.ResultWriter
   }
 }

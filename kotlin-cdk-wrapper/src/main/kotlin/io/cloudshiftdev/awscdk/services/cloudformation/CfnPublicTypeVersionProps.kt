@@ -231,8 +231,7 @@ public interface CfnPublicTypeVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps,
   ) : CdkObject(cdkObject), CfnPublicTypeVersionProps {
     /**
      * The Amazon Resource Number (ARN) of the extension.

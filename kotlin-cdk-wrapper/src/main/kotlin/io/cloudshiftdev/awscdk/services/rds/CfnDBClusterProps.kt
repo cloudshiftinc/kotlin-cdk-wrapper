@@ -398,19 +398,23 @@ public interface CfnDBClusterProps {
   public fun enableGlobalWriteForwarding(): Any? = unwrap(this).getEnableGlobalWriteForwarding()
 
   /**
-   * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster.
+   * Specifies whether to enable the HTTP endpoint for the DB cluster. By default, the HTTP endpoint
+   * isn't enabled.
    *
-   * By default, the HTTP endpoint is disabled.
+   * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+   * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+   * console with the RDS query editor.
    *
-   * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-   * queries on the Aurora Serverless DB cluster. You can also query your database from inside the RDS
-   * console with the query editor.
+   * RDS Data API is supported with the following DB clusters:
    *
-   * For more information, see [Using the Data API for Aurora
-   * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-   * *Amazon Aurora User Guide* .
+   * * Aurora PostgreSQL Serverless v2 and provisioned
+   * * Aurora PostgreSQL and Aurora MySQL Serverless v1
    *
-   * Valid for: Aurora DB clusters only
+   * For more information, see [Using RDS Data
+   * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+   * Aurora User Guide* .
+   *
+   * Valid for Cluster Type: Aurora DB clusters only
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablehttpendpoint)
    */
@@ -1052,7 +1056,7 @@ public interface CfnDBClusterProps {
    * Valid Values:
    *
    * * Aurora DB clusters - `aurora | aurora-iopt1`
-   * * Multi-AZ DB clusters - `io1`
+   * * Multi-AZ DB clusters - `io1 | io2 | gp3`
    *
    * Default:
    *
@@ -1438,36 +1442,42 @@ public interface CfnDBClusterProps {
     public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable)
 
     /**
-     * @param enableHttpEndpoint A value that indicates whether to enable the HTTP endpoint for an
-     * Aurora Serverless DB cluster.
-     * By default, the HTTP endpoint is disabled.
+     * @param enableHttpEndpoint Specifies whether to enable the HTTP endpoint for the DB cluster.
+     * By default, the HTTP endpoint isn't enabled.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+     * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+     * console with the RDS query editor.
      *
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-     * queries on the Aurora Serverless DB cluster. You can also query your database from inside the
-     * RDS console with the query editor.
+     * RDS Data API is supported with the following DB clusters:
      *
-     * For more information, see [Using the Data API for Aurora
-     * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-     * *Amazon Aurora User Guide* .
+     * * Aurora PostgreSQL Serverless v2 and provisioned
+     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
-     * Valid for: Aurora DB clusters only
+     * For more information, see [Using RDS Data
+     * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+     * Aurora User Guide* .
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     public fun enableHttpEndpoint(enableHttpEndpoint: Boolean)
 
     /**
-     * @param enableHttpEndpoint A value that indicates whether to enable the HTTP endpoint for an
-     * Aurora Serverless DB cluster.
-     * By default, the HTTP endpoint is disabled.
+     * @param enableHttpEndpoint Specifies whether to enable the HTTP endpoint for the DB cluster.
+     * By default, the HTTP endpoint isn't enabled.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+     * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+     * console with the RDS query editor.
      *
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-     * queries on the Aurora Serverless DB cluster. You can also query your database from inside the
-     * RDS console with the query editor.
+     * RDS Data API is supported with the following DB clusters:
      *
-     * For more information, see [Using the Data API for Aurora
-     * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-     * *Amazon Aurora User Guide* .
+     * * Aurora PostgreSQL Serverless v2 and provisioned
+     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
-     * Valid for: Aurora DB clusters only
+     * For more information, see [Using RDS Data
+     * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+     * Aurora User Guide* .
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     public fun enableHttpEndpoint(enableHttpEndpoint: IResolvable)
 
@@ -2192,7 +2202,7 @@ public interface CfnDBClusterProps {
      * Valid Values:
      *
      * * Aurora DB clusters - `aurora | aurora-iopt1`
-     * * Multi-AZ DB clusters - `io1`
+     * * Multi-AZ DB clusters - `io1 | io2 | gp3`
      *
      * Default:
      *
@@ -2643,38 +2653,44 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param enableHttpEndpoint A value that indicates whether to enable the HTTP endpoint for an
-     * Aurora Serverless DB cluster.
-     * By default, the HTTP endpoint is disabled.
+     * @param enableHttpEndpoint Specifies whether to enable the HTTP endpoint for the DB cluster.
+     * By default, the HTTP endpoint isn't enabled.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+     * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+     * console with the RDS query editor.
      *
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-     * queries on the Aurora Serverless DB cluster. You can also query your database from inside the
-     * RDS console with the query editor.
+     * RDS Data API is supported with the following DB clusters:
      *
-     * For more information, see [Using the Data API for Aurora
-     * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-     * *Amazon Aurora User Guide* .
+     * * Aurora PostgreSQL Serverless v2 and provisioned
+     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
-     * Valid for: Aurora DB clusters only
+     * For more information, see [Using RDS Data
+     * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+     * Aurora User Guide* .
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     override fun enableHttpEndpoint(enableHttpEndpoint: Boolean) {
       cdkBuilder.enableHttpEndpoint(enableHttpEndpoint)
     }
 
     /**
-     * @param enableHttpEndpoint A value that indicates whether to enable the HTTP endpoint for an
-     * Aurora Serverless DB cluster.
-     * By default, the HTTP endpoint is disabled.
+     * @param enableHttpEndpoint Specifies whether to enable the HTTP endpoint for the DB cluster.
+     * By default, the HTTP endpoint isn't enabled.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+     * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+     * console with the RDS query editor.
      *
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-     * queries on the Aurora Serverless DB cluster. You can also query your database from inside the
-     * RDS console with the query editor.
+     * RDS Data API is supported with the following DB clusters:
      *
-     * For more information, see [Using the Data API for Aurora
-     * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-     * *Amazon Aurora User Guide* .
+     * * Aurora PostgreSQL Serverless v2 and provisioned
+     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
-     * Valid for: Aurora DB clusters only
+     * For more information, see [Using RDS Data
+     * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+     * Aurora User Guide* .
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     override fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
       cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable::unwrap))
@@ -3482,7 +3498,7 @@ public interface CfnDBClusterProps {
      * Valid Values:
      *
      * * Aurora DB clusters - `aurora | aurora-iopt1`
-     * * Multi-AZ DB clusters - `io1`
+     * * Multi-AZ DB clusters - `io1 | io2 | gp3`
      *
      * Default:
      *
@@ -3559,7 +3575,7 @@ public interface CfnDBClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterProps,
   ) : CdkObject(cdkObject), CfnDBClusterProps {
     /**
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB
@@ -3856,20 +3872,23 @@ public interface CfnDBClusterProps {
     override fun enableGlobalWriteForwarding(): Any? = unwrap(this).getEnableGlobalWriteForwarding()
 
     /**
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB
-     * cluster.
+     * Specifies whether to enable the HTTP endpoint for the DB cluster. By default, the HTTP
+     * endpoint isn't enabled.
      *
-     * By default, the HTTP endpoint is disabled.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
+     * running SQL queries on the DB cluster. You can also query your database from inside the RDS
+     * console with the RDS query editor.
      *
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL
-     * queries on the Aurora Serverless DB cluster. You can also query your database from inside the
-     * RDS console with the query editor.
+     * RDS Data API is supported with the following DB clusters:
      *
-     * For more information, see [Using the Data API for Aurora
-     * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the
-     * *Amazon Aurora User Guide* .
+     * * Aurora PostgreSQL Serverless v2 and provisioned
+     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
-     * Valid for: Aurora DB clusters only
+     * For more information, see [Using RDS Data
+     * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
+     * Aurora User Guide* .
+     *
+     * Valid for Cluster Type: Aurora DB clusters only
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablehttpendpoint)
      */
@@ -4521,7 +4540,7 @@ public interface CfnDBClusterProps {
      * Valid Values:
      *
      * * Aurora DB clusters - `aurora | aurora-iopt1`
-     * * Multi-AZ DB clusters - `io1`
+     * * Multi-AZ DB clusters - `io1 | io2 | gp3`
      *
      * Default:
      *

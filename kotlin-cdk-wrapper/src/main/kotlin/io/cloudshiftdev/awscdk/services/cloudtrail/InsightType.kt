@@ -16,8 +16,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class InsightType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.InsightType,
+public open class InsightType(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.InsightType,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -35,6 +35,7 @@ public open class InsightType internal constructor(
         InsightType = InsightType(cdkObject)
 
     internal fun unwrap(wrapped: InsightType):
-        software.amazon.awscdk.services.cloudtrail.InsightType = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudtrail.InsightType = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudtrail.InsightType
   }
 }

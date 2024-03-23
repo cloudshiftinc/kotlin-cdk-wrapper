@@ -96,7 +96,7 @@ public interface CustomEndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions,
   ) : CdkObject(cdkObject), CustomEndpointOptions {
     /**
      * The certificate to use.

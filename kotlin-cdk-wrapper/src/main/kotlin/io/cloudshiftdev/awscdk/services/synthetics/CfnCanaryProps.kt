@@ -813,7 +813,7 @@ public interface CfnCanaryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanaryProps,
+    cdkObject: software.amazon.awscdk.services.synthetics.CfnCanaryProps,
   ) : CdkObject(cdkObject), CfnCanaryProps {
     /**
      * A structure that contains the configuration for canary artifacts, including the

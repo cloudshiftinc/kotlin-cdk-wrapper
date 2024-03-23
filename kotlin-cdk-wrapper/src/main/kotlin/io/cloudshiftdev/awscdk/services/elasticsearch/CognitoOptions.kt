@@ -129,7 +129,7 @@ public interface CognitoOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.CognitoOptions,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.CognitoOptions,
   ) : CdkObject(cdkObject), CognitoOptions {
     /**
      * (deprecated) The Amazon Cognito identity pool ID that you want Amazon ES to use for Kibana

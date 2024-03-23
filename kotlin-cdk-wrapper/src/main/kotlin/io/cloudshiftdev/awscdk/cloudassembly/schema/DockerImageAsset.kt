@@ -124,7 +124,7 @@ public interface DockerImageAsset {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageAsset,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageAsset,
   ) : CdkObject(cdkObject), DockerImageAsset {
     /**
      * Destinations for this file asset.

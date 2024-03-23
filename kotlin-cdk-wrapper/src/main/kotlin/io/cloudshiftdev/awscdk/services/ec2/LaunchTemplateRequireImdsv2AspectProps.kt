@@ -61,8 +61,7 @@ public interface LaunchTemplateRequireImdsv2AspectProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProps,
+    cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProps,
   ) : CdkObject(cdkObject), LaunchTemplateRequireImdsv2AspectProps {
     /**
      * Whether warning annotations from this Aspect should be suppressed or not.

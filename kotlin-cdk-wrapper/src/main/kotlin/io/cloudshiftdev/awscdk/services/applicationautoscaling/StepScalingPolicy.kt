@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class StepScalingPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy,
+public open class StepScalingPolicy(
+  cdkObject: software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -383,5 +382,6 @@ public open class StepScalingPolicy internal constructor(
 
     internal fun unwrap(wrapped: StepScalingPolicy):
         software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy = wrapped.cdkObject
+        as software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy
   }
 }

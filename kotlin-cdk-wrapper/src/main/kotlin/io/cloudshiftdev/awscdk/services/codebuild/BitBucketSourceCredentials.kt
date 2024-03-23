@@ -28,9 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class BitBucketSourceCredentials internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials,
+public open class BitBucketSourceCredentials(
+  cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -114,6 +113,7 @@ public open class BitBucketSourceCredentials internal constructor(
         BitBucketSourceCredentials = BitBucketSourceCredentials(cdkObject)
 
     internal fun unwrap(wrapped: BitBucketSourceCredentials):
-        software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials
   }
 }

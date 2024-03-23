@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html)
  */
-public open class CfnDataCellsFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter,
+public open class CfnDataCellsFilter(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -549,7 +549,8 @@ public open class CfnDataCellsFilter internal constructor(
         CfnDataCellsFilter = CfnDataCellsFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCellsFilter):
-        software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter
   }
 
   /**
@@ -624,8 +625,7 @@ public open class CfnDataCellsFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty,
     ) : CdkObject(cdkObject), ColumnWildcardProperty {
       /**
        * Excludes column names.
@@ -731,8 +731,7 @@ public open class CfnDataCellsFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty,
     ) : CdkObject(cdkObject), RowFilterProperty {
       /**
        * A wildcard for all rows.

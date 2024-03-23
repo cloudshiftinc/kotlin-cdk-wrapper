@@ -190,7 +190,7 @@ public interface OAuthAuthorizationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps,
+    cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps,
   ) : CdkObject(cdkObject), OAuthAuthorizationProps {
     /**
      * The URL to the authorization endpoint.

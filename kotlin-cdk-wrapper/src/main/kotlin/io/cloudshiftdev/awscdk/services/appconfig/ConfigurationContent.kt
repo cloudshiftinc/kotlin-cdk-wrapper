@@ -20,8 +20,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class ConfigurationContent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
+public abstract class ConfigurationContent(
+  cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
 ) : CdkObject(cdkObject) {
   /**
    * The configuration content.
@@ -34,7 +34,7 @@ public abstract class ConfigurationContent internal constructor(
   public open fun contentType(): String = unwrap(this).getContentType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
+    cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
   ) : ConfigurationContent(cdkObject)
 
   public companion object {

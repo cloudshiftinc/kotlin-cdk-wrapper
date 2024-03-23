@@ -102,7 +102,7 @@ public interface RouteProps : RouteBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.RouteProps,
   ) : CdkObject(cdkObject), RouteProps {
     /**
      * The service mesh to define the route in.

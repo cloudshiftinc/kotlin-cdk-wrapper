@@ -99,7 +99,7 @@ public interface SignalsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.SignalsOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.SignalsOptions,
   ) : CdkObject(cdkObject), SignalsOptions {
     /**
      * The percentage of signals that need to be successful.

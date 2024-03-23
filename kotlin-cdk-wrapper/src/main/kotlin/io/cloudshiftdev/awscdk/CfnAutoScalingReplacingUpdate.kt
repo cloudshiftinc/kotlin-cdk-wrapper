@@ -74,7 +74,7 @@ public interface CfnAutoScalingReplacingUpdate {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate,
+    cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate,
   ) : CdkObject(cdkObject), CfnAutoScalingReplacingUpdate {
     /**
      *

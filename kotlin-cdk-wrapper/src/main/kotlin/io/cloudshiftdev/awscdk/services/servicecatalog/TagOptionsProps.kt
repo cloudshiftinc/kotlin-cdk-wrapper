@@ -71,7 +71,7 @@ public interface TagOptionsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptionsProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptionsProps,
   ) : CdkObject(cdkObject), TagOptionsProps {
     /**
      * The values that are allowed to be set for specific tags.

@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
  */
-public open class CfnDeviceDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition,
+public open class CfnDeviceDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -396,7 +396,133 @@ public open class CfnDeviceDefinition internal constructor(
         CfnDeviceDefinition = CfnDeviceDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceDefinition):
-        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinition
+  }
+
+  /**
+   * A device definition version contains a list of
+   * [devices](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html)
+   * .
+   *
+   *
+   * After you create a device definition version that contains the devices you want to deploy, you
+   * must add it to your group version. For more information, see
+   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+   * .
+   *
+   *
+   * In an AWS CloudFormation template, `DeviceDefinitionVersion` is the property type of the
+   * `InitialVersion` property in the
+   * [`AWS::Greengrass::DeviceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * DeviceDefinitionVersionProperty deviceDefinitionVersionProperty =
+   * DeviceDefinitionVersionProperty.builder()
+   * .devices(List.of(DeviceProperty.builder()
+   * .certificateArn("certificateArn")
+   * .id("id")
+   * .thingArn("thingArn")
+   * // the properties below are optional
+   * .syncShadow(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html)
+   */
+  public interface DeviceDefinitionVersionProperty {
+    /**
+     * The devices in this version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)
+     */
+    public fun devices(): Any
+
+    /**
+     * A builder for [DeviceDefinitionVersionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param devices The devices in this version. 
+       */
+      public fun devices(devices: IResolvable)
+
+      /**
+       * @param devices The devices in this version. 
+       */
+      public fun devices(devices: List<Any>)
+
+      /**
+       * @param devices The devices in this version. 
+       */
+      public fun devices(vararg devices: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty.builder()
+
+      /**
+       * @param devices The devices in this version. 
+       */
+      override fun devices(devices: IResolvable) {
+        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param devices The devices in this version. 
+       */
+      override fun devices(devices: List<Any>) {
+        cdkBuilder.devices(devices)
+      }
+
+      /**
+       * @param devices The devices in this version. 
+       */
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty,
+    ) : CdkObject(cdkObject), DeviceDefinitionVersionProperty {
+      /**
+       * The devices in this version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)
+       */
+      override fun devices(): Any = unwrap(this).getDevices()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceDefinitionVersionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty):
+          DeviceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceDefinitionVersionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceDefinitionVersionProperty):
+          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
+    }
   }
 
   /**
@@ -554,8 +680,7 @@ public open class CfnDeviceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty,
     ) : CdkObject(cdkObject), DeviceProperty {
       /**
        * The Amazon Resource Name (ARN) of the device certificate for the device.
@@ -607,132 +732,6 @@ public open class CfnDeviceDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty
-    }
-  }
-
-  /**
-   * A device definition version contains a list of
-   * [devices](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html)
-   * .
-   *
-   *
-   * After you create a device definition version that contains the devices you want to deploy, you
-   * must add it to your group version. For more information, see
-   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
-   * .
-   *
-   *
-   * In an AWS CloudFormation template, `DeviceDefinitionVersion` is the property type of the
-   * `InitialVersion` property in the
-   * [`AWS::Greengrass::DeviceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * DeviceDefinitionVersionProperty deviceDefinitionVersionProperty =
-   * DeviceDefinitionVersionProperty.builder()
-   * .devices(List.of(DeviceProperty.builder()
-   * .certificateArn("certificateArn")
-   * .id("id")
-   * .thingArn("thingArn")
-   * // the properties below are optional
-   * .syncShadow(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html)
-   */
-  public interface DeviceDefinitionVersionProperty {
-    /**
-     * The devices in this version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)
-     */
-    public fun devices(): Any
-
-    /**
-     * A builder for [DeviceDefinitionVersionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param devices The devices in this version. 
-       */
-      public fun devices(devices: IResolvable)
-
-      /**
-       * @param devices The devices in this version. 
-       */
-      public fun devices(devices: List<Any>)
-
-      /**
-       * @param devices The devices in this version. 
-       */
-      public fun devices(vararg devices: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty.builder()
-
-      /**
-       * @param devices The devices in this version. 
-       */
-      override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param devices The devices in this version. 
-       */
-      override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
-      }
-
-      /**
-       * @param devices The devices in this version. 
-       */
-      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), DeviceDefinitionVersionProperty {
-      /**
-       * The devices in this version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-devicedefinitionversion.html#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)
-       */
-      override fun devices(): Any = unwrap(this).getDevices()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceDefinitionVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty):
-          DeviceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeviceDefinitionVersionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceDefinitionVersionProperty):
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty
     }
   }
 }

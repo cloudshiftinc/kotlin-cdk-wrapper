@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html)
  */
-public open class CfnStandard internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard,
+public open class CfnStandard(
+  cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,7 +245,8 @@ public open class CfnStandard internal constructor(
         CfnStandard = CfnStandard(cdkObject)
 
     internal fun unwrap(wrapped: CfnStandard):
-        software.amazon.awscdk.services.securityhub.CfnStandard = wrapped.cdkObject
+        software.amazon.awscdk.services.securityhub.CfnStandard = wrapped.cdkObject as
+        software.amazon.awscdk.services.securityhub.CfnStandard
   }
 
   /**
@@ -332,8 +333,7 @@ public open class CfnStandard internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty,
+      cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty,
     ) : CdkObject(cdkObject), StandardsControlProperty {
       /**
        * A user-defined reason for changing a control's enablement status in a specified standard.

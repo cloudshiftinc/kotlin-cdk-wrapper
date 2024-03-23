@@ -320,7 +320,7 @@ public interface CfnStackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnStackProps,
+    cdkObject: software.amazon.awscdk.CfnStackProps,
   ) : CdkObject(cdkObject), CfnStackProps {
     /**
      * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related

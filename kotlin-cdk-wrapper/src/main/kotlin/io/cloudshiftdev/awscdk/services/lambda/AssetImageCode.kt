@@ -79,8 +79,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetImageCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.AssetImageCode,
+public open class AssetImageCode(
+  cdkObject: software.amazon.awscdk.services.lambda.AssetImageCode,
 ) : Code(cdkObject) {
   public constructor(directory: String, props: AssetImageCodeProps) :
       this(software.amazon.awscdk.services.lambda.AssetImageCode(directory,
@@ -829,6 +829,7 @@ public open class AssetImageCode internal constructor(
         AssetImageCode = AssetImageCode(cdkObject)
 
     internal fun unwrap(wrapped: AssetImageCode):
-        software.amazon.awscdk.services.lambda.AssetImageCode = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.AssetImageCode = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.AssetImageCode
   }
 }

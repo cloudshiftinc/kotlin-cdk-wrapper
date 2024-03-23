@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html)
  */
-public open class CfnRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
+public open class CfnRepository(
+  cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -574,7 +574,8 @@ public open class CfnRepository internal constructor(
         CfnRepository = CfnRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepository):
-        software.amazon.awscdk.services.codecommit.CfnRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.codecommit.CfnRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.codecommit.CfnRepository
   }
 
   /**
@@ -712,7 +713,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
     ) : CdkObject(cdkObject), CodeProperty {
       /**
        * Optional.
@@ -752,187 +753,6 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty
-    }
-  }
-
-  /**
-   * Information about the Amazon S3 bucket that contains the code that will be committed to the new
-   * repository.
-   *
-   * Changes to this property are ignored after initial resource creation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codecommit.*;
-   * S3Property s3Property = S3Property.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * // the properties below are optional
-   * .objectVersion("objectVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html)
-   */
-  public interface S3Property {
-    /**
-     * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be
-     * committed to the new repository.
-     *
-     * This can be specified using the name of the bucket in the AWS account . Changes to this
-     * property are ignored after initial resource creation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * The key to use for accessing the Amazon S3 bucket.
-     *
-     * Changes to this property are ignored after initial resource creation. For more information,
-     * see [Creating object key
-     * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
-     * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
-     * Amazon S3 User Guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key)
-     */
-    public fun key(): String
-
-    /**
-     * The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket.
-     *
-     * Changes to this property are ignored after initial resource creation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion)
-     */
-    public fun objectVersion(): String? = unwrap(this).getObjectVersion()
-
-    /**
-     * A builder for [S3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The name of the Amazon S3 bucket that contains the ZIP file with the content
-       * that will be committed to the new repository. 
-       * This can be specified using the name of the bucket in the AWS account . Changes to this
-       * property are ignored after initial resource creation.
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param key The key to use for accessing the Amazon S3 bucket. 
-       * Changes to this property are ignored after initial resource creation. For more information,
-       * see [Creating object key
-       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
-       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
-       * Amazon S3 User Guide.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param objectVersion The object version of the ZIP file, if versioning is enabled for the
-       * Amazon S3 bucket.
-       * Changes to this property are ignored after initial resource creation.
-       */
-      public fun objectVersion(objectVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.Builder =
-          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.builder()
-
-      /**
-       * @param bucket The name of the Amazon S3 bucket that contains the ZIP file with the content
-       * that will be committed to the new repository. 
-       * This can be specified using the name of the bucket in the AWS account . Changes to this
-       * property are ignored after initial resource creation.
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param key The key to use for accessing the Amazon S3 bucket. 
-       * Changes to this property are ignored after initial resource creation. For more information,
-       * see [Creating object key
-       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
-       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
-       * Amazon S3 User Guide.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param objectVersion The object version of the ZIP file, if versioning is enabled for the
-       * Amazon S3 bucket.
-       * Changes to this property are ignored after initial resource creation.
-       */
-      override fun objectVersion(objectVersion: String) {
-        cdkBuilder.objectVersion(objectVersion)
-      }
-
-      public fun build(): software.amazon.awscdk.services.codecommit.CfnRepository.S3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
-      /**
-       * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be
-       * committed to the new repository.
-       *
-       * This can be specified using the name of the bucket in the AWS account . Changes to this
-       * property are ignored after initial resource creation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * The key to use for accessing the Amazon S3 bucket.
-       *
-       * Changes to this property are ignored after initial resource creation. For more information,
-       * see [Creating object key
-       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
-       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
-       * Amazon S3 User Guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket.
-       *
-       * Changes to this property are ignored after initial resource creation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion)
-       */
-      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3Property):
-          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property
     }
   }
 
@@ -1142,8 +962,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
     ) : CdkObject(cdkObject), RepositoryTriggerProperty {
       /**
        * The branches to be included in the trigger configuration.
@@ -1209,6 +1028,187 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty
+    }
+  }
+
+  /**
+   * Information about the Amazon S3 bucket that contains the code that will be committed to the new
+   * repository.
+   *
+   * Changes to this property are ignored after initial resource creation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codecommit.*;
+   * S3Property s3Property = S3Property.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * // the properties below are optional
+   * .objectVersion("objectVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html)
+   */
+  public interface S3Property {
+    /**
+     * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be
+     * committed to the new repository.
+     *
+     * This can be specified using the name of the bucket in the AWS account . Changes to this
+     * property are ignored after initial resource creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * The key to use for accessing the Amazon S3 bucket.
+     *
+     * Changes to this property are ignored after initial resource creation. For more information,
+     * see [Creating object key
+     * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
+     * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
+     * Amazon S3 User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key)
+     */
+    public fun key(): String
+
+    /**
+     * The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket.
+     *
+     * Changes to this property are ignored after initial resource creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion)
+     */
+    public fun objectVersion(): String? = unwrap(this).getObjectVersion()
+
+    /**
+     * A builder for [S3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The name of the Amazon S3 bucket that contains the ZIP file with the content
+       * that will be committed to the new repository. 
+       * This can be specified using the name of the bucket in the AWS account . Changes to this
+       * property are ignored after initial resource creation.
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param key The key to use for accessing the Amazon S3 bucket. 
+       * Changes to this property are ignored after initial resource creation. For more information,
+       * see [Creating object key
+       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
+       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
+       * Amazon S3 User Guide.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param objectVersion The object version of the ZIP file, if versioning is enabled for the
+       * Amazon S3 bucket.
+       * Changes to this property are ignored after initial resource creation.
+       */
+      public fun objectVersion(objectVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.Builder =
+          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.builder()
+
+      /**
+       * @param bucket The name of the Amazon S3 bucket that contains the ZIP file with the content
+       * that will be committed to the new repository. 
+       * This can be specified using the name of the bucket in the AWS account . Changes to this
+       * property are ignored after initial resource creation.
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param key The key to use for accessing the Amazon S3 bucket. 
+       * Changes to this property are ignored after initial resource creation. For more information,
+       * see [Creating object key
+       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
+       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
+       * Amazon S3 User Guide.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param objectVersion The object version of the ZIP file, if versioning is enabled for the
+       * Amazon S3 bucket.
+       * Changes to this property are ignored after initial resource creation.
+       */
+      override fun objectVersion(objectVersion: String) {
+        cdkBuilder.objectVersion(objectVersion)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codecommit.CfnRepository.S3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
+    ) : CdkObject(cdkObject), S3Property {
+      /**
+       * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be
+       * committed to the new repository.
+       *
+       * This can be specified using the name of the bucket in the AWS account . Changes to this
+       * property are ignored after initial resource creation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * The key to use for accessing the Amazon S3 bucket.
+       *
+       * Changes to this property are ignored after initial resource creation. For more information,
+       * see [Creating object key
+       * names](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html) and [Uploading
+       * objects](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html) in the
+       * Amazon S3 User Guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The object version of the ZIP file, if versioning is enabled for the Amazon S3 bucket.
+       *
+       * Changes to this property are ignored after initial resource creation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html#cfn-codecommit-repository-s3-objectversion)
+       */
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property):
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3Property):
+          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codecommit.CfnRepository.S3Property
     }
   }
 }

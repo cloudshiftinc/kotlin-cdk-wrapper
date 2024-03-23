@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)
  */
-public open class CfnCertificateAuthority internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority,
+public open class CfnCertificateAuthority(
+  cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -968,231 +968,8 @@ public open class CfnCertificateAuthority internal constructor(
         CfnCertificateAuthority = CfnCertificateAuthority(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificateAuthority):
-        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority = wrapped.cdkObject
-  }
-
-  /**
-   * Describes an Electronic Data Interchange (EDI) entity as described in as defined in [Subject
-   * Alternative Name](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) in
-   * RFC 5280.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * EdiPartyNameProperty ediPartyNameProperty = EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html)
-   */
-  public interface EdiPartyNameProperty {
-    /**
-     * Specifies the name assigner.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
-     */
-    public fun nameAssigner(): String
-
-    /**
-     * Specifies the party name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-partyname)
-     */
-    public fun partyName(): String
-
-    /**
-     * A builder for [EdiPartyNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param nameAssigner Specifies the name assigner. 
-       */
-      public fun nameAssigner(nameAssigner: String)
-
-      /**
-       * @param partyName Specifies the party name. 
-       */
-      public fun partyName(partyName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.builder()
-
-      /**
-       * @param nameAssigner Specifies the name assigner. 
-       */
-      override fun nameAssigner(nameAssigner: String) {
-        cdkBuilder.nameAssigner(nameAssigner)
-      }
-
-      /**
-       * @param partyName Specifies the party name. 
-       */
-      override fun partyName(partyName: String) {
-        cdkBuilder.partyName(partyName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
-    ) : CdkObject(cdkObject), EdiPartyNameProperty {
-      /**
-       * Specifies the name assigner.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
-       */
-      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
-
-      /**
-       * Specifies the party name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-partyname)
-       */
-      override fun partyName(): String = unwrap(this).getPartyName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EdiPartyNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty):
-          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiPartyNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EdiPartyNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty
-    }
-  }
-
-  /**
-   * Defines a custom ASN.1 X.400 `GeneralName` using an object identifier (OID) and value. The OID
-   * must satisfy the regular expression shown below. For more information, see NIST's definition of
-   * [Object Identifier
-   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * OtherNameProperty otherNameProperty = OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html)
-   */
-  public interface OtherNameProperty {
-    /**
-     * Specifies an OID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-typeid)
-     */
-    public fun typeId(): String
-
-    /**
-     * Specifies an OID value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [OtherNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param typeId Specifies an OID. 
-       */
-      public fun typeId(typeId: String)
-
-      /**
-       * @param value Specifies an OID value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.Builder =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.builder()
-
-      /**
-       * @param typeId Specifies an OID. 
-       */
-      override fun typeId(typeId: String) {
-        cdkBuilder.typeId(typeId)
-      }
-
-      /**
-       * @param value Specifies an OID value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
-    ) : CdkObject(cdkObject), OtherNameProperty {
-      /**
-       * Specifies an OID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-typeid)
-       */
-      override fun typeId(): String = unwrap(this).getTypeId()
-
-      /**
-       * Specifies an OID value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OtherNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty):
-          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as? OtherNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OtherNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty
-    }
+        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority = wrapped.cdkObject as
+        software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
   }
 
   /**
@@ -1362,8 +1139,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
     ) : CdkObject(cdkObject), AccessDescriptionProperty {
       /**
        * The location of `AccessDescription` information.
@@ -1395,6 +1171,1723 @@ public open class CfnCertificateAuthority internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty
+    }
+  }
+
+  /**
+   * Describes the type and format of extension access.
+   *
+   * Only one of `CustomObjectIdentifier` or `AccessMethodType` may be provided. Providing both
+   * results in `InvalidArgsException` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * AccessMethodProperty accessMethodProperty = AccessMethodProperty.builder()
+   * .accessMethodType("accessMethodType")
+   * .customObjectIdentifier("customObjectIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html)
+   */
+  public interface AccessMethodProperty {
+    /**
+     * Specifies the `AccessMethod` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-accessmethodtype)
+     */
+    public fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
+
+    /**
+     * An object identifier (OID) specifying the `AccessMethod` .
+     *
+     * The OID must satisfy the regular expression shown below. For more information, see NIST's
+     * definition of [Object Identifier
+     * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-customobjectidentifier)
+     */
+    public fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
+
+    /**
+     * A builder for [AccessMethodProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessMethodType Specifies the `AccessMethod` .
+       */
+      public fun accessMethodType(accessMethodType: String)
+
+      /**
+       * @param customObjectIdentifier An object identifier (OID) specifying the `AccessMethod` .
+       * The OID must satisfy the regular expression shown below. For more information, see NIST's
+       * definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       */
+      public fun customObjectIdentifier(customObjectIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty.builder()
+
+      /**
+       * @param accessMethodType Specifies the `AccessMethod` .
+       */
+      override fun accessMethodType(accessMethodType: String) {
+        cdkBuilder.accessMethodType(accessMethodType)
+      }
+
+      /**
+       * @param customObjectIdentifier An object identifier (OID) specifying the `AccessMethod` .
+       * The OID must satisfy the regular expression shown below. For more information, see NIST's
+       * definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       */
+      override fun customObjectIdentifier(customObjectIdentifier: String) {
+        cdkBuilder.customObjectIdentifier(customObjectIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
+    ) : CdkObject(cdkObject), AccessMethodProperty {
+      /**
+       * Specifies the `AccessMethod` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-accessmethodtype)
+       */
+      override fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
+
+      /**
+       * An object identifier (OID) specifying the `AccessMethod` .
+       *
+       * The OID must satisfy the regular expression shown below. For more information, see NIST's
+       * definition of [Object Identifier
+       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-customobjectidentifier)
+       */
+      override fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessMethodProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty):
+          AccessMethodProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessMethodProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessMethodProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty
+    }
+  }
+
+  /**
+   * Contains configuration information for a certificate revocation list (CRL).
+   *
+   * Your private certificate authority (CA) creates base CRLs. Delta CRLs are not supported. You
+   * can enable CRLs for your new or an existing private CA by setting the *Enabled* parameter to
+   * `true` . Your private CA writes CRLs to an S3 bucket that you specify in the *S3BucketName*
+   * parameter. You can hide the name of your bucket by specifying a value for the *CustomCname*
+   * parameter. Your private CA by default copies the CNAME or the S3 bucket name to the *CRL
+   * Distribution Points* extension of each certificate it issues. If you want to configure this
+   * default behavior to be something different, you can set the
+   * *CrlDistributionPointExtensionConfiguration* parameter. Your S3 bucket policy must give write
+   * permission to AWS Private CA.
+   *
+   * AWS Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
+   * information, see [Encrypting Your
+   * CRLs](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#crl-encryption) .
+   *
+   * Your private CA uses the value in the *ExpirationInDays* parameter to calculate the
+   * *nextUpdate* field in the CRL. The CRL is refreshed prior to a certificate's expiration date or
+   * when a certificate is revoked. When a certificate is revoked, it appears in the CRL until the
+   * certificate expires, and then in one additional CRL after expiration, and it always appears in the
+   * audit report.
+   *
+   * A CRL is typically updated approximately 30 minutes after a certificate is revoked. If for any
+   * reason a CRL update fails, AWS Private CA makes further attempts every 15 minutes.
+   *
+   * CRLs contain the following fields:
+   *
+   * * *Version* : The current version number defined in RFC 5280 is V2. The integer value is 0x1.
+   * * *Signature Algorithm* : The name of the algorithm used to sign the CRL.
+   * * *Issuer* : The X.500 distinguished name of your private CA that issued the CRL.
+   * * *Last Update* : The issue date and time of this CRL.
+   * * *Next Update* : The day and time by which the next CRL will be issued.
+   * * *Revoked Certificates* : List of revoked certificates. Each list item contains the following
+   * information.
+   * * *Serial Number* : The serial number, in hexadecimal format, of the revoked certificate.
+   * * *Revocation Date* : Date and time the certificate was revoked.
+   * * *CRL Entry Extensions* : Optional extensions for the CRL entry.
+   * * *X509v3 CRL Reason Code* : Reason the certificate was revoked.
+   * * *CRL Extensions* : Optional extensions for the CRL.
+   * * *X509v3 Authority Key Identifier* : Identifies the public key associated with the private key
+   * used to sign the certificate.
+   * * *X509v3 CRL Number:* : Decimal sequence number for the CRL.
+   * * *Signature Algorithm* : Algorithm used by your private CA to sign the CRL.
+   * * *Signature Value* : Signature computed over the CRL.
+   *
+   * Certificate revocation lists created by AWS Private CA are DER-encoded. You can use the
+   * following OpenSSL command to list a CRL.
+   *
+   * `openssl crl -inform DER -text -in *crl_path* -noout`
+   *
+   * For more information, see [Planning a certificate revocation list
+   * (CRL)](https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html) in the *AWS
+   * Private Certificate Authority User Guide*
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
+   * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
+   * .omitExtension(false)
+   * .build())
+   * .customCname("customCname")
+   * .enabled(false)
+   * .expirationInDays(123)
+   * .s3BucketName("s3BucketName")
+   * .s3ObjectAcl("s3ObjectAcl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html)
+   */
+  public interface CrlConfigurationProperty {
+    /**
+     * Configures the default behavior of the CRL Distribution Point extension for certificates
+     * issued by your CA.
+     *
+     * If this field is not provided, then the CRL Distribution Point extension will be present and
+     * contain the default CRL URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crldistributionpointextensionconfiguration)
+     */
+    public fun crlDistributionPointExtensionConfiguration(): Any? =
+        unwrap(this).getCrlDistributionPointExtensionConfiguration()
+
+    /**
+     * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
+     * of an alias for the CRL distribution point.
+     *
+     * Use this value if you don't want the name of your S3 bucket to be public.
+     *
+     *
+     * The content of a Canonical Name (CNAME) record must conform to
+     * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on the
+     * use of special characters in URIs. Additionally, the value of the CNAME must not include a
+     * protocol prefix such as "http://" or "https://".
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
+     */
+    public fun customCname(): String? = unwrap(this).getCustomCname()
+
+    /**
+     * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
+     *
+     * You can use this value to enable certificate revocation for a new CA when you call the
+     * `CreateCertificateAuthority` operation or for an existing CA when you call the
+     * `UpdateCertificateAuthority` operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * Validity period of the CRL in days.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays)
+     */
+    public fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
+
+    /**
+     * Name of the S3 bucket that contains the CRL.
+     *
+     * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
+     * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
+     * the name of your bucket by calling the
+     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
+     * operation. You must specify a [bucket
+     * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
+     * that allows AWS Private CA to write the CRL to your bucket.
+     *
+     *
+     * The `S3BucketName` parameter must conform to the [S3 bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)
+     */
+    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+    /**
+     * Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3
+     * bucket.
+     *
+     * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you choose
+     * BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and your PKI
+     * clients may need an alternative method of access.
+     *
+     * If no value is specified, the default is PUBLIC_READ.
+     *
+     * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
+     * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
+     * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
+     * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
+     * `PUBLIC_READ` as the value.
+     *
+     * For more information, see [Blocking public access to the S3
+     * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl)
+     */
+    public fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
+
+    /**
+     * A builder for [CrlConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      public
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable)
+
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      public
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty)
+
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
+      public
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
+       * that enables the use of an alias for the CRL distribution point.
+       * Use this value if you don't want the name of your S3 bucket to be public.
+       *
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
+       */
+      public fun customCname(customCname: String)
+
+      /**
+       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
+       * enabled.
+       * You can use this value to enable certificate revocation for a new CA when you call the
+       * `CreateCertificateAuthority` operation or for an existing CA when you call the
+       * `UpdateCertificateAuthority` operation.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
+       * enabled.
+       * You can use this value to enable certificate revocation for a new CA when you call the
+       * `CreateCertificateAuthority` operation or for an existing CA when you call the
+       * `UpdateCertificateAuthority` operation.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param expirationInDays Validity period of the CRL in days.
+       */
+      public fun expirationInDays(expirationInDays: Number)
+
+      /**
+       * @param s3BucketName Name of the S3 bucket that contains the CRL.
+       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
+       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
+       * the name of your bucket by calling the
+       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
+       * operation. You must specify a [bucket
+       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
+       * that allows AWS Private CA to write the CRL to your bucket.
+       *
+       *
+       * The `S3BucketName` parameter must conform to the [S3 bucket naming
+       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
+       */
+      public fun s3BucketName(s3BucketName: String)
+
+      /**
+       * @param s3ObjectAcl Determines whether the CRL will be publicly readable or privately held
+       * in the CRL Amazon S3 bucket.
+       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
+       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
+       * your PKI clients may need an alternative method of access.
+       *
+       * If no value is specified, the default is PUBLIC_READ.
+       *
+       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
+       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
+       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
+       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
+       * `PUBLIC_READ` as the value.
+       *
+       * For more information, see [Blocking public access to the S3
+       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
+       */
+      public fun s3ObjectAcl(s3ObjectAcl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty.builder()
+
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      override
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable) {
+        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      override
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty) {
+        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(CrlDistributionPointExtensionConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
+       * CRL Distribution Point extension for certificates issued by your CA.
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
+      override
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty(crlDistributionPointExtensionConfiguration))
+
+      /**
+       * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
+       * that enables the use of an alias for the CRL distribution point.
+       * Use this value if you don't want the name of your S3 bucket to be public.
+       *
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
+       */
+      override fun customCname(customCname: String) {
+        cdkBuilder.customCname(customCname)
+      }
+
+      /**
+       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
+       * enabled.
+       * You can use this value to enable certificate revocation for a new CA when you call the
+       * `CreateCertificateAuthority` operation or for an existing CA when you call the
+       * `UpdateCertificateAuthority` operation.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
+       * enabled.
+       * You can use this value to enable certificate revocation for a new CA when you call the
+       * `CreateCertificateAuthority` operation or for an existing CA when you call the
+       * `UpdateCertificateAuthority` operation.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param expirationInDays Validity period of the CRL in days.
+       */
+      override fun expirationInDays(expirationInDays: Number) {
+        cdkBuilder.expirationInDays(expirationInDays)
+      }
+
+      /**
+       * @param s3BucketName Name of the S3 bucket that contains the CRL.
+       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
+       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
+       * the name of your bucket by calling the
+       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
+       * operation. You must specify a [bucket
+       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
+       * that allows AWS Private CA to write the CRL to your bucket.
+       *
+       *
+       * The `S3BucketName` parameter must conform to the [S3 bucket naming
+       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
+       */
+      override fun s3BucketName(s3BucketName: String) {
+        cdkBuilder.s3BucketName(s3BucketName)
+      }
+
+      /**
+       * @param s3ObjectAcl Determines whether the CRL will be publicly readable or privately held
+       * in the CRL Amazon S3 bucket.
+       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
+       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
+       * your PKI clients may need an alternative method of access.
+       *
+       * If no value is specified, the default is PUBLIC_READ.
+       *
+       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
+       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
+       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
+       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
+       * `PUBLIC_READ` as the value.
+       *
+       * For more information, see [Blocking public access to the S3
+       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
+       */
+      override fun s3ObjectAcl(s3ObjectAcl: String) {
+        cdkBuilder.s3ObjectAcl(s3ObjectAcl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
+    ) : CdkObject(cdkObject), CrlConfigurationProperty {
+      /**
+       * Configures the default behavior of the CRL Distribution Point extension for certificates
+       * issued by your CA.
+       *
+       * If this field is not provided, then the CRL Distribution Point extension will be present
+       * and contain the default CRL URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crldistributionpointextensionconfiguration)
+       */
+      override fun crlDistributionPointExtensionConfiguration(): Any? =
+          unwrap(this).getCrlDistributionPointExtensionConfiguration()
+
+      /**
+       * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
+       * of an alias for the CRL distribution point.
+       *
+       * Use this value if you don't want the name of your S3 bucket to be public.
+       *
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
+       */
+      override fun customCname(): String? = unwrap(this).getCustomCname()
+
+      /**
+       * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
+       *
+       * You can use this value to enable certificate revocation for a new CA when you call the
+       * `CreateCertificateAuthority` operation or for an existing CA when you call the
+       * `UpdateCertificateAuthority` operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * Validity period of the CRL in days.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays)
+       */
+      override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
+
+      /**
+       * Name of the S3 bucket that contains the CRL.
+       *
+       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
+       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
+       * the name of your bucket by calling the
+       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
+       * operation. You must specify a [bucket
+       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
+       * that allows AWS Private CA to write the CRL to your bucket.
+       *
+       *
+       * The `S3BucketName` parameter must conform to the [S3 bucket naming
+       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)
+       */
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+      /**
+       * Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3
+       * bucket.
+       *
+       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
+       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
+       * your PKI clients may need an alternative method of access.
+       *
+       * If no value is specified, the default is PUBLIC_READ.
+       *
+       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
+       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
+       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
+       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
+       * `PUBLIC_READ` as the value.
+       *
+       * For more information, see [Blocking public access to the S3
+       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl)
+       */
+      override fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CrlConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty):
+          CrlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? CrlConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CrlConfigurationProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configuration information for the default behavior of the CRL Distribution Point (CDP)
+   * extension in certificates issued by your CA.
+   *
+   * This extension contains a link to download the CRL, so you can check whether a certificate has
+   * been revoked. To choose whether you want this extension omitted or not in certificates issued by
+   * your CA, you can set the *OmitExtension* parameter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CrlDistributionPointExtensionConfigurationProperty
+   * crlDistributionPointExtensionConfigurationProperty =
+   * CrlDistributionPointExtensionConfigurationProperty.builder()
+   * .omitExtension(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html)
+   */
+  public interface CrlDistributionPointExtensionConfigurationProperty {
+    /**
+     * Configures whether the CRL Distribution Point extension should be populated with the default
+     * URL to the CRL.
+     *
+     * If set to `true` , then the CDP extension will not be present in any certificates issued by
+     * that CA unless otherwise specified through CSR or API passthrough.
+     *
+     *
+     * Only set this if you have another way to distribute the CRL Distribution Points for
+     * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+     *
+     * This configuration cannot be enabled with a custom CNAME set.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html#cfn-acmpca-certificateauthority-crldistributionpointextensionconfiguration-omitextension)
+     */
+    public fun omitExtension(): Any
+
+    /**
+     * A builder for [CrlDistributionPointExtensionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param omitExtension Configures whether the CRL Distribution Point extension should be
+       * populated with the default URL to the CRL. 
+       * If set to `true` , then the CDP extension will not be present in any certificates issued by
+       * that CA unless otherwise specified through CSR or API passthrough.
+       *
+       *
+       * Only set this if you have another way to distribute the CRL Distribution Points for
+       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+       *
+       * This configuration cannot be enabled with a custom CNAME set.
+       */
+      public fun omitExtension(omitExtension: Boolean)
+
+      /**
+       * @param omitExtension Configures whether the CRL Distribution Point extension should be
+       * populated with the default URL to the CRL. 
+       * If set to `true` , then the CDP extension will not be present in any certificates issued by
+       * that CA unless otherwise specified through CSR or API passthrough.
+       *
+       *
+       * Only set this if you have another way to distribute the CRL Distribution Points for
+       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+       *
+       * This configuration cannot be enabled with a custom CNAME set.
+       */
+      public fun omitExtension(omitExtension: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty.builder()
+
+      /**
+       * @param omitExtension Configures whether the CRL Distribution Point extension should be
+       * populated with the default URL to the CRL. 
+       * If set to `true` , then the CDP extension will not be present in any certificates issued by
+       * that CA unless otherwise specified through CSR or API passthrough.
+       *
+       *
+       * Only set this if you have another way to distribute the CRL Distribution Points for
+       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+       *
+       * This configuration cannot be enabled with a custom CNAME set.
+       */
+      override fun omitExtension(omitExtension: Boolean) {
+        cdkBuilder.omitExtension(omitExtension)
+      }
+
+      /**
+       * @param omitExtension Configures whether the CRL Distribution Point extension should be
+       * populated with the default URL to the CRL. 
+       * If set to `true` , then the CDP extension will not be present in any certificates issued by
+       * that CA unless otherwise specified through CSR or API passthrough.
+       *
+       *
+       * Only set this if you have another way to distribute the CRL Distribution Points for
+       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+       *
+       * This configuration cannot be enabled with a custom CNAME set.
+       */
+      override fun omitExtension(omitExtension: IResolvable) {
+        cdkBuilder.omitExtension(omitExtension.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
+    ) : CdkObject(cdkObject), CrlDistributionPointExtensionConfigurationProperty {
+      /**
+       * Configures whether the CRL Distribution Point extension should be populated with the
+       * default URL to the CRL.
+       *
+       * If set to `true` , then the CDP extension will not be present in any certificates issued by
+       * that CA unless otherwise specified through CSR or API passthrough.
+       *
+       *
+       * Only set this if you have another way to distribute the CRL Distribution Points for
+       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
+       *
+       * This configuration cannot be enabled with a custom CNAME set.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html#cfn-acmpca-certificateauthority-crldistributionpointextensionconfiguration-omitextension)
+       */
+      override fun omitExtension(): Any = unwrap(this).getOmitExtension()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CrlDistributionPointExtensionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty):
+          CrlDistributionPointExtensionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrlDistributionPointExtensionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CrlDistributionPointExtensionConfigurationProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the certificate extensions to be added to the certificate signing request (CSR).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CsrExtensionsProperty csrExtensionsProperty = CsrExtensionsProperty.builder()
+   * .keyUsage(KeyUsageProperty.builder()
+   * .crlSign(false)
+   * .dataEncipherment(false)
+   * .decipherOnly(false)
+   * .digitalSignature(false)
+   * .encipherOnly(false)
+   * .keyAgreement(false)
+   * .keyCertSign(false)
+   * .keyEncipherment(false)
+   * .nonRepudiation(false)
+   * .build())
+   * .subjectInformationAccess(List.of(AccessDescriptionProperty.builder()
+   * .accessLocation(GeneralNameProperty.builder()
+   * .directoryName(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .dnsName("dnsName")
+   * .ediPartyName(EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build())
+   * .ipAddress("ipAddress")
+   * .otherName(OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build())
+   * .registeredId("registeredId")
+   * .rfc822Name("rfc822Name")
+   * .uniformResourceIdentifier("uniformResourceIdentifier")
+   * .build())
+   * .accessMethod(AccessMethodProperty.builder()
+   * .accessMethodType("accessMethodType")
+   * .customObjectIdentifier("customObjectIdentifier")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html)
+   */
+  public interface CsrExtensionsProperty {
+    /**
+     * Indicates the purpose of the certificate and of the key contained in the certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-keyusage)
+     */
+    public fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+
+    /**
+     * For CA certificates, provides a path to additional information pertaining to the CA, such as
+     * revocation and policy.
+     *
+     * For more information, see [Subject Information
+     * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+     * in RFC 5280.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-subjectinformationaccess)
+     */
+    public fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
+
+    /**
+     * A builder for [CsrExtensionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      public fun keyUsage(keyUsage: IResolvable)
+
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      public fun keyUsage(keyUsage: KeyUsageProperty)
+
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
+      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      public fun subjectInformationAccess(subjectInformationAccess: IResolvable)
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      public fun subjectInformationAccess(subjectInformationAccess: List<Any>)
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      public fun subjectInformationAccess(vararg subjectInformationAccess: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty.builder()
+
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      override fun keyUsage(keyUsage: IResolvable) {
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      override fun keyUsage(keyUsage: KeyUsageProperty) {
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+      }
+
+      /**
+       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
+       * certificate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
+      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
+          keyUsage(KeyUsageProperty(keyUsage))
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      override fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
+        cdkBuilder.subjectInformationAccess(subjectInformationAccess.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
+        cdkBuilder.subjectInformationAccess(subjectInformationAccess)
+      }
+
+      /**
+       * @param subjectInformationAccess For CA certificates, provides a path to additional
+       * information pertaining to the CA, such as revocation and policy.
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       */
+      override fun subjectInformationAccess(vararg subjectInformationAccess: Any): Unit =
+          subjectInformationAccess(subjectInformationAccess.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
+    ) : CdkObject(cdkObject), CsrExtensionsProperty {
+      /**
+       * Indicates the purpose of the certificate and of the key contained in the certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-keyusage)
+       */
+      override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+
+      /**
+       * For CA certificates, provides a path to additional information pertaining to the CA, such
+       * as revocation and policy.
+       *
+       * For more information, see [Subject Information
+       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
+       * in RFC 5280.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-subjectinformationaccess)
+       */
+      override fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CsrExtensionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty):
+          CsrExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsrExtensionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CsrExtensionsProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty
+    }
+  }
+
+  /**
+   * Defines the X.500 relative distinguished name (RDN).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * CustomAttributeProperty customAttributeProperty = CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html)
+   */
+  public interface CustomAttributeProperty {
+    /**
+     * Specifies the object identifier (OID) of the attribute type of the relative distinguished
+     * name (RDN).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-objectidentifier)
+     */
+    public fun objectIdentifier(): String
+
+    /**
+     * Specifies the attribute value of relative distinguished name (RDN).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [CustomAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
+       * relative distinguished name (RDN). 
+       */
+      public fun objectIdentifier(objectIdentifier: String)
+
+      /**
+       * @param value Specifies the attribute value of relative distinguished name (RDN). 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty.builder()
+
+      /**
+       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
+       * relative distinguished name (RDN). 
+       */
+      override fun objectIdentifier(objectIdentifier: String) {
+        cdkBuilder.objectIdentifier(objectIdentifier)
+      }
+
+      /**
+       * @param value Specifies the attribute value of relative distinguished name (RDN). 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
+    ) : CdkObject(cdkObject), CustomAttributeProperty {
+      /**
+       * Specifies the object identifier (OID) of the attribute type of the relative distinguished
+       * name (RDN).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-objectidentifier)
+       */
+      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
+
+      /**
+       * Specifies the attribute value of relative distinguished name (RDN).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty):
+          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomAttributeProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty
+    }
+  }
+
+  /**
+   * Describes an Electronic Data Interchange (EDI) entity as described in as defined in [Subject
+   * Alternative Name](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) in
+   * RFC 5280.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * EdiPartyNameProperty ediPartyNameProperty = EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html)
+   */
+  public interface EdiPartyNameProperty {
+    /**
+     * Specifies the name assigner.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
+     */
+    public fun nameAssigner(): String
+
+    /**
+     * Specifies the party name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-partyname)
+     */
+    public fun partyName(): String
+
+    /**
+     * A builder for [EdiPartyNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nameAssigner Specifies the name assigner. 
+       */
+      public fun nameAssigner(nameAssigner: String)
+
+      /**
+       * @param partyName Specifies the party name. 
+       */
+      public fun partyName(partyName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.builder()
+
+      /**
+       * @param nameAssigner Specifies the name assigner. 
+       */
+      override fun nameAssigner(nameAssigner: String) {
+        cdkBuilder.nameAssigner(nameAssigner)
+      }
+
+      /**
+       * @param partyName Specifies the party name. 
+       */
+      override fun partyName(partyName: String) {
+        cdkBuilder.partyName(partyName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
+    ) : CdkObject(cdkObject), EdiPartyNameProperty {
+      /**
+       * Specifies the name assigner.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
+       */
+      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
+
+      /**
+       * Specifies the party name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-partyname)
+       */
+      override fun partyName(): String = unwrap(this).getPartyName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EdiPartyNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty):
+          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiPartyNameProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EdiPartyNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty
+    }
+  }
+
+  /**
+   * Describes an ASN.1 X.400 `GeneralName` as defined in [RFC
+   * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) . Only one of the
+   * following naming options should be provided. Providing more than one option results in an
+   * `InvalidArgsException` error.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * GeneralNameProperty generalNameProperty = GeneralNameProperty.builder()
+   * .directoryName(SubjectProperty.builder()
+   * .commonName("commonName")
+   * .country("country")
+   * .customAttributes(List.of(CustomAttributeProperty.builder()
+   * .objectIdentifier("objectIdentifier")
+   * .value("value")
+   * .build()))
+   * .distinguishedNameQualifier("distinguishedNameQualifier")
+   * .generationQualifier("generationQualifier")
+   * .givenName("givenName")
+   * .initials("initials")
+   * .locality("locality")
+   * .organization("organization")
+   * .organizationalUnit("organizationalUnit")
+   * .pseudonym("pseudonym")
+   * .serialNumber("serialNumber")
+   * .state("state")
+   * .surname("surname")
+   * .title("title")
+   * .build())
+   * .dnsName("dnsName")
+   * .ediPartyName(EdiPartyNameProperty.builder()
+   * .nameAssigner("nameAssigner")
+   * .partyName("partyName")
+   * .build())
+   * .ipAddress("ipAddress")
+   * .otherName(OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build())
+   * .registeredId("registeredId")
+   * .rfc822Name("rfc822Name")
+   * .uniformResourceIdentifier("uniformResourceIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html)
+   */
+  public interface GeneralNameProperty {
+    /**
+     * Contains information about the certificate subject.
+     *
+     * The certificate can be one issued by your private certificate authority (CA) or it can be
+     * your private CA certificate. The Subject field in the certificate identifies the entity that
+     * owns or controls the public key in the certificate. The entity can be a user, computer, device,
+     * or service. The Subject must contain an X.500 distinguished name (DN). A DN is a sequence of
+     * relative distinguished names (RDNs). The RDNs are separated by commas in the certificate. The DN
+     * must be unique for each entity, but your private CA can issue more than one certificate with the
+     * same DN to the same entity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-directoryname)
+     */
+    public fun directoryName(): Any? = unwrap(this).getDirectoryName()
+
+    /**
+     * Represents `GeneralName` as a DNS name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-dnsname)
+     */
+    public fun dnsName(): String? = unwrap(this).getDnsName()
+
+    /**
+     * Represents `GeneralName` as an `EdiPartyName` object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-edipartyname)
+     */
+    public fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
+
+    /**
+     * Represents `GeneralName` as an IPv4 or IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-ipaddress)
+     */
+    public fun ipAddress(): String? = unwrap(this).getIpAddress()
+
+    /**
+     * Represents `GeneralName` using an `OtherName` object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-othername)
+     */
+    public fun otherName(): Any? = unwrap(this).getOtherName()
+
+    /**
+     * Represents `GeneralName` as an object identifier (OID).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-registeredid)
+     */
+    public fun registeredId(): String? = unwrap(this).getRegisteredId()
+
+    /**
+     * Represents `GeneralName` as an [RFC
+     * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-rfc822name)
+     */
+    public fun rfc822Name(): String? = unwrap(this).getRfc822Name()
+
+    /**
+     * Represents `GeneralName` as a URI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-uniformresourceidentifier)
+     */
+    public fun uniformResourceIdentifier(): String? = unwrap(this).getUniformResourceIdentifier()
+
+    /**
+     * A builder for [GeneralNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      public fun directoryName(directoryName: IResolvable)
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      public fun directoryName(directoryName: SubjectProperty)
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
+      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit)
+
+      /**
+       * @param dnsName Represents `GeneralName` as a DNS name.
+       */
+      public fun dnsName(dnsName: String)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      public fun ediPartyName(ediPartyName: IResolvable)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty)
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit)
+
+      /**
+       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
+       */
+      public fun ipAddress(ipAddress: String)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      public fun otherName(otherName: IResolvable)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      public fun otherName(otherName: OtherNameProperty)
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
+      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit)
+
+      /**
+       * @param registeredId Represents `GeneralName` as an object identifier (OID).
+       */
+      public fun registeredId(registeredId: String)
+
+      /**
+       * @param rfc822Name Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       */
+      public fun rfc822Name(rfc822Name: String)
+
+      /**
+       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
+       */
+      public fun uniformResourceIdentifier(uniformResourceIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty.Builder
+          =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty.builder()
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      override fun directoryName(directoryName: IResolvable) {
+        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      override fun directoryName(directoryName: SubjectProperty) {
+        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
+      }
+
+      /**
+       * @param directoryName Contains information about the certificate subject.
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
+      override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
+          directoryName(SubjectProperty(directoryName))
+
+      /**
+       * @param dnsName Represents `GeneralName` as a DNS name.
+       */
+      override fun dnsName(dnsName: String) {
+        cdkBuilder.dnsName(dnsName)
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      override fun ediPartyName(ediPartyName: IResolvable) {
+        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
+        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
+      }
+
+      /**
+       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit =
+          ediPartyName(EdiPartyNameProperty(ediPartyName))
+
+      /**
+       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
+       */
+      override fun ipAddress(ipAddress: String) {
+        cdkBuilder.ipAddress(ipAddress)
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      override fun otherName(otherName: IResolvable) {
+        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      override fun otherName(otherName: OtherNameProperty) {
+        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
+      }
+
+      /**
+       * @param otherName Represents `GeneralName` using an `OtherName` object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
+      override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
+          otherName(OtherNameProperty(otherName))
+
+      /**
+       * @param registeredId Represents `GeneralName` as an object identifier (OID).
+       */
+      override fun registeredId(registeredId: String) {
+        cdkBuilder.registeredId(registeredId)
+      }
+
+      /**
+       * @param rfc822Name Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       */
+      override fun rfc822Name(rfc822Name: String) {
+        cdkBuilder.rfc822Name(rfc822Name)
+      }
+
+      /**
+       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
+       */
+      override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
+        cdkBuilder.uniformResourceIdentifier(uniformResourceIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
+    ) : CdkObject(cdkObject), GeneralNameProperty {
+      /**
+       * Contains information about the certificate subject.
+       *
+       * The certificate can be one issued by your private certificate authority (CA) or it can be
+       * your private CA certificate. The Subject field in the certificate identifies the entity that
+       * owns or controls the public key in the certificate. The entity can be a user, computer,
+       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
+       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
+       * certificate. The DN must be unique for each entity, but your private CA can issue more than
+       * one certificate with the same DN to the same entity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-directoryname)
+       */
+      override fun directoryName(): Any? = unwrap(this).getDirectoryName()
+
+      /**
+       * Represents `GeneralName` as a DNS name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-dnsname)
+       */
+      override fun dnsName(): String? = unwrap(this).getDnsName()
+
+      /**
+       * Represents `GeneralName` as an `EdiPartyName` object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-edipartyname)
+       */
+      override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
+
+      /**
+       * Represents `GeneralName` as an IPv4 or IPv6 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-ipaddress)
+       */
+      override fun ipAddress(): String? = unwrap(this).getIpAddress()
+
+      /**
+       * Represents `GeneralName` using an `OtherName` object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-othername)
+       */
+      override fun otherName(): Any? = unwrap(this).getOtherName()
+
+      /**
+       * Represents `GeneralName` as an object identifier (OID).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-registeredid)
+       */
+      override fun registeredId(): String? = unwrap(this).getRegisteredId()
+
+      /**
+       * Represents `GeneralName` as an [RFC
+       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-rfc822name)
+       */
+      override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
+
+      /**
+       * Represents `GeneralName` as a URI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-uniformresourceidentifier)
+       */
+      override fun uniformResourceIdentifier(): String? =
+          unwrap(this).getUniformResourceIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty):
+          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as? GeneralNameProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GeneralNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty
     }
   }
 
@@ -1739,8 +3232,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
     ) : CdkObject(cdkObject), KeyUsageProperty {
       /**
        * Key can be used to sign CRLs.
@@ -1843,7 +3335,8 @@ public open class CfnCertificateAuthority internal constructor(
   }
 
   /**
-   * Describes the certificate extensions to be added to the certificate signing request (CSR).
+   * Contains information to enable and configure Online Certificate Status Protocol (OCSP) for
+   * validating certificate revocation status.
    *
    * Example:
    *
@@ -1851,244 +3344,272 @@ public open class CfnCertificateAuthority internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CsrExtensionsProperty csrExtensionsProperty = CsrExtensionsProperty.builder()
-   * .keyUsage(KeyUsageProperty.builder()
-   * .crlSign(false)
-   * .dataEncipherment(false)
-   * .decipherOnly(false)
-   * .digitalSignature(false)
-   * .encipherOnly(false)
-   * .keyAgreement(false)
-   * .keyCertSign(false)
-   * .keyEncipherment(false)
-   * .nonRepudiation(false)
-   * .build())
-   * .subjectInformationAccess(List.of(AccessDescriptionProperty.builder()
-   * .accessLocation(GeneralNameProperty.builder()
-   * .directoryName(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .dnsName("dnsName")
-   * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build())
-   * .ipAddress("ipAddress")
-   * .otherName(OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build())
-   * .registeredId("registeredId")
-   * .rfc822Name("rfc822Name")
-   * .uniformResourceIdentifier("uniformResourceIdentifier")
-   * .build())
-   * .accessMethod(AccessMethodProperty.builder()
-   * .accessMethodType("accessMethodType")
-   * .customObjectIdentifier("customObjectIdentifier")
-   * .build())
-   * .build()))
+   * OcspConfigurationProperty ocspConfigurationProperty = OcspConfigurationProperty.builder()
+   * .enabled(false)
+   * .ocspCustomCname("ocspCustomCname")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)
    */
-  public interface CsrExtensionsProperty {
+  public interface OcspConfigurationProperty {
     /**
-     * Indicates the purpose of the certificate and of the key contained in the certificate.
+     * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating certificate
+     * revocation status.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-keyusage)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
      */
-    public fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+    public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * For CA certificates, provides a path to additional information pertaining to the CA, such as
-     * revocation and policy.
+     * By default, AWS Private CA injects an Amazon domain into certificates being validated by the
+     * Online Certificate Status Protocol (OCSP).
      *
-     * For more information, see [Subject Information
-     * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-     * in RFC 5280.
+     * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
+     * domain.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-subjectinformationaccess)
+     *
+     * The content of a Canonical Name (CNAME) record must conform to
+     * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on the
+     * use of special characters in URIs. Additionally, the value of the CNAME must not include a
+     * protocol prefix such as "http://" or "https://".
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-ocspcustomcname)
      */
-    public fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
+    public fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
 
     /**
-     * A builder for [CsrExtensionsProperty]
+     * A builder for [OcspConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
+       * validating certificate revocation status.
        */
-      public fun keyUsage(keyUsage: IResolvable)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
+       * validating certificate revocation status.
        */
-      public fun keyUsage(keyUsage: KeyUsageProperty)
+      public fun enabled(enabled: IResolvable)
 
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param ocspCustomCname By default, AWS Private CA injects an Amazon domain into
+       * certificates being validated by the Online Certificate Status Protocol (OCSP).
+       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
+       * domain.
+       *
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
-      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      public fun subjectInformationAccess(subjectInformationAccess: IResolvable)
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      public fun subjectInformationAccess(subjectInformationAccess: List<Any>)
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      public fun subjectInformationAccess(vararg subjectInformationAccess: Any)
+      public fun ocspCustomCname(ocspCustomCname: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty.Builder
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty.builder()
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty.builder()
 
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
+       * validating certificate revocation status.
        */
-      override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
+       * validating certificate revocation status.
        */
-      override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       /**
-       * @param keyUsage Indicates the purpose of the certificate and of the key contained in the
-       * certificate.
+       * @param ocspCustomCname By default, AWS Private CA injects an Amazon domain into
+       * certificates being validated by the Online Certificate Status Protocol (OCSP).
+       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
+       * domain.
+       *
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
-      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
-          keyUsage(KeyUsageProperty(keyUsage))
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      override fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
-        cdkBuilder.subjectInformationAccess(subjectInformationAccess.let(IResolvable::unwrap))
+      override fun ocspCustomCname(ocspCustomCname: String) {
+        cdkBuilder.ocspCustomCname(ocspCustomCname)
       }
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
-        cdkBuilder.subjectInformationAccess(subjectInformationAccess)
-      }
-
-      /**
-       * @param subjectInformationAccess For CA certificates, provides a path to additional
-       * information pertaining to the CA, such as revocation and policy.
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
-       */
-      override fun subjectInformationAccess(vararg subjectInformationAccess: Any): Unit =
-          subjectInformationAccess(subjectInformationAccess.toList())
 
       public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
-    ) : CdkObject(cdkObject), CsrExtensionsProperty {
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
+    ) : CdkObject(cdkObject), OcspConfigurationProperty {
       /**
-       * Indicates the purpose of the certificate and of the key contained in the certificate.
+       * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating
+       * certificate revocation status.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-keyusage)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
        */
-      override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
       /**
-       * For CA certificates, provides a path to additional information pertaining to the CA, such
-       * as revocation and policy.
+       * By default, AWS Private CA injects an Amazon domain into certificates being validated by
+       * the Online Certificate Status Protocol (OCSP).
        *
-       * For more information, see [Subject Information
-       * Access](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2)
-       * in RFC 5280.
+       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
+       * domain.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html#cfn-acmpca-certificateauthority-csrextensions-subjectinformationaccess)
+       *
+       * The content of a Canonical Name (CNAME) record must conform to
+       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
+       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
+       * protocol prefix such as "http://" or "https://".
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-ocspcustomcname)
        */
-      override fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
+      override fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CsrExtensionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OcspConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty):
-          CsrExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsrExtensionsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty):
+          OcspConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OcspConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OcspConfigurationProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty
+    }
+  }
+
+  /**
+   * Defines a custom ASN.1 X.400 `GeneralName` using an object identifier (OID) and value. The OID
+   * must satisfy the regular expression shown below. For more information, see NIST's definition of
+   * [Object Identifier
+   * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.acmpca.*;
+   * OtherNameProperty otherNameProperty = OtherNameProperty.builder()
+   * .typeId("typeId")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html)
+   */
+  public interface OtherNameProperty {
+    /**
+     * Specifies an OID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-typeid)
+     */
+    public fun typeId(): String
+
+    /**
+     * Specifies an OID value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [OtherNameProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param typeId Specifies an OID. 
+       */
+      public fun typeId(typeId: String)
+
+      /**
+       * @param value Specifies an OID value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.Builder =
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.builder()
+
+      /**
+       * @param typeId Specifies an OID. 
+       */
+      override fun typeId(typeId: String) {
+        cdkBuilder.typeId(typeId)
+      }
+
+      /**
+       * @param value Specifies an OID value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
+    ) : CdkObject(cdkObject), OtherNameProperty {
+      /**
+       * Specifies an OID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-typeid)
+       */
+      override fun typeId(): String = unwrap(this).getTypeId()
+
+      /**
+       * Specifies an OID value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-othername.html#cfn-acmpca-certificateauthority-othername-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OtherNameProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty):
+          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as? OtherNameProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CsrExtensionsProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty =
+      internal fun unwrap(wrapped: OtherNameProperty):
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty
+          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty
     }
   }
 
@@ -2273,8 +3794,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
     ) : CdkObject(cdkObject), RevocationConfigurationProperty {
       /**
        * Configuration of the certificate revocation list (CRL), if any, maintained by your private
@@ -2732,8 +4252,7 @@ public open class CfnCertificateAuthority internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
+      cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
     ) : CdkObject(cdkObject), SubjectProperty {
       /**
        * Fully qualified domain name (FQDN) associated with the certificate subject.
@@ -2871,1537 +4390,6 @@ public open class CfnCertificateAuthority internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty
-    }
-  }
-
-  /**
-   * Describes the type and format of extension access.
-   *
-   * Only one of `CustomObjectIdentifier` or `AccessMethodType` may be provided. Providing both
-   * results in `InvalidArgsException` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * AccessMethodProperty accessMethodProperty = AccessMethodProperty.builder()
-   * .accessMethodType("accessMethodType")
-   * .customObjectIdentifier("customObjectIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html)
-   */
-  public interface AccessMethodProperty {
-    /**
-     * Specifies the `AccessMethod` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-accessmethodtype)
-     */
-    public fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
-
-    /**
-     * An object identifier (OID) specifying the `AccessMethod` .
-     *
-     * The OID must satisfy the regular expression shown below. For more information, see NIST's
-     * definition of [Object Identifier
-     * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-customobjectidentifier)
-     */
-    public fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
-
-    /**
-     * A builder for [AccessMethodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessMethodType Specifies the `AccessMethod` .
-       */
-      public fun accessMethodType(accessMethodType: String)
-
-      /**
-       * @param customObjectIdentifier An object identifier (OID) specifying the `AccessMethod` .
-       * The OID must satisfy the regular expression shown below. For more information, see NIST's
-       * definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       */
-      public fun customObjectIdentifier(customObjectIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty.builder()
-
-      /**
-       * @param accessMethodType Specifies the `AccessMethod` .
-       */
-      override fun accessMethodType(accessMethodType: String) {
-        cdkBuilder.accessMethodType(accessMethodType)
-      }
-
-      /**
-       * @param customObjectIdentifier An object identifier (OID) specifying the `AccessMethod` .
-       * The OID must satisfy the regular expression shown below. For more information, see NIST's
-       * definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       */
-      override fun customObjectIdentifier(customObjectIdentifier: String) {
-        cdkBuilder.customObjectIdentifier(customObjectIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
-    ) : CdkObject(cdkObject), AccessMethodProperty {
-      /**
-       * Specifies the `AccessMethod` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-accessmethodtype)
-       */
-      override fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
-
-      /**
-       * An object identifier (OID) specifying the `AccessMethod` .
-       *
-       * The OID must satisfy the regular expression shown below. For more information, see NIST's
-       * definition of [Object Identifier
-       * (OID)](https://docs.aws.amazon.com/https://csrc.nist.gov/glossary/term/Object_Identifier) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-accessmethod.html#cfn-acmpca-certificateauthority-accessmethod-customobjectidentifier)
-       */
-      override fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessMethodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty):
-          AccessMethodProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessMethodProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessMethodProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty
-    }
-  }
-
-  /**
-   * Contains configuration information for a certificate revocation list (CRL).
-   *
-   * Your private certificate authority (CA) creates base CRLs. Delta CRLs are not supported. You
-   * can enable CRLs for your new or an existing private CA by setting the *Enabled* parameter to
-   * `true` . Your private CA writes CRLs to an S3 bucket that you specify in the *S3BucketName*
-   * parameter. You can hide the name of your bucket by specifying a value for the *CustomCname*
-   * parameter. Your private CA by default copies the CNAME or the S3 bucket name to the *CRL
-   * Distribution Points* extension of each certificate it issues. If you want to configure this
-   * default behavior to be something different, you can set the
-   * *CrlDistributionPointExtensionConfiguration* parameter. Your S3 bucket policy must give write
-   * permission to AWS Private CA.
-   *
-   * AWS Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
-   * information, see [Encrypting Your
-   * CRLs](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#crl-encryption) .
-   *
-   * Your private CA uses the value in the *ExpirationInDays* parameter to calculate the
-   * *nextUpdate* field in the CRL. The CRL is refreshed prior to a certificate's expiration date or
-   * when a certificate is revoked. When a certificate is revoked, it appears in the CRL until the
-   * certificate expires, and then in one additional CRL after expiration, and it always appears in the
-   * audit report.
-   *
-   * A CRL is typically updated approximately 30 minutes after a certificate is revoked. If for any
-   * reason a CRL update fails, AWS Private CA makes further attempts every 15 minutes.
-   *
-   * CRLs contain the following fields:
-   *
-   * * *Version* : The current version number defined in RFC 5280 is V2. The integer value is 0x1.
-   * * *Signature Algorithm* : The name of the algorithm used to sign the CRL.
-   * * *Issuer* : The X.500 distinguished name of your private CA that issued the CRL.
-   * * *Last Update* : The issue date and time of this CRL.
-   * * *Next Update* : The day and time by which the next CRL will be issued.
-   * * *Revoked Certificates* : List of revoked certificates. Each list item contains the following
-   * information.
-   * * *Serial Number* : The serial number, in hexadecimal format, of the revoked certificate.
-   * * *Revocation Date* : Date and time the certificate was revoked.
-   * * *CRL Entry Extensions* : Optional extensions for the CRL entry.
-   * * *X509v3 CRL Reason Code* : Reason the certificate was revoked.
-   * * *CRL Extensions* : Optional extensions for the CRL.
-   * * *X509v3 Authority Key Identifier* : Identifies the public key associated with the private key
-   * used to sign the certificate.
-   * * *X509v3 CRL Number:* : Decimal sequence number for the CRL.
-   * * *Signature Algorithm* : Algorithm used by your private CA to sign the CRL.
-   * * *Signature Value* : Signature computed over the CRL.
-   *
-   * Certificate revocation lists created by AWS Private CA are DER-encoded. You can use the
-   * following OpenSSL command to list a CRL.
-   *
-   * `openssl crl -inform DER -text -in *crl_path* -noout`
-   *
-   * For more information, see [Planning a certificate revocation list
-   * (CRL)](https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html) in the *AWS
-   * Private Certificate Authority User Guide*
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
-   * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
-   * .omitExtension(false)
-   * .build())
-   * .customCname("customCname")
-   * .enabled(false)
-   * .expirationInDays(123)
-   * .s3BucketName("s3BucketName")
-   * .s3ObjectAcl("s3ObjectAcl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html)
-   */
-  public interface CrlConfigurationProperty {
-    /**
-     * Configures the default behavior of the CRL Distribution Point extension for certificates
-     * issued by your CA.
-     *
-     * If this field is not provided, then the CRL Distribution Point extension will be present and
-     * contain the default CRL URL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crldistributionpointextensionconfiguration)
-     */
-    public fun crlDistributionPointExtensionConfiguration(): Any? =
-        unwrap(this).getCrlDistributionPointExtensionConfiguration()
-
-    /**
-     * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
-     * of an alias for the CRL distribution point.
-     *
-     * Use this value if you don't want the name of your S3 bucket to be public.
-     *
-     *
-     * The content of a Canonical Name (CNAME) record must conform to
-     * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on the
-     * use of special characters in URIs. Additionally, the value of the CNAME must not include a
-     * protocol prefix such as "http://" or "https://".
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
-     */
-    public fun customCname(): String? = unwrap(this).getCustomCname()
-
-    /**
-     * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
-     *
-     * You can use this value to enable certificate revocation for a new CA when you call the
-     * `CreateCertificateAuthority` operation or for an existing CA when you call the
-     * `UpdateCertificateAuthority` operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * Validity period of the CRL in days.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays)
-     */
-    public fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
-
-    /**
-     * Name of the S3 bucket that contains the CRL.
-     *
-     * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
-     * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
-     * the name of your bucket by calling the
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * operation. You must specify a [bucket
-     * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
-     * that allows AWS Private CA to write the CRL to your bucket.
-     *
-     *
-     * The `S3BucketName` parameter must conform to the [S3 bucket naming
-     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)
-     */
-    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-    /**
-     * Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3
-     * bucket.
-     *
-     * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you choose
-     * BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and your PKI
-     * clients may need an alternative method of access.
-     *
-     * If no value is specified, the default is PUBLIC_READ.
-     *
-     * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
-     * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
-     * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
-     * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
-     * `PUBLIC_READ` as the value.
-     *
-     * For more information, see [Blocking public access to the S3
-     * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl)
-     */
-    public fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
-
-    /**
-     * A builder for [CrlConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable)
-
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty)
-
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
-      public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
-       * that enables the use of an alias for the CRL distribution point.
-       * Use this value if you don't want the name of your S3 bucket to be public.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       */
-      public fun customCname(customCname: String)
-
-      /**
-       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
-       * You can use this value to enable certificate revocation for a new CA when you call the
-       * `CreateCertificateAuthority` operation or for an existing CA when you call the
-       * `UpdateCertificateAuthority` operation.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
-       * You can use this value to enable certificate revocation for a new CA when you call the
-       * `CreateCertificateAuthority` operation or for an existing CA when you call the
-       * `UpdateCertificateAuthority` operation.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param expirationInDays Validity period of the CRL in days.
-       */
-      public fun expirationInDays(expirationInDays: Number)
-
-      /**
-       * @param s3BucketName Name of the S3 bucket that contains the CRL.
-       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
-       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
-       * the name of your bucket by calling the
-       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-       * operation. You must specify a [bucket
-       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
-       * that allows AWS Private CA to write the CRL to your bucket.
-       *
-       *
-       * The `S3BucketName` parameter must conform to the [S3 bucket naming
-       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-       */
-      public fun s3BucketName(s3BucketName: String)
-
-      /**
-       * @param s3ObjectAcl Determines whether the CRL will be publicly readable or privately held
-       * in the CRL Amazon S3 bucket.
-       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
-       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
-       * your PKI clients may need an alternative method of access.
-       *
-       * If no value is specified, the default is PUBLIC_READ.
-       *
-       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
-       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
-       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
-       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
-       * `PUBLIC_READ` as the value.
-       *
-       * For more information, see [Blocking public access to the S3
-       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
-       */
-      public fun s3ObjectAcl(s3ObjectAcl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty.builder()
-
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      override
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable) {
-        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      override
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty) {
-        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(CrlDistributionPointExtensionConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param crlDistributionPointExtensionConfiguration Configures the default behavior of the
-       * CRL Distribution Point extension for certificates issued by your CA.
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
-      override
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty(crlDistributionPointExtensionConfiguration))
-
-      /**
-       * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
-       * that enables the use of an alias for the CRL distribution point.
-       * Use this value if you don't want the name of your S3 bucket to be public.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       */
-      override fun customCname(customCname: String) {
-        cdkBuilder.customCname(customCname)
-      }
-
-      /**
-       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
-       * You can use this value to enable certificate revocation for a new CA when you call the
-       * `CreateCertificateAuthority` operation or for an existing CA when you call the
-       * `UpdateCertificateAuthority` operation.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
-       * You can use this value to enable certificate revocation for a new CA when you call the
-       * `CreateCertificateAuthority` operation or for an existing CA when you call the
-       * `UpdateCertificateAuthority` operation.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param expirationInDays Validity period of the CRL in days.
-       */
-      override fun expirationInDays(expirationInDays: Number) {
-        cdkBuilder.expirationInDays(expirationInDays)
-      }
-
-      /**
-       * @param s3BucketName Name of the S3 bucket that contains the CRL.
-       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
-       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
-       * the name of your bucket by calling the
-       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-       * operation. You must specify a [bucket
-       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
-       * that allows AWS Private CA to write the CRL to your bucket.
-       *
-       *
-       * The `S3BucketName` parameter must conform to the [S3 bucket naming
-       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-       */
-      override fun s3BucketName(s3BucketName: String) {
-        cdkBuilder.s3BucketName(s3BucketName)
-      }
-
-      /**
-       * @param s3ObjectAcl Determines whether the CRL will be publicly readable or privately held
-       * in the CRL Amazon S3 bucket.
-       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
-       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
-       * your PKI clients may need an alternative method of access.
-       *
-       * If no value is specified, the default is PUBLIC_READ.
-       *
-       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
-       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
-       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
-       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
-       * `PUBLIC_READ` as the value.
-       *
-       * For more information, see [Blocking public access to the S3
-       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
-       */
-      override fun s3ObjectAcl(s3ObjectAcl: String) {
-        cdkBuilder.s3ObjectAcl(s3ObjectAcl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
-    ) : CdkObject(cdkObject), CrlConfigurationProperty {
-      /**
-       * Configures the default behavior of the CRL Distribution Point extension for certificates
-       * issued by your CA.
-       *
-       * If this field is not provided, then the CRL Distribution Point extension will be present
-       * and contain the default CRL URL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crldistributionpointextensionconfiguration)
-       */
-      override fun crlDistributionPointExtensionConfiguration(): Any? =
-          unwrap(this).getCrlDistributionPointExtensionConfiguration()
-
-      /**
-       * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
-       * of an alias for the CRL distribution point.
-       *
-       * Use this value if you don't want the name of your S3 bucket to be public.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
-       */
-      override fun customCname(): String? = unwrap(this).getCustomCname()
-
-      /**
-       * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
-       *
-       * You can use this value to enable certificate revocation for a new CA when you call the
-       * `CreateCertificateAuthority` operation or for an existing CA when you call the
-       * `UpdateCertificateAuthority` operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * Validity period of the CRL in days.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays)
-       */
-      override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
-
-      /**
-       * Name of the S3 bucket that contains the CRL.
-       *
-       * If you do not provide a value for the *CustomCname* argument, the name of your S3 bucket is
-       * placed into the *CRL Distribution Points* extension of the issued certificate. You can change
-       * the name of your bucket by calling the
-       * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-       * operation. You must specify a [bucket
-       * policy](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-policies)
-       * that allows AWS Private CA to write the CRL to your bucket.
-       *
-       *
-       * The `S3BucketName` parameter must conform to the [S3 bucket naming
-       * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)
-       */
-      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-      /**
-       * Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3
-       * bucket.
-       *
-       * If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you
-       * choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and
-       * your PKI clients may need an alternative method of access.
-       *
-       * If no value is specified, the default is PUBLIC_READ.
-       *
-       * *Note:* This default can cause CA creation to fail in some circumstances. If you have have
-       * enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the
-       * value of this parameter as `BUCKET_OWNER_FULL_CONTROL` , and not doing so results in an error.
-       * If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or
-       * `PUBLIC_READ` as the value.
-       *
-       * For more information, see [Blocking public access to the S3
-       * bucket](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#s3-bpa) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl)
-       */
-      override fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CrlConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty):
-          CrlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? CrlConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CrlConfigurationProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty
-    }
-  }
-
-  /**
-   * Contains configuration information for the default behavior of the CRL Distribution Point (CDP)
-   * extension in certificates issued by your CA.
-   *
-   * This extension contains a link to download the CRL, so you can check whether a certificate has
-   * been revoked. To choose whether you want this extension omitted or not in certificates issued by
-   * your CA, you can set the *OmitExtension* parameter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CrlDistributionPointExtensionConfigurationProperty
-   * crlDistributionPointExtensionConfigurationProperty =
-   * CrlDistributionPointExtensionConfigurationProperty.builder()
-   * .omitExtension(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html)
-   */
-  public interface CrlDistributionPointExtensionConfigurationProperty {
-    /**
-     * Configures whether the CRL Distribution Point extension should be populated with the default
-     * URL to the CRL.
-     *
-     * If set to `true` , then the CDP extension will not be present in any certificates issued by
-     * that CA unless otherwise specified through CSR or API passthrough.
-     *
-     *
-     * Only set this if you have another way to distribute the CRL Distribution Points for
-     * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-     *
-     * This configuration cannot be enabled with a custom CNAME set.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html#cfn-acmpca-certificateauthority-crldistributionpointextensionconfiguration-omitextension)
-     */
-    public fun omitExtension(): Any
-
-    /**
-     * A builder for [CrlDistributionPointExtensionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param omitExtension Configures whether the CRL Distribution Point extension should be
-       * populated with the default URL to the CRL. 
-       * If set to `true` , then the CDP extension will not be present in any certificates issued by
-       * that CA unless otherwise specified through CSR or API passthrough.
-       *
-       *
-       * Only set this if you have another way to distribute the CRL Distribution Points for
-       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-       *
-       * This configuration cannot be enabled with a custom CNAME set.
-       */
-      public fun omitExtension(omitExtension: Boolean)
-
-      /**
-       * @param omitExtension Configures whether the CRL Distribution Point extension should be
-       * populated with the default URL to the CRL. 
-       * If set to `true` , then the CDP extension will not be present in any certificates issued by
-       * that CA unless otherwise specified through CSR or API passthrough.
-       *
-       *
-       * Only set this if you have another way to distribute the CRL Distribution Points for
-       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-       *
-       * This configuration cannot be enabled with a custom CNAME set.
-       */
-      public fun omitExtension(omitExtension: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty.builder()
-
-      /**
-       * @param omitExtension Configures whether the CRL Distribution Point extension should be
-       * populated with the default URL to the CRL. 
-       * If set to `true` , then the CDP extension will not be present in any certificates issued by
-       * that CA unless otherwise specified through CSR or API passthrough.
-       *
-       *
-       * Only set this if you have another way to distribute the CRL Distribution Points for
-       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-       *
-       * This configuration cannot be enabled with a custom CNAME set.
-       */
-      override fun omitExtension(omitExtension: Boolean) {
-        cdkBuilder.omitExtension(omitExtension)
-      }
-
-      /**
-       * @param omitExtension Configures whether the CRL Distribution Point extension should be
-       * populated with the default URL to the CRL. 
-       * If set to `true` , then the CDP extension will not be present in any certificates issued by
-       * that CA unless otherwise specified through CSR or API passthrough.
-       *
-       *
-       * Only set this if you have another way to distribute the CRL Distribution Points for
-       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-       *
-       * This configuration cannot be enabled with a custom CNAME set.
-       */
-      override fun omitExtension(omitExtension: IResolvable) {
-        cdkBuilder.omitExtension(omitExtension.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
-    ) : CdkObject(cdkObject), CrlDistributionPointExtensionConfigurationProperty {
-      /**
-       * Configures whether the CRL Distribution Point extension should be populated with the
-       * default URL to the CRL.
-       *
-       * If set to `true` , then the CDP extension will not be present in any certificates issued by
-       * that CA unless otherwise specified through CSR or API passthrough.
-       *
-       *
-       * Only set this if you have another way to distribute the CRL Distribution Points for
-       * certificates issued by your CA, such as the Matter Distributed Compliance Ledger.
-       *
-       * This configuration cannot be enabled with a custom CNAME set.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crldistributionpointextensionconfiguration.html#cfn-acmpca-certificateauthority-crldistributionpointextensionconfiguration-omitextension)
-       */
-      override fun omitExtension(): Any = unwrap(this).getOmitExtension()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CrlDistributionPointExtensionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty):
-          CrlDistributionPointExtensionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CrlDistributionPointExtensionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CrlDistributionPointExtensionConfigurationProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty
-    }
-  }
-
-  /**
-   * Contains information to enable and configure Online Certificate Status Protocol (OCSP) for
-   * validating certificate revocation status.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * OcspConfigurationProperty ocspConfigurationProperty = OcspConfigurationProperty.builder()
-   * .enabled(false)
-   * .ocspCustomCname("ocspCustomCname")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)
-   */
-  public interface OcspConfigurationProperty {
-    /**
-     * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating certificate
-     * revocation status.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * By default, AWS Private CA injects an Amazon domain into certificates being validated by the
-     * Online Certificate Status Protocol (OCSP).
-     *
-     * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
-     * domain.
-     *
-     *
-     * The content of a Canonical Name (CNAME) record must conform to
-     * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on the
-     * use of special characters in URIs. Additionally, the value of the CNAME must not include a
-     * protocol prefix such as "http://" or "https://".
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-ocspcustomcname)
-     */
-    public fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
-
-    /**
-     * A builder for [OcspConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param ocspCustomCname By default, AWS Private CA injects an Amazon domain into
-       * certificates being validated by the Online Certificate Status Protocol (OCSP).
-       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
-       * domain.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       */
-      public fun ocspCustomCname(ocspCustomCname: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty.builder()
-
-      /**
-       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ocspCustomCname By default, AWS Private CA injects an Amazon domain into
-       * certificates being validated by the Online Certificate Status Protocol (OCSP).
-       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
-       * domain.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       */
-      override fun ocspCustomCname(ocspCustomCname: String) {
-        cdkBuilder.ocspCustomCname(ocspCustomCname)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
-    ) : CdkObject(cdkObject), OcspConfigurationProperty {
-      /**
-       * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating
-       * certificate revocation status.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * By default, AWS Private CA injects an Amazon domain into certificates being validated by
-       * the Online Certificate Status Protocol (OCSP).
-       *
-       * A customer can alternatively use this object to define a CNAME specifying a customized OCSP
-       * domain.
-       *
-       *
-       * The content of a Canonical Name (CNAME) record must conform to
-       * [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt) restrictions on
-       * the use of special characters in URIs. Additionally, the value of the CNAME must not include a
-       * protocol prefix such as "http://" or "https://".
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-ocspcustomcname)
-       */
-      override fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OcspConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty):
-          OcspConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OcspConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OcspConfigurationProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes an ASN.1 X.400 `GeneralName` as defined in [RFC
-   * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) . Only one of the
-   * following naming options should be provided. Providing more than one option results in an
-   * `InvalidArgsException` error.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * GeneralNameProperty generalNameProperty = GeneralNameProperty.builder()
-   * .directoryName(SubjectProperty.builder()
-   * .commonName("commonName")
-   * .country("country")
-   * .customAttributes(List.of(CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build()))
-   * .distinguishedNameQualifier("distinguishedNameQualifier")
-   * .generationQualifier("generationQualifier")
-   * .givenName("givenName")
-   * .initials("initials")
-   * .locality("locality")
-   * .organization("organization")
-   * .organizationalUnit("organizationalUnit")
-   * .pseudonym("pseudonym")
-   * .serialNumber("serialNumber")
-   * .state("state")
-   * .surname("surname")
-   * .title("title")
-   * .build())
-   * .dnsName("dnsName")
-   * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
-   * .partyName("partyName")
-   * .build())
-   * .ipAddress("ipAddress")
-   * .otherName(OtherNameProperty.builder()
-   * .typeId("typeId")
-   * .value("value")
-   * .build())
-   * .registeredId("registeredId")
-   * .rfc822Name("rfc822Name")
-   * .uniformResourceIdentifier("uniformResourceIdentifier")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html)
-   */
-  public interface GeneralNameProperty {
-    /**
-     * Contains information about the certificate subject.
-     *
-     * The certificate can be one issued by your private certificate authority (CA) or it can be
-     * your private CA certificate. The Subject field in the certificate identifies the entity that
-     * owns or controls the public key in the certificate. The entity can be a user, computer, device,
-     * or service. The Subject must contain an X.500 distinguished name (DN). A DN is a sequence of
-     * relative distinguished names (RDNs). The RDNs are separated by commas in the certificate. The DN
-     * must be unique for each entity, but your private CA can issue more than one certificate with the
-     * same DN to the same entity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-directoryname)
-     */
-    public fun directoryName(): Any? = unwrap(this).getDirectoryName()
-
-    /**
-     * Represents `GeneralName` as a DNS name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-dnsname)
-     */
-    public fun dnsName(): String? = unwrap(this).getDnsName()
-
-    /**
-     * Represents `GeneralName` as an `EdiPartyName` object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-edipartyname)
-     */
-    public fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
-
-    /**
-     * Represents `GeneralName` as an IPv4 or IPv6 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-ipaddress)
-     */
-    public fun ipAddress(): String? = unwrap(this).getIpAddress()
-
-    /**
-     * Represents `GeneralName` using an `OtherName` object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-othername)
-     */
-    public fun otherName(): Any? = unwrap(this).getOtherName()
-
-    /**
-     * Represents `GeneralName` as an object identifier (OID).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-registeredid)
-     */
-    public fun registeredId(): String? = unwrap(this).getRegisteredId()
-
-    /**
-     * Represents `GeneralName` as an [RFC
-     * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-rfc822name)
-     */
-    public fun rfc822Name(): String? = unwrap(this).getRfc822Name()
-
-    /**
-     * Represents `GeneralName` as a URI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-uniformresourceidentifier)
-     */
-    public fun uniformResourceIdentifier(): String? = unwrap(this).getUniformResourceIdentifier()
-
-    /**
-     * A builder for [GeneralNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      public fun directoryName(directoryName: IResolvable)
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      public fun directoryName(directoryName: SubjectProperty)
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
-      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit)
-
-      /**
-       * @param dnsName Represents `GeneralName` as a DNS name.
-       */
-      public fun dnsName(dnsName: String)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      public fun ediPartyName(ediPartyName: IResolvable)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty)
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit)
-
-      /**
-       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
-       */
-      public fun ipAddress(ipAddress: String)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      public fun otherName(otherName: IResolvable)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      public fun otherName(otherName: OtherNameProperty)
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
-      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit)
-
-      /**
-       * @param registeredId Represents `GeneralName` as an object identifier (OID).
-       */
-      public fun registeredId(registeredId: String)
-
-      /**
-       * @param rfc822Name Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       */
-      public fun rfc822Name(rfc822Name: String)
-
-      /**
-       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
-       */
-      public fun uniformResourceIdentifier(uniformResourceIdentifier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty.builder()
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      override fun directoryName(directoryName: IResolvable) {
-        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      override fun directoryName(directoryName: SubjectProperty) {
-        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
-      }
-
-      /**
-       * @param directoryName Contains information about the certificate subject.
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
-      override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
-          directoryName(SubjectProperty(directoryName))
-
-      /**
-       * @param dnsName Represents `GeneralName` as a DNS name.
-       */
-      override fun dnsName(dnsName: String) {
-        cdkBuilder.dnsName(dnsName)
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      override fun ediPartyName(ediPartyName: IResolvable) {
-        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
-        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
-      }
-
-      /**
-       * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
-      override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit =
-          ediPartyName(EdiPartyNameProperty(ediPartyName))
-
-      /**
-       * @param ipAddress Represents `GeneralName` as an IPv4 or IPv6 address.
-       */
-      override fun ipAddress(ipAddress: String) {
-        cdkBuilder.ipAddress(ipAddress)
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      override fun otherName(otherName: IResolvable) {
-        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      override fun otherName(otherName: OtherNameProperty) {
-        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
-      }
-
-      /**
-       * @param otherName Represents `GeneralName` using an `OtherName` object.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
-      override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
-          otherName(OtherNameProperty(otherName))
-
-      /**
-       * @param registeredId Represents `GeneralName` as an object identifier (OID).
-       */
-      override fun registeredId(registeredId: String) {
-        cdkBuilder.registeredId(registeredId)
-      }
-
-      /**
-       * @param rfc822Name Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       */
-      override fun rfc822Name(rfc822Name: String) {
-        cdkBuilder.rfc822Name(rfc822Name)
-      }
-
-      /**
-       * @param uniformResourceIdentifier Represents `GeneralName` as a URI.
-       */
-      override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
-        cdkBuilder.uniformResourceIdentifier(uniformResourceIdentifier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
-    ) : CdkObject(cdkObject), GeneralNameProperty {
-      /**
-       * Contains information about the certificate subject.
-       *
-       * The certificate can be one issued by your private certificate authority (CA) or it can be
-       * your private CA certificate. The Subject field in the certificate identifies the entity that
-       * owns or controls the public key in the certificate. The entity can be a user, computer,
-       * device, or service. The Subject must contain an X.500 distinguished name (DN). A DN is a
-       * sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the
-       * certificate. The DN must be unique for each entity, but your private CA can issue more than
-       * one certificate with the same DN to the same entity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-directoryname)
-       */
-      override fun directoryName(): Any? = unwrap(this).getDirectoryName()
-
-      /**
-       * Represents `GeneralName` as a DNS name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-dnsname)
-       */
-      override fun dnsName(): String? = unwrap(this).getDnsName()
-
-      /**
-       * Represents `GeneralName` as an `EdiPartyName` object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-edipartyname)
-       */
-      override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
-
-      /**
-       * Represents `GeneralName` as an IPv4 or IPv6 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-ipaddress)
-       */
-      override fun ipAddress(): String? = unwrap(this).getIpAddress()
-
-      /**
-       * Represents `GeneralName` using an `OtherName` object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-othername)
-       */
-      override fun otherName(): Any? = unwrap(this).getOtherName()
-
-      /**
-       * Represents `GeneralName` as an object identifier (OID).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-registeredid)
-       */
-      override fun registeredId(): String? = unwrap(this).getRegisteredId()
-
-      /**
-       * Represents `GeneralName` as an [RFC
-       * 822](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc822) email address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-rfc822name)
-       */
-      override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
-
-      /**
-       * Represents `GeneralName` as a URI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html#cfn-acmpca-certificateauthority-generalname-uniformresourceidentifier)
-       */
-      override fun uniformResourceIdentifier(): String? =
-          unwrap(this).getUniformResourceIdentifier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GeneralNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty):
-          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as? GeneralNameProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GeneralNameProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty
-    }
-  }
-
-  /**
-   * Defines the X.500 relative distinguished name (RDN).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.acmpca.*;
-   * CustomAttributeProperty customAttributeProperty = CustomAttributeProperty.builder()
-   * .objectIdentifier("objectIdentifier")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html)
-   */
-  public interface CustomAttributeProperty {
-    /**
-     * Specifies the object identifier (OID) of the attribute type of the relative distinguished
-     * name (RDN).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-objectidentifier)
-     */
-    public fun objectIdentifier(): String
-
-    /**
-     * Specifies the attribute value of relative distinguished name (RDN).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [CustomAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
-       * relative distinguished name (RDN). 
-       */
-      public fun objectIdentifier(objectIdentifier: String)
-
-      /**
-       * @param value Specifies the attribute value of relative distinguished name (RDN). 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty.Builder
-          =
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty.builder()
-
-      /**
-       * @param objectIdentifier Specifies the object identifier (OID) of the attribute type of the
-       * relative distinguished name (RDN). 
-       */
-      override fun objectIdentifier(objectIdentifier: String) {
-        cdkBuilder.objectIdentifier(objectIdentifier)
-      }
-
-      /**
-       * @param value Specifies the attribute value of relative distinguished name (RDN). 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
-    ) : CdkObject(cdkObject), CustomAttributeProperty {
-      /**
-       * Specifies the object identifier (OID) of the attribute type of the relative distinguished
-       * name (RDN).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-objectidentifier)
-       */
-      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
-
-      /**
-       * Specifies the attribute value of relative distinguished name (RDN).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-customattribute.html#cfn-acmpca-certificateauthority-customattribute-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty):
-          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomAttributeProperty):
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty
     }
   }
 }

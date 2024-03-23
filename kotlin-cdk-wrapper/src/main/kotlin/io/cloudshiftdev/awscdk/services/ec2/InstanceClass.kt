@@ -219,10 +219,22 @@ public enum class InstanceClass(
   INF2(software.amazon.awscdk.services.ec2.InstanceClass.INF2),
   MACINTOSH1_INTEL(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH1_INTEL),
   MAC1(software.amazon.awscdk.services.ec2.InstanceClass.MAC1),
+  MACINTOSH2_M1(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M1),
+  MAC2(software.amazon.awscdk.services.ec2.InstanceClass.MAC2),
+  MACINTOSH2_M2(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2),
+  MAC2_M2(software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2),
+  MACINTOSH2_M2_PRO(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2_PRO),
+  MAC2_M2PRO(software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2PRO),
   VIDEO_TRANSCODING1(software.amazon.awscdk.services.ec2.InstanceClass.VIDEO_TRANSCODING1),
   VT1(software.amazon.awscdk.services.ec2.InstanceClass.VT1),
   HIGH_PERFORMANCE_COMPUTING6_AMD(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING6_AMD),
   HPC6A(software.amazon.awscdk.services.ec2.InstanceClass.HPC6A),
+  HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE),
+  HPC6ID(software.amazon.awscdk.services.ec2.InstanceClass.HPC6ID),
+  HIGH_PERFORMANCE_COMPUTING7_AMD(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING7_AMD),
+  HPC7A(software.amazon.awscdk.services.ec2.InstanceClass.HPC7A),
+  HIGH_PERFORMANCE_COMPUTING7_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING7_GRAVITON),
+  HPC7G(software.amazon.awscdk.services.ec2.InstanceClass.HPC7G),
   DEEP_LEARNING1(software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING1),
   DL1(software.amazon.awscdk.services.ec2.InstanceClass.DL1),
   ;
@@ -514,12 +526,28 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH1_INTEL ->
           InstanceClass.MACINTOSH1_INTEL
       software.amazon.awscdk.services.ec2.InstanceClass.MAC1 -> InstanceClass.MAC1
+      software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M1 -> InstanceClass.MACINTOSH2_M1
+      software.amazon.awscdk.services.ec2.InstanceClass.MAC2 -> InstanceClass.MAC2
+      software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2 -> InstanceClass.MACINTOSH2_M2
+      software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2 -> InstanceClass.MAC2_M2
+      software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2_PRO ->
+          InstanceClass.MACINTOSH2_M2_PRO
+      software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2PRO -> InstanceClass.MAC2_M2PRO
       software.amazon.awscdk.services.ec2.InstanceClass.VIDEO_TRANSCODING1 ->
           InstanceClass.VIDEO_TRANSCODING1
       software.amazon.awscdk.services.ec2.InstanceClass.VT1 -> InstanceClass.VT1
       software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING6_AMD ->
           InstanceClass.HIGH_PERFORMANCE_COMPUTING6_AMD
       software.amazon.awscdk.services.ec2.InstanceClass.HPC6A -> InstanceClass.HPC6A
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE ->
+          InstanceClass.HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE
+      software.amazon.awscdk.services.ec2.InstanceClass.HPC6ID -> InstanceClass.HPC6ID
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING7_AMD ->
+          InstanceClass.HIGH_PERFORMANCE_COMPUTING7_AMD
+      software.amazon.awscdk.services.ec2.InstanceClass.HPC7A -> InstanceClass.HPC7A
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING7_GRAVITON ->
+          InstanceClass.HIGH_PERFORMANCE_COMPUTING7_GRAVITON
+      software.amazon.awscdk.services.ec2.InstanceClass.HPC7G -> InstanceClass.HPC7G
       software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING1 ->
           InstanceClass.DEEP_LEARNING1
       software.amazon.awscdk.services.ec2.InstanceClass.DL1 -> InstanceClass.DL1

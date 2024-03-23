@@ -106,7 +106,7 @@ public interface EksVolumeOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EksVolumeOptions,
+    cdkObject: software.amazon.awscdk.services.batch.EksVolumeOptions,
   ) : CdkObject(cdkObject), EksVolumeOptions {
     /**
      * The path on the container where the volume is mounted.

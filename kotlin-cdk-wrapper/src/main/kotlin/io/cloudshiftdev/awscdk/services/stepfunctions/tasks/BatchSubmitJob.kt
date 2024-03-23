@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-batch.html)
  */
-public open class BatchSubmitJob internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob,
+public open class BatchSubmitJob(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -698,6 +697,7 @@ public open class BatchSubmitJob internal constructor(
         BatchSubmitJob = BatchSubmitJob(cdkObject)
 
     internal fun unwrap(wrapped: BatchSubmitJob):
-        software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob
   }
 }

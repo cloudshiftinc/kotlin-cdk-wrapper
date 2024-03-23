@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscopeanalysis.html)
  */
-public open class CfnNetworkInsightsAccessScopeAnalysis internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis,
+public open class CfnNetworkInsightsAccessScopeAnalysis(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -237,6 +236,7 @@ public open class CfnNetworkInsightsAccessScopeAnalysis internal constructor(
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAccessScopeAnalysis):
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis
   }
 }

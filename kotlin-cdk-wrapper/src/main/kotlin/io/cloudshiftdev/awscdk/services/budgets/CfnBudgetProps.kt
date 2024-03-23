@@ -203,7 +203,7 @@ public interface CfnBudgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetProps,
+    cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetProps,
   ) : CdkObject(cdkObject), CfnBudgetProps {
     /**
      * The budget object that you want to create.

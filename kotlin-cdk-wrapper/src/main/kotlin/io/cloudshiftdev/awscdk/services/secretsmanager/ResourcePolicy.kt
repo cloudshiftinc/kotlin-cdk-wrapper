@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ResourcePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicy,
+public open class ResourcePolicy(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicy,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -107,6 +107,7 @@ public open class ResourcePolicy internal constructor(
         ResourcePolicy = ResourcePolicy(cdkObject)
 
     internal fun unwrap(wrapped: ResourcePolicy):
-        software.amazon.awscdk.services.secretsmanager.ResourcePolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.ResourcePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.ResourcePolicy
   }
 }

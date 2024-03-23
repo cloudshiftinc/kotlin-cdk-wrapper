@@ -527,7 +527,7 @@ public interface CfnModelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelProps,
   ) : CdkObject(cdkObject), CfnModelProps {
     /**
      * Specifies the containers in the inference pipeline.

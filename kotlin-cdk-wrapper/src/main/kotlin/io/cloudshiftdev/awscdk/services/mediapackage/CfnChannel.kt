@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -501,7 +501,116 @@ public open class CfnChannel internal constructor(
         CfnChannel = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel):
-        software.amazon.awscdk.services.mediapackage.CfnChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackage.CfnChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackage.CfnChannel
+  }
+
+  /**
+   * HLS ingest configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * HlsIngestProperty hlsIngestProperty = HlsIngestProperty.builder()
+   * .ingestEndpoints(List.of(IngestEndpointProperty.builder()
+   * .id("id")
+   * .password("password")
+   * .url("url")
+   * .username("username")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html)
+   */
+  public interface HlsIngestProperty {
+    /**
+     * The input URL where the source stream should be sent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html#cfn-mediapackage-channel-hlsingest-ingestendpoints)
+     */
+    public fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
+
+    /**
+     * A builder for [HlsIngestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      public fun ingestEndpoints(ingestEndpoints: IResolvable)
+
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      public fun ingestEndpoints(ingestEndpoints: List<Any>)
+
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      public fun ingestEndpoints(vararg ingestEndpoints: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.Builder =
+          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.builder()
+
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      override fun ingestEndpoints(ingestEndpoints: IResolvable) {
+        cdkBuilder.ingestEndpoints(ingestEndpoints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      override fun ingestEndpoints(ingestEndpoints: List<Any>) {
+        cdkBuilder.ingestEndpoints(ingestEndpoints)
+      }
+
+      /**
+       * @param ingestEndpoints The input URL where the source stream should be sent.
+       */
+      override fun ingestEndpoints(vararg ingestEndpoints: Any): Unit =
+          ingestEndpoints(ingestEndpoints.toList())
+
+      public fun build(): software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
+    ) : CdkObject(cdkObject), HlsIngestProperty {
+      /**
+       * The input URL where the source stream should be sent.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html#cfn-mediapackage-channel-hlsingest-ingestendpoints)
+       */
+      override fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HlsIngestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty):
+          HlsIngestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsIngestProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HlsIngestProperty):
+          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty
+    }
   }
 
   /**
@@ -617,8 +726,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
     ) : CdkObject(cdkObject), IngestEndpointProperty {
       /**
        * The endpoint identifier.
@@ -664,115 +772,6 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty
-    }
-  }
-
-  /**
-   * HLS ingest configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * HlsIngestProperty hlsIngestProperty = HlsIngestProperty.builder()
-   * .ingestEndpoints(List.of(IngestEndpointProperty.builder()
-   * .id("id")
-   * .password("password")
-   * .url("url")
-   * .username("username")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html)
-   */
-  public interface HlsIngestProperty {
-    /**
-     * The input URL where the source stream should be sent.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html#cfn-mediapackage-channel-hlsingest-ingestendpoints)
-     */
-    public fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
-
-    /**
-     * A builder for [HlsIngestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      public fun ingestEndpoints(ingestEndpoints: IResolvable)
-
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      public fun ingestEndpoints(ingestEndpoints: List<Any>)
-
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      public fun ingestEndpoints(vararg ingestEndpoints: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.Builder =
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.builder()
-
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      override fun ingestEndpoints(ingestEndpoints: IResolvable) {
-        cdkBuilder.ingestEndpoints(ingestEndpoints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      override fun ingestEndpoints(ingestEndpoints: List<Any>) {
-        cdkBuilder.ingestEndpoints(ingestEndpoints)
-      }
-
-      /**
-       * @param ingestEndpoints The input URL where the source stream should be sent.
-       */
-      override fun ingestEndpoints(vararg ingestEndpoints: Any): Unit =
-          ingestEndpoints(ingestEndpoints.toList())
-
-      public fun build(): software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
-    ) : CdkObject(cdkObject), HlsIngestProperty {
-      /**
-       * The input URL where the source stream should be sent.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html#cfn-mediapackage-channel-hlsingest-ingestendpoints)
-       */
-      override fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HlsIngestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty):
-          HlsIngestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsIngestProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HlsIngestProperty):
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty
     }
   }
 
@@ -829,8 +828,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * Sets a custom Amazon CloudWatch log group name.

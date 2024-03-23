@@ -182,7 +182,7 @@ public interface LaunchTemplateSpotOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions,
   ) : CdkObject(cdkObject), LaunchTemplateSpotOptions {
     /**
      * Spot Instances with a defined duration (also known as Spot blocks) are designed not to be

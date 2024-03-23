@@ -33,8 +33,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class TimeZone internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.TimeZone,
+public open class TimeZone(
+  cdkObject: software.amazon.awscdk.TimeZone,
 ) : CdkObject(cdkObject) {
   /**
    * The name of the timezone.
@@ -1023,6 +1023,7 @@ public open class TimeZone internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TimeZone): TimeZone = TimeZone(cdkObject)
 
-    internal fun unwrap(wrapped: TimeZone): software.amazon.awscdk.TimeZone = wrapped.cdkObject
+    internal fun unwrap(wrapped: TimeZone): software.amazon.awscdk.TimeZone = wrapped.cdkObject as
+        software.amazon.awscdk.TimeZone
   }
 }

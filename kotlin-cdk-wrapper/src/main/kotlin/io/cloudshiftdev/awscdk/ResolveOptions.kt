@@ -124,7 +124,7 @@ public interface ResolveOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ResolveOptions,
+    cdkObject: software.amazon.awscdk.ResolveOptions,
   ) : CdkObject(cdkObject), ResolveOptions {
     /**
      * Whether the resolution is being executed during the prepare phase or not.

@@ -59,7 +59,7 @@ public interface CfnAccountAliasProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps,
+    cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps,
   ) : CdkObject(cdkObject), CfnAccountAliasProps {
     /**
      * An alias or short name for an AWS account .

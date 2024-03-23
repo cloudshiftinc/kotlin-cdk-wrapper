@@ -96,8 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.fms.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2489,7 +2489,7 @@ public open class CfnPolicy internal constructor(
         CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy): software.amazon.awscdk.services.fms.CfnPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.fms.CfnPolicy
   }
 
   /**
@@ -2598,7 +2598,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty,
     ) : CdkObject(cdkObject), IEMapProperty {
       /**
        * The account list for the map.
@@ -2631,14 +2631,12 @@ public open class CfnPolicy internal constructor(
   }
 
   /**
-   * The resource tags that AWS Firewall Manager uses to determine if a particular resource should
-   * be included or excluded from the AWS Firewall Manager policy.
+   * Configures the firewall policy deployment model of AWS Network Firewall .
    *
-   * Tags enable you to categorize your AWS resources in different ways, for example, by purpose,
-   * owner, or environment. Each tag consists of a key and an optional value. Firewall Manager combines
-   * the tags with "AND" so that, if you add more than one tag to a policy scope, a resource must have
-   * all the specified tags to be included or excluded. For more information, see [Working with Tag
-   * Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html) .
+   * For information about Network Firewall deployment models, see [AWS Network Firewall example
+   * architectures with
+   * routing](https://docs.aws.amazon.com/network-firewall/latest/developerguide/architectures.html) in
+   * the *Network Firewall Developer Guide* .
    *
    * Example:
    *
@@ -2646,315 +2644,92 @@ public open class CfnPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fms.*;
-   * ResourceTagProperty resourceTagProperty = ResourceTagProperty.builder()
-   * .key("key")
-   * // the properties below are optional
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html)
-   */
-  public interface ResourceTagProperty {
-    /**
-     * The resource tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-key)
-     */
-    public fun key(): String
-
-    /**
-     * The resource tag value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ResourceTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The resource tag key. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The resource tag value.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.Builder =
-          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.builder()
-
-      /**
-       * @param key The resource tag key. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The resource tag value.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty,
-    ) : CdkObject(cdkObject), ResourceTagProperty {
-      /**
-       * The resource tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The resource tag value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty):
-          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceTagProperty):
-          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty
-    }
-  }
-
-  /**
-   * A collection of key:value pairs associated with an AWS resource.
-   *
-   * The key:value pair can be anything you define. Typically, the tag key represents a category
-   * (such as "environment") and the tag value represents a specific value within that category (such
-   * as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fms.*;
-   * PolicyTagProperty policyTagProperty = PolicyTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html)
-   */
-  public interface PolicyTagProperty {
-    /**
-     * Part of the key:value pair that defines a tag.
-     *
-     * You can use a tag key to describe a category of information, such as "customer." Tag keys are
-     * case-sensitive.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-key)
-     */
-    public fun key(): String
-
-    /**
-     * Part of the key:value pair that defines a tag.
-     *
-     * You can use a tag value to describe a specific value within a category, such as "companyA" or
-     * "companyB." Tag values are case-sensitive.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [PolicyTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key Part of the key:value pair that defines a tag. 
-       * You can use a tag key to describe a category of information, such as "customer." Tag keys
-       * are case-sensitive.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value Part of the key:value pair that defines a tag. 
-       * You can use a tag value to describe a specific value within a category, such as "companyA"
-       * or "companyB." Tag values are case-sensitive.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.Builder =
-          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.builder()
-
-      /**
-       * @param key Part of the key:value pair that defines a tag. 
-       * You can use a tag key to describe a category of information, such as "customer." Tag keys
-       * are case-sensitive.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value Part of the key:value pair that defines a tag. 
-       * You can use a tag value to describe a specific value within a category, such as "companyA"
-       * or "companyB." Tag values are case-sensitive.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty,
-    ) : CdkObject(cdkObject), PolicyTagProperty {
-      /**
-       * Part of the key:value pair that defines a tag.
-       *
-       * You can use a tag key to describe a category of information, such as "customer." Tag keys
-       * are case-sensitive.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * Part of the key:value pair that defines a tag.
-       *
-       * You can use a tag value to describe a specific value within a category, such as "companyA"
-       * or "companyB." Tag values are case-sensitive.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty):
-          PolicyTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PolicyTagProperty):
-          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty
-    }
-  }
-
-  /**
-   * Configures the deployment model for the third-party firewall.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fms.*;
-   * ThirdPartyFirewallPolicyProperty thirdPartyFirewallPolicyProperty =
-   * ThirdPartyFirewallPolicyProperty.builder()
+   * NetworkFirewallPolicyProperty networkFirewallPolicyProperty =
+   * NetworkFirewallPolicyProperty.builder()
    * .firewallDeploymentModel("firewallDeploymentModel")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html)
    */
-  public interface ThirdPartyFirewallPolicyProperty {
+  public interface NetworkFirewallPolicyProperty {
     /**
-     * Defines the deployment model to use for the third-party firewall policy.
+     * Defines the deployment model to use for the firewall policy.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html#cfn-fms-policy-thirdpartyfirewallpolicy-firewalldeploymentmodel)
+     * To use a distributed model, set
+     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+     * to `DISTRIBUTED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html#cfn-fms-policy-networkfirewallpolicy-firewalldeploymentmodel)
      */
     public fun firewallDeploymentModel(): String
 
     /**
-     * A builder for [ThirdPartyFirewallPolicyProperty]
+     * A builder for [NetworkFirewallPolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param firewallDeploymentModel Defines the deployment model to use for the third-party
-       * firewall policy. 
+       * @param firewallDeploymentModel Defines the deployment model to use for the firewall policy.
+       * 
+       * To use a distributed model, set
+       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+       * to `DISTRIBUTED` .
        */
       public fun firewallDeploymentModel(firewallDeploymentModel: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.Builder =
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.builder()
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.builder()
 
       /**
-       * @param firewallDeploymentModel Defines the deployment model to use for the third-party
-       * firewall policy. 
+       * @param firewallDeploymentModel Defines the deployment model to use for the firewall policy.
+       * 
+       * To use a distributed model, set
+       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+       * to `DISTRIBUTED` .
        */
       override fun firewallDeploymentModel(firewallDeploymentModel: String) {
         cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
       }
 
       public fun build():
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty =
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty,
-    ) : CdkObject(cdkObject), ThirdPartyFirewallPolicyProperty {
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty,
+    ) : CdkObject(cdkObject), NetworkFirewallPolicyProperty {
       /**
-       * Defines the deployment model to use for the third-party firewall policy.
+       * Defines the deployment model to use for the firewall policy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html#cfn-fms-policy-thirdpartyfirewallpolicy-firewalldeploymentmodel)
+       * To use a distributed model, set
+       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
+       * to `DISTRIBUTED` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html#cfn-fms-policy-networkfirewallpolicy-firewalldeploymentmodel)
        */
       override fun firewallDeploymentModel(): String = unwrap(this).getFirewallDeploymentModel()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThirdPartyFirewallPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkFirewallPolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty):
-          ThirdPartyFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ThirdPartyFirewallPolicyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty):
+          NetworkFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkFirewallPolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ThirdPartyFirewallPolicyProperty):
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty
+      internal fun unwrap(wrapped: NetworkFirewallPolicyProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty
     }
   }
 
@@ -3102,7 +2877,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty,
     ) : CdkObject(cdkObject), PolicyOptionProperty {
       /**
        * Defines the deployment model to use for the firewall policy.
@@ -3133,6 +2908,249 @@ public open class CfnPolicy internal constructor(
       internal fun unwrap(wrapped: PolicyOptionProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty
+    }
+  }
+
+  /**
+   * A collection of key:value pairs associated with an AWS resource.
+   *
+   * The key:value pair can be anything you define. Typically, the tag key represents a category
+   * (such as "environment") and the tag value represents a specific value within that category (such
+   * as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * PolicyTagProperty policyTagProperty = PolicyTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html)
+   */
+  public interface PolicyTagProperty {
+    /**
+     * Part of the key:value pair that defines a tag.
+     *
+     * You can use a tag key to describe a category of information, such as "customer." Tag keys are
+     * case-sensitive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-key)
+     */
+    public fun key(): String
+
+    /**
+     * Part of the key:value pair that defines a tag.
+     *
+     * You can use a tag value to describe a specific value within a category, such as "companyA" or
+     * "companyB." Tag values are case-sensitive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [PolicyTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key Part of the key:value pair that defines a tag. 
+       * You can use a tag key to describe a category of information, such as "customer." Tag keys
+       * are case-sensitive.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value Part of the key:value pair that defines a tag. 
+       * You can use a tag value to describe a specific value within a category, such as "companyA"
+       * or "companyB." Tag values are case-sensitive.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.builder()
+
+      /**
+       * @param key Part of the key:value pair that defines a tag. 
+       * You can use a tag key to describe a category of information, such as "customer." Tag keys
+       * are case-sensitive.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value Part of the key:value pair that defines a tag. 
+       * You can use a tag value to describe a specific value within a category, such as "companyA"
+       * or "companyB." Tag values are case-sensitive.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty,
+    ) : CdkObject(cdkObject), PolicyTagProperty {
+      /**
+       * Part of the key:value pair that defines a tag.
+       *
+       * You can use a tag key to describe a category of information, such as "customer." Tag keys
+       * are case-sensitive.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * Part of the key:value pair that defines a tag.
+       *
+       * You can use a tag value to describe a specific value within a category, such as "companyA"
+       * or "companyB." Tag values are case-sensitive.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PolicyTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty):
+          PolicyTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PolicyTagProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty
+    }
+  }
+
+  /**
+   * The resource tags that AWS Firewall Manager uses to determine if a particular resource should
+   * be included or excluded from the AWS Firewall Manager policy.
+   *
+   * Tags enable you to categorize your AWS resources in different ways, for example, by purpose,
+   * owner, or environment. Each tag consists of a key and an optional value. Firewall Manager combines
+   * the tags with "AND" so that, if you add more than one tag to a policy scope, a resource must have
+   * all the specified tags to be included or excluded. For more information, see [Working with Tag
+   * Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * ResourceTagProperty resourceTagProperty = ResourceTagProperty.builder()
+   * .key("key")
+   * // the properties below are optional
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html)
+   */
+  public interface ResourceTagProperty {
+    /**
+     * The resource tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The resource tag value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ResourceTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The resource tag key. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The resource tag value.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.builder()
+
+      /**
+       * @param key The resource tag key. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The resource tag value.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty,
+    ) : CdkObject(cdkObject), ResourceTagProperty {
+      /**
+       * The resource tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The resource tag value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty):
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceTagProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty
     }
   }
 
@@ -3749,8 +3767,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty,
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty,
     ) : CdkObject(cdkObject), SecurityServicePolicyDataProperty {
       /**
        * Details about the service that are specific to the service type, in JSON format.
@@ -3955,12 +3972,7 @@ public open class CfnPolicy internal constructor(
   }
 
   /**
-   * Configures the firewall policy deployment model of AWS Network Firewall .
-   *
-   * For information about Network Firewall deployment models, see [AWS Network Firewall example
-   * architectures with
-   * routing](https://docs.aws.amazon.com/network-firewall/latest/developerguide/architectures.html) in
-   * the *Network Firewall Developer Guide* .
+   * Configures the deployment model for the third-party firewall.
    *
    * Example:
    *
@@ -3968,93 +3980,78 @@ public open class CfnPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fms.*;
-   * NetworkFirewallPolicyProperty networkFirewallPolicyProperty =
-   * NetworkFirewallPolicyProperty.builder()
+   * ThirdPartyFirewallPolicyProperty thirdPartyFirewallPolicyProperty =
+   * ThirdPartyFirewallPolicyProperty.builder()
    * .firewallDeploymentModel("firewallDeploymentModel")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
    */
-  public interface NetworkFirewallPolicyProperty {
+  public interface ThirdPartyFirewallPolicyProperty {
     /**
-     * Defines the deployment model to use for the firewall policy.
+     * Defines the deployment model to use for the third-party firewall policy.
      *
-     * To use a distributed model, set
-     * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-     * to `DISTRIBUTED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html#cfn-fms-policy-networkfirewallpolicy-firewalldeploymentmodel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html#cfn-fms-policy-thirdpartyfirewallpolicy-firewalldeploymentmodel)
      */
     public fun firewallDeploymentModel(): String
 
     /**
-     * A builder for [NetworkFirewallPolicyProperty]
+     * A builder for [ThirdPartyFirewallPolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param firewallDeploymentModel Defines the deployment model to use for the firewall policy.
-       * 
-       * To use a distributed model, set
-       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-       * to `DISTRIBUTED` .
+       * @param firewallDeploymentModel Defines the deployment model to use for the third-party
+       * firewall policy. 
        */
       public fun firewallDeploymentModel(firewallDeploymentModel: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.Builder =
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.builder()
+          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.builder()
 
       /**
-       * @param firewallDeploymentModel Defines the deployment model to use for the firewall policy.
-       * 
-       * To use a distributed model, set
-       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-       * to `DISTRIBUTED` .
+       * @param firewallDeploymentModel Defines the deployment model to use for the third-party
+       * firewall policy. 
        */
       override fun firewallDeploymentModel(firewallDeploymentModel: String) {
         cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
       }
 
       public fun build():
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty =
+          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty,
-    ) : CdkObject(cdkObject), NetworkFirewallPolicyProperty {
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty,
+    ) : CdkObject(cdkObject), ThirdPartyFirewallPolicyProperty {
       /**
-       * Defines the deployment model to use for the firewall policy.
+       * Defines the deployment model to use for the third-party firewall policy.
        *
-       * To use a distributed model, set
-       * [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html)
-       * to `DISTRIBUTED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkfirewallpolicy.html#cfn-fms-policy-networkfirewallpolicy-firewalldeploymentmodel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html#cfn-fms-policy-thirdpartyfirewallpolicy-firewalldeploymentmodel)
        */
       override fun firewallDeploymentModel(): String = unwrap(this).getFirewallDeploymentModel()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkFirewallPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThirdPartyFirewallPolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty):
-          NetworkFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkFirewallPolicyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty):
+          ThirdPartyFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThirdPartyFirewallPolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NetworkFirewallPolicyProperty):
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty
+      internal fun unwrap(wrapped: ThirdPartyFirewallPolicyProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty
     }
   }
 }

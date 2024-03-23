@@ -433,7 +433,7 @@ public interface DynamoGetItemProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps,
   ) : CdkObject(cdkObject), DynamoGetItemProps {
     /**
      * An optional description for this state.

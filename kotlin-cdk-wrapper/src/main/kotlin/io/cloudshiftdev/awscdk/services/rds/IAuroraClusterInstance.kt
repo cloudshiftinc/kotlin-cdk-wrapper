@@ -52,7 +52,7 @@ public interface IAuroraClusterInstance : IResource {
   public fun type(): InstanceType
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IAuroraClusterInstance,
+    cdkObject: software.amazon.awscdk.services.rds.IAuroraClusterInstance,
   ) : CdkObject(cdkObject), IAuroraClusterInstance {
     /**
      * Apply the given removal policy to this resource.

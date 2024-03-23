@@ -32,8 +32,8 @@ import kotlin.String
  * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
  * ```
  */
-public open class Peer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Peer,
+public open class Peer(
+  cdkObject: software.amazon.awscdk.services.ec2.Peer,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.Peer()
   )
@@ -64,5 +64,6 @@ public open class Peer internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.Peer): Peer = Peer(cdkObject)
 
     internal fun unwrap(wrapped: Peer): software.amazon.awscdk.services.ec2.Peer = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.Peer
   }
 }

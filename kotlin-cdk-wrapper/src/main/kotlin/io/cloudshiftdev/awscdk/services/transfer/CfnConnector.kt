@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html)
  */
-public open class CfnConnector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
+public open class CfnConnector(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -454,300 +454,8 @@ public open class CfnConnector internal constructor(
         CfnConnector = CfnConnector(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnector):
-        software.amazon.awscdk.services.transfer.CfnConnector = wrapped.cdkObject
-  }
-
-  /**
-   * A structure that contains the parameters for an SFTP connector object.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * SftpConfigProperty sftpConfigProperty = SftpConfigProperty.builder()
-   * .trustedHostKeys(List.of("trustedHostKeys"))
-   * .userSecretId("userSecretId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html)
-   */
-  public interface SftpConfigProperty {
-    /**
-     * The public portion of the host key, or keys, that are used to identify the external server to
-     * which you are connecting.
-     *
-     * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary key.
-     *
-     * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-     * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify only
-     * the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;` portion of
-     * the key.
-     *
-     * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-     *
-     * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-     * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-     * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-     * generated.
-     *
-     * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-     * `ftp.host.com` .
-     *
-     * `ssh-keyscan ftp.host.com`
-     *
-     * This prints the public host key to standard output.
-     *
-     * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-     *
-     * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-     * command or into the *Trusted host keys* field in the console.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-trustedhostkeys)
-     */
-    public fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?: emptyList()
-
-    /**
-     * The identifier for the secret (in AWS Secrets Manager) that contains the SFTP user's private
-     * key, password, or both.
-     *
-     * The identifier must be the Amazon Resource Name (ARN) of the secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
-     */
-    public fun userSecretId(): String? = unwrap(this).getUserSecretId()
-
-    /**
-     * A builder for [SftpConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
-       * identify the external server to which you are connecting.
-       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
-       * key.
-       *
-       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
-       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
-       * portion of the key.
-       *
-       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-       *
-       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-       * generated.
-       *
-       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-       * `ftp.host.com` .
-       *
-       * `ssh-keyscan ftp.host.com`
-       *
-       * This prints the public host key to standard output.
-       *
-       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-       *
-       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-       * command or into the *Trusted host keys* field in the console.
-       */
-      public fun trustedHostKeys(trustedHostKeys: List<String>)
-
-      /**
-       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
-       * identify the external server to which you are connecting.
-       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
-       * key.
-       *
-       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
-       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
-       * portion of the key.
-       *
-       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-       *
-       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-       * generated.
-       *
-       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-       * `ftp.host.com` .
-       *
-       * `ssh-keyscan ftp.host.com`
-       *
-       * This prints the public host key to standard output.
-       *
-       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-       *
-       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-       * command or into the *Trusted host keys* field in the console.
-       */
-      public fun trustedHostKeys(vararg trustedHostKeys: String)
-
-      /**
-       * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
-       * the SFTP user's private key, password, or both.
-       * The identifier must be the Amazon Resource Name (ARN) of the secret.
-       */
-      public fun userSecretId(userSecretId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.builder()
-
-      /**
-       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
-       * identify the external server to which you are connecting.
-       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
-       * key.
-       *
-       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
-       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
-       * portion of the key.
-       *
-       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-       *
-       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-       * generated.
-       *
-       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-       * `ftp.host.com` .
-       *
-       * `ssh-keyscan ftp.host.com`
-       *
-       * This prints the public host key to standard output.
-       *
-       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-       *
-       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-       * command or into the *Trusted host keys* field in the console.
-       */
-      override fun trustedHostKeys(trustedHostKeys: List<String>) {
-        cdkBuilder.trustedHostKeys(trustedHostKeys)
-      }
-
-      /**
-       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
-       * identify the external server to which you are connecting.
-       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
-       * key.
-       *
-       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
-       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
-       * portion of the key.
-       *
-       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-       *
-       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-       * generated.
-       *
-       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-       * `ftp.host.com` .
-       *
-       * `ssh-keyscan ftp.host.com`
-       *
-       * This prints the public host key to standard output.
-       *
-       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-       *
-       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-       * command or into the *Trusted host keys* field in the console.
-       */
-      override fun trustedHostKeys(vararg trustedHostKeys: String): Unit =
-          trustedHostKeys(trustedHostKeys.toList())
-
-      /**
-       * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
-       * the SFTP user's private key, password, or both.
-       * The identifier must be the Amazon Resource Name (ARN) of the secret.
-       */
-      override fun userSecretId(userSecretId: String) {
-        cdkBuilder.userSecretId(userSecretId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
-    ) : CdkObject(cdkObject), SftpConfigProperty {
-      /**
-       * The public portion of the host key, or keys, that are used to identify the external server
-       * to which you are connecting.
-       *
-       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
-       * key.
-       *
-       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
-       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
-       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
-       * portion of the key.
-       *
-       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
-       *
-       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
-       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
-       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
-       * generated.
-       *
-       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
-       * `ftp.host.com` .
-       *
-       * `ssh-keyscan ftp.host.com`
-       *
-       * This prints the public host key to standard output.
-       *
-       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
-       *
-       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
-       * command or into the *Trusted host keys* field in the console.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-trustedhostkeys)
-       */
-      override fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?:
-          emptyList()
-
-      /**
-       * The identifier for the secret (in AWS Secrets Manager) that contains the SFTP user's
-       * private key, password, or both.
-       *
-       * The identifier must be the Amazon Resource Name (ARN) of the secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
-       */
-      override fun userSecretId(): String? = unwrap(this).getUserSecretId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SftpConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty):
-          SftpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SftpConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SftpConfigProperty):
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty
-    }
+        software.amazon.awscdk.services.transfer.CfnConnector = wrapped.cdkObject as
+        software.amazon.awscdk.services.transfer.CfnConnector
   }
 
   /**
@@ -1089,8 +797,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
     ) : CdkObject(cdkObject), As2ConfigProperty {
       /**
        * Provides Basic authentication support to the AS2 Connectors API.
@@ -1216,6 +923,298 @@ public open class CfnConnector internal constructor(
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty
+    }
+  }
+
+  /**
+   * A structure that contains the parameters for an SFTP connector object.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * SftpConfigProperty sftpConfigProperty = SftpConfigProperty.builder()
+   * .trustedHostKeys(List.of("trustedHostKeys"))
+   * .userSecretId("userSecretId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html)
+   */
+  public interface SftpConfigProperty {
+    /**
+     * The public portion of the host key, or keys, that are used to identify the external server to
+     * which you are connecting.
+     *
+     * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary key.
+     *
+     * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+     * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify only
+     * the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;` portion of
+     * the key.
+     *
+     * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+     *
+     * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+     * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+     * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+     * generated.
+     *
+     * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+     * `ftp.host.com` .
+     *
+     * `ssh-keyscan ftp.host.com`
+     *
+     * This prints the public host key to standard output.
+     *
+     * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+     *
+     * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+     * command or into the *Trusted host keys* field in the console.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-trustedhostkeys)
+     */
+    public fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?: emptyList()
+
+    /**
+     * The identifier for the secret (in AWS Secrets Manager) that contains the SFTP user's private
+     * key, password, or both.
+     *
+     * The identifier must be the Amazon Resource Name (ARN) of the secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
+     */
+    public fun userSecretId(): String? = unwrap(this).getUserSecretId()
+
+    /**
+     * A builder for [SftpConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
+       * identify the external server to which you are connecting.
+       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
+       * key.
+       *
+       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
+       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
+       * portion of the key.
+       *
+       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+       *
+       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+       * generated.
+       *
+       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+       * `ftp.host.com` .
+       *
+       * `ssh-keyscan ftp.host.com`
+       *
+       * This prints the public host key to standard output.
+       *
+       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+       *
+       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+       * command or into the *Trusted host keys* field in the console.
+       */
+      public fun trustedHostKeys(trustedHostKeys: List<String>)
+
+      /**
+       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
+       * identify the external server to which you are connecting.
+       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
+       * key.
+       *
+       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
+       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
+       * portion of the key.
+       *
+       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+       *
+       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+       * generated.
+       *
+       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+       * `ftp.host.com` .
+       *
+       * `ssh-keyscan ftp.host.com`
+       *
+       * This prints the public host key to standard output.
+       *
+       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+       *
+       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+       * command or into the *Trusted host keys* field in the console.
+       */
+      public fun trustedHostKeys(vararg trustedHostKeys: String)
+
+      /**
+       * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
+       * the SFTP user's private key, password, or both.
+       * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       */
+      public fun userSecretId(userSecretId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.builder()
+
+      /**
+       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
+       * identify the external server to which you are connecting.
+       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
+       * key.
+       *
+       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
+       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
+       * portion of the key.
+       *
+       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+       *
+       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+       * generated.
+       *
+       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+       * `ftp.host.com` .
+       *
+       * `ssh-keyscan ftp.host.com`
+       *
+       * This prints the public host key to standard output.
+       *
+       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+       *
+       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+       * command or into the *Trusted host keys* field in the console.
+       */
+      override fun trustedHostKeys(trustedHostKeys: List<String>) {
+        cdkBuilder.trustedHostKeys(trustedHostKeys)
+      }
+
+      /**
+       * @param trustedHostKeys The public portion of the host key, or keys, that are used to
+       * identify the external server to which you are connecting.
+       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
+       * key.
+       *
+       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
+       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
+       * portion of the key.
+       *
+       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+       *
+       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+       * generated.
+       *
+       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+       * `ftp.host.com` .
+       *
+       * `ssh-keyscan ftp.host.com`
+       *
+       * This prints the public host key to standard output.
+       *
+       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+       *
+       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+       * command or into the *Trusted host keys* field in the console.
+       */
+      override fun trustedHostKeys(vararg trustedHostKeys: String): Unit =
+          trustedHostKeys(trustedHostKeys.toList())
+
+      /**
+       * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
+       * the SFTP user's private key, password, or both.
+       * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       */
+      override fun userSecretId(userSecretId: String) {
+        cdkBuilder.userSecretId(userSecretId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
+    ) : CdkObject(cdkObject), SftpConfigProperty {
+      /**
+       * The public portion of the host key, or keys, that are used to identify the external server
+       * to which you are connecting.
+       *
+       * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
+       * key.
+       *
+       * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
+       * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
+       * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
+       * portion of the key.
+       *
+       * For the trusted host key, AWS Transfer Family accepts RSA and ECDSA keys.
+       *
+       * * For RSA keys, the `&lt;key type&gt;` string is `ssh-rsa` .
+       * * For ECDSA keys, the `&lt;key type&gt;` string is either `ecdsa-sha2-nistp256` ,
+       * `ecdsa-sha2-nistp384` , or `ecdsa-sha2-nistp521` , depending on the size of the key you
+       * generated.
+       *
+       * Run this command to retrieve the SFTP server host key, where your SFTP server name is
+       * `ftp.host.com` .
+       *
+       * `ssh-keyscan ftp.host.com`
+       *
+       * This prints the public host key to standard output.
+       *
+       * `ftp.host.com ssh-rsa AAAAB3Nza...&lt;long-string-for-public-key`
+       *
+       * Copy and paste this string into the `TrustedHostKeys` field for the `create-connector`
+       * command or into the *Trusted host keys* field in the console.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-trustedhostkeys)
+       */
+      override fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?:
+          emptyList()
+
+      /**
+       * The identifier for the secret (in AWS Secrets Manager) that contains the SFTP user's
+       * private key, password, or both.
+       *
+       * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
+       */
+      override fun userSecretId(): String? = unwrap(this).getUserSecretId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SftpConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty):
+          SftpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SftpConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SftpConfigProperty):
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty
     }
   }
 }

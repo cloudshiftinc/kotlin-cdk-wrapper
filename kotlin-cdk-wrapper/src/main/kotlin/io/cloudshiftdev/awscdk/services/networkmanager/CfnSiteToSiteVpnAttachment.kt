@@ -52,9 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html)
  */
-public open class CfnSiteToSiteVpnAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment,
+public open class CfnSiteToSiteVpnAttachment(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -398,7 +397,8 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnSiteToSiteVpnAttachment):
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment
   }
 
   /**
@@ -513,8 +513,7 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty,
     ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.

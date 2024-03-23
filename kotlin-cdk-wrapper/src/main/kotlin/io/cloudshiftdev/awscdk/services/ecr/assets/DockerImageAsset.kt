@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DockerImageAsset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAsset,
+public open class DockerImageAsset(
+  cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAsset,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -694,6 +694,7 @@ public open class DockerImageAsset internal constructor(
         DockerImageAsset = DockerImageAsset(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAsset):
-        software.amazon.awscdk.services.ecr.assets.DockerImageAsset = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.assets.DockerImageAsset = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.assets.DockerImageAsset
   }
 }

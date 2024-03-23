@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html)
  */
-public open class CfnSizeConstraintSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet,
+public open class CfnSizeConstraintSet(
+  cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,7 +233,8 @@ public open class CfnSizeConstraintSet internal constructor(
         CfnSizeConstraintSet = CfnSizeConstraintSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnSizeConstraintSet):
-        software.amazon.awscdk.services.waf.CfnSizeConstraintSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.CfnSizeConstraintSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.CfnSizeConstraintSet
   }
 
   /**
@@ -405,8 +406,7 @@ public open class CfnSizeConstraintSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
@@ -896,8 +896,7 @@ public open class CfnSizeConstraintSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty,
+      cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty,
     ) : CdkObject(cdkObject), SizeConstraintProperty {
       /**
        * The type of comparison you want AWS WAF to perform.

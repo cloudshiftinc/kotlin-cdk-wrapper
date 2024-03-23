@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)
  */
-public open class CfnBranch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch,
+public open class CfnBranch(
+  cdkObject: software.amazon.awscdk.services.amplify.CfnBranch,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -939,7 +939,86 @@ public open class CfnBranch internal constructor(
         CfnBranch(cdkObject)
 
     internal fun unwrap(wrapped: CfnBranch): software.amazon.awscdk.services.amplify.CfnBranch =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.amplify.CfnBranch
+  }
+
+  /**
+   * Describes the backend properties associated with an Amplify `Branch` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * BackendProperty backendProperty = BackendProperty.builder()
+   * .stackArn("stackArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html)
+   */
+  public interface BackendProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html#cfn-amplify-branch-backend-stackarn)
+     */
+    public fun stackArn(): String? = unwrap(this).getStackArn()
+
+    /**
+     * A builder for [BackendProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param stackArn The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
+       */
+      public fun stackArn(stackArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.builder()
+
+      /**
+       * @param stackArn The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
+       */
+      override fun stackArn(stackArn: String) {
+        cdkBuilder.stackArn(stackArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty,
+    ) : CdkObject(cdkObject), BackendProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html#cfn-amplify-branch-backend-stackarn)
+       */
+      override fun stackArn(): String? = unwrap(this).getStackArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BackendProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty):
+          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BackendProperty):
+          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty
+    }
   }
 
   /**
@@ -1045,8 +1124,7 @@ public open class CfnBranch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty,
     ) : CdkObject(cdkObject), BasicAuthConfigProperty {
       /**
        * Enables basic authorization for the branch.
@@ -1161,8 +1239,7 @@ public open class CfnBranch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * The environment variable name.
@@ -1194,85 +1271,6 @@ public open class CfnBranch internal constructor(
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty
-    }
-  }
-
-  /**
-   * Describes the backend properties associated with an Amplify `Branch` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplify.*;
-   * BackendProperty backendProperty = BackendProperty.builder()
-   * .stackArn("stackArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html)
-   */
-  public interface BackendProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html#cfn-amplify-branch-backend-stackarn)
-     */
-    public fun stackArn(): String? = unwrap(this).getStackArn()
-
-    /**
-     * A builder for [BackendProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param stackArn The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
-       */
-      public fun stackArn(stackArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.Builder =
-          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.builder()
-
-      /**
-       * @param stackArn The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
-       */
-      override fun stackArn(stackArn: String) {
-        cdkBuilder.stackArn(stackArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty,
-    ) : CdkObject(cdkObject), BackendProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the AWS CloudFormation stack.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-backend.html#cfn-amplify-branch-backend-stackarn)
-       */
-      override fun stackArn(): String? = unwrap(this).getStackArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BackendProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty):
-          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BackendProperty):
-          software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty
     }
   }
 }

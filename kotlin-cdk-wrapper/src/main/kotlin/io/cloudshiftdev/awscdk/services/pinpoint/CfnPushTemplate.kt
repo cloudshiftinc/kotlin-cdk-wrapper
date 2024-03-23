@@ -88,8 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html)
  */
-public open class CfnPushTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate,
+public open class CfnPushTemplate(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -835,12 +835,13 @@ public open class CfnPushTemplate internal constructor(
         CfnPushTemplate = CfnPushTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnPushTemplate):
-        software.amazon.awscdk.services.pinpoint.CfnPushTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnPushTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnPushTemplate
   }
 
   /**
-   * Specifies the default settings and content for a message template that can be used in messages
-   * that are sent through a push notification channel.
+   * Specifies channel-specific content and settings for a message template that can be used in push
+   * notifications that are sent through the APNs (Apple Push Notification service) channel.
    *
    * Example:
    *
@@ -848,19 +849,20 @@ public open class CfnPushTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * DefaultPushNotificationTemplateProperty defaultPushNotificationTemplateProperty =
-   * DefaultPushNotificationTemplateProperty.builder()
+   * APNSPushNotificationTemplateProperty aPNSPushNotificationTemplateProperty =
+   * APNSPushNotificationTemplateProperty.builder()
    * .action("action")
    * .body("body")
+   * .mediaUrl("mediaUrl")
    * .sound("sound")
    * .title("title")
    * .url("url")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html)
    */
-  public interface DefaultPushNotificationTemplateProperty {
+  public interface APNSPushNotificationTemplateProperty {
     /**
      * The action to occur if a recipient taps a push notification that's based on the message
      * template.
@@ -870,33 +872,38 @@ public open class CfnPushTemplate internal constructor(
      * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
      * background. This is the default action.
      * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-     * setting uses the deep-linking features of the iOS and Android platforms.
+     * setting uses the deep-linking features of the iOS platform.
      * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
      * at a URL that you specify.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-action)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-action)
      */
     public fun action(): String? = unwrap(this).getAction()
 
     /**
      * The message body to use in push notifications that are based on the message template.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-body)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-body)
      */
     public fun body(): String? = unwrap(this).getBody()
 
     /**
-     * The sound to play when a recipient receives a push notification that's based on the message
+     * The URL of an image or video to display in push notifications that are based on the message
      * template.
      *
-     * You can use the default stream or specify the file name of a sound resource that's bundled in
-     * your app. On an Android platform, the sound file must reside in `/res/raw/` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-mediaurl)
+     */
+    public fun mediaUrl(): String? = unwrap(this).getMediaUrl()
+
+    /**
+     * The key for the sound to play when the recipient receives a push notification that's based on
+     * the message template.
      *
-     * For an iOS platform, this value is the key for the name of a sound file in your app's main
-     * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
-     * found or you specify `default` for the value, the system plays the default alert sound.
+     * The value for this key is the name of a sound file in your app's main bundle or the
+     * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
+     * specify `default` for the value, the system plays the default alert sound.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-sound)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-sound)
      */
     public fun sound(): String? = unwrap(this).getSound()
 
@@ -905,21 +912,21 @@ public open class CfnPushTemplate internal constructor(
      *
      * This title appears above the notification message on a recipient's device.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-title)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-title)
      */
     public fun title(): String? = unwrap(this).getTitle()
 
     /**
-     * The URL to open in a recipient's default mobile browser, if a recipient taps a push
+     * The URL to open in the recipient's default mobile browser, if a recipient taps a push
      * notification that's based on the message template and the value of the `Action` property is
      * `URL` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-url)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-url)
      */
     public fun url(): String? = unwrap(this).getUrl()
 
     /**
-     * A builder for [DefaultPushNotificationTemplateProperty]
+     * A builder for [APNSPushNotificationTemplateProperty]
      */
     @CdkDslMarker
     public interface Builder {
@@ -931,7 +938,7 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS and Android platforms.
+       * setting uses the deep-linking features of the iOS platform.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        */
@@ -944,14 +951,17 @@ public open class CfnPushTemplate internal constructor(
       public fun body(body: String)
 
       /**
-       * @param sound The sound to play when a recipient receives a push notification that's based
-       * on the message template.
-       * You can use the default stream or specify the file name of a sound resource that's bundled
-       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
-       *
-       * For an iOS platform, this value is the key for the name of a sound file in your app's main
-       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
-       * found or you specify `default` for the value, the system plays the default alert sound.
+       * @param mediaUrl The URL of an image or video to display in push notifications that are
+       * based on the message template.
+       */
+      public fun mediaUrl(mediaUrl: String)
+
+      /**
+       * @param sound The key for the sound to play when the recipient receives a push notification
+       * that's based on the message template.
+       * The value for this key is the name of a sound file in your app's main bundle or the
+       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
+       * specify `default` for the value, the system plays the default alert sound.
        */
       public fun sound(sound: String)
 
@@ -962,7 +972,7 @@ public open class CfnPushTemplate internal constructor(
       public fun title(title: String)
 
       /**
-       * @param url The URL to open in a recipient's default mobile browser, if a recipient taps a
+       * @param url The URL to open in the recipient's default mobile browser, if a recipient taps a
        * push notification that's based on the message template and the value of the `Action` property
        * is `URL` .
        */
@@ -971,9 +981,9 @@ public open class CfnPushTemplate internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty.Builder
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty.Builder
           =
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty.builder()
 
       /**
        * @param action The action to occur if a recipient taps a push notification that's based on
@@ -983,7 +993,7 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS and Android platforms.
+       * setting uses the deep-linking features of the iOS platform.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        */
@@ -1000,14 +1010,19 @@ public open class CfnPushTemplate internal constructor(
       }
 
       /**
-       * @param sound The sound to play when a recipient receives a push notification that's based
-       * on the message template.
-       * You can use the default stream or specify the file name of a sound resource that's bundled
-       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
-       *
-       * For an iOS platform, this value is the key for the name of a sound file in your app's main
-       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
-       * found or you specify `default` for the value, the system plays the default alert sound.
+       * @param mediaUrl The URL of an image or video to display in push notifications that are
+       * based on the message template.
+       */
+      override fun mediaUrl(mediaUrl: String) {
+        cdkBuilder.mediaUrl(mediaUrl)
+      }
+
+      /**
+       * @param sound The key for the sound to play when the recipient receives a push notification
+       * that's based on the message template.
+       * The value for this key is the name of a sound file in your app's main bundle or the
+       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
+       * specify `default` for the value, the system plays the default alert sound.
        */
       override fun sound(sound: String) {
         cdkBuilder.sound(sound)
@@ -1022,7 +1037,7 @@ public open class CfnPushTemplate internal constructor(
       }
 
       /**
-       * @param url The URL to open in a recipient's default mobile browser, if a recipient taps a
+       * @param url The URL to open in the recipient's default mobile browser, if a recipient taps a
        * push notification that's based on the message template and the value of the `Action` property
        * is `URL` .
        */
@@ -1031,14 +1046,13 @@ public open class CfnPushTemplate internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty,
-    ) : CdkObject(cdkObject), DefaultPushNotificationTemplateProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty,
+    ) : CdkObject(cdkObject), APNSPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
        * template.
@@ -1048,33 +1062,38 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS and Android platforms.
+       * setting uses the deep-linking features of the iOS platform.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-action)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-action)
        */
       override fun action(): String? = unwrap(this).getAction()
 
       /**
        * The message body to use in push notifications that are based on the message template.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-body)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-body)
        */
       override fun body(): String? = unwrap(this).getBody()
 
       /**
-       * The sound to play when a recipient receives a push notification that's based on the message
+       * The URL of an image or video to display in push notifications that are based on the message
        * template.
        *
-       * You can use the default stream or specify the file name of a sound resource that's bundled
-       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-mediaurl)
+       */
+      override fun mediaUrl(): String? = unwrap(this).getMediaUrl()
+
+      /**
+       * The key for the sound to play when the recipient receives a push notification that's based
+       * on the message template.
        *
-       * For an iOS platform, this value is the key for the name of a sound file in your app's main
-       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
-       * found or you specify `default` for the value, the system plays the default alert sound.
+       * The value for this key is the name of a sound file in your app's main bundle or the
+       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
+       * specify `default` for the value, the system plays the default alert sound.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-sound)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-sound)
        */
       override fun sound(): String? = unwrap(this).getSound()
 
@@ -1083,36 +1102,36 @@ public open class CfnPushTemplate internal constructor(
        *
        * This title appears above the notification message on a recipient's device.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-title)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-title)
        */
       override fun title(): String? = unwrap(this).getTitle()
 
       /**
-       * The URL to open in a recipient's default mobile browser, if a recipient taps a push
+       * The URL to open in the recipient's default mobile browser, if a recipient taps a push
        * notification that's based on the message template and the value of the `Action` property is
        * `URL` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-url)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-url)
        */
       override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultPushNotificationTemplateProperty {
+          APNSPushNotificationTemplateProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty):
-          DefaultPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultPushNotificationTemplateProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty):
+          APNSPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          APNSPushNotificationTemplateProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DefaultPushNotificationTemplateProperty):
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
+      internal fun unwrap(wrapped: APNSPushNotificationTemplateProperty):
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
     }
   }
 
@@ -1371,8 +1390,7 @@ public open class CfnPushTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty,
     ) : CdkObject(cdkObject), AndroidPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
@@ -1471,8 +1489,8 @@ public open class CfnPushTemplate internal constructor(
   }
 
   /**
-   * Specifies channel-specific content and settings for a message template that can be used in push
-   * notifications that are sent through the APNs (Apple Push Notification service) channel.
+   * Specifies the default settings and content for a message template that can be used in messages
+   * that are sent through a push notification channel.
    *
    * Example:
    *
@@ -1480,20 +1498,19 @@ public open class CfnPushTemplate internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * APNSPushNotificationTemplateProperty aPNSPushNotificationTemplateProperty =
-   * APNSPushNotificationTemplateProperty.builder()
+   * DefaultPushNotificationTemplateProperty defaultPushNotificationTemplateProperty =
+   * DefaultPushNotificationTemplateProperty.builder()
    * .action("action")
    * .body("body")
-   * .mediaUrl("mediaUrl")
    * .sound("sound")
    * .title("title")
    * .url("url")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html)
    */
-  public interface APNSPushNotificationTemplateProperty {
+  public interface DefaultPushNotificationTemplateProperty {
     /**
      * The action to occur if a recipient taps a push notification that's based on the message
      * template.
@@ -1503,38 +1520,33 @@ public open class CfnPushTemplate internal constructor(
      * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
      * background. This is the default action.
      * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-     * setting uses the deep-linking features of the iOS platform.
+     * setting uses the deep-linking features of the iOS and Android platforms.
      * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
      * at a URL that you specify.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-action)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-action)
      */
     public fun action(): String? = unwrap(this).getAction()
 
     /**
      * The message body to use in push notifications that are based on the message template.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-body)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-body)
      */
     public fun body(): String? = unwrap(this).getBody()
 
     /**
-     * The URL of an image or video to display in push notifications that are based on the message
+     * The sound to play when a recipient receives a push notification that's based on the message
      * template.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-mediaurl)
-     */
-    public fun mediaUrl(): String? = unwrap(this).getMediaUrl()
-
-    /**
-     * The key for the sound to play when the recipient receives a push notification that's based on
-     * the message template.
+     * You can use the default stream or specify the file name of a sound resource that's bundled in
+     * your app. On an Android platform, the sound file must reside in `/res/raw/` .
      *
-     * The value for this key is the name of a sound file in your app's main bundle or the
-     * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
-     * specify `default` for the value, the system plays the default alert sound.
+     * For an iOS platform, this value is the key for the name of a sound file in your app's main
+     * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
+     * found or you specify `default` for the value, the system plays the default alert sound.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-sound)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-sound)
      */
     public fun sound(): String? = unwrap(this).getSound()
 
@@ -1543,21 +1555,21 @@ public open class CfnPushTemplate internal constructor(
      *
      * This title appears above the notification message on a recipient's device.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-title)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-title)
      */
     public fun title(): String? = unwrap(this).getTitle()
 
     /**
-     * The URL to open in the recipient's default mobile browser, if a recipient taps a push
+     * The URL to open in a recipient's default mobile browser, if a recipient taps a push
      * notification that's based on the message template and the value of the `Action` property is
      * `URL` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-url)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-url)
      */
     public fun url(): String? = unwrap(this).getUrl()
 
     /**
-     * A builder for [APNSPushNotificationTemplateProperty]
+     * A builder for [DefaultPushNotificationTemplateProperty]
      */
     @CdkDslMarker
     public interface Builder {
@@ -1569,7 +1581,7 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS platform.
+       * setting uses the deep-linking features of the iOS and Android platforms.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        */
@@ -1582,17 +1594,14 @@ public open class CfnPushTemplate internal constructor(
       public fun body(body: String)
 
       /**
-       * @param mediaUrl The URL of an image or video to display in push notifications that are
-       * based on the message template.
-       */
-      public fun mediaUrl(mediaUrl: String)
-
-      /**
-       * @param sound The key for the sound to play when the recipient receives a push notification
-       * that's based on the message template.
-       * The value for this key is the name of a sound file in your app's main bundle or the
-       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
-       * specify `default` for the value, the system plays the default alert sound.
+       * @param sound The sound to play when a recipient receives a push notification that's based
+       * on the message template.
+       * You can use the default stream or specify the file name of a sound resource that's bundled
+       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
+       *
+       * For an iOS platform, this value is the key for the name of a sound file in your app's main
+       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
+       * found or you specify `default` for the value, the system plays the default alert sound.
        */
       public fun sound(sound: String)
 
@@ -1603,7 +1612,7 @@ public open class CfnPushTemplate internal constructor(
       public fun title(title: String)
 
       /**
-       * @param url The URL to open in the recipient's default mobile browser, if a recipient taps a
+       * @param url The URL to open in a recipient's default mobile browser, if a recipient taps a
        * push notification that's based on the message template and the value of the `Action` property
        * is `URL` .
        */
@@ -1612,9 +1621,9 @@ public open class CfnPushTemplate internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty.Builder
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty.Builder
           =
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty.builder()
 
       /**
        * @param action The action to occur if a recipient taps a push notification that's based on
@@ -1624,7 +1633,7 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS platform.
+       * setting uses the deep-linking features of the iOS and Android platforms.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        */
@@ -1641,19 +1650,14 @@ public open class CfnPushTemplate internal constructor(
       }
 
       /**
-       * @param mediaUrl The URL of an image or video to display in push notifications that are
-       * based on the message template.
-       */
-      override fun mediaUrl(mediaUrl: String) {
-        cdkBuilder.mediaUrl(mediaUrl)
-      }
-
-      /**
-       * @param sound The key for the sound to play when the recipient receives a push notification
-       * that's based on the message template.
-       * The value for this key is the name of a sound file in your app's main bundle or the
-       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
-       * specify `default` for the value, the system plays the default alert sound.
+       * @param sound The sound to play when a recipient receives a push notification that's based
+       * on the message template.
+       * You can use the default stream or specify the file name of a sound resource that's bundled
+       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
+       *
+       * For an iOS platform, this value is the key for the name of a sound file in your app's main
+       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
+       * found or you specify `default` for the value, the system plays the default alert sound.
        */
       override fun sound(sound: String) {
         cdkBuilder.sound(sound)
@@ -1668,7 +1672,7 @@ public open class CfnPushTemplate internal constructor(
       }
 
       /**
-       * @param url The URL to open in the recipient's default mobile browser, if a recipient taps a
+       * @param url The URL to open in a recipient's default mobile browser, if a recipient taps a
        * push notification that's based on the message template and the value of the `Action` property
        * is `URL` .
        */
@@ -1677,14 +1681,13 @@ public open class CfnPushTemplate internal constructor(
       }
 
       public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty,
-    ) : CdkObject(cdkObject), APNSPushNotificationTemplateProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty,
+    ) : CdkObject(cdkObject), DefaultPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
        * template.
@@ -1694,38 +1697,33 @@ public open class CfnPushTemplate internal constructor(
        * * `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the
        * background. This is the default action.
        * * `DEEP_LINK` – Your app opens and displays a designated user interface in the app. This
-       * setting uses the deep-linking features of the iOS platform.
+       * setting uses the deep-linking features of the iOS and Android platforms.
        * * `URL` – The default mobile browser on the recipient's device opens and loads the web page
        * at a URL that you specify.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-action)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-action)
        */
       override fun action(): String? = unwrap(this).getAction()
 
       /**
        * The message body to use in push notifications that are based on the message template.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-body)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-body)
        */
       override fun body(): String? = unwrap(this).getBody()
 
       /**
-       * The URL of an image or video to display in push notifications that are based on the message
+       * The sound to play when a recipient receives a push notification that's based on the message
        * template.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-mediaurl)
-       */
-      override fun mediaUrl(): String? = unwrap(this).getMediaUrl()
-
-      /**
-       * The key for the sound to play when the recipient receives a push notification that's based
-       * on the message template.
+       * You can use the default stream or specify the file name of a sound resource that's bundled
+       * in your app. On an Android platform, the sound file must reside in `/res/raw/` .
        *
-       * The value for this key is the name of a sound file in your app's main bundle or the
-       * `Library/Sounds` folder in your app's data container. If the sound file can't be found or you
-       * specify `default` for the value, the system plays the default alert sound.
+       * For an iOS platform, this value is the key for the name of a sound file in your app's main
+       * bundle or the `Library/Sounds` folder in your app's data container. If the sound file can't be
+       * found or you specify `default` for the value, the system plays the default alert sound.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-sound)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-sound)
        */
       override fun sound(): String? = unwrap(this).getSound()
 
@@ -1734,36 +1732,36 @@ public open class CfnPushTemplate internal constructor(
        *
        * This title appears above the notification message on a recipient's device.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-title)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-title)
        */
       override fun title(): String? = unwrap(this).getTitle()
 
       /**
-       * The URL to open in the recipient's default mobile browser, if a recipient taps a push
+       * The URL to open in a recipient's default mobile browser, if a recipient taps a push
        * notification that's based on the message template and the value of the `Action` property is
        * `URL` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html#cfn-pinpoint-pushtemplate-apnspushnotificationtemplate-url)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html#cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-url)
        */
       override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          APNSPushNotificationTemplateProperty {
+          DefaultPushNotificationTemplateProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty):
-          APNSPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          APNSPushNotificationTemplateProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty):
+          DefaultPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultPushNotificationTemplateProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: APNSPushNotificationTemplateProperty):
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
+      internal fun unwrap(wrapped: DefaultPushNotificationTemplateProperty):
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty
+          software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
     }
   }
 }

@@ -907,7 +907,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps,
   ) : CdkObject(cdkObject), StepFunctionsRestApiProps {
     /**
      * The source of the API key for metering requests according to a usage plan.

@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html)
  */
-public open class CfnMicrosoftAD internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD,
+public open class CfnMicrosoftAD(
+  cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -528,7 +528,8 @@ public open class CfnMicrosoftAD internal constructor(
         CfnMicrosoftAD = CfnMicrosoftAD(cdkObject)
 
     internal fun unwrap(wrapped: CfnMicrosoftAD):
-        software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD = wrapped.cdkObject
+        software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD = wrapped.cdkObject as
+        software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD
   }
 
   /**
@@ -630,8 +631,7 @@ public open class CfnMicrosoftAD internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty,
     ) : CdkObject(cdkObject), VpcSettingsProperty {
       /**
        * The identifiers of the subnets for the directory servers.

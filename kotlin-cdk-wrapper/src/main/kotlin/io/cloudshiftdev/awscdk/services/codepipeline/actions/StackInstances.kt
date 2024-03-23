@@ -42,12 +42,11 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public abstract class StackInstances internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StackInstances,
+public abstract class StackInstances(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances,
   ) : StackInstances(cdkObject)
 
   public companion object {

@@ -99,7 +99,7 @@ public interface Ulimit {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Ulimit,
+    cdkObject: software.amazon.awscdk.services.ecs.Ulimit,
   ) : CdkObject(cdkObject), Ulimit {
     /**
      * The hard limit for the ulimit type.

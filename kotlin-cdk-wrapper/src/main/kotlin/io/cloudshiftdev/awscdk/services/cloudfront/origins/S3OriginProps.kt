@@ -172,7 +172,7 @@ public interface S3OriginProps : OriginProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3OriginProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3OriginProps,
   ) : CdkObject(cdkObject), S3OriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;

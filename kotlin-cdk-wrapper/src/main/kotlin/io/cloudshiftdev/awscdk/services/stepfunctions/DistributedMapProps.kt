@@ -425,7 +425,7 @@ public interface DistributedMapProps : MapBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMapProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMapProps,
   ) : CdkObject(cdkObject), DistributedMapProps {
     /**
      * An optional description for this state.

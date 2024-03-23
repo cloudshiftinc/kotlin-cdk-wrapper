@@ -275,7 +275,7 @@ public interface CfnDataProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dms.CfnDataProviderProps,
+    cdkObject: software.amazon.awscdk.services.dms.CfnDataProviderProps,
   ) : CdkObject(cdkObject), CfnDataProviderProps {
     /**
      * The identifier of the data provider.

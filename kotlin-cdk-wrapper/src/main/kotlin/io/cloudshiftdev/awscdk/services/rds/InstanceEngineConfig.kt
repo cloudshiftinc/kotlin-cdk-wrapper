@@ -99,7 +99,7 @@ public interface InstanceEngineConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.InstanceEngineConfig,
+    cdkObject: software.amazon.awscdk.services.rds.InstanceEngineConfig,
   ) : CdkObject(cdkObject), InstanceEngineConfig {
     /**
      * Features supported by the database engine.

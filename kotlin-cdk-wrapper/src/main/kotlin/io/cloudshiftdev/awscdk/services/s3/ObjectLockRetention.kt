@@ -25,8 +25,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)
  */
-public open class ObjectLockRetention internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.ObjectLockRetention,
+public open class ObjectLockRetention(
+  cdkObject: software.amazon.awscdk.services.s3.ObjectLockRetention,
 ) : CdkObject(cdkObject) {
   /**
    * The default period for which objects should be retained.
@@ -51,6 +51,7 @@ public open class ObjectLockRetention internal constructor(
         ObjectLockRetention = ObjectLockRetention(cdkObject)
 
     internal fun unwrap(wrapped: ObjectLockRetention):
-        software.amazon.awscdk.services.s3.ObjectLockRetention = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.ObjectLockRetention = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.ObjectLockRetention
   }
 }

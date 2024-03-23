@@ -36,7 +36,7 @@ public interface IBackupVault : IResource {
   public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.IBackupVault,
+    cdkObject: software.amazon.awscdk.services.backup.IBackupVault,
   ) : CdkObject(cdkObject), IBackupVault {
     /**
      * Apply the given removal policy to this resource.

@@ -96,7 +96,7 @@ public interface WeightedTarget {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.WeightedTarget,
+    cdkObject: software.amazon.awscdk.services.appmesh.WeightedTarget,
   ) : CdkObject(cdkObject), WeightedTarget {
     /**
      * The port to match from the request.

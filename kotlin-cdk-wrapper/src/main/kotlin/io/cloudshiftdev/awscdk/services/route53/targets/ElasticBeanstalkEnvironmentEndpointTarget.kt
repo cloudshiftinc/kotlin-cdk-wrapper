@@ -27,9 +27,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget,
+public open class ElasticBeanstalkEnvironmentEndpointTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(environmentEndpoint: String) :
       this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint)
@@ -62,6 +61,7 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor
 
     internal fun unwrap(wrapped: ElasticBeanstalkEnvironmentEndpointTarget):
         software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget
   }
 }

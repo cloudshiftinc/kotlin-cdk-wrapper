@@ -44,8 +44,8 @@ import kotlin.jvm.JvmName
  * Tags.of(node).add("Environment", "Dev");
  * ```
  */
-public abstract class VirtualNodeListener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
+public abstract class VirtualNodeListener(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
 ) : CdkObject(cdkObject) {
   /**
    * Binds the current object when adding Listener to a VirtualNode.
@@ -56,7 +56,7 @@ public abstract class VirtualNodeListener internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualNodeListenerConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
   ) : VirtualNodeListener(cdkObject)
 
   public companion object {

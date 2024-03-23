@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html)
  */
-public open class CfnVPCEndpointConnectionNotification internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification,
+public open class CfnVPCEndpointConnectionNotification(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -265,5 +264,6 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
 
     internal fun unwrap(wrapped: CfnVPCEndpointConnectionNotification):
         software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification
   }
 }

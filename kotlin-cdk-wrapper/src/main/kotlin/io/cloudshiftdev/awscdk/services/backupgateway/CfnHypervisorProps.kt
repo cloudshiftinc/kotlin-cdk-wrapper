@@ -203,7 +203,7 @@ public interface CfnHypervisorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisorProps,
+    cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisorProps,
   ) : CdkObject(cdkObject), CfnHypervisorProps {
     /**
      * The server host of the hypervisor.

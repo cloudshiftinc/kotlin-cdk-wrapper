@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * app.synth();
  * ```
  */
-public open class Service internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.Service,
+public open class Service(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.Service,
 ) : Resource(cdkObject), IService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -546,6 +546,6 @@ public open class Service internal constructor(
         = Service(cdkObject)
 
     internal fun unwrap(wrapped: Service): software.amazon.awscdk.services.servicediscovery.Service
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.servicediscovery.Service
   }
 }

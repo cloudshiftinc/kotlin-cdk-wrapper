@@ -34,8 +34,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class GelfLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriver,
+public open class GelfLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: GelfLogDriverProps) :
       this(software.amazon.awscdk.services.ecs.GelfLogDriver(props.let(GelfLogDriverProps::unwrap))
@@ -369,6 +369,6 @@ public open class GelfLogDriver internal constructor(
         GelfLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: GelfLogDriver): software.amazon.awscdk.services.ecs.GelfLogDriver =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.GelfLogDriver
   }
 }

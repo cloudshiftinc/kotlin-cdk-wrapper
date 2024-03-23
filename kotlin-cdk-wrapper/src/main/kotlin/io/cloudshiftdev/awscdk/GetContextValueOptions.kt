@@ -107,7 +107,7 @@ public interface GetContextValueOptions : GetContextKeyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.GetContextValueOptions,
+    cdkObject: software.amazon.awscdk.GetContextValueOptions,
   ) : CdkObject(cdkObject), GetContextValueOptions {
     /**
      * The value to return if the context value was not found and a missing context is reported.

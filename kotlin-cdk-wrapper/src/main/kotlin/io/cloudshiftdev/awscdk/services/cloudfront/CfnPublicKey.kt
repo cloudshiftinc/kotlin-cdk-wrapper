@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html)
  */
-public open class CfnPublicKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey,
+public open class CfnPublicKey(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -267,7 +267,8 @@ public open class CfnPublicKey internal constructor(
         CfnPublicKey = CfnPublicKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicKey):
-        software.amazon.awscdk.services.cloudfront.CfnPublicKey = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnPublicKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnPublicKey
   }
 
   /**
@@ -406,8 +407,7 @@ public open class CfnPublicKey internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty,
     ) : CdkObject(cdkObject), PublicKeyConfigProperty {
       /**
        * A string included in the request to help make sure that the request can't be replayed.

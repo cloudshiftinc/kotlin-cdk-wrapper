@@ -471,7 +471,7 @@ public interface CfnFeatureGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps,
   ) : CdkObject(cdkObject), CfnFeatureGroupProps {
     /**
      * A free form description of a `FeatureGroup` .

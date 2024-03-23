@@ -103,8 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)
  */
-public open class CfnTheme internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme,
+public open class CfnTheme(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -649,7 +649,875 @@ public open class CfnTheme internal constructor(
         CfnTheme(cdkObject)
 
     internal fun unwrap(wrapped: CfnTheme): software.amazon.awscdk.services.quicksight.CfnTheme =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.quicksight.CfnTheme
+  }
+
+  /**
+   * The display options for tile borders for visuals.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * BorderStyleProperty borderStyleProperty = BorderStyleProperty.builder()
+   * .show(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html)
+   */
+  public interface BorderStyleProperty {
+    /**
+     * The option to enable display of borders for visuals.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html#cfn-quicksight-theme-borderstyle-show)
+     */
+    public fun show(): Any? = unwrap(this).getShow()
+
+    /**
+     * A builder for [BorderStyleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param show The option to enable display of borders for visuals.
+       */
+      public fun show(show: Boolean)
+
+      /**
+       * @param show The option to enable display of borders for visuals.
+       */
+      public fun show(show: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.builder()
+
+      /**
+       * @param show The option to enable display of borders for visuals.
+       */
+      override fun show(show: Boolean) {
+        cdkBuilder.show(show)
+      }
+
+      /**
+       * @param show The option to enable display of borders for visuals.
+       */
+      override fun show(show: IResolvable) {
+        cdkBuilder.show(show.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty,
+    ) : CdkObject(cdkObject), BorderStyleProperty {
+      /**
+       * The option to enable display of borders for visuals.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html#cfn-quicksight-theme-borderstyle-show)
+       */
+      override fun show(): Any? = unwrap(this).getShow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BorderStyleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty):
+          BorderStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? BorderStyleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BorderStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty
+    }
+  }
+
+  /**
+   * The theme colors that are used for data colors in charts.
+   *
+   * The colors description is a hexadecimal color code that consists of six alphanumerical
+   * characters, prefixed with `#` , for example #37BFF5.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * DataColorPaletteProperty dataColorPaletteProperty = DataColorPaletteProperty.builder()
+   * .colors(List.of("colors"))
+   * .emptyFillColor("emptyFillColor")
+   * .minMaxGradient(List.of("minMaxGradient"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html)
+   */
+  public interface DataColorPaletteProperty {
+    /**
+     * The hexadecimal codes for the colors.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-colors)
+     */
+    public fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
+
+    /**
+     * The hexadecimal code of a color that applies to charts where a lack of data is highlighted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-emptyfillcolor)
+     */
+    public fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
+
+    /**
+     * The minimum and maximum hexadecimal codes that describe a color gradient.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-minmaxgradient)
+     */
+    public fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
+
+    /**
+     * A builder for [DataColorPaletteProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param colors The hexadecimal codes for the colors.
+       */
+      public fun colors(colors: List<String>)
+
+      /**
+       * @param colors The hexadecimal codes for the colors.
+       */
+      public fun colors(vararg colors: String)
+
+      /**
+       * @param emptyFillColor The hexadecimal code of a color that applies to charts where a lack
+       * of data is highlighted.
+       */
+      public fun emptyFillColor(emptyFillColor: String)
+
+      /**
+       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
+       * gradient.
+       */
+      public fun minMaxGradient(minMaxGradient: List<String>)
+
+      /**
+       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
+       * gradient.
+       */
+      public fun minMaxGradient(vararg minMaxGradient: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.builder()
+
+      /**
+       * @param colors The hexadecimal codes for the colors.
+       */
+      override fun colors(colors: List<String>) {
+        cdkBuilder.colors(colors)
+      }
+
+      /**
+       * @param colors The hexadecimal codes for the colors.
+       */
+      override fun colors(vararg colors: String): Unit = colors(colors.toList())
+
+      /**
+       * @param emptyFillColor The hexadecimal code of a color that applies to charts where a lack
+       * of data is highlighted.
+       */
+      override fun emptyFillColor(emptyFillColor: String) {
+        cdkBuilder.emptyFillColor(emptyFillColor)
+      }
+
+      /**
+       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
+       * gradient.
+       */
+      override fun minMaxGradient(minMaxGradient: List<String>) {
+        cdkBuilder.minMaxGradient(minMaxGradient)
+      }
+
+      /**
+       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
+       * gradient.
+       */
+      override fun minMaxGradient(vararg minMaxGradient: String): Unit =
+          minMaxGradient(minMaxGradient.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty,
+    ) : CdkObject(cdkObject), DataColorPaletteProperty {
+      /**
+       * The hexadecimal codes for the colors.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-colors)
+       */
+      override fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
+
+      /**
+       * The hexadecimal code of a color that applies to charts where a lack of data is highlighted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-emptyfillcolor)
+       */
+      override fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
+
+      /**
+       * The minimum and maximum hexadecimal codes that describe a color gradient.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-minmaxgradient)
+       */
+      override fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataColorPaletteProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty):
+          DataColorPaletteProperty = CdkObjectWrappers.wrap(cdkObject) as? DataColorPaletteProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataColorPaletteProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty
+    }
+  }
+
+  /**
+   * Determines the font settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * FontProperty fontProperty = FontProperty.builder()
+   * .fontFamily("fontFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html)
+   */
+  public interface FontProperty {
+    /**
+     * Determines the font family settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html#cfn-quicksight-theme-font-fontfamily)
+     */
+    public fun fontFamily(): String? = unwrap(this).getFontFamily()
+
+    /**
+     * A builder for [FontProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fontFamily Determines the font family settings.
+       */
+      public fun fontFamily(fontFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.builder()
+
+      /**
+       * @param fontFamily Determines the font family settings.
+       */
+      override fun fontFamily(fontFamily: String) {
+        cdkBuilder.fontFamily(fontFamily)
+      }
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty,
+    ) : CdkObject(cdkObject), FontProperty {
+      /**
+       * Determines the font family settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html#cfn-quicksight-theme-font-fontfamily)
+       */
+      override fun fontFamily(): String? = unwrap(this).getFontFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FontProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty):
+          FontProperty = CdkObjectWrappers.wrap(cdkObject) as? FontProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FontProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty
+    }
+  }
+
+  /**
+   * The display options for gutter spacing between tiles on a sheet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * GutterStyleProperty gutterStyleProperty = GutterStyleProperty.builder()
+   * .show(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html)
+   */
+  public interface GutterStyleProperty {
+    /**
+     * This Boolean value controls whether to display a gutter space between sheet tiles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html#cfn-quicksight-theme-gutterstyle-show)
+     */
+    public fun show(): Any? = unwrap(this).getShow()
+
+    /**
+     * A builder for [GutterStyleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param show This Boolean value controls whether to display a gutter space between sheet
+       * tiles.
+       */
+      public fun show(show: Boolean)
+
+      /**
+       * @param show This Boolean value controls whether to display a gutter space between sheet
+       * tiles.
+       */
+      public fun show(show: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.builder()
+
+      /**
+       * @param show This Boolean value controls whether to display a gutter space between sheet
+       * tiles.
+       */
+      override fun show(show: Boolean) {
+        cdkBuilder.show(show)
+      }
+
+      /**
+       * @param show This Boolean value controls whether to display a gutter space between sheet
+       * tiles.
+       */
+      override fun show(show: IResolvable) {
+        cdkBuilder.show(show.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty,
+    ) : CdkObject(cdkObject), GutterStyleProperty {
+      /**
+       * This Boolean value controls whether to display a gutter space between sheet tiles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html#cfn-quicksight-theme-gutterstyle-show)
+       */
+      override fun show(): Any? = unwrap(this).getShow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GutterStyleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty):
+          GutterStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? GutterStyleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GutterStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty
+    }
+  }
+
+  /**
+   * The display options for margins around the outside edge of sheets.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * MarginStyleProperty marginStyleProperty = MarginStyleProperty.builder()
+   * .show(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html)
+   */
+  public interface MarginStyleProperty {
+    /**
+     * This Boolean value controls whether to display sheet margins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html#cfn-quicksight-theme-marginstyle-show)
+     */
+    public fun show(): Any? = unwrap(this).getShow()
+
+    /**
+     * A builder for [MarginStyleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param show This Boolean value controls whether to display sheet margins.
+       */
+      public fun show(show: Boolean)
+
+      /**
+       * @param show This Boolean value controls whether to display sheet margins.
+       */
+      public fun show(show: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.builder()
+
+      /**
+       * @param show This Boolean value controls whether to display sheet margins.
+       */
+      override fun show(show: Boolean) {
+        cdkBuilder.show(show)
+      }
+
+      /**
+       * @param show This Boolean value controls whether to display sheet margins.
+       */
+      override fun show(show: IResolvable) {
+        cdkBuilder.show(show.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty,
+    ) : CdkObject(cdkObject), MarginStyleProperty {
+      /**
+       * This Boolean value controls whether to display sheet margins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html#cfn-quicksight-theme-marginstyle-show)
+       */
+      override fun show(): Any? = unwrap(this).getShow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MarginStyleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty):
+          MarginStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? MarginStyleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarginStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty
+    }
+  }
+
+  /**
+   * Permission for the resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
+   * .actions(List.of("actions"))
+   * .principal("principal")
+   * // the properties below are optional
+   * .resource("resource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html)
+   */
+  public interface ResourcePermissionProperty {
+    /**
+     * The IAM action to grant or revoke permissions on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-actions)
+     */
+    public fun actions(): List<String>
+
+    /**
+     * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
+     *
+     * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+     * (This is common.)
+     * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+     * dashboard, template, or theme. (This is common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
+     * this option only to share resources (templates) across AWS accounts . (This is less common.)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
+     */
+    public fun principal(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-resource)
+     */
+    public fun resource(): String? = unwrap(this).getResource()
+
+    /**
+     * A builder for [ResourcePermissionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      public fun actions(actions: List<String>)
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      public fun actions(vararg actions: String)
+
+      /**
+       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
+       * following:. 
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       */
+      public fun principal(principal: String)
+
+      /**
+       * @param resource the value to be set.
+       */
+      public fun resource(resource: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.builder()
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      override fun actions(actions: List<String>) {
+        cdkBuilder.actions(actions)
+      }
+
+      /**
+       * @param actions The IAM action to grant or revoke permissions on. 
+       */
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
+
+      /**
+       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
+       * following:. 
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       */
+      override fun principal(principal: String) {
+        cdkBuilder.principal(principal)
+      }
+
+      /**
+       * @param resource the value to be set.
+       */
+      override fun resource(resource: String) {
+        cdkBuilder.resource(resource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
+    ) : CdkObject(cdkObject), ResourcePermissionProperty {
+      /**
+       * The IAM action to grant or revoke permissions on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-actions)
+       */
+      override fun actions(): List<String> = unwrap(this).getActions()
+
+      /**
+       * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
+       *
+       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
+       * (This is common.)
+       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
+       * dashboard, template, or theme. (This is common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
+       * Use this option only to share resources (templates) across AWS accounts . (This is less
+       * common.)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
+       */
+      override fun principal(): String = unwrap(this).getPrincipal()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-resource)
+       */
+      override fun resource(): String? = unwrap(this).getResource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePermissionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty):
+          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourcePermissionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourcePermissionProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty
+    }
+  }
+
+  /**
+   * The theme display options for sheets.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * SheetStyleProperty sheetStyleProperty = SheetStyleProperty.builder()
+   * .tile(TileStyleProperty.builder()
+   * .border(BorderStyleProperty.builder()
+   * .show(false)
+   * .build())
+   * .build())
+   * .tileLayout(TileLayoutStyleProperty.builder()
+   * .gutter(GutterStyleProperty.builder()
+   * .show(false)
+   * .build())
+   * .margin(MarginStyleProperty.builder()
+   * .show(false)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html)
+   */
+  public interface SheetStyleProperty {
+    /**
+     * The display options for tiles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tile)
+     */
+    public fun tile(): Any? = unwrap(this).getTile()
+
+    /**
+     * The layout options for tiles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tilelayout)
+     */
+    public fun tileLayout(): Any? = unwrap(this).getTileLayout()
+
+    /**
+     * A builder for [SheetStyleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tile The display options for tiles.
+       */
+      public fun tile(tile: IResolvable)
+
+      /**
+       * @param tile The display options for tiles.
+       */
+      public fun tile(tile: TileStyleProperty)
+
+      /**
+       * @param tile The display options for tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
+      public fun tile(tile: TileStyleProperty.Builder.() -> Unit)
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      public fun tileLayout(tileLayout: IResolvable)
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      public fun tileLayout(tileLayout: TileLayoutStyleProperty)
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
+      public fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.builder()
+
+      /**
+       * @param tile The display options for tiles.
+       */
+      override fun tile(tile: IResolvable) {
+        cdkBuilder.tile(tile.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tile The display options for tiles.
+       */
+      override fun tile(tile: TileStyleProperty) {
+        cdkBuilder.tile(tile.let(TileStyleProperty::unwrap))
+      }
+
+      /**
+       * @param tile The display options for tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
+      override fun tile(tile: TileStyleProperty.Builder.() -> Unit): Unit =
+          tile(TileStyleProperty(tile))
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      override fun tileLayout(tileLayout: IResolvable) {
+        cdkBuilder.tileLayout(tileLayout.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      override fun tileLayout(tileLayout: TileLayoutStyleProperty) {
+        cdkBuilder.tileLayout(tileLayout.let(TileLayoutStyleProperty::unwrap))
+      }
+
+      /**
+       * @param tileLayout The layout options for tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
+      override fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit): Unit =
+          tileLayout(TileLayoutStyleProperty(tileLayout))
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty,
+    ) : CdkObject(cdkObject), SheetStyleProperty {
+      /**
+       * The display options for tiles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tile)
+       */
+      override fun tile(): Any? = unwrap(this).getTile()
+
+      /**
+       * The layout options for tiles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tilelayout)
+       */
+      override fun tileLayout(): Any? = unwrap(this).getTileLayout()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SheetStyleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty):
+          SheetStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? SheetStyleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SheetStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty
+    }
   }
 
   /**
@@ -918,8 +1786,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty,
     ) : CdkObject(cdkObject), ThemeConfigurationProperty {
       /**
        * Color properties that apply to chart data colors.
@@ -968,7 +1835,7 @@ public open class CfnTheme internal constructor(
   }
 
   /**
-   * Display options related to tiles on a sheet.
+   * Theme error.
    *
    * Example:
    *
@@ -976,376 +1843,101 @@ public open class CfnTheme internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * TileStyleProperty tileStyleProperty = TileStyleProperty.builder()
-   * .border(BorderStyleProperty.builder()
-   * .show(false)
-   * .build())
+   * ThemeErrorProperty themeErrorProperty = ThemeErrorProperty.builder()
+   * .message("message")
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html)
    */
-  public interface TileStyleProperty {
+  public interface ThemeErrorProperty {
     /**
-     * The border around a tile.
+     * The error message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html#cfn-quicksight-theme-tilestyle-border)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-message)
      */
-    public fun border(): Any? = unwrap(this).getBorder()
+    public fun message(): String? = unwrap(this).getMessage()
 
     /**
-     * A builder for [TileStyleProperty]
+     * The type of error.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ThemeErrorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param border The border around a tile.
+       * @param message The error message.
        */
-      public fun border(border: IResolvable)
+      public fun message(message: String)
 
       /**
-       * @param border The border around a tile.
+       * @param type The type of error.
        */
-      public fun border(border: BorderStyleProperty)
-
-      /**
-       * @param border The border around a tile.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
-      public fun border(border: BorderStyleProperty.Builder.() -> Unit)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.builder()
 
       /**
-       * @param border The border around a tile.
+       * @param message The error message.
        */
-      override fun border(border: IResolvable) {
-        cdkBuilder.border(border.let(IResolvable::unwrap))
+      override fun message(message: String) {
+        cdkBuilder.message(message)
       }
 
       /**
-       * @param border The border around a tile.
+       * @param type The type of error.
        */
-      override fun border(border: BorderStyleProperty) {
-        cdkBuilder.border(border.let(BorderStyleProperty::unwrap))
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
-      /**
-       * @param border The border around a tile.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
-      override fun border(border: BorderStyleProperty.Builder.() -> Unit): Unit =
-          border(BorderStyleProperty(border))
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty =
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty,
-    ) : CdkObject(cdkObject), TileStyleProperty {
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty,
+    ) : CdkObject(cdkObject), ThemeErrorProperty {
       /**
-       * The border around a tile.
+       * The error message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html#cfn-quicksight-theme-tilestyle-border)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-message)
        */
-      override fun border(): Any? = unwrap(this).getBorder()
+      override fun message(): String? = unwrap(this).getMessage()
+
+      /**
+       * The type of error.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TileStyleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThemeErrorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty):
-          TileStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? TileStyleProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty):
+          ThemeErrorProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeErrorProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TileStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty = (wrapped as
+      internal fun unwrap(wrapped: ThemeErrorProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty
-    }
-  }
-
-  /**
-   * Determines the typography options.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * TypographyProperty typographyProperty = TypographyProperty.builder()
-   * .fontFamilies(List.of(FontProperty.builder()
-   * .fontFamily("fontFamily")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html)
-   */
-  public interface TypographyProperty {
-    /**
-     * Determines the list of font families.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html#cfn-quicksight-theme-typography-fontfamilies)
-     */
-    public fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
-
-    /**
-     * A builder for [TypographyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      public fun fontFamilies(fontFamilies: IResolvable)
-
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      public fun fontFamilies(fontFamilies: List<Any>)
-
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      public fun fontFamilies(vararg fontFamilies: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.builder()
-
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      override fun fontFamilies(fontFamilies: IResolvable) {
-        cdkBuilder.fontFamilies(fontFamilies.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      override fun fontFamilies(fontFamilies: List<Any>) {
-        cdkBuilder.fontFamilies(fontFamilies)
-      }
-
-      /**
-       * @param fontFamilies Determines the list of font families.
-       */
-      override fun fontFamilies(vararg fontFamilies: Any): Unit =
-          fontFamilies(fontFamilies.toList())
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty,
-    ) : CdkObject(cdkObject), TypographyProperty {
-      /**
-       * Determines the list of font families.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html#cfn-quicksight-theme-typography-fontfamilies)
-       */
-      override fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TypographyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty):
-          TypographyProperty = CdkObjectWrappers.wrap(cdkObject) as? TypographyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TypographyProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty
-    }
-  }
-
-  /**
-   * The display options for the layout of tiles on a sheet.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * TileLayoutStyleProperty tileLayoutStyleProperty = TileLayoutStyleProperty.builder()
-   * .gutter(GutterStyleProperty.builder()
-   * .show(false)
-   * .build())
-   * .margin(MarginStyleProperty.builder()
-   * .show(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html)
-   */
-  public interface TileLayoutStyleProperty {
-    /**
-     * The gutter settings that apply between tiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-gutter)
-     */
-    public fun gutter(): Any? = unwrap(this).getGutter()
-
-    /**
-     * The margin settings that apply around the outside edge of sheets.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-margin)
-     */
-    public fun margin(): Any? = unwrap(this).getMargin()
-
-    /**
-     * A builder for [TileLayoutStyleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      public fun gutter(gutter: IResolvable)
-
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      public fun gutter(gutter: GutterStyleProperty)
-
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
-      public fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit)
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      public fun margin(margin: IResolvable)
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      public fun margin(margin: MarginStyleProperty)
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
-      public fun margin(margin: MarginStyleProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.builder()
-
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      override fun gutter(gutter: IResolvable) {
-        cdkBuilder.gutter(gutter.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      override fun gutter(gutter: GutterStyleProperty) {
-        cdkBuilder.gutter(gutter.let(GutterStyleProperty::unwrap))
-      }
-
-      /**
-       * @param gutter The gutter settings that apply between tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
-      override fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit): Unit =
-          gutter(GutterStyleProperty(gutter))
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      override fun margin(margin: IResolvable) {
-        cdkBuilder.margin(margin.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      override fun margin(margin: MarginStyleProperty) {
-        cdkBuilder.margin(margin.let(MarginStyleProperty::unwrap))
-      }
-
-      /**
-       * @param margin The margin settings that apply around the outside edge of sheets.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
-      override fun margin(margin: MarginStyleProperty.Builder.() -> Unit): Unit =
-          margin(MarginStyleProperty(margin))
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty,
-    ) : CdkObject(cdkObject), TileLayoutStyleProperty {
-      /**
-       * The gutter settings that apply between tiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-gutter)
-       */
-      override fun gutter(): Any? = unwrap(this).getGutter()
-
-      /**
-       * The margin settings that apply around the outside edge of sheets.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-margin)
-       */
-      override fun margin(): Any? = unwrap(this).getMargin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TileLayoutStyleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty):
-          TileLayoutStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? TileLayoutStyleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TileLayoutStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty
+          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty
     }
   }
 
@@ -1649,8 +2241,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty,
     ) : CdkObject(cdkObject), ThemeVersionProperty {
       /**
        * The Amazon Resource Name (ARN) of the resource.
@@ -1730,7 +2321,7 @@ public open class CfnTheme internal constructor(
   }
 
   /**
-   * The display options for tile borders for visuals.
+   * The display options for the layout of tiles on a sheet.
    *
    * Example:
    *
@@ -1738,92 +2329,165 @@ public open class CfnTheme internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * BorderStyleProperty borderStyleProperty = BorderStyleProperty.builder()
+   * TileLayoutStyleProperty tileLayoutStyleProperty = TileLayoutStyleProperty.builder()
+   * .gutter(GutterStyleProperty.builder()
    * .show(false)
+   * .build())
+   * .margin(MarginStyleProperty.builder()
+   * .show(false)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html)
    */
-  public interface BorderStyleProperty {
+  public interface TileLayoutStyleProperty {
     /**
-     * The option to enable display of borders for visuals.
+     * The gutter settings that apply between tiles.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html#cfn-quicksight-theme-borderstyle-show)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-gutter)
      */
-    public fun show(): Any? = unwrap(this).getShow()
+    public fun gutter(): Any? = unwrap(this).getGutter()
 
     /**
-     * A builder for [BorderStyleProperty]
+     * The margin settings that apply around the outside edge of sheets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-margin)
+     */
+    public fun margin(): Any? = unwrap(this).getMargin()
+
+    /**
+     * A builder for [TileLayoutStyleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param show The option to enable display of borders for visuals.
+       * @param gutter The gutter settings that apply between tiles.
        */
-      public fun show(show: Boolean)
+      public fun gutter(gutter: IResolvable)
 
       /**
-       * @param show The option to enable display of borders for visuals.
+       * @param gutter The gutter settings that apply between tiles.
        */
-      public fun show(show: IResolvable)
+      public fun gutter(gutter: GutterStyleProperty)
+
+      /**
+       * @param gutter The gutter settings that apply between tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
+      public fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit)
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      public fun margin(margin: IResolvable)
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      public fun margin(margin: MarginStyleProperty)
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
+      public fun margin(margin: MarginStyleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.builder()
 
       /**
-       * @param show The option to enable display of borders for visuals.
+       * @param gutter The gutter settings that apply between tiles.
        */
-      override fun show(show: Boolean) {
-        cdkBuilder.show(show)
+      override fun gutter(gutter: IResolvable) {
+        cdkBuilder.gutter(gutter.let(IResolvable::unwrap))
       }
 
       /**
-       * @param show The option to enable display of borders for visuals.
+       * @param gutter The gutter settings that apply between tiles.
        */
-      override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
+      override fun gutter(gutter: GutterStyleProperty) {
+        cdkBuilder.gutter(gutter.let(GutterStyleProperty::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty =
+      /**
+       * @param gutter The gutter settings that apply between tiles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
+      override fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit): Unit =
+          gutter(GutterStyleProperty(gutter))
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      override fun margin(margin: IResolvable) {
+        cdkBuilder.margin(margin.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      override fun margin(margin: MarginStyleProperty) {
+        cdkBuilder.margin(margin.let(MarginStyleProperty::unwrap))
+      }
+
+      /**
+       * @param margin The margin settings that apply around the outside edge of sheets.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
+      override fun margin(margin: MarginStyleProperty.Builder.() -> Unit): Unit =
+          margin(MarginStyleProperty(margin))
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty,
-    ) : CdkObject(cdkObject), BorderStyleProperty {
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty,
+    ) : CdkObject(cdkObject), TileLayoutStyleProperty {
       /**
-       * The option to enable display of borders for visuals.
+       * The gutter settings that apply between tiles.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html#cfn-quicksight-theme-borderstyle-show)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-gutter)
        */
-      override fun show(): Any? = unwrap(this).getShow()
+      override fun gutter(): Any? = unwrap(this).getGutter()
+
+      /**
+       * The margin settings that apply around the outside edge of sheets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilelayoutstyle.html#cfn-quicksight-theme-tilelayoutstyle-margin)
+       */
+      override fun margin(): Any? = unwrap(this).getMargin()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BorderStyleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TileLayoutStyleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty):
-          BorderStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? BorderStyleProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty):
+          TileLayoutStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? TileLayoutStyleProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BorderStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty = (wrapped as
+      internal fun unwrap(wrapped: TileLayoutStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty
     }
   }
 
   /**
-   * The display options for margins around the outside edge of sheets.
+   * Display options related to tiles on a sheet.
    *
    * Example:
    *
@@ -1831,87 +2495,208 @@ public open class CfnTheme internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * MarginStyleProperty marginStyleProperty = MarginStyleProperty.builder()
+   * TileStyleProperty tileStyleProperty = TileStyleProperty.builder()
+   * .border(BorderStyleProperty.builder()
    * .show(false)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html)
    */
-  public interface MarginStyleProperty {
+  public interface TileStyleProperty {
     /**
-     * This Boolean value controls whether to display sheet margins.
+     * The border around a tile.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html#cfn-quicksight-theme-marginstyle-show)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html#cfn-quicksight-theme-tilestyle-border)
      */
-    public fun show(): Any? = unwrap(this).getShow()
+    public fun border(): Any? = unwrap(this).getBorder()
 
     /**
-     * A builder for [MarginStyleProperty]
+     * A builder for [TileStyleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param show This Boolean value controls whether to display sheet margins.
+       * @param border The border around a tile.
        */
-      public fun show(show: Boolean)
+      public fun border(border: IResolvable)
 
       /**
-       * @param show This Boolean value controls whether to display sheet margins.
+       * @param border The border around a tile.
        */
-      public fun show(show: IResolvable)
+      public fun border(border: BorderStyleProperty)
+
+      /**
+       * @param border The border around a tile.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
+      public fun border(border: BorderStyleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.builder()
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.builder()
 
       /**
-       * @param show This Boolean value controls whether to display sheet margins.
+       * @param border The border around a tile.
        */
-      override fun show(show: Boolean) {
-        cdkBuilder.show(show)
+      override fun border(border: IResolvable) {
+        cdkBuilder.border(border.let(IResolvable::unwrap))
       }
 
       /**
-       * @param show This Boolean value controls whether to display sheet margins.
+       * @param border The border around a tile.
        */
-      override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
+      override fun border(border: BorderStyleProperty) {
+        cdkBuilder.border(border.let(BorderStyleProperty::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty =
+      /**
+       * @param border The border around a tile.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
+      override fun border(border: BorderStyleProperty.Builder.() -> Unit): Unit =
+          border(BorderStyleProperty(border))
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty,
-    ) : CdkObject(cdkObject), MarginStyleProperty {
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty,
+    ) : CdkObject(cdkObject), TileStyleProperty {
       /**
-       * This Boolean value controls whether to display sheet margins.
+       * The border around a tile.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html#cfn-quicksight-theme-marginstyle-show)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-tilestyle.html#cfn-quicksight-theme-tilestyle-border)
        */
-      override fun show(): Any? = unwrap(this).getShow()
+      override fun border(): Any? = unwrap(this).getBorder()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MarginStyleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TileStyleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty):
-          MarginStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? MarginStyleProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty):
+          TileStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? TileStyleProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MarginStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty = (wrapped as
+      internal fun unwrap(wrapped: TileStyleProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty
+          software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty
+    }
+  }
+
+  /**
+   * Determines the typography options.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * TypographyProperty typographyProperty = TypographyProperty.builder()
+   * .fontFamilies(List.of(FontProperty.builder()
+   * .fontFamily("fontFamily")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html)
+   */
+  public interface TypographyProperty {
+    /**
+     * Determines the list of font families.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html#cfn-quicksight-theme-typography-fontfamilies)
+     */
+    public fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
+
+    /**
+     * A builder for [TypographyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      public fun fontFamilies(fontFamilies: IResolvable)
+
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      public fun fontFamilies(fontFamilies: List<Any>)
+
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      public fun fontFamilies(vararg fontFamilies: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.builder()
+
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      override fun fontFamilies(fontFamilies: IResolvable) {
+        cdkBuilder.fontFamilies(fontFamilies.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      override fun fontFamilies(fontFamilies: List<Any>) {
+        cdkBuilder.fontFamilies(fontFamilies)
+      }
+
+      /**
+       * @param fontFamilies Determines the list of font families.
+       */
+      override fun fontFamilies(vararg fontFamilies: Any): Unit =
+          fontFamilies(fontFamilies.toList())
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty,
+    ) : CdkObject(cdkObject), TypographyProperty {
+      /**
+       * Determines the list of font families.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html#cfn-quicksight-theme-typography-fontfamilies)
+       */
+      override fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TypographyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty):
+          TypographyProperty = CdkObjectWrappers.wrap(cdkObject) as? TypographyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TypographyProperty):
+          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty
     }
   }
 
@@ -2307,8 +3092,7 @@ public open class CfnTheme internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty,
     ) : CdkObject(cdkObject), UIColorPaletteProperty {
       /**
        * This color is that applies to selected states and buttons.
@@ -2447,802 +3231,6 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty
-    }
-  }
-
-  /**
-   * Theme error.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * ThemeErrorProperty themeErrorProperty = ThemeErrorProperty.builder()
-   * .message("message")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html)
-   */
-  public interface ThemeErrorProperty {
-    /**
-     * The error message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-message)
-     */
-    public fun message(): String? = unwrap(this).getMessage()
-
-    /**
-     * The type of error.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ThemeErrorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param message The error message.
-       */
-      public fun message(message: String)
-
-      /**
-       * @param type The type of error.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.builder()
-
-      /**
-       * @param message The error message.
-       */
-      override fun message(message: String) {
-        cdkBuilder.message(message)
-      }
-
-      /**
-       * @param type The type of error.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty,
-    ) : CdkObject(cdkObject), ThemeErrorProperty {
-      /**
-       * The error message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-message)
-       */
-      override fun message(): String? = unwrap(this).getMessage()
-
-      /**
-       * The type of error.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeerror.html#cfn-quicksight-theme-themeerror-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThemeErrorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty):
-          ThemeErrorProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeErrorProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThemeErrorProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty
-    }
-  }
-
-  /**
-   * Permission for the resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
-   * .actions(List.of("actions"))
-   * .principal("principal")
-   * // the properties below are optional
-   * .resource("resource")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html)
-   */
-  public interface ResourcePermissionProperty {
-    /**
-     * The IAM action to grant or revoke permissions on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-actions)
-     */
-    public fun actions(): List<String>
-
-    /**
-     * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
-     *
-     * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-     * (This is common.)
-     * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-     * dashboard, template, or theme. (This is common.)
-     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-     * this option only to share resources (templates) across AWS accounts . (This is less common.)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
-     */
-    public fun principal(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-resource)
-     */
-    public fun resource(): String? = unwrap(this).getResource()
-
-    /**
-     * A builder for [ResourcePermissionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      public fun actions(actions: List<String>)
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      public fun actions(vararg actions: String)
-
-      /**
-       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
-       * following:. 
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       */
-      public fun principal(principal: String)
-
-      /**
-       * @param resource the value to be set.
-       */
-      public fun resource(resource: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.builder()
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      override fun actions(actions: List<String>) {
-        cdkBuilder.actions(actions)
-      }
-
-      /**
-       * @param actions The IAM action to grant or revoke permissions on. 
-       */
-      override fun actions(vararg actions: String): Unit = actions(actions.toList())
-
-      /**
-       * @param principal The Amazon Resource Name (ARN) of the principal. This can be one of the
-       * following:. 
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       */
-      override fun principal(principal: String) {
-        cdkBuilder.principal(principal)
-      }
-
-      /**
-       * @param resource the value to be set.
-       */
-      override fun resource(resource: String) {
-        cdkBuilder.resource(resource)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
-    ) : CdkObject(cdkObject), ResourcePermissionProperty {
-      /**
-       * The IAM action to grant or revoke permissions on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-actions)
-       */
-      override fun actions(): List<String> = unwrap(this).getActions()
-
-      /**
-       * The Amazon Resource Name (ARN) of the principal. This can be one of the following:.
-       *
-       * * The ARN of an Amazon QuickSight user or group associated with a data source or dataset.
-       * (This is common.)
-       * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
-       * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
-       */
-      override fun principal(): String = unwrap(this).getPrincipal()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-resource)
-       */
-      override fun resource(): String? = unwrap(this).getResource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePermissionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty):
-          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourcePermissionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourcePermissionProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty
-    }
-  }
-
-  /**
-   * Determines the font settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * FontProperty fontProperty = FontProperty.builder()
-   * .fontFamily("fontFamily")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html)
-   */
-  public interface FontProperty {
-    /**
-     * Determines the font family settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html#cfn-quicksight-theme-font-fontfamily)
-     */
-    public fun fontFamily(): String? = unwrap(this).getFontFamily()
-
-    /**
-     * A builder for [FontProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fontFamily Determines the font family settings.
-       */
-      public fun fontFamily(fontFamily: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.builder()
-
-      /**
-       * @param fontFamily Determines the font family settings.
-       */
-      override fun fontFamily(fontFamily: String) {
-        cdkBuilder.fontFamily(fontFamily)
-      }
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty,
-    ) : CdkObject(cdkObject), FontProperty {
-      /**
-       * Determines the font family settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-font.html#cfn-quicksight-theme-font-fontfamily)
-       */
-      override fun fontFamily(): String? = unwrap(this).getFontFamily()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FontProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty):
-          FontProperty = CdkObjectWrappers.wrap(cdkObject) as? FontProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FontProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty
-    }
-  }
-
-  /**
-   * The theme colors that are used for data colors in charts.
-   *
-   * The colors description is a hexadecimal color code that consists of six alphanumerical
-   * characters, prefixed with `#` , for example #37BFF5.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * DataColorPaletteProperty dataColorPaletteProperty = DataColorPaletteProperty.builder()
-   * .colors(List.of("colors"))
-   * .emptyFillColor("emptyFillColor")
-   * .minMaxGradient(List.of("minMaxGradient"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html)
-   */
-  public interface DataColorPaletteProperty {
-    /**
-     * The hexadecimal codes for the colors.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-colors)
-     */
-    public fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
-
-    /**
-     * The hexadecimal code of a color that applies to charts where a lack of data is highlighted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-emptyfillcolor)
-     */
-    public fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
-
-    /**
-     * The minimum and maximum hexadecimal codes that describe a color gradient.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-minmaxgradient)
-     */
-    public fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
-
-    /**
-     * A builder for [DataColorPaletteProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param colors The hexadecimal codes for the colors.
-       */
-      public fun colors(colors: List<String>)
-
-      /**
-       * @param colors The hexadecimal codes for the colors.
-       */
-      public fun colors(vararg colors: String)
-
-      /**
-       * @param emptyFillColor The hexadecimal code of a color that applies to charts where a lack
-       * of data is highlighted.
-       */
-      public fun emptyFillColor(emptyFillColor: String)
-
-      /**
-       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
-       * gradient.
-       */
-      public fun minMaxGradient(minMaxGradient: List<String>)
-
-      /**
-       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
-       * gradient.
-       */
-      public fun minMaxGradient(vararg minMaxGradient: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.builder()
-
-      /**
-       * @param colors The hexadecimal codes for the colors.
-       */
-      override fun colors(colors: List<String>) {
-        cdkBuilder.colors(colors)
-      }
-
-      /**
-       * @param colors The hexadecimal codes for the colors.
-       */
-      override fun colors(vararg colors: String): Unit = colors(colors.toList())
-
-      /**
-       * @param emptyFillColor The hexadecimal code of a color that applies to charts where a lack
-       * of data is highlighted.
-       */
-      override fun emptyFillColor(emptyFillColor: String) {
-        cdkBuilder.emptyFillColor(emptyFillColor)
-      }
-
-      /**
-       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
-       * gradient.
-       */
-      override fun minMaxGradient(minMaxGradient: List<String>) {
-        cdkBuilder.minMaxGradient(minMaxGradient)
-      }
-
-      /**
-       * @param minMaxGradient The minimum and maximum hexadecimal codes that describe a color
-       * gradient.
-       */
-      override fun minMaxGradient(vararg minMaxGradient: String): Unit =
-          minMaxGradient(minMaxGradient.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty,
-    ) : CdkObject(cdkObject), DataColorPaletteProperty {
-      /**
-       * The hexadecimal codes for the colors.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-colors)
-       */
-      override fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
-
-      /**
-       * The hexadecimal code of a color that applies to charts where a lack of data is highlighted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-emptyfillcolor)
-       */
-      override fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
-
-      /**
-       * The minimum and maximum hexadecimal codes that describe a color gradient.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html#cfn-quicksight-theme-datacolorpalette-minmaxgradient)
-       */
-      override fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataColorPaletteProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty):
-          DataColorPaletteProperty = CdkObjectWrappers.wrap(cdkObject) as? DataColorPaletteProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataColorPaletteProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty
-    }
-  }
-
-  /**
-   * The display options for gutter spacing between tiles on a sheet.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * GutterStyleProperty gutterStyleProperty = GutterStyleProperty.builder()
-   * .show(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html)
-   */
-  public interface GutterStyleProperty {
-    /**
-     * This Boolean value controls whether to display a gutter space between sheet tiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html#cfn-quicksight-theme-gutterstyle-show)
-     */
-    public fun show(): Any? = unwrap(this).getShow()
-
-    /**
-     * A builder for [GutterStyleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param show This Boolean value controls whether to display a gutter space between sheet
-       * tiles.
-       */
-      public fun show(show: Boolean)
-
-      /**
-       * @param show This Boolean value controls whether to display a gutter space between sheet
-       * tiles.
-       */
-      public fun show(show: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.builder()
-
-      /**
-       * @param show This Boolean value controls whether to display a gutter space between sheet
-       * tiles.
-       */
-      override fun show(show: Boolean) {
-        cdkBuilder.show(show)
-      }
-
-      /**
-       * @param show This Boolean value controls whether to display a gutter space between sheet
-       * tiles.
-       */
-      override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty,
-    ) : CdkObject(cdkObject), GutterStyleProperty {
-      /**
-       * This Boolean value controls whether to display a gutter space between sheet tiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html#cfn-quicksight-theme-gutterstyle-show)
-       */
-      override fun show(): Any? = unwrap(this).getShow()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GutterStyleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty):
-          GutterStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? GutterStyleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GutterStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty
-    }
-  }
-
-  /**
-   * The theme display options for sheets.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.quicksight.*;
-   * SheetStyleProperty sheetStyleProperty = SheetStyleProperty.builder()
-   * .tile(TileStyleProperty.builder()
-   * .border(BorderStyleProperty.builder()
-   * .show(false)
-   * .build())
-   * .build())
-   * .tileLayout(TileLayoutStyleProperty.builder()
-   * .gutter(GutterStyleProperty.builder()
-   * .show(false)
-   * .build())
-   * .margin(MarginStyleProperty.builder()
-   * .show(false)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html)
-   */
-  public interface SheetStyleProperty {
-    /**
-     * The display options for tiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tile)
-     */
-    public fun tile(): Any? = unwrap(this).getTile()
-
-    /**
-     * The layout options for tiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tilelayout)
-     */
-    public fun tileLayout(): Any? = unwrap(this).getTileLayout()
-
-    /**
-     * A builder for [SheetStyleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param tile The display options for tiles.
-       */
-      public fun tile(tile: IResolvable)
-
-      /**
-       * @param tile The display options for tiles.
-       */
-      public fun tile(tile: TileStyleProperty)
-
-      /**
-       * @param tile The display options for tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
-      public fun tile(tile: TileStyleProperty.Builder.() -> Unit)
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      public fun tileLayout(tileLayout: IResolvable)
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      public fun tileLayout(tileLayout: TileLayoutStyleProperty)
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
-      public fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.Builder =
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.builder()
-
-      /**
-       * @param tile The display options for tiles.
-       */
-      override fun tile(tile: IResolvable) {
-        cdkBuilder.tile(tile.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tile The display options for tiles.
-       */
-      override fun tile(tile: TileStyleProperty) {
-        cdkBuilder.tile(tile.let(TileStyleProperty::unwrap))
-      }
-
-      /**
-       * @param tile The display options for tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
-      override fun tile(tile: TileStyleProperty.Builder.() -> Unit): Unit =
-          tile(TileStyleProperty(tile))
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      override fun tileLayout(tileLayout: IResolvable) {
-        cdkBuilder.tileLayout(tileLayout.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      override fun tileLayout(tileLayout: TileLayoutStyleProperty) {
-        cdkBuilder.tileLayout(tileLayout.let(TileLayoutStyleProperty::unwrap))
-      }
-
-      /**
-       * @param tileLayout The layout options for tiles.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
-      override fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit): Unit =
-          tileLayout(TileLayoutStyleProperty(tileLayout))
-
-      public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty,
-    ) : CdkObject(cdkObject), SheetStyleProperty {
-      /**
-       * The display options for tiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tile)
-       */
-      override fun tile(): Any? = unwrap(this).getTile()
-
-      /**
-       * The layout options for tiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-sheetstyle.html#cfn-quicksight-theme-sheetstyle-tilelayout)
-       */
-      override fun tileLayout(): Any? = unwrap(this).getTileLayout()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SheetStyleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty):
-          SheetStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? SheetStyleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SheetStyleProperty):
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty
     }
   }
 }

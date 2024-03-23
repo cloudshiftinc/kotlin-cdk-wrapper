@@ -238,7 +238,7 @@ public interface CfnVirtualMFADeviceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps,
   ) : CdkObject(cdkObject), CfnVirtualMFADeviceProps {
     /**
      * The path for the virtual MFA device.

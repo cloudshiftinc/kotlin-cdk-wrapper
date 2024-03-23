@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LinuxParameters internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.LinuxParameters,
+public open class LinuxParameters(
+  cdkObject: software.amazon.awscdk.services.batch.LinuxParameters,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -250,6 +250,7 @@ public open class LinuxParameters internal constructor(
         LinuxParameters = LinuxParameters(cdkObject)
 
     internal fun unwrap(wrapped: LinuxParameters):
-        software.amazon.awscdk.services.batch.LinuxParameters = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.LinuxParameters = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.LinuxParameters
   }
 }

@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html)
  */
-public open class CfnAssistantAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation,
+public open class CfnAssistantAssociation(
+  cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -329,7 +329,8 @@ public open class CfnAssistantAssociation internal constructor(
         CfnAssistantAssociation = CfnAssistantAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssistantAssociation):
-        software.amazon.awscdk.services.wisdom.CfnAssistantAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.wisdom.CfnAssistantAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.wisdom.CfnAssistantAssociation
   }
 
   /**
@@ -386,8 +387,7 @@ public open class CfnAssistantAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty,
     ) : CdkObject(cdkObject), AssociationDataProperty {
       /**
        * The identifier of the knowledge base.

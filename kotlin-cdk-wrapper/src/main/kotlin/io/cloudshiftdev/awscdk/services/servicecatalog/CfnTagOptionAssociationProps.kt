@@ -81,8 +81,7 @@ public interface CfnTagOptionAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps,
   ) : CdkObject(cdkObject), CfnTagOptionAssociationProps {
     /**
      * The resource identifier.

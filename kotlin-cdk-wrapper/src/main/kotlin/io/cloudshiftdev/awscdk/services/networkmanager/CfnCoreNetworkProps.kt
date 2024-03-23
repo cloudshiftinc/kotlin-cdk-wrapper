@@ -153,7 +153,7 @@ public interface CfnCoreNetworkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps,
   ) : CdkObject(cdkObject), CfnCoreNetworkProps {
     /**
      * The description of a core network.

@@ -385,7 +385,7 @@ public interface CfnBotAliasProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lex.CfnBotAliasProps,
+    cdkObject: software.amazon.awscdk.services.lex.CfnBotAliasProps,
   ) : CdkObject(cdkObject), CfnBotAliasProps {
     /**
      * Specifies settings that are unique to a locale.

@@ -313,7 +313,7 @@ public interface IEnvironment : IResource {
       options: ExtensionOptions.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IEnvironment,
+    cdkObject: software.amazon.awscdk.services.appconfig.IEnvironment,
   ) : CdkObject(cdkObject), IEnvironment {
     /**
      * Adds an extension association to the environment.

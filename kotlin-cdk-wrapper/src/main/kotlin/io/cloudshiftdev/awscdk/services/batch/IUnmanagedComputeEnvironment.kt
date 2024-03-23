@@ -30,7 +30,7 @@ public interface IUnmanagedComputeEnvironment : IComputeEnvironment {
   public fun unmanagedvCpUs(): Number? = unwrap(this).getUnmanagedvCPUs()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment,
+    cdkObject: software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment,
   ) : CdkObject(cdkObject), IUnmanagedComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.

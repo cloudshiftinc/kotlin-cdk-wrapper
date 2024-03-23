@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html)
  */
-public open class CfnPermission internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnPermission,
+public open class CfnPermission(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -107,12 +107,12 @@ public open class CfnPermission internal constructor(
   }
 
   /**
-   * The name of the Lambda function, version, or alias.
+   * The name or ARN of the Lambda function, version, or alias.
    */
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   /**
-   * The name of the Lambda function, version, or alias.
+   * The name or ARN of the Lambda function, version, or alias.
    */
   public open fun functionName(`value`: String) {
     unwrap(this).setFunctionName(`value`)
@@ -212,7 +212,7 @@ public open class CfnPermission internal constructor(
     public fun eventSourceToken(eventSourceToken: String)
 
     /**
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      *
      * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with
      * alias).
@@ -225,7 +225,7 @@ public open class CfnPermission internal constructor(
      * length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-functionname)
-     * @param functionName The name of the Lambda function, version, or alias. 
+     * @param functionName The name or ARN of the Lambda function, version, or alias. 
      */
     public fun functionName(functionName: String)
 
@@ -318,7 +318,7 @@ public open class CfnPermission internal constructor(
     }
 
     /**
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      *
      * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with
      * alias).
@@ -331,7 +331,7 @@ public open class CfnPermission internal constructor(
      * length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-functionname)
-     * @param functionName The name of the Lambda function, version, or alias. 
+     * @param functionName The name or ARN of the Lambda function, version, or alias. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
@@ -424,6 +424,7 @@ public open class CfnPermission internal constructor(
         CfnPermission = CfnPermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermission):
-        software.amazon.awscdk.services.lambda.CfnPermission = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnPermission = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnPermission
   }
 }

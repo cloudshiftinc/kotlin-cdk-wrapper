@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html)
  */
-public open class CfnCloudFrontOriginAccessIdentity internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity,
+public open class CfnCloudFrontOriginAccessIdentity(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,7 +224,8 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
 
     internal fun unwrap(wrapped: CfnCloudFrontOriginAccessIdentity):
         software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity
   }
 
   /**
@@ -290,8 +290,7 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty,
     ) : CdkObject(cdkObject), CloudFrontOriginAccessIdentityConfigProperty {
       /**
        * A comment to describe the origin access identity.

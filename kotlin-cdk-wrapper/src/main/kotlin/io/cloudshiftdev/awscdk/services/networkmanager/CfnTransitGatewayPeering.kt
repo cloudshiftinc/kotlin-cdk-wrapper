@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html)
  */
-public open class CfnTransitGatewayPeering internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering,
+public open class CfnTransitGatewayPeering(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -273,5 +272,6 @@ public open class CfnTransitGatewayPeering internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayPeering):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering = wrapped.cdkObject
+        as software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering
   }
 }

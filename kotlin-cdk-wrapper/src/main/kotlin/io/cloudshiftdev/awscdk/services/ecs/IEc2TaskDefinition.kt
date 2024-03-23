@@ -17,7 +17,7 @@ import kotlin.String
  */
 public interface IEc2TaskDefinition : ITaskDefinition {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IEc2TaskDefinition,
+    cdkObject: software.amazon.awscdk.services.ecs.IEc2TaskDefinition,
   ) : CdkObject(cdkObject), IEc2TaskDefinition {
     /**
      * Apply the given removal policy to this resource.

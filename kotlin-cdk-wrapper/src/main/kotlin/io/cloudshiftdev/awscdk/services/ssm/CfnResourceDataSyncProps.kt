@@ -317,7 +317,7 @@ public interface CfnResourceDataSyncProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps,
   ) : CdkObject(cdkObject), CfnResourceDataSyncProps {
     /**
      * The name of the S3 bucket where the aggregated data is stored.

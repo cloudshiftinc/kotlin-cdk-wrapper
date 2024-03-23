@@ -32,8 +32,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class QueryParameterMatch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
+public abstract class QueryParameterMatch(
+  cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the query parameter match configuration.
@@ -44,7 +44,7 @@ public abstract class QueryParameterMatch internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(QueryParameterMatchConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
   ) : QueryParameterMatch(cdkObject)
 
   public companion object {

@@ -262,7 +262,7 @@ public interface CfnUserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUserProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnUserProps,
   ) : CdkObject(cdkObject), CfnUserProps {
     /**
      * Access permissions string used for this user.

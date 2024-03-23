@@ -33,7 +33,7 @@ public interface ITrigger : IConstruct {
   public fun executeBefore(vararg scopes: Construct)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.triggers.ITrigger,
+    cdkObject: software.amazon.awscdk.triggers.ITrigger,
   ) : CdkObject(cdkObject), ITrigger {
     /**
      * Adds trigger dependencies.

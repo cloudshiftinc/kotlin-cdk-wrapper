@@ -130,7 +130,7 @@ public interface CfnDatasetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetGroupProps,
+    cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetGroupProps,
   ) : CdkObject(cdkObject), CfnDatasetGroupProps {
     /**
      * The domain of a Domain dataset group.

@@ -105,8 +105,7 @@ public interface CfnResolverRuleAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps,
   ) : CdkObject(cdkObject), CfnResolverRuleAssociationProps {
     /**
      * The name of an association between a Resolver rule and a VPC.

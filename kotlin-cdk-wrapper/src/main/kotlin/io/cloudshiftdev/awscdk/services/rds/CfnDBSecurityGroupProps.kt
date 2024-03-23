@@ -179,7 +179,7 @@ public interface CfnDBSecurityGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps,
   ) : CdkObject(cdkObject), CfnDBSecurityGroupProps {
     /**
      * Ingress rules to be applied to the DB security group.

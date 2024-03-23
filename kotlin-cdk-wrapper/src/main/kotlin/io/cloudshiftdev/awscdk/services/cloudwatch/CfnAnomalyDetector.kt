@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html)
  */
-public open class CfnAnomalyDetector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
+public open class CfnAnomalyDetector(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -635,7 +635,327 @@ public open class CfnAnomalyDetector internal constructor(
         CfnAnomalyDetector = CfnAnomalyDetector(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyDetector):
-        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
+  }
+
+  /**
+   * Specifies details about how the anomaly detection model is to be trained, including time ranges
+   * to exclude when training and updating the model.
+   *
+   * The configuration can also include the time zone to use for the metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
+   * .excludedTimeRanges(List.of(RangeProperty.builder()
+   * .endTime("endTime")
+   * .startTime("startTime")
+   * .build()))
+   * .metricTimeZone("metricTimeZone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html)
+   */
+  public interface ConfigurationProperty {
+    /**
+     * Specifies an array of time ranges to exclude from use when the anomaly detection model is
+     * trained and updated.
+     *
+     * Use this to make sure that events that could cause unusual values for the metric, such as
+     * deployments, aren't used when CloudWatch creates or updates the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)
+     */
+    public fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
+
+    /**
+     * The time zone to use for the metric.
+     *
+     * This is useful to enable the model to automatically account for daylight savings time changes
+     * if the metric is sensitive to such time changes.
+     *
+     * To specify a time zone, use the name of the time zone as specified in the standard tz
+     * database. For more information, see [tz
+     * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)
+     */
+    public fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
+
+    /**
+     * A builder for [ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      public fun excludedTimeRanges(excludedTimeRanges: IResolvable)
+
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      public fun excludedTimeRanges(excludedTimeRanges: List<Any>)
+
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      public fun excludedTimeRanges(vararg excludedTimeRanges: Any)
+
+      /**
+       * @param metricTimeZone The time zone to use for the metric.
+       * This is useful to enable the model to automatically account for daylight savings time
+       * changes if the metric is sensitive to such time changes.
+       *
+       * To specify a time zone, use the name of the time zone as specified in the standard tz
+       * database. For more information, see [tz
+       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
+       */
+      public fun metricTimeZone(metricTimeZone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty.builder()
+
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      override fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
+        cdkBuilder.excludedTimeRanges(excludedTimeRanges.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
+        cdkBuilder.excludedTimeRanges(excludedTimeRanges)
+      }
+
+      /**
+       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
+       * anomaly detection model is trained and updated.
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       */
+      override fun excludedTimeRanges(vararg excludedTimeRanges: Any): Unit =
+          excludedTimeRanges(excludedTimeRanges.toList())
+
+      /**
+       * @param metricTimeZone The time zone to use for the metric.
+       * This is useful to enable the model to automatically account for daylight savings time
+       * changes if the metric is sensitive to such time changes.
+       *
+       * To specify a time zone, use the name of the time zone as specified in the standard tz
+       * database. For more information, see [tz
+       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
+       */
+      override fun metricTimeZone(metricTimeZone: String) {
+        cdkBuilder.metricTimeZone(metricTimeZone)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty,
+    ) : CdkObject(cdkObject), ConfigurationProperty {
+      /**
+       * Specifies an array of time ranges to exclude from use when the anomaly detection model is
+       * trained and updated.
+       *
+       * Use this to make sure that events that could cause unusual values for the metric, such as
+       * deployments, aren't used when CloudWatch creates or updates the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)
+       */
+      override fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
+
+      /**
+       * The time zone to use for the metric.
+       *
+       * This is useful to enable the model to automatically account for daylight savings time
+       * changes if the metric is sensitive to such time changes.
+       *
+       * To specify a time zone, use the name of the time zone as specified in the standard tz
+       * database. For more information, see [tz
+       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)
+       */
+      override fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty):
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty
+    }
+  }
+
+  /**
+   * A dimension is a name/value pair that is part of the identity of a metric.
+   *
+   * Because dimensions are part of the unique identifier for a metric, whenever you add a unique
+   * name/value pair to one of your metrics, you are creating a new variation of that metric. For
+   * example, many Amazon EC2 metrics publish `InstanceId` as a dimension name, and the actual instance
+   * ID as the value for that dimension.
+   *
+   * You can assign up to 30 dimensions to a metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * DimensionProperty dimensionProperty = DimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html)
+   */
+  public interface DimensionProperty {
+    /**
+     * The name of the dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-name)
+     */
+    public fun name(): String
+
+    /**
+     * The value of the dimension.
+     *
+     * Dimension values must contain only ASCII characters and must include at least one
+     * non-whitespace character. ASCII control characters are not supported as part of dimension
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [DimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the dimension. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value of the dimension. 
+       * Dimension values must contain only ASCII characters and must include at least one
+       * non-whitespace character. ASCII control characters are not supported as part of dimension
+       * values.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.Builder =
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.builder()
+
+      /**
+       * @param name The name of the dimension. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value of the dimension. 
+       * Dimension values must contain only ASCII characters and must include at least one
+       * non-whitespace character. ASCII control characters are not supported as part of dimension
+       * values.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty,
+    ) : CdkObject(cdkObject), DimensionProperty {
+      /**
+       * The name of the dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The value of the dimension.
+       *
+       * Dimension values must contain only ASCII characters and must include at least one
+       * non-whitespace character. ASCII control characters are not supported as part of dimension
+       * values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty):
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DimensionProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty
+    }
   }
 
   /**
@@ -1075,8 +1395,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty,
     ) : CdkObject(cdkObject), MetricDataQueryProperty {
       /**
        * The ID of the account where the metrics are located.
@@ -1202,11 +1521,10 @@ public open class CfnAnomalyDetector internal constructor(
   }
 
   /**
-   * Designates the CloudWatch metric and statistic that provides the time series the anomaly
-   * detector uses as input.
+   * Indicates the CloudWatch math expression that provides the time series the anomaly detector
+   * uses as input.
    *
-   * If you have enabled unified cross-account observability, and this account is a monitoring
-   * account, the metric can be in the same account or a source account.
+   * The designated math expression must return a single time series.
    *
    * Example:
    *
@@ -1214,185 +1532,341 @@ public open class CfnAnomalyDetector internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * SingleMetricAnomalyDetectorProperty singleMetricAnomalyDetectorProperty =
-   * SingleMetricAnomalyDetectorProperty.builder()
+   * MetricMathAnomalyDetectorProperty metricMathAnomalyDetectorProperty =
+   * MetricMathAnomalyDetectorProperty.builder()
+   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .accountId("accountId")
+   * .expression("expression")
+   * .label("label")
+   * .metricStat(MetricStatProperty.builder()
+   * .metric(MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
    * .dimensions(List.of(DimensionProperty.builder()
    * .name("name")
    * .value("value")
    * .build()))
-   * .metricName("metricName")
-   * .namespace("namespace")
+   * .build())
+   * .period(123)
    * .stat("stat")
+   * // the properties below are optional
+   * .unit("unit")
+   * .build())
+   * .period(123)
+   * .returnData(false)
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html)
    */
-  public interface SingleMetricAnomalyDetectorProperty {
+  public interface MetricMathAnomalyDetectorProperty {
     /**
-     * The metric dimensions to create the anomaly detection model for.
+     * An array of metric data query structures that enables you to create an anomaly detector based
+     * on the result of a metric math expression.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-dimensions)
+     * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+     * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+     * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in the
+     * array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+     * expression must return a single time series.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html#cfn-cloudwatch-anomalydetector-metricmathanomalydetector-metricdataqueries)
      */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
+    public fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
 
     /**
-     * The name of the metric to create the anomaly detection model for.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-metricname)
-     */
-    public fun metricName(): String? = unwrap(this).getMetricName()
-
-    /**
-     * The namespace of the metric to create the anomaly detection model for.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-namespace)
-     */
-    public fun namespace(): String? = unwrap(this).getNamespace()
-
-    /**
-     * The statistic to use for the metric and anomaly detection model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-stat)
-     */
-    public fun stat(): String? = unwrap(this).getStat()
-
-    /**
-     * A builder for [SingleMetricAnomalyDetectorProperty]
+     * A builder for [MetricMathAnomalyDetectorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
        */
-      public fun dimensions(dimensions: IResolvable)
+      public fun metricDataQueries(metricDataQueries: IResolvable)
 
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
        */
-      public fun dimensions(dimensions: List<Any>)
+      public fun metricDataQueries(metricDataQueries: List<Any>)
 
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
        */
-      public fun dimensions(vararg dimensions: Any)
-
-      /**
-       * @param metricName The name of the metric to create the anomaly detection model for.
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace of the metric to create the anomaly detection model for.
-       */
-      public fun namespace(namespace: String)
-
-      /**
-       * @param stat The statistic to use for the metric and anomaly detection model.
-       */
-      public fun stat(stat: String)
+      public fun metricDataQueries(vararg metricDataQueries: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.Builder
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.Builder
           =
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.builder()
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.builder()
 
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
+       */
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
+        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
+       */
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
+        cdkBuilder.metricDataQueries(metricDataQueries)
+      }
+
+      /**
+       * @param metricDataQueries An array of metric data query structures that enables you to
+       * create an anomaly detector based on the result of a metric math expression.
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
+       */
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty,
+    ) : CdkObject(cdkObject), MetricMathAnomalyDetectorProperty {
+      /**
+       * An array of metric data query structures that enables you to create an anomaly detector
+       * based on the result of a metric math expression.
+       *
+       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
+       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
+       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
+       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
+       * expression must return a single time series.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html#cfn-cloudwatch-anomalydetector-metricmathanomalydetector-metricdataqueries)
+       */
+      override fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetricMathAnomalyDetectorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty):
+          MetricMathAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricMathAnomalyDetectorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricMathAnomalyDetectorProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
+    }
+  }
+
+  /**
+   * Represents a specific metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * MetricProperty metricProperty = MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html)
+   */
+  public interface MetricProperty {
+    /**
+     * The dimensions for the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The name of the metric.
+     *
+     * This is a required field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-metricname)
+     */
+    public fun metricName(): String
+
+    /**
+     * The namespace of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * A builder for [MetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The dimensions for the metric.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param metricName The name of the metric. 
+       * This is a required field.
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric. 
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.Builder =
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.builder()
+
+      /**
+       * @param dimensions The dimensions for the metric.
        */
       override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param dimensions The dimensions for the metric.
        */
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
       /**
-       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       * @param dimensions The dimensions for the metric.
        */
       override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       /**
-       * @param metricName The name of the metric to create the anomaly detection model for.
+       * @param metricName The name of the metric. 
+       * This is a required field.
        */
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
       /**
-       * @param namespace The namespace of the metric to create the anomaly detection model for.
+       * @param namespace The namespace of the metric. 
        */
       override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      /**
-       * @param stat The statistic to use for the metric and anomaly detection model.
-       */
-      override fun stat(stat: String) {
-        cdkBuilder.stat(stat)
-      }
-
       public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty,
-    ) : CdkObject(cdkObject), SingleMetricAnomalyDetectorProperty {
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty,
+    ) : CdkObject(cdkObject), MetricProperty {
       /**
-       * The metric dimensions to create the anomaly detection model for.
+       * The dimensions for the metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-dimensions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-dimensions)
        */
       override fun dimensions(): Any? = unwrap(this).getDimensions()
 
       /**
-       * The name of the metric to create the anomaly detection model for.
+       * The name of the metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-metricname)
+       * This is a required field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-metricname)
        */
-      override fun metricName(): String? = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
       /**
-       * The namespace of the metric to create the anomaly detection model for.
+       * The namespace of the metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-namespace)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-namespace)
        */
-      override fun namespace(): String? = unwrap(this).getNamespace()
-
-      /**
-       * The statistic to use for the metric and anomaly detection model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-stat)
-       */
-      override fun stat(): String? = unwrap(this).getStat()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SingleMetricAnomalyDetectorProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty):
-          SingleMetricAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingleMetricAnomalyDetectorProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty):
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SingleMetricAnomalyDetectorProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
+      internal fun unwrap(wrapped: MetricProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty
     }
   }
 
@@ -1605,8 +2079,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty,
     ) : CdkObject(cdkObject), MetricStatProperty {
       /**
        * The metric to return, including the metric name, namespace, and dimensions.
@@ -1674,679 +2147,6 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty
-    }
-  }
-
-  /**
-   * A dimension is a name/value pair that is part of the identity of a metric.
-   *
-   * Because dimensions are part of the unique identifier for a metric, whenever you add a unique
-   * name/value pair to one of your metrics, you are creating a new variation of that metric. For
-   * example, many Amazon EC2 metrics publish `InstanceId` as a dimension name, and the actual instance
-   * ID as the value for that dimension.
-   *
-   * You can assign up to 30 dimensions to a metric.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * DimensionProperty dimensionProperty = DimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html)
-   */
-  public interface DimensionProperty {
-    /**
-     * The name of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-name)
-     */
-    public fun name(): String
-
-    /**
-     * The value of the dimension.
-     *
-     * Dimension values must contain only ASCII characters and must include at least one
-     * non-whitespace character. ASCII control characters are not supported as part of dimension
-     * values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [DimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the dimension. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value of the dimension. 
-       * Dimension values must contain only ASCII characters and must include at least one
-       * non-whitespace character. ASCII control characters are not supported as part of dimension
-       * values.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.Builder =
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.builder()
-
-      /**
-       * @param name The name of the dimension. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value of the dimension. 
-       * Dimension values must contain only ASCII characters and must include at least one
-       * non-whitespace character. ASCII control characters are not supported as part of dimension
-       * values.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
-      /**
-       * The name of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The value of the dimension.
-       *
-       * Dimension values must contain only ASCII characters and must include at least one
-       * non-whitespace character. ASCII control characters are not supported as part of dimension
-       * values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-dimension.html#cfn-cloudwatch-anomalydetector-dimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DimensionProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty
-    }
-  }
-
-  /**
-   * Indicates the CloudWatch math expression that provides the time series the anomaly detector
-   * uses as input.
-   *
-   * The designated math expression must return a single time series.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricMathAnomalyDetectorProperty metricMathAnomalyDetectorProperty =
-   * MetricMathAnomalyDetectorProperty.builder()
-   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .accountId("accountId")
-   * .expression("expression")
-   * .label("label")
-   * .metricStat(MetricStatProperty.builder()
-   * .metric(MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .period(123)
-   * .stat("stat")
-   * // the properties below are optional
-   * .unit("unit")
-   * .build())
-   * .period(123)
-   * .returnData(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html)
-   */
-  public interface MetricMathAnomalyDetectorProperty {
-    /**
-     * An array of metric data query structures that enables you to create an anomaly detector based
-     * on the result of a metric math expression.
-     *
-     * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-     * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-     * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in the
-     * array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-     * expression must return a single time series.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html#cfn-cloudwatch-anomalydetector-metricmathanomalydetector-metricdataqueries)
-     */
-    public fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
-
-    /**
-     * A builder for [MetricMathAnomalyDetectorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      public fun metricDataQueries(metricDataQueries: IResolvable)
-
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      public fun metricDataQueries(metricDataQueries: List<Any>)
-
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      public fun metricDataQueries(vararg metricDataQueries: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.builder()
-
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      override fun metricDataQueries(metricDataQueries: IResolvable) {
-        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
-      }
-
-      /**
-       * @param metricDataQueries An array of metric data query structures that enables you to
-       * create an anomaly detector based on the result of a metric math expression.
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       */
-      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
-          metricDataQueries(metricDataQueries.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty,
-    ) : CdkObject(cdkObject), MetricMathAnomalyDetectorProperty {
-      /**
-       * An array of metric data query structures that enables you to create an anomaly detector
-       * based on the result of a metric math expression.
-       *
-       * Each item in `MetricDataQueries` gets a metric or performs a math expression. One item in
-       * `MetricDataQueries` is the expression that provides the time series that the anomaly detector
-       * uses as input. Designate the expression by setting `ReturnData` to `true` for this object in
-       * the array. For all other expressions and metrics, set `ReturnData` to `false` . The designated
-       * expression must return a single time series.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html#cfn-cloudwatch-anomalydetector-metricmathanomalydetector-metricdataqueries)
-       */
-      override fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MetricMathAnomalyDetectorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty):
-          MetricMathAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricMathAnomalyDetectorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricMathAnomalyDetectorProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
-    }
-  }
-
-  /**
-   * Specifies details about how the anomaly detection model is to be trained, including time ranges
-   * to exclude when training and updating the model.
-   *
-   * The configuration can also include the time zone to use for the metric.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
-   * .excludedTimeRanges(List.of(RangeProperty.builder()
-   * .endTime("endTime")
-   * .startTime("startTime")
-   * .build()))
-   * .metricTimeZone("metricTimeZone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html)
-   */
-  public interface ConfigurationProperty {
-    /**
-     * Specifies an array of time ranges to exclude from use when the anomaly detection model is
-     * trained and updated.
-     *
-     * Use this to make sure that events that could cause unusual values for the metric, such as
-     * deployments, aren't used when CloudWatch creates or updates the model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)
-     */
-    public fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
-
-    /**
-     * The time zone to use for the metric.
-     *
-     * This is useful to enable the model to automatically account for daylight savings time changes
-     * if the metric is sensitive to such time changes.
-     *
-     * To specify a time zone, use the name of the time zone as specified in the standard tz
-     * database. For more information, see [tz
-     * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)
-     */
-    public fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
-
-    /**
-     * A builder for [ConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      public fun excludedTimeRanges(excludedTimeRanges: IResolvable)
-
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      public fun excludedTimeRanges(excludedTimeRanges: List<Any>)
-
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      public fun excludedTimeRanges(vararg excludedTimeRanges: Any)
-
-      /**
-       * @param metricTimeZone The time zone to use for the metric.
-       * This is useful to enable the model to automatically account for daylight savings time
-       * changes if the metric is sensitive to such time changes.
-       *
-       * To specify a time zone, use the name of the time zone as specified in the standard tz
-       * database. For more information, see [tz
-       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
-       */
-      public fun metricTimeZone(metricTimeZone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty.builder()
-
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      override fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
-        cdkBuilder.excludedTimeRanges(excludedTimeRanges.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
-        cdkBuilder.excludedTimeRanges(excludedTimeRanges)
-      }
-
-      /**
-       * @param excludedTimeRanges Specifies an array of time ranges to exclude from use when the
-       * anomaly detection model is trained and updated.
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       */
-      override fun excludedTimeRanges(vararg excludedTimeRanges: Any): Unit =
-          excludedTimeRanges(excludedTimeRanges.toList())
-
-      /**
-       * @param metricTimeZone The time zone to use for the metric.
-       * This is useful to enable the model to automatically account for daylight savings time
-       * changes if the metric is sensitive to such time changes.
-       *
-       * To specify a time zone, use the name of the time zone as specified in the standard tz
-       * database. For more information, see [tz
-       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
-       */
-      override fun metricTimeZone(metricTimeZone: String) {
-        cdkBuilder.metricTimeZone(metricTimeZone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty,
-    ) : CdkObject(cdkObject), ConfigurationProperty {
-      /**
-       * Specifies an array of time ranges to exclude from use when the anomaly detection model is
-       * trained and updated.
-       *
-       * Use this to make sure that events that could cause unusual values for the metric, such as
-       * deployments, aren't used when CloudWatch creates or updates the model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)
-       */
-      override fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
-
-      /**
-       * The time zone to use for the metric.
-       *
-       * This is useful to enable the model to automatically account for daylight savings time
-       * changes if the metric is sensitive to such time changes.
-       *
-       * To specify a time zone, use the name of the time zone as specified in the standard tz
-       * database. For more information, see [tz
-       * database](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/Tz_database) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)
-       */
-      override fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty):
-          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfigurationProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty
-    }
-  }
-
-  /**
-   * Represents a specific metric.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricProperty metricProperty = MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html)
-   */
-  public interface MetricProperty {
-    /**
-     * The dimensions for the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-dimensions)
-     */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
-
-    /**
-     * The name of the metric.
-     *
-     * This is a required field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-metricname)
-     */
-    public fun metricName(): String
-
-    /**
-     * The namespace of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-namespace)
-     */
-    public fun namespace(): String
-
-    /**
-     * A builder for [MetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      public fun dimensions(dimensions: List<Any>)
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      public fun dimensions(vararg dimensions: Any)
-
-      /**
-       * @param metricName The name of the metric. 
-       * This is a required field.
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace of the metric. 
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.Builder =
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.builder()
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
-      }
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
-
-      /**
-       * @param metricName The name of the metric. 
-       * This is a required field.
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param namespace The namespace of the metric. 
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
-      /**
-       * The dimensions for the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-dimensions)
-       */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
-
-      /**
-       * The name of the metric.
-       *
-       * This is a required field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-metricname)
-       */
-      override fun metricName(): String = unwrap(this).getMetricName()
-
-      /**
-       * The namespace of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metric.html#cfn-cloudwatch-anomalydetector-metric-namespace)
-       */
-      override fun namespace(): String = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty
     }
   }
 
@@ -2432,8 +2232,7 @@ public open class CfnAnomalyDetector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty,
     ) : CdkObject(cdkObject), RangeProperty {
       /**
        * The end time of the range to exclude.
@@ -2468,6 +2267,200 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty
+    }
+  }
+
+  /**
+   * Designates the CloudWatch metric and statistic that provides the time series the anomaly
+   * detector uses as input.
+   *
+   * If you have enabled unified cross-account observability, and this account is a monitoring
+   * account, the metric can be in the same account or a source account.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * SingleMetricAnomalyDetectorProperty singleMetricAnomalyDetectorProperty =
+   * SingleMetricAnomalyDetectorProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * .stat("stat")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html)
+   */
+  public interface SingleMetricAnomalyDetectorProperty {
+    /**
+     * The metric dimensions to create the anomaly detection model for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The name of the metric to create the anomaly detection model for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-metricname)
+     */
+    public fun metricName(): String? = unwrap(this).getMetricName()
+
+    /**
+     * The namespace of the metric to create the anomaly detection model for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-namespace)
+     */
+    public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * The statistic to use for the metric and anomaly detection model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-stat)
+     */
+    public fun stat(): String? = unwrap(this).getStat()
+
+    /**
+     * A builder for [SingleMetricAnomalyDetectorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param metricName The name of the metric to create the anomaly detection model for.
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric to create the anomaly detection model for.
+       */
+      public fun namespace(namespace: String)
+
+      /**
+       * @param stat The statistic to use for the metric and anomaly detection model.
+       */
+      public fun stat(stat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.builder()
+
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param dimensions The metric dimensions to create the anomaly detection model for.
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      /**
+       * @param metricName The name of the metric to create the anomaly detection model for.
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace of the metric to create the anomaly detection model for.
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      /**
+       * @param stat The statistic to use for the metric and anomaly detection model.
+       */
+      override fun stat(stat: String) {
+        cdkBuilder.stat(stat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty,
+    ) : CdkObject(cdkObject), SingleMetricAnomalyDetectorProperty {
+      /**
+       * The metric dimensions to create the anomaly detection model for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * The name of the metric to create the anomaly detection model for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-metricname)
+       */
+      override fun metricName(): String? = unwrap(this).getMetricName()
+
+      /**
+       * The namespace of the metric to create the anomaly detection model for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-namespace)
+       */
+      override fun namespace(): String? = unwrap(this).getNamespace()
+
+      /**
+       * The statistic to use for the metric and anomaly detection model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html#cfn-cloudwatch-anomalydetector-singlemetricanomalydetector-stat)
+       */
+      override fun stat(): String? = unwrap(this).getStat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SingleMetricAnomalyDetectorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty):
+          SingleMetricAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleMetricAnomalyDetectorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleMetricAnomalyDetectorProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
     }
   }
 }

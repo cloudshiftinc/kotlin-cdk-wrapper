@@ -44,9 +44,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public open class ManagedKafkaEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource,
+public open class ManagedKafkaEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource,
 ) : StreamEventSource(cdkObject) {
   public constructor(props: ManagedKafkaEventSourceProps) :
       this(software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource(props.let(ManagedKafkaEventSourceProps::unwrap))
@@ -375,6 +374,7 @@ public open class ManagedKafkaEventSource internal constructor(
 
     internal fun unwrap(wrapped: ManagedKafkaEventSource):
         software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource
   }
 }

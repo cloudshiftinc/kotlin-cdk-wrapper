@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)
  */
-public open class CfnApiKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiKey,
+public open class CfnApiKey(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnApiKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -203,6 +203,6 @@ public open class CfnApiKey internal constructor(
         CfnApiKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiKey): software.amazon.awscdk.services.appsync.CfnApiKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.CfnApiKey
   }
 }

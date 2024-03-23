@@ -29,8 +29,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class PortMap internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.PortMap,
+public open class PortMap(
+  cdkObject: software.amazon.awscdk.services.ecs.PortMap,
 ) : CdkObject(cdkObject) {
   public constructor(networkmode: NetworkMode, pm: PortMapping) :
       this(software.amazon.awscdk.services.ecs.PortMap(networkmode.let(NetworkMode::unwrap),
@@ -294,6 +294,6 @@ public open class PortMap internal constructor(
         PortMap(cdkObject)
 
     internal fun unwrap(wrapped: PortMap): software.amazon.awscdk.services.ecs.PortMap =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.PortMap
   }
 }

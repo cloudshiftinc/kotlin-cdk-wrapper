@@ -254,7 +254,7 @@ public interface VpcLookupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpcLookupOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.VpcLookupOptions,
   ) : CdkObject(cdkObject), VpcLookupOptions {
     /**
      * Whether to match the default VPC.

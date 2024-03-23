@@ -30,8 +30,8 @@ import io.cloudshiftdev.awscdk.services.sqs.IQueue
  * .build());
  * ```
  */
-public open class SqsDlq internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
+public open class SqsDlq(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(queue.let(IQueue::unwrap))
@@ -52,6 +52,6 @@ public open class SqsDlq internal constructor(
         = SqsDlq(cdkObject)
 
     internal fun unwrap(wrapped: SqsDlq): software.amazon.awscdk.services.lambda.eventsources.SqsDlq
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lambda.eventsources.SqsDlq
   }
 }

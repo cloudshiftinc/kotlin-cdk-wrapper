@@ -147,7 +147,7 @@ public interface CfnPricingPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps,
+    cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps,
   ) : CdkObject(cdkObject), CfnPricingPlanProps {
     /**
      * The pricing plan description.

@@ -27,9 +27,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class LogGroupTargetInput internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
+public abstract class LogGroupTargetInput(
+  cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
 ) : CdkObject(cdkObject) {
   /**
    * Return the input properties for this input object.
@@ -40,7 +39,7 @@ public abstract class LogGroupTargetInput internal constructor(
       unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
+    cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
   ) : LogGroupTargetInput(cdkObject)
 
   public companion object {

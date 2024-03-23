@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html)
  */
-public open class CfnCustomResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnCustomResource,
+public open class CfnCustomResource(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnCustomResource,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -161,6 +161,7 @@ public open class CfnCustomResource internal constructor(
         CfnCustomResource = CfnCustomResource(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomResource):
-        software.amazon.awscdk.services.cloudformation.CfnCustomResource = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudformation.CfnCustomResource = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudformation.CfnCustomResource
   }
 }

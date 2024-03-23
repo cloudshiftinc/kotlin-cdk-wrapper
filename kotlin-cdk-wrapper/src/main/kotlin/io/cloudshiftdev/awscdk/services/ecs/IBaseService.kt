@@ -20,7 +20,7 @@ public interface IBaseService : IService {
   public fun cluster(): ICluster
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IBaseService,
+    cdkObject: software.amazon.awscdk.services.ecs.IBaseService,
   ) : CdkObject(cdkObject), IBaseService {
     /**
      * Apply the given removal policy to this resource.

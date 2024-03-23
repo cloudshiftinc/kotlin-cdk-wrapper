@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html)
  */
-public open class CfnStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnStep,
+public open class CfnStep(
+  cdkObject: software.amazon.awscdk.services.emr.CfnStep,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -325,7 +325,7 @@ public open class CfnStep internal constructor(
         CfnStep(cdkObject)
 
     internal fun unwrap(wrapped: CfnStep): software.amazon.awscdk.services.emr.CfnStep =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.emr.CfnStep
   }
 
   /**
@@ -495,8 +495,7 @@ public open class CfnStep internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty,
     ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
       /**
        * A list of command line arguments passed to the JAR file's main function when executed.
@@ -622,7 +621,7 @@ public open class CfnStep internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty,
     ) : CdkObject(cdkObject), KeyValueProperty {
       /**
        * The unique identifier of a key-value pair.

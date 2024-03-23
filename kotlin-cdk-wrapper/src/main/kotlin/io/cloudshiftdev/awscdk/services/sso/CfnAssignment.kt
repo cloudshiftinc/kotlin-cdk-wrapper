@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html)
  */
-public open class CfnAssignment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sso.CfnAssignment,
+public open class CfnAssignment(
+  cdkObject: software.amazon.awscdk.services.sso.CfnAssignment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -301,6 +301,6 @@ public open class CfnAssignment internal constructor(
         CfnAssignment(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssignment): software.amazon.awscdk.services.sso.CfnAssignment =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sso.CfnAssignment
   }
 }

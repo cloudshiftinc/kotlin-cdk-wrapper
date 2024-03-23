@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
  */
-public open class CfnStateMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
+public open class CfnStateMachine(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -851,7 +851,249 @@ public open class CfnStateMachine internal constructor(
         CfnStateMachine = CfnStateMachine(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachine):
-        software.amazon.awscdk.services.stepfunctions.CfnStateMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CfnStateMachine
+  }
+
+  /**
+   * Defines a CloudWatch log group.
+   *
+   *
+   * For more information see [Standard Versus Express
+   * Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html)
+   * in the AWS Step Functions Developer Guide.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+   * CloudWatchLogsLogGroupProperty cloudWatchLogsLogGroupProperty =
+   * CloudWatchLogsLogGroupProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
+   */
+  public interface CloudWatchLogsLogGroupProperty {
+    /**
+     * The ARN of the the CloudWatch log group to which you want your logs emitted to.
+     *
+     * The ARN must end with `:*`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html#cfn-stepfunctions-statemachine-cloudwatchlogsloggroup-loggrouparn)
+     */
+    public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+
+    /**
+     * A builder for [CloudWatchLogsLogGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroupArn The ARN of the the CloudWatch log group to which you want your logs
+       * emitted to.
+       * The ARN must end with `:*`
+       */
+      public fun logGroupArn(logGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
+
+      /**
+       * @param logGroupArn The ARN of the the CloudWatch log group to which you want your logs
+       * emitted to.
+       * The ARN must end with `:*`
+       */
+      override fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
+      /**
+       * The ARN of the the CloudWatch log group to which you want your logs emitted to.
+       *
+       * The ARN must end with `:*`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html#cfn-stepfunctions-statemachine-cloudwatchlogsloggroup-loggrouparn)
+       */
+      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsLogGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty):
+          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
+    }
+  }
+
+  /**
+   * Defines a destination for `LoggingConfiguration` .
+   *
+   *
+   * For more information on logging with `EXPRESS` workflows, see [Logging Express Workflows Using
+   * CloudWatch Logs](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+   * LogDestinationProperty logDestinationProperty = LogDestinationProperty.builder()
+   * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html)
+   */
+  public interface LogDestinationProperty {
+    /**
+     * An object describing a CloudWatch log group.
+     *
+     * For more information, see
+     * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+     * in the AWS CloudFormation User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)
+     */
+    public fun cloudWatchLogsLogGroup(): Any? = unwrap(this).getCloudWatchLogsLogGroup()
+
+    /**
+     * A builder for [LogDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable)
+
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty)
+
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8dd76848786f3d940ef85b178e7d7f8f3f3f96bb92885fa871fe9d82ef8dca13")
+      public
+          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty.builder()
+
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8dd76848786f3d940ef85b178e7d7f8f3f3f96bb92885fa871fe9d82ef8dca13")
+      override
+          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit):
+          Unit = cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty(cloudWatchLogsLogGroup))
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty,
+    ) : CdkObject(cdkObject), LogDestinationProperty {
+      /**
+       * An object describing a CloudWatch log group.
+       *
+       * For more information, see
+       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+       * in the AWS CloudFormation User Guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)
+       */
+      override fun cloudWatchLogsLogGroup(): Any? = unwrap(this).getCloudWatchLogsLogGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty):
+          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogDestinationProperty):
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty
+    }
   }
 
   /**
@@ -1017,8 +1259,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * An array of objects that describes where your execution history events will be logged.
@@ -1164,8 +1405,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of the S3 bucket where the state machine definition JSON or YAML file is stored.
@@ -1204,249 +1444,6 @@ public open class CfnStateMachine internal constructor(
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty
-    }
-  }
-
-  /**
-   * Defines a destination for `LoggingConfiguration` .
-   *
-   *
-   * For more information on logging with `EXPRESS` workflows, see [Logging Express Workflows Using
-   * CloudWatch Logs](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
-   * LogDestinationProperty logDestinationProperty = LogDestinationProperty.builder()
-   * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
-   * .logGroupArn("logGroupArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html)
-   */
-  public interface LogDestinationProperty {
-    /**
-     * An object describing a CloudWatch log group.
-     *
-     * For more information, see
-     * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-     * in the AWS CloudFormation User Guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)
-     */
-    public fun cloudWatchLogsLogGroup(): Any? = unwrap(this).getCloudWatchLogsLogGroup()
-
-    /**
-     * A builder for [LogDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable)
-
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      public fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty)
-
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8dd76848786f3d940ef85b178e7d7f8f3f3f96bb92885fa871fe9d82ef8dca13")
-      public
-          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty.builder()
-
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchLogsLogGroup An object describing a CloudWatch log group.
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8dd76848786f3d940ef85b178e7d7f8f3f3f96bb92885fa871fe9d82ef8dca13")
-      override
-          fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty.Builder.() -> Unit):
-          Unit = cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty(cloudWatchLogsLogGroup))
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty,
-    ) : CdkObject(cdkObject), LogDestinationProperty {
-      /**
-       * An object describing a CloudWatch log group.
-       *
-       * For more information, see
-       * [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
-       * in the AWS CloudFormation User Guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)
-       */
-      override fun cloudWatchLogsLogGroup(): Any? = unwrap(this).getCloudWatchLogsLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty):
-          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogDestinationProperty):
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty
-    }
-  }
-
-  /**
-   * Defines a CloudWatch log group.
-   *
-   *
-   * For more information see [Standard Versus Express
-   * Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html)
-   * in the AWS Step Functions Developer Guide.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
-   * CloudWatchLogsLogGroupProperty cloudWatchLogsLogGroupProperty =
-   * CloudWatchLogsLogGroupProperty.builder()
-   * .logGroupArn("logGroupArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
-   */
-  public interface CloudWatchLogsLogGroupProperty {
-    /**
-     * The ARN of the the CloudWatch log group to which you want your logs emitted to.
-     *
-     * The ARN must end with `:*`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html#cfn-stepfunctions-statemachine-cloudwatchlogsloggroup-loggrouparn)
-     */
-    public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
-
-    /**
-     * A builder for [CloudWatchLogsLogGroupProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logGroupArn The ARN of the the CloudWatch log group to which you want your logs
-       * emitted to.
-       * The ARN must end with `:*`
-       */
-      public fun logGroupArn(logGroupArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty.builder()
-
-      /**
-       * @param logGroupArn The ARN of the the CloudWatch log group to which you want your logs
-       * emitted to.
-       * The ARN must end with `:*`
-       */
-      override fun logGroupArn(logGroupArn: String) {
-        cdkBuilder.logGroupArn(logGroupArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
-      /**
-       * The ARN of the the CloudWatch log group to which you want your logs emitted to.
-       *
-       * The ARN must end with `:*`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html#cfn-stepfunctions-statemachine-cloudwatchlogsloggroup-loggrouparn)
-       */
-      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsLogGroupProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty):
-          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
     }
   }
 
@@ -1523,8 +1520,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The `key` for a key-value pair in a tag entry.
@@ -1628,8 +1624,7 @@ public open class CfnStateMachine internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty,
     ) : CdkObject(cdkObject), TracingConfigurationProperty {
       /**
        * When set to `true` , X-Ray tracing is enabled.

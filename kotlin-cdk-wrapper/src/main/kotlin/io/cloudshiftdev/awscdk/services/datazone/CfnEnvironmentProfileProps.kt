@@ -234,7 +234,7 @@ public interface CfnEnvironmentProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfileProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfileProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProfileProps {
     /**
      * The identifier of an AWS account in which an environment profile exists.

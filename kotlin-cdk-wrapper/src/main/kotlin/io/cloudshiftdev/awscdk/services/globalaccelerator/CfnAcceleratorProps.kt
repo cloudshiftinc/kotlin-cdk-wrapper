@@ -299,7 +299,7 @@ public interface CfnAcceleratorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAcceleratorProps,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAcceleratorProps,
   ) : CdkObject(cdkObject), CfnAcceleratorProps {
     /**
      * Indicates whether the accelerator is enabled. The value is true or false. The default value

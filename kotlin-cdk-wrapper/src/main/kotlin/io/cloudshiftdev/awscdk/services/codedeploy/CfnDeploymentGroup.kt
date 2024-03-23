@@ -169,8 +169,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
  */
-public open class CfnDeploymentGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup,
+public open class CfnDeploymentGroup(
+  cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2070,12 +2070,17 @@ public open class CfnDeploymentGroup internal constructor(
         CfnDeploymentGroup = CfnDeploymentGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentGroup):
-        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
   }
 
   /**
-   * `RevisionLocation` is a property that defines the location of the CodeDeploy application
-   * revision to deploy.
+   * The `AlarmConfiguration` property type configures CloudWatch alarms for an AWS CodeDeploy
+   * deployment group.
+   *
+   * `AlarmConfiguration` is a property of the
+   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+   * resource.
    *
    * Example:
    *
@@ -2083,227 +2088,326 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * RevisionLocationProperty revisionLocationProperty = RevisionLocationProperty.builder()
-   * .gitHubLocation(GitHubLocationProperty.builder()
-   * .commitId("commitId")
-   * .repository("repository")
-   * .build())
-   * .revisionType("revisionType")
-   * .s3Location(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * // the properties below are optional
-   * .bundleType("bundleType")
-   * .eTag("eTag")
-   * .version("version")
-   * .build())
+   * AlarmConfigurationProperty alarmConfigurationProperty = AlarmConfigurationProperty.builder()
+   * .alarms(List.of(AlarmProperty.builder()
+   * .name("name")
+   * .build()))
+   * .enabled(false)
+   * .ignorePollAlarmFailure(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html)
    */
-  public interface RevisionLocationProperty {
+  public interface AlarmConfigurationProperty {
     /**
-     * Information about the location of application artifacts stored in GitHub.
+     * A list of alarms configured for the deployment or deployment group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-githublocation)
+     * A maximum of 10 alarms can be added.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)
      */
-    public fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
+    public fun alarms(): Any? = unwrap(this).getAlarms()
 
     /**
-     * The type of application revision:.
+     * Indicates whether the alarm configuration is enabled.
      *
-     * * S3: An application revision stored in Amazon S3.
-     * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
-     * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
-     * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
-     * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as a
-     * RawString.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-revisiontype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled)
      */
-    public fun revisionType(): String? = unwrap(this).getRevisionType()
+    public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * Information about the location of a revision stored in Amazon S3.
+     * Indicates whether a deployment should continue if information about the current state of
+     * alarms cannot be retrieved from Amazon CloudWatch .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-s3location)
+     * The default value is `false` .
+     *
+     * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+     * CloudWatch .
+     * * `false` : The deployment stops if alarm status information can't be retrieved from
+     * CloudWatch .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure)
      */
-    public fun s3Location(): Any? = unwrap(this).getS3Location()
+    public fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
 
     /**
-     * A builder for [RevisionLocationProperty]
+     * A builder for [AlarmConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      public fun gitHubLocation(gitHubLocation: IResolvable)
+      public fun alarms(alarms: IResolvable)
 
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty)
+      public fun alarms(alarms: List<Any>)
 
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
-      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit)
+      public fun alarms(vararg alarms: Any)
 
       /**
-       * @param revisionType The type of application revision:.
-       * * S3: An application revision stored in Amazon S3.
-       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
-       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
-       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
-       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
-       * a RawString.
+       * @param enabled Indicates whether the alarm configuration is enabled.
        */
-      public fun revisionType(revisionType: String)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param enabled Indicates whether the alarm configuration is enabled.
        */
-      public fun s3Location(s3Location: IResolvable)
+      public fun enabled(enabled: IResolvable)
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
+       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
+       * The default value is `false` .
+       *
+       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+       * CloudWatch .
+       * * `false` : The deployment stops if alarm status information can't be retrieved from
+       * CloudWatch .
        */
-      public fun s3Location(s3Location: S3LocationProperty)
+      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean)
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
+       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
+       * The default value is `false` .
+       *
+       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+       * CloudWatch .
+       * * `false` : The deployment stops if alarm status information can't be retrieved from
+       * CloudWatch .
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
-      public fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit)
+      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty.Builder
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty.builder()
 
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      override fun gitHubLocation(gitHubLocation: IResolvable) {
-        cdkBuilder.gitHubLocation(gitHubLocation.let(IResolvable::unwrap))
+      override fun alarms(alarms: IResolvable) {
+        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
       }
 
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
-        cdkBuilder.gitHubLocation(gitHubLocation.let(GitHubLocationProperty::unwrap))
+      override fun alarms(alarms: List<Any>) {
+        cdkBuilder.alarms(alarms)
       }
 
       /**
-       * @param gitHubLocation Information about the location of application artifacts stored in
-       * GitHub.
+       * @param alarms A list of alarms configured for the deployment or deployment group.
+       * A maximum of 10 alarms can be added.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
-      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit): Unit =
-          gitHubLocation(GitHubLocationProperty(gitHubLocation))
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
 
       /**
-       * @param revisionType The type of application revision:.
-       * * S3: An application revision stored in Amazon S3.
-       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
-       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
-       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
-       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
-       * a RawString.
+       * @param enabled Indicates whether the alarm configuration is enabled.
        */
-      override fun revisionType(revisionType: String) {
-        cdkBuilder.revisionType(revisionType)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param enabled Indicates whether the alarm configuration is enabled.
        */
-      override fun s3Location(s3Location: IResolvable) {
-        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
+       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
+       * The default value is `false` .
+       *
+       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+       * CloudWatch .
+       * * `false` : The deployment stops if alarm status information can't be retrieved from
+       * CloudWatch .
        */
-      override fun s3Location(s3Location: S3LocationProperty) {
-        cdkBuilder.s3Location(s3Location.let(S3LocationProperty::unwrap))
+      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean) {
+        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure)
       }
 
       /**
-       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
+       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
+       * The default value is `false` .
+       *
+       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+       * CloudWatch .
+       * * `false` : The deployment stops if alarm status information can't be retrieved from
+       * CloudWatch .
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
-      override fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit): Unit =
-          s3Location(S3LocationProperty(s3Location))
+      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
+        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure.let(IResolvable::unwrap))
+      }
 
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty,
-    ) : CdkObject(cdkObject), RevisionLocationProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty,
+    ) : CdkObject(cdkObject), AlarmConfigurationProperty {
       /**
-       * Information about the location of application artifacts stored in GitHub.
+       * A list of alarms configured for the deployment or deployment group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-githublocation)
+       * A maximum of 10 alarms can be added.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)
        */
-      override fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
+      override fun alarms(): Any? = unwrap(this).getAlarms()
 
       /**
-       * The type of application revision:.
+       * Indicates whether the alarm configuration is enabled.
        *
-       * * S3: An application revision stored in Amazon S3.
-       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
-       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
-       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
-       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
-       * a RawString.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-revisiontype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled)
        */
-      override fun revisionType(): String? = unwrap(this).getRevisionType()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
       /**
-       * Information about the location of a revision stored in Amazon S3.
+       * Indicates whether a deployment should continue if information about the current state of
+       * alarms cannot be retrieved from Amazon CloudWatch .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-s3location)
+       * The default value is `false` .
+       *
+       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
+       * CloudWatch .
+       * * `false` : The deployment stops if alarm status information can't be retrieved from
+       * CloudWatch .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure)
        */
-      override fun s3Location(): Any? = unwrap(this).getS3Location()
+      override fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RevisionLocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty):
-          RevisionLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? RevisionLocationProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty):
+          AlarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AlarmConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RevisionLocationProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty =
+      internal fun unwrap(wrapped: AlarmConfigurationProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty
+    }
+  }
+
+  /**
+   * The `Alarm` property type specifies a CloudWatch alarm to use for an AWS CodeDeploy deployment
+   * group.
+   *
+   * The `Alarm` property of the [CodeDeploy DeploymentGroup
+   * AlarmConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html)
+   * property contains a list of `Alarm` property types.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * AlarmProperty alarmProperty = AlarmProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html)
+   */
+  public interface AlarmProperty {
+    /**
+     * The name of the alarm.
+     *
+     * Maximum length is 255 characters. Each alarm name can be used only once in a list of alarms.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html#cfn-codedeploy-deploymentgroup-alarm-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [AlarmProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the alarm.
+       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
+       * alarms.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.builder()
+
+      /**
+       * @param name The name of the alarm.
+       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
+       * alarms.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty,
+    ) : CdkObject(cdkObject), AlarmProperty {
+      /**
+       * The name of the alarm.
+       *
+       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
+       * alarms.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html#cfn-codedeploy-deploymentgroup-alarm-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty):
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AlarmProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty
     }
   }
 
@@ -2428,8 +2532,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty,
     ) : CdkObject(cdkObject), AutoRollbackConfigurationProperty {
       /**
        * Indicates whether a defined automatic rollback configuration is currently enabled.
@@ -2465,6 +2568,922 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about blue/green deployment options for a deployment group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * BlueGreenDeploymentConfigurationProperty blueGreenDeploymentConfigurationProperty =
+   * BlueGreenDeploymentConfigurationProperty.builder()
+   * .deploymentReadyOption(DeploymentReadyOptionProperty.builder()
+   * .actionOnTimeout("actionOnTimeout")
+   * .waitTimeInMinutes(123)
+   * .build())
+   * .greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty.builder()
+   * .action("action")
+   * .build())
+   * .terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty.builder()
+   * .action("action")
+   * .terminationWaitTimeInMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
+   */
+  public interface BlueGreenDeploymentConfigurationProperty {
+    /**
+     * Information about the action to take when newly provisioned instances are ready to receive
+     * traffic in a blue/green deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-deploymentreadyoption)
+     */
+    public fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
+
+    /**
+     * Information about how instances are provisioned for a replacement environment in a blue/green
+     * deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-greenfleetprovisioningoption)
+     */
+    public fun greenFleetProvisioningOption(): Any? = unwrap(this).getGreenFleetProvisioningOption()
+
+    /**
+     * Information about whether to terminate instances in the original fleet during a blue/green
+     * deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-terminateblueinstancesondeploymentsuccess)
+     */
+    public fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
+        unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
+
+    /**
+     * A builder for [BlueGreenDeploymentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      public fun deploymentReadyOption(deploymentReadyOption: IResolvable)
+
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      public fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty)
+
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
+      public
+          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit)
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      public fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable)
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      public
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty)
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
+      public
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit)
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      public
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable)
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      public
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty)
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
+      public
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.builder()
+
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      override fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
+        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      override fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
+        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(DeploymentReadyOptionProperty::unwrap))
+      }
+
+      /**
+       * @param deploymentReadyOption Information about the action to take when newly provisioned
+       * instances are ready to receive traffic in a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
+      override
+          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit):
+          Unit = deploymentReadyOption(DeploymentReadyOptionProperty(deploymentReadyOption))
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      override fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
+        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      override
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty) {
+        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(GreenFleetProvisioningOptionProperty::unwrap))
+      }
+
+      /**
+       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
+       * replacement environment in a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
+      override
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit):
+          Unit =
+          greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty(greenFleetProvisioningOption))
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      override
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable) {
+        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      override
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty) {
+        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(BlueInstanceTerminationOptionProperty::unwrap))
+      }
+
+      /**
+       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
+       * instances in the original fleet during a blue/green deployment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
+      override
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit):
+          Unit =
+          terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty(terminateBlueInstancesOnDeploymentSuccess))
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty,
+    ) : CdkObject(cdkObject), BlueGreenDeploymentConfigurationProperty {
+      /**
+       * Information about the action to take when newly provisioned instances are ready to receive
+       * traffic in a blue/green deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-deploymentreadyoption)
+       */
+      override fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
+
+      /**
+       * Information about how instances are provisioned for a replacement environment in a
+       * blue/green deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-greenfleetprovisioningoption)
+       */
+      override fun greenFleetProvisioningOption(): Any? =
+          unwrap(this).getGreenFleetProvisioningOption()
+
+      /**
+       * Information about whether to terminate instances in the original fleet during a blue/green
+       * deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-terminateblueinstancesondeploymentsuccess)
+       */
+      override fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
+          unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BlueGreenDeploymentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty):
+          BlueGreenDeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlueGreenDeploymentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlueGreenDeploymentConfigurationProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about whether instances in the original environment are terminated when a
+   * blue/green deployment is successful.
+   *
+   * `BlueInstanceTerminationOption` does not apply to Lambda deployments.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * BlueInstanceTerminationOptionProperty blueInstanceTerminationOptionProperty =
+   * BlueInstanceTerminationOptionProperty.builder()
+   * .action("action")
+   * .terminationWaitTimeInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html)
+   */
+  public interface BlueInstanceTerminationOptionProperty {
+    /**
+     * The action to take on instances in the original environment after a successful blue/green
+     * deployment.
+     *
+     * * `TERMINATE` : Instances are terminated after a specified wait time.
+     * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
+     * balancer and removed from the deployment group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-action)
+     */
+    public fun action(): String? = unwrap(this).getAction()
+
+    /**
+     * For an Amazon EC2 deployment, the number of minutes to wait after a successful blue/green
+     * deployment before terminating instances from the original environment.
+     *
+     * For an Amazon ECS deployment, the number of minutes before deleting the original (blue) task
+     * set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue) task
+     * set to a replacement (green) task set.
+     *
+     * The maximum setting is 2880 minutes (2 days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-terminationwaittimeinminutes)
+     */
+    public fun terminationWaitTimeInMinutes(): Number? =
+        unwrap(this).getTerminationWaitTimeInMinutes()
+
+    /**
+     * A builder for [BlueInstanceTerminationOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action to take on instances in the original environment after a
+       * successful blue/green deployment.
+       * * `TERMINATE` : Instances are terminated after a specified wait time.
+       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
+       * balancer and removed from the deployment group.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param terminationWaitTimeInMinutes For an Amazon EC2 deployment, the number of minutes to
+       * wait after a successful blue/green deployment before terminating instances from the original
+       * environment.
+       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
+       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
+       * task set to a replacement (green) task set.
+       *
+       * The maximum setting is 2880 minutes (2 days).
+       */
+      public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty.builder()
+
+      /**
+       * @param action The action to take on instances in the original environment after a
+       * successful blue/green deployment.
+       * * `TERMINATE` : Instances are terminated after a specified wait time.
+       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
+       * balancer and removed from the deployment group.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param terminationWaitTimeInMinutes For an Amazon EC2 deployment, the number of minutes to
+       * wait after a successful blue/green deployment before terminating instances from the original
+       * environment.
+       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
+       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
+       * task set to a replacement (green) task set.
+       *
+       * The maximum setting is 2880 minutes (2 days).
+       */
+      override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
+        cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty,
+    ) : CdkObject(cdkObject), BlueInstanceTerminationOptionProperty {
+      /**
+       * The action to take on instances in the original environment after a successful blue/green
+       * deployment.
+       *
+       * * `TERMINATE` : Instances are terminated after a specified wait time.
+       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
+       * balancer and removed from the deployment group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-action)
+       */
+      override fun action(): String? = unwrap(this).getAction()
+
+      /**
+       * For an Amazon EC2 deployment, the number of minutes to wait after a successful blue/green
+       * deployment before terminating instances from the original environment.
+       *
+       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
+       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
+       * task set to a replacement (green) task set.
+       *
+       * The maximum setting is 2880 minutes (2 days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-terminationwaittimeinminutes)
+       */
+      override fun terminationWaitTimeInMinutes(): Number? =
+          unwrap(this).getTerminationWaitTimeInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BlueInstanceTerminationOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty):
+          BlueInstanceTerminationOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlueInstanceTerminationOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlueInstanceTerminationOptionProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
+    }
+  }
+
+  /**
+   * `Deployment` is a property of the
+   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+   * resource that specifies an AWS CodeDeploy application revision to be deployed to instances in the
+   * deployment group. If you specify an application revision, your target revision is deployed as soon
+   * as the provisioning process is complete.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * DeploymentProperty deploymentProperty = DeploymentProperty.builder()
+   * .revision(RevisionLocationProperty.builder()
+   * .gitHubLocation(GitHubLocationProperty.builder()
+   * .commitId("commitId")
+   * .repository("repository")
+   * .build())
+   * .revisionType("revisionType")
+   * .s3Location(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * // the properties below are optional
+   * .bundleType("bundleType")
+   * .eTag("eTag")
+   * .version("version")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .description("description")
+   * .ignoreApplicationStopFailures(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html)
+   */
+  public interface DeploymentProperty {
+    /**
+     * A comment about the deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * If true, then if an `ApplicationStop` , `BeforeBlockTraffic` , or `AfterBlockTraffic`
+     * deployment lifecycle event to an instance fails, then the deployment continues to the next
+     * deployment lifecycle event.
+     *
+     * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+     * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+     * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+     *
+     * If false or not specified, then if a lifecycle event fails during a deployment to an
+     * instance, that deployment fails. If deployment to that instance is part of an overall deployment
+     * and the number of healthy hosts is not less than the minimum number of healthy hosts, then a
+     * deployment to the next instance is attempted.
+     *
+     * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+     * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from the
+     * previous successful deployment. (All other scripts are run from the AppSpec file in the current
+     * deployment.) If one of these scripts contains an error and does not run successfully, the
+     * deployment can fail.
+     *
+     * If the cause of the failure is a script from the last successful deployment that will never
+     * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+     * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+     * ignored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures)
+     */
+    public fun ignoreApplicationStopFailures(): Any? =
+        unwrap(this).getIgnoreApplicationStopFailures()
+
+    /**
+     * Information about the location of stored application artifacts and the service from which to
+     * retrieve them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-revision)
+     */
+    public fun revision(): Any
+
+    /**
+     * A builder for [DeploymentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description A comment about the deployment.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
+       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
+       * then the deployment continues to the next deployment lifecycle event.
+       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+       *
+       * If false or not specified, then if a lifecycle event fails during a deployment to an
+       * instance, that deployment fails. If deployment to that instance is part of an overall
+       * deployment and the number of healthy hosts is not less than the minimum number of healthy
+       * hosts, then a deployment to the next instance is attempted.
+       *
+       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
+       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
+       * current deployment.) If one of these scripts contains an error and does not run successfully,
+       * the deployment can fail.
+       *
+       * If the cause of the failure is a script from the last successful deployment that will never
+       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+       * ignored.
+       */
+      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean)
+
+      /**
+       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
+       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
+       * then the deployment continues to the next deployment lifecycle event.
+       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+       *
+       * If false or not specified, then if a lifecycle event fails during a deployment to an
+       * instance, that deployment fails. If deployment to that instance is part of an overall
+       * deployment and the number of healthy hosts is not less than the minimum number of healthy
+       * hosts, then a deployment to the next instance is attempted.
+       *
+       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
+       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
+       * current deployment.) If one of these scripts contains an error and does not run successfully,
+       * the deployment can fail.
+       *
+       * If the cause of the failure is a script from the last successful deployment that will never
+       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+       * ignored.
+       */
+      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable)
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      public fun revision(revision: IResolvable)
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      public fun revision(revision: RevisionLocationProperty)
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
+      public fun revision(revision: RevisionLocationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.builder()
+
+      /**
+       * @param description A comment about the deployment.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
+       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
+       * then the deployment continues to the next deployment lifecycle event.
+       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+       *
+       * If false or not specified, then if a lifecycle event fails during a deployment to an
+       * instance, that deployment fails. If deployment to that instance is part of an overall
+       * deployment and the number of healthy hosts is not less than the minimum number of healthy
+       * hosts, then a deployment to the next instance is attempted.
+       *
+       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
+       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
+       * current deployment.) If one of these scripts contains an error and does not run successfully,
+       * the deployment can fail.
+       *
+       * If the cause of the failure is a script from the last successful deployment that will never
+       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+       * ignored.
+       */
+      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean) {
+        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures)
+      }
+
+      /**
+       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
+       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
+       * then the deployment continues to the next deployment lifecycle event.
+       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+       *
+       * If false or not specified, then if a lifecycle event fails during a deployment to an
+       * instance, that deployment fails. If deployment to that instance is part of an overall
+       * deployment and the number of healthy hosts is not less than the minimum number of healthy
+       * hosts, then a deployment to the next instance is attempted.
+       *
+       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
+       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
+       * current deployment.) If one of these scripts contains an error and does not run successfully,
+       * the deployment can fail.
+       *
+       * If the cause of the failure is a script from the last successful deployment that will never
+       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+       * ignored.
+       */
+      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
+        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      override fun revision(revision: IResolvable) {
+        cdkBuilder.revision(revision.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      override fun revision(revision: RevisionLocationProperty) {
+        cdkBuilder.revision(revision.let(RevisionLocationProperty::unwrap))
+      }
+
+      /**
+       * @param revision Information about the location of stored application artifacts and the
+       * service from which to retrieve them. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
+      override fun revision(revision: RevisionLocationProperty.Builder.() -> Unit): Unit =
+          revision(RevisionLocationProperty(revision))
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty,
+    ) : CdkObject(cdkObject), DeploymentProperty {
+      /**
+       * A comment about the deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * If true, then if an `ApplicationStop` , `BeforeBlockTraffic` , or `AfterBlockTraffic`
+       * deployment lifecycle event to an instance fails, then the deployment continues to the next
+       * deployment lifecycle event.
+       *
+       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
+       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
+       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
+       *
+       * If false or not specified, then if a lifecycle event fails during a deployment to an
+       * instance, that deployment fails. If deployment to that instance is part of an overall
+       * deployment and the number of healthy hosts is not less than the minimum number of healthy
+       * hosts, then a deployment to the next instance is attempted.
+       *
+       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
+       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
+       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
+       * current deployment.) If one of these scripts contains an error and does not run successfully,
+       * the deployment can fail.
+       *
+       * If the cause of the failure is a script from the last successful deployment that will never
+       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
+       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
+       * ignored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures)
+       */
+      override fun ignoreApplicationStopFailures(): Any? =
+          unwrap(this).getIgnoreApplicationStopFailures()
+
+      /**
+       * Information about the location of stored application artifacts and the service from which
+       * to retrieve them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-revision)
+       */
+      override fun revision(): Any = unwrap(this).getRevision()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty):
+          DeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty
+    }
+  }
+
+  /**
+   * Information about how traffic is rerouted to instances in a replacement environment in a
+   * blue/green deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * DeploymentReadyOptionProperty deploymentReadyOptionProperty =
+   * DeploymentReadyOptionProperty.builder()
+   * .actionOnTimeout("actionOnTimeout")
+   * .waitTimeInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html)
+   */
+  public interface DeploymentReadyOptionProperty {
+    /**
+     * Information about when to reroute traffic from an original environment to a replacement
+     * environment in a blue/green deployment.
+     *
+     * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
+     * new application revision is installed on the instances in the replacement environment.
+     * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
+     * rerouting is started using
+     * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
+     * . If traffic rerouting is not started before the end of the specified wait period, the
+     * deployment status is changed to Stopped.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-actionontimeout)
+     */
+    public fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
+
+    /**
+     * The number of minutes to wait before the status of a blue/green deployment is changed to
+     * Stopped if rerouting is not started manually.
+     *
+     * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-waittimeinminutes)
+     */
+    public fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
+
+    /**
+     * A builder for [DeploymentReadyOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actionOnTimeout Information about when to reroute traffic from an original
+       * environment to a replacement environment in a blue/green deployment.
+       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
+       * new application revision is installed on the instances in the replacement environment.
+       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
+       * rerouting is started using
+       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
+       * . If traffic rerouting is not started before the end of the specified wait period, the
+       * deployment status is changed to Stopped.
+       */
+      public fun actionOnTimeout(actionOnTimeout: String)
+
+      /**
+       * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green
+       * deployment is changed to Stopped if rerouting is not started manually.
+       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
+       */
+      public fun waitTimeInMinutes(waitTimeInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty.builder()
+
+      /**
+       * @param actionOnTimeout Information about when to reroute traffic from an original
+       * environment to a replacement environment in a blue/green deployment.
+       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
+       * new application revision is installed on the instances in the replacement environment.
+       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
+       * rerouting is started using
+       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
+       * . If traffic rerouting is not started before the end of the specified wait period, the
+       * deployment status is changed to Stopped.
+       */
+      override fun actionOnTimeout(actionOnTimeout: String) {
+        cdkBuilder.actionOnTimeout(actionOnTimeout)
+      }
+
+      /**
+       * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green
+       * deployment is changed to Stopped if rerouting is not started manually.
+       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
+       */
+      override fun waitTimeInMinutes(waitTimeInMinutes: Number) {
+        cdkBuilder.waitTimeInMinutes(waitTimeInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty,
+    ) : CdkObject(cdkObject), DeploymentReadyOptionProperty {
+      /**
+       * Information about when to reroute traffic from an original environment to a replacement
+       * environment in a blue/green deployment.
+       *
+       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
+       * new application revision is installed on the instances in the replacement environment.
+       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
+       * rerouting is started using
+       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
+       * . If traffic rerouting is not started before the end of the specified wait period, the
+       * deployment status is changed to Stopped.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-actionontimeout)
+       */
+      override fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
+
+      /**
+       * The number of minutes to wait before the status of a blue/green deployment is changed to
+       * Stopped if rerouting is not started manually.
+       *
+       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-waittimeinminutes)
+       */
+      override fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentReadyOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty):
+          DeploymentReadyOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentReadyOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentReadyOptionProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
     }
   }
 
@@ -2556,8 +3575,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty,
     ) : CdkObject(cdkObject), DeploymentStyleProperty {
       /**
        * Indicates whether to route deployment traffic behind a load balancer.
@@ -2594,6 +3612,914 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty
+    }
+  }
+
+  /**
+   * Information about an Amazon EC2 tag filter.
+   *
+   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
+   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
+   * *AWS CodeDeploy User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * EC2TagFilterProperty eC2TagFilterProperty = EC2TagFilterProperty.builder()
+   * .key("key")
+   * .type("type")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html)
+   */
+  public interface EC2TagFilterProperty {
+    /**
+     * The tag filter key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The tag filter type:.
+     *
+     * * `KEY_ONLY` : Key only.
+     * * `VALUE_ONLY` : Value only.
+     * * `KEY_AND_VALUE` : Key and value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The tag filter value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [EC2TagFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag filter key.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param type The tag filter type:.
+       * * `KEY_ONLY` : Key only.
+       * * `VALUE_ONLY` : Value only.
+       * * `KEY_AND_VALUE` : Key and value.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The tag filter value.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty.builder()
+
+      /**
+       * @param key The tag filter key.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param type The tag filter type:.
+       * * `KEY_ONLY` : Key only.
+       * * `VALUE_ONLY` : Value only.
+       * * `KEY_AND_VALUE` : Key and value.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The tag filter value.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty,
+    ) : CdkObject(cdkObject), EC2TagFilterProperty {
+      /**
+       * The tag filter key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The tag filter type:.
+       *
+       * * `KEY_ONLY` : Key only.
+       * * `VALUE_ONLY` : Value only.
+       * * `KEY_AND_VALUE` : Key and value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The tag filter value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty):
+          EC2TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EC2TagFilterProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty
+    }
+  }
+
+  /**
+   * The `EC2TagSet` property type specifies information about groups of tags applied to Amazon EC2
+   * instances.
+   *
+   * The deployment group includes only Amazon EC2 instances identified by all the tag groups.
+   * Cannot be used in the same template as EC2TagFilters.
+   *
+   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
+   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
+   * *AWS CodeDeploy User Guide* .
+   *
+   * `EC2TagSet` is a property of the
+   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+   * resource type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * EC2TagSetListObjectProperty eC2TagSetListObjectProperty = EC2TagSetListObjectProperty.builder()
+   * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
+   * .key("key")
+   * .type("type")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html)
+   */
+  public interface EC2TagSetListObjectProperty {
+    /**
+     * A list that contains other lists of Amazon EC2 instance tag groups.
+     *
+     * For an instance to be included in the deployment group, it must be identified by all of the
+     * tag groups in the list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)
+     */
+    public fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
+
+    /**
+     * A builder for [EC2TagSetListObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      public fun ec2TagGroup(ec2TagGroup: IResolvable)
+
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      public fun ec2TagGroup(ec2TagGroup: List<Any>)
+
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      public fun ec2TagGroup(vararg ec2TagGroup: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty.builder()
+
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      override fun ec2TagGroup(ec2TagGroup: IResolvable) {
+        cdkBuilder.ec2TagGroup(ec2TagGroup.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      override fun ec2TagGroup(ec2TagGroup: List<Any>) {
+        cdkBuilder.ec2TagGroup(ec2TagGroup)
+      }
+
+      /**
+       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       */
+      override fun ec2TagGroup(vararg ec2TagGroup: Any): Unit = ec2TagGroup(ec2TagGroup.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty,
+    ) : CdkObject(cdkObject), EC2TagSetListObjectProperty {
+      /**
+       * A list that contains other lists of Amazon EC2 instance tag groups.
+       *
+       * For an instance to be included in the deployment group, it must be identified by all of the
+       * tag groups in the list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)
+       */
+      override fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagSetListObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty):
+          EC2TagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EC2TagSetListObjectProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EC2TagSetListObjectProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
+    }
+  }
+
+  /**
+   * The `EC2TagSet` property type specifies information about groups of tags applied to Amazon EC2
+   * instances.
+   *
+   * The deployment group includes only Amazon EC2 instances identified by all the tag groups.
+   * `EC2TagSet` cannot be used in the same template as `EC2TagFilter` .
+   *
+   * For information about using tags and tag groups to help manage your Amazon EC2 instances and
+   * on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * EC2TagSetProperty eC2TagSetProperty = EC2TagSetProperty.builder()
+   * .ec2TagSetList(List.of(EC2TagSetListObjectProperty.builder()
+   * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
+   * .key("key")
+   * .type("type")
+   * .value("value")
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html)
+   */
+  public interface EC2TagSetProperty {
+    /**
+     * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to include
+     * in the deployment group.
+     *
+     * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+     * this deployment group.
+     *
+     * Duplicates are not allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist)
+     */
+    public fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
+
+    /**
+     * A builder for [EC2TagSetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      public fun ec2TagSetList(ec2TagSetList: IResolvable)
+
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      public fun ec2TagSetList(ec2TagSetList: List<Any>)
+
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      public fun ec2TagSetList(vararg ec2TagSetList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.builder()
+
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      override fun ec2TagSetList(ec2TagSetList: IResolvable) {
+        cdkBuilder.ec2TagSetList(ec2TagSetList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      override fun ec2TagSetList(ec2TagSetList: List<Any>) {
+        cdkBuilder.ec2TagSetList(ec2TagSetList)
+      }
+
+      /**
+       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
+       * that you want to include in the deployment group.
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       */
+      override fun ec2TagSetList(vararg ec2TagSetList: Any): Unit =
+          ec2TagSetList(ec2TagSetList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty,
+    ) : CdkObject(cdkObject), EC2TagSetProperty {
+      /**
+       * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to
+       * include in the deployment group.
+       *
+       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
+       * this deployment group.
+       *
+       * Duplicates are not allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist)
+       */
+      override fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagSetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty):
+          EC2TagSetProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagSetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EC2TagSetProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty
+    }
+  }
+
+  /**
+   * Contains the service and cluster names used to identify an Amazon ECS deployment's target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * ECSServiceProperty eCSServiceProperty = ECSServiceProperty.builder()
+   * .clusterName("clusterName")
+   * .serviceName("serviceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html)
+   */
+  public interface ECSServiceProperty {
+    /**
+     * The name of the cluster that the Amazon ECS service is associated with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-clustername)
+     */
+    public fun clusterName(): String
+
+    /**
+     * The name of the target Amazon ECS service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-servicename)
+     */
+    public fun serviceName(): String
+
+    /**
+     * A builder for [ECSServiceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clusterName The name of the cluster that the Amazon ECS service is associated with. 
+       */
+      public fun clusterName(clusterName: String)
+
+      /**
+       * @param serviceName The name of the target Amazon ECS service. 
+       */
+      public fun serviceName(serviceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.builder()
+
+      /**
+       * @param clusterName The name of the cluster that the Amazon ECS service is associated with. 
+       */
+      override fun clusterName(clusterName: String) {
+        cdkBuilder.clusterName(clusterName)
+      }
+
+      /**
+       * @param serviceName The name of the target Amazon ECS service. 
+       */
+      override fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty,
+    ) : CdkObject(cdkObject), ECSServiceProperty {
+      /**
+       * The name of the cluster that the Amazon ECS service is associated with.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-clustername)
+       */
+      override fun clusterName(): String = unwrap(this).getClusterName()
+
+      /**
+       * The name of the target Amazon ECS service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-servicename)
+       */
+      override fun serviceName(): String = unwrap(this).getServiceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ECSServiceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty):
+          ECSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as? ECSServiceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ECSServiceProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty
+    }
+  }
+
+  /**
+   * The `ELBInfo` property type specifies information about the Elastic Load Balancing load
+   * balancer used for an CodeDeploy deployment group.
+   *
+   * If you specify the `ELBInfo` property, the `DeploymentStyle.DeploymentOption` property must be
+   * set to `WITH_TRAFFIC_CONTROL` for AWS CodeDeploy to route your traffic using the specified load
+   * balancers.
+   *
+   * `ELBInfo` is a property of the [AWS CodeDeploy DeploymentGroup
+   * LoadBalancerInfo](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * ELBInfoProperty eLBInfoProperty = ELBInfoProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html)
+   */
+  public interface ELBInfoProperty {
+    /**
+     * For blue/green deployments, the name of the load balancer that is used to route traffic from
+     * original instances to replacement instances in a blue/green deployment.
+     *
+     * For in-place deployments, the name of the load balancer that instances are deregistered from
+     * so they are not serving traffic during a deployment, and then re-registered with after the
+     * deployment is complete.
+     *
+     *
+     * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html#cfn-codedeploy-deploymentgroup-elbinfo-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [ELBInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name For blue/green deployments, the name of the load balancer that is used to route
+       * traffic from original instances to replacement instances in a blue/green deployment.
+       * For in-place deployments, the name of the load balancer that instances are deregistered
+       * from so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment is complete.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.builder()
+
+      /**
+       * @param name For blue/green deployments, the name of the load balancer that is used to route
+       * traffic from original instances to replacement instances in a blue/green deployment.
+       * For in-place deployments, the name of the load balancer that instances are deregistered
+       * from so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment is complete.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty,
+    ) : CdkObject(cdkObject), ELBInfoProperty {
+      /**
+       * For blue/green deployments, the name of the load balancer that is used to route traffic
+       * from original instances to replacement instances in a blue/green deployment.
+       *
+       * For in-place deployments, the name of the load balancer that instances are deregistered
+       * from so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment is complete.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html#cfn-codedeploy-deploymentgroup-elbinfo-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ELBInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty):
+          ELBInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ELBInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ELBInfoProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty
+    }
+  }
+
+  /**
+   * `GitHubLocation` is a property of the [CodeDeploy DeploymentGroup
+   * Revision](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html)
+   * property that specifies the location of an application revision that is stored in GitHub.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * GitHubLocationProperty gitHubLocationProperty = GitHubLocationProperty.builder()
+   * .commitId("commitId")
+   * .repository("repository")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html)
+   */
+  public interface GitHubLocationProperty {
+    /**
+     * The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the
+     * application revision.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-commitid)
+     */
+    public fun commitId(): String
+
+    /**
+     * The GitHub account and repository pair that stores a reference to the commit that represents
+     * the bundled artifacts for the application revision.
+     *
+     * Specify the value as `account/repository` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-repository)
+     */
+    public fun repository(): String
+
+    /**
+     * A builder for [GitHubLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param commitId The SHA1 commit ID of the GitHub commit that represents the bundled
+       * artifacts for the application revision. 
+       */
+      public fun commitId(commitId: String)
+
+      /**
+       * @param repository The GitHub account and repository pair that stores a reference to the
+       * commit that represents the bundled artifacts for the application revision. 
+       * Specify the value as `account/repository` .
+       */
+      public fun repository(repository: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty.builder()
+
+      /**
+       * @param commitId The SHA1 commit ID of the GitHub commit that represents the bundled
+       * artifacts for the application revision. 
+       */
+      override fun commitId(commitId: String) {
+        cdkBuilder.commitId(commitId)
+      }
+
+      /**
+       * @param repository The GitHub account and repository pair that stores a reference to the
+       * commit that represents the bundled artifacts for the application revision. 
+       * Specify the value as `account/repository` .
+       */
+      override fun repository(repository: String) {
+        cdkBuilder.repository(repository)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty,
+    ) : CdkObject(cdkObject), GitHubLocationProperty {
+      /**
+       * The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the
+       * application revision.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-commitid)
+       */
+      override fun commitId(): String = unwrap(this).getCommitId()
+
+      /**
+       * The GitHub account and repository pair that stores a reference to the commit that
+       * represents the bundled artifacts for the application revision.
+       *
+       * Specify the value as `account/repository` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-repository)
+       */
+      override fun repository(): String = unwrap(this).getRepository()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitHubLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty):
+          GitHubLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GitHubLocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitHubLocationProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty
+    }
+  }
+
+  /**
+   * Information about the instances that belong to the replacement environment in a blue/green
+   * deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * GreenFleetProvisioningOptionProperty greenFleetProvisioningOptionProperty =
+   * GreenFleetProvisioningOptionProperty.builder()
+   * .action("action")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html)
+   */
+  public interface GreenFleetProvisioningOptionProperty {
+    /**
+     * The method used to add instances to a replacement environment.
+     *
+     * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
+     * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define and
+     * create instances in a new Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html#cfn-codedeploy-deploymentgroup-greenfleetprovisioningoption-action)
+     */
+    public fun action(): String? = unwrap(this).getAction()
+
+    /**
+     * A builder for [GreenFleetProvisioningOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The method used to add instances to a replacement environment.
+       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
+       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
+       * and create instances in a new Auto Scaling group.
+       */
+      public fun action(action: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty.builder()
+
+      /**
+       * @param action The method used to add instances to a replacement environment.
+       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
+       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
+       * and create instances in a new Auto Scaling group.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty,
+    ) : CdkObject(cdkObject), GreenFleetProvisioningOptionProperty {
+      /**
+       * The method used to add instances to a replacement environment.
+       *
+       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
+       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
+       * and create instances in a new Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html#cfn-codedeploy-deploymentgroup-greenfleetprovisioningoption-action)
+       */
+      override fun action(): String? = unwrap(this).getAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GreenFleetProvisioningOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty):
+          GreenFleetProvisioningOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GreenFleetProvisioningOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GreenFleetProvisioningOptionProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
     }
   }
 
@@ -2894,8 +4820,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty,
     ) : CdkObject(cdkObject), LoadBalancerInfoProperty {
       /**
        * An array that contains information about the load balancers to use for load balancing in a
@@ -2957,1121 +4882,14 @@ public open class CfnDeploymentGroup internal constructor(
   }
 
   /**
-   * `Deployment` is a property of the
-   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
-   * resource that specifies an AWS CodeDeploy application revision to be deployed to instances in the
-   * deployment group. If you specify an application revision, your target revision is deployed as soon
-   * as the provisioning process is complete.
+   * The `OnPremisesTagSetListObject` property type specifies lists of on-premises instance tag
+   * groups.
    *
-   * Example:
+   * In order for an instance to be included in the deployment group, it must be identified by all
+   * the tag groups in the list.
    *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * DeploymentProperty deploymentProperty = DeploymentProperty.builder()
-   * .revision(RevisionLocationProperty.builder()
-   * .gitHubLocation(GitHubLocationProperty.builder()
-   * .commitId("commitId")
-   * .repository("repository")
-   * .build())
-   * .revisionType("revisionType")
-   * .s3Location(S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * // the properties below are optional
-   * .bundleType("bundleType")
-   * .eTag("eTag")
-   * .version("version")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .description("description")
-   * .ignoreApplicationStopFailures(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html)
-   */
-  public interface DeploymentProperty {
-    /**
-     * A comment about the deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * If true, then if an `ApplicationStop` , `BeforeBlockTraffic` , or `AfterBlockTraffic`
-     * deployment lifecycle event to an instance fails, then the deployment continues to the next
-     * deployment lifecycle event.
-     *
-     * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-     * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-     * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-     *
-     * If false or not specified, then if a lifecycle event fails during a deployment to an
-     * instance, that deployment fails. If deployment to that instance is part of an overall deployment
-     * and the number of healthy hosts is not less than the minimum number of healthy hosts, then a
-     * deployment to the next instance is attempted.
-     *
-     * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-     * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from the
-     * previous successful deployment. (All other scripts are run from the AppSpec file in the current
-     * deployment.) If one of these scripts contains an error and does not run successfully, the
-     * deployment can fail.
-     *
-     * If the cause of the failure is a script from the last successful deployment that will never
-     * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-     * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-     * ignored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures)
-     */
-    public fun ignoreApplicationStopFailures(): Any? =
-        unwrap(this).getIgnoreApplicationStopFailures()
-
-    /**
-     * Information about the location of stored application artifacts and the service from which to
-     * retrieve them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-revision)
-     */
-    public fun revision(): Any
-
-    /**
-     * A builder for [DeploymentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description A comment about the deployment.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
-       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
-       * then the deployment continues to the next deployment lifecycle event.
-       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-       *
-       * If false or not specified, then if a lifecycle event fails during a deployment to an
-       * instance, that deployment fails. If deployment to that instance is part of an overall
-       * deployment and the number of healthy hosts is not less than the minimum number of healthy
-       * hosts, then a deployment to the next instance is attempted.
-       *
-       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
-       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
-       * current deployment.) If one of these scripts contains an error and does not run successfully,
-       * the deployment can fail.
-       *
-       * If the cause of the failure is a script from the last successful deployment that will never
-       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-       * ignored.
-       */
-      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean)
-
-      /**
-       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
-       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
-       * then the deployment continues to the next deployment lifecycle event.
-       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-       *
-       * If false or not specified, then if a lifecycle event fails during a deployment to an
-       * instance, that deployment fails. If deployment to that instance is part of an overall
-       * deployment and the number of healthy hosts is not less than the minimum number of healthy
-       * hosts, then a deployment to the next instance is attempted.
-       *
-       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
-       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
-       * current deployment.) If one of these scripts contains an error and does not run successfully,
-       * the deployment can fail.
-       *
-       * If the cause of the failure is a script from the last successful deployment that will never
-       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-       * ignored.
-       */
-      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable)
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      public fun revision(revision: IResolvable)
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      public fun revision(revision: RevisionLocationProperty)
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
-      public fun revision(revision: RevisionLocationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.builder()
-
-      /**
-       * @param description A comment about the deployment.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
-       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
-       * then the deployment continues to the next deployment lifecycle event.
-       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-       *
-       * If false or not specified, then if a lifecycle event fails during a deployment to an
-       * instance, that deployment fails. If deployment to that instance is part of an overall
-       * deployment and the number of healthy hosts is not less than the minimum number of healthy
-       * hosts, then a deployment to the next instance is attempted.
-       *
-       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
-       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
-       * current deployment.) If one of these scripts contains an error and does not run successfully,
-       * the deployment can fail.
-       *
-       * If the cause of the failure is a script from the last successful deployment that will never
-       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-       * ignored.
-       */
-      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean) {
-        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures)
-      }
-
-      /**
-       * @param ignoreApplicationStopFailures If true, then if an `ApplicationStop` ,
-       * `BeforeBlockTraffic` , or `AfterBlockTraffic` deployment lifecycle event to an instance fails,
-       * then the deployment continues to the next deployment lifecycle event.
-       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-       *
-       * If false or not specified, then if a lifecycle event fails during a deployment to an
-       * instance, that deployment fails. If deployment to that instance is part of an overall
-       * deployment and the number of healthy hosts is not less than the minimum number of healthy
-       * hosts, then a deployment to the next instance is attempted.
-       *
-       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
-       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
-       * current deployment.) If one of these scripts contains an error and does not run successfully,
-       * the deployment can fail.
-       *
-       * If the cause of the failure is a script from the last successful deployment that will never
-       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-       * ignored.
-       */
-      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
-        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      override fun revision(revision: IResolvable) {
-        cdkBuilder.revision(revision.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      override fun revision(revision: RevisionLocationProperty) {
-        cdkBuilder.revision(revision.let(RevisionLocationProperty::unwrap))
-      }
-
-      /**
-       * @param revision Information about the location of stored application artifacts and the
-       * service from which to retrieve them. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
-      override fun revision(revision: RevisionLocationProperty.Builder.() -> Unit): Unit =
-          revision(RevisionLocationProperty(revision))
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty,
-    ) : CdkObject(cdkObject), DeploymentProperty {
-      /**
-       * A comment about the deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * If true, then if an `ApplicationStop` , `BeforeBlockTraffic` , or `AfterBlockTraffic`
-       * deployment lifecycle event to an instance fails, then the deployment continues to the next
-       * deployment lifecycle event.
-       *
-       * For example, if `ApplicationStop` fails, the deployment continues with DownloadBundle. If
-       * `BeforeBlockTraffic` fails, the deployment continues with `BlockTraffic` . If
-       * `AfterBlockTraffic` fails, the deployment continues with `ApplicationStop` .
-       *
-       * If false or not specified, then if a lifecycle event fails during a deployment to an
-       * instance, that deployment fails. If deployment to that instance is part of an overall
-       * deployment and the number of healthy hosts is not less than the minimum number of healthy
-       * hosts, then a deployment to the next instance is attempted.
-       *
-       * During a deployment, the AWS CodeDeploy agent runs the scripts specified for
-       * `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` in the AppSpec file from
-       * the previous successful deployment. (All other scripts are run from the AppSpec file in the
-       * current deployment.) If one of these scripts contains an error and does not run successfully,
-       * the deployment can fail.
-       *
-       * If the cause of the failure is a script from the last successful deployment that will never
-       * run successfully, create a new deployment and use `ignoreApplicationStopFailures` to specify
-       * that the `ApplicationStop` , `BeforeBlockTraffic` , and `AfterBlockTraffic` failures should be
-       * ignored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures)
-       */
-      override fun ignoreApplicationStopFailures(): Any? =
-          unwrap(this).getIgnoreApplicationStopFailures()
-
-      /**
-       * Information about the location of stored application artifacts and the service from which
-       * to retrieve them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-codedeploy-deploymentgroup-deployment-revision)
-       */
-      override fun revision(): Any = unwrap(this).getRevision()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty):
-          DeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty
-    }
-  }
-
-  /**
-   * Information about how traffic is rerouted to instances in a replacement environment in a
-   * blue/green deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * DeploymentReadyOptionProperty deploymentReadyOptionProperty =
-   * DeploymentReadyOptionProperty.builder()
-   * .actionOnTimeout("actionOnTimeout")
-   * .waitTimeInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html)
-   */
-  public interface DeploymentReadyOptionProperty {
-    /**
-     * Information about when to reroute traffic from an original environment to a replacement
-     * environment in a blue/green deployment.
-     *
-     * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
-     * new application revision is installed on the instances in the replacement environment.
-     * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
-     * rerouting is started using
-     * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
-     * . If traffic rerouting is not started before the end of the specified wait period, the
-     * deployment status is changed to Stopped.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-actionontimeout)
-     */
-    public fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
-
-    /**
-     * The number of minutes to wait before the status of a blue/green deployment is changed to
-     * Stopped if rerouting is not started manually.
-     *
-     * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-waittimeinminutes)
-     */
-    public fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
-
-    /**
-     * A builder for [DeploymentReadyOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actionOnTimeout Information about when to reroute traffic from an original
-       * environment to a replacement environment in a blue/green deployment.
-       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
-       * new application revision is installed on the instances in the replacement environment.
-       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
-       * rerouting is started using
-       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
-       * . If traffic rerouting is not started before the end of the specified wait period, the
-       * deployment status is changed to Stopped.
-       */
-      public fun actionOnTimeout(actionOnTimeout: String)
-
-      /**
-       * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green
-       * deployment is changed to Stopped if rerouting is not started manually.
-       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
-       */
-      public fun waitTimeInMinutes(waitTimeInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty.builder()
-
-      /**
-       * @param actionOnTimeout Information about when to reroute traffic from an original
-       * environment to a replacement environment in a blue/green deployment.
-       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
-       * new application revision is installed on the instances in the replacement environment.
-       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
-       * rerouting is started using
-       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
-       * . If traffic rerouting is not started before the end of the specified wait period, the
-       * deployment status is changed to Stopped.
-       */
-      override fun actionOnTimeout(actionOnTimeout: String) {
-        cdkBuilder.actionOnTimeout(actionOnTimeout)
-      }
-
-      /**
-       * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green
-       * deployment is changed to Stopped if rerouting is not started manually.
-       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
-       */
-      override fun waitTimeInMinutes(waitTimeInMinutes: Number) {
-        cdkBuilder.waitTimeInMinutes(waitTimeInMinutes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty,
-    ) : CdkObject(cdkObject), DeploymentReadyOptionProperty {
-      /**
-       * Information about when to reroute traffic from an original environment to a replacement
-       * environment in a blue/green deployment.
-       *
-       * * CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the
-       * new application revision is installed on the instances in the replacement environment.
-       * * STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic
-       * rerouting is started using
-       * [ContinueDeployment](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html)
-       * . If traffic rerouting is not started before the end of the specified wait period, the
-       * deployment status is changed to Stopped.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-actionontimeout)
-       */
-      override fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
-
-      /**
-       * The number of minutes to wait before the status of a blue/green deployment is changed to
-       * Stopped if rerouting is not started manually.
-       *
-       * Applies only to the `STOP_DEPLOYMENT` option for `actionOnTimeout` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html#cfn-codedeploy-deploymentgroup-deploymentreadyoption-waittimeinminutes)
-       */
-      override fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentReadyOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty):
-          DeploymentReadyOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentReadyOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentReadyOptionProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
-    }
-  }
-
-  /**
-   * Information about blue/green deployment options for a deployment group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * BlueGreenDeploymentConfigurationProperty blueGreenDeploymentConfigurationProperty =
-   * BlueGreenDeploymentConfigurationProperty.builder()
-   * .deploymentReadyOption(DeploymentReadyOptionProperty.builder()
-   * .actionOnTimeout("actionOnTimeout")
-   * .waitTimeInMinutes(123)
-   * .build())
-   * .greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty.builder()
-   * .action("action")
-   * .build())
-   * .terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty.builder()
-   * .action("action")
-   * .terminationWaitTimeInMinutes(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-   */
-  public interface BlueGreenDeploymentConfigurationProperty {
-    /**
-     * Information about the action to take when newly provisioned instances are ready to receive
-     * traffic in a blue/green deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-deploymentreadyoption)
-     */
-    public fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
-
-    /**
-     * Information about how instances are provisioned for a replacement environment in a blue/green
-     * deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-greenfleetprovisioningoption)
-     */
-    public fun greenFleetProvisioningOption(): Any? = unwrap(this).getGreenFleetProvisioningOption()
-
-    /**
-     * Information about whether to terminate instances in the original fleet during a blue/green
-     * deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-terminateblueinstancesondeploymentsuccess)
-     */
-    public fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
-        unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
-
-    /**
-     * A builder for [BlueGreenDeploymentConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      public fun deploymentReadyOption(deploymentReadyOption: IResolvable)
-
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      public fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty)
-
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
-      public
-          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      public fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable)
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      public
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty)
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
-      public
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable)
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty)
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
-      public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.builder()
-
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      override fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
-        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      override fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
-        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(DeploymentReadyOptionProperty::unwrap))
-      }
-
-      /**
-       * @param deploymentReadyOption Information about the action to take when newly provisioned
-       * instances are ready to receive traffic in a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
-      override
-          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit):
-          Unit = deploymentReadyOption(DeploymentReadyOptionProperty(deploymentReadyOption))
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      override fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
-        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      override
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty) {
-        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(GreenFleetProvisioningOptionProperty::unwrap))
-      }
-
-      /**
-       * @param greenFleetProvisioningOption Information about how instances are provisioned for a
-       * replacement environment in a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
-      override
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit):
-          Unit =
-          greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty(greenFleetProvisioningOption))
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      override
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable) {
-        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      override
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty) {
-        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(BlueInstanceTerminationOptionProperty::unwrap))
-      }
-
-      /**
-       * @param terminateBlueInstancesOnDeploymentSuccess Information about whether to terminate
-       * instances in the original fleet during a blue/green deployment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
-      override
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit):
-          Unit =
-          terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty(terminateBlueInstancesOnDeploymentSuccess))
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty,
-    ) : CdkObject(cdkObject), BlueGreenDeploymentConfigurationProperty {
-      /**
-       * Information about the action to take when newly provisioned instances are ready to receive
-       * traffic in a blue/green deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-deploymentreadyoption)
-       */
-      override fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
-
-      /**
-       * Information about how instances are provisioned for a replacement environment in a
-       * blue/green deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-greenfleetprovisioningoption)
-       */
-      override fun greenFleetProvisioningOption(): Any? =
-          unwrap(this).getGreenFleetProvisioningOption()
-
-      /**
-       * Information about whether to terminate instances in the original fleet during a blue/green
-       * deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration-terminateblueinstancesondeploymentsuccess)
-       */
-      override fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
-          unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          BlueGreenDeploymentConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty):
-          BlueGreenDeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlueGreenDeploymentConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BlueGreenDeploymentConfigurationProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
-    }
-  }
-
-  /**
-   * The `AlarmConfiguration` property type configures CloudWatch alarms for an AWS CodeDeploy
-   * deployment group.
-   *
-   * `AlarmConfiguration` is a property of the
-   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * AlarmConfigurationProperty alarmConfigurationProperty = AlarmConfigurationProperty.builder()
-   * .alarms(List.of(AlarmProperty.builder()
-   * .name("name")
-   * .build()))
-   * .enabled(false)
-   * .ignorePollAlarmFailure(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html)
-   */
-  public interface AlarmConfigurationProperty {
-    /**
-     * A list of alarms configured for the deployment or deployment group.
-     *
-     * A maximum of 10 alarms can be added.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)
-     */
-    public fun alarms(): Any? = unwrap(this).getAlarms()
-
-    /**
-     * Indicates whether the alarm configuration is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * Indicates whether a deployment should continue if information about the current state of
-     * alarms cannot be retrieved from Amazon CloudWatch .
-     *
-     * The default value is `false` .
-     *
-     * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-     * CloudWatch .
-     * * `false` : The deployment stops if alarm status information can't be retrieved from
-     * CloudWatch .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure)
-     */
-    public fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
-
-    /**
-     * A builder for [AlarmConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      public fun alarms(alarms: IResolvable)
-
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      public fun alarms(alarms: List<Any>)
-
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      public fun alarms(vararg alarms: Any)
-
-      /**
-       * @param enabled Indicates whether the alarm configuration is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether the alarm configuration is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
-       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
-       * The default value is `false` .
-       *
-       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-       * CloudWatch .
-       * * `false` : The deployment stops if alarm status information can't be retrieved from
-       * CloudWatch .
-       */
-      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean)
-
-      /**
-       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
-       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
-       * The default value is `false` .
-       *
-       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-       * CloudWatch .
-       * * `false` : The deployment stops if alarm status information can't be retrieved from
-       * CloudWatch .
-       */
-      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty.builder()
-
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      override fun alarms(alarms: List<Any>) {
-        cdkBuilder.alarms(alarms)
-      }
-
-      /**
-       * @param alarms A list of alarms configured for the deployment or deployment group.
-       * A maximum of 10 alarms can be added.
-       */
-      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
-
-      /**
-       * @param enabled Indicates whether the alarm configuration is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether the alarm configuration is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
-       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
-       * The default value is `false` .
-       *
-       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-       * CloudWatch .
-       * * `false` : The deployment stops if alarm status information can't be retrieved from
-       * CloudWatch .
-       */
-      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean) {
-        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure)
-      }
-
-      /**
-       * @param ignorePollAlarmFailure Indicates whether a deployment should continue if information
-       * about the current state of alarms cannot be retrieved from Amazon CloudWatch .
-       * The default value is `false` .
-       *
-       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-       * CloudWatch .
-       * * `false` : The deployment stops if alarm status information can't be retrieved from
-       * CloudWatch .
-       */
-      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
-        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty,
-    ) : CdkObject(cdkObject), AlarmConfigurationProperty {
-      /**
-       * A list of alarms configured for the deployment or deployment group.
-       *
-       * A maximum of 10 alarms can be added.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)
-       */
-      override fun alarms(): Any? = unwrap(this).getAlarms()
-
-      /**
-       * Indicates whether the alarm configuration is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * Indicates whether a deployment should continue if information about the current state of
-       * alarms cannot be retrieved from Amazon CloudWatch .
-       *
-       * The default value is `false` .
-       *
-       * * `true` : The deployment proceeds even if alarm status information can't be retrieved from
-       * CloudWatch .
-       * * `false` : The deployment stops if alarm status information can't be retrieved from
-       * CloudWatch .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure)
-       */
-      override fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty):
-          AlarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AlarmConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AlarmConfigurationProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty
-    }
-  }
-
-  /**
-   * Information about the instances that belong to the replacement environment in a blue/green
-   * deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * GreenFleetProvisioningOptionProperty greenFleetProvisioningOptionProperty =
-   * GreenFleetProvisioningOptionProperty.builder()
-   * .action("action")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html)
-   */
-  public interface GreenFleetProvisioningOptionProperty {
-    /**
-     * The method used to add instances to a replacement environment.
-     *
-     * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
-     * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define and
-     * create instances in a new Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html#cfn-codedeploy-deploymentgroup-greenfleetprovisioningoption-action)
-     */
-    public fun action(): String? = unwrap(this).getAction()
-
-    /**
-     * A builder for [GreenFleetProvisioningOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The method used to add instances to a replacement environment.
-       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
-       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
-       * and create instances in a new Auto Scaling group.
-       */
-      public fun action(action: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty.builder()
-
-      /**
-       * @param action The method used to add instances to a replacement environment.
-       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
-       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
-       * and create instances in a new Auto Scaling group.
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty,
-    ) : CdkObject(cdkObject), GreenFleetProvisioningOptionProperty {
-      /**
-       * The method used to add instances to a replacement environment.
-       *
-       * * `DISCOVER_EXISTING` : Use instances that already exist or will be created manually.
-       * * `COPY_AUTO_SCALING_GROUP` : Use settings from a specified Auto Scaling group to define
-       * and create instances in a new Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-greenfleetprovisioningoption.html#cfn-codedeploy-deploymentgroup-greenfleetprovisioningoption-action)
-       */
-      override fun action(): String? = unwrap(this).getAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          GreenFleetProvisioningOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty):
-          GreenFleetProvisioningOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GreenFleetProvisioningOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GreenFleetProvisioningOptionProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
-    }
-  }
-
-  /**
-   * The `TargetGroupInfo` property type specifies information about a target group in Elastic Load
-   * Balancing to use in a deployment.
-   *
-   * Instances are registered as targets in a target group, and traffic is routed to the target
-   * group. For more information, see
-   * [TargetGroupInfo](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TargetGroupInfo.html)
-   * in the *AWS CodeDeploy API Reference*
-   *
-   * If you specify the `TargetGroupInfo` property, the `DeploymentStyle.DeploymentOption` property
-   * must be set to `WITH_TRAFFIC_CONTROL` for CodeDeploy to route your traffic using the specified
-   * target groups.
-   *
-   * `TargetGroupInfo` is a property of the
-   * [LoadBalancerInfo](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html)
+   * `OnPremisesTagSetListObject` is a property of the [CodeDeploy DeploymentGroup
+   * OnPremisesTagSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html)
    * property type.
    *
    * Example:
@@ -4080,243 +4898,105 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TargetGroupInfoProperty targetGroupInfoProperty = TargetGroupInfoProperty.builder()
-   * .name("name")
+   * OnPremisesTagSetListObjectProperty onPremisesTagSetListObjectProperty =
+   * OnPremisesTagSetListObjectProperty.builder()
+   * .onPremisesTagGroup(List.of(TagFilterProperty.builder()
+   * .key("key")
+   * .type("type")
+   * .value("value")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html)
    */
-  public interface TargetGroupInfoProperty {
+  public interface OnPremisesTagSetListObjectProperty {
     /**
-     * For blue/green deployments, the name of the target group that instances in the original
-     * environment are deregistered from, and instances in the replacement environment registered with.
+     * Information about groups of on-premises instance tags.
      *
-     * For in-place deployments, the name of the target group that instances are deregistered from,
-     * so they are not serving traffic during a deployment, and then re-registered with after the
-     * deployment completes. No duplicates allowed.
-     *
-     *
-     * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-     *
-     *
-     * This value cannot exceed 32 characters, so you should use the `Name` property of the target
-     * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown in
-     * the following example. Don't use the group's Amazon Resource Name (ARN) or `TargetGroupFullName`
-     * attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)
      */
-    public fun name(): String? = unwrap(this).getName()
+    public fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
 
     /**
-     * A builder for [TargetGroupInfoProperty]
+     * A builder for [OnPremisesTagSetListObjectProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name For blue/green deployments, the name of the target group that instances in the
-       * original environment are deregistered from, and instances in the replacement environment
-       * registered with.
-       * For in-place deployments, the name of the target group that instances are deregistered
-       * from, so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment completes. No duplicates allowed.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       *
-       *
-       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
-       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
-       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
-       * `TargetGroupFullName` attribute.
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
        */
-      public fun name(name: String)
+      public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable)
+
+      /**
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+       */
+      public fun onPremisesTagGroup(onPremisesTagGroup: List<Any>)
+
+      /**
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+       */
+      public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty.Builder
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.Builder
           =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.builder()
 
       /**
-       * @param name For blue/green deployments, the name of the target group that instances in the
-       * original environment are deregistered from, and instances in the replacement environment
-       * registered with.
-       * For in-place deployments, the name of the target group that instances are deregistered
-       * from, so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment completes. No duplicates allowed.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       *
-       *
-       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
-       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
-       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
-       * `TargetGroupFullName` attribute.
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
+        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+       */
+      override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
+        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
+      }
+
+      /**
+       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
+       */
+      override fun onPremisesTagGroup(vararg onPremisesTagGroup: Any): Unit =
+          onPremisesTagGroup(onPremisesTagGroup.toList())
+
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty,
-    ) : CdkObject(cdkObject), TargetGroupInfoProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty,
+    ) : CdkObject(cdkObject), OnPremisesTagSetListObjectProperty {
       /**
-       * For blue/green deployments, the name of the target group that instances in the original
-       * environment are deregistered from, and instances in the replacement environment registered
-       * with.
+       * Information about groups of on-premises instance tags.
        *
-       * For in-place deployments, the name of the target group that instances are deregistered
-       * from, so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment completes. No duplicates allowed.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       *
-       *
-       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
-       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
-       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
-       * `TargetGroupFullName` attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupInfoProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnPremisesTagSetListObjectProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty):
-          TargetGroupInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupInfoProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty):
+          OnPremisesTagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnPremisesTagSetListObjectProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TargetGroupInfoProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty
-    }
-  }
-
-  /**
-   * Contains the service and cluster names used to identify an Amazon ECS deployment's target.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * ECSServiceProperty eCSServiceProperty = ECSServiceProperty.builder()
-   * .clusterName("clusterName")
-   * .serviceName("serviceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html)
-   */
-  public interface ECSServiceProperty {
-    /**
-     * The name of the cluster that the Amazon ECS service is associated with.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-clustername)
-     */
-    public fun clusterName(): String
-
-    /**
-     * The name of the target Amazon ECS service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-servicename)
-     */
-    public fun serviceName(): String
-
-    /**
-     * A builder for [ECSServiceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clusterName The name of the cluster that the Amazon ECS service is associated with. 
-       */
-      public fun clusterName(clusterName: String)
-
-      /**
-       * @param serviceName The name of the target Amazon ECS service. 
-       */
-      public fun serviceName(serviceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.builder()
-
-      /**
-       * @param clusterName The name of the cluster that the Amazon ECS service is associated with. 
-       */
-      override fun clusterName(clusterName: String) {
-        cdkBuilder.clusterName(clusterName)
-      }
-
-      /**
-       * @param serviceName The name of the target Amazon ECS service. 
-       */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty,
-    ) : CdkObject(cdkObject), ECSServiceProperty {
-      /**
-       * The name of the cluster that the Amazon ECS service is associated with.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-clustername)
-       */
-      override fun clusterName(): String = unwrap(this).getClusterName()
-
-      /**
-       * The name of the target Amazon ECS service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ecsservice.html#cfn-codedeploy-deploymentgroup-ecsservice-servicename)
-       */
-      override fun serviceName(): String = unwrap(this).getServiceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ECSServiceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty):
-          ECSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as? ECSServiceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ECSServiceProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty
+      internal fun unwrap(wrapped: OnPremisesTagSetListObjectProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
     }
   }
 
@@ -4451,8 +5131,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty,
     ) : CdkObject(cdkObject), OnPremisesTagSetProperty {
       /**
        * A list that contains other lists of on-premises instance tag groups.
@@ -4486,10 +5165,8 @@ public open class CfnDeploymentGroup internal constructor(
   }
 
   /**
-   * Information about a listener.
-   *
-   * The listener contains the path used to route traffic that is received from the load balancer to
-   * a target group.
+   * `RevisionLocation` is a property that defines the location of the CodeDeploy application
+   * revision to deploy.
    *
    * Example:
    *
@@ -4497,233 +5174,234 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TrafficRouteProperty trafficRouteProperty = TrafficRouteProperty.builder()
-   * .listenerArns(List.of("listenerArns"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html)
-   */
-  public interface TrafficRouteProperty {
-    /**
-     * The Amazon Resource Name (ARN) of one listener.
-     *
-     * The listener identifies the route between a target group and a load balancer. This is an
-     * array of strings with a maximum size of one.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html#cfn-codedeploy-deploymentgroup-trafficroute-listenerarns)
-     */
-    public fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
-
-    /**
-     * A builder for [TrafficRouteProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
-       * The listener identifies the route between a target group and a load balancer. This is an
-       * array of strings with a maximum size of one.
-       */
-      public fun listenerArns(listenerArns: List<String>)
-
-      /**
-       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
-       * The listener identifies the route between a target group and a load balancer. This is an
-       * array of strings with a maximum size of one.
-       */
-      public fun listenerArns(vararg listenerArns: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty.builder()
-
-      /**
-       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
-       * The listener identifies the route between a target group and a load balancer. This is an
-       * array of strings with a maximum size of one.
-       */
-      override fun listenerArns(listenerArns: List<String>) {
-        cdkBuilder.listenerArns(listenerArns)
-      }
-
-      /**
-       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
-       * The listener identifies the route between a target group and a load balancer. This is an
-       * array of strings with a maximum size of one.
-       */
-      override fun listenerArns(vararg listenerArns: String): Unit =
-          listenerArns(listenerArns.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty,
-    ) : CdkObject(cdkObject), TrafficRouteProperty {
-      /**
-       * The Amazon Resource Name (ARN) of one listener.
-       *
-       * The listener identifies the route between a target group and a load balancer. This is an
-       * array of strings with a maximum size of one.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html#cfn-codedeploy-deploymentgroup-trafficroute-listenerarns)
-       */
-      override fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficRouteProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty):
-          TrafficRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficRouteProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrafficRouteProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty
-    }
-  }
-
-  /**
-   * `GitHubLocation` is a property of the [CodeDeploy DeploymentGroup
-   * Revision](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html)
-   * property that specifies the location of an application revision that is stored in GitHub.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * GitHubLocationProperty gitHubLocationProperty = GitHubLocationProperty.builder()
+   * RevisionLocationProperty revisionLocationProperty = RevisionLocationProperty.builder()
+   * .gitHubLocation(GitHubLocationProperty.builder()
    * .commitId("commitId")
    * .repository("repository")
+   * .build())
+   * .revisionType("revisionType")
+   * .s3Location(S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * // the properties below are optional
+   * .bundleType("bundleType")
+   * .eTag("eTag")
+   * .version("version")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html)
    */
-  public interface GitHubLocationProperty {
+  public interface RevisionLocationProperty {
     /**
-     * The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the
-     * application revision.
+     * Information about the location of application artifacts stored in GitHub.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-commitid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-githublocation)
      */
-    public fun commitId(): String
+    public fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
 
     /**
-     * The GitHub account and repository pair that stores a reference to the commit that represents
-     * the bundled artifacts for the application revision.
+     * The type of application revision:.
      *
-     * Specify the value as `account/repository` .
+     * * S3: An application revision stored in Amazon S3.
+     * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
+     * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
+     * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
+     * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as a
+     * RawString.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-repository)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-revisiontype)
      */
-    public fun repository(): String
+    public fun revisionType(): String? = unwrap(this).getRevisionType()
 
     /**
-     * A builder for [GitHubLocationProperty]
+     * Information about the location of a revision stored in Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-s3location)
+     */
+    public fun s3Location(): Any? = unwrap(this).getS3Location()
+
+    /**
+     * A builder for [RevisionLocationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param commitId The SHA1 commit ID of the GitHub commit that represents the bundled
-       * artifacts for the application revision. 
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
        */
-      public fun commitId(commitId: String)
+      public fun gitHubLocation(gitHubLocation: IResolvable)
 
       /**
-       * @param repository The GitHub account and repository pair that stores a reference to the
-       * commit that represents the bundled artifacts for the application revision. 
-       * Specify the value as `account/repository` .
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
        */
-      public fun repository(repository: String)
+      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty)
+
+      /**
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
+      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit)
+
+      /**
+       * @param revisionType The type of application revision:.
+       * * S3: An application revision stored in Amazon S3.
+       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
+       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
+       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
+       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
+       * a RawString.
+       */
+      public fun revisionType(revisionType: String)
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      public fun s3Location(s3Location: IResolvable)
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      public fun s3Location(s3Location: S3LocationProperty)
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
+      public fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty.Builder
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty.Builder
           =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty.builder()
 
       /**
-       * @param commitId The SHA1 commit ID of the GitHub commit that represents the bundled
-       * artifacts for the application revision. 
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
        */
-      override fun commitId(commitId: String) {
-        cdkBuilder.commitId(commitId)
+      override fun gitHubLocation(gitHubLocation: IResolvable) {
+        cdkBuilder.gitHubLocation(gitHubLocation.let(IResolvable::unwrap))
       }
 
       /**
-       * @param repository The GitHub account and repository pair that stores a reference to the
-       * commit that represents the bundled artifacts for the application revision. 
-       * Specify the value as `account/repository` .
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
        */
-      override fun repository(repository: String) {
-        cdkBuilder.repository(repository)
+      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
+        cdkBuilder.gitHubLocation(gitHubLocation.let(GitHubLocationProperty::unwrap))
       }
+
+      /**
+       * @param gitHubLocation Information about the location of application artifacts stored in
+       * GitHub.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
+      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit): Unit =
+          gitHubLocation(GitHubLocationProperty(gitHubLocation))
+
+      /**
+       * @param revisionType The type of application revision:.
+       * * S3: An application revision stored in Amazon S3.
+       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
+       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
+       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
+       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
+       * a RawString.
+       */
+      override fun revisionType(revisionType: String) {
+        cdkBuilder.revisionType(revisionType)
+      }
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      override fun s3Location(s3Location: IResolvable) {
+        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      override fun s3Location(s3Location: S3LocationProperty) {
+        cdkBuilder.s3Location(s3Location.let(S3LocationProperty::unwrap))
+      }
+
+      /**
+       * @param s3Location Information about the location of a revision stored in Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
+      override fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+          s3Location(S3LocationProperty(s3Location))
 
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty,
-    ) : CdkObject(cdkObject), GitHubLocationProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty,
+    ) : CdkObject(cdkObject), RevisionLocationProperty {
       /**
-       * The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the
-       * application revision.
+       * Information about the location of application artifacts stored in GitHub.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-commitid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-githublocation)
        */
-      override fun commitId(): String = unwrap(this).getCommitId()
+      override fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
 
       /**
-       * The GitHub account and repository pair that stores a reference to the commit that
-       * represents the bundled artifacts for the application revision.
+       * The type of application revision:.
        *
-       * Specify the value as `account/repository` .
+       * * S3: An application revision stored in Amazon S3.
+       * * GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).
+       * * String: A YAML-formatted or JSON-formatted string ( AWS Lambda deployments only).
+       * * AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file
+       * for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as
+       * a RawString.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html#cfn-codedeploy-deploymentgroup-githublocation-repository)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-revisiontype)
        */
-      override fun repository(): String = unwrap(this).getRepository()
+      override fun revisionType(): String? = unwrap(this).getRevisionType()
+
+      /**
+       * Information about the location of a revision stored in Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html#cfn-codedeploy-deploymentgroup-revisionlocation-s3location)
+       */
+      override fun s3Location(): Any? = unwrap(this).getS3Location()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitHubLocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RevisionLocationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty):
-          GitHubLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GitHubLocationProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty):
+          RevisionLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? RevisionLocationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: GitHubLocationProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty =
+      internal fun unwrap(wrapped: RevisionLocationProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty
     }
   }
 
   /**
-   * Information about notification triggers for the deployment group.
+   * `S3Location` is a property of the [CodeDeploy DeploymentGroup
+   * Revision](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html)
+   * property that specifies the location of an application revision that is stored in Amazon Simple
+   * Storage Service ( Amazon S3 ).
    *
    * Example:
    *
@@ -4731,146 +5409,546 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
-   * .triggerEvents(List.of("triggerEvents"))
-   * .triggerName("triggerName")
-   * .triggerTargetArn("triggerTargetArn")
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * // the properties below are optional
+   * .bundleType("bundleType")
+   * .eTag("eTag")
+   * .version("version")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html)
    */
-  public interface TriggerConfigProperty {
+  public interface S3LocationProperty {
     /**
-     * The event type or types that trigger notifications.
+     * The name of the Amazon S3 bucket where the application revision is stored.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bucket)
      */
-    public fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?: emptyList()
+    public fun bucket(): String
 
     /**
-     * The name of the notification trigger.
+     * The file type of the application revision. Must be one of the following:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)
+     * * JSON
+     * * tar: A tar archive file.
+     * * tgz: A compressed tar archive file.
+     * * YAML
+     * * zip: A zip archive file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bundletype)
      */
-    public fun triggerName(): String? = unwrap(this).getTriggerName()
+    public fun bundleType(): String? = unwrap(this).getBundleType()
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic through which
-     * notifications about deployment or instance events are sent.
+     * The ETag of the Amazon S3 object that represents the bundled artifacts for the application
+     * revision.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)
+     * If the ETag is not specified as an input parameter, ETag validation of the object is skipped.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-etag)
      */
-    public fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
+    public fun eTag(): String? = unwrap(this).getETag()
 
     /**
-     * A builder for [TriggerConfigProperty]
+     * The name of the Amazon S3 object that represents the bundled artifacts for the application
+     * revision.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-key)
+     */
+    public fun key(): String
+
+    /**
+     * A specific version of the Amazon S3 object that represents the bundled artifacts for the
+     * application revision.
+     *
+     * If the version is not specified, the system uses the most recent version by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [S3LocationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param triggerEvents The event type or types that trigger notifications.
+       * @param bucket The name of the Amazon S3 bucket where the application revision is stored. 
        */
-      public fun triggerEvents(triggerEvents: List<String>)
+      public fun bucket(bucket: String)
 
       /**
-       * @param triggerEvents The event type or types that trigger notifications.
+       * @param bundleType The file type of the application revision. Must be one of the following:.
+       * * JSON
+       * * tar: A tar archive file.
+       * * tgz: A compressed tar archive file.
+       * * YAML
+       * * zip: A zip archive file.
        */
-      public fun triggerEvents(vararg triggerEvents: String)
+      public fun bundleType(bundleType: String)
 
       /**
-       * @param triggerName The name of the notification trigger.
+       * @param eTag The ETag of the Amazon S3 object that represents the bundled artifacts for the
+       * application revision.
+       * If the ETag is not specified as an input parameter, ETag validation of the object is
+       * skipped.
        */
-      public fun triggerName(triggerName: String)
+      public fun eTag(eTag: String)
 
       /**
-       * @param triggerTargetArn The Amazon Resource Name (ARN) of the Amazon Simple Notification
-       * Service topic through which notifications about deployment or instance events are sent.
+       * @param key The name of the Amazon S3 object that represents the bundled artifacts for the
+       * application revision. 
        */
-      public fun triggerTargetArn(triggerTargetArn: String)
+      public fun key(key: String)
+
+      /**
+       * @param version A specific version of the Amazon S3 object that represents the bundled
+       * artifacts for the application revision.
+       * If the version is not specified, the system uses the most recent version by default.
+       */
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.builder()
 
       /**
-       * @param triggerEvents The event type or types that trigger notifications.
+       * @param bucket The name of the Amazon S3 bucket where the application revision is stored. 
        */
-      override fun triggerEvents(triggerEvents: List<String>) {
-        cdkBuilder.triggerEvents(triggerEvents)
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
       }
 
       /**
-       * @param triggerEvents The event type or types that trigger notifications.
+       * @param bundleType The file type of the application revision. Must be one of the following:.
+       * * JSON
+       * * tar: A tar archive file.
+       * * tgz: A compressed tar archive file.
+       * * YAML
+       * * zip: A zip archive file.
        */
-      override fun triggerEvents(vararg triggerEvents: String): Unit =
-          triggerEvents(triggerEvents.toList())
-
-      /**
-       * @param triggerName The name of the notification trigger.
-       */
-      override fun triggerName(triggerName: String) {
-        cdkBuilder.triggerName(triggerName)
+      override fun bundleType(bundleType: String) {
+        cdkBuilder.bundleType(bundleType)
       }
 
       /**
-       * @param triggerTargetArn The Amazon Resource Name (ARN) of the Amazon Simple Notification
-       * Service topic through which notifications about deployment or instance events are sent.
+       * @param eTag The ETag of the Amazon S3 object that represents the bundled artifacts for the
+       * application revision.
+       * If the ETag is not specified as an input parameter, ETag validation of the object is
+       * skipped.
        */
-      override fun triggerTargetArn(triggerTargetArn: String) {
-        cdkBuilder.triggerTargetArn(triggerTargetArn)
+      override fun eTag(eTag: String) {
+        cdkBuilder.eTag(eTag)
+      }
+
+      /**
+       * @param key The name of the Amazon S3 object that represents the bundled artifacts for the
+       * application revision. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param version A specific version of the Amazon S3 object that represents the bundled
+       * artifacts for the application revision.
+       * If the version is not specified, the system uses the most recent version by default.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
       }
 
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty,
-    ) : CdkObject(cdkObject), TriggerConfigProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
       /**
-       * The event type or types that trigger notifications.
+       * The name of the Amazon S3 bucket where the application revision is stored.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bucket)
        */
-      override fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?: emptyList()
+      override fun bucket(): String = unwrap(this).getBucket()
 
       /**
-       * The name of the notification trigger.
+       * The file type of the application revision. Must be one of the following:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)
+       * * JSON
+       * * tar: A tar archive file.
+       * * tgz: A compressed tar archive file.
+       * * YAML
+       * * zip: A zip archive file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bundletype)
        */
-      override fun triggerName(): String? = unwrap(this).getTriggerName()
+      override fun bundleType(): String? = unwrap(this).getBundleType()
 
       /**
-       * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic through
-       * which notifications about deployment or instance events are sent.
+       * The ETag of the Amazon S3 object that represents the bundled artifacts for the application
+       * revision.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)
+       * If the ETag is not specified as an input parameter, ETag validation of the object is
+       * skipped.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-etag)
        */
-      override fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
+      override fun eTag(): String? = unwrap(this).getETag()
+
+      /**
+       * The name of the Amazon S3 object that represents the bundled artifacts for the application
+       * revision.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * A specific version of the Amazon S3 object that represents the bundled artifacts for the
+       * application revision.
+       *
+       * If the version is not specified, the system uses the most recent version by default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty):
-          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TriggerConfigProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty =
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty
+    }
+  }
+
+  /**
+   * `TagFilter` is a property type of the
+   * [AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+   * resource that specifies which on-premises instances to associate with the deployment group. To
+   * register on-premise instances with AWS CodeDeploy , see [Configure Existing On-Premises Instances
+   * by Using AWS
+   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html) in
+   * the *AWS CodeDeploy User Guide* .
+   *
+   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
+   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
+   * *AWS CodeDeploy User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
+   * .key("key")
+   * .type("type")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html)
+   */
+  public interface TagFilterProperty {
+    /**
+     * The on-premises instance tag filter key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The on-premises instance tag filter type:.
+     *
+     * * KEY_ONLY: Key only.
+     * * VALUE_ONLY: Value only.
+     * * KEY_AND_VALUE: Key and value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The on-premises instance tag filter value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [TagFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The on-premises instance tag filter key.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param type The on-premises instance tag filter type:.
+       * * KEY_ONLY: Key only.
+       * * VALUE_ONLY: Value only.
+       * * KEY_AND_VALUE: Key and value.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The on-premises instance tag filter value.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.Builder =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.builder()
+
+      /**
+       * @param key The on-premises instance tag filter key.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param type The on-premises instance tag filter type:.
+       * * KEY_ONLY: Key only.
+       * * VALUE_ONLY: Value only.
+       * * KEY_AND_VALUE: Key and value.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The on-premises instance tag filter value.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty,
+    ) : CdkObject(cdkObject), TagFilterProperty {
+      /**
+       * The on-premises instance tag filter key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The on-premises instance tag filter type:.
+       *
+       * * KEY_ONLY: Key only.
+       * * VALUE_ONLY: Value only.
+       * * KEY_AND_VALUE: Key and value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The on-premises instance tag filter value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty):
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TagFilterProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty
+    }
+  }
+
+  /**
+   * The `TargetGroupInfo` property type specifies information about a target group in Elastic Load
+   * Balancing to use in a deployment.
+   *
+   * Instances are registered as targets in a target group, and traffic is routed to the target
+   * group. For more information, see
+   * [TargetGroupInfo](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_TargetGroupInfo.html)
+   * in the *AWS CodeDeploy API Reference*
+   *
+   * If you specify the `TargetGroupInfo` property, the `DeploymentStyle.DeploymentOption` property
+   * must be set to `WITH_TRAFFIC_CONTROL` for CodeDeploy to route your traffic using the specified
+   * target groups.
+   *
+   * `TargetGroupInfo` is a property of the
+   * [LoadBalancerInfo](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+   * TargetGroupInfoProperty targetGroupInfoProperty = TargetGroupInfoProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html)
+   */
+  public interface TargetGroupInfoProperty {
+    /**
+     * For blue/green deployments, the name of the target group that instances in the original
+     * environment are deregistered from, and instances in the replacement environment registered with.
+     *
+     * For in-place deployments, the name of the target group that instances are deregistered from,
+     * so they are not serving traffic during a deployment, and then re-registered with after the
+     * deployment completes. No duplicates allowed.
+     *
+     *
+     * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+     *
+     *
+     * This value cannot exceed 32 characters, so you should use the `Name` property of the target
+     * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown in
+     * the following example. Don't use the group's Amazon Resource Name (ARN) or `TargetGroupFullName`
+     * attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [TargetGroupInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name For blue/green deployments, the name of the target group that instances in the
+       * original environment are deregistered from, and instances in the replacement environment
+       * registered with.
+       * For in-place deployments, the name of the target group that instances are deregistered
+       * from, so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment completes. No duplicates allowed.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       *
+       *
+       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
+       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
+       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
+       * `TargetGroupFullName` attribute.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty.builder()
+
+      /**
+       * @param name For blue/green deployments, the name of the target group that instances in the
+       * original environment are deregistered from, and instances in the replacement environment
+       * registered with.
+       * For in-place deployments, the name of the target group that instances are deregistered
+       * from, so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment completes. No duplicates allowed.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       *
+       *
+       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
+       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
+       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
+       * `TargetGroupFullName` attribute.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty,
+    ) : CdkObject(cdkObject), TargetGroupInfoProperty {
+      /**
+       * For blue/green deployments, the name of the target group that instances in the original
+       * environment are deregistered from, and instances in the replacement environment registered
+       * with.
+       *
+       * For in-place deployments, the name of the target group that instances are deregistered
+       * from, so they are not serving traffic during a deployment, and then re-registered with after
+       * the deployment completes. No duplicates allowed.
+       *
+       *
+       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
+       *
+       *
+       * This value cannot exceed 32 characters, so you should use the `Name` property of the target
+       * group, or the `TargetGroupName` attribute with the `Fn::GetAtt` intrinsic function, as shown
+       * in the following example. Don't use the group's Amazon Resource Name (ARN) or
+       * `TargetGroupFullName` attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetGroupInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty):
+          TargetGroupInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetGroupInfoProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty
     }
   }
 
@@ -5090,8 +6168,7 @@ public open class CfnDeploymentGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty,
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty,
     ) : CdkObject(cdkObject), TargetGroupPairInfoProperty {
       /**
        * The path used by a load balancer to route production traffic when an Amazon ECS deployment
@@ -5141,10 +6218,10 @@ public open class CfnDeploymentGroup internal constructor(
   }
 
   /**
-   * Information about whether instances in the original environment are terminated when a
-   * blue/green deployment is successful.
+   * Information about a listener.
    *
-   * `BlueInstanceTerminationOption` does not apply to Lambda deployments.
+   * The listener contains the path used to route traffic that is received from the load balancer to
+   * a target group.
    *
    * Example:
    *
@@ -5152,505 +6229,106 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * BlueInstanceTerminationOptionProperty blueInstanceTerminationOptionProperty =
-   * BlueInstanceTerminationOptionProperty.builder()
-   * .action("action")
-   * .terminationWaitTimeInMinutes(123)
+   * TrafficRouteProperty trafficRouteProperty = TrafficRouteProperty.builder()
+   * .listenerArns(List.of("listenerArns"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html)
    */
-  public interface BlueInstanceTerminationOptionProperty {
+  public interface TrafficRouteProperty {
     /**
-     * The action to take on instances in the original environment after a successful blue/green
-     * deployment.
+     * The Amazon Resource Name (ARN) of one listener.
      *
-     * * `TERMINATE` : Instances are terminated after a specified wait time.
-     * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
-     * balancer and removed from the deployment group.
+     * The listener identifies the route between a target group and a load balancer. This is an
+     * array of strings with a maximum size of one.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-action)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html#cfn-codedeploy-deploymentgroup-trafficroute-listenerarns)
      */
-    public fun action(): String? = unwrap(this).getAction()
+    public fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
 
     /**
-     * For an Amazon EC2 deployment, the number of minutes to wait after a successful blue/green
-     * deployment before terminating instances from the original environment.
-     *
-     * For an Amazon ECS deployment, the number of minutes before deleting the original (blue) task
-     * set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue) task
-     * set to a replacement (green) task set.
-     *
-     * The maximum setting is 2880 minutes (2 days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-terminationwaittimeinminutes)
-     */
-    public fun terminationWaitTimeInMinutes(): Number? =
-        unwrap(this).getTerminationWaitTimeInMinutes()
-
-    /**
-     * A builder for [BlueInstanceTerminationOptionProperty]
+     * A builder for [TrafficRouteProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param action The action to take on instances in the original environment after a
-       * successful blue/green deployment.
-       * * `TERMINATE` : Instances are terminated after a specified wait time.
-       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
-       * balancer and removed from the deployment group.
+       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
+       * The listener identifies the route between a target group and a load balancer. This is an
+       * array of strings with a maximum size of one.
        */
-      public fun action(action: String)
+      public fun listenerArns(listenerArns: List<String>)
 
       /**
-       * @param terminationWaitTimeInMinutes For an Amazon EC2 deployment, the number of minutes to
-       * wait after a successful blue/green deployment before terminating instances from the original
-       * environment.
-       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
-       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
-       * task set to a replacement (green) task set.
-       *
-       * The maximum setting is 2880 minutes (2 days).
+       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
+       * The listener identifies the route between a target group and a load balancer. This is an
+       * array of strings with a maximum size of one.
        */
-      public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
+      public fun listenerArns(vararg listenerArns: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty.Builder
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty.Builder
           =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty.builder()
 
       /**
-       * @param action The action to take on instances in the original environment after a
-       * successful blue/green deployment.
-       * * `TERMINATE` : Instances are terminated after a specified wait time.
-       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
-       * balancer and removed from the deployment group.
+       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
+       * The listener identifies the route between a target group and a load balancer. This is an
+       * array of strings with a maximum size of one.
        */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
+      override fun listenerArns(listenerArns: List<String>) {
+        cdkBuilder.listenerArns(listenerArns)
       }
 
       /**
-       * @param terminationWaitTimeInMinutes For an Amazon EC2 deployment, the number of minutes to
-       * wait after a successful blue/green deployment before terminating instances from the original
-       * environment.
-       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
-       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
-       * task set to a replacement (green) task set.
-       *
-       * The maximum setting is 2880 minutes (2 days).
+       * @param listenerArns The Amazon Resource Name (ARN) of one listener.
+       * The listener identifies the route between a target group and a load balancer. This is an
+       * array of strings with a maximum size of one.
        */
-      override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
-        cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
-      }
+      override fun listenerArns(vararg listenerArns: String): Unit =
+          listenerArns(listenerArns.toList())
 
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty,
-    ) : CdkObject(cdkObject), BlueInstanceTerminationOptionProperty {
-      /**
-       * The action to take on instances in the original environment after a successful blue/green
-       * deployment.
-       *
-       * * `TERMINATE` : Instances are terminated after a specified wait time.
-       * * `KEEP_ALIVE` : Instances are left running after they are deregistered from the load
-       * balancer and removed from the deployment group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-action)
-       */
-      override fun action(): String? = unwrap(this).getAction()
-
-      /**
-       * For an Amazon EC2 deployment, the number of minutes to wait after a successful blue/green
-       * deployment before terminating instances from the original environment.
-       *
-       * For an Amazon ECS deployment, the number of minutes before deleting the original (blue)
-       * task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue)
-       * task set to a replacement (green) task set.
-       *
-       * The maximum setting is 2880 minutes (2 days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-blueinstanceterminationoption.html#cfn-codedeploy-deploymentgroup-blueinstanceterminationoption-terminationwaittimeinminutes)
-       */
-      override fun terminationWaitTimeInMinutes(): Number? =
-          unwrap(this).getTerminationWaitTimeInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          BlueInstanceTerminationOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty):
-          BlueInstanceTerminationOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlueInstanceTerminationOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BlueInstanceTerminationOptionProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
-    }
-  }
-
-  /**
-   * The `Alarm` property type specifies a CloudWatch alarm to use for an AWS CodeDeploy deployment
-   * group.
-   *
-   * The `Alarm` property of the [CodeDeploy DeploymentGroup
-   * AlarmConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html)
-   * property contains a list of `Alarm` property types.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * AlarmProperty alarmProperty = AlarmProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html)
-   */
-  public interface AlarmProperty {
-    /**
-     * The name of the alarm.
-     *
-     * Maximum length is 255 characters. Each alarm name can be used only once in a list of alarms.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html#cfn-codedeploy-deploymentgroup-alarm-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [AlarmProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the alarm.
-       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
-       * alarms.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.builder()
-
-      /**
-       * @param name The name of the alarm.
-       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
-       * alarms.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty,
-    ) : CdkObject(cdkObject), AlarmProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty,
+    ) : CdkObject(cdkObject), TrafficRouteProperty {
       /**
-       * The name of the alarm.
+       * The Amazon Resource Name (ARN) of one listener.
        *
-       * Maximum length is 255 characters. Each alarm name can be used only once in a list of
-       * alarms.
+       * The listener identifies the route between a target group and a load balancer. This is an
+       * array of strings with a maximum size of one.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html#cfn-codedeploy-deploymentgroup-alarm-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-trafficroute.html#cfn-codedeploy-deploymentgroup-trafficroute-listenerarns)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficRouteProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty):
-          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AlarmProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty
-    }
-  }
-
-  /**
-   * `S3Location` is a property of the [CodeDeploy DeploymentGroup
-   * Revision](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html)
-   * property that specifies the location of an application revision that is stored in Amazon Simple
-   * Storage Service ( Amazon S3 ).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * // the properties below are optional
-   * .bundleType("bundleType")
-   * .eTag("eTag")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * The name of the Amazon S3 bucket where the application revision is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * The file type of the application revision. Must be one of the following:.
-     *
-     * * JSON
-     * * tar: A tar archive file.
-     * * tgz: A compressed tar archive file.
-     * * YAML
-     * * zip: A zip archive file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bundletype)
-     */
-    public fun bundleType(): String? = unwrap(this).getBundleType()
-
-    /**
-     * The ETag of the Amazon S3 object that represents the bundled artifacts for the application
-     * revision.
-     *
-     * If the ETag is not specified as an input parameter, ETag validation of the object is skipped.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-etag)
-     */
-    public fun eTag(): String? = unwrap(this).getETag()
-
-    /**
-     * The name of the Amazon S3 object that represents the bundled artifacts for the application
-     * revision.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-key)
-     */
-    public fun key(): String
-
-    /**
-     * A specific version of the Amazon S3 object that represents the bundled artifacts for the
-     * application revision.
-     *
-     * If the version is not specified, the system uses the most recent version by default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The name of the Amazon S3 bucket where the application revision is stored. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param bundleType The file type of the application revision. Must be one of the following:.
-       * * JSON
-       * * tar: A tar archive file.
-       * * tgz: A compressed tar archive file.
-       * * YAML
-       * * zip: A zip archive file.
-       */
-      public fun bundleType(bundleType: String)
-
-      /**
-       * @param eTag The ETag of the Amazon S3 object that represents the bundled artifacts for the
-       * application revision.
-       * If the ETag is not specified as an input parameter, ETag validation of the object is
-       * skipped.
-       */
-      public fun eTag(eTag: String)
-
-      /**
-       * @param key The name of the Amazon S3 object that represents the bundled artifacts for the
-       * application revision. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param version A specific version of the Amazon S3 object that represents the bundled
-       * artifacts for the application revision.
-       * If the version is not specified, the system uses the most recent version by default.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.builder()
-
-      /**
-       * @param bucket The name of the Amazon S3 bucket where the application revision is stored. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param bundleType The file type of the application revision. Must be one of the following:.
-       * * JSON
-       * * tar: A tar archive file.
-       * * tgz: A compressed tar archive file.
-       * * YAML
-       * * zip: A zip archive file.
-       */
-      override fun bundleType(bundleType: String) {
-        cdkBuilder.bundleType(bundleType)
-      }
-
-      /**
-       * @param eTag The ETag of the Amazon S3 object that represents the bundled artifacts for the
-       * application revision.
-       * If the ETag is not specified as an input parameter, ETag validation of the object is
-       * skipped.
-       */
-      override fun eTag(eTag: String) {
-        cdkBuilder.eTag(eTag)
-      }
-
-      /**
-       * @param key The name of the Amazon S3 object that represents the bundled artifacts for the
-       * application revision. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param version A specific version of the Amazon S3 object that represents the bundled
-       * artifacts for the application revision.
-       * If the version is not specified, the system uses the most recent version by default.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * The name of the Amazon S3 bucket where the application revision is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * The file type of the application revision. Must be one of the following:.
-       *
-       * * JSON
-       * * tar: A tar archive file.
-       * * tgz: A compressed tar archive file.
-       * * YAML
-       * * zip: A zip archive file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-bundletype)
-       */
-      override fun bundleType(): String? = unwrap(this).getBundleType()
-
-      /**
-       * The ETag of the Amazon S3 object that represents the bundled artifacts for the application
-       * revision.
-       *
-       * If the ETag is not specified as an input parameter, ETag validation of the object is
-       * skipped.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-etag)
-       */
-      override fun eTag(): String? = unwrap(this).getETag()
-
-      /**
-       * The name of the Amazon S3 object that represents the bundled artifacts for the application
-       * revision.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * A specific version of the Amazon S3 object that represents the bundled artifacts for the
-       * application revision.
-       *
-       * If the version is not specified, the system uses the most recent version by default.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-s3location.html#cfn-codedeploy-deploymentgroup-s3location-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty):
+          TrafficRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficRouteProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty =
+      internal fun unwrap(wrapped: TrafficRouteProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty
     }
   }
 
   /**
-   * The `EC2TagSet` property type specifies information about groups of tags applied to Amazon EC2
-   * instances.
-   *
-   * The deployment group includes only Amazon EC2 instances identified by all the tag groups.
-   * `EC2TagSet` cannot be used in the same template as `EC2TagFilter` .
-   *
-   * For information about using tags and tag groups to help manage your Amazon EC2 instances and
-   * on-premises instances, see [Tagging Instances for Deployment Groups in AWS
-   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) .
+   * Information about notification triggers for the deployment group.
    *
    * Example:
    *
@@ -5658,847 +6336,145 @@ public open class CfnDeploymentGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * EC2TagSetProperty eC2TagSetProperty = EC2TagSetProperty.builder()
-   * .ec2TagSetList(List.of(EC2TagSetListObjectProperty.builder()
-   * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
-   * .key("key")
-   * .type("type")
-   * .value("value")
-   * .build()))
-   * .build()))
+   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
+   * .triggerEvents(List.of("triggerEvents"))
+   * .triggerName("triggerName")
+   * .triggerTargetArn("triggerTargetArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html)
    */
-  public interface EC2TagSetProperty {
+  public interface TriggerConfigProperty {
     /**
-     * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to include
-     * in the deployment group.
+     * The event type or types that trigger notifications.
      *
-     * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-     * this deployment group.
-     *
-     * Duplicates are not allowed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)
      */
-    public fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
+    public fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?: emptyList()
 
     /**
-     * A builder for [EC2TagSetProperty]
+     * The name of the notification trigger.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)
+     */
+    public fun triggerName(): String? = unwrap(this).getTriggerName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic through which
+     * notifications about deployment or instance events are sent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)
+     */
+    public fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
+
+    /**
+     * A builder for [TriggerConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
+       * @param triggerEvents The event type or types that trigger notifications.
        */
-      public fun ec2TagSetList(ec2TagSetList: IResolvable)
+      public fun triggerEvents(triggerEvents: List<String>)
 
       /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
+       * @param triggerEvents The event type or types that trigger notifications.
        */
-      public fun ec2TagSetList(ec2TagSetList: List<Any>)
+      public fun triggerEvents(vararg triggerEvents: String)
 
       /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
+       * @param triggerName The name of the notification trigger.
        */
-      public fun ec2TagSetList(vararg ec2TagSetList: Any)
+      public fun triggerName(triggerName: String)
+
+      /**
+       * @param triggerTargetArn The Amazon Resource Name (ARN) of the Amazon Simple Notification
+       * Service topic through which notifications about deployment or instance events are sent.
+       */
+      public fun triggerTargetArn(triggerTargetArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.builder()
-
-      /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
-       */
-      override fun ec2TagSetList(ec2TagSetList: IResolvable) {
-        cdkBuilder.ec2TagSetList(ec2TagSetList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
-       */
-      override fun ec2TagSetList(ec2TagSetList: List<Any>) {
-        cdkBuilder.ec2TagSetList(ec2TagSetList)
-      }
-
-      /**
-       * @param ec2TagSetList The Amazon EC2 tags that are already applied to Amazon EC2 instances
-       * that you want to include in the deployment group.
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
-       */
-      override fun ec2TagSetList(vararg ec2TagSetList: Any): Unit =
-          ec2TagSetList(ec2TagSetList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty,
-    ) : CdkObject(cdkObject), EC2TagSetProperty {
-      /**
-       * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to
-       * include in the deployment group.
-       *
-       * CodeDeploy includes all Amazon EC2 instances identified by any of the tags you specify in
-       * this deployment group.
-       *
-       * Duplicates are not allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist)
-       */
-      override fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagSetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty):
-          EC2TagSetProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagSetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EC2TagSetProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty
-    }
-  }
-
-  /**
-   * Information about an Amazon EC2 tag filter.
-   *
-   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
-   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
-   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
-   * *AWS CodeDeploy User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * EC2TagFilterProperty eC2TagFilterProperty = EC2TagFilterProperty.builder()
-   * .key("key")
-   * .type("type")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html)
-   */
-  public interface EC2TagFilterProperty {
-    /**
-     * The tag filter key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The tag filter type:.
-     *
-     * * `KEY_ONLY` : Key only.
-     * * `VALUE_ONLY` : Value only.
-     * * `KEY_AND_VALUE` : Key and value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * The tag filter value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [EC2TagFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag filter key.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param type The tag filter type:.
-       * * `KEY_ONLY` : Key only.
-       * * `VALUE_ONLY` : Value only.
-       * * `KEY_AND_VALUE` : Key and value.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value The tag filter value.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty.Builder
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty.Builder
           =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty.builder()
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty.builder()
 
       /**
-       * @param key The tag filter key.
+       * @param triggerEvents The event type or types that trigger notifications.
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun triggerEvents(triggerEvents: List<String>) {
+        cdkBuilder.triggerEvents(triggerEvents)
       }
 
       /**
-       * @param type The tag filter type:.
-       * * `KEY_ONLY` : Key only.
-       * * `VALUE_ONLY` : Value only.
-       * * `KEY_AND_VALUE` : Key and value.
+       * @param triggerEvents The event type or types that trigger notifications.
        */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun triggerEvents(vararg triggerEvents: String): Unit =
+          triggerEvents(triggerEvents.toList())
+
+      /**
+       * @param triggerName The name of the notification trigger.
+       */
+      override fun triggerName(triggerName: String) {
+        cdkBuilder.triggerName(triggerName)
       }
 
       /**
-       * @param value The tag filter value.
+       * @param triggerTargetArn The Amazon Resource Name (ARN) of the Amazon Simple Notification
+       * Service topic through which notifications about deployment or instance events are sent.
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun triggerTargetArn(triggerTargetArn: String) {
+        cdkBuilder.triggerTargetArn(triggerTargetArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty =
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty,
-    ) : CdkObject(cdkObject), EC2TagFilterProperty {
+      cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty,
+    ) : CdkObject(cdkObject), TriggerConfigProperty {
       /**
-       * The tag filter key.
+       * The event type or types that trigger notifications.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents)
        */
-      override fun key(): String? = unwrap(this).getKey()
+      override fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?: emptyList()
 
       /**
-       * The tag filter type:.
+       * The name of the notification trigger.
        *
-       * * `KEY_ONLY` : Key only.
-       * * `VALUE_ONLY` : Value only.
-       * * `KEY_AND_VALUE` : Key and value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername)
        */
-      override fun type(): String? = unwrap(this).getType()
+      override fun triggerName(): String? = unwrap(this).getTriggerName()
 
       /**
-       * The tag filter value.
+       * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic through
+       * which notifications about deployment or instance events are sent.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn)
        */
-      override fun `value`(): String? = unwrap(this).getValue()
+      override fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty):
-          EC2TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagFilterProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty):
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EC2TagFilterProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty =
+      internal fun unwrap(wrapped: TriggerConfigProperty):
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty
-    }
-  }
-
-  /**
-   * `TagFilter` is a property type of the
-   * [AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
-   * resource that specifies which on-premises instances to associate with the deployment group. To
-   * register on-premise instances with AWS CodeDeploy , see [Configure Existing On-Premises Instances
-   * by Using AWS
-   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html) in
-   * the *AWS CodeDeploy User Guide* .
-   *
-   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
-   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
-   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
-   * *AWS CodeDeploy User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
-   * .key("key")
-   * .type("type")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html)
-   */
-  public interface TagFilterProperty {
-    /**
-     * The on-premises instance tag filter key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The on-premises instance tag filter type:.
-     *
-     * * KEY_ONLY: Key only.
-     * * VALUE_ONLY: Value only.
-     * * KEY_AND_VALUE: Key and value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * The on-premises instance tag filter value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [TagFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The on-premises instance tag filter key.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param type The on-premises instance tag filter type:.
-       * * KEY_ONLY: Key only.
-       * * VALUE_ONLY: Value only.
-       * * KEY_AND_VALUE: Key and value.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value The on-premises instance tag filter value.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.builder()
-
-      /**
-       * @param key The on-premises instance tag filter key.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param type The on-premises instance tag filter type:.
-       * * KEY_ONLY: Key only.
-       * * VALUE_ONLY: Value only.
-       * * KEY_AND_VALUE: Key and value.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value The on-premises instance tag filter value.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty,
-    ) : CdkObject(cdkObject), TagFilterProperty {
-      /**
-       * The on-premises instance tag filter key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The on-premises instance tag filter type:.
-       *
-       * * KEY_ONLY: Key only.
-       * * VALUE_ONLY: Value only.
-       * * KEY_AND_VALUE: Key and value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * The on-premises instance tag filter value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty):
-          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagFilterProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty
-    }
-  }
-
-  /**
-   * The `ELBInfo` property type specifies information about the Elastic Load Balancing load
-   * balancer used for an CodeDeploy deployment group.
-   *
-   * If you specify the `ELBInfo` property, the `DeploymentStyle.DeploymentOption` property must be
-   * set to `WITH_TRAFFIC_CONTROL` for AWS CodeDeploy to route your traffic using the specified load
-   * balancers.
-   *
-   * `ELBInfo` is a property of the [AWS CodeDeploy DeploymentGroup
-   * LoadBalancerInfo](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * ELBInfoProperty eLBInfoProperty = ELBInfoProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html)
-   */
-  public interface ELBInfoProperty {
-    /**
-     * For blue/green deployments, the name of the load balancer that is used to route traffic from
-     * original instances to replacement instances in a blue/green deployment.
-     *
-     * For in-place deployments, the name of the load balancer that instances are deregistered from
-     * so they are not serving traffic during a deployment, and then re-registered with after the
-     * deployment is complete.
-     *
-     *
-     * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html#cfn-codedeploy-deploymentgroup-elbinfo-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [ELBInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name For blue/green deployments, the name of the load balancer that is used to route
-       * traffic from original instances to replacement instances in a blue/green deployment.
-       * For in-place deployments, the name of the load balancer that instances are deregistered
-       * from so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment is complete.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.Builder =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.builder()
-
-      /**
-       * @param name For blue/green deployments, the name of the load balancer that is used to route
-       * traffic from original instances to replacement instances in a blue/green deployment.
-       * For in-place deployments, the name of the load balancer that instances are deregistered
-       * from so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment is complete.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty,
-    ) : CdkObject(cdkObject), ELBInfoProperty {
-      /**
-       * For blue/green deployments, the name of the load balancer that is used to route traffic
-       * from original instances to replacement instances in a blue/green deployment.
-       *
-       * For in-place deployments, the name of the load balancer that instances are deregistered
-       * from so they are not serving traffic during a deployment, and then re-registered with after
-       * the deployment is complete.
-       *
-       *
-       * AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html#cfn-codedeploy-deploymentgroup-elbinfo-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ELBInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty):
-          ELBInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ELBInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ELBInfoProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty
-    }
-  }
-
-  /**
-   * The `OnPremisesTagSetListObject` property type specifies lists of on-premises instance tag
-   * groups.
-   *
-   * In order for an instance to be included in the deployment group, it must be identified by all
-   * the tag groups in the list.
-   *
-   * `OnPremisesTagSetListObject` is a property of the [CodeDeploy DeploymentGroup
-   * OnPremisesTagSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * OnPremisesTagSetListObjectProperty onPremisesTagSetListObjectProperty =
-   * OnPremisesTagSetListObjectProperty.builder()
-   * .onPremisesTagGroup(List.of(TagFilterProperty.builder()
-   * .key("key")
-   * .type("type")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html)
-   */
-  public interface OnPremisesTagSetListObjectProperty {
-    /**
-     * Information about groups of on-premises instance tags.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)
-     */
-    public fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
-
-    /**
-     * A builder for [OnPremisesTagSetListObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable)
-
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      public fun onPremisesTagGroup(onPremisesTagGroup: List<Any>)
-
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.builder()
-
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      override fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
-        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
-        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
-      }
-
-      /**
-       * @param onPremisesTagGroup Information about groups of on-premises instance tags.
-       */
-      override fun onPremisesTagGroup(vararg onPremisesTagGroup: Any): Unit =
-          onPremisesTagGroup(onPremisesTagGroup.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty,
-    ) : CdkObject(cdkObject), OnPremisesTagSetListObjectProperty {
-      /**
-       * Information about groups of on-premises instance tags.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)
-       */
-      override fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OnPremisesTagSetListObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty):
-          OnPremisesTagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OnPremisesTagSetListObjectProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnPremisesTagSetListObjectProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
-    }
-  }
-
-  /**
-   * The `EC2TagSet` property type specifies information about groups of tags applied to Amazon EC2
-   * instances.
-   *
-   * The deployment group includes only Amazon EC2 instances identified by all the tag groups.
-   * Cannot be used in the same template as EC2TagFilters.
-   *
-   * For more information about using tags and tag groups to help manage your Amazon EC2 instances
-   * and on-premises instances, see [Tagging Instances for Deployment Groups in AWS
-   * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
-   * *AWS CodeDeploy User Guide* .
-   *
-   * `EC2TagSet` is a property of the
-   * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
-   * resource type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codedeploy.*;
-   * EC2TagSetListObjectProperty eC2TagSetListObjectProperty = EC2TagSetListObjectProperty.builder()
-   * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
-   * .key("key")
-   * .type("type")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html)
-   */
-  public interface EC2TagSetListObjectProperty {
-    /**
-     * A list that contains other lists of Amazon EC2 instance tag groups.
-     *
-     * For an instance to be included in the deployment group, it must be identified by all of the
-     * tag groups in the list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)
-     */
-    public fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
-
-    /**
-     * A builder for [EC2TagSetListObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      public fun ec2TagGroup(ec2TagGroup: IResolvable)
-
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      public fun ec2TagGroup(ec2TagGroup: List<Any>)
-
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      public fun ec2TagGroup(vararg ec2TagGroup: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty.Builder
-          =
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty.builder()
-
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      override fun ec2TagGroup(ec2TagGroup: IResolvable) {
-        cdkBuilder.ec2TagGroup(ec2TagGroup.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      override fun ec2TagGroup(ec2TagGroup: List<Any>) {
-        cdkBuilder.ec2TagGroup(ec2TagGroup)
-      }
-
-      /**
-       * @param ec2TagGroup A list that contains other lists of Amazon EC2 instance tag groups.
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       */
-      override fun ec2TagGroup(vararg ec2TagGroup: Any): Unit = ec2TagGroup(ec2TagGroup.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty,
-    ) : CdkObject(cdkObject), EC2TagSetListObjectProperty {
-      /**
-       * A list that contains other lists of Amazon EC2 instance tag groups.
-       *
-       * For an instance to be included in the deployment group, it must be identified by all of the
-       * tag groups in the list.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)
-       */
-      override fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EC2TagSetListObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty):
-          EC2TagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EC2TagSetListObjectProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EC2TagSetListObjectProperty):
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty
+          software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty
     }
   }
 }

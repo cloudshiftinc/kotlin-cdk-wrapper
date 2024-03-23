@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)
  */
-public open class CfnLocalGatewayRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute,
+public open class CfnLocalGatewayRoute(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -229,6 +229,7 @@ public open class CfnLocalGatewayRoute internal constructor(
         CfnLocalGatewayRoute = CfnLocalGatewayRoute(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocalGatewayRoute):
-        software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute
   }
 }

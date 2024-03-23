@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -731,11 +731,11 @@ public open class CfnEnvironment internal constructor(
         = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment): software.amazon.awscdk.services.m2.CfnEnvironment
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.m2.CfnEnvironment
   }
 
   /**
-   * Defines the details of a high availability configuration.
+   * Defines the storage configuration for an Amazon EFS file system.
    *
    * Example:
    *
@@ -743,83 +743,104 @@ public open class CfnEnvironment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.m2.*;
-   * HighAvailabilityConfigProperty highAvailabilityConfigProperty =
-   * HighAvailabilityConfigProperty.builder()
-   * .desiredCapacity(123)
+   * EfsStorageConfigurationProperty efsStorageConfigurationProperty =
+   * EfsStorageConfigurationProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .mountPoint("mountPoint")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html)
    */
-  public interface HighAvailabilityConfigProperty {
+  public interface EfsStorageConfigurationProperty {
     /**
-     * The number of instances in a high availability configuration.
+     * The file system identifier.
      *
-     * The minimum possible value is 1 and the maximum is 100.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html#cfn-m2-environment-highavailabilityconfig-desiredcapacity)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-filesystemid)
      */
-    public fun desiredCapacity(): Number
+    public fun fileSystemId(): String
 
     /**
-     * A builder for [HighAvailabilityConfigProperty]
+     * The mount point for the file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-mountpoint)
+     */
+    public fun mountPoint(): String
+
+    /**
+     * A builder for [EfsStorageConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param desiredCapacity The number of instances in a high availability configuration. 
-       * The minimum possible value is 1 and the maximum is 100.
+       * @param fileSystemId The file system identifier. 
        */
-      public fun desiredCapacity(desiredCapacity: Number)
+      public fun fileSystemId(fileSystemId: String)
+
+      /**
+       * @param mountPoint The mount point for the file system. 
+       */
+      public fun mountPoint(mountPoint: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty.Builder =
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty.builder()
+          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty.builder()
 
       /**
-       * @param desiredCapacity The number of instances in a high availability configuration. 
-       * The minimum possible value is 1 and the maximum is 100.
+       * @param fileSystemId The file system identifier. 
        */
-      override fun desiredCapacity(desiredCapacity: Number) {
-        cdkBuilder.desiredCapacity(desiredCapacity)
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      /**
+       * @param mountPoint The mount point for the file system. 
+       */
+      override fun mountPoint(mountPoint: String) {
+        cdkBuilder.mountPoint(mountPoint)
       }
 
       public fun build():
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty =
+          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty,
-    ) : CdkObject(cdkObject), HighAvailabilityConfigProperty {
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty,
+    ) : CdkObject(cdkObject), EfsStorageConfigurationProperty {
       /**
-       * The number of instances in a high availability configuration.
+       * The file system identifier.
        *
-       * The minimum possible value is 1 and the maximum is 100.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html#cfn-m2-environment-highavailabilityconfig-desiredcapacity)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-filesystemid)
        */
-      override fun desiredCapacity(): Number = unwrap(this).getDesiredCapacity()
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+
+      /**
+       * The mount point for the file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-mountpoint)
+       */
+      override fun mountPoint(): String = unwrap(this).getMountPoint()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HighAvailabilityConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EfsStorageConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty):
-          HighAvailabilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HighAvailabilityConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty):
+          EfsStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EfsStorageConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: HighAvailabilityConfigProperty):
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty =
+      internal fun unwrap(wrapped: EfsStorageConfigurationProperty):
+          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty
+          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty
     }
   }
 
@@ -898,8 +919,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty,
     ) : CdkObject(cdkObject), FsxStorageConfigurationProperty {
       /**
        * The file system identifier.
@@ -931,6 +951,94 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty
+    }
+  }
+
+  /**
+   * Defines the details of a high availability configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.m2.*;
+   * HighAvailabilityConfigProperty highAvailabilityConfigProperty =
+   * HighAvailabilityConfigProperty.builder()
+   * .desiredCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html)
+   */
+  public interface HighAvailabilityConfigProperty {
+    /**
+     * The number of instances in a high availability configuration.
+     *
+     * The minimum possible value is 1 and the maximum is 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html#cfn-m2-environment-highavailabilityconfig-desiredcapacity)
+     */
+    public fun desiredCapacity(): Number
+
+    /**
+     * A builder for [HighAvailabilityConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param desiredCapacity The number of instances in a high availability configuration. 
+       * The minimum possible value is 1 and the maximum is 100.
+       */
+      public fun desiredCapacity(desiredCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty.Builder =
+          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty.builder()
+
+      /**
+       * @param desiredCapacity The number of instances in a high availability configuration. 
+       * The minimum possible value is 1 and the maximum is 100.
+       */
+      override fun desiredCapacity(desiredCapacity: Number) {
+        cdkBuilder.desiredCapacity(desiredCapacity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty,
+    ) : CdkObject(cdkObject), HighAvailabilityConfigProperty {
+      /**
+       * The number of instances in a high availability configuration.
+       *
+       * The minimum possible value is 1 and the maximum is 100.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-highavailabilityconfig.html#cfn-m2-environment-highavailabilityconfig-desiredcapacity)
+       */
+      override fun desiredCapacity(): Number = unwrap(this).getDesiredCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HighAvailabilityConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty):
+          HighAvailabilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HighAvailabilityConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HighAvailabilityConfigProperty):
+          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty
     }
   }
 
@@ -1068,8 +1176,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty,
     ) : CdkObject(cdkObject), StorageConfigurationProperty {
       /**
        * Defines the storage configuration for an Amazon EFS file system.
@@ -1101,117 +1208,6 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty
-    }
-  }
-
-  /**
-   * Defines the storage configuration for an Amazon EFS file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.m2.*;
-   * EfsStorageConfigurationProperty efsStorageConfigurationProperty =
-   * EfsStorageConfigurationProperty.builder()
-   * .fileSystemId("fileSystemId")
-   * .mountPoint("mountPoint")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html)
-   */
-  public interface EfsStorageConfigurationProperty {
-    /**
-     * The file system identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-filesystemid)
-     */
-    public fun fileSystemId(): String
-
-    /**
-     * The mount point for the file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-mountpoint)
-     */
-    public fun mountPoint(): String
-
-    /**
-     * A builder for [EfsStorageConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fileSystemId The file system identifier. 
-       */
-      public fun fileSystemId(fileSystemId: String)
-
-      /**
-       * @param mountPoint The mount point for the file system. 
-       */
-      public fun mountPoint(mountPoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty.builder()
-
-      /**
-       * @param fileSystemId The file system identifier. 
-       */
-      override fun fileSystemId(fileSystemId: String) {
-        cdkBuilder.fileSystemId(fileSystemId)
-      }
-
-      /**
-       * @param mountPoint The mount point for the file system. 
-       */
-      override fun mountPoint(mountPoint: String) {
-        cdkBuilder.mountPoint(mountPoint)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty,
-    ) : CdkObject(cdkObject), EfsStorageConfigurationProperty {
-      /**
-       * The file system identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-filesystemid)
-       */
-      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
-
-      /**
-       * The mount point for the file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html#cfn-m2-environment-efsstorageconfiguration-mountpoint)
-       */
-      override fun mountPoint(): String = unwrap(this).getMountPoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EfsStorageConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty):
-          EfsStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EfsStorageConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EfsStorageConfigurationProperty):
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty
     }
   }
 }

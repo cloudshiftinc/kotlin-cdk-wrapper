@@ -75,7 +75,7 @@ public interface WindowsUserDataOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.WindowsUserDataOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.WindowsUserDataOptions,
   ) : CdkObject(cdkObject), WindowsUserDataOptions {
     /**
      * Set to true to set this userdata to persist through an instance reboot;

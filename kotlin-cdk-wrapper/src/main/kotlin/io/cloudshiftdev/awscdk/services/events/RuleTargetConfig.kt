@@ -532,7 +532,7 @@ public interface RuleTargetConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.RuleTargetConfig,
+    cdkObject: software.amazon.awscdk.services.events.RuleTargetConfig,
   ) : CdkObject(cdkObject), RuleTargetConfig {
     /**
      * The Amazon Resource Name (ARN) of the target.

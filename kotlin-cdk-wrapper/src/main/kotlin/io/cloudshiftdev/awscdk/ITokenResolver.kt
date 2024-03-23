@@ -44,7 +44,7 @@ public interface ITokenResolver {
   ): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ITokenResolver,
+    cdkObject: software.amazon.awscdk.ITokenResolver,
   ) : CdkObject(cdkObject), ITokenResolver {
     /**
      * Resolve a tokenized list.

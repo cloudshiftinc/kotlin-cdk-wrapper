@@ -123,7 +123,7 @@ public interface ManagedRuleProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.ManagedRuleProps,
+    cdkObject: software.amazon.awscdk.services.config.ManagedRuleProps,
   ) : CdkObject(cdkObject), ManagedRuleProps {
     /**
      * A name for the AWS Config rule.

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html)
  */
-public open class CfnClusterSecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup,
+public open class CfnClusterSecurityGroup(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +208,7 @@ public open class CfnClusterSecurityGroup internal constructor(
         CfnClusterSecurityGroup = CfnClusterSecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterSecurityGroup):
-        software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup
   }
 }

@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-emr-eks.html)
  */
-public open class EmrContainersCreateVirtualCluster internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster,
+public open class EmrContainersCreateVirtualCluster(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -518,6 +517,7 @@ public open class EmrContainersCreateVirtualCluster internal constructor(
 
     internal fun unwrap(wrapped: EmrContainersCreateVirtualCluster):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster
   }
 }

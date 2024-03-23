@@ -165,7 +165,7 @@ public interface ConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.ConnectionProps,
+    cdkObject: software.amazon.awscdk.services.events.ConnectionProps,
   ) : CdkObject(cdkObject), ConnectionProps {
     /**
      * The authorization type for the connection.

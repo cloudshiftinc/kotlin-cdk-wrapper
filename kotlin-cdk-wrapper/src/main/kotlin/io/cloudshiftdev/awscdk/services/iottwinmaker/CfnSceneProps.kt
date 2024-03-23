@@ -211,7 +211,7 @@ public interface CfnSceneProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSceneProps,
+    cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSceneProps,
   ) : CdkObject(cdkObject), CfnSceneProps {
     /**
      * A list of capabilities that the scene uses to render.

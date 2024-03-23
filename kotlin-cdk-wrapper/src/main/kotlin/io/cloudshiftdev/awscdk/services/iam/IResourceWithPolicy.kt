@@ -34,7 +34,7 @@ public interface IResourceWithPolicy : IResource {
       AddToResourcePolicyResult
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IResourceWithPolicy,
+    cdkObject: software.amazon.awscdk.services.iam.IResourceWithPolicy,
   ) : CdkObject(cdkObject), IResourceWithPolicy {
     /**
      * Add a statement to the resource's resource policy.

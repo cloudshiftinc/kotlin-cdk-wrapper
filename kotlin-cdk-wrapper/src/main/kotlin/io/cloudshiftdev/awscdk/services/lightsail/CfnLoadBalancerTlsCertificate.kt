@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancertlscertificate.html)
  */
-public open class CfnLoadBalancerTlsCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate,
+public open class CfnLoadBalancerTlsCertificate(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -419,5 +418,6 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
 
     internal fun unwrap(wrapped: CfnLoadBalancerTlsCertificate):
         software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate = wrapped.cdkObject
+        as software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate
   }
 }

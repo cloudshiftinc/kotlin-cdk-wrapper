@@ -16,7 +16,7 @@ public interface IGatewayVpcEndpointService {
   public fun name(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService,
+    cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService,
   ) : CdkObject(cdkObject), IGatewayVpcEndpointService {
     /**
      * The name of the service.

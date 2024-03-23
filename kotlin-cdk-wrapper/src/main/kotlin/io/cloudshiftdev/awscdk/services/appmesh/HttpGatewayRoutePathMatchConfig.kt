@@ -202,7 +202,7 @@ public interface HttpGatewayRoutePathMatchConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig,
   ) : CdkObject(cdkObject), HttpGatewayRoutePathMatchConfig {
     /**
      * Gateway route configuration for matching on the prefix of the URL path of the request.

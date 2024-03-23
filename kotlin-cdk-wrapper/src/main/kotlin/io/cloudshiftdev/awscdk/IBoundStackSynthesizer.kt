@@ -15,7 +15,7 @@ import kotlin.jvm.JvmName
  */
 public interface IBoundStackSynthesizer : IStackSynthesizer {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IBoundStackSynthesizer,
+    cdkObject: software.amazon.awscdk.IBoundStackSynthesizer,
   ) : CdkObject(cdkObject), IBoundStackSynthesizer {
     /**
      * Register a Docker Image Asset.

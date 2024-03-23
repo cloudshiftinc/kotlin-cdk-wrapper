@@ -84,7 +84,7 @@ public interface StoppingCondition {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition,
   ) : CdkObject(cdkObject), StoppingCondition {
     /**
      * The maximum length of time, in seconds, that the training or compilation job can run.

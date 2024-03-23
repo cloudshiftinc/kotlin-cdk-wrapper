@@ -132,7 +132,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datazone.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * The description of a project.

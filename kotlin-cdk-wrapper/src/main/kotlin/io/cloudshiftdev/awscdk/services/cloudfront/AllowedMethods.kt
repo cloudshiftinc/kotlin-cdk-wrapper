@@ -23,8 +23,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class AllowedMethods internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.AllowedMethods,
+public open class AllowedMethods(
+  cdkObject: software.amazon.awscdk.services.cloudfront.AllowedMethods,
 ) : CdkObject(cdkObject) {
   /**
    * HTTP methods supported.
@@ -45,6 +45,7 @@ public open class AllowedMethods internal constructor(
         AllowedMethods = AllowedMethods(cdkObject)
 
     internal fun unwrap(wrapped: AllowedMethods):
-        software.amazon.awscdk.services.cloudfront.AllowedMethods = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.AllowedMethods = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.AllowedMethods
   }
 }

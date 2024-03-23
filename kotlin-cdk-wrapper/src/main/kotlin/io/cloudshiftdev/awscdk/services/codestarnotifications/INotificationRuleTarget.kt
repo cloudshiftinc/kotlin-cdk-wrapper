@@ -19,8 +19,7 @@ public interface INotificationRuleTarget {
   public fun bindAsNotificationRuleTarget(scope: Construct): NotificationRuleTargetConfig
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget,
+    cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget,
   ) : CdkObject(cdkObject), INotificationRuleTarget {
     /**
      * Returns a target configuration for notification rule.

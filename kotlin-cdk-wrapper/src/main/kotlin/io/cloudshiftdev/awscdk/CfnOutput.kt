@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "ServiceAccountIamRole").value(serviceAccount.getRole().getRoleArn()).build();
  * ```
  */
-public open class CfnOutput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnOutput,
+public open class CfnOutput(
+  cdkObject: software.amazon.awscdk.CfnOutput,
 ) : CfnElement(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,6 +296,7 @@ public open class CfnOutput internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnOutput): CfnOutput = CfnOutput(cdkObject)
 
-    internal fun unwrap(wrapped: CfnOutput): software.amazon.awscdk.CfnOutput = wrapped.cdkObject
+    internal fun unwrap(wrapped: CfnOutput): software.amazon.awscdk.CfnOutput = wrapped.cdkObject as
+        software.amazon.awscdk.CfnOutput
   }
 }

@@ -36,9 +36,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class EcrSourceAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction,
+public open class EcrSourceAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: EcrSourceActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction(props.let(EcrSourceActionProps::unwrap))
@@ -236,6 +235,7 @@ public open class EcrSourceAction internal constructor(
         EcrSourceAction = EcrSourceAction(cdkObject)
 
     internal fun unwrap(wrapped: EcrSourceAction):
-        software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction
   }
 }

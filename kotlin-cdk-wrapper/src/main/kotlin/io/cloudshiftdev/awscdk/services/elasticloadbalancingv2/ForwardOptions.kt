@@ -64,7 +64,7 @@ public interface ForwardOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions,
   ) : CdkObject(cdkObject), ForwardOptions {
     /**
      * For how long clients should be directed to the same target group.

@@ -290,8 +290,7 @@ public interface CfnSlackChannelConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps,
   ) : CdkObject(cdkObject), CfnSlackChannelConfigurationProps {
     /**
      * The name of the configuration.

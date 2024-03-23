@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)
  */
-public open class CfnReplicationConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
+public open class CfnReplicationConfiguration(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,128 +214,8 @@ public open class CfnReplicationConfiguration internal constructor(
         CfnReplicationConfiguration = CfnReplicationConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationConfiguration):
-        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration = wrapped.cdkObject
-  }
-
-  /**
-   * An array of objects representing the destination for a replication rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecr.*;
-   * ReplicationDestinationProperty replicationDestinationProperty =
-   * ReplicationDestinationProperty.builder()
-   * .region("region")
-   * .registryId("registryId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html)
-   */
-  public interface ReplicationDestinationProperty {
-    /**
-     * The Region to replicate to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-region)
-     */
-    public fun region(): String
-
-    /**
-     * The AWS account ID of the Amazon ECR private registry to replicate to.
-     *
-     * When configuring cross-Region replication within your own registry, specify your own account
-     * ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-registryid)
-     */
-    public fun registryId(): String
-
-    /**
-     * A builder for [ReplicationDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param region The Region to replicate to. 
-       */
-      public fun region(region: String)
-
-      /**
-       * @param registryId The AWS account ID of the Amazon ECR private registry to replicate to. 
-       * When configuring cross-Region replication within your own registry, specify your own
-       * account ID.
-       */
-      public fun registryId(registryId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty.builder()
-
-      /**
-       * @param region The Region to replicate to. 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      /**
-       * @param registryId The AWS account ID of the Amazon ECR private registry to replicate to. 
-       * When configuring cross-Region replication within your own registry, specify your own
-       * account ID.
-       */
-      override fun registryId(registryId: String) {
-        cdkBuilder.registryId(registryId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
-    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
-      /**
-       * The Region to replicate to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-
-      /**
-       * The AWS account ID of the Amazon ECR private registry to replicate to.
-       *
-       * When configuring cross-Region replication within your own registry, specify your own
-       * account ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-registryid)
-       */
-      override fun registryId(): String = unwrap(this).getRegistryId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty):
-          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicationDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicationDestinationProperty):
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
-    }
+        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.CfnReplicationConfiguration
   }
 
   /**
@@ -432,8 +312,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
       /**
        * An array of objects representing the replication destinations and repository filters for a
@@ -459,6 +338,126 @@ public open class CfnReplicationConfiguration internal constructor(
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty
+    }
+  }
+
+  /**
+   * An array of objects representing the destination for a replication rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecr.*;
+   * ReplicationDestinationProperty replicationDestinationProperty =
+   * ReplicationDestinationProperty.builder()
+   * .region("region")
+   * .registryId("registryId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html)
+   */
+  public interface ReplicationDestinationProperty {
+    /**
+     * The Region to replicate to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-region)
+     */
+    public fun region(): String
+
+    /**
+     * The AWS account ID of the Amazon ECR private registry to replicate to.
+     *
+     * When configuring cross-Region replication within your own registry, specify your own account
+     * ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-registryid)
+     */
+    public fun registryId(): String
+
+    /**
+     * A builder for [ReplicationDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param region The Region to replicate to. 
+       */
+      public fun region(region: String)
+
+      /**
+       * @param registryId The AWS account ID of the Amazon ECR private registry to replicate to. 
+       * When configuring cross-Region replication within your own registry, specify your own
+       * account ID.
+       */
+      public fun registryId(registryId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty.builder()
+
+      /**
+       * @param region The Region to replicate to. 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      /**
+       * @param registryId The AWS account ID of the Amazon ECR private registry to replicate to. 
+       * When configuring cross-Region replication within your own registry, specify your own
+       * account ID.
+       */
+      override fun registryId(registryId: String) {
+        cdkBuilder.registryId(registryId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
+    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
+      /**
+       * The Region to replicate to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+
+      /**
+       * The AWS account ID of the Amazon ECR private registry to replicate to.
+       *
+       * When configuring cross-Region replication within your own registry, specify your own
+       * account ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html#cfn-ecr-replicationconfiguration-replicationdestination-registryid)
+       */
+      override fun registryId(): String = unwrap(this).getRegistryId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty):
+          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationDestinationProperty):
+          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
     }
   }
 
@@ -617,8 +616,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
     ) : CdkObject(cdkObject), ReplicationRuleProperty {
       /**
        * An array of objects representing the destination for a replication rule.
@@ -748,8 +746,7 @@ public open class CfnReplicationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
     ) : CdkObject(cdkObject), RepositoryFilterProperty {
       /**
        * The repository filter details.

@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * "bucket", deployment.getDeployedBucket()));
  * ```
  */
-public open class Source internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.deployment.Source,
+public open class Source(
+  cdkObject: software.amazon.awscdk.services.s3.deployment.Source,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun asset(path: String): ISource =
@@ -73,6 +73,6 @@ public open class Source internal constructor(
         Source(cdkObject)
 
     internal fun unwrap(wrapped: Source): software.amazon.awscdk.services.s3.deployment.Source =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.deployment.Source
   }
 }

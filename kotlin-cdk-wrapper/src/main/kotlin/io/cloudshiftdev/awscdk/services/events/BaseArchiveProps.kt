@@ -137,7 +137,7 @@ public interface BaseArchiveProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.BaseArchiveProps,
+    cdkObject: software.amazon.awscdk.services.events.BaseArchiveProps,
   ) : CdkObject(cdkObject), BaseArchiveProps {
     /**
      * The name of the archive.

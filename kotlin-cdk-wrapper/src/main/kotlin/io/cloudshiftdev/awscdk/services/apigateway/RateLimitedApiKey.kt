@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class RateLimitedApiKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKey,
+public open class RateLimitedApiKey(
+  cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKey,
 ) : Resource(cdkObject), IApiKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -622,6 +622,7 @@ public open class RateLimitedApiKey internal constructor(
         RateLimitedApiKey = RateLimitedApiKey(cdkObject)
 
     internal fun unwrap(wrapped: RateLimitedApiKey):
-        software.amazon.awscdk.services.apigateway.RateLimitedApiKey = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.RateLimitedApiKey = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.RateLimitedApiKey
   }
 }

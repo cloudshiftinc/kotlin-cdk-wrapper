@@ -20,8 +20,7 @@ public interface INetworkLoadBalancerTarget {
   public fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup): LoadBalancerTargetProps
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget,
   ) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
     /**
      * Attach load-balanced target to a TargetGroup.

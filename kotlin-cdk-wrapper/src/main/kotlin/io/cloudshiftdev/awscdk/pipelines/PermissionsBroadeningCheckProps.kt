@@ -81,7 +81,7 @@ public interface PermissionsBroadeningCheckProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps,
+    cdkObject: software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps,
   ) : CdkObject(cdkObject), PermissionsBroadeningCheckProps {
     /**
      * Topic to send notifications when a human needs to give manual confirmation.

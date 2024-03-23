@@ -26,8 +26,8 @@ import kotlin.collections.Map
  * StackDeployment stackDeployment = StackDeployment.fromArtifact(cloudFormationStackArtifact);
  * ```
  */
-public open class StackDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.StackDeployment,
+public open class StackDeployment(
+  cdkObject: software.amazon.awscdk.pipelines.StackDeployment,
 ) : CdkObject(cdkObject) {
   /**
    * Template path on disk to CloudAssembly.
@@ -161,6 +161,6 @@ public open class StackDeployment internal constructor(
         = StackDeployment(cdkObject)
 
     internal fun unwrap(wrapped: StackDeployment): software.amazon.awscdk.pipelines.StackDeployment
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.pipelines.StackDeployment
   }
 }

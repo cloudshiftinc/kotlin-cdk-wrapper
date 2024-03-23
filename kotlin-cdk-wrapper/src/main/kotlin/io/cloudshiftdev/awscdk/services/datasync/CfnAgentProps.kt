@@ -308,7 +308,7 @@ public interface CfnAgentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnAgentProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnAgentProps,
   ) : CdkObject(cdkObject), CfnAgentProps {
     /**
      * Specifies your DataSync agent's activation key.

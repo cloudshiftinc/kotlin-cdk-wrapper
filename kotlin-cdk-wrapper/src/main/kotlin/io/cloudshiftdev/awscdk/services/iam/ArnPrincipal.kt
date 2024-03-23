@@ -35,8 +35,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
  */
-public open class ArnPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.ArnPrincipal,
+public open class ArnPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.ArnPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(arn: String) : this(software.amazon.awscdk.services.iam.ArnPrincipal(arn)
   )
@@ -72,6 +72,6 @@ public open class ArnPrincipal internal constructor(
         ArnPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: ArnPrincipal): software.amazon.awscdk.services.iam.ArnPrincipal =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.ArnPrincipal
   }
 }

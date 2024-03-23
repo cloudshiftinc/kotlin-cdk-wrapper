@@ -113,7 +113,7 @@ public interface CfnSchemaVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionProps,
   ) : CdkObject(cdkObject), CfnSchemaVersionProps {
     /**
      * The schema that includes the schema version.

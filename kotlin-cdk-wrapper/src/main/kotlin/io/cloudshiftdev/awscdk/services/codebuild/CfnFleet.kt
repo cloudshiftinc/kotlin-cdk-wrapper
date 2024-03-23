@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -418,6 +418,6 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.codebuild.CfnFleet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.codebuild.CfnFleet
   }
 }

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html)
  */
-public open class CfnResourceCollection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
+public open class CfnResourceCollection(
+  cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -219,7 +219,107 @@ public open class CfnResourceCollection internal constructor(
         CfnResourceCollection = CfnResourceCollection(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceCollection):
-        software.amazon.awscdk.services.devopsguru.CfnResourceCollection = wrapped.cdkObject
+        software.amazon.awscdk.services.devopsguru.CfnResourceCollection = wrapped.cdkObject as
+        software.amazon.awscdk.services.devopsguru.CfnResourceCollection
+  }
+
+  /**
+   * Information about AWS CloudFormation stacks.
+   *
+   * You can use up to 1000 stacks to specify which AWS resources in your account to analyze. For
+   * more information, see
+   * [Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html) in the *AWS
+   * CloudFormation User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.devopsguru.*;
+   * CloudFormationCollectionFilterProperty cloudFormationCollectionFilterProperty =
+   * CloudFormationCollectionFilterProperty.builder()
+   * .stackNames(List.of("stackNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html)
+   */
+  public interface CloudFormationCollectionFilterProperty {
+    /**
+     * An array of CloudFormation stack names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html#cfn-devopsguru-resourcecollection-cloudformationcollectionfilter-stacknames)
+     */
+    public fun stackNames(): List<String> = unwrap(this).getStackNames() ?: emptyList()
+
+    /**
+     * A builder for [CloudFormationCollectionFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param stackNames An array of CloudFormation stack names.
+       */
+      public fun stackNames(stackNames: List<String>)
+
+      /**
+       * @param stackNames An array of CloudFormation stack names.
+       */
+      public fun stackNames(vararg stackNames: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty.builder()
+
+      /**
+       * @param stackNames An array of CloudFormation stack names.
+       */
+      override fun stackNames(stackNames: List<String>) {
+        cdkBuilder.stackNames(stackNames)
+      }
+
+      /**
+       * @param stackNames An array of CloudFormation stack names.
+       */
+      override fun stackNames(vararg stackNames: String): Unit = stackNames(stackNames.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty,
+    ) : CdkObject(cdkObject), CloudFormationCollectionFilterProperty {
+      /**
+       * An array of CloudFormation stack names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html#cfn-devopsguru-resourcecollection-cloudformationcollectionfilter-stacknames)
+       */
+      override fun stackNames(): List<String> = unwrap(this).getStackNames() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CloudFormationCollectionFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty):
+          CloudFormationCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudFormationCollectionFilterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudFormationCollectionFilterProperty):
+          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
+    }
   }
 
   /**
@@ -513,8 +613,7 @@ public open class CfnResourceCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty,
     ) : CdkObject(cdkObject), ResourceCollectionFilterProperty {
       /**
        * Information about AWS CloudFormation stacks.
@@ -761,8 +860,7 @@ public open class CfnResourceCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty,
+      cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty,
     ) : CdkObject(cdkObject), TagCollectionProperty {
       /**
        * An AWS tag *key* that is used to identify the AWS resources that DevOps Guru analyzes.
@@ -814,106 +912,6 @@ public open class CfnResourceCollection internal constructor(
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty
-    }
-  }
-
-  /**
-   * Information about AWS CloudFormation stacks.
-   *
-   * You can use up to 1000 stacks to specify which AWS resources in your account to analyze. For
-   * more information, see
-   * [Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html) in the *AWS
-   * CloudFormation User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.devopsguru.*;
-   * CloudFormationCollectionFilterProperty cloudFormationCollectionFilterProperty =
-   * CloudFormationCollectionFilterProperty.builder()
-   * .stackNames(List.of("stackNames"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html)
-   */
-  public interface CloudFormationCollectionFilterProperty {
-    /**
-     * An array of CloudFormation stack names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html#cfn-devopsguru-resourcecollection-cloudformationcollectionfilter-stacknames)
-     */
-    public fun stackNames(): List<String> = unwrap(this).getStackNames() ?: emptyList()
-
-    /**
-     * A builder for [CloudFormationCollectionFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param stackNames An array of CloudFormation stack names.
-       */
-      public fun stackNames(stackNames: List<String>)
-
-      /**
-       * @param stackNames An array of CloudFormation stack names.
-       */
-      public fun stackNames(vararg stackNames: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty.Builder
-          =
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty.builder()
-
-      /**
-       * @param stackNames An array of CloudFormation stack names.
-       */
-      override fun stackNames(stackNames: List<String>) {
-        cdkBuilder.stackNames(stackNames)
-      }
-
-      /**
-       * @param stackNames An array of CloudFormation stack names.
-       */
-      override fun stackNames(vararg stackNames: String): Unit = stackNames(stackNames.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty,
-    ) : CdkObject(cdkObject), CloudFormationCollectionFilterProperty {
-      /**
-       * An array of CloudFormation stack names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-cloudformationcollectionfilter.html#cfn-devopsguru-resourcecollection-cloudformationcollectionfilter-stacknames)
-       */
-      override fun stackNames(): List<String> = unwrap(this).getStackNames() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudFormationCollectionFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty):
-          CloudFormationCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudFormationCollectionFilterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudFormationCollectionFilterProperty):
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty
     }
   }
 }

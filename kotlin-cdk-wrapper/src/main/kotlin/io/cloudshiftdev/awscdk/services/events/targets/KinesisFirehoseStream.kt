@@ -32,9 +32,8 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream as Amaz
  * .build();
  * ```
  */
-public open class KinesisFirehoseStream internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
+public open class KinesisFirehoseStream(
+  cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream) :
       this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream::unwrap))
@@ -125,6 +124,7 @@ public open class KinesisFirehoseStream internal constructor(
         KinesisFirehoseStream = KinesisFirehoseStream(cdkObject)
 
     internal fun unwrap(wrapped: KinesisFirehoseStream):
-        software.amazon.awscdk.services.events.targets.KinesisFirehoseStream = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.KinesisFirehoseStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.KinesisFirehoseStream
   }
 }

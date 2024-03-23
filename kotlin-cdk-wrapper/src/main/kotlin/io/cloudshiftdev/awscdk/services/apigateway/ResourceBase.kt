@@ -11,8 +11,8 @@ import kotlin.jvm.JvmName
 /**
  *
  */
-public abstract class ResourceBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase,
+public abstract class ResourceBase(
+  cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase,
 ) : io.cloudshiftdev.awscdk.Resource(cdkObject), IResource {
   /**
    * Adds an OPTIONS method to this resource which responds to Cross-Origin Resource Sharing (CORS)
@@ -229,7 +229,7 @@ public abstract class ResourceBase internal constructor(
   public override fun resourceId(): String = unwrap(this).getResourceId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase,
+    cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase,
   ) : ResourceBase(cdkObject)
 
   public companion object {

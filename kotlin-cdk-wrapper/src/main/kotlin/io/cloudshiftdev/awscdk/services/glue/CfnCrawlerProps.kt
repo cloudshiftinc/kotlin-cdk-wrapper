@@ -548,7 +548,7 @@ public interface CfnCrawlerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawlerProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnCrawlerProps,
   ) : CdkObject(cdkObject), CfnCrawlerProps {
     /**
      * A list of UTF-8 strings that specify the names of custom classifiers that are associated with

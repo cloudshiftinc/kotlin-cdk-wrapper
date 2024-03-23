@@ -357,7 +357,7 @@ public interface CfnDatasetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.databrew.CfnDatasetProps,
+    cdkObject: software.amazon.awscdk.services.databrew.CfnDatasetProps,
   ) : CdkObject(cdkObject), CfnDatasetProps {
     /**
      * The file format of a dataset that is created from an Amazon S3 file or folder.

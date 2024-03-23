@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SageMakerCreateTransformJob internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob,
+public open class SageMakerCreateTransformJob(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -800,6 +799,7 @@ public open class SageMakerCreateTransformJob internal constructor(
 
     internal fun unwrap(wrapped: SageMakerCreateTransformJob):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob
   }
 }

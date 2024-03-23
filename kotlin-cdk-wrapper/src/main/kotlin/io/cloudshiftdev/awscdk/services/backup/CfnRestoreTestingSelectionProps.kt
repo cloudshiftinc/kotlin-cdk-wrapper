@@ -348,7 +348,7 @@ public interface CfnRestoreTestingSelectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelectionProps,
+    cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelectionProps,
   ) : CdkObject(cdkObject), CfnRestoreTestingSelectionProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target

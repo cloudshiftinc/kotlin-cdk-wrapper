@@ -138,7 +138,7 @@ public interface CfnLayerVersionPermissionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps,
   ) : CdkObject(cdkObject), CfnLayerVersionPermissionProps {
     /**
      * The API action that grants access to the layer.

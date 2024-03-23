@@ -132,7 +132,7 @@ public interface CfnPredefinedAttributeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps,
   ) : CdkObject(cdkObject), CfnPredefinedAttributeProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.

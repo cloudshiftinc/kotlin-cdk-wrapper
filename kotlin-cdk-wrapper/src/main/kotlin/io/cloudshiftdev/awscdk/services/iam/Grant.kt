@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * List.of(instance));
  * ```
  */
-public open class Grant internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.Grant,
+public open class Grant(
+  cdkObject: software.amazon.awscdk.services.iam.Grant,
 ) : CdkObject(cdkObject), IDependable {
   /**
    * Make sure this grant is applied before the given constructs are deployed.
@@ -127,6 +127,6 @@ public open class Grant internal constructor(
         Grant(cdkObject)
 
     internal fun unwrap(wrapped: Grant): software.amazon.awscdk.services.iam.Grant =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.Grant
   }
 }

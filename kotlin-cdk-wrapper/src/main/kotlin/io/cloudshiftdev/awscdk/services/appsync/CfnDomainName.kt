@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainname.html)
  */
-public open class CfnDomainName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnDomainName,
+public open class CfnDomainName(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -201,6 +201,7 @@ public open class CfnDomainName internal constructor(
         CfnDomainName = CfnDomainName(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainName):
-        software.amazon.awscdk.services.appsync.CfnDomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnDomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnDomainName
   }
 }

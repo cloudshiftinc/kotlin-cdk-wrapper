@@ -544,7 +544,7 @@ public interface CfnContainerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lightsail.CfnContainerProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnContainerProps,
   ) : CdkObject(cdkObject), CfnContainerProps {
     /**
      * An object that describes the current container deployment of the container service.

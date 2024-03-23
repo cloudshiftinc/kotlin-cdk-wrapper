@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html)
  */
-public open class CfnRouteResponse internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse,
+public open class CfnRouteResponse(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -323,7 +323,8 @@ public open class CfnRouteResponse internal constructor(
         CfnRouteResponse = CfnRouteResponse(cdkObject)
 
     internal fun unwrap(wrapped: CfnRouteResponse):
-        software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse
   }
 
   /**
@@ -393,8 +394,7 @@ public open class CfnRouteResponse internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty,
     ) : CdkObject(cdkObject), ParameterConstraintsProperty {
       /**
        * Specifies whether the parameter is required.

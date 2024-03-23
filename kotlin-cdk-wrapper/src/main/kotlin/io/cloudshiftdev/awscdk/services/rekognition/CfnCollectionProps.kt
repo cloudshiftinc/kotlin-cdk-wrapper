@@ -95,7 +95,7 @@ public interface CfnCollectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rekognition.CfnCollectionProps,
+    cdkObject: software.amazon.awscdk.services.rekognition.CfnCollectionProps,
   ) : CdkObject(cdkObject), CfnCollectionProps {
     /**
      * ID for the collection that you are creating.

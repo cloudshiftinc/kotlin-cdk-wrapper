@@ -19,8 +19,8 @@ import kotlin.String
  * S3ImportSource s3ImportSource = new S3ImportSource(bucket, "key");
  * ```
  */
-public open class S3ImportSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.S3ImportSource,
+public open class S3ImportSource(
+  cdkObject: software.amazon.awscdk.services.cloudfront.S3ImportSource,
 ) : ImportSource(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
       this(software.amazon.awscdk.services.cloudfront.S3ImportSource(bucket.let(IBucket::unwrap),
@@ -42,6 +42,7 @@ public open class S3ImportSource internal constructor(
         S3ImportSource = S3ImportSource(cdkObject)
 
     internal fun unwrap(wrapped: S3ImportSource):
-        software.amazon.awscdk.services.cloudfront.S3ImportSource = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.S3ImportSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.S3ImportSource
   }
 }

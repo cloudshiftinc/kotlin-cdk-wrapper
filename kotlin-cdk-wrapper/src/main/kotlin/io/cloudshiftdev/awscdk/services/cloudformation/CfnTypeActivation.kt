@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)
  */
-public open class CfnTypeActivation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivation,
+public open class CfnTypeActivation(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnTypeActivation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -599,7 +599,8 @@ public open class CfnTypeActivation internal constructor(
         CfnTypeActivation = CfnTypeActivation(cdkObject)
 
     internal fun unwrap(wrapped: CfnTypeActivation):
-        software.amazon.awscdk.services.cloudformation.CfnTypeActivation = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudformation.CfnTypeActivation = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudformation.CfnTypeActivation
   }
 
   /**
@@ -682,8 +683,7 @@ public open class CfnTypeActivation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty,
     ) : CdkObject(cdkObject), LoggingConfigProperty {
       /**
        * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information

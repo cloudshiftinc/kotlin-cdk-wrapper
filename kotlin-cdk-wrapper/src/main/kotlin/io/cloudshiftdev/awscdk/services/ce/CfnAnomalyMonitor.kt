@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html)
  */
-public open class CfnAnomalyMonitor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor,
+public open class CfnAnomalyMonitor(
+  cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -337,7 +337,8 @@ public open class CfnAnomalyMonitor internal constructor(
         CfnAnomalyMonitor = CfnAnomalyMonitor(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyMonitor):
-        software.amazon.awscdk.services.ce.CfnAnomalyMonitor = wrapped.cdkObject
+        software.amazon.awscdk.services.ce.CfnAnomalyMonitor = wrapped.cdkObject as
+        software.amazon.awscdk.services.ce.CfnAnomalyMonitor
   }
 
   /**
@@ -422,8 +423,7 @@ public open class CfnAnomalyMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty,
+      cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty,
     ) : CdkObject(cdkObject), ResourceTagProperty {
       /**
        * The key that's associated with the tag.

@@ -26,9 +26,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class WebSocketRouteIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration,
+public abstract class WebSocketRouteIntegration(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration,
 ) : CdkObject(cdkObject) {
   /**
    * Bind this integration to the route.
@@ -50,7 +49,7 @@ public abstract class WebSocketRouteIntegration internal constructor(
       WebSocketRouteIntegrationConfig = bind(WebSocketRouteIntegrationBindOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration,
   ) : WebSocketRouteIntegration(cdkObject)
 
   public companion object {

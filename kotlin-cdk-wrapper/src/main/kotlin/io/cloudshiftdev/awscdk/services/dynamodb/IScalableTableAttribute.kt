@@ -48,7 +48,7 @@ public interface IScalableTableAttribute {
   public fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
+    cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
   ) : CdkObject(cdkObject), IScalableTableAttribute {
     /**
      * Add scheduled scaling for this scaling attribute.

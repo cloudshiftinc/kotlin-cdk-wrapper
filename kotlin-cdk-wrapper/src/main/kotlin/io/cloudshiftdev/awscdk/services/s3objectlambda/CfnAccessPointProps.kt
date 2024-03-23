@@ -132,7 +132,7 @@ public interface CfnAccessPointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps,
+    cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps,
   ) : CdkObject(cdkObject), CfnAccessPointProps {
     /**
      * The name of this access point.

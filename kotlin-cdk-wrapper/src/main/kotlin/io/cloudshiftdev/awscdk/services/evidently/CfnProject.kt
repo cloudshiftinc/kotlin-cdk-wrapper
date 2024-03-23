@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.evidently.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -600,7 +600,7 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.evidently.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.evidently.CfnProject
   }
 
   /**
@@ -683,8 +683,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty,
     ) : CdkObject(cdkObject), AppConfigResourceObjectProperty {
       /**
        * The ID of the AWS AppConfig application to use for client-side evaluation.
@@ -834,8 +833,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty,
     ) : CdkObject(cdkObject), DataDeliveryObjectProperty {
       /**
        * If the project stores evaluation events in CloudWatch Logs , this structure stores the log
@@ -946,8 +944,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty,
     ) : CdkObject(cdkObject), S3DestinationProperty {
       /**
        * The name of the bucket in which Evidently stores evaluation events.

@@ -150,7 +150,7 @@ public interface ISecret : IResource {
   public fun secretValueFromJson(key: String): SecretValue
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecret,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.ISecret,
   ) : CdkObject(cdkObject), ISecret {
     /**
      * Adds a rotation schedule to the secret.

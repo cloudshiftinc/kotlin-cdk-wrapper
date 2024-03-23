@@ -535,7 +535,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
   public fun metricVolumeWriteIoPs(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IDatabaseCluster,
+    cdkObject: software.amazon.awscdk.services.rds.IDatabaseCluster,
   ) : CdkObject(cdkObject), IDatabaseCluster {
     /**
      * Add a new db proxy to this cluster.

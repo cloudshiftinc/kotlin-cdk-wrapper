@@ -34,8 +34,8 @@ import kotlin.jvm.JvmName
  * const ref = myBucket.export();
  * Bucket.import(this, 'MyImportedBucket', ref);
  */
-public abstract class BucketBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.BucketBase,
+public abstract class BucketBase(
+  cdkObject: software.amazon.awscdk.services.s3.BucketBase,
 ) : Resource(cdkObject), IBucket {
   /**
    * Adds a bucket notification event destination.
@@ -875,7 +875,7 @@ public abstract class BucketBase internal constructor(
       virtualHostedUrlForObject(key, VirtualHostedStyleUrlOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketBase,
+    cdkObject: software.amazon.awscdk.services.s3.BucketBase,
   ) : BucketBase(cdkObject)
 
   public companion object {

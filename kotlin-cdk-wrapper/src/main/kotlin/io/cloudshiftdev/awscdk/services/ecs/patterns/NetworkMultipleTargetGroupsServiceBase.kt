@@ -17,9 +17,8 @@ import kotlin.collections.List
  * The base class for NetworkMultipleTargetGroupsEc2Service and
  * NetworkMultipleTargetGroupsFargateService classes.
  */
-public abstract class NetworkMultipleTargetGroupsServiceBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase,
+public abstract class NetworkMultipleTargetGroupsServiceBase(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase,
 ) : Construct(cdkObject) {
   /**
    * The cluster that hosts the service.
@@ -71,8 +70,7 @@ public abstract class NetworkMultipleTargetGroupsServiceBase internal constructo
       unwrap(this).getTargetGroups().map(NetworkTargetGroup::wrap)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase,
   ) : NetworkMultipleTargetGroupsServiceBase(cdkObject)
 
   public companion object {

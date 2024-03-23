@@ -83,7 +83,7 @@ public interface ResultWriterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriterProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriterProps,
   ) : CdkObject(cdkObject), ResultWriterProps {
     /**
      * S3 Bucket in which to save Map Run results.

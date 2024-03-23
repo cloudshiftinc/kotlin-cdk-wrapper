@@ -20,8 +20,8 @@ import kotlin.collections.Map
  * "ForAnyValue:StringLike", Map.of("cognito-identity.amazonaws.com:amr", "unauthenticated")));
  * ```
  */
-public open class WebIdentityPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.WebIdentityPrincipal,
+public open class WebIdentityPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.WebIdentityPrincipal,
 ) : FederatedPrincipal(cdkObject) {
   public constructor(identityProvider: String) :
       this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider)
@@ -42,6 +42,7 @@ public open class WebIdentityPrincipal internal constructor(
         WebIdentityPrincipal = WebIdentityPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: WebIdentityPrincipal):
-        software.amazon.awscdk.services.iam.WebIdentityPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.WebIdentityPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.WebIdentityPrincipal
   }
 }

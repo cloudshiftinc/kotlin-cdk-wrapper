@@ -359,7 +359,7 @@ public interface CfnScheduledActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledActionProps,
+    cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledActionProps,
   ) : CdkObject(cdkObject), CfnScheduledActionProps {
     /**
      * If true, the schedule is enabled.

@@ -300,7 +300,7 @@ public interface CfnServiceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnServiceProps,
+    cdkObject: software.amazon.awscdk.services.refactorspaces.CfnServiceProps,
   ) : CdkObject(cdkObject), CfnServiceProps {
     /**
      * The unique identifier of the application.

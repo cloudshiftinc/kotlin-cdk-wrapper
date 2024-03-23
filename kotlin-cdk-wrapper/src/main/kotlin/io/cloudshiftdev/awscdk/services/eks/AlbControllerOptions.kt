@@ -120,7 +120,7 @@ public interface AlbControllerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions,
+    cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions,
   ) : CdkObject(cdkObject), AlbControllerOptions {
     /**
      * The IAM policy to apply to the service account.

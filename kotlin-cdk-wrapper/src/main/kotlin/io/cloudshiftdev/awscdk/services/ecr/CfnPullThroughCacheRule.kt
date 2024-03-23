@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html)
  */
-public open class CfnPullThroughCacheRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule,
+public open class CfnPullThroughCacheRule(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -229,6 +229,7 @@ public open class CfnPullThroughCacheRule internal constructor(
         CfnPullThroughCacheRule = CfnPullThroughCacheRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnPullThroughCacheRule):
-        software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule
   }
 }

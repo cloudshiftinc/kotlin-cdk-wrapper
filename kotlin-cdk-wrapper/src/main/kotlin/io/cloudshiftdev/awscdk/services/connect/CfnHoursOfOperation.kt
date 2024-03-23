@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html)
  */
-public open class CfnHoursOfOperation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation,
+public open class CfnHoursOfOperation(
+  cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -385,7 +385,8 @@ public open class CfnHoursOfOperation internal constructor(
         CfnHoursOfOperation = CfnHoursOfOperation(cdkObject)
 
     internal fun unwrap(wrapped: CfnHoursOfOperation):
-        software.amazon.awscdk.services.connect.CfnHoursOfOperation = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnHoursOfOperation = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnHoursOfOperation
   }
 
   /**
@@ -543,8 +544,7 @@ public open class CfnHoursOfOperation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty,
     ) : CdkObject(cdkObject), HoursOfOperationConfigProperty {
       /**
        * The day that the hours of operation applies to.
@@ -661,8 +661,7 @@ public open class CfnHoursOfOperation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty,
     ) : CdkObject(cdkObject), HoursOfOperationTimeSliceProperty {
       /**
        * The hours.

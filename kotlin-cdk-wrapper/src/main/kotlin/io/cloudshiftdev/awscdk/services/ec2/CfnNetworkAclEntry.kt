@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html)
  */
-public open class CfnNetworkAclEntry internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry,
+public open class CfnNetworkAclEntry(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -598,7 +598,8 @@ public open class CfnNetworkAclEntry internal constructor(
         CfnNetworkAclEntry = CfnNetworkAclEntry(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkAclEntry):
-        software.amazon.awscdk.services.ec2.CfnNetworkAclEntry = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkAclEntry = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
   }
 
   /**
@@ -687,7 +688,7 @@ public open class CfnNetworkAclEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty,
     ) : CdkObject(cdkObject), IcmpProperty {
       /**
        * The Internet Control Message Protocol (ICMP) code.
@@ -807,8 +808,7 @@ public open class CfnNetworkAclEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty,
     ) : CdkObject(cdkObject), PortRangeProperty {
       /**
        * The first port in the range.

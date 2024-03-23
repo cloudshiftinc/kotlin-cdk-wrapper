@@ -21,8 +21,8 @@ import kotlin.String
  * identity.grantSendEmail(user);
  * ```
  */
-public abstract class Identity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.Identity,
+public abstract class Identity(
+  cdkObject: software.amazon.awscdk.services.ses.Identity,
 ) : CdkObject(cdkObject) {
   /**
    * The hosted zone associated with this identity.
@@ -38,7 +38,7 @@ public abstract class Identity internal constructor(
   public open fun `value`(): String = unwrap(this).getValue()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.Identity,
+    cdkObject: software.amazon.awscdk.services.ses.Identity,
   ) : Identity(cdkObject)
 
   public companion object {

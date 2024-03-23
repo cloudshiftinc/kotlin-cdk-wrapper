@@ -16,7 +16,7 @@ public interface IStableAnyProducer {
   public fun produce(): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IStableAnyProducer,
+    cdkObject: software.amazon.awscdk.IStableAnyProducer,
   ) : CdkObject(cdkObject), IStableAnyProducer {
     /**
      * Produce the value.

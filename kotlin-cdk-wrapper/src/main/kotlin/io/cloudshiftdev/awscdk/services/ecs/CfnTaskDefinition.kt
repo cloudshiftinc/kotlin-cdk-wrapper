@@ -249,8 +249,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)
  */
-public open class CfnTaskDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
+public open class CfnTaskDefinition(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1852,2090 +1852,8 @@ public open class CfnTaskDefinition internal constructor(
         CfnTaskDefinition = CfnTaskDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskDefinition):
-        software.amazon.awscdk.services.ecs.CfnTaskDefinition = wrapped.cdkObject
-  }
-
-  /**
-   * The `HostVolumeProperties` property specifies details on a container instance bind mount host
-   * volume.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * HostVolumePropertiesProperty hostVolumePropertiesProperty =
-   * HostVolumePropertiesProperty.builder()
-   * .sourcePath("sourcePath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html)
-   */
-  public interface HostVolumePropertiesProperty {
-    /**
-     * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
-     * container instance that's presented to the container.
-     *
-     * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
-     * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
-     * specified location on the host container instance until you delete it manually. If the
-     * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
-     * If the location does exist, the contents of the source path folder are exported.
-     *
-     * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html#cfn-ecs-taskdefinition-hostvolumeproperties-sourcepath)
-     */
-    public fun sourcePath(): String? = unwrap(this).getSourcePath()
-
-    /**
-     * A builder for [HostVolumePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sourcePath When the `host` parameter is used, specify a `sourcePath` to declare the
-       * path on the host container instance that's presented to the container.
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
-       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
-       * specified location on the host container instance until you delete it manually. If the
-       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
-       * If the location does exist, the contents of the source path folder are exported.
-       *
-       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
-       */
-      public fun sourcePath(sourcePath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty.builder()
-
-      /**
-       * @param sourcePath When the `host` parameter is used, specify a `sourcePath` to declare the
-       * path on the host container instance that's presented to the container.
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
-       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
-       * specified location on the host container instance until you delete it manually. If the
-       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
-       * If the location does exist, the contents of the source path folder are exported.
-       *
-       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
-       */
-      override fun sourcePath(sourcePath: String) {
-        cdkBuilder.sourcePath(sourcePath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty,
-    ) : CdkObject(cdkObject), HostVolumePropertiesProperty {
-      /**
-       * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
-       * container instance that's presented to the container.
-       *
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
-       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
-       * specified location on the host container instance until you delete it manually. If the
-       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
-       * If the location does exist, the contents of the source path folder are exported.
-       *
-       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html#cfn-ecs-taskdefinition-hostvolumeproperties-sourcepath)
-       */
-      override fun sourcePath(): String? = unwrap(this).getSourcePath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HostVolumePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty):
-          HostVolumePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HostVolumePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HostVolumePropertiesProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty
-    }
-  }
-
-  /**
-   * A list of namespaced kernel parameters to set in the container.
-   *
-   * This parameter maps to `Sysctls` in the [Create a
-   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-   * section of the [Docker Remote
-   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-   * option to [docker
-   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-   * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer lived
-   * connections.
-   *
-   * We don't recommend that you specify network-related `systemControls` parameters for multiple
-   * containers in a single task that also uses either the `awsvpc` or `host` network mode. Doing this
-   * has the following disadvantages:
-   *
-   * * For tasks that use the `awsvpc` network mode including Fargate, if you set `systemControls`
-   * for any container, it applies to all containers in the task. If you set different `systemControls`
-   * for multiple containers in a single task, the container that's started last determines which
-   * `systemControls` take effect.
-   * * For tasks that use the `host` network mode, the network namespace `systemControls` aren't
-   * supported.
-   *
-   * If you're setting an IPC resource namespace to use for the containers in the task, the
-   * following conditions apply to your system controls. For more information, see [IPC
-   * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_ipcmode)
-   * .
-   *
-   * * For tasks that use the `host` IPC mode, IPC namespace `systemControls` aren't supported.
-   * * For tasks that use the `task` IPC mode, IPC namespace `systemControls` values apply to all
-   * containers within a task.
-   *
-   *
-   * This parameter is not supported for Windows containers. &gt; This parameter is only supported
-   * for tasks that are hosted on AWS Fargate if the tasks are using platform version `1.4.0` or later
-   * (Linux). This isn't supported for Windows containers on Fargate.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * SystemControlProperty systemControlProperty = SystemControlProperty.builder()
-   * .namespace("namespace")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html)
-   */
-  public interface SystemControlProperty {
-    /**
-     * The namespaced kernel parameter to set a `value` for.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-namespace)
-     */
-    public fun namespace(): String? = unwrap(this).getNamespace()
-
-    /**
-     * The namespaced kernel parameter to set a `value` for.
-     *
-     * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
-     * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"` ,
-     * and `Sysctls` that start with `"fs.mqueue.*"`
-     *
-     * Valid network namespace values: `Sysctls` that start with `"net.*"`
-     *
-     * All of these values are supported by Fargate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [SystemControlProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param namespace The namespaced kernel parameter to set a `value` for.
-       */
-      public fun namespace(namespace: String)
-
-      /**
-       * @param value The namespaced kernel parameter to set a `value` for.
-       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
-       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
-       * , and `Sysctls` that start with `"fs.mqueue.*"`
-       *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
-       *
-       * All of these values are supported by Fargate.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty.builder()
-
-      /**
-       * @param namespace The namespaced kernel parameter to set a `value` for.
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      /**
-       * @param value The namespaced kernel parameter to set a `value` for.
-       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
-       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
-       * , and `Sysctls` that start with `"fs.mqueue.*"`
-       *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
-       *
-       * All of these values are supported by Fargate.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty,
-    ) : CdkObject(cdkObject), SystemControlProperty {
-      /**
-       * The namespaced kernel parameter to set a `value` for.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-namespace)
-       */
-      override fun namespace(): String? = unwrap(this).getNamespace()
-
-      /**
-       * The namespaced kernel parameter to set a `value` for.
-       *
-       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
-       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
-       * , and `Sysctls` that start with `"fs.mqueue.*"`
-       *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
-       *
-       * All of these values are supported by Fargate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SystemControlProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty):
-          SystemControlProperty = CdkObjectWrappers.wrap(cdkObject) as? SystemControlProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SystemControlProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty
-    }
-  }
-
-  /**
-   * The FireLens configuration for the container.
-   *
-   * This is used to specify and configure a log router for container logs. For more information,
-   * see [Custom log
-   * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * FirelensConfigurationProperty firelensConfigurationProperty =
-   * FirelensConfigurationProperty.builder()
-   * .options(Map.of(
-   * "optionsKey", "options"))
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html)
-   */
-  public interface FirelensConfigurationProperty {
-    /**
-     * The options to use when configuring the log router.
-     *
-     * This field is optional and can be used to add additional metadata, such as the task, task
-     * definition, cluster, and container instance details to the log event.
-     *
-     * If specified, valid option keys are:
-     *
-     * * `enable-ecs-log-metadata` , which can be `true` or `false`
-     * * `config-file-type` , which can be `s3` or `file`
-     * * `config-file-value` , which is either an S3 ARN or a file path
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options)
-     */
-    public fun options(): Any? = unwrap(this).getOptions()
-
-    /**
-     * The log router to use.
-     *
-     * The valid values are `fluentd` or `fluentbit` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [FirelensConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param options The options to use when configuring the log router.
-       * This field is optional and can be used to add additional metadata, such as the task, task
-       * definition, cluster, and container instance details to the log event.
-       *
-       * If specified, valid option keys are:
-       *
-       * * `enable-ecs-log-metadata` , which can be `true` or `false`
-       * * `config-file-type` , which can be `s3` or `file`
-       * * `config-file-value` , which is either an S3 ARN or a file path
-       */
-      public fun options(options: IResolvable)
-
-      /**
-       * @param options The options to use when configuring the log router.
-       * This field is optional and can be used to add additional metadata, such as the task, task
-       * definition, cluster, and container instance details to the log event.
-       *
-       * If specified, valid option keys are:
-       *
-       * * `enable-ecs-log-metadata` , which can be `true` or `false`
-       * * `config-file-type` , which can be `s3` or `file`
-       * * `config-file-value` , which is either an S3 ARN or a file path
-       */
-      public fun options(options: Map<String, String>)
-
-      /**
-       * @param type The log router to use.
-       * The valid values are `fluentd` or `fluentbit` .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty.builder()
-
-      /**
-       * @param options The options to use when configuring the log router.
-       * This field is optional and can be used to add additional metadata, such as the task, task
-       * definition, cluster, and container instance details to the log event.
-       *
-       * If specified, valid option keys are:
-       *
-       * * `enable-ecs-log-metadata` , which can be `true` or `false`
-       * * `config-file-type` , which can be `s3` or `file`
-       * * `config-file-value` , which is either an S3 ARN or a file path
-       */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param options The options to use when configuring the log router.
-       * This field is optional and can be used to add additional metadata, such as the task, task
-       * definition, cluster, and container instance details to the log event.
-       *
-       * If specified, valid option keys are:
-       *
-       * * `enable-ecs-log-metadata` , which can be `true` or `false`
-       * * `config-file-type` , which can be `s3` or `file`
-       * * `config-file-value` , which is either an S3 ARN or a file path
-       */
-      override fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
-      }
-
-      /**
-       * @param type The log router to use.
-       * The valid values are `fluentd` or `fluentbit` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty,
-    ) : CdkObject(cdkObject), FirelensConfigurationProperty {
-      /**
-       * The options to use when configuring the log router.
-       *
-       * This field is optional and can be used to add additional metadata, such as the task, task
-       * definition, cluster, and container instance details to the log event.
-       *
-       * If specified, valid option keys are:
-       *
-       * * `enable-ecs-log-metadata` , which can be `true` or `false`
-       * * `config-file-type` , which can be `s3` or `file`
-       * * `config-file-value` , which is either an S3 ARN or a file path
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options)
-       */
-      override fun options(): Any? = unwrap(this).getOptions()
-
-      /**
-       * The log router to use.
-       *
-       * The valid values are `fluentd` or `fluentbit` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FirelensConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty):
-          FirelensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FirelensConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FirelensConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty
-    }
-  }
-
-  /**
-   * The container path, mount options, and size of the tmpfs mount.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * TmpfsProperty tmpfsProperty = TmpfsProperty.builder()
-   * .size(123)
-   * // the properties below are optional
-   * .containerPath("containerPath")
-   * .mountOptions(List.of("mountOptions"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html)
-   */
-  public interface TmpfsProperty {
-    /**
-     * The absolute file path where the tmpfs volume is to be mounted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
-     */
-    public fun containerPath(): String? = unwrap(this).getContainerPath()
-
-    /**
-     * The list of tmpfs volume mount options.
-     *
-     * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-     * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime" |
-     * "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-     * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-     * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
-     */
-    public fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?: emptyList()
-
-    /**
-     * The maximum size (in MiB) of the tmpfs volume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
-     */
-    public fun size(): Number
-
-    /**
-     * A builder for [TmpfsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerPath The absolute file path where the tmpfs volume is to be mounted.
-       */
-      public fun containerPath(containerPath: String)
-
-      /**
-       * @param mountOptions The list of tmpfs volume mount options.
-       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
-       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-       */
-      public fun mountOptions(mountOptions: List<String>)
-
-      /**
-       * @param mountOptions The list of tmpfs volume mount options.
-       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
-       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-       */
-      public fun mountOptions(vararg mountOptions: String)
-
-      /**
-       * @param size The maximum size (in MiB) of the tmpfs volume. 
-       */
-      public fun size(size: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty.builder()
-
-      /**
-       * @param containerPath The absolute file path where the tmpfs volume is to be mounted.
-       */
-      override fun containerPath(containerPath: String) {
-        cdkBuilder.containerPath(containerPath)
-      }
-
-      /**
-       * @param mountOptions The list of tmpfs volume mount options.
-       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
-       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-       */
-      override fun mountOptions(mountOptions: List<String>) {
-        cdkBuilder.mountOptions(mountOptions)
-      }
-
-      /**
-       * @param mountOptions The list of tmpfs volume mount options.
-       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
-       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-       */
-      override fun mountOptions(vararg mountOptions: String): Unit =
-          mountOptions(mountOptions.toList())
-
-      /**
-       * @param size The maximum size (in MiB) of the tmpfs volume. 
-       */
-      override fun size(size: Number) {
-        cdkBuilder.size(size)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty,
-    ) : CdkObject(cdkObject), TmpfsProperty {
-      /**
-       * The absolute file path where the tmpfs volume is to be mounted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
-       */
-      override fun containerPath(): String? = unwrap(this).getContainerPath()
-
-      /**
-       * The list of tmpfs volume mount options.
-       *
-       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
-       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
-       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
-       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
-       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
-       */
-      override fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?: emptyList()
-
-      /**
-       * The maximum size (in MiB) of the tmpfs volume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
-       */
-      override fun size(): Number = unwrap(this).getSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TmpfsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty):
-          TmpfsProperty = CdkObjectWrappers.wrap(cdkObject) as? TmpfsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TmpfsProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty
-    }
-  }
-
-  /**
-   * The `HostEntry` property specifies a hostname and an IP address that are added to the
-   * `/etc/hosts` file of a container through the `extraHosts` parameter of its `ContainerDefinition`
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * HostEntryProperty hostEntryProperty = HostEntryProperty.builder()
-   * .hostname("hostname")
-   * .ipAddress("ipAddress")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html)
-   */
-  public interface HostEntryProperty {
-    /**
-     * The hostname to use in the `/etc/hosts` entry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-hostname)
-     */
-    public fun hostname(): String? = unwrap(this).getHostname()
-
-    /**
-     * The IP address to use in the `/etc/hosts` entry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-ipaddress)
-     */
-    public fun ipAddress(): String? = unwrap(this).getIpAddress()
-
-    /**
-     * A builder for [HostEntryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param hostname The hostname to use in the `/etc/hosts` entry.
-       */
-      public fun hostname(hostname: String)
-
-      /**
-       * @param ipAddress The IP address to use in the `/etc/hosts` entry.
-       */
-      public fun ipAddress(ipAddress: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty.builder()
-
-      /**
-       * @param hostname The hostname to use in the `/etc/hosts` entry.
-       */
-      override fun hostname(hostname: String) {
-        cdkBuilder.hostname(hostname)
-      }
-
-      /**
-       * @param ipAddress The IP address to use in the `/etc/hosts` entry.
-       */
-      override fun ipAddress(ipAddress: String) {
-        cdkBuilder.ipAddress(ipAddress)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty,
-    ) : CdkObject(cdkObject), HostEntryProperty {
-      /**
-       * The hostname to use in the `/etc/hosts` entry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-hostname)
-       */
-      override fun hostname(): String? = unwrap(this).getHostname()
-
-      /**
-       * The IP address to use in the `/etc/hosts` entry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-ipaddress)
-       */
-      override fun ipAddress(): String? = unwrap(this).getIpAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HostEntryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty):
-          HostEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? HostEntryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HostEntryProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty
-    }
-  }
-
-  /**
-   * A list of files containing the environment variables to pass to a container.
-   *
-   * You can specify up to ten environment files. The file must have a `.env` file extension. Each
-   * line in an environment file should contain an environment variable in `VARIABLE=VALUE` format.
-   * Lines beginning with `#` are treated as comments and are ignored.
-   *
-   * If there are environment variables specified using the `environment` parameter in a container
-   * definition, they take precedence over the variables contained within an environment file. If
-   * multiple environment files are specified that contain the same variable, they're processed from
-   * the top down. We recommend that you use unique variable names. For more information, see
-   * [Specifying environment
-   * variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * You must use the following platforms for the Fargate launch type:
-   *
-   * * Linux platform version `1.4.0` or later.
-   * * Windows platform version `1.0.0` or later.
-   *
-   * Consider the following when using the Fargate launch type:
-   *
-   * * The file is handled like a native Docker env-file.
-   * * There is no support for shell escape handling.
-   * * The container entry point interperts the `VARIABLE` values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * EnvironmentFileProperty environmentFileProperty = EnvironmentFileProperty.builder()
-   * .type("type")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html)
-   */
-  public interface EnvironmentFileProperty {
-    /**
-     * The file type to use.
-     *
-     * The only supported value is `s3` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon S3 object containing the environment variable
-     * file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [EnvironmentFileProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The file type to use.
-       * The only supported value is `s3` .
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value The Amazon Resource Name (ARN) of the Amazon S3 object containing the
-       * environment variable file.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty.builder()
-
-      /**
-       * @param type The file type to use.
-       * The only supported value is `s3` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value The Amazon Resource Name (ARN) of the Amazon S3 object containing the
-       * environment variable file.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty,
-    ) : CdkObject(cdkObject), EnvironmentFileProperty {
-      /**
-       * The file type to use.
-       *
-       * The only supported value is `s3` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon S3 object containing the environment variable
-       * file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentFileProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty):
-          EnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentFileProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnvironmentFileProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty
-    }
-  }
-
-  /**
-   * The `ulimit` settings to pass to the container.
-   *
-   * Amazon ECS tasks hosted on AWS Fargate use the default resource limit values set by the
-   * operating system with the exception of the `nofile` resource limit parameter which AWS Fargate
-   * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
-   * container can use. The default `nofile` soft limit is `1024` and the default hard limit is `65535`
-   * .
-   *
-   * You can specify the `ulimit` settings for a container in a task definition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * UlimitProperty ulimitProperty = UlimitProperty.builder()
-   * .hardLimit(123)
-   * .name("name")
-   * .softLimit(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html)
-   */
-  public interface UlimitProperty {
-    /**
-     * The hard limit for the `ulimit` type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
-     */
-    public fun hardLimit(): Number
-
-    /**
-     * The `type` of the `ulimit` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-name)
-     */
-    public fun name(): String
-
-    /**
-     * The soft limit for the `ulimit` type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
-     */
-    public fun softLimit(): Number
-
-    /**
-     * A builder for [UlimitProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param hardLimit The hard limit for the `ulimit` type. 
-       */
-      public fun hardLimit(hardLimit: Number)
-
-      /**
-       * @param name The `type` of the `ulimit` . 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param softLimit The soft limit for the `ulimit` type. 
-       */
-      public fun softLimit(softLimit: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty.builder()
-
-      /**
-       * @param hardLimit The hard limit for the `ulimit` type. 
-       */
-      override fun hardLimit(hardLimit: Number) {
-        cdkBuilder.hardLimit(hardLimit)
-      }
-
-      /**
-       * @param name The `type` of the `ulimit` . 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param softLimit The soft limit for the `ulimit` type. 
-       */
-      override fun softLimit(softLimit: Number) {
-        cdkBuilder.softLimit(softLimit)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty,
-    ) : CdkObject(cdkObject), UlimitProperty {
-      /**
-       * The hard limit for the `ulimit` type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
-       */
-      override fun hardLimit(): Number = unwrap(this).getHardLimit()
-
-      /**
-       * The `type` of the `ulimit` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The soft limit for the `ulimit` type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
-       */
-      override fun softLimit(): Number = unwrap(this).getSoftLimit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UlimitProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty):
-          UlimitProperty = CdkObjectWrappers.wrap(cdkObject) as? UlimitProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UlimitProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty
-    }
-  }
-
-  /**
-   * Details on a data volume from another container in the same task definition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * VolumeFromProperty volumeFromProperty = VolumeFromProperty.builder()
-   * .readOnly(false)
-   * .sourceContainer("sourceContainer")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html)
-   */
-  public interface VolumeFromProperty {
-    /**
-     * If this value is `true` , the container has read-only access to the volume.
-     *
-     * If this value is `false` , then the container can write to the volume. The default value is
-     * `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-readonly)
-     */
-    public fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-    /**
-     * The name of another container within the same task definition to mount volumes from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-sourcecontainer)
-     */
-    public fun sourceContainer(): String? = unwrap(this).getSourceContainer()
-
-    /**
-     * A builder for [VolumeFromProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      public fun readOnly(readOnly: Boolean)
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      public fun readOnly(readOnly: IResolvable)
-
-      /**
-       * @param sourceContainer The name of another container within the same task definition to
-       * mount volumes from.
-       */
-      public fun sourceContainer(sourceContainer: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty.builder()
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      override fun readOnly(readOnly: Boolean) {
-        cdkBuilder.readOnly(readOnly)
-      }
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceContainer The name of another container within the same task definition to
-       * mount volumes from.
-       */
-      override fun sourceContainer(sourceContainer: String) {
-        cdkBuilder.sourceContainer(sourceContainer)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty,
-    ) : CdkObject(cdkObject), VolumeFromProperty {
-      /**
-       * If this value is `true` , the container has read-only access to the volume.
-       *
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-readonly)
-       */
-      override fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-      /**
-       * The name of another container within the same task definition to mount volumes from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-sourcecontainer)
-       */
-      override fun sourceContainer(): String? = unwrap(this).getSourceContainer()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeFromProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty):
-          VolumeFromProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeFromProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VolumeFromProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty
-    }
-  }
-
-  /**
-   * The `DockerVolumeConfiguration` property specifies a Docker volume configuration and is used
-   * when you use Docker volumes.
-   *
-   * Docker volumes are only supported when you are using the EC2 launch type. Windows containers
-   * only support the use of the `local` driver. To use bind mounts, specify a `host` instead.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DockerVolumeConfigurationProperty dockerVolumeConfigurationProperty =
-   * DockerVolumeConfigurationProperty.builder()
-   * .autoprovision(false)
-   * .driver("driver")
-   * .driverOpts(Map.of(
-   * "driverOptsKey", "driverOpts"))
-   * .labels(Map.of(
-   * "labelsKey", "labels"))
-   * .scope("scope")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html)
-   */
-  public interface DockerVolumeConfigurationProperty {
-    /**
-     * If this value is `true` , the Docker volume is created if it doesn't already exist.
-     *
-     *
-     * This field is only used if the `scope` is `shared` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
-     */
-    public fun autoprovision(): Any? = unwrap(this).getAutoprovision()
-
-    /**
-     * The Docker volume driver to use.
-     *
-     * The driver value must match the driver name provided by Docker because it is used for task
-     * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
-     * retrieve the driver name from your container instance. If the driver was installed using another
-     * method, use Docker plugin discovery to retrieve the driver name. For more information, see
-     * [Docker plugin
-     * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-     * . This parameter maps to `Driver` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
-     */
-    public fun driver(): String? = unwrap(this).getDriver()
-
-    /**
-     * A map of Docker driver-specific options passed through.
-     *
-     * This parameter maps to `DriverOpts` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
-     */
-    public fun driverOpts(): Any? = unwrap(this).getDriverOpts()
-
-    /**
-     * Custom metadata to add to your Docker volume.
-     *
-     * This parameter maps to `Labels` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
-     */
-    public fun labels(): Any? = unwrap(this).getLabels()
-
-    /**
-     * The scope for the Docker volume that determines its lifecycle.
-     *
-     * Docker volumes that are scoped to a `task` are automatically provisioned when the task starts
-     * and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the
-     * task stops.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
-     */
-    public fun scope(): String? = unwrap(this).getScope()
-
-    /**
-     * A builder for [DockerVolumeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
-       * already exist.
-       *
-       * This field is only used if the `scope` is `shared` .
-       */
-      public fun autoprovision(autoprovision: Boolean)
-
-      /**
-       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
-       * already exist.
-       *
-       * This field is only used if the `scope` is `shared` .
-       */
-      public fun autoprovision(autoprovision: IResolvable)
-
-      /**
-       * @param driver The Docker volume driver to use.
-       * The driver value must match the driver name provided by Docker because it is used for task
-       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
-       * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      public fun driver(driver: String)
-
-      /**
-       * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      public fun driverOpts(driverOpts: IResolvable)
-
-      /**
-       * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      public fun driverOpts(driverOpts: Map<String, String>)
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      public fun labels(labels: IResolvable)
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      public fun labels(labels: Map<String, String>)
-
-      /**
-       * @param scope The scope for the Docker volume that determines its lifecycle.
-       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
-       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
-       * after the task stops.
-       */
-      public fun scope(scope: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty.builder()
-
-      /**
-       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
-       * already exist.
-       *
-       * This field is only used if the `scope` is `shared` .
-       */
-      override fun autoprovision(autoprovision: Boolean) {
-        cdkBuilder.autoprovision(autoprovision)
-      }
-
-      /**
-       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
-       * already exist.
-       *
-       * This field is only used if the `scope` is `shared` .
-       */
-      override fun autoprovision(autoprovision: IResolvable) {
-        cdkBuilder.autoprovision(autoprovision.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param driver The Docker volume driver to use.
-       * The driver value must match the driver name provided by Docker because it is used for task
-       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
-       * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      override fun driver(driver: String) {
-        cdkBuilder.driver(driver)
-      }
-
-      /**
-       * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      override fun driverOpts(driverOpts: IResolvable) {
-        cdkBuilder.driverOpts(driverOpts.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      override fun driverOpts(driverOpts: Map<String, String>) {
-        cdkBuilder.driverOpts(driverOpts)
-      }
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      override fun labels(labels: IResolvable) {
-        cdkBuilder.labels(labels.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       */
-      override fun labels(labels: Map<String, String>) {
-        cdkBuilder.labels(labels)
-      }
-
-      /**
-       * @param scope The scope for the Docker volume that determines its lifecycle.
-       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
-       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
-       * after the task stops.
-       */
-      override fun scope(scope: String) {
-        cdkBuilder.scope(scope)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), DockerVolumeConfigurationProperty {
-      /**
-       * If this value is `true` , the Docker volume is created if it doesn't already exist.
-       *
-       *
-       * This field is only used if the `scope` is `shared` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
-       */
-      override fun autoprovision(): Any? = unwrap(this).getAutoprovision()
-
-      /**
-       * The Docker volume driver to use.
-       *
-       * The driver value must match the driver name provided by Docker because it is used for task
-       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
-       * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
-       */
-      override fun driver(): String? = unwrap(this).getDriver()
-
-      /**
-       * A map of Docker driver-specific options passed through.
-       *
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
-       */
-      override fun driverOpts(): Any? = unwrap(this).getDriverOpts()
-
-      /**
-       * Custom metadata to add to your Docker volume.
-       *
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
-       */
-      override fun labels(): Any? = unwrap(this).getLabels()
-
-      /**
-       * The scope for the Docker volume that determines its lifecycle.
-       *
-       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
-       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
-       * after the task stops.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
-       */
-      override fun scope(): String? = unwrap(this).getScope()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DockerVolumeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty):
-          DockerVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DockerVolumeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DockerVolumeConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty
-    }
-  }
-
-  /**
-   * This parameter is specified when you're using an Amazon Elastic File System file system for
-   * task storage.
-   *
-   * For more information, see [Amazon EFS
-   * volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/efs-volumes.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * EFSVolumeConfigurationProperty eFSVolumeConfigurationProperty =
-   * EFSVolumeConfigurationProperty.builder()
-   * .filesystemId("filesystemId")
-   * // the properties below are optional
-   * .authorizationConfig(AuthorizationConfigProperty.builder()
-   * .accessPointId("accessPointId")
-   * .iam("iam")
-   * .build())
-   * .rootDirectory("rootDirectory")
-   * .transitEncryption("transitEncryption")
-   * .transitEncryptionPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html)
-   */
-  public interface EFSVolumeConfigurationProperty {
-    /**
-     * The authorization configuration details for the Amazon EFS file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-authorizationconfig)
-     */
-    public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
-
-    /**
-     * The Amazon EFS file system ID to use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-filesystemid)
-     */
-    public fun filesystemId(): String
-
-    /**
-     * The directory within the Amazon EFS file system to mount as the root directory inside the
-     * host.
-     *
-     * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying `/`
-     * will have the same effect as omitting this parameter.
-     *
-     *
-     * If an EFS access point is specified in the `authorizationConfig` , the root directory
-     * parameter must either be omitted or set to `/` which will enforce the path set on the EFS access
-     * point.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-rootdirectory)
-     */
-    public fun rootDirectory(): String? = unwrap(this).getRootDirectory()
-
-    /**
-     * Determines whether to use encryption for Amazon EFS data in transit between the Amazon ECS
-     * host and the Amazon EFS server.
-     *
-     * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
-     * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-     * [Encrypting data in
-     * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-     * Elastic File System User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryption)
-     */
-    public fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
-
-    /**
-     * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
-     * server.
-     *
-     * If you do not specify a transit encryption port, it will use the port selection strategy that
-     * the Amazon EFS mount helper uses. For more information, see [EFS mount
-     * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon Elastic
-     * File System User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryptionport)
-     */
-    public fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
-
-    /**
-     * A builder for [EFSVolumeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      public fun authorizationConfig(authorizationConfig: IResolvable)
-
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
-
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a43a14e096c85e15a78eec7ef1bbe5a3cb80d900972837ecf8db4370d73749b4")
-      public
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param filesystemId The Amazon EFS file system ID to use. 
-       */
-      public fun filesystemId(filesystemId: String)
-
-      /**
-       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
-       * directory inside the host.
-       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
-       * `/` will have the same effect as omitting this parameter.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
-       * access point.
-       */
-      public fun rootDirectory(rootDirectory: String)
-
-      /**
-       * @param transitEncryption Determines whether to use encryption for Amazon EFS data in
-       * transit between the Amazon ECS host and the Amazon EFS server.
-       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
-       */
-      public fun transitEncryption(transitEncryption: String)
-
-      /**
-       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
-       * ECS host and the Amazon EFS server.
-       * If you do not specify a transit encryption port, it will use the port selection strategy
-       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
-       */
-      public fun transitEncryptionPort(transitEncryptionPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty.builder()
-
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a43a14e096c85e15a78eec7ef1bbe5a3cb80d900972837ecf8db4370d73749b4")
-      override
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
-          Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
-
-      /**
-       * @param filesystemId The Amazon EFS file system ID to use. 
-       */
-      override fun filesystemId(filesystemId: String) {
-        cdkBuilder.filesystemId(filesystemId)
-      }
-
-      /**
-       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
-       * directory inside the host.
-       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
-       * `/` will have the same effect as omitting this parameter.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
-       * access point.
-       */
-      override fun rootDirectory(rootDirectory: String) {
-        cdkBuilder.rootDirectory(rootDirectory)
-      }
-
-      /**
-       * @param transitEncryption Determines whether to use encryption for Amazon EFS data in
-       * transit between the Amazon ECS host and the Amazon EFS server.
-       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
-       */
-      override fun transitEncryption(transitEncryption: String) {
-        cdkBuilder.transitEncryption(transitEncryption)
-      }
-
-      /**
-       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
-       * ECS host and the Amazon EFS server.
-       * If you do not specify a transit encryption port, it will use the port selection strategy
-       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
-       */
-      override fun transitEncryptionPort(transitEncryptionPort: Number) {
-        cdkBuilder.transitEncryptionPort(transitEncryptionPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), EFSVolumeConfigurationProperty {
-      /**
-       * The authorization configuration details for the Amazon EFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-authorizationconfig)
-       */
-      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
-
-      /**
-       * The Amazon EFS file system ID to use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-filesystemid)
-       */
-      override fun filesystemId(): String = unwrap(this).getFilesystemId()
-
-      /**
-       * The directory within the Amazon EFS file system to mount as the root directory inside the
-       * host.
-       *
-       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
-       * `/` will have the same effect as omitting this parameter.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
-       * access point.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-rootdirectory)
-       */
-      override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
-
-      /**
-       * Determines whether to use encryption for Amazon EFS data in transit between the Amazon ECS
-       * host and the Amazon EFS server.
-       *
-       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryption)
-       */
-      override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
-
-      /**
-       * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
-       * server.
-       *
-       * If you do not specify a transit encryption port, it will use the port selection strategy
-       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryptionport)
-       */
-      override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EFSVolumeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty):
-          EFSVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EFSVolumeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EFSVolumeConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty
-    }
-  }
-
-  /**
-   * The details for a volume mount point that's used in a container definition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * MountPointProperty mountPointProperty = MountPointProperty.builder()
-   * .containerPath("containerPath")
-   * .readOnly(false)
-   * .sourceVolume("sourceVolume")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html)
-   */
-  public interface MountPointProperty {
-    /**
-     * The path on the container to mount the host volume at.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-containerpath)
-     */
-    public fun containerPath(): String? = unwrap(this).getContainerPath()
-
-    /**
-     * If this value is `true` , the container has read-only access to the volume.
-     *
-     * If this value is `false` , then the container can write to the volume. The default value is
-     * `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-readonly)
-     */
-    public fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-    /**
-     * The name of the volume to mount.
-     *
-     * Must be a volume name referenced in the `name` parameter of task definition `volume` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-sourcevolume)
-     */
-    public fun sourceVolume(): String? = unwrap(this).getSourceVolume()
-
-    /**
-     * A builder for [MountPointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerPath The path on the container to mount the host volume at.
-       */
-      public fun containerPath(containerPath: String)
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      public fun readOnly(readOnly: Boolean)
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      public fun readOnly(readOnly: IResolvable)
-
-      /**
-       * @param sourceVolume The name of the volume to mount.
-       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
-       */
-      public fun sourceVolume(sourceVolume: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty.builder()
-
-      /**
-       * @param containerPath The path on the container to mount the host volume at.
-       */
-      override fun containerPath(containerPath: String) {
-        cdkBuilder.containerPath(containerPath)
-      }
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      override fun readOnly(readOnly: Boolean) {
-        cdkBuilder.readOnly(readOnly)
-      }
-
-      /**
-       * @param readOnly If this value is `true` , the container has read-only access to the volume.
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       */
-      override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceVolume The name of the volume to mount.
-       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
-       */
-      override fun sourceVolume(sourceVolume: String) {
-        cdkBuilder.sourceVolume(sourceVolume)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty,
-    ) : CdkObject(cdkObject), MountPointProperty {
-      /**
-       * The path on the container to mount the host volume at.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-containerpath)
-       */
-      override fun containerPath(): String? = unwrap(this).getContainerPath()
-
-      /**
-       * If this value is `true` , the container has read-only access to the volume.
-       *
-       * If this value is `false` , then the container can write to the volume. The default value is
-       * `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-readonly)
-       */
-      override fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-      /**
-       * The name of the volume to mount.
-       *
-       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-sourcevolume)
-       */
-      override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MountPointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty):
-          MountPointProperty = CdkObjectWrappers.wrap(cdkObject) as? MountPointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MountPointProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty
-    }
+        software.amazon.awscdk.services.ecs.CfnTaskDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CfnTaskDefinition
   }
 
   /**
@@ -4050,8 +1968,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty,
     ) : CdkObject(cdkObject), AuthorizationConfigProperty {
       /**
        * The Amazon EFS access point ID to use.
@@ -4097,1579 +2014,6 @@ public open class CfnTaskDefinition internal constructor(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty
-    }
-  }
-
-  /**
-   * Details on an Elastic Inference accelerator.
-   *
-   * For more information, see [Working with Amazon Elastic Inference on Amazon
-   * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-inference.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * InferenceAcceleratorProperty inferenceAcceleratorProperty =
-   * InferenceAcceleratorProperty.builder()
-   * .deviceName("deviceName")
-   * .deviceType("deviceType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html)
-   */
-  public interface InferenceAcceleratorProperty {
-    /**
-     * The Elastic Inference accelerator device name.
-     *
-     * The `deviceName` must also be referenced in a container definition as a
-     * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
-     */
-    public fun deviceName(): String? = unwrap(this).getDeviceName()
-
-    /**
-     * The Elastic Inference accelerator type to use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
-     */
-    public fun deviceType(): String? = unwrap(this).getDeviceType()
-
-    /**
-     * A builder for [InferenceAcceleratorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deviceName The Elastic Inference accelerator device name.
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
-       */
-      public fun deviceName(deviceName: String)
-
-      /**
-       * @param deviceType The Elastic Inference accelerator type to use.
-       */
-      public fun deviceType(deviceType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty.builder()
-
-      /**
-       * @param deviceName The Elastic Inference accelerator device name.
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
-       */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
-      }
-
-      /**
-       * @param deviceType The Elastic Inference accelerator type to use.
-       */
-      override fun deviceType(deviceType: String) {
-        cdkBuilder.deviceType(deviceType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), InferenceAcceleratorProperty {
-      /**
-       * The Elastic Inference accelerator device name.
-       *
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
-       */
-      override fun deviceName(): String? = unwrap(this).getDeviceName()
-
-      /**
-       * The Elastic Inference accelerator type to use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
-       */
-      override fun deviceType(): String? = unwrap(this).getDeviceType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InferenceAcceleratorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty):
-          InferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InferenceAcceleratorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InferenceAcceleratorProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty
-    }
-  }
-
-  /**
-   * The constraint on task placement in the task definition.
-   *
-   * For more information, see [Task placement
-   * constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   *
-   * Task placement constraints aren't supported for tasks run on AWS Fargate .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * TaskDefinitionPlacementConstraintProperty taskDefinitionPlacementConstraintProperty =
-   * TaskDefinitionPlacementConstraintProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .expression("expression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html)
-   */
-  public interface TaskDefinitionPlacementConstraintProperty {
-    /**
-     * A cluster query language expression to apply to the constraint.
-     *
-     * For more information, see [Cluster query
-     * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-     * in the *Amazon Elastic Container Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression)
-     */
-    public fun expression(): String? = unwrap(this).getExpression()
-
-    /**
-     * The type of constraint.
-     *
-     * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [TaskDefinitionPlacementConstraintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * For more information, see [Cluster query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param type The type of constraint. 
-       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty.builder()
-
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * For more information, see [Cluster query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param type The type of constraint. 
-       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty,
-    ) : CdkObject(cdkObject), TaskDefinitionPlacementConstraintProperty {
-      /**
-       * A cluster query language expression to apply to the constraint.
-       *
-       * For more information, see [Cluster query
-       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
-       * in the *Amazon Elastic Container Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression)
-       */
-      override fun expression(): String? = unwrap(this).getExpression()
-
-      /**
-       * The type of constraint.
-       *
-       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TaskDefinitionPlacementConstraintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty):
-          TaskDefinitionPlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TaskDefinitionPlacementConstraintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskDefinitionPlacementConstraintProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
-    }
-  }
-
-  /**
-   * Information about the platform for the Amazon ECS service or task.
-   *
-   * For more information about `RuntimePlatform` , see
-   * [RuntimePlatform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
-   * in the *Amazon Elastic Container Service Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * RuntimePlatformProperty runtimePlatformProperty = RuntimePlatformProperty.builder()
-   * .cpuArchitecture("cpuArchitecture")
-   * .operatingSystemFamily("operatingSystemFamily")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html)
-   */
-  public interface RuntimePlatformProperty {
-    /**
-     * The CPU architecture.
-     *
-     * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` . This
-     * option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on
-     * Fargate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture)
-     */
-    public fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
-
-    /**
-     * The operating system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-operatingsystemfamily)
-     */
-    public fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
-
-    /**
-     * A builder for [RuntimePlatformProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpuArchitecture The CPU architecture.
-       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
-       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
-       * on Fargate.
-       */
-      public fun cpuArchitecture(cpuArchitecture: String)
-
-      /**
-       * @param operatingSystemFamily The operating system.
-       */
-      public fun operatingSystemFamily(operatingSystemFamily: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty.builder()
-
-      /**
-       * @param cpuArchitecture The CPU architecture.
-       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
-       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
-       * on Fargate.
-       */
-      override fun cpuArchitecture(cpuArchitecture: String) {
-        cdkBuilder.cpuArchitecture(cpuArchitecture)
-      }
-
-      /**
-       * @param operatingSystemFamily The operating system.
-       */
-      override fun operatingSystemFamily(operatingSystemFamily: String) {
-        cdkBuilder.operatingSystemFamily(operatingSystemFamily)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty,
-    ) : CdkObject(cdkObject), RuntimePlatformProperty {
-      /**
-       * The CPU architecture.
-       *
-       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
-       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
-       * on Fargate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture)
-       */
-      override fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
-
-      /**
-       * The operating system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-operatingsystemfamily)
-       */
-      override fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuntimePlatformProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty):
-          RuntimePlatformProperty = CdkObjectWrappers.wrap(cdkObject) as? RuntimePlatformProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RuntimePlatformProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty
-    }
-  }
-
-  /**
-   * The `ContainerDependency` property specifies the dependencies defined for container startup and
-   * shutdown.
-   *
-   * A container can contain multiple dependencies. When a dependency is defined for container
-   * startup, for container shutdown it is reversed.
-   *
-   * Your Amazon ECS container instances require at least version 1.26.0 of the container agent to
-   * enable container dependencies. However, we recommend using the latest container agent version. For
-   * information about checking your agent version and updating to the latest version, see [Updating
-   * the Amazon ECS Container
-   * Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the
-   * *Amazon Elastic Container Service Developer Guide* . If you are using an Amazon ECS-optimized
-   * Linux AMI, your instance needs at least version 1.26.0-1 of the `ecs-init` package. If your
-   * container instances are launched from version `20190301` or later, then they contain the required
-   * versions of the container agent and `ecs-init` . For more information, see [Amazon ECS-optimized
-   * Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
-   *
-   *
-   * For tasks using the Fargate launch type, this parameter requires that the task or service uses
-   * platform version 1.3.0 or later.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ContainerDependencyProperty containerDependencyProperty = ContainerDependencyProperty.builder()
-   * .condition("condition")
-   * .containerName("containerName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html)
-   */
-  public interface ContainerDependencyProperty {
-    /**
-     * The dependency condition of the container. The following are the available conditions and
-     * their behavior:.
-     *
-     * * `START` - This condition emulates the behavior of links and volumes today. It validates
-     * that a dependent container is started before permitting other containers to start.
-     * * `COMPLETE` - This condition validates that a dependent container runs to completion (exits)
-     * before permitting other containers to start. This can be useful for nonessential containers that
-     * run a script and then exit. This condition can't be set on an essential container.
-     * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
-     * container exits with a `zero` status. This condition can't be set on an essential container.
-     * * `HEALTHY` - This condition validates that the dependent container passes its Docker health
-     * check before permitting other containers to start. This requires that the dependent container
-     * has health checks configured. This condition is confirmed only at task startup.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-condition)
-     */
-    public fun condition(): String? = unwrap(this).getCondition()
-
-    /**
-     * The name of a container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-containername)
-     */
-    public fun containerName(): String? = unwrap(this).getContainerName()
-
-    /**
-     * A builder for [ContainerDependencyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param condition The dependency condition of the container. The following are the available
-       * conditions and their behavior:.
-       * * `START` - This condition emulates the behavior of links and volumes today. It validates
-       * that a dependent container is started before permitting other containers to start.
-       * * `COMPLETE` - This condition validates that a dependent container runs to completion
-       * (exits) before permitting other containers to start. This can be useful for nonessential
-       * containers that run a script and then exit. This condition can't be set on an essential
-       * container.
-       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
-       * container exits with a `zero` status. This condition can't be set on an essential container.
-       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
-       * health check before permitting other containers to start. This requires that the dependent
-       * container has health checks configured. This condition is confirmed only at task startup.
-       */
-      public fun condition(condition: String)
-
-      /**
-       * @param containerName The name of a container.
-       */
-      public fun containerName(containerName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty.builder()
-
-      /**
-       * @param condition The dependency condition of the container. The following are the available
-       * conditions and their behavior:.
-       * * `START` - This condition emulates the behavior of links and volumes today. It validates
-       * that a dependent container is started before permitting other containers to start.
-       * * `COMPLETE` - This condition validates that a dependent container runs to completion
-       * (exits) before permitting other containers to start. This can be useful for nonessential
-       * containers that run a script and then exit. This condition can't be set on an essential
-       * container.
-       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
-       * container exits with a `zero` status. This condition can't be set on an essential container.
-       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
-       * health check before permitting other containers to start. This requires that the dependent
-       * container has health checks configured. This condition is confirmed only at task startup.
-       */
-      override fun condition(condition: String) {
-        cdkBuilder.condition(condition)
-      }
-
-      /**
-       * @param containerName The name of a container.
-       */
-      override fun containerName(containerName: String) {
-        cdkBuilder.containerName(containerName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty,
-    ) : CdkObject(cdkObject), ContainerDependencyProperty {
-      /**
-       * The dependency condition of the container. The following are the available conditions and
-       * their behavior:.
-       *
-       * * `START` - This condition emulates the behavior of links and volumes today. It validates
-       * that a dependent container is started before permitting other containers to start.
-       * * `COMPLETE` - This condition validates that a dependent container runs to completion
-       * (exits) before permitting other containers to start. This can be useful for nonessential
-       * containers that run a script and then exit. This condition can't be set on an essential
-       * container.
-       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
-       * container exits with a `zero` status. This condition can't be set on an essential container.
-       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
-       * health check before permitting other containers to start. This requires that the dependent
-       * container has health checks configured. This condition is confirmed only at task startup.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-condition)
-       */
-      override fun condition(): String? = unwrap(this).getCondition()
-
-      /**
-       * The name of a container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-containername)
-       */
-      override fun containerName(): String? = unwrap(this).getContainerName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContainerDependencyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty):
-          ContainerDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContainerDependencyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContainerDependencyProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty
-    }
-  }
-
-  /**
-   * A key-value pair object.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * KeyValuePairProperty keyValuePairProperty = KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html)
-   */
-  public interface KeyValuePairProperty {
-    /**
-     * The name of the key-value pair.
-     *
-     * For environment variables, this is the name of the environment variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The value of the key-value pair.
-     *
-     * For environment variables, this is the value of the environment variable.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [KeyValuePairProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the key-value pair.
-       * For environment variables, this is the name of the environment variable.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value of the key-value pair.
-       * For environment variables, this is the value of the environment variable.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty.builder()
-
-      /**
-       * @param name The name of the key-value pair.
-       * For environment variables, this is the name of the environment variable.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value of the key-value pair.
-       * For environment variables, this is the value of the environment variable.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty,
-    ) : CdkObject(cdkObject), KeyValuePairProperty {
-      /**
-       * The name of the key-value pair.
-       *
-       * For environment variables, this is the name of the environment variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The value of the key-value pair.
-       *
-       * For environment variables, this is the value of the environment variable.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValuePairProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty):
-          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyValuePairProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty
-    }
-  }
-
-  /**
-   * The `Device` property specifies an object representing a container instance host device.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * DeviceProperty deviceProperty = DeviceProperty.builder()
-   * .containerPath("containerPath")
-   * .hostPath("hostPath")
-   * .permissions(List.of("permissions"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html)
-   */
-  public interface DeviceProperty {
-    /**
-     * The path inside the container at which to expose the host device.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath)
-     */
-    public fun containerPath(): String? = unwrap(this).getContainerPath()
-
-    /**
-     * The path for the device on the host container instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath)
-     */
-    public fun hostPath(): String? = unwrap(this).getHostPath()
-
-    /**
-     * The explicit permissions to provide to the container for the device.
-     *
-     * By default, the container has permissions for `read` , `write` , and `mknod` for the device.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions)
-     */
-    public fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
-
-    /**
-     * A builder for [DeviceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerPath The path inside the container at which to expose the host device.
-       */
-      public fun containerPath(containerPath: String)
-
-      /**
-       * @param hostPath The path for the device on the host container instance.
-       */
-      public fun hostPath(hostPath: String)
-
-      /**
-       * @param permissions The explicit permissions to provide to the container for the device.
-       * By default, the container has permissions for `read` , `write` , and `mknod` for the
-       * device.
-       */
-      public fun permissions(permissions: List<String>)
-
-      /**
-       * @param permissions The explicit permissions to provide to the container for the device.
-       * By default, the container has permissions for `read` , `write` , and `mknod` for the
-       * device.
-       */
-      public fun permissions(vararg permissions: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty.builder()
-
-      /**
-       * @param containerPath The path inside the container at which to expose the host device.
-       */
-      override fun containerPath(containerPath: String) {
-        cdkBuilder.containerPath(containerPath)
-      }
-
-      /**
-       * @param hostPath The path for the device on the host container instance.
-       */
-      override fun hostPath(hostPath: String) {
-        cdkBuilder.hostPath(hostPath)
-      }
-
-      /**
-       * @param permissions The explicit permissions to provide to the container for the device.
-       * By default, the container has permissions for `read` , `write` , and `mknod` for the
-       * device.
-       */
-      override fun permissions(permissions: List<String>) {
-        cdkBuilder.permissions(permissions)
-      }
-
-      /**
-       * @param permissions The explicit permissions to provide to the container for the device.
-       * By default, the container has permissions for `read` , `write` , and `mknod` for the
-       * device.
-       */
-      override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty,
-    ) : CdkObject(cdkObject), DeviceProperty {
-      /**
-       * The path inside the container at which to expose the host device.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath)
-       */
-      override fun containerPath(): String? = unwrap(this).getContainerPath()
-
-      /**
-       * The path for the device on the host container instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath)
-       */
-      override fun hostPath(): String? = unwrap(this).getHostPath()
-
-      /**
-       * The explicit permissions to provide to the container for the device.
-       *
-       * By default, the container has permissions for `read` , `write` , and `mknod` for the
-       * device.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions)
-       */
-      override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty):
-          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty
-    }
-  }
-
-  /**
-   * The Linux-specific options that are applied to the container, such as Linux
-   * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * LinuxParametersProperty linuxParametersProperty = LinuxParametersProperty.builder()
-   * .capabilities(KernelCapabilitiesProperty.builder()
-   * .add(List.of("add"))
-   * .drop(List.of("drop"))
-   * .build())
-   * .devices(List.of(DeviceProperty.builder()
-   * .containerPath("containerPath")
-   * .hostPath("hostPath")
-   * .permissions(List.of("permissions"))
-   * .build()))
-   * .initProcessEnabled(false)
-   * .maxSwap(123)
-   * .sharedMemorySize(123)
-   * .swappiness(123)
-   * .tmpfs(List.of(TmpfsProperty.builder()
-   * .size(123)
-   * // the properties below are optional
-   * .containerPath("containerPath")
-   * .mountOptions(List.of("mountOptions"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html)
-   */
-  public interface LinuxParametersProperty {
-    /**
-     * The Linux capabilities for the container that are added to or dropped from the default
-     * configuration provided by Docker.
-     *
-     *
-     * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-     * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-capabilities)
-     */
-    public fun capabilities(): Any? = unwrap(this).getCapabilities()
-
-    /**
-     * Any host devices to expose to the container.
-     *
-     * This parameter maps to `Devices` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     *
-     * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-     * supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-devices)
-     */
-    public fun devices(): Any? = unwrap(this).getDevices()
-
-    /**
-     * Run an `init` process inside the container that forwards signals and reaps processes.
-     *
-     * This parameter maps to the `--init` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-     * instance. To check the Docker Remote API version on your container instance, log in to your
-     * container instance and run the following command: `sudo docker version --format
-     * '{{.Server.APIVersion}}'`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
-     */
-    public fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
-
-    /**
-     * The total amount of swap memory (in MiB) a container can use.
-     *
-     * This parameter will be translated to the `--memory-swap` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * where the value would be the sum of the container memory plus the `maxSwap` value.
-     *
-     * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
-     * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
-     * the swap configuration for the container instance it is running on. A `maxSwap` value must be
-     * set for the `swappiness` parameter to be used.
-     *
-     *
-     * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
-     * supported.
-     *
-     * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-maxswap)
-     */
-    public fun maxSwap(): Number? = unwrap(this).getMaxSwap()
-
-    /**
-     * The value for the size (in MiB) of the `/dev/shm` volume.
-     *
-     * This parameter maps to the `--shm-size` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     *
-     * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter is
-     * not supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
-     */
-    public fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
-
-    /**
-     * This allows you to tune a container's memory swappiness behavior.
-     *
-     * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary. A
-     * `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted values
-     * are whole numbers between `0` and `100` . If the `swappiness` parameter is not specified, a
-     * default value of `60` is used. If a value is not specified for `maxSwap` then this parameter is
-     * ignored. This parameter maps to the `--memory-swappiness` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     *
-     * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
-     * supported.
-     *
-     * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-swappiness)
-     */
-    public fun swappiness(): Number? = unwrap(this).getSwappiness()
-
-    /**
-     * The container path, mount options, and size (in MiB) of the tmpfs mount.
-     *
-     * This parameter maps to the `--tmpfs` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     *
-     * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-     * supported.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
-     */
-    public fun tmpfs(): Any? = unwrap(this).getTmpfs()
-
-    /**
-     * A builder for [LinuxParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      public fun capabilities(capabilities: IResolvable)
-
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      public fun capabilities(capabilities: KernelCapabilitiesProperty)
-
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1d10aaa6a433a74fbb4881c1f9b1fea32c8374cd97bb050bf7c42862af656c32")
-      public fun capabilities(capabilities: KernelCapabilitiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      public fun devices(devices: IResolvable)
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      public fun devices(devices: List<Any>)
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      public fun devices(vararg devices: Any)
-
-      /**
-       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
-       * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       */
-      public fun initProcessEnabled(initProcessEnabled: Boolean)
-
-      /**
-       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
-       * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       */
-      public fun initProcessEnabled(initProcessEnabled: IResolvable)
-
-      /**
-       * @param maxSwap The total amount of swap memory (in MiB) a container can use.
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
-       *
-       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
-       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
-       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
-       * set for the `swappiness` parameter to be used.
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       */
-      public fun maxSwap(maxSwap: Number)
-
-      /**
-       * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
-       * is not supported.
-       */
-      public fun sharedMemorySize(sharedMemorySize: Number)
-
-      /**
-       * @param swappiness This allows you to tune a container's memory swappiness behavior.
-       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
-       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
-       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
-       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       */
-      public fun swappiness(swappiness: Number)
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      public fun tmpfs(tmpfs: IResolvable)
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      public fun tmpfs(tmpfs: List<Any>)
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      public fun tmpfs(vararg tmpfs: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty.builder()
-
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      override fun capabilities(capabilities: IResolvable) {
-        cdkBuilder.capabilities(capabilities.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      override fun capabilities(capabilities: KernelCapabilitiesProperty) {
-        cdkBuilder.capabilities(capabilities.let(KernelCapabilitiesProperty::unwrap))
-      }
-
-      /**
-       * @param capabilities The Linux capabilities for the container that are added to or dropped
-       * from the default configuration provided by Docker.
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1d10aaa6a433a74fbb4881c1f9b1fea32c8374cd97bb050bf7c42862af656c32")
-      override fun capabilities(capabilities: KernelCapabilitiesProperty.Builder.() -> Unit): Unit =
-          capabilities(KernelCapabilitiesProperty(capabilities))
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
-      }
-
-      /**
-       * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       */
-      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
-
-      /**
-       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
-       * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       */
-      override fun initProcessEnabled(initProcessEnabled: Boolean) {
-        cdkBuilder.initProcessEnabled(initProcessEnabled)
-      }
-
-      /**
-       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
-       * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       */
-      override fun initProcessEnabled(initProcessEnabled: IResolvable) {
-        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxSwap The total amount of swap memory (in MiB) a container can use.
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
-       *
-       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
-       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
-       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
-       * set for the `swappiness` parameter to be used.
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       */
-      override fun maxSwap(maxSwap: Number) {
-        cdkBuilder.maxSwap(maxSwap)
-      }
-
-      /**
-       * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
-       * is not supported.
-       */
-      override fun sharedMemorySize(sharedMemorySize: Number) {
-        cdkBuilder.sharedMemorySize(sharedMemorySize)
-      }
-
-      /**
-       * @param swappiness This allows you to tune a container's memory swappiness behavior.
-       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
-       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
-       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
-       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       */
-      override fun swappiness(swappiness: Number) {
-        cdkBuilder.swappiness(swappiness)
-      }
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      override fun tmpfs(tmpfs: IResolvable) {
-        cdkBuilder.tmpfs(tmpfs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      override fun tmpfs(tmpfs: List<Any>) {
-        cdkBuilder.tmpfs(tmpfs)
-      }
-
-      /**
-       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       */
-      override fun tmpfs(vararg tmpfs: Any): Unit = tmpfs(tmpfs.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty,
-    ) : CdkObject(cdkObject), LinuxParametersProperty {
-      /**
-       * The Linux capabilities for the container that are added to or dropped from the default
-       * configuration provided by Docker.
-       *
-       *
-       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
-       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-capabilities)
-       */
-      override fun capabilities(): Any? = unwrap(this).getCapabilities()
-
-      /**
-       * Any host devices to expose to the container.
-       *
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
-       * supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-devices)
-       */
-      override fun devices(): Any? = unwrap(this).getDevices()
-
-      /**
-       * Run an `init` process inside the container that forwards signals and reaps processes.
-       *
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
-       */
-      override fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
-
-      /**
-       * The total amount of swap memory (in MiB) a container can use.
-       *
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
-       *
-       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
-       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
-       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
-       * set for the `swappiness` parameter to be used.
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-maxswap)
-       */
-      override fun maxSwap(): Number? = unwrap(this).getMaxSwap()
-
-      /**
-       * The value for the size (in MiB) of the `/dev/shm` volume.
-       *
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
-       * is not supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
-       */
-      override fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
-
-      /**
-       * This allows you to tune a container's memory swappiness behavior.
-       *
-       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
-       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
-       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
-       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
-       * supported.
-       *
-       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-swappiness)
-       */
-      override fun swappiness(): Number? = unwrap(this).getSwappiness()
-
-      /**
-       * The container path, mount options, and size (in MiB) of the tmpfs mount.
-       *
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
-       * supported.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
-       */
-      override fun tmpfs(): Any? = unwrap(this).getTmpfs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LinuxParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty):
-          LinuxParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? LinuxParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LinuxParametersProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty
     }
   }
 
@@ -10249,8 +6593,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty,
     ) : CdkObject(cdkObject), ContainerDefinitionProperty {
       /**
        * The command that's passed to the container.
@@ -11236,14 +7579,28 @@ public open class CfnTaskDefinition internal constructor(
   }
 
   /**
-   * The configuration details for the App Mesh proxy.
+   * The `ContainerDependency` property specifies the dependencies defined for container startup and
+   * shutdown.
    *
-   * For tasks that use the EC2 launch type, the container instances require at least version 1.26.0
-   * of the container agent and at least version 1.26.0-1 of the `ecs-init` package to use a proxy
-   * configuration. If your container instances are launched from the Amazon ECS optimized AMI version
-   * `20190301` or later, then they contain the required versions of the container agent and `ecs-init`
-   * . For more information, see [Amazon ECS-optimized Linux
-   * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
+   * A container can contain multiple dependencies. When a dependency is defined for container
+   * startup, for container shutdown it is reversed.
+   *
+   * Your Amazon ECS container instances require at least version 1.26.0 of the container agent to
+   * enable container dependencies. However, we recommend using the latest container agent version. For
+   * information about checking your agent version and updating to the latest version, see [Updating
+   * the Amazon ECS Container
+   * Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) in the
+   * *Amazon Elastic Container Service Developer Guide* . If you are using an Amazon ECS-optimized
+   * Linux AMI, your instance needs at least version 1.26.0-1 of the `ecs-init` package. If your
+   * container instances are launched from version `20190301` or later, then they contain the required
+   * versions of the container agent and `ecs-init` . For more information, see [Amazon ECS-optimized
+   * Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
+   * the *Amazon Elastic Container Service Developer Guide* .
+   *
+   *
+   * For tasks using the Fargate launch type, this parameter requires that the task or service uses
+   * platform version 1.3.0 or later.
+   *
    *
    * Example:
    *
@@ -11251,307 +7608,1497 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ProxyConfigurationProperty proxyConfigurationProperty = ProxyConfigurationProperty.builder()
+   * ContainerDependencyProperty containerDependencyProperty = ContainerDependencyProperty.builder()
+   * .condition("condition")
    * .containerName("containerName")
-   * // the properties below are optional
-   * .proxyConfigurationProperties(List.of(KeyValuePairProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html)
    */
-  public interface ProxyConfigurationProperty {
+  public interface ContainerDependencyProperty {
     /**
-     * The name of the container that will serve as the App Mesh proxy.
+     * The dependency condition of the container. The following are the available conditions and
+     * their behavior:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-containername)
+     * * `START` - This condition emulates the behavior of links and volumes today. It validates
+     * that a dependent container is started before permitting other containers to start.
+     * * `COMPLETE` - This condition validates that a dependent container runs to completion (exits)
+     * before permitting other containers to start. This can be useful for nonessential containers that
+     * run a script and then exit. This condition can't be set on an essential container.
+     * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+     * container exits with a `zero` status. This condition can't be set on an essential container.
+     * * `HEALTHY` - This condition validates that the dependent container passes its Docker health
+     * check before permitting other containers to start. This requires that the dependent container
+     * has health checks configured. This condition is confirmed only at task startup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-condition)
      */
-    public fun containerName(): String
+    public fun condition(): String? = unwrap(this).getCondition()
 
     /**
-     * The set of network configuration parameters to provide the Container Network Interface (CNI)
-     * plugin, specified as key-value pairs.
+     * The name of a container.
      *
-     * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the `user`
-     * parameter in a container definition. This is used to ensure the proxy ignores its own traffic.
-     * If `IgnoredGID` is specified, this field can be empty.
-     * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-     * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-     * traffic. If `IgnoredUID` is specified, this field can be empty.
-     * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-     * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-     * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the `AppPorts`
-     * is directed to.
-     * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the `AppPorts`
-     * is directed to.
-     * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-     * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-     * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-     * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-containername)
      */
-    public fun proxyConfigurationProperties(): Any? = unwrap(this).getProxyConfigurationProperties()
+    public fun containerName(): String? = unwrap(this).getContainerName()
 
     /**
-     * The proxy type.
-     *
-     * The only supported value is `APPMESH` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ProxyConfigurationProperty]
+     * A builder for [ContainerDependencyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param containerName The name of the container that will serve as the App Mesh proxy. 
+       * @param condition The dependency condition of the container. The following are the available
+       * conditions and their behavior:.
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a `zero` status. This condition can't be set on an essential container.
+       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
+       * health check before permitting other containers to start. This requires that the dependent
+       * container has health checks configured. This condition is confirmed only at task startup.
+       */
+      public fun condition(condition: String)
+
+      /**
+       * @param containerName The name of a container.
        */
       public fun containerName(containerName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty.builder()
 
       /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * @param condition The dependency condition of the container. The following are the available
+       * conditions and their behavior:.
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a `zero` status. This condition can't be set on an essential container.
+       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
+       * health check before permitting other containers to start. This requires that the dependent
+       * container has health checks configured. This condition is confirmed only at task startup.
        */
-      public fun proxyConfigurationProperties(proxyConfigurationProperties: IResolvable)
+      override fun condition(condition: String) {
+        cdkBuilder.condition(condition)
+      }
 
       /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * @param containerName The name of a container.
        */
-      public fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>)
+      override fun containerName(containerName: String) {
+        cdkBuilder.containerName(containerName)
+      }
 
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty,
+    ) : CdkObject(cdkObject), ContainerDependencyProperty {
       /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * The dependency condition of the container. The following are the available conditions and
+       * their behavior:.
+       *
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a `zero` status. This condition can't be set on an essential container.
+       * * `HEALTHY` - This condition validates that the dependent container passes its Docker
+       * health check before permitting other containers to start. This requires that the dependent
+       * container has health checks configured. This condition is confirmed only at task startup.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-condition)
        */
-      public fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any)
+      override fun condition(): String? = unwrap(this).getCondition()
 
       /**
-       * @param type The proxy type.
-       * The only supported value is `APPMESH` .
+       * The name of a container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdependency.html#cfn-ecs-taskdefinition-containerdependency-containername)
+       */
+      override fun containerName(): String? = unwrap(this).getContainerName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContainerDependencyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty):
+          ContainerDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDependencyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContainerDependencyProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty
+    }
+  }
+
+  /**
+   * The `Device` property specifies an object representing a container instance host device.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeviceProperty deviceProperty = DeviceProperty.builder()
+   * .containerPath("containerPath")
+   * .hostPath("hostPath")
+   * .permissions(List.of("permissions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html)
+   */
+  public interface DeviceProperty {
+    /**
+     * The path inside the container at which to expose the host device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath)
+     */
+    public fun containerPath(): String? = unwrap(this).getContainerPath()
+
+    /**
+     * The path for the device on the host container instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath)
+     */
+    public fun hostPath(): String? = unwrap(this).getHostPath()
+
+    /**
+     * The explicit permissions to provide to the container for the device.
+     *
+     * By default, the container has permissions for `read` , `write` , and `mknod` for the device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions)
+     */
+    public fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+
+    /**
+     * A builder for [DeviceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerPath The path inside the container at which to expose the host device.
+       */
+      public fun containerPath(containerPath: String)
+
+      /**
+       * @param hostPath The path for the device on the host container instance.
+       */
+      public fun hostPath(hostPath: String)
+
+      /**
+       * @param permissions The explicit permissions to provide to the container for the device.
+       * By default, the container has permissions for `read` , `write` , and `mknod` for the
+       * device.
+       */
+      public fun permissions(permissions: List<String>)
+
+      /**
+       * @param permissions The explicit permissions to provide to the container for the device.
+       * By default, the container has permissions for `read` , `write` , and `mknod` for the
+       * device.
+       */
+      public fun permissions(vararg permissions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty.builder()
+
+      /**
+       * @param containerPath The path inside the container at which to expose the host device.
+       */
+      override fun containerPath(containerPath: String) {
+        cdkBuilder.containerPath(containerPath)
+      }
+
+      /**
+       * @param hostPath The path for the device on the host container instance.
+       */
+      override fun hostPath(hostPath: String) {
+        cdkBuilder.hostPath(hostPath)
+      }
+
+      /**
+       * @param permissions The explicit permissions to provide to the container for the device.
+       * By default, the container has permissions for `read` , `write` , and `mknod` for the
+       * device.
+       */
+      override fun permissions(permissions: List<String>) {
+        cdkBuilder.permissions(permissions)
+      }
+
+      /**
+       * @param permissions The explicit permissions to provide to the container for the device.
+       * By default, the container has permissions for `read` , `write` , and `mknod` for the
+       * device.
+       */
+      override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty,
+    ) : CdkObject(cdkObject), DeviceProperty {
+      /**
+       * The path inside the container at which to expose the host device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-containerpath)
+       */
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
+
+      /**
+       * The path for the device on the host container instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-hostpath)
+       */
+      override fun hostPath(): String? = unwrap(this).getHostPath()
+
+      /**
+       * The explicit permissions to provide to the container for the device.
+       *
+       * By default, the container has permissions for `read` , `write` , and `mknod` for the
+       * device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-device.html#cfn-ecs-taskdefinition-device-permissions)
+       */
+      override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty):
+          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty
+    }
+  }
+
+  /**
+   * The `DockerVolumeConfiguration` property specifies a Docker volume configuration and is used
+   * when you use Docker volumes.
+   *
+   * Docker volumes are only supported when you are using the EC2 launch type. Windows containers
+   * only support the use of the `local` driver. To use bind mounts, specify a `host` instead.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DockerVolumeConfigurationProperty dockerVolumeConfigurationProperty =
+   * DockerVolumeConfigurationProperty.builder()
+   * .autoprovision(false)
+   * .driver("driver")
+   * .driverOpts(Map.of(
+   * "driverOptsKey", "driverOpts"))
+   * .labels(Map.of(
+   * "labelsKey", "labels"))
+   * .scope("scope")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html)
+   */
+  public interface DockerVolumeConfigurationProperty {
+    /**
+     * If this value is `true` , the Docker volume is created if it doesn't already exist.
+     *
+     *
+     * This field is only used if the `scope` is `shared` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
+     */
+    public fun autoprovision(): Any? = unwrap(this).getAutoprovision()
+
+    /**
+     * The Docker volume driver to use.
+     *
+     * The driver value must match the driver name provided by Docker because it is used for task
+     * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
+     * retrieve the driver name from your container instance. If the driver was installed using another
+     * method, use Docker plugin discovery to retrieve the driver name. For more information, see
+     * [Docker plugin
+     * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
+     * . This parameter maps to `Driver` in the [Create a
+     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
+     * option to [docker volume
+     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
+     */
+    public fun driver(): String? = unwrap(this).getDriver()
+
+    /**
+     * A map of Docker driver-specific options passed through.
+     *
+     * This parameter maps to `DriverOpts` in the [Create a
+     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+     * option to [docker volume
+     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
+     */
+    public fun driverOpts(): Any? = unwrap(this).getDriverOpts()
+
+    /**
+     * Custom metadata to add to your Docker volume.
+     *
+     * This parameter maps to `Labels` in the [Create a
+     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+     * option to [docker volume
+     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
+     */
+    public fun labels(): Any? = unwrap(this).getLabels()
+
+    /**
+     * The scope for the Docker volume that determines its lifecycle.
+     *
+     * Docker volumes that are scoped to a `task` are automatically provisioned when the task starts
+     * and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the
+     * task stops.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * A builder for [DockerVolumeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
+       * already exist.
+       *
+       * This field is only used if the `scope` is `shared` .
+       */
+      public fun autoprovision(autoprovision: Boolean)
+
+      /**
+       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
+       * already exist.
+       *
+       * This field is only used if the `scope` is `shared` .
+       */
+      public fun autoprovision(autoprovision: IResolvable)
+
+      /**
+       * @param driver The Docker volume driver to use.
+       * The driver value must match the driver name provided by Docker because it is used for task
+       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
+       * retrieve the driver name from your container instance. If the driver was installed using
+       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
+       * see [Docker plugin
+       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
+       * . This parameter maps to `Driver` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      public fun driver(driver: String)
+
+      /**
+       * @param driverOpts A map of Docker driver-specific options passed through.
+       * This parameter maps to `DriverOpts` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      public fun driverOpts(driverOpts: IResolvable)
+
+      /**
+       * @param driverOpts A map of Docker driver-specific options passed through.
+       * This parameter maps to `DriverOpts` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      public fun driverOpts(driverOpts: Map<String, String>)
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      public fun labels(labels: IResolvable)
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      public fun labels(labels: Map<String, String>)
+
+      /**
+       * @param scope The scope for the Docker volume that determines its lifecycle.
+       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
+       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
+       * after the task stops.
+       */
+      public fun scope(scope: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty.builder()
+
+      /**
+       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
+       * already exist.
+       *
+       * This field is only used if the `scope` is `shared` .
+       */
+      override fun autoprovision(autoprovision: Boolean) {
+        cdkBuilder.autoprovision(autoprovision)
+      }
+
+      /**
+       * @param autoprovision If this value is `true` , the Docker volume is created if it doesn't
+       * already exist.
+       *
+       * This field is only used if the `scope` is `shared` .
+       */
+      override fun autoprovision(autoprovision: IResolvable) {
+        cdkBuilder.autoprovision(autoprovision.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param driver The Docker volume driver to use.
+       * The driver value must match the driver name provided by Docker because it is used for task
+       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
+       * retrieve the driver name from your container instance. If the driver was installed using
+       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
+       * see [Docker plugin
+       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
+       * . This parameter maps to `Driver` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      override fun driver(driver: String) {
+        cdkBuilder.driver(driver)
+      }
+
+      /**
+       * @param driverOpts A map of Docker driver-specific options passed through.
+       * This parameter maps to `DriverOpts` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      override fun driverOpts(driverOpts: IResolvable) {
+        cdkBuilder.driverOpts(driverOpts.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param driverOpts A map of Docker driver-specific options passed through.
+       * This parameter maps to `DriverOpts` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      override fun driverOpts(driverOpts: Map<String, String>) {
+        cdkBuilder.driverOpts(driverOpts)
+      }
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      override fun labels(labels: IResolvable) {
+        cdkBuilder.labels(labels.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       */
+      override fun labels(labels: Map<String, String>) {
+        cdkBuilder.labels(labels)
+      }
+
+      /**
+       * @param scope The scope for the Docker volume that determines its lifecycle.
+       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
+       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
+       * after the task stops.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty,
+    ) : CdkObject(cdkObject), DockerVolumeConfigurationProperty {
+      /**
+       * If this value is `true` , the Docker volume is created if it doesn't already exist.
+       *
+       *
+       * This field is only used if the `scope` is `shared` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision)
+       */
+      override fun autoprovision(): Any? = unwrap(this).getAutoprovision()
+
+      /**
+       * The Docker volume driver to use.
+       *
+       * The driver value must match the driver name provided by Docker because it is used for task
+       * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
+       * retrieve the driver name from your container instance. If the driver was installed using
+       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
+       * see [Docker plugin
+       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
+       * . This parameter maps to `Driver` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
+       */
+      override fun driver(): String? = unwrap(this).getDriver()
+
+      /**
+       * A map of Docker driver-specific options passed through.
+       *
+       * This parameter maps to `DriverOpts` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
+       */
+      override fun driverOpts(): Any? = unwrap(this).getDriverOpts()
+
+      /**
+       * Custom metadata to add to your Docker volume.
+       *
+       * This parameter maps to `Labels` in the [Create a
+       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
+       * option to [docker volume
+       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
+       */
+      override fun labels(): Any? = unwrap(this).getLabels()
+
+      /**
+       * The scope for the Docker volume that determines its lifecycle.
+       *
+       * Docker volumes that are scoped to a `task` are automatically provisioned when the task
+       * starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist
+       * after the task stops.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DockerVolumeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty):
+          DockerVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DockerVolumeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DockerVolumeConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty
+    }
+  }
+
+  /**
+   * This parameter is specified when you're using an Amazon Elastic File System file system for
+   * task storage.
+   *
+   * For more information, see [Amazon EFS
+   * volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/efs-volumes.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * EFSVolumeConfigurationProperty eFSVolumeConfigurationProperty =
+   * EFSVolumeConfigurationProperty.builder()
+   * .filesystemId("filesystemId")
+   * // the properties below are optional
+   * .authorizationConfig(AuthorizationConfigProperty.builder()
+   * .accessPointId("accessPointId")
+   * .iam("iam")
+   * .build())
+   * .rootDirectory("rootDirectory")
+   * .transitEncryption("transitEncryption")
+   * .transitEncryptionPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html)
+   */
+  public interface EFSVolumeConfigurationProperty {
+    /**
+     * The authorization configuration details for the Amazon EFS file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-authorizationconfig)
+     */
+    public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+    /**
+     * The Amazon EFS file system ID to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-filesystemid)
+     */
+    public fun filesystemId(): String
+
+    /**
+     * The directory within the Amazon EFS file system to mount as the root directory inside the
+     * host.
+     *
+     * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying `/`
+     * will have the same effect as omitting this parameter.
+     *
+     *
+     * If an EFS access point is specified in the `authorizationConfig` , the root directory
+     * parameter must either be omitted or set to `/` which will enforce the path set on the EFS access
+     * point.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-rootdirectory)
+     */
+    public fun rootDirectory(): String? = unwrap(this).getRootDirectory()
+
+    /**
+     * Determines whether to use encryption for Amazon EFS data in transit between the Amazon ECS
+     * host and the Amazon EFS server.
+     *
+     * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
+     * parameter is omitted, the default value of `DISABLED` is used. For more information, see
+     * [Encrypting data in
+     * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
+     * Elastic File System User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryption)
+     */
+    public fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
+
+    /**
+     * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
+     * server.
+     *
+     * If you do not specify a transit encryption port, it will use the port selection strategy that
+     * the Amazon EFS mount helper uses. For more information, see [EFS mount
+     * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon Elastic
+     * File System User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryptionport)
+     */
+    public fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
+
+    /**
+     * A builder for [EFSVolumeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      public fun authorizationConfig(authorizationConfig: IResolvable)
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a43a14e096c85e15a78eec7ef1bbe5a3cb80d900972837ecf8db4370d73749b4")
+      public
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param filesystemId The Amazon EFS file system ID to use. 
+       */
+      public fun filesystemId(filesystemId: String)
+
+      /**
+       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
+       * directory inside the host.
+       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
+       * `/` will have the same effect as omitting this parameter.
+       *
+       *
+       * If an EFS access point is specified in the `authorizationConfig` , the root directory
+       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
+       * access point.
+       */
+      public fun rootDirectory(rootDirectory: String)
+
+      /**
+       * @param transitEncryption Determines whether to use encryption for Amazon EFS data in
+       * transit between the Amazon ECS host and the Amazon EFS server.
+       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
+       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
+       * [Encrypting data in
+       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
+       * Elastic File System User Guide* .
+       */
+      public fun transitEncryption(transitEncryption: String)
+
+      /**
+       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
+       * ECS host and the Amazon EFS server.
+       * If you do not specify a transit encryption port, it will use the port selection strategy
+       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
+       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
+       * Elastic File System User Guide* .
+       */
+      public fun transitEncryptionPort(transitEncryptionPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty.builder()
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      override fun authorizationConfig(authorizationConfig: IResolvable) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
+       * system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a43a14e096c85e15a78eec7ef1bbe5a3cb80d900972837ecf8db4370d73749b4")
+      override
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
+          Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
+
+      /**
+       * @param filesystemId The Amazon EFS file system ID to use. 
+       */
+      override fun filesystemId(filesystemId: String) {
+        cdkBuilder.filesystemId(filesystemId)
+      }
+
+      /**
+       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
+       * directory inside the host.
+       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
+       * `/` will have the same effect as omitting this parameter.
+       *
+       *
+       * If an EFS access point is specified in the `authorizationConfig` , the root directory
+       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
+       * access point.
+       */
+      override fun rootDirectory(rootDirectory: String) {
+        cdkBuilder.rootDirectory(rootDirectory)
+      }
+
+      /**
+       * @param transitEncryption Determines whether to use encryption for Amazon EFS data in
+       * transit between the Amazon ECS host and the Amazon EFS server.
+       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
+       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
+       * [Encrypting data in
+       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
+       * Elastic File System User Guide* .
+       */
+      override fun transitEncryption(transitEncryption: String) {
+        cdkBuilder.transitEncryption(transitEncryption)
+      }
+
+      /**
+       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
+       * ECS host and the Amazon EFS server.
+       * If you do not specify a transit encryption port, it will use the port selection strategy
+       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
+       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
+       * Elastic File System User Guide* .
+       */
+      override fun transitEncryptionPort(transitEncryptionPort: Number) {
+        cdkBuilder.transitEncryptionPort(transitEncryptionPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty,
+    ) : CdkObject(cdkObject), EFSVolumeConfigurationProperty {
+      /**
+       * The authorization configuration details for the Amazon EFS file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-authorizationconfig)
+       */
+      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+      /**
+       * The Amazon EFS file system ID to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-filesystemid)
+       */
+      override fun filesystemId(): String = unwrap(this).getFilesystemId()
+
+      /**
+       * The directory within the Amazon EFS file system to mount as the root directory inside the
+       * host.
+       *
+       * If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying
+       * `/` will have the same effect as omitting this parameter.
+       *
+       *
+       * If an EFS access point is specified in the `authorizationConfig` , the root directory
+       * parameter must either be omitted or set to `/` which will enforce the path set on the EFS
+       * access point.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-rootdirectory)
+       */
+      override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
+
+      /**
+       * Determines whether to use encryption for Amazon EFS data in transit between the Amazon ECS
+       * host and the Amazon EFS server.
+       *
+       * Transit encryption must be turned on if Amazon EFS IAM authorization is used. If this
+       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
+       * [Encrypting data in
+       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
+       * Elastic File System User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryption)
+       */
+      override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
+
+      /**
+       * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
+       * server.
+       *
+       * If you do not specify a transit encryption port, it will use the port selection strategy
+       * that the Amazon EFS mount helper uses. For more information, see [EFS mount
+       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
+       * Elastic File System User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html#cfn-ecs-taskdefinition-efsvolumeconfiguration-transitencryptionport)
+       */
+      override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EFSVolumeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty):
+          EFSVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EFSVolumeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EFSVolumeConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty
+    }
+  }
+
+  /**
+   * A list of files containing the environment variables to pass to a container.
+   *
+   * You can specify up to ten environment files. The file must have a `.env` file extension. Each
+   * line in an environment file should contain an environment variable in `VARIABLE=VALUE` format.
+   * Lines beginning with `#` are treated as comments and are ignored.
+   *
+   * If there are environment variables specified using the `environment` parameter in a container
+   * definition, they take precedence over the variables contained within an environment file. If
+   * multiple environment files are specified that contain the same variable, they're processed from
+   * the top down. We recommend that you use unique variable names. For more information, see [Use a
+   * file to pass environment variables to a
+   * container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/use-environment-file.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Environment variable files are objects in Amazon S3 and all Amazon S3 security considerations
+   * apply.
+   *
+   * You must use the following platforms for the Fargate launch type:
+   *
+   * * Linux platform version `1.4.0` or later.
+   * * Windows platform version `1.0.0` or later.
+   *
+   * Consider the following when using the Fargate launch type:
+   *
+   * * The file is handled like a native Docker env-file.
+   * * There is no support for shell escape handling.
+   * * The container entry point interperts the `VARIABLE` values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * EnvironmentFileProperty environmentFileProperty = EnvironmentFileProperty.builder()
+   * .type("type")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html)
+   */
+  public interface EnvironmentFileProperty {
+    /**
+     * The file type to use.
+     *
+     * Environment files are objects in Amazon S3. The only supported value is `s3` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon S3 object containing the environment variable
+     * file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [EnvironmentFileProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The file type to use.
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The Amazon Resource Name (ARN) of the Amazon S3 object containing the
+       * environment variable file.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty.builder()
+
+      /**
+       * @param type The file type to use.
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The Amazon Resource Name (ARN) of the Amazon S3 object containing the
+       * environment variable file.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty,
+    ) : CdkObject(cdkObject), EnvironmentFileProperty {
+      /**
+       * The file type to use.
+       *
+       * Environment files are objects in Amazon S3. The only supported value is `s3` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon S3 object containing the environment variable
+       * file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-environmentfile.html#cfn-ecs-taskdefinition-environmentfile-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentFileProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty):
+          EnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentFileProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentFileProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty
+    }
+  }
+
+  /**
+   * The amount of ephemeral storage to allocate for the task.
+   *
+   * This parameter is used to expand the total amount of ephemeral storage available, beyond the
+   * default amount, for tasks hosted on AWS Fargate . For more information, see [Using data volumes in
+   * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the
+   * *Amazon ECS Developer Guide;* .
+   *
+   *
+   * For tasks using the Fargate launch type, the task requires the following platforms:
+   *
+   * * Linux platform version `1.4.0` or later.
+   * * Windows platform version `1.0.0` or later.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
+   * .sizeInGiB(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html)
+   */
+  public interface EphemeralStorageProperty {
+    /**
+     * The total amount, in GiB, of ephemeral storage to set for the task.
+     *
+     * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
+     */
+    public fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
+
+    /**
+     * A builder for [EphemeralStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
+       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       */
+      public fun sizeInGiB(sizeInGiB: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty.builder()
+
+      /**
+       * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
+       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       */
+      override fun sizeInGiB(sizeInGiB: Number) {
+        cdkBuilder.sizeInGiB(sizeInGiB)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty,
+    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+      /**
+       * The total amount, in GiB, of ephemeral storage to set for the task.
+       *
+       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
+       */
+      override fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EphemeralStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty):
+          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EphemeralStorageProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty
+    }
+  }
+
+  /**
+   * The FireLens configuration for the container.
+   *
+   * This is used to specify and configure a log router for container logs. For more information,
+   * see [Custom log
+   * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * FirelensConfigurationProperty firelensConfigurationProperty =
+   * FirelensConfigurationProperty.builder()
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html)
+   */
+  public interface FirelensConfigurationProperty {
+    /**
+     * The options to use when configuring the log router.
+     *
+     * This field is optional and can be used to add additional metadata, such as the task, task
+     * definition, cluster, and container instance details to the log event.
+     *
+     * If specified, valid option keys are:
+     *
+     * * `enable-ecs-log-metadata` , which can be `true` or `false`
+     * * `config-file-type` , which can be `s3` or `file`
+     * * `config-file-value` , which is either an S3 ARN or a file path
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options)
+     */
+    public fun options(): Any? = unwrap(this).getOptions()
+
+    /**
+     * The log router to use.
+     *
+     * The valid values are `fluentd` or `fluentbit` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [FirelensConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to add additional metadata, such as the task, task
+       * definition, cluster, and container instance details to the log event.
+       *
+       * If specified, valid option keys are:
+       *
+       * * `enable-ecs-log-metadata` , which can be `true` or `false`
+       * * `config-file-type` , which can be `s3` or `file`
+       * * `config-file-value` , which is either an S3 ARN or a file path
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to add additional metadata, such as the task, task
+       * definition, cluster, and container instance details to the log event.
+       *
+       * If specified, valid option keys are:
+       *
+       * * `enable-ecs-log-metadata` , which can be `true` or `false`
+       * * `config-file-type` , which can be `s3` or `file`
+       * * `config-file-value` , which is either an S3 ARN or a file path
+       */
+      public fun options(options: Map<String, String>)
+
+      /**
+       * @param type The log router to use.
+       * The valid values are `fluentd` or `fluentbit` .
        */
       public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty.builder()
 
       /**
-       * @param containerName The name of the container that will serve as the App Mesh proxy. 
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to add additional metadata, such as the task, task
+       * definition, cluster, and container instance details to the log event.
+       *
+       * If specified, valid option keys are:
+       *
+       * * `enable-ecs-log-metadata` , which can be `true` or `false`
+       * * `config-file-type` , which can be `s3` or `file`
+       * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      override fun containerName(containerName: String) {
-        cdkBuilder.containerName(containerName)
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable::unwrap))
       }
 
       /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to add additional metadata, such as the task, task
+       * definition, cluster, and container instance details to the log event.
+       *
+       * If specified, valid option keys are:
+       *
+       * * `enable-ecs-log-metadata` , which can be `true` or `false`
+       * * `config-file-type` , which can be `s3` or `file`
+       * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      override fun proxyConfigurationProperties(proxyConfigurationProperties: IResolvable) {
-        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties.let(IResolvable::unwrap))
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
       }
 
       /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       */
-      override fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>) {
-        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties)
-      }
-
-      /**
-       * @param proxyConfigurationProperties The set of network configuration parameters to provide
-       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       */
-      override fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any): Unit =
-          proxyConfigurationProperties(proxyConfigurationProperties.toList())
-
-      /**
-       * @param type The proxy type.
-       * The only supported value is `APPMESH` .
+       * @param type The log router to use.
+       * The valid values are `fluentd` or `fluentbit` .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty,
-    ) : CdkObject(cdkObject), ProxyConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty,
+    ) : CdkObject(cdkObject), FirelensConfigurationProperty {
       /**
-       * The name of the container that will serve as the App Mesh proxy.
+       * The options to use when configuring the log router.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-containername)
+       * This field is optional and can be used to add additional metadata, such as the task, task
+       * definition, cluster, and container instance details to the log event.
+       *
+       * If specified, valid option keys are:
+       *
+       * * `enable-ecs-log-metadata` , which can be `true` or `false`
+       * * `config-file-type` , which can be `s3` or `file`
+       * * `config-file-value` , which is either an S3 ARN or a file path
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options)
        */
-      override fun containerName(): String = unwrap(this).getContainerName()
+      override fun options(): Any? = unwrap(this).getOptions()
 
       /**
-       * The set of network configuration parameters to provide the Container Network Interface
-       * (CNI) plugin, specified as key-value pairs.
+       * The log router to use.
        *
-       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredGID` is specified, this field can be empty.
-       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
-       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
-       * traffic. If `IgnoredUID` is specified, this field can be empty.
-       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
-       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
-       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
-       * `AppPorts` is directed to.
-       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
-       * `AppPorts` is directed to.
-       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
-       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
-       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * The valid values are `fluentd` or `fluentbit` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)
-       */
-      override fun proxyConfigurationProperties(): Any? =
-          unwrap(this).getProxyConfigurationProperties()
-
-      /**
-       * The proxy type.
-       *
-       * The only supported value is `APPMESH` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-type)
        */
       override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProxyConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FirelensConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty):
-          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProxyConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty):
+          FirelensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FirelensConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ProxyConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty =
+      internal fun unwrap(wrapped: FirelensConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty
     }
   }
 
   /**
-   * The repository credentials for private registry authentication.
+   * The `HealthCheck` property specifies an object representing a container health check.
+   *
+   * Health check parameters that are specified in a container definition override any Docker health
+   * checks that exist in the container image (such as those specified in a parent image or from the
+   * image's Dockerfile). This configuration maps to the `HEALTHCHECK` parameter of [docker
+   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+   *
+   *
+   * The Amazon ECS container agent only monitors and reports on the health checks specified in the
+   * task definition. Amazon ECS does not monitor Docker health checks that are embedded in a container
+   * image and not specified in the container definition. Health check parameters that are specified in
+   * a container definition override any Docker health checks that exist in the container image.
+   *
+   *
+   * If a task is run manually, and not as part of a service, the task will continue its lifecycle
+   * regardless of its health status. For tasks that are part of a service, if the task reports as
+   * unhealthy then the task will be stopped and the service scheduler will replace it.
+   *
+   * The following are notes about container health check support:
+   *
+   * * Container health checks require version 1.17.0 or greater of the Amazon ECS container agent.
+   * For more information, see [Updating the Amazon ECS Container
+   * Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) .
+   * * Container health checks are supported for Fargate tasks if you are using platform version
+   * 1.1.0 or greater. For more information, see [AWS Fargate Platform
+   * Versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) .
+   * * Container health checks are not supported for tasks that are part of a service that is
+   * configured to use a Classic Load Balancer.
    *
    * Example:
    *
@@ -11559,119 +9106,471 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * RepositoryCredentialsProperty repositoryCredentialsProperty =
-   * RepositoryCredentialsProperty.builder()
-   * .credentialsParameter("credentialsParameter")
+   * HealthCheckProperty healthCheckProperty = HealthCheckProperty.builder()
+   * .command(List.of("command"))
+   * .interval(123)
+   * .retries(123)
+   * .startPeriod(123)
+   * .timeout(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html)
    */
-  public interface RepositoryCredentialsProperty {
+  public interface HealthCheckProperty {
     /**
-     * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
+     * A string array representing the command that the container runs to determine if it is
+     * healthy.
      *
+     * The string array must start with `CMD` to run the command arguments directly, or `CMD-SHELL`
+     * to run the command with the container's default shell.
      *
-     * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
-     * Region as the task that you're launching then you can use either the full ARN or the name of the
-     * secret. When you use the AWS Management Console, you must specify the full ARN of the secret.
+     * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+     * APIs, enclose the list of commands in double quotes and brackets.
      *
+     * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+     * You don't include the double quotes and brackets when you use the AWS Management Console.
+     *
+     * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+     *
+     * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+     * information, see `HealthCheck` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
      */
-    public fun credentialsParameter(): String? = unwrap(this).getCredentialsParameter()
+    public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
     /**
-     * A builder for [RepositoryCredentialsProperty]
+     * The time period in seconds between each health check execution.
+     *
+     * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
+     */
+    public fun interval(): Number? = unwrap(this).getInterval()
+
+    /**
+     * The number of times to retry a failed health check before the container is considered
+     * unhealthy.
+     *
+     * You may specify between 1 and 10 retries. The default value is 3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
+     */
+    public fun retries(): Number? = unwrap(this).getRetries()
+
+    /**
+     * The optional grace period to provide containers time to bootstrap before failed health checks
+     * count towards the maximum number of retries.
+     *
+     * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+     *
+     *
+     * If a health check succeeds within the `startPeriod` , then the container is considered
+     * healthy and any subsequent failures count toward the maximum number of retries.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod)
+     */
+    public fun startPeriod(): Number? = unwrap(this).getStartPeriod()
+
+    /**
+     * The time period in seconds to wait for a health check to succeed before it is considered a
+     * failure.
+     *
+     * You may specify between 2 and 60 seconds. The default value is 5.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
+     */
+    public fun timeout(): Number? = unwrap(this).getTimeout()
+
+    /**
+     * A builder for [HealthCheckProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credentialsParameter The Amazon Resource Name (ARN) of the secret containing the
-       * private repository credentials.
+       * @param command A string array representing the command that the container runs to determine
+       * if it is healthy.
+       * The string array must start with `CMD` to run the command arguments directly, or
+       * `CMD-SHELL` to run the command with the container's default shell.
        *
-       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
-       * Region as the task that you're launching then you can use either the full ARN or the name of
-       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
-       * secret.
+       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+       * APIs, enclose the list of commands in double quotes and brackets.
+       *
+       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
+       *
+       * You don't include the double quotes and brackets when you use the AWS Management Console.
+       *
+       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+       *
+       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+       * information, see `HealthCheck` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
        */
-      public fun credentialsParameter(credentialsParameter: String)
+      public fun command(command: List<String>)
+
+      /**
+       * @param command A string array representing the command that the container runs to determine
+       * if it is healthy.
+       * The string array must start with `CMD` to run the command arguments directly, or
+       * `CMD-SHELL` to run the command with the container's default shell.
+       *
+       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+       * APIs, enclose the list of commands in double quotes and brackets.
+       *
+       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
+       *
+       * You don't include the double quotes and brackets when you use the AWS Management Console.
+       *
+       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+       *
+       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+       * information, see `HealthCheck` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       */
+      public fun command(vararg command: String)
+
+      /**
+       * @param interval The time period in seconds between each health check execution.
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       */
+      public fun interval(interval: Number)
+
+      /**
+       * @param retries The number of times to retry a failed health check before the container is
+       * considered unhealthy.
+       * You may specify between 1 and 10 retries. The default value is 3.
+       */
+      public fun retries(retries: Number)
+
+      /**
+       * @param startPeriod The optional grace period to provide containers time to bootstrap before
+       * failed health checks count towards the maximum number of retries.
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       *
+       *
+       * If a health check succeeds within the `startPeriod` , then the container is considered
+       * healthy and any subsequent failures count toward the maximum number of retries.
+       */
+      public fun startPeriod(startPeriod: Number)
+
+      /**
+       * @param timeout The time period in seconds to wait for a health check to succeed before it
+       * is considered a failure.
+       * You may specify between 2 and 60 seconds. The default value is 5.
+       */
+      public fun timeout(timeout: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty.builder()
 
       /**
-       * @param credentialsParameter The Amazon Resource Name (ARN) of the secret containing the
-       * private repository credentials.
+       * @param command A string array representing the command that the container runs to determine
+       * if it is healthy.
+       * The string array must start with `CMD` to run the command arguments directly, or
+       * `CMD-SHELL` to run the command with the container's default shell.
        *
-       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
-       * Region as the task that you're launching then you can use either the full ARN or the name of
-       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
-       * secret.
+       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+       * APIs, enclose the list of commands in double quotes and brackets.
+       *
+       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
+       *
+       * You don't include the double quotes and brackets when you use the AWS Management Console.
+       *
+       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+       *
+       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+       * information, see `HealthCheck` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
        */
-      override fun credentialsParameter(credentialsParameter: String) {
-        cdkBuilder.credentialsParameter(credentialsParameter)
+      override fun command(command: List<String>) {
+        cdkBuilder.command(command)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty =
+      /**
+       * @param command A string array representing the command that the container runs to determine
+       * if it is healthy.
+       * The string array must start with `CMD` to run the command arguments directly, or
+       * `CMD-SHELL` to run the command with the container's default shell.
+       *
+       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+       * APIs, enclose the list of commands in double quotes and brackets.
+       *
+       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
+       *
+       * You don't include the double quotes and brackets when you use the AWS Management Console.
+       *
+       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+       *
+       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+       * information, see `HealthCheck` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       */
+      override fun command(vararg command: String): Unit = command(command.toList())
+
+      /**
+       * @param interval The time period in seconds between each health check execution.
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       */
+      override fun interval(interval: Number) {
+        cdkBuilder.interval(interval)
+      }
+
+      /**
+       * @param retries The number of times to retry a failed health check before the container is
+       * considered unhealthy.
+       * You may specify between 1 and 10 retries. The default value is 3.
+       */
+      override fun retries(retries: Number) {
+        cdkBuilder.retries(retries)
+      }
+
+      /**
+       * @param startPeriod The optional grace period to provide containers time to bootstrap before
+       * failed health checks count towards the maximum number of retries.
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       *
+       *
+       * If a health check succeeds within the `startPeriod` , then the container is considered
+       * healthy and any subsequent failures count toward the maximum number of retries.
+       */
+      override fun startPeriod(startPeriod: Number) {
+        cdkBuilder.startPeriod(startPeriod)
+      }
+
+      /**
+       * @param timeout The time period in seconds to wait for a health check to succeed before it
+       * is considered a failure.
+       * You may specify between 2 and 60 seconds. The default value is 5.
+       */
+      override fun timeout(timeout: Number) {
+        cdkBuilder.timeout(timeout)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty,
+    ) : CdkObject(cdkObject), HealthCheckProperty {
+      /**
+       * A string array representing the command that the container runs to determine if it is
+       * healthy.
+       *
+       * The string array must start with `CMD` to run the command arguments directly, or
+       * `CMD-SHELL` to run the command with the container's default shell.
+       *
+       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
+       * APIs, enclose the list of commands in double quotes and brackets.
+       *
+       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
+       *
+       * You don't include the double quotes and brackets when you use the AWS Management Console.
+       *
+       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
+       *
+       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
+       * information, see `HealthCheck` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
+       */
+      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+      /**
+       * The time period in seconds between each health check execution.
+       *
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
+       */
+      override fun interval(): Number? = unwrap(this).getInterval()
+
+      /**
+       * The number of times to retry a failed health check before the container is considered
+       * unhealthy.
+       *
+       * You may specify between 1 and 10 retries. The default value is 3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
+       */
+      override fun retries(): Number? = unwrap(this).getRetries()
+
+      /**
+       * The optional grace period to provide containers time to bootstrap before failed health
+       * checks count towards the maximum number of retries.
+       *
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       *
+       *
+       * If a health check succeeds within the `startPeriod` , then the container is considered
+       * healthy and any subsequent failures count toward the maximum number of retries.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod)
+       */
+      override fun startPeriod(): Number? = unwrap(this).getStartPeriod()
+
+      /**
+       * The time period in seconds to wait for a health check to succeed before it is considered a
+       * failure.
+       *
+       * You may specify between 2 and 60 seconds. The default value is 5.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
+       */
+      override fun timeout(): Number? = unwrap(this).getTimeout()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty):
+          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HealthCheckProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty
+    }
+  }
+
+  /**
+   * The `HostEntry` property specifies a hostname and an IP address that are added to the
+   * `/etc/hosts` file of a container through the `extraHosts` parameter of its `ContainerDefinition`
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * HostEntryProperty hostEntryProperty = HostEntryProperty.builder()
+   * .hostname("hostname")
+   * .ipAddress("ipAddress")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html)
+   */
+  public interface HostEntryProperty {
+    /**
+     * The hostname to use in the `/etc/hosts` entry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-hostname)
+     */
+    public fun hostname(): String? = unwrap(this).getHostname()
+
+    /**
+     * The IP address to use in the `/etc/hosts` entry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-ipaddress)
+     */
+    public fun ipAddress(): String? = unwrap(this).getIpAddress()
+
+    /**
+     * A builder for [HostEntryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hostname The hostname to use in the `/etc/hosts` entry.
+       */
+      public fun hostname(hostname: String)
+
+      /**
+       * @param ipAddress The IP address to use in the `/etc/hosts` entry.
+       */
+      public fun ipAddress(ipAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty.builder()
+
+      /**
+       * @param hostname The hostname to use in the `/etc/hosts` entry.
+       */
+      override fun hostname(hostname: String) {
+        cdkBuilder.hostname(hostname)
+      }
+
+      /**
+       * @param ipAddress The IP address to use in the `/etc/hosts` entry.
+       */
+      override fun ipAddress(ipAddress: String) {
+        cdkBuilder.ipAddress(ipAddress)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty,
-    ) : CdkObject(cdkObject), RepositoryCredentialsProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty,
+    ) : CdkObject(cdkObject), HostEntryProperty {
       /**
-       * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
+       * The hostname to use in the `/etc/hosts` entry.
        *
-       *
-       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
-       * Region as the task that you're launching then you can use either the full ARN or the name of
-       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
-       * secret.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-hostname)
        */
-      override fun credentialsParameter(): String? = unwrap(this).getCredentialsParameter()
+      override fun hostname(): String? = unwrap(this).getHostname()
+
+      /**
+       * The IP address to use in the `/etc/hosts` entry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostentry.html#cfn-ecs-taskdefinition-hostentry-ipaddress)
+       */
+      override fun ipAddress(): String? = unwrap(this).getIpAddress()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RepositoryCredentialsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostEntryProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty):
-          RepositoryCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RepositoryCredentialsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty):
+          HostEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? HostEntryProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RepositoryCredentialsProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty
+      internal fun unwrap(wrapped: HostEntryProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty
     }
   }
 
   /**
-   * An object representing the secret to expose to your container.
-   *
-   * Secrets can be exposed to a container in the following ways:
-   *
-   * * To inject sensitive data into your containers as environment variables, use the `secrets`
-   * container definition parameter.
-   * * To reference sensitive information in the log configuration of a container, use the
-   * `secretOptions` container definition parameter.
-   *
-   * For more information, see [Specifying sensitive
-   * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
-   * in the *Amazon Elastic Container Service Developer Guide* .
+   * The `HostVolumeProperties` property specifies details on a container instance bind mount host
+   * volume.
    *
    * Example:
    *
@@ -11679,165 +9578,1431 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * SecretProperty secretProperty = SecretProperty.builder()
-   * .name("name")
-   * .valueFrom("valueFrom")
+   * HostVolumePropertiesProperty hostVolumePropertiesProperty =
+   * HostVolumePropertiesProperty.builder()
+   * .sourcePath("sourcePath")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html)
    */
-  public interface SecretProperty {
+  public interface HostVolumePropertiesProperty {
     /**
-     * The name of the secret.
+     * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
+     * container instance that's presented to the container.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-name)
+     * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
+     * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
+     * specified location on the host container instance until you delete it manually. If the
+     * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
+     * If the location does exist, the contents of the source path folder are exported.
+     *
+     * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html#cfn-ecs-taskdefinition-hostvolumeproperties-sourcepath)
      */
-    public fun name(): String
+    public fun sourcePath(): String? = unwrap(this).getSourcePath()
 
     /**
-     * The secret to expose to the container.
-     *
-     * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-     * ARN of the parameter in the SSM Parameter Store.
-     *
-     * For information about the require AWS Identity and Access Management permissions, see
-     * [Required IAM permissions for Amazon ECS
-     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-     * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-     * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer Guide*
-     * .
-     *
-     *
-     * If the SSM Parameter Store parameter exists in the same Region as the task you're launching,
-     * then you can use either the full ARN or name of the parameter. If the parameter exists in a
-     * different Region, then the full ARN must be specified.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-valuefrom)
-     */
-    public fun valueFrom(): String
-
-    /**
-     * A builder for [SecretProperty]
+     * A builder for [HostVolumePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the secret. 
+       * @param sourcePath When the `host` parameter is used, specify a `sourcePath` to declare the
+       * path on the host container instance that's presented to the container.
+       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
+       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
+       * specified location on the host container instance until you delete it manually. If the
+       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
+       * If the location does exist, the contents of the source path folder are exported.
+       *
+       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
        */
-      public fun name(name: String)
-
-      /**
-       * @param valueFrom The secret to expose to the container. 
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
-       *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
-       */
-      public fun valueFrom(valueFrom: String)
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty.builder()
 
       /**
-       * @param name The name of the secret. 
+       * @param sourcePath When the `host` parameter is used, specify a `sourcePath` to declare the
+       * path on the host container instance that's presented to the container.
+       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
+       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
+       * specified location on the host container instance until you delete it manually. If the
+       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
+       * If the location does exist, the contents of the source path folder are exported.
+       *
+       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
+       */
+      override fun sourcePath(sourcePath: String) {
+        cdkBuilder.sourcePath(sourcePath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty,
+    ) : CdkObject(cdkObject), HostVolumePropertiesProperty {
+      /**
+       * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
+       * container instance that's presented to the container.
+       *
+       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If the
+       * `host` parameter contains a `sourcePath` file location, then the data volume persists at the
+       * specified location on the host container instance until you delete it manually. If the
+       * `sourcePath` value doesn't exist on the host container instance, the Docker daemon creates it.
+       * If the location does exist, the contents of the source path folder are exported.
+       *
+       * If you're using the Fargate launch type, the `sourcePath` parameter is not supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-hostvolumeproperties.html#cfn-ecs-taskdefinition-hostvolumeproperties-sourcepath)
+       */
+      override fun sourcePath(): String? = unwrap(this).getSourcePath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostVolumePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty):
+          HostVolumePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HostVolumePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HostVolumePropertiesProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty
+    }
+  }
+
+  /**
+   * Details on an Elastic Inference accelerator.
+   *
+   * For more information, see [Working with Amazon Elastic Inference on Amazon
+   * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-inference.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * InferenceAcceleratorProperty inferenceAcceleratorProperty =
+   * InferenceAcceleratorProperty.builder()
+   * .deviceName("deviceName")
+   * .deviceType("deviceType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html)
+   */
+  public interface InferenceAcceleratorProperty {
+    /**
+     * The Elastic Inference accelerator device name.
+     *
+     * The `deviceName` must also be referenced in a container definition as a
+     * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
+     */
+    public fun deviceName(): String? = unwrap(this).getDeviceName()
+
+    /**
+     * The Elastic Inference accelerator type to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
+     */
+    public fun deviceType(): String? = unwrap(this).getDeviceType()
+
+    /**
+     * A builder for [InferenceAcceleratorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The Elastic Inference accelerator device name.
+       * The `deviceName` must also be referenced in a container definition as a
+       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
+       * .
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param deviceType The Elastic Inference accelerator type to use.
+       */
+      public fun deviceType(deviceType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty.builder()
+
+      /**
+       * @param deviceName The Elastic Inference accelerator device name.
+       * The `deviceName` must also be referenced in a container definition as a
+       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
+       * .
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param deviceType The Elastic Inference accelerator type to use.
+       */
+      override fun deviceType(deviceType: String) {
+        cdkBuilder.deviceType(deviceType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty,
+    ) : CdkObject(cdkObject), InferenceAcceleratorProperty {
+      /**
+       * The Elastic Inference accelerator device name.
+       *
+       * The `deviceName` must also be referenced in a container definition as a
+       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
+       */
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
+
+      /**
+       * The Elastic Inference accelerator type to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
+       */
+      override fun deviceType(): String? = unwrap(this).getDeviceType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InferenceAcceleratorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty):
+          InferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceAcceleratorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceAcceleratorProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty
+    }
+  }
+
+  /**
+   * The Linux capabilities to add or remove from the default Docker configuration for a container
+   * defined in the task definition.
+   *
+   * For more information about the default capabilities and the non-default available capabilities,
+   * see [Runtime privilege and Linux
+   * capabilities](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
+   * in the *Docker run reference* . For more detailed information about these Linux capabilities, see
+   * the
+   * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
+   * Linux manual page.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * KernelCapabilitiesProperty kernelCapabilitiesProperty = KernelCapabilitiesProperty.builder()
+   * .add(List.of("add"))
+   * .drop(List.of("drop"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html)
+   */
+  public interface KernelCapabilitiesProperty {
+    /**
+     * The Linux capabilities for the container that have been added to the default configuration
+     * provided by Docker.
+     *
+     * This parameter maps to `CapAdd` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-add`
+     * option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+     *
+     *
+     * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+     * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+     * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+     * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID" |
+     * "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" | "SYS_PTRACE"
+     * | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" | "WAKE_ALARM"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-add)
+     */
+    public fun add(): List<String> = unwrap(this).getAdd() ?: emptyList()
+
+    /**
+     * The Linux capabilities for the container that have been removed from the default
+     * configuration provided by Docker.
+     *
+     * This parameter maps to `CapDrop` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-drop`
+     * option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+     * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+     * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+     * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID" |
+     * "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" | "SYS_PTRACE"
+     * | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" | "WAKE_ALARM"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-drop)
+     */
+    public fun drop(): List<String> = unwrap(this).getDrop() ?: emptyList()
+
+    /**
+     * A builder for [KernelCapabilitiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param add The Linux capabilities for the container that have been added to the default
+       * configuration provided by Docker.
+       * This parameter maps to `CapAdd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-add` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+       *
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      public fun add(add: List<String>)
+
+      /**
+       * @param add The Linux capabilities for the container that have been added to the default
+       * configuration provided by Docker.
+       * This parameter maps to `CapAdd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-add` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+       *
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      public fun add(vararg add: String)
+
+      /**
+       * @param drop The Linux capabilities for the container that have been removed from the
+       * default configuration provided by Docker.
+       * This parameter maps to `CapDrop` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-drop` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      public fun drop(drop: List<String>)
+
+      /**
+       * @param drop The Linux capabilities for the container that have been removed from the
+       * default configuration provided by Docker.
+       * This parameter maps to `CapDrop` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-drop` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      public fun drop(vararg drop: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty.builder()
+
+      /**
+       * @param add The Linux capabilities for the container that have been added to the default
+       * configuration provided by Docker.
+       * This parameter maps to `CapAdd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-add` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+       *
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      override fun add(add: List<String>) {
+        cdkBuilder.add(add)
+      }
+
+      /**
+       * @param add The Linux capabilities for the container that have been added to the default
+       * configuration provided by Docker.
+       * This parameter maps to `CapAdd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-add` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+       *
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      override fun add(vararg add: String): Unit = add(add.toList())
+
+      /**
+       * @param drop The Linux capabilities for the container that have been removed from the
+       * default configuration provided by Docker.
+       * This parameter maps to `CapDrop` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-drop` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      override fun drop(drop: List<String>) {
+        cdkBuilder.drop(drop)
+      }
+
+      /**
+       * @param drop The Linux capabilities for the container that have been removed from the
+       * default configuration provided by Docker.
+       * This parameter maps to `CapDrop` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-drop` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       */
+      override fun drop(vararg drop: String): Unit = drop(drop.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty,
+    ) : CdkObject(cdkObject), KernelCapabilitiesProperty {
+      /**
+       * The Linux capabilities for the container that have been added to the default configuration
+       * provided by Docker.
+       *
+       * This parameter maps to `CapAdd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-add` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
+       *
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-add)
+       */
+      override fun add(): List<String> = unwrap(this).getAdd() ?: emptyList()
+
+      /**
+       * The Linux capabilities for the container that have been removed from the default
+       * configuration provided by Docker.
+       *
+       * This parameter maps to `CapDrop` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--cap-drop` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
+       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
+       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
+       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
+       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
+       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
+       * "WAKE_ALARM"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-drop)
+       */
+      override fun drop(): List<String> = unwrap(this).getDrop() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KernelCapabilitiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty):
+          KernelCapabilitiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KernelCapabilitiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KernelCapabilitiesProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty
+    }
+  }
+
+  /**
+   * A key-value pair object.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * KeyValuePairProperty keyValuePairProperty = KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html)
+   */
+  public interface KeyValuePairProperty {
+    /**
+     * The name of the key-value pair.
+     *
+     * For environment variables, this is the name of the environment variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value of the key-value pair.
+     *
+     * For environment variables, this is the value of the environment variable.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [KeyValuePairProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the key-value pair.
+       * For environment variables, this is the name of the environment variable.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value of the key-value pair.
+       * For environment variables, this is the value of the environment variable.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty.builder()
+
+      /**
+       * @param name The name of the key-value pair.
+       * For environment variables, this is the name of the environment variable.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param valueFrom The secret to expose to the container. 
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
-       *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
+       * @param value The value of the key-value pair.
+       * For environment variables, this is the value of the environment variable.
        */
-      override fun valueFrom(valueFrom: String) {
-        cdkBuilder.valueFrom(valueFrom)
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
       }
 
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty,
-    ) : CdkObject(cdkObject), SecretProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty,
+    ) : CdkObject(cdkObject), KeyValuePairProperty {
       /**
-       * The name of the secret.
+       * The name of the key-value pair.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-name)
+       * For environment variables, this is the name of the environment variable.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-name)
        */
-      override fun name(): String = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
       /**
-       * The secret to expose to the container.
+       * The value of the key-value pair.
        *
-       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
-       * ARN of the parameter in the SSM Parameter Store.
+       * For environment variables, this is the value of the environment variable.
        *
-       * For information about the require AWS Identity and Access Management permissions, see
-       * [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
-       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
-       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
-       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
-       * Guide* .
-       *
-       *
-       * If the SSM Parameter Store parameter exists in the same Region as the task you're
-       * launching, then you can use either the full ARN or name of the parameter. If the parameter
-       * exists in a different Region, then the full ARN must be specified.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-valuefrom)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html#cfn-ecs-taskdefinition-keyvaluepair-value)
        */
-      override fun valueFrom(): String = unwrap(this).getValueFrom()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SecretProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValuePairProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty):
-          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty):
+          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SecretProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty = (wrapped as
+      internal fun unwrap(wrapped: KeyValuePairProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty
+    }
+  }
+
+  /**
+   * The Linux-specific options that are applied to the container, such as Linux
+   * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * LinuxParametersProperty linuxParametersProperty = LinuxParametersProperty.builder()
+   * .capabilities(KernelCapabilitiesProperty.builder()
+   * .add(List.of("add"))
+   * .drop(List.of("drop"))
+   * .build())
+   * .devices(List.of(DeviceProperty.builder()
+   * .containerPath("containerPath")
+   * .hostPath("hostPath")
+   * .permissions(List.of("permissions"))
+   * .build()))
+   * .initProcessEnabled(false)
+   * .maxSwap(123)
+   * .sharedMemorySize(123)
+   * .swappiness(123)
+   * .tmpfs(List.of(TmpfsProperty.builder()
+   * .size(123)
+   * // the properties below are optional
+   * .containerPath("containerPath")
+   * .mountOptions(List.of("mountOptions"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html)
+   */
+  public interface LinuxParametersProperty {
+    /**
+     * The Linux capabilities for the container that are added to or dropped from the default
+     * configuration provided by Docker.
+     *
+     *
+     * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+     * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-capabilities)
+     */
+    public fun capabilities(): Any? = unwrap(this).getCapabilities()
+
+    /**
+     * Any host devices to expose to the container.
+     *
+     * This parameter maps to `Devices` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+     * option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+     * supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-devices)
+     */
+    public fun devices(): Any? = unwrap(this).getDevices()
+
+    /**
+     * Run an `init` process inside the container that forwards signals and reaps processes.
+     *
+     * This parameter maps to the `--init` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+     * instance. To check the Docker Remote API version on your container instance, log in to your
+     * container instance and run the following command: `sudo docker version --format
+     * '{{.Server.APIVersion}}'`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
+     */
+    public fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
+
+    /**
+     * The total amount of swap memory (in MiB) a container can use.
+     *
+     * This parameter will be translated to the `--memory-swap` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * where the value would be the sum of the container memory plus the `maxSwap` value.
+     *
+     * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
+     * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
+     * the swap configuration for the container instance it is running on. A `maxSwap` value must be
+     * set for the `swappiness` parameter to be used.
+     *
+     *
+     * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
+     * supported.
+     *
+     * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-maxswap)
+     */
+    public fun maxSwap(): Number? = unwrap(this).getMaxSwap()
+
+    /**
+     * The value for the size (in MiB) of the `/dev/shm` volume.
+     *
+     * This parameter maps to the `--shm-size` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter is
+     * not supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
+     */
+    public fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
+
+    /**
+     * This allows you to tune a container's memory swappiness behavior.
+     *
+     * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary. A
+     * `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted values
+     * are whole numbers between `0` and `100` . If the `swappiness` parameter is not specified, a
+     * default value of `60` is used. If a value is not specified for `maxSwap` then this parameter is
+     * ignored. This parameter maps to the `--memory-swappiness` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
+     * supported.
+     *
+     * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-swappiness)
+     */
+    public fun swappiness(): Number? = unwrap(this).getSwappiness()
+
+    /**
+     * The container path, mount options, and size (in MiB) of the tmpfs mount.
+     *
+     * This parameter maps to the `--tmpfs` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+     * supported.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
+     */
+    public fun tmpfs(): Any? = unwrap(this).getTmpfs()
+
+    /**
+     * A builder for [LinuxParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      public fun capabilities(capabilities: IResolvable)
+
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      public fun capabilities(capabilities: KernelCapabilitiesProperty)
+
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d10aaa6a433a74fbb4881c1f9b1fea32c8374cd97bb050bf7c42862af656c32")
+      public fun capabilities(capabilities: KernelCapabilitiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      public fun devices(devices: IResolvable)
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      public fun devices(devices: List<Any>)
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      public fun devices(vararg devices: Any)
+
+      /**
+       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
+       * and reaps processes.
+       * This parameter maps to the `--init` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      public fun initProcessEnabled(initProcessEnabled: Boolean)
+
+      /**
+       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
+       * and reaps processes.
+       * This parameter maps to the `--init` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      public fun initProcessEnabled(initProcessEnabled: IResolvable)
+
+      /**
+       * @param maxSwap The total amount of swap memory (in MiB) a container can use.
+       * This parameter will be translated to the `--memory-swap` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       *
+       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
+       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
+       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
+       * set for the `swappiness` parameter to be used.
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       */
+      public fun maxSwap(maxSwap: Number)
+
+      /**
+       * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
+       * This parameter maps to the `--shm-size` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
+       * is not supported.
+       */
+      public fun sharedMemorySize(sharedMemorySize: Number)
+
+      /**
+       * @param swappiness This allows you to tune a container's memory swappiness behavior.
+       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
+       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
+       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
+       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       */
+      public fun swappiness(swappiness: Number)
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      public fun tmpfs(tmpfs: IResolvable)
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      public fun tmpfs(tmpfs: List<Any>)
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      public fun tmpfs(vararg tmpfs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty.builder()
+
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      override fun capabilities(capabilities: IResolvable) {
+        cdkBuilder.capabilities(capabilities.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      override fun capabilities(capabilities: KernelCapabilitiesProperty) {
+        cdkBuilder.capabilities(capabilities.let(KernelCapabilitiesProperty::unwrap))
+      }
+
+      /**
+       * @param capabilities The Linux capabilities for the container that are added to or dropped
+       * from the default configuration provided by Docker.
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d10aaa6a433a74fbb4881c1f9b1fea32c8374cd97bb050bf7c42862af656c32")
+      override fun capabilities(capabilities: KernelCapabilitiesProperty.Builder.() -> Unit): Unit =
+          capabilities(KernelCapabilitiesProperty(capabilities))
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      override fun devices(devices: IResolvable) {
+        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      override fun devices(devices: List<Any>) {
+        cdkBuilder.devices(devices)
+      }
+
+      /**
+       * @param devices Any host devices to expose to the container.
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       */
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
+
+      /**
+       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
+       * and reaps processes.
+       * This parameter maps to the `--init` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      override fun initProcessEnabled(initProcessEnabled: Boolean) {
+        cdkBuilder.initProcessEnabled(initProcessEnabled)
+      }
+
+      /**
+       * @param initProcessEnabled Run an `init` process inside the container that forwards signals
+       * and reaps processes.
+       * This parameter maps to the `--init` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       */
+      override fun initProcessEnabled(initProcessEnabled: IResolvable) {
+        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxSwap The total amount of swap memory (in MiB) a container can use.
+       * This parameter will be translated to the `--memory-swap` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       *
+       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
+       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
+       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
+       * set for the `swappiness` parameter to be used.
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       */
+      override fun maxSwap(maxSwap: Number) {
+        cdkBuilder.maxSwap(maxSwap)
+      }
+
+      /**
+       * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
+       * This parameter maps to the `--shm-size` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
+       * is not supported.
+       */
+      override fun sharedMemorySize(sharedMemorySize: Number) {
+        cdkBuilder.sharedMemorySize(sharedMemorySize)
+      }
+
+      /**
+       * @param swappiness This allows you to tune a container's memory swappiness behavior.
+       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
+       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
+       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
+       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       */
+      override fun swappiness(swappiness: Number) {
+        cdkBuilder.swappiness(swappiness)
+      }
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      override fun tmpfs(tmpfs: IResolvable) {
+        cdkBuilder.tmpfs(tmpfs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      override fun tmpfs(tmpfs: List<Any>) {
+        cdkBuilder.tmpfs(tmpfs)
+      }
+
+      /**
+       * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       */
+      override fun tmpfs(vararg tmpfs: Any): Unit = tmpfs(tmpfs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty,
+    ) : CdkObject(cdkObject), LinuxParametersProperty {
+      /**
+       * The Linux capabilities for the container that are added to or dropped from the default
+       * configuration provided by Docker.
+       *
+       *
+       * For tasks that use the Fargate launch type, `capabilities` is supported for all platform
+       * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-capabilities)
+       */
+      override fun capabilities(): Any? = unwrap(this).getCapabilities()
+
+      /**
+       * Any host devices to expose to the container.
+       *
+       * This parameter maps to `Devices` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
+       * supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-devices)
+       */
+      override fun devices(): Any? = unwrap(this).getDevices()
+
+      /**
+       * Run an `init` process inside the container that forwards signals and reaps processes.
+       *
+       * This parameter maps to the `--init` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: `sudo docker version --format
+       * '{{.Server.APIVersion}}'`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
+       */
+      override fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
+
+      /**
+       * The total amount of swap memory (in MiB) a container can use.
+       *
+       * This parameter will be translated to the `--memory-swap` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       *
+       * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
+       * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
+       * the swap configuration for the container instance it is running on. A `maxSwap` value must be
+       * set for the `swappiness` parameter to be used.
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `maxSwap` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-maxswap)
+       */
+      override fun maxSwap(): Number? = unwrap(this).getMaxSwap()
+
+      /**
+       * The value for the size (in MiB) of the `/dev/shm` volume.
+       *
+       * This parameter maps to the `--shm-size` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
+       * is not supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)
+       */
+      override fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
+
+      /**
+       * This allows you to tune a container's memory swappiness behavior.
+       *
+       * A `swappiness` value of `0` will cause swapping to not happen unless absolutely necessary.
+       * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
+       * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
+       * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
+       * supported.
+       *
+       * If you're using tasks on Amazon Linux 2023 the `swappiness` parameter isn't supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-swappiness)
+       */
+      override fun swappiness(): Number? = unwrap(this).getSwappiness()
+
+      /**
+       * The container path, mount options, and size (in MiB) of the tmpfs mount.
+       *
+       * This parameter maps to the `--tmpfs` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
+       * supported.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-tmpfs)
+       */
+      override fun tmpfs(): Any? = unwrap(this).getTmpfs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LinuxParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty):
+          LinuxParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? LinuxParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LinuxParametersProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty
     }
   }
 
@@ -12085,8 +11250,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * The log driver to use for the container.
@@ -12158,6 +11322,172 @@ public open class CfnTaskDefinition internal constructor(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty
+    }
+  }
+
+  /**
+   * The details for a volume mount point that's used in a container definition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * MountPointProperty mountPointProperty = MountPointProperty.builder()
+   * .containerPath("containerPath")
+   * .readOnly(false)
+   * .sourceVolume("sourceVolume")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html)
+   */
+  public interface MountPointProperty {
+    /**
+     * The path on the container to mount the host volume at.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-containerpath)
+     */
+    public fun containerPath(): String? = unwrap(this).getContainerPath()
+
+    /**
+     * If this value is `true` , the container has read-only access to the volume.
+     *
+     * If this value is `false` , then the container can write to the volume. The default value is
+     * `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-readonly)
+     */
+    public fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+    /**
+     * The name of the volume to mount.
+     *
+     * Must be a volume name referenced in the `name` parameter of task definition `volume` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-sourcevolume)
+     */
+    public fun sourceVolume(): String? = unwrap(this).getSourceVolume()
+
+    /**
+     * A builder for [MountPointProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerPath The path on the container to mount the host volume at.
+       */
+      public fun containerPath(containerPath: String)
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      public fun readOnly(readOnly: Boolean)
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      public fun readOnly(readOnly: IResolvable)
+
+      /**
+       * @param sourceVolume The name of the volume to mount.
+       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
+       */
+      public fun sourceVolume(sourceVolume: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty.builder()
+
+      /**
+       * @param containerPath The path on the container to mount the host volume at.
+       */
+      override fun containerPath(containerPath: String) {
+        cdkBuilder.containerPath(containerPath)
+      }
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      override fun readOnly(readOnly: Boolean) {
+        cdkBuilder.readOnly(readOnly)
+      }
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      override fun readOnly(readOnly: IResolvable) {
+        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceVolume The name of the volume to mount.
+       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
+       */
+      override fun sourceVolume(sourceVolume: String) {
+        cdkBuilder.sourceVolume(sourceVolume)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty,
+    ) : CdkObject(cdkObject), MountPointProperty {
+      /**
+       * The path on the container to mount the host volume at.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-containerpath)
+       */
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
+
+      /**
+       * If this value is `true` , the container has read-only access to the volume.
+       *
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-readonly)
+       */
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+      /**
+       * The name of the volume to mount.
+       *
+       * Must be a volume name referenced in the `name` parameter of task definition `volume` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html#cfn-ecs-taskdefinition-mountpoint-sourcevolume)
+       */
+      override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MountPointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty):
+          MountPointProperty = CdkObjectWrappers.wrap(cdkObject) as? MountPointProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MountPointProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty
     }
   }
 
@@ -12642,8 +11972,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty,
     ) : CdkObject(cdkObject), PortMappingProperty {
       /**
        * The application protocol that's used for the port mapping.
@@ -12818,34 +12147,14 @@ public open class CfnTaskDefinition internal constructor(
   }
 
   /**
-   * The `HealthCheck` property specifies an object representing a container health check.
+   * The configuration details for the App Mesh proxy.
    *
-   * Health check parameters that are specified in a container definition override any Docker health
-   * checks that exist in the container image (such as those specified in a parent image or from the
-   * image's Dockerfile). This configuration maps to the `HEALTHCHECK` parameter of [docker
-   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
-   *
-   *
-   * The Amazon ECS container agent only monitors and reports on the health checks specified in the
-   * task definition. Amazon ECS does not monitor Docker health checks that are embedded in a container
-   * image and not specified in the container definition. Health check parameters that are specified in
-   * a container definition override any Docker health checks that exist in the container image.
-   *
-   *
-   * If a task is run manually, and not as part of a service, the task will continue its lifecycle
-   * regardless of its health status. For tasks that are part of a service, if the task reports as
-   * unhealthy then the task will be stopped and the service scheduler will replace it.
-   *
-   * The following are notes about container health check support:
-   *
-   * * Container health checks require version 1.17.0 or greater of the Amazon ECS container agent.
-   * For more information, see [Updating the Amazon ECS Container
-   * Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html) .
-   * * Container health checks are supported for Fargate tasks if you are using platform version
-   * 1.1.0 or greater. For more information, see [AWS Fargate Platform
-   * Versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) .
-   * * Container health checks are not supported for tasks that are part of a service that is
-   * configured to use a Classic Load Balancer.
+   * For tasks that use the EC2 launch type, the container instances require at least version 1.26.0
+   * of the container agent and at least version 1.26.0-1 of the `ecs-init` package to use a proxy
+   * configuration. If your container instances are launched from the Amazon ECS optimized AMI version
+   * `20190301` or later, then they contain the required versions of the container agent and `ecs-init`
+   * . For more information, see [Amazon ECS-optimized Linux
+   * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
    *
    * Example:
    *
@@ -12853,357 +12162,409 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * HealthCheckProperty healthCheckProperty = HealthCheckProperty.builder()
-   * .command(List.of("command"))
-   * .interval(123)
-   * .retries(123)
-   * .startPeriod(123)
-   * .timeout(123)
+   * ProxyConfigurationProperty proxyConfigurationProperty = ProxyConfigurationProperty.builder()
+   * .containerName("containerName")
+   * // the properties below are optional
+   * .proxyConfigurationProperties(List.of(KeyValuePairProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html)
    */
-  public interface HealthCheckProperty {
+  public interface ProxyConfigurationProperty {
     /**
-     * A string array representing the command that the container runs to determine if it is
-     * healthy.
+     * The name of the container that will serve as the App Mesh proxy.
      *
-     * The string array must start with `CMD` to run the command arguments directly, or `CMD-SHELL`
-     * to run the command with the container's default shell.
-     *
-     * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-     * APIs, enclose the list of commands in double quotes and brackets.
-     *
-     * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-     *
-     * You don't include the double quotes and brackets when you use the AWS Management Console.
-     *
-     * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-     *
-     * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-     * information, see `HealthCheck` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-containername)
      */
-    public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    public fun containerName(): String
 
     /**
-     * The time period in seconds between each health check execution.
+     * The set of network configuration parameters to provide the Container Network Interface (CNI)
+     * plugin, specified as key-value pairs.
      *
-     * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the `user`
+     * parameter in a container definition. This is used to ensure the proxy ignores its own traffic.
+     * If `IgnoredGID` is specified, this field can be empty.
+     * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+     * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+     * traffic. If `IgnoredUID` is specified, this field can be empty.
+     * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+     * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+     * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the `AppPorts`
+     * is directed to.
+     * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the `AppPorts`
+     * is directed to.
+     * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+     * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+     * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+     * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)
      */
-    public fun interval(): Number? = unwrap(this).getInterval()
+    public fun proxyConfigurationProperties(): Any? = unwrap(this).getProxyConfigurationProperties()
 
     /**
-     * The number of times to retry a failed health check before the container is considered
-     * unhealthy.
+     * The proxy type.
      *
-     * You may specify between 1 and 10 retries. The default value is 3.
+     * The only supported value is `APPMESH` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-type)
      */
-    public fun retries(): Number? = unwrap(this).getRetries()
+    public fun type(): String? = unwrap(this).getType()
 
     /**
-     * The optional grace period to provide containers time to bootstrap before failed health checks
-     * count towards the maximum number of retries.
-     *
-     * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
-     *
-     *
-     * If a health check succeeds within the `startPeriod` , then the container is considered
-     * healthy and any subsequent failures count toward the maximum number of retries.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod)
-     */
-    public fun startPeriod(): Number? = unwrap(this).getStartPeriod()
-
-    /**
-     * The time period in seconds to wait for a health check to succeed before it is considered a
-     * failure.
-     *
-     * You may specify between 2 and 60 seconds. The default value is 5.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
-     */
-    public fun timeout(): Number? = unwrap(this).getTimeout()
-
-    /**
-     * A builder for [HealthCheckProperty]
+     * A builder for [ProxyConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param command A string array representing the command that the container runs to determine
-       * if it is healthy.
-       * The string array must start with `CMD` to run the command arguments directly, or
-       * `CMD-SHELL` to run the command with the container's default shell.
-       *
-       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-       * APIs, enclose the list of commands in double quotes and brackets.
-       *
-       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-       *
-       * You don't include the double quotes and brackets when you use the AWS Management Console.
-       *
-       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-       *
-       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * @param containerName The name of the container that will serve as the App Mesh proxy. 
        */
-      public fun command(command: List<String>)
+      public fun containerName(containerName: String)
 
       /**
-       * @param command A string array representing the command that the container runs to determine
-       * if it is healthy.
-       * The string array must start with `CMD` to run the command arguments directly, or
-       * `CMD-SHELL` to run the command with the container's default shell.
-       *
-       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-       * APIs, enclose the list of commands in double quotes and brackets.
-       *
-       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-       *
-       * You don't include the double quotes and brackets when you use the AWS Management Console.
-       *
-       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-       *
-       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      public fun command(vararg command: String)
+      public fun proxyConfigurationProperties(proxyConfigurationProperties: IResolvable)
 
       /**
-       * @param interval The time period in seconds between each health check execution.
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      public fun interval(interval: Number)
+      public fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>)
 
       /**
-       * @param retries The number of times to retry a failed health check before the container is
-       * considered unhealthy.
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      public fun retries(retries: Number)
+      public fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any)
 
       /**
-       * @param startPeriod The optional grace period to provide containers time to bootstrap before
-       * failed health checks count towards the maximum number of retries.
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
-       *
-       *
-       * If a health check succeeds within the `startPeriod` , then the container is considered
-       * healthy and any subsequent failures count toward the maximum number of retries.
+       * @param type The proxy type.
+       * The only supported value is `APPMESH` .
        */
-      public fun startPeriod(startPeriod: Number)
-
-      /**
-       * @param timeout The time period in seconds to wait for a health check to succeed before it
-       * is considered a failure.
-       * You may specify between 2 and 60 seconds. The default value is 5.
-       */
-      public fun timeout(timeout: Number)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty.builder()
 
       /**
-       * @param command A string array representing the command that the container runs to determine
-       * if it is healthy.
-       * The string array must start with `CMD` to run the command arguments directly, or
-       * `CMD-SHELL` to run the command with the container's default shell.
-       *
-       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-       * APIs, enclose the list of commands in double quotes and brackets.
-       *
-       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-       *
-       * You don't include the double quotes and brackets when you use the AWS Management Console.
-       *
-       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-       *
-       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * @param containerName The name of the container that will serve as the App Mesh proxy. 
        */
-      override fun command(command: List<String>) {
-        cdkBuilder.command(command)
+      override fun containerName(containerName: String) {
+        cdkBuilder.containerName(containerName)
       }
 
       /**
-       * @param command A string array representing the command that the container runs to determine
-       * if it is healthy.
-       * The string array must start with `CMD` to run the command arguments directly, or
-       * `CMD-SHELL` to run the command with the container's default shell.
-       *
-       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-       * APIs, enclose the list of commands in double quotes and brackets.
-       *
-       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-       *
-       * You don't include the double quotes and brackets when you use the AWS Management Console.
-       *
-       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-       *
-       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      override fun command(vararg command: String): Unit = command(command.toList())
-
-      /**
-       * @param interval The time period in seconds between each health check execution.
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
-       */
-      override fun interval(interval: Number) {
-        cdkBuilder.interval(interval)
+      override fun proxyConfigurationProperties(proxyConfigurationProperties: IResolvable) {
+        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param retries The number of times to retry a failed health check before the container is
-       * considered unhealthy.
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      override fun retries(retries: Number) {
-        cdkBuilder.retries(retries)
+      override fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>) {
+        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties)
       }
 
       /**
-       * @param startPeriod The optional grace period to provide containers time to bootstrap before
-       * failed health checks count towards the maximum number of retries.
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
-       *
-       *
-       * If a health check succeeds within the `startPeriod` , then the container is considered
-       * healthy and any subsequent failures count toward the maximum number of retries.
+       * @param proxyConfigurationProperties The set of network configuration parameters to provide
+       * the Container Network Interface (CNI) plugin, specified as key-value pairs.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
-      override fun startPeriod(startPeriod: Number) {
-        cdkBuilder.startPeriod(startPeriod)
-      }
+      override fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any): Unit =
+          proxyConfigurationProperties(proxyConfigurationProperties.toList())
 
       /**
-       * @param timeout The time period in seconds to wait for a health check to succeed before it
-       * is considered a failure.
-       * You may specify between 2 and 60 seconds. The default value is 5.
+       * @param type The proxy type.
+       * The only supported value is `APPMESH` .
        */
-      override fun timeout(timeout: Number) {
-        cdkBuilder.timeout(timeout)
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty,
-    ) : CdkObject(cdkObject), HealthCheckProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty,
+    ) : CdkObject(cdkObject), ProxyConfigurationProperty {
       /**
-       * A string array representing the command that the container runs to determine if it is
-       * healthy.
+       * The name of the container that will serve as the App Mesh proxy.
        *
-       * The string array must start with `CMD` to run the command arguments directly, or
-       * `CMD-SHELL` to run the command with the container's default shell.
-       *
-       * When you use the AWS Management Console JSON panel, the AWS Command Line Interface , or the
-       * APIs, enclose the list of commands in double quotes and brackets.
-       *
-       * `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`
-       *
-       * You don't include the double quotes and brackets when you use the AWS Management Console.
-       *
-       * `CMD-SHELL, curl -f http://localhost/ || exit 1`
-       *
-       * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-containername)
        */
-      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+      override fun containerName(): String = unwrap(this).getContainerName()
 
       /**
-       * The time period in seconds between each health check execution.
+       * The set of network configuration parameters to provide the Container Network Interface
+       * (CNI) plugin, specified as key-value pairs.
        *
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       * * `IgnoredUID` - (Required) The user ID (UID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredGID` is specified, this field can be empty.
+       * * `IgnoredGID` - (Required) The group ID (GID) of the proxy container as defined by the
+       * `user` parameter in a container definition. This is used to ensure the proxy ignores its own
+       * traffic. If `IgnoredUID` is specified, this field can be empty.
+       * * `AppPorts` - (Required) The list of ports that the application uses. Network traffic to
+       * these ports is forwarded to the `ProxyIngressPort` and `ProxyEgressPort` .
+       * * `ProxyIngressPort` - (Required) Specifies the port that incoming traffic to the
+       * `AppPorts` is directed to.
+       * * `ProxyEgressPort` - (Required) Specifies the port that outgoing traffic from the
+       * `AppPorts` is directed to.
+       * * `EgressIgnoredPorts` - (Required) The egress traffic going to the specified ports is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
+       * * `EgressIgnoredIPs` - (Required) The egress traffic going to the specified IP addresses is
+       * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)
        */
-      override fun interval(): Number? = unwrap(this).getInterval()
+      override fun proxyConfigurationProperties(): Any? =
+          unwrap(this).getProxyConfigurationProperties()
 
       /**
-       * The number of times to retry a failed health check before the container is considered
-       * unhealthy.
+       * The proxy type.
        *
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * The only supported value is `APPMESH` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html#cfn-ecs-taskdefinition-proxyconfiguration-type)
        */
-      override fun retries(): Number? = unwrap(this).getRetries()
-
-      /**
-       * The optional grace period to provide containers time to bootstrap before failed health
-       * checks count towards the maximum number of retries.
-       *
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
-       *
-       *
-       * If a health check succeeds within the `startPeriod` , then the container is considered
-       * healthy and any subsequent failures count toward the maximum number of retries.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod)
-       */
-      override fun startPeriod(): Number? = unwrap(this).getStartPeriod()
-
-      /**
-       * The time period in seconds to wait for a health check to succeed before it is considered a
-       * failure.
-       *
-       * You may specify between 2 and 60 seconds. The default value is 5.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
-       */
-      override fun timeout(): Number? = unwrap(this).getTimeout()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProxyConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty):
-          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty):
+          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProxyConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: HealthCheckProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty
+      internal fun unwrap(wrapped: ProxyConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty
+    }
+  }
+
+  /**
+   * The repository credentials for private registry authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * RepositoryCredentialsProperty repositoryCredentialsProperty =
+   * RepositoryCredentialsProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html)
+   */
+  public interface RepositoryCredentialsProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
+     *
+     *
+     * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
+     * Region as the task that you're launching then you can use either the full ARN or the name of the
+     * secret. When you use the AWS Management Console, you must specify the full ARN of the secret.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+     */
+    public fun credentialsParameter(): String? = unwrap(this).getCredentialsParameter()
+
+    /**
+     * A builder for [RepositoryCredentialsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param credentialsParameter The Amazon Resource Name (ARN) of the secret containing the
+       * private repository credentials.
+       *
+       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
+       * Region as the task that you're launching then you can use either the full ARN or the name of
+       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
+       * secret.
+       */
+      public fun credentialsParameter(credentialsParameter: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty.builder()
+
+      /**
+       * @param credentialsParameter The Amazon Resource Name (ARN) of the secret containing the
+       * private repository credentials.
+       *
+       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
+       * Region as the task that you're launching then you can use either the full ARN or the name of
+       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
+       * secret.
+       */
+      override fun credentialsParameter(credentialsParameter: String) {
+        cdkBuilder.credentialsParameter(credentialsParameter)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty,
+    ) : CdkObject(cdkObject), RepositoryCredentialsProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
+       *
+       *
+       * When you use the Amazon ECS API, AWS CLI , or AWS SDK, if the secret exists in the same
+       * Region as the task that you're launching then you can use either the full ARN or the name of
+       * the secret. When you use the AWS Management Console, you must specify the full ARN of the
+       * secret.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-repositorycredentials.html#cfn-ecs-taskdefinition-repositorycredentials-credentialsparameter)
+       */
+      override fun credentialsParameter(): String? = unwrap(this).getCredentialsParameter()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RepositoryCredentialsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty):
+          RepositoryCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryCredentialsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RepositoryCredentialsProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty
     }
   }
 
@@ -13317,8 +12678,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty,
     ) : CdkObject(cdkObject), ResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
@@ -13365,18 +12725,349 @@ public open class CfnTaskDefinition internal constructor(
   }
 
   /**
-   * The amount of ephemeral storage to allocate for the task.
+   * Information about the platform for the Amazon ECS service or task.
    *
-   * This parameter is used to expand the total amount of ephemeral storage available, beyond the
-   * default amount, for tasks hosted on AWS Fargate . For more information, see [Using data volumes in
-   * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the
-   * *Amazon ECS Developer Guide;* .
+   * For more information about `RuntimePlatform` , see
+   * [RuntimePlatform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * RuntimePlatformProperty runtimePlatformProperty = RuntimePlatformProperty.builder()
+   * .cpuArchitecture("cpuArchitecture")
+   * .operatingSystemFamily("operatingSystemFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html)
+   */
+  public interface RuntimePlatformProperty {
+    /**
+     * The CPU architecture.
+     *
+     * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` . This
+     * option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on
+     * Fargate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture)
+     */
+    public fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
+
+    /**
+     * The operating system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-operatingsystemfamily)
+     */
+    public fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
+
+    /**
+     * A builder for [RuntimePlatformProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpuArchitecture The CPU architecture.
+       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
+       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
+       * on Fargate.
+       */
+      public fun cpuArchitecture(cpuArchitecture: String)
+
+      /**
+       * @param operatingSystemFamily The operating system.
+       */
+      public fun operatingSystemFamily(operatingSystemFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty.builder()
+
+      /**
+       * @param cpuArchitecture The CPU architecture.
+       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
+       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
+       * on Fargate.
+       */
+      override fun cpuArchitecture(cpuArchitecture: String) {
+        cdkBuilder.cpuArchitecture(cpuArchitecture)
+      }
+
+      /**
+       * @param operatingSystemFamily The operating system.
+       */
+      override fun operatingSystemFamily(operatingSystemFamily: String) {
+        cdkBuilder.operatingSystemFamily(operatingSystemFamily)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty,
+    ) : CdkObject(cdkObject), RuntimePlatformProperty {
+      /**
+       * The CPU architecture.
+       *
+       * You can run your Linux tasks on an ARM-based platform by setting the value to `ARM64` .
+       * This option is available for tasks that run on Linux Amazon EC2 instance or Linux containers
+       * on Fargate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture)
+       */
+      override fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
+
+      /**
+       * The operating system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html#cfn-ecs-taskdefinition-runtimeplatform-operatingsystemfamily)
+       */
+      override fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuntimePlatformProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty):
+          RuntimePlatformProperty = CdkObjectWrappers.wrap(cdkObject) as? RuntimePlatformProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuntimePlatformProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty
+    }
+  }
+
+  /**
+   * An object representing the secret to expose to your container.
+   *
+   * Secrets can be exposed to a container in the following ways:
+   *
+   * * To inject sensitive data into your containers as environment variables, use the `secrets`
+   * container definition parameter.
+   * * To reference sensitive information in the log configuration of a container, use the
+   * `secretOptions` container definition parameter.
+   *
+   * For more information, see [Specifying sensitive
+   * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * SecretProperty secretProperty = SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html)
+   */
+  public interface SecretProperty {
+    /**
+     * The name of the secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-name)
+     */
+    public fun name(): String
+
+    /**
+     * The secret to expose to the container.
+     *
+     * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+     * ARN of the parameter in the SSM Parameter Store.
+     *
+     * For information about the require AWS Identity and Access Management permissions, see
+     * [Required IAM permissions for Amazon ECS
+     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+     * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+     * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+     * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer Guide*
+     * .
+     *
+     *
+     * If the SSM Parameter Store parameter exists in the same Region as the task you're launching,
+     * then you can use either the full ARN or name of the parameter. If the parameter exists in a
+     * different Region, then the full ARN must be specified.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-valuefrom)
+     */
+    public fun valueFrom(): String
+
+    /**
+     * A builder for [SecretProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the secret. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param valueFrom The secret to expose to the container. 
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       */
+      public fun valueFrom(valueFrom: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty.builder()
+
+      /**
+       * @param name The name of the secret. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param valueFrom The secret to expose to the container. 
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       */
+      override fun valueFrom(valueFrom: String) {
+        cdkBuilder.valueFrom(valueFrom)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty,
+    ) : CdkObject(cdkObject), SecretProperty {
+      /**
+       * The name of the secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The secret to expose to the container.
+       *
+       * The supported values are either the full ARN of the AWS Secrets Manager secret or the full
+       * ARN of the parameter in the SSM Parameter Store.
+       *
+       * For information about the require AWS Identity and Access Management permissions, see
+       * [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-secrets.html#secrets-iam)
+       * (for Secrets Manager) or [Required IAM permissions for Amazon ECS
+       * secrets](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data-parameters.html)
+       * (for Systems Manager Parameter store) in the *Amazon Elastic Container Service Developer
+       * Guide* .
+       *
+       *
+       * If the SSM Parameter Store parameter exists in the same Region as the task you're
+       * launching, then you can use either the full ARN or name of the parameter. If the parameter
+       * exists in a different Region, then the full ARN must be specified.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html#cfn-ecs-taskdefinition-secret-valuefrom)
+       */
+      override fun valueFrom(): String = unwrap(this).getValueFrom()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SecretProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty):
+          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecretProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty
+    }
+  }
+
+  /**
+   * A list of namespaced kernel parameters to set in the container.
+   *
+   * This parameter maps to `Sysctls` in the [Create a
+   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+   * section of the [Docker Remote
+   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
+   * option to [docker
+   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+   * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer lived
+   * connections.
+   *
+   * We don't recommend that you specify network-related `systemControls` parameters for multiple
+   * containers in a single task that also uses either the `awsvpc` or `host` network mode. Doing this
+   * has the following disadvantages:
+   *
+   * * For tasks that use the `awsvpc` network mode including Fargate, if you set `systemControls`
+   * for any container, it applies to all containers in the task. If you set different `systemControls`
+   * for multiple containers in a single task, the container that's started last determines which
+   * `systemControls` take effect.
+   * * For tasks that use the `host` network mode, the network namespace `systemControls` aren't
+   * supported.
+   *
+   * If you're setting an IPC resource namespace to use for the containers in the task, the
+   * following conditions apply to your system controls. For more information, see [IPC
+   * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_ipcmode)
+   * .
+   *
+   * * For tasks that use the `host` IPC mode, IPC namespace `systemControls` aren't supported.
+   * * For tasks that use the `task` IPC mode, IPC namespace `systemControls` values apply to all
+   * containers within a task.
    *
    *
-   * For tasks using the Fargate launch type, the task requires the following platforms:
-   *
-   * * Linux platform version `1.4.0` or later.
-   * * Windows platform version `1.0.0` or later.
+   * This parameter is not supported for Windows containers. &gt; This parameter is only supported
+   * for tasks that are hosted on AWS Fargate if the tasks are using platform version `1.4.0` or later
+   * (Linux). This isn't supported for Windows containers on Fargate.
    *
    *
    * Example:
@@ -13385,82 +13076,726 @@ public open class CfnTaskDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
-   * .sizeInGiB(123)
+   * SystemControlProperty systemControlProperty = SystemControlProperty.builder()
+   * .namespace("namespace")
+   * .value("value")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html)
    */
-  public interface EphemeralStorageProperty {
+  public interface SystemControlProperty {
     /**
-     * The total amount, in GiB, of ephemeral storage to set for the task.
+     * The namespaced kernel parameter to set a `value` for.
      *
-     * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-namespace)
      */
-    public fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
+    public fun namespace(): String? = unwrap(this).getNamespace()
 
     /**
-     * A builder for [EphemeralStorageProperty]
+     * The namespaced kernel parameter to set a `value` for.
+     *
+     * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
+     * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"` ,
+     * and `Sysctls` that start with `"fs.mqueue.*"`
+     *
+     * Valid network namespace values: `Sysctls` that start with `"net.*"`
+     *
+     * All of these values are supported by Fargate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [SystemControlProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       * @param namespace The namespaced kernel parameter to set a `value` for.
        */
-      public fun sizeInGiB(sizeInGiB: Number)
+      public fun namespace(namespace: String)
+
+      /**
+       * @param value The namespaced kernel parameter to set a `value` for.
+       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
+       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
+       * , and `Sysctls` that start with `"fs.mqueue.*"`
+       *
+       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       *
+       * All of these values are supported by Fargate.
+       */
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty.builder()
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty.builder()
 
       /**
-       * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       * @param namespace The namespaced kernel parameter to set a `value` for.
        */
-      override fun sizeInGiB(sizeInGiB: Number) {
-        cdkBuilder.sizeInGiB(sizeInGiB)
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      /**
+       * @param value The namespaced kernel parameter to set a `value` for.
+       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
+       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
+       * , and `Sysctls` that start with `"fs.mqueue.*"`
+       *
+       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       *
+       * All of these values are supported by Fargate.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty,
+    ) : CdkObject(cdkObject), SystemControlProperty {
       /**
-       * The total amount, in GiB, of ephemeral storage to set for the task.
+       * The namespaced kernel parameter to set a `value` for.
        *
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-namespace)
        */
-      override fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
+      override fun namespace(): String? = unwrap(this).getNamespace()
+
+      /**
+       * The namespaced kernel parameter to set a `value` for.
+       *
+       * Valid IPC namespace values: `"kernel.msgmax" | "kernel.msgmnb" | "kernel.msgmni" |
+       * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
+       * , and `Sysctls` that start with `"fs.mqueue.*"`
+       *
+       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       *
+       * All of these values are supported by Fargate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-systemcontrol.html#cfn-ecs-taskdefinition-systemcontrol-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EphemeralStorageProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SystemControlProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty):
-          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty):
+          SystemControlProperty = CdkObjectWrappers.wrap(cdkObject) as? SystemControlProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EphemeralStorageProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty
+      internal fun unwrap(wrapped: SystemControlProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty
+    }
+  }
+
+  /**
+   * The constraint on task placement in the task definition.
+   *
+   * For more information, see [Task placement
+   * constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   *
+   * Task placement constraints aren't supported for tasks run on AWS Fargate .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * TaskDefinitionPlacementConstraintProperty taskDefinitionPlacementConstraintProperty =
+   * TaskDefinitionPlacementConstraintProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html)
+   */
+  public interface TaskDefinitionPlacementConstraintProperty {
+    /**
+     * A cluster query language expression to apply to the constraint.
+     *
+     * For more information, see [Cluster query
+     * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * The type of constraint.
+     *
+     * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [TaskDefinitionPlacementConstraintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * For more information, see [Cluster query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param type The type of constraint. 
+       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty.builder()
+
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * For more information, see [Cluster query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param type The type of constraint. 
+       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty,
+    ) : CdkObject(cdkObject), TaskDefinitionPlacementConstraintProperty {
+      /**
+       * A cluster query language expression to apply to the constraint.
+       *
+       * For more information, see [Cluster query
+       * language](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-expression)
+       */
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * The type of constraint.
+       *
+       * The `MemberOf` constraint restricts selection to be from a group of valid candidates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html#cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TaskDefinitionPlacementConstraintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty):
+          TaskDefinitionPlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TaskDefinitionPlacementConstraintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TaskDefinitionPlacementConstraintProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
+    }
+  }
+
+  /**
+   * The container path, mount options, and size of the tmpfs mount.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * TmpfsProperty tmpfsProperty = TmpfsProperty.builder()
+   * .size(123)
+   * // the properties below are optional
+   * .containerPath("containerPath")
+   * .mountOptions(List.of("mountOptions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html)
+   */
+  public interface TmpfsProperty {
+    /**
+     * The absolute file path where the tmpfs volume is to be mounted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
+     */
+    public fun containerPath(): String? = unwrap(this).getContainerPath()
+
+    /**
+     * The list of tmpfs volume mount options.
+     *
+     * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+     * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime" |
+     * "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+     * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+     * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
+     */
+    public fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?: emptyList()
+
+    /**
+     * The maximum size (in MiB) of the tmpfs volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
+     */
+    public fun size(): Number
+
+    /**
+     * A builder for [TmpfsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerPath The absolute file path where the tmpfs volume is to be mounted.
+       */
+      public fun containerPath(containerPath: String)
+
+      /**
+       * @param mountOptions The list of tmpfs volume mount options.
+       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
+       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+       */
+      public fun mountOptions(mountOptions: List<String>)
+
+      /**
+       * @param mountOptions The list of tmpfs volume mount options.
+       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
+       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+       */
+      public fun mountOptions(vararg mountOptions: String)
+
+      /**
+       * @param size The maximum size (in MiB) of the tmpfs volume. 
+       */
+      public fun size(size: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty.builder()
+
+      /**
+       * @param containerPath The absolute file path where the tmpfs volume is to be mounted.
+       */
+      override fun containerPath(containerPath: String) {
+        cdkBuilder.containerPath(containerPath)
+      }
+
+      /**
+       * @param mountOptions The list of tmpfs volume mount options.
+       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
+       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+       */
+      override fun mountOptions(mountOptions: List<String>) {
+        cdkBuilder.mountOptions(mountOptions)
+      }
+
+      /**
+       * @param mountOptions The list of tmpfs volume mount options.
+       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
+       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+       */
+      override fun mountOptions(vararg mountOptions: String): Unit =
+          mountOptions(mountOptions.toList())
+
+      /**
+       * @param size The maximum size (in MiB) of the tmpfs volume. 
+       */
+      override fun size(size: Number) {
+        cdkBuilder.size(size)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty,
+    ) : CdkObject(cdkObject), TmpfsProperty {
+      /**
+       * The absolute file path where the tmpfs volume is to be mounted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-containerpath)
+       */
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
+
+      /**
+       * The list of tmpfs volume mount options.
+       *
+       * Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | "exec" |
+       * "noexec" | "sync" | "async" | "dirsync" | "remount" | "mand" | "nomand" | "atime" | "noatime"
+       * | "diratime" | "nodiratime" | "bind" | "rbind" | "unbindable" | "runbindable" | "private" |
+       * "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime" | "norelatime" |
+       * "strictatime" | "nostrictatime" | "mode" | "uid" | "gid" | "nr_inodes" | "nr_blocks" | "mpol"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-mountoptions)
+       */
+      override fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?: emptyList()
+
+      /**
+       * The maximum size (in MiB) of the tmpfs volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html#cfn-ecs-taskdefinition-tmpfs-size)
+       */
+      override fun size(): Number = unwrap(this).getSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TmpfsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty):
+          TmpfsProperty = CdkObjectWrappers.wrap(cdkObject) as? TmpfsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TmpfsProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty
+    }
+  }
+
+  /**
+   * The `ulimit` settings to pass to the container.
+   *
+   * Amazon ECS tasks hosted on AWS Fargate use the default resource limit values set by the
+   * operating system with the exception of the `nofile` resource limit parameter which AWS Fargate
+   * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+   * container can use. The default `nofile` soft limit is `1024` and the default hard limit is `65535`
+   * .
+   *
+   * You can specify the `ulimit` settings for a container in a task definition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * UlimitProperty ulimitProperty = UlimitProperty.builder()
+   * .hardLimit(123)
+   * .name("name")
+   * .softLimit(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html)
+   */
+  public interface UlimitProperty {
+    /**
+     * The hard limit for the `ulimit` type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
+     */
+    public fun hardLimit(): Number
+
+    /**
+     * The `type` of the `ulimit` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-name)
+     */
+    public fun name(): String
+
+    /**
+     * The soft limit for the `ulimit` type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
+     */
+    public fun softLimit(): Number
+
+    /**
+     * A builder for [UlimitProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hardLimit The hard limit for the `ulimit` type. 
+       */
+      public fun hardLimit(hardLimit: Number)
+
+      /**
+       * @param name The `type` of the `ulimit` . 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param softLimit The soft limit for the `ulimit` type. 
+       */
+      public fun softLimit(softLimit: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty.builder()
+
+      /**
+       * @param hardLimit The hard limit for the `ulimit` type. 
+       */
+      override fun hardLimit(hardLimit: Number) {
+        cdkBuilder.hardLimit(hardLimit)
+      }
+
+      /**
+       * @param name The `type` of the `ulimit` . 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param softLimit The soft limit for the `ulimit` type. 
+       */
+      override fun softLimit(softLimit: Number) {
+        cdkBuilder.softLimit(softLimit)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty,
+    ) : CdkObject(cdkObject), UlimitProperty {
+      /**
+       * The hard limit for the `ulimit` type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
+       */
+      override fun hardLimit(): Number = unwrap(this).getHardLimit()
+
+      /**
+       * The `type` of the `ulimit` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The soft limit for the `ulimit` type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
+       */
+      override fun softLimit(): Number = unwrap(this).getSoftLimit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UlimitProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty):
+          UlimitProperty = CdkObjectWrappers.wrap(cdkObject) as? UlimitProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UlimitProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty
+    }
+  }
+
+  /**
+   * Details on a data volume from another container in the same task definition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * VolumeFromProperty volumeFromProperty = VolumeFromProperty.builder()
+   * .readOnly(false)
+   * .sourceContainer("sourceContainer")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html)
+   */
+  public interface VolumeFromProperty {
+    /**
+     * If this value is `true` , the container has read-only access to the volume.
+     *
+     * If this value is `false` , then the container can write to the volume. The default value is
+     * `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-readonly)
+     */
+    public fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+    /**
+     * The name of another container within the same task definition to mount volumes from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-sourcecontainer)
+     */
+    public fun sourceContainer(): String? = unwrap(this).getSourceContainer()
+
+    /**
+     * A builder for [VolumeFromProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      public fun readOnly(readOnly: Boolean)
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      public fun readOnly(readOnly: IResolvable)
+
+      /**
+       * @param sourceContainer The name of another container within the same task definition to
+       * mount volumes from.
+       */
+      public fun sourceContainer(sourceContainer: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty.builder()
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      override fun readOnly(readOnly: Boolean) {
+        cdkBuilder.readOnly(readOnly)
+      }
+
+      /**
+       * @param readOnly If this value is `true` , the container has read-only access to the volume.
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       */
+      override fun readOnly(readOnly: IResolvable) {
+        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceContainer The name of another container within the same task definition to
+       * mount volumes from.
+       */
+      override fun sourceContainer(sourceContainer: String) {
+        cdkBuilder.sourceContainer(sourceContainer)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty,
+    ) : CdkObject(cdkObject), VolumeFromProperty {
+      /**
+       * If this value is `true` , the container has read-only access to the volume.
+       *
+       * If this value is `false` , then the container can write to the volume. The default value is
+       * `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-readonly)
+       */
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+      /**
+       * The name of another container within the same task definition to mount volumes from.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumefrom.html#cfn-ecs-taskdefinition-volumefrom-sourcecontainer)
+       */
+      override fun sourceContainer(): String? = unwrap(this).getSourceContainer()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeFromProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty):
+          VolumeFromProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeFromProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VolumeFromProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty
     }
   }
 
@@ -13896,7 +14231,7 @@ public open class CfnTaskDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty,
     ) : CdkObject(cdkObject), VolumeProperty {
       /**
        * Indicates whether the volume should be configured at launch time.
@@ -13985,362 +14320,6 @@ public open class CfnTaskDefinition internal constructor(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty
-    }
-  }
-
-  /**
-   * The Linux capabilities to add or remove from the default Docker configuration for a container
-   * defined in the task definition.
-   *
-   * For more information about the default capabilities and the non-default available capabilities,
-   * see [Runtime privilege and Linux
-   * capabilities](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
-   * in the *Docker run reference* . For more detailed information about these Linux capabilities, see
-   * the
-   * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
-   * Linux manual page.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * KernelCapabilitiesProperty kernelCapabilitiesProperty = KernelCapabilitiesProperty.builder()
-   * .add(List.of("add"))
-   * .drop(List.of("drop"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html)
-   */
-  public interface KernelCapabilitiesProperty {
-    /**
-     * The Linux capabilities for the container that have been added to the default configuration
-     * provided by Docker.
-     *
-     * This parameter maps to `CapAdd` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-add`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     *
-     * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-     *
-     *
-     * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-     * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-     * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-     * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID" |
-     * "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" | "SYS_PTRACE"
-     * | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" | "WAKE_ALARM"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-add)
-     */
-    public fun add(): List<String> = unwrap(this).getAdd() ?: emptyList()
-
-    /**
-     * The Linux capabilities for the container that have been removed from the default
-     * configuration provided by Docker.
-     *
-     * This parameter maps to `CapDrop` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-drop`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
-     *
-     * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-     * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-     * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-     * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID" |
-     * "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" | "SYS_PTRACE"
-     * | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" | "WAKE_ALARM"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-drop)
-     */
-    public fun drop(): List<String> = unwrap(this).getDrop() ?: emptyList()
-
-    /**
-     * A builder for [KernelCapabilitiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param add The Linux capabilities for the container that have been added to the default
-       * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-       *
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      public fun add(add: List<String>)
-
-      /**
-       * @param add The Linux capabilities for the container that have been added to the default
-       * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-       *
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      public fun add(vararg add: String)
-
-      /**
-       * @param drop The Linux capabilities for the container that have been removed from the
-       * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      public fun drop(drop: List<String>)
-
-      /**
-       * @param drop The Linux capabilities for the container that have been removed from the
-       * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      public fun drop(vararg drop: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty.builder()
-
-      /**
-       * @param add The Linux capabilities for the container that have been added to the default
-       * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-       *
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      override fun add(add: List<String>) {
-        cdkBuilder.add(add)
-      }
-
-      /**
-       * @param add The Linux capabilities for the container that have been added to the default
-       * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-       *
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      override fun add(vararg add: String): Unit = add(add.toList())
-
-      /**
-       * @param drop The Linux capabilities for the container that have been removed from the
-       * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      override fun drop(drop: List<String>) {
-        cdkBuilder.drop(drop)
-      }
-
-      /**
-       * @param drop The Linux capabilities for the container that have been removed from the
-       * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       */
-      override fun drop(vararg drop: String): Unit = drop(drop.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty,
-    ) : CdkObject(cdkObject), KernelCapabilitiesProperty {
-      /**
-       * The Linux capabilities for the container that have been added to the default configuration
-       * provided by Docker.
-       *
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       *
-       * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
-       *
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-add)
-       */
-      override fun add(): List<String> = unwrap(this).getAdd() ?: emptyList()
-
-      /**
-       * The Linux capabilities for the container that have been removed from the default
-       * configuration provided by Docker.
-       *
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
-       *
-       * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
-       * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
-       * "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" |
-       * "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID"
-       * | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" |
-       * "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" |
-       * "WAKE_ALARM"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html#cfn-ecs-taskdefinition-kernelcapabilities-drop)
-       */
-      override fun drop(): List<String> = unwrap(this).getDrop() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KernelCapabilitiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty):
-          KernelCapabilitiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KernelCapabilitiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KernelCapabilitiesProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty
     }
   }
 }

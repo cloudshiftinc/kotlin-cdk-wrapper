@@ -241,7 +241,7 @@ public interface CfnHubProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.securityhub.CfnHubProps,
+    cdkObject: software.amazon.awscdk.services.securityhub.CfnHubProps,
   ) : CdkObject(cdkObject), CfnHubProps {
     /**
      * Whether to automatically enable new controls when they are added to standards that are

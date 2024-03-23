@@ -29,9 +29,8 @@ import kotlin.collections.Map
  *
  * [Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html)
  */
-public open class DynamoAttributeValue internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue,
+public open class DynamoAttributeValue(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue,
 ) : CdkObject(cdkObject) {
   /**
    * Represents the data for the attribute.
@@ -113,5 +112,6 @@ public open class DynamoAttributeValue internal constructor(
 
     internal fun unwrap(wrapped: DynamoAttributeValue):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue
   }
 }

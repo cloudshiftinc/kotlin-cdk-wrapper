@@ -95,8 +95,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html)
  */
-public open class CfnAccountPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnAccountPolicy,
+public open class CfnAccountPolicy(
+  cdkObject: software.amazon.awscdk.services.logs.CfnAccountPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -475,6 +475,7 @@ public open class CfnAccountPolicy internal constructor(
         CfnAccountPolicy = CfnAccountPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountPolicy):
-        software.amazon.awscdk.services.logs.CfnAccountPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CfnAccountPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CfnAccountPolicy
   }
 }

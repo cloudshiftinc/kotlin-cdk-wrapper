@@ -257,8 +257,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps,
   ) : CdkObject(cdkObject), CfnZonalAutoshiftConfigurationProps {
     /**
      * A practice run configuration for a resource includes the Amazon CloudWatch alarms that you've

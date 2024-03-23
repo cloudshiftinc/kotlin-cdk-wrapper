@@ -78,8 +78,7 @@ public interface NestedCloudAssemblyProperties {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties,
   ) : CdkObject(cdkObject), NestedCloudAssemblyProperties {
     /**
      * Relative path to the nested cloud assembly.

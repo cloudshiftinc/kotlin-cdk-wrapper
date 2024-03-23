@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ConfigurationSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.ConfigurationSet,
+public open class ConfigurationSet(
+  cdkObject: software.amazon.awscdk.services.ses.ConfigurationSet,
 ) : Resource(cdkObject), IConfigurationSet {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -272,6 +272,7 @@ public open class ConfigurationSet internal constructor(
         ConfigurationSet = ConfigurationSet(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationSet):
-        software.amazon.awscdk.services.ses.ConfigurationSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.ConfigurationSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.ConfigurationSet
   }
 }

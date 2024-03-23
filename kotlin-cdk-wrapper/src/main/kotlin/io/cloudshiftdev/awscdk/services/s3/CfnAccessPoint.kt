@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html)
  */
-public open class CfnAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
+public open class CfnAccessPoint(
+  cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -481,92 +481,7 @@ public open class CfnAccessPoint internal constructor(
         = CfnAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPoint): software.amazon.awscdk.services.s3.CfnAccessPoint
-        = wrapped.cdkObject
-  }
-
-  /**
-   * The Virtual Private Cloud (VPC) configuration for this access point.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
-   * .vpcId("vpcId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html)
-   */
-  public interface VpcConfigurationProperty {
-    /**
-     * If this field is specified, the access point will only allow connections from the specified
-     * VPC ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html#cfn-s3-accesspoint-vpcconfiguration-vpcid)
-     */
-    public fun vpcId(): String? = unwrap(this).getVpcId()
-
-    /**
-     * A builder for [VpcConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcId If this field is specified, the access point will only allow connections from
-       * the specified VPC ID.
-       */
-      public fun vpcId(vpcId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.builder()
-
-      /**
-       * @param vpcId If this field is specified, the access point will only allow connections from
-       * the specified VPC ID.
-       */
-      override fun vpcId(vpcId: String) {
-        cdkBuilder.vpcId(vpcId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
-    ) : CdkObject(cdkObject), VpcConfigurationProperty {
-      /**
-       * If this field is specified, the access point will only allow connections from the specified
-       * VPC ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html#cfn-s3-accesspoint-vpcconfiguration-vpcid)
-       */
-      override fun vpcId(): String? = unwrap(this).getVpcId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty):
-          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigurationProperty):
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.s3.CfnAccessPoint
   }
 
   /**
@@ -869,8 +784,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
@@ -945,6 +859,90 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty
+    }
+  }
+
+  /**
+   * The Virtual Private Cloud (VPC) configuration for this access point.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+   * .vpcId("vpcId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html)
+   */
+  public interface VpcConfigurationProperty {
+    /**
+     * If this field is specified, the access point will only allow connections from the specified
+     * VPC ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html#cfn-s3-accesspoint-vpcconfiguration-vpcid)
+     */
+    public fun vpcId(): String? = unwrap(this).getVpcId()
+
+    /**
+     * A builder for [VpcConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcId If this field is specified, the access point will only allow connections from
+       * the specified VPC ID.
+       */
+      public fun vpcId(vpcId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.builder()
+
+      /**
+       * @param vpcId If this field is specified, the access point will only allow connections from
+       * the specified VPC ID.
+       */
+      override fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
+    ) : CdkObject(cdkObject), VpcConfigurationProperty {
+      /**
+       * If this field is specified, the access point will only allow connections from the specified
+       * VPC ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html#cfn-s3-accesspoint-vpcconfiguration-vpcid)
+       */
+      override fun vpcId(): String? = unwrap(this).getVpcId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty):
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty
     }
   }
 }

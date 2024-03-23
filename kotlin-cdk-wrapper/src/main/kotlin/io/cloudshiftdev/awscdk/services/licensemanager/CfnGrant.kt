@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)
  */
-public open class CfnGrant internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrant,
+public open class CfnGrant(
+  cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrant,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -365,6 +365,6 @@ public open class CfnGrant internal constructor(
         = CfnGrant(cdkObject)
 
     internal fun unwrap(wrapped: CfnGrant): software.amazon.awscdk.services.licensemanager.CfnGrant
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.licensemanager.CfnGrant
   }
 }

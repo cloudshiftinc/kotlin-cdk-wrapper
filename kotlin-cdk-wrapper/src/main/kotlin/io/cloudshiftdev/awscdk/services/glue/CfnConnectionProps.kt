@@ -140,7 +140,7 @@ public interface CfnConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnConnectionProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnConnectionProps,
   ) : CdkObject(cdkObject), CfnConnectionProps {
     /**
      * The ID of the data catalog to create the catalog object in.

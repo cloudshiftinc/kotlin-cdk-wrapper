@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html)
  */
-public open class CfnTrail internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail,
+public open class CfnTrail(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1348,7 +1348,7 @@ public open class CfnTrail internal constructor(
         CfnTrail(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrail): software.amazon.awscdk.services.cloudtrail.CfnTrail =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudtrail.CfnTrail
   }
 
   /**
@@ -1491,8 +1491,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
       /**
        * Contains all selector statements in an advanced event selector.
@@ -1525,436 +1524,6 @@ public open class CfnTrail internal constructor(
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty
-    }
-  }
-
-  /**
-   * Use event selectors to further specify the management and data event settings for your trail.
-   *
-   * By default, trails created without specific event selectors will be configured to log all read
-   * and write management events, and no data events. When an event occurs in your account, CloudTrail
-   * evaluates the event selector for all trails. For each trail, if the event matches any event
-   * selector, the trail processes and logs the event. If the event doesn't match any event selector,
-   * the trail doesn't log the event.
-   *
-   * You can configure up to five event selectors for a trail.
-   *
-   * You cannot apply both event selectors and advanced event selectors to a trail.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
-   * EventSelectorProperty eventSelectorProperty = EventSelectorProperty.builder()
-   * .dataResources(List.of(DataResourceProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .values(List.of("values"))
-   * .build()))
-   * .excludeManagementEventSources(List.of("excludeManagementEventSources"))
-   * .includeManagementEvents(false)
-   * .readWriteType("readWriteType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html)
-   */
-  public interface EventSelectorProperty {
-    /**
-     * CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and
-     * Amazon DynamoDB tables with basic event selectors.
-     *
-     * You can specify up to 250 resources for an individual event selector, but the total number of
-     * data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-     * apply if you configure resource logging for all data events.
-     *
-     * For more information, see [Data
-     * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-     * and [Limits in AWS
-     * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-     * in the *AWS CloudTrail User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
-     */
-    public fun dataResources(): Any? = unwrap(this).getDataResources()
-
-    /**
-     * An optional list of service event sources from which you do not want management events to be
-     * logged on your trail.
-     *
-     * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-     * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-     * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS and
-     * Amazon RDS Data API events are logged to your trail. You can exclude management event sources
-     * only in Regions that support the event source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-excludemanagementeventsources)
-     */
-    public fun excludeManagementEventSources(): List<String> =
-        unwrap(this).getExcludeManagementEventSources() ?: emptyList()
-
-    /**
-     * Specify if you want your event selector to include management events for your trail.
-     *
-     * For more information, see [Management
-     * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-     * in the *AWS CloudTrail User Guide* .
-     *
-     * By default, the value is `true` .
-     *
-     * The first copy of management events is free. You are charged for additional copies of
-     * management events that you are logging on any subsequent trail in the same Region. For more
-     * information about CloudTrail pricing, see [AWS CloudTrail
-     * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
-     */
-    public fun includeManagementEvents(): Any? = unwrap(this).getIncludeManagementEvents()
-
-    /**
-     * Specify if you want your trail to log read-only events, write-only events, or all.
-     *
-     * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is a
-     * write-only API operation.
-     *
-     * By default, the value is `All` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
-     */
-    public fun readWriteType(): String? = unwrap(this).getReadWriteType()
-
-    /**
-     * A builder for [EventSelectorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      public fun dataResources(dataResources: IResolvable)
-
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      public fun dataResources(dataResources: List<Any>)
-
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      public fun dataResources(vararg dataResources: Any)
-
-      /**
-       * @param excludeManagementEventSources An optional list of service event sources from which
-       * you do not want management events to be logged on your trail.
-       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
-       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
-       * sources only in Regions that support the event source.
-       */
-      public fun excludeManagementEventSources(excludeManagementEventSources: List<String>)
-
-      /**
-       * @param excludeManagementEventSources An optional list of service event sources from which
-       * you do not want management events to be logged on your trail.
-       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
-       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
-       * sources only in Regions that support the event source.
-       */
-      public fun excludeManagementEventSources(vararg excludeManagementEventSources: String)
-
-      /**
-       * @param includeManagementEvents Specify if you want your event selector to include
-       * management events for your trail.
-       * For more information, see [Management
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * By default, the value is `true` .
-       *
-       * The first copy of management events is free. You are charged for additional copies of
-       * management events that you are logging on any subsequent trail in the same Region. For more
-       * information about CloudTrail pricing, see [AWS CloudTrail
-       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-       */
-      public fun includeManagementEvents(includeManagementEvents: Boolean)
-
-      /**
-       * @param includeManagementEvents Specify if you want your event selector to include
-       * management events for your trail.
-       * For more information, see [Management
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * By default, the value is `true` .
-       *
-       * The first copy of management events is free. You are charged for additional copies of
-       * management events that you are logging on any subsequent trail in the same Region. For more
-       * information about CloudTrail pricing, see [AWS CloudTrail
-       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-       */
-      public fun includeManagementEvents(includeManagementEvents: IResolvable)
-
-      /**
-       * @param readWriteType Specify if you want your trail to log read-only events, write-only
-       * events, or all.
-       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
-       * a write-only API operation.
-       *
-       * By default, the value is `All` .
-       */
-      public fun readWriteType(readWriteType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.Builder =
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.builder()
-
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      override fun dataResources(dataResources: IResolvable) {
-        cdkBuilder.dataResources(dataResources.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      override fun dataResources(dataResources: List<Any>) {
-        cdkBuilder.dataResources(dataResources)
-      }
-
-      /**
-       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
-       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       */
-      override fun dataResources(vararg dataResources: Any): Unit =
-          dataResources(dataResources.toList())
-
-      /**
-       * @param excludeManagementEventSources An optional list of service event sources from which
-       * you do not want management events to be logged on your trail.
-       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
-       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
-       * sources only in Regions that support the event source.
-       */
-      override fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
-        cdkBuilder.excludeManagementEventSources(excludeManagementEventSources)
-      }
-
-      /**
-       * @param excludeManagementEventSources An optional list of service event sources from which
-       * you do not want management events to be logged on your trail.
-       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
-       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
-       * sources only in Regions that support the event source.
-       */
-      override fun excludeManagementEventSources(vararg excludeManagementEventSources: String): Unit
-          = excludeManagementEventSources(excludeManagementEventSources.toList())
-
-      /**
-       * @param includeManagementEvents Specify if you want your event selector to include
-       * management events for your trail.
-       * For more information, see [Management
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * By default, the value is `true` .
-       *
-       * The first copy of management events is free. You are charged for additional copies of
-       * management events that you are logging on any subsequent trail in the same Region. For more
-       * information about CloudTrail pricing, see [AWS CloudTrail
-       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-       */
-      override fun includeManagementEvents(includeManagementEvents: Boolean) {
-        cdkBuilder.includeManagementEvents(includeManagementEvents)
-      }
-
-      /**
-       * @param includeManagementEvents Specify if you want your event selector to include
-       * management events for your trail.
-       * For more information, see [Management
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * By default, the value is `true` .
-       *
-       * The first copy of management events is free. You are charged for additional copies of
-       * management events that you are logging on any subsequent trail in the same Region. For more
-       * information about CloudTrail pricing, see [AWS CloudTrail
-       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-       */
-      override fun includeManagementEvents(includeManagementEvents: IResolvable) {
-        cdkBuilder.includeManagementEvents(includeManagementEvents.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readWriteType Specify if you want your trail to log read-only events, write-only
-       * events, or all.
-       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
-       * a write-only API operation.
-       *
-       * By default, the value is `All` .
-       */
-      override fun readWriteType(readWriteType: String) {
-        cdkBuilder.readWriteType(readWriteType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty,
-    ) : CdkObject(cdkObject), EventSelectorProperty {
-      /**
-       * CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and
-       * Amazon DynamoDB tables with basic event selectors.
-       *
-       * You can specify up to 250 resources for an individual event selector, but the total number
-       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
-       * apply if you configure resource logging for all data events.
-       *
-       * For more information, see [Data
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-       * and [Limits in AWS
-       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
-       */
-      override fun dataResources(): Any? = unwrap(this).getDataResources()
-
-      /**
-       * An optional list of service event sources from which you do not want management events to
-       * be logged on your trail.
-       *
-       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
-       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
-       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
-       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
-       * sources only in Regions that support the event source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-excludemanagementeventsources)
-       */
-      override fun excludeManagementEventSources(): List<String> =
-          unwrap(this).getExcludeManagementEventSources() ?: emptyList()
-
-      /**
-       * Specify if you want your event selector to include management events for your trail.
-       *
-       * For more information, see [Management
-       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-       * in the *AWS CloudTrail User Guide* .
-       *
-       * By default, the value is `true` .
-       *
-       * The first copy of management events is free. You are charged for additional copies of
-       * management events that you are logging on any subsequent trail in the same Region. For more
-       * information about CloudTrail pricing, see [AWS CloudTrail
-       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
-       */
-      override fun includeManagementEvents(): Any? = unwrap(this).getIncludeManagementEvents()
-
-      /**
-       * Specify if you want your trail to log read-only events, write-only events, or all.
-       *
-       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
-       * a write-only API operation.
-       *
-       * By default, the value is `All` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
-       */
-      override fun readWriteType(): String? = unwrap(this).getReadWriteType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventSelectorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty):
-          EventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSelectorProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventSelectorProperty):
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty
     }
   }
 
@@ -3569,8 +3138,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedFieldSelectorProperty {
       /**
        * An operator that includes events that match the last few characters of the event record
@@ -4423,8 +3991,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty,
     ) : CdkObject(cdkObject), DataResourceProperty {
       /**
        * The resource type in which you want to log data events.
@@ -4507,6 +4074,435 @@ public open class CfnTrail internal constructor(
   }
 
   /**
+   * Use event selectors to further specify the management and data event settings for your trail.
+   *
+   * By default, trails created without specific event selectors will be configured to log all read
+   * and write management events, and no data events. When an event occurs in your account, CloudTrail
+   * evaluates the event selector for all trails. For each trail, if the event matches any event
+   * selector, the trail processes and logs the event. If the event doesn't match any event selector,
+   * the trail doesn't log the event.
+   *
+   * You can configure up to five event selectors for a trail.
+   *
+   * You cannot apply both event selectors and advanced event selectors to a trail.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
+   * EventSelectorProperty eventSelectorProperty = EventSelectorProperty.builder()
+   * .dataResources(List.of(DataResourceProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .values(List.of("values"))
+   * .build()))
+   * .excludeManagementEventSources(List.of("excludeManagementEventSources"))
+   * .includeManagementEvents(false)
+   * .readWriteType("readWriteType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html)
+   */
+  public interface EventSelectorProperty {
+    /**
+     * CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and
+     * Amazon DynamoDB tables with basic event selectors.
+     *
+     * You can specify up to 250 resources for an individual event selector, but the total number of
+     * data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+     * apply if you configure resource logging for all data events.
+     *
+     * For more information, see [Data
+     * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Limits in AWS
+     * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+     * in the *AWS CloudTrail User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
+     */
+    public fun dataResources(): Any? = unwrap(this).getDataResources()
+
+    /**
+     * An optional list of service event sources from which you do not want management events to be
+     * logged on your trail.
+     *
+     * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+     * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+     * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS and
+     * Amazon RDS Data API events are logged to your trail. You can exclude management event sources
+     * only in Regions that support the event source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-excludemanagementeventsources)
+     */
+    public fun excludeManagementEventSources(): List<String> =
+        unwrap(this).getExcludeManagementEventSources() ?: emptyList()
+
+    /**
+     * Specify if you want your event selector to include management events for your trail.
+     *
+     * For more information, see [Management
+     * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+     * in the *AWS CloudTrail User Guide* .
+     *
+     * By default, the value is `true` .
+     *
+     * The first copy of management events is free. You are charged for additional copies of
+     * management events that you are logging on any subsequent trail in the same Region. For more
+     * information about CloudTrail pricing, see [AWS CloudTrail
+     * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
+     */
+    public fun includeManagementEvents(): Any? = unwrap(this).getIncludeManagementEvents()
+
+    /**
+     * Specify if you want your trail to log read-only events, write-only events, or all.
+     *
+     * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is a
+     * write-only API operation.
+     *
+     * By default, the value is `All` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
+     */
+    public fun readWriteType(): String? = unwrap(this).getReadWriteType()
+
+    /**
+     * A builder for [EventSelectorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      public fun dataResources(dataResources: IResolvable)
+
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      public fun dataResources(dataResources: List<Any>)
+
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      public fun dataResources(vararg dataResources: Any)
+
+      /**
+       * @param excludeManagementEventSources An optional list of service event sources from which
+       * you do not want management events to be logged on your trail.
+       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
+       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
+       * sources only in Regions that support the event source.
+       */
+      public fun excludeManagementEventSources(excludeManagementEventSources: List<String>)
+
+      /**
+       * @param excludeManagementEventSources An optional list of service event sources from which
+       * you do not want management events to be logged on your trail.
+       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
+       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
+       * sources only in Regions that support the event source.
+       */
+      public fun excludeManagementEventSources(vararg excludeManagementEventSources: String)
+
+      /**
+       * @param includeManagementEvents Specify if you want your event selector to include
+       * management events for your trail.
+       * For more information, see [Management
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * By default, the value is `true` .
+       *
+       * The first copy of management events is free. You are charged for additional copies of
+       * management events that you are logging on any subsequent trail in the same Region. For more
+       * information about CloudTrail pricing, see [AWS CloudTrail
+       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+       */
+      public fun includeManagementEvents(includeManagementEvents: Boolean)
+
+      /**
+       * @param includeManagementEvents Specify if you want your event selector to include
+       * management events for your trail.
+       * For more information, see [Management
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * By default, the value is `true` .
+       *
+       * The first copy of management events is free. You are charged for additional copies of
+       * management events that you are logging on any subsequent trail in the same Region. For more
+       * information about CloudTrail pricing, see [AWS CloudTrail
+       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+       */
+      public fun includeManagementEvents(includeManagementEvents: IResolvable)
+
+      /**
+       * @param readWriteType Specify if you want your trail to log read-only events, write-only
+       * events, or all.
+       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
+       * a write-only API operation.
+       *
+       * By default, the value is `All` .
+       */
+      public fun readWriteType(readWriteType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.Builder =
+          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.builder()
+
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      override fun dataResources(dataResources: IResolvable) {
+        cdkBuilder.dataResources(dataResources.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      override fun dataResources(dataResources: List<Any>) {
+        cdkBuilder.dataResources(dataResources)
+      }
+
+      /**
+       * @param dataResources CloudTrail supports data event logging for Amazon S3 objects, AWS
+       * Lambda functions, and Amazon DynamoDB tables with basic event selectors.
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       */
+      override fun dataResources(vararg dataResources: Any): Unit =
+          dataResources(dataResources.toList())
+
+      /**
+       * @param excludeManagementEventSources An optional list of service event sources from which
+       * you do not want management events to be logged on your trail.
+       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
+       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
+       * sources only in Regions that support the event source.
+       */
+      override fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
+        cdkBuilder.excludeManagementEventSources(excludeManagementEventSources)
+      }
+
+      /**
+       * @param excludeManagementEventSources An optional list of service event sources from which
+       * you do not want management events to be logged on your trail.
+       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
+       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
+       * sources only in Regions that support the event source.
+       */
+      override fun excludeManagementEventSources(vararg excludeManagementEventSources: String): Unit
+          = excludeManagementEventSources(excludeManagementEventSources.toList())
+
+      /**
+       * @param includeManagementEvents Specify if you want your event selector to include
+       * management events for your trail.
+       * For more information, see [Management
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * By default, the value is `true` .
+       *
+       * The first copy of management events is free. You are charged for additional copies of
+       * management events that you are logging on any subsequent trail in the same Region. For more
+       * information about CloudTrail pricing, see [AWS CloudTrail
+       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+       */
+      override fun includeManagementEvents(includeManagementEvents: Boolean) {
+        cdkBuilder.includeManagementEvents(includeManagementEvents)
+      }
+
+      /**
+       * @param includeManagementEvents Specify if you want your event selector to include
+       * management events for your trail.
+       * For more information, see [Management
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * By default, the value is `true` .
+       *
+       * The first copy of management events is free. You are charged for additional copies of
+       * management events that you are logging on any subsequent trail in the same Region. For more
+       * information about CloudTrail pricing, see [AWS CloudTrail
+       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+       */
+      override fun includeManagementEvents(includeManagementEvents: IResolvable) {
+        cdkBuilder.includeManagementEvents(includeManagementEvents.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param readWriteType Specify if you want your trail to log read-only events, write-only
+       * events, or all.
+       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
+       * a write-only API operation.
+       *
+       * By default, the value is `All` .
+       */
+      override fun readWriteType(readWriteType: String) {
+        cdkBuilder.readWriteType(readWriteType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty,
+    ) : CdkObject(cdkObject), EventSelectorProperty {
+      /**
+       * CloudTrail supports data event logging for Amazon S3 objects, AWS Lambda functions, and
+       * Amazon DynamoDB tables with basic event selectors.
+       *
+       * You can specify up to 250 resources for an individual event selector, but the total number
+       * of data resources cannot exceed 250 across all event selectors in a trail. This limit does not
+       * apply if you configure resource logging for all data events.
+       *
+       * For more information, see [Data
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+       * and [Limits in AWS
+       * CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources)
+       */
+      override fun dataResources(): Any? = unwrap(this).getDataResources()
+
+      /**
+       * An optional list of service event sources from which you do not want management events to
+       * be logged on your trail.
+       *
+       * In this release, the list can be empty (disables the filter), or it can filter out AWS Key
+       * Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or
+       * `rdsdata.amazonaws.com` . By default, `ExcludeManagementEventSources` is empty, and AWS KMS
+       * and Amazon RDS Data API events are logged to your trail. You can exclude management event
+       * sources only in Regions that support the event source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-excludemanagementeventsources)
+       */
+      override fun excludeManagementEventSources(): List<String> =
+          unwrap(this).getExcludeManagementEventSources() ?: emptyList()
+
+      /**
+       * Specify if you want your event selector to include management events for your trail.
+       *
+       * For more information, see [Management
+       * Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
+       *
+       * By default, the value is `true` .
+       *
+       * The first copy of management events is free. You are charged for additional copies of
+       * management events that you are logging on any subsequent trail in the same Region. For more
+       * information about CloudTrail pricing, see [AWS CloudTrail
+       * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents)
+       */
+      override fun includeManagementEvents(): Any? = unwrap(this).getIncludeManagementEvents()
+
+      /**
+       * Specify if you want your trail to log read-only events, write-only events, or all.
+       *
+       * For example, the EC2 `GetConsoleOutput` is a read-only API operation and `RunInstances` is
+       * a write-only API operation.
+       *
+       * By default, the value is `All` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype)
+       */
+      override fun readWriteType(): String? = unwrap(this).getReadWriteType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventSelectorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty):
+          EventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSelectorProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventSelectorProperty):
+          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty
+    }
+  }
+
+  /**
    * A JSON string that contains a list of Insights types that are logged on a trail.
    *
    * Example:
@@ -4578,8 +4574,7 @@ public open class CfnTrail internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty,
     ) : CdkObject(cdkObject), InsightSelectorProperty {
       /**
        * The type of Insights events to log on a trail. `ApiCallRateInsight` and

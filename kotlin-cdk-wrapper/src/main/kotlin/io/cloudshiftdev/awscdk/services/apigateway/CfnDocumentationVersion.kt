@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html)
  */
-public open class CfnDocumentationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigateway.CfnDocumentationVersion,
+public open class CfnDocumentationVersion(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -193,6 +192,7 @@ public open class CfnDocumentationVersion internal constructor(
         CfnDocumentationVersion = CfnDocumentationVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentationVersion):
-        software.amazon.awscdk.services.apigateway.CfnDocumentationVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnDocumentationVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnDocumentationVersion
   }
 }

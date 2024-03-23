@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class ParameterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroup,
+public open class ParameterGroup(
+  cdkObject: software.amazon.awscdk.services.rds.ParameterGroup,
 ) : Resource(cdkObject), IParameterGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -237,6 +237,6 @@ public open class ParameterGroup internal constructor(
         = ParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroup): software.amazon.awscdk.services.rds.ParameterGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.rds.ParameterGroup
   }
 }

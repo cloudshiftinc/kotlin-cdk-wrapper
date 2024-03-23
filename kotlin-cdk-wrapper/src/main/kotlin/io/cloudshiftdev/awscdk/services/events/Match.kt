@@ -32,8 +32,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Match internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Match,
+public open class Match(
+  cdkObject: software.amazon.awscdk.services.events.Match,
 ) : CdkObject(cdkObject), IResolvable {
   /**
    * A representation of this matcher as a list of strings.
@@ -117,6 +117,6 @@ public open class Match internal constructor(
         Match(cdkObject)
 
     internal fun unwrap(wrapped: Match): software.amazon.awscdk.services.events.Match =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.Match
   }
 }

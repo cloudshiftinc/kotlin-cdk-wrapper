@@ -612,8 +612,7 @@ public interface CfnModelBiasJobDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps,
   ) : CdkObject(cdkObject), CfnModelBiasJobDefinitionProps {
     /**
      * The name of the endpoint used to run the monitoring job.

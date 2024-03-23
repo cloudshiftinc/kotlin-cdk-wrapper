@@ -33,8 +33,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class ManualApprovalStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStep,
+public open class ManualApprovalStep(
+  cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStep,
 ) : Step(cdkObject) {
   public constructor(id: String) : this(software.amazon.awscdk.pipelines.ManualApprovalStep(id)
   )
@@ -100,6 +100,7 @@ public open class ManualApprovalStep internal constructor(
         ManualApprovalStep = ManualApprovalStep(cdkObject)
 
     internal fun unwrap(wrapped: ManualApprovalStep):
-        software.amazon.awscdk.pipelines.ManualApprovalStep = wrapped.cdkObject
+        software.amazon.awscdk.pipelines.ManualApprovalStep = wrapped.cdkObject as
+        software.amazon.awscdk.pipelines.ManualApprovalStep
   }
 }

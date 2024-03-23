@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Connection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Connection,
+public open class Connection(
+  cdkObject: software.amazon.awscdk.services.events.Connection,
 ) : Resource(cdkObject), IConnection {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -239,6 +239,6 @@ public open class Connection internal constructor(
         Connection(cdkObject)
 
     internal fun unwrap(wrapped: Connection): software.amazon.awscdk.services.events.Connection =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.Connection
   }
 }

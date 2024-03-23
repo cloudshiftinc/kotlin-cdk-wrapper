@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)
  */
-public open class CfnEventSourceMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping,
+public open class CfnEventSourceMapping(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -329,12 +329,12 @@ public open class CfnEventSourceMapping internal constructor(
       filterCriteria(FilterCriteriaProperty(`value`))
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(`value`: String) {
     unwrap(this).setFunctionName(`value`)
@@ -847,7 +847,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit)
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* – `MyFunction` .
      *
@@ -859,7 +859,7 @@ public open class CfnEventSourceMapping internal constructor(
      * it's limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
 
@@ -1413,7 +1413,7 @@ public open class CfnEventSourceMapping internal constructor(
         filterCriteria(FilterCriteriaProperty(filterCriteria))
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* – `MyFunction` .
      *
@@ -1425,7 +1425,7 @@ public open class CfnEventSourceMapping internal constructor(
      * it's limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
@@ -1772,330 +1772,8 @@ public open class CfnEventSourceMapping internal constructor(
         CfnEventSourceMapping = CfnEventSourceMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventSourceMapping):
-        software.amazon.awscdk.services.lambda.CfnEventSourceMapping = wrapped.cdkObject
-  }
-
-  /**
-   * Specific configuration settings for a self-managed Apache Kafka event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
-   * SelfManagedKafkaEventSourceConfigProperty.builder()
-   * .consumerGroupId("consumerGroupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html)
-   */
-  public interface SelfManagedKafkaEventSourceConfigProperty {
-    /**
-     * The identifier for the Kafka consumer group to join.
-     *
-     * The consumer group ID must be unique among all your Kafka event sources. After creating a
-     * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-     * For more information, see [Customizable consumer group
-     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
-     */
-    public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
-
-    /**
-     * A builder for [SelfManagedKafkaEventSourceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param consumerGroupId The identifier for the Kafka consumer group to join.
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       */
-      public fun consumerGroupId(consumerGroupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.builder()
-
-      /**
-       * @param consumerGroupId The identifier for the Kafka consumer group to join.
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       */
-      override fun consumerGroupId(consumerGroupId: String) {
-        cdkBuilder.consumerGroupId(consumerGroupId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
-    ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceConfigProperty {
-      /**
-       * The identifier for the Kafka consumer group to join.
-       *
-       * The consumer group ID must be unique among all your Kafka event sources. After creating a
-       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-       * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
-       */
-      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SelfManagedKafkaEventSourceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty):
-          SelfManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SelfManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelfManagedKafkaEventSourceConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
-    }
-  }
-
-  /**
-   * A structure within a `FilterCriteria` object that defines an event filtering pattern.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .pattern("pattern")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html)
-   */
-  public interface FilterProperty {
-    /**
-     * A filter pattern.
-     *
-     * For more information on the syntax of a filter pattern, see [Filter rule
-     * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
-     */
-    public fun pattern(): String? = unwrap(this).getPattern()
-
-    /**
-     * A builder for [FilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pattern A filter pattern.
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       */
-      public fun pattern(pattern: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.builder()
-
-      /**
-       * @param pattern A filter pattern.
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       */
-      override fun pattern(pattern: String) {
-        cdkBuilder.pattern(pattern)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * A filter pattern.
-       *
-       * For more information on the syntax of a filter pattern, see [Filter rule
-       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
-       */
-      override fun pattern(): String? = unwrap(this).getPattern()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty
-    }
-  }
-
-  /**
-   * The self-managed Apache Kafka cluster for your event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * SelfManagedEventSourceProperty selfManagedEventSourceProperty =
-   * SelfManagedEventSourceProperty.builder()
-   * .endpoints(EndpointsProperty.builder()
-   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html)
-   */
-  public interface SelfManagedEventSourceProperty {
-    /**
-     * The list of bootstrap servers for your Kafka brokers in the following format:
-     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
-     */
-    public fun endpoints(): Any? = unwrap(this).getEndpoints()
-
-    /**
-     * A builder for [SelfManagedEventSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun endpoints(endpoints: IResolvable)
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun endpoints(endpoints: EndpointsProperty)
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.builder()
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun endpoints(endpoints: IResolvable) {
-        cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun endpoints(endpoints: EndpointsProperty) {
-        cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
-      }
-
-      /**
-       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
-       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
-          endpoints(EndpointsProperty(endpoints))
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
-    ) : CdkObject(cdkObject), SelfManagedEventSourceProperty {
-      /**
-       * The list of bootstrap servers for your Kafka brokers in the following format:
-       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
-       */
-      override fun endpoints(): Any? = unwrap(this).getEndpoints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SelfManagedEventSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty):
-          SelfManagedEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SelfManagedEventSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelfManagedEventSourceProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
-    }
+        software.amazon.awscdk.services.lambda.CfnEventSourceMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnEventSourceMapping
   }
 
   /**
@@ -2169,8 +1847,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty,
     ) : CdkObject(cdkObject), AmazonManagedKafkaEventSourceConfigProperty {
       /**
        * The identifier for the Kafka consumer group to join.
@@ -2202,6 +1879,378 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
+    }
+  }
+
+  /**
+   * A configuration object that specifies the destination of an event after Lambda processes it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * DestinationConfigProperty destinationConfigProperty = DestinationConfigProperty.builder()
+   * .onFailure(OnFailureProperty.builder()
+   * .destination("destination")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html)
+   */
+  public interface DestinationConfigProperty {
+    /**
+     * The destination configuration for failed invocations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)
+     */
+    public fun onFailure(): Any? = unwrap(this).getOnFailure()
+
+    /**
+     * A builder for [DestinationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      public fun onFailure(onFailure: IResolvable)
+
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      public fun onFailure(onFailure: OnFailureProperty)
+
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
+      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty.builder()
+
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      override fun onFailure(onFailure: IResolvable) {
+        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      override fun onFailure(onFailure: OnFailureProperty) {
+        cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
+      }
+
+      /**
+       * @param onFailure The destination configuration for failed invocations.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
+      override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
+          onFailure(OnFailureProperty(onFailure))
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty,
+    ) : CdkObject(cdkObject), DestinationConfigProperty {
+      /**
+       * The destination configuration for failed invocations.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)
+       */
+      override fun onFailure(): Any? = unwrap(this).getOnFailure()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty):
+          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty
+    }
+  }
+
+  /**
+   * Specific configuration settings for a DocumentDB event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * DocumentDBEventSourceConfigProperty documentDBEventSourceConfigProperty =
+   * DocumentDBEventSourceConfigProperty.builder()
+   * .collectionName("collectionName")
+   * .databaseName("databaseName")
+   * .fullDocument("fullDocument")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html)
+   */
+  public interface DocumentDBEventSourceConfigProperty {
+    /**
+     * The name of the collection to consume within the database.
+     *
+     * If you do not specify a collection, Lambda consumes all collections.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-collectionname)
+     */
+    public fun collectionName(): String? = unwrap(this).getCollectionName()
+
+    /**
+     * The name of the database to consume within the DocumentDB cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * Determines what DocumentDB sends to your event stream during document update operations.
+     *
+     * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy of
+     * the entire document. Otherwise, DocumentDB sends only a partial document that contains the
+     * changes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-fulldocument)
+     */
+    public fun fullDocument(): String? = unwrap(this).getFullDocument()
+
+    /**
+     * A builder for [DocumentDBEventSourceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param collectionName The name of the collection to consume within the database.
+       * If you do not specify a collection, Lambda consumes all collections.
+       */
+      public fun collectionName(collectionName: String)
+
+      /**
+       * @param databaseName The name of the database to consume within the DocumentDB cluster.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param fullDocument Determines what DocumentDB sends to your event stream during document
+       * update operations.
+       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
+       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
+       * changes.
+       */
+      public fun fullDocument(fullDocument: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.builder()
+
+      /**
+       * @param collectionName The name of the collection to consume within the database.
+       * If you do not specify a collection, Lambda consumes all collections.
+       */
+      override fun collectionName(collectionName: String) {
+        cdkBuilder.collectionName(collectionName)
+      }
+
+      /**
+       * @param databaseName The name of the database to consume within the DocumentDB cluster.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param fullDocument Determines what DocumentDB sends to your event stream during document
+       * update operations.
+       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
+       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
+       * changes.
+       */
+      override fun fullDocument(fullDocument: String) {
+        cdkBuilder.fullDocument(fullDocument)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty,
+    ) : CdkObject(cdkObject), DocumentDBEventSourceConfigProperty {
+      /**
+       * The name of the collection to consume within the database.
+       *
+       * If you do not specify a collection, Lambda consumes all collections.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-collectionname)
+       */
+      override fun collectionName(): String? = unwrap(this).getCollectionName()
+
+      /**
+       * The name of the database to consume within the DocumentDB cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * Determines what DocumentDB sends to your event stream during document update operations.
+       *
+       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
+       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
+       * changes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-fulldocument)
+       */
+      override fun fullDocument(): String? = unwrap(this).getFullDocument()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DocumentDBEventSourceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty):
+          DocumentDBEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentDBEventSourceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DocumentDBEventSourceConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
+    }
+  }
+
+  /**
+   * The list of bootstrap servers for your Kafka brokers in the following format:
+   * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * EndpointsProperty endpointsProperty = EndpointsProperty.builder()
+   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html)
+   */
+  public interface EndpointsProperty {
+    /**
+     * The list of bootstrap servers for your Kafka brokers in the following format:
+     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html#cfn-lambda-eventsourcemapping-endpoints-kafkabootstrapservers)
+     */
+    public fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers() ?:
+        emptyList()
+
+    /**
+     * A builder for [EndpointsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
+
+      /**
+       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.builder()
+
+      /**
+       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
+        cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
+      }
+
+      /**
+       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
+       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String): Unit =
+          kafkaBootstrapServers(kafkaBootstrapServers.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty,
+    ) : CdkObject(cdkObject), EndpointsProperty {
+      /**
+       * The list of bootstrap servers for your Kafka brokers in the following format:
+       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html#cfn-lambda-eventsourcemapping-endpoints-kafkabootstrapservers)
+       */
+      override fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers()
+          ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty):
+          EndpointsProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointsProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty
     }
   }
 
@@ -2283,8 +2332,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
     ) : CdkObject(cdkObject), FilterCriteriaProperty {
       /**
        * A list of filters.
@@ -2309,6 +2357,101 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty
+    }
+  }
+
+  /**
+   * A structure within a `FilterCriteria` object that defines an event filtering pattern.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .pattern("pattern")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html)
+   */
+  public interface FilterProperty {
+    /**
+     * A filter pattern.
+     *
+     * For more information on the syntax of a filter pattern, see [Filter rule
+     * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
+     */
+    public fun pattern(): String? = unwrap(this).getPattern()
+
+    /**
+     * A builder for [FilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pattern A filter pattern.
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       */
+      public fun pattern(pattern: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.Builder =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.builder()
+
+      /**
+       * @param pattern A filter pattern.
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       */
+      override fun pattern(pattern: String) {
+        cdkBuilder.pattern(pattern)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      /**
+       * A filter pattern.
+       *
+       * For more information on the syntax of a filter pattern, see [Filter rule
+       * syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html#cfn-lambda-eventsourcemapping-filter-pattern)
+       */
+      override fun pattern(): String? = unwrap(this).getPattern()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty
     }
   }
 
@@ -2411,8 +2554,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
     ) : CdkObject(cdkObject), OnFailureProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
@@ -2457,7 +2599,9 @@ public open class CfnEventSourceMapping internal constructor(
   }
 
   /**
-   * A configuration object that specifies the destination of an event after Lambda processes it.
+   * (Amazon SQS only) The scaling configuration for the event source.
+   *
+   * To remove the configuration, pass an empty value.
    *
    * Example:
    *
@@ -2465,106 +2609,303 @@ public open class CfnEventSourceMapping internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * DestinationConfigProperty destinationConfigProperty = DestinationConfigProperty.builder()
-   * .onFailure(OnFailureProperty.builder()
-   * .destination("destination")
-   * .build())
+   * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
+   * .maximumConcurrency(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html)
    */
-  public interface DestinationConfigProperty {
+  public interface ScalingConfigProperty {
     /**
-     * The destination configuration for failed invocations.
+     * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
      */
-    public fun onFailure(): Any? = unwrap(this).getOnFailure()
+    public fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
 
     /**
-     * A builder for [DestinationConfigProperty]
+     * A builder for [ScalingConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param onFailure The destination configuration for failed invocations.
+       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
+       * event source can invoke.
        */
-      public fun onFailure(onFailure: IResolvable)
-
-      /**
-       * @param onFailure The destination configuration for failed invocations.
-       */
-      public fun onFailure(onFailure: OnFailureProperty)
-
-      /**
-       * @param onFailure The destination configuration for failed invocations.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
-      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit)
+      public fun maximumConcurrency(maximumConcurrency: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty.Builder
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.Builder
           =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty.builder()
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.builder()
 
       /**
-       * @param onFailure The destination configuration for failed invocations.
+       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
+       * event source can invoke.
        */
-      override fun onFailure(onFailure: IResolvable) {
-        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+      override fun maximumConcurrency(maximumConcurrency: Number) {
+        cdkBuilder.maximumConcurrency(maximumConcurrency)
       }
-
-      /**
-       * @param onFailure The destination configuration for failed invocations.
-       */
-      override fun onFailure(onFailure: OnFailureProperty) {
-        cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
-      }
-
-      /**
-       * @param onFailure The destination configuration for failed invocations.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
-      override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
-          onFailure(OnFailureProperty(onFailure))
 
       public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty,
-    ) : CdkObject(cdkObject), DestinationConfigProperty {
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
+    ) : CdkObject(cdkObject), ScalingConfigProperty {
       /**
-       * The destination configuration for failed invocations.
+       * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-destinationconfig.html#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
        */
-      override fun onFailure(): Any? = unwrap(this).getOnFailure()
+      override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty):
-          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DestinationConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty):
+          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DestinationConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
+      internal fun unwrap(wrapped: ScalingConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty
+    }
+  }
+
+  /**
+   * The self-managed Apache Kafka cluster for your event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SelfManagedEventSourceProperty selfManagedEventSourceProperty =
+   * SelfManagedEventSourceProperty.builder()
+   * .endpoints(EndpointsProperty.builder()
+   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html)
+   */
+  public interface SelfManagedEventSourceProperty {
+    /**
+     * The list of bootstrap servers for your Kafka brokers in the following format:
+     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
+     */
+    public fun endpoints(): Any? = unwrap(this).getEndpoints()
+
+    /**
+     * A builder for [SelfManagedEventSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun endpoints(endpoints: IResolvable)
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      public fun endpoints(endpoints: EndpointsProperty)
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
+      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.builder()
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun endpoints(endpoints: IResolvable) {
+        cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      override fun endpoints(endpoints: EndpointsProperty) {
+        cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
+      }
+
+      /**
+       * @param endpoints The list of bootstrap servers for your Kafka brokers in the following
+       * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
+      override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
+          endpoints(EndpointsProperty(endpoints))
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
+    ) : CdkObject(cdkObject), SelfManagedEventSourceProperty {
+      /**
+       * The list of bootstrap servers for your Kafka brokers in the following format:
+       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource-endpoints)
+       */
+      override fun endpoints(): Any? = unwrap(this).getEndpoints()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SelfManagedEventSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty):
+          SelfManagedEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedEventSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SelfManagedEventSourceProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
+    }
+  }
+
+  /**
+   * Specific configuration settings for a self-managed Apache Kafka event source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
+   * SelfManagedKafkaEventSourceConfigProperty.builder()
+   * .consumerGroupId("consumerGroupId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html)
+   */
+  public interface SelfManagedKafkaEventSourceConfigProperty {
+    /**
+     * The identifier for the Kafka consumer group to join.
+     *
+     * The consumer group ID must be unique among all your Kafka event sources. After creating a
+     * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+     * For more information, see [Customizable consumer group
+     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
+     */
+    public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+    /**
+     * A builder for [SelfManagedKafkaEventSourceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param consumerGroupId The identifier for the Kafka consumer group to join.
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       */
+      public fun consumerGroupId(consumerGroupId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.builder()
+
+      /**
+       * @param consumerGroupId The identifier for the Kafka consumer group to join.
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       */
+      override fun consumerGroupId(consumerGroupId: String) {
+        cdkBuilder.consumerGroupId(consumerGroupId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
+    ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceConfigProperty {
+      /**
+       * The identifier for the Kafka consumer group to join.
+       *
+       * The consumer group ID must be unique among all your Kafka event sources. After creating a
+       * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
+       * For more information, see [Customizable consumer group
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
+       */
+      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SelfManagedKafkaEventSourceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty):
+          SelfManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SelfManagedKafkaEventSourceConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
     }
   }
 
@@ -2724,8 +3065,7 @@ public open class CfnEventSourceMapping internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
     ) : CdkObject(cdkObject), SourceAccessConfigurationProperty {
       /**
        * The type of authentication protocol, VPC components, or virtual host for your event source.
@@ -2786,356 +3126,6 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
-    }
-  }
-
-  /**
-   * (Amazon SQS only) The scaling configuration for the event source.
-   *
-   * To remove the configuration, pass an empty value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
-   * .maximumConcurrency(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html)
-   */
-  public interface ScalingConfigProperty {
-    /**
-     * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
-     */
-    public fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
-
-    /**
-     * A builder for [ScalingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
-       * event source can invoke.
-       */
-      public fun maximumConcurrency(maximumConcurrency: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.builder()
-
-      /**
-       * @param maximumConcurrency Limits the number of concurrent instances that the Amazon SQS
-       * event source can invoke.
-       */
-      override fun maximumConcurrency(maximumConcurrency: Number) {
-        cdkBuilder.maximumConcurrency(maximumConcurrency)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
-    ) : CdkObject(cdkObject), ScalingConfigProperty {
-      /**
-       * Limits the number of concurrent instances that the Amazon SQS event source can invoke.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html#cfn-lambda-eventsourcemapping-scalingconfig-maximumconcurrency)
-       */
-      override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty):
-          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty
-    }
-  }
-
-  /**
-   * Specific configuration settings for a DocumentDB event source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * DocumentDBEventSourceConfigProperty documentDBEventSourceConfigProperty =
-   * DocumentDBEventSourceConfigProperty.builder()
-   * .collectionName("collectionName")
-   * .databaseName("databaseName")
-   * .fullDocument("fullDocument")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html)
-   */
-  public interface DocumentDBEventSourceConfigProperty {
-    /**
-     * The name of the collection to consume within the database.
-     *
-     * If you do not specify a collection, Lambda consumes all collections.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-collectionname)
-     */
-    public fun collectionName(): String? = unwrap(this).getCollectionName()
-
-    /**
-     * The name of the database to consume within the DocumentDB cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * Determines what DocumentDB sends to your event stream during document update operations.
-     *
-     * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy of
-     * the entire document. Otherwise, DocumentDB sends only a partial document that contains the
-     * changes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-fulldocument)
-     */
-    public fun fullDocument(): String? = unwrap(this).getFullDocument()
-
-    /**
-     * A builder for [DocumentDBEventSourceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param collectionName The name of the collection to consume within the database.
-       * If you do not specify a collection, Lambda consumes all collections.
-       */
-      public fun collectionName(collectionName: String)
-
-      /**
-       * @param databaseName The name of the database to consume within the DocumentDB cluster.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param fullDocument Determines what DocumentDB sends to your event stream during document
-       * update operations.
-       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
-       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
-       * changes.
-       */
-      public fun fullDocument(fullDocument: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.builder()
-
-      /**
-       * @param collectionName The name of the collection to consume within the database.
-       * If you do not specify a collection, Lambda consumes all collections.
-       */
-      override fun collectionName(collectionName: String) {
-        cdkBuilder.collectionName(collectionName)
-      }
-
-      /**
-       * @param databaseName The name of the database to consume within the DocumentDB cluster.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param fullDocument Determines what DocumentDB sends to your event stream during document
-       * update operations.
-       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
-       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
-       * changes.
-       */
-      override fun fullDocument(fullDocument: String) {
-        cdkBuilder.fullDocument(fullDocument)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty,
-    ) : CdkObject(cdkObject), DocumentDBEventSourceConfigProperty {
-      /**
-       * The name of the collection to consume within the database.
-       *
-       * If you do not specify a collection, Lambda consumes all collections.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-collectionname)
-       */
-      override fun collectionName(): String? = unwrap(this).getCollectionName()
-
-      /**
-       * The name of the database to consume within the DocumentDB cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * Determines what DocumentDB sends to your event stream during document update operations.
-       *
-       * If set to UpdateLookup, DocumentDB sends a delta describing the changes, along with a copy
-       * of the entire document. Otherwise, DocumentDB sends only a partial document that contains the
-       * changes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig-fulldocument)
-       */
-      override fun fullDocument(): String? = unwrap(this).getFullDocument()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DocumentDBEventSourceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty):
-          DocumentDBEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DocumentDBEventSourceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DocumentDBEventSourceConfigProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
-    }
-  }
-
-  /**
-   * The list of bootstrap servers for your Kafka brokers in the following format:
-   * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lambda.*;
-   * EndpointsProperty endpointsProperty = EndpointsProperty.builder()
-   * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html)
-   */
-  public interface EndpointsProperty {
-    /**
-     * The list of bootstrap servers for your Kafka brokers in the following format:
-     * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html#cfn-lambda-eventsourcemapping-endpoints-kafkabootstrapservers)
-     */
-    public fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers() ?:
-        emptyList()
-
-    /**
-     * A builder for [EndpointsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
-       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
-
-      /**
-       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
-       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      public fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.Builder =
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.builder()
-
-      /**
-       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
-       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
-        cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
-      }
-
-      /**
-       * @param kafkaBootstrapServers The list of bootstrap servers for your Kafka brokers in the
-       * following format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       */
-      override fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String): Unit =
-          kafkaBootstrapServers(kafkaBootstrapServers.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty,
-    ) : CdkObject(cdkObject), EndpointsProperty {
-      /**
-       * The list of bootstrap servers for your Kafka brokers in the following format:
-       * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html#cfn-lambda-eventsourcemapping-endpoints-kafkabootstrapservers)
-       */
-      override fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers()
-          ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty):
-          EndpointsProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointsProperty):
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty
     }
   }
 }

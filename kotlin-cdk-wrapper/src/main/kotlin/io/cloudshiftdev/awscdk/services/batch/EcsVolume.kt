@@ -34,8 +34,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class EcsVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
+public abstract class EcsVolume(
+  cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
 ) : CdkObject(cdkObject) {
   /**
    * The path on the container that this volume will be mounted to.
@@ -55,7 +55,7 @@ public abstract class EcsVolume internal constructor(
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
+    cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
   ) : EcsVolume(cdkObject)
 
   public companion object {

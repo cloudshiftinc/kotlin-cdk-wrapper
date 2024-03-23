@@ -46,9 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
  */
-public open class SageMakerCreateModel internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel,
+public open class SageMakerCreateModel(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel,
 ) : TaskStateBase(cdkObject), IGrantable, IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -695,5 +694,6 @@ public open class SageMakerCreateModel internal constructor(
 
     internal fun unwrap(wrapped: SageMakerCreateModel):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel
   }
 }

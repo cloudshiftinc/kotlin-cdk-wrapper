@@ -200,8 +200,7 @@ public interface UserPoolIdentityProviderGoogleProps : UserPoolIdentityProviderP
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps,
   ) : CdkObject(cdkObject), UserPoolIdentityProviderGoogleProps {
     /**
      * Mapping attributes from the identity provider to standard and custom attributes of the user

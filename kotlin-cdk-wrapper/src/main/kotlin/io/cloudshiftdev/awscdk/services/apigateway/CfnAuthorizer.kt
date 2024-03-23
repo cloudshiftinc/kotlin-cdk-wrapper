@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html)
  */
-public open class CfnAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnAuthorizer,
+public open class CfnAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnAuthorizer,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -543,6 +543,7 @@ public open class CfnAuthorizer internal constructor(
         CfnAuthorizer = CfnAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthorizer):
-        software.amazon.awscdk.services.apigateway.CfnAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnAuthorizer
   }
 }

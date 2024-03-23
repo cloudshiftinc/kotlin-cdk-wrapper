@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html)
  */
-public open class CfnWALWorkspace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspace,
+public open class CfnWALWorkspace(
+  cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -214,6 +214,7 @@ public open class CfnWALWorkspace internal constructor(
         CfnWALWorkspace = CfnWALWorkspace(cdkObject)
 
     internal fun unwrap(wrapped: CfnWALWorkspace):
-        software.amazon.awscdk.services.emr.CfnWALWorkspace = wrapped.cdkObject
+        software.amazon.awscdk.services.emr.CfnWALWorkspace = wrapped.cdkObject as
+        software.amazon.awscdk.services.emr.CfnWALWorkspace
   }
 }

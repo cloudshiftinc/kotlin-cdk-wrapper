@@ -755,7 +755,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * The CPU architecture of an application.

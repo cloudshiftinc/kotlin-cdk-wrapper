@@ -303,7 +303,7 @@ public interface CustomResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CustomResourceProps,
+    cdkObject: software.amazon.awscdk.CustomResourceProps,
   ) : CdkObject(cdkObject), CustomResourceProps {
     /**
      * Convert all property keys to pascal case.

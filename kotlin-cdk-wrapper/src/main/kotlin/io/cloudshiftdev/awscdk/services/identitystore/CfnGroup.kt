@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.identitystore.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -190,6 +190,6 @@ public open class CfnGroup internal constructor(
         CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.identitystore.CfnGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.identitystore.CfnGroup
   }
 }

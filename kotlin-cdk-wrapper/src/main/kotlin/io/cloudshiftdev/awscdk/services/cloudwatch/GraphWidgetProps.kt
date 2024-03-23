@@ -540,7 +540,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidgetProps,
   ) : CdkObject(cdkObject), GraphWidgetProps {
     /**
      * The end of the time range to use for each widget independently from those of the dashboard.

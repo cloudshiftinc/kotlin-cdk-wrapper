@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-dedicatedippool.html)
  */
-public open class CfnDedicatedIpPool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnDedicatedIpPool,
+public open class CfnDedicatedIpPool(
+  cdkObject: software.amazon.awscdk.services.ses.CfnDedicatedIpPool,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -191,6 +191,7 @@ public open class CfnDedicatedIpPool internal constructor(
         CfnDedicatedIpPool = CfnDedicatedIpPool(cdkObject)
 
     internal fun unwrap(wrapped: CfnDedicatedIpPool):
-        software.amazon.awscdk.services.ses.CfnDedicatedIpPool = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnDedicatedIpPool = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnDedicatedIpPool
   }
 }

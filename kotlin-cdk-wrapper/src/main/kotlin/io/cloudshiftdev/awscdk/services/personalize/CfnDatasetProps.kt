@@ -217,7 +217,7 @@ public interface CfnDatasetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetProps,
+    cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetProps,
   ) : CdkObject(cdkObject), CfnDatasetProps {
     /**
      * The Amazon Resource Name (ARN) of the dataset group.

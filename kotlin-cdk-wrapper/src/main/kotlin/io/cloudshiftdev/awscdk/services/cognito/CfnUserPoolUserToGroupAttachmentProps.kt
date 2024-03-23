@@ -100,8 +100,7 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps,
   ) : CdkObject(cdkObject), CfnUserPoolUserToGroupAttachmentProps {
     /**
      * The name of the group that you want to add your user to.

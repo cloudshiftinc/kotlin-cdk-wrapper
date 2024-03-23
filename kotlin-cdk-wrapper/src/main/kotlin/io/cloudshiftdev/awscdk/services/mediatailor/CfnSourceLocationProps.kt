@@ -337,7 +337,7 @@ public interface CfnSourceLocationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps,
+    cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps,
   ) : CdkObject(cdkObject), CfnSourceLocationProps {
     /**
      * The access configuration for the source location.

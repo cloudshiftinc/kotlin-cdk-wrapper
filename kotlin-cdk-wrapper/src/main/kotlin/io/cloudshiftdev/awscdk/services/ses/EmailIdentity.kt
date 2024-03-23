@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * identity.grantSendEmail(user);
  * ```
  */
-public open class EmailIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.EmailIdentity,
+public open class EmailIdentity(
+  cdkObject: software.amazon.awscdk.services.ses.EmailIdentity,
 ) : Resource(cdkObject), IEmailIdentity {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -333,6 +333,6 @@ public open class EmailIdentity internal constructor(
         EmailIdentity(cdkObject)
 
     internal fun unwrap(wrapped: EmailIdentity): software.amazon.awscdk.services.ses.EmailIdentity =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.EmailIdentity
   }
 }

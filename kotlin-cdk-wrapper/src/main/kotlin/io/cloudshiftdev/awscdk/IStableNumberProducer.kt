@@ -16,7 +16,7 @@ public interface IStableNumberProducer {
   public fun produce(): Number?
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IStableNumberProducer,
+    cdkObject: software.amazon.awscdk.IStableNumberProducer,
   ) : CdkObject(cdkObject), IStableNumberProducer {
     /**
      * Produce the number value.

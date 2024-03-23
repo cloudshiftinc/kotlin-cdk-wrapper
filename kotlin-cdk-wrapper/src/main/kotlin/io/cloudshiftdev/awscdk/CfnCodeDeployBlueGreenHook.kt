@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-template-reference)
  */
-public open class CfnCodeDeployBlueGreenHook internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenHook,
+public open class CfnCodeDeployBlueGreenHook(
+  cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenHook,
 ) : CfnHook(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -425,6 +425,7 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
         CfnCodeDeployBlueGreenHook = CfnCodeDeployBlueGreenHook(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenHook):
-        software.amazon.awscdk.CfnCodeDeployBlueGreenHook = wrapped.cdkObject
+        software.amazon.awscdk.CfnCodeDeployBlueGreenHook = wrapped.cdkObject as
+        software.amazon.awscdk.CfnCodeDeployBlueGreenHook
   }
 }

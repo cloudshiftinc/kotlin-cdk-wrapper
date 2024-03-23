@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html)
  */
-public open class CfnAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount,
+public open class CfnAccount(
+  cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -223,7 +223,8 @@ public open class CfnAccount internal constructor(
         CfnAccount = CfnAccount(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccount):
-        software.amazon.awscdk.services.certificatemanager.CfnAccount = wrapped.cdkObject
+        software.amazon.awscdk.services.certificatemanager.CfnAccount = wrapped.cdkObject as
+        software.amazon.awscdk.services.certificatemanager.CfnAccount
   }
 
   /**
@@ -295,8 +296,7 @@ public open class CfnAccount internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty,
     ) : CdkObject(cdkObject), ExpiryEventsConfigurationProperty {
       /**
        * This option specifies the number of days prior to certificate expiration when ACM starts

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
  */
-public open class CfnCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnCertificate,
+public open class CfnCertificate(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -331,6 +331,7 @@ public open class CfnCertificate internal constructor(
         CfnCertificate = CfnCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificate):
-        software.amazon.awscdk.services.lightsail.CfnCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.lightsail.CfnCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.lightsail.CfnCertificate
   }
 }

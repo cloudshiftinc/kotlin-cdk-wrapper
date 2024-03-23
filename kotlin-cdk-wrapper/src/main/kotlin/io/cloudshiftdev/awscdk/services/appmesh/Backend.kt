@@ -42,8 +42,8 @@ import kotlin.jvm.JvmName
  * node.addBackend(Backend.virtualService(virtualService));
  * ```
  */
-public abstract class Backend internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,
+public abstract class Backend(
+  cdkObject: software.amazon.awscdk.services.appmesh.Backend,
 ) : CdkObject(cdkObject) {
   /**
    * Return backend config.
@@ -54,7 +54,7 @@ public abstract class Backend internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(BackendConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,
+    cdkObject: software.amazon.awscdk.services.appmesh.Backend,
   ) : Backend(cdkObject)
 
   public companion object {

@@ -102,7 +102,7 @@ public interface OutputDataConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig,
   ) : CdkObject(cdkObject), OutputDataConfig {
     /**
      * Optional KMS encryption key that Amazon SageMaker uses to encrypt the model artifacts at rest

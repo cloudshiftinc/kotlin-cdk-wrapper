@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html)
  */
-public open class CfnQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnQueue,
+public open class CfnQueue(
+  cdkObject: software.amazon.awscdk.services.connect.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -522,7 +522,7 @@ public open class CfnQueue internal constructor(
         CfnQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueue): software.amazon.awscdk.services.connect.CfnQueue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnQueue
   }
 
   /**
@@ -643,8 +643,7 @@ public open class CfnQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty,
     ) : CdkObject(cdkObject), OutboundCallerConfigProperty {
       /**
        * The caller ID name.

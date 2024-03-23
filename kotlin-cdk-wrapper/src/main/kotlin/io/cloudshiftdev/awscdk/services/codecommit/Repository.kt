@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Repository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codecommit.Repository,
+public open class Repository(
+  cdkObject: software.amazon.awscdk.services.codecommit.Repository,
 ) : Resource(cdkObject), IRepository {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -933,6 +933,6 @@ public open class Repository internal constructor(
         = Repository(cdkObject)
 
     internal fun unwrap(wrapped: Repository): software.amazon.awscdk.services.codecommit.Repository
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.codecommit.Repository
   }
 }

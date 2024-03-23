@@ -62,7 +62,7 @@ public interface CfnDNSSECProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnDNSSECProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnDNSSECProps,
   ) : CdkObject(cdkObject), CfnDNSSECProps {
     /**
      * A unique string (ID) that is used to identify a hosted zone.

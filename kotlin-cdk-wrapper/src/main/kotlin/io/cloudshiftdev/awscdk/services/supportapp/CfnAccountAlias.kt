@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html)
  */
-public open class CfnAccountAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAlias,
+public open class CfnAccountAlias(
+  cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -139,6 +139,7 @@ public open class CfnAccountAlias internal constructor(
         CfnAccountAlias = CfnAccountAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountAlias):
-        software.amazon.awscdk.services.supportapp.CfnAccountAlias = wrapped.cdkObject
+        software.amazon.awscdk.services.supportapp.CfnAccountAlias = wrapped.cdkObject as
+        software.amazon.awscdk.services.supportapp.CfnAccountAlias
   }
 }

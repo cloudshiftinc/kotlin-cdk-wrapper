@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
  */
-public open class CfnPatchBaseline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
+public open class CfnPatchBaseline(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1035,7 +1035,122 @@ public open class CfnPatchBaseline internal constructor(
         CfnPatchBaseline = CfnPatchBaseline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPatchBaseline):
-        software.amazon.awscdk.services.ssm.CfnPatchBaseline = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnPatchBaseline = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnPatchBaseline
+  }
+
+  /**
+   * The `PatchFilterGroup` property type specifies a set of patch filters for an AWS Systems
+   * Manager patch baseline, typically used for approval rules for a Systems Manager patch baseline.
+   *
+   * `PatchFilterGroup` is the property type for the `GlobalFilters` property of the
+   * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
+   * resource and the `PatchFilterGroup` property of the
+   * [Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * PatchFilterGroupProperty patchFilterGroupProperty = PatchFilterGroupProperty.builder()
+   * .patchFilters(List.of(PatchFilterProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html)
+   */
+  public interface PatchFilterGroupProperty {
+    /**
+     * The set of patch filters that make up the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)
+     */
+    public fun patchFilters(): Any? = unwrap(this).getPatchFilters()
+
+    /**
+     * A builder for [PatchFilterGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      public fun patchFilters(patchFilters: IResolvable)
+
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      public fun patchFilters(patchFilters: List<Any>)
+
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      public fun patchFilters(vararg patchFilters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.Builder =
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.builder()
+
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      override fun patchFilters(patchFilters: IResolvable) {
+        cdkBuilder.patchFilters(patchFilters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      override fun patchFilters(patchFilters: List<Any>) {
+        cdkBuilder.patchFilters(patchFilters)
+      }
+
+      /**
+       * @param patchFilters The set of patch filters that make up the group.
+       */
+      override fun patchFilters(vararg patchFilters: Any): Unit =
+          patchFilters(patchFilters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
+    ) : CdkObject(cdkObject), PatchFilterGroupProperty {
+      /**
+       * The set of patch filters that make up the group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)
+       */
+      override fun patchFilters(): Any? = unwrap(this).getPatchFilters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PatchFilterGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty):
+          PatchFilterGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PatchFilterGroupProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PatchFilterGroupProperty):
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty
+    }
   }
 
   /**
@@ -1156,8 +1271,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
     ) : CdkObject(cdkObject), PatchFilterProperty {
       /**
        * The key for the filter.
@@ -1197,121 +1311,6 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty
-    }
-  }
-
-  /**
-   * The `PatchFilterGroup` property type specifies a set of patch filters for an AWS Systems
-   * Manager patch baseline, typically used for approval rules for a Systems Manager patch baseline.
-   *
-   * `PatchFilterGroup` is the property type for the `GlobalFilters` property of the
-   * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
-   * resource and the `PatchFilterGroup` property of the
-   * [Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * PatchFilterGroupProperty patchFilterGroupProperty = PatchFilterGroupProperty.builder()
-   * .patchFilters(List.of(PatchFilterProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html)
-   */
-  public interface PatchFilterGroupProperty {
-    /**
-     * The set of patch filters that make up the group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)
-     */
-    public fun patchFilters(): Any? = unwrap(this).getPatchFilters()
-
-    /**
-     * A builder for [PatchFilterGroupProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      public fun patchFilters(patchFilters: IResolvable)
-
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      public fun patchFilters(patchFilters: List<Any>)
-
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      public fun patchFilters(vararg patchFilters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.Builder =
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.builder()
-
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      override fun patchFilters(patchFilters: IResolvable) {
-        cdkBuilder.patchFilters(patchFilters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      override fun patchFilters(patchFilters: List<Any>) {
-        cdkBuilder.patchFilters(patchFilters)
-      }
-
-      /**
-       * @param patchFilters The set of patch filters that make up the group.
-       */
-      override fun patchFilters(vararg patchFilters: Any): Unit =
-          patchFilters(patchFilters.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
-    ) : CdkObject(cdkObject), PatchFilterGroupProperty {
-      /**
-       * The set of patch filters that make up the group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)
-       */
-      override fun patchFilters(): Any? = unwrap(this).getPatchFilters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PatchFilterGroupProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty):
-          PatchFilterGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PatchFilterGroupProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PatchFilterGroupProperty):
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty
     }
   }
 
@@ -1480,8 +1479,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
     ) : CdkObject(cdkObject), PatchSourceProperty {
       /**
        * The value of the yum repo configuration. For example:.
@@ -1538,6 +1536,124 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty
+    }
+  }
+
+  /**
+   * The `RuleGroup` property type specifies a set of rules that define the approval rules for an
+   * AWS Systems Manager patch baseline.
+   *
+   * `RuleGroup` is the property type for the `ApprovalRules` property of the
+   * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * RuleGroupProperty ruleGroupProperty = RuleGroupProperty.builder()
+   * .patchRules(List.of(RuleProperty.builder()
+   * .approveAfterDays(123)
+   * .approveUntilDate("approveUntilDate")
+   * .complianceLevel("complianceLevel")
+   * .enableNonSecurity(false)
+   * .patchFilterGroup(PatchFilterGroupProperty.builder()
+   * .patchFilters(List.of(PatchFilterProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build()))
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html)
+   */
+  public interface RuleGroupProperty {
+    /**
+     * The rules that make up the rule group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html#cfn-ssm-patchbaseline-rulegroup-patchrules)
+     */
+    public fun patchRules(): Any? = unwrap(this).getPatchRules()
+
+    /**
+     * A builder for [RuleGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      public fun patchRules(patchRules: IResolvable)
+
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      public fun patchRules(patchRules: List<Any>)
+
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      public fun patchRules(vararg patchRules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.Builder =
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.builder()
+
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      override fun patchRules(patchRules: IResolvable) {
+        cdkBuilder.patchRules(patchRules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      override fun patchRules(patchRules: List<Any>) {
+        cdkBuilder.patchRules(patchRules)
+      }
+
+      /**
+       * @param patchRules The rules that make up the rule group.
+       */
+      override fun patchRules(vararg patchRules: Any): Unit = patchRules(patchRules.toList())
+
+      public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
+    ) : CdkObject(cdkObject), RuleGroupProperty {
+      /**
+       * The rules that make up the rule group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html#cfn-ssm-patchbaseline-rulegroup-patchrules)
+       */
+      override fun patchRules(): Any? = unwrap(this).getPatchRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty):
+          RuleGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleGroupProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleGroupProperty):
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty
     }
   }
 
@@ -1778,7 +1894,7 @@ public open class CfnPatchBaseline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The number of days after the release date of each patch matched by the rule that the patch
@@ -1850,125 +1966,6 @@ public open class CfnPatchBaseline internal constructor(
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty
-    }
-  }
-
-  /**
-   * The `RuleGroup` property type specifies a set of rules that define the approval rules for an
-   * AWS Systems Manager patch baseline.
-   *
-   * `RuleGroup` is the property type for the `ApprovalRules` property of the
-   * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * RuleGroupProperty ruleGroupProperty = RuleGroupProperty.builder()
-   * .patchRules(List.of(RuleProperty.builder()
-   * .approveAfterDays(123)
-   * .approveUntilDate("approveUntilDate")
-   * .complianceLevel("complianceLevel")
-   * .enableNonSecurity(false)
-   * .patchFilterGroup(PatchFilterGroupProperty.builder()
-   * .patchFilters(List.of(PatchFilterProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build()))
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html)
-   */
-  public interface RuleGroupProperty {
-    /**
-     * The rules that make up the rule group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html#cfn-ssm-patchbaseline-rulegroup-patchrules)
-     */
-    public fun patchRules(): Any? = unwrap(this).getPatchRules()
-
-    /**
-     * A builder for [RuleGroupProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      public fun patchRules(patchRules: IResolvable)
-
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      public fun patchRules(patchRules: List<Any>)
-
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      public fun patchRules(vararg patchRules: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.Builder =
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.builder()
-
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      override fun patchRules(patchRules: IResolvable) {
-        cdkBuilder.patchRules(patchRules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      override fun patchRules(patchRules: List<Any>) {
-        cdkBuilder.patchRules(patchRules)
-      }
-
-      /**
-       * @param patchRules The rules that make up the rule group.
-       */
-      override fun patchRules(vararg patchRules: Any): Unit = patchRules(patchRules.toList())
-
-      public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
-    ) : CdkObject(cdkObject), RuleGroupProperty {
-      /**
-       * The rules that make up the rule group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html#cfn-ssm-patchbaseline-rulegroup-patchrules)
-       */
-      override fun patchRules(): Any? = unwrap(this).getPatchRules()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleGroupProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty):
-          RuleGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleGroupProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RuleGroupProperty):
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty
     }
   }
 }

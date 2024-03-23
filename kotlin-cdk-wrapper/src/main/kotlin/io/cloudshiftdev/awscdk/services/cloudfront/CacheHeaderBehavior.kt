@@ -35,8 +35,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class CacheHeaderBehavior internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior,
+public open class CacheHeaderBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * If no headers will be passed, or an allow list of headers.
@@ -59,6 +59,7 @@ public open class CacheHeaderBehavior internal constructor(
         CacheHeaderBehavior = CacheHeaderBehavior(cdkObject)
 
     internal fun unwrap(wrapped: CacheHeaderBehavior):
-        software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior
   }
 }

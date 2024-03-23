@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EksJobDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.EksJobDefinition,
+public open class EksJobDefinition(
+  cdkObject: software.amazon.awscdk.services.batch.EksJobDefinition,
 ) : Resource(cdkObject), IEksJobDefinition, IJobDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -436,6 +436,7 @@ public open class EksJobDefinition internal constructor(
         EksJobDefinition = EksJobDefinition(cdkObject)
 
     internal fun unwrap(wrapped: EksJobDefinition):
-        software.amazon.awscdk.services.batch.EksJobDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.EksJobDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.EksJobDefinition
   }
 }

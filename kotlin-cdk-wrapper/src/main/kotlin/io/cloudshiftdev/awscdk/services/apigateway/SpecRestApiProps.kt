@@ -394,7 +394,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApiProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApiProps,
   ) : CdkObject(cdkObject), SpecRestApiProps {
     /**
      * An OpenAPI definition compatible with API Gateway.

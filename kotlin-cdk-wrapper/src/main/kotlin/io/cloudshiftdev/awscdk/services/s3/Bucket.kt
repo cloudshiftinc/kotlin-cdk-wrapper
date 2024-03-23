@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Bucket internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.Bucket,
+public open class Bucket(
+  cdkObject: software.amazon.awscdk.services.s3.Bucket,
 ) : BucketBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1187,6 +1187,6 @@ public open class Bucket internal constructor(
         Bucket(cdkObject)
 
     internal fun unwrap(wrapped: Bucket): software.amazon.awscdk.services.s3.Bucket =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.s3.Bucket
   }
 }

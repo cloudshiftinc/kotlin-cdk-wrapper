@@ -23,9 +23,8 @@ import kotlin.String
  *
  * [Documentation](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)
  */
-public open class CacheControl internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CacheControl,
+public open class CacheControl(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CacheControl,
 ) : CdkObject(cdkObject) {
   /**
    * the actual text value of the created directive.
@@ -86,6 +85,7 @@ public open class CacheControl internal constructor(
         CacheControl = CacheControl(cdkObject)
 
     internal fun unwrap(wrapped: CacheControl):
-        software.amazon.awscdk.services.codepipeline.actions.CacheControl = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.CacheControl = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CacheControl
   }
 }

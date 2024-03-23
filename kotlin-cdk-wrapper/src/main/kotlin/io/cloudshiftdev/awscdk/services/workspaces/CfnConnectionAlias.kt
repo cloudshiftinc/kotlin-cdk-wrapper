@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)
  */
-public open class CfnConnectionAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias,
+public open class CfnConnectionAlias(
+  cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,7 +216,8 @@ public open class CfnConnectionAlias internal constructor(
         CfnConnectionAlias = CfnConnectionAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectionAlias):
-        software.amazon.awscdk.services.workspaces.CfnConnectionAlias = wrapped.cdkObject
+        software.amazon.awscdk.services.workspaces.CfnConnectionAlias = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspaces.CfnConnectionAlias
   }
 
   /**
@@ -347,8 +348,7 @@ public open class CfnConnectionAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty,
     ) : CdkObject(cdkObject), ConnectionAliasAssociationProperty {
       /**
        * The identifier of the AWS account that associated the connection alias with a directory.

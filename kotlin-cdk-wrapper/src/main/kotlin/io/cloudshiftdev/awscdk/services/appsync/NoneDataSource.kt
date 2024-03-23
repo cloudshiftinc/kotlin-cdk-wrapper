@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NoneDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.NoneDataSource,
+public open class NoneDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.NoneDataSource,
 ) : BaseDataSource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -131,6 +131,7 @@ public open class NoneDataSource internal constructor(
         NoneDataSource = NoneDataSource(cdkObject)
 
     internal fun unwrap(wrapped: NoneDataSource):
-        software.amazon.awscdk.services.appsync.NoneDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.NoneDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.NoneDataSource
   }
 }

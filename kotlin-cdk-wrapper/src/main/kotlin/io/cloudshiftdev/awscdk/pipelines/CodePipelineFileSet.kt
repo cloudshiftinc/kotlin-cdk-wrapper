@@ -24,8 +24,8 @@ import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
  * .build();
  * ```
  */
-public open class CodePipelineFileSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineFileSet,
+public open class CodePipelineFileSet(
+  cdkObject: software.amazon.awscdk.pipelines.CodePipelineFileSet,
 ) : FileSet(cdkObject) {
   public companion object {
     public fun fromArtifact(artifact: Artifact): CodePipelineFileSet =
@@ -35,6 +35,7 @@ public open class CodePipelineFileSet internal constructor(
         CodePipelineFileSet = CodePipelineFileSet(cdkObject)
 
     internal fun unwrap(wrapped: CodePipelineFileSet):
-        software.amazon.awscdk.pipelines.CodePipelineFileSet = wrapped.cdkObject
+        software.amazon.awscdk.pipelines.CodePipelineFileSet = wrapped.cdkObject as
+        software.amazon.awscdk.pipelines.CodePipelineFileSet
   }
 }

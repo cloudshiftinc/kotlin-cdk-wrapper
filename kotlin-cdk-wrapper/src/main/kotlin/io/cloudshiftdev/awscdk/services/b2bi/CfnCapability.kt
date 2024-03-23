@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-capability.html)
  */
-public open class CfnCapability internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
+public open class CfnCapability(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -485,7 +485,7 @@ public open class CfnCapability internal constructor(
         = CfnCapability(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapability): software.amazon.awscdk.services.b2bi.CfnCapability
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.b2bi.CfnCapability
   }
 
   /**
@@ -590,8 +590,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
     ) : CdkObject(cdkObject), CapabilityConfigurationProperty {
       /**
        * An EDI (electronic data interchange) configuration object.
@@ -616,125 +615,6 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.b2bi.*;
-   * X12DetailsProperty x12DetailsProperty = X12DetailsProperty.builder()
-   * .transactionSet("transactionSet")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html)
-   */
-  public interface X12DetailsProperty {
-    /**
-     * Returns an enumerated type where each value identifies an X12 transaction set.
-     *
-     * Transaction sets are maintained by the X12 Accredited Standards Committee.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-transactionset)
-     */
-    public fun transactionSet(): String? = unwrap(this).getTransactionSet()
-
-    /**
-     * Returns the version to use for the specified X12 transaction set.
-     *
-     * Supported versions are `4010` , `4030` , and `5010` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [X12DetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param transactionSet Returns an enumerated type where each value identifies an X12
-       * transaction set.
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       */
-      public fun transactionSet(transactionSet: String)
-
-      /**
-       * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.Builder =
-          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.builder()
-
-      /**
-       * @param transactionSet Returns an enumerated type where each value identifies an X12
-       * transaction set.
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       */
-      override fun transactionSet(transactionSet: String) {
-        cdkBuilder.transactionSet(transactionSet)
-      }
-
-      /**
-       * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
-    ) : CdkObject(cdkObject), X12DetailsProperty {
-      /**
-       * Returns an enumerated type where each value identifies an X12 transaction set.
-       *
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-transactionset)
-       */
-      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
-
-      /**
-       * Returns the version to use for the specified X12 transaction set.
-       *
-       * Supported versions are `4010` , `4030` , and `5010` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): X12DetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty):
-          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: X12DetailsProperty):
-          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty
     }
   }
 
@@ -965,8 +845,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
     ) : CdkObject(cdkObject), EdiConfigurationProperty {
       /**
        * Contains the Amazon S3 bucket and prefix for the location of the input file, which is
@@ -1125,7 +1004,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
     ) : CdkObject(cdkObject), EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
@@ -1230,7 +1109,7 @@ public open class CfnCapability internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * Specifies the name of the Amazon S3 bucket.
@@ -1262,6 +1141,125 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12DetailsProperty x12DetailsProperty = X12DetailsProperty.builder()
+   * .transactionSet("transactionSet")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html)
+   */
+  public interface X12DetailsProperty {
+    /**
+     * Returns an enumerated type where each value identifies an X12 transaction set.
+     *
+     * Transaction sets are maintained by the X12 Accredited Standards Committee.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-transactionset)
+     */
+    public fun transactionSet(): String? = unwrap(this).getTransactionSet()
+
+    /**
+     * Returns the version to use for the specified X12 transaction set.
+     *
+     * Supported versions are `4010` , `4030` , and `5010` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [X12DetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param transactionSet Returns an enumerated type where each value identifies an X12
+       * transaction set.
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       */
+      public fun transactionSet(transactionSet: String)
+
+      /**
+       * @param version Returns the version to use for the specified X12 transaction set.
+       * Supported versions are `4010` , `4030` , and `5010` .
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.builder()
+
+      /**
+       * @param transactionSet Returns an enumerated type where each value identifies an X12
+       * transaction set.
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       */
+      override fun transactionSet(transactionSet: String) {
+        cdkBuilder.transactionSet(transactionSet)
+      }
+
+      /**
+       * @param version Returns the version to use for the specified X12 transaction set.
+       * Supported versions are `4010` , `4030` , and `5010` .
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
+    ) : CdkObject(cdkObject), X12DetailsProperty {
+      /**
+       * Returns an enumerated type where each value identifies an X12 transaction set.
+       *
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-transactionset)
+       */
+      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
+
+      /**
+       * Returns the version to use for the specified X12 transaction set.
+       *
+       * Supported versions are `4010` , `4030` , and `5010` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-x12details.html#cfn-b2bi-capability-x12details-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12DetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty):
+          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12DetailsProperty):
+          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty
     }
   }
 }

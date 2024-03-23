@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkvpcassociation.html)
  */
-public open class CfnServiceNetworkVpcAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation,
+public open class CfnServiceNetworkVpcAssociation(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -367,6 +366,7 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnServiceNetworkVpcAssociation):
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation
   }
 }

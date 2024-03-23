@@ -64,9 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)
  */
-public open class CfnResolverEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint,
+public open class CfnResolverEndpoint(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -727,7 +726,8 @@ public open class CfnResolverEndpoint internal constructor(
         CfnResolverEndpoint = CfnResolverEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverEndpoint):
-        software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint
   }
 
   /**
@@ -829,8 +829,7 @@ public open class CfnResolverEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty,
+      cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty,
     ) : CdkObject(cdkObject), IpAddressRequestProperty {
       /**
        * The IPv4 address that you want to use for DNS queries.

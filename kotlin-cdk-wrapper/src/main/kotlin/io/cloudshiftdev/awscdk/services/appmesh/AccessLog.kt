@@ -36,8 +36,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class AccessLog internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
+public abstract class AccessLog(
+  cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the AccessLog type is initialized.
@@ -51,7 +51,7 @@ public abstract class AccessLog internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(AccessLogConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
+    cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
   ) : AccessLog(cdkObject)
 
   public companion object {

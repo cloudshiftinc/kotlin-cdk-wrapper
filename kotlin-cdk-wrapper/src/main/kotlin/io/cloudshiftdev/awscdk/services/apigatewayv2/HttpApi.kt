@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class HttpApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApi,
+public open class HttpApi(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApi,
 ) : Resource(cdkObject), IHttpApi, IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -755,6 +755,6 @@ public open class HttpApi internal constructor(
         HttpApi(cdkObject)
 
     internal fun unwrap(wrapped: HttpApi): software.amazon.awscdk.services.apigatewayv2.HttpApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.HttpApi
   }
 }

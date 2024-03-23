@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * app.synth();
  * ```
  */
-public open class PublicDnsNamespace internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace,
+public open class PublicDnsNamespace(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace,
 ) : Resource(cdkObject), IPublicDnsNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,6 +215,7 @@ public open class PublicDnsNamespace internal constructor(
         PublicDnsNamespace = PublicDnsNamespace(cdkObject)
 
     internal fun unwrap(wrapped: PublicDnsNamespace):
-        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace
   }
 }

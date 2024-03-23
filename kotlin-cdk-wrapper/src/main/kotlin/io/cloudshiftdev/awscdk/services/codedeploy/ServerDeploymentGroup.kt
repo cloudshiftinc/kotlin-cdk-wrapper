@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ServerDeploymentGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup,
+public open class ServerDeploymentGroup(
+  cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup,
 ) : Resource(cdkObject), IServerDeploymentGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -612,6 +612,7 @@ public open class ServerDeploymentGroup internal constructor(
         ServerDeploymentGroup = ServerDeploymentGroup(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentGroup):
-        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup
   }
 }

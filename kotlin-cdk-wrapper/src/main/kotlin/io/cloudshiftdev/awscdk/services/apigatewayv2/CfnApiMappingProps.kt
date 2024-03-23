@@ -120,7 +120,7 @@ public interface CfnApiMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps,
   ) : CdkObject(cdkObject), CfnApiMappingProps {
     /**
      * The API identifier.

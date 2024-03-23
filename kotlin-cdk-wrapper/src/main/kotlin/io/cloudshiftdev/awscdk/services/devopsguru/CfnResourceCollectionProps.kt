@@ -109,7 +109,7 @@ public interface CfnResourceCollectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps,
+    cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps,
   ) : CdkObject(cdkObject), CfnResourceCollectionProps {
     /**
      * Information about a filter used to specify which AWS resources are analyzed for anomalous

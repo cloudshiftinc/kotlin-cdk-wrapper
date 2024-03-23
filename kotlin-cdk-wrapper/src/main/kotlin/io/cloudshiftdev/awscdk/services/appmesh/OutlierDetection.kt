@@ -129,7 +129,7 @@ public interface OutlierDetection {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.OutlierDetection,
+    cdkObject: software.amazon.awscdk.services.appmesh.OutlierDetection,
   ) : CdkObject(cdkObject), OutlierDetection {
     /**
      * The base amount of time for which a host is ejected.

@@ -45,9 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html)
  */
-public open class CfnAccessLogSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription,
+public open class CfnAccessLogSubscription(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -256,6 +255,7 @@ public open class CfnAccessLogSubscription internal constructor(
         CfnAccessLogSubscription = CfnAccessLogSubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessLogSubscription):
-        software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription
   }
 }

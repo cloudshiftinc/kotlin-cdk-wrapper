@@ -86,7 +86,7 @@ public interface CfnChannelPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelPolicyProps,
+    cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelPolicyProps,
   ) : CdkObject(cdkObject), CfnChannelPolicyProps {
     /**
      * The name of the channel associated with this Channel Policy.

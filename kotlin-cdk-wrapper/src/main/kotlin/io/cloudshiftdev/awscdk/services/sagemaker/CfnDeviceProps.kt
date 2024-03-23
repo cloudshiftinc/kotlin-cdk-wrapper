@@ -161,7 +161,7 @@ public interface CfnDeviceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceProps,
   ) : CdkObject(cdkObject), CfnDeviceProps {
     /**
      * Edge device you want to create.

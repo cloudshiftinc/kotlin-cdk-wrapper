@@ -270,7 +270,7 @@ public interface IExtensible {
       options: ExtensionOptions.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IExtensible,
+    cdkObject: software.amazon.awscdk.services.appconfig.IExtensible,
   ) : CdkObject(cdkObject), IExtensible {
     /**
      * Adds an extension association to the derived resource.

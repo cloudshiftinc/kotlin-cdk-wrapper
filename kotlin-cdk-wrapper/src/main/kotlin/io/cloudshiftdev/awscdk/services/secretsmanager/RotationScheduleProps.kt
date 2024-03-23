@@ -183,7 +183,7 @@ public interface RotationScheduleProps : RotationScheduleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.RotationScheduleProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.RotationScheduleProps,
   ) : CdkObject(cdkObject), RotationScheduleProps {
     /**
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the

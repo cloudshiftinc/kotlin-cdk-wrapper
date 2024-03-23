@@ -364,7 +364,7 @@ public interface CfnDataRepositoryAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps,
+    cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps,
   ) : CdkObject(cdkObject), CfnDataRepositoryAssociationProps {
     /**
      * A boolean flag indicating whether an import data repository task to import metadata should

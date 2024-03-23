@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html)
  */
-public open class CfnConfigurationSetEventDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
+public open class CfnConfigurationSetEventDestination(
+  cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -249,15 +248,16 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
     internal fun unwrap(wrapped: CfnConfigurationSetEventDestination):
         software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination = wrapped.cdkObject
+        as software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
   }
 
   /**
-   * Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis
-   * Firehose event destination.
+   * Contains information associated with an Amazon CloudWatch event destination to which email
+   * sending events are published.
    *
-   * Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets,
-   * which enable you to publish email sending events. For information about using configuration sets,
-   * see the [Amazon SES Developer
+   * Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which
+   * enable you to publish email sending events. For information about using configuration sets, see
+   * the [Amazon SES Developer
    * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
    *
    * Example:
@@ -266,114 +266,112 @@ public open class CfnConfigurationSetEventDestination internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * KinesisFirehoseDestinationProperty kinesisFirehoseDestinationProperty =
-   * KinesisFirehoseDestinationProperty.builder()
-   * .deliveryStreamArn("deliveryStreamArn")
-   * .iamRoleArn("iamRoleArn")
+   * CloudWatchDestinationProperty cloudWatchDestinationProperty =
+   * CloudWatchDestinationProperty.builder()
+   * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+   * .defaultDimensionValue("defaultDimensionValue")
+   * .dimensionName("dimensionName")
+   * .dimensionValueSource("dimensionValueSource")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html)
    */
-  public interface KinesisFirehoseDestinationProperty {
+  public interface CloudWatchDestinationProperty {
     /**
-     * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
-     * to.
+     * A list of dimensions upon which to categorize your emails when you publish email sending
+     * events to Amazon CloudWatch.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
      */
-    public fun deliveryStreamArn(): String
+    public fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
 
     /**
-     * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
-     * Kinesis Firehose stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
-     */
-    public fun iamRoleArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseDestinationProperty]
+     * A builder for [CloudWatchDestinationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
-       * events should be published to. 
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
        */
-      public fun deliveryStreamArn(deliveryStreamArn: String)
+      public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
       /**
-       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
-       * events to the Amazon Kinesis Firehose stream. 
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
        */
-      public fun iamRoleArn(iamRoleArn: String)
+      public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
+
+      /**
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
+       */
+      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder
           =
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
 
       /**
-       * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
-       * events should be published to. 
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
        */
-      override fun deliveryStreamArn(deliveryStreamArn: String) {
-        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+      override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
-       * events to the Amazon Kinesis Firehose stream. 
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
        */
-      override fun iamRoleArn(iamRoleArn: String) {
-        cdkBuilder.iamRoleArn(iamRoleArn)
+      override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
       }
+
+      /**
+       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
+       * when you publish email sending events to Amazon CloudWatch.
+       */
+      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
+          dimensionConfigurations(dimensionConfigurations.toList())
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
+    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
       /**
-       * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
-       * to.
+       * A list of dimensions upon which to categorize your emails when you publish email sending
+       * events to Amazon CloudWatch.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
        */
-      override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
-
-      /**
-       * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
-       * Kinesis Firehose stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
-       */
-      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+      override fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          KinesisFirehoseDestinationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchDestinationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty):
-          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseDestinationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty):
+          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchDestinationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KinesisFirehoseDestinationProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+      internal fun unwrap(wrapped: CloudWatchDestinationProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
     }
   }
 
@@ -528,8 +526,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
     ) : CdkObject(cdkObject), DimensionConfigurationProperty {
       /**
        * The default value of the dimension that is published to Amazon CloudWatch if you do not
@@ -1063,8 +1060,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
     ) : CdkObject(cdkObject), EventDestinationProperty {
       /**
        * An object that contains the names, default values, and sources of the dimensions associated
@@ -1166,6 +1162,131 @@ public open class CfnConfigurationSetEventDestination internal constructor(
   }
 
   /**
+   * Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis
+   * Firehose event destination.
+   *
+   * Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets,
+   * which enable you to publish email sending events. For information about using configuration sets,
+   * see the [Amazon SES Developer
+   * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * KinesisFirehoseDestinationProperty kinesisFirehoseDestinationProperty =
+   * KinesisFirehoseDestinationProperty.builder()
+   * .deliveryStreamArn("deliveryStreamArn")
+   * .iamRoleArn("iamRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html)
+   */
+  public interface KinesisFirehoseDestinationProperty {
+    /**
+     * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
+     * to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+     */
+    public fun deliveryStreamArn(): String
+
+    /**
+     * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
+     * Kinesis Firehose stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
+     */
+    public fun iamRoleArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
+       * events should be published to. 
+       */
+      public fun deliveryStreamArn(deliveryStreamArn: String)
+
+      /**
+       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
+       * events to the Amazon Kinesis Firehose stream. 
+       */
+      public fun iamRoleArn(iamRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
+
+      /**
+       * @param deliveryStreamArn The ARN of the Amazon Kinesis Firehose stream that email sending
+       * events should be published to. 
+       */
+      override fun deliveryStreamArn(deliveryStreamArn: String) {
+        cdkBuilder.deliveryStreamArn(deliveryStreamArn)
+      }
+
+      /**
+       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
+       * events to the Amazon Kinesis Firehose stream. 
+       */
+      override fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+      /**
+       * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
+       * to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn)
+       */
+      override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
+
+      /**
+       * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
+       * Kinesis Firehose stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
+       */
+      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KinesisFirehoseDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty):
+          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseDestinationProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
+    }
+  }
+
+  /**
    * Contains the topic ARN associated with an Amazon Simple Notification Service (Amazon SNS) event
    * destination.
    *
@@ -1244,8 +1365,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
     ) : CdkObject(cdkObject), SnsDestinationProperty {
       /**
        * The ARN of the Amazon SNS topic for email sending events.
@@ -1277,131 +1397,6 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty
-    }
-  }
-
-  /**
-   * Contains information associated with an Amazon CloudWatch event destination to which email
-   * sending events are published.
-   *
-   * Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which
-   * enable you to publish email sending events. For information about using configuration sets, see
-   * the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * CloudWatchDestinationProperty cloudWatchDestinationProperty =
-   * CloudWatchDestinationProperty.builder()
-   * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
-   * .defaultDimensionValue("defaultDimensionValue")
-   * .dimensionName("dimensionName")
-   * .dimensionValueSource("dimensionValueSource")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html)
-   */
-  public interface CloudWatchDestinationProperty {
-    /**
-     * A list of dimensions upon which to categorize your emails when you publish email sending
-     * events to Amazon CloudWatch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
-     */
-    public fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
-
-    /**
-     * A builder for [CloudWatchDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
-
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
-
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
-
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
-      }
-
-      /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
-       */
-      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
-          dimensionConfigurations(dimensionConfigurations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
-      /**
-       * A list of dimensions upon which to categorize your emails when you publish email sending
-       * events to Amazon CloudWatch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
-       */
-      override fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty):
-          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchDestinationProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty
     }
   }
 }

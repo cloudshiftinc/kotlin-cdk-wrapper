@@ -26,9 +26,8 @@ import io.cloudshiftdev.awscdk.services.ec2.Instance
  * lb.addTarget(new InstanceTarget(instance));
  * ```
  */
-public open class InstanceTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget,
+public open class InstanceTarget(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget,
 ) : CdkObject(cdkObject), ILoadBalancerTarget {
   public constructor(instance: Instance) :
       this(software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget(instance.let(Instance::unwrap))
@@ -60,6 +59,7 @@ public open class InstanceTarget internal constructor(
         InstanceTarget = InstanceTarget(cdkObject)
 
     internal fun unwrap(wrapped: InstanceTarget):
-        software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget
   }
 }

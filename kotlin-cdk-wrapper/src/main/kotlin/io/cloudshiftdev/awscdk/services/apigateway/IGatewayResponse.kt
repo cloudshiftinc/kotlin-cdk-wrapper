@@ -15,7 +15,7 @@ import io.cloudshiftdev.constructs.Node
  */
 public interface IGatewayResponse : IResource {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IGatewayResponse,
+    cdkObject: software.amazon.awscdk.services.apigateway.IGatewayResponse,
   ) : CdkObject(cdkObject), IGatewayResponse {
     /**
      * Apply the given removal policy to this resource.

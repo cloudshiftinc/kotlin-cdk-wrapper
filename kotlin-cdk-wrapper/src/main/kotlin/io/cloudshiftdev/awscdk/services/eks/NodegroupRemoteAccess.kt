@@ -122,7 +122,7 @@ public interface NodegroupRemoteAccess {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.NodegroupRemoteAccess,
+    cdkObject: software.amazon.awscdk.services.eks.NodegroupRemoteAccess,
   ) : CdkObject(cdkObject), NodegroupRemoteAccess {
     /**
      * The security groups that are allowed SSH access (port 22) to the worker nodes.

@@ -70,8 +70,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudFormationStackArtifact internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.CloudFormationStackArtifact,
+public open class CloudFormationStackArtifact(
+  cdkObject: software.amazon.awscdk.cxapi.CloudFormationStackArtifact,
 ) : CloudArtifact(cdkObject) {
   public constructor(
     assembly: CloudAssembly,
@@ -536,6 +536,7 @@ public open class CloudFormationStackArtifact internal constructor(
         CloudFormationStackArtifact = CloudFormationStackArtifact(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationStackArtifact):
-        software.amazon.awscdk.cxapi.CloudFormationStackArtifact = wrapped.cdkObject
+        software.amazon.awscdk.cxapi.CloudFormationStackArtifact = wrapped.cdkObject as
+        software.amazon.awscdk.cxapi.CloudFormationStackArtifact
   }
 }

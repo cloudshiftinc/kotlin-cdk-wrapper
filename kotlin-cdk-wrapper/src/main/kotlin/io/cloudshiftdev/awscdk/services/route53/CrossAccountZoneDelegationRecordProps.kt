@@ -167,8 +167,7 @@ public interface CrossAccountZoneDelegationRecordProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps,
+    cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps,
   ) : CdkObject(cdkObject), CrossAccountZoneDelegationRecordProps {
     /**
      * The zone to be delegated.

@@ -125,8 +125,7 @@ public interface CfnAccessPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps,
+    cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps,
   ) : CdkObject(cdkObject), CfnAccessPolicyProps {
     /**
      * The description of the policy.

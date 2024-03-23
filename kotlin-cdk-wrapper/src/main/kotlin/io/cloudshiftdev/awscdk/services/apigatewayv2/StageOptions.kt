@@ -139,7 +139,7 @@ public interface StageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.StageOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.StageOptions,
   ) : CdkObject(cdkObject), StageOptions {
     /**
      * Whether updates to an API automatically trigger a new deployment.

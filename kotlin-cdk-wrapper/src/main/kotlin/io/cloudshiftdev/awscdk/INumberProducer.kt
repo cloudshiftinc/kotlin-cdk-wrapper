@@ -18,7 +18,7 @@ public interface INumberProducer {
   public fun produce(context: IResolveContext): Number?
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.INumberProducer,
+    cdkObject: software.amazon.awscdk.INumberProducer,
   ) : CdkObject(cdkObject), INumberProducer {
     /**
      * Produce the number value.

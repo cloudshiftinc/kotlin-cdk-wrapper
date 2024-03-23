@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)
  */
-public open class CfnIdentityProviderConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig,
+public open class CfnIdentityProviderConfig(
+  cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -381,7 +381,8 @@ public open class CfnIdentityProviderConfig internal constructor(
         CfnIdentityProviderConfig = CfnIdentityProviderConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityProviderConfig):
-        software.amazon.awscdk.services.eks.CfnIdentityProviderConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.CfnIdentityProviderConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
   }
 
   /**
@@ -628,8 +629,7 @@ public open class CfnIdentityProviderConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty,
     ) : CdkObject(cdkObject), OidcIdentityProviderConfigProperty {
       /**
        * This is also known as *audience* .
@@ -788,8 +788,7 @@ public open class CfnIdentityProviderConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty,
     ) : CdkObject(cdkObject), RequiredClaimProperty {
       /**
        * The key to match from the token.

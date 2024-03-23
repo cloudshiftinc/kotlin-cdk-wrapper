@@ -127,7 +127,7 @@ public interface ProductStackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackProps,
   ) : CdkObject(cdkObject), ProductStackProps {
     /**
      * A Bucket can be passed to store assets, enabling ProductStack Asset support.

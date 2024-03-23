@@ -595,7 +595,7 @@ public interface CfnBranchProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranchProps,
+    cdkObject: software.amazon.awscdk.services.amplify.CfnBranchProps,
   ) : CdkObject(cdkObject), CfnBranchProps {
     /**
      * The unique ID for an Amplify app.

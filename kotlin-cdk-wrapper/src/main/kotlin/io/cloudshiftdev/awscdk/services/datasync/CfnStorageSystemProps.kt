@@ -328,7 +328,7 @@ public interface CfnStorageSystemProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystemProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystemProps,
   ) : CdkObject(cdkObject), CfnStorageSystemProps {
     /**
      * Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects to and reads

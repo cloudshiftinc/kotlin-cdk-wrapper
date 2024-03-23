@@ -146,7 +146,7 @@ public interface CfnResourcePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.CfnResourcePolicyProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
     /**
      * Specifies whether to block resource-based policies that allow broad access to the secret.

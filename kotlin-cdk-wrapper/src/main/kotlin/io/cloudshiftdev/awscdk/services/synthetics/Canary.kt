@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Canary internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.synthetics.Canary,
+public open class Canary(
+  cdkObject: software.amazon.awscdk.services.synthetics.Canary,
 ) : Resource(cdkObject), IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -742,6 +742,6 @@ public open class Canary internal constructor(
         Canary(cdkObject)
 
     internal fun unwrap(wrapped: Canary): software.amazon.awscdk.services.synthetics.Canary =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.synthetics.Canary
   }
 }

@@ -69,7 +69,7 @@ public interface CommonGatewayRouteSpecOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions,
   ) : CdkObject(cdkObject), CommonGatewayRouteSpecOptions {
     /**
      * The priority for the gateway route.

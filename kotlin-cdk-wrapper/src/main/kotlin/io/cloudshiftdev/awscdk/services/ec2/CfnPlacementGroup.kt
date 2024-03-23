@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html)
  */
-public open class CfnPlacementGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroup,
+public open class CfnPlacementGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -279,6 +279,7 @@ public open class CfnPlacementGroup internal constructor(
         CfnPlacementGroup = CfnPlacementGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlacementGroup):
-        software.amazon.awscdk.services.ec2.CfnPlacementGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnPlacementGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnPlacementGroup
   }
 }

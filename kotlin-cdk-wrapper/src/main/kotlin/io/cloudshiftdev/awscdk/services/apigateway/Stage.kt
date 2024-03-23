@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Stage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Stage,
+public open class Stage(
+  cdkObject: software.amazon.awscdk.services.apigateway.Stage,
 ) : StageBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -596,6 +596,6 @@ public open class Stage internal constructor(
         Stage(cdkObject)
 
     internal fun unwrap(wrapped: Stage): software.amazon.awscdk.services.apigateway.Stage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.Stage
   }
 }

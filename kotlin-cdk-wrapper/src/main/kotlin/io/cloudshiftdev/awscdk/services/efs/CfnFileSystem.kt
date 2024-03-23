@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
  */
-public open class CfnFileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
+public open class CfnFileSystem(
+  cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1157,7 +1157,215 @@ public open class CfnFileSystem internal constructor(
         CfnFileSystem(cdkObject)
 
     internal fun unwrap(wrapped: CfnFileSystem): software.amazon.awscdk.services.efs.CfnFileSystem =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.efs.CfnFileSystem
+  }
+
+  /**
+   * The backup policy turns automatic backups for the file system on or off.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * BackupPolicyProperty backupPolicyProperty = BackupPolicyProperty.builder()
+   * .status("status")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)
+   */
+  public interface BackupPolicyProperty {
+    /**
+     * Set the backup policy status for the file system.
+     *
+     * * *`ENABLED`* - Turns automatic backups on for the file system.
+     * * *`DISABLED`* - Turns automatic backups off for the file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [BackupPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param status Set the backup policy status for the file system. 
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.builder()
+
+      /**
+       * @param status Set the backup policy status for the file system. 
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
+    ) : CdkObject(cdkObject), BackupPolicyProperty {
+      /**
+       * Set the backup policy status for the file system.
+       *
+       * * *`ENABLED`* - Turns automatic backups on for the file system.
+       * * *`DISABLED`* - Turns automatic backups off for the file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BackupPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty):
+          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? BackupPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BackupPolicyProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty
+    }
+  }
+
+  /**
+   * A tag is a key-value pair attached to a file system.
+   *
+   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
+   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * ElasticFileSystemTagProperty elasticFileSystemTagProperty =
+   * ElasticFileSystemTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html)
+   */
+  public interface ElasticFileSystemTagProperty {
+    /**
+     * The tag key (String).
+     *
+     * The key can't start with `aws:` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ElasticFileSystemTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag key (String). 
+       * The key can't start with `aws:` .
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the tag key. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.builder()
+
+      /**
+       * @param key The tag key (String). 
+       * The key can't start with `aws:` .
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the tag key. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
+    ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
+      /**
+       * The tag key (String).
+       *
+       * The key can't start with `aws:` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticFileSystemTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty):
+          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticFileSystemTagProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticFileSystemTagProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty
+    }
   }
 
   /**
@@ -1251,8 +1459,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
     ) : CdkObject(cdkObject), FileSystemProtectionProperty {
       /**
        * The status of the file system's replication overwrite protection.
@@ -1294,10 +1501,20 @@ public open class CfnFileSystem internal constructor(
   }
 
   /**
-   * A tag is a key-value pair attached to a file system.
+   * Describes a policy used by Lifecycle management that specifies when to transition files into
+   * and out of the EFS storage classes.
    *
-   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
-   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
+   * For more information, see [Managing file system
+   * storage](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html) .
+   *
+   *
+   * * Each `LifecyclePolicy` object can have only a single transition. This means that in a request
+   * body, `LifecyclePolicies` must be structured as an array of `LifecyclePolicy` objects, one object
+   * for each transition, `TransitionToIA` , `TransitionToArchive` , `TransitionToPrimaryStorageClass`
+   * .
+   * * See the AWS::EFS::FileSystem examples for the correct `LifecyclePolicy` structure. Do not use
+   * the syntax shown on this page.
+   *
    *
    * Example:
    *
@@ -1305,110 +1522,293 @@ public open class CfnFileSystem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.efs.*;
-   * ElasticFileSystemTagProperty elasticFileSystemTagProperty =
-   * ElasticFileSystemTagProperty.builder()
-   * .key("key")
-   * .value("value")
+   * LifecyclePolicyProperty lifecyclePolicyProperty = LifecyclePolicyProperty.builder()
+   * .transitionToArchive("transitionToArchive")
+   * .transitionToIa("transitionToIa")
+   * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html)
    */
-  public interface ElasticFileSystemTagProperty {
+  public interface LifecyclePolicyProperty {
     /**
-     * The tag key (String).
+     * The number of days after files were last accessed in primary storage (the Standard storage
+     * class) at which to move them to Archive storage.
      *
-     * The key can't start with `aws:` .
+     * Metadata operations such as listing the contents of a directory don't count as file access
+     * events.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoarchive)
      */
-    public fun key(): String
+    public fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
 
     /**
-     * The value of the tag key.
+     * The number of days after files were last accessed in primary storage (the Standard storage
+     * class) at which to move them to Infrequent Access (IA) storage.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+     * Metadata operations such as listing the contents of a directory don't count as file access
+     * events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)
      */
-    public fun `value`(): String
+    public fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
 
     /**
-     * A builder for [ElasticFileSystemTagProperty]
+     * Whether to move files back to primary (Standard) storage after they are accessed in IA or
+     * Archive storage.
+     *
+     * Metadata operations such as listing the contents of a directory don't count as file access
+     * events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)
+     */
+    public fun transitionToPrimaryStorageClass(): String? =
+        unwrap(this).getTransitionToPrimaryStorageClass()
+
+    /**
+     * A builder for [LifecyclePolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key The tag key (String). 
-       * The key can't start with `aws:` .
+       * @param transitionToArchive The number of days after files were last accessed in primary
+       * storage (the Standard storage class) at which to move them to Archive storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
        */
-      public fun key(key: String)
+      public fun transitionToArchive(transitionToArchive: String)
 
       /**
-       * @param value The value of the tag key. 
+       * @param transitionToIa The number of days after files were last accessed in primary storage
+       * (the Standard storage class) at which to move them to Infrequent Access (IA) storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
        */
-      public fun `value`(`value`: String)
+      public fun transitionToIa(transitionToIa: String)
+
+      /**
+       * @param transitionToPrimaryStorageClass Whether to move files back to primary (Standard)
+       * storage after they are accessed in IA or Archive storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
+       */
+      public fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.builder()
+          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.builder()
 
       /**
-       * @param key The tag key (String). 
-       * The key can't start with `aws:` .
+       * @param transitionToArchive The number of days after files were last accessed in primary
+       * storage (the Standard storage class) at which to move them to Archive storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun transitionToArchive(transitionToArchive: String) {
+        cdkBuilder.transitionToArchive(transitionToArchive)
       }
 
       /**
-       * @param value The value of the tag key. 
+       * @param transitionToIa The number of days after files were last accessed in primary storage
+       * (the Standard storage class) at which to move them to Infrequent Access (IA) storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun transitionToIa(transitionToIa: String) {
+        cdkBuilder.transitionToIa(transitionToIa)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty =
-          cdkBuilder.build()
+      /**
+       * @param transitionToPrimaryStorageClass Whether to move files back to primary (Standard)
+       * storage after they are accessed in IA or Archive storage.
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
+       */
+      override fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String) {
+        cdkBuilder.transitionToPrimaryStorageClass(transitionToPrimaryStorageClass)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
-    ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
+    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
       /**
-       * The tag key (String).
+       * The number of days after files were last accessed in primary storage (the Standard storage
+       * class) at which to move them to Archive storage.
        *
-       * The key can't start with `aws:` .
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-key)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoarchive)
        */
-      override fun key(): String = unwrap(this).getKey()
+      override fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
 
       /**
-       * The value of the tag key.
+       * The number of days after files were last accessed in primary storage (the Standard storage
+       * class) at which to move them to Infrequent Access (IA) storage.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-elasticfilesystemtag.html#cfn-efs-filesystem-elasticfilesystemtag-value)
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)
        */
-      override fun `value`(): String = unwrap(this).getValue()
+      override fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
+
+      /**
+       * Whether to move files back to primary (Standard) storage after they are accessed in IA or
+       * Archive storage.
+       *
+       * Metadata operations such as listing the contents of a directory don't count as file access
+       * events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)
+       */
+      override fun transitionToPrimaryStorageClass(): String? =
+          unwrap(this).getTransitionToPrimaryStorageClass()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticFileSystemTagProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LifecyclePolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty):
-          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticFileSystemTagProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty):
+          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ElasticFileSystemTagProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty
+      internal fun unwrap(wrapped: LifecyclePolicyProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty
+    }
+  }
+
+  /**
+   * Describes the replication configuration for a specific file system.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * ReplicationConfigurationProperty replicationConfigurationProperty =
+   * ReplicationConfigurationProperty.builder()
+   * .destinations(List.of(ReplicationDestinationProperty.builder()
+   * .availabilityZoneName("availabilityZoneName")
+   * .fileSystemId("fileSystemId")
+   * .kmsKeyId("kmsKeyId")
+   * .region("region")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html)
+   */
+  public interface ReplicationConfigurationProperty {
+    /**
+     * An array of destination objects.
+     *
+     * Only one destination object is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html#cfn-efs-filesystem-replicationconfiguration-destinations)
+     */
+    public fun destinations(): Any? = unwrap(this).getDestinations()
+
+    /**
+     * A builder for [ReplicationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      public fun destinations(destinations: IResolvable)
+
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      public fun destinations(destinations: List<Any>)
+
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      public fun destinations(vararg destinations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty.builder()
+
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      override fun destinations(destinations: IResolvable) {
+        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      override fun destinations(destinations: List<Any>) {
+        cdkBuilder.destinations(destinations)
+      }
+
+      /**
+       * @param destinations An array of destination objects.
+       * Only one destination object is supported.
+       */
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
+    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
+      /**
+       * An array of destination objects.
+       *
+       * Only one destination object is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html#cfn-efs-filesystem-replicationconfiguration-destinations)
+       */
+      override fun destinations(): Any? = unwrap(this).getDestinations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty):
+          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationConfigurationProperty):
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty
     }
   }
 
@@ -1568,8 +1968,7 @@ public open class CfnFileSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
     ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
        * The AWS For One Zone file systems, the replication configuration must specify the
@@ -1631,411 +2030,6 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty
-    }
-  }
-
-  /**
-   * Describes a policy used by Lifecycle management that specifies when to transition files into
-   * and out of the EFS storage classes.
-   *
-   * For more information, see [Managing file system
-   * storage](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html) .
-   *
-   *
-   * * Each `LifecyclePolicy` object can have only a single transition. This means that in a request
-   * body, `LifecyclePolicies` must be structured as an array of `LifecyclePolicy` objects, one object
-   * for each transition, `TransitionToIA` , `TransitionToArchive` , `TransitionToPrimaryStorageClass`
-   * .
-   * * See the AWS::EFS::FileSystem examples for the correct `LifecyclePolicy` structure. Do not use
-   * the syntax shown on this page.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * LifecyclePolicyProperty lifecyclePolicyProperty = LifecyclePolicyProperty.builder()
-   * .transitionToArchive("transitionToArchive")
-   * .transitionToIa("transitionToIa")
-   * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html)
-   */
-  public interface LifecyclePolicyProperty {
-    /**
-     * The number of days after files were last accessed in primary storage (the Standard storage
-     * class) at which to move them to Archive storage.
-     *
-     * Metadata operations such as listing the contents of a directory don't count as file access
-     * events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoarchive)
-     */
-    public fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
-
-    /**
-     * The number of days after files were last accessed in primary storage (the Standard storage
-     * class) at which to move them to Infrequent Access (IA) storage.
-     *
-     * Metadata operations such as listing the contents of a directory don't count as file access
-     * events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)
-     */
-    public fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
-
-    /**
-     * Whether to move files back to primary (Standard) storage after they are accessed in IA or
-     * Archive storage.
-     *
-     * Metadata operations such as listing the contents of a directory don't count as file access
-     * events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)
-     */
-    public fun transitionToPrimaryStorageClass(): String? =
-        unwrap(this).getTransitionToPrimaryStorageClass()
-
-    /**
-     * A builder for [LifecyclePolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param transitionToArchive The number of days after files were last accessed in primary
-       * storage (the Standard storage class) at which to move them to Archive storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      public fun transitionToArchive(transitionToArchive: String)
-
-      /**
-       * @param transitionToIa The number of days after files were last accessed in primary storage
-       * (the Standard storage class) at which to move them to Infrequent Access (IA) storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      public fun transitionToIa(transitionToIa: String)
-
-      /**
-       * @param transitionToPrimaryStorageClass Whether to move files back to primary (Standard)
-       * storage after they are accessed in IA or Archive storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      public fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.builder()
-
-      /**
-       * @param transitionToArchive The number of days after files were last accessed in primary
-       * storage (the Standard storage class) at which to move them to Archive storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      override fun transitionToArchive(transitionToArchive: String) {
-        cdkBuilder.transitionToArchive(transitionToArchive)
-      }
-
-      /**
-       * @param transitionToIa The number of days after files were last accessed in primary storage
-       * (the Standard storage class) at which to move them to Infrequent Access (IA) storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      override fun transitionToIa(transitionToIa: String) {
-        cdkBuilder.transitionToIa(transitionToIa)
-      }
-
-      /**
-       * @param transitionToPrimaryStorageClass Whether to move files back to primary (Standard)
-       * storage after they are accessed in IA or Archive storage.
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       */
-      override fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String) {
-        cdkBuilder.transitionToPrimaryStorageClass(transitionToPrimaryStorageClass)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
-    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
-      /**
-       * The number of days after files were last accessed in primary storage (the Standard storage
-       * class) at which to move them to Archive storage.
-       *
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoarchive)
-       */
-      override fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
-
-      /**
-       * The number of days after files were last accessed in primary storage (the Standard storage
-       * class) at which to move them to Infrequent Access (IA) storage.
-       *
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)
-       */
-      override fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
-
-      /**
-       * Whether to move files back to primary (Standard) storage after they are accessed in IA or
-       * Archive storage.
-       *
-       * Metadata operations such as listing the contents of a directory don't count as file access
-       * events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)
-       */
-      override fun transitionToPrimaryStorageClass(): String? =
-          unwrap(this).getTransitionToPrimaryStorageClass()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LifecyclePolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty):
-          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LifecyclePolicyProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty
-    }
-  }
-
-  /**
-   * Describes the replication configuration for a specific file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * ReplicationConfigurationProperty replicationConfigurationProperty =
-   * ReplicationConfigurationProperty.builder()
-   * .destinations(List.of(ReplicationDestinationProperty.builder()
-   * .availabilityZoneName("availabilityZoneName")
-   * .fileSystemId("fileSystemId")
-   * .kmsKeyId("kmsKeyId")
-   * .region("region")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html)
-   */
-  public interface ReplicationConfigurationProperty {
-    /**
-     * An array of destination objects.
-     *
-     * Only one destination object is supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html#cfn-efs-filesystem-replicationconfiguration-destinations)
-     */
-    public fun destinations(): Any? = unwrap(this).getDestinations()
-
-    /**
-     * A builder for [ReplicationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      public fun destinations(destinations: IResolvable)
-
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      public fun destinations(destinations: List<Any>)
-
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      public fun destinations(vararg destinations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty.builder()
-
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
-      }
-
-      /**
-       * @param destinations An array of destination objects.
-       * Only one destination object is supported.
-       */
-      override fun destinations(vararg destinations: Any): Unit =
-          destinations(destinations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
-      /**
-       * An array of destination objects.
-       *
-       * Only one destination object is supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationconfiguration.html#cfn-efs-filesystem-replicationconfiguration-destinations)
-       */
-      override fun destinations(): Any? = unwrap(this).getDestinations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty):
-          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicationConfigurationProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty
-    }
-  }
-
-  /**
-   * The backup policy turns automatic backups for the file system on or off.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * BackupPolicyProperty backupPolicyProperty = BackupPolicyProperty.builder()
-   * .status("status")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)
-   */
-  public interface BackupPolicyProperty {
-    /**
-     * Set the backup policy status for the file system.
-     *
-     * * *`ENABLED`* - Turns automatic backups on for the file system.
-     * * *`DISABLED`* - Turns automatic backups off for the file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
-     */
-    public fun status(): String
-
-    /**
-     * A builder for [BackupPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param status Set the backup policy status for the file system. 
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
-       */
-      public fun status(status: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.builder()
-
-      /**
-       * @param status Set the backup policy status for the file system. 
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
-    ) : CdkObject(cdkObject), BackupPolicyProperty {
-      /**
-       * Set the backup policy status for the file system.
-       *
-       * * *`ENABLED`* - Turns automatic backups on for the file system.
-       * * *`DISABLED`* - Turns automatic backups off for the file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html#cfn-efs-filesystem-backuppolicy-status)
-       */
-      override fun status(): String = unwrap(this).getStatus()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BackupPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty):
-          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? BackupPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BackupPolicyProperty):
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty
     }
   }
 }

@@ -141,7 +141,7 @@ public interface GitConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration,
+    cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration,
   ) : CdkObject(cdkObject), GitConfiguration {
     /**
      * The field where the repository event that will start the pipeline, such as pushing Git tags,

@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)
  */
-public open class CfnDeviceProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile,
+public open class CfnDeviceProfile(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -319,7 +319,8 @@ public open class CfnDeviceProfile internal constructor(
         CfnDeviceProfile = CfnDeviceProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceProfile):
-        software.amazon.awscdk.services.iotwireless.CfnDeviceProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnDeviceProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnDeviceProfile
   }
 
   /**
@@ -818,8 +819,7 @@ public open class CfnDeviceProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty,
     ) : CdkObject(cdkObject), LoRaWANDeviceProfileProperty {
       /**
        * The ClassBTimeout value.

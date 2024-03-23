@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html)
  */
-public open class CfnGroupVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersion,
+public open class CfnGroupVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -410,6 +410,7 @@ public open class CfnGroupVersion internal constructor(
         CfnGroupVersion = CfnGroupVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupVersion):
-        software.amazon.awscdk.services.greengrass.CfnGroupVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnGroupVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnGroupVersion
   }
 }

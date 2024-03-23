@@ -116,7 +116,7 @@ public interface DockerImageDestination : AwsDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageDestination,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageDestination,
   ) : CdkObject(cdkObject), DockerImageDestination {
     /**
      * The role that needs to be assumed while publishing this asset.

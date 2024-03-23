@@ -59,9 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-dataintegration.html)
  */
-public open class CfnDataIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
+public open class CfnDataIntegration(
+  cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -531,7 +530,129 @@ public open class CfnDataIntegration internal constructor(
         CfnDataIntegration = CfnDataIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataIntegration):
-        software.amazon.awscdk.services.appintegrations.CfnDataIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.appintegrations.CfnDataIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appintegrations.CfnDataIntegration
+  }
+
+  /**
+   * The configuration for what files should be pulled from the source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appintegrations.*;
+   * Object filters;
+   * FileConfigurationProperty fileConfigurationProperty = FileConfigurationProperty.builder()
+   * .folders(List.of("folders"))
+   * // the properties below are optional
+   * .filters(filters)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html)
+   */
+  public interface FileConfigurationProperty {
+    /**
+     * Restrictions for what files should be pulled from the source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-filters)
+     */
+    public fun filters(): Any? = unwrap(this).getFilters()
+
+    /**
+     * Identifiers for the source folders to pull all files from recursively.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-folders)
+     */
+    public fun folders(): List<String>
+
+    /**
+     * A builder for [FileConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filters Restrictions for what files should be pulled from the source.
+       */
+      public fun filters(filters: Any)
+
+      /**
+       * @param folders Identifiers for the source folders to pull all files from recursively. 
+       */
+      public fun folders(folders: List<String>)
+
+      /**
+       * @param folders Identifiers for the source folders to pull all files from recursively. 
+       */
+      public fun folders(vararg folders: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty.builder()
+
+      /**
+       * @param filters Restrictions for what files should be pulled from the source.
+       */
+      override fun filters(filters: Any) {
+        cdkBuilder.filters(filters)
+      }
+
+      /**
+       * @param folders Identifiers for the source folders to pull all files from recursively. 
+       */
+      override fun folders(folders: List<String>) {
+        cdkBuilder.folders(folders)
+      }
+
+      /**
+       * @param folders Identifiers for the source folders to pull all files from recursively. 
+       */
+      override fun folders(vararg folders: String): Unit = folders(folders.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
+    ) : CdkObject(cdkObject), FileConfigurationProperty {
+      /**
+       * Restrictions for what files should be pulled from the source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-filters)
+       */
+      override fun filters(): Any? = unwrap(this).getFilters()
+
+      /**
+       * Identifiers for the source folders to pull all files from recursively.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-folders)
+       */
+      override fun folders(): List<String> = unwrap(this).getFolders()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty):
+          FileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileConfigurationProperty):
+          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
+    }
   }
 
   /**
@@ -632,8 +753,7 @@ public open class CfnDataIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
     ) : CdkObject(cdkObject), ScheduleConfigProperty {
       /**
        * The start date for objects to import in the first flow run as an Unix/epoch timestamp in
@@ -673,128 +793,6 @@ public open class CfnDataIntegration internal constructor(
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty
-    }
-  }
-
-  /**
-   * The configuration for what files should be pulled from the source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appintegrations.*;
-   * Object filters;
-   * FileConfigurationProperty fileConfigurationProperty = FileConfigurationProperty.builder()
-   * .folders(List.of("folders"))
-   * // the properties below are optional
-   * .filters(filters)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html)
-   */
-  public interface FileConfigurationProperty {
-    /**
-     * Restrictions for what files should be pulled from the source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-filters)
-     */
-    public fun filters(): Any? = unwrap(this).getFilters()
-
-    /**
-     * Identifiers for the source folders to pull all files from recursively.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-folders)
-     */
-    public fun folders(): List<String>
-
-    /**
-     * A builder for [FileConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param filters Restrictions for what files should be pulled from the source.
-       */
-      public fun filters(filters: Any)
-
-      /**
-       * @param folders Identifiers for the source folders to pull all files from recursively. 
-       */
-      public fun folders(folders: List<String>)
-
-      /**
-       * @param folders Identifiers for the source folders to pull all files from recursively. 
-       */
-      public fun folders(vararg folders: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty.builder()
-
-      /**
-       * @param filters Restrictions for what files should be pulled from the source.
-       */
-      override fun filters(filters: Any) {
-        cdkBuilder.filters(filters)
-      }
-
-      /**
-       * @param folders Identifiers for the source folders to pull all files from recursively. 
-       */
-      override fun folders(folders: List<String>) {
-        cdkBuilder.folders(folders)
-      }
-
-      /**
-       * @param folders Identifiers for the source folders to pull all files from recursively. 
-       */
-      override fun folders(vararg folders: String): Unit = folders(folders.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
-    ) : CdkObject(cdkObject), FileConfigurationProperty {
-      /**
-       * Restrictions for what files should be pulled from the source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-filters)
-       */
-      override fun filters(): Any? = unwrap(this).getFilters()
-
-      /**
-       * Identifiers for the source folders to pull all files from recursively.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html#cfn-appintegrations-dataintegration-fileconfiguration-folders)
-       */
-      override fun folders(): List<String> = unwrap(this).getFolders()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty):
-          FileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FileConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FileConfigurationProperty):
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
     }
   }
 }

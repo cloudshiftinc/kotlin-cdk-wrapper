@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html)
  */
-public open class CfnEgressOnlyInternetGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway,
+public open class CfnEgressOnlyInternetGateway(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -133,6 +133,7 @@ public open class CfnEgressOnlyInternetGateway internal constructor(
         CfnEgressOnlyInternetGateway = CfnEgressOnlyInternetGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnEgressOnlyInternetGateway):
-        software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway
   }
 }

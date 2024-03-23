@@ -935,7 +935,7 @@ public interface CfnBrokerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBrokerProps,
+    cdkObject: software.amazon.awscdk.services.amazonmq.CfnBrokerProps,
   ) : CdkObject(cdkObject), CfnBrokerProps {
     /**
      * Optional.

@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
  */
-public open class CfnListenerCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate,
+public open class CfnListenerCertificate(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -228,7 +227,8 @@ public open class CfnListenerCertificate internal constructor(
 
     internal fun unwrap(wrapped: CfnListenerCertificate):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate
   }
 
   /**
@@ -285,8 +285,7 @@ public open class CfnListenerCertificate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty,
     ) : CdkObject(cdkObject), CertificateProperty {
       /**
        * The Amazon Resource Name (ARN) of the certificate.

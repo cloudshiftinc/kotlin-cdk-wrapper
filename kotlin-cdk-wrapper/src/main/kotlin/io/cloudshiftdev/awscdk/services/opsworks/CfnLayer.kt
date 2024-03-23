@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html)
  */
-public open class CfnLayer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
+public open class CfnLayer(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1385,7 +1385,7 @@ public open class CfnLayer internal constructor(
         CfnLayer(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayer): software.amazon.awscdk.services.opsworks.CfnLayer =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnLayer
   }
 
   /**
@@ -1584,8 +1584,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
     ) : CdkObject(cdkObject), AutoScalingThresholdsProperty {
       /**
        * The CPU utilization threshold, as a percent of the available CPU.
@@ -1752,8 +1751,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
     ) : CdkObject(cdkObject), LifecycleEventConfigurationProperty {
       /**
        * The Shutdown event configuration.
@@ -1779,241 +1777,6 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * RecipesProperty recipesProperty = RecipesProperty.builder()
-   * .configure(List.of("configure"))
-   * .deploy(List.of("deploy"))
-   * .setup(List.of("setup"))
-   * .shutdown(List.of("shutdown"))
-   * .undeploy(List.of("undeploy"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html)
-   */
-  public interface RecipesProperty {
-    /**
-     * An array of custom recipe names to be run following a `configure` event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-configure)
-     */
-    public fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
-
-    /**
-     * An array of custom recipe names to be run following a `deploy` event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-deploy)
-     */
-    public fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
-
-    /**
-     * An array of custom recipe names to be run following a `setup` event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-setup)
-     */
-    public fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
-
-    /**
-     * An array of custom recipe names to be run following a `shutdown` event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-shutdown)
-     */
-    public fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
-
-    /**
-     * An array of custom recipe names to be run following a `undeploy` event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-undeploy)
-     */
-    public fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
-
-    /**
-     * A builder for [RecipesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configure An array of custom recipe names to be run following a `configure` event.
-       */
-      public fun configure(configure: List<String>)
-
-      /**
-       * @param configure An array of custom recipe names to be run following a `configure` event.
-       */
-      public fun configure(vararg configure: String)
-
-      /**
-       * @param deploy An array of custom recipe names to be run following a `deploy` event.
-       */
-      public fun deploy(deploy: List<String>)
-
-      /**
-       * @param deploy An array of custom recipe names to be run following a `deploy` event.
-       */
-      public fun deploy(vararg deploy: String)
-
-      /**
-       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
-       */
-      public fun shutdown(shutdown: List<String>)
-
-      /**
-       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
-       */
-      public fun shutdown(vararg shutdown: String)
-
-      /**
-       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
-       */
-      public fun undeploy(undeploy: List<String>)
-
-      /**
-       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
-       */
-      public fun undeploy(vararg undeploy: String)
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      public fun up(setup: List<String>)
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      public fun up(vararg setup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.builder()
-
-      /**
-       * @param configure An array of custom recipe names to be run following a `configure` event.
-       */
-      override fun configure(configure: List<String>) {
-        cdkBuilder.configure(configure)
-      }
-
-      /**
-       * @param configure An array of custom recipe names to be run following a `configure` event.
-       */
-      override fun configure(vararg configure: String): Unit = configure(configure.toList())
-
-      /**
-       * @param deploy An array of custom recipe names to be run following a `deploy` event.
-       */
-      override fun deploy(deploy: List<String>) {
-        cdkBuilder.deploy(deploy)
-      }
-
-      /**
-       * @param deploy An array of custom recipe names to be run following a `deploy` event.
-       */
-      override fun deploy(vararg deploy: String): Unit = deploy(deploy.toList())
-
-      /**
-       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
-       */
-      override fun shutdown(shutdown: List<String>) {
-        cdkBuilder.shutdown(shutdown)
-      }
-
-      /**
-       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
-       */
-      override fun shutdown(vararg shutdown: String): Unit = shutdown(shutdown.toList())
-
-      /**
-       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
-       */
-      override fun undeploy(undeploy: List<String>) {
-        cdkBuilder.undeploy(undeploy)
-      }
-
-      /**
-       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
-       */
-      override fun undeploy(vararg undeploy: String): Unit = undeploy(undeploy.toList())
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      override fun up(setup: List<String>) {
-        cdkBuilder.setup(setup)
-      }
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      override fun up(vararg setup: String): Unit = up(setup.toList())
-
-      public fun build(): software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
-    ) : CdkObject(cdkObject), RecipesProperty {
-      /**
-       * An array of custom recipe names to be run following a `configure` event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-configure)
-       */
-      override fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
-
-      /**
-       * An array of custom recipe names to be run following a `deploy` event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-deploy)
-       */
-      override fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
-
-      /**
-       * An array of custom recipe names to be run following a `setup` event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-setup)
-       */
-      override fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
-
-      /**
-       * An array of custom recipe names to be run following a `shutdown` event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-shutdown)
-       */
-      override fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
-
-      /**
-       * An array of custom recipe names to be run following a `undeploy` event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-undeploy)
-       */
-      override fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecipesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty):
-          RecipesProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecipesProperty):
-          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty
     }
   }
 
@@ -2209,8 +1972,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
     ) : CdkObject(cdkObject), LoadBasedAutoScalingProperty {
       /**
        * An `AutoScalingThresholds` object that describes the downscaling configuration, which
@@ -2251,6 +2013,386 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * RecipesProperty recipesProperty = RecipesProperty.builder()
+   * .configure(List.of("configure"))
+   * .deploy(List.of("deploy"))
+   * .setup(List.of("setup"))
+   * .shutdown(List.of("shutdown"))
+   * .undeploy(List.of("undeploy"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html)
+   */
+  public interface RecipesProperty {
+    /**
+     * An array of custom recipe names to be run following a `configure` event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-configure)
+     */
+    public fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
+
+    /**
+     * An array of custom recipe names to be run following a `deploy` event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-deploy)
+     */
+    public fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
+
+    /**
+     * An array of custom recipe names to be run following a `setup` event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-setup)
+     */
+    public fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
+
+    /**
+     * An array of custom recipe names to be run following a `shutdown` event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-shutdown)
+     */
+    public fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
+
+    /**
+     * An array of custom recipe names to be run following a `undeploy` event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-undeploy)
+     */
+    public fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
+
+    /**
+     * A builder for [RecipesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configure An array of custom recipe names to be run following a `configure` event.
+       */
+      public fun configure(configure: List<String>)
+
+      /**
+       * @param configure An array of custom recipe names to be run following a `configure` event.
+       */
+      public fun configure(vararg configure: String)
+
+      /**
+       * @param deploy An array of custom recipe names to be run following a `deploy` event.
+       */
+      public fun deploy(deploy: List<String>)
+
+      /**
+       * @param deploy An array of custom recipe names to be run following a `deploy` event.
+       */
+      public fun deploy(vararg deploy: String)
+
+      /**
+       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+       */
+      public fun shutdown(shutdown: List<String>)
+
+      /**
+       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+       */
+      public fun shutdown(vararg shutdown: String)
+
+      /**
+       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+       */
+      public fun undeploy(undeploy: List<String>)
+
+      /**
+       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+       */
+      public fun undeploy(vararg undeploy: String)
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      public fun up(setup: List<String>)
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      public fun up(vararg setup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.builder()
+
+      /**
+       * @param configure An array of custom recipe names to be run following a `configure` event.
+       */
+      override fun configure(configure: List<String>) {
+        cdkBuilder.configure(configure)
+      }
+
+      /**
+       * @param configure An array of custom recipe names to be run following a `configure` event.
+       */
+      override fun configure(vararg configure: String): Unit = configure(configure.toList())
+
+      /**
+       * @param deploy An array of custom recipe names to be run following a `deploy` event.
+       */
+      override fun deploy(deploy: List<String>) {
+        cdkBuilder.deploy(deploy)
+      }
+
+      /**
+       * @param deploy An array of custom recipe names to be run following a `deploy` event.
+       */
+      override fun deploy(vararg deploy: String): Unit = deploy(deploy.toList())
+
+      /**
+       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+       */
+      override fun shutdown(shutdown: List<String>) {
+        cdkBuilder.shutdown(shutdown)
+      }
+
+      /**
+       * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
+       */
+      override fun shutdown(vararg shutdown: String): Unit = shutdown(shutdown.toList())
+
+      /**
+       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+       */
+      override fun undeploy(undeploy: List<String>) {
+        cdkBuilder.undeploy(undeploy)
+      }
+
+      /**
+       * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
+       */
+      override fun undeploy(vararg undeploy: String): Unit = undeploy(undeploy.toList())
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      override fun up(setup: List<String>) {
+        cdkBuilder.setup(setup)
+      }
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      override fun up(vararg setup: String): Unit = up(setup.toList())
+
+      public fun build(): software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
+    ) : CdkObject(cdkObject), RecipesProperty {
+      /**
+       * An array of custom recipe names to be run following a `configure` event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-configure)
+       */
+      override fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
+
+      /**
+       * An array of custom recipe names to be run following a `deploy` event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-deploy)
+       */
+      override fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
+
+      /**
+       * An array of custom recipe names to be run following a `setup` event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-setup)
+       */
+      override fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
+
+      /**
+       * An array of custom recipe names to be run following a `shutdown` event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-shutdown)
+       */
+      override fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
+
+      /**
+       * An array of custom recipe names to be run following a `undeploy` event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-recipes-undeploy)
+       */
+      override fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecipesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty):
+          RecipesProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecipesProperty):
+          software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * ShutdownEventConfigurationProperty shutdownEventConfigurationProperty =
+   * ShutdownEventConfigurationProperty.builder()
+   * .delayUntilElbConnectionsDrained(false)
+   * .executionTimeout(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html)
+   */
+  public interface ShutdownEventConfigurationProperty {
+    /**
+     * Whether to enable Elastic Load Balancing connection draining.
+     *
+     * For more information, see [Connection
+     * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
+     */
+    public fun delayUntilElbConnectionsDrained(): Any? =
+        unwrap(this).getDelayUntilElbConnectionsDrained()
+
+    /**
+     * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event before
+     * shutting down an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
+     */
+    public fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
+
+    /**
+     * A builder for [ShutdownEventConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       */
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean)
+
+      /**
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       */
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable)
+
+      /**
+       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
+       * triggering a Shutdown event before shutting down an instance.
+       */
+      public fun executionTimeout(executionTimeout: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.builder()
+
+      /**
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       */
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
+        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
+      }
+
+      /**
+       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
+       * draining.
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       */
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
+        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
+       * triggering a Shutdown event before shutting down an instance.
+       */
+      override fun executionTimeout(executionTimeout: Number) {
+        cdkBuilder.executionTimeout(executionTimeout)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
+    ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
+      /**
+       * Whether to enable Elastic Load Balancing connection draining.
+       *
+       * For more information, see [Connection
+       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
+       */
+      override fun delayUntilElbConnectionsDrained(): Any? =
+          unwrap(this).getDelayUntilElbConnectionsDrained()
+
+      /**
+       * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event
+       * before shutting down an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
+       */
+      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ShutdownEventConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty):
+          ShutdownEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ShutdownEventConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ShutdownEventConfigurationProperty):
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty
     }
   }
 
@@ -2499,8 +2641,7 @@ public open class CfnLayer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
     ) : CdkObject(cdkObject), VolumeConfigurationProperty {
       /**
        * Specifies whether an Amazon EBS volume is encrypted.
@@ -2589,152 +2730,6 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * ShutdownEventConfigurationProperty shutdownEventConfigurationProperty =
-   * ShutdownEventConfigurationProperty.builder()
-   * .delayUntilElbConnectionsDrained(false)
-   * .executionTimeout(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html)
-   */
-  public interface ShutdownEventConfigurationProperty {
-    /**
-     * Whether to enable Elastic Load Balancing connection draining.
-     *
-     * For more information, see [Connection
-     * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
-     */
-    public fun delayUntilElbConnectionsDrained(): Any? =
-        unwrap(this).getDelayUntilElbConnectionsDrained()
-
-    /**
-     * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event before
-     * shutting down an instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
-     */
-    public fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
-
-    /**
-     * A builder for [ShutdownEventConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean)
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable)
-
-      /**
-       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
-       * triggering a Shutdown event before shutting down an instance.
-       */
-      public fun executionTimeout(executionTimeout: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.builder()
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
-        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
-      }
-
-      /**
-       * @param delayUntilElbConnectionsDrained Whether to enable Elastic Load Balancing connection
-       * draining.
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       */
-      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
-        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param executionTimeout The time, in seconds, that AWS OpsWorks Stacks waits after
-       * triggering a Shutdown event before shutting down an instance.
-       */
-      override fun executionTimeout(executionTimeout: Number) {
-        cdkBuilder.executionTimeout(executionTimeout)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
-    ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
-      /**
-       * Whether to enable Elastic Load Balancing connection draining.
-       *
-       * For more information, see [Connection
-       * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-delayuntilelbconnectionsdrained)
-       */
-      override fun delayUntilElbConnectionsDrained(): Any? =
-          unwrap(this).getDelayUntilElbConnectionsDrained()
-
-      /**
-       * The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event
-       * before shutting down an instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html#cfn-opsworks-layer-shutdowneventconfiguration-executiontimeout)
-       */
-      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ShutdownEventConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty):
-          ShutdownEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ShutdownEventConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShutdownEventConfigurationProperty):
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty
     }
   }
 }

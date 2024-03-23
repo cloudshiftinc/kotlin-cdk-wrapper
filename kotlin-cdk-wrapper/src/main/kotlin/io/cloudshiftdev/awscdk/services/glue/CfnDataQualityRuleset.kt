@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)
  */
-public open class CfnDataQualityRuleset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset,
+public open class CfnDataQualityRuleset(
+  cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -369,7 +369,8 @@ public open class CfnDataQualityRuleset internal constructor(
         CfnDataQualityRuleset = CfnDataQualityRuleset(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataQualityRuleset):
-        software.amazon.awscdk.services.glue.CfnDataQualityRuleset = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnDataQualityRuleset = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnDataQualityRuleset
   }
 
   /**
@@ -447,8 +448,7 @@ public open class CfnDataQualityRuleset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty,
     ) : CdkObject(cdkObject), DataQualityTargetTableProperty {
       /**
        * The name of the database where the AWS Glue table exists.

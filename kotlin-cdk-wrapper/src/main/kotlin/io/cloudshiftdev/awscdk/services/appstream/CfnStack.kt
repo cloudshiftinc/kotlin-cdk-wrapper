@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html)
  */
-public open class CfnStack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
+public open class CfnStack(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1018,7 +1018,118 @@ public open class CfnStack internal constructor(
         CfnStack(cdkObject)
 
     internal fun unwrap(wrapped: CfnStack): software.amazon.awscdk.services.appstream.CfnStack =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appstream.CfnStack
+  }
+
+  /**
+   * Describes an interface VPC endpoint (interface endpoint) that lets you create a private
+   * connection between the virtual private cloud (VPC) that you specify and AppStream 2.0. When you
+   * specify an interface endpoint for a stack, users of the stack can connect to AppStream 2.0 only
+   * through that endpoint. When you specify an interface endpoint for an image builder, administrators
+   * can connect to the image builder only through that endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * AccessEndpointProperty accessEndpointProperty = AccessEndpointProperty.builder()
+   * .endpointType("endpointType")
+   * .vpceId("vpceId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html)
+   */
+  public interface AccessEndpointProperty {
+    /**
+     * The type of interface endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype)
+     */
+    public fun endpointType(): String
+
+    /**
+     * The identifier (ID) of the VPC in which the interface endpoint is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid)
+     */
+    public fun vpceId(): String
+
+    /**
+     * A builder for [AccessEndpointProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointType The type of interface endpoint. 
+       */
+      public fun endpointType(endpointType: String)
+
+      /**
+       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
+       */
+      public fun vpceId(vpceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.Builder =
+          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.builder()
+
+      /**
+       * @param endpointType The type of interface endpoint. 
+       */
+      override fun endpointType(endpointType: String) {
+        cdkBuilder.endpointType(endpointType)
+      }
+
+      /**
+       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
+       */
+      override fun vpceId(vpceId: String) {
+        cdkBuilder.vpceId(vpceId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
+    ) : CdkObject(cdkObject), AccessEndpointProperty {
+      /**
+       * The type of interface endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype)
+       */
+      override fun endpointType(): String = unwrap(this).getEndpointType()
+
+      /**
+       * The identifier (ID) of the VPC in which the interface endpoint is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid)
+       */
+      override fun vpceId(): String = unwrap(this).getVpceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessEndpointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty):
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessEndpointProperty):
+          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty
+    }
   }
 
   /**
@@ -1121,8 +1232,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
     ) : CdkObject(cdkObject), ApplicationSettingsProperty {
       /**
        * Enables or disables persistent application settings for users during their streaming
@@ -1158,118 +1268,6 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty
-    }
-  }
-
-  /**
-   * Describes an interface VPC endpoint (interface endpoint) that lets you create a private
-   * connection between the virtual private cloud (VPC) that you specify and AppStream 2.0. When you
-   * specify an interface endpoint for a stack, users of the stack can connect to AppStream 2.0 only
-   * through that endpoint. When you specify an interface endpoint for an image builder, administrators
-   * can connect to the image builder only through that endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * AccessEndpointProperty accessEndpointProperty = AccessEndpointProperty.builder()
-   * .endpointType("endpointType")
-   * .vpceId("vpceId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html)
-   */
-  public interface AccessEndpointProperty {
-    /**
-     * The type of interface endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype)
-     */
-    public fun endpointType(): String
-
-    /**
-     * The identifier (ID) of the VPC in which the interface endpoint is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid)
-     */
-    public fun vpceId(): String
-
-    /**
-     * A builder for [AccessEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpointType The type of interface endpoint. 
-       */
-      public fun endpointType(endpointType: String)
-
-      /**
-       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
-       */
-      public fun vpceId(vpceId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.Builder =
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.builder()
-
-      /**
-       * @param endpointType The type of interface endpoint. 
-       */
-      override fun endpointType(endpointType: String) {
-        cdkBuilder.endpointType(endpointType)
-      }
-
-      /**
-       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
-       */
-      override fun vpceId(vpceId: String) {
-        cdkBuilder.vpceId(vpceId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
-    ) : CdkObject(cdkObject), AccessEndpointProperty {
-      /**
-       * The type of interface endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-endpointtype)
-       */
-      override fun endpointType(): String = unwrap(this).getEndpointType()
-
-      /**
-       * The identifier (ID) of the VPC in which the interface endpoint is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html#cfn-appstream-stack-accessendpoint-vpceid)
-       */
-      override fun vpceId(): String = unwrap(this).getVpceId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty):
-          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessEndpointProperty):
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty
     }
   }
 
@@ -1377,8 +1375,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
     ) : CdkObject(cdkObject), StorageConnectorProperty {
       /**
        * The type of storage connector.
@@ -1417,6 +1414,94 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty
+    }
+  }
+
+  /**
+   * The streaming protocol that you want your stack to prefer.
+   *
+   * This can be UDP or TCP. Currently, UDP is only supported in the Windows native client.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * StreamingExperienceSettingsProperty streamingExperienceSettingsProperty =
+   * StreamingExperienceSettingsProperty.builder()
+   * .preferredProtocol("preferredProtocol")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html)
+   */
+  public interface StreamingExperienceSettingsProperty {
+    /**
+     * The preferred protocol that you want to use while streaming your application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html#cfn-appstream-stack-streamingexperiencesettings-preferredprotocol)
+     */
+    public fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
+
+    /**
+     * A builder for [StreamingExperienceSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param preferredProtocol The preferred protocol that you want to use while streaming your
+       * application.
+       */
+      public fun preferredProtocol(preferredProtocol: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty.builder()
+
+      /**
+       * @param preferredProtocol The preferred protocol that you want to use while streaming your
+       * application.
+       */
+      override fun preferredProtocol(preferredProtocol: String) {
+        cdkBuilder.preferredProtocol(preferredProtocol)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
+    ) : CdkObject(cdkObject), StreamingExperienceSettingsProperty {
+      /**
+       * The preferred protocol that you want to use while streaming your application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html#cfn-appstream-stack-streamingexperiencesettings-preferredprotocol)
+       */
+      override fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StreamingExperienceSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty):
+          StreamingExperienceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingExperienceSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StreamingExperienceSettingsProperty):
+          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty
     }
   }
 
@@ -1539,8 +1624,7 @@ public open class CfnStack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
     ) : CdkObject(cdkObject), UserSettingProperty {
       /**
        * The action that is enabled or disabled.
@@ -1588,95 +1672,6 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty
-    }
-  }
-
-  /**
-   * The streaming protocol that you want your stack to prefer.
-   *
-   * This can be UDP or TCP. Currently, UDP is only supported in the Windows native client.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * StreamingExperienceSettingsProperty streamingExperienceSettingsProperty =
-   * StreamingExperienceSettingsProperty.builder()
-   * .preferredProtocol("preferredProtocol")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html)
-   */
-  public interface StreamingExperienceSettingsProperty {
-    /**
-     * The preferred protocol that you want to use while streaming your application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html#cfn-appstream-stack-streamingexperiencesettings-preferredprotocol)
-     */
-    public fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
-
-    /**
-     * A builder for [StreamingExperienceSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param preferredProtocol The preferred protocol that you want to use while streaming your
-       * application.
-       */
-      public fun preferredProtocol(preferredProtocol: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty.builder()
-
-      /**
-       * @param preferredProtocol The preferred protocol that you want to use while streaming your
-       * application.
-       */
-      override fun preferredProtocol(preferredProtocol: String) {
-        cdkBuilder.preferredProtocol(preferredProtocol)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
-    ) : CdkObject(cdkObject), StreamingExperienceSettingsProperty {
-      /**
-       * The preferred protocol that you want to use while streaming your application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html#cfn-appstream-stack-streamingexperiencesettings-preferredprotocol)
-       */
-      override fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StreamingExperienceSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty):
-          StreamingExperienceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StreamingExperienceSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StreamingExperienceSettingsProperty):
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty
     }
   }
 }

@@ -120,7 +120,7 @@ public interface BounceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.actions.BounceProps,
+    cdkObject: software.amazon.awscdk.services.ses.actions.BounceProps,
   ) : CdkObject(cdkObject), BounceProps {
     /**
      * The email address of the sender of the bounced email.

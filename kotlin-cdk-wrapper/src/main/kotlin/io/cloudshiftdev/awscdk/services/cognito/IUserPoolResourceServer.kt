@@ -21,7 +21,7 @@ public interface IUserPoolResourceServer : IResource {
   public fun userPoolResourceServerId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.IUserPoolResourceServer,
+    cdkObject: software.amazon.awscdk.services.cognito.IUserPoolResourceServer,
   ) : CdkObject(cdkObject), IUserPoolResourceServer {
     /**
      * Apply the given removal policy to this resource.

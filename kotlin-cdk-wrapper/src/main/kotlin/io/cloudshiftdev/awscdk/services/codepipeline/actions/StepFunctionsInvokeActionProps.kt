@@ -208,8 +208,7 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps,
   ) : CdkObject(cdkObject), StepFunctionsInvokeActionProps {
     /**
      * The physical, human-readable name of the Action.

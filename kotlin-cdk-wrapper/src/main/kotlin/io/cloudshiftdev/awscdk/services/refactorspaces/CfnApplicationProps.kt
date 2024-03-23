@@ -211,7 +211,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * The endpoint URL of the Amazon API Gateway proxy.

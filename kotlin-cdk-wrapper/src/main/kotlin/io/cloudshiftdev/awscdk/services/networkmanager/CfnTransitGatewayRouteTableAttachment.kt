@@ -53,9 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html)
  */
-public open class CfnTransitGatewayRouteTableAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment,
+public open class CfnTransitGatewayRouteTableAttachment(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -415,7 +414,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayRouteTableAttachment):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment
   }
 
   /**
@@ -530,8 +530,7 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty,
     ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.

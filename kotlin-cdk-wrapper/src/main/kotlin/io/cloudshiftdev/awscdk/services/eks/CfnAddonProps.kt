@@ -341,7 +341,7 @@ public interface CfnAddonProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.CfnAddonProps,
+    cdkObject: software.amazon.awscdk.services.eks.CfnAddonProps,
   ) : CdkObject(cdkObject), CfnAddonProps {
     /**
      * The name of the add-on.

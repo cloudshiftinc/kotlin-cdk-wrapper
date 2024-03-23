@@ -364,7 +364,7 @@ public interface ProduceActionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.ProduceActionOptions,
+    cdkObject: software.amazon.awscdk.pipelines.ProduceActionOptions,
   ) : CdkObject(cdkObject), ProduceActionOptions {
     /**
      * Name the action should get.

@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)
  */
-public open class CfnTrigger internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
+public open class CfnTrigger(
+  cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -667,7 +667,7 @@ public open class CfnTrigger internal constructor(
         CfnTrigger(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrigger): software.amazon.awscdk.services.glue.CfnTrigger =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnTrigger
   }
 
   /**
@@ -908,7 +908,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * The job arguments used when this trigger fires.
@@ -985,355 +985,6 @@ public open class CfnTrigger internal constructor(
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty
-    }
-  }
-
-  /**
-   * Batch condition that must be met (specified number of events received or batch time window
-   * expired) before EventBridge event trigger fires.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * EventBatchingConditionProperty eventBatchingConditionProperty =
-   * EventBatchingConditionProperty.builder()
-   * .batchSize(123)
-   * // the properties below are optional
-   * .batchWindow(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html)
-   */
-  public interface EventBatchingConditionProperty {
-    /**
-     * Number of events that must be received from Amazon EventBridge before EventBridge event
-     * trigger fires.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchsize)
-     */
-    public fun batchSize(): Number
-
-    /**
-     * Window of time in seconds after which EventBridge event trigger fires.
-     *
-     * Window starts when first event is received.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchwindow)
-     */
-    public fun batchWindow(): Number? = unwrap(this).getBatchWindow()
-
-    /**
-     * A builder for [EventBatchingConditionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param batchSize Number of events that must be received from Amazon EventBridge before
-       * EventBridge event trigger fires. 
-       */
-      public fun batchSize(batchSize: Number)
-
-      /**
-       * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
-       * Window starts when first event is received.
-       */
-      public fun batchWindow(batchWindow: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.builder()
-
-      /**
-       * @param batchSize Number of events that must be received from Amazon EventBridge before
-       * EventBridge event trigger fires. 
-       */
-      override fun batchSize(batchSize: Number) {
-        cdkBuilder.batchSize(batchSize)
-      }
-
-      /**
-       * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
-       * Window starts when first event is received.
-       */
-      override fun batchWindow(batchWindow: Number) {
-        cdkBuilder.batchWindow(batchWindow)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
-    ) : CdkObject(cdkObject), EventBatchingConditionProperty {
-      /**
-       * Number of events that must be received from Amazon EventBridge before EventBridge event
-       * trigger fires.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchsize)
-       */
-      override fun batchSize(): Number = unwrap(this).getBatchSize()
-
-      /**
-       * Window of time in seconds after which EventBridge event trigger fires.
-       *
-       * Window starts when first event is received.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchwindow)
-       */
-      override fun batchWindow(): Number? = unwrap(this).getBatchWindow()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventBatchingConditionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty):
-          EventBatchingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EventBatchingConditionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventBatchingConditionProperty):
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty
-    }
-  }
-
-  /**
-   * Specifies configuration properties of a job run notification.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * NotificationPropertyProperty notificationPropertyProperty =
-   * NotificationPropertyProperty.builder()
-   * .notifyDelayAfter(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html)
-   */
-  public interface NotificationPropertyProperty {
-    /**
-     * After a job run starts, the number of minutes to wait before sending a job run delay
-     * notification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html#cfn-glue-trigger-notificationproperty-notifydelayafter)
-     */
-    public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
-
-    /**
-     * A builder for [NotificationPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
-       * sending a job run delay notification.
-       */
-      public fun notifyDelayAfter(notifyDelayAfter: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.builder()
-
-      /**
-       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
-       * sending a job run delay notification.
-       */
-      override fun notifyDelayAfter(notifyDelayAfter: Number) {
-        cdkBuilder.notifyDelayAfter(notifyDelayAfter)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
-    ) : CdkObject(cdkObject), NotificationPropertyProperty {
-      /**
-       * After a job run starts, the number of minutes to wait before sending a job run delay
-       * notification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html#cfn-glue-trigger-notificationproperty-notifydelayafter)
-       */
-      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty):
-          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationPropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationPropertyProperty):
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty
-    }
-  }
-
-  /**
-   * Defines the predicate of the trigger, which determines when it fires.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * PredicateProperty predicateProperty = PredicateProperty.builder()
-   * .conditions(List.of(ConditionProperty.builder()
-   * .crawlerName("crawlerName")
-   * .crawlState("crawlState")
-   * .jobName("jobName")
-   * .logicalOperator("logicalOperator")
-   * .state("state")
-   * .build()))
-   * .logical("logical")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html)
-   */
-  public interface PredicateProperty {
-    /**
-     * A list of the conditions that determine when the trigger will fire.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions)
-     */
-    public fun conditions(): Any? = unwrap(this).getConditions()
-
-    /**
-     * An optional field if only one condition is listed.
-     *
-     * If multiple conditions are listed, then this field is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical)
-     */
-    public fun logical(): String? = unwrap(this).getLogical()
-
-    /**
-     * A builder for [PredicateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      public fun conditions(conditions: IResolvable)
-
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      public fun conditions(conditions: List<Any>)
-
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      public fun conditions(vararg conditions: Any)
-
-      /**
-       * @param logical An optional field if only one condition is listed.
-       * If multiple conditions are listed, then this field is required.
-       */
-      public fun logical(logical: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.builder()
-
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      override fun conditions(conditions: IResolvable) {
-        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      override fun conditions(conditions: List<Any>) {
-        cdkBuilder.conditions(conditions)
-      }
-
-      /**
-       * @param conditions A list of the conditions that determine when the trigger will fire.
-       */
-      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
-
-      /**
-       * @param logical An optional field if only one condition is listed.
-       * If multiple conditions are listed, then this field is required.
-       */
-      override fun logical(logical: String) {
-        cdkBuilder.logical(logical)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
-    ) : CdkObject(cdkObject), PredicateProperty {
-      /**
-       * A list of the conditions that determine when the trigger will fire.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions)
-       */
-      override fun conditions(): Any? = unwrap(this).getConditions()
-
-      /**
-       * An optional field if only one condition is listed.
-       *
-       * If multiple conditions are listed, then this field is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical)
-       */
-      override fun logical(): String? = unwrap(this).getLogical()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PredicateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty):
-          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PredicateProperty):
-          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty
     }
   }
 
@@ -1476,7 +1127,7 @@ public open class CfnTrigger internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
     ) : CdkObject(cdkObject), ConditionProperty {
       /**
        * The state of the crawler to which this condition applies.
@@ -1531,6 +1182,353 @@ public open class CfnTrigger internal constructor(
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty
+    }
+  }
+
+  /**
+   * Batch condition that must be met (specified number of events received or batch time window
+   * expired) before EventBridge event trigger fires.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * EventBatchingConditionProperty eventBatchingConditionProperty =
+   * EventBatchingConditionProperty.builder()
+   * .batchSize(123)
+   * // the properties below are optional
+   * .batchWindow(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html)
+   */
+  public interface EventBatchingConditionProperty {
+    /**
+     * Number of events that must be received from Amazon EventBridge before EventBridge event
+     * trigger fires.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchsize)
+     */
+    public fun batchSize(): Number
+
+    /**
+     * Window of time in seconds after which EventBridge event trigger fires.
+     *
+     * Window starts when first event is received.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchwindow)
+     */
+    public fun batchWindow(): Number? = unwrap(this).getBatchWindow()
+
+    /**
+     * A builder for [EventBatchingConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param batchSize Number of events that must be received from Amazon EventBridge before
+       * EventBridge event trigger fires. 
+       */
+      public fun batchSize(batchSize: Number)
+
+      /**
+       * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
+       * Window starts when first event is received.
+       */
+      public fun batchWindow(batchWindow: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.builder()
+
+      /**
+       * @param batchSize Number of events that must be received from Amazon EventBridge before
+       * EventBridge event trigger fires. 
+       */
+      override fun batchSize(batchSize: Number) {
+        cdkBuilder.batchSize(batchSize)
+      }
+
+      /**
+       * @param batchWindow Window of time in seconds after which EventBridge event trigger fires.
+       * Window starts when first event is received.
+       */
+      override fun batchWindow(batchWindow: Number) {
+        cdkBuilder.batchWindow(batchWindow)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
+    ) : CdkObject(cdkObject), EventBatchingConditionProperty {
+      /**
+       * Number of events that must be received from Amazon EventBridge before EventBridge event
+       * trigger fires.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchsize)
+       */
+      override fun batchSize(): Number = unwrap(this).getBatchSize()
+
+      /**
+       * Window of time in seconds after which EventBridge event trigger fires.
+       *
+       * Window starts when first event is received.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html#cfn-glue-trigger-eventbatchingcondition-batchwindow)
+       */
+      override fun batchWindow(): Number? = unwrap(this).getBatchWindow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventBatchingConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty):
+          EventBatchingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBatchingConditionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventBatchingConditionProperty):
+          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty
+    }
+  }
+
+  /**
+   * Specifies configuration properties of a job run notification.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * NotificationPropertyProperty notificationPropertyProperty =
+   * NotificationPropertyProperty.builder()
+   * .notifyDelayAfter(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html)
+   */
+  public interface NotificationPropertyProperty {
+    /**
+     * After a job run starts, the number of minutes to wait before sending a job run delay
+     * notification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html#cfn-glue-trigger-notificationproperty-notifydelayafter)
+     */
+    public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+
+    /**
+     * A builder for [NotificationPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
+       * sending a job run delay notification.
+       */
+      public fun notifyDelayAfter(notifyDelayAfter: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.builder()
+
+      /**
+       * @param notifyDelayAfter After a job run starts, the number of minutes to wait before
+       * sending a job run delay notification.
+       */
+      override fun notifyDelayAfter(notifyDelayAfter: Number) {
+        cdkBuilder.notifyDelayAfter(notifyDelayAfter)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
+    ) : CdkObject(cdkObject), NotificationPropertyProperty {
+      /**
+       * After a job run starts, the number of minutes to wait before sending a job run delay
+       * notification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-notificationproperty.html#cfn-glue-trigger-notificationproperty-notifydelayafter)
+       */
+      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty):
+          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationPropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationPropertyProperty):
+          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty
+    }
+  }
+
+  /**
+   * Defines the predicate of the trigger, which determines when it fires.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * PredicateProperty predicateProperty = PredicateProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .crawlerName("crawlerName")
+   * .crawlState("crawlState")
+   * .jobName("jobName")
+   * .logicalOperator("logicalOperator")
+   * .state("state")
+   * .build()))
+   * .logical("logical")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html)
+   */
+  public interface PredicateProperty {
+    /**
+     * A list of the conditions that determine when the trigger will fire.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions)
+     */
+    public fun conditions(): Any? = unwrap(this).getConditions()
+
+    /**
+     * An optional field if only one condition is listed.
+     *
+     * If multiple conditions are listed, then this field is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical)
+     */
+    public fun logical(): String? = unwrap(this).getLogical()
+
+    /**
+     * A builder for [PredicateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      public fun conditions(conditions: IResolvable)
+
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      public fun conditions(conditions: List<Any>)
+
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      public fun conditions(vararg conditions: Any)
+
+      /**
+       * @param logical An optional field if only one condition is listed.
+       * If multiple conditions are listed, then this field is required.
+       */
+      public fun logical(logical: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.builder()
+
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      override fun conditions(conditions: IResolvable) {
+        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      override fun conditions(conditions: List<Any>) {
+        cdkBuilder.conditions(conditions)
+      }
+
+      /**
+       * @param conditions A list of the conditions that determine when the trigger will fire.
+       */
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
+
+      /**
+       * @param logical An optional field if only one condition is listed.
+       * If multiple conditions are listed, then this field is required.
+       */
+      override fun logical(logical: String) {
+        cdkBuilder.logical(logical)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
+    ) : CdkObject(cdkObject), PredicateProperty {
+      /**
+       * A list of the conditions that determine when the trigger will fire.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions)
+       */
+      override fun conditions(): Any? = unwrap(this).getConditions()
+
+      /**
+       * An optional field if only one condition is listed.
+       *
+       * If multiple conditions are listed, then this field is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical)
+       */
+      override fun logical(): String? = unwrap(this).getLogical()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PredicateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty):
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PredicateProperty):
+          software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty
     }
   }
 }

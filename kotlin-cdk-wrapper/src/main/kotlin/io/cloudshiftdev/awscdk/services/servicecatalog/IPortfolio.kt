@@ -352,7 +352,7 @@ public interface IPortfolio : IResource {
   public fun shareWithAccount(accountId: String, options: PortfolioShareOptions.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.IPortfolio,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.IPortfolio,
   ) : CdkObject(cdkObject), IPortfolio {
     /**
      * Associate portfolio with the given product.

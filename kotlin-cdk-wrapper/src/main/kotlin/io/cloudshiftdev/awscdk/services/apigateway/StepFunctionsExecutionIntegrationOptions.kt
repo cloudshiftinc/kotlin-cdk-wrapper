@@ -635,8 +635,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigateway.StepFunctionsExecutionIntegrationOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsExecutionIntegrationOptions,
   ) : CdkObject(cdkObject), StepFunctionsExecutionIntegrationOptions {
     /**
      * If the whole authorizer object, including custom context values should be in the execution

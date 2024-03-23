@@ -10,8 +10,8 @@ import kotlin.jvm.JvmName
 /**
  * Protocol utility class.
  */
-public open class Manifest internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cloudassembly.schema.Manifest,
+public open class Manifest(
+  cdkObject: software.amazon.awscdk.cloudassembly.schema.Manifest,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun loadAssemblyManifest(filePath: String): AssemblyManifest =
@@ -55,6 +55,6 @@ public open class Manifest internal constructor(
         Manifest(cdkObject)
 
     internal fun unwrap(wrapped: Manifest): software.amazon.awscdk.cloudassembly.schema.Manifest =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.cloudassembly.schema.Manifest
   }
 }

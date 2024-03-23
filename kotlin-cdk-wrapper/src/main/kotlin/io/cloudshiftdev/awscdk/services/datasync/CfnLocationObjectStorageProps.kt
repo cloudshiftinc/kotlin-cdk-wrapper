@@ -343,7 +343,7 @@ public interface CfnLocationObjectStorageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps,
   ) : CdkObject(cdkObject), CfnLocationObjectStorageProps {
     /**
      * Specifies the access key (for example, a user name) if credentials are required to

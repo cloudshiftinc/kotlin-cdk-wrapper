@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html)
  */
-public open class CfnDataCatalogEncryptionSettings internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
+public open class CfnDataCatalogEncryptionSettings(
+  cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,11 +245,24 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
         CfnDataCatalogEncryptionSettings = CfnDataCatalogEncryptionSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCatalogEncryptionSettings):
-        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
   }
 
   /**
-   * Specifies the encryption-at-rest configuration for the Data Catalog.
+   * The data structure used by the Data Catalog to encrypt the password as part of
+   * `CreateConnection` or `UpdateConnection` and store it in the `ENCRYPTED_PASSWORD` field in the
+   * connection properties.
+   *
+   * You can enable catalog encryption or only password encryption.
+   *
+   * When a `CreationConnection` request arrives containing a password, the Data Catalog first
+   * encrypts the password using your AWS KMS key. It then encrypts the whole connection object again
+   * if catalog encryption is also enabled.
+   *
+   * This encryption requires that you set AWS KMS key permissions to enable or restrict access on
+   * the password key according to your security requirements. For example, you might want only
+   * administrators to have decrypt permission on the password key.
    *
    * Example:
    *
@@ -258,137 +270,156 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * EncryptionAtRestProperty encryptionAtRestProperty = EncryptionAtRestProperty.builder()
-   * .catalogEncryptionMode("catalogEncryptionMode")
-   * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
-   * .sseAwsKmsKeyId("sseAwsKmsKeyId")
+   * ConnectionPasswordEncryptionProperty connectionPasswordEncryptionProperty =
+   * ConnectionPasswordEncryptionProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .returnConnectionPasswordEncrypted(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html)
    */
-  public interface EncryptionAtRestProperty {
+  public interface ConnectionPasswordEncryptionProperty {
     /**
-     * The encryption-at-rest mode for encrypting Data Catalog data.
+     * An AWS KMS key that is used to encrypt the connection password.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode)
+     * If connection password protection is enabled, the caller of `CreateConnection` and
+     * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
+     * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission to
+     * enable or restrict access on the password key according to your security requirements.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid)
      */
-    public fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     /**
-     * The role that AWS Glue assumes to encrypt and decrypt the Data Catalog objects on the
-     * caller's behalf.
+     * When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain
+     * encrypted in the responses of `GetConnection` and `GetConnections` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionservicerole)
+     * This encryption takes effect independently from catalog encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted)
      */
-    public fun catalogEncryptionServiceRole(): String? =
-        unwrap(this).getCatalogEncryptionServiceRole()
+    public fun returnConnectionPasswordEncrypted(): Any? =
+        unwrap(this).getReturnConnectionPasswordEncrypted()
 
     /**
-     * The ID of the AWS KMS key to use for encryption at rest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid)
-     */
-    public fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
-
-    /**
-     * A builder for [EncryptionAtRestProperty]
+     * A builder for [ConnectionPasswordEncryptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param catalogEncryptionMode The encryption-at-rest mode for encrypting Data Catalog data.
+       * @param kmsKeyId An AWS KMS key that is used to encrypt the connection password.
+       * If connection password protection is enabled, the caller of `CreateConnection` and
+       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
+       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
+       * to enable or restrict access on the password key according to your security requirements.
        */
-      public fun catalogEncryptionMode(catalogEncryptionMode: String)
+      public fun kmsKeyId(kmsKeyId: String)
 
       /**
-       * @param catalogEncryptionServiceRole The role that AWS Glue assumes to encrypt and decrypt
-       * the Data Catalog objects on the caller's behalf.
+       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
+       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
+       * `GetConnections` .
+       * This encryption takes effect independently from catalog encryption.
        */
-      public fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String)
+      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean)
 
       /**
-       * @param sseAwsKmsKeyId The ID of the AWS KMS key to use for encryption at rest.
+       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
+       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
+       * `GetConnections` .
+       * This encryption takes effect independently from catalog encryption.
        */
-      public fun sseAwsKmsKeyId(sseAwsKmsKeyId: String)
+      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty.Builder
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty.Builder
           =
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty.builder()
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty.builder()
 
       /**
-       * @param catalogEncryptionMode The encryption-at-rest mode for encrypting Data Catalog data.
+       * @param kmsKeyId An AWS KMS key that is used to encrypt the connection password.
+       * If connection password protection is enabled, the caller of `CreateConnection` and
+       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
+       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
+       * to enable or restrict access on the password key according to your security requirements.
        */
-      override fun catalogEncryptionMode(catalogEncryptionMode: String) {
-        cdkBuilder.catalogEncryptionMode(catalogEncryptionMode)
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
       /**
-       * @param catalogEncryptionServiceRole The role that AWS Glue assumes to encrypt and decrypt
-       * the Data Catalog objects on the caller's behalf.
+       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
+       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
+       * `GetConnections` .
+       * This encryption takes effect independently from catalog encryption.
        */
-      override fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
-        cdkBuilder.catalogEncryptionServiceRole(catalogEncryptionServiceRole)
+      override fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean) {
+        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted)
       }
 
       /**
-       * @param sseAwsKmsKeyId The ID of the AWS KMS key to use for encryption at rest.
+       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
+       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
+       * `GetConnections` .
+       * This encryption takes effect independently from catalog encryption.
        */
-      override fun sseAwsKmsKeyId(sseAwsKmsKeyId: String) {
-        cdkBuilder.sseAwsKmsKeyId(sseAwsKmsKeyId)
+      override
+          fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable) {
+        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestProperty {
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
+    ) : CdkObject(cdkObject), ConnectionPasswordEncryptionProperty {
       /**
-       * The encryption-at-rest mode for encrypting Data Catalog data.
+       * An AWS KMS key that is used to encrypt the connection password.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode)
+       * If connection password protection is enabled, the caller of `CreateConnection` and
+       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
+       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
+       * to enable or restrict access on the password key according to your security requirements.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid)
        */
-      override fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
       /**
-       * The role that AWS Glue assumes to encrypt and decrypt the Data Catalog objects on the
-       * caller's behalf.
+       * When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain
+       * encrypted in the responses of `GetConnection` and `GetConnections` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionservicerole)
-       */
-      override fun catalogEncryptionServiceRole(): String? =
-          unwrap(this).getCatalogEncryptionServiceRole()
-
-      /**
-       * The ID of the AWS KMS key to use for encryption at rest.
+       * This encryption takes effect independently from catalog encryption.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted)
        */
-      override fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
+      override fun returnConnectionPasswordEncrypted(): Any? =
+          unwrap(this).getReturnConnectionPasswordEncrypted()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConnectionPasswordEncryptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty):
-          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionAtRestProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty):
+          ConnectionPasswordEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionPasswordEncryptionProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EncryptionAtRestProperty):
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
+      internal fun unwrap(wrapped: ConnectionPasswordEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
     }
   }
 
@@ -567,8 +598,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
     ) : CdkObject(cdkObject), DataCatalogEncryptionSettingsProperty {
       /**
        * When connection password protection is enabled, the Data Catalog uses a customer-provided
@@ -610,19 +640,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
   }
 
   /**
-   * The data structure used by the Data Catalog to encrypt the password as part of
-   * `CreateConnection` or `UpdateConnection` and store it in the `ENCRYPTED_PASSWORD` field in the
-   * connection properties.
-   *
-   * You can enable catalog encryption or only password encryption.
-   *
-   * When a `CreationConnection` request arrives containing a password, the Data Catalog first
-   * encrypts the password using your AWS KMS key. It then encrypts the whole connection object again
-   * if catalog encryption is also enabled.
-   *
-   * This encryption requires that you set AWS KMS key permissions to enable or restrict access on
-   * the password key according to your security requirements. For example, you might want only
-   * administrators to have decrypt permission on the password key.
+   * Specifies the encryption-at-rest configuration for the Data Catalog.
    *
    * Example:
    *
@@ -630,157 +648,136 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * ConnectionPasswordEncryptionProperty connectionPasswordEncryptionProperty =
-   * ConnectionPasswordEncryptionProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .returnConnectionPasswordEncrypted(false)
+   * EncryptionAtRestProperty encryptionAtRestProperty = EncryptionAtRestProperty.builder()
+   * .catalogEncryptionMode("catalogEncryptionMode")
+   * .catalogEncryptionServiceRole("catalogEncryptionServiceRole")
+   * .sseAwsKmsKeyId("sseAwsKmsKeyId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html)
    */
-  public interface ConnectionPasswordEncryptionProperty {
+  public interface EncryptionAtRestProperty {
     /**
-     * An AWS KMS key that is used to encrypt the connection password.
+     * The encryption-at-rest mode for encrypting Data Catalog data.
      *
-     * If connection password protection is enabled, the caller of `CreateConnection` and
-     * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
-     * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission to
-     * enable or restrict access on the password key according to your security requirements.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode)
      */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    public fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
 
     /**
-     * When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain
-     * encrypted in the responses of `GetConnection` and `GetConnections` .
+     * The role that AWS Glue assumes to encrypt and decrypt the Data Catalog objects on the
+     * caller's behalf.
      *
-     * This encryption takes effect independently from catalog encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionservicerole)
      */
-    public fun returnConnectionPasswordEncrypted(): Any? =
-        unwrap(this).getReturnConnectionPasswordEncrypted()
+    public fun catalogEncryptionServiceRole(): String? =
+        unwrap(this).getCatalogEncryptionServiceRole()
 
     /**
-     * A builder for [ConnectionPasswordEncryptionProperty]
+     * The ID of the AWS KMS key to use for encryption at rest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid)
+     */
+    public fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
+
+    /**
+     * A builder for [EncryptionAtRestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param kmsKeyId An AWS KMS key that is used to encrypt the connection password.
-       * If connection password protection is enabled, the caller of `CreateConnection` and
-       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
-       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
-       * to enable or restrict access on the password key according to your security requirements.
+       * @param catalogEncryptionMode The encryption-at-rest mode for encrypting Data Catalog data.
        */
-      public fun kmsKeyId(kmsKeyId: String)
+      public fun catalogEncryptionMode(catalogEncryptionMode: String)
 
       /**
-       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
-       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
-       * `GetConnections` .
-       * This encryption takes effect independently from catalog encryption.
+       * @param catalogEncryptionServiceRole The role that AWS Glue assumes to encrypt and decrypt
+       * the Data Catalog objects on the caller's behalf.
        */
-      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean)
+      public fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String)
 
       /**
-       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
-       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
-       * `GetConnections` .
-       * This encryption takes effect independently from catalog encryption.
+       * @param sseAwsKmsKeyId The ID of the AWS KMS key to use for encryption at rest.
        */
-      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable)
+      public fun sseAwsKmsKeyId(sseAwsKmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty.Builder
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty.Builder
           =
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty.builder()
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty.builder()
 
       /**
-       * @param kmsKeyId An AWS KMS key that is used to encrypt the connection password.
-       * If connection password protection is enabled, the caller of `CreateConnection` and
-       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
-       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
-       * to enable or restrict access on the password key according to your security requirements.
+       * @param catalogEncryptionMode The encryption-at-rest mode for encrypting Data Catalog data.
        */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
+      override fun catalogEncryptionMode(catalogEncryptionMode: String) {
+        cdkBuilder.catalogEncryptionMode(catalogEncryptionMode)
       }
 
       /**
-       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
-       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
-       * `GetConnections` .
-       * This encryption takes effect independently from catalog encryption.
+       * @param catalogEncryptionServiceRole The role that AWS Glue assumes to encrypt and decrypt
+       * the Data Catalog objects on the caller's behalf.
        */
-      override fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean) {
-        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted)
+      override fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
+        cdkBuilder.catalogEncryptionServiceRole(catalogEncryptionServiceRole)
       }
 
       /**
-       * @param returnConnectionPasswordEncrypted When the `ReturnConnectionPasswordEncrypted` flag
-       * is set to "true", passwords remain encrypted in the responses of `GetConnection` and
-       * `GetConnections` .
-       * This encryption takes effect independently from catalog encryption.
+       * @param sseAwsKmsKeyId The ID of the AWS KMS key to use for encryption at rest.
        */
-      override
-          fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable) {
-        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted.let(IResolvable::unwrap))
+      override fun sseAwsKmsKeyId(sseAwsKmsKeyId: String) {
+        cdkBuilder.sseAwsKmsKeyId(sseAwsKmsKeyId)
       }
 
       public fun build():
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
-    ) : CdkObject(cdkObject), ConnectionPasswordEncryptionProperty {
+      cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
+    ) : CdkObject(cdkObject), EncryptionAtRestProperty {
       /**
-       * An AWS KMS key that is used to encrypt the connection password.
+       * The encryption-at-rest mode for encrypting Data Catalog data.
        *
-       * If connection password protection is enabled, the caller of `CreateConnection` and
-       * `UpdateConnection` needs at least `kms:Encrypt` permission on the specified AWS KMS key, to
-       * encrypt passwords before storing them in the Data Catalog. You can set the decrypt permission
-       * to enable or restrict access on the password key according to your security requirements.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode)
        */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
 
       /**
-       * When the `ReturnConnectionPasswordEncrypted` flag is set to "true", passwords remain
-       * encrypted in the responses of `GetConnection` and `GetConnections` .
+       * The role that AWS Glue assumes to encrypt and decrypt the Data Catalog objects on the
+       * caller's behalf.
        *
-       * This encryption takes effect independently from catalog encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionservicerole)
        */
-      override fun returnConnectionPasswordEncrypted(): Any? =
-          unwrap(this).getReturnConnectionPasswordEncrypted()
+      override fun catalogEncryptionServiceRole(): String? =
+          unwrap(this).getCatalogEncryptionServiceRole()
+
+      /**
+       * The ID of the AWS KMS key to use for encryption at rest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid)
+       */
+      override fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConnectionPasswordEncryptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty):
-          ConnectionPasswordEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionPasswordEncryptionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty):
+          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionAtRestProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConnectionPasswordEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
+      internal fun unwrap(wrapped: EncryptionAtRestProperty):
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty
+          software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
     }
   }
 }

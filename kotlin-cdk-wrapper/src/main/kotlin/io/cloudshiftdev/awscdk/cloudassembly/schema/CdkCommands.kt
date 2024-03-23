@@ -120,7 +120,7 @@ public interface CdkCommands {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommands,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommands,
   ) : CdkObject(cdkObject), CdkCommands {
     /**
      * Options to for the cdk deploy command.

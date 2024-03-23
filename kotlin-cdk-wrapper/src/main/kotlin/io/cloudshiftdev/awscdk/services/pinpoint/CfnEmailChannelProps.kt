@@ -193,7 +193,7 @@ public interface CfnEmailChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps,
   ) : CdkObject(cdkObject), CfnEmailChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that you're specifying the email

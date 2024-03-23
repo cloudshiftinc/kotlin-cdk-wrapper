@@ -37,8 +37,8 @@ import kotlin.collections.Map
  * }
  * ```
  */
-public open class TagManager internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.TagManager,
+public open class TagManager(
+  cdkObject: software.amazon.awscdk.TagManager,
 ) : CdkObject(cdkObject) {
   public constructor(tagType: TagType, resourceTypeName: String) :
       this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName)
@@ -287,5 +287,6 @@ public open class TagManager internal constructor(
         TagManager(cdkObject)
 
     internal fun unwrap(wrapped: TagManager): software.amazon.awscdk.TagManager = wrapped.cdkObject
+        as software.amazon.awscdk.TagManager
   }
 }

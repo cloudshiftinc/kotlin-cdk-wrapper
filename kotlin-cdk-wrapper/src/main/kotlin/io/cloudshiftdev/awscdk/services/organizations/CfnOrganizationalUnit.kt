@@ -52,9 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organizationalunit.html)
  */
-public open class CfnOrganizationalUnit internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.organizations.CfnOrganizationalUnit,
+public open class CfnOrganizationalUnit(
+  cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationalUnit,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -332,6 +331,7 @@ public open class CfnOrganizationalUnit internal constructor(
         CfnOrganizationalUnit = CfnOrganizationalUnit(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationalUnit):
-        software.amazon.awscdk.services.organizations.CfnOrganizationalUnit = wrapped.cdkObject
+        software.amazon.awscdk.services.organizations.CfnOrganizationalUnit = wrapped.cdkObject as
+        software.amazon.awscdk.services.organizations.CfnOrganizationalUnit
   }
 }

@@ -765,7 +765,7 @@ public interface CfnDataLakeSettingsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps,
+    cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps,
   ) : CdkObject(cdkObject), CfnDataLakeSettingsProps {
     /**
      * A list of AWS Lake Formation principals.

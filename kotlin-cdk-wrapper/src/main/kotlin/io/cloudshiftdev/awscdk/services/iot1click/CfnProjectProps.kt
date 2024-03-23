@@ -141,7 +141,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot1click.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.iot1click.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * The description of the project.

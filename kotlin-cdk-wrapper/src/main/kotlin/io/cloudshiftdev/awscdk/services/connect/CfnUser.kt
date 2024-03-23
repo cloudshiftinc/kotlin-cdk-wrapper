@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.connect.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -691,7 +691,7 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.connect.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnUser
   }
 
   /**
@@ -862,8 +862,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty,
     ) : CdkObject(cdkObject), UserIdentityInfoProperty {
       /**
        * The email address.
@@ -929,165 +928,6 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty
-    }
-  }
-
-  /**
-   * A predefined attribute must be created before using `UserProficiencies` in the Cloudformation
-   * *User* template.
-   *
-   * For more information, see [Predefined
-   * attributes](https://docs.aws.amazon.com/connect/latest/adminguide/predefined-attributes.html) .
-   *
-   * Proficiency of a user.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * UserProficiencyProperty userProficiencyProperty = UserProficiencyProperty.builder()
-   * .attributeName("attributeName")
-   * .attributeValue("attributeValue")
-   * .level(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html)
-   */
-  public interface UserProficiencyProperty {
-    /**
-     * The name of user’s proficiency.
-     *
-     * You must use a predefined attribute name that is present in the Amazon Connect instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributename)
-     */
-    public fun attributeName(): String
-
-    /**
-     * The value of user’s proficiency.
-     *
-     * You must use a predefined attribute value that is present in the Amazon Connect instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributevalue)
-     */
-    public fun attributeValue(): String
-
-    /**
-     * The level of the proficiency.
-     *
-     * The valid values are 1, 2, 3, 4 and 5.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-level)
-     */
-    public fun level(): Number
-
-    /**
-     * A builder for [UserProficiencyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeName The name of user’s proficiency. 
-       * You must use a predefined attribute name that is present in the Amazon Connect instance.
-       */
-      public fun attributeName(attributeName: String)
-
-      /**
-       * @param attributeValue The value of user’s proficiency. 
-       * You must use a predefined attribute value that is present in the Amazon Connect instance.
-       */
-      public fun attributeValue(attributeValue: String)
-
-      /**
-       * @param level The level of the proficiency. 
-       * The valid values are 1, 2, 3, 4 and 5.
-       */
-      public fun level(level: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.Builder =
-          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.builder()
-
-      /**
-       * @param attributeName The name of user’s proficiency. 
-       * You must use a predefined attribute name that is present in the Amazon Connect instance.
-       */
-      override fun attributeName(attributeName: String) {
-        cdkBuilder.attributeName(attributeName)
-      }
-
-      /**
-       * @param attributeValue The value of user’s proficiency. 
-       * You must use a predefined attribute value that is present in the Amazon Connect instance.
-       */
-      override fun attributeValue(attributeValue: String) {
-        cdkBuilder.attributeValue(attributeValue)
-      }
-
-      /**
-       * @param level The level of the proficiency. 
-       * The valid values are 1, 2, 3, 4 and 5.
-       */
-      override fun level(level: Number) {
-        cdkBuilder.level(level)
-      }
-
-      public fun build(): software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty,
-    ) : CdkObject(cdkObject), UserProficiencyProperty {
-      /**
-       * The name of user’s proficiency.
-       *
-       * You must use a predefined attribute name that is present in the Amazon Connect instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributename)
-       */
-      override fun attributeName(): String = unwrap(this).getAttributeName()
-
-      /**
-       * The value of user’s proficiency.
-       *
-       * You must use a predefined attribute value that is present in the Amazon Connect instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributevalue)
-       */
-      override fun attributeValue(): String = unwrap(this).getAttributeValue()
-
-      /**
-       * The level of the proficiency.
-       *
-       * The valid values are 1, 2, 3, 4 and 5.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-level)
-       */
-      override fun level(): Number = unwrap(this).getLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserProficiencyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty):
-          UserProficiencyProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProficiencyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserProficiencyProperty):
-          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty
     }
   }
 
@@ -1242,8 +1082,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty,
     ) : CdkObject(cdkObject), UserPhoneConfigProperty {
       /**
        * The After Call Work (ACW) timeout setting, in seconds.
@@ -1300,6 +1139,164 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty
+    }
+  }
+
+  /**
+   * A predefined attribute must be created before using `UserProficiencies` in the Cloudformation
+   * *User* template.
+   *
+   * For more information, see [Predefined
+   * attributes](https://docs.aws.amazon.com/connect/latest/adminguide/predefined-attributes.html) .
+   *
+   * Proficiency of a user.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * UserProficiencyProperty userProficiencyProperty = UserProficiencyProperty.builder()
+   * .attributeName("attributeName")
+   * .attributeValue("attributeValue")
+   * .level(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html)
+   */
+  public interface UserProficiencyProperty {
+    /**
+     * The name of user’s proficiency.
+     *
+     * You must use a predefined attribute name that is present in the Amazon Connect instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributename)
+     */
+    public fun attributeName(): String
+
+    /**
+     * The value of user’s proficiency.
+     *
+     * You must use a predefined attribute value that is present in the Amazon Connect instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributevalue)
+     */
+    public fun attributeValue(): String
+
+    /**
+     * The level of the proficiency.
+     *
+     * The valid values are 1, 2, 3, 4 and 5.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-level)
+     */
+    public fun level(): Number
+
+    /**
+     * A builder for [UserProficiencyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeName The name of user’s proficiency. 
+       * You must use a predefined attribute name that is present in the Amazon Connect instance.
+       */
+      public fun attributeName(attributeName: String)
+
+      /**
+       * @param attributeValue The value of user’s proficiency. 
+       * You must use a predefined attribute value that is present in the Amazon Connect instance.
+       */
+      public fun attributeValue(attributeValue: String)
+
+      /**
+       * @param level The level of the proficiency. 
+       * The valid values are 1, 2, 3, 4 and 5.
+       */
+      public fun level(level: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.Builder =
+          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.builder()
+
+      /**
+       * @param attributeName The name of user’s proficiency. 
+       * You must use a predefined attribute name that is present in the Amazon Connect instance.
+       */
+      override fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+      }
+
+      /**
+       * @param attributeValue The value of user’s proficiency. 
+       * You must use a predefined attribute value that is present in the Amazon Connect instance.
+       */
+      override fun attributeValue(attributeValue: String) {
+        cdkBuilder.attributeValue(attributeValue)
+      }
+
+      /**
+       * @param level The level of the proficiency. 
+       * The valid values are 1, 2, 3, 4 and 5.
+       */
+      override fun level(level: Number) {
+        cdkBuilder.level(level)
+      }
+
+      public fun build(): software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty,
+    ) : CdkObject(cdkObject), UserProficiencyProperty {
+      /**
+       * The name of user’s proficiency.
+       *
+       * You must use a predefined attribute name that is present in the Amazon Connect instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributename)
+       */
+      override fun attributeName(): String = unwrap(this).getAttributeName()
+
+      /**
+       * The value of user’s proficiency.
+       *
+       * You must use a predefined attribute value that is present in the Amazon Connect instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-attributevalue)
+       */
+      override fun attributeValue(): String = unwrap(this).getAttributeValue()
+
+      /**
+       * The level of the proficiency.
+       *
+       * The valid values are 1, 2, 3, 4 and 5.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userproficiency.html#cfn-connect-user-userproficiency-level)
+       */
+      override fun level(): Number = unwrap(this).getLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserProficiencyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty):
+          UserProficiencyProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProficiencyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserProficiencyProperty):
+          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty
     }
   }
 }

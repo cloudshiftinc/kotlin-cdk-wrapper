@@ -828,7 +828,7 @@ public interface FirelensLogRouterProps : ContainerDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.FirelensLogRouterProps,
+    cdkObject: software.amazon.awscdk.services.ecs.FirelensLogRouterProps,
   ) : CdkObject(cdkObject), FirelensLogRouterProps {
     /**
      * The command that is passed to the container.

@@ -586,7 +586,7 @@ public interface CfnApplicationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplicationProps,
+    cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplicationProps,
   ) : CdkObject(cdkObject), CfnApplicationProps {
     /**
      * If set to true, the managed policies for SSM and CW will be attached to the instance roles if

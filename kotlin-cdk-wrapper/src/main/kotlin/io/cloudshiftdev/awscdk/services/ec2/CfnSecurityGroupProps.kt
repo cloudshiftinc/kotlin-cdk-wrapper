@@ -34,6 +34,7 @@ import kotlin.collections.List
  * .destinationPrefixListId("destinationPrefixListId")
  * .destinationSecurityGroupId("destinationSecurityGroupId")
  * .fromPort(123)
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
  * .toPort(123)
  * .build()))
  * .securityGroupIngress(List.of(IngressProperty.builder()
@@ -288,7 +289,7 @@ public interface CfnSecurityGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupProps,
   ) : CdkObject(cdkObject), CfnSecurityGroupProps {
     /**
      * A description for the security group.

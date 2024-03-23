@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AutoScalingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroup,
+public open class AutoScalingGroup(
+  cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroup,
 ) : Resource(cdkObject), ILoadBalancerTarget, IConnectable, IApplicationLoadBalancerTarget,
     INetworkLoadBalancerTarget, IAutoScalingGroup {
   public constructor(
@@ -1915,6 +1915,7 @@ public open class AutoScalingGroup internal constructor(
         AutoScalingGroup = AutoScalingGroup(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingGroup):
-        software.amazon.awscdk.services.autoscaling.AutoScalingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.AutoScalingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.AutoScalingGroup
   }
 }

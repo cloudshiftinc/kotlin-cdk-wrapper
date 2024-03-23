@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicpolicy.html)
  */
-public open class CfnTopicPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.CfnTopicPolicy,
+public open class CfnTopicPolicy(
+  cdkObject: software.amazon.awscdk.services.sns.CfnTopicPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -212,6 +212,6 @@ public open class CfnTopicPolicy internal constructor(
         = CfnTopicPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopicPolicy): software.amazon.awscdk.services.sns.CfnTopicPolicy
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sns.CfnTopicPolicy
   }
 }

@@ -20,8 +20,7 @@ public interface ILoadBalancerTarget : IConnectable {
   public fun attachToClassicLb(loadBalancer: LoadBalancer)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
   ) : CdkObject(cdkObject), ILoadBalancerTarget {
     /**
      * Attach load-balanced target to a classic ELB.

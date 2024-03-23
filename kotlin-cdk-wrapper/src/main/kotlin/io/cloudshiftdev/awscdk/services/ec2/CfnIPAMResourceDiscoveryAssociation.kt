@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscoveryassociation.html)
  */
-public open class CfnIPAMResourceDiscoveryAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation,
+public open class CfnIPAMResourceDiscoveryAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -304,5 +303,6 @@ public open class CfnIPAMResourceDiscoveryAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnIPAMResourceDiscoveryAssociation):
         software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation
   }
 }

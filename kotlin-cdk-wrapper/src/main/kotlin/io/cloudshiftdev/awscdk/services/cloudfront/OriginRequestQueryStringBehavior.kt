@@ -31,9 +31,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class OriginRequestQueryStringBehavior internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior,
+public open class OriginRequestQueryStringBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * The behavior of query strings -- allow all, none, or only an allow list.
@@ -64,6 +63,7 @@ public open class OriginRequestQueryStringBehavior internal constructor(
 
     internal fun unwrap(wrapped: OriginRequestQueryStringBehavior):
         software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior
   }
 }

@@ -618,8 +618,7 @@ public interface CfnModelExplainabilityJobDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinitionProps,
   ) : CdkObject(cdkObject), CfnModelExplainabilityJobDefinitionProps {
     /**
      * The name of the endpoint used to run the monitoring job.

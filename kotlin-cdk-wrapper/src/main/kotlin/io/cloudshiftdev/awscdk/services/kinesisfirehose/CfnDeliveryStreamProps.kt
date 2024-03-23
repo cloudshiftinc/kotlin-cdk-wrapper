@@ -1077,7 +1077,7 @@ public interface CfnDeliveryStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps,
+    cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps,
   ) : CdkObject(cdkObject), CfnDeliveryStreamProps {
     /**
      * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch

@@ -216,7 +216,7 @@ public interface CfnRulesetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.databrew.CfnRulesetProps,
+    cdkObject: software.amazon.awscdk.services.databrew.CfnRulesetProps,
   ) : CdkObject(cdkObject), CfnRulesetProps {
     /**
      * The description of the ruleset.

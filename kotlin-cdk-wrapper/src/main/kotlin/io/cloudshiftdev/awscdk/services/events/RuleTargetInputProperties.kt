@@ -120,7 +120,7 @@ public interface RuleTargetInputProperties {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInputProperties,
+    cdkObject: software.amazon.awscdk.services.events.RuleTargetInputProperties,
   ) : CdkObject(cdkObject), RuleTargetInputProperties {
     /**
      * Literal input to the target service (must be valid JSON).

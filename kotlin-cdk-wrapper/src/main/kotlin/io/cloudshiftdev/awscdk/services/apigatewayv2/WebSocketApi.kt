@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class WebSocketApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApi,
+public open class WebSocketApi(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApi,
 ) : Resource(cdkObject), IWebSocketApi, IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -470,6 +470,7 @@ public open class WebSocketApi internal constructor(
         WebSocketApi = WebSocketApi(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketApi):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketApi = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.WebSocketApi = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketApi
   }
 }

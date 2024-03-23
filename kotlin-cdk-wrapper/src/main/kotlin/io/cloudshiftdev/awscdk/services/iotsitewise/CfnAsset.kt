@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html)
  */
-public open class CfnAsset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset,
+public open class CfnAsset(
+  cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -82,12 +82,12 @@ public open class CfnAsset internal constructor(
   )
 
   /**
-   * A description for the asset.
+   * The ID of the asset, in UUID format.
    */
   public open fun assetDescription(): String? = unwrap(this).getAssetDescription()
 
   /**
-   * A description for the asset.
+   * The ID of the asset, in UUID format.
    */
   public open fun assetDescription(`value`: String) {
     unwrap(this).setAssetDescription(`value`)
@@ -106,26 +106,26 @@ public open class CfnAsset internal constructor(
   }
 
   /**
-   * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+   * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(): Any? = unwrap(this).getAssetHierarchies()
 
   /**
-   * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+   * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(`value`: IResolvable) {
     unwrap(this).setAssetHierarchies(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+   * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(`value`: List<Any>) {
     unwrap(this).setAssetHierarchies(`value`)
   }
 
   /**
-   * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+   * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(vararg `value`: Any): Unit = assetHierarchies(`value`.toList())
 
@@ -142,12 +142,12 @@ public open class CfnAsset internal constructor(
   }
 
   /**
-   * A unique, friendly name for the asset.
+   * A friendly name for the asset.
    */
   public open fun assetName(): String = unwrap(this).getAssetName()
 
   /**
-   * A unique, friendly name for the asset.
+   * A friendly name for the asset.
    */
   public open fun assetName(`value`: String) {
     unwrap(this).setAssetName(`value`)
@@ -225,10 +225,10 @@ public open class CfnAsset internal constructor(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A description for the asset.
+     * The ID of the asset, in UUID format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetdescription)
-     * @param assetDescription A description for the asset. 
+     * @param assetDescription The ID of the asset, in UUID format. 
      */
     public fun assetDescription(assetDescription: String)
 
@@ -241,35 +241,32 @@ public open class CfnAsset internal constructor(
     public fun assetExternalId(assetExternalId: String)
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     public fun assetHierarchies(assetHierarchies: IResolvable)
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     public fun assetHierarchies(assetHierarchies: List<Any>)
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     public fun assetHierarchies(vararg assetHierarchies: Any)
 
@@ -287,12 +284,10 @@ public open class CfnAsset internal constructor(
     public fun assetModelId(assetModelId: String)
 
     /**
-     * A unique, friendly name for the asset.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     * A friendly name for the asset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetname)
-     * @param assetName A unique, friendly name for the asset. 
+     * @param assetName A friendly name for the asset. 
      */
     public fun assetName(assetName: String)
 
@@ -362,10 +357,10 @@ public open class CfnAsset internal constructor(
         software.amazon.awscdk.services.iotsitewise.CfnAsset.Builder.create(scope, id)
 
     /**
-     * A description for the asset.
+     * The ID of the asset, in UUID format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetdescription)
-     * @param assetDescription A description for the asset. 
+     * @param assetDescription The ID of the asset, in UUID format. 
      */
     override fun assetDescription(assetDescription: String) {
       cdkBuilder.assetDescription(assetDescription)
@@ -382,39 +377,36 @@ public open class CfnAsset internal constructor(
     }
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     override fun assetHierarchies(assetHierarchies: IResolvable) {
       cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable::unwrap))
     }
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     override fun assetHierarchies(assetHierarchies: List<Any>) {
       cdkBuilder.assetHierarchies(assetHierarchies)
     }
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assethierarchies)
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * . 
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     override fun assetHierarchies(vararg assetHierarchies: Any): Unit =
         assetHierarchies(assetHierarchies.toList())
@@ -435,12 +427,10 @@ public open class CfnAsset internal constructor(
     }
 
     /**
-     * A unique, friendly name for the asset.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     * A friendly name for the asset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetname)
-     * @param assetName A unique, friendly name for the asset. 
+     * @param assetName A friendly name for the asset. 
      */
     override fun assetName(assetName: String) {
       cdkBuilder.assetName(assetName)
@@ -530,11 +520,11 @@ public open class CfnAsset internal constructor(
         CfnAsset(cdkObject)
 
     internal fun unwrap(wrapped: CfnAsset): software.amazon.awscdk.services.iotsitewise.CfnAsset =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iotsitewise.CfnAsset
   }
 
   /**
-   * Describes an asset hierarchy that contains a `childAssetId` and `hierarchyLogicalId` .
+   * Describes an asset hierarchy that contains a hierarchy's name and ID.
    *
    * Example:
    *
@@ -576,9 +566,9 @@ public open class CfnAsset internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     /**
-     * The `LogicalID` of the hierarchy. This ID is a `hierarchyLogicalId` .
+     * The ID of the hierarchy.
      *
-     * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
+     * This ID is a `hierarchyId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-logicalid)
      */
@@ -605,8 +595,8 @@ public open class CfnAsset internal constructor(
       public fun id(id: String)
 
       /**
-       * @param logicalId The `LogicalID` of the hierarchy. This ID is a `hierarchyLogicalId` .
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
+       * @param logicalId The ID of the hierarchy.
+       * This ID is a `hierarchyId` .
        */
       public fun logicalId(logicalId: String)
     }
@@ -638,8 +628,8 @@ public open class CfnAsset internal constructor(
       }
 
       /**
-       * @param logicalId The `LogicalID` of the hierarchy. This ID is a `hierarchyLogicalId` .
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
+       * @param logicalId The ID of the hierarchy.
+       * This ID is a `hierarchyId` .
        */
       override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
@@ -651,8 +641,7 @@ public open class CfnAsset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty,
     ) : CdkObject(cdkObject), AssetHierarchyProperty {
       /**
        * The Id of the child asset.
@@ -676,9 +665,9 @@ public open class CfnAsset internal constructor(
       override fun id(): String? = unwrap(this).getId()
 
       /**
-       * The `LogicalID` of the hierarchy. This ID is a `hierarchyLogicalId` .
+       * The ID of the hierarchy.
        *
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
+       * This ID is a `hierarchyId` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-logicalid)
        */
@@ -726,14 +715,12 @@ public open class CfnAsset internal constructor(
    */
   public interface AssetPropertyProperty {
     /**
-     * The property alias that identifies the property, such as an OPC-UA server data stream path
-     * (for example, `/company/windfarm/3/turbine/7/temperature` ).
+     * The alias that identifies the property, such as an OPC-UA server data stream path (for
+     * example, `/company/windfarm/3/turbine/7/temperature` ).
      *
      * For more information, see [Mapping industrial data streams to asset
      * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html)
      * in the *AWS IoT SiteWise User Guide* .
-     *
-     * The property alias must have 1-1000 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-alias)
      */
@@ -756,26 +743,19 @@ public open class CfnAsset internal constructor(
     /**
      * The `LogicalID` of the asset property.
      *
-     * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-logicalid)
      */
     public fun logicalId(): String? = unwrap(this).getLogicalId()
 
     /**
-     * The MQTT notification state ( `ENABLED` or `DISABLED` ) for this asset property.
+     * The MQTT notification state (enabled or disabled) for this asset property.
      *
-     * When the notification state is `ENABLED` , AWS IoT SiteWise publishes property value updates
-     * to a unique MQTT topic. For more information, see [Interacting with other
+     * When the notification state is enabled, AWS IoT SiteWise publishes property value updates to
+     * a unique MQTT topic. For more information, see [Interacting with other
      * services](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html)
      * in the *AWS IoT SiteWise User Guide* .
      *
      * If you omit this parameter, the notification state is set to `DISABLED` .
-     *
-     *
-     * You must use all caps for the NotificationState parameter. If you use lower case letters, you
-     * will receive a schema validation error.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-notificationstate)
      */
@@ -794,13 +774,11 @@ public open class CfnAsset internal constructor(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alias The property alias that identifies the property, such as an OPC-UA server data
-       * stream path (for example, `/company/windfarm/3/turbine/7/temperature` ).
+       * @param alias The alias that identifies the property, such as an OPC-UA server data stream
+       * path (for example, `/company/windfarm/3/turbine/7/temperature` ).
        * For more information, see [Mapping industrial data streams to asset
        * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html)
        * in the *AWS IoT SiteWise User Guide* .
-       *
-       * The property alias must have 1-1000 characters.
        */
       public fun alias(alias: String)
 
@@ -816,23 +794,18 @@ public open class CfnAsset internal constructor(
 
       /**
        * @param logicalId The `LogicalID` of the asset property.
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
        */
       public fun logicalId(logicalId: String)
 
       /**
-       * @param notificationState The MQTT notification state ( `ENABLED` or `DISABLED` ) for this
-       * asset property.
-       * When the notification state is `ENABLED` , AWS IoT SiteWise publishes property value
-       * updates to a unique MQTT topic. For more information, see [Interacting with other
+       * @param notificationState The MQTT notification state (enabled or disabled) for this asset
+       * property.
+       * When the notification state is enabled, AWS IoT SiteWise publishes property value updates
+       * to a unique MQTT topic. For more information, see [Interacting with other
        * services](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html)
        * in the *AWS IoT SiteWise User Guide* .
        *
        * If you omit this parameter, the notification state is set to `DISABLED` .
-       *
-       *
-       * You must use all caps for the NotificationState parameter. If you use lower case letters,
-       * you will receive a schema validation error.
        */
       public fun notificationState(notificationState: String)
 
@@ -848,13 +821,11 @@ public open class CfnAsset internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty.builder()
 
       /**
-       * @param alias The property alias that identifies the property, such as an OPC-UA server data
-       * stream path (for example, `/company/windfarm/3/turbine/7/temperature` ).
+       * @param alias The alias that identifies the property, such as an OPC-UA server data stream
+       * path (for example, `/company/windfarm/3/turbine/7/temperature` ).
        * For more information, see [Mapping industrial data streams to asset
        * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html)
        * in the *AWS IoT SiteWise User Guide* .
-       *
-       * The property alias must have 1-1000 characters.
        */
       override fun alias(alias: String) {
         cdkBuilder.alias(alias)
@@ -876,25 +847,20 @@ public open class CfnAsset internal constructor(
 
       /**
        * @param logicalId The `LogicalID` of the asset property.
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
        */
       override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
       }
 
       /**
-       * @param notificationState The MQTT notification state ( `ENABLED` or `DISABLED` ) for this
-       * asset property.
-       * When the notification state is `ENABLED` , AWS IoT SiteWise publishes property value
-       * updates to a unique MQTT topic. For more information, see [Interacting with other
+       * @param notificationState The MQTT notification state (enabled or disabled) for this asset
+       * property.
+       * When the notification state is enabled, AWS IoT SiteWise publishes property value updates
+       * to a unique MQTT topic. For more information, see [Interacting with other
        * services](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html)
        * in the *AWS IoT SiteWise User Guide* .
        *
        * If you omit this parameter, the notification state is set to `DISABLED` .
-       *
-       *
-       * You must use all caps for the NotificationState parameter. If you use lower case letters,
-       * you will receive a schema validation error.
        */
       override fun notificationState(notificationState: String) {
         cdkBuilder.notificationState(notificationState)
@@ -912,18 +878,15 @@ public open class CfnAsset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty,
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty,
     ) : CdkObject(cdkObject), AssetPropertyProperty {
       /**
-       * The property alias that identifies the property, such as an OPC-UA server data stream path
-       * (for example, `/company/windfarm/3/turbine/7/temperature` ).
+       * The alias that identifies the property, such as an OPC-UA server data stream path (for
+       * example, `/company/windfarm/3/turbine/7/temperature` ).
        *
        * For more information, see [Mapping industrial data streams to asset
        * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html)
        * in the *AWS IoT SiteWise User Guide* .
-       *
-       * The property alias must have 1-1000 characters.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-alias)
        */
@@ -946,26 +909,19 @@ public open class CfnAsset internal constructor(
       /**
        * The `LogicalID` of the asset property.
        *
-       * The maximum length is 256 characters, with the pattern `[^\u0000-\u001F\u007F]+` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-logicalid)
        */
       override fun logicalId(): String? = unwrap(this).getLogicalId()
 
       /**
-       * The MQTT notification state ( `ENABLED` or `DISABLED` ) for this asset property.
+       * The MQTT notification state (enabled or disabled) for this asset property.
        *
-       * When the notification state is `ENABLED` , AWS IoT SiteWise publishes property value
-       * updates to a unique MQTT topic. For more information, see [Interacting with other
+       * When the notification state is enabled, AWS IoT SiteWise publishes property value updates
+       * to a unique MQTT topic. For more information, see [Interacting with other
        * services](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/interact-with-other-services.html)
        * in the *AWS IoT SiteWise User Guide* .
        *
        * If you omit this parameter, the notification state is set to `DISABLED` .
-       *
-       *
-       * You must use all caps for the NotificationState parameter. If you use lower case letters,
-       * you will receive a schema validation error.
-       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-notificationstate)
        */

@@ -245,7 +245,7 @@ public interface CfnComponentVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersionProps,
+    cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersionProps,
   ) : CdkObject(cdkObject), CfnComponentVersionProps {
     /**
      * The recipe to use to create the component.

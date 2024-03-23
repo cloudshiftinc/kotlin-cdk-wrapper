@@ -125,8 +125,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticsearch.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1586,7 +1586,1118 @@ public open class CfnDomain internal constructor(
         = CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.elasticsearch.CfnDomain
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.elasticsearch.CfnDomain
+  }
+
+  /**
+   * Specifies options for fine-grained access control.
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * AdvancedSecurityOptionsInputProperty advancedSecurityOptionsInputProperty =
+   * AdvancedSecurityOptionsInputProperty.builder()
+   * .anonymousAuthEnabled(false)
+   * .enabled(false)
+   * .internalUserDatabaseEnabled(false)
+   * .masterUserOptions(MasterUserOptionsProperty.builder()
+   * .masterUserArn("masterUserArn")
+   * .masterUserName("masterUserName")
+   * .masterUserPassword("masterUserPassword")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html)
+   */
+  public interface AdvancedSecurityOptionsInputProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)
+     */
+    public fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
+
+    /**
+     * True to enable fine-grained access control.
+     *
+     * You must also enable encryption of data at rest and node-to-node encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * True to enable the internal user database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)
+     */
+    public fun internalUserDatabaseEnabled(): Any? = unwrap(this).getInternalUserDatabaseEnabled()
+
+    /**
+     * Specifies information about the master user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions)
+     */
+    public fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
+
+    /**
+     * A builder for [AdvancedSecurityOptionsInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param anonymousAuthEnabled the value to be set.
+       */
+      public fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean)
+
+      /**
+       * @param anonymousAuthEnabled the value to be set.
+       */
+      public fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable)
+
+      /**
+       * @param enabled True to enable fine-grained access control.
+       * You must also enable encryption of data at rest and node-to-node encryption.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled True to enable fine-grained access control.
+       * You must also enable encryption of data at rest and node-to-node encryption.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param internalUserDatabaseEnabled True to enable the internal user database.
+       */
+      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean)
+
+      /**
+       * @param internalUserDatabaseEnabled True to enable the internal user database.
+       */
+      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable)
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      public fun masterUserOptions(masterUserOptions: IResolvable)
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty)
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8b99364a7a797efb4caa40815da91bc63a60a5bafb54620f1c05db76cda54b0")
+      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty.builder()
+
+      /**
+       * @param anonymousAuthEnabled the value to be set.
+       */
+      override fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean) {
+        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled)
+      }
+
+      /**
+       * @param anonymousAuthEnabled the value to be set.
+       */
+      override fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
+        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enabled True to enable fine-grained access control.
+       * You must also enable encryption of data at rest and node-to-node encryption.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled True to enable fine-grained access control.
+       * You must also enable encryption of data at rest and node-to-node encryption.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param internalUserDatabaseEnabled True to enable the internal user database.
+       */
+      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean) {
+        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled)
+      }
+
+      /**
+       * @param internalUserDatabaseEnabled True to enable the internal user database.
+       */
+      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
+        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      override fun masterUserOptions(masterUserOptions: IResolvable) {
+        cdkBuilder.masterUserOptions(masterUserOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      override fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
+        cdkBuilder.masterUserOptions(masterUserOptions.let(MasterUserOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param masterUserOptions Specifies information about the master user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8b99364a7a797efb4caa40815da91bc63a60a5bafb54620f1c05db76cda54b0")
+      override
+          fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit):
+          Unit = masterUserOptions(MasterUserOptionsProperty(masterUserOptions))
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty,
+    ) : CdkObject(cdkObject), AdvancedSecurityOptionsInputProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)
+       */
+      override fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
+
+      /**
+       * True to enable fine-grained access control.
+       *
+       * You must also enable encryption of data at rest and node-to-node encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * True to enable the internal user database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)
+       */
+      override fun internalUserDatabaseEnabled(): Any? =
+          unwrap(this).getInternalUserDatabaseEnabled()
+
+      /**
+       * Specifies information about the master user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions)
+       */
+      override fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AdvancedSecurityOptionsInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty):
+          AdvancedSecurityOptionsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedSecurityOptionsInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdvancedSecurityOptionsInputProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
+    }
+  }
+
+  /**
+   * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * CognitoOptionsProperty cognitoOptionsProperty = CognitoOptionsProperty.builder()
+   * .enabled(false)
+   * .identityPoolId("identityPoolId")
+   * .roleArn("roleArn")
+   * .userPoolId("userPoolId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html)
+   */
+  public interface CognitoOptionsProperty {
+    /**
+     * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
+     *
+     * See [Amazon Cognito authentication for OpenSearch
+     * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
+     * Dashboards authentication.
+     *
+     * Required if you enable Cognito authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid)
+     */
+    public fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+
+    /**
+     * The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool
+     * and identity pool.
+     *
+     * Required if you enable Cognito authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
+     * Dashboards authentication.
+     *
+     * Required if you enable Cognito authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid)
+     */
+    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
+
+    /**
+     * A builder for [CognitoOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+       * .
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+       * .
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
+       * to use for OpenSearch Dashboards authentication.
+       * Required if you enable Cognito authentication.
+       */
+      public fun identityPoolId(identityPoolId: String)
+
+      /**
+       * @param roleArn The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure
+       * your user pool and identity pool.
+       * Required if you enable Cognito authentication.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
+       * for OpenSearch Dashboards authentication.
+       * Required if you enable Cognito authentication.
+       */
+      public fun userPoolId(userPoolId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty.Builder =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty.builder()
+
+      /**
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+       * .
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
+       * Dashboards.
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+       * .
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
+       * to use for OpenSearch Dashboards authentication.
+       * Required if you enable Cognito authentication.
+       */
+      override fun identityPoolId(identityPoolId: String) {
+        cdkBuilder.identityPoolId(identityPoolId)
+      }
+
+      /**
+       * @param roleArn The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure
+       * your user pool and identity pool.
+       * Required if you enable Cognito authentication.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
+       * for OpenSearch Dashboards authentication.
+       * Required if you enable Cognito authentication.
+       */
+      override fun userPoolId(userPoolId: String) {
+        cdkBuilder.userPoolId(userPoolId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty,
+    ) : CdkObject(cdkObject), CognitoOptionsProperty {
+      /**
+       * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
+       *
+       * See [Amazon Cognito authentication for OpenSearch
+       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
+       * Dashboards authentication.
+       *
+       * Required if you enable Cognito authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid)
+       */
+      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+
+      /**
+       * The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool
+       * and identity pool.
+       *
+       * Required if you enable Cognito authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
+       * Dashboards authentication.
+       *
+       * Required if you enable Cognito authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid)
+       */
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty):
+          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CognitoOptionsProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies options for cold storage. For more information, see [Cold storage for Amazon
+   * Elasticsearch
+   * Service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/cold-storage.html)
+   * .
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * ColdStorageOptionsProperty coldStorageOptionsProperty = ColdStorageOptionsProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html)
+   */
+  public interface ColdStorageOptionsProperty {
+    /**
+     * Whether to enable or disable cold storage on the domain.
+     *
+     * You must enable UltraWarm storage in order to enable cold storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html#cfn-elasticsearch-domain-coldstorageoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [ColdStorageOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage in order to enable cold storage.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage in order to enable cold storage.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty.builder()
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage in order to enable cold storage.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Whether to enable or disable cold storage on the domain.
+       * You must enable UltraWarm storage in order to enable cold storage.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty,
+    ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
+      /**
+       * Whether to enable or disable cold storage on the domain.
+       *
+       * You must enable UltraWarm storage in order to enable cold storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html#cfn-elasticsearch-domain-coldstorageoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ColdStorageOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty):
+          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColdStorageOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ColdStorageOptionsProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies additional options for the domain endpoint, such as whether to require HTTPS for all
+   * traffic or whether to use a custom endpoint rather than the default endpoint.
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * DomainEndpointOptionsProperty domainEndpointOptionsProperty =
+   * DomainEndpointOptionsProperty.builder()
+   * .customEndpoint("customEndpoint")
+   * .customEndpointCertificateArn("customEndpointCertificateArn")
+   * .customEndpointEnabled(false)
+   * .enforceHttps(false)
+   * .tlsSecurityPolicy("tlsSecurityPolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html)
+   */
+  public interface DomainEndpointOptionsProperty {
+    /**
+     * The fully qualified URL for your custom endpoint.
+     *
+     * Required if you enabled a custom endpoint for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpoint)
+     */
+    public fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
+
+    /**
+     * The AWS Certificate Manager ARN for your domain's SSL/TLS certificate.
+     *
+     * Required if you enabled a custom endpoint for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn)
+     */
+    public fun customEndpointCertificateArn(): String? =
+        unwrap(this).getCustomEndpointCertificateArn()
+
+    /**
+     * True to enable a custom endpoint for the domain.
+     *
+     * If enabled, you must also provide values for `CustomEndpoint` and
+     * `CustomEndpointCertificateArn` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled)
+     */
+    public fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
+
+    /**
+     * True to require that all traffic to the domain arrive over HTTPS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps)
+     */
+    public fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
+
+    /**
+     * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
+     * (recommended) or 1.2:.
+     *
+     * * `Policy-Min-TLS-1-0-2019-07`
+     * * `Policy-Min-TLS-1-2-2019-07`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy)
+     */
+    public fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
+
+    /**
+     * A builder for [DomainEndpointOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customEndpoint The fully qualified URL for your custom endpoint.
+       * Required if you enabled a custom endpoint for the domain.
+       */
+      public fun customEndpoint(customEndpoint: String)
+
+      /**
+       * @param customEndpointCertificateArn The AWS Certificate Manager ARN for your domain's
+       * SSL/TLS certificate.
+       * Required if you enabled a custom endpoint for the domain.
+       */
+      public fun customEndpointCertificateArn(customEndpointCertificateArn: String)
+
+      /**
+       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
+       * If enabled, you must also provide values for `CustomEndpoint` and
+       * `CustomEndpointCertificateArn` .
+       */
+      public fun customEndpointEnabled(customEndpointEnabled: Boolean)
+
+      /**
+       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
+       * If enabled, you must also provide values for `CustomEndpoint` and
+       * `CustomEndpointCertificateArn` .
+       */
+      public fun customEndpointEnabled(customEndpointEnabled: IResolvable)
+
+      /**
+       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
+       */
+      public fun enforceHttps(enforceHttps: Boolean)
+
+      /**
+       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
+       */
+      public fun enforceHttps(enforceHttps: IResolvable)
+
+      /**
+       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
+       * values are TLS 1.3 (recommended) or 1.2:.
+       * * `Policy-Min-TLS-1-0-2019-07`
+       * * `Policy-Min-TLS-1-2-2019-07`
+       */
+      public fun tlsSecurityPolicy(tlsSecurityPolicy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty.builder()
+
+      /**
+       * @param customEndpoint The fully qualified URL for your custom endpoint.
+       * Required if you enabled a custom endpoint for the domain.
+       */
+      override fun customEndpoint(customEndpoint: String) {
+        cdkBuilder.customEndpoint(customEndpoint)
+      }
+
+      /**
+       * @param customEndpointCertificateArn The AWS Certificate Manager ARN for your domain's
+       * SSL/TLS certificate.
+       * Required if you enabled a custom endpoint for the domain.
+       */
+      override fun customEndpointCertificateArn(customEndpointCertificateArn: String) {
+        cdkBuilder.customEndpointCertificateArn(customEndpointCertificateArn)
+      }
+
+      /**
+       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
+       * If enabled, you must also provide values for `CustomEndpoint` and
+       * `CustomEndpointCertificateArn` .
+       */
+      override fun customEndpointEnabled(customEndpointEnabled: Boolean) {
+        cdkBuilder.customEndpointEnabled(customEndpointEnabled)
+      }
+
+      /**
+       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
+       * If enabled, you must also provide values for `CustomEndpoint` and
+       * `CustomEndpointCertificateArn` .
+       */
+      override fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
+        cdkBuilder.customEndpointEnabled(customEndpointEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
+       */
+      override fun enforceHttps(enforceHttps: Boolean) {
+        cdkBuilder.enforceHttps(enforceHttps)
+      }
+
+      /**
+       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
+       */
+      override fun enforceHttps(enforceHttps: IResolvable) {
+        cdkBuilder.enforceHttps(enforceHttps.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
+       * values are TLS 1.3 (recommended) or 1.2:.
+       * * `Policy-Min-TLS-1-0-2019-07`
+       * * `Policy-Min-TLS-1-2-2019-07`
+       */
+      override fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
+        cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty,
+    ) : CdkObject(cdkObject), DomainEndpointOptionsProperty {
+      /**
+       * The fully qualified URL for your custom endpoint.
+       *
+       * Required if you enabled a custom endpoint for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpoint)
+       */
+      override fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
+
+      /**
+       * The AWS Certificate Manager ARN for your domain's SSL/TLS certificate.
+       *
+       * Required if you enabled a custom endpoint for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn)
+       */
+      override fun customEndpointCertificateArn(): String? =
+          unwrap(this).getCustomEndpointCertificateArn()
+
+      /**
+       * True to enable a custom endpoint for the domain.
+       *
+       * If enabled, you must also provide values for `CustomEndpoint` and
+       * `CustomEndpointCertificateArn` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled)
+       */
+      override fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
+
+      /**
+       * True to require that all traffic to the domain arrive over HTTPS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps)
+       */
+      override fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
+
+      /**
+       * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
+       * (recommended) or 1.2:.
+       *
+       * * `Policy-Min-TLS-1-0-2019-07`
+       * * `Policy-Min-TLS-1-2-2019-07`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy)
+       */
+      override fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DomainEndpointOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty):
+          DomainEndpointOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DomainEndpointOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DomainEndpointOptionsProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty
+    }
+  }
+
+  /**
+   * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data
+   * nodes in the OpenSearch Service domain.
+   *
+   * For more information, see [EBS volume size
+   * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * EBSOptionsProperty eBSOptionsProperty = EBSOptionsProperty.builder()
+   * .ebsEnabled(false)
+   * .iops(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html)
+   */
+  public interface EBSOptionsProperty {
+    /**
+     * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
+     * domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-ebsenabled)
+     */
+    public fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+
+    /**
+     * The number of I/O operations per second (IOPS) that the volume supports.
+     *
+     * This property applies only to provisioned IOPS EBS volume types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The size (in GiB) of the EBS volume for each data node.
+     *
+     * The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance
+     * type to which it is attached. For more information, see [EBS volume size
+     * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+     * in the *Amazon OpenSearch Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The EBS volume type to use with the OpenSearch Service domain, such as standard, gp2, or io1.
+     *
+     * For more information about each type, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+     * EC2 User Guide for Linux Instances* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EBSOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      public fun ebsEnabled(ebsEnabled: Boolean)
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      public fun ebsEnabled(ebsEnabled: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * This property applies only to provisioned IOPS EBS volume types.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The EBS volume type to use with the OpenSearch Service domain, such as
+       * standard, gp2, or io1.
+       * For more information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty.Builder =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty.builder()
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      override fun ebsEnabled(ebsEnabled: Boolean) {
+        cdkBuilder.ebsEnabled(ebsEnabled)
+      }
+
+      /**
+       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
+       * OpenSearch Service domain.
+       */
+      override fun ebsEnabled(ebsEnabled: IResolvable) {
+        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+       * This property applies only to provisioned IOPS EBS volume types.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The EBS volume type to use with the OpenSearch Service domain, such as
+       * standard, gp2, or io1.
+       * For more information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty,
+    ) : CdkObject(cdkObject), EBSOptionsProperty {
+      /**
+       * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
+       * domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-ebsenabled)
+       */
+      override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+
+      /**
+       * The number of I/O operations per second (IOPS) that the volume supports.
+       *
+       * This property applies only to provisioned IOPS EBS volume types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The size (in GiB) of the EBS volume for each data node.
+       *
+       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
+       * instance type to which it is attached. For more information, see [EBS volume size
+       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
+       * in the *Amazon OpenSearch Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The EBS volume type to use with the OpenSearch Service domain, such as standard, gp2, or
+       * io1.
+       *
+       * For more information about each type, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
+       * EC2 User Guide for Linux Instances* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EBSOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty):
+          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EBSOptionsProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty
+    }
   }
 
   /**
@@ -2083,8 +3194,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty,
     ) : CdkObject(cdkObject), ElasticsearchClusterConfigProperty {
       /**
        * Specifies cold storage options for the domain.
@@ -2216,6 +3326,303 @@ public open class CfnDomain internal constructor(
   }
 
   /**
+   * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key
+   * to use.
+   *
+   *
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
+   * EncryptionAtRestOptionsProperty.builder()
+   * .enabled(false)
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html)
+   */
+  public interface EncryptionAtRestOptionsProperty {
+    /**
+     * Specify `true` to enable encryption at rest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The KMS key ID.
+     *
+     * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
+     * rest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [EncryptionAtRestOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specify `true` to enable encryption at rest.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param kmsKeyId The KMS key ID.
+       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
+       * rest.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty.builder()
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify `true` to enable encryption at rest.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param kmsKeyId The KMS key ID.
+       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
+       * rest.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty,
+    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+      /**
+       * Specify `true` to enable encryption at rest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The KMS key ID.
+       *
+       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
+       * rest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty):
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty
+    }
+  }
+
+  /**
+   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
+   * [New resource
+   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+   * in the *Amazon OpenSearch Service Developer Guide* .
+   *
+   * Specifies whether the OpenSearch Service domain publishes the Elasticsearch application, search
+   * slow logs, or index slow logs to Amazon CloudWatch. Each option must be an object of name
+   * `SEARCH_SLOW_LOGS` , `ES_APPLICATION_LOGS` , `INDEX_SLOW_LOGS` , or `AUDIT_LOGS` depending on the
+   * type of logs you want to publish.
+   *
+   * If you enable a slow log, you still have to enable the *collection* of slow logs using the
+   * Configuration API. To learn more, see [Enabling log publishing ( AWS
+   * CLI)](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createdomain-configure-slow-logs.html#createdomain-configure-slow-logs-cli)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
+   * LogPublishingOptionProperty logPublishingOptionProperty = LogPublishingOptionProperty.builder()
+   * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html)
+   */
+  public interface LogPublishingOptionProperty {
+    /**
+     * Specifies the CloudWatch log group to publish to.
+     *
+     * Required if you enable log publishing for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn)
+     */
+    public fun cloudWatchLogsLogGroupArn(): String? = unwrap(this).getCloudWatchLogsLogGroupArn()
+
+    /**
+     * If `true` , enables the publishing of logs to CloudWatch.
+     *
+     * Default: `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [LogPublishingOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
+       * Required if you enable log publishing for the domain.
+       */
+      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty.builder()
+
+      /**
+       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
+       * Required if you enable log publishing for the domain.
+       */
+      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
+        cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
+      }
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
+       * Default: `false` .
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty,
+    ) : CdkObject(cdkObject), LogPublishingOptionProperty {
+      /**
+       * Specifies the CloudWatch log group to publish to.
+       *
+       * Required if you enable log publishing for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn)
+       */
+      override fun cloudWatchLogsLogGroupArn(): String? =
+          unwrap(this).getCloudWatchLogsLogGroupArn()
+
+      /**
+       * If `true` , enables the publishing of logs to CloudWatch.
+       *
+       * Default: `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogPublishingOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty):
+          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogPublishingOptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogPublishingOptionProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty
+    }
+  }
+
+  /**
    * Specifies information about the master user. Required if you enabled the internal user
    * database.
    *
@@ -2333,8 +3740,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty,
     ) : CdkObject(cdkObject), MasterUserOptionsProperty {
       /**
        * ARN for the master user.
@@ -2379,555 +3785,6 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies options for fine-grained access control.
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * AdvancedSecurityOptionsInputProperty advancedSecurityOptionsInputProperty =
-   * AdvancedSecurityOptionsInputProperty.builder()
-   * .anonymousAuthEnabled(false)
-   * .enabled(false)
-   * .internalUserDatabaseEnabled(false)
-   * .masterUserOptions(MasterUserOptionsProperty.builder()
-   * .masterUserArn("masterUserArn")
-   * .masterUserName("masterUserName")
-   * .masterUserPassword("masterUserPassword")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html)
-   */
-  public interface AdvancedSecurityOptionsInputProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)
-     */
-    public fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
-
-    /**
-     * True to enable fine-grained access control.
-     *
-     * You must also enable encryption of data at rest and node-to-node encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * True to enable the internal user database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)
-     */
-    public fun internalUserDatabaseEnabled(): Any? = unwrap(this).getInternalUserDatabaseEnabled()
-
-    /**
-     * Specifies information about the master user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions)
-     */
-    public fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
-
-    /**
-     * A builder for [AdvancedSecurityOptionsInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param anonymousAuthEnabled the value to be set.
-       */
-      public fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean)
-
-      /**
-       * @param anonymousAuthEnabled the value to be set.
-       */
-      public fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable)
-
-      /**
-       * @param enabled True to enable fine-grained access control.
-       * You must also enable encryption of data at rest and node-to-node encryption.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled True to enable fine-grained access control.
-       * You must also enable encryption of data at rest and node-to-node encryption.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param internalUserDatabaseEnabled True to enable the internal user database.
-       */
-      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean)
-
-      /**
-       * @param internalUserDatabaseEnabled True to enable the internal user database.
-       */
-      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable)
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      public fun masterUserOptions(masterUserOptions: IResolvable)
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty)
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f8b99364a7a797efb4caa40815da91bc63a60a5bafb54620f1c05db76cda54b0")
-      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty.builder()
-
-      /**
-       * @param anonymousAuthEnabled the value to be set.
-       */
-      override fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean) {
-        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled)
-      }
-
-      /**
-       * @param anonymousAuthEnabled the value to be set.
-       */
-      override fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
-        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enabled True to enable fine-grained access control.
-       * You must also enable encryption of data at rest and node-to-node encryption.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled True to enable fine-grained access control.
-       * You must also enable encryption of data at rest and node-to-node encryption.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param internalUserDatabaseEnabled True to enable the internal user database.
-       */
-      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean) {
-        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled)
-      }
-
-      /**
-       * @param internalUserDatabaseEnabled True to enable the internal user database.
-       */
-      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
-        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      override fun masterUserOptions(masterUserOptions: IResolvable) {
-        cdkBuilder.masterUserOptions(masterUserOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      override fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
-        cdkBuilder.masterUserOptions(masterUserOptions.let(MasterUserOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param masterUserOptions Specifies information about the master user.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f8b99364a7a797efb4caa40815da91bc63a60a5bafb54620f1c05db76cda54b0")
-      override
-          fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit):
-          Unit = masterUserOptions(MasterUserOptionsProperty(masterUserOptions))
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty,
-    ) : CdkObject(cdkObject), AdvancedSecurityOptionsInputProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-anonymousauthenabled)
-       */
-      override fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
-
-      /**
-       * True to enable fine-grained access control.
-       *
-       * You must also enable encryption of data at rest and node-to-node encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * True to enable the internal user database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)
-       */
-      override fun internalUserDatabaseEnabled(): Any? =
-          unwrap(this).getInternalUserDatabaseEnabled()
-
-      /**
-       * Specifies information about the master user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.html#cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions)
-       */
-      override fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AdvancedSecurityOptionsInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty):
-          AdvancedSecurityOptionsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdvancedSecurityOptionsInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdvancedSecurityOptionsInputProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
-    }
-  }
-
-  /**
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   * Specifies whether the OpenSearch Service domain publishes the Elasticsearch application, search
-   * slow logs, or index slow logs to Amazon CloudWatch. Each option must be an object of name
-   * `SEARCH_SLOW_LOGS` , `ES_APPLICATION_LOGS` , `INDEX_SLOW_LOGS` , or `AUDIT_LOGS` depending on the
-   * type of logs you want to publish.
-   *
-   * If you enable a slow log, you still have to enable the *collection* of slow logs using the
-   * Configuration API. To learn more, see [Enabling log publishing ( AWS
-   * CLI)](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createdomain-configure-slow-logs.html#createdomain-configure-slow-logs-cli)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * LogPublishingOptionProperty logPublishingOptionProperty = LogPublishingOptionProperty.builder()
-   * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html)
-   */
-  public interface LogPublishingOptionProperty {
-    /**
-     * Specifies the CloudWatch log group to publish to.
-     *
-     * Required if you enable log publishing for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn)
-     */
-    public fun cloudWatchLogsLogGroupArn(): String? = unwrap(this).getCloudWatchLogsLogGroupArn()
-
-    /**
-     * If `true` , enables the publishing of logs to CloudWatch.
-     *
-     * Default: `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [LogPublishingOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
-       * Required if you enable log publishing for the domain.
-       */
-      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty.builder()
-
-      /**
-       * @param cloudWatchLogsLogGroupArn Specifies the CloudWatch log group to publish to.
-       * Required if you enable log publishing for the domain.
-       */
-      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
-        cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
-      }
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled If `true` , enables the publishing of logs to CloudWatch.
-       * Default: `false` .
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty,
-    ) : CdkObject(cdkObject), LogPublishingOptionProperty {
-      /**
-       * Specifies the CloudWatch log group to publish to.
-       *
-       * Required if you enable log publishing for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn)
-       */
-      override fun cloudWatchLogsLogGroupArn(): String? =
-          unwrap(this).getCloudWatchLogsLogGroupArn()
-
-      /**
-       * If `true` , enables the publishing of logs to CloudWatch.
-       *
-       * Default: `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-logpublishingoption.html#cfn-elasticsearch-domain-logpublishingoption-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogPublishingOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty):
-          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LogPublishingOptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogPublishingOptionProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty
-    }
-  }
-
-  /**
-   * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key
-   * to use.
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
-   * EncryptionAtRestOptionsProperty.builder()
-   * .enabled(false)
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html)
-   */
-  public interface EncryptionAtRestOptionsProperty {
-    /**
-     * Specify `true` to enable encryption at rest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The KMS key ID.
-     *
-     * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
-     * rest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [EncryptionAtRestOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Specify `true` to enable encryption at rest.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param kmsKeyId The KMS key ID.
-       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
-       * rest.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty.builder()
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specify `true` to enable encryption at rest.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param kmsKeyId The KMS key ID.
-       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
-       * rest.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
-      /**
-       * Specify `true` to enable encryption at rest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The KMS key ID.
-       *
-       * Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a` . Required if you enable encryption at
-       * rest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-encryptionatrestoptions.html#cfn-elasticsearch-domain-encryptionatrestoptions-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty
     }
   }
 
@@ -3009,8 +3866,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty,
     ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
       /**
        * Specifies whether node-to-node encryption is enabled, as a Boolean.
@@ -3115,8 +3971,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty,
     ) : CdkObject(cdkObject), SnapshotOptionsProperty {
       /**
        * The hour in UTC during which the service takes an automated daily snapshot of the indices
@@ -3146,499 +4001,6 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies zone awareness configuration options. Only use if `ZoneAwarenessEnabled` is `true` .
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * ZoneAwarenessConfigProperty zoneAwarenessConfigProperty = ZoneAwarenessConfigProperty.builder()
-   * .availabilityZoneCount(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html)
-   */
-  public interface ZoneAwarenessConfigProperty {
-    /**
-     * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the domain
-     * to use.
-     *
-     * Valid values are `2` and `3` . Default is 2.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html#cfn-elasticsearch-domain-zoneawarenessconfig-availabilityzonecount)
-     */
-    public fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
-
-    /**
-     * A builder for [ZoneAwarenessConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
-       * of AZs that you want the domain to use.
-       * Valid values are `2` and `3` . Default is 2.
-       */
-      public fun availabilityZoneCount(availabilityZoneCount: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty.builder()
-
-      /**
-       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
-       * of AZs that you want the domain to use.
-       * Valid values are `2` and `3` . Default is 2.
-       */
-      override fun availabilityZoneCount(availabilityZoneCount: Number) {
-        cdkBuilder.availabilityZoneCount(availabilityZoneCount)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty,
-    ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
-      /**
-       * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the
-       * domain to use.
-       *
-       * Valid values are `2` and `3` . Default is 2.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html#cfn-elasticsearch-domain-zoneawarenessconfig-availabilityzonecount)
-       */
-      override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ZoneAwarenessConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty):
-          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZoneAwarenessConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty
-    }
-  }
-
-  /**
-   * Specifies additional options for the domain endpoint, such as whether to require HTTPS for all
-   * traffic or whether to use a custom endpoint rather than the default endpoint.
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * DomainEndpointOptionsProperty domainEndpointOptionsProperty =
-   * DomainEndpointOptionsProperty.builder()
-   * .customEndpoint("customEndpoint")
-   * .customEndpointCertificateArn("customEndpointCertificateArn")
-   * .customEndpointEnabled(false)
-   * .enforceHttps(false)
-   * .tlsSecurityPolicy("tlsSecurityPolicy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html)
-   */
-  public interface DomainEndpointOptionsProperty {
-    /**
-     * The fully qualified URL for your custom endpoint.
-     *
-     * Required if you enabled a custom endpoint for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpoint)
-     */
-    public fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
-
-    /**
-     * The AWS Certificate Manager ARN for your domain's SSL/TLS certificate.
-     *
-     * Required if you enabled a custom endpoint for the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn)
-     */
-    public fun customEndpointCertificateArn(): String? =
-        unwrap(this).getCustomEndpointCertificateArn()
-
-    /**
-     * True to enable a custom endpoint for the domain.
-     *
-     * If enabled, you must also provide values for `CustomEndpoint` and
-     * `CustomEndpointCertificateArn` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled)
-     */
-    public fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
-
-    /**
-     * True to require that all traffic to the domain arrive over HTTPS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps)
-     */
-    public fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
-
-    /**
-     * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
-     * (recommended) or 1.2:.
-     *
-     * * `Policy-Min-TLS-1-0-2019-07`
-     * * `Policy-Min-TLS-1-2-2019-07`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy)
-     */
-    public fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
-
-    /**
-     * A builder for [DomainEndpointOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param customEndpoint The fully qualified URL for your custom endpoint.
-       * Required if you enabled a custom endpoint for the domain.
-       */
-      public fun customEndpoint(customEndpoint: String)
-
-      /**
-       * @param customEndpointCertificateArn The AWS Certificate Manager ARN for your domain's
-       * SSL/TLS certificate.
-       * Required if you enabled a custom endpoint for the domain.
-       */
-      public fun customEndpointCertificateArn(customEndpointCertificateArn: String)
-
-      /**
-       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
-       * If enabled, you must also provide values for `CustomEndpoint` and
-       * `CustomEndpointCertificateArn` .
-       */
-      public fun customEndpointEnabled(customEndpointEnabled: Boolean)
-
-      /**
-       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
-       * If enabled, you must also provide values for `CustomEndpoint` and
-       * `CustomEndpointCertificateArn` .
-       */
-      public fun customEndpointEnabled(customEndpointEnabled: IResolvable)
-
-      /**
-       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
-       */
-      public fun enforceHttps(enforceHttps: Boolean)
-
-      /**
-       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
-       */
-      public fun enforceHttps(enforceHttps: IResolvable)
-
-      /**
-       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
-       * values are TLS 1.3 (recommended) or 1.2:.
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
-       */
-      public fun tlsSecurityPolicy(tlsSecurityPolicy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty.builder()
-
-      /**
-       * @param customEndpoint The fully qualified URL for your custom endpoint.
-       * Required if you enabled a custom endpoint for the domain.
-       */
-      override fun customEndpoint(customEndpoint: String) {
-        cdkBuilder.customEndpoint(customEndpoint)
-      }
-
-      /**
-       * @param customEndpointCertificateArn The AWS Certificate Manager ARN for your domain's
-       * SSL/TLS certificate.
-       * Required if you enabled a custom endpoint for the domain.
-       */
-      override fun customEndpointCertificateArn(customEndpointCertificateArn: String) {
-        cdkBuilder.customEndpointCertificateArn(customEndpointCertificateArn)
-      }
-
-      /**
-       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
-       * If enabled, you must also provide values for `CustomEndpoint` and
-       * `CustomEndpointCertificateArn` .
-       */
-      override fun customEndpointEnabled(customEndpointEnabled: Boolean) {
-        cdkBuilder.customEndpointEnabled(customEndpointEnabled)
-      }
-
-      /**
-       * @param customEndpointEnabled True to enable a custom endpoint for the domain.
-       * If enabled, you must also provide values for `CustomEndpoint` and
-       * `CustomEndpointCertificateArn` .
-       */
-      override fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
-        cdkBuilder.customEndpointEnabled(customEndpointEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
-       */
-      override fun enforceHttps(enforceHttps: Boolean) {
-        cdkBuilder.enforceHttps(enforceHttps)
-      }
-
-      /**
-       * @param enforceHttps True to require that all traffic to the domain arrive over HTTPS.
-       */
-      override fun enforceHttps(enforceHttps: IResolvable) {
-        cdkBuilder.enforceHttps(enforceHttps.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
-       * values are TLS 1.3 (recommended) or 1.2:.
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
-       */
-      override fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
-        cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty,
-    ) : CdkObject(cdkObject), DomainEndpointOptionsProperty {
-      /**
-       * The fully qualified URL for your custom endpoint.
-       *
-       * Required if you enabled a custom endpoint for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpoint)
-       */
-      override fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
-
-      /**
-       * The AWS Certificate Manager ARN for your domain's SSL/TLS certificate.
-       *
-       * Required if you enabled a custom endpoint for the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn)
-       */
-      override fun customEndpointCertificateArn(): String? =
-          unwrap(this).getCustomEndpointCertificateArn()
-
-      /**
-       * True to enable a custom endpoint for the domain.
-       *
-       * If enabled, you must also provide values for `CustomEndpoint` and
-       * `CustomEndpointCertificateArn` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled)
-       */
-      override fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
-
-      /**
-       * True to require that all traffic to the domain arrive over HTTPS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-enforcehttps)
-       */
-      override fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
-
-      /**
-       * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
-       * (recommended) or 1.2:.
-       *
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-domainendpointoptions.html#cfn-elasticsearch-domain-domainendpointoptions-tlssecuritypolicy)
-       */
-      override fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DomainEndpointOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty):
-          DomainEndpointOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DomainEndpointOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DomainEndpointOptionsProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies options for cold storage. For more information, see [Cold storage for Amazon
-   * Elasticsearch
-   * Service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/cold-storage.html)
-   * .
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * ColdStorageOptionsProperty coldStorageOptionsProperty = ColdStorageOptionsProperty.builder()
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html)
-   */
-  public interface ColdStorageOptionsProperty {
-    /**
-     * Whether to enable or disable cold storage on the domain.
-     *
-     * You must enable UltraWarm storage in order to enable cold storage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html#cfn-elasticsearch-domain-coldstorageoptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [ColdStorageOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage in order to enable cold storage.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage in order to enable cold storage.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty.builder()
-
-      /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage in order to enable cold storage.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Whether to enable or disable cold storage on the domain.
-       * You must enable UltraWarm storage in order to enable cold storage.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty,
-    ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
-      /**
-       * Whether to enable or disable cold storage on the domain.
-       *
-       * You must enable UltraWarm storage in order to enable cold storage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html#cfn-elasticsearch-domain-coldstorageoptions-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ColdStorageOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty):
-          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ColdStorageOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ColdStorageOptionsProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty
     }
   }
 
@@ -3805,8 +4167,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty,
     ) : CdkObject(cdkObject), VPCOptionsProperty {
       /**
        * The list of security group IDs that are associated with the VPC endpoints for the domain.
@@ -3855,12 +4216,7 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data
-   * nodes in the OpenSearch Service domain.
-   *
-   * For more information, see [EBS volume size
-   * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
+   * Specifies zone awareness configuration options. Only use if `ZoneAwarenessEnabled` is `true` .
    *
    *
    * The `AWS::Elasticsearch::Domain` resource is being replaced by the
@@ -3879,455 +4235,86 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * EBSOptionsProperty eBSOptionsProperty = EBSOptionsProperty.builder()
-   * .ebsEnabled(false)
-   * .iops(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
+   * ZoneAwarenessConfigProperty zoneAwarenessConfigProperty = ZoneAwarenessConfigProperty.builder()
+   * .availabilityZoneCount(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html)
    */
-  public interface EBSOptionsProperty {
+  public interface ZoneAwarenessConfigProperty {
     /**
-     * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
-     * domain.
+     * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the domain
+     * to use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-ebsenabled)
+     * Valid values are `2` and `3` . Default is 2.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html#cfn-elasticsearch-domain-zoneawarenessconfig-availabilityzonecount)
      */
-    public fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+    public fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
 
     /**
-     * The number of I/O operations per second (IOPS) that the volume supports.
-     *
-     * This property applies only to provisioned IOPS EBS volume types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * The size (in GiB) of the EBS volume for each data node.
-     *
-     * The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance
-     * type to which it is attached. For more information, see [EBS volume size
-     * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-     * in the *Amazon OpenSearch Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumesize)
-     */
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-    /**
-     * The EBS volume type to use with the OpenSearch Service domain, such as standard, gp2, or io1.
-     *
-     * For more information about each type, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumetype)
-     */
-    public fun volumeType(): String? = unwrap(this).getVolumeType()
-
-    /**
-     * A builder for [EBSOptionsProperty]
+     * A builder for [ZoneAwarenessConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
+       * of AZs that you want the domain to use.
+       * Valid values are `2` and `3` . Default is 2.
        */
-      public fun ebsEnabled(ebsEnabled: Boolean)
-
-      /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
-       */
-      public fun ebsEnabled(ebsEnabled: IResolvable)
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * This property applies only to provisioned IOPS EBS volume types.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       */
-      public fun volumeSize(volumeSize: Number)
-
-      /**
-       * @param volumeType The EBS volume type to use with the OpenSearch Service domain, such as
-       * standard, gp2, or io1.
-       * For more information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       */
-      public fun volumeType(volumeType: String)
+      public fun availabilityZoneCount(availabilityZoneCount: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty.Builder =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty.builder()
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty.builder()
 
       /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
+       * @param availabilityZoneCount If you enabled multiple Availability Zones (AZs), the number
+       * of AZs that you want the domain to use.
+       * Valid values are `2` and `3` . Default is 2.
        */
-      override fun ebsEnabled(ebsEnabled: Boolean) {
-        cdkBuilder.ebsEnabled(ebsEnabled)
-      }
-
-      /**
-       * @param ebsEnabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-       * OpenSearch Service domain.
-       */
-      override fun ebsEnabled(ebsEnabled: IResolvable) {
-        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param iops The number of I/O operations per second (IOPS) that the volume supports.
-       * This property applies only to provisioned IOPS EBS volume types.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param volumeSize The size (in GiB) of the EBS volume for each data node.
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       */
-      override fun volumeSize(volumeSize: Number) {
-        cdkBuilder.volumeSize(volumeSize)
-      }
-
-      /**
-       * @param volumeType The EBS volume type to use with the OpenSearch Service domain, such as
-       * standard, gp2, or io1.
-       * For more information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       */
-      override fun volumeType(volumeType: String) {
-        cdkBuilder.volumeType(volumeType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty,
-    ) : CdkObject(cdkObject), EBSOptionsProperty {
-      /**
-       * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
-       * domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-ebsenabled)
-       */
-      override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
-
-      /**
-       * The number of I/O operations per second (IOPS) that the volume supports.
-       *
-       * This property applies only to provisioned IOPS EBS volume types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The size (in GiB) of the EBS volume for each data node.
-       *
-       * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-       * instance type to which it is attached. For more information, see [EBS volume size
-       * limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#ebsresource)
-       * in the *Amazon OpenSearch Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumesize)
-       */
-      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-      /**
-       * The EBS volume type to use with the OpenSearch Service domain, such as standard, gp2, or
-       * io1.
-       *
-       * For more information about each type, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-ebsoptions.html#cfn-elasticsearch-domain-ebsoptions-volumetype)
-       */
-      override fun volumeType(): String? = unwrap(this).getVolumeType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EBSOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty):
-          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EBSOptionsProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty
-    }
-  }
-
-  /**
-   * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
-   *
-   *
-   * The `AWS::Elasticsearch::Domain` resource is being replaced by the
-   * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
-   * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
-   * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
-   * supports both OpenSearch and Elasticsearch. For more information about the service rename, see
-   * [New resource
-   * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
-   * in the *Amazon OpenSearch Service Developer Guide* .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticsearch.*;
-   * CognitoOptionsProperty cognitoOptionsProperty = CognitoOptionsProperty.builder()
-   * .enabled(false)
-   * .identityPoolId("identityPoolId")
-   * .roleArn("roleArn")
-   * .userPoolId("userPoolId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html)
-   */
-  public interface CognitoOptionsProperty {
-    /**
-     * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
-     *
-     * See [Amazon Cognito authentication for OpenSearch
-     * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
-     * Dashboards authentication.
-     *
-     * Required if you enable Cognito authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid)
-     */
-    public fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
-
-    /**
-     * The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool
-     * and identity pool.
-     *
-     * Required if you enable Cognito authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
-     * Dashboards authentication.
-     *
-     * Required if you enable Cognito authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid)
-     */
-    public fun userPoolId(): String? = unwrap(this).getUserPoolId()
-
-    /**
-     * A builder for [CognitoOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
-       * to use for OpenSearch Dashboards authentication.
-       * Required if you enable Cognito authentication.
-       */
-      public fun identityPoolId(identityPoolId: String)
-
-      /**
-       * @param roleArn The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure
-       * your user pool and identity pool.
-       * Required if you enable Cognito authentication.
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
-       * for OpenSearch Dashboards authentication.
-       * Required if you enable Cognito authentication.
-       */
-      public fun userPoolId(userPoolId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty.Builder =
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty.builder()
-
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Whether to enable or disable Amazon Cognito authentication for OpenSearch
-       * Dashboards.
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param identityPoolId The Amazon Cognito identity pool ID that you want OpenSearch Service
-       * to use for OpenSearch Dashboards authentication.
-       * Required if you enable Cognito authentication.
-       */
-      override fun identityPoolId(identityPoolId: String) {
-        cdkBuilder.identityPoolId(identityPoolId)
-      }
-
-      /**
-       * @param roleArn The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure
-       * your user pool and identity pool.
-       * Required if you enable Cognito authentication.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param userPoolId The Amazon Cognito user pool ID that you want OpenSearch Service to use
-       * for OpenSearch Dashboards authentication.
-       * Required if you enable Cognito authentication.
-       */
-      override fun userPoolId(userPoolId: String) {
-        cdkBuilder.userPoolId(userPoolId)
+      override fun availabilityZoneCount(availabilityZoneCount: Number) {
+        cdkBuilder.availabilityZoneCount(availabilityZoneCount)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty =
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty,
-    ) : CdkObject(cdkObject), CognitoOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty,
+    ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
       /**
-       * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
+       * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the
+       * domain to use.
        *
-       * See [Amazon Cognito authentication for OpenSearch
-       * Dashboards](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
-       * .
+       * Valid values are `2` and `3` . Default is 2.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-zoneawarenessconfig.html#cfn-elasticsearch-domain-zoneawarenessconfig-availabilityzonecount)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The Amazon Cognito identity pool ID that you want OpenSearch Service to use for OpenSearch
-       * Dashboards authentication.
-       *
-       * Required if you enable Cognito authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-identitypoolid)
-       */
-      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
-
-      /**
-       * The `AmazonESCognitoAccess` role that allows OpenSearch Service to configure your user pool
-       * and identity pool.
-       *
-       * Required if you enable Cognito authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-
-      /**
-       * The Amazon Cognito user pool ID that you want OpenSearch Service to use for OpenSearch
-       * Dashboards authentication.
-       *
-       * Required if you enable Cognito authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-cognitooptions.html#cfn-elasticsearch-domain-cognitooptions-userpoolid)
-       */
-      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+      override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ZoneAwarenessConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty):
-          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptionsProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty):
+          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZoneAwarenessConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CognitoOptionsProperty):
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty
+      internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty
     }
   }
 }

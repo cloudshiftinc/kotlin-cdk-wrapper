@@ -66,8 +66,7 @@ public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigP
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps,
   ) : CdkObject(cdkObject), TimeBasedCanaryTrafficRoutingProps {
     /**
      * The amount of time between traffic shifts.

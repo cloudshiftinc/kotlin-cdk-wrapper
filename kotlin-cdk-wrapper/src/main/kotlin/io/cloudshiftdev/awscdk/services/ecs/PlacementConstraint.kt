@@ -44,8 +44,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class PlacementConstraint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.PlacementConstraint,
+public open class PlacementConstraint(
+  cdkObject: software.amazon.awscdk.services.ecs.PlacementConstraint,
 ) : CdkObject(cdkObject) {
   /**
    * Return the placement JSON.
@@ -64,6 +64,7 @@ public open class PlacementConstraint internal constructor(
         PlacementConstraint = PlacementConstraint(cdkObject)
 
     internal fun unwrap(wrapped: PlacementConstraint):
-        software.amazon.awscdk.services.ecs.PlacementConstraint = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.PlacementConstraint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.PlacementConstraint
   }
 }

@@ -970,7 +970,7 @@ public interface DockerImageFunctionProps : FunctionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunctionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunctionProps,
   ) : CdkObject(cdkObject), DockerImageFunctionProps {
     /**
      * Specify the configuration of AWS Distro for OpenTelemetry (ADOT) instrumentation.

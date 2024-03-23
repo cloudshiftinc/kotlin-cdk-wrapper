@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-sourcelocation.html)
  */
-public open class CfnSourceLocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation,
+public open class CfnSourceLocation(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -587,491 +587,8 @@ public open class CfnSourceLocation internal constructor(
         CfnSourceLocation = CfnSourceLocation(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceLocation):
-        software.amazon.awscdk.services.mediatailor.CfnSourceLocation = wrapped.cdkObject
-  }
-
-  /**
-   * The optional configuration for a server that serves segments.
-   *
-   * Use this if you want the segment delivery server to be different from the source location
-   * server. For example, you can configure your source location server to be an origination server,
-   * such as MediaPackage, and the segment delivery server to be a content delivery network (CDN), such
-   * as CloudFront. If you don't specify a segment delivery server, then the source location server is
-   * used.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * DefaultSegmentDeliveryConfigurationProperty defaultSegmentDeliveryConfigurationProperty =
-   * DefaultSegmentDeliveryConfigurationProperty.builder()
-   * .baseUrl("baseUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html)
-   */
-  public interface DefaultSegmentDeliveryConfigurationProperty {
-    /**
-     * The hostname of the server that will be used to serve segments.
-     *
-     * This string must include the protocol, such as *https:// * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration-baseurl)
-     */
-    public fun baseUrl(): String? = unwrap(this).getBaseUrl()
-
-    /**
-     * A builder for [DefaultSegmentDeliveryConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseUrl The hostname of the server that will be used to serve segments.
-       * This string must include the protocol, such as *https:// * .
-       */
-      public fun baseUrl(baseUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.builder()
-
-      /**
-       * @param baseUrl The hostname of the server that will be used to serve segments.
-       * This string must include the protocol, such as *https:// * .
-       */
-      override fun baseUrl(baseUrl: String) {
-        cdkBuilder.baseUrl(baseUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty,
-    ) : CdkObject(cdkObject), DefaultSegmentDeliveryConfigurationProperty {
-      /**
-       * The hostname of the server that will be used to serve segments.
-       *
-       * This string must include the protocol, such as *https:// * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration-baseurl)
-       */
-      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultSegmentDeliveryConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty):
-          DefaultSegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultSegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultSegmentDeliveryConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
-    }
-  }
-
-  /**
-   * The segment delivery configuration settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * SegmentDeliveryConfigurationProperty segmentDeliveryConfigurationProperty =
-   * SegmentDeliveryConfigurationProperty.builder()
-   * .baseUrl("baseUrl")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html)
-   */
-  public interface SegmentDeliveryConfigurationProperty {
-    /**
-     * The base URL of the host or path of the segment delivery server that you're using to serve
-     * segments.
-     *
-     * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
-     * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
-     * relative URL specify the relative path, such as `/some/path*` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-baseurl)
-     */
-    public fun baseUrl(): String? = unwrap(this).getBaseUrl()
-
-    /**
-     * A unique identifier used to distinguish between multiple segment delivery configurations in a
-     * source location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [SegmentDeliveryConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseUrl The base URL of the host or path of the segment delivery server that you're
-       * using to serve segments.
-       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
-       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
-       * relative URL specify the relative path, such as `/some/path*` .
-       */
-      public fun baseUrl(baseUrl: String)
-
-      /**
-       * @param name A unique identifier used to distinguish between multiple segment delivery
-       * configurations in a source location.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty.builder()
-
-      /**
-       * @param baseUrl The base URL of the host or path of the segment delivery server that you're
-       * using to serve segments.
-       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
-       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
-       * relative URL specify the relative path, such as `/some/path*` .
-       */
-      override fun baseUrl(baseUrl: String) {
-        cdkBuilder.baseUrl(baseUrl)
-      }
-
-      /**
-       * @param name A unique identifier used to distinguish between multiple segment delivery
-       * configurations in a source location.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty,
-    ) : CdkObject(cdkObject), SegmentDeliveryConfigurationProperty {
-      /**
-       * The base URL of the host or path of the segment delivery server that you're using to serve
-       * segments.
-       *
-       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
-       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
-       * relative URL specify the relative path, such as `/some/path*` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-baseurl)
-       */
-      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
-
-      /**
-       * A unique identifier used to distinguish between multiple segment delivery configurations in
-       * a source location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SegmentDeliveryConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty):
-          SegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SegmentDeliveryConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
-    }
-  }
-
-  /**
-   * AWS Secrets Manager access token configuration parameters.
-   *
-   * For information about Secrets Manager access token authentication, see [Working with AWS
-   * Secrets Manager access token
-   * authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * SecretsManagerAccessTokenConfigurationProperty secretsManagerAccessTokenConfigurationProperty =
-   * SecretsManagerAccessTokenConfigurationProperty.builder()
-   * .headerName("headerName")
-   * .secretArn("secretArn")
-   * .secretStringKey("secretStringKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html)
-   */
-  public interface SecretsManagerAccessTokenConfigurationProperty {
-    /**
-     * The name of the HTTP header used to supply the access token in requests to the source
-     * location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-headername)
-     */
-    public fun headerName(): String? = unwrap(this).getHeaderName()
-
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the access
-     * token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretarn)
-     */
-    public fun secretArn(): String? = unwrap(this).getSecretArn()
-
-    /**
-     * The AWS Secrets Manager
-     * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
-     * key associated with the access token. MediaTailor uses the key to look up SecretString key and
-     * value pair containing the access token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretstringkey)
-     */
-    public fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
-
-    /**
-     * A builder for [SecretsManagerAccessTokenConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param headerName The name of the HTTP header used to supply the access token in requests
-       * to the source location.
-       */
-      public fun headerName(headerName: String)
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that
-       * contains the access token.
-       */
-      public fun secretArn(secretArn: String)
-
-      /**
-       * @param secretStringKey The AWS Secrets Manager
-       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
-       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
-       * value pair containing the access token.
-       */
-      public fun secretStringKey(secretStringKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty.builder()
-
-      /**
-       * @param headerName The name of the HTTP header used to supply the access token in requests
-       * to the source location.
-       */
-      override fun headerName(headerName: String) {
-        cdkBuilder.headerName(headerName)
-      }
-
-      /**
-       * @param secretArn The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that
-       * contains the access token.
-       */
-      override fun secretArn(secretArn: String) {
-        cdkBuilder.secretArn(secretArn)
-      }
-
-      /**
-       * @param secretStringKey The AWS Secrets Manager
-       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
-       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
-       * value pair containing the access token.
-       */
-      override fun secretStringKey(secretStringKey: String) {
-        cdkBuilder.secretStringKey(secretStringKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty,
-    ) : CdkObject(cdkObject), SecretsManagerAccessTokenConfigurationProperty {
-      /**
-       * The name of the HTTP header used to supply the access token in requests to the source
-       * location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-headername)
-       */
-      override fun headerName(): String? = unwrap(this).getHeaderName()
-
-      /**
-       * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the access
-       * token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretarn)
-       */
-      override fun secretArn(): String? = unwrap(this).getSecretArn()
-
-      /**
-       * The AWS Secrets Manager
-       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
-       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
-       * value pair containing the access token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretstringkey)
-       */
-      override fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SecretsManagerAccessTokenConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty):
-          SecretsManagerAccessTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SecretsManagerAccessTokenConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SecretsManagerAccessTokenConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
-    }
-  }
-
-  /**
-   * The HTTP configuration for the source location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * HttpConfigurationProperty httpConfigurationProperty = HttpConfigurationProperty.builder()
-   * .baseUrl("baseUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html)
-   */
-  public interface HttpConfigurationProperty {
-    /**
-     * The base URL for the source location host server.
-     *
-     * This string must include the protocol, such as *https:// * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html#cfn-mediatailor-sourcelocation-httpconfiguration-baseurl)
-     */
-    public fun baseUrl(): String
-
-    /**
-     * A builder for [HttpConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseUrl The base URL for the source location host server. 
-       * This string must include the protocol, such as *https:// * .
-       */
-      public fun baseUrl(baseUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty.builder()
-
-      /**
-       * @param baseUrl The base URL for the source location host server. 
-       * This string must include the protocol, such as *https:// * .
-       */
-      override fun baseUrl(baseUrl: String) {
-        cdkBuilder.baseUrl(baseUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty,
-    ) : CdkObject(cdkObject), HttpConfigurationProperty {
-      /**
-       * The base URL for the source location host server.
-       *
-       * This string must include the protocol, such as *https:// * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html#cfn-mediatailor-sourcelocation-httpconfiguration-baseurl)
-       */
-      override fun baseUrl(): String = unwrap(this).getBaseUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty):
-          HttpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HttpConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty
-    }
+        software.amazon.awscdk.services.mediatailor.CfnSourceLocation = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediatailor.CfnSourceLocation
   }
 
   /**
@@ -1248,8 +765,7 @@ public open class CfnSourceLocation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty,
     ) : CdkObject(cdkObject), AccessConfigurationProperty {
       /**
        * The type of authentication used to access content from `HttpConfiguration::BaseUrl` on your
@@ -1301,6 +817,486 @@ public open class CfnSourceLocation internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty
+    }
+  }
+
+  /**
+   * The optional configuration for a server that serves segments.
+   *
+   * Use this if you want the segment delivery server to be different from the source location
+   * server. For example, you can configure your source location server to be an origination server,
+   * such as MediaPackage, and the segment delivery server to be a content delivery network (CDN), such
+   * as CloudFront. If you don't specify a segment delivery server, then the source location server is
+   * used.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * DefaultSegmentDeliveryConfigurationProperty defaultSegmentDeliveryConfigurationProperty =
+   * DefaultSegmentDeliveryConfigurationProperty.builder()
+   * .baseUrl("baseUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html)
+   */
+  public interface DefaultSegmentDeliveryConfigurationProperty {
+    /**
+     * The hostname of the server that will be used to serve segments.
+     *
+     * This string must include the protocol, such as *https:// * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration-baseurl)
+     */
+    public fun baseUrl(): String? = unwrap(this).getBaseUrl()
+
+    /**
+     * A builder for [DefaultSegmentDeliveryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param baseUrl The hostname of the server that will be used to serve segments.
+       * This string must include the protocol, such as *https:// * .
+       */
+      public fun baseUrl(baseUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.builder()
+
+      /**
+       * @param baseUrl The hostname of the server that will be used to serve segments.
+       * This string must include the protocol, such as *https:// * .
+       */
+      override fun baseUrl(baseUrl: String) {
+        cdkBuilder.baseUrl(baseUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty,
+    ) : CdkObject(cdkObject), DefaultSegmentDeliveryConfigurationProperty {
+      /**
+       * The hostname of the server that will be used to serve segments.
+       *
+       * This string must include the protocol, such as *https:// * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-defaultsegmentdeliveryconfiguration-baseurl)
+       */
+      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DefaultSegmentDeliveryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty):
+          DefaultSegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultSegmentDeliveryConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
+    }
+  }
+
+  /**
+   * The HTTP configuration for the source location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * HttpConfigurationProperty httpConfigurationProperty = HttpConfigurationProperty.builder()
+   * .baseUrl("baseUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html)
+   */
+  public interface HttpConfigurationProperty {
+    /**
+     * The base URL for the source location host server.
+     *
+     * This string must include the protocol, such as *https:// * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html#cfn-mediatailor-sourcelocation-httpconfiguration-baseurl)
+     */
+    public fun baseUrl(): String
+
+    /**
+     * A builder for [HttpConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param baseUrl The base URL for the source location host server. 
+       * This string must include the protocol, such as *https:// * .
+       */
+      public fun baseUrl(baseUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty.builder()
+
+      /**
+       * @param baseUrl The base URL for the source location host server. 
+       * This string must include the protocol, such as *https:// * .
+       */
+      override fun baseUrl(baseUrl: String) {
+        cdkBuilder.baseUrl(baseUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty,
+    ) : CdkObject(cdkObject), HttpConfigurationProperty {
+      /**
+       * The base URL for the source location host server.
+       *
+       * This string must include the protocol, such as *https:// * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-httpconfiguration.html#cfn-mediatailor-sourcelocation-httpconfiguration-baseurl)
+       */
+      override fun baseUrl(): String = unwrap(this).getBaseUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty):
+          HttpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HttpConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty
+    }
+  }
+
+  /**
+   * AWS Secrets Manager access token configuration parameters.
+   *
+   * For information about Secrets Manager access token authentication, see [Working with AWS
+   * Secrets Manager access token
+   * authentication](https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-access-configuration-access-token.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * SecretsManagerAccessTokenConfigurationProperty secretsManagerAccessTokenConfigurationProperty =
+   * SecretsManagerAccessTokenConfigurationProperty.builder()
+   * .headerName("headerName")
+   * .secretArn("secretArn")
+   * .secretStringKey("secretStringKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html)
+   */
+  public interface SecretsManagerAccessTokenConfigurationProperty {
+    /**
+     * The name of the HTTP header used to supply the access token in requests to the source
+     * location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-headername)
+     */
+    public fun headerName(): String? = unwrap(this).getHeaderName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the access
+     * token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretarn)
+     */
+    public fun secretArn(): String? = unwrap(this).getSecretArn()
+
+    /**
+     * The AWS Secrets Manager
+     * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
+     * key associated with the access token. MediaTailor uses the key to look up SecretString key and
+     * value pair containing the access token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretstringkey)
+     */
+    public fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
+
+    /**
+     * A builder for [SecretsManagerAccessTokenConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param headerName The name of the HTTP header used to supply the access token in requests
+       * to the source location.
+       */
+      public fun headerName(headerName: String)
+
+      /**
+       * @param secretArn The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that
+       * contains the access token.
+       */
+      public fun secretArn(secretArn: String)
+
+      /**
+       * @param secretStringKey The AWS Secrets Manager
+       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
+       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
+       * value pair containing the access token.
+       */
+      public fun secretStringKey(secretStringKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty.builder()
+
+      /**
+       * @param headerName The name of the HTTP header used to supply the access token in requests
+       * to the source location.
+       */
+      override fun headerName(headerName: String) {
+        cdkBuilder.headerName(headerName)
+      }
+
+      /**
+       * @param secretArn The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that
+       * contains the access token.
+       */
+      override fun secretArn(secretArn: String) {
+        cdkBuilder.secretArn(secretArn)
+      }
+
+      /**
+       * @param secretStringKey The AWS Secrets Manager
+       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
+       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
+       * value pair containing the access token.
+       */
+      override fun secretStringKey(secretStringKey: String) {
+        cdkBuilder.secretStringKey(secretStringKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty,
+    ) : CdkObject(cdkObject), SecretsManagerAccessTokenConfigurationProperty {
+      /**
+       * The name of the HTTP header used to supply the access token in requests to the source
+       * location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-headername)
+       */
+      override fun headerName(): String? = unwrap(this).getHeaderName()
+
+      /**
+       * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the access
+       * token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretarn)
+       */
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
+
+      /**
+       * The AWS Secrets Manager
+       * [SecretString](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html)
+       * key associated with the access token. MediaTailor uses the key to look up SecretString key and
+       * value pair containing the access token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration.html#cfn-mediatailor-sourcelocation-secretsmanageraccesstokenconfiguration-secretstringkey)
+       */
+      override fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SecretsManagerAccessTokenConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty):
+          SecretsManagerAccessTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SecretsManagerAccessTokenConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecretsManagerAccessTokenConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
+    }
+  }
+
+  /**
+   * The segment delivery configuration settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * SegmentDeliveryConfigurationProperty segmentDeliveryConfigurationProperty =
+   * SegmentDeliveryConfigurationProperty.builder()
+   * .baseUrl("baseUrl")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html)
+   */
+  public interface SegmentDeliveryConfigurationProperty {
+    /**
+     * The base URL of the host or path of the segment delivery server that you're using to serve
+     * segments.
+     *
+     * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
+     * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
+     * relative URL specify the relative path, such as `/some/path*` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-baseurl)
+     */
+    public fun baseUrl(): String? = unwrap(this).getBaseUrl()
+
+    /**
+     * A unique identifier used to distinguish between multiple segment delivery configurations in a
+     * source location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [SegmentDeliveryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param baseUrl The base URL of the host or path of the segment delivery server that you're
+       * using to serve segments.
+       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
+       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
+       * relative URL specify the relative path, such as `/some/path*` .
+       */
+      public fun baseUrl(baseUrl: String)
+
+      /**
+       * @param name A unique identifier used to distinguish between multiple segment delivery
+       * configurations in a source location.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty.builder()
+
+      /**
+       * @param baseUrl The base URL of the host or path of the segment delivery server that you're
+       * using to serve segments.
+       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
+       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
+       * relative URL specify the relative path, such as `/some/path*` .
+       */
+      override fun baseUrl(baseUrl: String) {
+        cdkBuilder.baseUrl(baseUrl)
+      }
+
+      /**
+       * @param name A unique identifier used to distinguish between multiple segment delivery
+       * configurations in a source location.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty,
+    ) : CdkObject(cdkObject), SegmentDeliveryConfigurationProperty {
+      /**
+       * The base URL of the host or path of the segment delivery server that you're using to serve
+       * segments.
+       *
+       * This is typically a content delivery network (CDN). The URL can be absolute or relative. To
+       * use an absolute URL include the protocol, such as `https://example.com/some/path` . To use a
+       * relative URL specify the relative path, such as `/some/path*` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-baseurl)
+       */
+      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
+
+      /**
+       * A unique identifier used to distinguish between multiple segment delivery configurations in
+       * a source location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-sourcelocation-segmentdeliveryconfiguration.html#cfn-mediatailor-sourcelocation-segmentdeliveryconfiguration-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SegmentDeliveryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty):
+          SegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SegmentDeliveryConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
     }
   }
 }

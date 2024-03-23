@@ -25,8 +25,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Specifies a Classic Load Balancer.
  *
- * You can specify the `AvailabilityZones` or `Subnets` property, but not both.
- *
  * If this resource has a public IP address and is also in a VPC that is defined in the same
  * template, you must use the [DependsOn
  * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
@@ -104,9 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html)
  */
-public open class CfnLoadBalancer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
+public open class CfnLoadBalancer(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,26 +211,20 @@ public open class CfnLoadBalancer internal constructor(
       unwrap(this).getAttrSourceSecurityGroupOwnerAlias()
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
       emptyList()
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
 
   /**
-   * The Availability Zones for the load balancer.
-   *
-   * For load balancers in a VPC, specify `Subnets` instead.
+   * The Availability Zones for a load balancer in a default VPC.
    */
   public open fun availabilityZones(vararg `value`: String): Unit =
       availabilityZones(`value`.toList())
@@ -611,28 +602,28 @@ public open class CfnLoadBalancer internal constructor(
     public fun appCookieStickinessPolicy(vararg appCookieStickinessPolicy: Any)
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     public fun availabilityZones(availabilityZones: List<String>)
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     public fun availabilityZones(vararg availabilityZones: String)
 
@@ -1086,30 +1077,30 @@ public open class CfnLoadBalancer internal constructor(
         appCookieStickinessPolicy(appCookieStickinessPolicy.toList())
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html#cfn-elasticloadbalancing-loadbalancer-availabilityzones)
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead. 
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC. 
      */
     override fun availabilityZones(vararg availabilityZones: String): Unit =
         availabilityZones(availabilityZones.toList())
@@ -1555,399 +1546,8 @@ public open class CfnLoadBalancer internal constructor(
         CfnLoadBalancer = CfnLoadBalancer(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancer):
-        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer = wrapped.cdkObject
-  }
-
-  /**
-   * Specifies policies for your Classic Load Balancer.
-   *
-   * To associate policies with a listener, use the
-   * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
-   * property for the listener.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
-   * Object attributes;
-   * PoliciesProperty policiesProperty = PoliciesProperty.builder()
-   * .attributes(List.of(attributes))
-   * .policyName("policyName")
-   * .policyType("policyType")
-   * // the properties below are optional
-   * .instancePorts(List.of("instancePorts"))
-   * .loadBalancerPorts(List.of("loadBalancerPorts"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html)
-   */
-  public interface PoliciesProperty {
-    /**
-     * The policy attributes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-attributes)
-     */
-    public fun attributes(): Any
-
-    /**
-     * The instance ports for the policy.
-     *
-     * Required only for some policy types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-instanceports)
-     */
-    public fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?: emptyList()
-
-    /**
-     * The load balancer ports for the policy.
-     *
-     * Required only for some policy types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-loadbalancerports)
-     */
-    public fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
-        emptyList()
-
-    /**
-     * The name of the policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policyname)
-     */
-    public fun policyName(): String
-
-    /**
-     * The name of the policy type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policytype)
-     */
-    public fun policyType(): String
-
-    /**
-     * A builder for [PoliciesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes The policy attributes. 
-       */
-      public fun attributes(attributes: List<Any>)
-
-      /**
-       * @param attributes The policy attributes. 
-       */
-      public fun attributes(vararg attributes: Any)
-
-      /**
-       * @param attributes The policy attributes. 
-       */
-      public fun attributes(attributes: IResolvable)
-
-      /**
-       * @param instancePorts The instance ports for the policy.
-       * Required only for some policy types.
-       */
-      public fun instancePorts(instancePorts: List<String>)
-
-      /**
-       * @param instancePorts The instance ports for the policy.
-       * Required only for some policy types.
-       */
-      public fun instancePorts(vararg instancePorts: String)
-
-      /**
-       * @param loadBalancerPorts The load balancer ports for the policy.
-       * Required only for some policy types.
-       */
-      public fun loadBalancerPorts(loadBalancerPorts: List<String>)
-
-      /**
-       * @param loadBalancerPorts The load balancer ports for the policy.
-       * Required only for some policy types.
-       */
-      public fun loadBalancerPorts(vararg loadBalancerPorts: String)
-
-      /**
-       * @param policyName The name of the policy. 
-       */
-      public fun policyName(policyName: String)
-
-      /**
-       * @param policyType The name of the policy type. 
-       */
-      public fun policyType(policyType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty.builder()
-
-      /**
-       * @param attributes The policy attributes. 
-       */
-      override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param attributes The policy attributes. 
-       */
-      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
-
-      /**
-       * @param attributes The policy attributes. 
-       */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param instancePorts The instance ports for the policy.
-       * Required only for some policy types.
-       */
-      override fun instancePorts(instancePorts: List<String>) {
-        cdkBuilder.instancePorts(instancePorts)
-      }
-
-      /**
-       * @param instancePorts The instance ports for the policy.
-       * Required only for some policy types.
-       */
-      override fun instancePorts(vararg instancePorts: String): Unit =
-          instancePorts(instancePorts.toList())
-
-      /**
-       * @param loadBalancerPorts The load balancer ports for the policy.
-       * Required only for some policy types.
-       */
-      override fun loadBalancerPorts(loadBalancerPorts: List<String>) {
-        cdkBuilder.loadBalancerPorts(loadBalancerPorts)
-      }
-
-      /**
-       * @param loadBalancerPorts The load balancer ports for the policy.
-       * Required only for some policy types.
-       */
-      override fun loadBalancerPorts(vararg loadBalancerPorts: String): Unit =
-          loadBalancerPorts(loadBalancerPorts.toList())
-
-      /**
-       * @param policyName The name of the policy. 
-       */
-      override fun policyName(policyName: String) {
-        cdkBuilder.policyName(policyName)
-      }
-
-      /**
-       * @param policyType The name of the policy type. 
-       */
-      override fun policyType(policyType: String) {
-        cdkBuilder.policyType(policyType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
-    ) : CdkObject(cdkObject), PoliciesProperty {
-      /**
-       * The policy attributes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-attributes)
-       */
-      override fun attributes(): Any = unwrap(this).getAttributes()
-
-      /**
-       * The instance ports for the policy.
-       *
-       * Required only for some policy types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-instanceports)
-       */
-      override fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?: emptyList()
-
-      /**
-       * The load balancer ports for the policy.
-       *
-       * Required only for some policy types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-loadbalancerports)
-       */
-      override fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
-          emptyList()
-
-      /**
-       * The name of the policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policyname)
-       */
-      override fun policyName(): String = unwrap(this).getPolicyName()
-
-      /**
-       * The name of the policy type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policytype)
-       */
-      override fun policyType(): String = unwrap(this).getPolicyType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PoliciesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty):
-          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PoliciesProperty):
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty
-    }
-  }
-
-  /**
-   * Specifies a policy for duration-based session stickiness for your Classic Load Balancer.
-   *
-   * To associate a policy with a listener, use the
-   * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
-   * property for the listener.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
-   * LBCookieStickinessPolicyProperty lBCookieStickinessPolicyProperty =
-   * LBCookieStickinessPolicyProperty.builder()
-   * .cookieExpirationPeriod("cookieExpirationPeriod")
-   * .policyName("policyName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html)
-   */
-  public interface LBCookieStickinessPolicyProperty {
-    /**
-     * The time period, in seconds, after which the cookie should be considered stale.
-     *
-     * If this parameter is not specified, the stickiness session lasts for the duration of the
-     * browser session.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-cookieexpirationperiod)
-     */
-    public fun cookieExpirationPeriod(): String? = unwrap(this).getCookieExpirationPeriod()
-
-    /**
-     * The name of the policy.
-     *
-     * This name must be unique within the set of policies for this load balancer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-policyname)
-     */
-    public fun policyName(): String? = unwrap(this).getPolicyName()
-
-    /**
-     * A builder for [LBCookieStickinessPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cookieExpirationPeriod The time period, in seconds, after which the cookie should be
-       * considered stale.
-       * If this parameter is not specified, the stickiness session lasts for the duration of the
-       * browser session.
-       */
-      public fun cookieExpirationPeriod(cookieExpirationPeriod: String)
-
-      /**
-       * @param policyName The name of the policy.
-       * This name must be unique within the set of policies for this load balancer.
-       */
-      public fun policyName(policyName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty.builder()
-
-      /**
-       * @param cookieExpirationPeriod The time period, in seconds, after which the cookie should be
-       * considered stale.
-       * If this parameter is not specified, the stickiness session lasts for the duration of the
-       * browser session.
-       */
-      override fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
-        cdkBuilder.cookieExpirationPeriod(cookieExpirationPeriod)
-      }
-
-      /**
-       * @param policyName The name of the policy.
-       * This name must be unique within the set of policies for this load balancer.
-       */
-      override fun policyName(policyName: String) {
-        cdkBuilder.policyName(policyName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
-    ) : CdkObject(cdkObject), LBCookieStickinessPolicyProperty {
-      /**
-       * The time period, in seconds, after which the cookie should be considered stale.
-       *
-       * If this parameter is not specified, the stickiness session lasts for the duration of the
-       * browser session.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-cookieexpirationperiod)
-       */
-      override fun cookieExpirationPeriod(): String? = unwrap(this).getCookieExpirationPeriod()
-
-      /**
-       * The name of the policy.
-       *
-       * This name must be unique within the set of policies for this load balancer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-policyname)
-       */
-      override fun policyName(): String? = unwrap(this).getPolicyName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LBCookieStickinessPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty):
-          LBCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LBCookieStickinessPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LBCookieStickinessPolicyProperty):
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
-    }
+        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
   }
 
   /**
@@ -2091,8 +1691,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
     ) : CdkObject(cdkObject), AccessLoggingPolicyProperty {
       /**
        * The interval for publishing the access logs. You can specify an interval of either 5
@@ -2231,8 +1830,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
     ) : CdkObject(cdkObject), AppCookieStickinessPolicyProperty {
       /**
        * The name of the application cookie used for stickiness.
@@ -2271,9 +1869,7 @@ public open class CfnLoadBalancer internal constructor(
   }
 
   /**
-   * Specifies a listener for your Classic Load Balancer.
-   *
-   * Modifying any property replaces the listener.
+   * Specifies the connection draining settings for your Classic Load Balancer.
    *
    * Example:
    *
@@ -2281,271 +1877,121 @@ public open class CfnLoadBalancer internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
-   * ListenersProperty listenersProperty = ListenersProperty.builder()
-   * .instancePort("instancePort")
-   * .loadBalancerPort("loadBalancerPort")
-   * .protocol("protocol")
+   * ConnectionDrainingPolicyProperty connectionDrainingPolicyProperty =
+   * ConnectionDrainingPolicyProperty.builder()
+   * .enabled(false)
    * // the properties below are optional
-   * .instanceProtocol("instanceProtocol")
-   * .policyNames(List.of("policyNames"))
-   * .sslCertificateId("sslCertificateId")
+   * .timeout(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html)
    */
-  public interface ListenersProperty {
+  public interface ConnectionDrainingPolicyProperty {
     /**
-     * The port on which the instance is listening.
+     * Specifies whether connection draining is enabled for the load balancer.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceport)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-enabled)
      */
-    public fun instancePort(): String
+    public fun enabled(): Any
 
     /**
-     * The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL.
+     * The maximum time, in seconds, to keep the existing connections open before deregistering the
+     * instances.
      *
-     * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
-     * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
-     *
-     * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is secure,
-     * (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
-     *
-     * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP or
-     * TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceprotocol)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-timeout)
      */
-    public fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
+    public fun timeout(): Number? = unwrap(this).getTimeout()
 
     /**
-     * The port on which the load balancer is listening.
-     *
-     * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can specify
-     * any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-loadbalancerport)
-     */
-    public fun loadBalancerPort(): String
-
-    /**
-     * The names of the policies to associate with the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-policynames)
-     */
-    public fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
-
-    /**
-     * The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the server certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-sslcertificateid)
-     */
-    public fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
-
-    /**
-     * A builder for [ListenersProperty]
+     * A builder for [ConnectionDrainingPolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instancePort The port on which the instance is listening. 
+       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
        */
-      public fun instancePort(instancePort: String)
+      public fun enabled(enabled: Boolean)
 
       /**
-       * @param instanceProtocol The protocol to use for routing traffic to instances: HTTP, HTTPS,
-       * TCP, or SSL.
-       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
-       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
-       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
-       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
        */
-      public fun instanceProtocol(instanceProtocol: String)
+      public fun enabled(enabled: IResolvable)
 
       /**
-       * @param loadBalancerPort The port on which the load balancer is listening. 
-       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
-       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+       * @param timeout The maximum time, in seconds, to keep the existing connections open before
+       * deregistering the instances.
        */
-      public fun loadBalancerPort(loadBalancerPort: String)
-
-      /**
-       * @param policyNames The names of the policies to associate with the listener.
-       */
-      public fun policyNames(policyNames: List<String>)
-
-      /**
-       * @param policyNames The names of the policies to associate with the listener.
-       */
-      public fun policyNames(vararg policyNames: String)
-
-      /**
-       * @param protocol The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP,
-       * or SSL. 
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param sslCertificateId The Amazon Resource Name (ARN) of the server certificate.
-       */
-      public fun sslCertificateId(sslCertificateId: String)
+      public fun timeout(timeout: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty.builder()
 
       /**
-       * @param instancePort The port on which the instance is listening. 
+       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
        */
-      override fun instancePort(instancePort: String) {
-        cdkBuilder.instancePort(instancePort)
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param instanceProtocol The protocol to use for routing traffic to instances: HTTP, HTTPS,
-       * TCP, or SSL.
-       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
-       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
-       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
-       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
        */
-      override fun instanceProtocol(instanceProtocol: String) {
-        cdkBuilder.instanceProtocol(instanceProtocol)
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
       /**
-       * @param loadBalancerPort The port on which the load balancer is listening. 
-       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
-       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+       * @param timeout The maximum time, in seconds, to keep the existing connections open before
+       * deregistering the instances.
        */
-      override fun loadBalancerPort(loadBalancerPort: String) {
-        cdkBuilder.loadBalancerPort(loadBalancerPort)
-      }
-
-      /**
-       * @param policyNames The names of the policies to associate with the listener.
-       */
-      override fun policyNames(policyNames: List<String>) {
-        cdkBuilder.policyNames(policyNames)
-      }
-
-      /**
-       * @param policyNames The names of the policies to associate with the listener.
-       */
-      override fun policyNames(vararg policyNames: String): Unit = policyNames(policyNames.toList())
-
-      /**
-       * @param protocol The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP,
-       * or SSL. 
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param sslCertificateId The Amazon Resource Name (ARN) of the server certificate.
-       */
-      override fun sslCertificateId(sslCertificateId: String) {
-        cdkBuilder.sslCertificateId(sslCertificateId)
+      override fun timeout(timeout: Number) {
+        cdkBuilder.timeout(timeout)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
-    ) : CdkObject(cdkObject), ListenersProperty {
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
+    ) : CdkObject(cdkObject), ConnectionDrainingPolicyProperty {
       /**
-       * The port on which the instance is listening.
+       * Specifies whether connection draining is enabled for the load balancer.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceport)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-enabled)
        */
-      override fun instancePort(): String = unwrap(this).getInstancePort()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
       /**
-       * The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL.
+       * The maximum time, in seconds, to keep the existing connections open before deregistering
+       * the instances.
        *
-       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
-       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
-       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
-       *
-       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
-       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceprotocol)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-timeout)
        */
-      override fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
-
-      /**
-       * The port on which the load balancer is listening.
-       *
-       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
-       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-loadbalancerport)
-       */
-      override fun loadBalancerPort(): String = unwrap(this).getLoadBalancerPort()
-
-      /**
-       * The names of the policies to associate with the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-policynames)
-       */
-      override fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
-
-      /**
-       * The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
-
-      /**
-       * The Amazon Resource Name (ARN) of the server certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-sslcertificateid)
-       */
-      override fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
+      override fun timeout(): Number? = unwrap(this).getTimeout()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ListenersProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionDrainingPolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty):
-          ListenersProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenersProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty):
+          ConnectionDrainingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionDrainingPolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ListenersProperty):
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty
+      internal fun unwrap(wrapped: ConnectionDrainingPolicyProperty):
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
     }
   }
 
@@ -2606,8 +2052,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
     ) : CdkObject(cdkObject), ConnectionSettingsProperty {
       /**
        * The time, in seconds, that the connection is allowed to be idle (no data has been sent over
@@ -2830,8 +2275,7 @@ public open class CfnLoadBalancer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
     ) : CdkObject(cdkObject), HealthCheckProperty {
       /**
        * The number of consecutive health checks successes required before moving the instance to
@@ -2908,7 +2352,11 @@ public open class CfnLoadBalancer internal constructor(
   }
 
   /**
-   * Specifies the connection draining settings for your Classic Load Balancer.
+   * Specifies a policy for duration-based session stickiness for your Classic Load Balancer.
+   *
+   * To associate a policy with a listener, use the
+   * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+   * property for the listener.
    *
    * Example:
    *
@@ -2916,122 +2364,658 @@ public open class CfnLoadBalancer internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
-   * ConnectionDrainingPolicyProperty connectionDrainingPolicyProperty =
-   * ConnectionDrainingPolicyProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .timeout(123)
+   * LBCookieStickinessPolicyProperty lBCookieStickinessPolicyProperty =
+   * LBCookieStickinessPolicyProperty.builder()
+   * .cookieExpirationPeriod("cookieExpirationPeriod")
+   * .policyName("policyName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html)
    */
-  public interface ConnectionDrainingPolicyProperty {
+  public interface LBCookieStickinessPolicyProperty {
     /**
-     * Specifies whether connection draining is enabled for the load balancer.
+     * The time period, in seconds, after which the cookie should be considered stale.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-enabled)
+     * If this parameter is not specified, the stickiness session lasts for the duration of the
+     * browser session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-cookieexpirationperiod)
      */
-    public fun enabled(): Any
+    public fun cookieExpirationPeriod(): String? = unwrap(this).getCookieExpirationPeriod()
 
     /**
-     * The maximum time, in seconds, to keep the existing connections open before deregistering the
-     * instances.
+     * The name of the policy.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-timeout)
+     * This name must be unique within the set of policies for this load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-policyname)
      */
-    public fun timeout(): Number? = unwrap(this).getTimeout()
+    public fun policyName(): String? = unwrap(this).getPolicyName()
 
     /**
-     * A builder for [ConnectionDrainingPolicyProperty]
+     * A builder for [LBCookieStickinessPolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
+       * @param cookieExpirationPeriod The time period, in seconds, after which the cookie should be
+       * considered stale.
+       * If this parameter is not specified, the stickiness session lasts for the duration of the
+       * browser session.
        */
-      public fun enabled(enabled: Boolean)
+      public fun cookieExpirationPeriod(cookieExpirationPeriod: String)
 
       /**
-       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
+       * @param policyName The name of the policy.
+       * This name must be unique within the set of policies for this load balancer.
        */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param timeout The maximum time, in seconds, to keep the existing connections open before
-       * deregistering the instances.
-       */
-      public fun timeout(timeout: Number)
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty.Builder
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty.Builder
           =
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty.builder()
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty.builder()
 
       /**
-       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
+       * @param cookieExpirationPeriod The time period, in seconds, after which the cookie should be
+       * considered stale.
+       * If this parameter is not specified, the stickiness session lasts for the duration of the
+       * browser session.
        */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
+      override fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
+        cdkBuilder.cookieExpirationPeriod(cookieExpirationPeriod)
       }
 
       /**
-       * @param enabled Specifies whether connection draining is enabled for the load balancer. 
+       * @param policyName The name of the policy.
+       * This name must be unique within the set of policies for this load balancer.
        */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param timeout The maximum time, in seconds, to keep the existing connections open before
-       * deregistering the instances.
-       */
-      override fun timeout(timeout: Number) {
-        cdkBuilder.timeout(timeout)
+      override fun policyName(policyName: String) {
+        cdkBuilder.policyName(policyName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
-    ) : CdkObject(cdkObject), ConnectionDrainingPolicyProperty {
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
+    ) : CdkObject(cdkObject), LBCookieStickinessPolicyProperty {
       /**
-       * Specifies whether connection draining is enabled for the load balancer.
+       * The time period, in seconds, after which the cookie should be considered stale.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-enabled)
+       * If this parameter is not specified, the stickiness session lasts for the duration of the
+       * browser session.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-cookieexpirationperiod)
        */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun cookieExpirationPeriod(): String? = unwrap(this).getCookieExpirationPeriod()
 
       /**
-       * The maximum time, in seconds, to keep the existing connections open before deregistering
-       * the instances.
+       * The name of the policy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-connectiondrainingpolicy.html#cfn-elasticloadbalancing-loadbalancer-connectiondrainingpolicy-timeout)
+       * This name must be unique within the set of policies for this load balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html#cfn-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy-policyname)
        */
-      override fun timeout(): Number? = unwrap(this).getTimeout()
+      override fun policyName(): String? = unwrap(this).getPolicyName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionDrainingPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LBCookieStickinessPolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty):
-          ConnectionDrainingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionDrainingPolicyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty):
+          LBCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LBCookieStickinessPolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConnectionDrainingPolicyProperty):
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
+      internal fun unwrap(wrapped: LBCookieStickinessPolicyProperty):
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
+    }
+  }
+
+  /**
+   * Specifies a listener for your Classic Load Balancer.
+   *
+   * Modifying any property replaces the listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
+   * ListenersProperty listenersProperty = ListenersProperty.builder()
+   * .instancePort("instancePort")
+   * .loadBalancerPort("loadBalancerPort")
+   * .protocol("protocol")
+   * // the properties below are optional
+   * .instanceProtocol("instanceProtocol")
+   * .policyNames(List.of("policyNames"))
+   * .sslCertificateId("sslCertificateId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html)
+   */
+  public interface ListenersProperty {
+    /**
+     * The port on which the instance is listening.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceport)
+     */
+    public fun instancePort(): String
+
+    /**
+     * The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL.
+     *
+     * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
+     * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
+     *
+     * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is secure,
+     * (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
+     *
+     * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP or
+     * TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceprotocol)
+     */
+    public fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
+
+    /**
+     * The port on which the load balancer is listening.
+     *
+     * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can specify
+     * any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-loadbalancerport)
+     */
+    public fun loadBalancerPort(): String
+
+    /**
+     * The names of the policies to associate with the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-policynames)
+     */
+    public fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
+
+    /**
+     * The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the server certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-sslcertificateid)
+     */
+    public fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
+
+    /**
+     * A builder for [ListenersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instancePort The port on which the instance is listening. 
+       */
+      public fun instancePort(instancePort: String)
+
+      /**
+       * @param instanceProtocol The protocol to use for routing traffic to instances: HTTP, HTTPS,
+       * TCP, or SSL.
+       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
+       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
+       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
+       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+       */
+      public fun instanceProtocol(instanceProtocol: String)
+
+      /**
+       * @param loadBalancerPort The port on which the load balancer is listening. 
+       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
+       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+       */
+      public fun loadBalancerPort(loadBalancerPort: String)
+
+      /**
+       * @param policyNames The names of the policies to associate with the listener.
+       */
+      public fun policyNames(policyNames: List<String>)
+
+      /**
+       * @param policyNames The names of the policies to associate with the listener.
+       */
+      public fun policyNames(vararg policyNames: String)
+
+      /**
+       * @param protocol The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP,
+       * or SSL. 
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param sslCertificateId The Amazon Resource Name (ARN) of the server certificate.
+       */
+      public fun sslCertificateId(sslCertificateId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty.builder()
+
+      /**
+       * @param instancePort The port on which the instance is listening. 
+       */
+      override fun instancePort(instancePort: String) {
+        cdkBuilder.instancePort(instancePort)
+      }
+
+      /**
+       * @param instanceProtocol The protocol to use for routing traffic to instances: HTTP, HTTPS,
+       * TCP, or SSL.
+       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
+       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
+       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
+       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+       */
+      override fun instanceProtocol(instanceProtocol: String) {
+        cdkBuilder.instanceProtocol(instanceProtocol)
+      }
+
+      /**
+       * @param loadBalancerPort The port on which the load balancer is listening. 
+       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
+       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+       */
+      override fun loadBalancerPort(loadBalancerPort: String) {
+        cdkBuilder.loadBalancerPort(loadBalancerPort)
+      }
+
+      /**
+       * @param policyNames The names of the policies to associate with the listener.
+       */
+      override fun policyNames(policyNames: List<String>) {
+        cdkBuilder.policyNames(policyNames)
+      }
+
+      /**
+       * @param policyNames The names of the policies to associate with the listener.
+       */
+      override fun policyNames(vararg policyNames: String): Unit = policyNames(policyNames.toList())
+
+      /**
+       * @param protocol The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP,
+       * or SSL. 
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param sslCertificateId The Amazon Resource Name (ARN) of the server certificate.
+       */
+      override fun sslCertificateId(sslCertificateId: String) {
+        cdkBuilder.sslCertificateId(sslCertificateId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
+    ) : CdkObject(cdkObject), ListenersProperty {
+      /**
+       * The port on which the instance is listening.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceport)
+       */
+      override fun instancePort(): String = unwrap(this).getInstancePort()
+
+      /**
+       * The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL.
+       *
+       * If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the
+       * front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is
+       * secure, (HTTPS or SSL), the listener's `InstanceProtocol` must also be secure.
+       *
+       * If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP
+       * or TCP, the listener's `InstanceProtocol` must be HTTP or TCP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-instanceprotocol)
+       */
+      override fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
+
+      /**
+       * The port on which the load balancer is listening.
+       *
+       * On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can
+       * specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-loadbalancerport)
+       */
+      override fun loadBalancerPort(): String = unwrap(this).getLoadBalancerPort()
+
+      /**
+       * The names of the policies to associate with the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-policynames)
+       */
+      override fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
+
+      /**
+       * The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+
+      /**
+       * The Amazon Resource Name (ARN) of the server certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html#cfn-elasticloadbalancing-loadbalancer-listeners-sslcertificateid)
+       */
+      override fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ListenersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty):
+          ListenersProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ListenersProperty):
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty
+    }
+  }
+
+  /**
+   * Specifies policies for your Classic Load Balancer.
+   *
+   * To associate policies with a listener, use the
+   * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+   * property for the listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
+   * Object attributes;
+   * PoliciesProperty policiesProperty = PoliciesProperty.builder()
+   * .attributes(List.of(attributes))
+   * .policyName("policyName")
+   * .policyType("policyType")
+   * // the properties below are optional
+   * .instancePorts(List.of("instancePorts"))
+   * .loadBalancerPorts(List.of("loadBalancerPorts"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html)
+   */
+  public interface PoliciesProperty {
+    /**
+     * The policy attributes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-attributes)
+     */
+    public fun attributes(): Any
+
+    /**
+     * The instance ports for the policy.
+     *
+     * Required only for some policy types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-instanceports)
+     */
+    public fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?: emptyList()
+
+    /**
+     * The load balancer ports for the policy.
+     *
+     * Required only for some policy types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-loadbalancerports)
+     */
+    public fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
+        emptyList()
+
+    /**
+     * The name of the policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policyname)
+     */
+    public fun policyName(): String
+
+    /**
+     * The name of the policy type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policytype)
+     */
+    public fun policyType(): String
+
+    /**
+     * A builder for [PoliciesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes The policy attributes. 
+       */
+      public fun attributes(attributes: List<Any>)
+
+      /**
+       * @param attributes The policy attributes. 
+       */
+      public fun attributes(vararg attributes: Any)
+
+      /**
+       * @param attributes The policy attributes. 
+       */
+      public fun attributes(attributes: IResolvable)
+
+      /**
+       * @param instancePorts The instance ports for the policy.
+       * Required only for some policy types.
+       */
+      public fun instancePorts(instancePorts: List<String>)
+
+      /**
+       * @param instancePorts The instance ports for the policy.
+       * Required only for some policy types.
+       */
+      public fun instancePorts(vararg instancePorts: String)
+
+      /**
+       * @param loadBalancerPorts The load balancer ports for the policy.
+       * Required only for some policy types.
+       */
+      public fun loadBalancerPorts(loadBalancerPorts: List<String>)
+
+      /**
+       * @param loadBalancerPorts The load balancer ports for the policy.
+       * Required only for some policy types.
+       */
+      public fun loadBalancerPorts(vararg loadBalancerPorts: String)
+
+      /**
+       * @param policyName The name of the policy. 
+       */
+      public fun policyName(policyName: String)
+
+      /**
+       * @param policyType The name of the policy type. 
+       */
+      public fun policyType(policyType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty.builder()
+
+      /**
+       * @param attributes The policy attributes. 
+       */
+      override fun attributes(attributes: List<Any>) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param attributes The policy attributes. 
+       */
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
+
+      /**
+       * @param attributes The policy attributes. 
+       */
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param instancePorts The instance ports for the policy.
+       * Required only for some policy types.
+       */
+      override fun instancePorts(instancePorts: List<String>) {
+        cdkBuilder.instancePorts(instancePorts)
+      }
+
+      /**
+       * @param instancePorts The instance ports for the policy.
+       * Required only for some policy types.
+       */
+      override fun instancePorts(vararg instancePorts: String): Unit =
+          instancePorts(instancePorts.toList())
+
+      /**
+       * @param loadBalancerPorts The load balancer ports for the policy.
+       * Required only for some policy types.
+       */
+      override fun loadBalancerPorts(loadBalancerPorts: List<String>) {
+        cdkBuilder.loadBalancerPorts(loadBalancerPorts)
+      }
+
+      /**
+       * @param loadBalancerPorts The load balancer ports for the policy.
+       * Required only for some policy types.
+       */
+      override fun loadBalancerPorts(vararg loadBalancerPorts: String): Unit =
+          loadBalancerPorts(loadBalancerPorts.toList())
+
+      /**
+       * @param policyName The name of the policy. 
+       */
+      override fun policyName(policyName: String) {
+        cdkBuilder.policyName(policyName)
+      }
+
+      /**
+       * @param policyType The name of the policy type. 
+       */
+      override fun policyType(policyType: String) {
+        cdkBuilder.policyType(policyType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
+    ) : CdkObject(cdkObject), PoliciesProperty {
+      /**
+       * The policy attributes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-attributes)
+       */
+      override fun attributes(): Any = unwrap(this).getAttributes()
+
+      /**
+       * The instance ports for the policy.
+       *
+       * Required only for some policy types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-instanceports)
+       */
+      override fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?: emptyList()
+
+      /**
+       * The load balancer ports for the policy.
+       *
+       * Required only for some policy types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-loadbalancerports)
+       */
+      override fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
+          emptyList()
+
+      /**
+       * The name of the policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policyname)
+       */
+      override fun policyName(): String = unwrap(this).getPolicyName()
+
+      /**
+       * The name of the policy type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html#cfn-elasticloadbalancing-loadbalancer-policies-policytype)
+       */
+      override fun policyType(): String = unwrap(this).getPolicyType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PoliciesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty):
+          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PoliciesProperty):
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty
     }
   }
 }

@@ -120,7 +120,7 @@ public interface CfnResourceDefaultVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnResourceDefaultVersionProps,
+    cdkObject: software.amazon.awscdk.CfnResourceDefaultVersionProps,
   ) : CdkObject(cdkObject), CfnResourceDefaultVersionProps {
     /**
      * The name of the resource.

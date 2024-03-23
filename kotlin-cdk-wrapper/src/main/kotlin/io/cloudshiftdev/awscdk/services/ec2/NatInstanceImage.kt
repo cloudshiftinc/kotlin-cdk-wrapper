@@ -14,8 +14,8 @@ package io.cloudshiftdev.awscdk.services.ec2
  * NatInstanceImage natInstanceImage = new NatInstanceImage();
  * ```
  */
-public open class NatInstanceImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.NatInstanceImage,
+public open class NatInstanceImage(
+  cdkObject: software.amazon.awscdk.services.ec2.NatInstanceImage,
 ) : LookupMachineImage(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.NatInstanceImage()
   )
@@ -25,6 +25,7 @@ public open class NatInstanceImage internal constructor(
         NatInstanceImage = NatInstanceImage(cdkObject)
 
     internal fun unwrap(wrapped: NatInstanceImage):
-        software.amazon.awscdk.services.ec2.NatInstanceImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.NatInstanceImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.NatInstanceImage
   }
 }

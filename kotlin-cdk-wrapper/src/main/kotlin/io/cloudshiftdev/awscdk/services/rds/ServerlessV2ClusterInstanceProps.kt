@@ -257,7 +257,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps,
+    cdkObject: software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps,
   ) : CdkObject(cdkObject), ServerlessV2ClusterInstanceProps {
     /**
      * Whether to allow upgrade of major version for the DB instance.

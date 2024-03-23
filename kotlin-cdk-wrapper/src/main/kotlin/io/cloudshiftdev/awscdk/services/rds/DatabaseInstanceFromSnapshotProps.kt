@@ -917,7 +917,7 @@ public interface DatabaseInstanceFromSnapshotProps : DatabaseInstanceSourceProps
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps,
   ) : CdkObject(cdkObject), DatabaseInstanceFromSnapshotProps {
     /**
      * The allocated storage size, specified in gibibytes (GiB).

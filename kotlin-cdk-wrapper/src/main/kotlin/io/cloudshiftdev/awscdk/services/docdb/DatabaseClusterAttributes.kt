@@ -206,7 +206,7 @@ public interface DatabaseClusterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterAttributes,
+    cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterAttributes,
   ) : CdkObject(cdkObject), DatabaseClusterAttributes {
     /**
      * Cluster endpoint address.

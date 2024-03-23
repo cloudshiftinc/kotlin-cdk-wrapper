@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class TableWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidget,
+public open class TableWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: TableWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.TableWidget(props.let(TableWidgetProps::unwrap))
@@ -502,6 +502,7 @@ public open class TableWidget internal constructor(
         TableWidget = TableWidget(cdkObject)
 
     internal fun unwrap(wrapped: TableWidget):
-        software.amazon.awscdk.services.cloudwatch.TableWidget = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.TableWidget = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.TableWidget
   }
 }

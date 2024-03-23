@@ -31,7 +31,7 @@ public interface IRoute : IResource {
   public fun virtualRouter(): IVirtualRouter
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IRoute,
+    cdkObject: software.amazon.awscdk.services.appmesh.IRoute,
   ) : CdkObject(cdkObject), IRoute {
     /**
      * Apply the given removal policy to this resource.

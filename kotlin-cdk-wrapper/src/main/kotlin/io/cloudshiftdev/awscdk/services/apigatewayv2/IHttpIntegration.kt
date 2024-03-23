@@ -20,7 +20,7 @@ public interface IHttpIntegration : IIntegration {
   public fun httpApi(): IHttpApi
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpIntegration,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpIntegration,
   ) : CdkObject(cdkObject), IHttpIntegration {
     /**
      * Apply the given removal policy to this resource.

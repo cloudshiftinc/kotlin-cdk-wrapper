@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * from the world");
  * ```
  */
-public open class SecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.SecurityGroup,
+public open class SecurityGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.SecurityGroup,
 ) : Resource(cdkObject), ISecurityGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -551,6 +551,6 @@ public open class SecurityGroup internal constructor(
         SecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: SecurityGroup): software.amazon.awscdk.services.ec2.SecurityGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.SecurityGroup
   }
 }

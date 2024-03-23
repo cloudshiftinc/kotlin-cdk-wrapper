@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html)
  */
-public open class CfnProvisioningTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate,
+public open class CfnProvisioningTemplate(
+  cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -472,7 +472,8 @@ public open class CfnProvisioningTemplate internal constructor(
         CfnProvisioningTemplate = CfnProvisioningTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnProvisioningTemplate):
-        software.amazon.awscdk.services.iot.CfnProvisioningTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnProvisioningTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnProvisioningTemplate
   }
 
   /**
@@ -556,8 +557,7 @@ public open class CfnProvisioningTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty,
     ) : CdkObject(cdkObject), ProvisioningHookProperty {
       /**
        * The payload that was sent to the target function.

@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html)
  */
-public open class CfnSchema internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSchema,
+public open class CfnSchema(
+  cdkObject: software.amazon.awscdk.services.glue.CfnSchema,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -541,7 +541,112 @@ public open class CfnSchema internal constructor(
         CfnSchema(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchema): software.amazon.awscdk.services.glue.CfnSchema =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnSchema
+  }
+
+  /**
+   * Specifies a registry in the AWS Glue Schema Registry.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * RegistryProperty registryProperty = RegistryProperty.builder()
+   * .arn("arn")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html)
+   */
+  public interface RegistryProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * The name of the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [RegistryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the registry.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param name The name of the registry.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the registry.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param name The name of the registry.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty,
+    ) : CdkObject(cdkObject), RegistryProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * The name of the registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RegistryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty):
+          RegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? RegistryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RegistryProperty):
+          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty
+    }
   }
 
   /**
@@ -628,7 +733,7 @@ public open class CfnSchema internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty,
     ) : CdkObject(cdkObject), SchemaVersionProperty {
       /**
        * Indicates if this version is the latest version of the schema.
@@ -660,111 +765,6 @@ public open class CfnSchema internal constructor(
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty
-    }
-  }
-
-  /**
-   * Specifies a registry in the AWS Glue Schema Registry.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * RegistryProperty registryProperty = RegistryProperty.builder()
-   * .arn("arn")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html)
-   */
-  public interface RegistryProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the registry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * The name of the registry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [RegistryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the registry.
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param name The name of the registry.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the registry.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param name The name of the registry.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty,
-    ) : CdkObject(cdkObject), RegistryProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the registry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-
-      /**
-       * The name of the registry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RegistryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty):
-          RegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? RegistryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RegistryProperty):
-          software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty
     }
   }
 }

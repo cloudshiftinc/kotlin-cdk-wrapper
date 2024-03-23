@@ -29,8 +29,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public open class FilterCriteria internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.FilterCriteria,
+public open class FilterCriteria(
+  cdkObject: software.amazon.awscdk.services.lambda.FilterCriteria,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.lambda.FilterCriteria()
   )
@@ -43,6 +43,7 @@ public open class FilterCriteria internal constructor(
         FilterCriteria = FilterCriteria(cdkObject)
 
     internal fun unwrap(wrapped: FilterCriteria):
-        software.amazon.awscdk.services.lambda.FilterCriteria = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.FilterCriteria = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.FilterCriteria
   }
 }

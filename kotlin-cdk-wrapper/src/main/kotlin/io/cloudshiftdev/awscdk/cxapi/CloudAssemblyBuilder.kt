@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudAssemblyBuilder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilder,
+public open class CloudAssemblyBuilder(
+  cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilder,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.cxapi.CloudAssemblyBuilder()
   )
@@ -207,6 +207,7 @@ public open class CloudAssemblyBuilder internal constructor(
         CloudAssemblyBuilder = CloudAssemblyBuilder(cdkObject)
 
     internal fun unwrap(wrapped: CloudAssemblyBuilder):
-        software.amazon.awscdk.cxapi.CloudAssemblyBuilder = wrapped.cdkObject
+        software.amazon.awscdk.cxapi.CloudAssemblyBuilder = wrapped.cdkObject as
+        software.amazon.awscdk.cxapi.CloudAssemblyBuilder
   }
 }

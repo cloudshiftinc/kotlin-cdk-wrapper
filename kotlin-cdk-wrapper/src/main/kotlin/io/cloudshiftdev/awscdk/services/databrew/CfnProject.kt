@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.databrew.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -392,7 +392,7 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.databrew.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.databrew.CfnProject
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.databrew.CfnProject.SampleProperty,
+      cdkObject: software.amazon.awscdk.services.databrew.CfnProject.SampleProperty,
     ) : CdkObject(cdkObject), SampleProperty {
       /**
        * The number of rows in the sample.

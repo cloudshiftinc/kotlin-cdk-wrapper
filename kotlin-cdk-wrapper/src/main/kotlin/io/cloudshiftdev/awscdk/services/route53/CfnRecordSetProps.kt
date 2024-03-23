@@ -1849,7 +1849,7 @@ public interface CfnRecordSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetProps,
   ) : CdkObject(cdkObject), CfnRecordSetProps {
     /**
      * *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront

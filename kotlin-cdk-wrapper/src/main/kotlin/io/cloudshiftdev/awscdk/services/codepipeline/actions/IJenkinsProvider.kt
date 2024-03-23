@@ -34,7 +34,7 @@ public interface IJenkinsProvider : IConstruct {
   public fun version(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider,
   ) : CdkObject(cdkObject), IJenkinsProvider {
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

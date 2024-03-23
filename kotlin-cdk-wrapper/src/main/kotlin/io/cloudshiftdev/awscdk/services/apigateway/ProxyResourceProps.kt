@@ -221,7 +221,7 @@ public interface ProxyResourceProps : ProxyResourceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ProxyResourceProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.ProxyResourceProps,
   ) : CdkObject(cdkObject), ProxyResourceProps {
     /**
      * Adds an "ANY" method to this resource.

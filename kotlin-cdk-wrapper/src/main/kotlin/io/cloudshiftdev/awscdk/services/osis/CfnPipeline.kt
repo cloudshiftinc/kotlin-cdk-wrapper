@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-osis-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -703,278 +703,7 @@ public open class CfnPipeline internal constructor(
         CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline): software.amazon.awscdk.services.osis.CfnPipeline =
-        wrapped.cdkObject
-  }
-
-  /**
-   * An OpenSearch Ingestion-managed VPC endpoint that will access one or more pipelines.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.osis.*;
-   * VpcEndpointProperty vpcEndpointProperty = VpcEndpointProperty.builder()
-   * .vpcEndpointId("vpcEndpointId")
-   * .vpcId("vpcId")
-   * .vpcOptions(VpcOptionsProperty.builder()
-   * .subnetIds(List.of("subnetIds"))
-   * // the properties below are optional
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html)
-   */
-  public interface VpcEndpointProperty {
-    /**
-     * The unique identifier of the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
-     */
-    public fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
-
-    /**
-     * The ID for your VPC.
-     *
-     * AWS PrivateLink generates this value when you create a VPC.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
-     */
-    public fun vpcId(): String? = unwrap(this).getVpcId()
-
-    /**
-     * Information about the VPC, including associated subnets and security groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
-     */
-    public fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
-
-    /**
-     * A builder for [VpcEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcEndpointId The unique identifier of the endpoint.
-       */
-      public fun vpcEndpointId(vpcEndpointId: String)
-
-      /**
-       * @param vpcId The ID for your VPC.
-       * AWS PrivateLink generates this value when you create a VPC.
-       */
-      public fun vpcId(vpcId: String)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      public fun vpcOptions(vpcOptions: IResolvable)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty)
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.Builder =
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.builder()
-
-      /**
-       * @param vpcEndpointId The unique identifier of the endpoint.
-       */
-      override fun vpcEndpointId(vpcEndpointId: String) {
-        cdkBuilder.vpcEndpointId(vpcEndpointId)
-      }
-
-      /**
-       * @param vpcId The ID for your VPC.
-       * AWS PrivateLink generates this value when you create a VPC.
-       */
-      override fun vpcId(vpcId: String) {
-        cdkBuilder.vpcId(vpcId)
-      }
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      override fun vpcOptions(vpcOptions: IResolvable) {
-        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param vpcOptions Information about the VPC, including associated subnets and security
-       * groups.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
-          vpcOptions(VpcOptionsProperty(vpcOptions))
-
-      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
-    ) : CdkObject(cdkObject), VpcEndpointProperty {
-      /**
-       * The unique identifier of the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
-       */
-      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
-
-      /**
-       * The ID for your VPC.
-       *
-       * AWS PrivateLink generates this value when you create a VPC.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
-       */
-      override fun vpcId(): String? = unwrap(this).getVpcId()
-
-      /**
-       * Information about the VPC, including associated subnets and security groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
-       */
-      override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty):
-          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcEndpointProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty
-    }
-  }
-
-  /**
-   * The destination for OpenSearch Ingestion logs sent to Amazon CloudWatch.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.osis.*;
-   * CloudWatchLogDestinationProperty cloudWatchLogDestinationProperty =
-   * CloudWatchLogDestinationProperty.builder()
-   * .logGroup("logGroup")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html)
-   */
-  public interface CloudWatchLogDestinationProperty {
-    /**
-     * The name of the CloudWatch Logs group to send pipeline logs to.
-     *
-     * You can specify an existing log group or create a new one. For example,
-     * `/aws/vendedlogs/OpenSearchService/pipelines` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html#cfn-osis-pipeline-cloudwatchlogdestination-loggroup)
-     */
-    public fun logGroup(): String
-
-    /**
-     * A builder for [CloudWatchLogDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logGroup The name of the CloudWatch Logs group to send pipeline logs to. 
-       * You can specify an existing log group or create a new one. For example,
-       * `/aws/vendedlogs/OpenSearchService/pipelines` .
-       */
-      public fun logGroup(logGroup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty.builder()
-
-      /**
-       * @param logGroup The name of the CloudWatch Logs group to send pipeline logs to. 
-       * You can specify an existing log group or create a new one. For example,
-       * `/aws/vendedlogs/OpenSearchService/pipelines` .
-       */
-      override fun logGroup(logGroup: String) {
-        cdkBuilder.logGroup(logGroup)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogDestinationProperty {
-      /**
-       * The name of the CloudWatch Logs group to send pipeline logs to.
-       *
-       * You can specify an existing log group or create a new one. For example,
-       * `/aws/vendedlogs/OpenSearchService/pipelines` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html#cfn-osis-pipeline-cloudwatchlogdestination-loggroup)
-       */
-      override fun logGroup(): String = unwrap(this).getLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty):
-          CloudWatchLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogDestinationProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.osis.CfnPipeline
   }
 
   /**
@@ -1046,8 +775,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
     ) : CdkObject(cdkObject), BufferOptionsProperty {
       /**
        * Whether persistent buffering should be enabled.
@@ -1072,6 +800,187 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty
+    }
+  }
+
+  /**
+   * The destination for OpenSearch Ingestion logs sent to Amazon CloudWatch.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.osis.*;
+   * CloudWatchLogDestinationProperty cloudWatchLogDestinationProperty =
+   * CloudWatchLogDestinationProperty.builder()
+   * .logGroup("logGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html)
+   */
+  public interface CloudWatchLogDestinationProperty {
+    /**
+     * The name of the CloudWatch Logs group to send pipeline logs to.
+     *
+     * You can specify an existing log group or create a new one. For example,
+     * `/aws/vendedlogs/OpenSearchService/pipelines` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html#cfn-osis-pipeline-cloudwatchlogdestination-loggroup)
+     */
+    public fun logGroup(): String
+
+    /**
+     * A builder for [CloudWatchLogDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroup The name of the CloudWatch Logs group to send pipeline logs to. 
+       * You can specify an existing log group or create a new one. For example,
+       * `/aws/vendedlogs/OpenSearchService/pipelines` .
+       */
+      public fun logGroup(logGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty.builder()
+
+      /**
+       * @param logGroup The name of the CloudWatch Logs group to send pipeline logs to. 
+       * You can specify an existing log group or create a new one. For example,
+       * `/aws/vendedlogs/OpenSearchService/pipelines` .
+       */
+      override fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogDestinationProperty {
+      /**
+       * The name of the CloudWatch Logs group to send pipeline logs to.
+       *
+       * You can specify an existing log group or create a new one. For example,
+       * `/aws/vendedlogs/OpenSearchService/pipelines` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-cloudwatchlogdestination.html#cfn-osis-pipeline-cloudwatchlogdestination-loggroup)
+       */
+      override fun logGroup(): String = unwrap(this).getLogGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty):
+          CloudWatchLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogDestinationProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty
+    }
+  }
+
+  /**
+   * Options to control how OpenSearch encrypts buffer data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.osis.*;
+   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
+   * EncryptionAtRestOptionsProperty.builder()
+   * .kmsKeyArn("kmsKeyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html)
+   */
+  public interface EncryptionAtRestOptionsProperty {
+    /**
+     * The ARN of the KMS key used to encrypt buffer data.
+     *
+     * By default, data is encrypted using an AWS owned key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String
+
+    /**
+     * A builder for [EncryptionAtRestOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
+       * By default, data is encrypted using an AWS owned key.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.builder()
+
+      /**
+       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
+       * By default, data is encrypted using an AWS owned key.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
+    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+      /**
+       * The ARN of the KMS key used to encrypt buffer data.
+       *
+       * By default, data is encrypted using an AWS owned key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty):
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty
     }
   }
 
@@ -1212,8 +1121,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
     ) : CdkObject(cdkObject), LogPublishingOptionsProperty {
       /**
        * The destination for OpenSearch Ingestion logs sent to Amazon CloudWatch Logs.
@@ -1251,7 +1159,7 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * Options to control how OpenSearch encrypts buffer data.
+   * An OpenSearch Ingestion-managed VPC endpoint that will access one or more pipelines.
    *
    * Example:
    *
@@ -1259,83 +1167,171 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.osis.*;
-   * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
-   * EncryptionAtRestOptionsProperty.builder()
-   * .kmsKeyArn("kmsKeyArn")
+   * VpcEndpointProperty vpcEndpointProperty = VpcEndpointProperty.builder()
+   * .vpcEndpointId("vpcEndpointId")
+   * .vpcId("vpcId")
+   * .vpcOptions(VpcOptionsProperty.builder()
+   * .subnetIds(List.of("subnetIds"))
+   * // the properties below are optional
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html)
    */
-  public interface EncryptionAtRestOptionsProperty {
+  public interface VpcEndpointProperty {
     /**
-     * The ARN of the KMS key used to encrypt buffer data.
+     * The unique identifier of the endpoint.
      *
-     * By default, data is encrypted using an AWS owned key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
      */
-    public fun kmsKeyArn(): String
+    public fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
     /**
-     * A builder for [EncryptionAtRestOptionsProperty]
+     * The ID for your VPC.
+     *
+     * AWS PrivateLink generates this value when you create a VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
+     */
+    public fun vpcId(): String? = unwrap(this).getVpcId()
+
+    /**
+     * Information about the VPC, including associated subnets and security groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
+     */
+    public fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
+
+    /**
+     * A builder for [VpcEndpointProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
-       * By default, data is encrypted using an AWS owned key.
+       * @param vpcEndpointId The unique identifier of the endpoint.
        */
-      public fun kmsKeyArn(kmsKeyArn: String)
+      public fun vpcEndpointId(vpcEndpointId: String)
+
+      /**
+       * @param vpcId The ID for your VPC.
+       * AWS PrivateLink generates this value when you create a VPC.
+       */
+      public fun vpcId(vpcId: String)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      public fun vpcOptions(vpcOptions: IResolvable)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty)
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.Builder =
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.builder()
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.builder()
 
       /**
-       * @param kmsKeyArn The ARN of the KMS key used to encrypt buffer data. 
-       * By default, data is encrypted using an AWS owned key.
+       * @param vpcEndpointId The unique identifier of the endpoint.
        */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      override fun vpcEndpointId(vpcEndpointId: String) {
+        cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
+      /**
+       * @param vpcId The ID for your VPC.
+       * AWS PrivateLink generates this value when you create a VPC.
+       */
+      override fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      override fun vpcOptions(vpcOptions: IResolvable) {
+        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
+        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param vpcOptions Information about the VPC, including associated subnets and security
+       * groups.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
+          vpcOptions(VpcOptionsProperty(vpcOptions))
+
+      public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
+    ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
-       * The ARN of the KMS key used to encrypt buffer data.
+       * The unique identifier of the endpoint.
        *
-       * By default, data is encrypted using an AWS owned key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-encryptionatrestoptions.html#cfn-osis-pipeline-encryptionatrestoptions-kmskeyarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcendpointid)
        */
-      override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+
+      /**
+       * The ID for your VPC.
+       *
+       * AWS PrivateLink generates this value when you create a VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcid)
+       */
+      override fun vpcId(): String? = unwrap(this).getVpcId()
+
+      /**
+       * Information about the VPC, including associated subnets and security groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcendpoint.html#cfn-osis-pipeline-vpcendpoint-vpcoptions)
+       */
+      override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionAtRestOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcEndpointProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty):
+          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty
+      internal fun unwrap(wrapped: VpcEndpointProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty
     }
   }
 
@@ -1433,7 +1429,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
     ) : CdkObject(cdkObject), VpcOptionsProperty {
       /**
        * A list of security groups associated with the VPC endpoint.

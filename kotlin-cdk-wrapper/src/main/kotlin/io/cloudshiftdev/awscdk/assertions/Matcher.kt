@@ -34,8 +34,8 @@ import kotlin.String
  * "Fred", Match.arrayWith(List.of("Wobble")))));
  * ```
  */
-public abstract class Matcher internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.Matcher,
+public abstract class Matcher(
+  cdkObject: software.amazon.awscdk.assertions.Matcher,
 ) : CdkObject(cdkObject) {
   /**
    * A name for the matcher.
@@ -57,7 +57,7 @@ public abstract class Matcher internal constructor(
       unwrap(this).test(`actual`).let(MatchResult::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.assertions.Matcher,
+    cdkObject: software.amazon.awscdk.assertions.Matcher,
   ) : Matcher(cdkObject)
 
   public companion object {

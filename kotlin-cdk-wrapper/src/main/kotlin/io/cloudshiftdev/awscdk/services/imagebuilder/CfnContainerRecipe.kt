@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html)
  */
-public open class CfnContainerRecipe internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe,
+public open class CfnContainerRecipe(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -865,7 +865,151 @@ public open class CfnContainerRecipe internal constructor(
         CfnContainerRecipe = CfnContainerRecipe(cdkObject)
 
     internal fun unwrap(wrapped: CfnContainerRecipe):
-        software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe
+  }
+
+  /**
+   * Configuration details of the component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ComponentConfigurationProperty componentConfigurationProperty =
+   * ComponentConfigurationProperty.builder()
+   * .componentArn("componentArn")
+   * .parameters(List.of(ComponentParameterProperty.builder()
+   * .name("name")
+   * .value(List.of("value"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html)
+   */
+  public interface ComponentConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-componentarn)
+     */
+    public fun componentArn(): String? = unwrap(this).getComponentArn()
+
+    /**
+     * A group of parameter settings that Image Builder uses to configure the component for a
+     * specific recipe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [ComponentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentArn The Amazon Resource Name (ARN) of the component.
+       */
+      public fun componentArn(componentArn: String)
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      public fun parameters(parameters: List<Any>)
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      public fun parameters(vararg parameters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty.builder()
+
+      /**
+       * @param componentArn The Amazon Resource Name (ARN) of the component.
+       */
+      override fun componentArn(componentArn: String) {
+        cdkBuilder.componentArn(componentArn)
+      }
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      override fun parameters(parameters: List<Any>) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param parameters A group of parameter settings that Image Builder uses to configure the
+       * component for a specific recipe.
+       */
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty,
+    ) : CdkObject(cdkObject), ComponentConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-componentarn)
+       */
+      override fun componentArn(): String? = unwrap(this).getComponentArn()
+
+      /**
+       * A group of parameter settings that Image Builder uses to configure the component for a
+       * specific recipe.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty):
+          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
+    }
   }
 
   /**
@@ -952,8 +1096,7 @@ public open class CfnContainerRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty,
     ) : CdkObject(cdkObject), ComponentParameterProperty {
       /**
        * The name of the component parameter to set.
@@ -1209,8 +1352,7 @@ public open class CfnContainerRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty,
     ) : CdkObject(cdkObject), EbsInstanceBlockDeviceSpecificationProperty {
       /**
        * Use to configure delete on termination of the associated device.
@@ -1285,270 +1427,6 @@ public open class CfnContainerRecipe internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty
-    }
-  }
-
-  /**
-   * Configuration details of the component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ComponentConfigurationProperty componentConfigurationProperty =
-   * ComponentConfigurationProperty.builder()
-   * .componentArn("componentArn")
-   * .parameters(List.of(ComponentParameterProperty.builder()
-   * .name("name")
-   * .value(List.of("value"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html)
-   */
-  public interface ComponentConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-componentarn)
-     */
-    public fun componentArn(): String? = unwrap(this).getComponentArn()
-
-    /**
-     * A group of parameter settings that Image Builder uses to configure the component for a
-     * specific recipe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * A builder for [ComponentConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentArn The Amazon Resource Name (ARN) of the component.
-       */
-      public fun componentArn(componentArn: String)
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      public fun parameters(parameters: List<Any>)
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      public fun parameters(vararg parameters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty.builder()
-
-      /**
-       * @param componentArn The Amazon Resource Name (ARN) of the component.
-       */
-      override fun componentArn(componentArn: String) {
-        cdkBuilder.componentArn(componentArn)
-      }
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param parameters A group of parameter settings that Image Builder uses to configure the
-       * component for a specific recipe.
-       */
-      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-componentarn)
-       */
-      override fun componentArn(): String? = unwrap(this).getComponentArn()
-
-      /**
-       * A group of parameter settings that Image Builder uses to configure the component for a
-       * specific recipe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html#cfn-imagebuilder-containerrecipe-componentconfiguration-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty):
-          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
-    }
-  }
-
-  /**
-   * The container repository where the output container image is stored.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * TargetContainerRepositoryProperty targetContainerRepositoryProperty =
-   * TargetContainerRepositoryProperty.builder()
-   * .repositoryName("repositoryName")
-   * .service("service")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html)
-   */
-  public interface TargetContainerRepositoryProperty {
-    /**
-     * The name of the container repository where the output container image is stored.
-     *
-     * This name is prefixed by the repository location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
-     */
-    public fun repositoryName(): String? = unwrap(this).getRepositoryName()
-
-    /**
-     * Specifies the service in which this image was registered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-service)
-     */
-    public fun service(): String? = unwrap(this).getService()
-
-    /**
-     * A builder for [TargetContainerRepositoryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param repositoryName The name of the container repository where the output container image
-       * is stored.
-       * This name is prefixed by the repository location.
-       */
-      public fun repositoryName(repositoryName: String)
-
-      /**
-       * @param service Specifies the service in which this image was registered.
-       */
-      public fun service(service: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty.builder()
-
-      /**
-       * @param repositoryName The name of the container repository where the output container image
-       * is stored.
-       * This name is prefixed by the repository location.
-       */
-      override fun repositoryName(repositoryName: String) {
-        cdkBuilder.repositoryName(repositoryName)
-      }
-
-      /**
-       * @param service Specifies the service in which this image was registered.
-       */
-      override fun service(service: String) {
-        cdkBuilder.service(service)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty,
-    ) : CdkObject(cdkObject), TargetContainerRepositoryProperty {
-      /**
-       * The name of the container repository where the output container image is stored.
-       *
-       * This name is prefixed by the repository location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
-       */
-      override fun repositoryName(): String? = unwrap(this).getRepositoryName()
-
-      /**
-       * Specifies the service in which this image was registered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-service)
-       */
-      override fun service(): String? = unwrap(this).getService()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetContainerRepositoryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty):
-          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetContainerRepositoryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetContainerRepositoryProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
     }
   }
 
@@ -1703,8 +1581,7 @@ public open class CfnContainerRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty,
     ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
       /**
        * The device to which these mappings apply.
@@ -1877,8 +1754,7 @@ public open class CfnContainerRecipe internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty,
     ) : CdkObject(cdkObject), InstanceConfigurationProperty {
       /**
        * Defines the block devices to attach for building an instance from this Image Builder AMI.
@@ -1912,6 +1788,125 @@ public open class CfnContainerRecipe internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty
+    }
+  }
+
+  /**
+   * The container repository where the output container image is stored.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * TargetContainerRepositoryProperty targetContainerRepositoryProperty =
+   * TargetContainerRepositoryProperty.builder()
+   * .repositoryName("repositoryName")
+   * .service("service")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html)
+   */
+  public interface TargetContainerRepositoryProperty {
+    /**
+     * The name of the container repository where the output container image is stored.
+     *
+     * This name is prefixed by the repository location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
+     */
+    public fun repositoryName(): String? = unwrap(this).getRepositoryName()
+
+    /**
+     * Specifies the service in which this image was registered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-service)
+     */
+    public fun service(): String? = unwrap(this).getService()
+
+    /**
+     * A builder for [TargetContainerRepositoryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param repositoryName The name of the container repository where the output container image
+       * is stored.
+       * This name is prefixed by the repository location.
+       */
+      public fun repositoryName(repositoryName: String)
+
+      /**
+       * @param service Specifies the service in which this image was registered.
+       */
+      public fun service(service: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty.builder()
+
+      /**
+       * @param repositoryName The name of the container repository where the output container image
+       * is stored.
+       * This name is prefixed by the repository location.
+       */
+      override fun repositoryName(repositoryName: String) {
+        cdkBuilder.repositoryName(repositoryName)
+      }
+
+      /**
+       * @param service Specifies the service in which this image was registered.
+       */
+      override fun service(service: String) {
+        cdkBuilder.service(service)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty,
+    ) : CdkObject(cdkObject), TargetContainerRepositoryProperty {
+      /**
+       * The name of the container repository where the output container image is stored.
+       *
+       * This name is prefixed by the repository location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
+       */
+      override fun repositoryName(): String? = unwrap(this).getRepositoryName()
+
+      /**
+       * Specifies the service in which this image was registered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-service)
+       */
+      override fun service(): String? = unwrap(this).getService()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetContainerRepositoryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty):
+          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetContainerRepositoryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetContainerRepositoryProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
     }
   }
 }

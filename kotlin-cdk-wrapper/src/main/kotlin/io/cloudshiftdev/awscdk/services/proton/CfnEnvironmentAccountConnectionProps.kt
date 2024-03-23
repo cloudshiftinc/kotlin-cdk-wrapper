@@ -272,8 +272,7 @@ public interface CfnEnvironmentAccountConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps,
+    cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps,
   ) : CdkObject(cdkObject), CfnEnvironmentAccountConnectionProps {
     /**
      * The Amazon Resource Name (ARN) of an IAM service role in the environment account.

@@ -339,7 +339,7 @@ public interface CfnPlaceIndexProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndexProps,
+    cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndexProps,
   ) : CdkObject(cdkObject), CfnPlaceIndexProps {
     /**
      * Specifies the geospatial data provider for the new place index.

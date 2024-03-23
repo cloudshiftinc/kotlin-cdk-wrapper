@@ -164,7 +164,7 @@ public interface CfnPromptProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnPromptProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnPromptProps,
   ) : CdkObject(cdkObject), CfnPromptProps {
     /**
      * The description of the prompt.

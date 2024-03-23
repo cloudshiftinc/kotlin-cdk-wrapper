@@ -194,7 +194,7 @@ public interface CfnStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnStreamProps,
+    cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnStreamProps,
   ) : CdkObject(cdkObject), CfnStreamProps {
     /**
      * How long the stream retains data, in hours.

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html)
  */
-public open class CfnThing internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnThing,
+public open class CfnThing(
+  cdkObject: software.amazon.awscdk.services.iot.CfnThing,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -251,7 +251,7 @@ public open class CfnThing internal constructor(
         CfnThing(cdkObject)
 
     internal fun unwrap(wrapped: CfnThing): software.amazon.awscdk.services.iot.CfnThing =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnThing
   }
 
   /**
@@ -334,7 +334,7 @@ public open class CfnThing internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty,
     ) : CdkObject(cdkObject), AttributePayloadProperty {
       /**
        * A JSON string containing up to three key-value pair in JSON format. For example:.

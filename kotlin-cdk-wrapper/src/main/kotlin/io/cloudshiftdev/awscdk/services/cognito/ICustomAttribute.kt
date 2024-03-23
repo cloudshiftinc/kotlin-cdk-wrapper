@@ -15,7 +15,7 @@ public interface ICustomAttribute {
   public fun bind(): CustomAttributeConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute,
+    cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute,
   ) : CdkObject(cdkObject), ICustomAttribute {
     /**
      * Bind this custom attribute type to the values as expected by CloudFormation.

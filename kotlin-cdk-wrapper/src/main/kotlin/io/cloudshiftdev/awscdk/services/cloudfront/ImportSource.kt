@@ -22,11 +22,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class ImportSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
+public abstract class ImportSource(
+  cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
   ) : ImportSource(cdkObject)
 
   public companion object {

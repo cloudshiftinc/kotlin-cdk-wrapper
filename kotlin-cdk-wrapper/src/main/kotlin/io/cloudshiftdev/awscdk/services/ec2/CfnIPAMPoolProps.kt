@@ -660,7 +660,7 @@ public interface CfnIPAMPoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolProps,
   ) : CdkObject(cdkObject), CfnIPAMPoolProps {
     /**
      * The address family of the pool.

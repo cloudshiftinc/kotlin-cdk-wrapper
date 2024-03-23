@@ -227,8 +227,7 @@ public interface WebSocketAwsIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps,
   ) : CdkObject(cdkObject), WebSocketAwsIntegrationProps {
     /**
      * Specifies the credentials role required for the integration.

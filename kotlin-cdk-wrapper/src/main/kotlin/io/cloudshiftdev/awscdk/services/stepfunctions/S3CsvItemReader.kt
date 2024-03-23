@@ -33,8 +33,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class S3CsvItemReader internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.S3CsvItemReader,
+public open class S3CsvItemReader(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.S3CsvItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3CsvItemReaderProps) :
       this(software.amazon.awscdk.services.stepfunctions.S3CsvItemReader(props.let(S3CsvItemReaderProps::unwrap))
@@ -181,6 +181,7 @@ public open class S3CsvItemReader internal constructor(
         S3CsvItemReader = S3CsvItemReader(cdkObject)
 
     internal fun unwrap(wrapped: S3CsvItemReader):
-        software.amazon.awscdk.services.stepfunctions.S3CsvItemReader = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.S3CsvItemReader = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.S3CsvItemReader
   }
 }

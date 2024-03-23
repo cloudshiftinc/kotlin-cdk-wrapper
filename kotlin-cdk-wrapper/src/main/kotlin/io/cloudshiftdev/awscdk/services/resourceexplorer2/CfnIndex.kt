@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html)
  */
-public open class CfnIndex internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndex,
+public open class CfnIndex(
+  cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndex,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -207,6 +207,7 @@ public open class CfnIndex internal constructor(
         CfnIndex = CfnIndex(cdkObject)
 
     internal fun unwrap(wrapped: CfnIndex):
-        software.amazon.awscdk.services.resourceexplorer2.CfnIndex = wrapped.cdkObject
+        software.amazon.awscdk.services.resourceexplorer2.CfnIndex = wrapped.cdkObject as
+        software.amazon.awscdk.services.resourceexplorer2.CfnIndex
   }
 }

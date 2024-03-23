@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)
  */
-public open class CfnTaskSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
+public open class CfnTaskSet(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -859,12 +859,13 @@ public open class CfnTaskSet internal constructor(
         CfnTaskSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskSet): software.amazon.awscdk.services.ecs.CfnTaskSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.CfnTaskSet
   }
 
   /**
-   * A floating-point percentage of the desired number of tasks to place and keep running in the
-   * task set.
+   * An object representing the networking details for a task or service.
+   *
+   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
    *
    * Example:
    *
@@ -872,107 +873,220 @@ public open class CfnTaskSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ScaleProperty scaleProperty = ScaleProperty.builder()
-   * .unit("unit")
-   * .value(123)
+   * AwsVpcConfigurationProperty awsVpcConfigurationProperty = AwsVpcConfigurationProperty.builder()
+   * .subnets(List.of("subnets"))
+   * // the properties below are optional
+   * .assignPublicIp("assignPublicIp")
+   * .securityGroups(List.of("securityGroups"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html)
    */
-  public interface ScaleProperty {
+  public interface AwsVpcConfigurationProperty {
     /**
-     * The unit of measure for the scale value.
+     * Whether the task's elastic network interface receives a public IP address.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-unit)
+     * The default value is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
      */
-    public fun unit(): String? = unwrap(this).getUnit()
+    public fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
 
     /**
-     * The value, specified as a percent total of a service's `desiredCount` , to scale the task
-     * set.
+     * The IDs of the security groups associated with the task or service.
      *
-     * Accepted values are numbers between 0 and 100.
+     * If you don't specify a security group, the default security group for the VPC is used.
+     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-value)
+     *
+     * All specified security groups must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-securitygroups)
      */
-    public fun `value`(): Number? = unwrap(this).getValue()
+    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
     /**
-     * A builder for [ScaleProperty]
+     * The IDs of the subnets associated with the task or service.
+     *
+     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+     *
+     *
+     * All specified subnets must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-subnets)
+     */
+    public fun subnets(): List<String>
+
+    /**
+     * A builder for [AwsVpcConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param unit The unit of measure for the scale value.
+       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
+       * address.
+       * The default value is `DISABLED` .
        */
-      public fun unit(unit: String)
+      public fun assignPublicIp(assignPublicIp: String)
 
       /**
-       * @param value The value, specified as a percent total of a service's `desiredCount` , to
-       * scale the task set.
-       * Accepted values are numbers between 0 and 100.
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
        */
-      public fun `value`(`value`: Number)
+      public fun securityGroups(securityGroups: List<String>)
+
+      /**
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
+       */
+      public fun securityGroups(vararg securityGroups: String)
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service. 
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service. 
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty.builder()
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty.builder()
 
       /**
-       * @param unit The unit of measure for the scale value.
+       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
+       * address.
+       * The default value is `DISABLED` .
        */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
+      override fun assignPublicIp(assignPublicIp: String) {
+        cdkBuilder.assignPublicIp(assignPublicIp)
       }
 
       /**
-       * @param value The value, specified as a percent total of a service's `desiredCount` , to
-       * scale the task set.
-       * Accepted values are numbers between 0 and 100.
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
        */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
+      override fun securityGroups(securityGroups: List<String>) {
+        cdkBuilder.securityGroups(securityGroups)
       }
 
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty =
-          cdkBuilder.build()
+      /**
+       * @param securityGroups The IDs of the security groups associated with the task or service.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified security groups must be from the same VPC.
+       */
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service. 
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The IDs of the subnets associated with the task or service. 
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty,
-    ) : CdkObject(cdkObject), ScaleProperty {
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty,
+    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
-       * The unit of measure for the scale value.
+       * Whether the task's elastic network interface receives a public IP address.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-unit)
+       * The default value is `DISABLED` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
        */
-      override fun unit(): String? = unwrap(this).getUnit()
+      override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
 
       /**
-       * The value, specified as a percent total of a service's `desiredCount` , to scale the task
-       * set.
+       * The IDs of the security groups associated with the task or service.
        *
-       * Accepted values are numbers between 0 and 100.
+       * If you don't specify a security group, the default security group for the VPC is used.
+       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-value)
+       *
+       * All specified security groups must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-securitygroups)
        */
-      override fun `value`(): Number? = unwrap(this).getValue()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+      /**
+       * The IDs of the subnets associated with the task or service.
+       *
+       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       *
+       *
+       * All specified subnets must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AwsVpcConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty):
-          ScaleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleProperty ?: Wrapper(cdkObject)
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty):
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ScaleProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty
+      internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
     }
   }
 
@@ -1159,7 +1273,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty,
     ) : CdkObject(cdkObject), LoadBalancerProperty {
       /**
        * The name of the container (as it appears in a container definition) to associate with the
@@ -1227,6 +1341,262 @@ public open class CfnTaskSet internal constructor(
           software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty
+    }
+  }
+
+  /**
+   * The network configuration for a task or service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+   * .subnets(List.of("subnets"))
+   * // the properties below are optional
+   * .assignPublicIp("assignPublicIp")
+   * .securityGroups(List.of("securityGroups"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * The VPC subnets and security groups that are associated with a task.
+     *
+     *
+     * All specified subnets and security groups must be from the same VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration)
+     */
+    public fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      public fun awsVpcConfiguration(awsVpcConfiguration: IResolvable)
+
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      public fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty)
+
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("86071b226e0630e4028fddeda36d35340516262893df40e8024690acc7b00fde")
+      public
+          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
+       * task.
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("86071b226e0630e4028fddeda36d35340516262893df40e8024690acc7b00fde")
+      override
+          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
+          Unit = awsVpcConfiguration(AwsVpcConfigurationProperty(awsVpcConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+      /**
+       * The VPC subnets and security groups that are associated with a task.
+       *
+       *
+       * All specified subnets and security groups must be from the same VPC.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration)
+       */
+      override fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * A floating-point percentage of the desired number of tasks to place and keep running in the
+   * task set.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ScaleProperty scaleProperty = ScaleProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html)
+   */
+  public interface ScaleProperty {
+    /**
+     * The unit of measure for the scale value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * The value, specified as a percent total of a service's `desiredCount` , to scale the task
+     * set.
+     *
+     * Accepted values are numbers between 0 and 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-value)
+     */
+    public fun `value`(): Number? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ScaleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit The unit of measure for the scale value.
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The value, specified as a percent total of a service's `desiredCount` , to
+       * scale the task set.
+       * Accepted values are numbers between 0 and 100.
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty.builder()
+
+      /**
+       * @param unit The unit of measure for the scale value.
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The value, specified as a percent total of a service's `desiredCount` , to
+       * scale the task set.
+       * Accepted values are numbers between 0 and 100.
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty,
+    ) : CdkObject(cdkObject), ScaleProperty {
+      /**
+       * The unit of measure for the scale value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+
+      /**
+       * The value, specified as a percent total of a service's `desiredCount` , to scale the task
+       * set.
+       *
+       * Accepted values are numbers between 0 and 100.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html#cfn-ecs-taskset-scale-value)
+       */
+      override fun `value`(): Number? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScaleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty):
+          ScaleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScaleProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty
     }
   }
 
@@ -1400,8 +1770,7 @@ public open class CfnTaskSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty,
     ) : CdkObject(cdkObject), ServiceRegistryProperty {
       /**
        * The container name value to be used for your service discovery service.
@@ -1466,378 +1835,6 @@ public open class CfnTaskSet internal constructor(
           software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty
-    }
-  }
-
-  /**
-   * The network configuration for a task or service.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * NetworkConfigurationProperty networkConfigurationProperty =
-   * NetworkConfigurationProperty.builder()
-   * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
-   * .subnets(List.of("subnets"))
-   * // the properties below are optional
-   * .assignPublicIp("assignPublicIp")
-   * .securityGroups(List.of("securityGroups"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html)
-   */
-  public interface NetworkConfigurationProperty {
-    /**
-     * The VPC subnets and security groups that are associated with a task.
-     *
-     *
-     * All specified subnets and security groups must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration)
-     */
-    public fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
-
-    /**
-     * A builder for [NetworkConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      public fun awsVpcConfiguration(awsVpcConfiguration: IResolvable)
-
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      public fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty)
-
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("86071b226e0630e4028fddeda36d35340516262893df40e8024690acc7b00fde")
-      public
-          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty.builder()
-
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param awsVpcConfiguration The VPC subnets and security groups that are associated with a
-       * task.
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("86071b226e0630e4028fddeda36d35340516262893df40e8024690acc7b00fde")
-      override
-          fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty.Builder.() -> Unit):
-          Unit = awsVpcConfiguration(AwsVpcConfigurationProperty(awsVpcConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
-      /**
-       * The VPC subnets and security groups that are associated with a task.
-       *
-       *
-       * All specified subnets and security groups must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-networkconfiguration.html#cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration)
-       */
-      override fun awsVpcConfiguration(): Any? = unwrap(this).getAwsVpcConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NetworkConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty
-    }
-  }
-
-  /**
-   * An object representing the networking details for a task or service.
-   *
-   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * AwsVpcConfigurationProperty awsVpcConfigurationProperty = AwsVpcConfigurationProperty.builder()
-   * .subnets(List.of("subnets"))
-   * // the properties below are optional
-   * .assignPublicIp("assignPublicIp")
-   * .securityGroups(List.of("securityGroups"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html)
-   */
-  public interface AwsVpcConfigurationProperty {
-    /**
-     * Whether the task's elastic network interface receives a public IP address.
-     *
-     * The default value is `DISABLED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
-     */
-    public fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
-
-    /**
-     * The IDs of the security groups associated with the task or service.
-     *
-     * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-     *
-     *
-     * All specified security groups must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-securitygroups)
-     */
-    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-    /**
-     * The IDs of the subnets associated with the task or service.
-     *
-     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-     *
-     *
-     * All specified subnets must be from the same VPC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-subnets)
-     */
-    public fun subnets(): List<String>
-
-    /**
-     * A builder for [AwsVpcConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
-       * address.
-       * The default value is `DISABLED` .
-       */
-      public fun assignPublicIp(assignPublicIp: String)
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      public fun securityGroups(securityGroups: List<String>)
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      public fun securityGroups(vararg securityGroups: String)
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty.builder()
-
-      /**
-       * @param assignPublicIp Whether the task's elastic network interface receives a public IP
-       * address.
-       * The default value is `DISABLED` .
-       */
-      override fun assignPublicIp(assignPublicIp: String) {
-        cdkBuilder.assignPublicIp(assignPublicIp)
-      }
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      override fun securityGroups(securityGroups: List<String>) {
-        cdkBuilder.securityGroups(securityGroups)
-      }
-
-      /**
-       * @param securityGroups The IDs of the security groups associated with the task or service.
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       */
-      override fun securityGroups(vararg securityGroups: String): Unit =
-          securityGroups(securityGroups.toList())
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
-      /**
-       * Whether the task's elastic network interface receives a public IP address.
-       *
-       * The default value is `DISABLED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
-       */
-      override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
-
-      /**
-       * The IDs of the security groups associated with the task or service.
-       *
-       * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified security groups must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-securitygroups)
-       */
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-      /**
-       * The IDs of the subnets associated with the task or service.
-       *
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
-       *
-       *
-       * All specified subnets must be from the same VPC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AwsVpcConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
     }
   }
 }

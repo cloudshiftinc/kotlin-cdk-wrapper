@@ -885,7 +885,7 @@ public interface BucketProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketProps,
+    cdkObject: software.amazon.awscdk.services.s3.BucketProps,
   ) : CdkObject(cdkObject), BucketProps {
     /**
      * Specifies a canned ACL that grants predefined permissions to the bucket.

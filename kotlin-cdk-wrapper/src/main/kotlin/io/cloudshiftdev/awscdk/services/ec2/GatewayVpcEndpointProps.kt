@@ -111,7 +111,7 @@ public interface GatewayVpcEndpointProps : GatewayVpcEndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps,
+    cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps,
   ) : CdkObject(cdkObject), GatewayVpcEndpointProps {
     /**
      * The service to use for this gateway VPC endpoint.

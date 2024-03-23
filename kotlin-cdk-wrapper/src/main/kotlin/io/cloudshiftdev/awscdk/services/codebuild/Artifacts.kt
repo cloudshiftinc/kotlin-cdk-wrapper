@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Artifacts internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
+public abstract class Artifacts(
+  cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
 ) : CdkObject(cdkObject), IArtifacts {
   /**
    * Callback when an Artifacts class is used in a CodeBuild Project.
@@ -55,7 +55,7 @@ public abstract class Artifacts internal constructor(
   public override fun type(): String = unwrap(this).getType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
+    cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
   ) : Artifacts(cdkObject)
 
   public companion object {

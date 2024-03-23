@@ -135,7 +135,7 @@ public interface SucceedProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.SucceedProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.SucceedProps,
   ) : CdkObject(cdkObject), SucceedProps {
     /**
      * An optional description for this state.

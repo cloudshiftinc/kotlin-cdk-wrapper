@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html)
  */
-public open class CfnLocationNFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS,
+public open class CfnLocationNFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -475,103 +475,8 @@ public open class CfnLocationNFS internal constructor(
         CfnLocationNFS = CfnLocationNFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationNFS):
-        software.amazon.awscdk.services.datasync.CfnLocationNFS = wrapped.cdkObject
-  }
-
-  /**
-   * The AWS DataSync agents that are connecting to a Network File System (NFS) location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * OnPremConfigProperty onPremConfigProperty = OnPremConfigProperty.builder()
-   * .agentArns(List.of("agentArns"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html)
-   */
-  public interface OnPremConfigProperty {
-    /**
-     * The Amazon Resource Names (ARNs) of the agents connecting to a transfer location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html#cfn-datasync-locationnfs-onpremconfig-agentarns)
-     */
-    public fun agentArns(): List<String>
-
-    /**
-     * A builder for [OnPremConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
-       * location. 
-       */
-      public fun agentArns(agentArns: List<String>)
-
-      /**
-       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
-       * location. 
-       */
-      public fun agentArns(vararg agentArns: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.builder()
-
-      /**
-       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
-       * location. 
-       */
-      override fun agentArns(agentArns: List<String>) {
-        cdkBuilder.agentArns(agentArns)
-      }
-
-      /**
-       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
-       * location. 
-       */
-      override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
-    ) : CdkObject(cdkObject), OnPremConfigProperty {
-      /**
-       * The Amazon Resource Names (ARNs) of the agents connecting to a transfer location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html#cfn-datasync-locationnfs-onpremconfig-agentarns)
-       */
-      override fun agentArns(): List<String> = unwrap(this).getAgentArns()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OnPremConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty):
-          OnPremConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OnPremConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnPremConfigProperty):
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty
-    }
+        software.amazon.awscdk.services.datasync.CfnLocationNFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationNFS
   }
 
   /**
@@ -670,8 +575,7 @@ public open class CfnLocationNFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty,
     ) : CdkObject(cdkObject), MountOptionsProperty {
       /**
        * Specifies the NFS version that you want DataSync to use when mounting your NFS share.
@@ -711,6 +615,101 @@ public open class CfnLocationNFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty
+    }
+  }
+
+  /**
+   * The AWS DataSync agents that are connecting to a Network File System (NFS) location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * OnPremConfigProperty onPremConfigProperty = OnPremConfigProperty.builder()
+   * .agentArns(List.of("agentArns"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html)
+   */
+  public interface OnPremConfigProperty {
+    /**
+     * The Amazon Resource Names (ARNs) of the agents connecting to a transfer location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html#cfn-datasync-locationnfs-onpremconfig-agentarns)
+     */
+    public fun agentArns(): List<String>
+
+    /**
+     * A builder for [OnPremConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+       * location. 
+       */
+      public fun agentArns(agentArns: List<String>)
+
+      /**
+       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+       * location. 
+       */
+      public fun agentArns(vararg agentArns: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.builder()
+
+      /**
+       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+       * location. 
+       */
+      override fun agentArns(agentArns: List<String>) {
+        cdkBuilder.agentArns(agentArns)
+      }
+
+      /**
+       * @param agentArns The Amazon Resource Names (ARNs) of the agents connecting to a transfer
+       * location. 
+       */
+      override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
+    ) : CdkObject(cdkObject), OnPremConfigProperty {
+      /**
+       * The Amazon Resource Names (ARNs) of the agents connecting to a transfer location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html#cfn-datasync-locationnfs-onpremconfig-agentarns)
+       */
+      override fun agentArns(): List<String> = unwrap(this).getAgentArns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnPremConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty):
+          OnPremConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OnPremConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnPremConfigProperty):
+          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty
     }
   }
 }

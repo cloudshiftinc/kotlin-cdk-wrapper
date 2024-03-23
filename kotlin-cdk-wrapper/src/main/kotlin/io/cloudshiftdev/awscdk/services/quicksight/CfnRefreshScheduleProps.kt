@@ -144,7 +144,7 @@ public interface CfnRefreshScheduleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps,
+    cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps,
   ) : CdkObject(cdkObject), CfnRefreshScheduleProps {
     /**
      * The AWS account ID of the account that you are creating a schedule in.

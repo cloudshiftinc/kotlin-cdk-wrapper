@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html)
  */
-public open class CfnApplicationOutputV2 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2,
+public open class CfnApplicationOutputV2(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -299,6 +298,7 @@ public open class CfnApplicationOutputV2 internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationOutputV2):
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2 = wrapped.cdkObject
+        as software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
   }
 
   /**
@@ -356,8 +356,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty,
     ) : CdkObject(cdkObject), DestinationSchemaProperty {
       /**
        * Specifies the format of the records on the output stream.
@@ -382,6 +381,289 @@ public open class CfnApplicationOutputV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, when configuring application
+   * output, identifies a Kinesis Data Firehose delivery stream as the destination.
+   *
+   * You provide the stream Amazon Resource Name (ARN) of the delivery stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisFirehoseOutputProperty kinesisFirehoseOutputProperty =
+   * KinesisFirehoseOutputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html)
+   */
+  public interface KinesisFirehoseOutputProperty {
+    /**
+     * The ARN of the destination delivery stream to write to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The ARN of the destination delivery stream to write to. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty.builder()
+
+      /**
+       * @param resourceArn The ARN of the destination delivery stream to write to. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
+      /**
+       * The ARN of the destination delivery stream to write to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty):
+          KinesisFirehoseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseOutputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseOutputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
+    }
+  }
+
+  /**
+   * When you configure a SQL-based Managed Service for Apache Flink application's output,
+   * identifies a Kinesis data stream as the destination.
+   *
+   * You provide the stream Amazon Resource Name (ARN).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisStreamsOutputProperty kinesisStreamsOutputProperty =
+   * KinesisStreamsOutputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html)
+   */
+  public interface KinesisStreamsOutputProperty {
+    /**
+     * The ARN of the destination Kinesis data stream to write to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [KinesisStreamsOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The ARN of the destination Kinesis data stream to write to. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty.builder()
+
+      /**
+       * @param resourceArn The ARN of the destination Kinesis data stream to write to. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty,
+    ) : CdkObject(cdkObject), KinesisStreamsOutputProperty {
+      /**
+       * The ARN of the destination Kinesis data stream to write to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty):
+          KinesisStreamsOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamsOutputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisStreamsOutputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
+    }
+  }
+
+  /**
+   * When you configure a SQL-based Managed Service for Apache Flink application's output,
+   * identifies an Amazon Lambda function as the destination.
+   *
+   * You provide the function Amazon Resource Name (ARN) of the Lambda function.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * LambdaOutputProperty lambdaOutputProperty = LambdaOutputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html)
+   */
+  public interface LambdaOutputProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
+     *
+     *
+     * To specify an earlier version of the Lambda function than the latest, include the Lambda
+     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+     * [Example ARNs: Amazon
+     * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html#cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [LambdaOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the destination Lambda function to
+       * write to. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty.builder()
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the destination Lambda function to
+       * write to. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty,
+    ) : CdkObject(cdkObject), LambdaOutputProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
+       *
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html#cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty):
+          LambdaOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaOutputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaOutputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
     }
   }
 
@@ -657,8 +939,7 @@ public open class CfnApplicationOutputV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty,
     ) : CdkObject(cdkObject), OutputProperty {
       /**
        * Describes the data format when records are written to the destination.
@@ -711,292 +992,6 @@ public open class CfnApplicationOutputV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, when configuring application
-   * output, identifies a Kinesis Data Firehose delivery stream as the destination.
-   *
-   * You provide the stream Amazon Resource Name (ARN) of the delivery stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisFirehoseOutputProperty kinesisFirehoseOutputProperty =
-   * KinesisFirehoseOutputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html)
-   */
-  public interface KinesisFirehoseOutputProperty {
-    /**
-     * The ARN of the destination delivery stream to write to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The ARN of the destination delivery stream to write to. 
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty.builder()
-
-      /**
-       * @param resourceArn The ARN of the destination delivery stream to write to. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
-      /**
-       * The ARN of the destination delivery stream to write to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty):
-          KinesisFirehoseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseOutputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisFirehoseOutputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty
-    }
-  }
-
-  /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's output,
-   * identifies an Amazon Lambda function as the destination.
-   *
-   * You provide the function Amazon Resource Name (ARN) of the Lambda function.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * LambdaOutputProperty lambdaOutputProperty = LambdaOutputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html)
-   */
-  public interface LambdaOutputProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
-     *
-     *
-     * To specify an earlier version of the Lambda function than the latest, include the Lambda
-     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-     * [Example ARNs: Amazon
-     * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html#cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [LambdaOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the destination Lambda function to
-       * write to. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty.builder()
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the destination Lambda function to
-       * write to. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty,
-    ) : CdkObject(cdkObject), LambdaOutputProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
-       *
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html#cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty):
-          LambdaOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaOutputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaOutputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty
-    }
-  }
-
-  /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's output,
-   * identifies a Kinesis data stream as the destination.
-   *
-   * You provide the stream Amazon Resource Name (ARN).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisStreamsOutputProperty kinesisStreamsOutputProperty =
-   * KinesisStreamsOutputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html)
-   */
-  public interface KinesisStreamsOutputProperty {
-    /**
-     * The ARN of the destination Kinesis data stream to write to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [KinesisStreamsOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The ARN of the destination Kinesis data stream to write to. 
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty.builder()
-
-      /**
-       * @param resourceArn The ARN of the destination Kinesis data stream to write to. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsOutputProperty {
-      /**
-       * The ARN of the destination Kinesis data stream to write to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty):
-          KinesisStreamsOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamsOutputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisStreamsOutputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty
     }
   }
 }

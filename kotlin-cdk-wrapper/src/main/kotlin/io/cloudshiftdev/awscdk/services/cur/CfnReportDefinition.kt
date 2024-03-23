@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html)
  */
-public open class CfnReportDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinition,
+public open class CfnReportDefinition(
+  cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinition,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -597,6 +597,7 @@ public open class CfnReportDefinition internal constructor(
         CfnReportDefinition = CfnReportDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportDefinition):
-        software.amazon.awscdk.services.cur.CfnReportDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.cur.CfnReportDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.cur.CfnReportDefinition
   }
 }

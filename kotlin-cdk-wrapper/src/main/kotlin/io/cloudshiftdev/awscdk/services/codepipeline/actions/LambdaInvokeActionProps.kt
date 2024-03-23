@@ -289,8 +289,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps,
   ) : CdkObject(cdkObject), LambdaInvokeActionProps {
     /**
      * The physical, human-readable name of the Action.

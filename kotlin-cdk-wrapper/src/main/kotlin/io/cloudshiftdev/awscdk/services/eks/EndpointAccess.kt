@@ -17,8 +17,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class EndpointAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.EndpointAccess,
+public open class EndpointAccess(
+  cdkObject: software.amazon.awscdk.services.eks.EndpointAccess,
 ) : CdkObject(cdkObject) {
   /**
    * Restrict public access to specific CIDR blocks.
@@ -44,6 +44,6 @@ public open class EndpointAccess internal constructor(
         = EndpointAccess(cdkObject)
 
     internal fun unwrap(wrapped: EndpointAccess): software.amazon.awscdk.services.eks.EndpointAccess
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.EndpointAccess
   }
 }

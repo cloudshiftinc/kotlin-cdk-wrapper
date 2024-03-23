@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
  */
-public open class CfnLogGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogGroup,
+public open class CfnLogGroup(
+  cdkObject: software.amazon.awscdk.services.logs.CfnLogGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -442,6 +442,6 @@ public open class CfnLogGroup internal constructor(
         CfnLogGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogGroup): software.amazon.awscdk.services.logs.CfnLogGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.CfnLogGroup
   }
 }

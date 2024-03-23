@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-application.html)
  */
-public open class Application internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Application,
+public open class Application(
+  cdkObject: software.amazon.awscdk.services.appconfig.Application,
 ) : Resource(cdkObject), IApplication, IExtensible {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -575,6 +575,6 @@ public open class Application internal constructor(
         = Application(cdkObject)
 
     internal fun unwrap(wrapped: Application): software.amazon.awscdk.services.appconfig.Application
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appconfig.Application
   }
 }

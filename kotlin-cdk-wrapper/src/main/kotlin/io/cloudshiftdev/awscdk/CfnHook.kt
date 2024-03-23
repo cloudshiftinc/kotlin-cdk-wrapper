@@ -24,8 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * codeDeployHook.getServiceRole() = myRole.getRoleArn();
  * ```
  */
-public open class CfnHook internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnHook,
+public open class CfnHook(
+  cdkObject: software.amazon.awscdk.CfnHook,
 ) : CfnElement(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -111,6 +111,7 @@ public open class CfnHook internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnHook): CfnHook = CfnHook(cdkObject)
 
-    internal fun unwrap(wrapped: CfnHook): software.amazon.awscdk.CfnHook = wrapped.cdkObject
+    internal fun unwrap(wrapped: CfnHook): software.amazon.awscdk.CfnHook = wrapped.cdkObject as
+        software.amazon.awscdk.CfnHook
   }
 }

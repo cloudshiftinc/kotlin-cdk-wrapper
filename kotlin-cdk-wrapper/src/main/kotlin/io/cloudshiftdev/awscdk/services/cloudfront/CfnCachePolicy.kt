@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)
  */
-public open class CfnCachePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
+public open class CfnCachePolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,7 +233,602 @@ public open class CfnCachePolicy internal constructor(
         CfnCachePolicy = CfnCachePolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnCachePolicy):
-        software.amazon.awscdk.services.cloudfront.CfnCachePolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnCachePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnCachePolicy
+  }
+
+  /**
+   * A cache policy configuration.
+   *
+   * This configuration determines the following:
+   *
+   * * The values that CloudFront includes in the cache key. These values can include HTTP headers,
+   * cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that
+   * it can return to the viewer.
+   * * The default, minimum, and maximum time to live (TTL) values that you want objects to stay in
+   * the CloudFront cache.
+   *
+   * The headers, cookies, and query strings that are included in the cache key are also included in
+   * requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a
+   * valid object in its cache that matches the request's cache key. If you want to send values to the
+   * origin but *not* include them in the cache key, use `OriginRequestPolicy` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * CachePolicyConfigProperty cachePolicyConfigProperty = CachePolicyConfigProperty.builder()
+   * .defaultTtl(123)
+   * .maxTtl(123)
+   * .minTtl(123)
+   * .name("name")
+   * .parametersInCacheKeyAndForwardedToOrigin(ParametersInCacheKeyAndForwardedToOriginProperty.builder()
+   * .cookiesConfig(CookiesConfigProperty.builder()
+   * .cookieBehavior("cookieBehavior")
+   * // the properties below are optional
+   * .cookies(List.of("cookies"))
+   * .build())
+   * .enableAcceptEncodingGzip(false)
+   * .headersConfig(HeadersConfigProperty.builder()
+   * .headerBehavior("headerBehavior")
+   * // the properties below are optional
+   * .headers(List.of("headers"))
+   * .build())
+   * .queryStringsConfig(QueryStringsConfigProperty.builder()
+   * .queryStringBehavior("queryStringBehavior")
+   * // the properties below are optional
+   * .queryStrings(List.of("queryStrings"))
+   * .build())
+   * // the properties below are optional
+   * .enableAcceptEncodingBrotli(false)
+   * .build())
+   * // the properties below are optional
+   * .comment("comment")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html)
+   */
+  public interface CachePolicyConfigProperty {
+    /**
+     * A comment to describe the cache policy.
+     *
+     * The comment cannot be longer than 128 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-comment)
+     */
+    public fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache
+     * before CloudFront sends another request to the origin to see if the object has been updated.
+     *
+     * CloudFront uses this value as the object's time to live (TTL) only when the origin does *not*
+     * send `Cache-Control` or `Expires` headers with the object. For more information, see [Managing
+     * How Long Content Stays in an Edge Cache
+     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is more
+     * than 86400 seconds, then the default value for this field is the same as the value of `MinTTL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl)
+     */
+    public fun defaultTtl(): Number
+
+    /**
+     * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before
+     * CloudFront sends another request to the origin to see if the object has been updated.
+     *
+     * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
+     * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
+     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL` or
+     * `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the same as
+     * the value of `DefaultTTL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl)
+     */
+    public fun maxTtl(): Number
+
+    /**
+     * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache
+     * before CloudFront sends another request to the origin to see if the object has been updated.
+     *
+     * For more information, see [Managing How Long Content Stays in an Edge Cache
+     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl)
+     */
+    public fun minTtl(): Number
+
+    /**
+     * A unique name to identify the cache policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name)
+     */
+    public fun name(): String
+
+    /**
+     * The HTTP headers, cookies, and URL query strings to include in the cache key.
+     *
+     * The values included in the cache key are also included in requests that CloudFront sends to
+     * the origin.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin)
+     */
+    public fun parametersInCacheKeyAndForwardedToOrigin(): Any
+
+    /**
+     * A builder for [CachePolicyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comment A comment to describe the cache policy.
+       * The comment cannot be longer than 128 characters.
+       */
+      public fun comment(comment: String)
+
+      /**
+       * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in
+       * the CloudFront cache before CloudFront sends another request to the origin to see if the
+       * object has been updated. 
+       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
+       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
+       * [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
+       * more than 86400 seconds, then the default value for this field is the same as the value of
+       * `MinTTL` .
+       */
+      public fun defaultTtl(defaultTtl: Number)
+
+      /**
+       * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront
+       * cache before CloudFront sends another request to the origin to see if the object has been
+       * updated. 
+       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
+       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
+       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
+       * same as the value of `DefaultTTL` .
+       */
+      public fun maxTtl(maxTtl: Number)
+
+      /**
+       * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the
+       * CloudFront cache before CloudFront sends another request to the origin to see if the object
+       * has been updated. 
+       * For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun minTtl(minTtl: Number)
+
+      /**
+       * @param name A unique name to identify the cache policy. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      public
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable)
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      public
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty)
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
+      public
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty.builder()
+
+      /**
+       * @param comment A comment to describe the cache policy.
+       * The comment cannot be longer than 128 characters.
+       */
+      override fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+      }
+
+      /**
+       * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in
+       * the CloudFront cache before CloudFront sends another request to the origin to see if the
+       * object has been updated. 
+       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
+       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
+       * [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
+       * more than 86400 seconds, then the default value for this field is the same as the value of
+       * `MinTTL` .
+       */
+      override fun defaultTtl(defaultTtl: Number) {
+        cdkBuilder.defaultTtl(defaultTtl)
+      }
+
+      /**
+       * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront
+       * cache before CloudFront sends another request to the origin to see if the object has been
+       * updated. 
+       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
+       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
+       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
+       * same as the value of `DefaultTTL` .
+       */
+      override fun maxTtl(maxTtl: Number) {
+        cdkBuilder.maxTtl(maxTtl)
+      }
+
+      /**
+       * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the
+       * CloudFront cache before CloudFront sends another request to the origin to see if the object
+       * has been updated. 
+       * For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun minTtl(minTtl: Number) {
+        cdkBuilder.minTtl(minTtl)
+      }
+
+      /**
+       * @param name A unique name to identify the cache policy. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      override
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable) {
+        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      override
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty) {
+        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(ParametersInCacheKeyAndForwardedToOriginProperty::unwrap))
+      }
+
+      /**
+       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
+       * strings to include in the cache key. 
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
+      override
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit):
+          Unit =
+          parametersInCacheKeyAndForwardedToOrigin(ParametersInCacheKeyAndForwardedToOriginProperty(parametersInCacheKeyAndForwardedToOrigin))
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
+    ) : CdkObject(cdkObject), CachePolicyConfigProperty {
+      /**
+       * A comment to describe the cache policy.
+       *
+       * The comment cannot be longer than 128 characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-comment)
+       */
+      override fun comment(): String? = unwrap(this).getComment()
+
+      /**
+       * The default amount of time, in seconds, that you want objects to stay in the CloudFront
+       * cache before CloudFront sends another request to the origin to see if the object has been
+       * updated.
+       *
+       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
+       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
+       * [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
+       * more than 86400 seconds, then the default value for this field is the same as the value of
+       * `MinTTL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl)
+       */
+      override fun defaultTtl(): Number = unwrap(this).getDefaultTtl()
+
+      /**
+       * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before
+       * CloudFront sends another request to the origin to see if the object has been updated.
+       *
+       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
+       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
+       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
+       * same as the value of `DefaultTTL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl)
+       */
+      override fun maxTtl(): Number = unwrap(this).getMaxTtl()
+
+      /**
+       * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront
+       * cache before CloudFront sends another request to the origin to see if the object has been
+       * updated.
+       *
+       * For more information, see [Managing How Long Content Stays in an Edge Cache
+       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl)
+       */
+      override fun minTtl(): Number = unwrap(this).getMinTtl()
+
+      /**
+       * A unique name to identify the cache policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The HTTP headers, cookies, and URL query strings to include in the cache key.
+       *
+       * The values included in the cache key are also included in requests that CloudFront sends to
+       * the origin.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin)
+       */
+      override fun parametersInCacheKeyAndForwardedToOrigin(): Any =
+          unwrap(this).getParametersInCacheKeyAndForwardedToOrigin()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CachePolicyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty):
+          CachePolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CachePolicyConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CachePolicyConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty
+    }
+  }
+
+  /**
+   * An object that determines whether any cookies in viewer requests (and if so, which cookies) are
+   * included in the cache key and in requests that CloudFront sends to the origin.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * CookiesConfigProperty cookiesConfigProperty = CookiesConfigProperty.builder()
+   * .cookieBehavior("cookieBehavior")
+   * // the properties below are optional
+   * .cookies(List.of("cookies"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html)
+   */
+  public interface CookiesConfigProperty {
+    /**
+     * Determines whether any cookies in viewer requests are included in the cache key and in
+     * requests that CloudFront sends to the origin.
+     *
+     * Valid values are:
+     *
+     * * `none` – No cookies in viewer requests are included in the cache key or in requests that
+     * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
+     * listed in an `OriginRequestPolicy` *are* included in origin requests.
+     * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
+     * are included in the cache key and in requests that CloudFront sends to the origin.
+     * * `allExcept` – All cookies in viewer requests are included in the cache key and in requests
+     * that CloudFront sends to the origin, **except** for those that are listed in the `CookieNames`
+     * type, which are not included.
+     * * `all` – All cookies in viewer requests are included in the cache key and in requests that
+     * CloudFront sends to the origin.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior)
+     */
+    public fun cookieBehavior(): String
+
+    /**
+     * Contains a list of cookie names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies)
+     */
+    public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+
+    /**
+     * A builder for [CookiesConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cookieBehavior Determines whether any cookies in viewer requests are included in the
+       * cache key and in requests that CloudFront sends to the origin. 
+       * Valid values are:
+       *
+       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
+       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
+       * listed in an `OriginRequestPolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in the cache key and in requests that CloudFront sends to the origin.
+       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
+       * requests that CloudFront sends to the origin, **except** for those that are listed in the
+       * `CookieNames` type, which are not included.
+       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
+       * CloudFront sends to the origin.
+       */
+      public fun cookieBehavior(cookieBehavior: String)
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      public fun cookies(cookies: List<String>)
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      public fun cookies(vararg cookies: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.builder()
+
+      /**
+       * @param cookieBehavior Determines whether any cookies in viewer requests are included in the
+       * cache key and in requests that CloudFront sends to the origin. 
+       * Valid values are:
+       *
+       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
+       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
+       * listed in an `OriginRequestPolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in the cache key and in requests that CloudFront sends to the origin.
+       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
+       * requests that CloudFront sends to the origin, **except** for those that are listed in the
+       * `CookieNames` type, which are not included.
+       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
+       * CloudFront sends to the origin.
+       */
+      override fun cookieBehavior(cookieBehavior: String) {
+        cdkBuilder.cookieBehavior(cookieBehavior)
+      }
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      override fun cookies(cookies: List<String>) {
+        cdkBuilder.cookies(cookies)
+      }
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      override fun cookies(vararg cookies: String): Unit = cookies(cookies.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
+    ) : CdkObject(cdkObject), CookiesConfigProperty {
+      /**
+       * Determines whether any cookies in viewer requests are included in the cache key and in
+       * requests that CloudFront sends to the origin.
+       *
+       * Valid values are:
+       *
+       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
+       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
+       * listed in an `OriginRequestPolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in the cache key and in requests that CloudFront sends to the origin.
+       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
+       * requests that CloudFront sends to the origin, **except** for those that are listed in the
+       * `CookieNames` type, which are not included.
+       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
+       * CloudFront sends to the origin.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior)
+       */
+      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
+
+      /**
+       * Contains a list of cookie names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies)
+       */
+      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CookiesConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty):
+          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CookiesConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty
+    }
   }
 
   /**
@@ -346,8 +941,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
     ) : CdkObject(cdkObject), HeadersConfigProperty {
       /**
        * Determines whether any HTTP headers are included in the cache key and in requests that
@@ -919,8 +1513,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
     ) : CdkObject(cdkObject), ParametersInCacheKeyAndForwardedToOriginProperty {
       /**
        * An object that determines whether any cookies in viewer requests (and if so, which cookies)
@@ -1024,181 +1617,6 @@ public open class CfnCachePolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty
-    }
-  }
-
-  /**
-   * An object that determines whether any cookies in viewer requests (and if so, which cookies) are
-   * included in the cache key and in requests that CloudFront sends to the origin.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * CookiesConfigProperty cookiesConfigProperty = CookiesConfigProperty.builder()
-   * .cookieBehavior("cookieBehavior")
-   * // the properties below are optional
-   * .cookies(List.of("cookies"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html)
-   */
-  public interface CookiesConfigProperty {
-    /**
-     * Determines whether any cookies in viewer requests are included in the cache key and in
-     * requests that CloudFront sends to the origin.
-     *
-     * Valid values are:
-     *
-     * * `none` – No cookies in viewer requests are included in the cache key or in requests that
-     * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
-     * listed in an `OriginRequestPolicy` *are* included in origin requests.
-     * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
-     * are included in the cache key and in requests that CloudFront sends to the origin.
-     * * `allExcept` – All cookies in viewer requests are included in the cache key and in requests
-     * that CloudFront sends to the origin, **except** for those that are listed in the `CookieNames`
-     * type, which are not included.
-     * * `all` – All cookies in viewer requests are included in the cache key and in requests that
-     * CloudFront sends to the origin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior)
-     */
-    public fun cookieBehavior(): String
-
-    /**
-     * Contains a list of cookie names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies)
-     */
-    public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
-
-    /**
-     * A builder for [CookiesConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cookieBehavior Determines whether any cookies in viewer requests are included in the
-       * cache key and in requests that CloudFront sends to the origin. 
-       * Valid values are:
-       *
-       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
-       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
-       * listed in an `OriginRequestPolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in the cache key and in requests that CloudFront sends to the origin.
-       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
-       * requests that CloudFront sends to the origin, **except** for those that are listed in the
-       * `CookieNames` type, which are not included.
-       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
-       * CloudFront sends to the origin.
-       */
-      public fun cookieBehavior(cookieBehavior: String)
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      public fun cookies(cookies: List<String>)
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      public fun cookies(vararg cookies: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.Builder =
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.builder()
-
-      /**
-       * @param cookieBehavior Determines whether any cookies in viewer requests are included in the
-       * cache key and in requests that CloudFront sends to the origin. 
-       * Valid values are:
-       *
-       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
-       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
-       * listed in an `OriginRequestPolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in the cache key and in requests that CloudFront sends to the origin.
-       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
-       * requests that CloudFront sends to the origin, **except** for those that are listed in the
-       * `CookieNames` type, which are not included.
-       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
-       * CloudFront sends to the origin.
-       */
-      override fun cookieBehavior(cookieBehavior: String) {
-        cdkBuilder.cookieBehavior(cookieBehavior)
-      }
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      override fun cookies(cookies: List<String>) {
-        cdkBuilder.cookies(cookies)
-      }
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      override fun cookies(vararg cookies: String): Unit = cookies(cookies.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
-    ) : CdkObject(cdkObject), CookiesConfigProperty {
-      /**
-       * Determines whether any cookies in viewer requests are included in the cache key and in
-       * requests that CloudFront sends to the origin.
-       *
-       * Valid values are:
-       *
-       * * `none` – No cookies in viewer requests are included in the cache key or in requests that
-       * CloudFront sends to the origin. Even when this field is set to `none` , any cookies that are
-       * listed in an `OriginRequestPolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in the cache key and in requests that CloudFront sends to the origin.
-       * * `allExcept` – All cookies in viewer requests are included in the cache key and in
-       * requests that CloudFront sends to the origin, **except** for those that are listed in the
-       * `CookieNames` type, which are not included.
-       * * `all` – All cookies in viewer requests are included in the cache key and in requests that
-       * CloudFront sends to the origin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior)
-       */
-      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
-
-      /**
-       * Contains a list of cookie names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html#cfn-cloudfront-cachepolicy-cookiesconfig-cookies)
-       */
-      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CookiesConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty):
-          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CookiesConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty
     }
   }
 
@@ -1332,8 +1750,7 @@ public open class CfnCachePolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
     ) : CdkObject(cdkObject), QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in the cache key
@@ -1380,427 +1797,6 @@ public open class CfnCachePolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty
-    }
-  }
-
-  /**
-   * A cache policy configuration.
-   *
-   * This configuration determines the following:
-   *
-   * * The values that CloudFront includes in the cache key. These values can include HTTP headers,
-   * cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that
-   * it can return to the viewer.
-   * * The default, minimum, and maximum time to live (TTL) values that you want objects to stay in
-   * the CloudFront cache.
-   *
-   * The headers, cookies, and query strings that are included in the cache key are also included in
-   * requests that CloudFront sends to the origin. CloudFront sends a request when it can't find a
-   * valid object in its cache that matches the request's cache key. If you want to send values to the
-   * origin but *not* include them in the cache key, use `OriginRequestPolicy` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * CachePolicyConfigProperty cachePolicyConfigProperty = CachePolicyConfigProperty.builder()
-   * .defaultTtl(123)
-   * .maxTtl(123)
-   * .minTtl(123)
-   * .name("name")
-   * .parametersInCacheKeyAndForwardedToOrigin(ParametersInCacheKeyAndForwardedToOriginProperty.builder()
-   * .cookiesConfig(CookiesConfigProperty.builder()
-   * .cookieBehavior("cookieBehavior")
-   * // the properties below are optional
-   * .cookies(List.of("cookies"))
-   * .build())
-   * .enableAcceptEncodingGzip(false)
-   * .headersConfig(HeadersConfigProperty.builder()
-   * .headerBehavior("headerBehavior")
-   * // the properties below are optional
-   * .headers(List.of("headers"))
-   * .build())
-   * .queryStringsConfig(QueryStringsConfigProperty.builder()
-   * .queryStringBehavior("queryStringBehavior")
-   * // the properties below are optional
-   * .queryStrings(List.of("queryStrings"))
-   * .build())
-   * // the properties below are optional
-   * .enableAcceptEncodingBrotli(false)
-   * .build())
-   * // the properties below are optional
-   * .comment("comment")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html)
-   */
-  public interface CachePolicyConfigProperty {
-    /**
-     * A comment to describe the cache policy.
-     *
-     * The comment cannot be longer than 128 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache
-     * before CloudFront sends another request to the origin to see if the object has been updated.
-     *
-     * CloudFront uses this value as the object's time to live (TTL) only when the origin does *not*
-     * send `Cache-Control` or `Expires` headers with the object. For more information, see [Managing
-     * How Long Content Stays in an Edge Cache
-     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-     * in the *Amazon CloudFront Developer Guide* .
-     *
-     * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is more
-     * than 86400 seconds, then the default value for this field is the same as the value of `MinTTL` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl)
-     */
-    public fun defaultTtl(): Number
-
-    /**
-     * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before
-     * CloudFront sends another request to the origin to see if the object has been updated.
-     *
-     * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
-     * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
-     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-     * in the *Amazon CloudFront Developer Guide* .
-     *
-     * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL` or
-     * `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the same as
-     * the value of `DefaultTTL` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl)
-     */
-    public fun maxTtl(): Number
-
-    /**
-     * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache
-     * before CloudFront sends another request to the origin to see if the object has been updated.
-     *
-     * For more information, see [Managing How Long Content Stays in an Edge Cache
-     * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-     * in the *Amazon CloudFront Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl)
-     */
-    public fun minTtl(): Number
-
-    /**
-     * A unique name to identify the cache policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name)
-     */
-    public fun name(): String
-
-    /**
-     * The HTTP headers, cookies, and URL query strings to include in the cache key.
-     *
-     * The values included in the cache key are also included in requests that CloudFront sends to
-     * the origin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin)
-     */
-    public fun parametersInCacheKeyAndForwardedToOrigin(): Any
-
-    /**
-     * A builder for [CachePolicyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comment A comment to describe the cache policy.
-       * The comment cannot be longer than 128 characters.
-       */
-      public fun comment(comment: String)
-
-      /**
-       * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in
-       * the CloudFront cache before CloudFront sends another request to the origin to see if the
-       * object has been updated. 
-       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
-       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
-       * [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
-       * more than 86400 seconds, then the default value for this field is the same as the value of
-       * `MinTTL` .
-       */
-      public fun defaultTtl(defaultTtl: Number)
-
-      /**
-       * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront
-       * cache before CloudFront sends another request to the origin to see if the object has been
-       * updated. 
-       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
-       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
-       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
-       * same as the value of `DefaultTTL` .
-       */
-      public fun maxTtl(maxTtl: Number)
-
-      /**
-       * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the
-       * CloudFront cache before CloudFront sends another request to the origin to see if the object
-       * has been updated. 
-       * For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      public fun minTtl(minTtl: Number)
-
-      /**
-       * @param name A unique name to identify the cache policy. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable)
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty)
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
-      public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty.builder()
-
-      /**
-       * @param comment A comment to describe the cache policy.
-       * The comment cannot be longer than 128 characters.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
-
-      /**
-       * @param defaultTtl The default amount of time, in seconds, that you want objects to stay in
-       * the CloudFront cache before CloudFront sends another request to the origin to see if the
-       * object has been updated. 
-       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
-       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
-       * [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
-       * more than 86400 seconds, then the default value for this field is the same as the value of
-       * `MinTTL` .
-       */
-      override fun defaultTtl(defaultTtl: Number) {
-        cdkBuilder.defaultTtl(defaultTtl)
-      }
-
-      /**
-       * @param maxTtl The maximum amount of time, in seconds, that objects stay in the CloudFront
-       * cache before CloudFront sends another request to the origin to see if the object has been
-       * updated. 
-       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
-       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
-       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
-       * same as the value of `DefaultTTL` .
-       */
-      override fun maxTtl(maxTtl: Number) {
-        cdkBuilder.maxTtl(maxTtl)
-      }
-
-      /**
-       * @param minTtl The minimum amount of time, in seconds, that you want objects to stay in the
-       * CloudFront cache before CloudFront sends another request to the origin to see if the object
-       * has been updated. 
-       * For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      override fun minTtl(minTtl: Number) {
-        cdkBuilder.minTtl(minTtl)
-      }
-
-      /**
-       * @param name A unique name to identify the cache policy. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      override
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable) {
-        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      override
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty) {
-        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(ParametersInCacheKeyAndForwardedToOriginProperty::unwrap))
-      }
-
-      /**
-       * @param parametersInCacheKeyAndForwardedToOrigin The HTTP headers, cookies, and URL query
-       * strings to include in the cache key. 
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
-      override
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit):
-          Unit =
-          parametersInCacheKeyAndForwardedToOrigin(ParametersInCacheKeyAndForwardedToOriginProperty(parametersInCacheKeyAndForwardedToOrigin))
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
-    ) : CdkObject(cdkObject), CachePolicyConfigProperty {
-      /**
-       * A comment to describe the cache policy.
-       *
-       * The comment cannot be longer than 128 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
-
-      /**
-       * The default amount of time, in seconds, that you want objects to stay in the CloudFront
-       * cache before CloudFront sends another request to the origin to see if the object has been
-       * updated.
-       *
-       * CloudFront uses this value as the object's time to live (TTL) only when the origin does
-       * *not* send `Cache-Control` or `Expires` headers with the object. For more information, see
-       * [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 86400 seconds (one day). If the value of `MinTTL` is
-       * more than 86400 seconds, then the default value for this field is the same as the value of
-       * `MinTTL` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl)
-       */
-      override fun defaultTtl(): Number = unwrap(this).getDefaultTtl()
-
-      /**
-       * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before
-       * CloudFront sends another request to the origin to see if the object has been updated.
-       *
-       * CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers
-       * with the object. For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * The default value for this field is 31536000 seconds (one year). If the value of `MinTTL`
-       * or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the
-       * same as the value of `DefaultTTL` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl)
-       */
-      override fun maxTtl(): Number = unwrap(this).getMaxTtl()
-
-      /**
-       * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront
-       * cache before CloudFront sends another request to the origin to see if the object has been
-       * updated.
-       *
-       * For more information, see [Managing How Long Content Stays in an Edge Cache
-       * (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-minttl)
-       */
-      override fun minTtl(): Number = unwrap(this).getMinTtl()
-
-      /**
-       * A unique name to identify the cache policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The HTTP headers, cookies, and URL query strings to include in the cache key.
-       *
-       * The values included in the cache key are also included in requests that CloudFront sends to
-       * the origin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html#cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin)
-       */
-      override fun parametersInCacheKeyAndForwardedToOrigin(): Any =
-          unwrap(this).getParametersInCacheKeyAndForwardedToOrigin()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CachePolicyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty):
-          CachePolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CachePolicyConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CachePolicyConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty
     }
   }
 }

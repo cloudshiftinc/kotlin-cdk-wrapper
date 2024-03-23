@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html)
  */
-public open class CfnStage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnStage,
+public open class CfnStage(
+  cdkObject: software.amazon.awscdk.services.ivs.CfnStage,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ivs.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -223,6 +223,6 @@ public open class CfnStage internal constructor(
         CfnStage(cdkObject)
 
     internal fun unwrap(wrapped: CfnStage): software.amazon.awscdk.services.ivs.CfnStage =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ivs.CfnStage
   }
 }

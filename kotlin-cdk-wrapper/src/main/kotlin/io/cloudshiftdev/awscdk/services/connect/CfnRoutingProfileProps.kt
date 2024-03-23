@@ -303,7 +303,7 @@ public interface CfnRoutingProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfileProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfileProps,
   ) : CdkObject(cdkObject), CfnRoutingProfileProps {
     /**
      * Whether agents with this routing profile will have their routing order calculated based on

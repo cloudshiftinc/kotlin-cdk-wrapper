@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)
  */
-public open class CfnDeviceFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet,
+public open class CfnDeviceFleet(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -365,7 +365,8 @@ public open class CfnDeviceFleet internal constructor(
         CfnDeviceFleet = CfnDeviceFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceFleet):
-        software.amazon.awscdk.services.sagemaker.CfnDeviceFleet = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnDeviceFleet = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnDeviceFleet
   }
 
   /**
@@ -453,8 +454,7 @@ public open class CfnDeviceFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty,
     ) : CdkObject(cdkObject), EdgeOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt data on

@@ -174,7 +174,7 @@ public interface TableOptionsV2 {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableOptionsV2,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TableOptionsV2,
   ) : CdkObject(cdkObject), TableOptionsV2 {
     /**
      * Whether CloudWatch contributor insights is enabled.

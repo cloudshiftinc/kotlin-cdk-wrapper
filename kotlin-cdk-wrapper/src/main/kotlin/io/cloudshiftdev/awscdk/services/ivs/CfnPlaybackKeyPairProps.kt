@@ -134,7 +134,7 @@ public interface CfnPlaybackKeyPairProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps,
+    cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps,
   ) : CdkObject(cdkObject), CfnPlaybackKeyPairProps {
     /**
      * Playback-key-pair name.

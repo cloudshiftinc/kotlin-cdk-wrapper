@@ -30,9 +30,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class ElasticBeanstalkDeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction,
+public open class ElasticBeanstalkDeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: ElasticBeanstalkDeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction(props.let(ElasticBeanstalkDeployActionProps::unwrap))
@@ -223,6 +222,7 @@ public open class ElasticBeanstalkDeployAction internal constructor(
 
     internal fun unwrap(wrapped: ElasticBeanstalkDeployAction):
         software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction
   }
 }

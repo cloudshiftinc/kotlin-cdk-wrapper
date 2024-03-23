@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
  */
-public open class CfnRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
+public open class CfnRepository(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -712,248 +712,7 @@ public open class CfnRepository internal constructor(
         CfnRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepository): software.amazon.awscdk.services.ecr.CfnRepository =
-        wrapped.cdkObject
-  }
-
-  /**
-   * The image scanning configuration for a repository.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecr.*;
-   * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
-   * ImageScanningConfigurationProperty.builder()
-   * .scanOnPush(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html)
-   */
-  public interface ImageScanningConfigurationProperty {
-    /**
-     * The setting that determines whether images are scanned after being pushed to a repository.
-     *
-     * If set to `true` , images will be scanned after being pushed. If this parameter is not
-     * specified, it will default to `false` and images will not be scanned unless a scan is manually
-     * started.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html#cfn-ecr-repository-imagescanningconfiguration-scanonpush)
-     */
-    public fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
-
-    /**
-     * A builder for [ImageScanningConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scanOnPush The setting that determines whether images are scanned after being pushed
-       * to a repository.
-       * If set to `true` , images will be scanned after being pushed. If this parameter is not
-       * specified, it will default to `false` and images will not be scanned unless a scan is manually
-       * started.
-       */
-      public fun scanOnPush(scanOnPush: Boolean)
-
-      /**
-       * @param scanOnPush The setting that determines whether images are scanned after being pushed
-       * to a repository.
-       * If set to `true` , images will be scanned after being pushed. If this parameter is not
-       * specified, it will default to `false` and images will not be scanned unless a scan is manually
-       * started.
-       */
-      public fun scanOnPush(scanOnPush: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty.builder()
-
-      /**
-       * @param scanOnPush The setting that determines whether images are scanned after being pushed
-       * to a repository.
-       * If set to `true` , images will be scanned after being pushed. If this parameter is not
-       * specified, it will default to `false` and images will not be scanned unless a scan is manually
-       * started.
-       */
-      override fun scanOnPush(scanOnPush: Boolean) {
-        cdkBuilder.scanOnPush(scanOnPush)
-      }
-
-      /**
-       * @param scanOnPush The setting that determines whether images are scanned after being pushed
-       * to a repository.
-       * If set to `true` , images will be scanned after being pushed. If this parameter is not
-       * specified, it will default to `false` and images will not be scanned unless a scan is manually
-       * started.
-       */
-      override fun scanOnPush(scanOnPush: IResolvable) {
-        cdkBuilder.scanOnPush(scanOnPush.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
-      /**
-       * The setting that determines whether images are scanned after being pushed to a repository.
-       *
-       * If set to `true` , images will be scanned after being pushed. If this parameter is not
-       * specified, it will default to `false` and images will not be scanned unless a scan is manually
-       * started.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html#cfn-ecr-repository-imagescanningconfiguration-scanonpush)
-       */
-      override fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ImageScanningConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty):
-          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty
-    }
-  }
-
-  /**
-   * The `LifecyclePolicy` property type specifies a lifecycle policy.
-   *
-   * For information about lifecycle policy syntax, see [Lifecycle policy
-   * template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) in the
-   * *Amazon ECR User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecr.*;
-   * LifecyclePolicyProperty lifecyclePolicyProperty = LifecyclePolicyProperty.builder()
-   * .lifecyclePolicyText("lifecyclePolicyText")
-   * .registryId("registryId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html)
-   */
-  public interface LifecyclePolicyProperty {
-    /**
-     * The JSON repository policy text to apply to the repository.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
-     */
-    public fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
-
-    /**
-     * The AWS account ID associated with the registry that contains the repository.
-     *
-     * If you do not specify a registry, the default registry is assumed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
-     */
-    public fun registryId(): String? = unwrap(this).getRegistryId()
-
-    /**
-     * A builder for [LifecyclePolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lifecyclePolicyText The JSON repository policy text to apply to the repository.
-       */
-      public fun lifecyclePolicyText(lifecyclePolicyText: String)
-
-      /**
-       * @param registryId The AWS account ID associated with the registry that contains the
-       * repository.
-       * If you do not specify a registry, the default registry is assumed.
-       */
-      public fun registryId(registryId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.Builder =
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.builder()
-
-      /**
-       * @param lifecyclePolicyText The JSON repository policy text to apply to the repository.
-       */
-      override fun lifecyclePolicyText(lifecyclePolicyText: String) {
-        cdkBuilder.lifecyclePolicyText(lifecyclePolicyText)
-      }
-
-      /**
-       * @param registryId The AWS account ID associated with the registry that contains the
-       * repository.
-       * If you do not specify a registry, the default registry is assumed.
-       */
-      override fun registryId(registryId: String) {
-        cdkBuilder.registryId(registryId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
-    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
-      /**
-       * The JSON repository policy text to apply to the repository.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
-       */
-      override fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
-
-      /**
-       * The AWS account ID associated with the registry that contains the repository.
-       *
-       * If you do not specify a registry, the default registry is assumed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
-       */
-      override fun registryId(): String? = unwrap(this).getRegistryId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LifecyclePolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty):
-          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LifecyclePolicyProperty):
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.ecr.CfnRepository
   }
 
   /**
@@ -1100,8 +859,7 @@ public open class CfnRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * The encryption type to use.
@@ -1153,6 +911,245 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty
+    }
+  }
+
+  /**
+   * The image scanning configuration for a repository.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecr.*;
+   * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
+   * ImageScanningConfigurationProperty.builder()
+   * .scanOnPush(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html)
+   */
+  public interface ImageScanningConfigurationProperty {
+    /**
+     * The setting that determines whether images are scanned after being pushed to a repository.
+     *
+     * If set to `true` , images will be scanned after being pushed. If this parameter is not
+     * specified, it will default to `false` and images will not be scanned unless a scan is manually
+     * started.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html#cfn-ecr-repository-imagescanningconfiguration-scanonpush)
+     */
+    public fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
+
+    /**
+     * A builder for [ImageScanningConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param scanOnPush The setting that determines whether images are scanned after being pushed
+       * to a repository.
+       * If set to `true` , images will be scanned after being pushed. If this parameter is not
+       * specified, it will default to `false` and images will not be scanned unless a scan is manually
+       * started.
+       */
+      public fun scanOnPush(scanOnPush: Boolean)
+
+      /**
+       * @param scanOnPush The setting that determines whether images are scanned after being pushed
+       * to a repository.
+       * If set to `true` , images will be scanned after being pushed. If this parameter is not
+       * specified, it will default to `false` and images will not be scanned unless a scan is manually
+       * started.
+       */
+      public fun scanOnPush(scanOnPush: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty.builder()
+
+      /**
+       * @param scanOnPush The setting that determines whether images are scanned after being pushed
+       * to a repository.
+       * If set to `true` , images will be scanned after being pushed. If this parameter is not
+       * specified, it will default to `false` and images will not be scanned unless a scan is manually
+       * started.
+       */
+      override fun scanOnPush(scanOnPush: Boolean) {
+        cdkBuilder.scanOnPush(scanOnPush)
+      }
+
+      /**
+       * @param scanOnPush The setting that determines whether images are scanned after being pushed
+       * to a repository.
+       * If set to `true` , images will be scanned after being pushed. If this parameter is not
+       * specified, it will default to `false` and images will not be scanned unless a scan is manually
+       * started.
+       */
+      override fun scanOnPush(scanOnPush: IResolvable) {
+        cdkBuilder.scanOnPush(scanOnPush.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
+    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
+      /**
+       * The setting that determines whether images are scanned after being pushed to a repository.
+       *
+       * If set to `true` , images will be scanned after being pushed. If this parameter is not
+       * specified, it will default to `false` and images will not be scanned unless a scan is manually
+       * started.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html#cfn-ecr-repository-imagescanningconfiguration-scanonpush)
+       */
+      override fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ImageScanningConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty):
+          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
+          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty
+    }
+  }
+
+  /**
+   * The `LifecyclePolicy` property type specifies a lifecycle policy.
+   *
+   * For information about lifecycle policy syntax, see [Lifecycle policy
+   * template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) in the
+   * *Amazon ECR User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecr.*;
+   * LifecyclePolicyProperty lifecyclePolicyProperty = LifecyclePolicyProperty.builder()
+   * .lifecyclePolicyText("lifecyclePolicyText")
+   * .registryId("registryId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html)
+   */
+  public interface LifecyclePolicyProperty {
+    /**
+     * The JSON repository policy text to apply to the repository.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
+     */
+    public fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
+
+    /**
+     * The AWS account ID associated with the registry that contains the repository.
+     *
+     * If you do not specify a registry, the default registry is assumed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
+     */
+    public fun registryId(): String? = unwrap(this).getRegistryId()
+
+    /**
+     * A builder for [LifecyclePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lifecyclePolicyText The JSON repository policy text to apply to the repository.
+       */
+      public fun lifecyclePolicyText(lifecyclePolicyText: String)
+
+      /**
+       * @param registryId The AWS account ID associated with the registry that contains the
+       * repository.
+       * If you do not specify a registry, the default registry is assumed.
+       */
+      public fun registryId(registryId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.Builder =
+          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.builder()
+
+      /**
+       * @param lifecyclePolicyText The JSON repository policy text to apply to the repository.
+       */
+      override fun lifecyclePolicyText(lifecyclePolicyText: String) {
+        cdkBuilder.lifecyclePolicyText(lifecyclePolicyText)
+      }
+
+      /**
+       * @param registryId The AWS account ID associated with the registry that contains the
+       * repository.
+       * If you do not specify a registry, the default registry is assumed.
+       */
+      override fun registryId(registryId: String) {
+        cdkBuilder.registryId(registryId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
+    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
+      /**
+       * The JSON repository policy text to apply to the repository.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-lifecyclepolicytext)
+       */
+      override fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
+
+      /**
+       * The AWS account ID associated with the registry that contains the repository.
+       *
+       * If you do not specify a registry, the default registry is assumed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html#cfn-ecr-repository-lifecyclepolicy-registryid)
+       */
+      override fun registryId(): String? = unwrap(this).getRegistryId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LifecyclePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty):
+          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LifecyclePolicyProperty):
+          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty
     }
   }
 }

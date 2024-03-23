@@ -472,7 +472,7 @@ public interface EcsTaskProps : TargetBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.EcsTaskProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.EcsTaskProps,
   ) : CdkObject(cdkObject), EcsTaskProps {
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.

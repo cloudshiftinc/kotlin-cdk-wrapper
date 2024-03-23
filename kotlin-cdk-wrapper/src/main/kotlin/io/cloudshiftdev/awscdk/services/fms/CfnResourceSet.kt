@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html)
  */
-public open class CfnResourceSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fms.CfnResourceSet,
+public open class CfnResourceSet(
+  cdkObject: software.amazon.awscdk.services.fms.CfnResourceSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -326,6 +326,6 @@ public open class CfnResourceSet internal constructor(
         = CfnResourceSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceSet): software.amazon.awscdk.services.fms.CfnResourceSet
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.fms.CfnResourceSet
   }
 }

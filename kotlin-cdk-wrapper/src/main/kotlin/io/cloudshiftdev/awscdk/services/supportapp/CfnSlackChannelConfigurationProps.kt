@@ -277,8 +277,7 @@ public interface CfnSlackChannelConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps,
   ) : CdkObject(cdkObject), CfnSlackChannelConfigurationProps {
     /**
      * The channel ID in Slack.

@@ -165,7 +165,7 @@ public interface ServiceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceAttributes,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceAttributes,
   ) : CdkObject(cdkObject), ServiceAttributes {
     /**
      *

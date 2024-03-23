@@ -239,7 +239,7 @@ public interface CfnConnectPeerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps,
   ) : CdkObject(cdkObject), CfnConnectPeerProps {
     /**
      * Describes the BGP options.

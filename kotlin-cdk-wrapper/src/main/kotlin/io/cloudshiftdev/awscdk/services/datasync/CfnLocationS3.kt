@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html)
  */
-public open class CfnLocationS3 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3,
+public open class CfnLocationS3(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -458,7 +458,8 @@ public open class CfnLocationS3 internal constructor(
         CfnLocationS3 = CfnLocationS3(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationS3):
-        software.amazon.awscdk.services.datasync.CfnLocationS3 = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationS3 = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationS3
   }
 
   /**
@@ -520,8 +521,7 @@ public open class CfnLocationS3 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty,
     ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
        * Specifies the ARN of the IAM role that DataSync uses to access your S3 bucket.

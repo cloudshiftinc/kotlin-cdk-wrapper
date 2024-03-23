@@ -69,7 +69,7 @@ public interface IHttpRoute : IRoute {
   public fun routeArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRoute,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRoute,
   ) : CdkObject(cdkObject), IHttpRoute {
     /**
      * Apply the given removal policy to this resource.

@@ -118,8 +118,7 @@ public interface NotificationRuleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions,
+    cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions,
   ) : CdkObject(cdkObject), NotificationRuleOptions {
     /**
      * The level of detail to include in the notifications for this resource.

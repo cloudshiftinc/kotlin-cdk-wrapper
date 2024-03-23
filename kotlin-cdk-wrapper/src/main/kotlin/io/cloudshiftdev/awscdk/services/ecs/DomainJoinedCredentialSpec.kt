@@ -25,8 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class DomainJoinedCredentialSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec,
+public open class DomainJoinedCredentialSpec(
+  cdkObject: software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec,
 ) : CredentialSpec(cdkObject) {
   public constructor(fileLocation: String) :
       this(software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec(fileLocation)
@@ -44,6 +44,7 @@ public open class DomainJoinedCredentialSpec internal constructor(
         DomainJoinedCredentialSpec = DomainJoinedCredentialSpec(cdkObject)
 
     internal fun unwrap(wrapped: DomainJoinedCredentialSpec):
-        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec
   }
 }

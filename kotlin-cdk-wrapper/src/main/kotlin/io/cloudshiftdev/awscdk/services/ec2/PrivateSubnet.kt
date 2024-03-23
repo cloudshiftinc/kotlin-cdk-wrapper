@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PrivateSubnet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnet,
+public open class PrivateSubnet(
+  cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnet,
 ) : Subnet(cdkObject), IPrivateSubnet {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -213,6 +213,6 @@ public open class PrivateSubnet internal constructor(
         PrivateSubnet(cdkObject)
 
     internal fun unwrap(wrapped: PrivateSubnet): software.amazon.awscdk.services.ec2.PrivateSubnet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.PrivateSubnet
   }
 }

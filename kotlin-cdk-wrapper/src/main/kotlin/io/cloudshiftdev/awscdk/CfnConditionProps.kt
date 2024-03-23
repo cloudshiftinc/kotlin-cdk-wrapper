@@ -56,7 +56,7 @@ public interface CfnConditionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnConditionProps,
+    cdkObject: software.amazon.awscdk.CfnConditionProps,
   ) : CdkObject(cdkObject), CfnConditionProps {
     /**
      * The expression that the condition will evaluate.

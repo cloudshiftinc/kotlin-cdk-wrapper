@@ -281,8 +281,7 @@ public interface AthenaGetQueryExecutionProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps,
   ) : CdkObject(cdkObject), AthenaGetQueryExecutionProps {
     /**
      * An optional description for this state.

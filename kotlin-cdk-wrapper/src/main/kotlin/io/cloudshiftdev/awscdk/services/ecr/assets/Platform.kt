@@ -19,8 +19,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class Platform internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.Platform,
+public open class Platform(
+  cdkObject: software.amazon.awscdk.services.ecr.assets.Platform,
 ) : CdkObject(cdkObject) {
   /**
    * The platform to use for docker build.
@@ -41,6 +41,6 @@ public open class Platform internal constructor(
         Platform(cdkObject)
 
     internal fun unwrap(wrapped: Platform): software.amazon.awscdk.services.ecr.assets.Platform =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecr.assets.Platform
   }
 }

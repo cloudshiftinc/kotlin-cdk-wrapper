@@ -135,7 +135,7 @@ public interface DestroyCommand : CdkCommand {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyCommand,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyCommand,
   ) : CdkObject(cdkObject), DestroyCommand {
     /**
      * Additional arguments to pass to the command This can be used to test specific CLI

@@ -108,7 +108,7 @@ public interface DeploymentStrategyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyProps,
   ) : CdkObject(cdkObject), DeploymentStrategyProps {
     /**
      * A name for the deployment strategy.

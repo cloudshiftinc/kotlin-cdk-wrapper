@@ -223,7 +223,7 @@ public interface CfnConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfigProps,
+    cdkObject: software.amazon.awscdk.services.groundstation.CfnConfigProps,
   ) : CdkObject(cdkObject), CfnConfigProps {
     /**
      * Object containing the parameters of a config.

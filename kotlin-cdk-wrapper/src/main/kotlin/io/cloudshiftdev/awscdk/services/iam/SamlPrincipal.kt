@@ -20,8 +20,8 @@ import kotlin.collections.Map
  * "SAML:iss", "issuer")));
  * ```
  */
-public open class SamlPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal,
+public open class SamlPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal,
 ) : FederatedPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
       this(software.amazon.awscdk.services.iam.SamlPrincipal(samlProvider.let(ISamlProvider::unwrap),
@@ -33,6 +33,6 @@ public open class SamlPrincipal internal constructor(
         SamlPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: SamlPrincipal): software.amazon.awscdk.services.iam.SamlPrincipal =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.SamlPrincipal
   }
 }

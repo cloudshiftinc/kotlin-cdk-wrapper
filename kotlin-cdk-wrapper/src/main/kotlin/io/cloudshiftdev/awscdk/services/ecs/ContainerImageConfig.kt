@@ -98,7 +98,7 @@ public interface ContainerImageConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImageConfig,
+    cdkObject: software.amazon.awscdk.services.ecs.ContainerImageConfig,
   ) : CdkObject(cdkObject), ContainerImageConfig {
     /**
      * Specifies the name of the container image.

@@ -141,8 +141,7 @@ public interface CfnVPCEndpointConnectionNotificationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps,
   ) : CdkObject(cdkObject), CfnVPCEndpointConnectionNotificationProps {
     /**
      * The endpoint events for which to receive notifications.

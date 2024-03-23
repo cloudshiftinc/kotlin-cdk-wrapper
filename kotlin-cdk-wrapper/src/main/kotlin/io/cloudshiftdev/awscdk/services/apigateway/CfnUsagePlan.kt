@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
  */
-public open class CfnUsagePlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
+public open class CfnUsagePlan(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -520,279 +520,8 @@ public open class CfnUsagePlan internal constructor(
         CfnUsagePlan = CfnUsagePlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnUsagePlan):
-        software.amazon.awscdk.services.apigateway.CfnUsagePlan = wrapped.cdkObject
-  }
-
-  /**
-   * `ThrottleSettings` is a property of the
-   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
-   * resource that specifies the overall request rate (average requests per second) and burst capacity
-   * when users call your REST APIs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * ThrottleSettingsProperty throttleSettingsProperty = ThrottleSettingsProperty.builder()
-   * .burstLimit(123)
-   * .rateLimit(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html)
-   */
-  public interface ThrottleSettingsProperty {
-    /**
-     * The API target request burst rate limit.
-     *
-     * This allows more requests through for a period of time than the target rate limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
-     */
-    public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
-
-    /**
-     * The API target request rate limit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
-     */
-    public fun rateLimit(): Number? = unwrap(this).getRateLimit()
-
-    /**
-     * A builder for [ThrottleSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param burstLimit The API target request burst rate limit.
-       * This allows more requests through for a period of time than the target rate limit.
-       */
-      public fun burstLimit(burstLimit: Number)
-
-      /**
-       * @param rateLimit The API target request rate limit.
-       */
-      public fun rateLimit(rateLimit: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
-
-      /**
-       * @param burstLimit The API target request burst rate limit.
-       * This allows more requests through for a period of time than the target rate limit.
-       */
-      override fun burstLimit(burstLimit: Number) {
-        cdkBuilder.burstLimit(burstLimit)
-      }
-
-      /**
-       * @param rateLimit The API target request rate limit.
-       */
-      override fun rateLimit(rateLimit: Number) {
-        cdkBuilder.rateLimit(rateLimit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
-    ) : CdkObject(cdkObject), ThrottleSettingsProperty {
-      /**
-       * The API target request burst rate limit.
-       *
-       * This allows more requests through for a period of time than the target rate limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
-       */
-      override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
-
-      /**
-       * The API target request rate limit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
-       */
-      override fun rateLimit(): Number? = unwrap(this).getRateLimit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ThrottleSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
-          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThrottleSettingsProperty):
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty
-    }
-  }
-
-  /**
-   * `QuotaSettings` is a property of the
-   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
-   * resource that specifies a target for the maximum number of requests users can make to your REST
-   * APIs.
-   *
-   * In some cases clients can exceed the targets that you set. Don’t rely on usage plans to control
-   * costs. Consider using [AWS
-   * Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
-   * to monitor costs and [AWS
-   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API
-   * requests.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * QuotaSettingsProperty quotaSettingsProperty = QuotaSettingsProperty.builder()
-   * .limit(123)
-   * .offset(123)
-   * .period("period")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html)
-   */
-  public interface QuotaSettingsProperty {
-    /**
-     * The target maximum number of requests that can be made in a given time period.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
-     */
-    public fun limit(): Number? = unwrap(this).getLimit()
-
-    /**
-     * The number of requests subtracted from the given limit in the initial time period.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
-     */
-    public fun offset(): Number? = unwrap(this).getOffset()
-
-    /**
-     * The time period in which the limit applies.
-     *
-     * Valid values are "DAY", "WEEK" or "MONTH".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
-     */
-    public fun period(): String? = unwrap(this).getPeriod()
-
-    /**
-     * A builder for [QuotaSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param limit The target maximum number of requests that can be made in a given time period.
-       */
-      public fun limit(limit: Number)
-
-      /**
-       * @param offset The number of requests subtracted from the given limit in the initial time
-       * period.
-       */
-      public fun offset(offset: Number)
-
-      /**
-       * @param period The time period in which the limit applies.
-       * Valid values are "DAY", "WEEK" or "MONTH".
-       */
-      public fun period(period: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.builder()
-
-      /**
-       * @param limit The target maximum number of requests that can be made in a given time period.
-       */
-      override fun limit(limit: Number) {
-        cdkBuilder.limit(limit)
-      }
-
-      /**
-       * @param offset The number of requests subtracted from the given limit in the initial time
-       * period.
-       */
-      override fun offset(offset: Number) {
-        cdkBuilder.offset(offset)
-      }
-
-      /**
-       * @param period The time period in which the limit applies.
-       * Valid values are "DAY", "WEEK" or "MONTH".
-       */
-      override fun period(period: String) {
-        cdkBuilder.period(period)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
-    ) : CdkObject(cdkObject), QuotaSettingsProperty {
-      /**
-       * The target maximum number of requests that can be made in a given time period.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
-       */
-      override fun limit(): Number? = unwrap(this).getLimit()
-
-      /**
-       * The number of requests subtracted from the given limit in the initial time period.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
-       */
-      override fun offset(): Number? = unwrap(this).getOffset()
-
-      /**
-       * The time period in which the limit applies.
-       *
-       * Valid values are "DAY", "WEEK" or "MONTH".
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
-       */
-      override fun period(): String? = unwrap(this).getPeriod()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QuotaSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty):
-          QuotaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QuotaSettingsProperty):
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty
-    }
+        software.amazon.awscdk.services.apigateway.CfnUsagePlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnUsagePlan
   }
 
   /**
@@ -907,8 +636,7 @@ public open class CfnUsagePlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
     ) : CdkObject(cdkObject), ApiStageProperty {
       /**
        * API Id of the associated API stage in a usage plan.
@@ -947,6 +675,276 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty
+    }
+  }
+
+  /**
+   * `QuotaSettings` is a property of the
+   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+   * resource that specifies a target for the maximum number of requests users can make to your REST
+   * APIs.
+   *
+   * In some cases clients can exceed the targets that you set. Don’t rely on usage plans to control
+   * costs. Consider using [AWS
+   * Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
+   * to monitor costs and [AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API
+   * requests.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * QuotaSettingsProperty quotaSettingsProperty = QuotaSettingsProperty.builder()
+   * .limit(123)
+   * .offset(123)
+   * .period("period")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html)
+   */
+  public interface QuotaSettingsProperty {
+    /**
+     * The target maximum number of requests that can be made in a given time period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+     */
+    public fun limit(): Number? = unwrap(this).getLimit()
+
+    /**
+     * The number of requests subtracted from the given limit in the initial time period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+     */
+    public fun offset(): Number? = unwrap(this).getOffset()
+
+    /**
+     * The time period in which the limit applies.
+     *
+     * Valid values are "DAY", "WEEK" or "MONTH".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+     */
+    public fun period(): String? = unwrap(this).getPeriod()
+
+    /**
+     * A builder for [QuotaSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param limit The target maximum number of requests that can be made in a given time period.
+       */
+      public fun limit(limit: Number)
+
+      /**
+       * @param offset The number of requests subtracted from the given limit in the initial time
+       * period.
+       */
+      public fun offset(offset: Number)
+
+      /**
+       * @param period The time period in which the limit applies.
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       */
+      public fun period(period: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.builder()
+
+      /**
+       * @param limit The target maximum number of requests that can be made in a given time period.
+       */
+      override fun limit(limit: Number) {
+        cdkBuilder.limit(limit)
+      }
+
+      /**
+       * @param offset The number of requests subtracted from the given limit in the initial time
+       * period.
+       */
+      override fun offset(offset: Number) {
+        cdkBuilder.offset(offset)
+      }
+
+      /**
+       * @param period The time period in which the limit applies.
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       */
+      override fun period(period: String) {
+        cdkBuilder.period(period)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
+    ) : CdkObject(cdkObject), QuotaSettingsProperty {
+      /**
+       * The target maximum number of requests that can be made in a given time period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+       */
+      override fun limit(): Number? = unwrap(this).getLimit()
+
+      /**
+       * The number of requests subtracted from the given limit in the initial time period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+       */
+      override fun offset(): Number? = unwrap(this).getOffset()
+
+      /**
+       * The time period in which the limit applies.
+       *
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+       */
+      override fun period(): String? = unwrap(this).getPeriod()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QuotaSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty):
+          QuotaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QuotaSettingsProperty):
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty
+    }
+  }
+
+  /**
+   * `ThrottleSettings` is a property of the
+   * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+   * resource that specifies the overall request rate (average requests per second) and burst capacity
+   * when users call your REST APIs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * ThrottleSettingsProperty throttleSettingsProperty = ThrottleSettingsProperty.builder()
+   * .burstLimit(123)
+   * .rateLimit(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html)
+   */
+  public interface ThrottleSettingsProperty {
+    /**
+     * The API target request burst rate limit.
+     *
+     * This allows more requests through for a period of time than the target rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+     */
+    public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+
+    /**
+     * The API target request rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+     */
+    public fun rateLimit(): Number? = unwrap(this).getRateLimit()
+
+    /**
+     * A builder for [ThrottleSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
+       */
+      public fun burstLimit(burstLimit: Number)
+
+      /**
+       * @param rateLimit The API target request rate limit.
+       */
+      public fun rateLimit(rateLimit: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
+
+      /**
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
+       */
+      override fun burstLimit(burstLimit: Number) {
+        cdkBuilder.burstLimit(burstLimit)
+      }
+
+      /**
+       * @param rateLimit The API target request rate limit.
+       */
+      override fun rateLimit(rateLimit: Number) {
+        cdkBuilder.rateLimit(rateLimit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
+    ) : CdkObject(cdkObject), ThrottleSettingsProperty {
+      /**
+       * The API target request burst rate limit.
+       *
+       * This allows more requests through for a period of time than the target rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+       */
+      override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+
+      /**
+       * The API target request rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+       */
+      override fun rateLimit(): Number? = unwrap(this).getRateLimit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ThrottleSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
+          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThrottleSettingsProperty):
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty
     }
   }
 }

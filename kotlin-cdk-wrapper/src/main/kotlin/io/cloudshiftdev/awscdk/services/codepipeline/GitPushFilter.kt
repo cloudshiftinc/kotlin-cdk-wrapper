@@ -152,7 +152,7 @@ public interface GitPushFilter {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter,
+    cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter,
   ) : CdkObject(cdkObject), GitPushFilter {
     /**
      * The list of patterns of Git tags that, when pushed, are to be excluded from starting the

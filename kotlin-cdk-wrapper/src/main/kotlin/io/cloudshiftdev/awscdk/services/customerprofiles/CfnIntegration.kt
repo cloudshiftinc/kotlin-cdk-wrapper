@@ -118,8 +118,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html)
  */
-public open class CfnIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration,
+public open class CfnIntegration(
+  cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -504,91 +504,8 @@ public open class CfnIntegration internal constructor(
         CfnIntegration = CfnIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegration):
-        software.amazon.awscdk.services.customerprofiles.CfnIntegration = wrapped.cdkObject
-  }
-
-  /**
-   * The properties that are applied when Marketo is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * MarketoSourcePropertiesProperty marketoSourcePropertiesProperty =
-   * MarketoSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html)
-   */
-  public interface MarketoSourcePropertiesProperty {
-    /**
-     * The object specified in the Marketo flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html#cfn-customerprofiles-integration-marketosourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [MarketoSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Marketo flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Marketo flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
-      /**
-       * The object specified in the Marketo flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html#cfn-customerprofiles-integration-marketosourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MarketoSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty):
-          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
-    }
+        software.amazon.awscdk.services.customerprofiles.CfnIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.customerprofiles.CfnIntegration
   }
 
   /**
@@ -725,8 +642,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty,
     ) : CdkObject(cdkObject), ConnectorOperatorProperty {
       /**
        * The operation to be performed on the provided Marketo source fields.
@@ -779,178 +695,6 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty
-    }
-  }
-
-  /**
-   * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
-   * .triggerType("triggerType")
-   * // the properties below are optional
-   * .triggerProperties(TriggerPropertiesProperty.builder()
-   * .scheduled(ScheduledTriggerPropertiesProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * // the properties below are optional
-   * .dataPullMode("dataPullMode")
-   * .firstExecutionFrom(123)
-   * .scheduleEndTime(123)
-   * .scheduleOffset(123)
-   * .scheduleStartTime(123)
-   * .timezone("timezone")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html)
-   */
-  public interface TriggerConfigProperty {
-    /**
-     * Specifies the configuration details of a schedule-triggered flow that you define.
-     *
-     * Currently, these settings only apply to the Scheduled trigger type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggerproperties)
-     */
-    public fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
-
-    /**
-     * Specifies the type of flow trigger.
-     *
-     * It can be OnDemand, Scheduled, or Event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggertype)
-     */
-    public fun triggerType(): String
-
-    /**
-     * A builder for [TriggerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      public fun triggerProperties(triggerProperties: IResolvable)
-
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      public fun triggerProperties(triggerProperties: TriggerPropertiesProperty)
-
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70f093d02bd5940e22cc195bebbe1fe645d686c826f8405fd3155cca76eb605b")
-      public fun triggerProperties(triggerProperties: TriggerPropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param triggerType Specifies the type of flow trigger. 
-       * It can be OnDemand, Scheduled, or Event.
-       */
-      public fun triggerType(triggerType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty.builder()
-
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      override fun triggerProperties(triggerProperties: IResolvable) {
-        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      override fun triggerProperties(triggerProperties: TriggerPropertiesProperty) {
-        cdkBuilder.triggerProperties(triggerProperties.let(TriggerPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * that you define.
-       * Currently, these settings only apply to the Scheduled trigger type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70f093d02bd5940e22cc195bebbe1fe645d686c826f8405fd3155cca76eb605b")
-      override
-          fun triggerProperties(triggerProperties: TriggerPropertiesProperty.Builder.() -> Unit):
-          Unit = triggerProperties(TriggerPropertiesProperty(triggerProperties))
-
-      /**
-       * @param triggerType Specifies the type of flow trigger. 
-       * It can be OnDemand, Scheduled, or Event.
-       */
-      override fun triggerType(triggerType: String) {
-        cdkBuilder.triggerType(triggerType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty,
-    ) : CdkObject(cdkObject), TriggerConfigProperty {
-      /**
-       * Specifies the configuration details of a schedule-triggered flow that you define.
-       *
-       * Currently, these settings only apply to the Scheduled trigger type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggerproperties)
-       */
-      override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
-
-      /**
-       * Specifies the type of flow trigger.
-       *
-       * It can be OnDemand, Scheduled, or Event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggertype)
-       */
-      override fun triggerType(): String = unwrap(this).getTriggerType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty):
-          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TriggerConfigProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty
     }
   }
 
@@ -1267,8 +1011,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty,
     ) : CdkObject(cdkObject), FlowDefinitionProperty {
       /**
        * A description of the flow you want to create.
@@ -1393,8 +1136,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty,
     ) : CdkObject(cdkObject), IncrementalPullConfigProperty {
       /**
        * A field that specifies the date time or timestamp field as the criteria to use when
@@ -1420,6 +1162,199 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Marketo is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * MarketoSourcePropertiesProperty marketoSourcePropertiesProperty =
+   * MarketoSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html)
+   */
+  public interface MarketoSourcePropertiesProperty {
+    /**
+     * The object specified in the Marketo flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html#cfn-customerprofiles-integration-marketosourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [MarketoSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Marketo flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Marketo flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
+      /**
+       * The object specified in the Marketo flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-marketosourceproperties.html#cfn-customerprofiles-integration-marketosourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MarketoSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty):
+          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * A map in which each key is an event type from an external application such as Segment or
+   * Shopify, and each value is an `ObjectTypeName` (template) used to ingest the event.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ObjectTypeMappingProperty objectTypeMappingProperty = ObjectTypeMappingProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html)
+   */
+  public interface ObjectTypeMappingProperty {
+    /**
+     * The key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ObjectTypeMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty.builder()
+
+      /**
+       * @param key The key. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty,
+    ) : CdkObject(cdkObject), ObjectTypeMappingProperty {
+      /**
+       * The key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ObjectTypeMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty):
+          ObjectTypeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObjectTypeMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ObjectTypeMappingProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
     }
   }
 
@@ -1500,8 +1435,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty,
     ) : CdkObject(cdkObject), S3SourcePropertiesProperty {
       /**
        * The Amazon S3 bucket name where the source files are stored.
@@ -1537,8 +1471,7 @@ public open class CfnIntegration internal constructor(
   }
 
   /**
-   * A map in which each key is an event type from an external application such as Segment or
-   * Shopify, and each value is an `ObjectTypeName` (template) used to ingest the event.
+   * The properties that are applied when Salesforce is being used as a source.
    *
    * Example:
    *
@@ -1546,104 +1479,167 @@ public open class CfnIntegration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * ObjectTypeMappingProperty objectTypeMappingProperty = ObjectTypeMappingProperty.builder()
-   * .key("key")
-   * .value("value")
+   * SalesforceSourcePropertiesProperty salesforceSourcePropertiesProperty =
+   * SalesforceSourcePropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .enableDynamicFieldUpdate(false)
+   * .includeDeletedRecords(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html)
    */
-  public interface ObjectTypeMappingProperty {
+  public interface SalesforceSourcePropertiesProperty {
     /**
-     * The key.
+     * The flag that enables dynamic fetching of new (recently added) fields in the Salesforce
+     * objects while running a flow.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-key)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-enabledynamicfieldupdate)
      */
-    public fun key(): String
+    public fun enableDynamicFieldUpdate(): Any? = unwrap(this).getEnableDynamicFieldUpdate()
 
     /**
-     * The value.
+     * Indicates whether Amazon AppFlow includes deleted files in the flow run.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-value)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-includedeletedrecords)
      */
-    public fun `value`(): String
+    public fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
 
     /**
-     * A builder for [ObjectTypeMappingProperty]
+     * The object specified in the Salesforce flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [SalesforceSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key The key. 
+       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
+       * added) fields in the Salesforce objects while running a flow.
        */
-      public fun key(key: String)
+      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean)
 
       /**
-       * @param value The value. 
+       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
+       * added) fields in the Salesforce objects while running a flow.
        */
-      public fun `value`(`value`: String)
+      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable)
+
+      /**
+       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
+       * flow run.
+       */
+      public fun includeDeletedRecords(includeDeletedRecords: Boolean)
+
+      /**
+       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
+       * flow run.
+       */
+      public fun includeDeletedRecords(includeDeletedRecords: IResolvable)
+
+      /**
+       * @param object The object specified in the Salesforce flow source. 
+       */
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty.Builder
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty.builder()
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty.builder()
 
       /**
-       * @param key The key. 
+       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
+       * added) fields in the Salesforce objects while running a flow.
        */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
+      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
+        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate)
       }
 
       /**
-       * @param value The value. 
+       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
+       * added) fields in the Salesforce objects while running a flow.
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
+        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
+       * flow run.
+       */
+      override fun includeDeletedRecords(includeDeletedRecords: Boolean) {
+        cdkBuilder.includeDeletedRecords(includeDeletedRecords)
+      }
+
+      /**
+       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
+       * flow run.
+       */
+      override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
+        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param object The object specified in the Salesforce flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
       }
 
       public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty,
-    ) : CdkObject(cdkObject), ObjectTypeMappingProperty {
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), SalesforceSourcePropertiesProperty {
       /**
-       * The key.
+       * The flag that enables dynamic fetching of new (recently added) fields in the Salesforce
+       * objects while running a flow.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-key)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-enabledynamicfieldupdate)
        */
-      override fun key(): String = unwrap(this).getKey()
+      override fun enableDynamicFieldUpdate(): Any? = unwrap(this).getEnableDynamicFieldUpdate()
 
       /**
-       * The value.
+       * Indicates whether Amazon AppFlow includes deleted files in the flow run.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-objecttypemapping.html#cfn-customerprofiles-integration-objecttypemapping-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-includedeletedrecords)
        */
-      override fun `value`(): String = unwrap(this).getValue()
+      override fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
+
+      /**
+       * The object specified in the Salesforce flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ObjectTypeMappingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SalesforceSourcePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty):
-          ObjectTypeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ObjectTypeMappingProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty):
+          SalesforceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceSourcePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ObjectTypeMappingProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
+      internal fun unwrap(wrapped: SalesforceSourcePropertiesProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
     }
   }
 
@@ -1839,8 +1835,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty,
     ) : CdkObject(cdkObject), ScheduledTriggerPropertiesProperty {
       /**
        * Specifies whether a scheduled flow has an incremental data transfer or a complete data
@@ -1917,668 +1912,6 @@ public open class CfnIntegration internal constructor(
   }
 
   /**
-   * The properties that are applied when using Zendesk as a flow source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * ZendeskSourcePropertiesProperty zendeskSourcePropertiesProperty =
-   * ZendeskSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html)
-   */
-  public interface ZendeskSourcePropertiesProperty {
-    /**
-     * The object specified in the Zendesk flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html#cfn-customerprofiles-integration-zendesksourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [ZendeskSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Zendesk flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Zendesk flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
-      /**
-       * The object specified in the Zendesk flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html#cfn-customerprofiles-integration-zendesksourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ZendeskSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty):
-          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Salesforce is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * SalesforceSourcePropertiesProperty salesforceSourcePropertiesProperty =
-   * SalesforceSourcePropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .enableDynamicFieldUpdate(false)
-   * .includeDeletedRecords(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html)
-   */
-  public interface SalesforceSourcePropertiesProperty {
-    /**
-     * The flag that enables dynamic fetching of new (recently added) fields in the Salesforce
-     * objects while running a flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-enabledynamicfieldupdate)
-     */
-    public fun enableDynamicFieldUpdate(): Any? = unwrap(this).getEnableDynamicFieldUpdate()
-
-    /**
-     * Indicates whether Amazon AppFlow includes deleted files in the flow run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-includedeletedrecords)
-     */
-    public fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
-
-    /**
-     * The object specified in the Salesforce flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [SalesforceSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
-       * added) fields in the Salesforce objects while running a flow.
-       */
-      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean)
-
-      /**
-       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
-       * added) fields in the Salesforce objects while running a flow.
-       */
-      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable)
-
-      /**
-       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
-       * flow run.
-       */
-      public fun includeDeletedRecords(includeDeletedRecords: Boolean)
-
-      /**
-       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
-       * flow run.
-       */
-      public fun includeDeletedRecords(includeDeletedRecords: IResolvable)
-
-      /**
-       * @param object The object specified in the Salesforce flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty.builder()
-
-      /**
-       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
-       * added) fields in the Salesforce objects while running a flow.
-       */
-      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
-        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate)
-      }
-
-      /**
-       * @param enableDynamicFieldUpdate The flag that enables dynamic fetching of new (recently
-       * added) fields in the Salesforce objects while running a flow.
-       */
-      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
-        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
-       * flow run.
-       */
-      override fun includeDeletedRecords(includeDeletedRecords: Boolean) {
-        cdkBuilder.includeDeletedRecords(includeDeletedRecords)
-      }
-
-      /**
-       * @param includeDeletedRecords Indicates whether Amazon AppFlow includes deleted files in the
-       * flow run.
-       */
-      override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
-        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param object The object specified in the Salesforce flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SalesforceSourcePropertiesProperty {
-      /**
-       * The flag that enables dynamic fetching of new (recently added) fields in the Salesforce
-       * objects while running a flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-enabledynamicfieldupdate)
-       */
-      override fun enableDynamicFieldUpdate(): Any? = unwrap(this).getEnableDynamicFieldUpdate()
-
-      /**
-       * Indicates whether Amazon AppFlow includes deleted files in the flow run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-includedeletedrecords)
-       */
-      override fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
-
-      /**
-       * The object specified in the Salesforce flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html#cfn-customerprofiles-integration-salesforcesourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SalesforceSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty):
-          SalesforceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SalesforceSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SalesforceSourcePropertiesProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The `Task` property type specifies the class for modeling different type of tasks.
-   *
-   * Task implementation varies based on the TaskType.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * TaskProperty taskProperty = TaskProperty.builder()
-   * .sourceFields(List.of("sourceFields"))
-   * .taskType("taskType")
-   * // the properties below are optional
-   * .connectorOperator(ConnectorOperatorProperty.builder()
-   * .marketo("marketo")
-   * .s3("s3")
-   * .salesforce("salesforce")
-   * .serviceNow("serviceNow")
-   * .zendesk("zendesk")
-   * .build())
-   * .destinationField("destinationField")
-   * .taskProperties(List.of(TaskPropertiesMapProperty.builder()
-   * .operatorPropertyKey("operatorPropertyKey")
-   * .property("property")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html)
-   */
-  public interface TaskProperty {
-    /**
-     * The operation to be performed on the provided source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-connectoroperator)
-     */
-    public fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
-
-    /**
-     * A field in a destination connector, or a field value against which Amazon AppFlow validates a
-     * source field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-destinationfield)
-     */
-    public fun destinationField(): String? = unwrap(this).getDestinationField()
-
-    /**
-     * The source fields to which a particular task is applied.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-sourcefields)
-     */
-    public fun sourceFields(): List<String>
-
-    /**
-     * A map used to store task-related information.
-     *
-     * The service looks for particular information based on the TaskType.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-taskproperties)
-     */
-    public fun taskProperties(): Any? = unwrap(this).getTaskProperties()
-
-    /**
-     * Specifies the particular task implementation that Amazon AppFlow performs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-tasktype)
-     */
-    public fun taskType(): String
-
-    /**
-     * A builder for [TaskProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      public fun connectorOperator(connectorOperator: IResolvable)
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty)
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("55599f197600a497862a593877646b0451deb8dc2f9983c96e237ae06ce2d179")
-      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit)
-
-      /**
-       * @param destinationField A field in a destination connector, or a field value against which
-       * Amazon AppFlow validates a source field.
-       */
-      public fun destinationField(destinationField: String)
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      public fun sourceFields(sourceFields: List<String>)
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      public fun sourceFields(vararg sourceFields: String)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      public fun taskProperties(taskProperties: IResolvable)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      public fun taskProperties(taskProperties: List<Any>)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      public fun taskProperties(vararg taskProperties: Any)
-
-      /**
-       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
-       */
-      public fun taskType(taskType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty.builder()
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      override fun connectorOperator(connectorOperator: IResolvable) {
-        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
-        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("55599f197600a497862a593877646b0451deb8dc2f9983c96e237ae06ce2d179")
-      override
-          fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit):
-          Unit = connectorOperator(ConnectorOperatorProperty(connectorOperator))
-
-      /**
-       * @param destinationField A field in a destination connector, or a field value against which
-       * Amazon AppFlow validates a source field.
-       */
-      override fun destinationField(destinationField: String) {
-        cdkBuilder.destinationField(destinationField)
-      }
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      override fun sourceFields(sourceFields: List<String>) {
-        cdkBuilder.sourceFields(sourceFields)
-      }
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      override fun sourceFields(vararg sourceFields: String): Unit =
-          sourceFields(sourceFields.toList())
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      override fun taskProperties(taskProperties: IResolvable) {
-        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      override fun taskProperties(taskProperties: List<Any>) {
-        cdkBuilder.taskProperties(taskProperties)
-      }
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The service looks for particular information based on the TaskType.
-       */
-      override fun taskProperties(vararg taskProperties: Any): Unit =
-          taskProperties(taskProperties.toList())
-
-      /**
-       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
-       */
-      override fun taskType(taskType: String) {
-        cdkBuilder.taskType(taskType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty,
-    ) : CdkObject(cdkObject), TaskProperty {
-      /**
-       * The operation to be performed on the provided source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-connectoroperator)
-       */
-      override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
-
-      /**
-       * A field in a destination connector, or a field value against which Amazon AppFlow validates
-       * a source field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-destinationfield)
-       */
-      override fun destinationField(): String? = unwrap(this).getDestinationField()
-
-      /**
-       * The source fields to which a particular task is applied.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-sourcefields)
-       */
-      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
-
-      /**
-       * A map used to store task-related information.
-       *
-       * The service looks for particular information based on the TaskType.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-taskproperties)
-       */
-      override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
-
-      /**
-       * Specifies the particular task implementation that Amazon AppFlow performs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-tasktype)
-       */
-      override fun taskType(): String = unwrap(this).getTaskType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaskProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty):
-          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration details that control the trigger for a flow.
-   *
-   * Currently, these settings only apply to the Scheduled trigger type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * TriggerPropertiesProperty triggerPropertiesProperty = TriggerPropertiesProperty.builder()
-   * .scheduled(ScheduledTriggerPropertiesProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * // the properties below are optional
-   * .dataPullMode("dataPullMode")
-   * .firstExecutionFrom(123)
-   * .scheduleEndTime(123)
-   * .scheduleOffset(123)
-   * .scheduleStartTime(123)
-   * .timezone("timezone")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html)
-   */
-  public interface TriggerPropertiesProperty {
-    /**
-     * Specifies the configuration details of a schedule-triggered flow that you define.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html#cfn-customerprofiles-integration-triggerproperties-scheduled)
-     */
-    public fun scheduled(): Any? = unwrap(this).getScheduled()
-
-    /**
-     * A builder for [TriggerPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      public fun scheduled(scheduled: IResolvable)
-
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      public fun scheduled(scheduled: ScheduledTriggerPropertiesProperty)
-
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f1e68d8358801e6d018d1420d012d7b5bc6d75899a8d943ed004542a60365ce")
-      public fun scheduled(scheduled: ScheduledTriggerPropertiesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty.builder()
-
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      override fun scheduled(scheduled: IResolvable) {
-        cdkBuilder.scheduled(scheduled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      override fun scheduled(scheduled: ScheduledTriggerPropertiesProperty) {
-        cdkBuilder.scheduled(scheduled.let(ScheduledTriggerPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
-       * define.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f1e68d8358801e6d018d1420d012d7b5bc6d75899a8d943ed004542a60365ce")
-      override fun scheduled(scheduled: ScheduledTriggerPropertiesProperty.Builder.() -> Unit): Unit
-          = scheduled(ScheduledTriggerPropertiesProperty(scheduled))
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty,
-    ) : CdkObject(cdkObject), TriggerPropertiesProperty {
-      /**
-       * Specifies the configuration details of a schedule-triggered flow that you define.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html#cfn-customerprofiles-integration-triggerproperties-scheduled)
-       */
-      override fun scheduled(): Any? = unwrap(this).getScheduled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty):
-          TriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TriggerPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TriggerPropertiesProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
-    }
-  }
-
-  /**
    * The properties that are applied when ServiceNow is being used as a source.
    *
    * Example:
@@ -2633,8 +1966,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty,
     ) : CdkObject(cdkObject), ServiceNowSourcePropertiesProperty {
       /**
        * The object specified in the ServiceNow flow source.
@@ -2660,291 +1992,6 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The configuration that controls how Customer Profiles retrieves data from the source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
-   * SourceFlowConfigProperty sourceFlowConfigProperty = SourceFlowConfigProperty.builder()
-   * .connectorType("connectorType")
-   * .sourceConnectorProperties(SourceConnectorPropertiesProperty.builder()
-   * .marketo(MarketoSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .s3(S3SourcePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .build())
-   * .salesforce(SalesforceSourcePropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .enableDynamicFieldUpdate(false)
-   * .includeDeletedRecords(false)
-   * .build())
-   * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .zendesk(ZendeskSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .connectorProfileName("connectorProfileName")
-   * .incrementalPullConfig(IncrementalPullConfigProperty.builder()
-   * .datetimeTypeFieldName("datetimeTypeFieldName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html)
-   */
-  public interface SourceFlowConfigProperty {
-    /**
-     * The name of the Amazon AppFlow connector profile.
-     *
-     * This name must be unique for each connector profile in the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectorprofilename)
-     */
-    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-    /**
-     * The type of connector, such as Salesforce, Marketo, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectortype)
-     */
-    public fun connectorType(): String
-
-    /**
-     * Defines the configuration for a scheduled incremental data pull.
-     *
-     * If a valid configuration is provided, the fields specified in the configuration are used when
-     * querying for the incremental data pull.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-incrementalpullconfig)
-     */
-    public fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
-
-    /**
-     * Specifies the information that is required to query a particular source connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-sourceconnectorproperties)
-     */
-    public fun sourceConnectorProperties(): Any
-
-    /**
-     * A builder for [SourceFlowConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectorProfileName The name of the Amazon AppFlow connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      public fun connectorProfileName(connectorProfileName: String)
-
-      /**
-       * @param connectorType The type of connector, such as Salesforce, Marketo, and so on. 
-       */
-      public fun connectorType(connectorType: String)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      public fun incrementalPullConfig(incrementalPullConfig: IResolvable)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48d51bd416d1ee7fc0fa038e2aa3e18540973a149bdc9c39fa032d2d6d13221b")
-      public
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7804759ca70ed0353106d5bfcbc5cf6795677bfc643f6c53ae0e644e38de8309")
-      public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty.builder()
-
-      /**
-       * @param connectorProfileName The name of the Amazon AppFlow connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      override fun connectorProfileName(connectorProfileName: String) {
-        cdkBuilder.connectorProfileName(connectorProfileName)
-      }
-
-      /**
-       * @param connectorType The type of connector, such as Salesforce, Marketo, and so on. 
-       */
-      override fun connectorType(connectorType: String) {
-        cdkBuilder.connectorType(connectorType)
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("48d51bd416d1ee7fc0fa038e2aa3e18540973a149bdc9c39fa032d2d6d13221b")
-      override
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit):
-          Unit = incrementalPullConfig(IncrementalPullConfigProperty(incrementalPullConfig))
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      override
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7804759ca70ed0353106d5bfcbc5cf6795677bfc643f6c53ae0e644e38de8309")
-      override
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit):
-          Unit =
-          sourceConnectorProperties(SourceConnectorPropertiesProperty(sourceConnectorProperties))
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty,
-    ) : CdkObject(cdkObject), SourceFlowConfigProperty {
-      /**
-       * The name of the Amazon AppFlow connector profile.
-       *
-       * This name must be unique for each connector profile in the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectorprofilename)
-       */
-      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-      /**
-       * The type of connector, such as Salesforce, Marketo, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectortype)
-       */
-      override fun connectorType(): String = unwrap(this).getConnectorType()
-
-      /**
-       * Defines the configuration for a scheduled incremental data pull.
-       *
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-incrementalpullconfig)
-       */
-      override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
-
-      /**
-       * Specifies the information that is required to query a particular source connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-sourceconnectorproperties)
-       */
-      override fun sourceConnectorProperties(): Any = unwrap(this).getSourceConnectorProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceFlowConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty):
-          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceFlowConfigProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty
     }
   }
 
@@ -3247,8 +2294,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty,
     ) : CdkObject(cdkObject), SourceConnectorPropertiesProperty {
       /**
        * The properties that are applied when Marketo is being used as a source.
@@ -3302,6 +2348,290 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty
+    }
+  }
+
+  /**
+   * The configuration that controls how Customer Profiles retrieves data from the source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * SourceFlowConfigProperty sourceFlowConfigProperty = SourceFlowConfigProperty.builder()
+   * .connectorType("connectorType")
+   * .sourceConnectorProperties(SourceConnectorPropertiesProperty.builder()
+   * .marketo(MarketoSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .s3(S3SourcePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .build())
+   * .salesforce(SalesforceSourcePropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .enableDynamicFieldUpdate(false)
+   * .includeDeletedRecords(false)
+   * .build())
+   * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .zendesk(ZendeskSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .connectorProfileName("connectorProfileName")
+   * .incrementalPullConfig(IncrementalPullConfigProperty.builder()
+   * .datetimeTypeFieldName("datetimeTypeFieldName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html)
+   */
+  public interface SourceFlowConfigProperty {
+    /**
+     * The name of the Amazon AppFlow connector profile.
+     *
+     * This name must be unique for each connector profile in the AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectorprofilename)
+     */
+    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+    /**
+     * The type of connector, such as Salesforce, Marketo, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectortype)
+     */
+    public fun connectorType(): String
+
+    /**
+     * Defines the configuration for a scheduled incremental data pull.
+     *
+     * If a valid configuration is provided, the fields specified in the configuration are used when
+     * querying for the incremental data pull.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-incrementalpullconfig)
+     */
+    public fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
+
+    /**
+     * Specifies the information that is required to query a particular source connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-sourceconnectorproperties)
+     */
+    public fun sourceConnectorProperties(): Any
+
+    /**
+     * A builder for [SourceFlowConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectorProfileName The name of the Amazon AppFlow connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      public fun connectorProfileName(connectorProfileName: String)
+
+      /**
+       * @param connectorType The type of connector, such as Salesforce, Marketo, and so on. 
+       */
+      public fun connectorType(connectorType: String)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      public fun incrementalPullConfig(incrementalPullConfig: IResolvable)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48d51bd416d1ee7fc0fa038e2aa3e18540973a149bdc9c39fa032d2d6d13221b")
+      public
+          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      public
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7804759ca70ed0353106d5bfcbc5cf6795677bfc643f6c53ae0e644e38de8309")
+      public
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty.builder()
+
+      /**
+       * @param connectorProfileName The name of the Amazon AppFlow connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      override fun connectorProfileName(connectorProfileName: String) {
+        cdkBuilder.connectorProfileName(connectorProfileName)
+      }
+
+      /**
+       * @param connectorType The type of connector, such as Salesforce, Marketo, and so on. 
+       */
+      override fun connectorType(connectorType: String) {
+        cdkBuilder.connectorType(connectorType)
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("48d51bd416d1ee7fc0fa038e2aa3e18540973a149bdc9c39fa032d2d6d13221b")
+      override
+          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit):
+          Unit = incrementalPullConfig(IncrementalPullConfigProperty(incrementalPullConfig))
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      override
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7804759ca70ed0353106d5bfcbc5cf6795677bfc643f6c53ae0e644e38de8309")
+      override
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          sourceConnectorProperties(SourceConnectorPropertiesProperty(sourceConnectorProperties))
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty,
+    ) : CdkObject(cdkObject), SourceFlowConfigProperty {
+      /**
+       * The name of the Amazon AppFlow connector profile.
+       *
+       * This name must be unique for each connector profile in the AWS account .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectorprofilename)
+       */
+      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+      /**
+       * The type of connector, such as Salesforce, Marketo, and so on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-connectortype)
+       */
+      override fun connectorType(): String = unwrap(this).getConnectorType()
+
+      /**
+       * Defines the configuration for a scheduled incremental data pull.
+       *
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-incrementalpullconfig)
+       */
+      override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
+
+      /**
+       * Specifies the information that is required to query a particular source connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceflowconfig.html#cfn-customerprofiles-integration-sourceflowconfig-sourceconnectorproperties)
+       */
+      override fun sourceConnectorProperties(): Any = unwrap(this).getSourceConnectorProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceFlowConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty):
+          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceFlowConfigProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty
     }
   }
 
@@ -3381,8 +2711,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty,
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty,
     ) : CdkObject(cdkObject), TaskPropertiesMapProperty {
       /**
        * The task property key.
@@ -3414,6 +2743,662 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty
+    }
+  }
+
+  /**
+   * The `Task` property type specifies the class for modeling different type of tasks.
+   *
+   * Task implementation varies based on the TaskType.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * TaskProperty taskProperty = TaskProperty.builder()
+   * .sourceFields(List.of("sourceFields"))
+   * .taskType("taskType")
+   * // the properties below are optional
+   * .connectorOperator(ConnectorOperatorProperty.builder()
+   * .marketo("marketo")
+   * .s3("s3")
+   * .salesforce("salesforce")
+   * .serviceNow("serviceNow")
+   * .zendesk("zendesk")
+   * .build())
+   * .destinationField("destinationField")
+   * .taskProperties(List.of(TaskPropertiesMapProperty.builder()
+   * .operatorPropertyKey("operatorPropertyKey")
+   * .property("property")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html)
+   */
+  public interface TaskProperty {
+    /**
+     * The operation to be performed on the provided source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-connectoroperator)
+     */
+    public fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
+
+    /**
+     * A field in a destination connector, or a field value against which Amazon AppFlow validates a
+     * source field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-destinationfield)
+     */
+    public fun destinationField(): String? = unwrap(this).getDestinationField()
+
+    /**
+     * The source fields to which a particular task is applied.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-sourcefields)
+     */
+    public fun sourceFields(): List<String>
+
+    /**
+     * A map used to store task-related information.
+     *
+     * The service looks for particular information based on the TaskType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-taskproperties)
+     */
+    public fun taskProperties(): Any? = unwrap(this).getTaskProperties()
+
+    /**
+     * Specifies the particular task implementation that Amazon AppFlow performs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-tasktype)
+     */
+    public fun taskType(): String
+
+    /**
+     * A builder for [TaskProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      public fun connectorOperator(connectorOperator: IResolvable)
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty)
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55599f197600a497862a593877646b0451deb8dc2f9983c96e237ae06ce2d179")
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit)
+
+      /**
+       * @param destinationField A field in a destination connector, or a field value against which
+       * Amazon AppFlow validates a source field.
+       */
+      public fun destinationField(destinationField: String)
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      public fun sourceFields(sourceFields: List<String>)
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      public fun sourceFields(vararg sourceFields: String)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      public fun taskProperties(taskProperties: IResolvable)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      public fun taskProperties(taskProperties: List<Any>)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      public fun taskProperties(vararg taskProperties: Any)
+
+      /**
+       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
+       */
+      public fun taskType(taskType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty.Builder =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty.builder()
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      override fun connectorOperator(connectorOperator: IResolvable) {
+        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
+        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55599f197600a497862a593877646b0451deb8dc2f9983c96e237ae06ce2d179")
+      override
+          fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit):
+          Unit = connectorOperator(ConnectorOperatorProperty(connectorOperator))
+
+      /**
+       * @param destinationField A field in a destination connector, or a field value against which
+       * Amazon AppFlow validates a source field.
+       */
+      override fun destinationField(destinationField: String) {
+        cdkBuilder.destinationField(destinationField)
+      }
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      override fun sourceFields(sourceFields: List<String>) {
+        cdkBuilder.sourceFields(sourceFields)
+      }
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      override fun sourceFields(vararg sourceFields: String): Unit =
+          sourceFields(sourceFields.toList())
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      override fun taskProperties(taskProperties: IResolvable) {
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      override fun taskProperties(taskProperties: List<Any>) {
+        cdkBuilder.taskProperties(taskProperties)
+      }
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The service looks for particular information based on the TaskType.
+       */
+      override fun taskProperties(vararg taskProperties: Any): Unit =
+          taskProperties(taskProperties.toList())
+
+      /**
+       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
+       */
+      override fun taskType(taskType: String) {
+        cdkBuilder.taskType(taskType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty,
+    ) : CdkObject(cdkObject), TaskProperty {
+      /**
+       * The operation to be performed on the provided source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-connectoroperator)
+       */
+      override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
+
+      /**
+       * A field in a destination connector, or a field value against which Amazon AppFlow validates
+       * a source field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-destinationfield)
+       */
+      override fun destinationField(): String? = unwrap(this).getDestinationField()
+
+      /**
+       * The source fields to which a particular task is applied.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-sourcefields)
+       */
+      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
+
+      /**
+       * A map used to store task-related information.
+       *
+       * The service looks for particular information based on the TaskType.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-taskproperties)
+       */
+      override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
+
+      /**
+       * Specifies the particular task implementation that Amazon AppFlow performs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html#cfn-customerprofiles-integration-task-tasktype)
+       */
+      override fun taskType(): String = unwrap(this).getTaskType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaskProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty):
+          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TaskProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty
+    }
+  }
+
+  /**
+   * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
+   * .triggerType("triggerType")
+   * // the properties below are optional
+   * .triggerProperties(TriggerPropertiesProperty.builder()
+   * .scheduled(ScheduledTriggerPropertiesProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * // the properties below are optional
+   * .dataPullMode("dataPullMode")
+   * .firstExecutionFrom(123)
+   * .scheduleEndTime(123)
+   * .scheduleOffset(123)
+   * .scheduleStartTime(123)
+   * .timezone("timezone")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html)
+   */
+  public interface TriggerConfigProperty {
+    /**
+     * Specifies the configuration details of a schedule-triggered flow that you define.
+     *
+     * Currently, these settings only apply to the Scheduled trigger type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggerproperties)
+     */
+    public fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+
+    /**
+     * Specifies the type of flow trigger.
+     *
+     * It can be OnDemand, Scheduled, or Event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggertype)
+     */
+    public fun triggerType(): String
+
+    /**
+     * A builder for [TriggerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      public fun triggerProperties(triggerProperties: IResolvable)
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      public fun triggerProperties(triggerProperties: TriggerPropertiesProperty)
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70f093d02bd5940e22cc195bebbe1fe645d686c826f8405fd3155cca76eb605b")
+      public fun triggerProperties(triggerProperties: TriggerPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param triggerType Specifies the type of flow trigger. 
+       * It can be OnDemand, Scheduled, or Event.
+       */
+      public fun triggerType(triggerType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty.builder()
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      override fun triggerProperties(triggerProperties: IResolvable) {
+        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      override fun triggerProperties(triggerProperties: TriggerPropertiesProperty) {
+        cdkBuilder.triggerProperties(triggerProperties.let(TriggerPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * that you define.
+       * Currently, these settings only apply to the Scheduled trigger type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70f093d02bd5940e22cc195bebbe1fe645d686c826f8405fd3155cca76eb605b")
+      override
+          fun triggerProperties(triggerProperties: TriggerPropertiesProperty.Builder.() -> Unit):
+          Unit = triggerProperties(TriggerPropertiesProperty(triggerProperties))
+
+      /**
+       * @param triggerType Specifies the type of flow trigger. 
+       * It can be OnDemand, Scheduled, or Event.
+       */
+      override fun triggerType(triggerType: String) {
+        cdkBuilder.triggerType(triggerType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty,
+    ) : CdkObject(cdkObject), TriggerConfigProperty {
+      /**
+       * Specifies the configuration details of a schedule-triggered flow that you define.
+       *
+       * Currently, these settings only apply to the Scheduled trigger type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggerproperties)
+       */
+      override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+
+      /**
+       * Specifies the type of flow trigger.
+       *
+       * It can be OnDemand, Scheduled, or Event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerconfig.html#cfn-customerprofiles-integration-triggerconfig-triggertype)
+       */
+      override fun triggerType(): String = unwrap(this).getTriggerType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty):
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TriggerConfigProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration details that control the trigger for a flow.
+   *
+   * Currently, these settings only apply to the Scheduled trigger type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * TriggerPropertiesProperty triggerPropertiesProperty = TriggerPropertiesProperty.builder()
+   * .scheduled(ScheduledTriggerPropertiesProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * // the properties below are optional
+   * .dataPullMode("dataPullMode")
+   * .firstExecutionFrom(123)
+   * .scheduleEndTime(123)
+   * .scheduleOffset(123)
+   * .scheduleStartTime(123)
+   * .timezone("timezone")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html)
+   */
+  public interface TriggerPropertiesProperty {
+    /**
+     * Specifies the configuration details of a schedule-triggered flow that you define.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html#cfn-customerprofiles-integration-triggerproperties-scheduled)
+     */
+    public fun scheduled(): Any? = unwrap(this).getScheduled()
+
+    /**
+     * A builder for [TriggerPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      public fun scheduled(scheduled: IResolvable)
+
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      public fun scheduled(scheduled: ScheduledTriggerPropertiesProperty)
+
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f1e68d8358801e6d018d1420d012d7b5bc6d75899a8d943ed004542a60365ce")
+      public fun scheduled(scheduled: ScheduledTriggerPropertiesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty.builder()
+
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      override fun scheduled(scheduled: IResolvable) {
+        cdkBuilder.scheduled(scheduled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      override fun scheduled(scheduled: ScheduledTriggerPropertiesProperty) {
+        cdkBuilder.scheduled(scheduled.let(ScheduledTriggerPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param scheduled Specifies the configuration details of a schedule-triggered flow that you
+       * define.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f1e68d8358801e6d018d1420d012d7b5bc6d75899a8d943ed004542a60365ce")
+      override fun scheduled(scheduled: ScheduledTriggerPropertiesProperty.Builder.() -> Unit): Unit
+          = scheduled(ScheduledTriggerPropertiesProperty(scheduled))
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty,
+    ) : CdkObject(cdkObject), TriggerPropertiesProperty {
+      /**
+       * Specifies the configuration details of a schedule-triggered flow that you define.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html#cfn-customerprofiles-integration-triggerproperties-scheduled)
+       */
+      override fun scheduled(): Any? = unwrap(this).getScheduled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty):
+          TriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TriggerPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TriggerPropertiesProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when using Zendesk as a flow source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ZendeskSourcePropertiesProperty zendeskSourcePropertiesProperty =
+   * ZendeskSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html)
+   */
+  public interface ZendeskSourcePropertiesProperty {
+    /**
+     * The object specified in the Zendesk flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html#cfn-customerprofiles-integration-zendesksourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [ZendeskSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Zendesk flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Zendesk flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
+      /**
+       * The object specified in the Zendesk flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-zendesksourceproperties.html#cfn-customerprofiles-integration-zendesksourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ZendeskSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty):
+          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
     }
   }
 }

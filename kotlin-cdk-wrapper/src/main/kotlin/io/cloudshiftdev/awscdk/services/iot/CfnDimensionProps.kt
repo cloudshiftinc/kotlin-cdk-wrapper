@@ -160,7 +160,7 @@ public interface CfnDimensionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnDimensionProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnDimensionProps,
   ) : CdkObject(cdkObject), CfnDimensionProps {
     /**
      * A unique identifier for the dimension.

@@ -33,9 +33,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HttpJwtAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer,
+public open class HttpJwtAuthorizer(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor(
     id: String,
@@ -201,6 +200,7 @@ public open class HttpJwtAuthorizer internal constructor(
         HttpJwtAuthorizer = HttpJwtAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: HttpJwtAuthorizer):
-        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer
   }
 }

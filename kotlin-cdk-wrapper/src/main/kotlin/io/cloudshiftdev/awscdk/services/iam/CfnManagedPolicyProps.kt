@@ -507,7 +507,7 @@ public interface CfnManagedPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicyProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicyProps,
   ) : CdkObject(cdkObject), CfnManagedPolicyProps {
     /**
      * A friendly description of the policy.

@@ -81,7 +81,7 @@ public interface CfnVPNConnectionRouteProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionRouteProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionRouteProps,
   ) : CdkObject(cdkObject), CfnVPNConnectionRouteProps {
     /**
      * The CIDR block associated with the local subnet of the customer network.

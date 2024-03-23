@@ -315,7 +315,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * (deprecated) ARNs of FinSpace Data Bundles to install.

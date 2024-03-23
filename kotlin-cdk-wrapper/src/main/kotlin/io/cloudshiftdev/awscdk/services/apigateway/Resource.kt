@@ -24,8 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * book.addMethod("GET");
  * ```
  */
-public open class Resource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Resource,
+public open class Resource(
+  cdkObject: software.amazon.awscdk.services.apigateway.Resource,
 ) : ResourceBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -332,6 +332,6 @@ public open class Resource internal constructor(
         Resource(cdkObject)
 
     internal fun unwrap(wrapped: Resource): software.amazon.awscdk.services.apigateway.Resource =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.Resource
   }
 }

@@ -32,11 +32,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class InputFormat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
+public abstract class InputFormat(
+  cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
+    cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
   ) : InputFormat(cdkObject)
 
   public companion object {

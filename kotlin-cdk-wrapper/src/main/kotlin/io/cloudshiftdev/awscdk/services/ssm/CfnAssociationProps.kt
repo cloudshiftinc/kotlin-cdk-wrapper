@@ -250,9 +250,15 @@ public interface CfnAssociationProps {
    * The targets for the association.
    *
    * You must specify the `InstanceId` or `Targets` property. You can target all instances in an AWS
-   * account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-   * example that targets all instances, see the "Create an association for all managed instances in an
-   * AWS account " later in this page.
+   * account by specifying t he `InstanceIds` key with a value of `*` .
+   *
+   * Supported formats include the following.
+   *
+   * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+   * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+   *
+   * To view a JSON and a YAML example that targets all instances, see "Create an association for
+   * all managed instances in an AWS account " on the Examples page.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
    */
@@ -469,27 +475,45 @@ public interface CfnAssociationProps {
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     public fun targets(targets: IResolvable)
 
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     public fun targets(targets: List<Any>)
 
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     public fun targets(vararg targets: Any)
 
@@ -736,9 +760,15 @@ public interface CfnAssociationProps {
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
@@ -747,9 +777,15 @@ public interface CfnAssociationProps {
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
@@ -758,9 +794,15 @@ public interface CfnAssociationProps {
     /**
      * @param targets The targets for the association.
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      */
     override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
@@ -785,7 +827,7 @@ public interface CfnAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnAssociationProps,
   ) : CdkObject(cdkObject), CfnAssociationProps {
     /**
      * By default, when you create a new association, the system runs it immediately after it is
@@ -979,9 +1021,15 @@ public interface CfnAssociationProps {
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      */

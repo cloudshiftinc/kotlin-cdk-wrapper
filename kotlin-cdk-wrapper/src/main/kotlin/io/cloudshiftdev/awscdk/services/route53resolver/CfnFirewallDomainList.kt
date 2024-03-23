@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html)
  */
-public open class CfnFirewallDomainList internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList,
+public open class CfnFirewallDomainList(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -355,6 +354,7 @@ public open class CfnFirewallDomainList internal constructor(
         CfnFirewallDomainList = CfnFirewallDomainList(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallDomainList):
-        software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList
   }
 }

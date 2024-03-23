@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * profilingGroup.grantPublish(publishAppRole);
  * ```
  */
-public open class ProfilingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup,
+public open class ProfilingGroup(
+  cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup,
 ) : Resource(cdkObject), IProfilingGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -173,6 +173,7 @@ public open class ProfilingGroup internal constructor(
         ProfilingGroup = ProfilingGroup(cdkObject)
 
     internal fun unwrap(wrapped: ProfilingGroup):
-        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup
   }
 }

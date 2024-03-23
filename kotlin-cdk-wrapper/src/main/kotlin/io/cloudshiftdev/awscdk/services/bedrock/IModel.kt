@@ -20,7 +20,7 @@ public interface IModel {
   public fun modelArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.bedrock.IModel,
+    cdkObject: software.amazon.awscdk.services.bedrock.IModel,
   ) : CdkObject(cdkObject), IModel {
     /**
      * The ARN of the model.

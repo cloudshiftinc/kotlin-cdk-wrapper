@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -670,7 +670,627 @@ public open class CfnGroup internal constructor(
         = CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.resourcegroups.CfnGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.resourcegroups.CfnGroup
+  }
+
+  /**
+   * One of the items in the service configuration assigned to a resource group.
+   *
+   * A service configuration can consist of one or more items. For details service configurations
+   * and how to construct them, see [Service configurations for resource
+   * groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the *AWS Resource
+   * Groups User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
+   * ConfigurationItemProperty configurationItemProperty = ConfigurationItemProperty.builder()
+   * .parameters(List.of(ConfigurationParameterProperty.builder()
+   * .name("name")
+   * .values(List.of("values"))
+   * .build()))
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html)
+   */
+  public interface ConfigurationItemProperty {
+    /**
+     * A collection of parameters for this configuration item.
+     *
+     * For the list of parameters that you can use with each configuration item `Type` , see
+     * [Supported resource types and
+     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * in the *AWS Resource Groups User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * Specifies the type of configuration item.
+     *
+     * Each item must have a unique value for type. For the list of the types that you can specify
+     * for a configuration item, see [Supported resource types and
+     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * in the *AWS Resource Groups User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ConfigurationItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      public fun parameters(parameters: List<Any>)
+
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      public fun parameters(vararg parameters: Any)
+
+      /**
+       * @param type Specifies the type of configuration item.
+       * Each item must have a unique value for type. For the list of the types that you can specify
+       * for a configuration item, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty.Builder
+          =
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty.builder()
+
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      override fun parameters(parameters: List<Any>) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param parameters A collection of parameters for this configuration item.
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
+      /**
+       * @param type Specifies the type of configuration item.
+       * Each item must have a unique value for type. For the list of the types that you can specify
+       * for a configuration item, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
+    ) : CdkObject(cdkObject), ConfigurationItemProperty {
+      /**
+       * A collection of parameters for this configuration item.
+       *
+       * For the list of parameters that you can use with each configuration item `Type` , see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * Specifies the type of configuration item.
+       *
+       * Each item must have a unique value for type. For the list of the types that you can specify
+       * for a configuration item, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty):
+          ConfigurationItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationItemProperty):
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty
+    }
+  }
+
+  /**
+   * One parameter for a group configuration item.
+   *
+   * For details about service configurations and how to construct them, see [Service configurations
+   * for resource groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the
+   * *AWS Resource Groups User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
+   * ConfigurationParameterProperty configurationParameterProperty =
+   * ConfigurationParameterProperty.builder()
+   * .name("name")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html)
+   */
+  public interface ConfigurationParameterProperty {
+    /**
+     * The name of the group configuration parameter.
+     *
+     * For the list of parameters that you can use with each configuration item type, see [Supported
+     * resource types and
+     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * in the *AWS Resource Groups User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value or values to be used for the specified parameter.
+     *
+     * For the list of values you can use with each parameter, see [Supported resource types and
+     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [ConfigurationParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the group configuration parameter.
+       * For the list of parameters that you can use with each configuration item type, see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param values The value or values to be used for the specified parameter.
+       * For the list of values you can use with each parameter, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * .
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The value or values to be used for the specified parameter.
+       * For the list of values you can use with each parameter, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * .
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty.builder()
+
+      /**
+       * @param name The name of the group configuration parameter.
+       * For the list of parameters that you can use with each configuration item type, see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param values The value or values to be used for the specified parameter.
+       * For the list of values you can use with each parameter, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * .
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The value or values to be used for the specified parameter.
+       * For the list of values you can use with each parameter, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * .
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
+    ) : CdkObject(cdkObject), ConfigurationParameterProperty {
+      /**
+       * The name of the group configuration parameter.
+       *
+       * For the list of parameters that you can use with each configuration item type, see
+       * [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * in the *AWS Resource Groups User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The value or values to be used for the specified parameter.
+       *
+       * For the list of values you can use with each parameter, see [Supported resource types and
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty):
+          ConfigurationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationParameterProperty):
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty
+    }
+  }
+
+  /**
+   * Specifies details within a `ResourceQuery` structure that determines the membership of the
+   * resource group.
+   *
+   * The contents required in the `Query` structure are determined by the `Type` property of the
+   * containing `ResourceQuery` structure.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
+   * QueryProperty queryProperty = QueryProperty.builder()
+   * .resourceTypeFilters(List.of("resourceTypeFilters"))
+   * .stackIdentifier("stackIdentifier")
+   * .tagFilters(List.of(TagFilterProperty.builder()
+   * .key("key")
+   * .values(List.of("values"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html)
+   */
+  public interface QueryProperty {
+    /**
+     * Specifies limits to the types of resources that can be included in the resource group.
+     *
+     * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+     * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+     * is `["AWS::AllSupported"]` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-resourcetypefilters)
+     */
+    public fun resourceTypeFilters(): List<String> = unwrap(this).getResourceTypeFilters() ?:
+        emptyList()
+
+    /**
+     * Specifies the ARN of a CloudFormation stack.
+     *
+     * All supported resources of the CloudFormation stack are members of the resource group. If you
+     * don't specify an ARN, this parameter defaults to the current stack that you are defining, which
+     * means that all the resources of the current stack are grouped.
+     *
+     * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property is
+     * `CLOUDFORMATION_STACK_1_0.`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier)
+     */
+    public fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
+
+    /**
+     * A list of key-value pair objects that limit which resources can be members of the resource
+     * group.
+     *
+     * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+     *
+     * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+     * list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-tagfilters)
+     */
+    public fun tagFilters(): Any? = unwrap(this).getTagFilters()
+
+    /**
+     * A builder for [QueryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
+       * in the resource group.
+       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+       * is `["AWS::AllSupported"]` .
+       */
+      public fun resourceTypeFilters(resourceTypeFilters: List<String>)
+
+      /**
+       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
+       * in the resource group.
+       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+       * is `["AWS::AllSupported"]` .
+       */
+      public fun resourceTypeFilters(vararg resourceTypeFilters: String)
+
+      /**
+       * @param stackIdentifier Specifies the ARN of a CloudFormation stack.
+       * All supported resources of the CloudFormation stack are members of the resource group. If
+       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
+       * which means that all the resources of the current stack are grouped.
+       *
+       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
+       * is `CLOUDFORMATION_STACK_1_0.`
+       */
+      public fun stackIdentifier(stackIdentifier: String)
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      public fun tagFilters(tagFilters: IResolvable)
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      public fun tagFilters(tagFilters: List<Any>)
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      public fun tagFilters(vararg tagFilters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.Builder =
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.builder()
+
+      /**
+       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
+       * in the resource group.
+       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+       * is `["AWS::AllSupported"]` .
+       */
+      override fun resourceTypeFilters(resourceTypeFilters: List<String>) {
+        cdkBuilder.resourceTypeFilters(resourceTypeFilters)
+      }
+
+      /**
+       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
+       * in the resource group.
+       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+       * is `["AWS::AllSupported"]` .
+       */
+      override fun resourceTypeFilters(vararg resourceTypeFilters: String): Unit =
+          resourceTypeFilters(resourceTypeFilters.toList())
+
+      /**
+       * @param stackIdentifier Specifies the ARN of a CloudFormation stack.
+       * All supported resources of the CloudFormation stack are members of the resource group. If
+       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
+       * which means that all the resources of the current stack are grouped.
+       *
+       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
+       * is `CLOUDFORMATION_STACK_1_0.`
+       */
+      override fun stackIdentifier(stackIdentifier: String) {
+        cdkBuilder.stackIdentifier(stackIdentifier)
+      }
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      override fun tagFilters(tagFilters: IResolvable) {
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      override fun tagFilters(tagFilters: List<Any>) {
+        cdkBuilder.tagFilters(tagFilters)
+      }
+
+      /**
+       * @param tagFilters A list of key-value pair objects that limit which resources can be
+       * members of the resource group.
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       */
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
+
+      public fun build(): software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
+    ) : CdkObject(cdkObject), QueryProperty {
+      /**
+       * Specifies limits to the types of resources that can be included in the resource group.
+       *
+       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
+       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
+       * is `["AWS::AllSupported"]` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-resourcetypefilters)
+       */
+      override fun resourceTypeFilters(): List<String> = unwrap(this).getResourceTypeFilters() ?:
+          emptyList()
+
+      /**
+       * Specifies the ARN of a CloudFormation stack.
+       *
+       * All supported resources of the CloudFormation stack are members of the resource group. If
+       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
+       * which means that all the resources of the current stack are grouped.
+       *
+       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
+       * is `CLOUDFORMATION_STACK_1_0.`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier)
+       */
+      override fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
+
+      /**
+       * A list of key-value pair objects that limit which resources can be members of the resource
+       * group.
+       *
+       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
+       *
+       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
+       * list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-tagfilters)
+       */
+      override fun tagFilters(): Any? = unwrap(this).getTagFilters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty):
+          QueryProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryProperty):
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty
+    }
   }
 
   /**
@@ -893,8 +1513,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
     ) : CdkObject(cdkObject), ResourceQueryProperty {
       /**
        * The query that defines the membership of the group.
@@ -948,273 +1567,6 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty
-    }
-  }
-
-  /**
-   * Specifies details within a `ResourceQuery` structure that determines the membership of the
-   * resource group.
-   *
-   * The contents required in the `Query` structure are determined by the `Type` property of the
-   * containing `ResourceQuery` structure.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
-   * QueryProperty queryProperty = QueryProperty.builder()
-   * .resourceTypeFilters(List.of("resourceTypeFilters"))
-   * .stackIdentifier("stackIdentifier")
-   * .tagFilters(List.of(TagFilterProperty.builder()
-   * .key("key")
-   * .values(List.of("values"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html)
-   */
-  public interface QueryProperty {
-    /**
-     * Specifies limits to the types of resources that can be included in the resource group.
-     *
-     * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-     * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-     * is `["AWS::AllSupported"]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-resourcetypefilters)
-     */
-    public fun resourceTypeFilters(): List<String> = unwrap(this).getResourceTypeFilters() ?:
-        emptyList()
-
-    /**
-     * Specifies the ARN of a CloudFormation stack.
-     *
-     * All supported resources of the CloudFormation stack are members of the resource group. If you
-     * don't specify an ARN, this parameter defaults to the current stack that you are defining, which
-     * means that all the resources of the current stack are grouped.
-     *
-     * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property is
-     * `CLOUDFORMATION_STACK_1_0.`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier)
-     */
-    public fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
-
-    /**
-     * A list of key-value pair objects that limit which resources can be members of the resource
-     * group.
-     *
-     * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-     *
-     * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-     * list.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-tagfilters)
-     */
-    public fun tagFilters(): Any? = unwrap(this).getTagFilters()
-
-    /**
-     * A builder for [QueryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
-       * in the resource group.
-       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-       * is `["AWS::AllSupported"]` .
-       */
-      public fun resourceTypeFilters(resourceTypeFilters: List<String>)
-
-      /**
-       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
-       * in the resource group.
-       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-       * is `["AWS::AllSupported"]` .
-       */
-      public fun resourceTypeFilters(vararg resourceTypeFilters: String)
-
-      /**
-       * @param stackIdentifier Specifies the ARN of a CloudFormation stack.
-       * All supported resources of the CloudFormation stack are members of the resource group. If
-       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
-       * which means that all the resources of the current stack are grouped.
-       *
-       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
-       * is `CLOUDFORMATION_STACK_1_0.`
-       */
-      public fun stackIdentifier(stackIdentifier: String)
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      public fun tagFilters(tagFilters: IResolvable)
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      public fun tagFilters(tagFilters: List<Any>)
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      public fun tagFilters(vararg tagFilters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.Builder =
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.builder()
-
-      /**
-       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
-       * in the resource group.
-       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-       * is `["AWS::AllSupported"]` .
-       */
-      override fun resourceTypeFilters(resourceTypeFilters: List<String>) {
-        cdkBuilder.resourceTypeFilters(resourceTypeFilters)
-      }
-
-      /**
-       * @param resourceTypeFilters Specifies limits to the types of resources that can be included
-       * in the resource group.
-       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-       * is `["AWS::AllSupported"]` .
-       */
-      override fun resourceTypeFilters(vararg resourceTypeFilters: String): Unit =
-          resourceTypeFilters(resourceTypeFilters.toList())
-
-      /**
-       * @param stackIdentifier Specifies the ARN of a CloudFormation stack.
-       * All supported resources of the CloudFormation stack are members of the resource group. If
-       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
-       * which means that all the resources of the current stack are grouped.
-       *
-       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
-       * is `CLOUDFORMATION_STACK_1_0.`
-       */
-      override fun stackIdentifier(stackIdentifier: String) {
-        cdkBuilder.stackIdentifier(stackIdentifier)
-      }
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
-      }
-
-      /**
-       * @param tagFilters A list of key-value pair objects that limit which resources can be
-       * members of the resource group.
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       */
-      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
-
-      public fun build(): software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
-    ) : CdkObject(cdkObject), QueryProperty {
-      /**
-       * Specifies limits to the types of resources that can be included in the resource group.
-       *
-       * For example, if `ResourceTypeFilters` is `["AWS::EC2::Instance", "AWS::DynamoDB::Table"]` ,
-       * only EC2 instances or DynamoDB tables can be members of this resource group. The default value
-       * is `["AWS::AllSupported"]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-resourcetypefilters)
-       */
-      override fun resourceTypeFilters(): List<String> = unwrap(this).getResourceTypeFilters() ?:
-          emptyList()
-
-      /**
-       * Specifies the ARN of a CloudFormation stack.
-       *
-       * All supported resources of the CloudFormation stack are members of the resource group. If
-       * you don't specify an ARN, this parameter defaults to the current stack that you are defining,
-       * which means that all the resources of the current stack are grouped.
-       *
-       * You can specify a value for `StackIdentifier` only when the `ResourceQuery.Type` property
-       * is `CLOUDFORMATION_STACK_1_0.`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-stackidentifier)
-       */
-      override fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
-
-      /**
-       * A list of key-value pair objects that limit which resources can be members of the resource
-       * group.
-       *
-       * This property is required when the `ResourceQuery.Type` property is `TAG_FILTERS_1_0` .
-       *
-       * A resource must have a tag that matches every filter that is provided in the `TagFilters`
-       * list.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html#cfn-resourcegroups-group-query-tagfilters)
-       */
-      override fun tagFilters(): Any? = unwrap(this).getTagFilters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QueryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty):
-          QueryProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QueryProperty):
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty
     }
   }
 
@@ -1343,8 +1695,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
+      cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
     ) : CdkObject(cdkObject), TagFilterProperty {
       /**
        * A string that defines a tag key.
@@ -1385,361 +1736,6 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty
-    }
-  }
-
-  /**
-   * One of the items in the service configuration assigned to a resource group.
-   *
-   * A service configuration can consist of one or more items. For details service configurations
-   * and how to construct them, see [Service configurations for resource
-   * groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the *AWS Resource
-   * Groups User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
-   * ConfigurationItemProperty configurationItemProperty = ConfigurationItemProperty.builder()
-   * .parameters(List.of(ConfigurationParameterProperty.builder()
-   * .name("name")
-   * .values(List.of("values"))
-   * .build()))
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html)
-   */
-  public interface ConfigurationItemProperty {
-    /**
-     * A collection of parameters for this configuration item.
-     *
-     * For the list of parameters that you can use with each configuration item `Type` , see
-     * [Supported resource types and
-     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-     * in the *AWS Resource Groups User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * Specifies the type of configuration item.
-     *
-     * Each item must have a unique value for type. For the list of the types that you can specify
-     * for a configuration item, see [Supported resource types and
-     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-     * in the *AWS Resource Groups User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ConfigurationItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      public fun parameters(parameters: List<Any>)
-
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      public fun parameters(vararg parameters: Any)
-
-      /**
-       * @param type Specifies the type of configuration item.
-       * Each item must have a unique value for type. For the list of the types that you can specify
-       * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty.Builder
-          =
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty.builder()
-
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param parameters A collection of parameters for this configuration item.
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
-
-      /**
-       * @param type Specifies the type of configuration item.
-       * Each item must have a unique value for type. For the list of the types that you can specify
-       * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
-    ) : CdkObject(cdkObject), ConfigurationItemProperty {
-      /**
-       * A collection of parameters for this configuration item.
-       *
-       * For the list of parameters that you can use with each configuration item `Type` , see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * Specifies the type of configuration item.
-       *
-       * Each item must have a unique value for type. For the list of the types that you can specify
-       * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty):
-          ConfigurationItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConfigurationItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfigurationItemProperty):
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty
-    }
-  }
-
-  /**
-   * One parameter for a group configuration item.
-   *
-   * For details about service configurations and how to construct them, see [Service configurations
-   * for resource groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the
-   * *AWS Resource Groups User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resourcegroups.*;
-   * ConfigurationParameterProperty configurationParameterProperty =
-   * ConfigurationParameterProperty.builder()
-   * .name("name")
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html)
-   */
-  public interface ConfigurationParameterProperty {
-    /**
-     * The name of the group configuration parameter.
-     *
-     * For the list of parameters that you can use with each configuration item type, see [Supported
-     * resource types and
-     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-     * in the *AWS Resource Groups User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The value or values to be used for the specified parameter.
-     *
-     * For the list of values you can use with each parameter, see [Supported resource types and
-     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [ConfigurationParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the group configuration parameter.
-       * For the list of parameters that you can use with each configuration item type, see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param values The value or values to be used for the specified parameter.
-       * For the list of values you can use with each parameter, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * .
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The value or values to be used for the specified parameter.
-       * For the list of values you can use with each parameter, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * .
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty.builder()
-
-      /**
-       * @param name The name of the group configuration parameter.
-       * For the list of parameters that you can use with each configuration item type, see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param values The value or values to be used for the specified parameter.
-       * For the list of values you can use with each parameter, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * .
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The value or values to be used for the specified parameter.
-       * For the list of values you can use with each parameter, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * .
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
-    ) : CdkObject(cdkObject), ConfigurationParameterProperty {
-      /**
-       * The name of the group configuration parameter.
-       *
-       * For the list of parameters that you can use with each configuration item type, see
-       * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * in the *AWS Resource Groups User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The value or values to be used for the specified parameter.
-       *
-       * For the list of values you can use with each parameter, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html#cfn-resourcegroups-group-configurationparameter-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty):
-          ConfigurationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConfigurationParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConfigurationParameterProperty):
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty
     }
   }
 }

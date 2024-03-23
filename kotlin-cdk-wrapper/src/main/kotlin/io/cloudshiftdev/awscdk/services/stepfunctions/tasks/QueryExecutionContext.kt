@@ -90,8 +90,7 @@ public interface QueryExecutionContext {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext,
   ) : CdkObject(cdkObject), QueryExecutionContext {
     /**
      * Name of catalog used in query execution.

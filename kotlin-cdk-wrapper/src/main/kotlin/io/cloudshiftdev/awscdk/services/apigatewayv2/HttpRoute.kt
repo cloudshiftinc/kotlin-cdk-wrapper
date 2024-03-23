@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class HttpRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRoute,
+public open class HttpRoute(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRoute,
 ) : Resource(cdkObject), IHttpRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -264,6 +264,6 @@ public open class HttpRoute internal constructor(
         = HttpRoute(cdkObject)
 
     internal fun unwrap(wrapped: HttpRoute): software.amazon.awscdk.services.apigatewayv2.HttpRoute
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.HttpRoute
   }
 }

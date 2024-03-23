@@ -248,7 +248,7 @@ public interface CfnAssistantProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantProps,
+    cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantProps,
   ) : CdkObject(cdkObject), CfnAssistantProps {
     /**
      * The description of the assistant.

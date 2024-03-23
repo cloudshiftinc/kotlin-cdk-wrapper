@@ -132,7 +132,7 @@ public interface MethodResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.MethodResponse,
+    cdkObject: software.amazon.awscdk.services.apigateway.MethodResponse,
   ) : CdkObject(cdkObject), MethodResponse {
     /**
      * The resources used for the response's content type.

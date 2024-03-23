@@ -53,9 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html)
  */
-public open class CfnRemediationConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CfnRemediationConfiguration,
+public open class CfnRemediationConfiguration(
+  cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -582,84 +581,8 @@ public open class CfnRemediationConfiguration internal constructor(
         CfnRemediationConfiguration = CfnRemediationConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnRemediationConfiguration):
-        software.amazon.awscdk.services.config.CfnRemediationConfiguration = wrapped.cdkObject
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * ResourceValueProperty resourceValueProperty = ResourceValueProperty.builder()
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html)
-   */
-  public interface ResourceValueProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ResourceValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value the value to be set.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.builder()
-
-      /**
-       * @param value the value to be set.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
-    ) : CdkObject(cdkObject), ResourceValueProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty):
-          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceValueProperty):
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty
-    }
+        software.amazon.awscdk.services.config.CfnRemediationConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnRemediationConfiguration
   }
 
   /**
@@ -746,8 +669,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty,
     ) : CdkObject(cdkObject), ExecutionControlsProperty {
       /**
        * A SsmControls object.
@@ -772,269 +694,6 @@ public open class CfnRemediationConfiguration internal constructor(
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty
-    }
-  }
-
-  /**
-   * AWS Systems Manager (SSM) specific remediation controls.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * SsmControlsProperty ssmControlsProperty = SsmControlsProperty.builder()
-   * .concurrentExecutionRatePercentage(123)
-   * .errorPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html)
-   */
-  public interface SsmControlsProperty {
-    /**
-     * The maximum percentage of remediation actions allowed to run in parallel on the non-compliant
-     * resources for that specific rule.
-     *
-     * You can specify a percentage, such as 10%. The default value is 10.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage)
-     */
-    public fun concurrentExecutionRatePercentage(): Number? =
-        unwrap(this).getConcurrentExecutionRatePercentage()
-
-    /**
-     * The percentage of errors that are allowed before SSM stops running automations on
-     * non-compliant resources for that specific rule.
-     *
-     * You can specify a percentage of errors, for example 10%. If you do not specifiy a percentage,
-     * the default is 50%. For example, if you set the ErrorPercentage to 40% for 10 non-compliant
-     * resources, then SSM stops running the automations when the fifth error is received.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage)
-     */
-    public fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
-
-    /**
-     * A builder for [SsmControlsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param concurrentExecutionRatePercentage The maximum percentage of remediation actions
-       * allowed to run in parallel on the non-compliant resources for that specific rule.
-       * You can specify a percentage, such as 10%. The default value is 10.
-       */
-      public fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number)
-
-      /**
-       * @param errorPercentage The percentage of errors that are allowed before SSM stops running
-       * automations on non-compliant resources for that specific rule.
-       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
-       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
-       * non-compliant resources, then SSM stops running the automations when the fifth error is
-       * received.
-       */
-      public fun errorPercentage(errorPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty.builder()
-
-      /**
-       * @param concurrentExecutionRatePercentage The maximum percentage of remediation actions
-       * allowed to run in parallel on the non-compliant resources for that specific rule.
-       * You can specify a percentage, such as 10%. The default value is 10.
-       */
-      override fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number) {
-        cdkBuilder.concurrentExecutionRatePercentage(concurrentExecutionRatePercentage)
-      }
-
-      /**
-       * @param errorPercentage The percentage of errors that are allowed before SSM stops running
-       * automations on non-compliant resources for that specific rule.
-       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
-       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
-       * non-compliant resources, then SSM stops running the automations when the fifth error is
-       * received.
-       */
-      override fun errorPercentage(errorPercentage: Number) {
-        cdkBuilder.errorPercentage(errorPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty,
-    ) : CdkObject(cdkObject), SsmControlsProperty {
-      /**
-       * The maximum percentage of remediation actions allowed to run in parallel on the
-       * non-compliant resources for that specific rule.
-       *
-       * You can specify a percentage, such as 10%. The default value is 10.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage)
-       */
-      override fun concurrentExecutionRatePercentage(): Number? =
-          unwrap(this).getConcurrentExecutionRatePercentage()
-
-      /**
-       * The percentage of errors that are allowed before SSM stops running automations on
-       * non-compliant resources for that specific rule.
-       *
-       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
-       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
-       * non-compliant resources, then SSM stops running the automations when the fifth error is
-       * received.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage)
-       */
-      override fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SsmControlsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty):
-          SsmControlsProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmControlsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SsmControlsProperty):
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * StaticValueProperty staticValueProperty = StaticValueProperty.builder()
-   * .value(List.of("value"))
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html)
-   */
-  public interface StaticValueProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-value)
-     */
-    public fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [StaticValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value the value to be set.
-       */
-      public fun `value`(`value`: List<String>)
-
-      /**
-       * @param value the value to be set.
-       */
-      public fun `value`(vararg `value`: String)
-
-      /**
-       * @param values the value to be set.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values the value to be set.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty.builder()
-
-      /**
-       * @param value the value to be set.
-       */
-      override fun `value`(`value`: List<String>) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param value the value to be set.
-       */
-      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
-
-      /**
-       * @param values the value to be set.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values the value to be set.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty,
-    ) : CdkObject(cdkObject), StaticValueProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-value)
-       */
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StaticValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty):
-          StaticValueProperty = CdkObjectWrappers.wrap(cdkObject) as? StaticValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StaticValueProperty):
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty
     }
   }
 
@@ -1174,8 +833,7 @@ public open class CfnRemediationConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
     ) : CdkObject(cdkObject), RemediationParameterValueProperty {
       /**
        * The value is dynamic and changes at run-time.
@@ -1208,6 +866,343 @@ public open class CfnRemediationConfiguration internal constructor(
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * ResourceValueProperty resourceValueProperty = ResourceValueProperty.builder()
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html)
+   */
+  public interface ResourceValueProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ResourceValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.builder()
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
+    ) : CdkObject(cdkObject), ResourceValueProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html#cfn-config-remediationconfiguration-resourcevalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty):
+          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceValueProperty):
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty
+    }
+  }
+
+  /**
+   * AWS Systems Manager (SSM) specific remediation controls.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * SsmControlsProperty ssmControlsProperty = SsmControlsProperty.builder()
+   * .concurrentExecutionRatePercentage(123)
+   * .errorPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html)
+   */
+  public interface SsmControlsProperty {
+    /**
+     * The maximum percentage of remediation actions allowed to run in parallel on the non-compliant
+     * resources for that specific rule.
+     *
+     * You can specify a percentage, such as 10%. The default value is 10.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage)
+     */
+    public fun concurrentExecutionRatePercentage(): Number? =
+        unwrap(this).getConcurrentExecutionRatePercentage()
+
+    /**
+     * The percentage of errors that are allowed before SSM stops running automations on
+     * non-compliant resources for that specific rule.
+     *
+     * You can specify a percentage of errors, for example 10%. If you do not specifiy a percentage,
+     * the default is 50%. For example, if you set the ErrorPercentage to 40% for 10 non-compliant
+     * resources, then SSM stops running the automations when the fifth error is received.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage)
+     */
+    public fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
+
+    /**
+     * A builder for [SsmControlsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param concurrentExecutionRatePercentage The maximum percentage of remediation actions
+       * allowed to run in parallel on the non-compliant resources for that specific rule.
+       * You can specify a percentage, such as 10%. The default value is 10.
+       */
+      public fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number)
+
+      /**
+       * @param errorPercentage The percentage of errors that are allowed before SSM stops running
+       * automations on non-compliant resources for that specific rule.
+       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
+       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
+       * non-compliant resources, then SSM stops running the automations when the fifth error is
+       * received.
+       */
+      public fun errorPercentage(errorPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty.builder()
+
+      /**
+       * @param concurrentExecutionRatePercentage The maximum percentage of remediation actions
+       * allowed to run in parallel on the non-compliant resources for that specific rule.
+       * You can specify a percentage, such as 10%. The default value is 10.
+       */
+      override fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number) {
+        cdkBuilder.concurrentExecutionRatePercentage(concurrentExecutionRatePercentage)
+      }
+
+      /**
+       * @param errorPercentage The percentage of errors that are allowed before SSM stops running
+       * automations on non-compliant resources for that specific rule.
+       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
+       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
+       * non-compliant resources, then SSM stops running the automations when the fifth error is
+       * received.
+       */
+      override fun errorPercentage(errorPercentage: Number) {
+        cdkBuilder.errorPercentage(errorPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty,
+    ) : CdkObject(cdkObject), SsmControlsProperty {
+      /**
+       * The maximum percentage of remediation actions allowed to run in parallel on the
+       * non-compliant resources for that specific rule.
+       *
+       * You can specify a percentage, such as 10%. The default value is 10.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-concurrentexecutionratepercentage)
+       */
+      override fun concurrentExecutionRatePercentage(): Number? =
+          unwrap(this).getConcurrentExecutionRatePercentage()
+
+      /**
+       * The percentage of errors that are allowed before SSM stops running automations on
+       * non-compliant resources for that specific rule.
+       *
+       * You can specify a percentage of errors, for example 10%. If you do not specifiy a
+       * percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10
+       * non-compliant resources, then SSM stops running the automations when the fifth error is
+       * received.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html#cfn-config-remediationconfiguration-ssmcontrols-errorpercentage)
+       */
+      override fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SsmControlsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty):
+          SsmControlsProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmControlsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmControlsProperty):
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * StaticValueProperty staticValueProperty = StaticValueProperty.builder()
+   * .value(List.of("value"))
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html)
+   */
+  public interface StaticValueProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-value)
+     */
+    public fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [StaticValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(`value`: List<String>)
+
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(vararg `value`: String)
+
+      /**
+       * @param values the value to be set.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values the value to be set.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty.builder()
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
+      /**
+       * @param values the value to be set.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values the value to be set.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty,
+    ) : CdkObject(cdkObject), StaticValueProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-value)
+       */
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html#cfn-config-remediationconfiguration-staticvalue-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StaticValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty):
+          StaticValueProperty = CdkObjectWrappers.wrap(cdkObject) as? StaticValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StaticValueProperty):
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty
     }
   }
 }

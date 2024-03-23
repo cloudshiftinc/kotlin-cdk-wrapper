@@ -109,8 +109,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
  */
-public open class CfnScalingPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
+public open class CfnScalingPlan(
+  cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -366,13 +366,15 @@ public open class CfnScalingPlan internal constructor(
         CfnScalingPlan = CfnScalingPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalingPlan):
-        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
   }
 
   /**
-   * `TagFilter` is a subproperty of
-   * [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
-   * that specifies a tag for an application source to use with a scaling plan.
+   * `ApplicationSource` is a property of
+   * [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
+   * that specifies the application source to use with a scaling plan. You can create one scaling plan
+   * per application source.
    *
    * Example:
    *
@@ -380,673 +382,225 @@ public open class CfnScalingPlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
-   * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
+   * ApplicationSourceProperty applicationSourceProperty = ApplicationSourceProperty.builder()
+   * .cloudFormationStackArn("cloudFormationStackArn")
+   * .tagFilters(List.of(TagFilterProperty.builder()
    * .key("key")
    * // the properties below are optional
    * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html)
-   */
-  public interface TagFilterProperty {
-    /**
-     * The tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The tag values (0 to 20).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [TagFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag key. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param values The tag values (0 to 20).
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The tag values (0 to 20).
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty.builder()
-
-      /**
-       * @param key The tag key. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param values The tag values (0 to 20).
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The tag values (0 to 20).
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty,
-    ) : CdkObject(cdkObject), TagFilterProperty {
-      /**
-       * The tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The tag values (0 to 20).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty):
-          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagFilterProperty):
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty
-    }
-  }
-
-  /**
-   * `TargetTrackingConfiguration` is a subproperty of
-   * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
-   * that specifies a target tracking configuration for a scalable resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
-   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
-   * TargetTrackingConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
    * .build()))
-   * .unit("unit")
-   * .build())
-   * .disableScaleIn(false)
-   * .estimatedInstanceWarmup(123)
-   * .predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty.builder()
-   * .predefinedScalingMetricType("predefinedScalingMetricType")
-   * // the properties below are optional
-   * .resourceLabel("resourceLabel")
-   * .build())
-   * .scaleInCooldown(123)
-   * .scaleOutCooldown(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
    */
-  public interface TargetTrackingConfigurationProperty {
+  public interface ApplicationSourceProperty {
     /**
-     * A customized metric.
+     * The Amazon Resource Name (ARN) of a CloudFormation stack.
      *
-     * You can specify either a predefined metric or a customized metric.
+     * You must specify either a `CloudFormationStackARN` or `TagFilters` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)
      */
-    public fun customizedScalingMetricSpecification(): Any? =
-        unwrap(this).getCustomizedScalingMetricSpecification()
+    public fun cloudFormationStackArn(): String? = unwrap(this).getCloudFormationStackArn()
 
     /**
-     * Indicates whether scale in by the target tracking scaling policy is disabled.
+     * A set of tag filters (keys and values).
      *
-     * If the value is `true` , scale in is disabled and the target tracking scaling policy doesn't
-     * remove capacity from the scalable resource. Otherwise, scale in is enabled and the target
-     * tracking scaling policy can remove capacity from the scalable resource.
+     * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+     * include up to 50 keys, and each key can include up to 20 values.
      *
-     * The default value is `false` .
+     * Tags are part of the syntax that you use to specify the resources you want returned when
+     * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+     * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+     * properties can accept any value as long as the combination of values is unique across scaling
+     * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+     * then you must specify valid values.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein)
+     * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)
      */
-    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+    public fun tagFilters(): Any? = unwrap(this).getTagFilters()
 
     /**
-     * The estimated time, in seconds, until a newly launched instance can contribute to the
-     * CloudWatch metrics.
-     *
-     * This value is used only if the resource is an Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup)
-     */
-    public fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
-
-    /**
-     * A predefined metric.
-     *
-     * You can specify either a predefined metric or a customized metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)
-     */
-    public fun predefinedScalingMetricSpecification(): Any? =
-        unwrap(this).getPredefinedScalingMetricSpecification()
-
-    /**
-     * The amount of time, in seconds, after a scale-in activity completes before another scale in
-     * activity can start.
-     *
-     * This value is not used if the scalable resource is an Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown)
-     */
-    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-    /**
-     * The amount of time, in seconds, after a scale-out activity completes before another scale-out
-     * activity can start.
-     *
-     * This value is not used if the scalable resource is an Auto Scaling group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown)
-     */
-    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-    /**
-     * The target value for the metric.
-     *
-     * Although this property accepts numbers of type Double, it won't accept values that are either
-     * too small or too large. Values must be in the range of -2^360 to 2^360.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetTrackingConfigurationProperty]
+     * A builder for [ApplicationSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
+       * @param cloudFormationStackArn The Amazon Resource Name (ARN) of a CloudFormation stack.
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable)
+      public fun cloudFormationStackArn(cloudFormationStackArn: String)
 
       /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty)
-
-      /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("21a641c32153f8aa63fdd4d9171716567e8b16f69ba4187974f946cb0b0109c6")
-      public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * If the value is `true` , scale in is disabled and the target tracking scaling policy
-       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
-       * target tracking scaling policy can remove capacity from the scalable resource.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
        *
-       * The default value is `false` .
-       */
-      public fun disableScaleIn(disableScaleIn: Boolean)
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * If the value is `true` , scale in is disabled and the target tracking scaling policy
-       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
-       * target tracking scaling policy can remove capacity from the scalable resource.
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
        *
-       * The default value is `false` .
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      public fun disableScaleIn(disableScaleIn: IResolvable)
+      public fun tagFilters(tagFilters: IResolvable)
 
       /**
-       * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched
-       * instance can contribute to the CloudWatch metrics.
-       * This value is used only if the resource is an Auto Scaling group.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
+       *
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
+       *
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number)
+      public fun tagFilters(tagFilters: List<Any>)
 
       /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
+       *
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
+       *
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable)
-
-      /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty)
-
-      /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4fac0d076170342ac4ce2296263a6555e9c1b27f89f5da59fe390ae01ef90023")
-      public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
-       * before another scale in activity can start.
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       */
-      public fun scaleInCooldown(scaleInCooldown: Number)
-
-      /**
-       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
-       * completes before another scale-out activity can start.
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       */
-      public fun scaleOutCooldown(scaleOutCooldown: Number)
-
-      /**
-       * @param targetValue The target value for the metric. 
-       * Although this property accepts numbers of type Double, it won't accept values that are
-       * either too small or too large. Values must be in the range of -2^360 to 2^360.
-       */
-      public fun targetValue(targetValue: Number)
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty.Builder
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty.Builder
           =
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty.builder()
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty.builder()
 
       /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
+       * @param cloudFormationStackArn The Amazon Resource Name (ARN) of a CloudFormation stack.
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      override
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable) {
-        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(IResolvable::unwrap))
+      override fun cloudFormationStackArn(cloudFormationStackArn: String) {
+        cdkBuilder.cloudFormationStackArn(cloudFormationStackArn)
       }
 
       /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      override
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty) {
-        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(CustomizedScalingMetricSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param customizedScalingMetricSpecification A customized metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("21a641c32153f8aa63fdd4d9171716567e8b16f69ba4187974f946cb0b0109c6")
-      override
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty(customizedScalingMetricSpecification))
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * If the value is `true` , scale in is disabled and the target tracking scaling policy
-       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
-       * target tracking scaling policy can remove capacity from the scalable resource.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
        *
-       * The default value is `false` .
-       */
-      override fun disableScaleIn(disableScaleIn: Boolean) {
-        cdkBuilder.disableScaleIn(disableScaleIn)
-      }
-
-      /**
-       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
-       * disabled.
-       * If the value is `true` , scale in is disabled and the target tracking scaling policy
-       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
-       * target tracking scaling policy can remove capacity from the scalable resource.
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
        *
-       * The default value is `false` .
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+      override fun tagFilters(tagFilters: IResolvable) {
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched
-       * instance can contribute to the CloudWatch metrics.
-       * This value is used only if the resource is an Auto Scaling group.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
+       *
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
+       *
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
-        cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
+      override fun tagFilters(tagFilters: List<Any>) {
+        cdkBuilder.tagFilters(tagFilters)
       }
 
       /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
+       * @param tagFilters A set of tag filters (keys and values).
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
+       *
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
+       *
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
-      override
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable) {
-        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      override
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty) {
-        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(PredefinedScalingMetricSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param predefinedScalingMetricSpecification A predefined metric.
-       * You can specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4fac0d076170342ac4ce2296263a6555e9c1b27f89f5da59fe390ae01ef90023")
-      override
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty(predefinedScalingMetricSpecification))
-
-      /**
-       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
-       * before another scale in activity can start.
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       */
-      override fun scaleInCooldown(scaleInCooldown: Number) {
-        cdkBuilder.scaleInCooldown(scaleInCooldown)
-      }
-
-      /**
-       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
-       * completes before another scale-out activity can start.
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       */
-      override fun scaleOutCooldown(scaleOutCooldown: Number) {
-        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
-      }
-
-      /**
-       * @param targetValue The target value for the metric. 
-       * Although this property accepts numbers of type Double, it won't accept values that are
-       * either too small or too large. Values must be in the range of -2^360 to 2^360.
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty,
+    ) : CdkObject(cdkObject), ApplicationSourceProperty {
       /**
-       * A customized metric.
+       * The Amazon Resource Name (ARN) of a CloudFormation stack.
        *
-       * You can specify either a predefined metric or a customized metric.
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)
        */
-      override fun customizedScalingMetricSpecification(): Any? =
-          unwrap(this).getCustomizedScalingMetricSpecification()
+      override fun cloudFormationStackArn(): String? = unwrap(this).getCloudFormationStackArn()
 
       /**
-       * Indicates whether scale in by the target tracking scaling policy is disabled.
+       * A set of tag filters (keys and values).
        *
-       * If the value is `true` , scale in is disabled and the target tracking scaling policy
-       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
-       * target tracking scaling policy can remove capacity from the scalable resource.
+       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
+       * include up to 50 keys, and each key can include up to 20 values.
        *
-       * The default value is `false` .
+       * Tags are part of the syntax that you use to specify the resources you want returned when
+       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
+       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
+       * properties can accept any value as long as the combination of values is unique across scaling
+       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
+       * then you must specify valid values.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein)
+       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)
        */
-      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-      /**
-       * The estimated time, in seconds, until a newly launched instance can contribute to the
-       * CloudWatch metrics.
-       *
-       * This value is used only if the resource is an Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup)
-       */
-      override fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
-
-      /**
-       * A predefined metric.
-       *
-       * You can specify either a predefined metric or a customized metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)
-       */
-      override fun predefinedScalingMetricSpecification(): Any? =
-          unwrap(this).getPredefinedScalingMetricSpecification()
-
-      /**
-       * The amount of time, in seconds, after a scale-in activity completes before another scale in
-       * activity can start.
-       *
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown)
-       */
-      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
-
-      /**
-       * The amount of time, in seconds, after a scale-out activity completes before another
-       * scale-out activity can start.
-       *
-       * This value is not used if the scalable resource is an Auto Scaling group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown)
-       */
-      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
-
-      /**
-       * The target value for the metric.
-       *
-       * Although this property accepts numbers of type Double, it won't accept values that are
-       * either too small or too large. Values must be in the range of -2^360 to 2^360.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun tagFilters(): Any? = unwrap(this).getTagFilters()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetTrackingConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty):
+          ApplicationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSourceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
+      internal fun unwrap(wrapped: ApplicationSourceProperty):
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
-    }
-  }
-
-  /**
-   * `MetricDimension` is a subproperty of
-   * [CustomizedScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html)
-   * that specifies a dimension for a customized metric to use with a scaling plan. Dimensions are
-   * arbitrary name/value pairs that can be associated with a CloudWatch metric. Duplicate dimensions
-   * are not allowed.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
-   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html)
-   */
-  public interface MetricDimensionProperty {
-    /**
-     * The name of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-name)
-     */
-    public fun name(): String
-
-    /**
-     * The value of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [MetricDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the dimension. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value of the dimension. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty.builder()
-
-      /**
-       * @param name The name of the dimension. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value of the dimension. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
-      /**
-       * The name of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The value of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDimensionProperty):
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
     }
   }
 
@@ -1259,8 +813,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty,
     ) : CdkObject(cdkObject), CustomizedLoadMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
@@ -1543,8 +1096,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), CustomizedScalingMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
@@ -1615,10 +1167,11 @@ public open class CfnScalingPlan internal constructor(
   }
 
   /**
-   * `ApplicationSource` is a property of
-   * [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
-   * that specifies the application source to use with a scaling plan. You can create one scaling plan
-   * per application source.
+   * `MetricDimension` is a subproperty of
+   * [CustomizedScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html)
+   * that specifies a dimension for a customized metric to use with a scaling plan. Dimensions are
+   * arbitrary name/value pairs that can be associated with a CloudWatch metric. Duplicate dimensions
+   * are not allowed.
    *
    * Example:
    *
@@ -1626,226 +1179,311 @@ public open class CfnScalingPlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
-   * ApplicationSourceProperty applicationSourceProperty = ApplicationSourceProperty.builder()
-   * .cloudFormationStackArn("cloudFormationStackArn")
-   * .tagFilters(List.of(TagFilterProperty.builder()
-   * .key("key")
-   * // the properties below are optional
-   * .values(List.of("values"))
-   * .build()))
+   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html)
    */
-  public interface ApplicationSourceProperty {
+  public interface MetricDimensionProperty {
     /**
-     * The Amazon Resource Name (ARN) of a CloudFormation stack.
+     * The name of the dimension.
      *
-     * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-name)
      */
-    public fun cloudFormationStackArn(): String? = unwrap(this).getCloudFormationStackArn()
+    public fun name(): String
 
     /**
-     * A set of tag filters (keys and values).
+     * The value of the dimension.
      *
-     * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-     * include up to 50 keys, and each key can include up to 20 values.
-     *
-     * Tags are part of the syntax that you use to specify the resources you want returned when
-     * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-     * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-     * properties can accept any value as long as the combination of values is unique across scaling
-     * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-     * then you must specify valid values.
-     *
-     * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-value)
      */
-    public fun tagFilters(): Any? = unwrap(this).getTagFilters()
+    public fun `value`(): String
 
     /**
-     * A builder for [ApplicationSourceProperty]
+     * A builder for [MetricDimensionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param cloudFormationStackArn The Amazon Resource Name (ARN) of a CloudFormation stack.
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+       * @param name The name of the dimension. 
        */
-      public fun cloudFormationStackArn(cloudFormationStackArn: String)
+      public fun name(name: String)
 
       /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+       * @param value The value of the dimension. 
        */
-      public fun tagFilters(tagFilters: IResolvable)
-
-      /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       */
-      public fun tagFilters(tagFilters: List<Any>)
-
-      /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       */
-      public fun tagFilters(vararg tagFilters: Any)
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty.Builder
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty.Builder
           =
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty.builder()
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty.builder()
 
       /**
-       * @param cloudFormationStackArn The Amazon Resource Name (ARN) of a CloudFormation stack.
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+       * @param name The name of the dimension. 
        */
-      override fun cloudFormationStackArn(cloudFormationStackArn: String) {
-        cdkBuilder.cloudFormationStackArn(cloudFormationStackArn)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
+       * @param value The value of the dimension. 
        */
-      override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
       }
-
-      /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       */
-      override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
-      }
-
-      /**
-       * @param tagFilters A set of tag filters (keys and values).
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       */
-      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty,
-    ) : CdkObject(cdkObject), ApplicationSourceProperty {
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty,
+    ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
-       * The Amazon Resource Name (ARN) of a CloudFormation stack.
+       * The name of the dimension.
        *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-name)
        */
-      override fun cloudFormationStackArn(): String? = unwrap(this).getCloudFormationStackArn()
+      override fun name(): String = unwrap(this).getName()
 
       /**
-       * A set of tag filters (keys and values).
+       * The value of the dimension.
        *
-       * Each tag filter specified must contain a key with values as optional. Each scaling plan can
-       * include up to 50 keys, and each key can include up to 20 values.
-       *
-       * Tags are part of the syntax that you use to specify the resources you want returned when
-       * configuring a scaling plan from the AWS Auto Scaling console. You do not need to specify valid
-       * tag filter values when you create a scaling plan with CloudFormation. The `Key` and `Values`
-       * properties can accept any value as long as the combination of values is unique across scaling
-       * plans. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan,
-       * then you must specify valid values.
-       *
-       * You must specify either a `CloudFormationStackARN` or `TagFilters` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-metricdimension.html#cfn-autoscalingplans-scalingplan-metricdimension-value)
        */
-      override fun tagFilters(): Any? = unwrap(this).getTagFilters()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationSourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty):
-          ApplicationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationSourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty):
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ApplicationSourceProperty):
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
+      internal fun unwrap(wrapped: MetricDimensionProperty):
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty
+    }
+  }
+
+  /**
+   * `PredefinedLoadMetricSpecification` is a subproperty of
+   * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
+   * that specifies a predefined load metric for predictive scaling to use with a scaling plan.
+   *
+   * After creating your scaling plan, you can use the AWS Auto Scaling console to visualize
+   * forecasts for the specified metric. For more information, see [View scaling information for a
+   * resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
+   * in the *Scaling Plans User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
+   * PredefinedLoadMetricSpecificationProperty predefinedLoadMetricSpecificationProperty =
+   * PredefinedLoadMetricSpecificationProperty.builder()
+   * .predefinedLoadMetricType("predefinedLoadMetricType")
+   * // the properties below are optional
+   * .resourceLabel("resourceLabel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html)
+   */
+  public interface PredefinedLoadMetricSpecificationProperty {
+    /**
+     * The metric type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-predefinedloadmetrictype)
+     */
+    public fun predefinedLoadMetricType(): String
+
+    /**
+     * Identifies the resource associated with the metric type.
+     *
+     * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount` and
+     * there is a target group for an Application Load Balancer attached to the Auto Scaling group.
+     *
+     * You create the resource label by appending the final portion of the load balancer ARN and the
+     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
+     * format is
+     * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
+     * where:
+     *
+     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
+     * ARN.
+     *
+     * This is an example:
+     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
+     *
+     * To find the ARN for an Application Load Balancer, use the
+     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+     * API operation. To find the ARN for the target group, use the
+     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+     * API operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-resourcelabel)
+     */
+    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+
+    /**
+     * A builder for [PredefinedLoadMetricSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param predefinedLoadMetricType The metric type. 
+       */
+      public fun predefinedLoadMetricType(predefinedLoadMetricType: String)
+
+      /**
+       * @param resourceLabel Identifies the resource associated with the metric type.
+       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
+       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format is
+       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
+       * where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * This is an example:
+       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
+       */
+      public fun resourceLabel(resourceLabel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty.builder()
+
+      /**
+       * @param predefinedLoadMetricType The metric type. 
+       */
+      override fun predefinedLoadMetricType(predefinedLoadMetricType: String) {
+        cdkBuilder.predefinedLoadMetricType(predefinedLoadMetricType)
+      }
+
+      /**
+       * @param resourceLabel Identifies the resource associated with the metric type.
+       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
+       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format is
+       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
+       * where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * This is an example:
+       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
+       */
+      override fun resourceLabel(resourceLabel: String) {
+        cdkBuilder.resourceLabel(resourceLabel)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty,
+    ) : CdkObject(cdkObject), PredefinedLoadMetricSpecificationProperty {
+      /**
+       * The metric type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-predefinedloadmetrictype)
+       */
+      override fun predefinedLoadMetricType(): String = unwrap(this).getPredefinedLoadMetricType()
+
+      /**
+       * Identifies the resource associated with the metric type.
+       *
+       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
+       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format is
+       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
+       * where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * This is an example:
+       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-resourcelabel)
+       */
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PredefinedLoadMetricSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty):
+          PredefinedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredefinedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PredefinedLoadMetricSpecificationProperty):
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
     }
   }
 
@@ -2002,8 +1640,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredefinedScalingMetricSpecificationProperty {
       /**
        * The metric type.
@@ -2842,8 +2479,7 @@ public open class CfnScalingPlan internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty,
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty,
     ) : CdkObject(cdkObject), ScalingInstructionProperty {
       /**
        * The customized load metric to use for predictive scaling.
@@ -3061,14 +2697,9 @@ public open class CfnScalingPlan internal constructor(
   }
 
   /**
-   * `PredefinedLoadMetricSpecification` is a subproperty of
-   * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
-   * that specifies a predefined load metric for predictive scaling to use with a scaling plan.
-   *
-   * After creating your scaling plan, you can use the AWS Auto Scaling console to visualize
-   * forecasts for the specified metric. For more information, see [View scaling information for a
-   * resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource)
-   * in the *Scaling Plans User Guide* .
+   * `TagFilter` is a subproperty of
+   * [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
+   * that specifies a tag for an application source to use with a scaling plan.
    *
    * Example:
    *
@@ -3076,196 +2707,557 @@ public open class CfnScalingPlan internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
-   * PredefinedLoadMetricSpecificationProperty predefinedLoadMetricSpecificationProperty =
-   * PredefinedLoadMetricSpecificationProperty.builder()
-   * .predefinedLoadMetricType("predefinedLoadMetricType")
+   * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
+   * .key("key")
    * // the properties below are optional
-   * .resourceLabel("resourceLabel")
+   * .values(List.of("values"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html)
    */
-  public interface PredefinedLoadMetricSpecificationProperty {
+  public interface TagFilterProperty {
     /**
-     * The metric type.
+     * The tag key.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-predefinedloadmetrictype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key)
      */
-    public fun predefinedLoadMetricType(): String
+    public fun key(): String
 
     /**
-     * Identifies the resource associated with the metric type.
+     * The tag values (0 to 20).
      *
-     * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount` and
-     * there is a target group for an Application Load Balancer attached to the Auto Scaling group.
-     *
-     * You create the resource label by appending the final portion of the load balancer ARN and the
-     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
-     * format is
-     * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
-     * where:
-     *
-     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
-     * ARN.
-     *
-     * This is an example:
-     * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-     *
-     * To find the ARN for an Application Load Balancer, use the
-     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-     * API operation. To find the ARN for the target group, use the
-     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-     * API operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-resourcelabel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values)
      */
-    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     /**
-     * A builder for [PredefinedLoadMetricSpecificationProperty]
+     * A builder for [TagFilterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param predefinedLoadMetricType The metric type. 
+       * @param key The tag key. 
        */
-      public fun predefinedLoadMetricType(predefinedLoadMetricType: String)
+      public fun key(key: String)
 
       /**
-       * @param resourceLabel Identifies the resource associated with the metric type.
-       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
-       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format is
-       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
-       * where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * This is an example:
-       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
+       * @param values The tag values (0 to 20).
        */
-      public fun resourceLabel(resourceLabel: String)
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The tag values (0 to 20).
+       */
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty.Builder
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty.Builder
           =
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty.builder()
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty.builder()
 
       /**
-       * @param predefinedLoadMetricType The metric type. 
+       * @param key The tag key. 
        */
-      override fun predefinedLoadMetricType(predefinedLoadMetricType: String) {
-        cdkBuilder.predefinedLoadMetricType(predefinedLoadMetricType)
+      override fun key(key: String) {
+        cdkBuilder.key(key)
       }
 
       /**
-       * @param resourceLabel Identifies the resource associated with the metric type.
-       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
-       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format is
-       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
-       * where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * This is an example:
-       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
+       * @param values The tag values (0 to 20).
        */
-      override fun resourceLabel(resourceLabel: String) {
-        cdkBuilder.resourceLabel(resourceLabel)
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
       }
+
+      /**
+       * @param values The tag values (0 to 20).
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), PredefinedLoadMetricSpecificationProperty {
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty,
+    ) : CdkObject(cdkObject), TagFilterProperty {
       /**
-       * The metric type.
+       * The tag key.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-predefinedloadmetrictype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-key)
        */
-      override fun predefinedLoadMetricType(): String = unwrap(this).getPredefinedLoadMetricType()
+      override fun key(): String = unwrap(this).getKey()
 
       /**
-       * Identifies the resource associated with the metric type.
+       * The tag values (0 to 20).
        *
-       * You can't specify a resource label unless the metric type is `ALBTargetGroupRequestCount`
-       * and there is a target group for an Application Load Balancer attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format is
-       * app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>,
-       * where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * This is an example:
-       * app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedloadmetricspecification-resourcelabel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html#cfn-autoscalingplans-scalingplan-tagfilter-values)
        */
-      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PredefinedLoadMetricSpecificationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagFilterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty):
-          PredefinedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PredefinedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty):
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PredefinedLoadMetricSpecificationProperty):
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
+      internal fun unwrap(wrapped: TagFilterProperty):
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty
+    }
+  }
+
+  /**
+   * `TargetTrackingConfiguration` is a subproperty of
+   * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
+   * that specifies a target tracking configuration for a scalable resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscalingplans.*;
+   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
+   * TargetTrackingConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .unit("unit")
+   * .build())
+   * .disableScaleIn(false)
+   * .estimatedInstanceWarmup(123)
+   * .predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty.builder()
+   * .predefinedScalingMetricType("predefinedScalingMetricType")
+   * // the properties below are optional
+   * .resourceLabel("resourceLabel")
+   * .build())
+   * .scaleInCooldown(123)
+   * .scaleOutCooldown(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
+   */
+  public interface TargetTrackingConfigurationProperty {
+    /**
+     * A customized metric.
+     *
+     * You can specify either a predefined metric or a customized metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)
+     */
+    public fun customizedScalingMetricSpecification(): Any? =
+        unwrap(this).getCustomizedScalingMetricSpecification()
+
+    /**
+     * Indicates whether scale in by the target tracking scaling policy is disabled.
+     *
+     * If the value is `true` , scale in is disabled and the target tracking scaling policy doesn't
+     * remove capacity from the scalable resource. Otherwise, scale in is enabled and the target
+     * tracking scaling policy can remove capacity from the scalable resource.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein)
+     */
+    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+    /**
+     * The estimated time, in seconds, until a newly launched instance can contribute to the
+     * CloudWatch metrics.
+     *
+     * This value is used only if the resource is an Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup)
+     */
+    public fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
+
+    /**
+     * A predefined metric.
+     *
+     * You can specify either a predefined metric or a customized metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)
+     */
+    public fun predefinedScalingMetricSpecification(): Any? =
+        unwrap(this).getPredefinedScalingMetricSpecification()
+
+    /**
+     * The amount of time, in seconds, after a scale-in activity completes before another scale in
+     * activity can start.
+     *
+     * This value is not used if the scalable resource is an Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown)
+     */
+    public fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+    /**
+     * The amount of time, in seconds, after a scale-out activity completes before another scale-out
+     * activity can start.
+     *
+     * This value is not used if the scalable resource is an Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown)
+     */
+    public fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+    /**
+     * The target value for the metric.
+     *
+     * Although this property accepts numbers of type Double, it won't accept values that are either
+     * too small or too large. Values must be in the range of -2^360 to 2^360.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number
+
+    /**
+     * A builder for [TargetTrackingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      public
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable)
+
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      public
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty)
+
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21a641c32153f8aa63fdd4d9171716567e8b16f69ba4187974f946cb0b0109c6")
+      public
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * If the value is `true` , scale in is disabled and the target tracking scaling policy
+       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
+       * target tracking scaling policy can remove capacity from the scalable resource.
+       *
+       * The default value is `false` .
+       */
+      public fun disableScaleIn(disableScaleIn: Boolean)
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * If the value is `true` , scale in is disabled and the target tracking scaling policy
+       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
+       * target tracking scaling policy can remove capacity from the scalable resource.
+       *
+       * The default value is `false` .
+       */
+      public fun disableScaleIn(disableScaleIn: IResolvable)
+
+      /**
+       * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched
+       * instance can contribute to the CloudWatch metrics.
+       * This value is used only if the resource is an Auto Scaling group.
+       */
+      public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number)
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      public
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable)
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      public
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty)
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4fac0d076170342ac4ce2296263a6555e9c1b27f89f5da59fe390ae01ef90023")
+      public
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
+       * before another scale in activity can start.
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       */
+      public fun scaleInCooldown(scaleInCooldown: Number)
+
+      /**
+       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
+       * completes before another scale-out activity can start.
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       */
+      public fun scaleOutCooldown(scaleOutCooldown: Number)
+
+      /**
+       * @param targetValue The target value for the metric. 
+       * Although this property accepts numbers of type Double, it won't accept values that are
+       * either too small or too large. Values must be in the range of -2^360 to 2^360.
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty.builder()
+
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      override
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable) {
+        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      override
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty) {
+        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(CustomizedScalingMetricSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param customizedScalingMetricSpecification A customized metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21a641c32153f8aa63fdd4d9171716567e8b16f69ba4187974f946cb0b0109c6")
+      override
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty(customizedScalingMetricSpecification))
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * If the value is `true` , scale in is disabled and the target tracking scaling policy
+       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
+       * target tracking scaling policy can remove capacity from the scalable resource.
+       *
+       * The default value is `false` .
+       */
+      override fun disableScaleIn(disableScaleIn: Boolean) {
+        cdkBuilder.disableScaleIn(disableScaleIn)
+      }
+
+      /**
+       * @param disableScaleIn Indicates whether scale in by the target tracking scaling policy is
+       * disabled.
+       * If the value is `true` , scale in is disabled and the target tracking scaling policy
+       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
+       * target tracking scaling policy can remove capacity from the scalable resource.
+       *
+       * The default value is `false` .
+       */
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched
+       * instance can contribute to the CloudWatch metrics.
+       * This value is used only if the resource is an Auto Scaling group.
+       */
+      override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
+        cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
+      }
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      override
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable) {
+        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      override
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty) {
+        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(PredefinedScalingMetricSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param predefinedScalingMetricSpecification A predefined metric.
+       * You can specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4fac0d076170342ac4ce2296263a6555e9c1b27f89f5da59fe390ae01ef90023")
+      override
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty(predefinedScalingMetricSpecification))
+
+      /**
+       * @param scaleInCooldown The amount of time, in seconds, after a scale-in activity completes
+       * before another scale in activity can start.
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       */
+      override fun scaleInCooldown(scaleInCooldown: Number) {
+        cdkBuilder.scaleInCooldown(scaleInCooldown)
+      }
+
+      /**
+       * @param scaleOutCooldown The amount of time, in seconds, after a scale-out activity
+       * completes before another scale-out activity can start.
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       */
+      override fun scaleOutCooldown(scaleOutCooldown: Number) {
+        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
+      }
+
+      /**
+       * @param targetValue The target value for the metric. 
+       * Although this property accepts numbers of type Double, it won't accept values that are
+       * either too small or too large. Values must be in the range of -2^360 to 2^360.
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
+      /**
+       * A customized metric.
+       *
+       * You can specify either a predefined metric or a customized metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)
+       */
+      override fun customizedScalingMetricSpecification(): Any? =
+          unwrap(this).getCustomizedScalingMetricSpecification()
+
+      /**
+       * Indicates whether scale in by the target tracking scaling policy is disabled.
+       *
+       * If the value is `true` , scale in is disabled and the target tracking scaling policy
+       * doesn't remove capacity from the scalable resource. Otherwise, scale in is enabled and the
+       * target tracking scaling policy can remove capacity from the scalable resource.
+       *
+       * The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein)
+       */
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+
+      /**
+       * The estimated time, in seconds, until a newly launched instance can contribute to the
+       * CloudWatch metrics.
+       *
+       * This value is used only if the resource is an Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup)
+       */
+      override fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
+
+      /**
+       * A predefined metric.
+       *
+       * You can specify either a predefined metric or a customized metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)
+       */
+      override fun predefinedScalingMetricSpecification(): Any? =
+          unwrap(this).getPredefinedScalingMetricSpecification()
+
+      /**
+       * The amount of time, in seconds, after a scale-in activity completes before another scale in
+       * activity can start.
+       *
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown)
+       */
+      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+
+      /**
+       * The amount of time, in seconds, after a scale-out activity completes before another
+       * scale-out activity can start.
+       *
+       * This value is not used if the scalable resource is an Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown)
+       */
+      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+
+      /**
+       * The target value for the metric.
+       *
+       * Although this property accepts numbers of type Double, it won't accept values that are
+       * either too small or too large. Values must be in the range of -2^360 to 2^360.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetTrackingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty):
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty
+          software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
     }
   }
 }

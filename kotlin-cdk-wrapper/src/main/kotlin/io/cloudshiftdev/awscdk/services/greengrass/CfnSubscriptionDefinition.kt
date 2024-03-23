@@ -66,9 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html)
  */
-public open class CfnSubscriptionDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition,
+public open class CfnSubscriptionDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -406,7 +405,8 @@ public open class CfnSubscriptionDefinition internal constructor(
         CfnSubscriptionDefinition = CfnSubscriptionDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionDefinition):
-        software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
   }
 
   /**
@@ -506,8 +506,7 @@ public open class CfnSubscriptionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty,
     ) : CdkObject(cdkObject), SubscriptionDefinitionVersionProperty {
       /**
        * The subscriptions in this version.
@@ -681,8 +680,7 @@ public open class CfnSubscriptionDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty,
     ) : CdkObject(cdkObject), SubscriptionProperty {
       /**
        * A descriptive or arbitrary ID for the subscription.

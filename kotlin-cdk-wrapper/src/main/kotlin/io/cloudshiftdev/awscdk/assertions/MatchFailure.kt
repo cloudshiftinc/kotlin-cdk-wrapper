@@ -140,7 +140,7 @@ public interface MatchFailure {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.assertions.MatchFailure,
+    cdkObject: software.amazon.awscdk.assertions.MatchFailure,
   ) : CdkObject(cdkObject), MatchFailure {
     /**
      * The cost of this particular mismatch.

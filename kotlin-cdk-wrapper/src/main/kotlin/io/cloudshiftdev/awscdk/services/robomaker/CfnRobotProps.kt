@@ -143,7 +143,7 @@ public interface CfnRobotProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotProps,
+    cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotProps,
   ) : CdkObject(cdkObject), CfnRobotProps {
     /**
      * The architecture of the robot.

@@ -187,7 +187,7 @@ public interface CfnSchemaMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMappingProps,
+    cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMappingProps,
   ) : CdkObject(cdkObject), CfnSchemaMappingProps {
     /**
      * A description of the schema.

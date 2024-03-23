@@ -316,7 +316,7 @@ public interface QueryStringProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.QueryStringProps,
+    cdkObject: software.amazon.awscdk.services.logs.QueryStringProps,
   ) : CdkObject(cdkObject), QueryStringProps {
     /**
      * Specifies which fields to display in the query results.

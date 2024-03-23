@@ -26,7 +26,7 @@ public interface IKeyPair : IResource {
   public fun type(): KeyPairType? = unwrap(this).getType()?.let(KeyPairType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IKeyPair,
+    cdkObject: software.amazon.awscdk.services.ec2.IKeyPair,
   ) : CdkObject(cdkObject), IKeyPair {
     /**
      * Apply the given removal policy to this resource.

@@ -93,7 +93,7 @@ public interface CfnMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnMappingProps,
+    cdkObject: software.amazon.awscdk.CfnMappingProps,
   ) : CdkObject(cdkObject), CfnMappingProps {
     /**
      *

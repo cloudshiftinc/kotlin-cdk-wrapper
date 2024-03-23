@@ -303,7 +303,7 @@ public interface CfnComponentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnComponentProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnComponentProps,
   ) : CdkObject(cdkObject), CfnComponentProps {
     /**
      * The change description of the component.

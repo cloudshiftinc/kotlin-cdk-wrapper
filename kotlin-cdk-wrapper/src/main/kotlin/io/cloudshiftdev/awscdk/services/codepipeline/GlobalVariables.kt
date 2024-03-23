@@ -23,8 +23,8 @@ import kotlin.String
  * );
  * ```
  */
-public open class GlobalVariables internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.GlobalVariables,
+public open class GlobalVariables(
+  cdkObject: software.amazon.awscdk.services.codepipeline.GlobalVariables,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.codepipeline.GlobalVariables()
   )
@@ -37,6 +37,7 @@ public open class GlobalVariables internal constructor(
         GlobalVariables = GlobalVariables(cdkObject)
 
     internal fun unwrap(wrapped: GlobalVariables):
-        software.amazon.awscdk.services.codepipeline.GlobalVariables = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.GlobalVariables = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.GlobalVariables
   }
 }

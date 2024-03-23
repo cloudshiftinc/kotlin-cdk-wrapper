@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class DatabaseClusterEngine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterEngine,
+public open class DatabaseClusterEngine(
+  cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterEngine,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.rds.DatabaseClusterEngine()
   )
@@ -77,6 +77,7 @@ public open class DatabaseClusterEngine internal constructor(
         DatabaseClusterEngine = DatabaseClusterEngine(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterEngine):
-        software.amazon.awscdk.services.rds.DatabaseClusterEngine = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.DatabaseClusterEngine = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.DatabaseClusterEngine
   }
 }

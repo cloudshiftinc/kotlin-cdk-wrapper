@@ -31,7 +31,7 @@ public interface IVirtualService : IResource {
   public fun virtualServiceName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IVirtualService,
+    cdkObject: software.amazon.awscdk.services.appmesh.IVirtualService,
   ) : CdkObject(cdkObject), IVirtualService {
     /**
      * Apply the given removal policy to this resource.

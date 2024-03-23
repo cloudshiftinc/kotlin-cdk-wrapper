@@ -233,7 +233,7 @@ public interface FunctionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes,
+    cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes,
   ) : CdkObject(cdkObject), FunctionAttributes {
     /**
      * The architecture of this Lambda Function (this is an optional attribute and defaults to

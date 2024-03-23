@@ -401,7 +401,7 @@ public interface CfnChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelProps,
+    cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
     /**
      * The name of the channel.

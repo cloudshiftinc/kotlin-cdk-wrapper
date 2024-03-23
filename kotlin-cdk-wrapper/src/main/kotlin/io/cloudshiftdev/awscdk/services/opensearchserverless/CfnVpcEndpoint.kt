@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html)
  */
-public open class CfnVpcEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint,
+public open class CfnVpcEndpoint(
+  cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -285,6 +284,7 @@ public open class CfnVpcEndpoint internal constructor(
         CfnVpcEndpoint = CfnVpcEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcEndpoint):
-        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint
   }
 }

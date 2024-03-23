@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.iam.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -869,7 +869,7 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.iam.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnUser
   }
 
   /**
@@ -966,7 +966,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty,
+      cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty,
     ) : CdkObject(cdkObject), LoginProfileProperty {
       /**
        * The user's password.
@@ -1088,7 +1088,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty,
+      cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty,
     ) : CdkObject(cdkObject), PolicyProperty {
       /**
        * The entire contents of the policy that defines permissions.

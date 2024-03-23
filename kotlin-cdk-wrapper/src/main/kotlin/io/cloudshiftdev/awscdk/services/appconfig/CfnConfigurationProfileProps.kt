@@ -354,7 +354,7 @@ public interface CfnConfigurationProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps,
   ) : CdkObject(cdkObject), CfnConfigurationProfileProps {
     /**
      * The application ID.

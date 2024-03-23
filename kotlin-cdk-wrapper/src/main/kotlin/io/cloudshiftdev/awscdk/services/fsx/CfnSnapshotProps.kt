@@ -114,7 +114,7 @@ public interface CfnSnapshotProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshotProps,
+    cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshotProps,
   ) : CdkObject(cdkObject), CfnSnapshotProps {
     /**
      * The name of the snapshot.

@@ -117,8 +117,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -425,7 +425,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.iotanalytics.CfnPipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.iotanalytics.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotanalytics.CfnPipeline
   }
 
   /**
@@ -1006,8 +1007,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
     ) : CdkObject(cdkObject), ActivityProperty {
       /**
        * Adds other attributes based on existing attributes in the message.
@@ -1096,114 +1096,6 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty
-    }
-  }
-
-  /**
-   * The datastore activity that specifies where to store the processed data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DatastoreProperty datastoreProperty = DatastoreProperty.builder()
-   * .datastoreName("datastoreName")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html)
-   */
-  public interface DatastoreProperty {
-    /**
-     * The name of the data store where processed messages are stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-datastorename)
-     */
-    public fun datastoreName(): String
-
-    /**
-     * The name of the datastore activity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [DatastoreProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param datastoreName The name of the data store where processed messages are stored. 
-       */
-      public fun datastoreName(datastoreName: String)
-
-      /**
-       * @param name The name of the datastore activity. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.builder()
-
-      /**
-       * @param datastoreName The name of the data store where processed messages are stored. 
-       */
-      override fun datastoreName(datastoreName: String) {
-        cdkBuilder.datastoreName(datastoreName)
-      }
-
-      /**
-       * @param name The name of the datastore activity. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
-    ) : CdkObject(cdkObject), DatastoreProperty {
-      /**
-       * The name of the data store where processed messages are stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-datastorename)
-       */
-      override fun datastoreName(): String = unwrap(this).getDatastoreName()
-
-      /**
-       * The name of the datastore activity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatastoreProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty):
-          DatastoreProperty = CdkObjectWrappers.wrap(cdkObject) as? DatastoreProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatastoreProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty
     }
   }
 
@@ -1336,8 +1228,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
     ) : CdkObject(cdkObject), AddAttributesProperty {
       /**
        * A list of 1-50 "AttributeNameMapping" objects that map an existing attribute to a new
@@ -1382,6 +1273,637 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty
+    }
+  }
+
+  /**
+   * Determines the source of the messages to be processed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * ChannelProperty channelProperty = ChannelProperty.builder()
+   * .channelName("channelName")
+   * .name("name")
+   * // the properties below are optional
+   * .next("next")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html)
+   */
+  public interface ChannelProperty {
+    /**
+     * The name of the channel from which the messages are processed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-channelname)
+     */
+    public fun channelName(): String
+
+    /**
+     * The name of the 'channel' activity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-name)
+     */
+    public fun name(): String
+
+    /**
+     * The next activity in the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-next)
+     */
+    public fun next(): String? = unwrap(this).getNext()
+
+    /**
+     * A builder for [ChannelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param channelName The name of the channel from which the messages are processed. 
+       */
+      public fun channelName(channelName: String)
+
+      /**
+       * @param name The name of the 'channel' activity. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      public fun next(next: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.builder()
+
+      /**
+       * @param channelName The name of the channel from which the messages are processed. 
+       */
+      override fun channelName(channelName: String) {
+        cdkBuilder.channelName(channelName)
+      }
+
+      /**
+       * @param name The name of the 'channel' activity. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      override fun next(next: String) {
+        cdkBuilder.next(next)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
+    ) : CdkObject(cdkObject), ChannelProperty {
+      /**
+       * The name of the channel from which the messages are processed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-channelname)
+       */
+      override fun channelName(): String = unwrap(this).getChannelName()
+
+      /**
+       * The name of the 'channel' activity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The next activity in the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-next)
+       */
+      override fun next(): String? = unwrap(this).getNext()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ChannelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty):
+          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChannelProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ChannelProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty
+    }
+  }
+
+  /**
+   * The datastore activity that specifies where to store the processed data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DatastoreProperty datastoreProperty = DatastoreProperty.builder()
+   * .datastoreName("datastoreName")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html)
+   */
+  public interface DatastoreProperty {
+    /**
+     * The name of the data store where processed messages are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-datastorename)
+     */
+    public fun datastoreName(): String
+
+    /**
+     * The name of the datastore activity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [DatastoreProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param datastoreName The name of the data store where processed messages are stored. 
+       */
+      public fun datastoreName(datastoreName: String)
+
+      /**
+       * @param name The name of the datastore activity. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.Builder =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.builder()
+
+      /**
+       * @param datastoreName The name of the data store where processed messages are stored. 
+       */
+      override fun datastoreName(datastoreName: String) {
+        cdkBuilder.datastoreName(datastoreName)
+      }
+
+      /**
+       * @param name The name of the datastore activity. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
+    ) : CdkObject(cdkObject), DatastoreProperty {
+      /**
+       * The name of the data store where processed messages are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-datastorename)
+       */
+      override fun datastoreName(): String = unwrap(this).getDatastoreName()
+
+      /**
+       * The name of the datastore activity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html#cfn-iotanalytics-pipeline-datastore-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatastoreProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty):
+          DatastoreProperty = CdkObjectWrappers.wrap(cdkObject) as? DatastoreProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatastoreProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty
+    }
+  }
+
+  /**
+   * An activity that adds data from the AWS IoT device registry to your message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DeviceRegistryEnrichProperty deviceRegistryEnrichProperty =
+   * DeviceRegistryEnrichProperty.builder()
+   * .attribute("attribute")
+   * .name("name")
+   * .roleArn("roleArn")
+   * .thingName("thingName")
+   * // the properties below are optional
+   * .next("next")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html)
+   */
+  public interface DeviceRegistryEnrichProperty {
+    /**
+     * The name of the attribute that is added to the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * The name of the 'deviceRegistryEnrich' activity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-name)
+     */
+    public fun name(): String
+
+    /**
+     * The next activity in the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-next)
+     */
+    public fun next(): String? = unwrap(this).getNext()
+
+    /**
+     * The ARN of the role that allows access to the device's registry information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The name of the IoT device whose registry information is added to the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-thingname)
+     */
+    public fun thingName(): String
+
+    /**
+     * A builder for [DeviceRegistryEnrichProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attribute The name of the attribute that is added to the message. 
+       */
+      public fun attribute(attribute: String)
+
+      /**
+       * @param name The name of the 'deviceRegistryEnrich' activity. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      public fun next(next: String)
+
+      /**
+       * @param roleArn The ARN of the role that allows access to the device's registry information.
+       * 
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param thingName The name of the IoT device whose registry information is added to the
+       * message. 
+       */
+      public fun thingName(thingName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty.builder()
+
+      /**
+       * @param attribute The name of the attribute that is added to the message. 
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      /**
+       * @param name The name of the 'deviceRegistryEnrich' activity. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      override fun next(next: String) {
+        cdkBuilder.next(next)
+      }
+
+      /**
+       * @param roleArn The ARN of the role that allows access to the device's registry information.
+       * 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param thingName The name of the IoT device whose registry information is added to the
+       * message. 
+       */
+      override fun thingName(thingName: String) {
+        cdkBuilder.thingName(thingName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
+    ) : CdkObject(cdkObject), DeviceRegistryEnrichProperty {
+      /**
+       * The name of the attribute that is added to the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+
+      /**
+       * The name of the 'deviceRegistryEnrich' activity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The next activity in the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-next)
+       */
+      override fun next(): String? = unwrap(this).getNext()
+
+      /**
+       * The ARN of the role that allows access to the device's registry information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The name of the IoT device whose registry information is added to the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-thingname)
+       */
+      override fun thingName(): String = unwrap(this).getThingName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceRegistryEnrichProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty):
+          DeviceRegistryEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceRegistryEnrichProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceRegistryEnrichProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty
+    }
+  }
+
+  /**
+   * An activity that adds information from the AWS IoT Device Shadows service to a message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * DeviceShadowEnrichProperty deviceShadowEnrichProperty = DeviceShadowEnrichProperty.builder()
+   * .attribute("attribute")
+   * .name("name")
+   * .roleArn("roleArn")
+   * .thingName("thingName")
+   * // the properties below are optional
+   * .next("next")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html)
+   */
+  public interface DeviceShadowEnrichProperty {
+    /**
+     * The name of the attribute that is added to the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * The name of the 'deviceShadowEnrich' activity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-name)
+     */
+    public fun name(): String
+
+    /**
+     * The next activity in the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-next)
+     */
+    public fun next(): String? = unwrap(this).getNext()
+
+    /**
+     * The ARN of the role that allows access to the device's shadow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The name of the IoT device whose shadow information is added to the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname)
+     */
+    public fun thingName(): String
+
+    /**
+     * A builder for [DeviceShadowEnrichProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attribute The name of the attribute that is added to the message. 
+       */
+      public fun attribute(attribute: String)
+
+      /**
+       * @param name The name of the 'deviceShadowEnrich' activity. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      public fun next(next: String)
+
+      /**
+       * @param roleArn The ARN of the role that allows access to the device's shadow. 
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param thingName The name of the IoT device whose shadow information is added to the
+       * message. 
+       */
+      public fun thingName(thingName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty.builder()
+
+      /**
+       * @param attribute The name of the attribute that is added to the message. 
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      /**
+       * @param name The name of the 'deviceShadowEnrich' activity. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param next The next activity in the pipeline.
+       */
+      override fun next(next: String) {
+        cdkBuilder.next(next)
+      }
+
+      /**
+       * @param roleArn The ARN of the role that allows access to the device's shadow. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param thingName The name of the IoT device whose shadow information is added to the
+       * message. 
+       */
+      override fun thingName(thingName: String) {
+        cdkBuilder.thingName(thingName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
+    ) : CdkObject(cdkObject), DeviceShadowEnrichProperty {
+      /**
+       * The name of the attribute that is added to the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+
+      /**
+       * The name of the 'deviceShadowEnrich' activity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The next activity in the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-next)
+       */
+      override fun next(): String? = unwrap(this).getNext()
+
+      /**
+       * The ARN of the role that allows access to the device's shadow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The name of the IoT device whose shadow information is added to the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname)
+       */
+      override fun thingName(): String = unwrap(this).getThingName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceShadowEnrichProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty):
+          DeviceShadowEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceShadowEnrichProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceShadowEnrichProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty
     }
   }
 
@@ -1480,8 +2002,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * An expression that looks like an SQL WHERE clause that must return a Boolean value.
@@ -1643,8 +2164,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
     ) : CdkObject(cdkObject), LambdaProperty {
       /**
        * The number of messages passed to the Lambda function for processing.
@@ -1693,496 +2213,6 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty
-    }
-  }
-
-  /**
-   * An activity that adds information from the AWS IoT Device Shadows service to a message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DeviceShadowEnrichProperty deviceShadowEnrichProperty = DeviceShadowEnrichProperty.builder()
-   * .attribute("attribute")
-   * .name("name")
-   * .roleArn("roleArn")
-   * .thingName("thingName")
-   * // the properties below are optional
-   * .next("next")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html)
-   */
-  public interface DeviceShadowEnrichProperty {
-    /**
-     * The name of the attribute that is added to the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute)
-     */
-    public fun attribute(): String
-
-    /**
-     * The name of the 'deviceShadowEnrich' activity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-name)
-     */
-    public fun name(): String
-
-    /**
-     * The next activity in the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-next)
-     */
-    public fun next(): String? = unwrap(this).getNext()
-
-    /**
-     * The ARN of the role that allows access to the device's shadow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * The name of the IoT device whose shadow information is added to the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname)
-     */
-    public fun thingName(): String
-
-    /**
-     * A builder for [DeviceShadowEnrichProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attribute The name of the attribute that is added to the message. 
-       */
-      public fun attribute(attribute: String)
-
-      /**
-       * @param name The name of the 'deviceShadowEnrich' activity. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      public fun next(next: String)
-
-      /**
-       * @param roleArn The ARN of the role that allows access to the device's shadow. 
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param thingName The name of the IoT device whose shadow information is added to the
-       * message. 
-       */
-      public fun thingName(thingName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty.builder()
-
-      /**
-       * @param attribute The name of the attribute that is added to the message. 
-       */
-      override fun attribute(attribute: String) {
-        cdkBuilder.attribute(attribute)
-      }
-
-      /**
-       * @param name The name of the 'deviceShadowEnrich' activity. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      override fun next(next: String) {
-        cdkBuilder.next(next)
-      }
-
-      /**
-       * @param roleArn The ARN of the role that allows access to the device's shadow. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param thingName The name of the IoT device whose shadow information is added to the
-       * message. 
-       */
-      override fun thingName(thingName: String) {
-        cdkBuilder.thingName(thingName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
-    ) : CdkObject(cdkObject), DeviceShadowEnrichProperty {
-      /**
-       * The name of the attribute that is added to the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-attribute)
-       */
-      override fun attribute(): String = unwrap(this).getAttribute()
-
-      /**
-       * The name of the 'deviceShadowEnrich' activity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The next activity in the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-next)
-       */
-      override fun next(): String? = unwrap(this).getNext()
-
-      /**
-       * The ARN of the role that allows access to the device's shadow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * The name of the IoT device whose shadow information is added to the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html#cfn-iotanalytics-pipeline-deviceshadowenrich-thingname)
-       */
-      override fun thingName(): String = unwrap(this).getThingName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceShadowEnrichProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty):
-          DeviceShadowEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeviceShadowEnrichProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceShadowEnrichProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty
-    }
-  }
-
-  /**
-   * Creates a new message using only the specified attributes from the original message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * SelectAttributesProperty selectAttributesProperty = SelectAttributesProperty.builder()
-   * .attributes(List.of("attributes"))
-   * .name("name")
-   * // the properties below are optional
-   * .next("next")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html)
-   */
-  public interface SelectAttributesProperty {
-    /**
-     * A list of the attributes to select from the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-attributes)
-     */
-    public fun attributes(): List<String>
-
-    /**
-     * The name of the 'selectAttributes' activity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-name)
-     */
-    public fun name(): String
-
-    /**
-     * The next activity in the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-next)
-     */
-    public fun next(): String? = unwrap(this).getNext()
-
-    /**
-     * A builder for [SelectAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes A list of the attributes to select from the message. 
-       */
-      public fun attributes(attributes: List<String>)
-
-      /**
-       * @param attributes A list of the attributes to select from the message. 
-       */
-      public fun attributes(vararg attributes: String)
-
-      /**
-       * @param name The name of the 'selectAttributes' activity. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      public fun next(next: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty.builder()
-
-      /**
-       * @param attributes A list of the attributes to select from the message. 
-       */
-      override fun attributes(attributes: List<String>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param attributes A list of the attributes to select from the message. 
-       */
-      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
-
-      /**
-       * @param name The name of the 'selectAttributes' activity. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      override fun next(next: String) {
-        cdkBuilder.next(next)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
-    ) : CdkObject(cdkObject), SelectAttributesProperty {
-      /**
-       * A list of the attributes to select from the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-attributes)
-       */
-      override fun attributes(): List<String> = unwrap(this).getAttributes()
-
-      /**
-       * The name of the 'selectAttributes' activity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The next activity in the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-next)
-       */
-      override fun next(): String? = unwrap(this).getNext()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SelectAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty):
-          SelectAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? SelectAttributesProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelectAttributesProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty
-    }
-  }
-
-  /**
-   * An activity that removes attributes from a message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * RemoveAttributesProperty removeAttributesProperty = RemoveAttributesProperty.builder()
-   * .attributes(List.of("attributes"))
-   * .name("name")
-   * // the properties below are optional
-   * .next("next")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html)
-   */
-  public interface RemoveAttributesProperty {
-    /**
-     * A list of 1-50 attributes to remove from the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-attributes)
-     */
-    public fun attributes(): List<String>
-
-    /**
-     * The name of the 'removeAttributes' activity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-name)
-     */
-    public fun name(): String
-
-    /**
-     * The next activity in the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-next)
-     */
-    public fun next(): String? = unwrap(this).getNext()
-
-    /**
-     * A builder for [RemoveAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes A list of 1-50 attributes to remove from the message. 
-       */
-      public fun attributes(attributes: List<String>)
-
-      /**
-       * @param attributes A list of 1-50 attributes to remove from the message. 
-       */
-      public fun attributes(vararg attributes: String)
-
-      /**
-       * @param name The name of the 'removeAttributes' activity. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      public fun next(next: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty.builder()
-
-      /**
-       * @param attributes A list of 1-50 attributes to remove from the message. 
-       */
-      override fun attributes(attributes: List<String>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param attributes A list of 1-50 attributes to remove from the message. 
-       */
-      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
-
-      /**
-       * @param name The name of the 'removeAttributes' activity. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param next The next activity in the pipeline.
-       */
-      override fun next(next: String) {
-        cdkBuilder.next(next)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
-    ) : CdkObject(cdkObject), RemoveAttributesProperty {
-      /**
-       * A list of 1-50 attributes to remove from the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-attributes)
-       */
-      override fun attributes(): List<String> = unwrap(this).getAttributes()
-
-      /**
-       * The name of the 'removeAttributes' activity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The next activity in the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-next)
-       */
-      override fun next(): String? = unwrap(this).getNext()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty):
-          RemoveAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? RemoveAttributesProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RemoveAttributesProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty
     }
   }
 
@@ -2301,7 +2331,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
     ) : CdkObject(cdkObject), MathProperty {
       /**
        * The name of the attribute that contains the result of the math operation.
@@ -2350,7 +2380,7 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * Determines the source of the messages to be processed.
+   * An activity that removes attributes from a message.
    *
    * Example:
    *
@@ -2358,50 +2388,55 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * ChannelProperty channelProperty = ChannelProperty.builder()
-   * .channelName("channelName")
+   * RemoveAttributesProperty removeAttributesProperty = RemoveAttributesProperty.builder()
+   * .attributes(List.of("attributes"))
    * .name("name")
    * // the properties below are optional
    * .next("next")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html)
    */
-  public interface ChannelProperty {
+  public interface RemoveAttributesProperty {
     /**
-     * The name of the channel from which the messages are processed.
+     * A list of 1-50 attributes to remove from the message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-channelname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-attributes)
      */
-    public fun channelName(): String
+    public fun attributes(): List<String>
 
     /**
-     * The name of the 'channel' activity.
+     * The name of the 'removeAttributes' activity.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-name)
      */
     public fun name(): String
 
     /**
      * The next activity in the pipeline.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-next)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-next)
      */
     public fun next(): String? = unwrap(this).getNext()
 
     /**
-     * A builder for [ChannelProperty]
+     * A builder for [RemoveAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param channelName The name of the channel from which the messages are processed. 
+       * @param attributes A list of 1-50 attributes to remove from the message. 
        */
-      public fun channelName(channelName: String)
+      public fun attributes(attributes: List<String>)
 
       /**
-       * @param name The name of the 'channel' activity. 
+       * @param attributes A list of 1-50 attributes to remove from the message. 
+       */
+      public fun attributes(vararg attributes: String)
+
+      /**
+       * @param name The name of the 'removeAttributes' activity. 
        */
       public fun name(name: String)
 
@@ -2413,18 +2448,24 @@ public open class CfnPipeline internal constructor(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.Builder =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty.builder()
 
       /**
-       * @param channelName The name of the channel from which the messages are processed. 
+       * @param attributes A list of 1-50 attributes to remove from the message. 
        */
-      override fun channelName(channelName: String) {
-        cdkBuilder.channelName(channelName)
+      override fun attributes(attributes: List<String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
-       * @param name The name of the 'channel' activity. 
+       * @param attributes A list of 1-50 attributes to remove from the message. 
+       */
+      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
+
+      /**
+       * @param name The name of the 'removeAttributes' activity. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -2437,56 +2478,56 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.next(next)
       }
 
-      public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty =
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
-    ) : CdkObject(cdkObject), ChannelProperty {
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
+    ) : CdkObject(cdkObject), RemoveAttributesProperty {
       /**
-       * The name of the channel from which the messages are processed.
+       * A list of 1-50 attributes to remove from the message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-channelname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-attributes)
        */
-      override fun channelName(): String = unwrap(this).getChannelName()
+      override fun attributes(): List<String> = unwrap(this).getAttributes()
 
       /**
-       * The name of the 'channel' activity.
+       * The name of the 'removeAttributes' activity.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
        * The next activity in the pipeline.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-channel.html#cfn-iotanalytics-pipeline-channel-next)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html#cfn-iotanalytics-pipeline-removeattributes-next)
        */
       override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ChannelProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty):
-          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChannelProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty):
+          RemoveAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? RemoveAttributesProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ChannelProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty
+      internal fun unwrap(wrapped: RemoveAttributesProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty
     }
   }
 
   /**
-   * An activity that adds data from the AWS IoT device registry to your message.
+   * Creates a new message using only the specified attributes from the original message.
    *
    * Example:
    *
@@ -2494,67 +2535,55 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DeviceRegistryEnrichProperty deviceRegistryEnrichProperty =
-   * DeviceRegistryEnrichProperty.builder()
-   * .attribute("attribute")
+   * SelectAttributesProperty selectAttributesProperty = SelectAttributesProperty.builder()
+   * .attributes(List.of("attributes"))
    * .name("name")
-   * .roleArn("roleArn")
-   * .thingName("thingName")
    * // the properties below are optional
    * .next("next")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html)
    */
-  public interface DeviceRegistryEnrichProperty {
+  public interface SelectAttributesProperty {
     /**
-     * The name of the attribute that is added to the message.
+     * A list of the attributes to select from the message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-attribute)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-attributes)
      */
-    public fun attribute(): String
+    public fun attributes(): List<String>
 
     /**
-     * The name of the 'deviceRegistryEnrich' activity.
+     * The name of the 'selectAttributes' activity.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-name)
      */
     public fun name(): String
 
     /**
      * The next activity in the pipeline.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-next)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-next)
      */
     public fun next(): String? = unwrap(this).getNext()
 
     /**
-     * The ARN of the role that allows access to the device's registry information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * The name of the IoT device whose registry information is added to the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-thingname)
-     */
-    public fun thingName(): String
-
-    /**
-     * A builder for [DeviceRegistryEnrichProperty]
+     * A builder for [SelectAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attribute The name of the attribute that is added to the message. 
+       * @param attributes A list of the attributes to select from the message. 
        */
-      public fun attribute(attribute: String)
+      public fun attributes(attributes: List<String>)
 
       /**
-       * @param name The name of the 'deviceRegistryEnrich' activity. 
+       * @param attributes A list of the attributes to select from the message. 
+       */
+      public fun attributes(vararg attributes: String)
+
+      /**
+       * @param name The name of the 'selectAttributes' activity. 
        */
       public fun name(name: String)
 
@@ -2562,35 +2591,28 @@ public open class CfnPipeline internal constructor(
        * @param next The next activity in the pipeline.
        */
       public fun next(next: String)
-
-      /**
-       * @param roleArn The ARN of the role that allows access to the device's registry information.
-       * 
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param thingName The name of the IoT device whose registry information is added to the
-       * message. 
-       */
-      public fun thingName(thingName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty.Builder
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty.Builder
           =
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty.builder()
 
       /**
-       * @param attribute The name of the attribute that is added to the message. 
+       * @param attributes A list of the attributes to select from the message. 
        */
-      override fun attribute(attribute: String) {
-        cdkBuilder.attribute(attribute)
+      override fun attributes(attributes: List<String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
-       * @param name The name of the 'deviceRegistryEnrich' activity. 
+       * @param attributes A list of the attributes to select from the message. 
+       */
+      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
+
+      /**
+       * @param name The name of the 'selectAttributes' activity. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -2603,82 +2625,51 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.next(next)
       }
 
-      /**
-       * @param roleArn The ARN of the role that allows access to the device's registry information.
-       * 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param thingName The name of the IoT device whose registry information is added to the
-       * message. 
-       */
-      override fun thingName(thingName: String) {
-        cdkBuilder.thingName(thingName)
-      }
-
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty =
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
-    ) : CdkObject(cdkObject), DeviceRegistryEnrichProperty {
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
+    ) : CdkObject(cdkObject), SelectAttributesProperty {
       /**
-       * The name of the attribute that is added to the message.
+       * A list of the attributes to select from the message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-attribute)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-attributes)
        */
-      override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attributes(): List<String> = unwrap(this).getAttributes()
 
       /**
-       * The name of the 'deviceRegistryEnrich' activity.
+       * The name of the 'selectAttributes' activity.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
        * The next activity in the pipeline.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-next)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html#cfn-iotanalytics-pipeline-selectattributes-next)
        */
       override fun next(): String? = unwrap(this).getNext()
-
-      /**
-       * The ARN of the role that allows access to the device's registry information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * The name of the IoT device whose registry information is added to the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html#cfn-iotanalytics-pipeline-deviceregistryenrich-thingname)
-       */
-      override fun thingName(): String = unwrap(this).getThingName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceRegistryEnrichProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SelectAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty):
-          DeviceRegistryEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeviceRegistryEnrichProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty):
+          SelectAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? SelectAttributesProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DeviceRegistryEnrichProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty =
+      internal fun unwrap(wrapped: SelectAttributesProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty
+          software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty
     }
   }
 }

@@ -21,7 +21,7 @@ public interface INodegroup : IResource {
   public fun nodegroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.INodegroup,
+    cdkObject: software.amazon.awscdk.services.eks.INodegroup,
   ) : CdkObject(cdkObject), INodegroup {
     /**
      * Apply the given removal policy to this resource.

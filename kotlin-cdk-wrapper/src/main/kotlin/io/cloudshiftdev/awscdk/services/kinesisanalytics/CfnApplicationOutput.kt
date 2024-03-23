@@ -73,9 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html)
  */
-public open class CfnApplicationOutput internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput,
+public open class CfnApplicationOutput(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -284,7 +283,8 @@ public open class CfnApplicationOutput internal constructor(
         CfnApplicationOutput = CfnApplicationOutput(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationOutput):
-        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput
   }
 
   /**
@@ -344,8 +344,7 @@ public open class CfnApplicationOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty,
     ) : CdkObject(cdkObject), DestinationSchemaProperty {
       /**
        * Specifies the format of the records on the output stream.
@@ -370,6 +369,132 @@ public open class CfnApplicationOutput internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty
+    }
+  }
+
+  /**
+   * When configuring application output, identifies an Amazon Kinesis Firehose delivery stream as
+   * the destination.
+   *
+   * You provide the stream Amazon Resource Name (ARN) and an IAM role that enables Amazon Kinesis
+   * Analytics to write to the stream on your behalf.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisFirehoseOutputProperty kinesisFirehoseOutputProperty =
+   * KinesisFirehoseOutputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html)
+   */
+  public interface KinesisFirehoseOutputProperty {
+    /**
+     * ARN of the destination Amazon Kinesis Firehose delivery stream to write to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
+     * stream on your behalf.
+     *
+     * You need to grant the necessary permissions to this role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn ARN of the destination Amazon Kinesis Firehose delivery stream to write
+       * to. 
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
+       * destination stream on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty.builder()
+
+      /**
+       * @param resourceArn ARN of the destination Amazon Kinesis Firehose delivery stream to write
+       * to. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
+       * destination stream on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
+      /**
+       * ARN of the destination Amazon Kinesis Firehose delivery stream to write to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
+       * stream on your behalf.
+       *
+       * You need to grant the necessary permissions to this role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty):
+          KinesisFirehoseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseOutputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseOutputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
     }
   }
 
@@ -458,8 +583,7 @@ public open class CfnApplicationOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty,
     ) : CdkObject(cdkObject), KinesisStreamsOutputProperty {
       /**
        * ARN of the destination Amazon Kinesis stream to write to.
@@ -494,6 +618,154 @@ public open class CfnApplicationOutput internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty
+    }
+  }
+
+  /**
+   * When configuring application output, identifies an AWS Lambda function as the destination.
+   *
+   * You provide the function Amazon Resource Name (ARN) and also an IAM role ARN that Amazon
+   * Kinesis Analytics can use to write to the function on your behalf.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * LambdaOutputProperty lambdaOutputProperty = LambdaOutputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html)
+   */
+  public interface LambdaOutputProperty {
+    /**
+     * Amazon Resource Name (ARN) of the destination Lambda function to write to.
+     *
+     *
+     * To specify an earlier version of the Lambda function than the latest, include the Lambda
+     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+     * [Example ARNs: AWS
+     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
+     * function on your behalf.
+     *
+     * You need to grant the necessary permissions to this role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [LambdaOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn Amazon Resource Name (ARN) of the destination Lambda function to write
+       * to. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
+       * destination function on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty.builder()
+
+      /**
+       * @param resourceArn Amazon Resource Name (ARN) of the destination Lambda function to write
+       * to. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
+       * destination function on your behalf. 
+       * You need to grant the necessary permissions to this role.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty,
+    ) : CdkObject(cdkObject), LambdaOutputProperty {
+      /**
+       * Amazon Resource Name (ARN) of the destination Lambda function to write to.
+       *
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: AWS
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
+       * function on your behalf.
+       *
+       * You need to grant the necessary permissions to this role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty):
+          LambdaOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaOutputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaOutputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
     }
   }
 
@@ -789,8 +1061,7 @@ public open class CfnApplicationOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.OutputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.OutputProperty,
     ) : CdkObject(cdkObject), OutputProperty {
       /**
        * Describes the data format when records are written to the destination.
@@ -846,282 +1117,6 @@ public open class CfnApplicationOutput internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.OutputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.OutputProperty
-    }
-  }
-
-  /**
-   * When configuring application output, identifies an Amazon Kinesis Firehose delivery stream as
-   * the destination.
-   *
-   * You provide the stream Amazon Resource Name (ARN) and an IAM role that enables Amazon Kinesis
-   * Analytics to write to the stream on your behalf.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisFirehoseOutputProperty kinesisFirehoseOutputProperty =
-   * KinesisFirehoseOutputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html)
-   */
-  public interface KinesisFirehoseOutputProperty {
-    /**
-     * ARN of the destination Amazon Kinesis Firehose delivery stream to write to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
-     * stream on your behalf.
-     *
-     * You need to grant the necessary permissions to this role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn ARN of the destination Amazon Kinesis Firehose delivery stream to write
-       * to. 
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
-       * destination stream on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty.builder()
-
-      /**
-       * @param resourceArn ARN of the destination Amazon Kinesis Firehose delivery stream to write
-       * to. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
-       * destination stream on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
-      /**
-       * ARN of the destination Amazon Kinesis Firehose delivery stream to write to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-
-      /**
-       * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
-       * stream on your behalf.
-       *
-       * You need to grant the necessary permissions to this role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty):
-          KinesisFirehoseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseOutputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisFirehoseOutputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty
-    }
-  }
-
-  /**
-   * When configuring application output, identifies an AWS Lambda function as the destination.
-   *
-   * You provide the function Amazon Resource Name (ARN) and also an IAM role ARN that Amazon
-   * Kinesis Analytics can use to write to the function on your behalf.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * LambdaOutputProperty lambdaOutputProperty = LambdaOutputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .roleArn("roleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html)
-   */
-  public interface LambdaOutputProperty {
-    /**
-     * Amazon Resource Name (ARN) of the destination Lambda function to write to.
-     *
-     *
-     * To specify an earlier version of the Lambda function than the latest, include the Lambda
-     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-     * [Example ARNs: AWS
-     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
-     * function on your behalf.
-     *
-     * You need to grant the necessary permissions to this role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [LambdaOutputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn Amazon Resource Name (ARN) of the destination Lambda function to write
-       * to. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      public fun resourceArn(resourceArn: String)
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
-       * destination function on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty.builder()
-
-      /**
-       * @param resourceArn Amazon Resource Name (ARN) of the destination Lambda function to write
-       * to. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      /**
-       * @param roleArn ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the
-       * destination function on your behalf. 
-       * You need to grant the necessary permissions to this role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty,
-    ) : CdkObject(cdkObject), LambdaOutputProperty {
-      /**
-       * Amazon Resource Name (ARN) of the destination Lambda function to write to.
-       *
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: AWS
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-
-      /**
-       * ARN of the IAM role that Amazon Kinesis Analytics can assume to write to the destination
-       * function on your behalf.
-       *
-       * You need to grant the necessary permissions to this role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.html#cfn-kinesisanalytics-applicationoutput-lambdaoutput-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaOutputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty):
-          LambdaOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaOutputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaOutputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty
     }
   }
 }

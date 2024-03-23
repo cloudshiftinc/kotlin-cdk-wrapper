@@ -79,7 +79,7 @@ public interface DeadLetterQueue {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue,
+    cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue,
   ) : CdkObject(cdkObject), DeadLetterQueue {
     /**
      * The number of times a message can be unsuccesfully dequeued before being moved to the

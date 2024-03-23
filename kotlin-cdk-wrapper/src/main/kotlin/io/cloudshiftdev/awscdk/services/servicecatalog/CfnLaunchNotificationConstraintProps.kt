@@ -163,8 +163,7 @@ public interface CfnLaunchNotificationConstraintProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps,
   ) : CdkObject(cdkObject), CfnLaunchNotificationConstraintProps {
     /**
      * The language code.

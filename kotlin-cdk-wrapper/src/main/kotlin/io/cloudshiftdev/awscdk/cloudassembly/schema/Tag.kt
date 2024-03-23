@@ -92,7 +92,7 @@ public interface Tag {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.Tag,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.Tag,
   ) : CdkObject(cdkObject), Tag {
     /**
      * Tag key.

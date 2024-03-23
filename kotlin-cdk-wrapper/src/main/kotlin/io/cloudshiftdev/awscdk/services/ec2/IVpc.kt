@@ -216,7 +216,7 @@ public interface IVpc : IResource {
   public fun vpnGatewayId(): String? = unwrap(this).getVpnGatewayId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IVpc,
+    cdkObject: software.amazon.awscdk.services.ec2.IVpc,
   ) : CdkObject(cdkObject), IVpc {
     /**
      * Adds a new client VPN endpoint to this VPC.

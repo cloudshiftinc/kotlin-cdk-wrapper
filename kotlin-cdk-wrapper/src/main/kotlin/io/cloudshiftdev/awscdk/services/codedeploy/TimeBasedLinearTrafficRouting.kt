@@ -20,9 +20,8 @@ import kotlin.Unit
  * TrafficRouting timeBasedLinearTrafficRouting = TimeBasedLinearTrafficRouting.allAtOnce();
  * ```
  */
-public open class TimeBasedLinearTrafficRouting internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting,
+public open class TimeBasedLinearTrafficRouting(
+  cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting,
 ) : TrafficRouting(cdkObject) {
   public constructor(props: TimeBasedLinearTrafficRoutingProps) :
       this(software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting(props.let(TimeBasedLinearTrafficRoutingProps::unwrap))
@@ -110,5 +109,6 @@ public open class TimeBasedLinearTrafficRouting internal constructor(
 
     internal fun unwrap(wrapped: TimeBasedLinearTrafficRouting):
         software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting = wrapped.cdkObject
+        as software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting
   }
 }

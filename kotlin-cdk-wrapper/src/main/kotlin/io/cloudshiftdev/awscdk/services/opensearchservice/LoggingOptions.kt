@@ -234,7 +234,7 @@ public interface LoggingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.LoggingOptions,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.LoggingOptions,
   ) : CdkObject(cdkObject), LoggingOptions {
     /**
      * Specify if Amazon OpenSearch Service application logging should be set up.

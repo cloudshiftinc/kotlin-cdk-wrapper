@@ -193,7 +193,7 @@ public interface CfnResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnResourceProps,
+    cdkObject: software.amazon.awscdk.services.lakeformation.CfnResourceProps,
   ) : CdkObject(cdkObject), CfnResourceProps {
     /**
      * Indicates whether the data access of tables pointing to the location can be managed by both

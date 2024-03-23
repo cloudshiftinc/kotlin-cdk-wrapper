@@ -10,6 +10,7 @@ import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import cloudshift.awscdkdsl.build.dsl.model.CdkModel
 import com.squareup.kotlinpoet.ANY
 import com.squareup.kotlinpoet.ClassName
+import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
@@ -311,7 +312,7 @@ internal object WrapperTypeGenerator {
                     .addModifiers(KModifier.INTERNAL)
                     .returns(cdkClass.className)
                     .addParameter("wrapped", cdkClass.className.mappedClassName())
-                    .addStatement("return wrapped.%N", CdkObjectName)
+                    .addStatement("return wrapped.%N as %T", CdkObjectName, cdkClass.className)
                     .build(),
             )
         }
@@ -322,6 +323,7 @@ internal object WrapperTypeGenerator {
         val innerClasses = ctx.model.innerClasses(cdkClass.className)
             .filter { it.isCdkClass && !it.isJssiClass && !it.isBuilderClass }
             .map { ctx.model.resolveClass(it) }
+            .sortedBy { it.className }
             .map { innerClass ->
                 generateWrapperType(innerClass.className, innerClass, ctx)
             }.toList()
@@ -338,9 +340,12 @@ internal object WrapperTypeGenerator {
             )
             .addProperty(
                 PropertySpec.builder(CdkObjectName, ANY)
-                    .addModifiers(KModifier.INTERNAL, KModifier.OPEN)
+                    .addModifiers(KModifier.INTERNAL)
                     .initializer(CdkObjectName)
                     .build(),
+            )
+            .addInitializerBlock(
+                CodeBlock.of(" %T.register(this)", CdkWrappersGenerator.ClassName,),
             )
             .build()
 
@@ -369,12 +374,6 @@ internal object WrapperTypeGenerator {
         wrapperBuilder.primaryConstructor(
             FunSpec.constructorBuilder().addParameter(CdkObjectName, cdkClass.className)
                 .addModifiers().build(),
-        )
-
-        wrapperBuilder.addProperty(
-            PropertySpec.builder(CdkObjectName, cdkClass.className)
-                .addModifiers(KModifier.OVERRIDE)
-                .initializer(CdkObjectName).build(),
         )
 
         if (cdkClass.isInterface) {
@@ -411,18 +410,16 @@ private fun TypeSpec.Builder.wrappedClassConstructor(
 ): TypeSpec.Builder {
     primaryConstructor(
         FunSpec.constructorBuilder().addParameter(delegatePropertyName, delegateClass)
-            .addModifiers(KModifier.INTERNAL).build(),
+            .build(),
     )
 
-    addProperty(
-        PropertySpec.builder(
-            delegatePropertyName,
-            delegateClass,
-            KModifier.INTERNAL,
-            KModifier.OVERRIDE,
-        )
-            .initializer(delegatePropertyName).build(),
-    )
+//    addProperty(
+//        PropertySpec.builder(
+//            delegatePropertyName,
+//            delegateClass,
+//        )
+//            .initializer(delegatePropertyName).build(),
+//    )
     return this
 }
 

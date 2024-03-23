@@ -148,7 +148,7 @@ public interface VpnConnectionProps : VpnConnectionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionProps,
+    cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionProps,
   ) : CdkObject(cdkObject), VpnConnectionProps {
     /**
      * The ASN of the customer gateway.

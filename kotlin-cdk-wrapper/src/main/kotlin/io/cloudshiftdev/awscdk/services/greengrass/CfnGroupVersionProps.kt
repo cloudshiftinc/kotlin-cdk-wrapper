@@ -233,7 +233,7 @@ public interface CfnGroupVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersionProps,
   ) : CdkObject(cdkObject), CfnGroupVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the connector definition version that contains the

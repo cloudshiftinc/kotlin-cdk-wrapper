@@ -44,7 +44,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .status("status")
  * // the properties below are optional
- * .modifiedAt("modifiedAt")
  * .sampleDocument("sampleDocument")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -55,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html)
  */
-public open class CfnTransformer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
+public open class CfnTransformer(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -82,7 +81,8 @@ public open class CfnTransformer internal constructor(
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   *
+   * Returns a timestamp representing the date and time for the most recent change for the
+   * transformer object.
    */
   public open fun attrModifiedAt(): String = unwrap(this).getAttrModifiedAt()
 
@@ -164,20 +164,6 @@ public open class CfnTransformer internal constructor(
    */
   public open fun mappingTemplate(`value`: String) {
     unwrap(this).setMappingTemplate(`value`)
-  }
-
-  /**
-   * Returns a timestamp representing the date and time for the most recent change for the
-   * transformer object.
-   */
-  public open fun modifiedAt(): String? = unwrap(this).getModifiedAt()
-
-  /**
-   * Returns a timestamp representing the date and time for the most recent change for the
-   * transformer object.
-   */
-  public open fun modifiedAt(`value`: String) {
-    unwrap(this).setModifiedAt(`value`)
   }
 
   /**
@@ -297,16 +283,6 @@ public open class CfnTransformer internal constructor(
      * for processing the EDI data. 
      */
     public fun mappingTemplate(mappingTemplate: String)
-
-    /**
-     * Returns a timestamp representing the date and time for the most recent change for the
-     * transformer object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object. 
-     */
-    public fun modifiedAt(modifiedAt: String)
 
     /**
      * Returns the descriptive name for the transformer.
@@ -433,18 +409,6 @@ public open class CfnTransformer internal constructor(
     }
 
     /**
-     * Returns a timestamp representing the date and time for the most recent change for the
-     * transformer object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object. 
-     */
-    override fun modifiedAt(modifiedAt: String) {
-      cdkBuilder.modifiedAt(modifiedAt)
-    }
-
-    /**
      * Returns the descriptive name for the transformer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-name)
@@ -521,136 +485,8 @@ public open class CfnTransformer internal constructor(
         CfnTransformer = CfnTransformer(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransformer):
-        software.amazon.awscdk.services.b2bi.CfnTransformer = wrapped.cdkObject
-  }
-
-  /**
-   * A structure that contains the X12 transaction set and version.
-   *
-   * The X12 structure is used when the system transforms an EDI (electronic data interchange) file.
-   *
-   *
-   * If an EDI input file contains more than one transaction, each transaction must have the same
-   * transaction set and version, for example 214/4010. If not, the transformer cannot parse the file.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.b2bi.*;
-   * X12DetailsProperty x12DetailsProperty = X12DetailsProperty.builder()
-   * .transactionSet("transactionSet")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html)
-   */
-  public interface X12DetailsProperty {
-    /**
-     * Returns an enumerated type where each value identifies an X12 transaction set.
-     *
-     * Transaction sets are maintained by the X12 Accredited Standards Committee.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-transactionset)
-     */
-    public fun transactionSet(): String? = unwrap(this).getTransactionSet()
-
-    /**
-     * Returns the version to use for the specified X12 transaction set.
-     *
-     * Supported versions are `4010` , `4030` , and `5010` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [X12DetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param transactionSet Returns an enumerated type where each value identifies an X12
-       * transaction set.
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       */
-      public fun transactionSet(transactionSet: String)
-
-      /**
-       * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.Builder =
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.builder()
-
-      /**
-       * @param transactionSet Returns an enumerated type where each value identifies an X12
-       * transaction set.
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       */
-      override fun transactionSet(transactionSet: String) {
-        cdkBuilder.transactionSet(transactionSet)
-      }
-
-      /**
-       * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
-    ) : CdkObject(cdkObject), X12DetailsProperty {
-      /**
-       * Returns an enumerated type where each value identifies an X12 transaction set.
-       *
-       * Transaction sets are maintained by the X12 Accredited Standards Committee.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-transactionset)
-       */
-      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
-
-      /**
-       * Returns the version to use for the specified X12 transaction set.
-       *
-       * Supported versions are `4010` , `4030` , and `5010` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): X12DetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty):
-          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: X12DetailsProperty):
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty
-    }
+        software.amazon.awscdk.services.b2bi.CfnTransformer = wrapped.cdkObject as
+        software.amazon.awscdk.services.b2bi.CfnTransformer
   }
 
   /**
@@ -759,7 +595,7 @@ public open class CfnTransformer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
     ) : CdkObject(cdkObject), EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
@@ -787,6 +623,134 @@ public open class CfnTransformer internal constructor(
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty
+    }
+  }
+
+  /**
+   * A structure that contains the X12 transaction set and version.
+   *
+   * The X12 structure is used when the system transforms an EDI (electronic data interchange) file.
+   *
+   *
+   * If an EDI input file contains more than one transaction, each transaction must have the same
+   * transaction set and version, for example 214/4010. If not, the transformer cannot parse the file.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12DetailsProperty x12DetailsProperty = X12DetailsProperty.builder()
+   * .transactionSet("transactionSet")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html)
+   */
+  public interface X12DetailsProperty {
+    /**
+     * Returns an enumerated type where each value identifies an X12 transaction set.
+     *
+     * Transaction sets are maintained by the X12 Accredited Standards Committee.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-transactionset)
+     */
+    public fun transactionSet(): String? = unwrap(this).getTransactionSet()
+
+    /**
+     * Returns the version to use for the specified X12 transaction set.
+     *
+     * Supported versions are `4010` , `4030` , and `5010` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [X12DetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param transactionSet Returns an enumerated type where each value identifies an X12
+       * transaction set.
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       */
+      public fun transactionSet(transactionSet: String)
+
+      /**
+       * @param version Returns the version to use for the specified X12 transaction set.
+       * Supported versions are `4010` , `4030` , and `5010` .
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.builder()
+
+      /**
+       * @param transactionSet Returns an enumerated type where each value identifies an X12
+       * transaction set.
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       */
+      override fun transactionSet(transactionSet: String) {
+        cdkBuilder.transactionSet(transactionSet)
+      }
+
+      /**
+       * @param version Returns the version to use for the specified X12 transaction set.
+       * Supported versions are `4010` , `4030` , and `5010` .
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
+    ) : CdkObject(cdkObject), X12DetailsProperty {
+      /**
+       * Returns an enumerated type where each value identifies an X12 transaction set.
+       *
+       * Transaction sets are maintained by the X12 Accredited Standards Committee.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-transactionset)
+       */
+      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
+
+      /**
+       * Returns the version to use for the specified X12 transaction set.
+       *
+       * Supported versions are `4010` , `4030` , and `5010` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12DetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty):
+          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12DetailsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty
     }
   }
 }

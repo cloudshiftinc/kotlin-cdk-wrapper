@@ -110,7 +110,7 @@ public interface SdkCallsPolicyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.customresources.SdkCallsPolicyOptions,
+    cdkObject: software.amazon.awscdk.customresources.SdkCallsPolicyOptions,
   ) : CdkObject(cdkObject), SdkCallsPolicyOptions {
     /**
      * The resources that the calls will have access to.

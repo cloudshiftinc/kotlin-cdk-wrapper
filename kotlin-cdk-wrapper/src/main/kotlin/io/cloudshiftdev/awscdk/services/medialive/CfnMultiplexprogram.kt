@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html)
  */
-public open class CfnMultiplexprogram internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
+public open class CfnMultiplexprogram(
+  cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -570,7 +570,8 @@ public open class CfnMultiplexprogram internal constructor(
         CfnMultiplexprogram = CfnMultiplexprogram(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiplexprogram):
-        software.amazon.awscdk.services.medialive.CfnMultiplexprogram = wrapped.cdkObject
+        software.amazon.awscdk.services.medialive.CfnMultiplexprogram = wrapped.cdkObject as
+        software.amazon.awscdk.services.medialive.CfnMultiplexprogram
   }
 
   /**
@@ -930,8 +931,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty,
     ) : CdkObject(cdkObject), MultiplexProgramPacketIdentifiersMapProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap.html#cfn-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap-audiopids)
@@ -1096,8 +1096,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty,
     ) : CdkObject(cdkObject), MultiplexProgramPipelineDetailProperty {
       /**
        * Identifies the channel pipeline that is currently active for the pipeline (identified by
@@ -1135,7 +1134,7 @@ public open class CfnMultiplexprogram internal constructor(
   }
 
   /**
-   * The video configuration for each program in a multiplex.
+   * Transport stream service descriptor configuration for the Multiplex program.
    *
    * Example:
    *
@@ -1143,154 +1142,105 @@ public open class CfnMultiplexprogram internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * MultiplexVideoSettingsProperty multiplexVideoSettingsProperty =
-   * MultiplexVideoSettingsProperty.builder()
-   * .constantBitrate(123)
-   * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
-   * .maximumBitrate(123)
-   * .minimumBitrate(123)
-   * .priority(123)
-   * .build())
+   * MultiplexProgramServiceDescriptorProperty multiplexProgramServiceDescriptorProperty =
+   * MultiplexProgramServiceDescriptorProperty.builder()
+   * .providerName("providerName")
+   * .serviceName("serviceName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html)
    */
-  public interface MultiplexVideoSettingsProperty {
+  public interface MultiplexProgramServiceDescriptorProperty {
     /**
-     * The constant bitrate configuration for the video encode.
+     * Name of the provider.
      *
-     * When this field is defined, StatmuxSettings must be undefined.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-constantbitrate)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-providername)
      */
-    public fun constantBitrate(): Number? = unwrap(this).getConstantBitrate()
+    public fun providerName(): String
 
     /**
-     * Statmux rate control settings.
+     * Name of the service.
      *
-     * When this field is defined, ConstantBitrate must be undefined.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-statmuxsettings)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-servicename)
      */
-    public fun statmuxSettings(): Any? = unwrap(this).getStatmuxSettings()
+    public fun serviceName(): String
 
     /**
-     * A builder for [MultiplexVideoSettingsProperty]
+     * A builder for [MultiplexProgramServiceDescriptorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param constantBitrate The constant bitrate configuration for the video encode.
-       * When this field is defined, StatmuxSettings must be undefined.
+       * @param providerName Name of the provider. 
        */
-      public fun constantBitrate(constantBitrate: Number)
+      public fun providerName(providerName: String)
 
       /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
+       * @param serviceName Name of the service. 
        */
-      public fun statmuxSettings(statmuxSettings: IResolvable)
-
-      /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
-       */
-      public fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty)
-
-      /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7ddc73ffa0466c7d988ca6e4e973c2f917fd50220bbadb87eb7cb973fb23a464")
-      public
-          fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty.Builder.() -> Unit)
+      public fun serviceName(serviceName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty.Builder
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty.Builder
           =
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty.builder()
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty.builder()
 
       /**
-       * @param constantBitrate The constant bitrate configuration for the video encode.
-       * When this field is defined, StatmuxSettings must be undefined.
+       * @param providerName Name of the provider. 
        */
-      override fun constantBitrate(constantBitrate: Number) {
-        cdkBuilder.constantBitrate(constantBitrate)
+      override fun providerName(providerName: String) {
+        cdkBuilder.providerName(providerName)
       }
 
       /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
+       * @param serviceName Name of the service. 
        */
-      override fun statmuxSettings(statmuxSettings: IResolvable) {
-        cdkBuilder.statmuxSettings(statmuxSettings.let(IResolvable::unwrap))
+      override fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
       }
-
-      /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
-       */
-      override fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty) {
-        cdkBuilder.statmuxSettings(statmuxSettings.let(MultiplexStatmuxVideoSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param statmuxSettings Statmux rate control settings.
-       * When this field is defined, ConstantBitrate must be undefined.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7ddc73ffa0466c7d988ca6e4e973c2f917fd50220bbadb87eb7cb973fb23a464")
-      override
-          fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty.Builder.() -> Unit):
-          Unit = statmuxSettings(MultiplexStatmuxVideoSettingsProperty(statmuxSettings))
 
       public fun build():
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexVideoSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty,
+    ) : CdkObject(cdkObject), MultiplexProgramServiceDescriptorProperty {
       /**
-       * The constant bitrate configuration for the video encode.
+       * Name of the provider.
        *
-       * When this field is defined, StatmuxSettings must be undefined.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-constantbitrate)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-providername)
        */
-      override fun constantBitrate(): Number? = unwrap(this).getConstantBitrate()
+      override fun providerName(): String = unwrap(this).getProviderName()
 
       /**
-       * Statmux rate control settings.
+       * Name of the service.
        *
-       * When this field is defined, ConstantBitrate must be undefined.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-statmuxsettings)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-servicename)
        */
-      override fun statmuxSettings(): Any? = unwrap(this).getStatmuxSettings()
+      override fun serviceName(): String = unwrap(this).getServiceName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MultiplexVideoSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiplexProgramServiceDescriptorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty):
-          MultiplexVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MultiplexVideoSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty):
+          MultiplexProgramServiceDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramServiceDescriptorProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MultiplexVideoSettingsProperty):
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
+      internal fun unwrap(wrapped: MultiplexProgramServiceDescriptorProperty):
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
     }
   }
 
@@ -1484,8 +1434,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexProgramSettingsProperty {
       /**
        * Indicates which pipeline is preferred by the multiplex for program ingest.
@@ -1642,8 +1591,7 @@ public open class CfnMultiplexprogram internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty,
     ) : CdkObject(cdkObject), MultiplexStatmuxVideoSettingsProperty {
       /**
        * Maximum statmux bitrate.
@@ -1692,7 +1640,7 @@ public open class CfnMultiplexprogram internal constructor(
   }
 
   /**
-   * Transport stream service descriptor configuration for the Multiplex program.
+   * The video configuration for each program in a multiplex.
    *
    * Example:
    *
@@ -1700,106 +1648,153 @@ public open class CfnMultiplexprogram internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
-   * MultiplexProgramServiceDescriptorProperty multiplexProgramServiceDescriptorProperty =
-   * MultiplexProgramServiceDescriptorProperty.builder()
-   * .providerName("providerName")
-   * .serviceName("serviceName")
+   * MultiplexVideoSettingsProperty multiplexVideoSettingsProperty =
+   * MultiplexVideoSettingsProperty.builder()
+   * .constantBitrate(123)
+   * .statmuxSettings(MultiplexStatmuxVideoSettingsProperty.builder()
+   * .maximumBitrate(123)
+   * .minimumBitrate(123)
+   * .priority(123)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html)
    */
-  public interface MultiplexProgramServiceDescriptorProperty {
+  public interface MultiplexVideoSettingsProperty {
     /**
-     * Name of the provider.
+     * The constant bitrate configuration for the video encode.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-providername)
+     * When this field is defined, StatmuxSettings must be undefined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-constantbitrate)
      */
-    public fun providerName(): String
+    public fun constantBitrate(): Number? = unwrap(this).getConstantBitrate()
 
     /**
-     * Name of the service.
+     * Statmux rate control settings.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-servicename)
+     * When this field is defined, ConstantBitrate must be undefined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-statmuxsettings)
      */
-    public fun serviceName(): String
+    public fun statmuxSettings(): Any? = unwrap(this).getStatmuxSettings()
 
     /**
-     * A builder for [MultiplexProgramServiceDescriptorProperty]
+     * A builder for [MultiplexVideoSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param providerName Name of the provider. 
+       * @param constantBitrate The constant bitrate configuration for the video encode.
+       * When this field is defined, StatmuxSettings must be undefined.
        */
-      public fun providerName(providerName: String)
+      public fun constantBitrate(constantBitrate: Number)
 
       /**
-       * @param serviceName Name of the service. 
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
        */
-      public fun serviceName(serviceName: String)
+      public fun statmuxSettings(statmuxSettings: IResolvable)
+
+      /**
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
+       */
+      public fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty)
+
+      /**
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7ddc73ffa0466c7d988ca6e4e973c2f917fd50220bbadb87eb7cb973fb23a464")
+      public
+          fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty.Builder
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty.Builder
           =
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty.builder()
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty.builder()
 
       /**
-       * @param providerName Name of the provider. 
+       * @param constantBitrate The constant bitrate configuration for the video encode.
+       * When this field is defined, StatmuxSettings must be undefined.
        */
-      override fun providerName(providerName: String) {
-        cdkBuilder.providerName(providerName)
+      override fun constantBitrate(constantBitrate: Number) {
+        cdkBuilder.constantBitrate(constantBitrate)
       }
 
       /**
-       * @param serviceName Name of the service. 
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
        */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
+      override fun statmuxSettings(statmuxSettings: IResolvable) {
+        cdkBuilder.statmuxSettings(statmuxSettings.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
+       */
+      override fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty) {
+        cdkBuilder.statmuxSettings(statmuxSettings.let(MultiplexStatmuxVideoSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param statmuxSettings Statmux rate control settings.
+       * When this field is defined, ConstantBitrate must be undefined.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7ddc73ffa0466c7d988ca6e4e973c2f917fd50220bbadb87eb7cb973fb23a464")
+      override
+          fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty.Builder.() -> Unit):
+          Unit = statmuxSettings(MultiplexStatmuxVideoSettingsProperty(statmuxSettings))
 
       public fun build():
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramServiceDescriptorProperty {
+      cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty,
+    ) : CdkObject(cdkObject), MultiplexVideoSettingsProperty {
       /**
-       * Name of the provider.
+       * The constant bitrate configuration for the video encode.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-providername)
+       * When this field is defined, StatmuxSettings must be undefined.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-constantbitrate)
        */
-      override fun providerName(): String = unwrap(this).getProviderName()
+      override fun constantBitrate(): Number? = unwrap(this).getConstantBitrate()
 
       /**
-       * Name of the service.
+       * Statmux rate control settings.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogramservicedescriptor.html#cfn-medialive-multiplexprogram-multiplexprogramservicedescriptor-servicename)
+       * When this field is defined, ConstantBitrate must be undefined.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexvideosettings.html#cfn-medialive-multiplexprogram-multiplexvideosettings-statmuxsettings)
        */
-      override fun serviceName(): String = unwrap(this).getServiceName()
+      override fun statmuxSettings(): Any? = unwrap(this).getStatmuxSettings()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MultiplexProgramServiceDescriptorProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiplexVideoSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty):
-          MultiplexProgramServiceDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MultiplexProgramServiceDescriptorProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty):
+          MultiplexVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexVideoSettingsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MultiplexProgramServiceDescriptorProperty):
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
+      internal fun unwrap(wrapped: MultiplexVideoSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty
+          software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
     }
   }
 }

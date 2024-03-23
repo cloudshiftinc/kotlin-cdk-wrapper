@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class DefinitionBody internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
+public abstract class DefinitionBody(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
 ) : CdkObject(cdkObject) {
   /**
    * @param scope 
@@ -73,7 +73,7 @@ public abstract class DefinitionBody internal constructor(
       graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
   ) : DefinitionBody(cdkObject)
 
   public companion object {

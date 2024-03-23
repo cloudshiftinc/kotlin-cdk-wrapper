@@ -26,8 +26,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public open class EventField internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.EventField,
+public open class EventField(
+  cdkObject: software.amazon.awscdk.services.events.EventField,
 ) : CdkObject(cdkObject), IResolvable {
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
@@ -82,6 +82,6 @@ public open class EventField internal constructor(
         EventField(cdkObject)
 
     internal fun unwrap(wrapped: EventField): software.amazon.awscdk.services.events.EventField =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.EventField
   }
 }

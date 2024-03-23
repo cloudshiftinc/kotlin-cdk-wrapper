@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferenceexperiment.html)
  */
-public open class CfnInferenceExperiment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment,
+public open class CfnInferenceExperiment(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -112,12 +112,12 @@ public open class CfnInferenceExperiment internal constructor(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the inference experiment.
+   * The ARN for your inference experiment.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The timestamp at which you created the inference experiment.
+   * The timestamp at which the inference experiment was created.
    */
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
@@ -151,7 +151,20 @@ public open class CfnInferenceExperiment internal constructor(
   public open fun attrLastModifiedTime(): String = unwrap(this).getAttrLastModifiedTime()
 
   /**
-   * The status of the inference experiment.
+   * The status of the inference experiment. The following are the possible statuses for an
+   * inference experiment:.
+   *
+   * * `Creating` - Amazon SageMaker is creating your experiment.
+   * * `Created` - Amazon SageMaker has finished the creation of your experiment and will begin the
+   * experiment at the scheduled time.
+   * * `Updating` - When you make changes to your experiment, your experiment shows as updating.
+   * * `Starting` - Amazon SageMaker is beginning your experiment.
+   * * `Running` - Your experiment is in progress.
+   * * `Stopping` - Amazon SageMaker is stopping your experiment.
+   * * `Completed` - Your experiment has completed.
+   * * `Cancelled` - When you conclude your experiment early using the
+   * [StopInferenceExperiment](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopInferenceExperiment.html)
+   * API, or if any operation fails with an unexpected error, it shows as cancelled.
    */
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -958,7 +971,157 @@ public open class CfnInferenceExperiment internal constructor(
         CfnInferenceExperiment = CfnInferenceExperiment(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceExperiment):
-        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
+  }
+
+  /**
+   * Configuration specifying how to treat different headers.
+   *
+   * If no headers are specified Amazon SageMaker will by default base64 encode when capturing the
+   * data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CaptureContentTypeHeaderProperty captureContentTypeHeaderProperty =
+   * CaptureContentTypeHeaderProperty.builder()
+   * .csvContentTypes(List.of("csvContentTypes"))
+   * .jsonContentTypes(List.of("jsonContentTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html)
+   */
+  public interface CaptureContentTypeHeaderProperty {
+    /**
+     * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
+     * accordingly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
+     */
+    public fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?: emptyList()
+
+    /**
+     * The list of all content type headers that SageMaker will treat as JSON and capture
+     * accordingly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)
+     */
+    public fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?: emptyList()
+
+    /**
+     * A builder for [CaptureContentTypeHeaderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * treat as CSV and capture accordingly.
+       */
+      public fun csvContentTypes(csvContentTypes: List<String>)
+
+      /**
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * treat as CSV and capture accordingly.
+       */
+      public fun csvContentTypes(vararg csvContentTypes: String)
+
+      /**
+       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
+       * JSON and capture accordingly.
+       */
+      public fun jsonContentTypes(jsonContentTypes: List<String>)
+
+      /**
+       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
+       * JSON and capture accordingly.
+       */
+      public fun jsonContentTypes(vararg jsonContentTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.builder()
+
+      /**
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * treat as CSV and capture accordingly.
+       */
+      override fun csvContentTypes(csvContentTypes: List<String>) {
+        cdkBuilder.csvContentTypes(csvContentTypes)
+      }
+
+      /**
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * treat as CSV and capture accordingly.
+       */
+      override fun csvContentTypes(vararg csvContentTypes: String): Unit =
+          csvContentTypes(csvContentTypes.toList())
+
+      /**
+       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
+       * JSON and capture accordingly.
+       */
+      override fun jsonContentTypes(jsonContentTypes: List<String>) {
+        cdkBuilder.jsonContentTypes(jsonContentTypes)
+      }
+
+      /**
+       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
+       * JSON and capture accordingly.
+       */
+      override fun jsonContentTypes(vararg jsonContentTypes: String): Unit =
+          jsonContentTypes(jsonContentTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
+    ) : CdkObject(cdkObject), CaptureContentTypeHeaderProperty {
+      /**
+       * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
+       * accordingly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
+       */
+      override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
+          emptyList()
+
+      /**
+       * The list of all content type headers that SageMaker will treat as JSON and capture
+       * accordingly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)
+       */
+      override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CaptureContentTypeHeaderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty):
+          CaptureContentTypeHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptureContentTypeHeaderProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CaptureContentTypeHeaderProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
+    }
   }
 
   /**
@@ -1108,8 +1271,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
     ) : CdkObject(cdkObject), DataStorageConfigProperty {
       /**
        * Configuration specifying how to treat different headers.
@@ -1152,6 +1314,270 @@ public open class CfnInferenceExperiment internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty
+    }
+  }
+
+  /**
+   * The metadata of the endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * EndpointMetadataProperty endpointMetadataProperty = EndpointMetadataProperty.builder()
+   * .endpointName("endpointName")
+   * // the properties below are optional
+   * .endpointConfigName("endpointConfigName")
+   * .endpointStatus("endpointStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html)
+   */
+  public interface EndpointMetadataProperty {
+    /**
+     * The name of the endpoint configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointconfigname)
+     */
+    public fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
+
+    /**
+     * The name of the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointname)
+     */
+    public fun endpointName(): String
+
+    /**
+     * The status of the endpoint.
+     *
+     * For possible values of the status of an endpoint, see
+     * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+     */
+    public fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
+
+    /**
+     * A builder for [EndpointMetadataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointConfigName The name of the endpoint configuration.
+       */
+      public fun endpointConfigName(endpointConfigName: String)
+
+      /**
+       * @param endpointName The name of the endpoint. 
+       */
+      public fun endpointName(endpointName: String)
+
+      /**
+       * @param endpointStatus The status of the endpoint.
+       * For possible values of the status of an endpoint, see
+       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+       * .
+       */
+      public fun endpointStatus(endpointStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty.builder()
+
+      /**
+       * @param endpointConfigName The name of the endpoint configuration.
+       */
+      override fun endpointConfigName(endpointConfigName: String) {
+        cdkBuilder.endpointConfigName(endpointConfigName)
+      }
+
+      /**
+       * @param endpointName The name of the endpoint. 
+       */
+      override fun endpointName(endpointName: String) {
+        cdkBuilder.endpointName(endpointName)
+      }
+
+      /**
+       * @param endpointStatus The status of the endpoint.
+       * For possible values of the status of an endpoint, see
+       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+       * .
+       */
+      override fun endpointStatus(endpointStatus: String) {
+        cdkBuilder.endpointStatus(endpointStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
+    ) : CdkObject(cdkObject), EndpointMetadataProperty {
+      /**
+       * The name of the endpoint configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointconfigname)
+       */
+      override fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
+
+      /**
+       * The name of the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointname)
+       */
+      override fun endpointName(): String = unwrap(this).getEndpointName()
+
+      /**
+       * The status of the endpoint.
+       *
+       * For possible values of the status of an endpoint, see
+       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
+       */
+      override fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointMetadataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty):
+          EndpointMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointMetadataProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointMetadataProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+    }
+  }
+
+  /**
+   * The start and end times of an inference experiment.
+   *
+   * The maximum duration that you can set for an inference experiment is 30 days.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * InferenceExperimentScheduleProperty inferenceExperimentScheduleProperty =
+   * InferenceExperimentScheduleProperty.builder()
+   * .endTime("endTime")
+   * .startTime("startTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html)
+   */
+  public interface InferenceExperimentScheduleProperty {
+    /**
+     * The timestamp at which the inference experiment ended or will end.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-endtime)
+     */
+    public fun endTime(): String? = unwrap(this).getEndTime()
+
+    /**
+     * The timestamp at which the inference experiment started or will start.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-starttime)
+     */
+    public fun startTime(): String? = unwrap(this).getStartTime()
+
+    /**
+     * A builder for [InferenceExperimentScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endTime The timestamp at which the inference experiment ended or will end.
+       */
+      public fun endTime(endTime: String)
+
+      /**
+       * @param startTime The timestamp at which the inference experiment started or will start.
+       */
+      public fun startTime(startTime: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty.builder()
+
+      /**
+       * @param endTime The timestamp at which the inference experiment ended or will end.
+       */
+      override fun endTime(endTime: String) {
+        cdkBuilder.endTime(endTime)
+      }
+
+      /**
+       * @param startTime The timestamp at which the inference experiment started or will start.
+       */
+      override fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
+    ) : CdkObject(cdkObject), InferenceExperimentScheduleProperty {
+      /**
+       * The timestamp at which the inference experiment ended or will end.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-endtime)
+       */
+      override fun endTime(): String? = unwrap(this).getEndTime()
+
+      /**
+       * The timestamp at which the inference experiment started or will start.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-starttime)
+       */
+      override fun startTime(): String? = unwrap(this).getStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InferenceExperimentScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty):
+          InferenceExperimentScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceExperimentScheduleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceExperimentScheduleProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
     }
   }
 
@@ -1275,8 +1701,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
     ) : CdkObject(cdkObject), ModelInfrastructureConfigProperty {
       /**
        * The inference option to which to deploy your model. Possible values are the following:.
@@ -1311,375 +1736,6 @@ public open class CfnInferenceExperiment internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty
-    }
-  }
-
-  /**
-   * The name and sampling percentage of a shadow variant.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ShadowModelVariantConfigProperty shadowModelVariantConfigProperty =
-   * ShadowModelVariantConfigProperty.builder()
-   * .samplingPercentage(123)
-   * .shadowModelVariantName("shadowModelVariantName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html)
-   */
-  public interface ShadowModelVariantConfigProperty {
-    /**
-     * The percentage of inference requests that Amazon SageMaker replicates from the production
-     * variant to the shadow variant.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-samplingpercentage)
-     */
-    public fun samplingPercentage(): Number
-
-    /**
-     * The name of the shadow variant.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-shadowmodelvariantname)
-     */
-    public fun shadowModelVariantName(): String
-
-    /**
-     * A builder for [ShadowModelVariantConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param samplingPercentage The percentage of inference requests that Amazon SageMaker
-       * replicates from the production variant to the shadow variant. 
-       */
-      public fun samplingPercentage(samplingPercentage: Number)
-
-      /**
-       * @param shadowModelVariantName The name of the shadow variant. 
-       */
-      public fun shadowModelVariantName(shadowModelVariantName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty.builder()
-
-      /**
-       * @param samplingPercentage The percentage of inference requests that Amazon SageMaker
-       * replicates from the production variant to the shadow variant. 
-       */
-      override fun samplingPercentage(samplingPercentage: Number) {
-        cdkBuilder.samplingPercentage(samplingPercentage)
-      }
-
-      /**
-       * @param shadowModelVariantName The name of the shadow variant. 
-       */
-      override fun shadowModelVariantName(shadowModelVariantName: String) {
-        cdkBuilder.shadowModelVariantName(shadowModelVariantName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
-    ) : CdkObject(cdkObject), ShadowModelVariantConfigProperty {
-      /**
-       * The percentage of inference requests that Amazon SageMaker replicates from the production
-       * variant to the shadow variant.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-samplingpercentage)
-       */
-      override fun samplingPercentage(): Number = unwrap(this).getSamplingPercentage()
-
-      /**
-       * The name of the shadow variant.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-shadowmodelvariantname)
-       */
-      override fun shadowModelVariantName(): String = unwrap(this).getShadowModelVariantName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ShadowModelVariantConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty):
-          ShadowModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ShadowModelVariantConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShadowModelVariantConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
-    }
-  }
-
-  /**
-   * The configuration of `ShadowMode` inference experiment type, which specifies a production
-   * variant to take all the inference requests, and a shadow variant to which Amazon SageMaker
-   * replicates a percentage of the inference requests.
-   *
-   * For the shadow variant it also specifies the percentage of requests that Amazon SageMaker
-   * replicates.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ShadowModeConfigProperty shadowModeConfigProperty = ShadowModeConfigProperty.builder()
-   * .shadowModelVariants(List.of(ShadowModelVariantConfigProperty.builder()
-   * .samplingPercentage(123)
-   * .shadowModelVariantName("shadowModelVariantName")
-   * .build()))
-   * .sourceModelVariantName("sourceModelVariantName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html)
-   */
-  public interface ShadowModeConfigProperty {
-    /**
-     * List of shadow variant configurations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-shadowmodelvariants)
-     */
-    public fun shadowModelVariants(): Any
-
-    /**
-     * The name of the production variant, which takes all the inference requests.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-sourcemodelvariantname)
-     */
-    public fun sourceModelVariantName(): String
-
-    /**
-     * A builder for [ShadowModeConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      public fun shadowModelVariants(shadowModelVariants: IResolvable)
-
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      public fun shadowModelVariants(shadowModelVariants: List<Any>)
-
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      public fun shadowModelVariants(vararg shadowModelVariants: Any)
-
-      /**
-       * @param sourceModelVariantName The name of the production variant, which takes all the
-       * inference requests. 
-       */
-      public fun sourceModelVariantName(sourceModelVariantName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty.builder()
-
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      override fun shadowModelVariants(shadowModelVariants: IResolvable) {
-        cdkBuilder.shadowModelVariants(shadowModelVariants.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      override fun shadowModelVariants(shadowModelVariants: List<Any>) {
-        cdkBuilder.shadowModelVariants(shadowModelVariants)
-      }
-
-      /**
-       * @param shadowModelVariants List of shadow variant configurations. 
-       */
-      override fun shadowModelVariants(vararg shadowModelVariants: Any): Unit =
-          shadowModelVariants(shadowModelVariants.toList())
-
-      /**
-       * @param sourceModelVariantName The name of the production variant, which takes all the
-       * inference requests. 
-       */
-      override fun sourceModelVariantName(sourceModelVariantName: String) {
-        cdkBuilder.sourceModelVariantName(sourceModelVariantName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
-    ) : CdkObject(cdkObject), ShadowModeConfigProperty {
-      /**
-       * List of shadow variant configurations.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-shadowmodelvariants)
-       */
-      override fun shadowModelVariants(): Any = unwrap(this).getShadowModelVariants()
-
-      /**
-       * The name of the production variant, which takes all the inference requests.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-sourcemodelvariantname)
-       */
-      override fun sourceModelVariantName(): String = unwrap(this).getSourceModelVariantName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ShadowModeConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty):
-          ShadowModeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ShadowModeConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShadowModeConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
-    }
-  }
-
-  /**
-   * The infrastructure configuration for deploying the model to a real-time inference endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * RealTimeInferenceConfigProperty realTimeInferenceConfigProperty =
-   * RealTimeInferenceConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html)
-   */
-  public interface RealTimeInferenceConfigProperty {
-    /**
-     * The number of instances of the type specified by `InstanceType` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancecount)
-     */
-    public fun instanceCount(): Number
-
-    /**
-     * The instance type the model is deployed to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * A builder for [RealTimeInferenceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceCount The number of instances of the type specified by `InstanceType` . 
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param instanceType The instance type the model is deployed to. 
-       */
-      public fun instanceType(instanceType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty.builder()
-
-      /**
-       * @param instanceCount The number of instances of the type specified by `InstanceType` . 
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param instanceType The instance type the model is deployed to. 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
-    ) : CdkObject(cdkObject), RealTimeInferenceConfigProperty {
-      /**
-       * The number of instances of the type specified by `InstanceType` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancecount)
-       */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
-
-      /**
-       * The instance type the model is deployed to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RealTimeInferenceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty):
-          RealTimeInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RealTimeInferenceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RealTimeInferenceConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
     }
   }
 
@@ -1818,8 +1874,7 @@ public open class CfnInferenceExperiment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
     ) : CdkObject(cdkObject), ModelVariantConfigProperty {
       /**
        * The configuration for the infrastructure that the model will be deployed to.
@@ -1862,9 +1917,7 @@ public open class CfnInferenceExperiment internal constructor(
   }
 
   /**
-   * The start and end times of an inference experiment.
-   *
-   * The maximum duration that you can set for an inference experiment is 30 days.
+   * The infrastructure configuration for deploying the model to a real-time inference endpoint.
    *
    * Example:
    *
@@ -1872,261 +1925,114 @@ public open class CfnInferenceExperiment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * InferenceExperimentScheduleProperty inferenceExperimentScheduleProperty =
-   * InferenceExperimentScheduleProperty.builder()
-   * .endTime("endTime")
-   * .startTime("startTime")
+   * RealTimeInferenceConfigProperty realTimeInferenceConfigProperty =
+   * RealTimeInferenceConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html)
    */
-  public interface InferenceExperimentScheduleProperty {
+  public interface RealTimeInferenceConfigProperty {
     /**
-     * The timestamp at which the inference experiment ended or will end.
+     * The number of instances of the type specified by `InstanceType` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-endtime)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancecount)
      */
-    public fun endTime(): String? = unwrap(this).getEndTime()
+    public fun instanceCount(): Number
 
     /**
-     * The timestamp at which the inference experiment started or will start.
+     * The instance type the model is deployed to.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-starttime)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancetype)
      */
-    public fun startTime(): String? = unwrap(this).getStartTime()
+    public fun instanceType(): String
 
     /**
-     * A builder for [InferenceExperimentScheduleProperty]
+     * A builder for [RealTimeInferenceConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endTime The timestamp at which the inference experiment ended or will end.
+       * @param instanceCount The number of instances of the type specified by `InstanceType` . 
        */
-      public fun endTime(endTime: String)
+      public fun instanceCount(instanceCount: Number)
 
       /**
-       * @param startTime The timestamp at which the inference experiment started or will start.
+       * @param instanceType The instance type the model is deployed to. 
        */
-      public fun startTime(startTime: String)
+      public fun instanceType(instanceType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty.builder()
 
       /**
-       * @param endTime The timestamp at which the inference experiment ended or will end.
+       * @param instanceCount The number of instances of the type specified by `InstanceType` . 
        */
-      override fun endTime(endTime: String) {
-        cdkBuilder.endTime(endTime)
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
       }
 
       /**
-       * @param startTime The timestamp at which the inference experiment started or will start.
+       * @param instanceType The instance type the model is deployed to. 
        */
-      override fun startTime(startTime: String) {
-        cdkBuilder.startTime(startTime)
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
-    ) : CdkObject(cdkObject), InferenceExperimentScheduleProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
+    ) : CdkObject(cdkObject), RealTimeInferenceConfigProperty {
       /**
-       * The timestamp at which the inference experiment ended or will end.
+       * The number of instances of the type specified by `InstanceType` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-endtime)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancecount)
        */
-      override fun endTime(): String? = unwrap(this).getEndTime()
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
       /**
-       * The timestamp at which the inference experiment started or will start.
+       * The instance type the model is deployed to.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html#cfn-sagemaker-inferenceexperiment-inferenceexperimentschedule-starttime)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html#cfn-sagemaker-inferenceexperiment-realtimeinferenceconfig-instancetype)
        */
-      override fun startTime(): String? = unwrap(this).getStartTime()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InferenceExperimentScheduleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RealTimeInferenceConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty):
-          InferenceExperimentScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InferenceExperimentScheduleProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty):
+          RealTimeInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RealTimeInferenceConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InferenceExperimentScheduleProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
+      internal fun unwrap(wrapped: RealTimeInferenceConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
     }
   }
 
   /**
-   * Configuration specifying how to treat different headers.
+   * The configuration of `ShadowMode` inference experiment type, which specifies a production
+   * variant to take all the inference requests, and a shadow variant to which Amazon SageMaker
+   * replicates a percentage of the inference requests.
    *
-   * If no headers are specified Amazon SageMaker will by default base64 encode when capturing the
-   * data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CaptureContentTypeHeaderProperty captureContentTypeHeaderProperty =
-   * CaptureContentTypeHeaderProperty.builder()
-   * .csvContentTypes(List.of("csvContentTypes"))
-   * .jsonContentTypes(List.of("jsonContentTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html)
-   */
-  public interface CaptureContentTypeHeaderProperty {
-    /**
-     * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
-     * accordingly.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
-     */
-    public fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?: emptyList()
-
-    /**
-     * The list of all content type headers that SageMaker will treat as JSON and capture
-     * accordingly.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)
-     */
-    public fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?: emptyList()
-
-    /**
-     * A builder for [CaptureContentTypeHeaderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
-       * treat as CSV and capture accordingly.
-       */
-      public fun csvContentTypes(csvContentTypes: List<String>)
-
-      /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
-       * treat as CSV and capture accordingly.
-       */
-      public fun csvContentTypes(vararg csvContentTypes: String)
-
-      /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
-       */
-      public fun jsonContentTypes(jsonContentTypes: List<String>)
-
-      /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
-       */
-      public fun jsonContentTypes(vararg jsonContentTypes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.builder()
-
-      /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
-       * treat as CSV and capture accordingly.
-       */
-      override fun csvContentTypes(csvContentTypes: List<String>) {
-        cdkBuilder.csvContentTypes(csvContentTypes)
-      }
-
-      /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
-       * treat as CSV and capture accordingly.
-       */
-      override fun csvContentTypes(vararg csvContentTypes: String): Unit =
-          csvContentTypes(csvContentTypes.toList())
-
-      /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
-       */
-      override fun jsonContentTypes(jsonContentTypes: List<String>) {
-        cdkBuilder.jsonContentTypes(jsonContentTypes)
-      }
-
-      /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
-       */
-      override fun jsonContentTypes(vararg jsonContentTypes: String): Unit =
-          jsonContentTypes(jsonContentTypes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
-    ) : CdkObject(cdkObject), CaptureContentTypeHeaderProperty {
-      /**
-       * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
-       * accordingly.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
-       */
-      override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
-          emptyList()
-
-      /**
-       * The list of all content type headers that SageMaker will treat as JSON and capture
-       * accordingly.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)
-       */
-      override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CaptureContentTypeHeaderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty):
-          CaptureContentTypeHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CaptureContentTypeHeaderProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CaptureContentTypeHeaderProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
-    }
-  }
-
-  /**
-   * The metadata of the endpoint.
+   * For the shadow variant it also specifies the percentage of requests that Amazon SageMaker
+   * replicates.
    *
    * Example:
    *
@@ -2134,146 +2040,245 @@ public open class CfnInferenceExperiment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * EndpointMetadataProperty endpointMetadataProperty = EndpointMetadataProperty.builder()
-   * .endpointName("endpointName")
-   * // the properties below are optional
-   * .endpointConfigName("endpointConfigName")
-   * .endpointStatus("endpointStatus")
+   * ShadowModeConfigProperty shadowModeConfigProperty = ShadowModeConfigProperty.builder()
+   * .shadowModelVariants(List.of(ShadowModelVariantConfigProperty.builder()
+   * .samplingPercentage(123)
+   * .shadowModelVariantName("shadowModelVariantName")
+   * .build()))
+   * .sourceModelVariantName("sourceModelVariantName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html)
    */
-  public interface EndpointMetadataProperty {
+  public interface ShadowModeConfigProperty {
     /**
-     * The name of the endpoint configuration.
+     * List of shadow variant configurations.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointconfigname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-shadowmodelvariants)
      */
-    public fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
+    public fun shadowModelVariants(): Any
 
     /**
-     * The name of the endpoint.
+     * The name of the production variant, which takes all the inference requests.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-sourcemodelvariantname)
      */
-    public fun endpointName(): String
+    public fun sourceModelVariantName(): String
 
     /**
-     * The status of the endpoint.
-     *
-     * For possible values of the status of an endpoint, see
-     * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-     */
-    public fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
-
-    /**
-     * A builder for [EndpointMetadataProperty]
+     * A builder for [ShadowModeConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endpointConfigName The name of the endpoint configuration.
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      public fun endpointConfigName(endpointConfigName: String)
+      public fun shadowModelVariants(shadowModelVariants: IResolvable)
 
       /**
-       * @param endpointName The name of the endpoint. 
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      public fun endpointName(endpointName: String)
+      public fun shadowModelVariants(shadowModelVariants: List<Any>)
 
       /**
-       * @param endpointStatus The status of the endpoint.
-       * For possible values of the status of an endpoint, see
-       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-       * .
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      public fun endpointStatus(endpointStatus: String)
+      public fun shadowModelVariants(vararg shadowModelVariants: Any)
+
+      /**
+       * @param sourceModelVariantName The name of the production variant, which takes all the
+       * inference requests. 
+       */
+      public fun sourceModelVariantName(sourceModelVariantName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty.builder()
 
       /**
-       * @param endpointConfigName The name of the endpoint configuration.
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      override fun endpointConfigName(endpointConfigName: String) {
-        cdkBuilder.endpointConfigName(endpointConfigName)
+      override fun shadowModelVariants(shadowModelVariants: IResolvable) {
+        cdkBuilder.shadowModelVariants(shadowModelVariants.let(IResolvable::unwrap))
       }
 
       /**
-       * @param endpointName The name of the endpoint. 
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      override fun endpointName(endpointName: String) {
-        cdkBuilder.endpointName(endpointName)
+      override fun shadowModelVariants(shadowModelVariants: List<Any>) {
+        cdkBuilder.shadowModelVariants(shadowModelVariants)
       }
 
       /**
-       * @param endpointStatus The status of the endpoint.
-       * For possible values of the status of an endpoint, see
-       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-       * .
+       * @param shadowModelVariants List of shadow variant configurations. 
        */
-      override fun endpointStatus(endpointStatus: String) {
-        cdkBuilder.endpointStatus(endpointStatus)
+      override fun shadowModelVariants(vararg shadowModelVariants: Any): Unit =
+          shadowModelVariants(shadowModelVariants.toList())
+
+      /**
+       * @param sourceModelVariantName The name of the production variant, which takes all the
+       * inference requests. 
+       */
+      override fun sourceModelVariantName(sourceModelVariantName: String) {
+        cdkBuilder.sourceModelVariantName(sourceModelVariantName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
-    ) : CdkObject(cdkObject), EndpointMetadataProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
+    ) : CdkObject(cdkObject), ShadowModeConfigProperty {
       /**
-       * The name of the endpoint configuration.
+       * List of shadow variant configurations.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointconfigname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-shadowmodelvariants)
        */
-      override fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
+      override fun shadowModelVariants(): Any = unwrap(this).getShadowModelVariants()
 
       /**
-       * The name of the endpoint.
+       * The name of the production variant, which takes all the inference requests.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodeconfig-sourcemodelvariantname)
        */
-      override fun endpointName(): String = unwrap(this).getEndpointName()
-
-      /**
-       * The status of the endpoint.
-       *
-       * For possible values of the status of an endpoint, see
-       * [](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-endpointmetadata.html#cfn-sagemaker-inferenceexperiment-endpointmetadata-endpointstatus)
-       */
-      override fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
+      override fun sourceModelVariantName(): String = unwrap(this).getSourceModelVariantName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointMetadataProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ShadowModeConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty):
-          EndpointMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointMetadataProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty):
+          ShadowModeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ShadowModeConfigProperty
           ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EndpointMetadataProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+      internal fun unwrap(wrapped: ShadowModeConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
+    }
+  }
+
+  /**
+   * The name and sampling percentage of a shadow variant.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ShadowModelVariantConfigProperty shadowModelVariantConfigProperty =
+   * ShadowModelVariantConfigProperty.builder()
+   * .samplingPercentage(123)
+   * .shadowModelVariantName("shadowModelVariantName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html)
+   */
+  public interface ShadowModelVariantConfigProperty {
+    /**
+     * The percentage of inference requests that Amazon SageMaker replicates from the production
+     * variant to the shadow variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-samplingpercentage)
+     */
+    public fun samplingPercentage(): Number
+
+    /**
+     * The name of the shadow variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-shadowmodelvariantname)
+     */
+    public fun shadowModelVariantName(): String
+
+    /**
+     * A builder for [ShadowModelVariantConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param samplingPercentage The percentage of inference requests that Amazon SageMaker
+       * replicates from the production variant to the shadow variant. 
+       */
+      public fun samplingPercentage(samplingPercentage: Number)
+
+      /**
+       * @param shadowModelVariantName The name of the shadow variant. 
+       */
+      public fun shadowModelVariantName(shadowModelVariantName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty.builder()
+
+      /**
+       * @param samplingPercentage The percentage of inference requests that Amazon SageMaker
+       * replicates from the production variant to the shadow variant. 
+       */
+      override fun samplingPercentage(samplingPercentage: Number) {
+        cdkBuilder.samplingPercentage(samplingPercentage)
+      }
+
+      /**
+       * @param shadowModelVariantName The name of the shadow variant. 
+       */
+      override fun shadowModelVariantName(shadowModelVariantName: String) {
+        cdkBuilder.shadowModelVariantName(shadowModelVariantName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
+    ) : CdkObject(cdkObject), ShadowModelVariantConfigProperty {
+      /**
+       * The percentage of inference requests that Amazon SageMaker replicates from the production
+       * variant to the shadow variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-samplingpercentage)
+       */
+      override fun samplingPercentage(): Number = unwrap(this).getSamplingPercentage()
+
+      /**
+       * The name of the shadow variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html#cfn-sagemaker-inferenceexperiment-shadowmodelvariantconfig-shadowmodelvariantname)
+       */
+      override fun shadowModelVariantName(): String = unwrap(this).getShadowModelVariantName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ShadowModelVariantConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty):
+          ShadowModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ShadowModelVariantConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ShadowModelVariantConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
     }
   }
 }

@@ -17,7 +17,7 @@ public interface IStableListProducer {
   public fun produce(): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IStableListProducer,
+    cdkObject: software.amazon.awscdk.IStableListProducer,
   ) : CdkObject(cdkObject), IStableListProducer {
     /**
      * Produce the list value.

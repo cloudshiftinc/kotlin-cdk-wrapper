@@ -34,8 +34,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class UnknownPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipal,
+public open class UnknownPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipal,
 ) : CdkObject(cdkObject), IPrincipal {
   public constructor(props: UnknownPrincipalProps) :
       this(software.amazon.awscdk.services.iam.UnknownPrincipal(props.let(UnknownPrincipalProps::unwrap))
@@ -137,6 +137,7 @@ public open class UnknownPrincipal internal constructor(
         UnknownPrincipal = UnknownPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: UnknownPrincipal):
-        software.amazon.awscdk.services.iam.UnknownPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.UnknownPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.UnknownPrincipal
   }
 }

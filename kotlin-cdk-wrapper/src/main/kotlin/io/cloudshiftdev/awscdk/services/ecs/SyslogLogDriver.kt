@@ -33,8 +33,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class SyslogLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.SyslogLogDriver,
+public open class SyslogLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.SyslogLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.SyslogLogDriver()
   )
@@ -432,6 +432,7 @@ public open class SyslogLogDriver internal constructor(
         SyslogLogDriver = SyslogLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: SyslogLogDriver):
-        software.amazon.awscdk.services.ecs.SyslogLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.SyslogLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.SyslogLogDriver
   }
 }

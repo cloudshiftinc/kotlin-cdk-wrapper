@@ -94,8 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html)
  */
-public open class CfnTagAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
+public open class CfnTagAssociation(
+  cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -349,7 +349,340 @@ public open class CfnTagAssociation internal constructor(
         CfnTagAssociation = CfnTagAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagAssociation):
-        software.amazon.awscdk.services.lakeformation.CfnTagAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.lakeformation.CfnTagAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.lakeformation.CfnTagAssociation
+  }
+
+  /**
+   * A structure for the database object.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
+   * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
+   * .catalogId("catalogId")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html)
+   */
+  public interface DatabaseResourceProperty {
+    /**
+     * The identifier for the Data Catalog .
+     *
+     * By default, it should be the account ID of the caller.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * The name of the database resource.
+     *
+     * Unique to the Data Catalog.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [DatabaseResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * By default, it should be the account ID of the caller.
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param name The name of the database resource. 
+       * Unique to the Data Catalog.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * By default, it should be the account ID of the caller.
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param name The name of the database resource. 
+       * Unique to the Data Catalog.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
+    ) : CdkObject(cdkObject), DatabaseResourceProperty {
+      /**
+       * The identifier for the Data Catalog .
+       *
+       * By default, it should be the account ID of the caller.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The name of the database resource.
+       *
+       * Unique to the Data Catalog.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty):
+          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty
+    }
+  }
+
+  /**
+   * A structure containing the catalog ID, tag key, and tag values of an LF-tag key-value pair.
+   *
+   * Example:
+   *
+   * ```
+   * import io.cloudshiftdev.awscdk.*;
+   * import io.cloudshiftdev.awscdk.services.glue.alpha.S3Table;
+   * import io.cloudshiftdev.awscdk.services.glue.alpha.Database;
+   * import io.cloudshiftdev.awscdk.services.glue.alpha.DataFormat;
+   * import io.cloudshiftdev.awscdk.services.glue.alpha.Schema;
+   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnDataLakeSettings;
+   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnTag;
+   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnTagAssociation;
+   * Stack stack;
+   * String accountId;
+   * String tagKey = "aws";
+   * String[] tagValues = List.of("dev");
+   * Database database = new Database(this, "Database");
+   * S3Table table = S3Table.Builder.create(this, "Table")
+   * .database(database)
+   * .columns(List.of(Column.builder()
+   * .name("col1")
+   * .type(Schema.STRING)
+   * .build(), Column.builder()
+   * .name("col2")
+   * .type(Schema.STRING)
+   * .build()))
+   * .dataFormat(DataFormat.CSV)
+   * .build();
+   * DefaultStackSynthesizer synthesizer = (DefaultStackSynthesizer)stack.getSynthesizer();
+   * CfnDataLakeSettings.Builder.create(this, "DataLakeSettings")
+   * .admins(List.of(DataLakePrincipalProperty.builder()
+   * .dataLakePrincipalIdentifier(stack.formatArn(ArnComponents.builder()
+   * .service("iam")
+   * .resource("role")
+   * .region("")
+   * .account(accountId)
+   * .resourceName("Admin")
+   * .build()))
+   * .build(), DataLakePrincipalProperty.builder()
+   * // The CDK cloudformation execution role.
+   * .dataLakePrincipalIdentifier(synthesizer.cloudFormationExecutionRoleArn.replace("${AWS::Partition}",
+   * "aws"))
+   * .build()))
+   * .build();
+   * CfnTag tag = CfnTag.Builder.create(this, "Tag")
+   * .catalogId(accountId)
+   * .tagKey(tagKey)
+   * .tagValues(tagValues)
+   * .build();
+   * LFTagPairProperty lfTagPairProperty = LFTagPairProperty.builder()
+   * .catalogId(accountId)
+   * .tagKey(tagKey)
+   * .tagValues(tagValues)
+   * .build();
+   * CfnTagAssociation tagAssociation = CfnTagAssociation.Builder.create(this, "TagAssociation")
+   * .lfTags(List.of(lfTagPairProperty))
+   * .resource(ResourceProperty.builder()
+   * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+   * .databaseName(database.getDatabaseName())
+   * .columnNames(List.of("col1", "col2"))
+   * .catalogId(accountId)
+   * .name(table.getTableName())
+   * .build())
+   * .build())
+   * .build();
+   * tagAssociation.node.addDependency(tag);
+   * tagAssociation.node.addDependency(table);
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html)
+   */
+  public interface LFTagPairProperty {
+    /**
+     * The identifier for the Data Catalog .
+     *
+     * By default, it is the account ID of the caller.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-catalogid)
+     */
+    public fun catalogId(): String
+
+    /**
+     * The key-name for the LF-tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagkey)
+     */
+    public fun tagKey(): String
+
+    /**
+     * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagvalues)
+     */
+    public fun tagValues(): List<String>
+
+    /**
+     * A builder for [LFTagPairProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * By default, it is the account ID of the caller.
+       */
+      public fun catalogId(catalogId: String)
+
+      /**
+       * @param tagKey The key-name for the LF-tag. 
+       */
+      public fun tagKey(tagKey: String)
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      public fun tagValues(tagValues: List<String>)
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      public fun tagValues(vararg tagValues: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty.Builder
+          =
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty.builder()
+
+      /**
+       * @param catalogId The identifier for the Data Catalog . 
+       * By default, it is the account ID of the caller.
+       */
+      override fun catalogId(catalogId: String) {
+        cdkBuilder.catalogId(catalogId)
+      }
+
+      /**
+       * @param tagKey The key-name for the LF-tag. 
+       */
+      override fun tagKey(tagKey: String) {
+        cdkBuilder.tagKey(tagKey)
+      }
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      override fun tagValues(tagValues: List<String>) {
+        cdkBuilder.tagValues(tagValues)
+      }
+
+      /**
+       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
+       * key-value pair. 
+       */
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
+    ) : CdkObject(cdkObject), LFTagPairProperty {
+      /**
+       * The identifier for the Data Catalog .
+       *
+       * By default, it is the account ID of the caller.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-catalogid)
+       */
+      override fun catalogId(): String = unwrap(this).getCatalogId()
+
+      /**
+       * The key-name for the LF-tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagkey)
+       */
+      override fun tagKey(): String = unwrap(this).getTagKey()
+
+      /**
+       * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagvalues)
+       */
+      override fun tagValues(): List<String> = unwrap(this).getTagValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagPairProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty):
+          LFTagPairProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagPairProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LFTagPairProperty):
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty
+    }
   }
 
   /**
@@ -619,8 +952,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
     ) : CdkObject(cdkObject), ResourceProperty {
       /**
        * The identifier for the Data Catalog.
@@ -683,7 +1015,10 @@ public open class CfnTagAssociation internal constructor(
   }
 
   /**
-   * A structure for the database object.
+   * A structure for the table object.
+   *
+   * A table is a metadata definition that represents your data. You can Grant and Revoke table
+   * privileges to a principal.
    *
    * Example:
    *
@@ -691,116 +1026,193 @@ public open class CfnTagAssociation internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
+   * Object tableWildcard;
+   * TableResourceProperty tableResourceProperty = TableResourceProperty.builder()
    * .catalogId("catalogId")
+   * .databaseName("databaseName")
+   * // the properties below are optional
    * .name("name")
+   * .tableWildcard(tableWildcard)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html)
    */
-  public interface DatabaseResourceProperty {
+  public interface TableResourceProperty {
     /**
      * The identifier for the Data Catalog .
      *
-     * By default, it should be the account ID of the caller.
+     * By default, it is the account ID of the caller.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-catalogid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-catalogid)
      */
     public fun catalogId(): String
 
     /**
-     * The name of the database resource.
+     * The name of the database for the table.
      *
-     * Unique to the Data Catalog.
+     * Unique to a Data Catalog. A database is a set of associated table definitions organized into
+     * a logical group. You can Grant and Revoke database privileges to a principal.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-databasename)
      */
-    public fun name(): String
+    public fun databaseName(): String
 
     /**
-     * A builder for [DatabaseResourceProperty]
+     * The name of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A wildcard object representing every table under a database.This is an object with no
+     * properties that effectively behaves as a true or false depending on whether not it is passed as
+     * a parameter. The valid inputs for a property with this type in either yaml or json is null or
+     * {}.
+     *
+     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-tablewildcard)
+     */
+    public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
+
+    /**
+     * A builder for [TableResourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
        * @param catalogId The identifier for the Data Catalog . 
-       * By default, it should be the account ID of the caller.
+       * By default, it is the account ID of the caller.
        */
       public fun catalogId(catalogId: String)
 
       /**
-       * @param name The name of the database resource. 
-       * Unique to the Data Catalog.
+       * @param databaseName The name of the database for the table. 
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param name The name of the table.
        */
       public fun name(name: String)
+
+      /**
+       * @param tableWildcard A wildcard object representing every table under a database.This is an
+       * object with no properties that effectively behaves as a true or false depending on whether not
+       * it is passed as a parameter. The valid inputs for a property with this type in either yaml or
+       * json is null or {}.
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+       */
+      public fun tableWildcard(tableWildcard: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty.Builder
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty.Builder
           =
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty.builder()
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty.builder()
 
       /**
        * @param catalogId The identifier for the Data Catalog . 
-       * By default, it should be the account ID of the caller.
+       * By default, it is the account ID of the caller.
        */
       override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
       /**
-       * @param name The name of the database resource. 
-       * Unique to the Data Catalog.
+       * @param databaseName The name of the database for the table. 
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param name The name of the table.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
+      /**
+       * @param tableWildcard A wildcard object representing every table under a database.This is an
+       * object with no properties that effectively behaves as a true or false depending on whether not
+       * it is passed as a parameter. The valid inputs for a property with this type in either yaml or
+       * json is null or {}.
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+       */
+      override fun tableWildcard(tableWildcard: Any) {
+        cdkBuilder.tableWildcard(tableWildcard)
+      }
+
       public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty =
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
-    ) : CdkObject(cdkObject), DatabaseResourceProperty {
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
+    ) : CdkObject(cdkObject), TableResourceProperty {
       /**
        * The identifier for the Data Catalog .
        *
-       * By default, it should be the account ID of the caller.
+       * By default, it is the account ID of the caller.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-catalogid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-catalogid)
        */
       override fun catalogId(): String = unwrap(this).getCatalogId()
 
       /**
-       * The name of the database resource.
+       * The name of the database for the table.
        *
-       * Unique to the Data Catalog.
+       * Unique to a Data Catalog. A database is a set of associated table definitions organized
+       * into a logical group. You can Grant and Revoke database privileges to a principal.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html#cfn-lakeformation-tagassociation-databaseresource-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-databasename)
        */
-      override fun name(): String = unwrap(this).getName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The name of the table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * A wildcard object representing every table under a database.This is an object with no
+       * properties that effectively behaves as a true or false depending on whether not it is passed
+       * as a parameter. The valid inputs for a property with this type in either yaml or json is null
+       * or {}.
+       *
+       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-tablewildcard)
+       */
+      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseResourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TableResourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty):
-          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty):
+          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DatabaseResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty =
+      internal fun unwrap(wrapped: TableResourceProperty):
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty
+          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty
     }
   }
 
@@ -957,8 +1369,7 @@ public open class CfnTagAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
+      cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
     ) : CdkObject(cdkObject), TableWithColumnsResourceProperty {
       /**
        * A wildcard object representing every table under a database.
@@ -1014,421 +1425,6 @@ public open class CfnTagAssociation internal constructor(
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty
-    }
-  }
-
-  /**
-   * A structure containing the catalog ID, tag key, and tag values of an LF-tag key-value pair.
-   *
-   * Example:
-   *
-   * ```
-   * import io.cloudshiftdev.awscdk.*;
-   * import io.cloudshiftdev.awscdk.services.glue.alpha.S3Table;
-   * import io.cloudshiftdev.awscdk.services.glue.alpha.Database;
-   * import io.cloudshiftdev.awscdk.services.glue.alpha.DataFormat;
-   * import io.cloudshiftdev.awscdk.services.glue.alpha.Schema;
-   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnDataLakeSettings;
-   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnTag;
-   * import io.cloudshiftdev.awscdk.services.lakeformation.CfnTagAssociation;
-   * Stack stack;
-   * String accountId;
-   * String tagKey = "aws";
-   * String[] tagValues = List.of("dev");
-   * Database database = new Database(this, "Database");
-   * S3Table table = S3Table.Builder.create(this, "Table")
-   * .database(database)
-   * .columns(List.of(Column.builder()
-   * .name("col1")
-   * .type(Schema.STRING)
-   * .build(), Column.builder()
-   * .name("col2")
-   * .type(Schema.STRING)
-   * .build()))
-   * .dataFormat(DataFormat.CSV)
-   * .build();
-   * DefaultStackSynthesizer synthesizer = (DefaultStackSynthesizer)stack.getSynthesizer();
-   * CfnDataLakeSettings.Builder.create(this, "DataLakeSettings")
-   * .admins(List.of(DataLakePrincipalProperty.builder()
-   * .dataLakePrincipalIdentifier(stack.formatArn(ArnComponents.builder()
-   * .service("iam")
-   * .resource("role")
-   * .region("")
-   * .account(accountId)
-   * .resourceName("Admin")
-   * .build()))
-   * .build(), DataLakePrincipalProperty.builder()
-   * // The CDK cloudformation execution role.
-   * .dataLakePrincipalIdentifier(synthesizer.cloudFormationExecutionRoleArn.replace("${AWS::Partition}",
-   * "aws"))
-   * .build()))
-   * .build();
-   * CfnTag tag = CfnTag.Builder.create(this, "Tag")
-   * .catalogId(accountId)
-   * .tagKey(tagKey)
-   * .tagValues(tagValues)
-   * .build();
-   * LFTagPairProperty lfTagPairProperty = LFTagPairProperty.builder()
-   * .catalogId(accountId)
-   * .tagKey(tagKey)
-   * .tagValues(tagValues)
-   * .build();
-   * CfnTagAssociation tagAssociation = CfnTagAssociation.Builder.create(this, "TagAssociation")
-   * .lfTags(List.of(lfTagPairProperty))
-   * .resource(ResourceProperty.builder()
-   * .tableWithColumns(TableWithColumnsResourceProperty.builder()
-   * .databaseName(database.getDatabaseName())
-   * .columnNames(List.of("col1", "col2"))
-   * .catalogId(accountId)
-   * .name(table.getTableName())
-   * .build())
-   * .build())
-   * .build();
-   * tagAssociation.node.addDependency(tag);
-   * tagAssociation.node.addDependency(table);
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html)
-   */
-  public interface LFTagPairProperty {
-    /**
-     * The identifier for the Data Catalog .
-     *
-     * By default, it is the account ID of the caller.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * The key-name for the LF-tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagkey)
-     */
-    public fun tagKey(): String
-
-    /**
-     * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagvalues)
-     */
-    public fun tagValues(): List<String>
-
-    /**
-     * A builder for [LFTagPairProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * By default, it is the account ID of the caller.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param tagKey The key-name for the LF-tag. 
-       */
-      public fun tagKey(tagKey: String)
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      public fun tagValues(tagValues: List<String>)
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      public fun tagValues(vararg tagValues: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * By default, it is the account ID of the caller.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param tagKey The key-name for the LF-tag. 
-       */
-      override fun tagKey(tagKey: String) {
-        cdkBuilder.tagKey(tagKey)
-      }
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      override fun tagValues(tagValues: List<String>) {
-        cdkBuilder.tagValues(tagValues)
-      }
-
-      /**
-       * @param tagValues A list of possible values of the corresponding `TagKey` of an LF-tag
-       * key-value pair. 
-       */
-      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
-    ) : CdkObject(cdkObject), LFTagPairProperty {
-      /**
-       * The identifier for the Data Catalog .
-       *
-       * By default, it is the account ID of the caller.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The key-name for the LF-tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagkey)
-       */
-      override fun tagKey(): String = unwrap(this).getTagKey()
-
-      /**
-       * A list of possible values of the corresponding `TagKey` of an LF-tag key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html#cfn-lakeformation-tagassociation-lftagpair-tagvalues)
-       */
-      override fun tagValues(): List<String> = unwrap(this).getTagValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LFTagPairProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty):
-          LFTagPairProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagPairProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LFTagPairProperty):
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty
-    }
-  }
-
-  /**
-   * A structure for the table object.
-   *
-   * A table is a metadata definition that represents your data. You can Grant and Revoke table
-   * privileges to a principal.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lakeformation.*;
-   * Object tableWildcard;
-   * TableResourceProperty tableResourceProperty = TableResourceProperty.builder()
-   * .catalogId("catalogId")
-   * .databaseName("databaseName")
-   * // the properties below are optional
-   * .name("name")
-   * .tableWildcard(tableWildcard)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html)
-   */
-  public interface TableResourceProperty {
-    /**
-     * The identifier for the Data Catalog .
-     *
-     * By default, it is the account ID of the caller.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-catalogid)
-     */
-    public fun catalogId(): String
-
-    /**
-     * The name of the database for the table.
-     *
-     * Unique to a Data Catalog. A database is a set of associated table definitions organized into
-     * a logical group. You can Grant and Revoke database privileges to a principal.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * The name of the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A wildcard object representing every table under a database.This is an object with no
-     * properties that effectively behaves as a true or false depending on whether not it is passed as
-     * a parameter. The valid inputs for a property with this type in either yaml or json is null or
-     * {}.
-     *
-     * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-tablewildcard)
-     */
-    public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
-
-    /**
-     * A builder for [TableResourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * By default, it is the account ID of the caller.
-       */
-      public fun catalogId(catalogId: String)
-
-      /**
-       * @param databaseName The name of the database for the table. 
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param name The name of the table.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param tableWildcard A wildcard object representing every table under a database.This is an
-       * object with no properties that effectively behaves as a true or false depending on whether not
-       * it is passed as a parameter. The valid inputs for a property with this type in either yaml or
-       * json is null or {}.
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       */
-      public fun tableWildcard(tableWildcard: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty.builder()
-
-      /**
-       * @param catalogId The identifier for the Data Catalog . 
-       * By default, it is the account ID of the caller.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
-
-      /**
-       * @param databaseName The name of the database for the table. 
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param name The name of the table.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param tableWildcard A wildcard object representing every table under a database.This is an
-       * object with no properties that effectively behaves as a true or false depending on whether not
-       * it is passed as a parameter. The valid inputs for a property with this type in either yaml or
-       * json is null or {}.
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       */
-      override fun tableWildcard(tableWildcard: Any) {
-        cdkBuilder.tableWildcard(tableWildcard)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
-    ) : CdkObject(cdkObject), TableResourceProperty {
-      /**
-       * The identifier for the Data Catalog .
-       *
-       * By default, it is the account ID of the caller.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-catalogid)
-       */
-      override fun catalogId(): String = unwrap(this).getCatalogId()
-
-      /**
-       * The name of the database for the table.
-       *
-       * Unique to a Data Catalog. A database is a set of associated table definitions organized
-       * into a logical group. You can Grant and Revoke database privileges to a principal.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * The name of the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * A wildcard object representing every table under a database.This is an object with no
-       * properties that effectively behaves as a true or false depending on whether not it is passed
-       * as a parameter. The valid inputs for a property with this type in either yaml or json is null
-       * or {}.
-       *
-       * At least one of `TableResource$Name` or `TableResource$TableWildcard` is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html#cfn-lakeformation-tagassociation-tableresource-tablewildcard)
-       */
-      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TableResourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty):
-          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TableResourceProperty):
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty
     }
   }
 }

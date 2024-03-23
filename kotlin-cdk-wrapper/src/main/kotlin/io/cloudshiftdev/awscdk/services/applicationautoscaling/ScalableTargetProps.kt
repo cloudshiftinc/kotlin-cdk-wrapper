@@ -196,8 +196,7 @@ public interface ScalableTargetProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.applicationautoscaling.ScalableTargetProps,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalableTargetProps,
   ) : CdkObject(cdkObject), ScalableTargetProps {
     /**
      * The maximum value that Application Auto Scaling can use to scale a target during a scaling

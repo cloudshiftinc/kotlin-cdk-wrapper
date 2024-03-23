@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class RdsDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.RdsDataSource,
+public open class RdsDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.RdsDataSource,
 ) : BackedDataSource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -235,6 +235,7 @@ public open class RdsDataSource internal constructor(
         RdsDataSource = RdsDataSource(cdkObject)
 
     internal fun unwrap(wrapped: RdsDataSource):
-        software.amazon.awscdk.services.appsync.RdsDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.RdsDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.RdsDataSource
   }
 }

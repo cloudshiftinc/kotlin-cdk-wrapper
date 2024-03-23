@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html)
  */
-public open class CfnLifecycleHook internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHook,
+public open class CfnLifecycleHook(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHook,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -427,6 +427,7 @@ public open class CfnLifecycleHook internal constructor(
         CfnLifecycleHook = CfnLifecycleHook(cdkObject)
 
     internal fun unwrap(wrapped: CfnLifecycleHook):
-        software.amazon.awscdk.services.autoscaling.CfnLifecycleHook = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnLifecycleHook = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnLifecycleHook
   }
 }

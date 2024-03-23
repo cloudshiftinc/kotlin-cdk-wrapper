@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Billing internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
+public abstract class Billing(
+  cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -42,7 +42,7 @@ public abstract class Billing internal constructor(
   public open fun mode(): BillingMode = unwrap(this).getMode().let(BillingMode::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
+    cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
   ) : Billing(cdkObject)
 
   public companion object {

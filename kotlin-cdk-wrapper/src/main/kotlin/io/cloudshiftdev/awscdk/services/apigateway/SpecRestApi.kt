@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * By default, the API will automatically be deployed and accessible from a
  * public endpoint.</a>
  */
-public open class SpecRestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApi,
+public open class SpecRestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApi,
 ) : RestApiBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -631,6 +631,7 @@ public open class SpecRestApi internal constructor(
         SpecRestApi = SpecRestApi(cdkObject)
 
     internal fun unwrap(wrapped: SpecRestApi):
-        software.amazon.awscdk.services.apigateway.SpecRestApi = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.SpecRestApi = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.SpecRestApi
   }
 }

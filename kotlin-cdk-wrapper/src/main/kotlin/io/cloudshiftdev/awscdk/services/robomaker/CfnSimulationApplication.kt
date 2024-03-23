@@ -62,9 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html)
  */
-public open class CfnSimulationApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
+public open class CfnSimulationApplication(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -602,7 +601,239 @@ public open class CfnSimulationApplication internal constructor(
         CfnSimulationApplication = CfnSimulationApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulationApplication):
-        software.amazon.awscdk.services.robomaker.CfnSimulationApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.robomaker.CfnSimulationApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.robomaker.CfnSimulationApplication
+  }
+
+  /**
+   * Information about a rendering engine.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.robomaker.*;
+   * RenderingEngineProperty renderingEngineProperty = RenderingEngineProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html)
+   */
+  public interface RenderingEngineProperty {
+    /**
+     * The name of the rendering engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-name)
+     */
+    public fun name(): String
+
+    /**
+     * The version of the rendering engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [RenderingEngineProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the rendering engine. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param version The version of the rendering engine. 
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty.Builder
+          =
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty.builder()
+
+      /**
+       * @param name The name of the rendering engine. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param version The version of the rendering engine. 
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
+    ) : CdkObject(cdkObject), RenderingEngineProperty {
+      /**
+       * The name of the rendering engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The version of the rendering engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RenderingEngineProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty):
+          RenderingEngineProperty = CdkObjectWrappers.wrap(cdkObject) as? RenderingEngineProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RenderingEngineProperty):
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
+    }
+  }
+
+  /**
+   * Information about a robot software suite.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.robomaker.*;
+   * RobotSoftwareSuiteProperty robotSoftwareSuiteProperty = RobotSoftwareSuiteProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html)
+   */
+  public interface RobotSoftwareSuiteProperty {
+    /**
+     * The name of the robot software suite.
+     *
+     * `General` is the only supported value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-name)
+     */
+    public fun name(): String
+
+    /**
+     * The version of the robot software suite.
+     *
+     * Not applicable for General software suite.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [RobotSoftwareSuiteProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the robot software suite. 
+       * `General` is the only supported value.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param version The version of the robot software suite.
+       * Not applicable for General software suite.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty.Builder
+          =
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty.builder()
+
+      /**
+       * @param name The name of the robot software suite. 
+       * `General` is the only supported value.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param version The version of the robot software suite.
+       * Not applicable for General software suite.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
+    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
+      /**
+       * The name of the robot software suite.
+       *
+       * `General` is the only supported value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The version of the robot software suite.
+       *
+       * Not applicable for General software suite.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RobotSoftwareSuiteProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty):
+          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
+    }
   }
 
   /**
@@ -689,8 +920,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
     ) : CdkObject(cdkObject), SimulationSoftwareSuiteProperty {
       /**
        * The name of the simulation software suite.
@@ -726,116 +956,6 @@ public open class CfnSimulationApplication internal constructor(
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty
-    }
-  }
-
-  /**
-   * Information about a rendering engine.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.robomaker.*;
-   * RenderingEngineProperty renderingEngineProperty = RenderingEngineProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html)
-   */
-  public interface RenderingEngineProperty {
-    /**
-     * The name of the rendering engine.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-name)
-     */
-    public fun name(): String
-
-    /**
-     * The version of the rendering engine.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [RenderingEngineProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the rendering engine. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param version The version of the rendering engine. 
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty.Builder
-          =
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty.builder()
-
-      /**
-       * @param name The name of the rendering engine. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param version The version of the rendering engine. 
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
-    ) : CdkObject(cdkObject), RenderingEngineProperty {
-      /**
-       * The name of the rendering engine.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The version of the rendering engine.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-renderingengine.html#cfn-robomaker-simulationapplication-renderingengine-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RenderingEngineProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty):
-          RenderingEngineProperty = CdkObjectWrappers.wrap(cdkObject) as? RenderingEngineProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RenderingEngineProperty):
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
     }
   }
 
@@ -933,8 +1053,7 @@ public open class CfnSimulationApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
+      cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
     ) : CdkObject(cdkObject), SourceConfigProperty {
       /**
        * The target processor architecture for the application.
@@ -973,129 +1092,6 @@ public open class CfnSimulationApplication internal constructor(
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty
-    }
-  }
-
-  /**
-   * Information about a robot software suite.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.robomaker.*;
-   * RobotSoftwareSuiteProperty robotSoftwareSuiteProperty = RobotSoftwareSuiteProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html)
-   */
-  public interface RobotSoftwareSuiteProperty {
-    /**
-     * The name of the robot software suite.
-     *
-     * `General` is the only supported value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-name)
-     */
-    public fun name(): String
-
-    /**
-     * The version of the robot software suite.
-     *
-     * Not applicable for General software suite.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [RobotSoftwareSuiteProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the robot software suite. 
-       * `General` is the only supported value.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param version The version of the robot software suite.
-       * Not applicable for General software suite.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty.Builder
-          =
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty.builder()
-
-      /**
-       * @param name The name of the robot software suite. 
-       * `General` is the only supported value.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param version The version of the robot software suite.
-       * Not applicable for General software suite.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
-    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
-      /**
-       * The name of the robot software suite.
-       *
-       * `General` is the only supported value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The version of the robot software suite.
-       *
-       * Not applicable for General software suite.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-robotsoftwaresuite.html#cfn-robomaker-simulationapplication-robotsoftwaresuite-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RobotSoftwareSuiteProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty):
-          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty
     }
   }
 }

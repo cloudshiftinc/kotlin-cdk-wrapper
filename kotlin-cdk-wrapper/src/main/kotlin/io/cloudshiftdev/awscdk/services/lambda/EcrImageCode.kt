@@ -32,8 +32,8 @@ import software.amazon.awscdk.services.ecr.IRepository as AmazonAwscdkServicesEc
  * .build();
  * ```
  */
-public open class EcrImageCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.EcrImageCode,
+public open class EcrImageCode(
+  cdkObject: software.amazon.awscdk.services.lambda.EcrImageCode,
 ) : Code(cdkObject) {
   public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository) :
       this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository::unwrap))
@@ -273,6 +273,6 @@ public open class EcrImageCode internal constructor(
         = EcrImageCode(cdkObject)
 
     internal fun unwrap(wrapped: EcrImageCode): software.amazon.awscdk.services.lambda.EcrImageCode
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lambda.EcrImageCode
   }
 }

@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html)
  */
-public open class CfnPortal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortal,
+public open class CfnPortal(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortal,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -619,6 +619,6 @@ public open class CfnPortal internal constructor(
         = CfnPortal(cdkObject)
 
     internal fun unwrap(wrapped: CfnPortal): software.amazon.awscdk.services.workspacesweb.CfnPortal
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.workspacesweb.CfnPortal
   }
 }

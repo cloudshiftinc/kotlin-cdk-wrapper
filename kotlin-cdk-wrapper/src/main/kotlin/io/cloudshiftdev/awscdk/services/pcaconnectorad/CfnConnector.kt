@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-connector.html)
  */
-public open class CfnConnector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector,
+public open class CfnConnector(
+  cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,7 +296,8 @@ public open class CfnConnector internal constructor(
         CfnConnector = CfnConnector(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnector):
-        software.amazon.awscdk.services.pcaconnectorad.CfnConnector = wrapped.cdkObject
+        software.amazon.awscdk.services.pcaconnectorad.CfnConnector = wrapped.cdkObject as
+        software.amazon.awscdk.services.pcaconnectorad.CfnConnector
   }
 
   /**
@@ -370,8 +371,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
     ) : CdkObject(cdkObject), VpcInformationProperty {
       /**
        * The security groups used with the connector.

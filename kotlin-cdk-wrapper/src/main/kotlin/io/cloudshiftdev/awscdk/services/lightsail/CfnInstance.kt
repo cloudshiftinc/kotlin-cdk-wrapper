@@ -96,8 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1083,117 +1083,7 @@ public open class CfnInstance internal constructor(
         = CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.lightsail.CfnInstance
-        = wrapped.cdkObject
-  }
-
-  /**
-   * `AutoSnapshotAddOn` is a property of the
-   * [AddOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-addon.html)
-   * property. It describes the automatic snapshot add-on for an instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * AutoSnapshotAddOnProperty autoSnapshotAddOnProperty = AutoSnapshotAddOnProperty.builder()
-   * .snapshotTimeOfDay("snapshotTimeOfDay")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html)
-   */
-  public interface AutoSnapshotAddOnProperty {
-    /**
-     * The daily time when an automatic snapshot will be created.
-     *
-     * Constraints:
-     *
-     * * Must be in `HH:00` format, and in an hourly increment.
-     * * Specified in Coordinated Universal Time (UTC).
-     * * The snapshot will be automatically created between the time specified and up to 45 minutes
-     * after.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html#cfn-lightsail-instance-autosnapshotaddon-snapshottimeofday)
-     */
-    public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
-
-    /**
-     * A builder for [AutoSnapshotAddOnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       */
-      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.builder()
-
-      /**
-       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       */
-      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
-        cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
-    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
-      /**
-       * The daily time when an automatic snapshot will be created.
-       *
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html#cfn-lightsail-instance-autosnapshotaddon-snapshottimeofday)
-       */
-      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty):
-          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoSnapshotAddOnProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnInstance
   }
 
   /**
@@ -1341,7 +1231,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
     ) : CdkObject(cdkObject), AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
@@ -1386,6 +1276,614 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty
+    }
+  }
+
+  /**
+   * `AutoSnapshotAddOn` is a property of the
+   * [AddOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-addon.html)
+   * property. It describes the automatic snapshot add-on for an instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * AutoSnapshotAddOnProperty autoSnapshotAddOnProperty = AutoSnapshotAddOnProperty.builder()
+   * .snapshotTimeOfDay("snapshotTimeOfDay")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html)
+   */
+  public interface AutoSnapshotAddOnProperty {
+    /**
+     * The daily time when an automatic snapshot will be created.
+     *
+     * Constraints:
+     *
+     * * Must be in `HH:00` format, and in an hourly increment.
+     * * Specified in Coordinated Universal Time (UTC).
+     * * The snapshot will be automatically created between the time specified and up to 45 minutes
+     * after.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html#cfn-lightsail-instance-autosnapshotaddon-snapshottimeofday)
+     */
+    public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+
+    /**
+     * A builder for [AutoSnapshotAddOnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.builder()
+
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
+        cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
+    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
+      /**
+       * The daily time when an automatic snapshot will be created.
+       *
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html#cfn-lightsail-instance-autosnapshotaddon-snapshottimeofday)
+       */
+      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty):
+          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoSnapshotAddOnProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
+          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty
+    }
+  }
+
+  /**
+   * `Disk` is a property of the
+   * [Hardware](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
+   * property. It describes a disk attached to an instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * DiskProperty diskProperty = DiskProperty.builder()
+   * .diskName("diskName")
+   * .path("path")
+   * // the properties below are optional
+   * .attachedTo("attachedTo")
+   * .attachmentState("attachmentState")
+   * .iops(123)
+   * .isSystemDisk(false)
+   * .sizeInGb("sizeInGb")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html)
+   */
+  public interface DiskProperty {
+    /**
+     * The resources to which the disk is attached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachedto)
+     */
+    public fun attachedTo(): String? = unwrap(this).getAttachedTo()
+
+    /**
+     * (Deprecated) The attachment state of the disk.
+     *
+     *
+     * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
+     * in the API response. It is now deprecated, but still included in the response. Use `isAttached`
+     * instead.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachmentstate)
+     */
+    public fun attachmentState(): String? = unwrap(this).getAttachmentState()
+
+    /**
+     * The unique name of the disk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-diskname)
+     */
+    public fun diskName(): String
+
+    /**
+     * The input/output operations per second (IOPS) of the disk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * A Boolean value indicating whether this disk is a system disk (has an operating system loaded
+     * on it).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-issystemdisk)
+     */
+    public fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
+
+    /**
+     * The disk path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-path)
+     */
+    public fun path(): String
+
+    /**
+     * The size of the disk in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-sizeingb)
+     */
+    public fun sizeInGb(): String? = unwrap(this).getSizeInGb()
+
+    /**
+     * A builder for [DiskProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachedTo The resources to which the disk is attached.
+       */
+      public fun attachedTo(attachedTo: String)
+
+      /**
+       * @param attachmentState (Deprecated) The attachment state of the disk.
+       *
+       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
+       * in the API response. It is now deprecated, but still included in the response. Use
+       * `isAttached` instead.
+       */
+      public fun attachmentState(attachmentState: String)
+
+      /**
+       * @param diskName The unique name of the disk. 
+       */
+      public fun diskName(diskName: String)
+
+      /**
+       * @param iops The input/output operations per second (IOPS) of the disk.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
+       * operating system loaded on it).
+       */
+      public fun isSystemDisk(isSystemDisk: Boolean)
+
+      /**
+       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
+       * operating system loaded on it).
+       */
+      public fun isSystemDisk(isSystemDisk: IResolvable)
+
+      /**
+       * @param path The disk path. 
+       */
+      public fun path(path: String)
+
+      /**
+       * @param sizeInGb The size of the disk in GB.
+       */
+      public fun sizeInGb(sizeInGb: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.builder()
+
+      /**
+       * @param attachedTo The resources to which the disk is attached.
+       */
+      override fun attachedTo(attachedTo: String) {
+        cdkBuilder.attachedTo(attachedTo)
+      }
+
+      /**
+       * @param attachmentState (Deprecated) The attachment state of the disk.
+       *
+       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
+       * in the API response. It is now deprecated, but still included in the response. Use
+       * `isAttached` instead.
+       */
+      override fun attachmentState(attachmentState: String) {
+        cdkBuilder.attachmentState(attachmentState)
+      }
+
+      /**
+       * @param diskName The unique name of the disk. 
+       */
+      override fun diskName(diskName: String) {
+        cdkBuilder.diskName(diskName)
+      }
+
+      /**
+       * @param iops The input/output operations per second (IOPS) of the disk.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
+       * operating system loaded on it).
+       */
+      override fun isSystemDisk(isSystemDisk: Boolean) {
+        cdkBuilder.isSystemDisk(isSystemDisk)
+      }
+
+      /**
+       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
+       * operating system loaded on it).
+       */
+      override fun isSystemDisk(isSystemDisk: IResolvable) {
+        cdkBuilder.isSystemDisk(isSystemDisk.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param path The disk path. 
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      /**
+       * @param sizeInGb The size of the disk in GB.
+       */
+      override fun sizeInGb(sizeInGb: String) {
+        cdkBuilder.sizeInGb(sizeInGb)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
+    ) : CdkObject(cdkObject), DiskProperty {
+      /**
+       * The resources to which the disk is attached.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachedto)
+       */
+      override fun attachedTo(): String? = unwrap(this).getAttachedTo()
+
+      /**
+       * (Deprecated) The attachment state of the disk.
+       *
+       *
+       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
+       * in the API response. It is now deprecated, but still included in the response. Use
+       * `isAttached` instead.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachmentstate)
+       */
+      override fun attachmentState(): String? = unwrap(this).getAttachmentState()
+
+      /**
+       * The unique name of the disk.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-diskname)
+       */
+      override fun diskName(): String = unwrap(this).getDiskName()
+
+      /**
+       * The input/output operations per second (IOPS) of the disk.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * A Boolean value indicating whether this disk is a system disk (has an operating system
+       * loaded on it).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-issystemdisk)
+       */
+      override fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
+
+      /**
+       * The disk path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-path)
+       */
+      override fun path(): String = unwrap(this).getPath()
+
+      /**
+       * The size of the disk in GB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-sizeingb)
+       */
+      override fun sizeInGb(): String? = unwrap(this).getSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DiskProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty):
+          DiskProperty = CdkObjectWrappers.wrap(cdkObject) as? DiskProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DiskProperty):
+          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty
+    }
+  }
+
+  /**
+   * `Hardware` is a property of the
+   * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
+   * resource. It describes the hardware properties for the instance, such as the vCPU count, attached
+   * disks, and amount of RAM.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * HardwareProperty hardwareProperty = HardwareProperty.builder()
+   * .cpuCount(123)
+   * .disks(List.of(DiskProperty.builder()
+   * .diskName("diskName")
+   * .path("path")
+   * // the properties below are optional
+   * .attachedTo("attachedTo")
+   * .attachmentState("attachmentState")
+   * .iops(123)
+   * .isSystemDisk(false)
+   * .sizeInGb("sizeInGb")
+   * .build()))
+   * .ramSizeInGb(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
+   */
+  public interface HardwareProperty {
+    /**
+     * The number of vCPUs the instance has.
+     *
+     *
+     * The `CpuCount` property is read-only and should not be specified in a create instance or
+     * update instance request.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-cpucount)
+     */
+    public fun cpuCount(): Number? = unwrap(this).getCpuCount()
+
+    /**
+     * The disks attached to the instance.
+     *
+     * The instance restarts when performing an attach disk or detach disk request. This resets the
+     * public IP address of your instance if a static IP isn't attached to it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-disks)
+     */
+    public fun disks(): Any? = unwrap(this).getDisks()
+
+    /**
+     * The amount of RAM in GB on the instance (for example, `1.0` ).
+     *
+     *
+     * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
+     * update instance request.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-ramsizeingb)
+     */
+    public fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
+
+    /**
+     * A builder for [HardwareProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpuCount The number of vCPUs the instance has.
+       *
+       * The `CpuCount` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       */
+      public fun cpuCount(cpuCount: Number)
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      public fun disks(disks: IResolvable)
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      public fun disks(disks: List<Any>)
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      public fun disks(vararg disks: Any)
+
+      /**
+       * @param ramSizeInGb The amount of RAM in GB on the instance (for example, `1.0` ).
+       *
+       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       */
+      public fun ramSizeInGb(ramSizeInGb: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.builder()
+
+      /**
+       * @param cpuCount The number of vCPUs the instance has.
+       *
+       * The `CpuCount` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       */
+      override fun cpuCount(cpuCount: Number) {
+        cdkBuilder.cpuCount(cpuCount)
+      }
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      override fun disks(disks: IResolvable) {
+        cdkBuilder.disks(disks.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      override fun disks(disks: List<Any>) {
+        cdkBuilder.disks(disks)
+      }
+
+      /**
+       * @param disks The disks attached to the instance.
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       */
+      override fun disks(vararg disks: Any): Unit = disks(disks.toList())
+
+      /**
+       * @param ramSizeInGb The amount of RAM in GB on the instance (for example, `1.0` ).
+       *
+       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       */
+      override fun ramSizeInGb(ramSizeInGb: Number) {
+        cdkBuilder.ramSizeInGb(ramSizeInGb)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
+    ) : CdkObject(cdkObject), HardwareProperty {
+      /**
+       * The number of vCPUs the instance has.
+       *
+       *
+       * The `CpuCount` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-cpucount)
+       */
+      override fun cpuCount(): Number? = unwrap(this).getCpuCount()
+
+      /**
+       * The disks attached to the instance.
+       *
+       * The instance restarts when performing an attach disk or detach disk request. This resets
+       * the public IP address of your instance if a static IP isn't attached to it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-disks)
+       */
+      override fun disks(): Any? = unwrap(this).getDisks()
+
+      /**
+       * The amount of RAM in GB on the instance (for example, `1.0` ).
+       *
+       *
+       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
+       * update instance request.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-ramsizeingb)
+       */
+      override fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HardwareProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty):
+          HardwareProperty = CdkObjectWrappers.wrap(cdkObject) as? HardwareProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HardwareProperty):
+          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty
     }
   }
 
@@ -1463,8 +1961,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The Availability Zone for the instance.
@@ -1556,8 +2053,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
     ) : CdkObject(cdkObject), MonthlyTransferProperty {
       /**
        * The amount of allocated monthly data transfer (in GB) for an instance.
@@ -1582,6 +2078,185 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty
+    }
+  }
+
+  /**
+   * `Networking` is a property of the
+   * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
+   * resource. It describes the public ports and the monthly amount of data transfer allocated for the
+   * instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * NetworkingProperty networkingProperty = NetworkingProperty.builder()
+   * .ports(List.of(PortProperty.builder()
+   * .accessDirection("accessDirection")
+   * .accessFrom("accessFrom")
+   * .accessType("accessType")
+   * .cidrListAliases(List.of("cidrListAliases"))
+   * .cidrs(List.of("cidrs"))
+   * .commonName("commonName")
+   * .fromPort(123)
+   * .ipv6Cidrs(List.of("ipv6Cidrs"))
+   * .protocol("protocol")
+   * .toPort(123)
+   * .build()))
+   * // the properties below are optional
+   * .monthlyTransfer(MonthlyTransferProperty.builder()
+   * .gbPerMonthAllocated("gbPerMonthAllocated")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html)
+   */
+  public interface NetworkingProperty {
+    /**
+     * The monthly amount of data transfer, in GB, allocated for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-monthlytransfer)
+     */
+    public fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
+
+    /**
+     * An array of ports to open on the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-ports)
+     */
+    public fun ports(): Any
+
+    /**
+     * A builder for [NetworkingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      public fun monthlyTransfer(monthlyTransfer: IResolvable)
+
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty)
+
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
+      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit)
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      public fun ports(ports: IResolvable)
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      public fun ports(ports: List<Any>)
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      public fun ports(vararg ports: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.builder()
+
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      override fun monthlyTransfer(monthlyTransfer: IResolvable) {
+        cdkBuilder.monthlyTransfer(monthlyTransfer.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
+        cdkBuilder.monthlyTransfer(monthlyTransfer.let(MonthlyTransferProperty::unwrap))
+      }
+
+      /**
+       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
+       * instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
+      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit):
+          Unit = monthlyTransfer(MonthlyTransferProperty(monthlyTransfer))
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      override fun ports(ports: IResolvable) {
+        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      override fun ports(ports: List<Any>) {
+        cdkBuilder.ports(ports)
+      }
+
+      /**
+       * @param ports An array of ports to open on the instance. 
+       */
+      override fun ports(vararg ports: Any): Unit = ports(ports.toList())
+
+      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
+    ) : CdkObject(cdkObject), NetworkingProperty {
+      /**
+       * The monthly amount of data transfer, in GB, allocated for the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-monthlytransfer)
+       */
+      override fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
+
+      /**
+       * An array of ports to open on the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-ports)
+       */
+      override fun ports(): Any = unwrap(this).getPorts()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty):
+          NetworkingProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkingProperty):
+          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty
     }
   }
 
@@ -2061,7 +2736,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
     ) : CdkObject(cdkObject), PortProperty {
       /**
        * The access direction ( `inbound` or `outbound` ).
@@ -2216,405 +2891,6 @@ public open class CfnInstance internal constructor(
   }
 
   /**
-   * `Hardware` is a property of the
-   * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
-   * resource. It describes the hardware properties for the instance, such as the vCPU count, attached
-   * disks, and amount of RAM.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * HardwareProperty hardwareProperty = HardwareProperty.builder()
-   * .cpuCount(123)
-   * .disks(List.of(DiskProperty.builder()
-   * .diskName("diskName")
-   * .path("path")
-   * // the properties below are optional
-   * .attachedTo("attachedTo")
-   * .attachmentState("attachmentState")
-   * .iops(123)
-   * .isSystemDisk(false)
-   * .sizeInGb("sizeInGb")
-   * .build()))
-   * .ramSizeInGb(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
-   */
-  public interface HardwareProperty {
-    /**
-     * The number of vCPUs the instance has.
-     *
-     *
-     * The `CpuCount` property is read-only and should not be specified in a create instance or
-     * update instance request.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-cpucount)
-     */
-    public fun cpuCount(): Number? = unwrap(this).getCpuCount()
-
-    /**
-     * The disks attached to the instance.
-     *
-     * The instance restarts when performing an attach disk or detach disk request. This resets the
-     * public IP address of your instance if a static IP isn't attached to it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-disks)
-     */
-    public fun disks(): Any? = unwrap(this).getDisks()
-
-    /**
-     * The amount of RAM in GB on the instance (for example, `1.0` ).
-     *
-     *
-     * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
-     * update instance request.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-ramsizeingb)
-     */
-    public fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
-
-    /**
-     * A builder for [HardwareProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpuCount The number of vCPUs the instance has.
-       *
-       * The `CpuCount` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       */
-      public fun cpuCount(cpuCount: Number)
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      public fun disks(disks: IResolvable)
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      public fun disks(disks: List<Any>)
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      public fun disks(vararg disks: Any)
-
-      /**
-       * @param ramSizeInGb The amount of RAM in GB on the instance (for example, `1.0` ).
-       *
-       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       */
-      public fun ramSizeInGb(ramSizeInGb: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.builder()
-
-      /**
-       * @param cpuCount The number of vCPUs the instance has.
-       *
-       * The `CpuCount` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       */
-      override fun cpuCount(cpuCount: Number) {
-        cdkBuilder.cpuCount(cpuCount)
-      }
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      override fun disks(disks: IResolvable) {
-        cdkBuilder.disks(disks.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      override fun disks(disks: List<Any>) {
-        cdkBuilder.disks(disks)
-      }
-
-      /**
-       * @param disks The disks attached to the instance.
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       */
-      override fun disks(vararg disks: Any): Unit = disks(disks.toList())
-
-      /**
-       * @param ramSizeInGb The amount of RAM in GB on the instance (for example, `1.0` ).
-       *
-       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       */
-      override fun ramSizeInGb(ramSizeInGb: Number) {
-        cdkBuilder.ramSizeInGb(ramSizeInGb)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
-    ) : CdkObject(cdkObject), HardwareProperty {
-      /**
-       * The number of vCPUs the instance has.
-       *
-       *
-       * The `CpuCount` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-cpucount)
-       */
-      override fun cpuCount(): Number? = unwrap(this).getCpuCount()
-
-      /**
-       * The disks attached to the instance.
-       *
-       * The instance restarts when performing an attach disk or detach disk request. This resets
-       * the public IP address of your instance if a static IP isn't attached to it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-disks)
-       */
-      override fun disks(): Any? = unwrap(this).getDisks()
-
-      /**
-       * The amount of RAM in GB on the instance (for example, `1.0` ).
-       *
-       *
-       * The `RamSizeInGb` property is read-only and should not be specified in a create instance or
-       * update instance request.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html#cfn-lightsail-instance-hardware-ramsizeingb)
-       */
-      override fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HardwareProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty):
-          HardwareProperty = CdkObjectWrappers.wrap(cdkObject) as? HardwareProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HardwareProperty):
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty
-    }
-  }
-
-  /**
-   * `Networking` is a property of the
-   * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
-   * resource. It describes the public ports and the monthly amount of data transfer allocated for the
-   * instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * NetworkingProperty networkingProperty = NetworkingProperty.builder()
-   * .ports(List.of(PortProperty.builder()
-   * .accessDirection("accessDirection")
-   * .accessFrom("accessFrom")
-   * .accessType("accessType")
-   * .cidrListAliases(List.of("cidrListAliases"))
-   * .cidrs(List.of("cidrs"))
-   * .commonName("commonName")
-   * .fromPort(123)
-   * .ipv6Cidrs(List.of("ipv6Cidrs"))
-   * .protocol("protocol")
-   * .toPort(123)
-   * .build()))
-   * // the properties below are optional
-   * .monthlyTransfer(MonthlyTransferProperty.builder()
-   * .gbPerMonthAllocated("gbPerMonthAllocated")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html)
-   */
-  public interface NetworkingProperty {
-    /**
-     * The monthly amount of data transfer, in GB, allocated for the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-monthlytransfer)
-     */
-    public fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
-
-    /**
-     * An array of ports to open on the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-ports)
-     */
-    public fun ports(): Any
-
-    /**
-     * A builder for [NetworkingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      public fun monthlyTransfer(monthlyTransfer: IResolvable)
-
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty)
-
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
-      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit)
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      public fun ports(ports: IResolvable)
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      public fun ports(ports: List<Any>)
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      public fun ports(vararg ports: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.builder()
-
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      override fun monthlyTransfer(monthlyTransfer: IResolvable) {
-        cdkBuilder.monthlyTransfer(monthlyTransfer.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
-        cdkBuilder.monthlyTransfer(monthlyTransfer.let(MonthlyTransferProperty::unwrap))
-      }
-
-      /**
-       * @param monthlyTransfer The monthly amount of data transfer, in GB, allocated for the
-       * instance.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
-      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit):
-          Unit = monthlyTransfer(MonthlyTransferProperty(monthlyTransfer))
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      override fun ports(ports: List<Any>) {
-        cdkBuilder.ports(ports)
-      }
-
-      /**
-       * @param ports An array of ports to open on the instance. 
-       */
-      override fun ports(vararg ports: Any): Unit = ports(ports.toList())
-
-      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
-    ) : CdkObject(cdkObject), NetworkingProperty {
-      /**
-       * The monthly amount of data transfer, in GB, allocated for the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-monthlytransfer)
-       */
-      override fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
-
-      /**
-       * An array of ports to open on the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html#cfn-lightsail-instance-networking-ports)
-       */
-      override fun ports(): Any = unwrap(this).getPorts()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty):
-          NetworkingProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NetworkingProperty):
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty
-    }
-  }
-
-  /**
    * `State` is a property of the
    * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
    * resource. It describes the status code and the state (for example, `running` ) of an instance.
@@ -2688,7 +2964,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
     ) : CdkObject(cdkObject), StateProperty {
       /**
        * The status code of the instance.
@@ -2719,287 +2995,6 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty
-    }
-  }
-
-  /**
-   * `Disk` is a property of the
-   * [Hardware](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
-   * property. It describes a disk attached to an instance.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * DiskProperty diskProperty = DiskProperty.builder()
-   * .diskName("diskName")
-   * .path("path")
-   * // the properties below are optional
-   * .attachedTo("attachedTo")
-   * .attachmentState("attachmentState")
-   * .iops(123)
-   * .isSystemDisk(false)
-   * .sizeInGb("sizeInGb")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html)
-   */
-  public interface DiskProperty {
-    /**
-     * The resources to which the disk is attached.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachedto)
-     */
-    public fun attachedTo(): String? = unwrap(this).getAttachedTo()
-
-    /**
-     * (Deprecated) The attachment state of the disk.
-     *
-     *
-     * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
-     * in the API response. It is now deprecated, but still included in the response. Use `isAttached`
-     * instead.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachmentstate)
-     */
-    public fun attachmentState(): String? = unwrap(this).getAttachmentState()
-
-    /**
-     * The unique name of the disk.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-diskname)
-     */
-    public fun diskName(): String
-
-    /**
-     * The input/output operations per second (IOPS) of the disk.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * A Boolean value indicating whether this disk is a system disk (has an operating system loaded
-     * on it).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-issystemdisk)
-     */
-    public fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
-
-    /**
-     * The disk path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-path)
-     */
-    public fun path(): String
-
-    /**
-     * The size of the disk in GB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-sizeingb)
-     */
-    public fun sizeInGb(): String? = unwrap(this).getSizeInGb()
-
-    /**
-     * A builder for [DiskProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attachedTo The resources to which the disk is attached.
-       */
-      public fun attachedTo(attachedTo: String)
-
-      /**
-       * @param attachmentState (Deprecated) The attachment state of the disk.
-       *
-       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
-       * in the API response. It is now deprecated, but still included in the response. Use
-       * `isAttached` instead.
-       */
-      public fun attachmentState(attachmentState: String)
-
-      /**
-       * @param diskName The unique name of the disk. 
-       */
-      public fun diskName(diskName: String)
-
-      /**
-       * @param iops The input/output operations per second (IOPS) of the disk.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
-       * operating system loaded on it).
-       */
-      public fun isSystemDisk(isSystemDisk: Boolean)
-
-      /**
-       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
-       * operating system loaded on it).
-       */
-      public fun isSystemDisk(isSystemDisk: IResolvable)
-
-      /**
-       * @param path The disk path. 
-       */
-      public fun path(path: String)
-
-      /**
-       * @param sizeInGb The size of the disk in GB.
-       */
-      public fun sizeInGb(sizeInGb: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.builder()
-
-      /**
-       * @param attachedTo The resources to which the disk is attached.
-       */
-      override fun attachedTo(attachedTo: String) {
-        cdkBuilder.attachedTo(attachedTo)
-      }
-
-      /**
-       * @param attachmentState (Deprecated) The attachment state of the disk.
-       *
-       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
-       * in the API response. It is now deprecated, but still included in the response. Use
-       * `isAttached` instead.
-       */
-      override fun attachmentState(attachmentState: String) {
-        cdkBuilder.attachmentState(attachmentState)
-      }
-
-      /**
-       * @param diskName The unique name of the disk. 
-       */
-      override fun diskName(diskName: String) {
-        cdkBuilder.diskName(diskName)
-      }
-
-      /**
-       * @param iops The input/output operations per second (IOPS) of the disk.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
-       * operating system loaded on it).
-       */
-      override fun isSystemDisk(isSystemDisk: Boolean) {
-        cdkBuilder.isSystemDisk(isSystemDisk)
-      }
-
-      /**
-       * @param isSystemDisk A Boolean value indicating whether this disk is a system disk (has an
-       * operating system loaded on it).
-       */
-      override fun isSystemDisk(isSystemDisk: IResolvable) {
-        cdkBuilder.isSystemDisk(isSystemDisk.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param path The disk path. 
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      /**
-       * @param sizeInGb The size of the disk in GB.
-       */
-      override fun sizeInGb(sizeInGb: String) {
-        cdkBuilder.sizeInGb(sizeInGb)
-      }
-
-      public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
-    ) : CdkObject(cdkObject), DiskProperty {
-      /**
-       * The resources to which the disk is attached.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachedto)
-       */
-      override fun attachedTo(): String? = unwrap(this).getAttachedTo()
-
-      /**
-       * (Deprecated) The attachment state of the disk.
-       *
-       *
-       * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
-       * in the API response. It is now deprecated, but still included in the response. Use
-       * `isAttached` instead.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-attachmentstate)
-       */
-      override fun attachmentState(): String? = unwrap(this).getAttachmentState()
-
-      /**
-       * The unique name of the disk.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-diskname)
-       */
-      override fun diskName(): String = unwrap(this).getDiskName()
-
-      /**
-       * The input/output operations per second (IOPS) of the disk.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * A Boolean value indicating whether this disk is a system disk (has an operating system
-       * loaded on it).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-issystemdisk)
-       */
-      override fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
-
-      /**
-       * The disk path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-path)
-       */
-      override fun path(): String = unwrap(this).getPath()
-
-      /**
-       * The size of the disk in GB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html#cfn-lightsail-instance-disk-sizeingb)
-       */
-      override fun sizeInGb(): String? = unwrap(this).getSizeInGb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DiskProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty):
-          DiskProperty = CdkObjectWrappers.wrap(cdkObject) as? DiskProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DiskProperty):
-          software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty
     }
   }
 }

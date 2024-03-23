@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)
  */
-public open class CfnImageBuilder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
+public open class CfnImageBuilder(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -876,7 +876,120 @@ public open class CfnImageBuilder internal constructor(
         CfnImageBuilder = CfnImageBuilder(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageBuilder):
-        software.amazon.awscdk.services.appstream.CfnImageBuilder = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnImageBuilder = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnImageBuilder
+  }
+
+  /**
+   * Describes an interface VPC endpoint (interface endpoint) that lets you create a private
+   * connection between the virtual private cloud (VPC) that you specify and AppStream 2.0. When you
+   * specify an interface endpoint for a stack, users of the stack can connect to AppStream 2.0 only
+   * through that endpoint. When you specify an interface endpoint for an image builder, administrators
+   * can connect to the image builder only through that endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * AccessEndpointProperty accessEndpointProperty = AccessEndpointProperty.builder()
+   * .endpointType("endpointType")
+   * .vpceId("vpceId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html)
+   */
+  public interface AccessEndpointProperty {
+    /**
+     * The type of interface endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-endpointtype)
+     */
+    public fun endpointType(): String
+
+    /**
+     * The identifier (ID) of the VPC in which the interface endpoint is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid)
+     */
+    public fun vpceId(): String
+
+    /**
+     * A builder for [AccessEndpointProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointType The type of interface endpoint. 
+       */
+      public fun endpointType(endpointType: String)
+
+      /**
+       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
+       */
+      public fun vpceId(vpceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.Builder =
+          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.builder()
+
+      /**
+       * @param endpointType The type of interface endpoint. 
+       */
+      override fun endpointType(endpointType: String) {
+        cdkBuilder.endpointType(endpointType)
+      }
+
+      /**
+       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
+       */
+      override fun vpceId(vpceId: String) {
+        cdkBuilder.vpceId(vpceId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
+    ) : CdkObject(cdkObject), AccessEndpointProperty {
+      /**
+       * The type of interface endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-endpointtype)
+       */
+      override fun endpointType(): String = unwrap(this).getEndpointType()
+
+      /**
+       * The identifier (ID) of the VPC in which the interface endpoint is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid)
+       */
+      override fun vpceId(): String = unwrap(this).getVpceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessEndpointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty):
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessEndpointProperty):
+          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty
+    }
   }
 
   /**
@@ -959,8 +1072,7 @@ public open class CfnImageBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
     ) : CdkObject(cdkObject), DomainJoinInfoProperty {
       /**
        * The fully qualified name of the directory (for example, corp.example.com).
@@ -993,119 +1105,6 @@ public open class CfnImageBuilder internal constructor(
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty
-    }
-  }
-
-  /**
-   * Describes an interface VPC endpoint (interface endpoint) that lets you create a private
-   * connection between the virtual private cloud (VPC) that you specify and AppStream 2.0. When you
-   * specify an interface endpoint for a stack, users of the stack can connect to AppStream 2.0 only
-   * through that endpoint. When you specify an interface endpoint for an image builder, administrators
-   * can connect to the image builder only through that endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * AccessEndpointProperty accessEndpointProperty = AccessEndpointProperty.builder()
-   * .endpointType("endpointType")
-   * .vpceId("vpceId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html)
-   */
-  public interface AccessEndpointProperty {
-    /**
-     * The type of interface endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-endpointtype)
-     */
-    public fun endpointType(): String
-
-    /**
-     * The identifier (ID) of the VPC in which the interface endpoint is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid)
-     */
-    public fun vpceId(): String
-
-    /**
-     * A builder for [AccessEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpointType The type of interface endpoint. 
-       */
-      public fun endpointType(endpointType: String)
-
-      /**
-       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
-       */
-      public fun vpceId(vpceId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.Builder =
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.builder()
-
-      /**
-       * @param endpointType The type of interface endpoint. 
-       */
-      override fun endpointType(endpointType: String) {
-        cdkBuilder.endpointType(endpointType)
-      }
-
-      /**
-       * @param vpceId The identifier (ID) of the VPC in which the interface endpoint is used. 
-       */
-      override fun vpceId(vpceId: String) {
-        cdkBuilder.vpceId(vpceId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
-    ) : CdkObject(cdkObject), AccessEndpointProperty {
-      /**
-       * The type of interface endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-endpointtype)
-       */
-      override fun endpointType(): String = unwrap(this).getEndpointType()
-
-      /**
-       * The identifier (ID) of the VPC in which the interface endpoint is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html#cfn-appstream-imagebuilder-accessendpoint-vpceid)
-       */
-      override fun vpceId(): String = unwrap(this).getVpceId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty):
-          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessEndpointProperty):
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty
     }
   }
 
@@ -1214,8 +1213,7 @@ public open class CfnImageBuilder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The identifiers of the security groups for the image builder.

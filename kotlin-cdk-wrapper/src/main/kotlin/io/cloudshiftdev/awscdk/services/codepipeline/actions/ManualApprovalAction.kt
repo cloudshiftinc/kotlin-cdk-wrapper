@@ -29,9 +29,8 @@ import kotlin.collections.List
  * manualApprovalAction.grantManualApproval(role);
  * ```
  */
-public open class ManualApprovalAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction,
+public open class ManualApprovalAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction,
 ) : Action(cdkObject) {
   public constructor(props: ManualApprovalActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction(props.let(ManualApprovalActionProps::unwrap))
@@ -296,6 +295,7 @@ public open class ManualApprovalAction internal constructor(
 
     internal fun unwrap(wrapped: ManualApprovalAction):
         software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction
   }
 }

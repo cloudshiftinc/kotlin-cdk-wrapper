@@ -176,7 +176,7 @@ public interface ItemBatcherProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcherProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcherProps,
   ) : CdkObject(cdkObject), ItemBatcherProps {
     /**
      * BatchInput.

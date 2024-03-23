@@ -87,7 +87,7 @@ public interface ArtifactsBucketLocation {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation,
+    cdkObject: software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation,
   ) : CdkObject(cdkObject), ArtifactsBucketLocation {
     /**
      * The s3 location that stores the data of each run.

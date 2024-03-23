@@ -164,7 +164,7 @@ public interface IVolume : IResource {
   public fun volumeId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IVolume,
+    cdkObject: software.amazon.awscdk.services.ec2.IVolume,
   ) : CdkObject(cdkObject), IVolume {
     /**
      * Apply the given removal policy to this resource.

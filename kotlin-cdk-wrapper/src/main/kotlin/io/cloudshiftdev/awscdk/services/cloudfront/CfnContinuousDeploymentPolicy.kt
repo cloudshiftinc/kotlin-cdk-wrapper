@@ -79,9 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html)
  */
-public open class CfnContinuousDeploymentPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
+public open class CfnContinuousDeploymentPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -255,359 +254,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
     internal fun unwrap(wrapped: CfnContinuousDeploymentPolicy):
         software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy = wrapped.cdkObject
-  }
-
-  /**
-   * The traffic configuration of your continuous deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * TrafficConfigProperty trafficConfigProperty = TrafficConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .singleHeaderConfig(SingleHeaderConfigProperty.builder()
-   * .header("header")
-   * .value("value")
-   * .build())
-   * .singleWeightConfig(SingleWeightConfigProperty.builder()
-   * .weight(123)
-   * // the properties below are optional
-   * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
-   * .idleTtl(123)
-   * .maximumTtl(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html)
-   */
-  public interface TrafficConfigProperty {
-    /**
-     * Determines which HTTP requests are sent to the staging distribution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleheaderconfig)
-     */
-    public fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
-
-    /**
-     * Contains the percentage of traffic to send to the staging distribution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleweightconfig)
-     */
-    public fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
-
-    /**
-     * The type of traffic configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [TrafficConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      public fun singleHeaderConfig(singleHeaderConfig: IResolvable)
-
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      public fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty)
-
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
-      public
-          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      public fun singleWeightConfig(singleWeightConfig: IResolvable)
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      public fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty)
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
-      public
-          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param type The type of traffic configuration. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty.builder()
-
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      override fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
-        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      override fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
-        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(SingleHeaderConfigProperty::unwrap))
-      }
-
-      /**
-       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
-       * distribution.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
-      override
-          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit):
-          Unit = singleHeaderConfig(SingleHeaderConfigProperty(singleHeaderConfig))
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      override fun singleWeightConfig(singleWeightConfig: IResolvable) {
-        cdkBuilder.singleWeightConfig(singleWeightConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      override fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
-        cdkBuilder.singleWeightConfig(singleWeightConfig.let(SingleWeightConfigProperty::unwrap))
-      }
-
-      /**
-       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
-       * distribution.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
-      override
-          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit):
-          Unit = singleWeightConfig(SingleWeightConfigProperty(singleWeightConfig))
-
-      /**
-       * @param type The type of traffic configuration. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
-    ) : CdkObject(cdkObject), TrafficConfigProperty {
-      /**
-       * Determines which HTTP requests are sent to the staging distribution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleheaderconfig)
-       */
-      override fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
-
-      /**
-       * Contains the percentage of traffic to send to the staging distribution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleweightconfig)
-       */
-      override fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
-
-      /**
-       * The type of traffic configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty):
-          TrafficConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrafficConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * SingleWeightPolicyConfigProperty singleWeightPolicyConfigProperty =
-   * SingleWeightPolicyConfigProperty.builder()
-   * .weight(123)
-   * // the properties below are optional
-   * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
-   * .idleTtl(123)
-   * .maximumTtl(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html)
-   */
-  public interface SingleWeightPolicyConfigProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
-     */
-    public fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
-     */
-    public fun weight(): Number
-
-    /**
-     * A builder for [SingleWeightPolicyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable)
-
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty)
-
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
-      public
-          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param weight the value to be set. 
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.builder()
-
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      override
-          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
-      }
-
-      /**
-       * @param sessionStickinessConfig the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
-      override
-          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit):
-          Unit = sessionStickinessConfig(SessionStickinessConfigProperty(sessionStickinessConfig))
-
-      /**
-       * @param weight the value to be set. 
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
-    ) : CdkObject(cdkObject), SingleWeightPolicyConfigProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
-       */
-      override fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
-       */
-      override fun weight(): Number = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SingleWeightPolicyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty):
-          SingleWeightPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingleWeightPolicyConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SingleWeightPolicyConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
-    }
+        as software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
   }
 
   /**
@@ -968,8 +615,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
     ) : CdkObject(cdkObject), ContinuousDeploymentPolicyConfigProperty {
       /**
        * A Boolean that indicates whether this continuous deployment policy is enabled (in effect).
@@ -1042,124 +688,6 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty
-    }
-  }
-
-  /**
-   * Determines which HTTP requests are sent to the staging distribution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * SingleHeaderConfigProperty singleHeaderConfigProperty = SingleHeaderConfigProperty.builder()
-   * .header("header")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html)
-   */
-  public interface SingleHeaderConfigProperty {
-    /**
-     * The request header name that you want CloudFront to send to your staging distribution.
-     *
-     * The header must contain the prefix `aws-cf-cd-` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-header)
-     */
-    public fun `header`(): String
-
-    /**
-     * The request header value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [SingleHeaderConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param header The request header name that you want CloudFront to send to your staging
-       * distribution. 
-       * The header must contain the prefix `aws-cf-cd-` .
-       */
-      public fun `header`(`header`: String)
-
-      /**
-       * @param value The request header value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty.builder()
-
-      /**
-       * @param header The request header name that you want CloudFront to send to your staging
-       * distribution. 
-       * The header must contain the prefix `aws-cf-cd-` .
-       */
-      override fun `header`(`header`: String) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param value The request header value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
-    ) : CdkObject(cdkObject), SingleHeaderConfigProperty {
-      /**
-       * The request header name that you want CloudFront to send to your staging distribution.
-       *
-       * The header must contain the prefix `aws-cf-cd-` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-header)
-       */
-      override fun `header`(): String = unwrap(this).getHeader()
-
-      /**
-       * The request header value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SingleHeaderConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty):
-          SingleHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingleHeaderConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SingleHeaderConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
     }
   }
 
@@ -1256,8 +784,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
     ) : CdkObject(cdkObject), SessionStickinessConfigProperty {
       /**
        * The amount of time after which you want sessions to cease if no requests are received.
@@ -1294,6 +821,123 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty
+    }
+  }
+
+  /**
+   * Determines which HTTP requests are sent to the staging distribution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * SingleHeaderConfigProperty singleHeaderConfigProperty = SingleHeaderConfigProperty.builder()
+   * .header("header")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html)
+   */
+  public interface SingleHeaderConfigProperty {
+    /**
+     * The request header name that you want CloudFront to send to your staging distribution.
+     *
+     * The header must contain the prefix `aws-cf-cd-` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-header)
+     */
+    public fun `header`(): String
+
+    /**
+     * The request header value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [SingleHeaderConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param header The request header name that you want CloudFront to send to your staging
+       * distribution. 
+       * The header must contain the prefix `aws-cf-cd-` .
+       */
+      public fun `header`(`header`: String)
+
+      /**
+       * @param value The request header value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty.builder()
+
+      /**
+       * @param header The request header name that you want CloudFront to send to your staging
+       * distribution. 
+       * The header must contain the prefix `aws-cf-cd-` .
+       */
+      override fun `header`(`header`: String) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      /**
+       * @param value The request header value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
+    ) : CdkObject(cdkObject), SingleHeaderConfigProperty {
+      /**
+       * The request header name that you want CloudFront to send to your staging distribution.
+       *
+       * The header must contain the prefix `aws-cf-cd-` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-header)
+       */
+      override fun `header`(): String = unwrap(this).getHeader()
+
+      /**
+       * The request header value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderconfig-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SingleHeaderConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty):
+          SingleHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleHeaderConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleHeaderConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
     }
   }
 
@@ -1366,8 +1010,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
     ) : CdkObject(cdkObject), SingleHeaderPolicyConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-header)
@@ -1539,8 +1182,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
     ) : CdkObject(cdkObject), SingleWeightConfigProperty {
       /**
        * Session stickiness provides the ability to define multiple requests from a single viewer as
@@ -1578,6 +1220,357 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * SingleWeightPolicyConfigProperty singleWeightPolicyConfigProperty =
+   * SingleWeightPolicyConfigProperty.builder()
+   * .weight(123)
+   * // the properties below are optional
+   * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+   * .idleTtl(123)
+   * .maximumTtl(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html)
+   */
+  public interface SingleWeightPolicyConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
+     */
+    public fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
+     */
+    public fun weight(): Number
+
+    /**
+     * A builder for [SingleWeightPolicyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable)
+
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty)
+
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
+      public
+          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param weight the value to be set. 
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.builder()
+
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      override
+          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
+      }
+
+      /**
+       * @param sessionStickinessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
+      override
+          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit):
+          Unit = sessionStickinessConfig(SessionStickinessConfigProperty(sessionStickinessConfig))
+
+      /**
+       * @param weight the value to be set. 
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
+    ) : CdkObject(cdkObject), SingleWeightPolicyConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
+       */
+      override fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
+       */
+      override fun weight(): Number = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SingleWeightPolicyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty):
+          SingleWeightPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleWeightPolicyConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleWeightPolicyConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
+    }
+  }
+
+  /**
+   * The traffic configuration of your continuous deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * TrafficConfigProperty trafficConfigProperty = TrafficConfigProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .singleHeaderConfig(SingleHeaderConfigProperty.builder()
+   * .header("header")
+   * .value("value")
+   * .build())
+   * .singleWeightConfig(SingleWeightConfigProperty.builder()
+   * .weight(123)
+   * // the properties below are optional
+   * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+   * .idleTtl(123)
+   * .maximumTtl(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html)
+   */
+  public interface TrafficConfigProperty {
+    /**
+     * Determines which HTTP requests are sent to the staging distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleheaderconfig)
+     */
+    public fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
+
+    /**
+     * Contains the percentage of traffic to send to the staging distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleweightconfig)
+     */
+    public fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
+
+    /**
+     * The type of traffic configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [TrafficConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      public fun singleHeaderConfig(singleHeaderConfig: IResolvable)
+
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      public fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty)
+
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
+      public
+          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      public fun singleWeightConfig(singleWeightConfig: IResolvable)
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      public fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty)
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
+      public
+          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of traffic configuration. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty.builder()
+
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      override fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
+        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      override fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
+        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(SingleHeaderConfigProperty::unwrap))
+      }
+
+      /**
+       * @param singleHeaderConfig Determines which HTTP requests are sent to the staging
+       * distribution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
+      override
+          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit):
+          Unit = singleHeaderConfig(SingleHeaderConfigProperty(singleHeaderConfig))
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      override fun singleWeightConfig(singleWeightConfig: IResolvable) {
+        cdkBuilder.singleWeightConfig(singleWeightConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      override fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
+        cdkBuilder.singleWeightConfig(singleWeightConfig.let(SingleWeightConfigProperty::unwrap))
+      }
+
+      /**
+       * @param singleWeightConfig Contains the percentage of traffic to send to the staging
+       * distribution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
+      override
+          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit):
+          Unit = singleWeightConfig(SingleWeightConfigProperty(singleWeightConfig))
+
+      /**
+       * @param type The type of traffic configuration. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
+    ) : CdkObject(cdkObject), TrafficConfigProperty {
+      /**
+       * Determines which HTTP requests are sent to the staging distribution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleheaderconfig)
+       */
+      override fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
+
+      /**
+       * Contains the percentage of traffic to send to the staging distribution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleweightconfig)
+       */
+      override fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
+
+      /**
+       * The type of traffic configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty):
+          TrafficConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrafficConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
     }
   }
 }

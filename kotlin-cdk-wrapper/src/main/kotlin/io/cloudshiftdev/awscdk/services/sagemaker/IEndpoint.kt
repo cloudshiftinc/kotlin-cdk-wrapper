@@ -35,7 +35,7 @@ public interface IEndpoint : IResource {
   public fun grantInvoke(grantee: IGrantable): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.IEndpoint,
+    cdkObject: software.amazon.awscdk.services.sagemaker.IEndpoint,
   ) : CdkObject(cdkObject), IEndpoint {
     /**
      * Apply the given removal policy to this resource.

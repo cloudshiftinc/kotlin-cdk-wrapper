@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -420,7 +420,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.systemsmanagersap.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.systemsmanagersap.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.systemsmanagersap.CfnApplication
   }
 
   /**
@@ -519,8 +520,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty,
+      cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty,
     ) : CdkObject(cdkObject), CredentialProperty {
       /**
        * The type of the application credentials.

@@ -82,7 +82,7 @@ public interface ThrottleSettings {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ThrottleSettings,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.ThrottleSettings,
   ) : CdkObject(cdkObject), ThrottleSettings {
     /**
      * The maximum API request rate limit over a time ranging from one to a few seconds.

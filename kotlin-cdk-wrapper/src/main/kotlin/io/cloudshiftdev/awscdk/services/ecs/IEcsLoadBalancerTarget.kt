@@ -19,7 +19,7 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTarge
 public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
     INetworkLoadBalancerTarget, ILoadBalancerTarget {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IEcsLoadBalancerTarget,
+    cdkObject: software.amazon.awscdk.services.ecs.IEcsLoadBalancerTarget,
   ) : CdkObject(cdkObject), IEcsLoadBalancerTarget {
     /**
      * Attach load-balanced target to a TargetGroup.

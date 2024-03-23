@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html)
  */
-public open class CfnLinkAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnLinkAssociation,
+public open class CfnLinkAssociation(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnLinkAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -184,6 +183,7 @@ public open class CfnLinkAssociation internal constructor(
         CfnLinkAssociation = CfnLinkAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnLinkAssociation):
-        software.amazon.awscdk.services.networkmanager.CfnLinkAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnLinkAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnLinkAssociation
   }
 }

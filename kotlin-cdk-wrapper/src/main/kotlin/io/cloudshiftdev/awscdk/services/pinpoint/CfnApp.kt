@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnApp,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -184,6 +184,6 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.pinpoint.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.pinpoint.CfnApp
   }
 }

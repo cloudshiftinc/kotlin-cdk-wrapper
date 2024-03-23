@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html)
  */
-public open class CfnScheduledAudit internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnScheduledAudit,
+public open class CfnScheduledAudit(
+  cdkObject: software.amazon.awscdk.services.iot.CfnScheduledAudit,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -441,6 +441,7 @@ public open class CfnScheduledAudit internal constructor(
         CfnScheduledAudit = CfnScheduledAudit(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledAudit):
-        software.amazon.awscdk.services.iot.CfnScheduledAudit = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnScheduledAudit = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnScheduledAudit
   }
 }

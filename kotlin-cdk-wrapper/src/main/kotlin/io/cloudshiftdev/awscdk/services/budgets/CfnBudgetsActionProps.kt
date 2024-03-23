@@ -320,7 +320,7 @@ public interface CfnBudgetsActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsActionProps,
+    cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsActionProps,
   ) : CdkObject(cdkObject), CfnBudgetsActionProps {
     /**
      * The trigger threshold of the action.

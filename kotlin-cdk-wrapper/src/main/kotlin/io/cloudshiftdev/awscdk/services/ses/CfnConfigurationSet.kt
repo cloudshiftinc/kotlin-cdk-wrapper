@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html)
  */
-public open class CfnConfigurationSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
+public open class CfnConfigurationSet(
+  cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -749,7 +749,102 @@ public open class CfnConfigurationSet internal constructor(
         CfnConfigurationSet = CfnConfigurationSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationSet):
-        software.amazon.awscdk.services.ses.CfnConfigurationSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnConfigurationSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnConfigurationSet
+  }
+
+  /**
+   * Settings for your VDM configuration as applicable to the Dashboard.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * DashboardOptionsProperty dashboardOptionsProperty = DashboardOptionsProperty.builder()
+   * .engagementMetrics("engagementMetrics")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html)
+   */
+  public interface DashboardOptionsProperty {
+    /**
+     * Specifies the status of your VDM engagement metrics collection. Can be one of the following:.
+     *
+     * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+     * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
+     */
+    public fun engagementMetrics(): String
+
+    /**
+     * A builder for [DashboardOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
+       * Can be one of the following:. 
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       */
+      public fun engagementMetrics(engagementMetrics: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.builder()
+
+      /**
+       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
+       * Can be one of the following:. 
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       */
+      override fun engagementMetrics(engagementMetrics: String) {
+        cdkBuilder.engagementMetrics(engagementMetrics)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
+    ) : CdkObject(cdkObject), DashboardOptionsProperty {
+      /**
+       * Specifies the status of your VDM engagement metrics collection. Can be one of the
+       * following:.
+       *
+       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
+       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
+       */
+      override fun engagementMetrics(): String = unwrap(this).getEngagementMetrics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashboardOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty):
+          DashboardOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashboardOptionsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashboardOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty
+    }
   }
 
   /**
@@ -847,8 +942,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
     ) : CdkObject(cdkObject), DeliveryOptionsProperty {
       /**
        * The name of the dedicated IP pool to associate with the configuration set.
@@ -952,8 +1046,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty,
     ) : CdkObject(cdkObject), GuardianOptionsProperty {
       /**
        * Specifies the status of your VDM optimized shared delivery. Can be one of the following:.
@@ -981,6 +1074,452 @@ public open class CfnConfigurationSet internal constructor(
           software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty
+    }
+  }
+
+  /**
+   * Contains information about the reputation settings for a configuration set.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
+   * .reputationMetricsEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html)
+   */
+  public interface ReputationOptionsProperty {
+    /**
+     * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
+     * such as bounce and complaint rates, to Amazon CloudWatch.
+     *
+     * If the value is `true` , reputation metrics are published. If the value is `false` ,
+     * reputation metrics are not published. The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
+     */
+    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+
+    /**
+     * A builder for [ReputationOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
+       */
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
+
+      /**
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
+       */
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.builder()
+
+      /**
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
+       */
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
+      }
+
+      /**
+       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
+       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
+       */
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
+    ) : CdkObject(cdkObject), ReputationOptionsProperty {
+      /**
+       * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
+       * such as bounce and complaint rates, to Amazon CloudWatch.
+       *
+       * If the value is `true` , reputation metrics are published. If the value is `false` ,
+       * reputation metrics are not published. The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
+       */
+      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty):
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReputationOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty
+    }
+  }
+
+  /**
+   * Used to enable or disable email sending for messages that use this configuration set in the
+   * current AWS Region.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * SendingOptionsProperty sendingOptionsProperty = SendingOptionsProperty.builder()
+   * .sendingEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html)
+   */
+  public interface SendingOptionsProperty {
+    /**
+     * If `true` , email sending is enabled for the configuration set.
+     *
+     * If `false` , email sending is disabled for the configuration set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html#cfn-ses-configurationset-sendingoptions-sendingenabled)
+     */
+    public fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
+
+    /**
+     * A builder for [SendingOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
+       * If `false` , email sending is disabled for the configuration set.
+       */
+      public fun sendingEnabled(sendingEnabled: Boolean)
+
+      /**
+       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
+       * If `false` , email sending is disabled for the configuration set.
+       */
+      public fun sendingEnabled(sendingEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty.builder()
+
+      /**
+       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
+       * If `false` , email sending is disabled for the configuration set.
+       */
+      override fun sendingEnabled(sendingEnabled: Boolean) {
+        cdkBuilder.sendingEnabled(sendingEnabled)
+      }
+
+      /**
+       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
+       * If `false` , email sending is disabled for the configuration set.
+       */
+      override fun sendingEnabled(sendingEnabled: IResolvable) {
+        cdkBuilder.sendingEnabled(sendingEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty,
+    ) : CdkObject(cdkObject), SendingOptionsProperty {
+      /**
+       * If `true` , email sending is enabled for the configuration set.
+       *
+       * If `false` , email sending is disabled for the configuration set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html#cfn-ses-configurationset-sendingoptions-sendingenabled)
+       */
+      override fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SendingOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty):
+          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SendingOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SendingOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty
+    }
+  }
+
+  /**
+   * An object that contains information about the suppression list preferences for your account.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * SuppressionOptionsProperty suppressionOptionsProperty = SuppressionOptionsProperty.builder()
+   * .suppressedReasons(List.of("suppressedReasons"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html)
+   */
+  public interface SuppressionOptionsProperty {
+    /**
+     * A list that contains the reasons that email addresses are automatically added to the
+     * suppression list for your account.
+     *
+     * This list can contain any or all of the following:
+     *
+     * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+     * when a message sent to that address results in a complaint.
+     * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when a
+     * message sent to that address results in a hard bounce.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html#cfn-ses-configurationset-suppressionoptions-suppressedreasons)
+     */
+    public fun suppressedReasons(): List<String> = unwrap(this).getSuppressedReasons() ?:
+        emptyList()
+
+    /**
+     * A builder for [SuppressionOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param suppressedReasons A list that contains the reasons that email addresses are
+       * automatically added to the suppression list for your account.
+       * This list can contain any or all of the following:
+       *
+       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+       * when a message sent to that address results in a complaint.
+       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
+       * a message sent to that address results in a hard bounce.
+       */
+      public fun suppressedReasons(suppressedReasons: List<String>)
+
+      /**
+       * @param suppressedReasons A list that contains the reasons that email addresses are
+       * automatically added to the suppression list for your account.
+       * This list can contain any or all of the following:
+       *
+       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+       * when a message sent to that address results in a complaint.
+       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
+       * a message sent to that address results in a hard bounce.
+       */
+      public fun suppressedReasons(vararg suppressedReasons: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty.builder()
+
+      /**
+       * @param suppressedReasons A list that contains the reasons that email addresses are
+       * automatically added to the suppression list for your account.
+       * This list can contain any or all of the following:
+       *
+       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+       * when a message sent to that address results in a complaint.
+       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
+       * a message sent to that address results in a hard bounce.
+       */
+      override fun suppressedReasons(suppressedReasons: List<String>) {
+        cdkBuilder.suppressedReasons(suppressedReasons)
+      }
+
+      /**
+       * @param suppressedReasons A list that contains the reasons that email addresses are
+       * automatically added to the suppression list for your account.
+       * This list can contain any or all of the following:
+       *
+       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+       * when a message sent to that address results in a complaint.
+       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
+       * a message sent to that address results in a hard bounce.
+       */
+      override fun suppressedReasons(vararg suppressedReasons: String): Unit =
+          suppressedReasons(suppressedReasons.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty,
+    ) : CdkObject(cdkObject), SuppressionOptionsProperty {
+      /**
+       * A list that contains the reasons that email addresses are automatically added to the
+       * suppression list for your account.
+       *
+       * This list can contain any or all of the following:
+       *
+       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
+       * when a message sent to that address results in a complaint.
+       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
+       * a message sent to that address results in a hard bounce.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html#cfn-ses-configurationset-suppressionoptions-suppressedreasons)
+       */
+      override fun suppressedReasons(): List<String> = unwrap(this).getSuppressedReasons() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SuppressionOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty):
+          SuppressionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuppressionOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SuppressionOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty
+    }
+  }
+
+  /**
+   * A domain that is used to redirect email recipients to an Amazon SES-operated domain.
+   *
+   * This domain captures open and click events generated by Amazon SES emails.
+   *
+   * For more information, see [Configuring Custom Domains to Handle Open and Click
+   * Tracking](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) in
+   * the *Amazon SES Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * TrackingOptionsProperty trackingOptionsProperty = TrackingOptionsProperty.builder()
+   * .customRedirectDomain("customRedirectDomain")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html)
+   */
+  public interface TrackingOptionsProperty {
+    /**
+     * The custom subdomain that is used to redirect email recipients to the Amazon SES event
+     * tracking domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-customredirectdomain)
+     */
+    public fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
+
+    /**
+     * A builder for [TrackingOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customRedirectDomain The custom subdomain that is used to redirect email recipients
+       * to the Amazon SES event tracking domain.
+       */
+      public fun customRedirectDomain(customRedirectDomain: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty.builder()
+
+      /**
+       * @param customRedirectDomain The custom subdomain that is used to redirect email recipients
+       * to the Amazon SES event tracking domain.
+       */
+      override fun customRedirectDomain(customRedirectDomain: String) {
+        cdkBuilder.customRedirectDomain(customRedirectDomain)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty,
+    ) : CdkObject(cdkObject), TrackingOptionsProperty {
+      /**
+       * The custom subdomain that is used to redirect email recipients to the Amazon SES event
+       * tracking domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-customredirectdomain)
+       */
+      override fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrackingOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty):
+          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrackingOptionsProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty
     }
   }
 
@@ -1114,8 +1653,7 @@ public open class CfnConfigurationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
     ) : CdkObject(cdkObject), VdmOptionsProperty {
       /**
        * Settings for your VDM configuration as applicable to the Dashboard.
@@ -1147,551 +1685,6 @@ public open class CfnConfigurationSet internal constructor(
           software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty
-    }
-  }
-
-  /**
-   * Settings for your VDM configuration as applicable to the Dashboard.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * DashboardOptionsProperty dashboardOptionsProperty = DashboardOptionsProperty.builder()
-   * .engagementMetrics("engagementMetrics")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html)
-   */
-  public interface DashboardOptionsProperty {
-    /**
-     * Specifies the status of your VDM engagement metrics collection. Can be one of the following:.
-     *
-     * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-     * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
-     */
-    public fun engagementMetrics(): String
-
-    /**
-     * A builder for [DashboardOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
-       * Can be one of the following:. 
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-       */
-      public fun engagementMetrics(engagementMetrics: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty.builder()
-
-      /**
-       * @param engagementMetrics Specifies the status of your VDM engagement metrics collection.
-       * Can be one of the following:. 
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-       */
-      override fun engagementMetrics(engagementMetrics: String) {
-        cdkBuilder.engagementMetrics(engagementMetrics)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
-    ) : CdkObject(cdkObject), DashboardOptionsProperty {
-      /**
-       * Specifies the status of your VDM engagement metrics collection. Can be one of the
-       * following:.
-       *
-       * * `ENABLED` – Amazon SES enables engagement metrics for the configuration set.
-       * * `DISABLED` – Amazon SES disables engagement metrics for the configuration set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html#cfn-ses-configurationset-dashboardoptions-engagementmetrics)
-       */
-      override fun engagementMetrics(): String = unwrap(this).getEngagementMetrics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DashboardOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty):
-          DashboardOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashboardOptionsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DashboardOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty
-    }
-  }
-
-  /**
-   * Used to enable or disable email sending for messages that use this configuration set in the
-   * current AWS Region.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * SendingOptionsProperty sendingOptionsProperty = SendingOptionsProperty.builder()
-   * .sendingEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html)
-   */
-  public interface SendingOptionsProperty {
-    /**
-     * If `true` , email sending is enabled for the configuration set.
-     *
-     * If `false` , email sending is disabled for the configuration set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html#cfn-ses-configurationset-sendingoptions-sendingenabled)
-     */
-    public fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
-
-    /**
-     * A builder for [SendingOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-       * If `false` , email sending is disabled for the configuration set.
-       */
-      public fun sendingEnabled(sendingEnabled: Boolean)
-
-      /**
-       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-       * If `false` , email sending is disabled for the configuration set.
-       */
-      public fun sendingEnabled(sendingEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty.builder()
-
-      /**
-       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-       * If `false` , email sending is disabled for the configuration set.
-       */
-      override fun sendingEnabled(sendingEnabled: Boolean) {
-        cdkBuilder.sendingEnabled(sendingEnabled)
-      }
-
-      /**
-       * @param sendingEnabled If `true` , email sending is enabled for the configuration set.
-       * If `false` , email sending is disabled for the configuration set.
-       */
-      override fun sendingEnabled(sendingEnabled: IResolvable) {
-        cdkBuilder.sendingEnabled(sendingEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty,
-    ) : CdkObject(cdkObject), SendingOptionsProperty {
-      /**
-       * If `true` , email sending is enabled for the configuration set.
-       *
-       * If `false` , email sending is disabled for the configuration set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-sendingoptions.html#cfn-ses-configurationset-sendingoptions-sendingenabled)
-       */
-      override fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SendingOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty):
-          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SendingOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SendingOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty
-    }
-  }
-
-  /**
-   * An object that contains information about the suppression list preferences for your account.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * SuppressionOptionsProperty suppressionOptionsProperty = SuppressionOptionsProperty.builder()
-   * .suppressedReasons(List.of("suppressedReasons"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html)
-   */
-  public interface SuppressionOptionsProperty {
-    /**
-     * A list that contains the reasons that email addresses are automatically added to the
-     * suppression list for your account.
-     *
-     * This list can contain any or all of the following:
-     *
-     * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-     * when a message sent to that address results in a complaint.
-     * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when a
-     * message sent to that address results in a hard bounce.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html#cfn-ses-configurationset-suppressionoptions-suppressedreasons)
-     */
-    public fun suppressedReasons(): List<String> = unwrap(this).getSuppressedReasons() ?:
-        emptyList()
-
-    /**
-     * A builder for [SuppressionOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param suppressedReasons A list that contains the reasons that email addresses are
-       * automatically added to the suppression list for your account.
-       * This list can contain any or all of the following:
-       *
-       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-       * when a message sent to that address results in a complaint.
-       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
-       * a message sent to that address results in a hard bounce.
-       */
-      public fun suppressedReasons(suppressedReasons: List<String>)
-
-      /**
-       * @param suppressedReasons A list that contains the reasons that email addresses are
-       * automatically added to the suppression list for your account.
-       * This list can contain any or all of the following:
-       *
-       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-       * when a message sent to that address results in a complaint.
-       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
-       * a message sent to that address results in a hard bounce.
-       */
-      public fun suppressedReasons(vararg suppressedReasons: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty.builder()
-
-      /**
-       * @param suppressedReasons A list that contains the reasons that email addresses are
-       * automatically added to the suppression list for your account.
-       * This list can contain any or all of the following:
-       *
-       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-       * when a message sent to that address results in a complaint.
-       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
-       * a message sent to that address results in a hard bounce.
-       */
-      override fun suppressedReasons(suppressedReasons: List<String>) {
-        cdkBuilder.suppressedReasons(suppressedReasons)
-      }
-
-      /**
-       * @param suppressedReasons A list that contains the reasons that email addresses are
-       * automatically added to the suppression list for your account.
-       * This list can contain any or all of the following:
-       *
-       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-       * when a message sent to that address results in a complaint.
-       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
-       * a message sent to that address results in a hard bounce.
-       */
-      override fun suppressedReasons(vararg suppressedReasons: String): Unit =
-          suppressedReasons(suppressedReasons.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty,
-    ) : CdkObject(cdkObject), SuppressionOptionsProperty {
-      /**
-       * A list that contains the reasons that email addresses are automatically added to the
-       * suppression list for your account.
-       *
-       * This list can contain any or all of the following:
-       *
-       * * `COMPLAINT` – Amazon SES adds an email address to the suppression list for your account
-       * when a message sent to that address results in a complaint.
-       * * `BOUNCE` – Amazon SES adds an email address to the suppression list for your account when
-       * a message sent to that address results in a hard bounce.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html#cfn-ses-configurationset-suppressionoptions-suppressedreasons)
-       */
-      override fun suppressedReasons(): List<String> = unwrap(this).getSuppressedReasons() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SuppressionOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty):
-          SuppressionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SuppressionOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SuppressionOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty
-    }
-  }
-
-  /**
-   * A domain that is used to redirect email recipients to an Amazon SES-operated domain.
-   *
-   * This domain captures open and click events generated by Amazon SES emails.
-   *
-   * For more information, see [Configuring Custom Domains to Handle Open and Click
-   * Tracking](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) in
-   * the *Amazon SES Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * TrackingOptionsProperty trackingOptionsProperty = TrackingOptionsProperty.builder()
-   * .customRedirectDomain("customRedirectDomain")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html)
-   */
-  public interface TrackingOptionsProperty {
-    /**
-     * The custom subdomain that is used to redirect email recipients to the Amazon SES event
-     * tracking domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-customredirectdomain)
-     */
-    public fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
-
-    /**
-     * A builder for [TrackingOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param customRedirectDomain The custom subdomain that is used to redirect email recipients
-       * to the Amazon SES event tracking domain.
-       */
-      public fun customRedirectDomain(customRedirectDomain: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty.builder()
-
-      /**
-       * @param customRedirectDomain The custom subdomain that is used to redirect email recipients
-       * to the Amazon SES event tracking domain.
-       */
-      override fun customRedirectDomain(customRedirectDomain: String) {
-        cdkBuilder.customRedirectDomain(customRedirectDomain)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty,
-    ) : CdkObject(cdkObject), TrackingOptionsProperty {
-      /**
-       * The custom subdomain that is used to redirect email recipients to the Amazon SES event
-       * tracking domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-customredirectdomain)
-       */
-      override fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TrackingOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty):
-          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingOptionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrackingOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty
-    }
-  }
-
-  /**
-   * Contains information about the reputation settings for a configuration set.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * ReputationOptionsProperty reputationOptionsProperty = ReputationOptionsProperty.builder()
-   * .reputationMetricsEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html)
-   */
-  public interface ReputationOptionsProperty {
-    /**
-     * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-     * such as bounce and complaint rates, to Amazon CloudWatch.
-     *
-     * If the value is `true` , reputation metrics are published. If the value is `false` ,
-     * reputation metrics are not published. The default value is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
-     */
-    public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
-
-    /**
-     * A builder for [ReputationOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
-
-      /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       */
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.builder()
-
-      /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
-      }
-
-      /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       */
-      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
-    ) : CdkObject(cdkObject), ReputationOptionsProperty {
-      /**
-       * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-       * such as bounce and complaint rates, to Amazon CloudWatch.
-       *
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
-       */
-      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReputationOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReputationOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReputationOptionsProperty):
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty
     }
   }
 }

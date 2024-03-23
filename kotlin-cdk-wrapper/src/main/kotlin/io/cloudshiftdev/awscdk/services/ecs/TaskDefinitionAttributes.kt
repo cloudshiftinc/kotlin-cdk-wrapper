@@ -120,7 +120,7 @@ public interface TaskDefinitionAttributes : CommonTaskDefinitionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionAttributes,
+    cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionAttributes,
   ) : CdkObject(cdkObject), TaskDefinitionAttributes {
     /**
      * What launch types this task definition should be compatible with.

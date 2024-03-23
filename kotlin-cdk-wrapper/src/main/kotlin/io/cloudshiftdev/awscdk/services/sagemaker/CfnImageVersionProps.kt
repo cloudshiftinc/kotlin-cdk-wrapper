@@ -296,7 +296,7 @@ public interface CfnImageVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersionProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersionProps,
   ) : CdkObject(cdkObject), CfnImageVersionProps {
     /**
      * The alias of the image version.

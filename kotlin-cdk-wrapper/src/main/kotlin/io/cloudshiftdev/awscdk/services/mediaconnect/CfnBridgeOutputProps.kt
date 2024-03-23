@@ -142,7 +142,7 @@ public interface CfnBridgeOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutputProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutputProps,
   ) : CdkObject(cdkObject), CfnBridgeOutputProps {
     /**
      * The ARN of the bridge that you want to describe.

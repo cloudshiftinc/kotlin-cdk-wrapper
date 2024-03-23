@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html)
  */
-public open class CfnGameServerGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
+public open class CfnGameServerGroup(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1054,255 +1054,8 @@ public open class CfnGameServerGroup internal constructor(
         CfnGameServerGroup = CfnGameServerGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameServerGroup):
-        software.amazon.awscdk.services.gamelift.CfnGameServerGroup = wrapped.cdkObject
-  }
-
-  /**
-   * *This data type is used with the GameLift FleetIQ and game server groups.*.
-   *
-   * An Amazon EC2 launch template that contains configuration settings and game server code to be
-   * deployed to all instances in a game server group. The launch template is specified when creating a
-   * new game server group with `GameServerGroup` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * LaunchTemplateProperty launchTemplateProperty = LaunchTemplateProperty.builder()
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html)
-   */
-  public interface LaunchTemplateProperty {
-    /**
-     * A unique identifier for an existing Amazon EC2 launch template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
-     */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-    /**
-     * A readable identifier for an existing Amazon EC2 launch template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version of the Amazon EC2 launch template to use.
-     *
-     * If no version is specified, the default version will be used. With Amazon EC2, you can
-     * specify a default version for a launch template. If none is set, the default is the first
-     * version created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [LaunchTemplateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
-       */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The version of the Amazon EC2 launch template to use.
-       * If no version is specified, the default version will be used. With Amazon EC2, you can
-       * specify a default version for a launch template. If none is set, the default is the first
-       * version created.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.builder()
-
-      /**
-       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
-       */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
-      }
-
-      /**
-       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The version of the Amazon EC2 launch template to use.
-       * If no version is specified, the default version will be used. With Amazon EC2, you can
-       * specify a default version for a launch template. If none is set, the default is the first
-       * version created.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateProperty {
-      /**
-       * A unique identifier for an existing Amazon EC2 launch template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
-       */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * A readable identifier for an existing Amazon EC2 launch template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version of the Amazon EC2 launch template to use.
-       *
-       * If no version is specified, the default version will be used. With Amazon EC2, you can
-       * specify a default version for a launch template. If none is set, the default is the first
-       * version created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty):
-          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty
-    }
-  }
-
-  /**
-   * *This data type is used with the Amazon GameLift FleetIQ and game server groups.*.
-   *
-   * Settings for a target-based scaling policy as part of a `GameServerGroupAutoScalingPolicy` .
-   * These settings are used to create a target-based policy that tracks the GameLift FleetIQ metric
-   * `"PercentUtilizedGameServers"` and specifies a target value for the metric. As player usage
-   * changes, the policy triggers to adjust the game server group capacity so that the metric returns
-   * to the target value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
-   * TargetTrackingConfigurationProperty.builder()
-   * .targetValue(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html)
-   */
-  public interface TargetTrackingConfigurationProperty {
-    /**
-     * Desired value to use with a game server group target-based scaling policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetTrackingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetValue Desired value to use with a game server group target-based scaling
-       * policy. 
-       */
-      public fun targetValue(targetValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.builder()
-
-      /**
-       * @param targetValue Desired value to use with a game server group target-based scaling
-       * policy. 
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
-      /**
-       * Desired value to use with a game server group target-based scaling policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetTrackingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
-    }
+        software.amazon.awscdk.services.gamelift.CfnGameServerGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.gamelift.CfnGameServerGroup
   }
 
   /**
@@ -1463,8 +1216,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
     ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
       /**
        * Length of time, in seconds, it takes for a new instance to start new game server processes
@@ -1607,8 +1359,7 @@ public open class CfnGameServerGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
     ) : CdkObject(cdkObject), InstanceDefinitionProperty {
       /**
        * An Amazon EC2 instance type designation.
@@ -1647,6 +1398,252 @@ public open class CfnGameServerGroup internal constructor(
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty
+    }
+  }
+
+  /**
+   * *This data type is used with the GameLift FleetIQ and game server groups.*.
+   *
+   * An Amazon EC2 launch template that contains configuration settings and game server code to be
+   * deployed to all instances in a game server group. The launch template is specified when creating a
+   * new game server group with `GameServerGroup` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * LaunchTemplateProperty launchTemplateProperty = LaunchTemplateProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html)
+   */
+  public interface LaunchTemplateProperty {
+    /**
+     * A unique identifier for an existing Amazon EC2 launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * A readable identifier for an existing Amazon EC2 launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version of the Amazon EC2 launch template to use.
+     *
+     * If no version is specified, the default version will be used. With Amazon EC2, you can
+     * specify a default version for a launch template. If none is set, the default is the first
+     * version created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [LaunchTemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The version of the Amazon EC2 launch template to use.
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.builder()
+
+      /**
+       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The version of the Amazon EC2 launch template to use.
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateProperty {
+      /**
+       * A unique identifier for an existing Amazon EC2 launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * A readable identifier for an existing Amazon EC2 launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version of the Amazon EC2 launch template to use.
+       *
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchTemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty):
+          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty
+    }
+  }
+
+  /**
+   * *This data type is used with the Amazon GameLift FleetIQ and game server groups.*.
+   *
+   * Settings for a target-based scaling policy as part of a `GameServerGroupAutoScalingPolicy` .
+   * These settings are used to create a target-based policy that tracks the GameLift FleetIQ metric
+   * `"PercentUtilizedGameServers"` and specifies a target value for the metric. As player usage
+   * changes, the policy triggers to adjust the game server group capacity so that the metric returns
+   * to the target value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
+   * TargetTrackingConfigurationProperty.builder()
+   * .targetValue(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html)
+   */
+  public interface TargetTrackingConfigurationProperty {
+    /**
+     * Desired value to use with a game server group target-based scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number
+
+    /**
+     * A builder for [TargetTrackingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetValue Desired value to use with a game server group target-based scaling
+       * policy. 
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.builder()
+
+      /**
+       * @param targetValue Desired value to use with a game server group target-based scaling
+       * policy. 
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
+      /**
+       * Desired value to use with a game server group target-based scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetTrackingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty):
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
     }
   }
 }

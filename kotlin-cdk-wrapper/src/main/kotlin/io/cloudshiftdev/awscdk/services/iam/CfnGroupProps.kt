@@ -368,7 +368,7 @@ public interface CfnGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnGroupProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnGroupProps,
   ) : CdkObject(cdkObject), CfnGroupProps {
     /**
      * The name of the group to create. Do not include the path in this value.

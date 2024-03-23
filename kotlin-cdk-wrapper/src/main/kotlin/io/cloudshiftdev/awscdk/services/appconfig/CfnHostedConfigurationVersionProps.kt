@@ -203,8 +203,7 @@ public interface CfnHostedConfigurationVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps,
   ) : CdkObject(cdkObject), CfnHostedConfigurationVersionProps {
     /**
      * The application ID.

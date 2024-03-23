@@ -37,8 +37,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class HttpOrigin internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.HttpOrigin,
+public open class HttpOrigin(
+  cdkObject: software.amazon.awscdk.services.cloudfront.origins.HttpOrigin,
 ) : OriginBase(cdkObject) {
   public constructor(domainName: String) :
       this(software.amazon.awscdk.services.cloudfront.origins.HttpOrigin(domainName)
@@ -434,6 +434,7 @@ public open class HttpOrigin internal constructor(
         HttpOrigin = HttpOrigin(cdkObject)
 
     internal fun unwrap(wrapped: HttpOrigin):
-        software.amazon.awscdk.services.cloudfront.origins.HttpOrigin = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.origins.HttpOrigin = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.origins.HttpOrigin
   }
 }

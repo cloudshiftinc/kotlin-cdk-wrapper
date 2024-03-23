@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-athena.html)
  */
-public open class AthenaGetQueryResults internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResults,
+public open class AthenaGetQueryResults(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResults,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -501,6 +500,7 @@ public open class AthenaGetQueryResults internal constructor(
 
     internal fun unwrap(wrapped: AthenaGetQueryResults):
         software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResults =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResults
   }
 }

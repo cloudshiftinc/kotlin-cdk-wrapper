@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instancestorageconfig.html)
  */
-public open class CfnInstanceStorageConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
+public open class CfnInstanceStorageConfig(
+  cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -568,11 +568,12 @@ public open class CfnInstanceStorageConfig internal constructor(
         CfnInstanceStorageConfig = CfnInstanceStorageConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceStorageConfig):
-        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
   }
 
   /**
-   * Configuration information of a Kinesis data stream.
+   * The encryption configuration.
    *
    * Example:
    *
@@ -580,77 +581,131 @@ public open class CfnInstanceStorageConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.connect.*;
-   * KinesisStreamConfigProperty kinesisStreamConfigProperty = KinesisStreamConfigProperty.builder()
-   * .streamArn("streamArn")
+   * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
+   * .encryptionType("encryptionType")
+   * .keyId("keyId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html)
    */
-  public interface KinesisStreamConfigProperty {
+  public interface EncryptionConfigProperty {
     /**
-     * The Amazon Resource Name (ARN) of the data stream.
+     * The type of encryption.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html#cfn-connect-instancestorageconfig-kinesisstreamconfig-streamarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-encryptiontype)
      */
-    public fun streamArn(): String
+    public fun encryptionType(): String
 
     /**
-     * A builder for [KinesisStreamConfigProperty]
+     * The full ARN of the encryption key.
+     *
+     *
+     * Be sure to provide the full ARN of the encryption key, not just the ID.
+     *
+     * Amazon Connect supports only KMS keys with the default key spec of
+     * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-keyid)
+     */
+    public fun keyId(): String
+
+    /**
+     * A builder for [EncryptionConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
+       * @param encryptionType The type of encryption. 
        */
-      public fun streamArn(streamArn: String)
+      public fun encryptionType(encryptionType: String)
+
+      /**
+       * @param keyId The full ARN of the encryption key. 
+       *
+       * Be sure to provide the full ARN of the encryption key, not just the ID.
+       *
+       * Amazon Connect supports only KMS keys with the default key spec of
+       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
+       * .
+       */
+      public fun keyId(keyId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty.Builder
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty.Builder
           =
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty.builder()
 
       /**
-       * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
+       * @param encryptionType The type of encryption. 
        */
-      override fun streamArn(streamArn: String) {
-        cdkBuilder.streamArn(streamArn)
+      override fun encryptionType(encryptionType: String) {
+        cdkBuilder.encryptionType(encryptionType)
+      }
+
+      /**
+       * @param keyId The full ARN of the encryption key. 
+       *
+       * Be sure to provide the full ARN of the encryption key, not just the ID.
+       *
+       * Amazon Connect supports only KMS keys with the default key spec of
+       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
+       * .
+       */
+      override fun keyId(keyId: String) {
+        cdkBuilder.keyId(keyId)
       }
 
       public fun build():
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
-    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
+    ) : CdkObject(cdkObject), EncryptionConfigProperty {
       /**
-       * The Amazon Resource Name (ARN) of the data stream.
+       * The type of encryption.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html#cfn-connect-instancestorageconfig-kinesisstreamconfig-streamarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-encryptiontype)
        */
-      override fun streamArn(): String = unwrap(this).getStreamArn()
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
+
+      /**
+       * The full ARN of the encryption key.
+       *
+       *
+       * Be sure to provide the full ARN of the encryption key, not just the ID.
+       *
+       * Amazon Connect supports only KMS keys with the default key spec of
+       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-keyid)
+       */
+      override fun keyId(): String = unwrap(this).getKeyId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty):
-          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty):
+          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KinesisStreamConfigProperty):
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
+      internal fun unwrap(wrapped: EncryptionConfigProperty):
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
     }
   }
 
@@ -709,8 +764,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
     ) : CdkObject(cdkObject), KinesisFirehoseConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the delivery stream.
@@ -739,7 +793,7 @@ public open class CfnInstanceStorageConfig internal constructor(
   }
 
   /**
-   * Information about the Amazon Simple Storage Service (Amazon S3) storage type.
+   * Configuration information of a Kinesis data stream.
    *
    * Example:
    *
@@ -747,162 +801,76 @@ public open class CfnInstanceStorageConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.connect.*;
-   * S3ConfigProperty s3ConfigProperty = S3ConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * // the properties below are optional
-   * .encryptionConfig(EncryptionConfigProperty.builder()
-   * .encryptionType("encryptionType")
-   * .keyId("keyId")
-   * .build())
+   * KinesisStreamConfigProperty kinesisStreamConfigProperty = KinesisStreamConfigProperty.builder()
+   * .streamArn("streamArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html)
    */
-  public interface S3ConfigProperty {
+  public interface KinesisStreamConfigProperty {
     /**
-     * The S3 bucket name.
+     * The Amazon Resource Name (ARN) of the data stream.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html#cfn-connect-instancestorageconfig-kinesisstreamconfig-streamarn)
      */
-    public fun bucketName(): String
+    public fun streamArn(): String
 
     /**
-     * The S3 bucket prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketprefix)
-     */
-    public fun bucketPrefix(): String
-
-    /**
-     * The Amazon S3 encryption configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-encryptionconfig)
-     */
-    public fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
-
-    /**
-     * A builder for [S3ConfigProperty]
+     * A builder for [KinesisStreamConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucketName The S3 bucket name. 
+       * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
        */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix The S3 bucket prefix. 
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      public fun encryptionConfig(encryptionConfig: IResolvable)
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty)
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit)
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty.Builder
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty.Builder
           =
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty.builder()
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
 
       /**
-       * @param bucketName The S3 bucket name. 
+       * @param streamArn The Amazon Resource Name (ARN) of the data stream. 
        */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
+      override fun streamArn(streamArn: String) {
+        cdkBuilder.streamArn(streamArn)
       }
-
-      /**
-       * @param bucketPrefix The S3 bucket prefix. 
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      override fun encryptionConfig(encryptionConfig: IResolvable) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionConfig The Amazon S3 encryption configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
-      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit):
-          Unit = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
 
       public fun build():
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
-    ) : CdkObject(cdkObject), S3ConfigProperty {
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
+    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
       /**
-       * The S3 bucket name.
+       * The Amazon Resource Name (ARN) of the data stream.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisstreamconfig.html#cfn-connect-instancestorageconfig-kinesisstreamconfig-streamarn)
        */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * The S3 bucket prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketprefix)
-       */
-      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
-
-      /**
-       * The Amazon S3 encryption configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-encryptionconfig)
-       */
-      override fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
+      override fun streamArn(): String = unwrap(this).getStreamArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty):
-          S3ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty):
+          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3ConfigProperty):
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty
+      internal fun unwrap(wrapped: KinesisStreamConfigProperty):
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
     }
   }
 
@@ -1041,8 +1009,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
     ) : CdkObject(cdkObject), KinesisVideoStreamConfigProperty {
       /**
        * The encryption configuration.
@@ -1089,7 +1056,7 @@ public open class CfnInstanceStorageConfig internal constructor(
   }
 
   /**
-   * The encryption configuration.
+   * Information about the Amazon Simple Storage Service (Amazon S3) storage type.
    *
    * Example:
    *
@@ -1097,132 +1064,161 @@ public open class CfnInstanceStorageConfig internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.connect.*;
-   * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
+   * S3ConfigProperty s3ConfigProperty = S3ConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * // the properties below are optional
+   * .encryptionConfig(EncryptionConfigProperty.builder()
    * .encryptionType("encryptionType")
    * .keyId("keyId")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html)
    */
-  public interface EncryptionConfigProperty {
+  public interface S3ConfigProperty {
     /**
-     * The type of encryption.
+     * The S3 bucket name.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-encryptiontype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketname)
      */
-    public fun encryptionType(): String
+    public fun bucketName(): String
 
     /**
-     * The full ARN of the encryption key.
+     * The S3 bucket prefix.
      *
-     *
-     * Be sure to provide the full ARN of the encryption key, not just the ID.
-     *
-     * Amazon Connect supports only KMS keys with the default key spec of
-     * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-keyid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketprefix)
      */
-    public fun keyId(): String
+    public fun bucketPrefix(): String
 
     /**
-     * A builder for [EncryptionConfigProperty]
+     * The Amazon S3 encryption configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-encryptionconfig)
+     */
+    public fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
+
+    /**
+     * A builder for [S3ConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param encryptionType The type of encryption. 
+       * @param bucketName The S3 bucket name. 
        */
-      public fun encryptionType(encryptionType: String)
+      public fun bucketName(bucketName: String)
 
       /**
-       * @param keyId The full ARN of the encryption key. 
-       *
-       * Be sure to provide the full ARN of the encryption key, not just the ID.
-       *
-       * Amazon Connect supports only KMS keys with the default key spec of
-       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
-       * .
+       * @param bucketPrefix The S3 bucket prefix. 
        */
-      public fun keyId(keyId: String)
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      public fun encryptionConfig(encryptionConfig: IResolvable)
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty)
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty.Builder
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty.Builder
           =
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty.builder()
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty.builder()
 
       /**
-       * @param encryptionType The type of encryption. 
+       * @param bucketName The S3 bucket name. 
        */
-      override fun encryptionType(encryptionType: String) {
-        cdkBuilder.encryptionType(encryptionType)
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
       }
 
       /**
-       * @param keyId The full ARN of the encryption key. 
-       *
-       * Be sure to provide the full ARN of the encryption key, not just the ID.
-       *
-       * Amazon Connect supports only KMS keys with the default key spec of
-       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
-       * .
+       * @param bucketPrefix The S3 bucket prefix. 
        */
-      override fun keyId(keyId: String) {
-        cdkBuilder.keyId(keyId)
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
       }
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      override fun encryptionConfig(encryptionConfig: IResolvable) {
+        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
+        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionConfig The Amazon S3 encryption configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit):
+          Unit = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
 
       public fun build():
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigProperty {
+      cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
+    ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
-       * The type of encryption.
+       * The S3 bucket name.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-encryptiontype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketname)
        */
-      override fun encryptionType(): String = unwrap(this).getEncryptionType()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
       /**
-       * The full ARN of the encryption key.
+       * The S3 bucket prefix.
        *
-       *
-       * Be sure to provide the full ARN of the encryption key, not just the ID.
-       *
-       * Amazon Connect supports only KMS keys with the default key spec of
-       * [`SYMMETRIC_DEFAULT`](https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html#cfn-connect-instancestorageconfig-encryptionconfig-keyid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-bucketprefix)
        */
-      override fun keyId(): String = unwrap(this).getKeyId()
+      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
+
+      /**
+       * The Amazon S3 encryption configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html#cfn-connect-instancestorageconfig-s3config-encryptionconfig)
+       */
+      override fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty):
-          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty):
+          S3ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EncryptionConfigProperty):
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty
+      internal fun unwrap(wrapped: S3ConfigProperty):
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty
     }
   }
 }

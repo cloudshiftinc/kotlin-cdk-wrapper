@@ -16,8 +16,8 @@ import kotlin.jvm.JvmName
  *
  * ContextProvider needs access to a Construct to hook into the context mechanism.
  */
-public open class ContextProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.ContextProvider,
+public open class ContextProvider(
+  cdkObject: software.amazon.awscdk.ContextProvider,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun key(scope: Construct, options: GetContextKeyOptions): GetContextKeyResult =
@@ -42,6 +42,6 @@ public open class ContextProvider internal constructor(
         ContextProvider(cdkObject)
 
     internal fun unwrap(wrapped: ContextProvider): software.amazon.awscdk.ContextProvider =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.ContextProvider
   }
 }

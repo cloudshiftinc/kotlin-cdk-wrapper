@@ -45,9 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)
  */
-public open class CfnModuleDefaultVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
+public open class CfnModuleDefaultVersion(
+  cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -221,5 +220,6 @@ public open class CfnModuleDefaultVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnModuleDefaultVersion):
         software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion = wrapped.cdkObject
+        as software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion
   }
 }

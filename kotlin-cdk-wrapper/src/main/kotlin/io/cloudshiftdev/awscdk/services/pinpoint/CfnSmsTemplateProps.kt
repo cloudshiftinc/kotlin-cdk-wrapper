@@ -172,7 +172,7 @@ public interface CfnSmsTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplateProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplateProps,
   ) : CdkObject(cdkObject), CfnSmsTemplateProps {
     /**
      * The message body to use in text messages that are based on the message template.

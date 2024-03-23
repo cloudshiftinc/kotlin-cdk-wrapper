@@ -53,7 +53,7 @@ public interface GitHubSourceCredentialsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps,
   ) : CdkObject(cdkObject), GitHubSourceCredentialsProps {
     /**
      * The personal access token to use when contacting the GitHub API.

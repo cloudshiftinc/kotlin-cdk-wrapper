@@ -62,9 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)
  */
-public open class CfnGlobalReplicationGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
+public open class CfnGlobalReplicationGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -567,7 +566,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
         CfnGlobalReplicationGroup = CfnGlobalReplicationGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalReplicationGroup):
-        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
   }
 
   /**
@@ -667,8 +667,7 @@ public open class CfnGlobalReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
     ) : CdkObject(cdkObject), GlobalReplicationGroupMemberProperty {
       /**
        * The replication group id of the Global datastore member.
@@ -708,139 +707,6 @@ public open class CfnGlobalReplicationGroup internal constructor(
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty
-    }
-  }
-
-  /**
-   * A list of `PreferredAvailabilityZones` objects that specifies the configuration of a node group
-   * in the resharded cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticache.*;
-   * ReshardingConfigurationProperty reshardingConfigurationProperty =
-   * ReshardingConfigurationProperty.builder()
-   * .nodeGroupId("nodeGroupId")
-   * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html)
-   */
-  public interface ReshardingConfigurationProperty {
-    /**
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group
-     * these configuration values apply to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)
-     */
-    public fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
-
-    /**
-     * A list of preferred availability zones for the nodes in this cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-preferredavailabilityzones)
-     */
-    public fun preferredAvailabilityZones(): List<String> =
-        unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
-
-    /**
-     * A builder for [ReshardingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
-       * id for the node group these configuration values apply to.
-       */
-      public fun nodeGroupId(nodeGroupId: String)
-
-      /**
-       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
-       * this cluster.
-       */
-      public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
-
-      /**
-       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
-       * this cluster.
-       */
-      public fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.builder()
-
-      /**
-       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
-       * id for the node group these configuration values apply to.
-       */
-      override fun nodeGroupId(nodeGroupId: String) {
-        cdkBuilder.nodeGroupId(nodeGroupId)
-      }
-
-      /**
-       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
-       * this cluster.
-       */
-      override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
-        cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
-      }
-
-      /**
-       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
-       * this cluster.
-       */
-      override fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String): Unit =
-          preferredAvailabilityZones(preferredAvailabilityZones.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
-    ) : CdkObject(cdkObject), ReshardingConfigurationProperty {
-      /**
-       * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node
-       * group these configuration values apply to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)
-       */
-      override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
-
-      /**
-       * A list of preferred availability zones for the nodes in this cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-preferredavailabilityzones)
-       */
-      override fun preferredAvailabilityZones(): List<String> =
-          unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReshardingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty):
-          ReshardingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReshardingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReshardingConfigurationProperty):
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
     }
   }
 
@@ -972,8 +838,7 @@ public open class CfnGlobalReplicationGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
     ) : CdkObject(cdkObject), RegionalConfigurationProperty {
       /**
        * The name of the secondary cluster.
@@ -1013,6 +878,138 @@ public open class CfnGlobalReplicationGroup internal constructor(
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty
+    }
+  }
+
+  /**
+   * A list of `PreferredAvailabilityZones` objects that specifies the configuration of a node group
+   * in the resharded cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticache.*;
+   * ReshardingConfigurationProperty reshardingConfigurationProperty =
+   * ReshardingConfigurationProperty.builder()
+   * .nodeGroupId("nodeGroupId")
+   * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html)
+   */
+  public interface ReshardingConfigurationProperty {
+    /**
+     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group
+     * these configuration values apply to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)
+     */
+    public fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
+
+    /**
+     * A list of preferred availability zones for the nodes in this cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-preferredavailabilityzones)
+     */
+    public fun preferredAvailabilityZones(): List<String> =
+        unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
+
+    /**
+     * A builder for [ReshardingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
+       * id for the node group these configuration values apply to.
+       */
+      public fun nodeGroupId(nodeGroupId: String)
+
+      /**
+       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
+       * this cluster.
+       */
+      public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
+
+      /**
+       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
+       * this cluster.
+       */
+      public fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.builder()
+
+      /**
+       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
+       * id for the node group these configuration values apply to.
+       */
+      override fun nodeGroupId(nodeGroupId: String) {
+        cdkBuilder.nodeGroupId(nodeGroupId)
+      }
+
+      /**
+       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
+       * this cluster.
+       */
+      override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
+        cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
+      }
+
+      /**
+       * @param preferredAvailabilityZones A list of preferred availability zones for the nodes in
+       * this cluster.
+       */
+      override fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String): Unit =
+          preferredAvailabilityZones(preferredAvailabilityZones.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
+    ) : CdkObject(cdkObject), ReshardingConfigurationProperty {
+      /**
+       * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node
+       * group these configuration values apply to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)
+       */
+      override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
+
+      /**
+       * A list of preferred availability zones for the nodes in this cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-preferredavailabilityzones)
+       */
+      override fun preferredAvailabilityZones(): List<String> =
+          unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReshardingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty):
+          ReshardingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReshardingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReshardingConfigurationProperty):
+          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
     }
   }
 }

@@ -229,8 +229,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1017,12 +1017,14 @@ public open class CfnDomain internal constructor(
         CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.sagemaker.CfnDomain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnDomain
   }
 
   /**
-   * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type
-   * that the version runs on.
+   * The Code Editor application settings.
+   *
+   * For more information about Code Editor, see [Get started with Code Editor in Amazon
+   * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html) .
    *
    * Example:
    *
@@ -1030,251 +1032,84 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
-   * .instanceType("instanceType")
-   * .lifecycleConfigArn("lifecycleConfigArn")
-   * .sageMakerImageArn("sageMakerImageArn")
-   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html)
-   */
-  public interface ResourceSpecProperty {
-    /**
-     * The instance type that the image version runs on.
-     *
-     *
-     * *JupyterServer apps* only support the `system` value.
-     *
-     * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` . KernelGateway
-     * apps also support all other values for available instance types.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-instancetype)
-     */
-    public fun instanceType(): String? = unwrap(this).getInstanceType()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-lifecycleconfigarn)
-     */
-    public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
-
-    /**
-     * The ARN of the SageMaker image that the image version belongs to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimagearn)
-     */
-    public fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
-
-    /**
-     * The ARN of the image version created on the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimageversionarn)
-     */
-    public fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
-
-    /**
-     * A builder for [ResourceSpecProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceType The instance type that the image version runs on.
-       *
-       * *JupyterServer apps* only support the `system` value.
-       *
-       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
-       * KernelGateway apps also support all other values for available instance types.
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
-       * attached to the Resource.
-       */
-      public fun lifecycleConfigArn(lifecycleConfigArn: String)
-
-      /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
-       */
-      public fun sageMakerImageArn(sageMakerImageArn: String)
-
-      /**
-       * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
-       */
-      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.builder()
-
-      /**
-       * @param instanceType The instance type that the image version runs on.
-       *
-       * *JupyterServer apps* only support the `system` value.
-       *
-       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
-       * KernelGateway apps also support all other values for available instance types.
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
-       * attached to the Resource.
-       */
-      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
-        cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
-      }
-
-      /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
-       */
-      override fun sageMakerImageArn(sageMakerImageArn: String) {
-        cdkBuilder.sageMakerImageArn(sageMakerImageArn)
-      }
-
-      /**
-       * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
-       */
-      override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
-        cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty,
-    ) : CdkObject(cdkObject), ResourceSpecProperty {
-      /**
-       * The instance type that the image version runs on.
-       *
-       *
-       * *JupyterServer apps* only support the `system` value.
-       *
-       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
-       * KernelGateway apps also support all other values for available instance types.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-instancetype)
-       */
-      override fun instanceType(): String? = unwrap(this).getInstanceType()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-lifecycleconfigarn)
-       */
-      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
-
-      /**
-       * The ARN of the SageMaker image that the image version belongs to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimagearn)
-       */
-      override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
-
-      /**
-       * The ARN of the image version created on the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimageversionarn)
-       */
-      override fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceSpecProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty):
-          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceSpecProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceSpecProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty
-    }
-  }
-
-  /**
-   * The JupyterServer app settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * JupyterServerAppSettingsProperty jupyterServerAppSettingsProperty =
-   * JupyterServerAppSettingsProperty.builder()
+   * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
+   * CodeEditorAppSettingsProperty.builder()
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
    * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html)
    */
-  public interface JupyterServerAppSettingsProperty {
+  public interface CodeEditorAppSettingsProperty {
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the JupyterServer app.
+     * used by the Code Editor app.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html#cfn-sagemaker-domain-jupyterserverappsettings-defaultresourcespec)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-defaultresourcespec)
      */
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     /**
-     * A builder for [JupyterServerAppSettingsProperty]
+     * The Amazon Resource Name (ARN) of the Code Editor application lifecycle configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-lifecycleconfigarns)
+     */
+    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+        emptyList()
+
+    /**
+     * A builder for [CodeEditorAppSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
+      @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
+       * lifecycle configuration.
+       */
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
+       * lifecycle configuration.
+       */
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty.builder()
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -1282,7 +1117,7 @@ public open class CfnDomain internal constructor(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
@@ -1290,52 +1125,75 @@ public open class CfnDomain internal constructor(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker image used by the Code Editor app.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
+      @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
       override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
+       * lifecycle configuration.
+       */
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      }
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
+       * lifecycle configuration.
+       */
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
+
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty,
-    ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty,
+    ) : CdkObject(cdkObject), CodeEditorAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the JupyterServer app.
+       * used by the Code Editor app.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html#cfn-sagemaker-domain-jupyterserverappsettings-defaultresourcespec)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-defaultresourcespec)
        */
       override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Code Editor application lifecycle configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-lifecycleconfigarns)
+       */
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JupyterServerAppSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeEditorAppSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty):
-          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JupyterServerAppSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty):
+          CodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeEditorAppSettingsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: JupyterServerAppSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty =
+      internal fun unwrap(wrapped: CodeEditorAppSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty
     }
   }
 
   /**
-   * The KernelGateway app settings.
+   * A Git repository that SageMaker automatically displays to users for cloning in the
+   * JupyterServer application.
    *
    * Example:
    *
@@ -1343,8 +1201,588 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * KernelGatewayAppSettingsProperty kernelGatewayAppSettingsProperty =
-   * KernelGatewayAppSettingsProperty.builder()
+   * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
+   * .repositoryUrl("repositoryUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html)
+   */
+  public interface CodeRepositoryProperty {
+    /**
+     * The URL of the Git repository.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html#cfn-sagemaker-domain-coderepository-repositoryurl)
+     */
+    public fun repositoryUrl(): String
+
+    /**
+     * A builder for [CodeRepositoryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param repositoryUrl The URL of the Git repository. 
+       */
+      public fun repositoryUrl(repositoryUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.builder()
+
+      /**
+       * @param repositoryUrl The URL of the Git repository. 
+       */
+      override fun repositoryUrl(repositoryUrl: String) {
+        cdkBuilder.repositoryUrl(repositoryUrl)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty,
+    ) : CdkObject(cdkObject), CodeRepositoryProperty {
+      /**
+       * The URL of the Git repository.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html#cfn-sagemaker-domain-coderepository-repositoryurl)
+       */
+      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeRepositoryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty):
+          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeRepositoryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CodeRepositoryProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty
+    }
+  }
+
+  /**
+   * The settings for assigning a custom file system to a user profile or space for an Amazon
+   * SageMaker Domain.
+   *
+   * Permitted users can access this file system in Amazon SageMaker Studio.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CustomFileSystemConfigProperty customFileSystemConfigProperty =
+   * CustomFileSystemConfigProperty.builder()
+   * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .fileSystemPath("fileSystemPath")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html)
+   */
+  public interface CustomFileSystemConfigProperty {
+    /**
+     * The settings for a custom Amazon EFS file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-efsfilesystemconfig)
+     */
+    public fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
+
+    /**
+     * A builder for [CustomFileSystemConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      public fun efsFileSystemConfig(efsFileSystemConfig: IResolvable)
+
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      public fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty)
+
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
+      public
+          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty.builder()
+
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty::unwrap))
+      }
+
+      /**
+       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
+      override
+          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit):
+          Unit = efsFileSystemConfig(EFSFileSystemConfigProperty(efsFileSystemConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty,
+    ) : CdkObject(cdkObject), CustomFileSystemConfigProperty {
+      /**
+       * The settings for a custom Amazon EFS file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-efsfilesystemconfig)
+       */
+      override fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomFileSystemConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty):
+          CustomFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomFileSystemConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomFileSystemConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty
+    }
+  }
+
+  /**
+   * A custom SageMaker image.
+   *
+   * For more information, see [Bring your own SageMaker
+   * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CustomImageProperty customImageProperty = CustomImageProperty.builder()
+   * .appImageConfigName("appImageConfigName")
+   * .imageName("imageName")
+   * // the properties below are optional
+   * .imageVersionNumber(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html)
+   */
+  public interface CustomImageProperty {
+    /**
+     * The name of the AppImageConfig.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-appimageconfigname)
+     */
+    public fun appImageConfigName(): String
+
+    /**
+     * The name of the CustomImage.
+     *
+     * Must be unique to your account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imagename)
+     */
+    public fun imageName(): String
+
+    /**
+     * The version number of the CustomImage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imageversionnumber)
+     */
+    public fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
+
+    /**
+     * A builder for [CustomImageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appImageConfigName The name of the AppImageConfig. 
+       */
+      public fun appImageConfigName(appImageConfigName: String)
+
+      /**
+       * @param imageName The name of the CustomImage. 
+       * Must be unique to your account.
+       */
+      public fun imageName(imageName: String)
+
+      /**
+       * @param imageVersionNumber The version number of the CustomImage.
+       */
+      public fun imageVersionNumber(imageVersionNumber: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.builder()
+
+      /**
+       * @param appImageConfigName The name of the AppImageConfig. 
+       */
+      override fun appImageConfigName(appImageConfigName: String) {
+        cdkBuilder.appImageConfigName(appImageConfigName)
+      }
+
+      /**
+       * @param imageName The name of the CustomImage. 
+       * Must be unique to your account.
+       */
+      override fun imageName(imageName: String) {
+        cdkBuilder.imageName(imageName)
+      }
+
+      /**
+       * @param imageVersionNumber The version number of the CustomImage.
+       */
+      override fun imageVersionNumber(imageVersionNumber: Number) {
+        cdkBuilder.imageVersionNumber(imageVersionNumber)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty,
+    ) : CdkObject(cdkObject), CustomImageProperty {
+      /**
+       * The name of the AppImageConfig.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-appimageconfigname)
+       */
+      override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
+
+      /**
+       * The name of the CustomImage.
+       *
+       * Must be unique to your account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imagename)
+       */
+      override fun imageName(): String = unwrap(this).getImageName()
+
+      /**
+       * The version number of the CustomImage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imageversionnumber)
+       */
+      override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomImageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty):
+          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomImageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomImageProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty
+    }
+  }
+
+  /**
+   * Details about the POSIX identity that is used for file system operations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CustomPosixUserConfigProperty customPosixUserConfigProperty =
+   * CustomPosixUserConfigProperty.builder()
+   * .gid(123)
+   * .uid(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html)
+   */
+  public interface CustomPosixUserConfigProperty {
+    /**
+     * The POSIX group ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-gid)
+     */
+    public fun gid(): Number
+
+    /**
+     * The POSIX user ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-uid)
+     */
+    public fun uid(): Number
+
+    /**
+     * A builder for [CustomPosixUserConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param gid The POSIX group ID. 
+       */
+      public fun gid(gid: Number)
+
+      /**
+       * @param uid The POSIX user ID. 
+       */
+      public fun uid(uid: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty.builder()
+
+      /**
+       * @param gid The POSIX group ID. 
+       */
+      override fun gid(gid: Number) {
+        cdkBuilder.gid(gid)
+      }
+
+      /**
+       * @param uid The POSIX user ID. 
+       */
+      override fun uid(uid: Number) {
+        cdkBuilder.uid(uid)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty,
+    ) : CdkObject(cdkObject), CustomPosixUserConfigProperty {
+      /**
+       * The POSIX group ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-gid)
+       */
+      override fun gid(): Number = unwrap(this).getGid()
+
+      /**
+       * The POSIX user ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-uid)
+       */
+      override fun uid(): Number = unwrap(this).getUid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomPosixUserConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty):
+          CustomPosixUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomPosixUserConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomPosixUserConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty
+    }
+  }
+
+  /**
+   * A collection of default EBS storage settings that applies to private spaces created within a
+   * domain or user profile.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DefaultEbsStorageSettingsProperty defaultEbsStorageSettingsProperty =
+   * DefaultEbsStorageSettingsProperty.builder()
+   * .defaultEbsVolumeSizeInGb(123)
+   * .maximumEbsVolumeSizeInGb(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html)
+   */
+  public interface DefaultEbsStorageSettingsProperty {
+    /**
+     * The default size of the EBS storage volume for a private space.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
+     */
+    public fun defaultEbsVolumeSizeInGb(): Number
+
+    /**
+     * The maximum size of the EBS storage volume for a private space.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
+     */
+    public fun maximumEbsVolumeSizeInGb(): Number
+
+    /**
+     * A builder for [DefaultEbsStorageSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
+       * space. 
+       */
+      public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number)
+
+      /**
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
+       * space. 
+       */
+      public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.builder()
+
+      /**
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
+       * space. 
+       */
+      override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
+        cdkBuilder.defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb)
+      }
+
+      /**
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
+       * space. 
+       */
+      override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
+        cdkBuilder.maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty,
+    ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
+      /**
+       * The default size of the EBS storage volume for a private space.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
+       */
+      override fun defaultEbsVolumeSizeInGb(): Number = unwrap(this).getDefaultEbsVolumeSizeInGb()
+
+      /**
+       * The maximum size of the EBS storage volume for a private space.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
+       */
+      override fun maximumEbsVolumeSizeInGb(): Number = unwrap(this).getMaximumEbsVolumeSizeInGb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DefaultEbsStorageSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty):
+          DefaultEbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultEbsStorageSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultEbsStorageSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty
+    }
+  }
+
+  /**
+   * A collection of settings that apply to spaces created in the domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DefaultSpaceSettingsProperty defaultSpaceSettingsProperty =
+   * DefaultSpaceSettingsProperty.builder()
+   * .executionRole("executionRole")
+   * // the properties below are optional
+   * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+   * .defaultResourceSpec(ResourceSpecProperty.builder()
+   * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
+   * .sageMakerImageArn("sageMakerImageArn")
+   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+   * .build())
+   * .build())
+   * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
    * .customImages(List.of(CustomImageProperty.builder()
    * .appImageConfigName("appImageConfigName")
    * .imageName("imageName")
@@ -1357,202 +1795,475 @@ public open class CfnDomain internal constructor(
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .build())
+   * .securityGroups(List.of("securityGroups"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html)
    */
-  public interface KernelGatewayAppSettingsProperty {
+  public interface DefaultSpaceSettingsProperty {
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * The ARN of the execution role for the space.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-customimages)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-executionrole)
      */
-    public fun customImages(): Any? = unwrap(this).getCustomImages()
+    public fun executionRole(): String
 
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the KernelGateway app.
+     * The JupyterServer app settings.
      *
-     *
-     * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-     * default instance type set here is used when Apps are created using the AWS CLI or AWS
-     * CloudFormation and the instance type parameter value is not passed.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-defaultresourcespec)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-jupyterserverappsettings)
      */
-    public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+    public fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
 
     /**
-     * A builder for [KernelGatewayAppSettingsProperty]
+     * The KernelGateway app settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-kernelgatewayappsettings)
+     */
+    public fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
+
+    /**
+     * The security group IDs for the Amazon VPC that the space uses for communication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-securitygroups)
+     */
+    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+    /**
+     * A builder for [DefaultSpaceSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param executionRole The ARN of the execution role for the space. 
        */
-      public fun customImages(customImages: IResolvable)
+      public fun executionRole(executionRole: String)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
-      public fun customImages(customImages: List<Any>)
+      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
-      public fun customImages(vararg customImages: Any)
+      public
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty)
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
-       */
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
-
-      /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
-       */
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
-
-      /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+      @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
+      public
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable)
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      public
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty)
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
+      public
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+       * communication.
+       */
+      public fun securityGroups(securityGroups: List<String>)
+
+      /**
+       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+       * communication.
+       */
+      public fun securityGroups(vararg securityGroups: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.builder()
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param executionRole The ARN of the execution role for the space. 
        */
-      override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+      override fun executionRole(executionRole: String) {
+        cdkBuilder.executionRole(executionRole)
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
-      override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+      override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
-       * KernelGateway app.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
-      override fun customImages(vararg customImages: Any): Unit =
-          customImages(customImages.toList())
-
-      /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
-       */
-      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+      override
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
       }
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
-       */
-      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
-      }
-
-      /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
+       * @param jupyterServerAppSettings The JupyterServer app settings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
+      @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
       override
-          fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
-          Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit):
+          Unit =
+          jupyterServerAppSettings(JupyterServerAppSettingsProperty(jupyterServerAppSettings))
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      override
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param kernelGatewayAppSettings The KernelGateway app settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
+      override
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit):
+          Unit =
+          kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
+
+      /**
+       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+       * communication.
+       */
+      override fun securityGroups(securityGroups: List<String>) {
+        cdkBuilder.securityGroups(securityGroups)
+      }
+
+      /**
+       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
+       * communication.
+       */
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty,
-    ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty,
+    ) : CdkObject(cdkObject), DefaultSpaceSettingsProperty {
       /**
-       * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+       * The ARN of the execution role for the space.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-customimages)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-executionrole)
        */
-      override fun customImages(): Any? = unwrap(this).getCustomImages()
+      override fun executionRole(): String = unwrap(this).getExecutionRole()
 
       /**
-       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the KernelGateway app.
+       * The JupyterServer app settings.
        *
-       *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
-       * CloudFormation and the instance type parameter value is not passed.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-defaultresourcespec)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-jupyterserverappsettings)
        */
-      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
+
+      /**
+       * The KernelGateway app settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-kernelgatewayappsettings)
+       */
+      override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
+
+      /**
+       * The security group IDs for the Amazon VPC that the space uses for communication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-securitygroups)
+       */
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KernelGatewayAppSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultSpaceSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty):
-          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KernelGatewayAppSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty):
+          DefaultSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSpaceSettingsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KernelGatewayAppSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty =
+      internal fun unwrap(wrapped: DefaultSpaceSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty
+    }
+  }
+
+  /**
+   * The default storage settings for a private space.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DefaultSpaceStorageSettingsProperty defaultSpaceStorageSettingsProperty =
+   * DefaultSpaceStorageSettingsProperty.builder()
+   * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
+   * .defaultEbsVolumeSizeInGb(123)
+   * .maximumEbsVolumeSizeInGb(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html)
+   */
+  public interface DefaultSpaceStorageSettingsProperty {
+    /**
+     * The default EBS storage settings for a private space.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
+     */
+    public fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
+
+    /**
+     * A builder for [DefaultSpaceStorageSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable)
+
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      public
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty)
+
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
+      public
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.builder()
+
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      override
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
+      override
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit):
+          Unit =
+          defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty(defaultEbsStorageSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty,
+    ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
+      /**
+       * The default EBS storage settings for a private space.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
+       */
+      override fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DefaultSpaceStorageSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty):
+          DefaultSpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSpaceStorageSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultSpaceStorageSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty
+    }
+  }
+
+  /**
+   * A collection of settings that configure the domain's Docker interaction.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DockerSettingsProperty dockerSettingsProperty = DockerSettingsProperty.builder()
+   * .enableDockerAccess("enableDockerAccess")
+   * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html)
+   */
+  public interface DockerSettingsProperty {
+    /**
+     * Indicates whether the domain can access Docker.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-enabledockeraccess)
+     */
+    public fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
+
+    /**
+     * The list of AWS accounts that are trusted when the domain is created in VPC-only mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-vpconlytrustedaccounts)
+     */
+    public fun vpcOnlyTrustedAccounts(): List<String> = unwrap(this).getVpcOnlyTrustedAccounts() ?:
+        emptyList()
+
+    /**
+     * A builder for [DockerSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableDockerAccess Indicates whether the domain can access Docker.
+       */
+      public fun enableDockerAccess(enableDockerAccess: String)
+
+      /**
+       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
+       * created in VPC-only mode.
+       */
+      public fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>)
+
+      /**
+       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
+       * created in VPC-only mode.
+       */
+      public fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.builder()
+
+      /**
+       * @param enableDockerAccess Indicates whether the domain can access Docker.
+       */
+      override fun enableDockerAccess(enableDockerAccess: String) {
+        cdkBuilder.enableDockerAccess(enableDockerAccess)
+      }
+
+      /**
+       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
+       * created in VPC-only mode.
+       */
+      override fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
+        cdkBuilder.vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts)
+      }
+
+      /**
+       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
+       * created in VPC-only mode.
+       */
+      override fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String): Unit =
+          vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts.toList())
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty,
+    ) : CdkObject(cdkObject), DockerSettingsProperty {
+      /**
+       * Indicates whether the domain can access Docker.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-enabledockeraccess)
+       */
+      override fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
+
+      /**
+       * The list of AWS accounts that are trusted when the domain is created in VPC-only mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-vpconlytrustedaccounts)
+       */
+      override fun vpcOnlyTrustedAccounts(): List<String> = unwrap(this).getVpcOnlyTrustedAccounts()
+          ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DockerSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty):
+          DockerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DockerSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DockerSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty
     }
   }
 
@@ -1752,8 +2463,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty,
     ) : CdkObject(cdkObject), DomainSettingsProperty {
       /**
        * A collection of settings that configure the domain's Docker interaction.
@@ -1795,6 +2505,124 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty
+    }
+  }
+
+  /**
+   * The settings for assigning a custom Amazon EFS file system to a user profile or space for an
+   * Amazon SageMaker Domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * EFSFileSystemConfigProperty eFSFileSystemConfigProperty = EFSFileSystemConfigProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .fileSystemPath("fileSystemPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html)
+   */
+  public interface EFSFileSystemConfigProperty {
+    /**
+     * The ID of your Amazon EFS file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystemid)
+     */
+    public fun fileSystemId(): String
+
+    /**
+     * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+     *
+     * Permitted users can access only this directory and below.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystempath)
+     */
+    public fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
+
+    /**
+     * A builder for [EFSFileSystemConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fileSystemId The ID of your Amazon EFS file system. 
+       */
+      public fun fileSystemId(fileSystemId: String)
+
+      /**
+       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
+       * SageMaker Studio.
+       * Permitted users can access only this directory and below.
+       */
+      public fun fileSystemPath(fileSystemPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.builder()
+
+      /**
+       * @param fileSystemId The ID of your Amazon EFS file system. 
+       */
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      /**
+       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
+       * SageMaker Studio.
+       * Permitted users can access only this directory and below.
+       */
+      override fun fileSystemPath(fileSystemPath: String) {
+        cdkBuilder.fileSystemPath(fileSystemPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty,
+    ) : CdkObject(cdkObject), EFSFileSystemConfigProperty {
+      /**
+       * The ID of your Amazon EFS file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystemid)
+       */
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+
+      /**
+       * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+       *
+       * Permitted users can access only this directory and below.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystempath)
+       */
+      override fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EFSFileSystemConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty):
+          EFSFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EFSFileSystemConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EFSFileSystemConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty
     }
   }
 
@@ -2042,8 +2870,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty,
     ) : CdkObject(cdkObject), JupyterLabAppSettingsProperty {
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
@@ -2095,6 +2922,351 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty
+    }
+  }
+
+  /**
+   * The JupyterServer app settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * JupyterServerAppSettingsProperty jupyterServerAppSettingsProperty =
+   * JupyterServerAppSettingsProperty.builder()
+   * .defaultResourceSpec(ResourceSpecProperty.builder()
+   * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
+   * .sageMakerImageArn("sageMakerImageArn")
+   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html)
+   */
+  public interface JupyterServerAppSettingsProperty {
+    /**
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
+     * used by the JupyterServer app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html#cfn-sagemaker-domain-jupyterserverappsettings-defaultresourcespec)
+     */
+    public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * A builder for [JupyterServerAppSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty.builder()
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+      }
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the JupyterServer app.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
+      override
+          fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
+          Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty,
+    ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
+      /**
+       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
+       * used by the JupyterServer app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterserverappsettings.html#cfn-sagemaker-domain-jupyterserverappsettings-defaultresourcespec)
+       */
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JupyterServerAppSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty):
+          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JupyterServerAppSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JupyterServerAppSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty
+    }
+  }
+
+  /**
+   * The KernelGateway app settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * KernelGatewayAppSettingsProperty kernelGatewayAppSettingsProperty =
+   * KernelGatewayAppSettingsProperty.builder()
+   * .customImages(List.of(CustomImageProperty.builder()
+   * .appImageConfigName("appImageConfigName")
+   * .imageName("imageName")
+   * // the properties below are optional
+   * .imageVersionNumber(123)
+   * .build()))
+   * .defaultResourceSpec(ResourceSpecProperty.builder()
+   * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
+   * .sageMakerImageArn("sageMakerImageArn")
+   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html)
+   */
+  public interface KernelGatewayAppSettingsProperty {
+    /**
+     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-customimages)
+     */
+    public fun customImages(): Any? = unwrap(this).getCustomImages()
+
+    /**
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
+     * used by the KernelGateway app.
+     *
+     *
+     * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+     * default instance type set here is used when Apps are created using the AWS CLI or AWS
+     * CloudFormation and the instance type parameter value is not passed.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-defaultresourcespec)
+     */
+    public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * A builder for [KernelGatewayAppSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      public fun customImages(customImages: IResolvable)
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      public fun customImages(customImages: List<Any>)
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      public fun customImages(vararg customImages: Any)
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty.builder()
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      override fun customImages(customImages: IResolvable) {
+        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      override fun customImages(customImages: List<Any>) {
+        cdkBuilder.customImages(customImages)
+      }
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * KernelGateway app.
+       */
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+      }
+
+      /**
+       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
+       * the default SageMaker image used by the KernelGateway app.
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
+      override
+          fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
+          Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty,
+    ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
+      /**
+       * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-customimages)
+       */
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
+
+      /**
+       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
+       * used by the KernelGateway app.
+       *
+       *
+       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * CloudFormation and the instance type parameter value is not passed.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-kernelgatewayappsettings.html#cfn-sagemaker-domain-kernelgatewayappsettings-defaultresourcespec)
+       */
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KernelGatewayAppSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty):
+          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KernelGatewayAppSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KernelGatewayAppSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty
     }
   }
 
@@ -2245,8 +3417,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty,
     ) : CdkObject(cdkObject), RSessionAppSettingsProperty {
       /**
        * A list of custom SageMaker images that are configured to run as a RSession app.
@@ -2279,6 +3450,131 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty
+    }
+  }
+
+  /**
+   * A collection of settings that configure user interaction with the `RStudioServerPro` app.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * RStudioServerProAppSettingsProperty rStudioServerProAppSettingsProperty =
+   * RStudioServerProAppSettingsProperty.builder()
+   * .accessStatus("accessStatus")
+   * .userGroup("userGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html)
+   */
+  public interface RStudioServerProAppSettingsProperty {
+    /**
+     * Indicates whether the current user has access to the `RStudioServerPro` app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-accessstatus)
+     */
+    public fun accessStatus(): String? = unwrap(this).getAccessStatus()
+
+    /**
+     * The level of permissions that the user has within the `RStudioServerPro` app.
+     *
+     * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
+     * Administrative Dashboard.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-usergroup)
+     */
+    public fun userGroup(): String? = unwrap(this).getUserGroup()
+
+    /**
+     * A builder for [RStudioServerProAppSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessStatus Indicates whether the current user has access to the `RStudioServerPro`
+       * app.
+       */
+      public fun accessStatus(accessStatus: String)
+
+      /**
+       * @param userGroup The level of permissions that the user has within the `RStudioServerPro`
+       * app.
+       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
+       * Administrative Dashboard.
+       */
+      public fun userGroup(userGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty.builder()
+
+      /**
+       * @param accessStatus Indicates whether the current user has access to the `RStudioServerPro`
+       * app.
+       */
+      override fun accessStatus(accessStatus: String) {
+        cdkBuilder.accessStatus(accessStatus)
+      }
+
+      /**
+       * @param userGroup The level of permissions that the user has within the `RStudioServerPro`
+       * app.
+       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
+       * Administrative Dashboard.
+       */
+      override fun userGroup(userGroup: String) {
+        cdkBuilder.userGroup(userGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty,
+    ) : CdkObject(cdkObject), RStudioServerProAppSettingsProperty {
+      /**
+       * Indicates whether the current user has access to the `RStudioServerPro` app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-accessstatus)
+       */
+      override fun accessStatus(): String? = unwrap(this).getAccessStatus()
+
+      /**
+       * The level of permissions that the user has within the `RStudioServerPro` app.
+       *
+       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
+       * Administrative Dashboard.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-usergroup)
+       */
+      override fun userGroup(): String? = unwrap(this).getUserGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RStudioServerProAppSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty):
+          RStudioServerProAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RStudioServerProAppSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RStudioServerProAppSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty
     }
   }
 
@@ -2440,8 +3736,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty,
     ) : CdkObject(cdkObject), RStudioServerProDomainSettingsProperty {
       /**
        * A collection that defines the default `InstanceType` , `SageMakerImageArn` , and
@@ -2493,7 +3788,8 @@ public open class CfnDomain internal constructor(
   }
 
   /**
-   * A collection of settings that configure the domain's Docker interaction.
+   * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type
+   * that the version runs on.
    *
    * Example:
    *
@@ -2501,1000 +3797,192 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DockerSettingsProperty dockerSettingsProperty = DockerSettingsProperty.builder()
-   * .enableDockerAccess("enableDockerAccess")
-   * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html)
-   */
-  public interface DockerSettingsProperty {
-    /**
-     * Indicates whether the domain can access Docker.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-enabledockeraccess)
-     */
-    public fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
-
-    /**
-     * The list of AWS accounts that are trusted when the domain is created in VPC-only mode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-vpconlytrustedaccounts)
-     */
-    public fun vpcOnlyTrustedAccounts(): List<String> = unwrap(this).getVpcOnlyTrustedAccounts() ?:
-        emptyList()
-
-    /**
-     * A builder for [DockerSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enableDockerAccess Indicates whether the domain can access Docker.
-       */
-      public fun enableDockerAccess(enableDockerAccess: String)
-
-      /**
-       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
-       * created in VPC-only mode.
-       */
-      public fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>)
-
-      /**
-       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
-       * created in VPC-only mode.
-       */
-      public fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.builder()
-
-      /**
-       * @param enableDockerAccess Indicates whether the domain can access Docker.
-       */
-      override fun enableDockerAccess(enableDockerAccess: String) {
-        cdkBuilder.enableDockerAccess(enableDockerAccess)
-      }
-
-      /**
-       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
-       * created in VPC-only mode.
-       */
-      override fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
-        cdkBuilder.vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts)
-      }
-
-      /**
-       * @param vpcOnlyTrustedAccounts The list of AWS accounts that are trusted when the domain is
-       * created in VPC-only mode.
-       */
-      override fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String): Unit =
-          vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts.toList())
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty,
-    ) : CdkObject(cdkObject), DockerSettingsProperty {
-      /**
-       * Indicates whether the domain can access Docker.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-enabledockeraccess)
-       */
-      override fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
-
-      /**
-       * The list of AWS accounts that are trusted when the domain is created in VPC-only mode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-dockersettings.html#cfn-sagemaker-domain-dockersettings-vpconlytrustedaccounts)
-       */
-      override fun vpcOnlyTrustedAccounts(): List<String> = unwrap(this).getVpcOnlyTrustedAccounts()
-          ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DockerSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty):
-          DockerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DockerSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DockerSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty
-    }
-  }
-
-  /**
-   * A collection of settings that configure user interaction with the `RStudioServerPro` app.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * RStudioServerProAppSettingsProperty rStudioServerProAppSettingsProperty =
-   * RStudioServerProAppSettingsProperty.builder()
-   * .accessStatus("accessStatus")
-   * .userGroup("userGroup")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html)
-   */
-  public interface RStudioServerProAppSettingsProperty {
-    /**
-     * Indicates whether the current user has access to the `RStudioServerPro` app.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-accessstatus)
-     */
-    public fun accessStatus(): String? = unwrap(this).getAccessStatus()
-
-    /**
-     * The level of permissions that the user has within the `RStudioServerPro` app.
-     *
-     * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
-     * Administrative Dashboard.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-usergroup)
-     */
-    public fun userGroup(): String? = unwrap(this).getUserGroup()
-
-    /**
-     * A builder for [RStudioServerProAppSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessStatus Indicates whether the current user has access to the `RStudioServerPro`
-       * app.
-       */
-      public fun accessStatus(accessStatus: String)
-
-      /**
-       * @param userGroup The level of permissions that the user has within the `RStudioServerPro`
-       * app.
-       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
-       * Administrative Dashboard.
-       */
-      public fun userGroup(userGroup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty.builder()
-
-      /**
-       * @param accessStatus Indicates whether the current user has access to the `RStudioServerPro`
-       * app.
-       */
-      override fun accessStatus(accessStatus: String) {
-        cdkBuilder.accessStatus(accessStatus)
-      }
-
-      /**
-       * @param userGroup The level of permissions that the user has within the `RStudioServerPro`
-       * app.
-       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
-       * Administrative Dashboard.
-       */
-      override fun userGroup(userGroup: String) {
-        cdkBuilder.userGroup(userGroup)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty,
-    ) : CdkObject(cdkObject), RStudioServerProAppSettingsProperty {
-      /**
-       * Indicates whether the current user has access to the `RStudioServerPro` app.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-accessstatus)
-       */
-      override fun accessStatus(): String? = unwrap(this).getAccessStatus()
-
-      /**
-       * The level of permissions that the user has within the `RStudioServerPro` app.
-       *
-       * This value defaults to `User`. The `Admin` value allows the user access to the RStudio
-       * Administrative Dashboard.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rstudioserverproappsettings.html#cfn-sagemaker-domain-rstudioserverproappsettings-usergroup)
-       */
-      override fun userGroup(): String? = unwrap(this).getUserGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RStudioServerProAppSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty):
-          RStudioServerProAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RStudioServerProAppSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RStudioServerProAppSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty
-    }
-  }
-
-  /**
-   * The settings for assigning a custom file system to a user profile or space for an Amazon
-   * SageMaker Domain.
-   *
-   * Permitted users can access this file system in Amazon SageMaker Studio.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CustomFileSystemConfigProperty customFileSystemConfigProperty =
-   * CustomFileSystemConfigProperty.builder()
-   * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
-   * .fileSystemId("fileSystemId")
-   * // the properties below are optional
-   * .fileSystemPath("fileSystemPath")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html)
-   */
-  public interface CustomFileSystemConfigProperty {
-    /**
-     * The settings for a custom Amazon EFS file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-efsfilesystemconfig)
-     */
-    public fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
-
-    /**
-     * A builder for [CustomFileSystemConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      public fun efsFileSystemConfig(efsFileSystemConfig: IResolvable)
-
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      public fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty)
-
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
-      public
-          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty.builder()
-
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty::unwrap))
-      }
-
-      /**
-       * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
-      override
-          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit):
-          Unit = efsFileSystemConfig(EFSFileSystemConfigProperty(efsFileSystemConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty,
-    ) : CdkObject(cdkObject), CustomFileSystemConfigProperty {
-      /**
-       * The settings for a custom Amazon EFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-efsfilesystemconfig)
-       */
-      override fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomFileSystemConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty):
-          CustomFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomFileSystemConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomFileSystemConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty
-    }
-  }
-
-  /**
-   * A custom SageMaker image.
-   *
-   * For more information, see [Bring your own SageMaker
-   * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CustomImageProperty customImageProperty = CustomImageProperty.builder()
-   * .appImageConfigName("appImageConfigName")
-   * .imageName("imageName")
-   * // the properties below are optional
-   * .imageVersionNumber(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html)
-   */
-  public interface CustomImageProperty {
-    /**
-     * The name of the AppImageConfig.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-appimageconfigname)
-     */
-    public fun appImageConfigName(): String
-
-    /**
-     * The name of the CustomImage.
-     *
-     * Must be unique to your account.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imagename)
-     */
-    public fun imageName(): String
-
-    /**
-     * The version number of the CustomImage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imageversionnumber)
-     */
-    public fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
-
-    /**
-     * A builder for [CustomImageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appImageConfigName The name of the AppImageConfig. 
-       */
-      public fun appImageConfigName(appImageConfigName: String)
-
-      /**
-       * @param imageName The name of the CustomImage. 
-       * Must be unique to your account.
-       */
-      public fun imageName(imageName: String)
-
-      /**
-       * @param imageVersionNumber The version number of the CustomImage.
-       */
-      public fun imageVersionNumber(imageVersionNumber: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.builder()
-
-      /**
-       * @param appImageConfigName The name of the AppImageConfig. 
-       */
-      override fun appImageConfigName(appImageConfigName: String) {
-        cdkBuilder.appImageConfigName(appImageConfigName)
-      }
-
-      /**
-       * @param imageName The name of the CustomImage. 
-       * Must be unique to your account.
-       */
-      override fun imageName(imageName: String) {
-        cdkBuilder.imageName(imageName)
-      }
-
-      /**
-       * @param imageVersionNumber The version number of the CustomImage.
-       */
-      override fun imageVersionNumber(imageVersionNumber: Number) {
-        cdkBuilder.imageVersionNumber(imageVersionNumber)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty,
-    ) : CdkObject(cdkObject), CustomImageProperty {
-      /**
-       * The name of the AppImageConfig.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-appimageconfigname)
-       */
-      override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
-
-      /**
-       * The name of the CustomImage.
-       *
-       * Must be unique to your account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imagename)
-       */
-      override fun imageName(): String = unwrap(this).getImageName()
-
-      /**
-       * The version number of the CustomImage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imageversionnumber)
-       */
-      override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomImageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty):
-          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomImageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomImageProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty
-    }
-  }
-
-  /**
-   * A Git repository that SageMaker automatically displays to users for cloning in the
-   * JupyterServer application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
-   * .repositoryUrl("repositoryUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html)
-   */
-  public interface CodeRepositoryProperty {
-    /**
-     * The URL of the Git repository.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html#cfn-sagemaker-domain-coderepository-repositoryurl)
-     */
-    public fun repositoryUrl(): String
-
-    /**
-     * A builder for [CodeRepositoryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param repositoryUrl The URL of the Git repository. 
-       */
-      public fun repositoryUrl(repositoryUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.builder()
-
-      /**
-       * @param repositoryUrl The URL of the Git repository. 
-       */
-      override fun repositoryUrl(repositoryUrl: String) {
-        cdkBuilder.repositoryUrl(repositoryUrl)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty,
-    ) : CdkObject(cdkObject), CodeRepositoryProperty {
-      /**
-       * The URL of the Git repository.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-coderepository.html#cfn-sagemaker-domain-coderepository-repositoryurl)
-       */
-      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeRepositoryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty):
-          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeRepositoryProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CodeRepositoryProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty
-    }
-  }
-
-  /**
-   * The settings for assigning a custom Amazon EFS file system to a user profile or space for an
-   * Amazon SageMaker Domain.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * EFSFileSystemConfigProperty eFSFileSystemConfigProperty = EFSFileSystemConfigProperty.builder()
-   * .fileSystemId("fileSystemId")
-   * // the properties below are optional
-   * .fileSystemPath("fileSystemPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html)
-   */
-  public interface EFSFileSystemConfigProperty {
-    /**
-     * The ID of your Amazon EFS file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystemid)
-     */
-    public fun fileSystemId(): String
-
-    /**
-     * The path to the file system directory that is accessible in Amazon SageMaker Studio.
-     *
-     * Permitted users can access only this directory and below.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystempath)
-     */
-    public fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
-
-    /**
-     * A builder for [EFSFileSystemConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fileSystemId The ID of your Amazon EFS file system. 
-       */
-      public fun fileSystemId(fileSystemId: String)
-
-      /**
-       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
-       * SageMaker Studio.
-       * Permitted users can access only this directory and below.
-       */
-      public fun fileSystemPath(fileSystemPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.builder()
-
-      /**
-       * @param fileSystemId The ID of your Amazon EFS file system. 
-       */
-      override fun fileSystemId(fileSystemId: String) {
-        cdkBuilder.fileSystemId(fileSystemId)
-      }
-
-      /**
-       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
-       * SageMaker Studio.
-       * Permitted users can access only this directory and below.
-       */
-      override fun fileSystemPath(fileSystemPath: String) {
-        cdkBuilder.fileSystemPath(fileSystemPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty,
-    ) : CdkObject(cdkObject), EFSFileSystemConfigProperty {
-      /**
-       * The ID of your Amazon EFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystemid)
-       */
-      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
-
-      /**
-       * The path to the file system directory that is accessible in Amazon SageMaker Studio.
-       *
-       * Permitted users can access only this directory and below.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-efsfilesystemconfig.html#cfn-sagemaker-domain-efsfilesystemconfig-filesystempath)
-       */
-      override fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EFSFileSystemConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty):
-          EFSFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EFSFileSystemConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EFSFileSystemConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty
-    }
-  }
-
-  /**
-   * Details about the POSIX identity that is used for file system operations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CustomPosixUserConfigProperty customPosixUserConfigProperty =
-   * CustomPosixUserConfigProperty.builder()
-   * .gid(123)
-   * .uid(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html)
-   */
-  public interface CustomPosixUserConfigProperty {
-    /**
-     * The POSIX group ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-gid)
-     */
-    public fun gid(): Number
-
-    /**
-     * The POSIX user ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-uid)
-     */
-    public fun uid(): Number
-
-    /**
-     * A builder for [CustomPosixUserConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gid The POSIX group ID. 
-       */
-      public fun gid(gid: Number)
-
-      /**
-       * @param uid The POSIX user ID. 
-       */
-      public fun uid(uid: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty.builder()
-
-      /**
-       * @param gid The POSIX group ID. 
-       */
-      override fun gid(gid: Number) {
-        cdkBuilder.gid(gid)
-      }
-
-      /**
-       * @param uid The POSIX user ID. 
-       */
-      override fun uid(uid: Number) {
-        cdkBuilder.uid(uid)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty,
-    ) : CdkObject(cdkObject), CustomPosixUserConfigProperty {
-      /**
-       * The POSIX group ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-gid)
-       */
-      override fun gid(): Number = unwrap(this).getGid()
-
-      /**
-       * The POSIX user ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customposixuserconfig.html#cfn-sagemaker-domain-customposixuserconfig-uid)
-       */
-      override fun uid(): Number = unwrap(this).getUid()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomPosixUserConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty):
-          CustomPosixUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomPosixUserConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomPosixUserConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty
-    }
-  }
-
-  /**
-   * The Code Editor application settings.
-   *
-   * For more information about Code Editor, see [Get started with Code Editor in Amazon
-   * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/code-editor.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
-   * CodeEditorAppSettingsProperty.builder()
-   * .defaultResourceSpec(ResourceSpecProperty.builder()
+   * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
    * .instanceType("instanceType")
    * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
-   * .build())
-   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html)
    */
-  public interface CodeEditorAppSettingsProperty {
+  public interface ResourceSpecProperty {
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the Code Editor app.
+     * The instance type that the image version runs on.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-defaultresourcespec)
+     *
+     * *JupyterServer apps* only support the `system` value.
+     *
+     * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` . KernelGateway
+     * apps also support all other values for available instance types.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-instancetype)
      */
-    public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+    public fun instanceType(): String? = unwrap(this).getInstanceType()
 
     /**
-     * The Amazon Resource Name (ARN) of the Code Editor application lifecycle configuration.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-lifecycleconfigarns)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-lifecycleconfigarn)
      */
-    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
-        emptyList()
+    public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
-     * A builder for [CodeEditorAppSettingsProperty]
+     * The ARN of the SageMaker image that the image version belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimagearn)
+     */
+    public fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
+
+    /**
+     * The ARN of the image version created on the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimageversionarn)
+     */
+    public fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
+
+    /**
+     * A builder for [ResourceSpecProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param instanceType The instance type that the image version runs on.
+       *
+       * *JupyterServer apps* only support the `system` value.
+       *
+       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
+       * KernelGateway apps also support all other values for available instance types.
        */
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
+      public fun instanceType(instanceType: String)
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
        */
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
+      public fun lifecycleConfigArn(lifecycleConfigArn: String)
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+      public fun sageMakerImageArn(sageMakerImageArn: String)
 
       /**
-       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
-       * lifecycle configuration.
+       * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
        */
-      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
-
-      /**
-       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
-       * lifecycle configuration.
-       */
-      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
+      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.builder()
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param instanceType The instance type that the image version runs on.
+       *
+       * *JupyterServer apps* only support the `system` value.
+       *
+       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
+       * KernelGateway apps also support all other values for available instance types.
        */
-      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
       }
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
        */
-      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
+        cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
       }
 
       /**
-       * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the Code Editor app.
+       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
-      override
-          fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
-          Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
-
-      /**
-       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
-       * lifecycle configuration.
-       */
-      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
-        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      override fun sageMakerImageArn(sageMakerImageArn: String) {
+        cdkBuilder.sageMakerImageArn(sageMakerImageArn)
       }
 
       /**
-       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Code Editor application
-       * lifecycle configuration.
+       * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
        */
-      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
-          lifecycleConfigArns(lifecycleConfigArns.toList())
+      override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
+        cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
+      }
 
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty,
-    ) : CdkObject(cdkObject), CodeEditorAppSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty,
+    ) : CdkObject(cdkObject), ResourceSpecProperty {
       /**
-       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the Code Editor app.
+       * The instance type that the image version runs on.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-defaultresourcespec)
+       *
+       * *JupyterServer apps* only support the `system` value.
+       *
+       * For *KernelGateway apps* , the `system` value is translated to `ml.t3.medium` .
+       * KernelGateway apps also support all other values for available instance types.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-instancetype)
        */
-      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
       /**
-       * The Amazon Resource Name (ARN) of the Code Editor application lifecycle configuration.
+       * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-codeeditorappsettings.html#cfn-sagemaker-domain-codeeditorappsettings-lifecycleconfigarns)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-lifecycleconfigarn)
        */
-      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
-          emptyList()
+      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
+
+      /**
+       * The ARN of the SageMaker image that the image version belongs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimagearn)
+       */
+      override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
+
+      /**
+       * The ARN of the image version created on the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimageversionarn)
+       */
+      override fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeEditorAppSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceSpecProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty):
-          CodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CodeEditorAppSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty):
+          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceSpecProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CodeEditorAppSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty
+      internal fun unwrap(wrapped: ResourceSpecProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty
     }
   }
 
   /**
-   * A collection of default EBS storage settings that applies to private spaces created within a
-   * domain or user profile.
+   * Specifies options when sharing an Amazon SageMaker Studio notebook.
+   *
+   * These settings are specified as part of `DefaultUserSettings` when the
+   * [CreateDomain](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html)
+   * API is called, and as part of `UserSettings` when the
+   * [CreateUserProfile](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html)
+   * API is called.
    *
    * Example:
    *
@@ -3502,110 +3990,145 @@ public open class CfnDomain internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DefaultEbsStorageSettingsProperty defaultEbsStorageSettingsProperty =
-   * DefaultEbsStorageSettingsProperty.builder()
-   * .defaultEbsVolumeSizeInGb(123)
-   * .maximumEbsVolumeSizeInGb(123)
+   * SharingSettingsProperty sharingSettingsProperty = SharingSettingsProperty.builder()
+   * .notebookOutputOption("notebookOutputOption")
+   * .s3KmsKeyId("s3KmsKeyId")
+   * .s3OutputPath("s3OutputPath")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html)
    */
-  public interface DefaultEbsStorageSettingsProperty {
+  public interface SharingSettingsProperty {
     /**
-     * The default size of the EBS storage volume for a private space.
+     * Whether to include the notebook cell output when sharing the notebook.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
+     * The default is `Disabled` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-notebookoutputoption)
      */
-    public fun defaultEbsVolumeSizeInGb(): Number
+    public fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
 
     /**
-     * The maximum size of the EBS storage volume for a private space.
+     * When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service (KMS) encryption
+     * key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3kmskeyid)
      */
-    public fun maximumEbsVolumeSizeInGb(): Number
+    public fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
 
     /**
-     * A builder for [DefaultEbsStorageSettingsProperty]
+     * When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to store the shared
+     * notebook snapshots.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3outputpath)
+     */
+    public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
+
+    /**
+     * A builder for [SharingSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param notebookOutputOption Whether to include the notebook cell output when sharing the
+       * notebook.
+       * The default is `Disabled` .
        */
-      public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number)
+      public fun notebookOutputOption(notebookOutputOption: String)
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param s3KmsKeyId When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service
+       * (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
        */
-      public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number)
+      public fun s3KmsKeyId(s3KmsKeyId: String)
+
+      /**
+       * @param s3OutputPath When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to
+       * store the shared notebook snapshots.
+       */
+      public fun s3OutputPath(s3OutputPath: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.builder()
 
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param notebookOutputOption Whether to include the notebook cell output when sharing the
+       * notebook.
+       * The default is `Disabled` .
        */
-      override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
-        cdkBuilder.defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb)
+      override fun notebookOutputOption(notebookOutputOption: String) {
+        cdkBuilder.notebookOutputOption(notebookOutputOption)
       }
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param s3KmsKeyId When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service
+       * (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
        */
-      override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
-        cdkBuilder.maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb)
+      override fun s3KmsKeyId(s3KmsKeyId: String) {
+        cdkBuilder.s3KmsKeyId(s3KmsKeyId)
+      }
+
+      /**
+       * @param s3OutputPath When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to
+       * store the shared notebook snapshots.
+       */
+      override fun s3OutputPath(s3OutputPath: String) {
+        cdkBuilder.s3OutputPath(s3OutputPath)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty =
+          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty,
-    ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty,
+    ) : CdkObject(cdkObject), SharingSettingsProperty {
       /**
-       * The default size of the EBS storage volume for a private space.
+       * Whether to include the notebook cell output when sharing the notebook.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
+       * The default is `Disabled` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-notebookoutputoption)
        */
-      override fun defaultEbsVolumeSizeInGb(): Number = unwrap(this).getDefaultEbsVolumeSizeInGb()
+      override fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
 
       /**
-       * The maximum size of the EBS storage volume for a private space.
+       * When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service (KMS) encryption
+       * key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3kmskeyid)
        */
-      override fun maximumEbsVolumeSizeInGb(): Number = unwrap(this).getMaximumEbsVolumeSizeInGb()
+      override fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
+
+      /**
+       * When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to store the shared
+       * notebook snapshots.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3outputpath)
+       */
+      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultEbsStorageSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SharingSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty):
-          DefaultEbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultEbsStorageSettingsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty):
+          SharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SharingSettingsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DefaultEbsStorageSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty
+      internal fun unwrap(wrapped: SharingSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty
     }
   }
 
@@ -4416,8 +4939,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty,
     ) : CdkObject(cdkObject), UserSettingsProperty {
       /**
        * The Code Editor application settings.
@@ -4555,548 +5077,6 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty
-    }
-  }
-
-  /**
-   * The default storage settings for a private space.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DefaultSpaceStorageSettingsProperty defaultSpaceStorageSettingsProperty =
-   * DefaultSpaceStorageSettingsProperty.builder()
-   * .defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty.builder()
-   * .defaultEbsVolumeSizeInGb(123)
-   * .maximumEbsVolumeSizeInGb(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html)
-   */
-  public interface DefaultSpaceStorageSettingsProperty {
-    /**
-     * The default EBS storage settings for a private space.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
-     */
-    public fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
-
-    /**
-     * A builder for [DefaultSpaceStorageSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable)
-
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      public
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty)
-
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
-      public
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.builder()
-
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      override
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
-      override
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit):
-          Unit =
-          defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty(defaultEbsStorageSettings))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty,
-    ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
-      /**
-       * The default EBS storage settings for a private space.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
-       */
-      override fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultSpaceStorageSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty):
-          DefaultSpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultSpaceStorageSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultSpaceStorageSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty
-    }
-  }
-
-  /**
-   * A collection of settings that apply to spaces created in the domain.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DefaultSpaceSettingsProperty defaultSpaceSettingsProperty =
-   * DefaultSpaceSettingsProperty.builder()
-   * .executionRole("executionRole")
-   * // the properties below are optional
-   * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
-   * .defaultResourceSpec(ResourceSpecProperty.builder()
-   * .instanceType("instanceType")
-   * .lifecycleConfigArn("lifecycleConfigArn")
-   * .sageMakerImageArn("sageMakerImageArn")
-   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
-   * .build())
-   * .build())
-   * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
-   * .customImages(List.of(CustomImageProperty.builder()
-   * .appImageConfigName("appImageConfigName")
-   * .imageName("imageName")
-   * // the properties below are optional
-   * .imageVersionNumber(123)
-   * .build()))
-   * .defaultResourceSpec(ResourceSpecProperty.builder()
-   * .instanceType("instanceType")
-   * .lifecycleConfigArn("lifecycleConfigArn")
-   * .sageMakerImageArn("sageMakerImageArn")
-   * .sageMakerImageVersionArn("sageMakerImageVersionArn")
-   * .build())
-   * .build())
-   * .securityGroups(List.of("securityGroups"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html)
-   */
-  public interface DefaultSpaceSettingsProperty {
-    /**
-     * The ARN of the execution role for the space.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-executionrole)
-     */
-    public fun executionRole(): String
-
-    /**
-     * The JupyterServer app settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-jupyterserverappsettings)
-     */
-    public fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
-
-    /**
-     * The KernelGateway app settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-kernelgatewayappsettings)
-     */
-    public fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
-
-    /**
-     * The security group IDs for the Amazon VPC that the space uses for communication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-securitygroups)
-     */
-    public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-
-    /**
-     * A builder for [DefaultSpaceSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param executionRole The ARN of the execution role for the space. 
-       */
-      public fun executionRole(executionRole: String)
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable)
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty)
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
-      public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit)
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable)
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty)
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
-      public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
-
-      /**
-       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
-       * communication.
-       */
-      public fun securityGroups(securityGroups: List<String>)
-
-      /**
-       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
-       * communication.
-       */
-      public fun securityGroups(vararg securityGroups: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.builder()
-
-      /**
-       * @param executionRole The ARN of the execution role for the space. 
-       */
-      override fun executionRole(executionRole: String) {
-        cdkBuilder.executionRole(executionRole)
-      }
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      override
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param jupyterServerAppSettings The JupyterServer app settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
-      override
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit):
-          Unit =
-          jupyterServerAppSettings(JupyterServerAppSettingsProperty(jupyterServerAppSettings))
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      override
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param kernelGatewayAppSettings The KernelGateway app settings.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
-      override
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit):
-          Unit =
-          kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
-
-      /**
-       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
-       * communication.
-       */
-      override fun securityGroups(securityGroups: List<String>) {
-        cdkBuilder.securityGroups(securityGroups)
-      }
-
-      /**
-       * @param securityGroups The security group IDs for the Amazon VPC that the space uses for
-       * communication.
-       */
-      override fun securityGroups(vararg securityGroups: String): Unit =
-          securityGroups(securityGroups.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty,
-    ) : CdkObject(cdkObject), DefaultSpaceSettingsProperty {
-      /**
-       * The ARN of the execution role for the space.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-executionrole)
-       */
-      override fun executionRole(): String = unwrap(this).getExecutionRole()
-
-      /**
-       * The JupyterServer app settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-jupyterserverappsettings)
-       */
-      override fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
-
-      /**
-       * The KernelGateway app settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-kernelgatewayappsettings)
-       */
-      override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
-
-      /**
-       * The security group IDs for the Amazon VPC that the space uses for communication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacesettings.html#cfn-sagemaker-domain-defaultspacesettings-securitygroups)
-       */
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DefaultSpaceSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty):
-          DefaultSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultSpaceSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultSpaceSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty
-    }
-  }
-
-  /**
-   * Specifies options when sharing an Amazon SageMaker Studio notebook.
-   *
-   * These settings are specified as part of `DefaultUserSettings` when the
-   * [CreateDomain](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html)
-   * API is called, and as part of `UserSettings` when the
-   * [CreateUserProfile](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html)
-   * API is called.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * SharingSettingsProperty sharingSettingsProperty = SharingSettingsProperty.builder()
-   * .notebookOutputOption("notebookOutputOption")
-   * .s3KmsKeyId("s3KmsKeyId")
-   * .s3OutputPath("s3OutputPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html)
-   */
-  public interface SharingSettingsProperty {
-    /**
-     * Whether to include the notebook cell output when sharing the notebook.
-     *
-     * The default is `Disabled` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-notebookoutputoption)
-     */
-    public fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
-
-    /**
-     * When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service (KMS) encryption
-     * key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3kmskeyid)
-     */
-    public fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
-
-    /**
-     * When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to store the shared
-     * notebook snapshots.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3outputpath)
-     */
-    public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
-
-    /**
-     * A builder for [SharingSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param notebookOutputOption Whether to include the notebook cell output when sharing the
-       * notebook.
-       * The default is `Disabled` .
-       */
-      public fun notebookOutputOption(notebookOutputOption: String)
-
-      /**
-       * @param s3KmsKeyId When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service
-       * (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-       */
-      public fun s3KmsKeyId(s3KmsKeyId: String)
-
-      /**
-       * @param s3OutputPath When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to
-       * store the shared notebook snapshots.
-       */
-      public fun s3OutputPath(s3OutputPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.builder()
-
-      /**
-       * @param notebookOutputOption Whether to include the notebook cell output when sharing the
-       * notebook.
-       * The default is `Disabled` .
-       */
-      override fun notebookOutputOption(notebookOutputOption: String) {
-        cdkBuilder.notebookOutputOption(notebookOutputOption)
-      }
-
-      /**
-       * @param s3KmsKeyId When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service
-       * (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-       */
-      override fun s3KmsKeyId(s3KmsKeyId: String) {
-        cdkBuilder.s3KmsKeyId(s3KmsKeyId)
-      }
-
-      /**
-       * @param s3OutputPath When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to
-       * store the shared notebook snapshots.
-       */
-      override fun s3OutputPath(s3OutputPath: String) {
-        cdkBuilder.s3OutputPath(s3OutputPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty,
-    ) : CdkObject(cdkObject), SharingSettingsProperty {
-      /**
-       * Whether to include the notebook cell output when sharing the notebook.
-       *
-       * The default is `Disabled` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-notebookoutputoption)
-       */
-      override fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
-
-      /**
-       * When `NotebookOutputOption` is `Allowed` , the AWS Key Management Service (KMS) encryption
-       * key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3kmskeyid)
-       */
-      override fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
-
-      /**
-       * When `NotebookOutputOption` is `Allowed` , the Amazon S3 bucket used to store the shared
-       * notebook snapshots.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3outputpath)
-       */
-      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SharingSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty):
-          SharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SharingSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SharingSettingsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty
     }
   }
 }

@@ -238,8 +238,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSourceProps,
+    cdkObject: software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSourceProps,
   ) : CdkObject(cdkObject), ManagedKafkaEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

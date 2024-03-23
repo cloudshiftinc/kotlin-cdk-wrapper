@@ -202,7 +202,7 @@ public interface CfnLayerVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersionProps,
+    cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersionProps,
   ) : CdkObject(cdkObject), CfnLayerVersionProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-layerversion.html#cfn-serverless-layerversion-compatibleruntimes)

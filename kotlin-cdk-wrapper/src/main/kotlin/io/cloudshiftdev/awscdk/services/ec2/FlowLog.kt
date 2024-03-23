@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FlowLog internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLog,
+public open class FlowLog(
+  cdkObject: software.amazon.awscdk.services.ec2.FlowLog,
 ) : Resource(cdkObject), IFlowLog {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -310,6 +310,6 @@ public open class FlowLog internal constructor(
         FlowLog(cdkObject)
 
     internal fun unwrap(wrapped: FlowLog): software.amazon.awscdk.services.ec2.FlowLog =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.FlowLog
   }
 }

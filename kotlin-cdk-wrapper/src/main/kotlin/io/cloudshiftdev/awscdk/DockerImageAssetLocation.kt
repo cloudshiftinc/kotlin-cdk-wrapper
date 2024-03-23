@@ -97,7 +97,7 @@ public interface DockerImageAssetLocation {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
+    cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
   ) : CdkObject(cdkObject), DockerImageAssetLocation {
     /**
      * The tag of the image in Amazon ECR.

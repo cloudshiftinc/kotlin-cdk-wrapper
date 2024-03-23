@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html)
  */
-public open class CfnUserPoolUICustomizationAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment,
+public open class CfnUserPoolUICustomizationAttachment(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,6 +215,7 @@ public open class CfnUserPoolUICustomizationAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnUserPoolUICustomizationAttachment):
         software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment
   }
 }

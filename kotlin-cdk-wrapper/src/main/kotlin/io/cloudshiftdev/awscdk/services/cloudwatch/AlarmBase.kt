@@ -10,8 +10,8 @@ import kotlin.String
 /**
  * The base class for Alarm and CompositeAlarm resources.
  */
-public abstract class AlarmBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
+public abstract class AlarmBase(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
 ) : Resource(cdkObject), IAlarm {
   /**
    * Trigger this action if the alarm fires.
@@ -62,7 +62,7 @@ public abstract class AlarmBase internal constructor(
   public override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
   ) : AlarmBase(cdkObject)
 
   public companion object {

@@ -79,8 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html)
  */
-public open class CfnLicense internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
+public open class CfnLicense(
+  cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -746,683 +746,8 @@ public open class CfnLicense internal constructor(
         CfnLicense = CfnLicense(cdkObject)
 
     internal fun unwrap(wrapped: CfnLicense):
-        software.amazon.awscdk.services.licensemanager.CfnLicense = wrapped.cdkObject
-  }
-
-  /**
-   * Details about a provisional configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
-   * ProvisionalConfigurationProperty provisionalConfigurationProperty =
-   * ProvisionalConfigurationProperty.builder()
-   * .maxTimeToLiveInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html)
-   */
-  public interface ProvisionalConfigurationProperty {
-    /**
-     * Maximum time for the provisional configuration, in minutes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html#cfn-licensemanager-license-provisionalconfiguration-maxtimetoliveinminutes)
-     */
-    public fun maxTimeToLiveInMinutes(): Number
-
-    /**
-     * A builder for [ProvisionalConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
-       */
-      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty.builder()
-
-      /**
-       * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
-       */
-      override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
-        cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
-    ) : CdkObject(cdkObject), ProvisionalConfigurationProperty {
-      /**
-       * Maximum time for the provisional configuration, in minutes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html#cfn-licensemanager-license-provisionalconfiguration-maxtimetoliveinminutes)
-       */
-      override fun maxTimeToLiveInMinutes(): Number = unwrap(this).getMaxTimeToLiveInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionalConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty):
-          ProvisionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProvisionalConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProvisionalConfigurationProperty):
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes key/value pairs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
-   * MetadataProperty metadataProperty = MetadataProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html)
-   */
-  public interface MetadataProperty {
-    /**
-     * The key name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-name)
-     */
-    public fun name(): String
-
-    /**
-     * The value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [MetadataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The key name. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.Builder =
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.builder()
-
-      /**
-       * @param name The key name. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
-    ) : CdkObject(cdkObject), MetadataProperty {
-      /**
-       * The key name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty):
-          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetadataProperty):
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty
-    }
-  }
-
-  /**
-   * Describes a resource entitled for use with a license.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
-   * EntitlementProperty entitlementProperty = EntitlementProperty.builder()
-   * .name("name")
-   * .unit("unit")
-   * // the properties below are optional
-   * .allowCheckIn(false)
-   * .maxCount(123)
-   * .overage(false)
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html)
-   */
-  public interface EntitlementProperty {
-    /**
-     * Indicates whether check-ins are allowed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-allowcheckin)
-     */
-    public fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
-
-    /**
-     * Maximum entitlement count.
-     *
-     * Use if the unit is not None.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-maxcount)
-     */
-    public fun maxCount(): Number? = unwrap(this).getMaxCount()
-
-    /**
-     * Entitlement name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-name)
-     */
-    public fun name(): String
-
-    /**
-     * Indicates whether overages are allowed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-overage)
-     */
-    public fun overage(): Any? = unwrap(this).getOverage()
-
-    /**
-     * Entitlement unit.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-unit)
-     */
-    public fun unit(): String
-
-    /**
-     * Entitlement resource.
-     *
-     * Use only if the unit is None.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [EntitlementProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowCheckIn Indicates whether check-ins are allowed.
-       */
-      public fun allowCheckIn(allowCheckIn: Boolean)
-
-      /**
-       * @param allowCheckIn Indicates whether check-ins are allowed.
-       */
-      public fun allowCheckIn(allowCheckIn: IResolvable)
-
-      /**
-       * @param maxCount Maximum entitlement count.
-       * Use if the unit is not None.
-       */
-      public fun maxCount(maxCount: Number)
-
-      /**
-       * @param name Entitlement name. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param overage Indicates whether overages are allowed.
-       */
-      public fun overage(overage: Boolean)
-
-      /**
-       * @param overage Indicates whether overages are allowed.
-       */
-      public fun overage(overage: IResolvable)
-
-      /**
-       * @param unit Entitlement unit. 
-       */
-      public fun unit(unit: String)
-
-      /**
-       * @param value Entitlement resource.
-       * Use only if the unit is None.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.Builder =
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.builder()
-
-      /**
-       * @param allowCheckIn Indicates whether check-ins are allowed.
-       */
-      override fun allowCheckIn(allowCheckIn: Boolean) {
-        cdkBuilder.allowCheckIn(allowCheckIn)
-      }
-
-      /**
-       * @param allowCheckIn Indicates whether check-ins are allowed.
-       */
-      override fun allowCheckIn(allowCheckIn: IResolvable) {
-        cdkBuilder.allowCheckIn(allowCheckIn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxCount Maximum entitlement count.
-       * Use if the unit is not None.
-       */
-      override fun maxCount(maxCount: Number) {
-        cdkBuilder.maxCount(maxCount)
-      }
-
-      /**
-       * @param name Entitlement name. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param overage Indicates whether overages are allowed.
-       */
-      override fun overage(overage: Boolean) {
-        cdkBuilder.overage(overage)
-      }
-
-      /**
-       * @param overage Indicates whether overages are allowed.
-       */
-      override fun overage(overage: IResolvable) {
-        cdkBuilder.overage(overage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param unit Entitlement unit. 
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      /**
-       * @param value Entitlement resource.
-       * Use only if the unit is None.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
-    ) : CdkObject(cdkObject), EntitlementProperty {
-      /**
-       * Indicates whether check-ins are allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-allowcheckin)
-       */
-      override fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
-
-      /**
-       * Maximum entitlement count.
-       *
-       * Use if the unit is not None.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-maxcount)
-       */
-      override fun maxCount(): Number? = unwrap(this).getMaxCount()
-
-      /**
-       * Entitlement name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Indicates whether overages are allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-overage)
-       */
-      override fun overage(): Any? = unwrap(this).getOverage()
-
-      /**
-       * Entitlement unit.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-unit)
-       */
-      override fun unit(): String = unwrap(this).getUnit()
-
-      /**
-       * Entitlement resource.
-       *
-       * Use only if the unit is None.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EntitlementProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty):
-          EntitlementProperty = CdkObjectWrappers.wrap(cdkObject) as? EntitlementProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EntitlementProperty):
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty
-    }
-  }
-
-  /**
-   * Date and time range during which the license is valid, in ISO8601-UTC format.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
-   * ValidityDateFormatProperty validityDateFormatProperty = ValidityDateFormatProperty.builder()
-   * .begin("begin")
-   * .end("end")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html)
-   */
-  public interface ValidityDateFormatProperty {
-    /**
-     * Start of the time range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-begin)
-     */
-    public fun begin(): String
-
-    /**
-     * End of the time range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-end)
-     */
-    public fun end(): String
-
-    /**
-     * A builder for [ValidityDateFormatProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param begin Start of the time range. 
-       */
-      public fun begin(begin: String)
-
-      /**
-       * @param end End of the time range. 
-       */
-      public fun end(end: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty.Builder
-          =
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty.builder()
-
-      /**
-       * @param begin Start of the time range. 
-       */
-      override fun begin(begin: String) {
-        cdkBuilder.begin(begin)
-      }
-
-      /**
-       * @param end End of the time range. 
-       */
-      override fun end(end: String) {
-        cdkBuilder.end(end)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
-    ) : CdkObject(cdkObject), ValidityDateFormatProperty {
-      /**
-       * Start of the time range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-begin)
-       */
-      override fun begin(): String = unwrap(this).getBegin()
-
-      /**
-       * End of the time range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-end)
-       */
-      override fun end(): String = unwrap(this).getEnd()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ValidityDateFormatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty):
-          ValidityDateFormatProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ValidityDateFormatProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ValidityDateFormatProperty):
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty
-    }
-  }
-
-  /**
-   * Details associated with the issuer of a license.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
-   * IssuerDataProperty issuerDataProperty = IssuerDataProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .signKey("signKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html)
-   */
-  public interface IssuerDataProperty {
-    /**
-     * Issuer name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-name)
-     */
-    public fun name(): String
-
-    /**
-     * Asymmetric KMS key from AWS Key Management Service .
-     *
-     * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
-     * signing algorithm.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-signkey)
-     */
-    public fun signKey(): String? = unwrap(this).getSignKey()
-
-    /**
-     * A builder for [IssuerDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Issuer name. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param signKey Asymmetric KMS key from AWS Key Management Service .
-       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
-       * signing algorithm.
-       */
-      public fun signKey(signKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.Builder =
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.builder()
-
-      /**
-       * @param name Issuer name. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param signKey Asymmetric KMS key from AWS Key Management Service .
-       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
-       * signing algorithm.
-       */
-      override fun signKey(signKey: String) {
-        cdkBuilder.signKey(signKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
-    ) : CdkObject(cdkObject), IssuerDataProperty {
-      /**
-       * Issuer name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Asymmetric KMS key from AWS Key Management Service .
-       *
-       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
-       * signing algorithm.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-signkey)
-       */
-      override fun signKey(): String? = unwrap(this).getSignKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IssuerDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty):
-          IssuerDataProperty = CdkObjectWrappers.wrap(cdkObject) as? IssuerDataProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IssuerDataProperty):
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty
-    }
+        software.amazon.awscdk.services.licensemanager.CfnLicense = wrapped.cdkObject as
+        software.amazon.awscdk.services.licensemanager.CfnLicense
   }
 
   /**
@@ -1511,8 +836,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
     ) : CdkObject(cdkObject), BorrowConfigurationProperty {
       /**
        * Indicates whether early check-ins are allowed.
@@ -1708,8 +1032,7 @@ public open class CfnLicense internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
     ) : CdkObject(cdkObject), ConsumptionConfigurationProperty {
       /**
        * Details about a borrow configuration.
@@ -1748,6 +1071,677 @@ public open class CfnLicense internal constructor(
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes a resource entitled for use with a license.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
+   * EntitlementProperty entitlementProperty = EntitlementProperty.builder()
+   * .name("name")
+   * .unit("unit")
+   * // the properties below are optional
+   * .allowCheckIn(false)
+   * .maxCount(123)
+   * .overage(false)
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html)
+   */
+  public interface EntitlementProperty {
+    /**
+     * Indicates whether check-ins are allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-allowcheckin)
+     */
+    public fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
+
+    /**
+     * Maximum entitlement count.
+     *
+     * Use if the unit is not None.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-maxcount)
+     */
+    public fun maxCount(): Number? = unwrap(this).getMaxCount()
+
+    /**
+     * Entitlement name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-name)
+     */
+    public fun name(): String
+
+    /**
+     * Indicates whether overages are allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-overage)
+     */
+    public fun overage(): Any? = unwrap(this).getOverage()
+
+    /**
+     * Entitlement unit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * Entitlement resource.
+     *
+     * Use only if the unit is None.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [EntitlementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowCheckIn Indicates whether check-ins are allowed.
+       */
+      public fun allowCheckIn(allowCheckIn: Boolean)
+
+      /**
+       * @param allowCheckIn Indicates whether check-ins are allowed.
+       */
+      public fun allowCheckIn(allowCheckIn: IResolvable)
+
+      /**
+       * @param maxCount Maximum entitlement count.
+       * Use if the unit is not None.
+       */
+      public fun maxCount(maxCount: Number)
+
+      /**
+       * @param name Entitlement name. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param overage Indicates whether overages are allowed.
+       */
+      public fun overage(overage: Boolean)
+
+      /**
+       * @param overage Indicates whether overages are allowed.
+       */
+      public fun overage(overage: IResolvable)
+
+      /**
+       * @param unit Entitlement unit. 
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value Entitlement resource.
+       * Use only if the unit is None.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.Builder =
+          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.builder()
+
+      /**
+       * @param allowCheckIn Indicates whether check-ins are allowed.
+       */
+      override fun allowCheckIn(allowCheckIn: Boolean) {
+        cdkBuilder.allowCheckIn(allowCheckIn)
+      }
+
+      /**
+       * @param allowCheckIn Indicates whether check-ins are allowed.
+       */
+      override fun allowCheckIn(allowCheckIn: IResolvable) {
+        cdkBuilder.allowCheckIn(allowCheckIn.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxCount Maximum entitlement count.
+       * Use if the unit is not None.
+       */
+      override fun maxCount(maxCount: Number) {
+        cdkBuilder.maxCount(maxCount)
+      }
+
+      /**
+       * @param name Entitlement name. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param overage Indicates whether overages are allowed.
+       */
+      override fun overage(overage: Boolean) {
+        cdkBuilder.overage(overage)
+      }
+
+      /**
+       * @param overage Indicates whether overages are allowed.
+       */
+      override fun overage(overage: IResolvable) {
+        cdkBuilder.overage(overage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param unit Entitlement unit. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value Entitlement resource.
+       * Use only if the unit is None.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
+    ) : CdkObject(cdkObject), EntitlementProperty {
+      /**
+       * Indicates whether check-ins are allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-allowcheckin)
+       */
+      override fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
+
+      /**
+       * Maximum entitlement count.
+       *
+       * Use if the unit is not None.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-maxcount)
+       */
+      override fun maxCount(): Number? = unwrap(this).getMaxCount()
+
+      /**
+       * Entitlement name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Indicates whether overages are allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-overage)
+       */
+      override fun overage(): Any? = unwrap(this).getOverage()
+
+      /**
+       * Entitlement unit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * Entitlement resource.
+       *
+       * Use only if the unit is None.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html#cfn-licensemanager-license-entitlement-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EntitlementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty):
+          EntitlementProperty = CdkObjectWrappers.wrap(cdkObject) as? EntitlementProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EntitlementProperty):
+          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty
+    }
+  }
+
+  /**
+   * Details associated with the issuer of a license.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
+   * IssuerDataProperty issuerDataProperty = IssuerDataProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .signKey("signKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html)
+   */
+  public interface IssuerDataProperty {
+    /**
+     * Issuer name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-name)
+     */
+    public fun name(): String
+
+    /**
+     * Asymmetric KMS key from AWS Key Management Service .
+     *
+     * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
+     * signing algorithm.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-signkey)
+     */
+    public fun signKey(): String? = unwrap(this).getSignKey()
+
+    /**
+     * A builder for [IssuerDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Issuer name. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param signKey Asymmetric KMS key from AWS Key Management Service .
+       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
+       * signing algorithm.
+       */
+      public fun signKey(signKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.Builder =
+          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.builder()
+
+      /**
+       * @param name Issuer name. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param signKey Asymmetric KMS key from AWS Key Management Service .
+       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
+       * signing algorithm.
+       */
+      override fun signKey(signKey: String) {
+        cdkBuilder.signKey(signKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
+    ) : CdkObject(cdkObject), IssuerDataProperty {
+      /**
+       * Issuer name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Asymmetric KMS key from AWS Key Management Service .
+       *
+       * The KMS key must have a key usage of sign and verify, and support the RSASSA-PSS SHA-256
+       * signing algorithm.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html#cfn-licensemanager-license-issuerdata-signkey)
+       */
+      override fun signKey(): String? = unwrap(this).getSignKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IssuerDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty):
+          IssuerDataProperty = CdkObjectWrappers.wrap(cdkObject) as? IssuerDataProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IssuerDataProperty):
+          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty
+    }
+  }
+
+  /**
+   * Describes key/value pairs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
+   * MetadataProperty metadataProperty = MetadataProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html)
+   */
+  public interface MetadataProperty {
+    /**
+     * The key name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-name)
+     */
+    public fun name(): String
+
+    /**
+     * The value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [MetadataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The key name. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.Builder =
+          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.builder()
+
+      /**
+       * @param name The key name. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
+    ) : CdkObject(cdkObject), MetadataProperty {
+      /**
+       * The key name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html#cfn-licensemanager-license-metadata-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty):
+          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataProperty):
+          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty
+    }
+  }
+
+  /**
+   * Details about a provisional configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
+   * ProvisionalConfigurationProperty provisionalConfigurationProperty =
+   * ProvisionalConfigurationProperty.builder()
+   * .maxTimeToLiveInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html)
+   */
+  public interface ProvisionalConfigurationProperty {
+    /**
+     * Maximum time for the provisional configuration, in minutes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html#cfn-licensemanager-license-provisionalconfiguration-maxtimetoliveinminutes)
+     */
+    public fun maxTimeToLiveInMinutes(): Number
+
+    /**
+     * A builder for [ProvisionalConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
+       */
+      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty.builder()
+
+      /**
+       * @param maxTimeToLiveInMinutes Maximum time for the provisional configuration, in minutes. 
+       */
+      override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
+        cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
+    ) : CdkObject(cdkObject), ProvisionalConfigurationProperty {
+      /**
+       * Maximum time for the provisional configuration, in minutes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html#cfn-licensemanager-license-provisionalconfiguration-maxtimetoliveinminutes)
+       */
+      override fun maxTimeToLiveInMinutes(): Number = unwrap(this).getMaxTimeToLiveInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisionalConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty):
+          ProvisionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionalConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisionalConfigurationProperty):
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
+    }
+  }
+
+  /**
+   * Date and time range during which the license is valid, in ISO8601-UTC format.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.licensemanager.*;
+   * ValidityDateFormatProperty validityDateFormatProperty = ValidityDateFormatProperty.builder()
+   * .begin("begin")
+   * .end("end")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html)
+   */
+  public interface ValidityDateFormatProperty {
+    /**
+     * Start of the time range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-begin)
+     */
+    public fun begin(): String
+
+    /**
+     * End of the time range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-end)
+     */
+    public fun end(): String
+
+    /**
+     * A builder for [ValidityDateFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param begin Start of the time range. 
+       */
+      public fun begin(begin: String)
+
+      /**
+       * @param end End of the time range. 
+       */
+      public fun end(end: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty.Builder
+          =
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty.builder()
+
+      /**
+       * @param begin Start of the time range. 
+       */
+      override fun begin(begin: String) {
+        cdkBuilder.begin(begin)
+      }
+
+      /**
+       * @param end End of the time range. 
+       */
+      override fun end(end: String) {
+        cdkBuilder.end(end)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
+    ) : CdkObject(cdkObject), ValidityDateFormatProperty {
+      /**
+       * Start of the time range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-begin)
+       */
+      override fun begin(): String = unwrap(this).getBegin()
+
+      /**
+       * End of the time range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html#cfn-licensemanager-license-validitydateformat-end)
+       */
+      override fun end(): String = unwrap(this).getEnd()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ValidityDateFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty):
+          ValidityDateFormatProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidityDateFormatProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ValidityDateFormatProperty):
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty
     }
   }
 }

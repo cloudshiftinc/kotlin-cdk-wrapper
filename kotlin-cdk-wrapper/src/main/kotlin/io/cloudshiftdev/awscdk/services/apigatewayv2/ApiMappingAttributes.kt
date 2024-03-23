@@ -56,7 +56,7 @@ public interface ApiMappingAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes,
   ) : CdkObject(cdkObject), ApiMappingAttributes {
     /**
      * The API mapping ID.

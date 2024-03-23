@@ -40,7 +40,7 @@ public interface ILocalBundling {
   public fun tryBundle(outputDir: String, options: BundlingOptions.Builder.() -> Unit): Boolean
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ILocalBundling,
+    cdkObject: software.amazon.awscdk.ILocalBundling,
   ) : CdkObject(cdkObject), ILocalBundling {
     /**
      * This method is called before attempting docker bundling to allow the bundler to be executed

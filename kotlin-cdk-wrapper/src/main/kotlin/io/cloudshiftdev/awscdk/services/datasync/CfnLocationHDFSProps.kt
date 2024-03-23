@@ -510,7 +510,7 @@ public interface CfnLocationHDFSProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFSProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFSProps,
   ) : CdkObject(cdkObject), CfnLocationHDFSProps {
     /**
      * The Amazon Resource Names (ARNs) of the agents that are used to connect to the HDFS cluster.

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -356,13 +356,14 @@ public open class CfnPipeline internal constructor(
         = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline): software.amazon.awscdk.services.sagemaker.CfnPipeline
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnPipeline
   }
 
   /**
-   * The location of the pipeline definition stored in Amazon S3.
+   * Configuration that controls the parallelism of the pipeline.
    *
-   * If specified, SageMaker will retrieve the pipeline definition from this location.
+   * By default, the parallelism configuration specified applies to all executions of the pipeline
+   * unless overridden.
    *
    * Example:
    *
@@ -370,165 +371,77 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * // the properties below are optional
-   * .eTag("eTag")
-   * .version("version")
+   * ParallelismConfigurationProperty parallelismConfigurationProperty =
+   * ParallelismConfigurationProperty.builder()
+   * .maxParallelExecutionSteps(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html)
    */
-  public interface S3LocationProperty {
+  public interface ParallelismConfigurationProperty {
     /**
-     * The name of the S3 bucket.
+     * The max number of steps that can be executed in parallel.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
      */
-    public fun bucket(): String
+    public fun maxParallelExecutionSteps(): Number
 
     /**
-     * A file checksum of the pipeline definition file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
-     */
-    public fun eTag(): String? = unwrap(this).getETag()
-
-    /**
-     * The object key (or key name) which uniquely identifies the object in an S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
-     */
-    public fun key(): String
-
-    /**
-     * The version ID of the pipeline definition file.
-     *
-     * If not specified, Amazon SageMaker will retrieve the latest version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [S3LocationProperty]
+     * A builder for [ParallelismConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucket The name of the S3 bucket. 
+       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
        */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param eTag A file checksum of the pipeline definition file.
-       */
-      public fun eTag(eTag: String)
-
-      /**
-       * @param key The object key (or key name) which uniquely identifies the object in an S3
-       * bucket. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param version The version ID of the pipeline definition file.
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       */
-      public fun version(version: String)
+      public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.builder()
 
       /**
-       * @param bucket The name of the S3 bucket. 
+       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
        */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
+      override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
+        cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
       }
 
-      /**
-       * @param eTag A file checksum of the pipeline definition file.
-       */
-      override fun eTag(eTag: String) {
-        cdkBuilder.eTag(eTag)
-      }
-
-      /**
-       * @param key The object key (or key name) which uniquely identifies the object in an S3
-       * bucket. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param version The version ID of the pipeline definition file.
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty =
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
+    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
       /**
-       * The name of the S3 bucket.
+       * The max number of steps that can be executed in parallel.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
        */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * A file checksum of the pipeline definition file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
-       */
-      override fun eTag(): String? = unwrap(this).getETag()
-
-      /**
-       * The object key (or key name) which uniquely identifies the object in an S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The version ID of the pipeline definition file.
-       *
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
+      override fun maxParallelExecutionSteps(): Number = unwrap(this).getMaxParallelExecutionSteps()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParallelismConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty):
+          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty
+      internal fun unwrap(wrapped: ParallelismConfigurationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty
     }
   }
 
@@ -663,8 +576,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
     ) : CdkObject(cdkObject), PipelineDefinitionProperty {
       /**
        * The [JSON pipeline
@@ -705,10 +617,9 @@ public open class CfnPipeline internal constructor(
   }
 
   /**
-   * Configuration that controls the parallelism of the pipeline.
+   * The location of the pipeline definition stored in Amazon S3.
    *
-   * By default, the parallelism configuration specified applies to all executions of the pipeline
-   * unless overridden.
+   * If specified, SageMaker will retrieve the pipeline definition from this location.
    *
    * Example:
    *
@@ -716,78 +627,164 @@ public open class CfnPipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ParallelismConfigurationProperty parallelismConfigurationProperty =
-   * ParallelismConfigurationProperty.builder()
-   * .maxParallelExecutionSteps(123)
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * // the properties below are optional
+   * .eTag("eTag")
+   * .version("version")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html)
    */
-  public interface ParallelismConfigurationProperty {
+  public interface S3LocationProperty {
     /**
-     * The max number of steps that can be executed in parallel.
+     * The name of the S3 bucket.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
      */
-    public fun maxParallelExecutionSteps(): Number
+    public fun bucket(): String
 
     /**
-     * A builder for [ParallelismConfigurationProperty]
+     * A file checksum of the pipeline definition file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
+     */
+    public fun eTag(): String? = unwrap(this).getETag()
+
+    /**
+     * The object key (or key name) which uniquely identifies the object in an S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
+     */
+    public fun key(): String
+
+    /**
+     * The version ID of the pipeline definition file.
+     *
+     * If not specified, Amazon SageMaker will retrieve the latest version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [S3LocationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
+       * @param bucket The name of the S3 bucket. 
        */
-      public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number)
+      public fun bucket(bucket: String)
+
+      /**
+       * @param eTag A file checksum of the pipeline definition file.
+       */
+      public fun eTag(eTag: String)
+
+      /**
+       * @param key The object key (or key name) which uniquely identifies the object in an S3
+       * bucket. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param version The version ID of the pipeline definition file.
+       * If not specified, Amazon SageMaker will retrieve the latest version.
+       */
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.builder()
 
       /**
-       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
+       * @param bucket The name of the S3 bucket. 
        */
-      override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
-        cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
+      /**
+       * @param eTag A file checksum of the pipeline definition file.
+       */
+      override fun eTag(eTag: String) {
+        cdkBuilder.eTag(eTag)
+      }
+
+      /**
+       * @param key The object key (or key name) which uniquely identifies the object in an S3
+       * bucket. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param version The version ID of the pipeline definition file.
+       * If not specified, Amazon SageMaker will retrieve the latest version.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
-    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
       /**
-       * The max number of steps that can be executed in parallel.
+       * The name of the S3 bucket.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
        */
-      override fun maxParallelExecutionSteps(): Number = unwrap(this).getMaxParallelExecutionSteps()
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * A file checksum of the pipeline definition file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
+       */
+      override fun eTag(): String? = unwrap(this).getETag()
+
+      /**
+       * The object key (or key name) which uniquely identifies the object in an S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The version ID of the pipeline definition file.
+       *
+       * If not specified, Amazon SageMaker will retrieve the latest version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParallelismConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ParallelismConfigurationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty
     }
   }
 }

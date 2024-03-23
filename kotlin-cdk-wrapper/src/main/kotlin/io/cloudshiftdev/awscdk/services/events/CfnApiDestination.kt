@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-apidestination.html)
  */
-public open class CfnApiDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnApiDestination,
+public open class CfnApiDestination(
+  cdkObject: software.amazon.awscdk.services.events.CfnApiDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -314,6 +314,7 @@ public open class CfnApiDestination internal constructor(
         CfnApiDestination = CfnApiDestination(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiDestination):
-        software.amazon.awscdk.services.events.CfnApiDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.events.CfnApiDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.CfnApiDestination
   }
 }

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-apikey.html)
  */
-public open class CfnAPIKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnAPIKey,
+public open class CfnAPIKey(
+  cdkObject: software.amazon.awscdk.services.location.CfnAPIKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -635,7 +635,7 @@ public open class CfnAPIKey internal constructor(
         CfnAPIKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnAPIKey): software.amazon.awscdk.services.location.CfnAPIKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.location.CfnAPIKey
   }
 
   /**
@@ -1016,8 +1016,7 @@ public open class CfnAPIKey internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty,
+      cdkObject: software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty,
     ) : CdkObject(cdkObject), ApiKeyRestrictionsProperty {
       /**
        * A list of allowed actions that an API key resource grants permissions to perform.

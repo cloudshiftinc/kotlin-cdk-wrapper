@@ -239,7 +239,7 @@ public interface CfnDHCPOptionsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps,
   ) : CdkObject(cdkObject), CfnDHCPOptionsProps {
     /**
      * This value is used to complete unqualified DNS hostnames.

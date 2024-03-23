@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CrossAccountZoneDelegationRecord internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord,
+public open class CrossAccountZoneDelegationRecord(
+  cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -206,5 +205,6 @@ public open class CrossAccountZoneDelegationRecord internal constructor(
 
     internal fun unwrap(wrapped: CrossAccountZoneDelegationRecord):
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord
   }
 }

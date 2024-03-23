@@ -856,7 +856,7 @@ public interface VpcProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpcProps,
+    cdkObject: software.amazon.awscdk.services.ec2.VpcProps,
   ) : CdkObject(cdkObject), VpcProps {
     /**
      * Availability zones this VPC spans.

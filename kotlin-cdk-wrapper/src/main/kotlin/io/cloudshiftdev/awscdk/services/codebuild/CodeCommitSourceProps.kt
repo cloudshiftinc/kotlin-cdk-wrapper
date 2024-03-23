@@ -155,7 +155,7 @@ public interface CodeCommitSourceProps : SourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CodeCommitSourceProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.CodeCommitSourceProps,
   ) : CdkObject(cdkObject), CodeCommitSourceProps {
     /**
      * The commit ID, pull request ID, branch name, or tag name that corresponds to the version of

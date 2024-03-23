@@ -303,8 +303,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.workspacesthinclient.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * The ID of the software set to apply.

@@ -17,8 +17,8 @@ package io.cloudshiftdev.awscdk.services.iam
  * .build());
  * ```
  */
-public open class AccountRootPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.AccountRootPrincipal,
+public open class AccountRootPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.AccountRootPrincipal,
 ) : AccountPrincipal(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.iam.AccountRootPrincipal()
   )
@@ -28,6 +28,7 @@ public open class AccountRootPrincipal internal constructor(
         AccountRootPrincipal = AccountRootPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: AccountRootPrincipal):
-        software.amazon.awscdk.services.iam.AccountRootPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.AccountRootPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.AccountRootPrincipal
   }
 }

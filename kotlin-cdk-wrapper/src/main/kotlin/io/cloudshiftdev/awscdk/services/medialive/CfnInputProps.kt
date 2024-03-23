@@ -405,7 +405,7 @@ public interface CfnInputProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.medialive.CfnInputProps,
+    cdkObject: software.amazon.awscdk.services.medialive.CfnInputProps,
   ) : CdkObject(cdkObject), CfnInputProps {
     /**
      * Settings that apply only if the input is a push type of input.

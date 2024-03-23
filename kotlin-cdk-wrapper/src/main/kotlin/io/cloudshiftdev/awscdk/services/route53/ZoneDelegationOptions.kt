@@ -79,7 +79,7 @@ public interface ZoneDelegationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationOptions,
+    cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationOptions,
   ) : CdkObject(cdkObject), ZoneDelegationOptions {
     /**
      * A comment to add on the DNS record created to incorporate the delegation.

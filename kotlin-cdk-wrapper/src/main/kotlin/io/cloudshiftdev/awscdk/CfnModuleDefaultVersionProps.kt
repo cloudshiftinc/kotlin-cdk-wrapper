@@ -113,7 +113,7 @@ public interface CfnModuleDefaultVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnModuleDefaultVersionProps,
+    cdkObject: software.amazon.awscdk.CfnModuleDefaultVersionProps,
   ) : CdkObject(cdkObject), CfnModuleDefaultVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the module version to set as the default version.

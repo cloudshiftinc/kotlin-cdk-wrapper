@@ -706,7 +706,7 @@ public interface CfnMonitorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitorProps,
+    cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitorProps,
   ) : CdkObject(cdkObject), CfnMonitorProps {
     /**
      * A complex type with the configuration information that determines the threshold and other

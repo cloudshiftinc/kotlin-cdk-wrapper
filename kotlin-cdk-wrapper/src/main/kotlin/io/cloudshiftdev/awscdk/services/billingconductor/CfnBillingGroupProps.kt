@@ -260,7 +260,7 @@ public interface CfnBillingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps,
+    cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps,
   ) : CdkObject(cdkObject), CfnBillingGroupProps {
     /**
      * The set of accounts that will be under the billing group.

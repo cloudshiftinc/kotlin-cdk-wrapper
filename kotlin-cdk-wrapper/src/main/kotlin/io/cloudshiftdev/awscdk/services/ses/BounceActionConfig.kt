@@ -138,7 +138,7 @@ public interface BounceActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.BounceActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.BounceActionConfig,
   ) : CdkObject(cdkObject), BounceActionConfig {
     /**
      * Human-readable text to include in the bounce message.

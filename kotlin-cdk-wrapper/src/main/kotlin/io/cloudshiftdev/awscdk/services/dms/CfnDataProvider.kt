@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html)
  */
-public open class CfnDataProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider,
+public open class CfnDataProvider(
+  cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -474,118 +474,8 @@ public open class CfnDataProvider internal constructor(
         CfnDataProvider = CfnDataProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataProvider):
-        software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject
-  }
-
-  /**
-   * PostgreSqlSettings property identifier.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * SettingsProperty settingsProperty = SettingsProperty.builder()
-   * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
-   * .certificateArn("certificateArn")
-   * .databaseName("databaseName")
-   * .port(123)
-   * .serverName("serverName")
-   * .sslMode("sslMode")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html)
-   */
-  public interface SettingsProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
-     */
-    public fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
-
-    /**
-     * A builder for [SettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      public fun postgreSqlSettings(postgreSqlSettings: IResolvable)
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty)
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
-      public
-          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.builder()
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
-        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
-      override
-          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
-          Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
-    ) : CdkObject(cdkObject), SettingsProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
-       */
-      override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty):
-          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SettingsProperty):
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty
-    }
+        software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnDataProvider
   }
 
   /**
@@ -749,8 +639,7 @@ public open class CfnDataProvider internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
     ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-certificatearn)
@@ -811,6 +700,117 @@ public open class CfnDataProvider internal constructor(
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty
+    }
+  }
+
+  /**
+   * PostgreSqlSettings property identifier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * SettingsProperty settingsProperty = SettingsProperty.builder()
+   * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
+   * .certificateArn("certificateArn")
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html)
+   */
+  public interface SettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
+     */
+    public fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
+
+    /**
+     * A builder for [SettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      public fun postgreSqlSettings(postgreSqlSettings: IResolvable)
+
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty)
+
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
+      public
+          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.builder()
+
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
+        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
+        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
+      }
+
+      /**
+       * @param postgreSqlSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
+      override
+          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
+          Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
+    ) : CdkObject(cdkObject), SettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
+       */
+      override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty):
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty
     }
   }
 }

@@ -210,7 +210,7 @@ public interface AssemblyManifest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssemblyManifest,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AssemblyManifest,
   ) : CdkObject(cdkObject), AssemblyManifest {
     /**
      * The set of artifacts in this assembly.

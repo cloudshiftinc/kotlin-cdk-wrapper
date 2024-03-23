@@ -74,8 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html)
  */
-public open class CfnFunctionConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
+public open class CfnFunctionConfiguration(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -755,7 +755,218 @@ public open class CfnFunctionConfiguration internal constructor(
         CfnFunctionConfiguration = CfnFunctionConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionConfiguration):
-        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
+  }
+
+  /**
+   * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
+   *
+   * Specifies the name and version of the runtime to use. Note that if a runtime is specified, code
+   * must also be specified.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * AppSyncRuntimeProperty appSyncRuntimeProperty = AppSyncRuntimeProperty.builder()
+   * .name("name")
+   * .runtimeVersion("runtimeVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html)
+   */
+  public interface AppSyncRuntimeProperty {
+    /**
+     * The `name` of the runtime to use.
+     *
+     * Currently, the only allowed value is `APPSYNC_JS` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-name)
+     */
+    public fun name(): String
+
+    /**
+     * The `version` of the runtime to use.
+     *
+     * Currently, the only allowed version is `1.0.0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-runtimeversion)
+     */
+    public fun runtimeVersion(): String
+
+    /**
+     * A builder for [AppSyncRuntimeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The `name` of the runtime to use. 
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param runtimeVersion The `version` of the runtime to use. 
+       * Currently, the only allowed version is `1.0.0` .
+       */
+      public fun runtimeVersion(runtimeVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty.builder()
+
+      /**
+       * @param name The `name` of the runtime to use. 
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param runtimeVersion The `version` of the runtime to use. 
+       * Currently, the only allowed version is `1.0.0` .
+       */
+      override fun runtimeVersion(runtimeVersion: String) {
+        cdkBuilder.runtimeVersion(runtimeVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
+    ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
+      /**
+       * The `name` of the runtime to use.
+       *
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The `version` of the runtime to use.
+       *
+       * Currently, the only allowed version is `1.0.0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-runtimeversion)
+       */
+      override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncRuntimeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty):
+          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as? AppSyncRuntimeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AppSyncRuntimeProperty):
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty
+    }
+  }
+
+  /**
+   * The `LambdaConflictHandlerConfig` object when configuring `LAMBDA` as the Conflict Handler.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * LambdaConflictHandlerConfigProperty lambdaConflictHandlerConfigProperty =
+   * LambdaConflictHandlerConfigProperty.builder()
+   * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+   */
+  public interface LambdaConflictHandlerConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html#cfn-appsync-functionconfiguration-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
+     */
+    public fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
+
+    /**
+     * A builder for [LambdaConflictHandlerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
+       * use as the Conflict Handler.
+       */
+      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.builder()
+
+      /**
+       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
+       * use as the Conflict Handler.
+       */
+      override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
+        cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
+    ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html#cfn-appsync-functionconfiguration-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
+       */
+      override fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LambdaConflictHandlerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty):
+          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConflictHandlerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
+    }
   }
 
   /**
@@ -921,8 +1132,7 @@ public open class CfnFunctionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
     ) : CdkObject(cdkObject), SyncConfigProperty {
       /**
        * The Conflict Detection strategy to use.
@@ -971,218 +1181,6 @@ public open class CfnFunctionConfiguration internal constructor(
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty
-    }
-  }
-
-  /**
-   * The `LambdaConflictHandlerConfig` object when configuring `LAMBDA` as the Conflict Handler.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * LambdaConflictHandlerConfigProperty lambdaConflictHandlerConfigProperty =
-   * LambdaConflictHandlerConfigProperty.builder()
-   * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
-   */
-  public interface LambdaConflictHandlerConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html#cfn-appsync-functionconfiguration-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
-     */
-    public fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
-
-    /**
-     * A builder for [LambdaConflictHandlerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
-       * use as the Conflict Handler.
-       */
-      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.builder()
-
-      /**
-       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
-       * use as the Conflict Handler.
-       */
-      override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
-        cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
-    ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html#cfn-appsync-functionconfiguration-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
-       */
-      override fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LambdaConflictHandlerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty):
-          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaConflictHandlerConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
-    }
-  }
-
-  /**
-   * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
-   *
-   * Specifies the name and version of the runtime to use. Note that if a runtime is specified, code
-   * must also be specified.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * AppSyncRuntimeProperty appSyncRuntimeProperty = AppSyncRuntimeProperty.builder()
-   * .name("name")
-   * .runtimeVersion("runtimeVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html)
-   */
-  public interface AppSyncRuntimeProperty {
-    /**
-     * The `name` of the runtime to use.
-     *
-     * Currently, the only allowed value is `APPSYNC_JS` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-name)
-     */
-    public fun name(): String
-
-    /**
-     * The `version` of the runtime to use.
-     *
-     * Currently, the only allowed version is `1.0.0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-runtimeversion)
-     */
-    public fun runtimeVersion(): String
-
-    /**
-     * A builder for [AppSyncRuntimeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The `name` of the runtime to use. 
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param runtimeVersion The `version` of the runtime to use. 
-       * Currently, the only allowed version is `1.0.0` .
-       */
-      public fun runtimeVersion(runtimeVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty.builder()
-
-      /**
-       * @param name The `name` of the runtime to use. 
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param runtimeVersion The `version` of the runtime to use. 
-       * Currently, the only allowed version is `1.0.0` .
-       */
-      override fun runtimeVersion(runtimeVersion: String) {
-        cdkBuilder.runtimeVersion(runtimeVersion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
-    ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
-      /**
-       * The `name` of the runtime to use.
-       *
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The `version` of the runtime to use.
-       *
-       * Currently, the only allowed version is `1.0.0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-appsyncruntime.html#cfn-appsync-functionconfiguration-appsyncruntime-runtimeversion)
-       */
-      override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncRuntimeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty):
-          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as? AppSyncRuntimeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AppSyncRuntimeProperty):
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty
     }
   }
 }

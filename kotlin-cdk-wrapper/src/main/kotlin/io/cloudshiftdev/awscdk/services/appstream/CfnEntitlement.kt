@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-entitlement.html)
  */
-public open class CfnEntitlement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement,
+public open class CfnEntitlement(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -314,7 +314,8 @@ public open class CfnEntitlement internal constructor(
         CfnEntitlement = CfnEntitlement(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntitlement):
-        software.amazon.awscdk.services.appstream.CfnEntitlement = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnEntitlement = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnEntitlement
   }
 
   /**
@@ -426,8 +427,7 @@ public open class CfnEntitlement internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty,
     ) : CdkObject(cdkObject), AttributeProperty {
       /**
        * A supported AWS IAM SAML PrincipalTag attribute that is matched to a value when a user

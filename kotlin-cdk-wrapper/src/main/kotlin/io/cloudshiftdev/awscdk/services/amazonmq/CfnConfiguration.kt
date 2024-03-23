@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html)
  */
-public open class CfnConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration,
+public open class CfnConfiguration(
+  cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -391,7 +391,8 @@ public open class CfnConfiguration internal constructor(
         CfnConfiguration = CfnConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfiguration):
-        software.amazon.awscdk.services.amazonmq.CfnConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.amazonmq.CfnConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.amazonmq.CfnConfiguration
   }
 
   /**
@@ -467,8 +468,7 @@ public open class CfnConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The key in a key-value pair.

@@ -269,7 +269,7 @@ public interface CfnLifecycleHookProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps,
   ) : CdkObject(cdkObject), CfnLifecycleHookProps {
     /**
      * The name of the Auto Scaling group.

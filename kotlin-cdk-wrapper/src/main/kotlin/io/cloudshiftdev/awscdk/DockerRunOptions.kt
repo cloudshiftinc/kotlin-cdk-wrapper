@@ -301,7 +301,7 @@ public interface DockerRunOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.DockerRunOptions,
+    cdkObject: software.amazon.awscdk.DockerRunOptions,
   ) : CdkObject(cdkObject), DockerRunOptions {
     /**
      * The command to run in the container.

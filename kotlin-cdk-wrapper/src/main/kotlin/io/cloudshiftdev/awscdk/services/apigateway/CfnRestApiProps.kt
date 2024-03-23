@@ -655,7 +655,7 @@ public interface CfnRestApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApiProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApiProps,
   ) : CdkObject(cdkObject), CfnRestApiProps {
     /**
      * The source of the API key for metering requests according to a usage plan.

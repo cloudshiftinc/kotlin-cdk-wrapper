@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html)
  */
-public open class CfnPartition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
+public open class CfnPartition(
+  cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -341,7 +341,1162 @@ public open class CfnPartition internal constructor(
         CfnPartition(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartition): software.amazon.awscdk.services.glue.CfnPartition =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnPartition
+  }
+
+  /**
+   * A column in a `Table` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * ColumnProperty columnProperty = ColumnProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .comment("comment")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html)
+   */
+  public interface ColumnProperty {
+    /**
+     * A free-form text comment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment)
+     */
+    public fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * The name of the `Column` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name)
+     */
+    public fun name(): String
+
+    /**
+     * The data type of the `Column` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ColumnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comment A free-form text comment.
+       */
+      public fun comment(comment: String)
+
+      /**
+       * @param name The name of the `Column` . 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type The data type of the `Column` .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.builder()
+
+      /**
+       * @param comment A free-form text comment.
+       */
+      override fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+      }
+
+      /**
+       * @param name The name of the `Column` . 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type The data type of the `Column` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
+    ) : CdkObject(cdkObject), ColumnProperty {
+      /**
+       * A free-form text comment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment)
+       */
+      override fun comment(): String? = unwrap(this).getComment()
+
+      /**
+       * The name of the `Column` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The data type of the `Column` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ColumnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty):
+          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ColumnProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty
+    }
+  }
+
+  /**
+   * Specifies the sort order of a sorted column.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * OrderProperty orderProperty = OrderProperty.builder()
+   * .column("column")
+   * // the properties below are optional
+   * .sortOrder(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html)
+   */
+  public interface OrderProperty {
+    /**
+     * The name of the column.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-column)
+     */
+    public fun column(): String
+
+    /**
+     * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
+     * `==0` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-sortorder)
+     */
+    public fun sortOrder(): Number? = unwrap(this).getSortOrder()
+
+    /**
+     * A builder for [OrderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param column The name of the column. 
+       */
+      public fun column(column: String)
+
+      /**
+       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
+       * descending order ( `==0` ).
+       */
+      public fun sortOrder(sortOrder: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.builder()
+
+      /**
+       * @param column The name of the column. 
+       */
+      override fun column(column: String) {
+        cdkBuilder.column(column)
+      }
+
+      /**
+       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
+       * descending order ( `==0` ).
+       */
+      override fun sortOrder(sortOrder: Number) {
+        cdkBuilder.sortOrder(sortOrder)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.OrderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
+    ) : CdkObject(cdkObject), OrderProperty {
+      /**
+       * The name of the column.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-column)
+       */
+      override fun column(): String = unwrap(this).getColumn()
+
+      /**
+       * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
+       * `==0` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-sortorder)
+       */
+      override fun sortOrder(): Number? = unwrap(this).getSortOrder()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OrderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty):
+          OrderProperty = CdkObjectWrappers.wrap(cdkObject) as? OrderProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OrderProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.OrderProperty
+    }
+  }
+
+  /**
+   * The structure used to create and update a partition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * Object parameters;
+   * Object skewedColumnValueLocationMaps;
+   * PartitionInputProperty partitionInputProperty = PartitionInputProperty.builder()
+   * .values(List.of("values"))
+   * // the properties below are optional
+   * .parameters(parameters)
+   * .storageDescriptor(StorageDescriptorProperty.builder()
+   * .bucketColumns(List.of("bucketColumns"))
+   * .columns(List.of(ColumnProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .comment("comment")
+   * .type("type")
+   * .build()))
+   * .compressed(false)
+   * .inputFormat("inputFormat")
+   * .location("location")
+   * .numberOfBuckets(123)
+   * .outputFormat("outputFormat")
+   * .parameters(parameters)
+   * .schemaReference(SchemaReferenceProperty.builder()
+   * .schemaId(SchemaIdProperty.builder()
+   * .registryName("registryName")
+   * .schemaArn("schemaArn")
+   * .schemaName("schemaName")
+   * .build())
+   * .schemaVersionId("schemaVersionId")
+   * .schemaVersionNumber(123)
+   * .build())
+   * .serdeInfo(SerdeInfoProperty.builder()
+   * .name("name")
+   * .parameters(parameters)
+   * .serializationLibrary("serializationLibrary")
+   * .build())
+   * .skewedInfo(SkewedInfoProperty.builder()
+   * .skewedColumnNames(List.of("skewedColumnNames"))
+   * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+   * .skewedColumnValues(List.of("skewedColumnValues"))
+   * .build())
+   * .sortColumns(List.of(OrderProperty.builder()
+   * .column("column")
+   * // the properties below are optional
+   * .sortOrder(123)
+   * .build()))
+   * .storedAsSubDirectories(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html)
+   */
+  public interface PartitionInputProperty {
+    /**
+     * These key-value pairs define partition parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * Provides information about the physical location where the partition is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor)
+     */
+    public fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
+
+    /**
+     * The values of the partition.
+     *
+     * Although this parameter is not required by the SDK, you must specify this parameter for a
+     * valid input.
+     *
+     * The values for the keys for the new partition must be passed as an array of String objects
+     * that must be ordered in the same order as the partition keys appearing in the Amazon S3 prefix.
+     * Otherwise AWS Glue will add the values to the wrong keys.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [PartitionInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameters These key-value pairs define partition parameters.
+       */
+      public fun parameters(parameters: Any)
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      public fun storageDescriptor(storageDescriptor: IResolvable)
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty)
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
+      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit)
+
+      /**
+       * @param values The values of the partition. 
+       * Although this parameter is not required by the SDK, you must specify this parameter for a
+       * valid input.
+       *
+       * The values for the keys for the new partition must be passed as an array of String objects
+       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
+       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The values of the partition. 
+       * Although this parameter is not required by the SDK, you must specify this parameter for a
+       * valid input.
+       *
+       * The values for the keys for the new partition must be passed as an array of String objects
+       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
+       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.builder()
+
+      /**
+       * @param parameters These key-value pairs define partition parameters.
+       */
+      override fun parameters(parameters: Any) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      override fun storageDescriptor(storageDescriptor: IResolvable) {
+        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
+        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
+      }
+
+      /**
+       * @param storageDescriptor Provides information about the physical location where the
+       * partition is stored.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
+      override
+          fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit):
+          Unit = storageDescriptor(StorageDescriptorProperty(storageDescriptor))
+
+      /**
+       * @param values The values of the partition. 
+       * Although this parameter is not required by the SDK, you must specify this parameter for a
+       * valid input.
+       *
+       * The values for the keys for the new partition must be passed as an array of String objects
+       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
+       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The values of the partition. 
+       * Although this parameter is not required by the SDK, you must specify this parameter for a
+       * valid input.
+       *
+       * The values for the keys for the new partition must be passed as an array of String objects
+       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
+       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
+    ) : CdkObject(cdkObject), PartitionInputProperty {
+      /**
+       * These key-value pairs define partition parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * Provides information about the physical location where the partition is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor)
+       */
+      override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
+
+      /**
+       * The values of the partition.
+       *
+       * Although this parameter is not required by the SDK, you must specify this parameter for a
+       * valid input.
+       *
+       * The values for the keys for the new partition must be passed as an array of String objects
+       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
+       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty):
+          PartitionInputProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PartitionInputProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty
+    }
+  }
+
+  /**
+   * A structure that contains schema identity fields.
+   *
+   * Either this or the `SchemaVersionId` has to be
+   * provided.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * SchemaIdProperty schemaIdProperty = SchemaIdProperty.builder()
+   * .registryName("registryName")
+   * .schemaArn("schemaArn")
+   * .schemaName("schemaName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html)
+   */
+  public interface SchemaIdProperty {
+    /**
+     * The name of the schema registry that contains the schema.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-registryname)
+     */
+    public fun registryName(): String? = unwrap(this).getRegistryName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the schema.
+     *
+     * One of `SchemaArn` or `SchemaName` has to be
+     * provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaarn)
+     */
+    public fun schemaArn(): String? = unwrap(this).getSchemaArn()
+
+    /**
+     * The name of the schema.
+     *
+     * One of `SchemaArn` or `SchemaName` has to be provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaname)
+     */
+    public fun schemaName(): String? = unwrap(this).getSchemaName()
+
+    /**
+     * A builder for [SchemaIdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param registryName The name of the schema registry that contains the schema.
+       */
+      public fun registryName(registryName: String)
+
+      /**
+       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
+       * One of `SchemaArn` or `SchemaName` has to be
+       * provided.
+       */
+      public fun schemaArn(schemaArn: String)
+
+      /**
+       * @param schemaName The name of the schema.
+       * One of `SchemaArn` or `SchemaName` has to be provided.
+       */
+      public fun schemaName(schemaName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.builder()
+
+      /**
+       * @param registryName The name of the schema registry that contains the schema.
+       */
+      override fun registryName(registryName: String) {
+        cdkBuilder.registryName(registryName)
+      }
+
+      /**
+       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
+       * One of `SchemaArn` or `SchemaName` has to be
+       * provided.
+       */
+      override fun schemaArn(schemaArn: String) {
+        cdkBuilder.schemaArn(schemaArn)
+      }
+
+      /**
+       * @param schemaName The name of the schema.
+       * One of `SchemaArn` or `SchemaName` has to be provided.
+       */
+      override fun schemaName(schemaName: String) {
+        cdkBuilder.schemaName(schemaName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
+    ) : CdkObject(cdkObject), SchemaIdProperty {
+      /**
+       * The name of the schema registry that contains the schema.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-registryname)
+       */
+      override fun registryName(): String? = unwrap(this).getRegistryName()
+
+      /**
+       * The Amazon Resource Name (ARN) of the schema.
+       *
+       * One of `SchemaArn` or `SchemaName` has to be
+       * provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaarn)
+       */
+      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
+
+      /**
+       * The name of the schema.
+       *
+       * One of `SchemaArn` or `SchemaName` has to be provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaname)
+       */
+      override fun schemaName(): String? = unwrap(this).getSchemaName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaIdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty):
+          SchemaIdProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaIdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaIdProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty
+    }
+  }
+
+  /**
+   * An object that references a schema stored in the AWS Glue Schema Registry.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * SchemaReferenceProperty schemaReferenceProperty = SchemaReferenceProperty.builder()
+   * .schemaId(SchemaIdProperty.builder()
+   * .registryName("registryName")
+   * .schemaArn("schemaArn")
+   * .schemaName("schemaName")
+   * .build())
+   * .schemaVersionId("schemaVersionId")
+   * .schemaVersionNumber(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html)
+   */
+  public interface SchemaReferenceProperty {
+    /**
+     * A structure that contains schema identity fields.
+     *
+     * Either this or the `SchemaVersionId` has to be
+     * provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaid)
+     */
+    public fun schemaId(): Any? = unwrap(this).getSchemaId()
+
+    /**
+     * The unique ID assigned to a version of the schema.
+     *
+     * Either this or the `SchemaId` has to be provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionid)
+     */
+    public fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
+
+    /**
+     * The version number of the schema.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionnumber)
+     */
+    public fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+
+    /**
+     * A builder for [SchemaReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      public fun schemaId(schemaId: IResolvable)
+
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      public fun schemaId(schemaId: SchemaIdProperty)
+
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
+      public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit)
+
+      /**
+       * @param schemaVersionId The unique ID assigned to a version of the schema.
+       * Either this or the `SchemaId` has to be provided.
+       */
+      public fun schemaVersionId(schemaVersionId: String)
+
+      /**
+       * @param schemaVersionNumber The version number of the schema.
+       */
+      public fun schemaVersionNumber(schemaVersionNumber: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.builder()
+
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      override fun schemaId(schemaId: IResolvable) {
+        cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      override fun schemaId(schemaId: SchemaIdProperty) {
+        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
+      }
+
+      /**
+       * @param schemaId A structure that contains schema identity fields.
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
+      override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
+          schemaId(SchemaIdProperty(schemaId))
+
+      /**
+       * @param schemaVersionId The unique ID assigned to a version of the schema.
+       * Either this or the `SchemaId` has to be provided.
+       */
+      override fun schemaVersionId(schemaVersionId: String) {
+        cdkBuilder.schemaVersionId(schemaVersionId)
+      }
+
+      /**
+       * @param schemaVersionNumber The version number of the schema.
+       */
+      override fun schemaVersionNumber(schemaVersionNumber: Number) {
+        cdkBuilder.schemaVersionNumber(schemaVersionNumber)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
+    ) : CdkObject(cdkObject), SchemaReferenceProperty {
+      /**
+       * A structure that contains schema identity fields.
+       *
+       * Either this or the `SchemaVersionId` has to be
+       * provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaid)
+       */
+      override fun schemaId(): Any? = unwrap(this).getSchemaId()
+
+      /**
+       * The unique ID assigned to a version of the schema.
+       *
+       * Either this or the `SchemaId` has to be provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionid)
+       */
+      override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
+
+      /**
+       * The version number of the schema.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionnumber)
+       */
+      override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty):
+          SchemaReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaReferenceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaReferenceProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty
+    }
+  }
+
+  /**
+   * Information about a serialization/deserialization program (SerDe) that serves as an extractor
+   * and loader.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * Object parameters;
+   * SerdeInfoProperty serdeInfoProperty = SerdeInfoProperty.builder()
+   * .name("name")
+   * .parameters(parameters)
+   * .serializationLibrary("serializationLibrary")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html)
+   */
+  public interface SerdeInfoProperty {
+    /**
+     * Name of the SerDe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * These key-value pairs define initialization parameters for the SerDe.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * Usually the class that implements the SerDe.
+     *
+     * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-serializationlibrary)
+     */
+    public fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+
+    /**
+     * A builder for [SerdeInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Name of the SerDe.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param parameters These key-value pairs define initialization parameters for the SerDe.
+       */
+      public fun parameters(parameters: Any)
+
+      /**
+       * @param serializationLibrary Usually the class that implements the SerDe.
+       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+       */
+      public fun serializationLibrary(serializationLibrary: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.builder()
+
+      /**
+       * @param name Name of the SerDe.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param parameters These key-value pairs define initialization parameters for the SerDe.
+       */
+      override fun parameters(parameters: Any) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      /**
+       * @param serializationLibrary Usually the class that implements the SerDe.
+       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+       */
+      override fun serializationLibrary(serializationLibrary: String) {
+        cdkBuilder.serializationLibrary(serializationLibrary)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
+    ) : CdkObject(cdkObject), SerdeInfoProperty {
+      /**
+       * Name of the SerDe.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * These key-value pairs define initialization parameters for the SerDe.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * Usually the class that implements the SerDe.
+       *
+       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-serializationlibrary)
+       */
+      override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SerdeInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty):
+          SerdeInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SerdeInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SerdeInfoProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty
+    }
+  }
+
+  /**
+   * Specifies skewed values in a table.
+   *
+   * Skewed values are those that occur with very high frequency.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * Object skewedColumnValueLocationMaps;
+   * SkewedInfoProperty skewedInfoProperty = SkewedInfoProperty.builder()
+   * .skewedColumnNames(List.of("skewedColumnNames"))
+   * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+   * .skewedColumnValues(List.of("skewedColumnValues"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html)
+   */
+  public interface SkewedInfoProperty {
+    /**
+     * A list of names of columns that contain skewed values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnnames)
+     */
+    public fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
+        emptyList()
+
+    /**
+     * A mapping of skewed values to the columns that contain them.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvaluelocationmaps)
+     */
+    public fun skewedColumnValueLocationMaps(): Any? =
+        unwrap(this).getSkewedColumnValueLocationMaps()
+
+    /**
+     * A list of values that appear so frequently as to be considered skewed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvalues)
+     */
+    public fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
+        emptyList()
+
+    /**
+     * A builder for [SkewedInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param skewedColumnNames A list of names of columns that contain skewed values.
+       */
+      public fun skewedColumnNames(skewedColumnNames: List<String>)
+
+      /**
+       * @param skewedColumnNames A list of names of columns that contain skewed values.
+       */
+      public fun skewedColumnNames(vararg skewedColumnNames: String)
+
+      /**
+       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
+       * them.
+       */
+      public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
+
+      /**
+       * @param skewedColumnValues A list of values that appear so frequently as to be considered
+       * skewed.
+       */
+      public fun skewedColumnValues(skewedColumnValues: List<String>)
+
+      /**
+       * @param skewedColumnValues A list of values that appear so frequently as to be considered
+       * skewed.
+       */
+      public fun skewedColumnValues(vararg skewedColumnValues: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.builder()
+
+      /**
+       * @param skewedColumnNames A list of names of columns that contain skewed values.
+       */
+      override fun skewedColumnNames(skewedColumnNames: List<String>) {
+        cdkBuilder.skewedColumnNames(skewedColumnNames)
+      }
+
+      /**
+       * @param skewedColumnNames A list of names of columns that contain skewed values.
+       */
+      override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
+          skewedColumnNames(skewedColumnNames.toList())
+
+      /**
+       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
+       * them.
+       */
+      override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
+        cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+      }
+
+      /**
+       * @param skewedColumnValues A list of values that appear so frequently as to be considered
+       * skewed.
+       */
+      override fun skewedColumnValues(skewedColumnValues: List<String>) {
+        cdkBuilder.skewedColumnValues(skewedColumnValues)
+      }
+
+      /**
+       * @param skewedColumnValues A list of values that appear so frequently as to be considered
+       * skewed.
+       */
+      override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
+          skewedColumnValues(skewedColumnValues.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
+    ) : CdkObject(cdkObject), SkewedInfoProperty {
+      /**
+       * A list of names of columns that contain skewed values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnnames)
+       */
+      override fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
+          emptyList()
+
+      /**
+       * A mapping of skewed values to the columns that contain them.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvaluelocationmaps)
+       */
+      override fun skewedColumnValueLocationMaps(): Any? =
+          unwrap(this).getSkewedColumnValueLocationMaps()
+
+      /**
+       * A list of values that appear so frequently as to be considered skewed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvalues)
+       */
+      override fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SkewedInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty):
+          SkewedInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SkewedInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SkewedInfoProperty):
+          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty
+    }
   }
 
   /**
@@ -861,8 +2016,7 @@ public open class CfnPartition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
     ) : CdkObject(cdkObject), StorageDescriptorProperty {
       /**
        * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
@@ -978,1163 +2132,6 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty
-    }
-  }
-
-  /**
-   * A structure that contains schema identity fields.
-   *
-   * Either this or the `SchemaVersionId` has to be
-   * provided.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * SchemaIdProperty schemaIdProperty = SchemaIdProperty.builder()
-   * .registryName("registryName")
-   * .schemaArn("schemaArn")
-   * .schemaName("schemaName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html)
-   */
-  public interface SchemaIdProperty {
-    /**
-     * The name of the schema registry that contains the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-registryname)
-     */
-    public fun registryName(): String? = unwrap(this).getRegistryName()
-
-    /**
-     * The Amazon Resource Name (ARN) of the schema.
-     *
-     * One of `SchemaArn` or `SchemaName` has to be
-     * provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaarn)
-     */
-    public fun schemaArn(): String? = unwrap(this).getSchemaArn()
-
-    /**
-     * The name of the schema.
-     *
-     * One of `SchemaArn` or `SchemaName` has to be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaname)
-     */
-    public fun schemaName(): String? = unwrap(this).getSchemaName()
-
-    /**
-     * A builder for [SchemaIdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param registryName The name of the schema registry that contains the schema.
-       */
-      public fun registryName(registryName: String)
-
-      /**
-       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       */
-      public fun schemaArn(schemaArn: String)
-
-      /**
-       * @param schemaName The name of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       */
-      public fun schemaName(schemaName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.builder()
-
-      /**
-       * @param registryName The name of the schema registry that contains the schema.
-       */
-      override fun registryName(registryName: String) {
-        cdkBuilder.registryName(registryName)
-      }
-
-      /**
-       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       */
-      override fun schemaArn(schemaArn: String) {
-        cdkBuilder.schemaArn(schemaArn)
-      }
-
-      /**
-       * @param schemaName The name of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       */
-      override fun schemaName(schemaName: String) {
-        cdkBuilder.schemaName(schemaName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
-    ) : CdkObject(cdkObject), SchemaIdProperty {
-      /**
-       * The name of the schema registry that contains the schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-registryname)
-       */
-      override fun registryName(): String? = unwrap(this).getRegistryName()
-
-      /**
-       * The Amazon Resource Name (ARN) of the schema.
-       *
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaarn)
-       */
-      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
-
-      /**
-       * The name of the schema.
-       *
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaname)
-       */
-      override fun schemaName(): String? = unwrap(this).getSchemaName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaIdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty):
-          SchemaIdProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaIdProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SchemaIdProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty
-    }
-  }
-
-  /**
-   * A column in a `Table` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * ColumnProperty columnProperty = ColumnProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .comment("comment")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html)
-   */
-  public interface ColumnProperty {
-    /**
-     * A free-form text comment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * The name of the `Column` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name)
-     */
-    public fun name(): String
-
-    /**
-     * The data type of the `Column` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ColumnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comment A free-form text comment.
-       */
-      public fun comment(comment: String)
-
-      /**
-       * @param name The name of the `Column` . 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type The data type of the `Column` .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.builder()
-
-      /**
-       * @param comment A free-form text comment.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
-
-      /**
-       * @param name The name of the `Column` . 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type The data type of the `Column` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
-    ) : CdkObject(cdkObject), ColumnProperty {
-      /**
-       * A free-form text comment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
-
-      /**
-       * The name of the `Column` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The data type of the `Column` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html#cfn-glue-partition-column-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ColumnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty):
-          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ColumnProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty
-    }
-  }
-
-  /**
-   * An object that references a schema stored in the AWS Glue Schema Registry.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * SchemaReferenceProperty schemaReferenceProperty = SchemaReferenceProperty.builder()
-   * .schemaId(SchemaIdProperty.builder()
-   * .registryName("registryName")
-   * .schemaArn("schemaArn")
-   * .schemaName("schemaName")
-   * .build())
-   * .schemaVersionId("schemaVersionId")
-   * .schemaVersionNumber(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html)
-   */
-  public interface SchemaReferenceProperty {
-    /**
-     * A structure that contains schema identity fields.
-     *
-     * Either this or the `SchemaVersionId` has to be
-     * provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaid)
-     */
-    public fun schemaId(): Any? = unwrap(this).getSchemaId()
-
-    /**
-     * The unique ID assigned to a version of the schema.
-     *
-     * Either this or the `SchemaId` has to be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionid)
-     */
-    public fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
-
-    /**
-     * The version number of the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionnumber)
-     */
-    public fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
-
-    /**
-     * A builder for [SchemaReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      public fun schemaId(schemaId: IResolvable)
-
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      public fun schemaId(schemaId: SchemaIdProperty)
-
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
-      public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit)
-
-      /**
-       * @param schemaVersionId The unique ID assigned to a version of the schema.
-       * Either this or the `SchemaId` has to be provided.
-       */
-      public fun schemaVersionId(schemaVersionId: String)
-
-      /**
-       * @param schemaVersionNumber The version number of the schema.
-       */
-      public fun schemaVersionNumber(schemaVersionNumber: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.builder()
-
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      override fun schemaId(schemaId: IResolvable) {
-        cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      override fun schemaId(schemaId: SchemaIdProperty) {
-        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
-      }
-
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
-      override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
-          schemaId(SchemaIdProperty(schemaId))
-
-      /**
-       * @param schemaVersionId The unique ID assigned to a version of the schema.
-       * Either this or the `SchemaId` has to be provided.
-       */
-      override fun schemaVersionId(schemaVersionId: String) {
-        cdkBuilder.schemaVersionId(schemaVersionId)
-      }
-
-      /**
-       * @param schemaVersionNumber The version number of the schema.
-       */
-      override fun schemaVersionNumber(schemaVersionNumber: Number) {
-        cdkBuilder.schemaVersionNumber(schemaVersionNumber)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
-    ) : CdkObject(cdkObject), SchemaReferenceProperty {
-      /**
-       * A structure that contains schema identity fields.
-       *
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaid)
-       */
-      override fun schemaId(): Any? = unwrap(this).getSchemaId()
-
-      /**
-       * The unique ID assigned to a version of the schema.
-       *
-       * Either this or the `SchemaId` has to be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionid)
-       */
-      override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
-
-      /**
-       * The version number of the schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionnumber)
-       */
-      override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty):
-          SchemaReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaReferenceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SchemaReferenceProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty
-    }
-  }
-
-  /**
-   * The structure used to create and update a partition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * Object parameters;
-   * Object skewedColumnValueLocationMaps;
-   * PartitionInputProperty partitionInputProperty = PartitionInputProperty.builder()
-   * .values(List.of("values"))
-   * // the properties below are optional
-   * .parameters(parameters)
-   * .storageDescriptor(StorageDescriptorProperty.builder()
-   * .bucketColumns(List.of("bucketColumns"))
-   * .columns(List.of(ColumnProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .comment("comment")
-   * .type("type")
-   * .build()))
-   * .compressed(false)
-   * .inputFormat("inputFormat")
-   * .location("location")
-   * .numberOfBuckets(123)
-   * .outputFormat("outputFormat")
-   * .parameters(parameters)
-   * .schemaReference(SchemaReferenceProperty.builder()
-   * .schemaId(SchemaIdProperty.builder()
-   * .registryName("registryName")
-   * .schemaArn("schemaArn")
-   * .schemaName("schemaName")
-   * .build())
-   * .schemaVersionId("schemaVersionId")
-   * .schemaVersionNumber(123)
-   * .build())
-   * .serdeInfo(SerdeInfoProperty.builder()
-   * .name("name")
-   * .parameters(parameters)
-   * .serializationLibrary("serializationLibrary")
-   * .build())
-   * .skewedInfo(SkewedInfoProperty.builder()
-   * .skewedColumnNames(List.of("skewedColumnNames"))
-   * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
-   * .skewedColumnValues(List.of("skewedColumnValues"))
-   * .build())
-   * .sortColumns(List.of(OrderProperty.builder()
-   * .column("column")
-   * // the properties below are optional
-   * .sortOrder(123)
-   * .build()))
-   * .storedAsSubDirectories(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html)
-   */
-  public interface PartitionInputProperty {
-    /**
-     * These key-value pairs define partition parameters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * Provides information about the physical location where the partition is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor)
-     */
-    public fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
-
-    /**
-     * The values of the partition.
-     *
-     * Although this parameter is not required by the SDK, you must specify this parameter for a
-     * valid input.
-     *
-     * The values for the keys for the new partition must be passed as an array of String objects
-     * that must be ordered in the same order as the partition keys appearing in the Amazon S3 prefix.
-     * Otherwise AWS Glue will add the values to the wrong keys.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values)
-     */
-    public fun values(): List<String>
-
-    /**
-     * A builder for [PartitionInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param parameters These key-value pairs define partition parameters.
-       */
-      public fun parameters(parameters: Any)
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      public fun storageDescriptor(storageDescriptor: IResolvable)
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty)
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
-      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit)
-
-      /**
-       * @param values The values of the partition. 
-       * Although this parameter is not required by the SDK, you must specify this parameter for a
-       * valid input.
-       *
-       * The values for the keys for the new partition must be passed as an array of String objects
-       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
-       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The values of the partition. 
-       * Although this parameter is not required by the SDK, you must specify this parameter for a
-       * valid input.
-       *
-       * The values for the keys for the new partition must be passed as an array of String objects
-       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
-       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.builder()
-
-      /**
-       * @param parameters These key-value pairs define partition parameters.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      override fun storageDescriptor(storageDescriptor: IResolvable) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
-      }
-
-      /**
-       * @param storageDescriptor Provides information about the physical location where the
-       * partition is stored.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
-      override
-          fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit):
-          Unit = storageDescriptor(StorageDescriptorProperty(storageDescriptor))
-
-      /**
-       * @param values The values of the partition. 
-       * Although this parameter is not required by the SDK, you must specify this parameter for a
-       * valid input.
-       *
-       * The values for the keys for the new partition must be passed as an array of String objects
-       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
-       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The values of the partition. 
-       * Although this parameter is not required by the SDK, you must specify this parameter for a
-       * valid input.
-       *
-       * The values for the keys for the new partition must be passed as an array of String objects
-       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
-       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
-    ) : CdkObject(cdkObject), PartitionInputProperty {
-      /**
-       * These key-value pairs define partition parameters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * Provides information about the physical location where the partition is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-storagedescriptor)
-       */
-      override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
-
-      /**
-       * The values of the partition.
-       *
-       * Although this parameter is not required by the SDK, you must specify this parameter for a
-       * valid input.
-       *
-       * The values for the keys for the new partition must be passed as an array of String objects
-       * that must be ordered in the same order as the partition keys appearing in the Amazon S3
-       * prefix. Otherwise AWS Glue will add the values to the wrong keys.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html#cfn-glue-partition-partitioninput-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty):
-          PartitionInputProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PartitionInputProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty
-    }
-  }
-
-  /**
-   * Specifies skewed values in a table.
-   *
-   * Skewed values are those that occur with very high frequency.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * Object skewedColumnValueLocationMaps;
-   * SkewedInfoProperty skewedInfoProperty = SkewedInfoProperty.builder()
-   * .skewedColumnNames(List.of("skewedColumnNames"))
-   * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
-   * .skewedColumnValues(List.of("skewedColumnValues"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html)
-   */
-  public interface SkewedInfoProperty {
-    /**
-     * A list of names of columns that contain skewed values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnnames)
-     */
-    public fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
-        emptyList()
-
-    /**
-     * A mapping of skewed values to the columns that contain them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvaluelocationmaps)
-     */
-    public fun skewedColumnValueLocationMaps(): Any? =
-        unwrap(this).getSkewedColumnValueLocationMaps()
-
-    /**
-     * A list of values that appear so frequently as to be considered skewed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvalues)
-     */
-    public fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
-        emptyList()
-
-    /**
-     * A builder for [SkewedInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      public fun skewedColumnNames(skewedColumnNames: List<String>)
-
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      public fun skewedColumnNames(vararg skewedColumnNames: String)
-
-      /**
-       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
-       * them.
-       */
-      public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
-
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      public fun skewedColumnValues(skewedColumnValues: List<String>)
-
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      public fun skewedColumnValues(vararg skewedColumnValues: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.builder()
-
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      override fun skewedColumnNames(skewedColumnNames: List<String>) {
-        cdkBuilder.skewedColumnNames(skewedColumnNames)
-      }
-
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
-          skewedColumnNames(skewedColumnNames.toList())
-
-      /**
-       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
-       * them.
-       */
-      override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
-        cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
-      }
-
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      override fun skewedColumnValues(skewedColumnValues: List<String>) {
-        cdkBuilder.skewedColumnValues(skewedColumnValues)
-      }
-
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
-          skewedColumnValues(skewedColumnValues.toList())
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
-    ) : CdkObject(cdkObject), SkewedInfoProperty {
-      /**
-       * A list of names of columns that contain skewed values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnnames)
-       */
-      override fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
-          emptyList()
-
-      /**
-       * A mapping of skewed values to the columns that contain them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvaluelocationmaps)
-       */
-      override fun skewedColumnValueLocationMaps(): Any? =
-          unwrap(this).getSkewedColumnValueLocationMaps()
-
-      /**
-       * A list of values that appear so frequently as to be considered skewed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html#cfn-glue-partition-skewedinfo-skewedcolumnvalues)
-       */
-      override fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SkewedInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty):
-          SkewedInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SkewedInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SkewedInfoProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty
-    }
-  }
-
-  /**
-   * Information about a serialization/deserialization program (SerDe) that serves as an extractor
-   * and loader.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * Object parameters;
-   * SerdeInfoProperty serdeInfoProperty = SerdeInfoProperty.builder()
-   * .name("name")
-   * .parameters(parameters)
-   * .serializationLibrary("serializationLibrary")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html)
-   */
-  public interface SerdeInfoProperty {
-    /**
-     * Name of the SerDe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * These key-value pairs define initialization parameters for the SerDe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * Usually the class that implements the SerDe.
-     *
-     * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-serializationlibrary)
-     */
-    public fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
-
-    /**
-     * A builder for [SerdeInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Name of the SerDe.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param parameters These key-value pairs define initialization parameters for the SerDe.
-       */
-      public fun parameters(parameters: Any)
-
-      /**
-       * @param serializationLibrary Usually the class that implements the SerDe.
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       */
-      public fun serializationLibrary(serializationLibrary: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.builder()
-
-      /**
-       * @param name Name of the SerDe.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param parameters These key-value pairs define initialization parameters for the SerDe.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param serializationLibrary Usually the class that implements the SerDe.
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       */
-      override fun serializationLibrary(serializationLibrary: String) {
-        cdkBuilder.serializationLibrary(serializationLibrary)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
-    ) : CdkObject(cdkObject), SerdeInfoProperty {
-      /**
-       * Name of the SerDe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * These key-value pairs define initialization parameters for the SerDe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * Usually the class that implements the SerDe.
-       *
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-serdeinfo.html#cfn-glue-partition-serdeinfo-serializationlibrary)
-       */
-      override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SerdeInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty):
-          SerdeInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SerdeInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SerdeInfoProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty
-    }
-  }
-
-  /**
-   * Specifies the sort order of a sorted column.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * OrderProperty orderProperty = OrderProperty.builder()
-   * .column("column")
-   * // the properties below are optional
-   * .sortOrder(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html)
-   */
-  public interface OrderProperty {
-    /**
-     * The name of the column.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-column)
-     */
-    public fun column(): String
-
-    /**
-     * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
-     * `==0` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-sortorder)
-     */
-    public fun sortOrder(): Number? = unwrap(this).getSortOrder()
-
-    /**
-     * A builder for [OrderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param column The name of the column. 
-       */
-      public fun column(column: String)
-
-      /**
-       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
-       * descending order ( `==0` ).
-       */
-      public fun sortOrder(sortOrder: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.builder()
-
-      /**
-       * @param column The name of the column. 
-       */
-      override fun column(column: String) {
-        cdkBuilder.column(column)
-      }
-
-      /**
-       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
-       * descending order ( `==0` ).
-       */
-      override fun sortOrder(sortOrder: Number) {
-        cdkBuilder.sortOrder(sortOrder)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnPartition.OrderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
-    ) : CdkObject(cdkObject), OrderProperty {
-      /**
-       * The name of the column.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-column)
-       */
-      override fun column(): String = unwrap(this).getColumn()
-
-      /**
-       * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
-       * `==0` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html#cfn-glue-partition-order-sortorder)
-       */
-      override fun sortOrder(): Number? = unwrap(this).getSortOrder()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OrderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty):
-          OrderProperty = CdkObjectWrappers.wrap(cdkObject) as? OrderProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OrderProperty):
-          software.amazon.awscdk.services.glue.CfnPartition.OrderProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnPartition.OrderProperty
     }
   }
 }

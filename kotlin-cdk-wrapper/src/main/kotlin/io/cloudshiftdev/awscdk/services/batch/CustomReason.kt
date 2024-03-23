@@ -119,7 +119,7 @@ public interface CustomReason {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.CustomReason,
+    cdkObject: software.amazon.awscdk.services.batch.CustomReason,
   ) : CdkObject(cdkObject), CustomReason {
     /**
      * A glob string that will match on the job exit code.

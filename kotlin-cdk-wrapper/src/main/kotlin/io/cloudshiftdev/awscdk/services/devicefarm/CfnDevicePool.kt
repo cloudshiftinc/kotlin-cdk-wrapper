@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-devicepool.html)
  */
-public open class CfnDevicePool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool,
+public open class CfnDevicePool(
+  cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -403,7 +403,8 @@ public open class CfnDevicePool internal constructor(
         CfnDevicePool = CfnDevicePool(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevicePool):
-        software.amazon.awscdk.services.devicefarm.CfnDevicePool = wrapped.cdkObject
+        software.amazon.awscdk.services.devicefarm.CfnDevicePool = wrapped.cdkObject as
+        software.amazon.awscdk.services.devicefarm.CfnDevicePool
   }
 
   /**
@@ -691,7 +692,7 @@ public open class CfnDevicePool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty,
+      cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty,
     ) : CdkObject(cdkObject), RuleProperty {
       /**
        * The rule's stringified attribute. For example, specify the value as `"\"abc\""` .

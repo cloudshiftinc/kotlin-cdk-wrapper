@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-rolealias.html)
  */
-public open class CfnRoleAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnRoleAlias,
+public open class CfnRoleAlias(
+  cdkObject: software.amazon.awscdk.services.iot.CfnRoleAlias,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -276,6 +276,6 @@ public open class CfnRoleAlias internal constructor(
         CfnRoleAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoleAlias): software.amazon.awscdk.services.iot.CfnRoleAlias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnRoleAlias
   }
 }

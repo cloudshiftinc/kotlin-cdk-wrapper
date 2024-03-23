@@ -2218,7 +2218,7 @@ public interface CfnPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicyProps,
+    cdkObject: software.amazon.awscdk.services.fms.CfnPolicyProps,
   ) : CdkObject(cdkObject), CfnPolicyProps {
     /**
      * Used when deleting a policy. If `true` , Firewall Manager performs cleanup according to the

@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)
  */
-public open class CfnClientVpnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint,
+public open class CfnClientVpnEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1145,20 +1145,12 @@ public open class CfnClientVpnEndpoint internal constructor(
         CfnClientVpnEndpoint = CfnClientVpnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnEndpoint):
-        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
   }
 
   /**
-   * The tags to apply to a resource when the resource is being created.
-   *
-   * When you specify a tag, you must specify the resource type to tag, otherwise the request will
-   * fail.
-   *
-   *
-   * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
-   * using might not support tagging all of these resource types. If you try to tag a resource type
-   * that is unsupported for the action you're using, you'll get an error.
-   *
+   * Information about the client certificate to be used for authentication.
    *
    * Example:
    *
@@ -1166,202 +1158,89 @@ public open class CfnClientVpnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
+   * CertificateAuthenticationRequestProperty certificateAuthenticationRequestProperty =
+   * CertificateAuthenticationRequestProperty.builder()
+   * .clientRootCertificateChainArn("clientRootCertificateChainArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html)
    */
-  public interface TagSpecificationProperty {
+  public interface CertificateAuthenticationRequestProperty {
     /**
-     * The type of resource to tag.
+     * The ARN of the client certificate.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
+     * The certificate must be signed by a certificate authority (CA) and it must be provisioned in
+     * AWS Certificate Manager (ACM).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html#cfn-ec2-clientvpnendpoint-certificateauthenticationrequest-clientrootcertificatechainarn)
      */
-    public fun resourceType(): String
+    public fun clientRootCertificateChainArn(): String
 
     /**
-     * The tags to apply to the resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-tags)
-     */
-    public fun tags(): List<CfnTag>
-
-    /**
-     * A builder for [TagSpecificationProperty]
+     * A builder for [CertificateAuthenticationRequestProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resourceType The type of resource to tag. 
+       * @param clientRootCertificateChainArn The ARN of the client certificate. 
+       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
+       * in AWS Certificate Manager (ACM).
        */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags to apply to the resource. 
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags to apply to the resource. 
-       */
-      public fun tags(vararg tags: CfnTag)
+      public fun clientRootCertificateChainArn(clientRootCertificateChainArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty.Builder
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.Builder
           =
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.builder()
 
       /**
-       * @param resourceType The type of resource to tag. 
+       * @param clientRootCertificateChainArn The ARN of the client certificate. 
+       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
+       * in AWS Certificate Manager (ACM).
        */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags to apply to the resource. 
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags to apply to the resource. 
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
-      /**
-       * The type of resource to tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
-       */
-      override fun resourceType(): String = unwrap(this).getResourceType()
-
-      /**
-       * The tags to apply to the resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags().map(CfnTag::wrap)
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty
-    }
-  }
-
-  /**
-   * Describes the Active Directory to be used for client authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * DirectoryServiceAuthenticationRequestProperty directoryServiceAuthenticationRequestProperty =
-   * DirectoryServiceAuthenticationRequestProperty.builder()
-   * .directoryId("directoryId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html)
-   */
-  public interface DirectoryServiceAuthenticationRequestProperty {
-    /**
-     * The ID of the Active Directory to be used for authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid)
-     */
-    public fun directoryId(): String
-
-    /**
-     * A builder for [DirectoryServiceAuthenticationRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryId The ID of the Active Directory to be used for authentication. 
-       */
-      public fun directoryId(directoryId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
-
-      /**
-       * @param directoryId The ID of the Active Directory to be used for authentication. 
-       */
-      override fun directoryId(directoryId: String) {
-        cdkBuilder.directoryId(directoryId)
+      override fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
+        cdkBuilder.clientRootCertificateChainArn(clientRootCertificateChainArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), DirectoryServiceAuthenticationRequestProperty {
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
+    ) : CdkObject(cdkObject), CertificateAuthenticationRequestProperty {
       /**
-       * The ID of the Active Directory to be used for authentication.
+       * The ARN of the client certificate.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid)
+       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
+       * in AWS Certificate Manager (ACM).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html#cfn-ec2-clientvpnendpoint-certificateauthenticationrequest-clientrootcertificatechainarn)
        */
-      override fun directoryId(): String = unwrap(this).getDirectoryId()
+      override fun clientRootCertificateChainArn(): String =
+          unwrap(this).getClientRootCertificateChainArn()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          DirectoryServiceAuthenticationRequestProperty {
+          CertificateAuthenticationRequestProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty):
-          DirectoryServiceAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DirectoryServiceAuthenticationRequestProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty):
+          CertificateAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateAuthenticationRequestProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DirectoryServiceAuthenticationRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
+      internal fun unwrap(wrapped: CertificateAuthenticationRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
     }
   }
 
@@ -1614,8 +1493,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), ClientAuthenticationRequestProperty {
       /**
        * Information about the Active Directory to be used, if applicable.
@@ -1666,6 +1544,142 @@ public open class CfnClientVpnEndpoint internal constructor(
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty
+    }
+  }
+
+  /**
+   * Indicates whether client connect options are enabled.
+   *
+   * The default is `false` (not enabled).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ClientConnectOptionsProperty clientConnectOptionsProperty =
+   * ClientConnectOptionsProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .lambdaFunctionArn("lambdaFunctionArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html)
+   */
+  public interface ClientConnectOptionsProperty {
+    /**
+     * Indicates whether client connect options are enabled.
+     *
+     * The default is `false` (not enabled).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-lambdafunctionarn)
+     */
+    public fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
+
+    /**
+     * A builder for [ClientConnectOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Indicates whether client connect options are enabled. 
+       * The default is `false` (not enabled).
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether client connect options are enabled. 
+       * The default is `false` (not enabled).
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param lambdaFunctionArn The Amazon Resource Name (ARN) of the AWS Lambda function used for
+       * connection authorization.
+       */
+      public fun lambdaFunctionArn(lambdaFunctionArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty.builder()
+
+      /**
+       * @param enabled Indicates whether client connect options are enabled. 
+       * The default is `false` (not enabled).
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates whether client connect options are enabled. 
+       * The default is `false` (not enabled).
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionArn The Amazon Resource Name (ARN) of the AWS Lambda function used for
+       * connection authorization.
+       */
+      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
+        cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
+    ) : CdkObject(cdkObject), ClientConnectOptionsProperty {
+      /**
+       * Indicates whether client connect options are enabled.
+       *
+       * The default is `false` (not enabled).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+
+      /**
+       * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection
+       * authorization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-lambdafunctionarn)
+       */
+      override fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientConnectOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty):
+          ClientConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientConnectOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientConnectOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty
     }
   }
 
@@ -1786,8 +1800,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
     ) : CdkObject(cdkObject), ClientLoginBannerOptionsProperty {
       /**
        * Customizable text that will be displayed in a banner on AWS provided clients when a VPN
@@ -1944,8 +1957,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
     ) : CdkObject(cdkObject), ConnectionLogOptionsProperty {
       /**
        * The name of the CloudWatch Logs log group.
@@ -1986,6 +1998,90 @@ public open class CfnClientVpnEndpoint internal constructor(
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty
+    }
+  }
+
+  /**
+   * Describes the Active Directory to be used for client authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * DirectoryServiceAuthenticationRequestProperty directoryServiceAuthenticationRequestProperty =
+   * DirectoryServiceAuthenticationRequestProperty.builder()
+   * .directoryId("directoryId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html)
+   */
+  public interface DirectoryServiceAuthenticationRequestProperty {
+    /**
+     * The ID of the Active Directory to be used for authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid)
+     */
+    public fun directoryId(): String
+
+    /**
+     * A builder for [DirectoryServiceAuthenticationRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryId The ID of the Active Directory to be used for authentication. 
+       */
+      public fun directoryId(directoryId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
+
+      /**
+       * @param directoryId The ID of the Active Directory to be used for authentication. 
+       */
+      override fun directoryId(directoryId: String) {
+        cdkBuilder.directoryId(directoryId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
+    ) : CdkObject(cdkObject), DirectoryServiceAuthenticationRequestProperty {
+      /**
+       * The ID of the Active Directory to be used for authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid)
+       */
+      override fun directoryId(): String = unwrap(this).getDirectoryId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DirectoryServiceAuthenticationRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty):
+          DirectoryServiceAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DirectoryServiceAuthenticationRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DirectoryServiceAuthenticationRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
     }
   }
 
@@ -2067,8 +2163,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
     ) : CdkObject(cdkObject), FederatedAuthenticationRequestProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM SAML identity provider.
@@ -2107,7 +2202,16 @@ public open class CfnClientVpnEndpoint internal constructor(
   }
 
   /**
-   * Information about the client certificate to be used for authentication.
+   * The tags to apply to a resource when the resource is being created.
+   *
+   * When you specify a tag, you must specify the resource type to tag, otherwise the request will
+   * fail.
+   *
+   *
+   * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
+   * using might not support tagging all of these resource types. If you try to tag a resource type
+   * that is unsupported for the action you're using, you'll get an error.
+   *
    *
    * Example:
    *
@@ -2115,227 +2219,116 @@ public open class CfnClientVpnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CertificateAuthenticationRequestProperty certificateAuthenticationRequestProperty =
-   * CertificateAuthenticationRequestProperty.builder()
-   * .clientRootCertificateChainArn("clientRootCertificateChainArn")
+   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html)
    */
-  public interface CertificateAuthenticationRequestProperty {
+  public interface TagSpecificationProperty {
     /**
-     * The ARN of the client certificate.
+     * The type of resource to tag.
      *
-     * The certificate must be signed by a certificate authority (CA) and it must be provisioned in
-     * AWS Certificate Manager (ACM).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html#cfn-ec2-clientvpnendpoint-certificateauthenticationrequest-clientrootcertificatechainarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
      */
-    public fun clientRootCertificateChainArn(): String
+    public fun resourceType(): String
 
     /**
-     * A builder for [CertificateAuthenticationRequestProperty]
+     * The tags to apply to the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-tags)
+     */
+    public fun tags(): List<CfnTag>
+
+    /**
+     * A builder for [TagSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param clientRootCertificateChainArn The ARN of the client certificate. 
-       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
-       * in AWS Certificate Manager (ACM).
+       * @param resourceType The type of resource to tag. 
        */
-      public fun clientRootCertificateChainArn(clientRootCertificateChainArn: String)
+      public fun resourceType(resourceType: String)
+
+      /**
+       * @param tags The tags to apply to the resource. 
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The tags to apply to the resource. 
+       */
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.Builder
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty.Builder
           =
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty.builder()
 
       /**
-       * @param clientRootCertificateChainArn The ARN of the client certificate. 
-       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
-       * in AWS Certificate Manager (ACM).
+       * @param resourceType The type of resource to tag. 
        */
-      override fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
-        cdkBuilder.clientRootCertificateChainArn(clientRootCertificateChainArn)
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
       }
+
+      /**
+       * @param tags The tags to apply to the resource. 
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The tags to apply to the resource. 
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), CertificateAuthenticationRequestProperty {
-      /**
-       * The ARN of the client certificate.
-       *
-       * The certificate must be signed by a certificate authority (CA) and it must be provisioned
-       * in AWS Certificate Manager (ACM).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html#cfn-ec2-clientvpnendpoint-certificateauthenticationrequest-clientrootcertificatechainarn)
-       */
-      override fun clientRootCertificateChainArn(): String =
-          unwrap(this).getClientRootCertificateChainArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CertificateAuthenticationRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty):
-          CertificateAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CertificateAuthenticationRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CertificateAuthenticationRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
-    }
-  }
-
-  /**
-   * Indicates whether client connect options are enabled.
-   *
-   * The default is `false` (not enabled).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ClientConnectOptionsProperty clientConnectOptionsProperty =
-   * ClientConnectOptionsProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .lambdaFunctionArn("lambdaFunctionArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html)
-   */
-  public interface ClientConnectOptionsProperty {
-    /**
-     * Indicates whether client connect options are enabled.
-     *
-     * The default is `false` (not enabled).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-lambdafunctionarn)
-     */
-    public fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
-
-    /**
-     * A builder for [ClientConnectOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Indicates whether client connect options are enabled. 
-       * The default is `false` (not enabled).
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether client connect options are enabled. 
-       * The default is `false` (not enabled).
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param lambdaFunctionArn The Amazon Resource Name (ARN) of the AWS Lambda function used for
-       * connection authorization.
-       */
-      public fun lambdaFunctionArn(lambdaFunctionArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty.builder()
-
-      /**
-       * @param enabled Indicates whether client connect options are enabled. 
-       * The default is `false` (not enabled).
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether client connect options are enabled. 
-       * The default is `false` (not enabled).
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lambdaFunctionArn The Amazon Resource Name (ARN) of the AWS Lambda function used for
-       * connection authorization.
-       */
-      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
-        cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty =
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
-    ) : CdkObject(cdkObject), ClientConnectOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
+    ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
-       * Indicates whether client connect options are enabled.
+       * The type of resource to tag.
        *
-       * The default is `false` (not enabled).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-enabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
        */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun resourceType(): String = unwrap(this).getResourceType()
 
       /**
-       * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection
-       * authorization.
+       * The tags to apply to the resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-lambdafunctionarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-tags)
        */
-      override fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags().map(CfnTag::wrap)
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClientConnectOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty):
-          ClientConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClientConnectOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty):
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ClientConnectOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty =
+      internal fun unwrap(wrapped: TagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty
     }
   }
 }

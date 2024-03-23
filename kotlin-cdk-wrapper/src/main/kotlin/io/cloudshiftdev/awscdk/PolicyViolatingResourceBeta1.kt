@@ -102,7 +102,7 @@ public interface PolicyViolatingResourceBeta1 {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.PolicyViolatingResourceBeta1,
+    cdkObject: software.amazon.awscdk.PolicyViolatingResourceBeta1,
   ) : CdkObject(cdkObject), PolicyViolatingResourceBeta1 {
     /**
      * The locations in the CloudFormation template that pose the violations.

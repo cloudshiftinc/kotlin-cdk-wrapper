@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html)
  */
-public open class CfnEmailChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannel,
+public open class CfnEmailChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -352,6 +352,7 @@ public open class CfnEmailChannel internal constructor(
         CfnEmailChannel = CfnEmailChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailChannel):
-        software.amazon.awscdk.services.pinpoint.CfnEmailChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnEmailChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnEmailChannel
   }
 }

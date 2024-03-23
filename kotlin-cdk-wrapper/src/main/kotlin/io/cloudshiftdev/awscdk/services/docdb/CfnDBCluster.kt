@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html)
  */
-public open class CfnDBCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster,
+public open class CfnDBCluster(
+  cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1404,6 +1404,6 @@ public open class CfnDBCluster internal constructor(
         CfnDBCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBCluster): software.amazon.awscdk.services.docdb.CfnDBCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.docdb.CfnDBCluster
   }
 }

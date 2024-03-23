@@ -490,7 +490,7 @@ public interface CfnCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateProps,
+    cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateProps,
   ) : CdkObject(cdkObject), CfnCertificateProps {
     /**
      * Specifies X.509 certificate information to be included in the issued certificate. An

@@ -58,7 +58,7 @@ public interface IScalableFunctionAttribute : IConstruct {
   public fun scaleOnUtilization(options: UtilizationScalingOptions.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IScalableFunctionAttribute,
+    cdkObject: software.amazon.awscdk.services.lambda.IScalableFunctionAttribute,
   ) : CdkObject(cdkObject), IScalableFunctionAttribute {
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

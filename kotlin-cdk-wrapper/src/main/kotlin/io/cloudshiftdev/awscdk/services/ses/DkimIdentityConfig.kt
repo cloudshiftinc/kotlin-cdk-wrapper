@@ -106,7 +106,7 @@ public interface DkimIdentityConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.DkimIdentityConfig,
+    cdkObject: software.amazon.awscdk.services.ses.DkimIdentityConfig,
   ) : CdkObject(cdkObject), DkimIdentityConfig {
     /**
      * A private key that's used to generate a DKIM signature.

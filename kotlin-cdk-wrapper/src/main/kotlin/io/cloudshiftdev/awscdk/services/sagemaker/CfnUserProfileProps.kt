@@ -336,7 +336,7 @@ public interface CfnUserProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfileProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfileProps,
   ) : CdkObject(cdkObject), CfnUserProfileProps {
     /**
      * The domain ID.

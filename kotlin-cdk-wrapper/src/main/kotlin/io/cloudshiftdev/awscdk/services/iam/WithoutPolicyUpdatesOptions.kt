@@ -70,7 +70,7 @@ public interface WithoutPolicyUpdatesOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions,
+    cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions,
   ) : CdkObject(cdkObject), WithoutPolicyUpdatesOptions {
     /**
      * Add grants to resources instead of dropping them.

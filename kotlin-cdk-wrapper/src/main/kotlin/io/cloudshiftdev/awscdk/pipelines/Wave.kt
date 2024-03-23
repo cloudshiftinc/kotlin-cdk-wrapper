@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class Wave internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.Wave,
+public open class Wave(
+  cdkObject: software.amazon.awscdk.pipelines.Wave,
 ) : CdkObject(cdkObject) {
   public constructor(id: String) : this(software.amazon.awscdk.pipelines.Wave(id)
   )
@@ -216,6 +216,7 @@ public open class Wave internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.Wave): Wave = Wave(cdkObject)
 
-    internal fun unwrap(wrapped: Wave): software.amazon.awscdk.pipelines.Wave = wrapped.cdkObject
+    internal fun unwrap(wrapped: Wave): software.amazon.awscdk.pipelines.Wave = wrapped.cdkObject as
+        software.amazon.awscdk.pipelines.Wave
   }
 }

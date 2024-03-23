@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html)
  */
-public open class CfnVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnVersion,
+public open class CfnVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -101,12 +101,12 @@ public open class CfnVersion internal constructor(
   }
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    */
   public open fun functionName(`value`: String) {
     unwrap(this).setFunctionName(`value`)
@@ -207,7 +207,7 @@ public open class CfnVersion internal constructor(
     public fun description(description: String)
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *
@@ -218,7 +218,7 @@ public open class CfnVersion internal constructor(
      * is limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
 
@@ -321,7 +321,7 @@ public open class CfnVersion internal constructor(
     }
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *
@@ -332,7 +332,7 @@ public open class CfnVersion internal constructor(
      * is limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-functionname)
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
@@ -432,7 +432,7 @@ public open class CfnVersion internal constructor(
         CfnVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnVersion): software.amazon.awscdk.services.lambda.CfnVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.CfnVersion
   }
 
   /**
@@ -494,8 +494,7 @@ public open class CfnVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty,
     ) : CdkObject(cdkObject), ProvisionedConcurrencyConfigurationProperty {
       /**
        * The amount of provisioned concurrency to allocate for the version.
@@ -602,8 +601,7 @@ public open class CfnVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty,
     ) : CdkObject(cdkObject), RuntimePolicyProperty {
       /**
        * The ARN of the runtime the function is configured to use.

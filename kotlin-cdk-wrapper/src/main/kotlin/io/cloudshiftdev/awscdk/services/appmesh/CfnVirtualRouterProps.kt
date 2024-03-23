@@ -226,7 +226,7 @@ public interface CfnVirtualRouterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouterProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouterProps,
   ) : CdkObject(cdkObject), CfnVirtualRouterProps {
     /**
      * The name of the service mesh to create the virtual router in.

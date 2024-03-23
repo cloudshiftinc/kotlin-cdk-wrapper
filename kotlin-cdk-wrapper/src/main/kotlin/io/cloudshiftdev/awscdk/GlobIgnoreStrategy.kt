@@ -19,8 +19,8 @@ import kotlin.collections.List
  * List.of("patterns"));
  * ```
  */
-public open class GlobIgnoreStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.GlobIgnoreStrategy,
+public open class GlobIgnoreStrategy(
+  cdkObject: software.amazon.awscdk.GlobIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
       this(software.amazon.awscdk.GlobIgnoreStrategy(absoluteRootPath, patterns)
@@ -49,6 +49,6 @@ public open class GlobIgnoreStrategy internal constructor(
         GlobIgnoreStrategy(cdkObject)
 
     internal fun unwrap(wrapped: GlobIgnoreStrategy): software.amazon.awscdk.GlobIgnoreStrategy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.GlobIgnoreStrategy
   }
 }

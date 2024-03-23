@@ -201,7 +201,7 @@ public interface CfnSegmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.evidently.CfnSegmentProps,
+    cdkObject: software.amazon.awscdk.services.evidently.CfnSegmentProps,
   ) : CdkObject(cdkObject), CfnSegmentProps {
     /**
      * An optional description for this segment.

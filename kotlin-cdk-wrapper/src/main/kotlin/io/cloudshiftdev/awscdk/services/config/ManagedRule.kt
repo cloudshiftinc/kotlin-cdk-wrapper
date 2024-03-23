@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ManagedRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.ManagedRule,
+public open class ManagedRule(
+  cdkObject: software.amazon.awscdk.services.config.ManagedRule,
 ) : Resource(cdkObject), IRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -325,6 +325,6 @@ public open class ManagedRule internal constructor(
         ManagedRule(cdkObject)
 
     internal fun unwrap(wrapped: ManagedRule): software.amazon.awscdk.services.config.ManagedRule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.config.ManagedRule
   }
 }

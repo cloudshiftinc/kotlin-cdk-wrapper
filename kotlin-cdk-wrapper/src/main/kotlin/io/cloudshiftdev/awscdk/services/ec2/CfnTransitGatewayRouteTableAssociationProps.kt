@@ -82,8 +82,7 @@ public interface CfnTransitGatewayRouteTableAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTableAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTableAssociationProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayRouteTableAssociationProps {
     /**
      * The ID of the attachment.

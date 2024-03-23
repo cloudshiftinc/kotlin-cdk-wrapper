@@ -504,7 +504,7 @@ public interface CfnCapacityReservationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationProps,
   ) : CdkObject(cdkObject), CfnCapacityReservationProps {
     /**
      * The Availability Zone in which to create the Capacity Reservation.

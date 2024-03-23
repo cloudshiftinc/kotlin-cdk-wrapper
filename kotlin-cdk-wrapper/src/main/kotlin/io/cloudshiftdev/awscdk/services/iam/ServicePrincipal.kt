@@ -25,8 +25,8 @@ import kotlin.collections.Map
  * stream.grantRead(lambdaRole);
  * ```
  */
-public open class ServicePrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.ServicePrincipal,
+public open class ServicePrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.ServicePrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(service: String) :
       this(software.amazon.awscdk.services.iam.ServicePrincipal(service)
@@ -169,6 +169,7 @@ public open class ServicePrincipal internal constructor(
         ServicePrincipal = ServicePrincipal(cdkObject)
 
     internal fun unwrap(wrapped: ServicePrincipal):
-        software.amazon.awscdk.services.iam.ServicePrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.ServicePrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.ServicePrincipal
   }
 }

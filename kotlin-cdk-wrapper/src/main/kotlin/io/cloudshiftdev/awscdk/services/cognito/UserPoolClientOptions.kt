@@ -430,7 +430,7 @@ public interface UserPoolClientOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientOptions,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientOptions,
   ) : CdkObject(cdkObject), UserPoolClientOptions {
     /**
      * Validity of the access token.

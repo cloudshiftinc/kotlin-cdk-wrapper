@@ -288,7 +288,7 @@ public interface HttpIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps,
   ) : CdkObject(cdkObject), HttpIntegrationProps {
     /**
      * The ID of the VPC link for a private integration.

@@ -31,8 +31,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Intrinsic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Intrinsic,
+public open class Intrinsic(
+  cdkObject: software.amazon.awscdk.Intrinsic,
 ) : CdkObject(cdkObject), IResolvable {
   public constructor(`value`: Any) : this(software.amazon.awscdk.Intrinsic(`value`)
   )
@@ -143,6 +143,7 @@ public open class Intrinsic internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Intrinsic): Intrinsic = Intrinsic(cdkObject)
 
-    internal fun unwrap(wrapped: Intrinsic): software.amazon.awscdk.Intrinsic = wrapped.cdkObject
+    internal fun unwrap(wrapped: Intrinsic): software.amazon.awscdk.Intrinsic = wrapped.cdkObject as
+        software.amazon.awscdk.Intrinsic
   }
 }

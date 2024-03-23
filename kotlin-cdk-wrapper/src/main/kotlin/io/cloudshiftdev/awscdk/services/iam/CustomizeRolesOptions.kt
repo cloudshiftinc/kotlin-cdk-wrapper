@@ -112,7 +112,7 @@ public interface CustomizeRolesOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions,
+    cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions,
   ) : CdkObject(cdkObject), CustomizeRolesOptions {
     /**
      * Whether or not to synthesize the resource into the CFN template.

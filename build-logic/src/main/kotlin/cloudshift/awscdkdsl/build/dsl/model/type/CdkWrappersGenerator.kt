@@ -8,9 +8,11 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.MemberName
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
+import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.STAR
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.asTypeName
+import java.util.*
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 
@@ -19,12 +21,26 @@ internal object CdkWrappersGenerator {
         val builder = TypeSpec.objectBuilder(ClassName)
             .addModifiers(KModifier.INTERNAL)
 
+        PropertySpec.builder("instanceMap", IdentityHashMap::class.asTypeName().parameterizedBy(ANY, ClassName("io.cloudshiftdev.awscdk.common", "CdkObject"))
+        )
+            .initializer("%T()", IdentityHashMap::class)
+            .addModifiers(KModifier.PRIVATE)
+            .build()
+            .let { builder.addProperty(it) }
+
+        FunSpec.builder("register")
+            .addModifiers(KModifier.INTERNAL)
+            .addParameter("cdkObject", ClassName("io.cloudshiftdev.awscdk.common", "CdkObject"))
+            .addStatement("requireNotNull(cdkObject.cdkObject) { %S }", "cdkObject cannot be null")
+            .addStatement("instanceMap[cdkObject.cdkObject] = cdkObject")
+            .build()
+            .let { builder.addFunction(it) }
+
         val wrapFunction = FunSpec.builder("wrap")
             .addModifiers(KModifier.INTERNAL)
             .addParameter("cdkObject", ANY)
             .returns(ANY.copy(nullable = true))
-            .addStatement("val kTwin = resolveKTwin(cdkObject::class)")
-            .addStatement("return kTwin?.let{resolveWrapperFunction(kTwin)}?.call(kTwin.%M, cdkObject)",
+            .addStatement("return instanceMap[cdkObject] ?: resolveKTwin(cdkObject::class)?.let{resolveWrapperFunction(it)?.call(it.%M, cdkObject)}",
                 MemberName("kotlin.reflect.full", "companionObjectInstance"),
             )
             .build()

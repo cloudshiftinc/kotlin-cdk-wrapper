@@ -139,7 +139,7 @@ public interface WebSocketRouteProps : WebSocketRouteOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps,
   ) : CdkObject(cdkObject), WebSocketRouteProps {
     /**
      * Whether the route requires an API Key to be provided.

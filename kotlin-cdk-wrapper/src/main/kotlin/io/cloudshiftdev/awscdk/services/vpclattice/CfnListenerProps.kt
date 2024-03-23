@@ -250,7 +250,7 @@ public interface CfnListenerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnListenerProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnListenerProps,
   ) : CdkObject(cdkObject), CfnListenerProps {
     /**
      * The action for the default rule.

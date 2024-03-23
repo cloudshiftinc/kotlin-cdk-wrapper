@@ -320,7 +320,7 @@ public interface CfnDeploymentStrategyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.CfnDeploymentStrategyProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.CfnDeploymentStrategyProps,
   ) : CdkObject(cdkObject), CfnDeploymentStrategyProps {
     /**
      * Total amount of time for a deployment to last.

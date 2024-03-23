@@ -229,8 +229,7 @@ public interface CfnIdentitySourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps,
+    cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps,
   ) : CdkObject(cdkObject), CfnIdentitySourceProps {
     /**
      * Contains configuration information used when creating a new identity source.

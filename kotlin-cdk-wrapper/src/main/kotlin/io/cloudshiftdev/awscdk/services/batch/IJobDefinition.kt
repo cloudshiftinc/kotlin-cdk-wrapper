@@ -85,7 +85,7 @@ public interface IJobDefinition : IResource {
   public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IJobDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IJobDefinition,
   ) : CdkObject(cdkObject), IJobDefinition {
     /**
      * Add a RetryStrategy to this JobDefinition.

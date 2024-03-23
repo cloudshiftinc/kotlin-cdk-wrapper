@@ -22,7 +22,7 @@ public interface ITaggableV2 {
   public fun cdkTagManager(): TagManager
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ITaggableV2,
+    cdkObject: software.amazon.awscdk.ITaggableV2,
   ) : CdkObject(cdkObject), ITaggableV2 {
     /**
      * TagManager to set, remove and format tags.

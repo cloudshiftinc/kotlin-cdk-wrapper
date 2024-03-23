@@ -120,7 +120,7 @@ public interface InterfaceVpcEndpointAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes,
+    cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes,
   ) : CdkObject(cdkObject), InterfaceVpcEndpointAttributes {
     /**
      * The port of the service of the interface VPC endpoint.

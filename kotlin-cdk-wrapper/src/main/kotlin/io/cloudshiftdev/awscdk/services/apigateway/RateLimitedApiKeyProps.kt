@@ -377,7 +377,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps,
   ) : CdkObject(cdkObject), RateLimitedApiKeyProps {
     /**
      * A name for the API key.

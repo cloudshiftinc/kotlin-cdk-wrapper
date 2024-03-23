@@ -197,7 +197,7 @@ public interface CfnNetworkSettingsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettingsProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettingsProps,
   ) : CdkObject(cdkObject), CfnNetworkSettingsProps {
     /**
      * One or more security groups used to control access from streaming instances to your VPC.

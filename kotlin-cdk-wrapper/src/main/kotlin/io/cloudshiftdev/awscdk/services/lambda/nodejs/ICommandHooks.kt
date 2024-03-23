@@ -58,7 +58,7 @@ public interface ICommandHooks {
   public fun beforeInstall(inputDir: String, outputDir: String): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
+    cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
   ) : CdkObject(cdkObject), ICommandHooks {
     /**
      * Returns commands to run after bundling.

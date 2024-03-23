@@ -21,7 +21,7 @@ public interface IListener : IResource {
   public fun listenerArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListener,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListener,
   ) : CdkObject(cdkObject), IListener {
     /**
      * Apply the given removal policy to this resource.

@@ -20,8 +20,8 @@ import kotlin.jvm.JvmName
  * FileSystem fileSystem = new FileSystem();
  * ```
  */
-public open class FileSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.FileSystem,
+public open class FileSystem(
+  cdkObject: software.amazon.awscdk.FileSystem,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.FileSystem()
   )
@@ -80,5 +80,6 @@ public open class FileSystem internal constructor(
         FileSystem(cdkObject)
 
     internal fun unwrap(wrapped: FileSystem): software.amazon.awscdk.FileSystem = wrapped.cdkObject
+        as software.amazon.awscdk.FileSystem
   }
 }

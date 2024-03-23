@@ -15,7 +15,7 @@ import kotlin.String
  */
 public interface IHttpNamespace : INamespace {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.IHttpNamespace,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.IHttpNamespace,
   ) : CdkObject(cdkObject), IHttpNamespace {
     /**
      * Apply the given removal policy to this resource.

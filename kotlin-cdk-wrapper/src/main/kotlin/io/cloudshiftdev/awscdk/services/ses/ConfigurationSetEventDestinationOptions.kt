@@ -129,8 +129,7 @@ public interface ConfigurationSetEventDestinationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions,
+    cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions,
   ) : CdkObject(cdkObject), ConfigurationSetEventDestinationOptions {
     /**
      * A name for the configuration set event destination.

@@ -141,7 +141,7 @@ public interface CfnDeliverySourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnDeliverySourceProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnDeliverySourceProps,
   ) : CdkObject(cdkObject), CfnDeliverySourceProps {
     /**
      * The type of log that the source is sending.

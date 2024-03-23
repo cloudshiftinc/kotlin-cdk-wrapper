@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)
  */
-public open class VirtualNode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNode,
+public open class VirtualNode(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualNode,
 ) : Resource(cdkObject), IVirtualNode {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -366,6 +366,6 @@ public open class VirtualNode internal constructor(
         VirtualNode(cdkObject)
 
     internal fun unwrap(wrapped: VirtualNode): software.amazon.awscdk.services.appmesh.VirtualNode =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appmesh.VirtualNode
   }
 }

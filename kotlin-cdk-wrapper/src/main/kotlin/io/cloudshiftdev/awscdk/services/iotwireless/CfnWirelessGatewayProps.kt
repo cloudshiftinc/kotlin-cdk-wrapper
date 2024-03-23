@@ -243,7 +243,7 @@ public interface CfnWirelessGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps,
+    cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps,
   ) : CdkObject(cdkObject), CfnWirelessGatewayProps {
     /**
      * The description of the new resource.

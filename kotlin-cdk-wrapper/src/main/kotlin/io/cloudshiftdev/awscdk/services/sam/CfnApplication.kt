@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.sam.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -351,7 +351,7 @@ public open class CfnApplication internal constructor(
         = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication): software.amazon.awscdk.services.sam.CfnApplication
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnApplication
   }
 
   /**
@@ -421,8 +421,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty,
     ) : CdkObject(cdkObject), ApplicationLocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-application-applicationlocation.html#cfn-serverless-application-applicationlocation-applicationid)

@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html)
  */
-public open class CfnMap internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnMap,
+public open class CfnMap(
+  cdkObject: software.amazon.awscdk.services.location.CfnMap,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -487,7 +487,7 @@ public open class CfnMap internal constructor(
         CfnMap(cdkObject)
 
     internal fun unwrap(wrapped: CfnMap): software.amazon.awscdk.services.location.CfnMap =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.location.CfnMap
   }
 
   /**
@@ -896,8 +896,7 @@ public open class CfnMap internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty,
     ) : CdkObject(cdkObject), MapConfigurationProperty {
       /**
        * Specifies the custom layers for the style.

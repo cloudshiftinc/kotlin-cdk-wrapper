@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class ClientVpnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpoint,
+public open class ClientVpnEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpoint,
 ) : Resource(cdkObject), IClientVpnEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -661,6 +661,7 @@ public open class ClientVpnEndpoint internal constructor(
         ClientVpnEndpoint = ClientVpnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: ClientVpnEndpoint):
-        software.amazon.awscdk.services.ec2.ClientVpnEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.ClientVpnEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.ClientVpnEndpoint
   }
 }

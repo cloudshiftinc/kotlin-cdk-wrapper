@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html)
  */
-public open class CfnClassifier internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
+public open class CfnClassifier(
+  cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -475,317 +475,7 @@ public open class CfnClassifier internal constructor(
         = CfnClassifier(cdkObject)
 
     internal fun unwrap(wrapped: CfnClassifier): software.amazon.awscdk.services.glue.CfnClassifier
-        = wrapped.cdkObject
-  }
-
-  /**
-   * A classifier for `JSON` content.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * JsonClassifierProperty jsonClassifierProperty = JsonClassifierProperty.builder()
-   * .jsonPath("jsonPath")
-   * // the properties below are optional
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html)
-   */
-  public interface JsonClassifierProperty {
-    /**
-     * A `JsonPath` string defining the JSON data for the classifier to classify.
-     *
-     * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
-     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-jsonpath)
-     */
-    public fun jsonPath(): String
-
-    /**
-     * The name of the classifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [JsonClassifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. 
-       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
-       * .
-       */
-      public fun jsonPath(jsonPath: String)
-
-      /**
-       * @param name The name of the classifier.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.builder()
-
-      /**
-       * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. 
-       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
-       * .
-       */
-      override fun jsonPath(jsonPath: String) {
-        cdkBuilder.jsonPath(jsonPath)
-      }
-
-      /**
-       * @param name The name of the classifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
-    ) : CdkObject(cdkObject), JsonClassifierProperty {
-      /**
-       * A `JsonPath` string defining the JSON data for the classifier to classify.
-       *
-       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-jsonpath)
-       */
-      override fun jsonPath(): String = unwrap(this).getJsonPath()
-
-      /**
-       * The name of the classifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JsonClassifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty):
-          JsonClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonClassifierProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JsonClassifierProperty):
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty
-    }
-  }
-
-  /**
-   * A classifier that uses `grok` patterns.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * GrokClassifierProperty grokClassifierProperty = GrokClassifierProperty.builder()
-   * .classification("classification")
-   * .grokPattern("grokPattern")
-   * // the properties below are optional
-   * .customPatterns("customPatterns")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html)
-   */
-  public interface GrokClassifierProperty {
-    /**
-     * An identifier of the data format that the classifier matches, such as Twitter, JSON, Omniture
-     * logs, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-classification)
-     */
-    public fun classification(): String
-
-    /**
-     * Optional custom grok patterns defined by this classifier.
-     *
-     * For more information, see custom patterns in [Writing Custom
-     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-custompatterns)
-     */
-    public fun customPatterns(): String? = unwrap(this).getCustomPatterns()
-
-    /**
-     * The grok pattern applied to a data store by this classifier.
-     *
-     * For more information, see built-in patterns in [Writing Custom
-     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-grokpattern)
-     */
-    public fun grokPattern(): String
-
-    /**
-     * The name of the classifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [GrokClassifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param classification An identifier of the data format that the classifier matches, such as
-       * Twitter, JSON, Omniture logs, and so on. 
-       */
-      public fun classification(classification: String)
-
-      /**
-       * @param customPatterns Optional custom grok patterns defined by this classifier.
-       * For more information, see custom patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       */
-      public fun customPatterns(customPatterns: String)
-
-      /**
-       * @param grokPattern The grok pattern applied to a data store by this classifier. 
-       * For more information, see built-in patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       */
-      public fun grokPattern(grokPattern: String)
-
-      /**
-       * @param name The name of the classifier.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.builder()
-
-      /**
-       * @param classification An identifier of the data format that the classifier matches, such as
-       * Twitter, JSON, Omniture logs, and so on. 
-       */
-      override fun classification(classification: String) {
-        cdkBuilder.classification(classification)
-      }
-
-      /**
-       * @param customPatterns Optional custom grok patterns defined by this classifier.
-       * For more information, see custom patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       */
-      override fun customPatterns(customPatterns: String) {
-        cdkBuilder.customPatterns(customPatterns)
-      }
-
-      /**
-       * @param grokPattern The grok pattern applied to a data store by this classifier. 
-       * For more information, see built-in patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       */
-      override fun grokPattern(grokPattern: String) {
-        cdkBuilder.grokPattern(grokPattern)
-      }
-
-      /**
-       * @param name The name of the classifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
-    ) : CdkObject(cdkObject), GrokClassifierProperty {
-      /**
-       * An identifier of the data format that the classifier matches, such as Twitter, JSON,
-       * Omniture logs, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-classification)
-       */
-      override fun classification(): String = unwrap(this).getClassification()
-
-      /**
-       * Optional custom grok patterns defined by this classifier.
-       *
-       * For more information, see custom patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-custompatterns)
-       */
-      override fun customPatterns(): String? = unwrap(this).getCustomPatterns()
-
-      /**
-       * The grok pattern applied to a data store by this classifier.
-       *
-       * For more information, see built-in patterns in [Writing Custom
-       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-grokpattern)
-       */
-      override fun grokPattern(): String = unwrap(this).getGrokPattern()
-
-      /**
-       * The name of the classifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GrokClassifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty):
-          GrokClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? GrokClassifierProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GrokClassifierProperty):
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnClassifier
   }
 
   /**
@@ -1093,8 +783,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
     ) : CdkObject(cdkObject), CsvClassifierProperty {
       /**
        * Enables the processing of files that contain only one column.
@@ -1187,6 +876,314 @@ public open class CfnClassifier internal constructor(
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty
+    }
+  }
+
+  /**
+   * A classifier that uses `grok` patterns.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * GrokClassifierProperty grokClassifierProperty = GrokClassifierProperty.builder()
+   * .classification("classification")
+   * .grokPattern("grokPattern")
+   * // the properties below are optional
+   * .customPatterns("customPatterns")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html)
+   */
+  public interface GrokClassifierProperty {
+    /**
+     * An identifier of the data format that the classifier matches, such as Twitter, JSON, Omniture
+     * logs, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-classification)
+     */
+    public fun classification(): String
+
+    /**
+     * Optional custom grok patterns defined by this classifier.
+     *
+     * For more information, see custom patterns in [Writing Custom
+     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-custompatterns)
+     */
+    public fun customPatterns(): String? = unwrap(this).getCustomPatterns()
+
+    /**
+     * The grok pattern applied to a data store by this classifier.
+     *
+     * For more information, see built-in patterns in [Writing Custom
+     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-grokpattern)
+     */
+    public fun grokPattern(): String
+
+    /**
+     * The name of the classifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [GrokClassifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param classification An identifier of the data format that the classifier matches, such as
+       * Twitter, JSON, Omniture logs, and so on. 
+       */
+      public fun classification(classification: String)
+
+      /**
+       * @param customPatterns Optional custom grok patterns defined by this classifier.
+       * For more information, see custom patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       */
+      public fun customPatterns(customPatterns: String)
+
+      /**
+       * @param grokPattern The grok pattern applied to a data store by this classifier. 
+       * For more information, see built-in patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       */
+      public fun grokPattern(grokPattern: String)
+
+      /**
+       * @param name The name of the classifier.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.builder()
+
+      /**
+       * @param classification An identifier of the data format that the classifier matches, such as
+       * Twitter, JSON, Omniture logs, and so on. 
+       */
+      override fun classification(classification: String) {
+        cdkBuilder.classification(classification)
+      }
+
+      /**
+       * @param customPatterns Optional custom grok patterns defined by this classifier.
+       * For more information, see custom patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       */
+      override fun customPatterns(customPatterns: String) {
+        cdkBuilder.customPatterns(customPatterns)
+      }
+
+      /**
+       * @param grokPattern The grok pattern applied to a data store by this classifier. 
+       * For more information, see built-in patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       */
+      override fun grokPattern(grokPattern: String) {
+        cdkBuilder.grokPattern(grokPattern)
+      }
+
+      /**
+       * @param name The name of the classifier.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
+    ) : CdkObject(cdkObject), GrokClassifierProperty {
+      /**
+       * An identifier of the data format that the classifier matches, such as Twitter, JSON,
+       * Omniture logs, and so on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-classification)
+       */
+      override fun classification(): String = unwrap(this).getClassification()
+
+      /**
+       * Optional custom grok patterns defined by this classifier.
+       *
+       * For more information, see custom patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-custompatterns)
+       */
+      override fun customPatterns(): String? = unwrap(this).getCustomPatterns()
+
+      /**
+       * The grok pattern applied to a data store by this classifier.
+       *
+       * For more information, see built-in patterns in [Writing Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-grokpattern)
+       */
+      override fun grokPattern(): String = unwrap(this).getGrokPattern()
+
+      /**
+       * The name of the classifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-grokclassifier.html#cfn-glue-classifier-grokclassifier-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GrokClassifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty):
+          GrokClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? GrokClassifierProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GrokClassifierProperty):
+          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty
+    }
+  }
+
+  /**
+   * A classifier for `JSON` content.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * JsonClassifierProperty jsonClassifierProperty = JsonClassifierProperty.builder()
+   * .jsonPath("jsonPath")
+   * // the properties below are optional
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html)
+   */
+  public interface JsonClassifierProperty {
+    /**
+     * A `JsonPath` string defining the JSON data for the classifier to classify.
+     *
+     * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
+     * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-jsonpath)
+     */
+    public fun jsonPath(): String
+
+    /**
+     * The name of the classifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [JsonClassifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. 
+       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
+       * .
+       */
+      public fun jsonPath(jsonPath: String)
+
+      /**
+       * @param name The name of the classifier.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.builder()
+
+      /**
+       * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. 
+       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
+       * .
+       */
+      override fun jsonPath(jsonPath: String) {
+        cdkBuilder.jsonPath(jsonPath)
+      }
+
+      /**
+       * @param name The name of the classifier.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
+    ) : CdkObject(cdkObject), JsonClassifierProperty {
+      /**
+       * A `JsonPath` string defining the JSON data for the classifier to classify.
+       *
+       * AWS Glue supports a subset of `JsonPath` , as described in [Writing JsonPath Custom
+       * Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-jsonpath)
+       */
+      override fun jsonPath(): String = unwrap(this).getJsonPath()
+
+      /**
+       * The name of the classifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-jsonclassifier.html#cfn-glue-classifier-jsonclassifier-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JsonClassifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty):
+          JsonClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonClassifierProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JsonClassifierProperty):
+          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty
     }
   }
 
@@ -1299,8 +1296,7 @@ public open class CfnClassifier internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
     ) : CdkObject(cdkObject), XMLClassifierProperty {
       /**
        * An identifier of the data format that the classifier matches.

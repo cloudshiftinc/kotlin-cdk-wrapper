@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Policy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.Policy,
+public open class Policy(
+  cdkObject: software.amazon.awscdk.services.iam.Policy,
 ) : Resource(cdkObject), IPolicy, IGrantable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.Policy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -474,6 +474,6 @@ public open class Policy internal constructor(
         Policy(cdkObject)
 
     internal fun unwrap(wrapped: Policy): software.amazon.awscdk.services.iam.Policy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.Policy
   }
 }

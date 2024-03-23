@@ -32,8 +32,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class BlockDeviceVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.BlockDeviceVolume,
+public open class BlockDeviceVolume(
+  cdkObject: software.amazon.awscdk.services.ec2.BlockDeviceVolume,
 ) : CdkObject(cdkObject) {
   /**
    * EBS device info.
@@ -80,6 +80,7 @@ public open class BlockDeviceVolume internal constructor(
         BlockDeviceVolume = BlockDeviceVolume(cdkObject)
 
     internal fun unwrap(wrapped: BlockDeviceVolume):
-        software.amazon.awscdk.services.ec2.BlockDeviceVolume = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.BlockDeviceVolume = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.BlockDeviceVolume
   }
 }

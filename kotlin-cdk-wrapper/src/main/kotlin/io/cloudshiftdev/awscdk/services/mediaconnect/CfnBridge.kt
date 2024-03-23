@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html)
  */
-public open class CfnBridge internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge,
+public open class CfnBridge(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -664,7 +664,185 @@ public open class CfnBridge internal constructor(
         = CfnBridge(cdkObject)
 
     internal fun unwrap(wrapped: CfnBridge): software.amazon.awscdk.services.mediaconnect.CfnBridge
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.mediaconnect.CfnBridge
+  }
+
+  /**
+   * The source of the bridge.
+   *
+   * A flow source originates in MediaConnect as an existing cloud flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeFlowSourceProperty bridgeFlowSourceProperty = BridgeFlowSourceProperty.builder()
+   * .flowArn("flowArn")
+   * .name("name")
+   * // the properties below are optional
+   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html)
+   */
+  public interface BridgeFlowSourceProperty {
+    /**
+     * The ARN of the cloud flow used as a source of this bridge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
+     */
+    public fun flowArn(): String
+
+    /**
+     * The name of the VPC interface attachment to use for this source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
+     */
+    public fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
+
+    /**
+     * The name of the flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [BridgeFlowSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
+       */
+      public fun flowArn(flowArn: String)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      public
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
+      public
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The name of the flow source. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.builder()
+
+      /**
+       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
+       */
+      override fun flowArn(flowArn: String) {
+        cdkBuilder.flowArn(flowArn)
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      override
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+      }
+
+      /**
+       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
+      override
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
+          Unit =
+          flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty(flowVpcInterfaceAttachment))
+
+      /**
+       * @param name The name of the flow source. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
+    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
+      /**
+       * The ARN of the cloud flow used as a source of this bridge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
+       */
+      override fun flowArn(): String = unwrap(this).getFlowArn()
+
+      /**
+       * The name of the VPC interface attachment to use for this source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
+       */
+      override fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
+
+      /**
+       * The name of the flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeFlowSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty):
+          BridgeFlowSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeFlowSourceProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeFlowSourceProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty
+    }
   }
 
   /**
@@ -823,8 +1001,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
     ) : CdkObject(cdkObject), BridgeNetworkOutputProperty {
       /**
        * The network output IP Address.
@@ -884,294 +1061,6 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty
-    }
-  }
-
-  /**
-   * The settings for source failover.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * FailoverConfigProperty failoverConfigProperty = FailoverConfigProperty.builder()
-   * .failoverMode("failoverMode")
-   * // the properties below are optional
-   * .sourcePriority(SourcePriorityProperty.builder()
-   * .primarySource("primarySource")
-   * .build())
-   * .state("state")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html)
-   */
-  public interface FailoverConfigProperty {
-    /**
-     * The type of failover you choose for this flow.
-     *
-     * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-     * single-source loss. FAILOVER allows switching between different streams.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-failovermode)
-     */
-    public fun failoverMode(): String
-
-    /**
-     * The priority you want to assign to a source.
-     *
-     * You can have a primary stream and a backup stream or two equally prioritized streams. This
-     * setting only applies when Failover Mode is set to FAILOVER.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
-     */
-    public fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
-
-    /**
-     * The state of source failover on the flow.
-     *
-     * If the state is inactive, the flow can have only one source. If the state is active, the flow
-     * can have one or two sources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-state)
-     */
-    public fun state(): String? = unwrap(this).getState()
-
-    /**
-     * A builder for [FailoverConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failoverMode The type of failover you choose for this flow. 
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams.
-       */
-      public fun failoverMode(failoverMode: String)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      public fun sourcePriority(sourcePriority: IResolvable)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
-
-      /**
-       * @param state The state of source failover on the flow.
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       */
-      public fun state(state: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.builder()
-
-      /**
-       * @param failoverMode The type of failover you choose for this flow. 
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams.
-       */
-      override fun failoverMode(failoverMode: String) {
-        cdkBuilder.failoverMode(failoverMode)
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      override fun sourcePriority(sourcePriority: IResolvable) {
-        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
-      }
-
-      /**
-       * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
-      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
-          sourcePriority(SourcePriorityProperty(sourcePriority))
-
-      /**
-       * @param state The state of source failover on the flow.
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       */
-      override fun state(state: String) {
-        cdkBuilder.state(state)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
-    ) : CdkObject(cdkObject), FailoverConfigProperty {
-      /**
-       * The type of failover you choose for this flow.
-       *
-       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
-       * single-source loss. FAILOVER allows switching between different streams.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-failovermode)
-       */
-      override fun failoverMode(): String = unwrap(this).getFailoverMode()
-
-      /**
-       * The priority you want to assign to a source.
-       *
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
-       */
-      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
-
-      /**
-       * The state of source failover on the flow.
-       *
-       * If the state is inactive, the flow can have only one source. If the state is active, the
-       * flow can have one or two sources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-state)
-       */
-      override fun state(): String? = unwrap(this).getState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FailoverConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty):
-          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FailoverConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FailoverConfigProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty
-    }
-  }
-
-  /**
-   * The VPC interface that you want to send your output to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
-   * VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html)
-   */
-  public interface VpcInterfaceAttachmentProperty {
-    /**
-     * The name of the VPC interface that you want to send your output to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
-     */
-    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-
-    /**
-     * A builder for [VpcInterfaceAttachmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      public fun vpcInterfaceName(vpcInterfaceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.Builder
-          =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
-
-      /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
-       */
-      override fun vpcInterfaceName(vpcInterfaceName: String) {
-        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
-      /**
-       * The name of the VPC interface that you want to send your output to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
-       */
-      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty
     }
   }
 
@@ -1315,8 +1204,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
     ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
       /**
        * The network source multicast IP.
@@ -1371,6 +1259,131 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty
+    }
+  }
+
+  /**
+   * The output of the bridge.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BridgeOutputProperty bridgeOutputProperty = BridgeOutputProperty.builder()
+   * .networkOutput(BridgeNetworkOutputProperty.builder()
+   * .ipAddress("ipAddress")
+   * .name("name")
+   * .networkName("networkName")
+   * .port(123)
+   * .protocol("protocol")
+   * .ttl(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html)
+   */
+  public interface BridgeOutputProperty {
+    /**
+     * The output of the bridge.
+     *
+     * A network output is delivered to your premises.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+     */
+    public fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+
+    /**
+     * A builder for [BridgeOutputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      public fun networkOutput(networkOutput: IResolvable)
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.builder()
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      override fun networkOutput(networkOutput: IResolvable) {
+        cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
+        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
+      }
+
+      /**
+       * @param networkOutput The output of the bridge.
+       * A network output is delivered to your premises.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit):
+          Unit = networkOutput(BridgeNetworkOutputProperty(networkOutput))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
+    ) : CdkObject(cdkObject), BridgeOutputProperty {
+      /**
+       * The output of the bridge.
+       *
+       * A network output is delivered to your premises.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+       */
+      override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeOutputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty):
+          BridgeOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeOutputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BridgeOutputProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty
     }
   }
 
@@ -1530,8 +1543,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
     ) : CdkObject(cdkObject), BridgeSourceProperty {
       /**
        * The source of the bridge.
@@ -1567,270 +1579,6 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty
-    }
-  }
-
-  /**
-   * The priority you want to assign to a source.
-   *
-   * You can have a primary stream and a backup stream or two equally prioritized streams. This
-   * setting only applies when Failover Mode is set to FAILOVER.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
-   * .primarySource("primarySource")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html)
-   */
-  public interface SourcePriorityProperty {
-    /**
-     * The name of the source you choose as the primary source for this flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
-     */
-    public fun primarySource(): String? = unwrap(this).getPrimarySource()
-
-    /**
-     * A builder for [SourcePriorityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       */
-      public fun primarySource(primarySource: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.builder()
-
-      /**
-       * @param primarySource The name of the source you choose as the primary source for this flow.
-       */
-      override fun primarySource(primarySource: String) {
-        cdkBuilder.primarySource(primarySource)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
-    ) : CdkObject(cdkObject), SourcePriorityProperty {
-      /**
-       * The name of the source you choose as the primary source for this flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
-       */
-      override fun primarySource(): String? = unwrap(this).getPrimarySource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty):
-          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourcePriorityProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty
-    }
-  }
-
-  /**
-   * The source of the bridge.
-   *
-   * A flow source originates in MediaConnect as an existing cloud flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeFlowSourceProperty bridgeFlowSourceProperty = BridgeFlowSourceProperty.builder()
-   * .flowArn("flowArn")
-   * .name("name")
-   * // the properties below are optional
-   * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
-   * .vpcInterfaceName("vpcInterfaceName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html)
-   */
-  public interface BridgeFlowSourceProperty {
-    /**
-     * The ARN of the cloud flow used as a source of this bridge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
-     */
-    public fun flowArn(): String
-
-    /**
-     * The name of the VPC interface attachment to use for this source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
-     */
-    public fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
-
-    /**
-     * The name of the flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [BridgeFlowSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
-       */
-      public fun flowArn(flowArn: String)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
-      public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name of the flow source. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.builder()
-
-      /**
-       * @param flowArn The ARN of the cloud flow used as a source of this bridge. 
-       */
-      override fun flowArn(flowArn: String) {
-        cdkBuilder.flowArn(flowArn)
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      override
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
-      }
-
-      /**
-       * @param flowVpcInterfaceAttachment The name of the VPC interface attachment to use for this
-       * source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
-      override
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
-          Unit =
-          flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty(flowVpcInterfaceAttachment))
-
-      /**
-       * @param name The name of the flow source. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
-    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
-      /**
-       * The ARN of the cloud flow used as a source of this bridge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowarn)
-       */
-      override fun flowArn(): String = unwrap(this).getFlowArn()
-
-      /**
-       * The name of the VPC interface attachment to use for this source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-flowvpcinterfaceattachment)
-       */
-      override fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
-
-      /**
-       * The name of the flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeflowsource.html#cfn-mediaconnect-bridge-bridgeflowsource-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeFlowSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty):
-          BridgeFlowSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeFlowSourceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BridgeFlowSourceProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty
     }
   }
 
@@ -1891,8 +1639,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
     ) : CdkObject(cdkObject), EgressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the egress bridge.
@@ -1921,7 +1668,7 @@ public open class CfnBridge internal constructor(
   }
 
   /**
-   * The output of the bridge.
+   * The settings for source failover.
    *
    * Example:
    *
@@ -1929,120 +1676,197 @@ public open class CfnBridge internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
-   * BridgeOutputProperty bridgeOutputProperty = BridgeOutputProperty.builder()
-   * .networkOutput(BridgeNetworkOutputProperty.builder()
-   * .ipAddress("ipAddress")
-   * .name("name")
-   * .networkName("networkName")
-   * .port(123)
-   * .protocol("protocol")
-   * .ttl(123)
+   * FailoverConfigProperty failoverConfigProperty = FailoverConfigProperty.builder()
+   * .failoverMode("failoverMode")
+   * // the properties below are optional
+   * .sourcePriority(SourcePriorityProperty.builder()
+   * .primarySource("primarySource")
    * .build())
+   * .state("state")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html)
    */
-  public interface BridgeOutputProperty {
+  public interface FailoverConfigProperty {
     /**
-     * The output of the bridge.
+     * The type of failover you choose for this flow.
      *
-     * A network output is delivered to your premises.
+     * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+     * single-source loss. FAILOVER allows switching between different streams.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-failovermode)
      */
-    public fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+    public fun failoverMode(): String
 
     /**
-     * A builder for [BridgeOutputProperty]
+     * The priority you want to assign to a source.
+     *
+     * You can have a primary stream and a backup stream or two equally prioritized streams. This
+     * setting only applies when Failover Mode is set to FAILOVER.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
+     */
+    public fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+
+    /**
+     * The state of source failover on the flow.
+     *
+     * If the state is inactive, the flow can have only one source. If the state is active, the flow
+     * can have one or two sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * A builder for [FailoverConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param failoverMode The type of failover you choose for this flow. 
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams.
        */
-      public fun networkOutput(networkOutput: IResolvable)
+      public fun failoverMode(failoverMode: String)
 
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
        */
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
+      public fun sourcePriority(sourcePriority: IResolvable)
 
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
+      @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
+
+      /**
+       * @param state The state of source failover on the flow.
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       */
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.Builder =
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.builder()
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.builder()
 
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param failoverMode The type of failover you choose for this flow. 
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams.
        */
-      override fun networkOutput(networkOutput: IResolvable) {
-        cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+      override fun failoverMode(failoverMode: String) {
+        cdkBuilder.failoverMode(failoverMode)
       }
 
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
        */
-      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
+      override fun sourcePriority(sourcePriority: IResolvable) {
+        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
       }
 
       /**
-       * @param networkOutput The output of the bridge.
-       * A network output is delivered to your premises.
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       */
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
+        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
+      }
+
+      /**
+       * @param sourcePriority The priority you want to assign to a source.
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit):
-          Unit = networkOutput(BridgeNetworkOutputProperty(networkOutput))
+      @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
+          sourcePriority(SourcePriorityProperty(sourcePriority))
+
+      /**
+       * @param state The state of source failover on the flow.
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
-    ) : CdkObject(cdkObject), BridgeOutputProperty {
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
+    ) : CdkObject(cdkObject), FailoverConfigProperty {
       /**
-       * The output of the bridge.
+       * The type of failover you choose for this flow.
        *
-       * A network output is delivered to your premises.
+       * MERGE combines the source streams into a single stream, allowing graceful recovery from any
+       * single-source loss. FAILOVER allows switching between different streams.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgeoutput.html#cfn-mediaconnect-bridge-bridgeoutput-networkoutput)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-failovermode)
        */
-      override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+      override fun failoverMode(): String = unwrap(this).getFailoverMode()
+
+      /**
+       * The priority you want to assign to a source.
+       *
+       * You can have a primary stream and a backup stream or two equally prioritized streams. This
+       * setting only applies when Failover Mode is set to FAILOVER.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
+       */
+      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+
+      /**
+       * The state of source failover on the flow.
+       *
+       * If the state is inactive, the flow can have only one source. If the state is active, the
+       * flow can have one or two sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BridgeOutputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FailoverConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty):
-          BridgeOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeOutputProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty):
+          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FailoverConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BridgeOutputProperty):
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty
+      internal fun unwrap(wrapped: FailoverConfigProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty
     }
   }
 
@@ -2124,8 +1948,7 @@ public open class CfnBridge internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
     ) : CdkObject(cdkObject), IngressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the ingress bridge.
@@ -2157,6 +1980,173 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty
+    }
+  }
+
+  /**
+   * The priority you want to assign to a source.
+   *
+   * You can have a primary stream and a backup stream or two equally prioritized streams. This
+   * setting only applies when Failover Mode is set to FAILOVER.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * SourcePriorityProperty sourcePriorityProperty = SourcePriorityProperty.builder()
+   * .primarySource("primarySource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html)
+   */
+  public interface SourcePriorityProperty {
+    /**
+     * The name of the source you choose as the primary source for this flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
+     */
+    public fun primarySource(): String? = unwrap(this).getPrimarySource()
+
+    /**
+     * A builder for [SourcePriorityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       */
+      public fun primarySource(primarySource: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.builder()
+
+      /**
+       * @param primarySource The name of the source you choose as the primary source for this flow.
+       */
+      override fun primarySource(primarySource: String) {
+        cdkBuilder.primarySource(primarySource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
+    ) : CdkObject(cdkObject), SourcePriorityProperty {
+      /**
+       * The name of the source you choose as the primary source for this flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-sourcepriority.html#cfn-mediaconnect-bridge-sourcepriority-primarysource)
+       */
+      override fun primarySource(): String? = unwrap(this).getPrimarySource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourcePriorityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty):
+          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourcePriorityProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty
+    }
+  }
+
+  /**
+   * The VPC interface that you want to send your output to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
+   * VpcInterfaceAttachmentProperty.builder()
+   * .vpcInterfaceName("vpcInterfaceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html)
+   */
+  public interface VpcInterfaceAttachmentProperty {
+    /**
+     * The name of the VPC interface that you want to send your output to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
+     */
+    public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+
+    /**
+     * A builder for [VpcInterfaceAttachmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      public fun vpcInterfaceName(vpcInterfaceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
+
+      /**
+       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       */
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
+        cdkBuilder.vpcInterfaceName(vpcInterfaceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
+    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+      /**
+       * The name of the VPC interface that you want to send your output to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
+       */
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcInterfaceAttachmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty):
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty
     }
   }
 }

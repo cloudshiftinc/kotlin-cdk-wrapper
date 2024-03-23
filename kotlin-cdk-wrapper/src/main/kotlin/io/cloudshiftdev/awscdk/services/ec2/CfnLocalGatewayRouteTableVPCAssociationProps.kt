@@ -118,8 +118,7 @@ public interface CfnLocalGatewayRouteTableVPCAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociationProps,
   ) : CdkObject(cdkObject), CfnLocalGatewayRouteTableVPCAssociationProps {
     /**
      * The ID of the local gateway route table.

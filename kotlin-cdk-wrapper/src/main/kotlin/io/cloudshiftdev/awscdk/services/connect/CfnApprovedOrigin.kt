@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-approvedorigin.html)
  */
-public open class CfnApprovedOrigin internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOrigin,
+public open class CfnApprovedOrigin(
+  cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOrigin,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -163,6 +163,7 @@ public open class CfnApprovedOrigin internal constructor(
         CfnApprovedOrigin = CfnApprovedOrigin(cdkObject)
 
     internal fun unwrap(wrapped: CfnApprovedOrigin):
-        software.amazon.awscdk.services.connect.CfnApprovedOrigin = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnApprovedOrigin = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnApprovedOrigin
   }
 }

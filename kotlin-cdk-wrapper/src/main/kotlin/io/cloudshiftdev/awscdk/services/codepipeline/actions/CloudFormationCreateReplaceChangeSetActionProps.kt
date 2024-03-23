@@ -662,8 +662,7 @@ public interface CloudFormationCreateReplaceChangeSetActionProps : CommonAwsActi
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetActionProps,
   ) : CdkObject(cdkObject), CloudFormationCreateReplaceChangeSetActionProps {
     /**
      * The AWS account this Action is supposed to operate in.

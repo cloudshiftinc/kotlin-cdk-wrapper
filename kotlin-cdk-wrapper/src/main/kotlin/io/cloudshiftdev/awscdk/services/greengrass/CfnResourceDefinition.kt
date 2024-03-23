@@ -109,8 +109,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
  */
-public open class CfnResourceDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition,
+public open class CfnResourceDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -444,24 +444,22 @@ public open class CfnResourceDefinition internal constructor(
         CfnResourceDefinition = CfnResourceDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDefinition):
-        software.amazon.awscdk.services.greengrass.CfnResourceDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnResourceDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnResourceDefinition
   }
 
   /**
-   * A resource definition version contains a list of resources. (In AWS CloudFormation , resources
-   * are named *resource instances* .).
+   * Settings that define additional Linux OS group permissions to give to the Lambda function
+   * process.
    *
+   * You can give the permissions of the Linux group that owns the resource or choose another Linux
+   * group. These permissions are in addition to the function's `RunAs` permissions.
    *
-   * After you create a resource definition version that contains the resources you want to deploy,
-   * you must add it to your group version. For more information, see
-   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
-   * .
-   *
-   *
-   * In an AWS CloudFormation template, `ResourceDefinitionVersion` is the property type of the
-   * `InitialVersion` property in the
-   * [`AWS::Greengrass::ResourceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
-   * resource.
+   * In an AWS CloudFormation template, `GroupOwnerSetting` is a property of the
+   * [`LocalDeviceResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html)
+   * and
+   * [`LocalVolumeResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.html)
+   * property types.
    *
    * Example:
    *
@@ -469,13 +467,160 @@ public open class CfnResourceDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * ResourceDefinitionVersionProperty resourceDefinitionVersionProperty =
-   * ResourceDefinitionVersionProperty.builder()
-   * .resources(List.of(ResourceInstanceProperty.builder()
-   * .id("id")
-   * .name("name")
-   * .resourceDataContainer(ResourceDataContainerProperty.builder()
-   * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+   * GroupOwnerSettingProperty groupOwnerSettingProperty = GroupOwnerSettingProperty.builder()
+   * .autoAddGroupOwner(false)
+   * // the properties below are optional
+   * .groupOwner("groupOwner")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html)
+   */
+  public interface GroupOwnerSettingProperty {
+    /**
+     * Indicates whether to give the privileges of the Linux group that owns the resource to the
+     * Lambda process.
+     *
+     * This gives the Lambda process the file access permissions of the Linux group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner)
+     */
+    public fun autoAddGroupOwner(): Any
+
+    /**
+     * The name of the Linux group whose privileges you want to add to the Lambda process.
+     *
+     * This value is ignored if `AutoAddGroupOwner` is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-groupowner)
+     */
+    public fun groupOwner(): String? = unwrap(this).getGroupOwner()
+
+    /**
+     * A builder for [GroupOwnerSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
+       * owns the resource to the Lambda process. 
+       * This gives the Lambda process the file access permissions of the Linux group.
+       */
+      public fun autoAddGroupOwner(autoAddGroupOwner: Boolean)
+
+      /**
+       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
+       * owns the resource to the Lambda process. 
+       * This gives the Lambda process the file access permissions of the Linux group.
+       */
+      public fun autoAddGroupOwner(autoAddGroupOwner: IResolvable)
+
+      /**
+       * @param groupOwner The name of the Linux group whose privileges you want to add to the
+       * Lambda process.
+       * This value is ignored if `AutoAddGroupOwner` is true.
+       */
+      public fun groupOwner(groupOwner: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty.builder()
+
+      /**
+       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
+       * owns the resource to the Lambda process. 
+       * This gives the Lambda process the file access permissions of the Linux group.
+       */
+      override fun autoAddGroupOwner(autoAddGroupOwner: Boolean) {
+        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner)
+      }
+
+      /**
+       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
+       * owns the resource to the Lambda process. 
+       * This gives the Lambda process the file access permissions of the Linux group.
+       */
+      override fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
+        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param groupOwner The name of the Linux group whose privileges you want to add to the
+       * Lambda process.
+       * This value is ignored if `AutoAddGroupOwner` is true.
+       */
+      override fun groupOwner(groupOwner: String) {
+        cdkBuilder.groupOwner(groupOwner)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty,
+    ) : CdkObject(cdkObject), GroupOwnerSettingProperty {
+      /**
+       * Indicates whether to give the privileges of the Linux group that owns the resource to the
+       * Lambda process.
+       *
+       * This gives the Lambda process the file access permissions of the Linux group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner)
+       */
+      override fun autoAddGroupOwner(): Any = unwrap(this).getAutoAddGroupOwner()
+
+      /**
+       * The name of the Linux group whose privileges you want to add to the Lambda process.
+       *
+       * This value is ignored if `AutoAddGroupOwner` is true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-groupowner)
+       */
+      override fun groupOwner(): String? = unwrap(this).getGroupOwner()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GroupOwnerSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty):
+          GroupOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GroupOwnerSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GroupOwnerSettingProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+    }
+  }
+
+  /**
+   * Settings for a local device resource, which represents a file under `/dev` .
+   *
+   * For more information, see [Access Local Resources with Lambda
+   * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
+   * in the *Developer Guide* .
+   *
+   * In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the
+   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * LocalDeviceResourceDataProperty localDeviceResourceDataProperty =
+   * LocalDeviceResourceDataProperty.builder()
    * .sourcePath("sourcePath")
    * // the properties below are optional
    * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
@@ -483,716 +628,146 @@ public open class CfnResourceDefinition internal constructor(
    * // the properties below are optional
    * .groupOwner("groupOwner")
    * .build())
-   * .build())
-   * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .sourcePath("sourcePath")
-   * // the properties below are optional
-   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
-   * .autoAddGroupOwner(false)
-   * // the properties below are optional
-   * .groupOwner("groupOwner")
-   * .build())
-   * .build())
-   * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build())
-   * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .sageMakerJobArn("sageMakerJobArn")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build())
-   * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
-   * .arn("arn")
-   * // the properties below are optional
-   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
-   * .build())
-   * .build())
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html)
    */
-  public interface ResourceDefinitionVersionProperty {
+  public interface LocalDeviceResourceDataProperty {
     /**
-     * The resources in this version.
+     * Settings that define additional Linux OS group permissions to give to the Lambda function
+     * process.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)
      */
-    public fun resources(): Any
+    public fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
 
     /**
-     * A builder for [ResourceDefinitionVersionProperty]
+     * The local absolute path of the device resource.
+     *
+     * The source path for a device resource can refer only to a character device or block device
+     * under `/dev` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath)
+     */
+    public fun sourcePath(): String
+
+    /**
+     * A builder for [LocalDeviceResourceDataProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      public fun resources(resources: IResolvable)
+      public fun groupOwnerSetting(groupOwnerSetting: IResolvable)
 
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      public fun resources(resources: List<Any>)
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty)
 
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      public fun resources(vararg resources: Any)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit)
+
+      /**
+       * @param sourcePath The local absolute path of the device resource. 
+       * The source path for a device resource can refer only to a character device or block device
+       * under `/dev` .
+       */
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty.Builder
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty.Builder
           =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty.builder()
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty.builder()
 
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      override fun resources(resources: IResolvable) {
-        cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
       }
 
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      override fun resources(resources: List<Any>) {
-        cdkBuilder.resources(resources)
+      override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
       }
 
       /**
-       * @param resources The resources in this version. 
+       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
+       * to the Lambda function process.
        */
-      override fun resources(vararg resources: Any): Unit = resources(resources.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), ResourceDefinitionVersionProperty {
-      /**
-       * The resources in this version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)
-       */
-      override fun resources(): Any = unwrap(this).getResources()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ResourceDefinitionVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty):
-          ResourceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourceDefinitionVersionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceDefinitionVersionProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
-    }
-  }
-
-  /**
-   * Settings for a secret resource, which references a secret from AWS Secrets Manager .
-   *
-   * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where
-   * it can be securely accessed by connectors and Lambda functions. For more information, see [Deploy
-   * Secrets to the AWS IoT Greengrass
-   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html) in the *Developer
-   * Guide* .
-   *
-   * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the
-   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * SecretsManagerSecretResourceDataProperty secretsManagerSecretResourceDataProperty =
-   * SecretsManagerSecretResourceDataProperty.builder()
-   * .arn("arn")
-   * // the properties below are optional
-   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html)
-   */
-  public interface SecretsManagerSecretResourceDataProperty {
-    /**
-     * The staging labels whose values you want to make available on the core, in addition to
-     * `AWSCURRENT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-additionalstaginglabelstodownload)
-     */
-    public fun additionalStagingLabelsToDownload(): List<String> =
-        unwrap(this).getAdditionalStagingLabelsToDownload() ?: emptyList()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Secrets Manager secret to make available on the core.
-     *
-     * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
-     * included by default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [SecretsManagerSecretResourceDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
-       * available on the core, in addition to `AWSCURRENT` .
-       */
-      public fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>)
-
-      /**
-       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
-       * available on the core, in addition to `AWSCURRENT` .
-       */
-      public fun additionalStagingLabelsToDownload(vararg additionalStagingLabelsToDownload: String)
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Secrets Manager secret to make available
-       * on the core. 
-       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
-       * included by default.
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.builder()
-
-      /**
-       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
-       * available on the core, in addition to `AWSCURRENT` .
-       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
       override
-          fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>) {
-        cdkBuilder.additionalStagingLabelsToDownload(additionalStagingLabelsToDownload)
-      }
+          fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit):
+          Unit = groupOwnerSetting(GroupOwnerSettingProperty(groupOwnerSetting))
 
       /**
-       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
-       * available on the core, in addition to `AWSCURRENT` .
+       * @param sourcePath The local absolute path of the device resource. 
+       * The source path for a device resource can refer only to a character device or block device
+       * under `/dev` .
        */
-      override fun additionalStagingLabelsToDownload(vararg
-          additionalStagingLabelsToDownload: String): Unit =
-          additionalStagingLabelsToDownload(additionalStagingLabelsToDownload.toList())
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Secrets Manager secret to make available
-       * on the core. 
-       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
-       * included by default.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
+      override fun sourcePath(sourcePath: String) {
+        cdkBuilder.sourcePath(sourcePath)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty,
-    ) : CdkObject(cdkObject), SecretsManagerSecretResourceDataProperty {
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty,
+    ) : CdkObject(cdkObject), LocalDeviceResourceDataProperty {
       /**
-       * The staging labels whose values you want to make available on the core, in addition to
-       * `AWSCURRENT` .
+       * Settings that define additional Linux OS group permissions to give to the Lambda function
+       * process.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-additionalstaginglabelstodownload)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)
        */
-      override fun additionalStagingLabelsToDownload(): List<String> =
-          unwrap(this).getAdditionalStagingLabelsToDownload() ?: emptyList()
+      override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
 
       /**
-       * The Amazon Resource Name (ARN) of the Secrets Manager secret to make available on the core.
+       * The local absolute path of the device resource.
        *
-       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
-       * included by default.
+       * The source path for a device resource can refer only to a character device or block device
+       * under `/dev` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-arn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath)
        */
-      override fun arn(): String = unwrap(this).getArn()
+      override fun sourcePath(): String = unwrap(this).getSourcePath()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SecretsManagerSecretResourceDataProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LocalDeviceResourceDataProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty):
-          SecretsManagerSecretResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SecretsManagerSecretResourceDataProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty):
+          LocalDeviceResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalDeviceResourceDataProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SecretsManagerSecretResourceDataProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
+      internal fun unwrap(wrapped: LocalDeviceResourceDataProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
-    }
-  }
-
-  /**
-   * Settings for an Amazon S3 machine learning resource.
-   *
-   * For more information, see [Perform Machine Learning
-   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) in the
-   * *Developer Guide* .
-   *
-   * In an AWS CloudFormation template, `S3MachineLearningModelResourceData` can be used in the
-   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * S3MachineLearningModelResourceDataProperty s3MachineLearningModelResourceDataProperty =
-   * S3MachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html)
-   */
-  public interface S3MachineLearningModelResourceDataProperty {
-    /**
-     * The absolute local path of the resource inside the Lambda environment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)
-     */
-    public fun destinationPath(): String
-
-    /**
-     * The owner setting for the downloaded machine learning resource.
-     *
-     * For more information, see [Access Machine Learning Resources from Lambda
-     * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html) in
-     * the *Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)
-     */
-    public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
-
-    /**
-     * The URI of the source model in an Amazon S3 bucket.
-     *
-     * The model package must be in `tar.gz` or `.zip` format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [S3MachineLearningModelResourceDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationPath The absolute local path of the resource inside the Lambda
-       * environment. 
-       */
-      public fun destinationPath(destinationPath: String)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      public fun ownerSetting(ownerSetting: IResolvable)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3Uri The URI of the source model in an Amazon S3 bucket. 
-       * The model package must be in `tar.gz` or `.zip` format.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty.builder()
-
-      /**
-       * @param destinationPath The absolute local path of the resource inside the Lambda
-       * environment. 
-       */
-      override fun destinationPath(destinationPath: String) {
-        cdkBuilder.destinationPath(destinationPath)
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      override fun ownerSetting(ownerSetting: IResolvable) {
-        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
-      override
-          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
-          Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
-
-      /**
-       * @param s3Uri The URI of the source model in an Amazon S3 bucket. 
-       * The model package must be in `tar.gz` or `.zip` format.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty,
-    ) : CdkObject(cdkObject), S3MachineLearningModelResourceDataProperty {
-      /**
-       * The absolute local path of the resource inside the Lambda environment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)
-       */
-      override fun destinationPath(): String = unwrap(this).getDestinationPath()
-
-      /**
-       * The owner setting for the downloaded machine learning resource.
-       *
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)
-       */
-      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
-
-      /**
-       * The URI of the source model in an Amazon S3 bucket.
-       *
-       * The model package must be in `tar.gz` or `.zip` format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          S3MachineLearningModelResourceDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty):
-          S3MachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3MachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3MachineLearningModelResourceDataProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
-    }
-  }
-
-  /**
-   * Settings for an Secrets Manager machine learning resource.
-   *
-   * For more information, see [Perform Machine Learning
-   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) in the
-   * *Developer Guide* .
-   *
-   * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in
-   * the
-   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * SageMakerMachineLearningModelResourceDataProperty
-   * sageMakerMachineLearningModelResourceDataProperty =
-   * SageMakerMachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .sageMakerJobArn("sageMakerJobArn")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html)
-   */
-  public interface SageMakerMachineLearningModelResourceDataProperty {
-    /**
-     * The absolute local path of the resource inside the Lambda environment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)
-     */
-    public fun destinationPath(): String
-
-    /**
-     * The owner setting for the downloaded machine learning resource.
-     *
-     * For more information, see [Access Machine Learning Resources from Lambda
-     * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html) in
-     * the *Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)
-     */
-    public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
-     * source model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
-     */
-    public fun sageMakerJobArn(): String
-
-    /**
-     * A builder for [SageMakerMachineLearningModelResourceDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationPath The absolute local path of the resource inside the Lambda
-       * environment. 
-       */
-      public fun destinationPath(destinationPath: String)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      public fun ownerSetting(ownerSetting: IResolvable)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
-
-      /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
-       */
-      public fun sageMakerJobArn(sageMakerJobArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty.builder()
-
-      /**
-       * @param destinationPath The absolute local path of the resource inside the Lambda
-       * environment. 
-       */
-      override fun destinationPath(destinationPath: String) {
-        cdkBuilder.destinationPath(destinationPath)
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      override fun ownerSetting(ownerSetting: IResolvable) {
-        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
-      }
-
-      /**
-       * @param ownerSetting The owner setting for the downloaded machine learning resource.
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
-      override
-          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
-          Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
-
-      /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
-       */
-      override fun sageMakerJobArn(sageMakerJobArn: String) {
-        cdkBuilder.sageMakerJobArn(sageMakerJobArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty,
-    ) : CdkObject(cdkObject), SageMakerMachineLearningModelResourceDataProperty {
-      /**
-       * The absolute local path of the resource inside the Lambda environment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)
-       */
-      override fun destinationPath(): String = unwrap(this).getDestinationPath()
-
-      /**
-       * The owner setting for the downloaded machine learning resource.
-       *
-       * For more information, see [Access Machine Learning Resources from Lambda
-       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
-       * in the *Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)
-       */
-      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
-       * source model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
-       */
-      override fun sageMakerJobArn(): String = unwrap(this).getSageMakerJobArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SageMakerMachineLearningModelResourceDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty):
-          SageMakerMachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SageMakerMachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SageMakerMachineLearningModelResourceDataProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
     }
   }
 
@@ -1344,8 +919,7 @@ public open class CfnResourceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty,
     ) : CdkObject(cdkObject), LocalVolumeResourceDataProperty {
       /**
        * The absolute local path of the resource in the Lambda environment.
@@ -1387,479 +961,6 @@ public open class CfnResourceDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty
-    }
-  }
-
-  /**
-   * Settings for a local device resource, which represents a file under `/dev` .
-   *
-   * For more information, see [Access Local Resources with Lambda
-   * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html)
-   * in the *Developer Guide* .
-   *
-   * In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the
-   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * LocalDeviceResourceDataProperty localDeviceResourceDataProperty =
-   * LocalDeviceResourceDataProperty.builder()
-   * .sourcePath("sourcePath")
-   * // the properties below are optional
-   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
-   * .autoAddGroupOwner(false)
-   * // the properties below are optional
-   * .groupOwner("groupOwner")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html)
-   */
-  public interface LocalDeviceResourceDataProperty {
-    /**
-     * Settings that define additional Linux OS group permissions to give to the Lambda function
-     * process.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)
-     */
-    public fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
-
-    /**
-     * The local absolute path of the device resource.
-     *
-     * The source path for a device resource can refer only to a character device or block device
-     * under `/dev` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath)
-     */
-    public fun sourcePath(): String
-
-    /**
-     * A builder for [LocalDeviceResourceDataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      public fun groupOwnerSetting(groupOwnerSetting: IResolvable)
-
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty)
-
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
-      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit)
-
-      /**
-       * @param sourcePath The local absolute path of the device resource. 
-       * The source path for a device resource can refer only to a character device or block device
-       * under `/dev` .
-       */
-      public fun sourcePath(sourcePath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty.builder()
-
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
-      }
-
-      /**
-       * @param groupOwnerSetting Settings that define additional Linux OS group permissions to give
-       * to the Lambda function process.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
-      override
-          fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit):
-          Unit = groupOwnerSetting(GroupOwnerSettingProperty(groupOwnerSetting))
-
-      /**
-       * @param sourcePath The local absolute path of the device resource. 
-       * The source path for a device resource can refer only to a character device or block device
-       * under `/dev` .
-       */
-      override fun sourcePath(sourcePath: String) {
-        cdkBuilder.sourcePath(sourcePath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty,
-    ) : CdkObject(cdkObject), LocalDeviceResourceDataProperty {
-      /**
-       * Settings that define additional Linux OS group permissions to give to the Lambda function
-       * process.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)
-       */
-      override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
-
-      /**
-       * The local absolute path of the device resource.
-       *
-       * The source path for a device resource can refer only to a character device or block device
-       * under `/dev` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath)
-       */
-      override fun sourcePath(): String = unwrap(this).getSourcePath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LocalDeviceResourceDataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty):
-          LocalDeviceResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LocalDeviceResourceDataProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LocalDeviceResourceDataProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
-    }
-  }
-
-  /**
-   * A local resource, machine learning resource, or secret resource.
-   *
-   * For more information, see [Access Local Resources with Lambda
-   * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html) ,
-   * [Perform Machine Learning
-   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) , and
-   * [Deploy Secrets to the AWS IoT Greengrass
-   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html) in the *Developer
-   * Guide* .
-   *
-   * In an AWS CloudFormation template, the `Resources` property of the
-   * [`AWS::Greengrass::ResourceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
-   * resource contains a list of `ResourceInstance` property types.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * ResourceInstanceProperty resourceInstanceProperty = ResourceInstanceProperty.builder()
-   * .id("id")
-   * .name("name")
-   * .resourceDataContainer(ResourceDataContainerProperty.builder()
-   * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
-   * .sourcePath("sourcePath")
-   * // the properties below are optional
-   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
-   * .autoAddGroupOwner(false)
-   * // the properties below are optional
-   * .groupOwner("groupOwner")
-   * .build())
-   * .build())
-   * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .sourcePath("sourcePath")
-   * // the properties below are optional
-   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
-   * .autoAddGroupOwner(false)
-   * // the properties below are optional
-   * .groupOwner("groupOwner")
-   * .build())
-   * .build())
-   * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build())
-   * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
-   * .destinationPath("destinationPath")
-   * .sageMakerJobArn("sageMakerJobArn")
-   * // the properties below are optional
-   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
-   * .groupOwner("groupOwner")
-   * .groupPermission("groupPermission")
-   * .build())
-   * .build())
-   * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
-   * .arn("arn")
-   * // the properties below are optional
-   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html)
-   */
-  public interface ResourceInstanceProperty {
-    /**
-     * A descriptive or arbitrary ID for the resource.
-     *
-     * This value must be unique within the resource definition version. Maximum length is 128
-     * characters with pattern `[a-zA-Z0-9:_-]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-id)
-     */
-    public fun id(): String
-
-    /**
-     * The descriptive resource name, which is displayed on the AWS IoT Greengrass console.
-     *
-     * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
-     * Greengrass group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name)
-     */
-    public fun name(): String
-
-    /**
-     * A container for resource data.
-     *
-     * The container takes only one of the following supported resource data types:
-     * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-     * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-     * `SecretsManagerSecretResourceData` .
-     *
-     *
-     * Only one resource type can be defined for a `ResourceDataContainer` instance.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)
-     */
-    public fun resourceDataContainer(): Any
-
-    /**
-     * A builder for [ResourceInstanceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id A descriptive or arbitrary ID for the resource. 
-       * This value must be unique within the resource definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      public fun id(id: String)
-
-      /**
-       * @param name The descriptive resource name, which is displayed on the AWS IoT Greengrass
-       * console. 
-       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
-       * Greengrass group.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      public fun resourceDataContainer(resourceDataContainer: IResolvable)
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      public fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty)
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
-      public
-          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty.builder()
-
-      /**
-       * @param id A descriptive or arbitrary ID for the resource. 
-       * This value must be unique within the resource definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param name The descriptive resource name, which is displayed on the AWS IoT Greengrass
-       * console. 
-       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
-       * Greengrass group.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      override fun resourceDataContainer(resourceDataContainer: IResolvable) {
-        cdkBuilder.resourceDataContainer(resourceDataContainer.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      override fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
-        cdkBuilder.resourceDataContainer(resourceDataContainer.let(ResourceDataContainerProperty::unwrap))
-      }
-
-      /**
-       * @param resourceDataContainer A container for resource data. 
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
-      override
-          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit):
-          Unit = resourceDataContainer(ResourceDataContainerProperty(resourceDataContainer))
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty,
-    ) : CdkObject(cdkObject), ResourceInstanceProperty {
-      /**
-       * A descriptive or arbitrary ID for the resource.
-       *
-       * This value must be unique within the resource definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The descriptive resource name, which is displayed on the AWS IoT Greengrass console.
-       *
-       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
-       * Greengrass group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * A container for resource data.
-       *
-       * The container takes only one of the following supported resource data types:
-       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
-       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
-       * `SecretsManagerSecretResourceData` .
-       *
-       *
-       * Only one resource type can be defined for a `ResourceDataContainer` instance.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)
-       */
-      override fun resourceDataContainer(): Any = unwrap(this).getResourceDataContainer()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceInstanceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty):
-          ResourceInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceInstanceProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResourceInstanceProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
     }
   }
 
@@ -2222,8 +1323,7 @@ public open class CfnResourceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty,
     ) : CdkObject(cdkObject), ResourceDataContainerProperty {
       /**
        * Settings for a local device resource.
@@ -2279,6 +1379,172 @@ public open class CfnResourceDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty
+    }
+  }
+
+  /**
+   * A resource definition version contains a list of resources. (In AWS CloudFormation , resources
+   * are named *resource instances* .).
+   *
+   *
+   * After you create a resource definition version that contains the resources you want to deploy,
+   * you must add it to your group version. For more information, see
+   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+   * .
+   *
+   *
+   * In an AWS CloudFormation template, `ResourceDefinitionVersion` is the property type of the
+   * `InitialVersion` property in the
+   * [`AWS::Greengrass::ResourceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * ResourceDefinitionVersionProperty resourceDefinitionVersionProperty =
+   * ResourceDefinitionVersionProperty.builder()
+   * .resources(List.of(ResourceInstanceProperty.builder()
+   * .id("id")
+   * .name("name")
+   * .resourceDataContainer(ResourceDataContainerProperty.builder()
+   * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+   * .sourcePath("sourcePath")
+   * // the properties below are optional
+   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+   * .autoAddGroupOwner(false)
+   * // the properties below are optional
+   * .groupOwner("groupOwner")
+   * .build())
+   * .build())
+   * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .sourcePath("sourcePath")
+   * // the properties below are optional
+   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+   * .autoAddGroupOwner(false)
+   * // the properties below are optional
+   * .groupOwner("groupOwner")
+   * .build())
+   * .build())
+   * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build())
+   * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .sageMakerJobArn("sageMakerJobArn")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build())
+   * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
+   * .arn("arn")
+   * // the properties below are optional
+   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+   * .build())
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html)
+   */
+  public interface ResourceDefinitionVersionProperty {
+    /**
+     * The resources in this version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)
+     */
+    public fun resources(): Any
+
+    /**
+     * A builder for [ResourceDefinitionVersionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resources The resources in this version. 
+       */
+      public fun resources(resources: IResolvable)
+
+      /**
+       * @param resources The resources in this version. 
+       */
+      public fun resources(resources: List<Any>)
+
+      /**
+       * @param resources The resources in this version. 
+       */
+      public fun resources(vararg resources: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty.builder()
+
+      /**
+       * @param resources The resources in this version. 
+       */
+      override fun resources(resources: IResolvable) {
+        cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resources The resources in this version. 
+       */
+      override fun resources(resources: List<Any>) {
+        cdkBuilder.resources(resources)
+      }
+
+      /**
+       * @param resources The resources in this version. 
+       */
+      override fun resources(vararg resources: Any): Unit = resources(resources.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty,
+    ) : CdkObject(cdkObject), ResourceDefinitionVersionProperty {
+      /**
+       * The resources in this version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.html#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)
+       */
+      override fun resources(): Any = unwrap(this).getResources()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ResourceDefinitionVersionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty):
+          ResourceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceDefinitionVersionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceDefinitionVersionProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
     }
   }
 
@@ -2381,8 +1647,7 @@ public open class CfnResourceDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty,
     ) : CdkObject(cdkObject), ResourceDownloadOwnerSettingProperty {
       /**
        * The group owner of the machine learning resource.
@@ -2424,17 +1689,19 @@ public open class CfnResourceDefinition internal constructor(
   }
 
   /**
-   * Settings that define additional Linux OS group permissions to give to the Lambda function
-   * process.
+   * A local resource, machine learning resource, or secret resource.
    *
-   * You can give the permissions of the Linux group that owns the resource or choose another Linux
-   * group. These permissions are in addition to the function's `RunAs` permissions.
+   * For more information, see [Access Local Resources with Lambda
+   * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-local-resources.html) ,
+   * [Perform Machine Learning
+   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) , and
+   * [Deploy Secrets to the AWS IoT Greengrass
+   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html) in the *Developer
+   * Guide* .
    *
-   * In an AWS CloudFormation template, `GroupOwnerSetting` is a property of the
-   * [`LocalDeviceResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.html)
-   * and
-   * [`LocalVolumeResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.html)
-   * property types.
+   * In an AWS CloudFormation template, the `Resources` property of the
+   * [`AWS::Greengrass::ResourceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
+   * resource contains a list of `ResourceInstance` property types.
    *
    * Example:
    *
@@ -2442,139 +1709,863 @@ public open class CfnResourceDefinition internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * GroupOwnerSettingProperty groupOwnerSettingProperty = GroupOwnerSettingProperty.builder()
+   * ResourceInstanceProperty resourceInstanceProperty = ResourceInstanceProperty.builder()
+   * .id("id")
+   * .name("name")
+   * .resourceDataContainer(ResourceDataContainerProperty.builder()
+   * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+   * .sourcePath("sourcePath")
+   * // the properties below are optional
+   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
    * .autoAddGroupOwner(false)
    * // the properties below are optional
    * .groupOwner("groupOwner")
+   * .build())
+   * .build())
+   * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .sourcePath("sourcePath")
+   * // the properties below are optional
+   * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+   * .autoAddGroupOwner(false)
+   * // the properties below are optional
+   * .groupOwner("groupOwner")
+   * .build())
+   * .build())
+   * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build())
+   * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .sageMakerJobArn("sageMakerJobArn")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build())
+   * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
+   * .arn("arn")
+   * // the properties below are optional
+   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+   * .build())
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html)
    */
-  public interface GroupOwnerSettingProperty {
+  public interface ResourceInstanceProperty {
     /**
-     * Indicates whether to give the privileges of the Linux group that owns the resource to the
-     * Lambda process.
+     * A descriptive or arbitrary ID for the resource.
      *
-     * This gives the Lambda process the file access permissions of the Linux group.
+     * This value must be unique within the resource definition version. Maximum length is 128
+     * characters with pattern `[a-zA-Z0-9:_-]+` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-id)
      */
-    public fun autoAddGroupOwner(): Any
+    public fun id(): String
 
     /**
-     * The name of the Linux group whose privileges you want to add to the Lambda process.
+     * The descriptive resource name, which is displayed on the AWS IoT Greengrass console.
      *
-     * This value is ignored if `AutoAddGroupOwner` is true.
+     * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
+     * Greengrass group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-groupowner)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name)
      */
-    public fun groupOwner(): String? = unwrap(this).getGroupOwner()
+    public fun name(): String
 
     /**
-     * A builder for [GroupOwnerSettingProperty]
+     * A container for resource data.
+     *
+     * The container takes only one of the following supported resource data types:
+     * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+     * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+     * `SecretsManagerSecretResourceData` .
+     *
+     *
+     * Only one resource type can be defined for a `ResourceDataContainer` instance.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)
+     */
+    public fun resourceDataContainer(): Any
+
+    /**
+     * A builder for [ResourceInstanceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
-       * owns the resource to the Lambda process. 
-       * This gives the Lambda process the file access permissions of the Linux group.
+       * @param id A descriptive or arbitrary ID for the resource. 
+       * This value must be unique within the resource definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        */
-      public fun autoAddGroupOwner(autoAddGroupOwner: Boolean)
+      public fun id(id: String)
 
       /**
-       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
-       * owns the resource to the Lambda process. 
-       * This gives the Lambda process the file access permissions of the Linux group.
+       * @param name The descriptive resource name, which is displayed on the AWS IoT Greengrass
+       * console. 
+       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
+       * Greengrass group.
        */
-      public fun autoAddGroupOwner(autoAddGroupOwner: IResolvable)
+      public fun name(name: String)
 
       /**
-       * @param groupOwner The name of the Linux group whose privileges you want to add to the
-       * Lambda process.
-       * This value is ignored if `AutoAddGroupOwner` is true.
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
        */
-      public fun groupOwner(groupOwner: String)
+      public fun resourceDataContainer(resourceDataContainer: IResolvable)
+
+      /**
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
+       */
+      public fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty)
+
+      /**
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
+      public
+          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty.Builder
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty.Builder
           =
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty.builder()
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty.builder()
 
       /**
-       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
-       * owns the resource to the Lambda process. 
-       * This gives the Lambda process the file access permissions of the Linux group.
+       * @param id A descriptive or arbitrary ID for the resource. 
+       * This value must be unique within the resource definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        */
-      override fun autoAddGroupOwner(autoAddGroupOwner: Boolean) {
-        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner)
+      override fun id(id: String) {
+        cdkBuilder.id(id)
       }
 
       /**
-       * @param autoAddGroupOwner Indicates whether to give the privileges of the Linux group that
-       * owns the resource to the Lambda process. 
-       * This gives the Lambda process the file access permissions of the Linux group.
+       * @param name The descriptive resource name, which is displayed on the AWS IoT Greengrass
+       * console. 
+       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
+       * Greengrass group.
        */
-      override fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
-        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner.let(IResolvable::unwrap))
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param groupOwner The name of the Linux group whose privileges you want to add to the
-       * Lambda process.
-       * This value is ignored if `AutoAddGroupOwner` is true.
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
        */
-      override fun groupOwner(groupOwner: String) {
-        cdkBuilder.groupOwner(groupOwner)
+      override fun resourceDataContainer(resourceDataContainer: IResolvable) {
+        cdkBuilder.resourceDataContainer(resourceDataContainer.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
+       */
+      override fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
+        cdkBuilder.resourceDataContainer(resourceDataContainer.let(ResourceDataContainerProperty::unwrap))
+      }
+
+      /**
+       * @param resourceDataContainer A container for resource data. 
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
+      override
+          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit):
+          Unit = resourceDataContainer(ResourceDataContainerProperty(resourceDataContainer))
 
       public fun build():
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty,
-    ) : CdkObject(cdkObject), GroupOwnerSettingProperty {
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty,
+    ) : CdkObject(cdkObject), ResourceInstanceProperty {
       /**
-       * Indicates whether to give the privileges of the Linux group that owns the resource to the
-       * Lambda process.
+       * A descriptive or arbitrary ID for the resource.
        *
-       * This gives the Lambda process the file access permissions of the Linux group.
+       * This value must be unique within the resource definition version. Maximum length is 128
+       * characters with pattern `[a-zA-Z0-9:_-]+` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-autoaddgroupowner)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-id)
        */
-      override fun autoAddGroupOwner(): Any = unwrap(this).getAutoAddGroupOwner()
+      override fun id(): String = unwrap(this).getId()
 
       /**
-       * The name of the Linux group whose privileges you want to add to the Lambda process.
+       * The descriptive resource name, which is displayed on the AWS IoT Greengrass console.
        *
-       * This value is ignored if `AutoAddGroupOwner` is true.
+       * Maximum length 128 characters with pattern [a-zA-Z0-9:_-]+. This must be unique within a
+       * Greengrass group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-groupownersetting.html#cfn-greengrass-resourcedefinition-groupownersetting-groupowner)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-name)
        */
-      override fun groupOwner(): String? = unwrap(this).getGroupOwner()
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * A container for resource data.
+       *
+       * The container takes only one of the following supported resource data types:
+       * `LocalDeviceResourceData` , `LocalVolumeResourceData` ,
+       * `SageMakerMachineLearningModelResourceData` , `S3MachineLearningModelResourceData` , or
+       * `SecretsManagerSecretResourceData` .
+       *
+       *
+       * Only one resource type can be defined for a `ResourceDataContainer` instance.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)
+       */
+      override fun resourceDataContainer(): Any = unwrap(this).getResourceDataContainer()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GroupOwnerSettingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceInstanceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty):
-          GroupOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GroupOwnerSettingProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty):
+          ResourceInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceInstanceProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: GroupOwnerSettingProperty):
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+      internal fun unwrap(wrapped: ResourceInstanceProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
+    }
+  }
+
+  /**
+   * Settings for an Amazon S3 machine learning resource.
+   *
+   * For more information, see [Perform Machine Learning
+   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) in the
+   * *Developer Guide* .
+   *
+   * In an AWS CloudFormation template, `S3MachineLearningModelResourceData` can be used in the
+   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * S3MachineLearningModelResourceDataProperty s3MachineLearningModelResourceDataProperty =
+   * S3MachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html)
+   */
+  public interface S3MachineLearningModelResourceDataProperty {
+    /**
+     * The absolute local path of the resource inside the Lambda environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)
+     */
+    public fun destinationPath(): String
+
+    /**
+     * The owner setting for the downloaded machine learning resource.
+     *
+     * For more information, see [Access Machine Learning Resources from Lambda
+     * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html) in
+     * the *Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)
+     */
+    public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+
+    /**
+     * The URI of the source model in an Amazon S3 bucket.
+     *
+     * The model package must be in `tar.gz` or `.zip` format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [S3MachineLearningModelResourceDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationPath The absolute local path of the resource inside the Lambda
+       * environment. 
+       */
+      public fun destinationPath(destinationPath: String)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      public fun ownerSetting(ownerSetting: IResolvable)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3Uri The URI of the source model in an Amazon S3 bucket. 
+       * The model package must be in `tar.gz` or `.zip` format.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty.builder()
+
+      /**
+       * @param destinationPath The absolute local path of the resource inside the Lambda
+       * environment. 
+       */
+      override fun destinationPath(destinationPath: String) {
+        cdkBuilder.destinationPath(destinationPath)
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      override fun ownerSetting(ownerSetting: IResolvable) {
+        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
+        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
+      override
+          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
+          Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
+
+      /**
+       * @param s3Uri The URI of the source model in an Amazon S3 bucket. 
+       * The model package must be in `tar.gz` or `.zip` format.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty,
+    ) : CdkObject(cdkObject), S3MachineLearningModelResourceDataProperty {
+      /**
+       * The absolute local path of the resource inside the Lambda environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)
+       */
+      override fun destinationPath(): String = unwrap(this).getDestinationPath()
+
+      /**
+       * The owner setting for the downloaded machine learning resource.
+       *
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)
+       */
+      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+
+      /**
+       * The URI of the source model in an Amazon S3 bucket.
+       *
+       * The model package must be in `tar.gz` or `.zip` format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          S3MachineLearningModelResourceDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty):
+          S3MachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3MachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3MachineLearningModelResourceDataProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
+    }
+  }
+
+  /**
+   * Settings for an Secrets Manager machine learning resource.
+   *
+   * For more information, see [Perform Machine Learning
+   * Inference](https://docs.aws.amazon.com/greengrass/v1/developerguide/ml-inference.html) in the
+   * *Developer Guide* .
+   *
+   * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in
+   * the
+   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * SageMakerMachineLearningModelResourceDataProperty
+   * sageMakerMachineLearningModelResourceDataProperty =
+   * SageMakerMachineLearningModelResourceDataProperty.builder()
+   * .destinationPath("destinationPath")
+   * .sageMakerJobArn("sageMakerJobArn")
+   * // the properties below are optional
+   * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+   * .groupOwner("groupOwner")
+   * .groupPermission("groupPermission")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html)
+   */
+  public interface SageMakerMachineLearningModelResourceDataProperty {
+    /**
+     * The absolute local path of the resource inside the Lambda environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)
+     */
+    public fun destinationPath(): String
+
+    /**
+     * The owner setting for the downloaded machine learning resource.
+     *
+     * For more information, see [Access Machine Learning Resources from Lambda
+     * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html) in
+     * the *Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)
+     */
+    public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+     * source model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
+     */
+    public fun sageMakerJobArn(): String
+
+    /**
+     * A builder for [SageMakerMachineLearningModelResourceDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationPath The absolute local path of the resource inside the Lambda
+       * environment. 
+       */
+      public fun destinationPath(destinationPath: String)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      public fun ownerSetting(ownerSetting: IResolvable)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
+
+      /**
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
+       * that represents the source model. 
+       */
+      public fun sageMakerJobArn(sageMakerJobArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty.builder()
+
+      /**
+       * @param destinationPath The absolute local path of the resource inside the Lambda
+       * environment. 
+       */
+      override fun destinationPath(destinationPath: String) {
+        cdkBuilder.destinationPath(destinationPath)
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      override fun ownerSetting(ownerSetting: IResolvable) {
+        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
+        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
+      }
+
+      /**
+       * @param ownerSetting The owner setting for the downloaded machine learning resource.
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
+      override
+          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
+          Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
+
+      /**
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
+       * that represents the source model. 
+       */
+      override fun sageMakerJobArn(sageMakerJobArn: String) {
+        cdkBuilder.sageMakerJobArn(sageMakerJobArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty,
+    ) : CdkObject(cdkObject), SageMakerMachineLearningModelResourceDataProperty {
+      /**
+       * The absolute local path of the resource inside the Lambda environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)
+       */
+      override fun destinationPath(): String = unwrap(this).getDestinationPath()
+
+      /**
+       * The owner setting for the downloaded machine learning resource.
+       *
+       * For more information, see [Access Machine Learning Resources from Lambda
+       * Functions](https://docs.aws.amazon.com/greengrass/v1/developerguide/access-ml-resources.html)
+       * in the *Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)
+       */
+      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+       * source model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
+       */
+      override fun sageMakerJobArn(): String = unwrap(this).getSageMakerJobArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SageMakerMachineLearningModelResourceDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty):
+          SageMakerMachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerMachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SageMakerMachineLearningModelResourceDataProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
+    }
+  }
+
+  /**
+   * Settings for a secret resource, which references a secret from AWS Secrets Manager .
+   *
+   * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where
+   * it can be securely accessed by connectors and Lambda functions. For more information, see [Deploy
+   * Secrets to the AWS IoT Greengrass
+   * Core](https://docs.aws.amazon.com/greengrass/v1/developerguide/secrets.html) in the *Developer
+   * Guide* .
+   *
+   * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the
+   * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * SecretsManagerSecretResourceDataProperty secretsManagerSecretResourceDataProperty =
+   * SecretsManagerSecretResourceDataProperty.builder()
+   * .arn("arn")
+   * // the properties below are optional
+   * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html)
+   */
+  public interface SecretsManagerSecretResourceDataProperty {
+    /**
+     * The staging labels whose values you want to make available on the core, in addition to
+     * `AWSCURRENT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-additionalstaginglabelstodownload)
+     */
+    public fun additionalStagingLabelsToDownload(): List<String> =
+        unwrap(this).getAdditionalStagingLabelsToDownload() ?: emptyList()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Secrets Manager secret to make available on the core.
+     *
+     * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
+     * included by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [SecretsManagerSecretResourceDataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
+       * available on the core, in addition to `AWSCURRENT` .
+       */
+      public fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>)
+
+      /**
+       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
+       * available on the core, in addition to `AWSCURRENT` .
+       */
+      public fun additionalStagingLabelsToDownload(vararg additionalStagingLabelsToDownload: String)
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Secrets Manager secret to make available
+       * on the core. 
+       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
+       * included by default.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.builder()
+
+      /**
+       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
+       * available on the core, in addition to `AWSCURRENT` .
+       */
+      override
+          fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>) {
+        cdkBuilder.additionalStagingLabelsToDownload(additionalStagingLabelsToDownload)
+      }
+
+      /**
+       * @param additionalStagingLabelsToDownload The staging labels whose values you want to make
+       * available on the core, in addition to `AWSCURRENT` .
+       */
+      override fun additionalStagingLabelsToDownload(vararg
+          additionalStagingLabelsToDownload: String): Unit =
+          additionalStagingLabelsToDownload(additionalStagingLabelsToDownload.toList())
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Secrets Manager secret to make available
+       * on the core. 
+       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
+       * included by default.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty,
+    ) : CdkObject(cdkObject), SecretsManagerSecretResourceDataProperty {
+      /**
+       * The staging labels whose values you want to make available on the core, in addition to
+       * `AWSCURRENT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-additionalstaginglabelstodownload)
+       */
+      override fun additionalStagingLabelsToDownload(): List<String> =
+          unwrap(this).getAdditionalStagingLabelsToDownload() ?: emptyList()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Secrets Manager secret to make available on the core.
+       *
+       * The value of the secret's latest version (represented by the `AWSCURRENT` staging label) is
+       * included by default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html#cfn-greengrass-resourcedefinition-secretsmanagersecretresourcedata-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SecretsManagerSecretResourceDataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty):
+          SecretsManagerSecretResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SecretsManagerSecretResourceDataProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecretsManagerSecretResourceDataProperty):
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
     }
   }
 }

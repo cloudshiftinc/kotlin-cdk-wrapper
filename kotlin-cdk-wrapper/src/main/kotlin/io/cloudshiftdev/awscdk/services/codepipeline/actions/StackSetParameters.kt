@@ -20,12 +20,11 @@ import kotlin.collections.Map
  * "Asset1", "true"));
  * ```
  */
-public abstract class StackSetParameters internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
+public abstract class StackSetParameters(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
   ) : StackSetParameters(cdkObject)
 
   public companion object {

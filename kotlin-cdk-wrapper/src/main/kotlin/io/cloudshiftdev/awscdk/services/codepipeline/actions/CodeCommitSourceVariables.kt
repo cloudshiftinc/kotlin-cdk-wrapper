@@ -151,8 +151,7 @@ public interface CodeCommitSourceVariables {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceVariables,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceVariables,
   ) : CdkObject(cdkObject), CodeCommitSourceVariables {
     /**
      * The date the currently last commit on the tracked branch was authored, in ISO-8601 format.

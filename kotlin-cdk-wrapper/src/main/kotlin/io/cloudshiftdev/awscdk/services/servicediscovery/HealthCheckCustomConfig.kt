@@ -64,8 +64,7 @@ public interface HealthCheckCustomConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig,
   ) : CdkObject(cdkObject), HealthCheckCustomConfig {
     /**
      * The number of 30-second intervals that you want Cloud Map to wait after receiving an

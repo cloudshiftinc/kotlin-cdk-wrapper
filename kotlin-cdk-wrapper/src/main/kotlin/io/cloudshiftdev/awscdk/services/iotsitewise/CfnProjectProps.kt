@@ -181,7 +181,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * A list that contains the IDs of each asset associated with the project.

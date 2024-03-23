@@ -21,7 +21,7 @@ public interface IAuthorizer : IResource {
   public fun authorizerId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IAuthorizer,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IAuthorizer,
   ) : CdkObject(cdkObject), IAuthorizer {
     /**
      * Apply the given removal policy to this resource.

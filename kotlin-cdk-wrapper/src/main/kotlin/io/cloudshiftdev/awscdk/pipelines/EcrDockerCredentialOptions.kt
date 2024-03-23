@@ -95,7 +95,7 @@ public interface EcrDockerCredentialOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions,
+    cdkObject: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions,
   ) : CdkObject(cdkObject), EcrDockerCredentialOptions {
     /**
      * An IAM role to assume prior to accessing the secret.

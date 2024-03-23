@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html)
  */
-public open class CfnServerCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificate,
+public open class CfnServerCertificate(
+  cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -433,6 +433,7 @@ public open class CfnServerCertificate internal constructor(
         CfnServerCertificate = CfnServerCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerCertificate):
-        software.amazon.awscdk.services.iam.CfnServerCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnServerCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnServerCertificate
   }
 }

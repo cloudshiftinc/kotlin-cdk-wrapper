@@ -136,7 +136,7 @@ public interface EventInvokeConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigOptions,
   ) : CdkObject(cdkObject), EventInvokeConfigOptions {
     /**
      * The maximum age of a request that Lambda sends to a function for processing.

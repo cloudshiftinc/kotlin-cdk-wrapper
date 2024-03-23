@@ -217,7 +217,7 @@ public interface CfnNetworkInterfaceAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachmentProps,
   ) : CdkObject(cdkObject), CfnNetworkInterfaceAttachmentProps {
     /**
      * Whether to delete the network interface when the instance terminates.

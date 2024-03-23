@@ -146,7 +146,7 @@ public interface AppsyncFunctionProps : BaseAppsyncFunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionProps,
+    cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionProps,
   ) : CdkObject(cdkObject), AppsyncFunctionProps {
     /**
      * the GraphQL Api linked to this AppSync Function.

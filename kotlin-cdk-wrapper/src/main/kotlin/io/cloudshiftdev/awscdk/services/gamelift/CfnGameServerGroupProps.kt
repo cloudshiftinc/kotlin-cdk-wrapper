@@ -711,7 +711,7 @@ public interface CfnGameServerGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps,
   ) : CdkObject(cdkObject), CfnGameServerGroupProps {
     /**
      * Configuration settings to define a scaling policy for the Auto Scaling group that is

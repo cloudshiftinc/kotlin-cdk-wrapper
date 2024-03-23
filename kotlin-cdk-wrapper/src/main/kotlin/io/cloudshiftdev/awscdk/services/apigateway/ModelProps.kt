@@ -196,7 +196,7 @@ public interface ModelProps : ModelOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ModelProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.ModelProps,
   ) : CdkObject(cdkObject), ModelProps {
     /**
      * The content type for the model.

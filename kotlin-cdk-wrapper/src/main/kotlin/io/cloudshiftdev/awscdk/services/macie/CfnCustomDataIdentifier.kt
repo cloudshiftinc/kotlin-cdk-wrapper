@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)
  */
-public open class CfnCustomDataIdentifier internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifier,
+public open class CfnCustomDataIdentifier(
+  cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifier,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -536,6 +536,7 @@ public open class CfnCustomDataIdentifier internal constructor(
         CfnCustomDataIdentifier = CfnCustomDataIdentifier(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomDataIdentifier):
-        software.amazon.awscdk.services.macie.CfnCustomDataIdentifier = wrapped.cdkObject
+        software.amazon.awscdk.services.macie.CfnCustomDataIdentifier = wrapped.cdkObject as
+        software.amazon.awscdk.services.macie.CfnCustomDataIdentifier
   }
 }

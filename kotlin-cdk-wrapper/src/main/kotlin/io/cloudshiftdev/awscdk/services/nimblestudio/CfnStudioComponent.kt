@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)
  */
-public open class CfnStudioComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
+public open class CfnStudioComponent(
+  cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -730,7 +730,608 @@ public open class CfnStudioComponent internal constructor(
         CfnStudioComponent = CfnStudioComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioComponent):
-        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent = wrapped.cdkObject
+        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
+  }
+
+  /**
+   * An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * ActiveDirectoryComputerAttributeProperty activeDirectoryComputerAttributeProperty =
+   * ActiveDirectoryComputerAttributeProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html)
+   */
+  public interface ActiveDirectoryComputerAttributeProperty {
+    /**
+     * The name for the LDAP attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value for the LDAP attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ActiveDirectoryComputerAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name for the LDAP attribute.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value for the LDAP attribute.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.builder()
+
+      /**
+       * @param name The name for the LDAP attribute.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value for the LDAP attribute.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
+    ) : CdkObject(cdkObject), ActiveDirectoryComputerAttributeProperty {
+      /**
+       * The name for the LDAP attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The value for the LDAP attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ActiveDirectoryComputerAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty):
+          ActiveDirectoryComputerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryComputerAttributeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActiveDirectoryComputerAttributeProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+    }
+  }
+
+  /**
+   * The configuration for a AWS Directory Service for Microsoft Active Directory studio resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * ActiveDirectoryConfigurationProperty activeDirectoryConfigurationProperty =
+   * ActiveDirectoryConfigurationProperty.builder()
+   * .computerAttributes(List.of(ActiveDirectoryComputerAttributeProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .directoryId("directoryId")
+   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html)
+   */
+  public interface ActiveDirectoryConfigurationProperty {
+    /**
+     * A collection of custom attributes for an Active Directory computer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)
+     */
+    public fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
+
+    /**
+     * The directory ID of the AWS Directory Service for Microsoft Active Directory to access using
+     * this studio component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid)
+     */
+    public fun directoryId(): String? = unwrap(this).getDirectoryId()
+
+    /**
+     * The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname)
+     */
+    public fun organizationalUnitDistinguishedName(): String? =
+        unwrap(this).getOrganizationalUnitDistinguishedName()
+
+    /**
+     * A builder for [ActiveDirectoryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      public fun computerAttributes(computerAttributes: IResolvable)
+
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      public fun computerAttributes(computerAttributes: List<Any>)
+
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      public fun computerAttributes(vararg computerAttributes: Any)
+
+      /**
+       * @param directoryId The directory ID of the AWS Directory Service for Microsoft Active
+       * Directory to access using this studio component.
+       */
+      public fun directoryId(directoryId: String)
+
+      /**
+       * @param organizationalUnitDistinguishedName The distinguished name (DN) and organizational
+       * unit (OU) of an Active Directory computer.
+       */
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty.builder()
+
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      override fun computerAttributes(computerAttributes: IResolvable) {
+        cdkBuilder.computerAttributes(computerAttributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      override fun computerAttributes(computerAttributes: List<Any>) {
+        cdkBuilder.computerAttributes(computerAttributes)
+      }
+
+      /**
+       * @param computerAttributes A collection of custom attributes for an Active Directory
+       * computer.
+       */
+      override fun computerAttributes(vararg computerAttributes: Any): Unit =
+          computerAttributes(computerAttributes.toList())
+
+      /**
+       * @param directoryId The directory ID of the AWS Directory Service for Microsoft Active
+       * Directory to access using this studio component.
+       */
+      override fun directoryId(directoryId: String) {
+        cdkBuilder.directoryId(directoryId)
+      }
+
+      /**
+       * @param organizationalUnitDistinguishedName The distinguished name (DN) and organizational
+       * unit (OU) of an Active Directory computer.
+       */
+      override
+          fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
+        cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
+    ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
+      /**
+       * A collection of custom attributes for an Active Directory computer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)
+       */
+      override fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
+
+      /**
+       * The directory ID of the AWS Directory Service for Microsoft Active Directory to access
+       * using this studio component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid)
+       */
+      override fun directoryId(): String? = unwrap(this).getDirectoryId()
+
+      /**
+       * The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname)
+       */
+      override fun organizationalUnitDistinguishedName(): String? =
+          unwrap(this).getOrganizationalUnitDistinguishedName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ActiveDirectoryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty):
+          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActiveDirectoryConfigurationProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration for a render farm that is associated with a studio resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * ComputeFarmConfigurationProperty computeFarmConfigurationProperty =
+   * ComputeFarmConfigurationProperty.builder()
+   * .activeDirectoryUser("activeDirectoryUser")
+   * .endpoint("endpoint")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html)
+   */
+  public interface ComputeFarmConfigurationProperty {
+    /**
+     * The name of an Active Directory user that is used on ComputeFarm worker instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-activedirectoryuser)
+     */
+    public fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
+
+    /**
+     * The endpoint of the ComputeFarm that is accessed by the studio component resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-endpoint)
+     */
+    public fun endpoint(): String? = unwrap(this).getEndpoint()
+
+    /**
+     * A builder for [ComputeFarmConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
+       * worker instances.
+       */
+      public fun activeDirectoryUser(activeDirectoryUser: String)
+
+      /**
+       * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
+       * resource.
+       */
+      public fun endpoint(endpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty.builder()
+
+      /**
+       * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
+       * worker instances.
+       */
+      override fun activeDirectoryUser(activeDirectoryUser: String) {
+        cdkBuilder.activeDirectoryUser(activeDirectoryUser)
+      }
+
+      /**
+       * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
+       * resource.
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
+    ) : CdkObject(cdkObject), ComputeFarmConfigurationProperty {
+      /**
+       * The name of an Active Directory user that is used on ComputeFarm worker instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-activedirectoryuser)
+       */
+      override fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
+
+      /**
+       * The endpoint of the ComputeFarm that is accessed by the studio component resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-endpoint)
+       */
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComputeFarmConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty):
+          ComputeFarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputeFarmConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComputeFarmConfigurationProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration for a license service that is associated with a studio resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * LicenseServiceConfigurationProperty licenseServiceConfigurationProperty =
+   * LicenseServiceConfigurationProperty.builder()
+   * .endpoint("endpoint")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html)
+   */
+  public interface LicenseServiceConfigurationProperty {
+    /**
+     * The endpoint of the license service that is accessed by the studio component resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html#cfn-nimblestudio-studiocomponent-licenseserviceconfiguration-endpoint)
+     */
+    public fun endpoint(): String? = unwrap(this).getEndpoint()
+
+    /**
+     * A builder for [LicenseServiceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpoint The endpoint of the license service that is accessed by the studio
+       * component resource.
+       */
+      public fun endpoint(endpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
+
+      /**
+       * @param endpoint The endpoint of the license service that is accessed by the studio
+       * component resource.
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
+    ) : CdkObject(cdkObject), LicenseServiceConfigurationProperty {
+      /**
+       * The endpoint of the license service that is accessed by the studio component resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html#cfn-nimblestudio-studiocomponent-licenseserviceconfiguration-endpoint)
+       */
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LicenseServiceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty):
+          LicenseServiceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LicenseServiceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LicenseServiceConfigurationProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
+    }
+  }
+
+  /**
+   * A parameter for a studio component script, in the form of a key-value pair.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * ScriptParameterKeyValueProperty scriptParameterKeyValueProperty =
+   * ScriptParameterKeyValueProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html)
+   */
+  public interface ScriptParameterKeyValueProperty {
+    /**
+     * A script parameter key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * A script parameter value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ScriptParameterKeyValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key A script parameter key.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value A script parameter value.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
+
+      /**
+       * @param key A script parameter key.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value A script parameter value.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
+    ) : CdkObject(cdkObject), ScriptParameterKeyValueProperty {
+      /**
+       * A script parameter key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * A script parameter value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScriptParameterKeyValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty):
+          ScriptParameterKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScriptParameterKeyValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScriptParameterKeyValueProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
+    }
   }
 
   /**
@@ -874,8 +1475,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
     ) : CdkObject(cdkObject), SharedFileSystemConfigurationProperty {
       /**
        * The endpoint of the shared file system that is accessed by the studio component resource.
@@ -929,675 +1529,6 @@ public open class CfnStudioComponent internal constructor(
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty
-    }
-  }
-
-  /**
-   * A parameter for a studio component script, in the form of a key-value pair.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * ScriptParameterKeyValueProperty scriptParameterKeyValueProperty =
-   * ScriptParameterKeyValueProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html)
-   */
-  public interface ScriptParameterKeyValueProperty {
-    /**
-     * A script parameter key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * A script parameter value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ScriptParameterKeyValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key A script parameter key.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value A script parameter value.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
-
-      /**
-       * @param key A script parameter key.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value A script parameter value.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
-    ) : CdkObject(cdkObject), ScriptParameterKeyValueProperty {
-      /**
-       * A script parameter key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * A script parameter value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html#cfn-nimblestudio-studiocomponent-scriptparameterkeyvalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScriptParameterKeyValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty):
-          ScriptParameterKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScriptParameterKeyValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScriptParameterKeyValueProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
-    }
-  }
-
-  /**
-   * The configuration for a render farm that is associated with a studio resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * ComputeFarmConfigurationProperty computeFarmConfigurationProperty =
-   * ComputeFarmConfigurationProperty.builder()
-   * .activeDirectoryUser("activeDirectoryUser")
-   * .endpoint("endpoint")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html)
-   */
-  public interface ComputeFarmConfigurationProperty {
-    /**
-     * The name of an Active Directory user that is used on ComputeFarm worker instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-activedirectoryuser)
-     */
-    public fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
-
-    /**
-     * The endpoint of the ComputeFarm that is accessed by the studio component resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-endpoint)
-     */
-    public fun endpoint(): String? = unwrap(this).getEndpoint()
-
-    /**
-     * A builder for [ComputeFarmConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
-       * worker instances.
-       */
-      public fun activeDirectoryUser(activeDirectoryUser: String)
-
-      /**
-       * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
-       * resource.
-       */
-      public fun endpoint(endpoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty.builder()
-
-      /**
-       * @param activeDirectoryUser The name of an Active Directory user that is used on ComputeFarm
-       * worker instances.
-       */
-      override fun activeDirectoryUser(activeDirectoryUser: String) {
-        cdkBuilder.activeDirectoryUser(activeDirectoryUser)
-      }
-
-      /**
-       * @param endpoint The endpoint of the ComputeFarm that is accessed by the studio component
-       * resource.
-       */
-      override fun endpoint(endpoint: String) {
-        cdkBuilder.endpoint(endpoint)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
-    ) : CdkObject(cdkObject), ComputeFarmConfigurationProperty {
-      /**
-       * The name of an Active Directory user that is used on ComputeFarm worker instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-activedirectoryuser)
-       */
-      override fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
-
-      /**
-       * The endpoint of the ComputeFarm that is accessed by the studio component resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html#cfn-nimblestudio-studiocomponent-computefarmconfiguration-endpoint)
-       */
-      override fun endpoint(): String? = unwrap(this).getEndpoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComputeFarmConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty):
-          ComputeFarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComputeFarmConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComputeFarmConfigurationProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
-    }
-  }
-
-  /**
-   * Initialization scripts for studio components.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * StudioComponentInitializationScriptProperty studioComponentInitializationScriptProperty =
-   * StudioComponentInitializationScriptProperty.builder()
-   * .launchProfileProtocolVersion("launchProfileProtocolVersion")
-   * .platform("platform")
-   * .runContext("runContext")
-   * .script("script")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html)
-   */
-  public interface StudioComponentInitializationScriptProperty {
-    /**
-     * The version number of the protocol that is used by the launch profile.
-     *
-     * The only valid version is "2021-03-31".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-launchprofileprotocolversion)
-     */
-    public fun launchProfileProtocolVersion(): String? =
-        unwrap(this).getLaunchProfileProtocolVersion()
-
-    /**
-     * The platform of the initialization script, either Windows or Linux.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform)
-     */
-    public fun platform(): String? = unwrap(this).getPlatform()
-
-    /**
-     * The method to use when running the initialization script.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-runcontext)
-     */
-    public fun runContext(): String? = unwrap(this).getRunContext()
-
-    /**
-     * The initialization script.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-script)
-     */
-    public fun script(): String? = unwrap(this).getScript()
-
-    /**
-     * A builder for [StudioComponentInitializationScriptProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchProfileProtocolVersion The version number of the protocol that is used by the
-       * launch profile.
-       * The only valid version is "2021-03-31".
-       */
-      public fun launchProfileProtocolVersion(launchProfileProtocolVersion: String)
-
-      /**
-       * @param platform The platform of the initialization script, either Windows or Linux.
-       */
-      public fun platform(platform: String)
-
-      /**
-       * @param runContext The method to use when running the initialization script.
-       */
-      public fun runContext(runContext: String)
-
-      /**
-       * @param script The initialization script.
-       */
-      public fun script(script: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty.builder()
-
-      /**
-       * @param launchProfileProtocolVersion The version number of the protocol that is used by the
-       * launch profile.
-       * The only valid version is "2021-03-31".
-       */
-      override fun launchProfileProtocolVersion(launchProfileProtocolVersion: String) {
-        cdkBuilder.launchProfileProtocolVersion(launchProfileProtocolVersion)
-      }
-
-      /**
-       * @param platform The platform of the initialization script, either Windows or Linux.
-       */
-      override fun platform(platform: String) {
-        cdkBuilder.platform(platform)
-      }
-
-      /**
-       * @param runContext The method to use when running the initialization script.
-       */
-      override fun runContext(runContext: String) {
-        cdkBuilder.runContext(runContext)
-      }
-
-      /**
-       * @param script The initialization script.
-       */
-      override fun script(script: String) {
-        cdkBuilder.script(script)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
-    ) : CdkObject(cdkObject), StudioComponentInitializationScriptProperty {
-      /**
-       * The version number of the protocol that is used by the launch profile.
-       *
-       * The only valid version is "2021-03-31".
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-launchprofileprotocolversion)
-       */
-      override fun launchProfileProtocolVersion(): String? =
-          unwrap(this).getLaunchProfileProtocolVersion()
-
-      /**
-       * The platform of the initialization script, either Windows or Linux.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform)
-       */
-      override fun platform(): String? = unwrap(this).getPlatform()
-
-      /**
-       * The method to use when running the initialization script.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-runcontext)
-       */
-      override fun runContext(): String? = unwrap(this).getRunContext()
-
-      /**
-       * The initialization script.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-script)
-       */
-      override fun script(): String? = unwrap(this).getScript()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StudioComponentInitializationScriptProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty):
-          StudioComponentInitializationScriptProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StudioComponentInitializationScriptProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StudioComponentInitializationScriptProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
-    }
-  }
-
-  /**
-   * The configuration for a AWS Directory Service for Microsoft Active Directory studio resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * ActiveDirectoryConfigurationProperty activeDirectoryConfigurationProperty =
-   * ActiveDirectoryConfigurationProperty.builder()
-   * .computerAttributes(List.of(ActiveDirectoryComputerAttributeProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .directoryId("directoryId")
-   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html)
-   */
-  public interface ActiveDirectoryConfigurationProperty {
-    /**
-     * A collection of custom attributes for an Active Directory computer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)
-     */
-    public fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
-
-    /**
-     * The directory ID of the AWS Directory Service for Microsoft Active Directory to access using
-     * this studio component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid)
-     */
-    public fun directoryId(): String? = unwrap(this).getDirectoryId()
-
-    /**
-     * The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname)
-     */
-    public fun organizationalUnitDistinguishedName(): String? =
-        unwrap(this).getOrganizationalUnitDistinguishedName()
-
-    /**
-     * A builder for [ActiveDirectoryConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      public fun computerAttributes(computerAttributes: IResolvable)
-
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      public fun computerAttributes(computerAttributes: List<Any>)
-
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      public fun computerAttributes(vararg computerAttributes: Any)
-
-      /**
-       * @param directoryId The directory ID of the AWS Directory Service for Microsoft Active
-       * Directory to access using this studio component.
-       */
-      public fun directoryId(directoryId: String)
-
-      /**
-       * @param organizationalUnitDistinguishedName The distinguished name (DN) and organizational
-       * unit (OU) of an Active Directory computer.
-       */
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty.builder()
-
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      override fun computerAttributes(computerAttributes: IResolvable) {
-        cdkBuilder.computerAttributes(computerAttributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      override fun computerAttributes(computerAttributes: List<Any>) {
-        cdkBuilder.computerAttributes(computerAttributes)
-      }
-
-      /**
-       * @param computerAttributes A collection of custom attributes for an Active Directory
-       * computer.
-       */
-      override fun computerAttributes(vararg computerAttributes: Any): Unit =
-          computerAttributes(computerAttributes.toList())
-
-      /**
-       * @param directoryId The directory ID of the AWS Directory Service for Microsoft Active
-       * Directory to access using this studio component.
-       */
-      override fun directoryId(directoryId: String) {
-        cdkBuilder.directoryId(directoryId)
-      }
-
-      /**
-       * @param organizationalUnitDistinguishedName The distinguished name (DN) and organizational
-       * unit (OU) of an Active Directory computer.
-       */
-      override
-          fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-        cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
-    ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
-      /**
-       * A collection of custom attributes for an Active Directory computer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)
-       */
-      override fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
-
-      /**
-       * The directory ID of the AWS Directory Service for Microsoft Active Directory to access
-       * using this studio component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid)
-       */
-      override fun directoryId(): String? = unwrap(this).getDirectoryId()
-
-      /**
-       * The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname)
-       */
-      override fun organizationalUnitDistinguishedName(): String? =
-          unwrap(this).getOrganizationalUnitDistinguishedName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ActiveDirectoryConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty):
-          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActiveDirectoryConfigurationProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration for a license service that is associated with a studio resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * LicenseServiceConfigurationProperty licenseServiceConfigurationProperty =
-   * LicenseServiceConfigurationProperty.builder()
-   * .endpoint("endpoint")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html)
-   */
-  public interface LicenseServiceConfigurationProperty {
-    /**
-     * The endpoint of the license service that is accessed by the studio component resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html#cfn-nimblestudio-studiocomponent-licenseserviceconfiguration-endpoint)
-     */
-    public fun endpoint(): String? = unwrap(this).getEndpoint()
-
-    /**
-     * A builder for [LicenseServiceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpoint The endpoint of the license service that is accessed by the studio
-       * component resource.
-       */
-      public fun endpoint(endpoint: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
-
-      /**
-       * @param endpoint The endpoint of the license service that is accessed by the studio
-       * component resource.
-       */
-      override fun endpoint(endpoint: String) {
-        cdkBuilder.endpoint(endpoint)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
-    ) : CdkObject(cdkObject), LicenseServiceConfigurationProperty {
-      /**
-       * The endpoint of the license service that is accessed by the studio component resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html#cfn-nimblestudio-studiocomponent-licenseserviceconfiguration-endpoint)
-       */
-      override fun endpoint(): String? = unwrap(this).getEndpoint()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LicenseServiceConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty):
-          LicenseServiceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LicenseServiceConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LicenseServiceConfigurationProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
     }
   }
 
@@ -1887,8 +1818,7 @@ public open class CfnStudioComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
     ) : CdkObject(cdkObject), StudioComponentConfigurationProperty {
       /**
        * The configuration for a AWS Directory Service for Microsoft Active Directory studio
@@ -1944,7 +1874,7 @@ public open class CfnStudioComponent internal constructor(
   }
 
   /**
-   * An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.
+   * Initialization scripts for studio components.
    *
    * Example:
    *
@@ -1952,106 +1882,169 @@ public open class CfnStudioComponent internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * ActiveDirectoryComputerAttributeProperty activeDirectoryComputerAttributeProperty =
-   * ActiveDirectoryComputerAttributeProperty.builder()
-   * .name("name")
-   * .value("value")
+   * StudioComponentInitializationScriptProperty studioComponentInitializationScriptProperty =
+   * StudioComponentInitializationScriptProperty.builder()
+   * .launchProfileProtocolVersion("launchProfileProtocolVersion")
+   * .platform("platform")
+   * .runContext("runContext")
+   * .script("script")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html)
    */
-  public interface ActiveDirectoryComputerAttributeProperty {
+  public interface StudioComponentInitializationScriptProperty {
     /**
-     * The name for the LDAP attribute.
+     * The version number of the protocol that is used by the launch profile.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-name)
+     * The only valid version is "2021-03-31".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-launchprofileprotocolversion)
      */
-    public fun name(): String? = unwrap(this).getName()
+    public fun launchProfileProtocolVersion(): String? =
+        unwrap(this).getLaunchProfileProtocolVersion()
 
     /**
-     * The value for the LDAP attribute.
+     * The platform of the initialization script, either Windows or Linux.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform)
      */
-    public fun `value`(): String? = unwrap(this).getValue()
+    public fun platform(): String? = unwrap(this).getPlatform()
 
     /**
-     * A builder for [ActiveDirectoryComputerAttributeProperty]
+     * The method to use when running the initialization script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-runcontext)
+     */
+    public fun runContext(): String? = unwrap(this).getRunContext()
+
+    /**
+     * The initialization script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-script)
+     */
+    public fun script(): String? = unwrap(this).getScript()
+
+    /**
+     * A builder for [StudioComponentInitializationScriptProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name for the LDAP attribute.
+       * @param launchProfileProtocolVersion The version number of the protocol that is used by the
+       * launch profile.
+       * The only valid version is "2021-03-31".
        */
-      public fun name(name: String)
+      public fun launchProfileProtocolVersion(launchProfileProtocolVersion: String)
 
       /**
-       * @param value The value for the LDAP attribute.
+       * @param platform The platform of the initialization script, either Windows or Linux.
        */
-      public fun `value`(`value`: String)
+      public fun platform(platform: String)
+
+      /**
+       * @param runContext The method to use when running the initialization script.
+       */
+      public fun runContext(runContext: String)
+
+      /**
+       * @param script The initialization script.
+       */
+      public fun script(script: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.Builder
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty.Builder
           =
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.builder()
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty.builder()
 
       /**
-       * @param name The name for the LDAP attribute.
+       * @param launchProfileProtocolVersion The version number of the protocol that is used by the
+       * launch profile.
+       * The only valid version is "2021-03-31".
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun launchProfileProtocolVersion(launchProfileProtocolVersion: String) {
+        cdkBuilder.launchProfileProtocolVersion(launchProfileProtocolVersion)
       }
 
       /**
-       * @param value The value for the LDAP attribute.
+       * @param platform The platform of the initialization script, either Windows or Linux.
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun platform(platform: String) {
+        cdkBuilder.platform(platform)
+      }
+
+      /**
+       * @param runContext The method to use when running the initialization script.
+       */
+      override fun runContext(runContext: String) {
+        cdkBuilder.runContext(runContext)
+      }
+
+      /**
+       * @param script The initialization script.
+       */
+      override fun script(script: String) {
+        cdkBuilder.script(script)
       }
 
       public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
-    ) : CdkObject(cdkObject), ActiveDirectoryComputerAttributeProperty {
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
+    ) : CdkObject(cdkObject), StudioComponentInitializationScriptProperty {
       /**
-       * The name for the LDAP attribute.
+       * The version number of the protocol that is used by the launch profile.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-name)
+       * The only valid version is "2021-03-31".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-launchprofileprotocolversion)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun launchProfileProtocolVersion(): String? =
+          unwrap(this).getLaunchProfileProtocolVersion()
 
       /**
-       * The value for the LDAP attribute.
+       * The platform of the initialization script, either Windows or Linux.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html#cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform)
        */
-      override fun `value`(): String? = unwrap(this).getValue()
+      override fun platform(): String? = unwrap(this).getPlatform()
+
+      /**
+       * The method to use when running the initialization script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-runcontext)
+       */
+      override fun runContext(): String? = unwrap(this).getRunContext()
+
+      /**
+       * The initialization script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html#cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-script)
+       */
+      override fun script(): String? = unwrap(this).getScript()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          ActiveDirectoryComputerAttributeProperty {
+          StudioComponentInitializationScriptProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty):
-          ActiveDirectoryComputerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ActiveDirectoryComputerAttributeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty):
+          StudioComponentInitializationScriptProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StudioComponentInitializationScriptProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ActiveDirectoryComputerAttributeProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+      internal fun unwrap(wrapped: StudioComponentInitializationScriptProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty
+          software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
     }
   }
 }

@@ -37,7 +37,7 @@ public interface IResolvable {
       unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IResolvable,
+    cdkObject: software.amazon.awscdk.IResolvable,
   ) : CdkObject(cdkObject), IResolvable {
     /**
      * The creation stack of this resolvable which will be appended to errors thrown during

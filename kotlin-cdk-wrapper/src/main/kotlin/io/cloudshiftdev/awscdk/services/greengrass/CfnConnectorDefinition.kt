@@ -67,9 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
  */
-public open class CfnConnectorDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
+public open class CfnConnectorDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -404,7 +403,150 @@ public open class CfnConnectorDefinition internal constructor(
         CfnConnectorDefinition = CfnConnectorDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectorDefinition):
-        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
+  }
+
+  /**
+   * A connector definition version contains a list of connectors.
+   *
+   *
+   * After you create a connector definition version that contains the connectors you want to
+   * deploy, you must add it to your group version. For more information, see
+   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+   * .
+   *
+   *
+   * In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the
+   * `InitialVersion` property in the
+   * [`AWS::Greengrass::ConnectorDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * Object parameters;
+   * ConnectorDefinitionVersionProperty connectorDefinitionVersionProperty =
+   * ConnectorDefinitionVersionProperty.builder()
+   * .connectors(List.of(ConnectorProperty.builder()
+   * .connectorArn("connectorArn")
+   * .id("id")
+   * // the properties below are optional
+   * .parameters(parameters)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html)
+   */
+  public interface ConnectorDefinitionVersionProperty {
+    /**
+     * The connectors in this version.
+     *
+     * Only one instance of a given connector can be added to a connector definition version at a
+     * time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)
+     */
+    public fun connectors(): Any
+
+    /**
+     * A builder for [ConnectorDefinitionVersionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      public fun connectors(connectors: IResolvable)
+
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      public fun connectors(connectors: List<Any>)
+
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      public fun connectors(vararg connectors: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty.builder()
+
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      override fun connectors(connectors: IResolvable) {
+        cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      override fun connectors(connectors: List<Any>) {
+        cdkBuilder.connectors(connectors)
+      }
+
+      /**
+       * @param connectors The connectors in this version. 
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       */
+      override fun connectors(vararg connectors: Any): Unit = connectors(connectors.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty,
+    ) : CdkObject(cdkObject), ConnectorDefinitionVersionProperty {
+      /**
+       * The connectors in this version.
+       *
+       * Only one instance of a given connector can be added to a connector definition version at a
+       * time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)
+       */
+      override fun connectors(): Any = unwrap(this).getConnectors()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConnectorDefinitionVersionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty):
+          ConnectorDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorDefinitionVersionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectorDefinitionVersionProperty):
+          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
+    }
   }
 
   /**
@@ -533,8 +675,7 @@ public open class CfnConnectorDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty,
     ) : CdkObject(cdkObject), ConnectorProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector.
@@ -582,149 +723,6 @@ public open class CfnConnectorDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty
-    }
-  }
-
-  /**
-   * A connector definition version contains a list of connectors.
-   *
-   *
-   * After you create a connector definition version that contains the connectors you want to
-   * deploy, you must add it to your group version. For more information, see
-   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
-   * .
-   *
-   *
-   * In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the
-   * `InitialVersion` property in the
-   * [`AWS::Greengrass::ConnectorDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * Object parameters;
-   * ConnectorDefinitionVersionProperty connectorDefinitionVersionProperty =
-   * ConnectorDefinitionVersionProperty.builder()
-   * .connectors(List.of(ConnectorProperty.builder()
-   * .connectorArn("connectorArn")
-   * .id("id")
-   * // the properties below are optional
-   * .parameters(parameters)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html)
-   */
-  public interface ConnectorDefinitionVersionProperty {
-    /**
-     * The connectors in this version.
-     *
-     * Only one instance of a given connector can be added to a connector definition version at a
-     * time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)
-     */
-    public fun connectors(): Any
-
-    /**
-     * A builder for [ConnectorDefinitionVersionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      public fun connectors(connectors: IResolvable)
-
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      public fun connectors(connectors: List<Any>)
-
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      public fun connectors(vararg connectors: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty.builder()
-
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      override fun connectors(connectors: IResolvable) {
-        cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      override fun connectors(connectors: List<Any>) {
-        cdkBuilder.connectors(connectors)
-      }
-
-      /**
-       * @param connectors The connectors in this version. 
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       */
-      override fun connectors(vararg connectors: Any): Unit = connectors(connectors.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), ConnectorDefinitionVersionProperty {
-      /**
-       * The connectors in this version.
-       *
-       * Only one instance of a given connector can be added to a connector definition version at a
-       * time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)
-       */
-      override fun connectors(): Any = unwrap(this).getConnectors()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConnectorDefinitionVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty):
-          ConnectorDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectorDefinitionVersionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectorDefinitionVersionProperty):
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty
     }
   }
 }

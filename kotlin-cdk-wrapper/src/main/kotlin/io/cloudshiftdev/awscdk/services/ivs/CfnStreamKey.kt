@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html)
  */
-public open class CfnStreamKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKey,
+public open class CfnStreamKey(
+  cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -217,6 +217,6 @@ public open class CfnStreamKey internal constructor(
         CfnStreamKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamKey): software.amazon.awscdk.services.ivs.CfnStreamKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ivs.CfnStreamKey
   }
 }

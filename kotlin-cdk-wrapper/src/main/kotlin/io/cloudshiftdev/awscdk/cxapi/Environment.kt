@@ -90,7 +90,7 @@ public interface Environment {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.Environment,
+    cdkObject: software.amazon.awscdk.cxapi.Environment,
   ) : CdkObject(cdkObject), Environment {
     /**
      * The AWS account this environment deploys into.

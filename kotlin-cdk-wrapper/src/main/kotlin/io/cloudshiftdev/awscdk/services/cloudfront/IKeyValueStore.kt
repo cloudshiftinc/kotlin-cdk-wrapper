@@ -31,7 +31,7 @@ public interface IKeyValueStore : IResource {
   public fun keyValueStoreStatus(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IKeyValueStore,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IKeyValueStore,
   ) : CdkObject(cdkObject), IKeyValueStore {
     /**
      * Apply the given removal policy to this resource.

@@ -15,8 +15,8 @@ import kotlin.jvm.JvmName
  * For example, those can be
  * used to allocate unique physical names for resources.
  */
-public open class Names internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Names,
+public open class Names(
+  cdkObject: software.amazon.awscdk.Names,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun nodeUniqueId(node: Node): String =
@@ -37,6 +37,7 @@ public open class Names internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Names): Names = Names(cdkObject)
 
-    internal fun unwrap(wrapped: Names): software.amazon.awscdk.Names = wrapped.cdkObject
+    internal fun unwrap(wrapped: Names): software.amazon.awscdk.Names = wrapped.cdkObject as
+        software.amazon.awscdk.Names
   }
 }

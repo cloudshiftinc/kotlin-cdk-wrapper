@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html)
  */
-public open class CfnSecurityConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig,
+public open class CfnSecurityConfig(
+  cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -310,6 +309,7 @@ public open class CfnSecurityConfig internal constructor(
 
     internal fun unwrap(wrapped: CfnSecurityConfig):
         software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig = wrapped.cdkObject
+        as software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig
   }
 
   /**
@@ -432,8 +432,7 @@ public open class CfnSecurityConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty,
     ) : CdkObject(cdkObject), SamlConfigOptionsProperty {
       /**
        * The group attribute for this SAML integration.

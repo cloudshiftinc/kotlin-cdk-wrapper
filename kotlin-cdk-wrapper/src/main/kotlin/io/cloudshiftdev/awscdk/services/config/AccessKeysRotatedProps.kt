@@ -131,7 +131,7 @@ public interface AccessKeysRotatedProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.AccessKeysRotatedProps,
+    cdkObject: software.amazon.awscdk.services.config.AccessKeysRotatedProps,
   ) : CdkObject(cdkObject), AccessKeysRotatedProps {
     /**
      * A name for the AWS Config rule.

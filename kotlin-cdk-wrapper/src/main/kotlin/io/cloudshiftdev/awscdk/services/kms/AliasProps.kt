@@ -123,7 +123,7 @@ public interface AliasProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.AliasProps,
+    cdkObject: software.amazon.awscdk.services.kms.AliasProps,
   ) : CdkObject(cdkObject), AliasProps {
     /**
      * The name of the alias.

@@ -1264,7 +1264,7 @@ public interface CfnKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.CfnKeyProps,
+    cdkObject: software.amazon.awscdk.services.kms.CfnKeyProps,
   ) : CdkObject(cdkObject), CfnKeyProps {
     /**
      * Skips ("bypasses") the key policy lockout safety check. The default value is false.

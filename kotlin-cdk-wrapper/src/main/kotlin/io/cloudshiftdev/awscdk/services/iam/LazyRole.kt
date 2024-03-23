@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LazyRole internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.LazyRole,
+public open class LazyRole(
+  cdkObject: software.amazon.awscdk.services.iam.LazyRole,
 ) : Resource(cdkObject), IRole {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -559,6 +559,6 @@ public open class LazyRole internal constructor(
         LazyRole(cdkObject)
 
     internal fun unwrap(wrapped: LazyRole): software.amazon.awscdk.services.iam.LazyRole =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.LazyRole
   }
 }

@@ -24,9 +24,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  * .build();
  * ```
  */
-public open class LoadBalancerTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.LoadBalancerTarget,
+public open class LoadBalancerTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.LoadBalancerTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(loadBalancer: ILoadBalancerV2) :
       this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(loadBalancer.let(ILoadBalancerV2::unwrap))
@@ -57,6 +56,7 @@ public open class LoadBalancerTarget internal constructor(
         LoadBalancerTarget = LoadBalancerTarget(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerTarget):
-        software.amazon.awscdk.services.route53.targets.LoadBalancerTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.LoadBalancerTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.LoadBalancerTarget
   }
 }

@@ -27,8 +27,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
  * .build())));
  * ```
  */
-public open class RetryStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
+public open class RetryStrategy(
+  cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
 ) : CdkObject(cdkObject) {
   public constructor(action: Action, on: Reason) :
       this(software.amazon.awscdk.services.batch.RetryStrategy(action.let(Action::unwrap),
@@ -54,6 +54,6 @@ public open class RetryStrategy internal constructor(
         = RetryStrategy(cdkObject)
 
     internal fun unwrap(wrapped: RetryStrategy): software.amazon.awscdk.services.batch.RetryStrategy
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.batch.RetryStrategy
   }
 }

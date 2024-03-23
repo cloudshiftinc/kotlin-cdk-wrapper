@@ -96,8 +96,7 @@ public interface AvailabilityZonesContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery,
   ) : CdkObject(cdkObject), AvailabilityZonesContextQuery {
     /**
      * Query account.

@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html)
  */
-public open class CfnVerifiedAccessGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup,
+public open class CfnVerifiedAccessGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -429,7 +429,8 @@ public open class CfnVerifiedAccessGroup internal constructor(
         CfnVerifiedAccessGroup = CfnVerifiedAccessGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessGroup):
-        software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup
   }
 
   /**
@@ -532,8 +533,7 @@ public open class CfnVerifiedAccessGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty,
     ) : CdkObject(cdkObject), SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.

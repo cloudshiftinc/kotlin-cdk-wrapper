@@ -119,7 +119,7 @@ public interface YAxisProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.YAxisProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.YAxisProps,
   ) : CdkObject(cdkObject), YAxisProps {
     /**
      * The label.

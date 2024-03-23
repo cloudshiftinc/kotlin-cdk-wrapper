@@ -372,8 +372,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration,
+    cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration,
   ) : CdkObject(cdkObject), ServiceManagedEBSVolumeConfiguration {
     /**
      * Indicates whether the volume should be encrypted.

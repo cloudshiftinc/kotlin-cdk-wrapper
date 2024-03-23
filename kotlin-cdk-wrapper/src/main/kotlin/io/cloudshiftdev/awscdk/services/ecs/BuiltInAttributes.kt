@@ -17,8 +17,8 @@ import kotlin.String
  * BuiltInAttributes builtInAttributes = new BuiltInAttributes();
  * ```
  */
-public open class BuiltInAttributes internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.BuiltInAttributes,
+public open class BuiltInAttributes(
+  cdkObject: software.amazon.awscdk.services.ecs.BuiltInAttributes,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.BuiltInAttributes()
   )
@@ -41,6 +41,7 @@ public open class BuiltInAttributes internal constructor(
         BuiltInAttributes = BuiltInAttributes(cdkObject)
 
     internal fun unwrap(wrapped: BuiltInAttributes):
-        software.amazon.awscdk.services.ecs.BuiltInAttributes = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.BuiltInAttributes = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.BuiltInAttributes
   }
 }

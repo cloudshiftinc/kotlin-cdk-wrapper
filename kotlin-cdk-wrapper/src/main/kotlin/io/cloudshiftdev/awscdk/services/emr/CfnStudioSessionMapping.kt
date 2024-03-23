@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studiosessionmapping.html)
  */
-public open class CfnStudioSessionMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMapping,
+public open class CfnStudioSessionMapping(
+  cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMapping,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,6 +245,7 @@ public open class CfnStudioSessionMapping internal constructor(
         CfnStudioSessionMapping = CfnStudioSessionMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioSessionMapping):
-        software.amazon.awscdk.services.emr.CfnStudioSessionMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.emr.CfnStudioSessionMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.emr.CfnStudioSessionMapping
   }
 }

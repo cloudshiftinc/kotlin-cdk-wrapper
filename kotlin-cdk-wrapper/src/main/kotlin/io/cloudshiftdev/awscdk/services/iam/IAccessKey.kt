@@ -29,7 +29,7 @@ public interface IAccessKey : IResource {
   public fun secretAccessKey(): SecretValue
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IAccessKey,
+    cdkObject: software.amazon.awscdk.services.iam.IAccessKey,
   ) : CdkObject(cdkObject), IAccessKey {
     /**
      * The Access Key ID.

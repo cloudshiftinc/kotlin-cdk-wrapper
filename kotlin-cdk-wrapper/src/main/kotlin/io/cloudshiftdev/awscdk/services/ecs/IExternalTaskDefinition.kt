@@ -17,7 +17,7 @@ import kotlin.String
  */
 public interface IExternalTaskDefinition : ITaskDefinition {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IExternalTaskDefinition,
+    cdkObject: software.amazon.awscdk.services.ecs.IExternalTaskDefinition,
   ) : CdkObject(cdkObject), IExternalTaskDefinition {
     /**
      * Apply the given removal policy to this resource.

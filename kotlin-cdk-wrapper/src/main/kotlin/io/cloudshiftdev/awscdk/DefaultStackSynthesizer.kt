@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class DefaultStackSynthesizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.DefaultStackSynthesizer,
+public open class DefaultStackSynthesizer(
+  cdkObject: software.amazon.awscdk.DefaultStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.DefaultStackSynthesizer()
   )
@@ -693,6 +693,7 @@ public open class DefaultStackSynthesizer internal constructor(
         DefaultStackSynthesizer = DefaultStackSynthesizer(cdkObject)
 
     internal fun unwrap(wrapped: DefaultStackSynthesizer):
-        software.amazon.awscdk.DefaultStackSynthesizer = wrapped.cdkObject
+        software.amazon.awscdk.DefaultStackSynthesizer = wrapped.cdkObject as
+        software.amazon.awscdk.DefaultStackSynthesizer
   }
 }

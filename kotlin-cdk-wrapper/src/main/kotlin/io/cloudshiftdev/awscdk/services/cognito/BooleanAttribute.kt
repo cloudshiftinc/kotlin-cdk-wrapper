@@ -33,8 +33,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class BooleanAttribute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.BooleanAttribute,
+public open class BooleanAttribute(
+  cdkObject: software.amazon.awscdk.services.cognito.BooleanAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.BooleanAttribute()
   )
@@ -111,6 +111,7 @@ public open class BooleanAttribute internal constructor(
         BooleanAttribute = BooleanAttribute(cdkObject)
 
     internal fun unwrap(wrapped: BooleanAttribute):
-        software.amazon.awscdk.services.cognito.BooleanAttribute = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.BooleanAttribute = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.BooleanAttribute
   }
 }

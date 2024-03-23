@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html)
  */
-public open class CfnIPAMScope internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScope,
+public open class CfnIPAMScope(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -273,6 +273,6 @@ public open class CfnIPAMScope internal constructor(
         CfnIPAMScope(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMScope): software.amazon.awscdk.services.ec2.CfnIPAMScope =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnIPAMScope
   }
 }

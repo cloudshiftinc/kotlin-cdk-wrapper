@@ -34,8 +34,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class InitFile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitFile,
+public abstract class InitFile(
+  cdkObject: software.amazon.awscdk.services.ec2.InitFile,
 ) : InitElement(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -43,7 +43,7 @@ public abstract class InitFile internal constructor(
   public override fun elementType(): String = unwrap(this).getElementType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitFile,
+    cdkObject: software.amazon.awscdk.services.ec2.InitFile,
   ) : InitFile(cdkObject)
 
   public companion object {

@@ -88,7 +88,7 @@ public interface PublicSubnetAttributes : SubnetAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PublicSubnetAttributes,
+    cdkObject: software.amazon.awscdk.services.ec2.PublicSubnetAttributes,
   ) : CdkObject(cdkObject), PublicSubnetAttributes {
     /**
      * The Availability Zone the subnet is located in.

@@ -254,7 +254,7 @@ public interface CfnHostProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnHostProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnHostProps,
   ) : CdkObject(cdkObject), CfnHostProps {
     /**
      * The ID of the Outpost hardware asset on which the Dedicated Host is allocated.

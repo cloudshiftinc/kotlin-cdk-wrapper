@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html)
  */
-public open class CfnVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
+public open class CfnVolume(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -538,120 +538,7 @@ public open class CfnVolume internal constructor(
         CfnVolume(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolume): software.amazon.awscdk.services.fsx.CfnVolume =
-        wrapped.cdkObject
-  }
-
-  /**
-   * The configuration object for mounting a Network File System (NFS) file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * NfsExportsProperty nfsExportsProperty = NfsExportsProperty.builder()
-   * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
-   * .clients("clients")
-   * .options(List.of("options"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html)
-   */
-  public interface NfsExportsProperty {
-    /**
-     * A list of configuration objects that contain the client and options for mounting the OpenZFS
-     * file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html#cfn-fsx-volume-nfsexports-clientconfigurations)
-     */
-    public fun clientConfigurations(): Any
-
-    /**
-     * A builder for [NfsExportsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      public fun clientConfigurations(clientConfigurations: IResolvable)
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      public fun clientConfigurations(clientConfigurations: List<Any>)
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      public fun clientConfigurations(vararg clientConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty.builder()
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      override fun clientConfigurations(clientConfigurations: IResolvable) {
-        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      override fun clientConfigurations(clientConfigurations: List<Any>) {
-        cdkBuilder.clientConfigurations(clientConfigurations)
-      }
-
-      /**
-       * @param clientConfigurations A list of configuration objects that contain the client and
-       * options for mounting the OpenZFS file system. 
-       */
-      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
-          clientConfigurations(clientConfigurations.toList())
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty,
-    ) : CdkObject(cdkObject), NfsExportsProperty {
-      /**
-       * A list of configuration objects that contain the client and options for mounting the
-       * OpenZFS file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html#cfn-fsx-volume-nfsexports-clientconfigurations)
-       */
-      override fun clientConfigurations(): Any = unwrap(this).getClientConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NfsExportsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty):
-          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NfsExportsProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.fsx.CfnVolume
   }
 
   /**
@@ -811,8 +698,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty,
     ) : CdkObject(cdkObject), AggregateConfigurationProperty {
       /**
        * The list of aggregates that this volume resides on.
@@ -866,11 +752,13 @@ public open class CfnVolume internal constructor(
   }
 
   /**
-   * The configuration to set the retention period of an FSx for ONTAP SnapLock volume.
+   * Sets the autocommit period of files in an FSx for ONTAP SnapLock volume, which determines how
+   * long the files must remain unmodified before they're automatically transitioned to the write once,
+   * read many (WORM) state.
    *
-   * The retention period includes default, maximum, and minimum settings. For more information, see
-   * [Working with the retention period in
-   * SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html) .
+   * For more information, see
+   * [Autocommit](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-autocommit)
+   * .
    *
    * Example:
    *
@@ -878,439 +766,146 @@ public open class CfnVolume internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * SnaplockRetentionPeriodProperty snaplockRetentionPeriodProperty =
-   * SnaplockRetentionPeriodProperty.builder()
-   * .defaultRetention(RetentionPeriodProperty.builder()
+   * AutocommitPeriodProperty autocommitPeriodProperty = AutocommitPeriodProperty.builder()
    * .type("type")
    * // the properties below are optional
    * .value(123)
-   * .build())
-   * .maximumRetention(RetentionPeriodProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .value(123)
-   * .build())
-   * .minimumRetention(RetentionPeriodProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .value(123)
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html)
    */
-  public interface SnaplockRetentionPeriodProperty {
+  public interface AutocommitPeriodProperty {
     /**
-     * The retention period assigned to a write once, read many (WORM) file by default if an
-     * explicit retention period is not set for an FSx for ONTAP SnapLock volume.
-     *
-     * The default retention period must be greater than or equal to the minimum retention period
-     * and less than or equal to the maximum retention period.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-defaultretention)
-     */
-    public fun defaultRetention(): Any
-
-    /**
-     * The longest retention period that can be assigned to a WORM file on an FSx for ONTAP SnapLock
+     * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
      * volume.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-maximumretention)
-     */
-    public fun maximumRetention(): Any
-
-    /**
-     * The shortest retention period that can be assigned to a WORM file on an FSx for ONTAP
-     * SnapLock volume.
+     * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-minimumretention)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-type)
      */
-    public fun minimumRetention(): Any
+    public fun type(): String
 
     /**
-     * A builder for [SnaplockRetentionPeriodProperty]
+     * Defines the amount of time for the autocommit period of a file in an FSx for ONTAP SnapLock
+     * volume.
+     *
+     * The following ranges are valid:
+     *
+     * * `Minutes` : 5 - 65,535
+     * * `Hours` : 1 - 65,535
+     * * `Days` : 1 - 3,650
+     * * `Months` : 1 - 120
+     * * `Years` : 1 - 10
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-value)
+     */
+    public fun `value`(): Number? = unwrap(this).getValue()
+
+    /**
+     * A builder for [AutocommitPeriodProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
+       * @param type Defines the type of time for the autocommit period of a file in an FSx for
+       * ONTAP SnapLock volume. 
+       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
        */
-      public fun defaultRetention(defaultRetention: IResolvable)
+      public fun type(type: String)
 
       /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
+       * @param value Defines the amount of time for the autocommit period of a file in an FSx for
+       * ONTAP SnapLock volume.
+       * The following ranges are valid:
+       *
+       * * `Minutes` : 5 - 65,535
+       * * `Hours` : 1 - 65,535
+       * * `Days` : 1 - 3,650
+       * * `Months` : 1 - 120
+       * * `Years` : 1 - 10
        */
-      public fun defaultRetention(defaultRetention: RetentionPeriodProperty)
-
-      /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8a42a5037103ecf76c0a9f00ef8c2fe089b7914680cc04cda363796f099e8bd4")
-      public fun defaultRetention(defaultRetention: RetentionPeriodProperty.Builder.() -> Unit)
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      public fun maximumRetention(maximumRetention: IResolvable)
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      public fun maximumRetention(maximumRetention: RetentionPeriodProperty)
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70d68515ae4f0204070f094fd7932b69f8841870d439504d18b4c3e586ee30a3")
-      public fun maximumRetention(maximumRetention: RetentionPeriodProperty.Builder.() -> Unit)
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      public fun minimumRetention(minimumRetention: IResolvable)
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      public fun minimumRetention(minimumRetention: RetentionPeriodProperty)
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b577d436edea2397c35c744ca0cfd12f57db380f6daeca18cf04497f22097758")
-      public fun minimumRetention(minimumRetention: RetentionPeriodProperty.Builder.() -> Unit)
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty.builder()
+          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty.builder()
 
       /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
+       * @param type Defines the type of time for the autocommit period of a file in an FSx for
+       * ONTAP SnapLock volume. 
+       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
        */
-      override fun defaultRetention(defaultRetention: IResolvable) {
-        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable::unwrap))
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
+       * @param value Defines the amount of time for the autocommit period of a file in an FSx for
+       * ONTAP SnapLock volume.
+       * The following ranges are valid:
+       *
+       * * `Minutes` : 5 - 65,535
+       * * `Hours` : 1 - 65,535
+       * * `Days` : 1 - 3,650
+       * * `Months` : 1 - 120
+       * * `Years` : 1 - 10
        */
-      override fun defaultRetention(defaultRetention: RetentionPeriodProperty) {
-        cdkBuilder.defaultRetention(defaultRetention.let(RetentionPeriodProperty::unwrap))
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
       }
 
-      /**
-       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
-       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
-       * volume. 
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8a42a5037103ecf76c0a9f00ef8c2fe089b7914680cc04cda363796f099e8bd4")
-      override fun defaultRetention(defaultRetention: RetentionPeriodProperty.Builder.() -> Unit):
-          Unit = defaultRetention(RetentionPeriodProperty(defaultRetention))
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      override fun maximumRetention(maximumRetention: IResolvable) {
-        cdkBuilder.maximumRetention(maximumRetention.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      override fun maximumRetention(maximumRetention: RetentionPeriodProperty) {
-        cdkBuilder.maximumRetention(maximumRetention.let(RetentionPeriodProperty::unwrap))
-      }
-
-      /**
-       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
-       * an FSx for ONTAP SnapLock volume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("70d68515ae4f0204070f094fd7932b69f8841870d439504d18b4c3e586ee30a3")
-      override fun maximumRetention(maximumRetention: RetentionPeriodProperty.Builder.() -> Unit):
-          Unit = maximumRetention(RetentionPeriodProperty(maximumRetention))
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      override fun minimumRetention(minimumRetention: IResolvable) {
-        cdkBuilder.minimumRetention(minimumRetention.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      override fun minimumRetention(minimumRetention: RetentionPeriodProperty) {
-        cdkBuilder.minimumRetention(minimumRetention.let(RetentionPeriodProperty::unwrap))
-      }
-
-      /**
-       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
-       * on an FSx for ONTAP SnapLock volume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b577d436edea2397c35c744ca0cfd12f57db380f6daeca18cf04497f22097758")
-      override fun minimumRetention(minimumRetention: RetentionPeriodProperty.Builder.() -> Unit):
-          Unit = minimumRetention(RetentionPeriodProperty(minimumRetention))
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty =
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty,
-    ) : CdkObject(cdkObject), SnaplockRetentionPeriodProperty {
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty,
+    ) : CdkObject(cdkObject), AutocommitPeriodProperty {
       /**
-       * The retention period assigned to a write once, read many (WORM) file by default if an
-       * explicit retention period is not set for an FSx for ONTAP SnapLock volume.
+       * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
+       * volume.
        *
-       * The default retention period must be greater than or equal to the minimum retention period
-       * and less than or equal to the maximum retention period.
+       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-defaultretention)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-type)
        */
-      override fun defaultRetention(): Any = unwrap(this).getDefaultRetention()
+      override fun type(): String = unwrap(this).getType()
 
       /**
-       * The longest retention period that can be assigned to a WORM file on an FSx for ONTAP
-       * SnapLock volume.
+       * Defines the amount of time for the autocommit period of a file in an FSx for ONTAP SnapLock
+       * volume.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-maximumretention)
-       */
-      override fun maximumRetention(): Any = unwrap(this).getMaximumRetention()
-
-      /**
-       * The shortest retention period that can be assigned to a WORM file on an FSx for ONTAP
-       * SnapLock volume.
+       * The following ranges are valid:
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-minimumretention)
+       * * `Minutes` : 5 - 65,535
+       * * `Hours` : 1 - 65,535
+       * * `Days` : 1 - 3,650
+       * * `Months` : 1 - 120
+       * * `Years` : 1 - 10
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-value)
        */
-      override fun minimumRetention(): Any = unwrap(this).getMinimumRetention()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SnaplockRetentionPeriodProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutocommitPeriodProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty):
-          SnaplockRetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnaplockRetentionPeriodProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty):
+          AutocommitPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? AutocommitPeriodProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SnaplockRetentionPeriodProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty
-    }
-  }
-
-  /**
-   * Describes the data tiering policy for an ONTAP volume.
-   *
-   * When enabled, Amazon FSx for ONTAP's intelligent tiering automatically transitions a volume's
-   * data between the file system's primary storage and capacity pool storage based on your access
-   * patterns.
-   *
-   * Valid tiering policies are the following:
-   *
-   * * `SNAPSHOT_ONLY` - (Default value) moves cold snapshots to the capacity pool storage tier.
-   * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on your
-   * access patterns.
-   * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to the
-   * storage pool tier.
-   * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being moved to
-   * the capacity pool tier.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * TieringPolicyProperty tieringPolicyProperty = TieringPolicyProperty.builder()
-   * .coolingPeriod(123)
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html)
-   */
-  public interface TieringPolicyProperty {
-    /**
-     * Specifies the number of days that user data in a volume must remain inactive before it is
-     * considered "cold" and moved to the capacity pool.
-     *
-     * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2 and
-     * 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-coolingperiod)
-     */
-    public fun coolingPeriod(): Number? = unwrap(this).getCoolingPeriod()
-
-    /**
-     * Specifies the tiering policy used to transition data. Default value is `SNAPSHOT_ONLY` .
-     *
-     * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
-     * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on your
-     * access patterns.
-     * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
-     * the storage pool tier.
-     * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being moved
-     * to the capacity pool tier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [TieringPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param coolingPeriod Specifies the number of days that user data in a volume must remain
-       * inactive before it is considered "cold" and moved to the capacity pool.
-       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
-       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
-       */
-      public fun coolingPeriod(coolingPeriod: Number)
-
-      /**
-       * @param name Specifies the tiering policy used to transition data. Default value is
-       * `SNAPSHOT_ONLY` .
-       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
-       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
-       * your access patterns.
-       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
-       * the storage pool tier.
-       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
-       * moved to the capacity pool tier.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty.builder()
-
-      /**
-       * @param coolingPeriod Specifies the number of days that user data in a volume must remain
-       * inactive before it is considered "cold" and moved to the capacity pool.
-       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
-       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
-       */
-      override fun coolingPeriod(coolingPeriod: Number) {
-        cdkBuilder.coolingPeriod(coolingPeriod)
-      }
-
-      /**
-       * @param name Specifies the tiering policy used to transition data. Default value is
-       * `SNAPSHOT_ONLY` .
-       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
-       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
-       * your access patterns.
-       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
-       * the storage pool tier.
-       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
-       * moved to the capacity pool tier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty,
-    ) : CdkObject(cdkObject), TieringPolicyProperty {
-      /**
-       * Specifies the number of days that user data in a volume must remain inactive before it is
-       * considered "cold" and moved to the capacity pool.
-       *
-       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
-       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-coolingperiod)
-       */
-      override fun coolingPeriod(): Number? = unwrap(this).getCoolingPeriod()
-
-      /**
-       * Specifies the tiering policy used to transition data. Default value is `SNAPSHOT_ONLY` .
-       *
-       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
-       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
-       * your access patterns.
-       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
-       * the storage pool tier.
-       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
-       * moved to the capacity pool tier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TieringPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty):
-          TieringPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TieringPolicyProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty = (wrapped as
+      internal fun unwrap(wrapped: AutocommitPeriodProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty
+          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty
     }
   }
 
@@ -1459,8 +1054,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty,
     ) : CdkObject(cdkObject), ClientConfigurationsProperty {
       /**
        * A value that specifies who can mount the file system.
@@ -1511,7 +1105,7 @@ public open class CfnVolume internal constructor(
   }
 
   /**
-   * Configures how much storage users and groups can use on the volume.
+   * The configuration object for mounting a Network File System (NFS) file system.
    *
    * Example:
    *
@@ -1519,1290 +1113,107 @@ public open class CfnVolume internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * UserAndGroupQuotasProperty userAndGroupQuotasProperty = UserAndGroupQuotasProperty.builder()
-   * .id(123)
-   * .storageCapacityQuotaGiB(123)
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html)
-   */
-  public interface UserAndGroupQuotasProperty {
-    /**
-     * The ID of the user or group that the quota applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-id)
-     */
-    public fun id(): Number
-
-    /**
-     * The user or group's storage quota, in gibibytes (GiB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-storagecapacityquotagib)
-     */
-    public fun storageCapacityQuotaGiB(): Number
-
-    /**
-     * Specifies whether the quota applies to a user or group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [UserAndGroupQuotasProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID of the user or group that the quota applies to. 
-       */
-      public fun id(id: Number)
-
-      /**
-       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). 
-       */
-      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
-
-      /**
-       * @param type Specifies whether the quota applies to a user or group. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty.builder()
-
-      /**
-       * @param id The ID of the user or group that the quota applies to. 
-       */
-      override fun id(id: Number) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). 
-       */
-      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
-        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
-      }
-
-      /**
-       * @param type Specifies whether the quota applies to a user or group. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty,
-    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
-      /**
-       * The ID of the user or group that the quota applies to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-id)
-       */
-      override fun id(): Number = unwrap(this).getId()
-
-      /**
-       * The user or group's storage quota, in gibibytes (GiB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-storagecapacityquotagib)
-       */
-      override fun storageCapacityQuotaGiB(): Number = unwrap(this).getStorageCapacityQuotaGiB()
-
-      /**
-       * Specifies whether the quota applies to a user or group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UserAndGroupQuotasProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty):
-          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty
-    }
-  }
-
-  /**
-   * The configuration object that specifies the snapshot to use as the origin of the data for the
-   * volume.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * OriginSnapshotProperty originSnapshotProperty = OriginSnapshotProperty.builder()
-   * .copyStrategy("copyStrategy")
-   * .snapshotArn("snapshotArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html)
-   */
-  public interface OriginSnapshotProperty {
-    /**
-     * Specifies the strategy used when copying data from the snapshot to the new volume.
-     *
-     * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot is
-     * faster than copying data from the snapshot to a new volume and doesn't consume disk throughput.
-     * However, the origin snapshot can't be deleted if there is a volume using its copied data.
-     * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
-     *
-     * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
-     * system.
-     *
-     *
-     * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
-     * from another FSx for OpenZFS file system. For more information, see
-     * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-copystrategy)
-     */
-    public fun copyStrategy(): String
-
-    /**
-     * Specifies the snapshot to use when creating an OpenZFS volume from a snapshot.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-snapshotarn)
-     */
-    public fun snapshotArn(): String
-
-    /**
-     * A builder for [OriginSnapshotProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param copyStrategy Specifies the strategy used when copying data from the snapshot to the
-       * new volume. 
-       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
-       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
-       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
-       * copied data.
-       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
-       *
-       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
-       * system.
-       *
-       *
-       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
-       * from another FSx for OpenZFS file system. For more information, see
-       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
-       * .
-       */
-      public fun copyStrategy(copyStrategy: String)
-
-      /**
-       * @param snapshotArn Specifies the snapshot to use when creating an OpenZFS volume from a
-       * snapshot. 
-       */
-      public fun snapshotArn(snapshotArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty.builder()
-
-      /**
-       * @param copyStrategy Specifies the strategy used when copying data from the snapshot to the
-       * new volume. 
-       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
-       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
-       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
-       * copied data.
-       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
-       *
-       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
-       * system.
-       *
-       *
-       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
-       * from another FSx for OpenZFS file system. For more information, see
-       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
-       * .
-       */
-      override fun copyStrategy(copyStrategy: String) {
-        cdkBuilder.copyStrategy(copyStrategy)
-      }
-
-      /**
-       * @param snapshotArn Specifies the snapshot to use when creating an OpenZFS volume from a
-       * snapshot. 
-       */
-      override fun snapshotArn(snapshotArn: String) {
-        cdkBuilder.snapshotArn(snapshotArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty,
-    ) : CdkObject(cdkObject), OriginSnapshotProperty {
-      /**
-       * Specifies the strategy used when copying data from the snapshot to the new volume.
-       *
-       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
-       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
-       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
-       * copied data.
-       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
-       *
-       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
-       * system.
-       *
-       *
-       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
-       * from another FSx for OpenZFS file system. For more information, see
-       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-copystrategy)
-       */
-      override fun copyStrategy(): String = unwrap(this).getCopyStrategy()
-
-      /**
-       * Specifies the snapshot to use when creating an OpenZFS volume from a snapshot.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-snapshotarn)
-       */
-      override fun snapshotArn(): String = unwrap(this).getSnapshotArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OriginSnapshotProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty):
-          OriginSnapshotProperty = CdkObjectWrappers.wrap(cdkObject) as? OriginSnapshotProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OriginSnapshotProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty
-    }
-  }
-
-  /**
-   * Specifies the retention period of an FSx for ONTAP SnapLock volume.
-   *
-   * After it is set, it can't be changed. Files can't be deleted or modified during the retention
-   * period.
-   *
-   * For more information, see [Working with the retention period in
-   * SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html)
-   */
-  public interface RetentionPeriodProperty {
-    /**
-     * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
-     *
-     * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
-     * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
-     * retention period.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-type)
-     */
-    public fun type(): String
-
-    /**
-     * Defines the amount of time for the retention period of an FSx for ONTAP SnapLock volume.
-     *
-     * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the following
-     * ranges are valid:
-     *
-     * * `Seconds` : 0 - 65,535
-     * * `Minutes` : 0 - 65,535
-     * * `Hours` : 0 - 24
-     * * `Days` : 0 - 365
-     * * `Months` : 0 - 12
-     * * `Years` : 0 - 100
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-value)
-     */
-    public fun `value`(): Number? = unwrap(this).getValue()
-
-    /**
-     * A builder for [RetentionPeriodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type Defines the type of time for the retention period of an FSx for ONTAP SnapLock
-       * volume. 
-       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
-       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
-       * retention period.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value Defines the amount of time for the retention period of an FSx for ONTAP
-       * SnapLock volume.
-       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
-       * following ranges are valid:
-       *
-       * * `Seconds` : 0 - 65,535
-       * * `Minutes` : 0 - 65,535
-       * * `Hours` : 0 - 24
-       * * `Days` : 0 - 365
-       * * `Months` : 0 - 12
-       * * `Years` : 0 - 100
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty.builder()
-
-      /**
-       * @param type Defines the type of time for the retention period of an FSx for ONTAP SnapLock
-       * volume. 
-       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
-       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
-       * retention period.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value Defines the amount of time for the retention period of an FSx for ONTAP
-       * SnapLock volume.
-       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
-       * following ranges are valid:
-       *
-       * * `Seconds` : 0 - 65,535
-       * * `Minutes` : 0 - 65,535
-       * * `Hours` : 0 - 24
-       * * `Days` : 0 - 365
-       * * `Months` : 0 - 12
-       * * `Years` : 0 - 100
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
-      /**
-       * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
-       *
-       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
-       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
-       * retention period.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * Defines the amount of time for the retention period of an FSx for ONTAP SnapLock volume.
-       *
-       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
-       * following ranges are valid:
-       *
-       * * `Seconds` : 0 - 65,535
-       * * `Minutes` : 0 - 65,535
-       * * `Hours` : 0 - 24
-       * * `Days` : 0 - 365
-       * * `Months` : 0 - 12
-       * * `Years` : 0 - 100
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-value)
-       */
-      override fun `value`(): Number? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty):
-          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetentionPeriodProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty
-    }
-  }
-
-  /**
-   * Sets the autocommit period of files in an FSx for ONTAP SnapLock volume, which determines how
-   * long the files must remain unmodified before they're automatically transitioned to the write once,
-   * read many (WORM) state.
-   *
-   * For more information, see
-   * [Autocommit](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-autocommit)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * AutocommitPeriodProperty autocommitPeriodProperty = AutocommitPeriodProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html)
-   */
-  public interface AutocommitPeriodProperty {
-    /**
-     * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
-     * volume.
-     *
-     * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-type)
-     */
-    public fun type(): String
-
-    /**
-     * Defines the amount of time for the autocommit period of a file in an FSx for ONTAP SnapLock
-     * volume.
-     *
-     * The following ranges are valid:
-     *
-     * * `Minutes` : 5 - 65,535
-     * * `Hours` : 1 - 65,535
-     * * `Days` : 1 - 3,650
-     * * `Months` : 1 - 120
-     * * `Years` : 1 - 10
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-value)
-     */
-    public fun `value`(): Number? = unwrap(this).getValue()
-
-    /**
-     * A builder for [AutocommitPeriodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type Defines the type of time for the autocommit period of a file in an FSx for
-       * ONTAP SnapLock volume. 
-       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
-       */
-      public fun type(type: String)
-
-      /**
-       * @param value Defines the amount of time for the autocommit period of a file in an FSx for
-       * ONTAP SnapLock volume.
-       * The following ranges are valid:
-       *
-       * * `Minutes` : 5 - 65,535
-       * * `Hours` : 1 - 65,535
-       * * `Days` : 1 - 3,650
-       * * `Months` : 1 - 120
-       * * `Years` : 1 - 10
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty.builder()
-
-      /**
-       * @param type Defines the type of time for the autocommit period of a file in an FSx for
-       * ONTAP SnapLock volume. 
-       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param value Defines the amount of time for the autocommit period of a file in an FSx for
-       * ONTAP SnapLock volume.
-       * The following ranges are valid:
-       *
-       * * `Minutes` : 5 - 65,535
-       * * `Hours` : 1 - 65,535
-       * * `Days` : 1 - 3,650
-       * * `Months` : 1 - 120
-       * * `Years` : 1 - 10
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty,
-    ) : CdkObject(cdkObject), AutocommitPeriodProperty {
-      /**
-       * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
-       * volume.
-       *
-       * Setting this value to `NONE` disables autocommit. The default value is `NONE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-
-      /**
-       * Defines the amount of time for the autocommit period of a file in an FSx for ONTAP SnapLock
-       * volume.
-       *
-       * The following ranges are valid:
-       *
-       * * `Minutes` : 5 - 65,535
-       * * `Hours` : 1 - 65,535
-       * * `Days` : 1 - 3,650
-       * * `Months` : 1 - 120
-       * * `Years` : 1 - 10
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-autocommitperiod.html#cfn-fsx-volume-autocommitperiod-value)
-       */
-      override fun `value`(): Number? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutocommitPeriodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty):
-          AutocommitPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? AutocommitPeriodProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutocommitPeriodProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * OpenZFSConfigurationProperty openZFSConfigurationProperty =
-   * OpenZFSConfigurationProperty.builder()
-   * .parentVolumeId("parentVolumeId")
-   * // the properties below are optional
-   * .copyTagsToSnapshots(false)
-   * .dataCompressionType("dataCompressionType")
-   * .nfsExports(List.of(NfsExportsProperty.builder()
+   * NfsExportsProperty nfsExportsProperty = NfsExportsProperty.builder()
    * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
    * .clients("clients")
    * .options(List.of("options"))
    * .build()))
-   * .build()))
-   * .options(List.of("options"))
-   * .originSnapshot(OriginSnapshotProperty.builder()
-   * .copyStrategy("copyStrategy")
-   * .snapshotArn("snapshotArn")
-   * .build())
-   * .readOnly(false)
-   * .recordSizeKiB(123)
-   * .storageCapacityQuotaGiB(123)
-   * .storageCapacityReservationGiB(123)
-   * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
-   * .id(123)
-   * .storageCapacityQuotaGiB(123)
-   * .type("type")
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html)
    */
-  public interface OpenZFSConfigurationProperty {
+  public interface NfsExportsProperty {
     /**
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots.
+     * A list of configuration objects that contain the client and options for mounting the OpenZFS
+     * file system.
      *
-     * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-     * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify one
-     * or more tags, only the specified tags are copied to snapshots. If you specify one or more tags
-     * when creating the snapshot, no tags are copied from the volume, regardless of this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html#cfn-fsx-volume-nfsexports-clientconfigurations)
      */
-    public fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
+    public fun clientConfigurations(): Any
 
     /**
-     * Specifies the method used to compress the data on the volume. The compression type is `NONE`
-     * by default.
-     *
-     * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
-     * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
-     * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
-     * storage utilization.
-     * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
-     * Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-datacompressiontype)
-     */
-    public fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
-
-    /**
-     * The configuration object for mounting a Network File System (NFS) file system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-nfsexports)
-     */
-    public fun nfsExports(): Any? = unwrap(this).getNfsExports()
-
-    /**
-     * To delete the volume's child volumes, snapshots, and clones, use the string
-     * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-options)
-     */
-    public fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
-
-    /**
-     * The configuration object that specifies the snapshot to use as the origin of the data for the
-     * volume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-originsnapshot)
-     */
-    public fun originSnapshot(): Any? = unwrap(this).getOriginSnapshot()
-
-    /**
-     * The ID of the volume to use as the parent volume of the volume that you are creating.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-parentvolumeid)
-     */
-    public fun parentVolumeId(): String
-
-    /**
-     * A Boolean value indicating whether the volume is read-only.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-readonly)
-     */
-    public fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-    /**
-     * Specifies the suggested block size for a volume in a ZFS dataset, in kibibytes (KiB).
-     *
-     * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
-     * recommend using the default setting for the majority of use cases. Generally, workloads that
-     * write in fixed small or large record sizes may benefit from setting a custom record size, like
-     * database workloads (small record size) or media streaming workloads (large record size). For
-     * additional guidance on when to set a custom record size, see [ZFS Record
-     * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
-     * in the *Amazon FSx for OpenZFS User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-recordsizekib)
-     */
-    public fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
-
-    /**
-     * Sets the maximum storage size in gibibytes (GiB) for the volume.
-     *
-     * You can specify a quota that is larger than the storage on the parent volume. A volume quota
-     * limits the amount of storage that the volume can consume to the configured amount, but does not
-     * guarantee the space will be available on the parent volume. To guarantee quota space, you must
-     * also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota, set this
-     * to `-1` .
-     *
-     * For more information, see [Volume
-     * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-     * in the *Amazon FSx for OpenZFS User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityquotagib)
-     */
-    public fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
-
-    /**
-     * Specifies the amount of storage in gibibytes (GiB) to reserve from the parent volume.
-     *
-     * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage space
-     * on the parent volume will always be available for the volume. You can't reserve more storage
-     * than the parent volume has. To *not* specify a storage capacity reservation, set this to `0` or
-     * `-1` . For more information, see [Volume
-     * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-     * in the *Amazon FSx for OpenZFS User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityreservationgib)
-     */
-    public fun storageCapacityReservationGiB(): Number? =
-        unwrap(this).getStorageCapacityReservationGiB()
-
-    /**
-     * Configures how much storage users and groups can use on the volume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-userandgroupquotas)
-     */
-    public fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
-
-    /**
-     * A builder for [OpenZFSConfigurationProperty]
+     * A builder for [NfsExportsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
-       * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      public fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean)
+      public fun clientConfigurations(clientConfigurations: IResolvable)
 
       /**
-       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
-       * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      public fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable)
+      public fun clientConfigurations(clientConfigurations: List<Any>)
 
       /**
-       * @param dataCompressionType Specifies the method used to compress the data on the volume.
-       * The compression type is `NONE` by default.
-       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
-       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
-       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
-       * storage utilization.
-       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
-       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      public fun dataCompressionType(dataCompressionType: String)
-
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      public fun nfsExports(nfsExports: IResolvable)
-
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      public fun nfsExports(nfsExports: List<Any>)
-
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      public fun nfsExports(vararg nfsExports: Any)
-
-      /**
-       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
-       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-       */
-      public fun options(options: List<String>)
-
-      /**
-       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
-       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-       */
-      public fun options(vararg options: String)
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      public fun originSnapshot(originSnapshot: IResolvable)
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      public fun originSnapshot(originSnapshot: OriginSnapshotProperty)
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bc249c4485e28a5183f8f7c874ed1490b18c693d1ab99d945c20696f0af2a6cf")
-      public fun originSnapshot(originSnapshot: OriginSnapshotProperty.Builder.() -> Unit)
-
-      /**
-       * @param parentVolumeId The ID of the volume to use as the parent volume of the volume that
-       * you are creating. 
-       */
-      public fun parentVolumeId(parentVolumeId: String)
-
-      /**
-       * @param readOnly A Boolean value indicating whether the volume is read-only.
-       */
-      public fun readOnly(readOnly: Boolean)
-
-      /**
-       * @param readOnly A Boolean value indicating whether the volume is read-only.
-       */
-      public fun readOnly(readOnly: IResolvable)
-
-      /**
-       * @param recordSizeKiB Specifies the suggested block size for a volume in a ZFS dataset, in
-       * kibibytes (KiB).
-       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
-       * recommend using the default setting for the majority of use cases. Generally, workloads that
-       * write in fixed small or large record sizes may benefit from setting a custom record size, like
-       * database workloads (small record size) or media streaming workloads (large record size). For
-       * additional guidance on when to set a custom record size, see [ZFS Record
-       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      public fun recordSizeKiB(recordSizeKiB: Number)
-
-      /**
-       * @param storageCapacityQuotaGiB Sets the maximum storage size in gibibytes (GiB) for the
-       * volume.
-       * You can specify a quota that is larger than the storage on the parent volume. A volume
-       * quota limits the amount of storage that the volume can consume to the configured amount, but
-       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
-       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
-       * set this to `-1` .
-       *
-       * For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
-
-      /**
-       * @param storageCapacityReservationGiB Specifies the amount of storage in gibibytes (GiB) to
-       * reserve from the parent volume.
-       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
-       * space on the parent volume will always be available for the volume. You can't reserve more
-       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
-       * to `0` or `-1` . For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      public fun storageCapacityReservationGiB(storageCapacityReservationGiB: Number)
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable)
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>)
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      public fun userAndGroupQuotas(vararg userAndGroupQuotas: Any)
+      public fun clientConfigurations(vararg clientConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty.Builder =
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty.builder()
+          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty.builder()
 
       /**
-       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
-       * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      override fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
-        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots)
+      override fun clientConfigurations(clientConfigurations: IResolvable) {
+        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
-       * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
-        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable::unwrap))
+      override fun clientConfigurations(clientConfigurations: List<Any>) {
+        cdkBuilder.clientConfigurations(clientConfigurations)
       }
 
       /**
-       * @param dataCompressionType Specifies the method used to compress the data on the volume.
-       * The compression type is `NONE` by default.
-       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
-       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
-       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
-       * storage utilization.
-       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
-       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+       * @param clientConfigurations A list of configuration objects that contain the client and
+       * options for mounting the OpenZFS file system. 
        */
-      override fun dataCompressionType(dataCompressionType: String) {
-        cdkBuilder.dataCompressionType(dataCompressionType)
-      }
+      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
+          clientConfigurations(clientConfigurations.toList())
 
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      override fun nfsExports(nfsExports: IResolvable) {
-        cdkBuilder.nfsExports(nfsExports.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      override fun nfsExports(nfsExports: List<Any>) {
-        cdkBuilder.nfsExports(nfsExports)
-      }
-
-      /**
-       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
-       * system.
-       */
-      override fun nfsExports(vararg nfsExports: Any): Unit = nfsExports(nfsExports.toList())
-
-      /**
-       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
-       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-       */
-      override fun options(options: List<String>) {
-        cdkBuilder.options(options)
-      }
-
-      /**
-       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
-       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-       */
-      override fun options(vararg options: String): Unit = options(options.toList())
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      override fun originSnapshot(originSnapshot: IResolvable) {
-        cdkBuilder.originSnapshot(originSnapshot.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      override fun originSnapshot(originSnapshot: OriginSnapshotProperty) {
-        cdkBuilder.originSnapshot(originSnapshot.let(OriginSnapshotProperty::unwrap))
-      }
-
-      /**
-       * @param originSnapshot The configuration object that specifies the snapshot to use as the
-       * origin of the data for the volume.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bc249c4485e28a5183f8f7c874ed1490b18c693d1ab99d945c20696f0af2a6cf")
-      override fun originSnapshot(originSnapshot: OriginSnapshotProperty.Builder.() -> Unit): Unit =
-          originSnapshot(OriginSnapshotProperty(originSnapshot))
-
-      /**
-       * @param parentVolumeId The ID of the volume to use as the parent volume of the volume that
-       * you are creating. 
-       */
-      override fun parentVolumeId(parentVolumeId: String) {
-        cdkBuilder.parentVolumeId(parentVolumeId)
-      }
-
-      /**
-       * @param readOnly A Boolean value indicating whether the volume is read-only.
-       */
-      override fun readOnly(readOnly: Boolean) {
-        cdkBuilder.readOnly(readOnly)
-      }
-
-      /**
-       * @param readOnly A Boolean value indicating whether the volume is read-only.
-       */
-      override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordSizeKiB Specifies the suggested block size for a volume in a ZFS dataset, in
-       * kibibytes (KiB).
-       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
-       * recommend using the default setting for the majority of use cases. Generally, workloads that
-       * write in fixed small or large record sizes may benefit from setting a custom record size, like
-       * database workloads (small record size) or media streaming workloads (large record size). For
-       * additional guidance on when to set a custom record size, see [ZFS Record
-       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      override fun recordSizeKiB(recordSizeKiB: Number) {
-        cdkBuilder.recordSizeKiB(recordSizeKiB)
-      }
-
-      /**
-       * @param storageCapacityQuotaGiB Sets the maximum storage size in gibibytes (GiB) for the
-       * volume.
-       * You can specify a quota that is larger than the storage on the parent volume. A volume
-       * quota limits the amount of storage that the volume can consume to the configured amount, but
-       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
-       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
-       * set this to `-1` .
-       *
-       * For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
-        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
-      }
-
-      /**
-       * @param storageCapacityReservationGiB Specifies the amount of storage in gibibytes (GiB) to
-       * reserve from the parent volume.
-       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
-       * space on the parent volume will always be available for the volume. You can't reserve more
-       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
-       * to `0` or `-1` . For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       */
-      override fun storageCapacityReservationGiB(storageCapacityReservationGiB: Number) {
-        cdkBuilder.storageCapacityReservationGiB(storageCapacityReservationGiB)
-      }
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
-        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
-        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
-      }
-
-      /**
-       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
-       * volume.
-       */
-      override fun userAndGroupQuotas(vararg userAndGroupQuotas: Any): Unit =
-          userAndGroupQuotas(userAndGroupQuotas.toList())
-
-      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty
-          = cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty,
-    ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty,
+    ) : CdkObject(cdkObject), NfsExportsProperty {
       /**
-       * A Boolean value indicating whether tags for the volume should be copied to snapshots.
+       * A list of configuration objects that contain the client and options for mounting the
+       * OpenZFS file system.
        *
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-nfsexports.html#cfn-fsx-volume-nfsexports-clientconfigurations)
        */
-      override fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
-
-      /**
-       * Specifies the method used to compress the data on the volume. The compression type is
-       * `NONE` by default.
-       *
-       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
-       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
-       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
-       * storage utilization.
-       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
-       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-datacompressiontype)
-       */
-      override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
-
-      /**
-       * The configuration object for mounting a Network File System (NFS) file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-nfsexports)
-       */
-      override fun nfsExports(): Any? = unwrap(this).getNfsExports()
-
-      /**
-       * To delete the volume's child volumes, snapshots, and clones, use the string
-       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-options)
-       */
-      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
-
-      /**
-       * The configuration object that specifies the snapshot to use as the origin of the data for
-       * the volume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-originsnapshot)
-       */
-      override fun originSnapshot(): Any? = unwrap(this).getOriginSnapshot()
-
-      /**
-       * The ID of the volume to use as the parent volume of the volume that you are creating.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-parentvolumeid)
-       */
-      override fun parentVolumeId(): String = unwrap(this).getParentVolumeId()
-
-      /**
-       * A Boolean value indicating whether the volume is read-only.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-readonly)
-       */
-      override fun readOnly(): Any? = unwrap(this).getReadOnly()
-
-      /**
-       * Specifies the suggested block size for a volume in a ZFS dataset, in kibibytes (KiB).
-       *
-       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
-       * recommend using the default setting for the majority of use cases. Generally, workloads that
-       * write in fixed small or large record sizes may benefit from setting a custom record size, like
-       * database workloads (small record size) or media streaming workloads (large record size). For
-       * additional guidance on when to set a custom record size, see [ZFS Record
-       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-recordsizekib)
-       */
-      override fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
-
-      /**
-       * Sets the maximum storage size in gibibytes (GiB) for the volume.
-       *
-       * You can specify a quota that is larger than the storage on the parent volume. A volume
-       * quota limits the amount of storage that the volume can consume to the configured amount, but
-       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
-       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
-       * set this to `-1` .
-       *
-       * For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityquotagib)
-       */
-      override fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
-
-      /**
-       * Specifies the amount of storage in gibibytes (GiB) to reserve from the parent volume.
-       *
-       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
-       * space on the parent volume will always be available for the volume. You can't reserve more
-       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
-       * to `0` or `-1` . For more information, see [Volume
-       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
-       * in the *Amazon FSx for OpenZFS User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityreservationgib)
-       */
-      override fun storageCapacityReservationGiB(): Number? =
-          unwrap(this).getStorageCapacityReservationGiB()
-
-      /**
-       * Configures how much storage users and groups can use on the volume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-userandgroupquotas)
-       */
-      override fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
+      override fun clientConfigurations(): Any = unwrap(this).getClientConfigurations()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OpenZFSConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NfsExportsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty):
-          OpenZFSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OpenZFSConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty):
+          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: OpenZFSConfigurationProperty):
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty
+      internal fun unwrap(wrapped: NfsExportsProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty
     }
   }
 
@@ -3503,8 +1914,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty,
     ) : CdkObject(cdkObject), OntapConfigurationProperty {
       /**
        * Used to specify the configuration options for an FSx for ONTAP volume's storage aggregate
@@ -3691,6 +2101,1007 @@ public open class CfnVolume internal constructor(
           software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * OpenZFSConfigurationProperty openZFSConfigurationProperty =
+   * OpenZFSConfigurationProperty.builder()
+   * .parentVolumeId("parentVolumeId")
+   * // the properties below are optional
+   * .copyTagsToSnapshots(false)
+   * .dataCompressionType("dataCompressionType")
+   * .nfsExports(List.of(NfsExportsProperty.builder()
+   * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+   * .clients("clients")
+   * .options(List.of("options"))
+   * .build()))
+   * .build()))
+   * .options(List.of("options"))
+   * .originSnapshot(OriginSnapshotProperty.builder()
+   * .copyStrategy("copyStrategy")
+   * .snapshotArn("snapshotArn")
+   * .build())
+   * .readOnly(false)
+   * .recordSizeKiB(123)
+   * .storageCapacityQuotaGiB(123)
+   * .storageCapacityReservationGiB(123)
+   * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+   * .id(123)
+   * .storageCapacityQuotaGiB(123)
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html)
+   */
+  public interface OpenZFSConfigurationProperty {
+    /**
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots.
+     *
+     * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+     * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify one
+     * or more tags, only the specified tags are copied to snapshots. If you specify one or more tags
+     * when creating the snapshot, no tags are copied from the volume, regardless of this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
+     */
+    public fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
+
+    /**
+     * Specifies the method used to compress the data on the volume. The compression type is `NONE`
+     * by default.
+     *
+     * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
+     * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
+     * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
+     * storage utilization.
+     * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     * Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-datacompressiontype)
+     */
+    public fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
+
+    /**
+     * The configuration object for mounting a Network File System (NFS) file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-nfsexports)
+     */
+    public fun nfsExports(): Any? = unwrap(this).getNfsExports()
+
+    /**
+     * To delete the volume's child volumes, snapshots, and clones, use the string
+     * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-options)
+     */
+    public fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+
+    /**
+     * The configuration object that specifies the snapshot to use as the origin of the data for the
+     * volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-originsnapshot)
+     */
+    public fun originSnapshot(): Any? = unwrap(this).getOriginSnapshot()
+
+    /**
+     * The ID of the volume to use as the parent volume of the volume that you are creating.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-parentvolumeid)
+     */
+    public fun parentVolumeId(): String
+
+    /**
+     * A Boolean value indicating whether the volume is read-only.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-readonly)
+     */
+    public fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+    /**
+     * Specifies the suggested block size for a volume in a ZFS dataset, in kibibytes (KiB).
+     *
+     * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
+     * recommend using the default setting for the majority of use cases. Generally, workloads that
+     * write in fixed small or large record sizes may benefit from setting a custom record size, like
+     * database workloads (small record size) or media streaming workloads (large record size). For
+     * additional guidance on when to set a custom record size, see [ZFS Record
+     * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
+     * in the *Amazon FSx for OpenZFS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-recordsizekib)
+     */
+    public fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
+
+    /**
+     * Sets the maximum storage size in gibibytes (GiB) for the volume.
+     *
+     * You can specify a quota that is larger than the storage on the parent volume. A volume quota
+     * limits the amount of storage that the volume can consume to the configured amount, but does not
+     * guarantee the space will be available on the parent volume. To guarantee quota space, you must
+     * also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota, set this
+     * to `-1` .
+     *
+     * For more information, see [Volume
+     * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+     * in the *Amazon FSx for OpenZFS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityquotagib)
+     */
+    public fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
+
+    /**
+     * Specifies the amount of storage in gibibytes (GiB) to reserve from the parent volume.
+     *
+     * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage space
+     * on the parent volume will always be available for the volume. You can't reserve more storage
+     * than the parent volume has. To *not* specify a storage capacity reservation, set this to `0` or
+     * `-1` . For more information, see [Volume
+     * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+     * in the *Amazon FSx for OpenZFS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityreservationgib)
+     */
+    public fun storageCapacityReservationGiB(): Number? =
+        unwrap(this).getStorageCapacityReservationGiB()
+
+    /**
+     * Configures how much storage users and groups can use on the volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-userandgroupquotas)
+     */
+    public fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
+
+    /**
+     * A builder for [OpenZFSConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
+       * copied to snapshots.
+       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
+       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       */
+      public fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean)
+
+      /**
+       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
+       * copied to snapshots.
+       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
+       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       */
+      public fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable)
+
+      /**
+       * @param dataCompressionType Specifies the method used to compress the data on the volume.
+       * The compression type is `NONE` by default.
+       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
+       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
+       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
+       * storage utilization.
+       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
+       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+       */
+      public fun dataCompressionType(dataCompressionType: String)
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      public fun nfsExports(nfsExports: IResolvable)
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      public fun nfsExports(nfsExports: List<Any>)
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      public fun nfsExports(vararg nfsExports: Any)
+
+      /**
+       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
+       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+       */
+      public fun options(options: List<String>)
+
+      /**
+       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
+       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+       */
+      public fun options(vararg options: String)
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      public fun originSnapshot(originSnapshot: IResolvable)
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      public fun originSnapshot(originSnapshot: OriginSnapshotProperty)
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc249c4485e28a5183f8f7c874ed1490b18c693d1ab99d945c20696f0af2a6cf")
+      public fun originSnapshot(originSnapshot: OriginSnapshotProperty.Builder.() -> Unit)
+
+      /**
+       * @param parentVolumeId The ID of the volume to use as the parent volume of the volume that
+       * you are creating. 
+       */
+      public fun parentVolumeId(parentVolumeId: String)
+
+      /**
+       * @param readOnly A Boolean value indicating whether the volume is read-only.
+       */
+      public fun readOnly(readOnly: Boolean)
+
+      /**
+       * @param readOnly A Boolean value indicating whether the volume is read-only.
+       */
+      public fun readOnly(readOnly: IResolvable)
+
+      /**
+       * @param recordSizeKiB Specifies the suggested block size for a volume in a ZFS dataset, in
+       * kibibytes (KiB).
+       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
+       * recommend using the default setting for the majority of use cases. Generally, workloads that
+       * write in fixed small or large record sizes may benefit from setting a custom record size, like
+       * database workloads (small record size) or media streaming workloads (large record size). For
+       * additional guidance on when to set a custom record size, see [ZFS Record
+       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      public fun recordSizeKiB(recordSizeKiB: Number)
+
+      /**
+       * @param storageCapacityQuotaGiB Sets the maximum storage size in gibibytes (GiB) for the
+       * volume.
+       * You can specify a quota that is larger than the storage on the parent volume. A volume
+       * quota limits the amount of storage that the volume can consume to the configured amount, but
+       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
+       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
+       * set this to `-1` .
+       *
+       * For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
+
+      /**
+       * @param storageCapacityReservationGiB Specifies the amount of storage in gibibytes (GiB) to
+       * reserve from the parent volume.
+       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
+       * space on the parent volume will always be available for the volume. You can't reserve more
+       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
+       * to `0` or `-1` . For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      public fun storageCapacityReservationGiB(storageCapacityReservationGiB: Number)
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable)
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>)
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      public fun userAndGroupQuotas(vararg userAndGroupQuotas: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty.builder()
+
+      /**
+       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
+       * copied to snapshots.
+       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
+       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       */
+      override fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
+        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots)
+      }
+
+      /**
+       * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
+       * copied to snapshots.
+       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
+       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       */
+      override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
+        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataCompressionType Specifies the method used to compress the data on the volume.
+       * The compression type is `NONE` by default.
+       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
+       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
+       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
+       * storage utilization.
+       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
+       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+       */
+      override fun dataCompressionType(dataCompressionType: String) {
+        cdkBuilder.dataCompressionType(dataCompressionType)
+      }
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      override fun nfsExports(nfsExports: IResolvable) {
+        cdkBuilder.nfsExports(nfsExports.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      override fun nfsExports(nfsExports: List<Any>) {
+        cdkBuilder.nfsExports(nfsExports)
+      }
+
+      /**
+       * @param nfsExports The configuration object for mounting a Network File System (NFS) file
+       * system.
+       */
+      override fun nfsExports(vararg nfsExports: Any): Unit = nfsExports(nfsExports.toList())
+
+      /**
+       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
+       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+       */
+      override fun options(options: List<String>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options To delete the volume's child volumes, snapshots, and clones, use the string
+       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+       */
+      override fun options(vararg options: String): Unit = options(options.toList())
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      override fun originSnapshot(originSnapshot: IResolvable) {
+        cdkBuilder.originSnapshot(originSnapshot.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      override fun originSnapshot(originSnapshot: OriginSnapshotProperty) {
+        cdkBuilder.originSnapshot(originSnapshot.let(OriginSnapshotProperty::unwrap))
+      }
+
+      /**
+       * @param originSnapshot The configuration object that specifies the snapshot to use as the
+       * origin of the data for the volume.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc249c4485e28a5183f8f7c874ed1490b18c693d1ab99d945c20696f0af2a6cf")
+      override fun originSnapshot(originSnapshot: OriginSnapshotProperty.Builder.() -> Unit): Unit =
+          originSnapshot(OriginSnapshotProperty(originSnapshot))
+
+      /**
+       * @param parentVolumeId The ID of the volume to use as the parent volume of the volume that
+       * you are creating. 
+       */
+      override fun parentVolumeId(parentVolumeId: String) {
+        cdkBuilder.parentVolumeId(parentVolumeId)
+      }
+
+      /**
+       * @param readOnly A Boolean value indicating whether the volume is read-only.
+       */
+      override fun readOnly(readOnly: Boolean) {
+        cdkBuilder.readOnly(readOnly)
+      }
+
+      /**
+       * @param readOnly A Boolean value indicating whether the volume is read-only.
+       */
+      override fun readOnly(readOnly: IResolvable) {
+        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordSizeKiB Specifies the suggested block size for a volume in a ZFS dataset, in
+       * kibibytes (KiB).
+       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
+       * recommend using the default setting for the majority of use cases. Generally, workloads that
+       * write in fixed small or large record sizes may benefit from setting a custom record size, like
+       * database workloads (small record size) or media streaming workloads (large record size). For
+       * additional guidance on when to set a custom record size, see [ZFS Record
+       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      override fun recordSizeKiB(recordSizeKiB: Number) {
+        cdkBuilder.recordSizeKiB(recordSizeKiB)
+      }
+
+      /**
+       * @param storageCapacityQuotaGiB Sets the maximum storage size in gibibytes (GiB) for the
+       * volume.
+       * You can specify a quota that is larger than the storage on the parent volume. A volume
+       * quota limits the amount of storage that the volume can consume to the configured amount, but
+       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
+       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
+       * set this to `-1` .
+       *
+       * For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
+        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
+      }
+
+      /**
+       * @param storageCapacityReservationGiB Specifies the amount of storage in gibibytes (GiB) to
+       * reserve from the parent volume.
+       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
+       * space on the parent volume will always be available for the volume. You can't reserve more
+       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
+       * to `0` or `-1` . For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       */
+      override fun storageCapacityReservationGiB(storageCapacityReservationGiB: Number) {
+        cdkBuilder.storageCapacityReservationGiB(storageCapacityReservationGiB)
+      }
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
+        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
+        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
+      }
+
+      /**
+       * @param userAndGroupQuotas Configures how much storage users and groups can use on the
+       * volume.
+       */
+      override fun userAndGroupQuotas(vararg userAndGroupQuotas: Any): Unit =
+          userAndGroupQuotas(userAndGroupQuotas.toList())
+
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty,
+    ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
+      /**
+       * A Boolean value indicating whether tags for the volume should be copied to snapshots.
+       *
+       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
+       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
+       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
+       */
+      override fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
+
+      /**
+       * Specifies the method used to compress the data on the volume. The compression type is
+       * `NONE` by default.
+       *
+       * * `NONE` - Doesn't compress the data on the volume. `NONE` is the default.
+       * * `ZSTD` - Compresses the data in the volume using the Zstandard (ZSTD) compression
+       * algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk
+       * storage utilization.
+       * * `LZ4` - Compresses the data in the volume using the LZ4 compression algorithm. Compared
+       * to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-datacompressiontype)
+       */
+      override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
+
+      /**
+       * The configuration object for mounting a Network File System (NFS) file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-nfsexports)
+       */
+      override fun nfsExports(): Any? = unwrap(this).getNfsExports()
+
+      /**
+       * To delete the volume's child volumes, snapshots, and clones, use the string
+       * `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-options)
+       */
+      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+
+      /**
+       * The configuration object that specifies the snapshot to use as the origin of the data for
+       * the volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-originsnapshot)
+       */
+      override fun originSnapshot(): Any? = unwrap(this).getOriginSnapshot()
+
+      /**
+       * The ID of the volume to use as the parent volume of the volume that you are creating.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-parentvolumeid)
+       */
+      override fun parentVolumeId(): String = unwrap(this).getParentVolumeId()
+
+      /**
+       * A Boolean value indicating whether the volume is read-only.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-readonly)
+       */
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+      /**
+       * Specifies the suggested block size for a volume in a ZFS dataset, in kibibytes (KiB).
+       *
+       * Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We
+       * recommend using the default setting for the majority of use cases. Generally, workloads that
+       * write in fixed small or large record sizes may benefit from setting a custom record size, like
+       * database workloads (small record size) or media streaming workloads (large record size). For
+       * additional guidance on when to set a custom record size, see [ZFS Record
+       * size](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-recordsizekib)
+       */
+      override fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
+
+      /**
+       * Sets the maximum storage size in gibibytes (GiB) for the volume.
+       *
+       * You can specify a quota that is larger than the storage on the parent volume. A volume
+       * quota limits the amount of storage that the volume can consume to the configured amount, but
+       * does not guarantee the space will be available on the parent volume. To guarantee quota space,
+       * you must also set `StorageCapacityReservationGiB` . To *not* specify a storage capacity quota,
+       * set this to `-1` .
+       *
+       * For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityquotagib)
+       */
+      override fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
+
+      /**
+       * Specifies the amount of storage in gibibytes (GiB) to reserve from the parent volume.
+       *
+       * Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage
+       * space on the parent volume will always be available for the volume. You can't reserve more
+       * storage than the parent volume has. To *not* specify a storage capacity reservation, set this
+       * to `0` or `-1` . For more information, see [Volume
+       * properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties)
+       * in the *Amazon FSx for OpenZFS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-storagecapacityreservationgib)
+       */
+      override fun storageCapacityReservationGiB(): Number? =
+          unwrap(this).getStorageCapacityReservationGiB()
+
+      /**
+       * Configures how much storage users and groups can use on the volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-userandgroupquotas)
+       */
+      override fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OpenZFSConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty):
+          OpenZFSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenZFSConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenZFSConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration object that specifies the snapshot to use as the origin of the data for the
+   * volume.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * OriginSnapshotProperty originSnapshotProperty = OriginSnapshotProperty.builder()
+   * .copyStrategy("copyStrategy")
+   * .snapshotArn("snapshotArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html)
+   */
+  public interface OriginSnapshotProperty {
+    /**
+     * Specifies the strategy used when copying data from the snapshot to the new volume.
+     *
+     * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot is
+     * faster than copying data from the snapshot to a new volume and doesn't consume disk throughput.
+     * However, the origin snapshot can't be deleted if there is a volume using its copied data.
+     * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
+     *
+     * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
+     * system.
+     *
+     *
+     * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
+     * from another FSx for OpenZFS file system. For more information, see
+     * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-copystrategy)
+     */
+    public fun copyStrategy(): String
+
+    /**
+     * Specifies the snapshot to use when creating an OpenZFS volume from a snapshot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-snapshotarn)
+     */
+    public fun snapshotArn(): String
+
+    /**
+     * A builder for [OriginSnapshotProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param copyStrategy Specifies the strategy used when copying data from the snapshot to the
+       * new volume. 
+       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
+       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
+       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
+       * copied data.
+       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
+       *
+       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
+       * system.
+       *
+       *
+       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
+       * from another FSx for OpenZFS file system. For more information, see
+       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
+       * .
+       */
+      public fun copyStrategy(copyStrategy: String)
+
+      /**
+       * @param snapshotArn Specifies the snapshot to use when creating an OpenZFS volume from a
+       * snapshot. 
+       */
+      public fun snapshotArn(snapshotArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty.builder()
+
+      /**
+       * @param copyStrategy Specifies the strategy used when copying data from the snapshot to the
+       * new volume. 
+       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
+       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
+       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
+       * copied data.
+       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
+       *
+       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
+       * system.
+       *
+       *
+       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
+       * from another FSx for OpenZFS file system. For more information, see
+       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
+       * .
+       */
+      override fun copyStrategy(copyStrategy: String) {
+        cdkBuilder.copyStrategy(copyStrategy)
+      }
+
+      /**
+       * @param snapshotArn Specifies the snapshot to use when creating an OpenZFS volume from a
+       * snapshot. 
+       */
+      override fun snapshotArn(snapshotArn: String) {
+        cdkBuilder.snapshotArn(snapshotArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty,
+    ) : CdkObject(cdkObject), OriginSnapshotProperty {
+      /**
+       * Specifies the strategy used when copying data from the snapshot to the new volume.
+       *
+       * * `CLONE` - The new volume references the data in the origin snapshot. Cloning a snapshot
+       * is faster than copying data from the snapshot to a new volume and doesn't consume disk
+       * throughput. However, the origin snapshot can't be deleted if there is a volume using its
+       * copied data.
+       * * `FULL_COPY` - Copies all data from the snapshot to the new volume.
+       *
+       * Specify this option to create the volume from a snapshot on another FSx for OpenZFS file
+       * system.
+       *
+       *
+       * The `INCREMENTAL_COPY` option is only for updating an existing volume by using a snapshot
+       * from another FSx for OpenZFS file system. For more information, see
+       * [CopySnapshotAndUpdateVolume](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CopySnapshotAndUpdateVolume.html)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-copystrategy)
+       */
+      override fun copyStrategy(): String = unwrap(this).getCopyStrategy()
+
+      /**
+       * Specifies the snapshot to use when creating an OpenZFS volume from a snapshot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html#cfn-fsx-volume-originsnapshot-snapshotarn)
+       */
+      override fun snapshotArn(): String = unwrap(this).getSnapshotArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OriginSnapshotProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty):
+          OriginSnapshotProperty = CdkObjectWrappers.wrap(cdkObject) as? OriginSnapshotProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OriginSnapshotProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty
+    }
+  }
+
+  /**
+   * Specifies the retention period of an FSx for ONTAP SnapLock volume.
+   *
+   * After it is set, it can't be changed. Files can't be deleted or modified during the retention
+   * period.
+   *
+   * For more information, see [Working with the retention period in
+   * SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html)
+   */
+  public interface RetentionPeriodProperty {
+    /**
+     * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
+     *
+     * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
+     * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
+     * retention period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-type)
+     */
+    public fun type(): String
+
+    /**
+     * Defines the amount of time for the retention period of an FSx for ONTAP SnapLock volume.
+     *
+     * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the following
+     * ranges are valid:
+     *
+     * * `Seconds` : 0 - 65,535
+     * * `Minutes` : 0 - 65,535
+     * * `Hours` : 0 - 24
+     * * `Days` : 0 - 365
+     * * `Months` : 0 - 12
+     * * `Years` : 0 - 100
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-value)
+     */
+    public fun `value`(): Number? = unwrap(this).getValue()
+
+    /**
+     * A builder for [RetentionPeriodProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type Defines the type of time for the retention period of an FSx for ONTAP SnapLock
+       * volume. 
+       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
+       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
+       * retention period.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value Defines the amount of time for the retention period of an FSx for ONTAP
+       * SnapLock volume.
+       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
+       * following ranges are valid:
+       *
+       * * `Seconds` : 0 - 65,535
+       * * `Minutes` : 0 - 65,535
+       * * `Hours` : 0 - 24
+       * * `Days` : 0 - 365
+       * * `Months` : 0 - 12
+       * * `Years` : 0 - 100
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty.builder()
+
+      /**
+       * @param type Defines the type of time for the retention period of an FSx for ONTAP SnapLock
+       * volume. 
+       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
+       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
+       * retention period.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value Defines the amount of time for the retention period of an FSx for ONTAP
+       * SnapLock volume.
+       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
+       * following ranges are valid:
+       *
+       * * `Seconds` : 0 - 65,535
+       * * `Minutes` : 0 - 65,535
+       * * `Hours` : 0 - 24
+       * * `Days` : 0 - 365
+       * * `Months` : 0 - 12
+       * * `Years` : 0 - 100
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty,
+    ) : CdkObject(cdkObject), RetentionPeriodProperty {
+      /**
+       * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
+       *
+       * Set it to one of the valid types. If you set it to `INFINITE` , the files are retained
+       * forever. If you set it to `UNSPECIFIED` , the files are retained until you set an explicit
+       * retention period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * Defines the amount of time for the retention period of an FSx for ONTAP SnapLock volume.
+       *
+       * You can't set a value for `INFINITE` or `UNSPECIFIED` . For all other options, the
+       * following ranges are valid:
+       *
+       * * `Seconds` : 0 - 65,535
+       * * `Minutes` : 0 - 65,535
+       * * `Hours` : 0 - 24
+       * * `Days` : 0 - 365
+       * * `Months` : 0 - 12
+       * * `Years` : 0 - 100
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-retentionperiod.html#cfn-fsx-volume-retentionperiod-value)
+       */
+      override fun `value`(): Number? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty):
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetentionPeriodProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty
     }
   }
 
@@ -4039,8 +3450,7 @@ public open class CfnVolume internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty,
     ) : CdkObject(cdkObject), SnaplockConfigurationProperty {
       /**
        * Enables or disables the audit log volume for an FSx for ONTAP SnapLock volume.
@@ -4138,6 +3548,588 @@ public open class CfnVolume internal constructor(
           software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration to set the retention period of an FSx for ONTAP SnapLock volume.
+   *
+   * The retention period includes default, maximum, and minimum settings. For more information, see
+   * [Working with the retention period in
+   * SnapLock](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-retention.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * SnaplockRetentionPeriodProperty snaplockRetentionPeriodProperty =
+   * SnaplockRetentionPeriodProperty.builder()
+   * .defaultRetention(RetentionPeriodProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .value(123)
+   * .build())
+   * .maximumRetention(RetentionPeriodProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .value(123)
+   * .build())
+   * .minimumRetention(RetentionPeriodProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .value(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html)
+   */
+  public interface SnaplockRetentionPeriodProperty {
+    /**
+     * The retention period assigned to a write once, read many (WORM) file by default if an
+     * explicit retention period is not set for an FSx for ONTAP SnapLock volume.
+     *
+     * The default retention period must be greater than or equal to the minimum retention period
+     * and less than or equal to the maximum retention period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-defaultretention)
+     */
+    public fun defaultRetention(): Any
+
+    /**
+     * The longest retention period that can be assigned to a WORM file on an FSx for ONTAP SnapLock
+     * volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-maximumretention)
+     */
+    public fun maximumRetention(): Any
+
+    /**
+     * The shortest retention period that can be assigned to a WORM file on an FSx for ONTAP
+     * SnapLock volume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-minimumretention)
+     */
+    public fun minimumRetention(): Any
+
+    /**
+     * A builder for [SnaplockRetentionPeriodProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      public fun defaultRetention(defaultRetention: IResolvable)
+
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      public fun defaultRetention(defaultRetention: RetentionPeriodProperty)
+
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8a42a5037103ecf76c0a9f00ef8c2fe089b7914680cc04cda363796f099e8bd4")
+      public fun defaultRetention(defaultRetention: RetentionPeriodProperty.Builder.() -> Unit)
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      public fun maximumRetention(maximumRetention: IResolvable)
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      public fun maximumRetention(maximumRetention: RetentionPeriodProperty)
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70d68515ae4f0204070f094fd7932b69f8841870d439504d18b4c3e586ee30a3")
+      public fun maximumRetention(maximumRetention: RetentionPeriodProperty.Builder.() -> Unit)
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      public fun minimumRetention(minimumRetention: IResolvable)
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      public fun minimumRetention(minimumRetention: RetentionPeriodProperty)
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b577d436edea2397c35c744ca0cfd12f57db380f6daeca18cf04497f22097758")
+      public fun minimumRetention(minimumRetention: RetentionPeriodProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty.builder()
+
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      override fun defaultRetention(defaultRetention: IResolvable) {
+        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      override fun defaultRetention(defaultRetention: RetentionPeriodProperty) {
+        cdkBuilder.defaultRetention(defaultRetention.let(RetentionPeriodProperty::unwrap))
+      }
+
+      /**
+       * @param defaultRetention The retention period assigned to a write once, read many (WORM)
+       * file by default if an explicit retention period is not set for an FSx for ONTAP SnapLock
+       * volume. 
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8a42a5037103ecf76c0a9f00ef8c2fe089b7914680cc04cda363796f099e8bd4")
+      override fun defaultRetention(defaultRetention: RetentionPeriodProperty.Builder.() -> Unit):
+          Unit = defaultRetention(RetentionPeriodProperty(defaultRetention))
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      override fun maximumRetention(maximumRetention: IResolvable) {
+        cdkBuilder.maximumRetention(maximumRetention.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      override fun maximumRetention(maximumRetention: RetentionPeriodProperty) {
+        cdkBuilder.maximumRetention(maximumRetention.let(RetentionPeriodProperty::unwrap))
+      }
+
+      /**
+       * @param maximumRetention The longest retention period that can be assigned to a WORM file on
+       * an FSx for ONTAP SnapLock volume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("70d68515ae4f0204070f094fd7932b69f8841870d439504d18b4c3e586ee30a3")
+      override fun maximumRetention(maximumRetention: RetentionPeriodProperty.Builder.() -> Unit):
+          Unit = maximumRetention(RetentionPeriodProperty(maximumRetention))
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      override fun minimumRetention(minimumRetention: IResolvable) {
+        cdkBuilder.minimumRetention(minimumRetention.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      override fun minimumRetention(minimumRetention: RetentionPeriodProperty) {
+        cdkBuilder.minimumRetention(minimumRetention.let(RetentionPeriodProperty::unwrap))
+      }
+
+      /**
+       * @param minimumRetention The shortest retention period that can be assigned to a WORM file
+       * on an FSx for ONTAP SnapLock volume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b577d436edea2397c35c744ca0cfd12f57db380f6daeca18cf04497f22097758")
+      override fun minimumRetention(minimumRetention: RetentionPeriodProperty.Builder.() -> Unit):
+          Unit = minimumRetention(RetentionPeriodProperty(minimumRetention))
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty,
+    ) : CdkObject(cdkObject), SnaplockRetentionPeriodProperty {
+      /**
+       * The retention period assigned to a write once, read many (WORM) file by default if an
+       * explicit retention period is not set for an FSx for ONTAP SnapLock volume.
+       *
+       * The default retention period must be greater than or equal to the minimum retention period
+       * and less than or equal to the maximum retention period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-defaultretention)
+       */
+      override fun defaultRetention(): Any = unwrap(this).getDefaultRetention()
+
+      /**
+       * The longest retention period that can be assigned to a WORM file on an FSx for ONTAP
+       * SnapLock volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-maximumretention)
+       */
+      override fun maximumRetention(): Any = unwrap(this).getMaximumRetention()
+
+      /**
+       * The shortest retention period that can be assigned to a WORM file on an FSx for ONTAP
+       * SnapLock volume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-snaplockretentionperiod.html#cfn-fsx-volume-snaplockretentionperiod-minimumretention)
+       */
+      override fun minimumRetention(): Any = unwrap(this).getMinimumRetention()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnaplockRetentionPeriodProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty):
+          SnaplockRetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnaplockRetentionPeriodProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnaplockRetentionPeriodProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty
+    }
+  }
+
+  /**
+   * Describes the data tiering policy for an ONTAP volume.
+   *
+   * When enabled, Amazon FSx for ONTAP's intelligent tiering automatically transitions a volume's
+   * data between the file system's primary storage and capacity pool storage based on your access
+   * patterns.
+   *
+   * Valid tiering policies are the following:
+   *
+   * * `SNAPSHOT_ONLY` - (Default value) moves cold snapshots to the capacity pool storage tier.
+   * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on your
+   * access patterns.
+   * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to the
+   * storage pool tier.
+   * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being moved to
+   * the capacity pool tier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * TieringPolicyProperty tieringPolicyProperty = TieringPolicyProperty.builder()
+   * .coolingPeriod(123)
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html)
+   */
+  public interface TieringPolicyProperty {
+    /**
+     * Specifies the number of days that user data in a volume must remain inactive before it is
+     * considered "cold" and moved to the capacity pool.
+     *
+     * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2 and
+     * 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-coolingperiod)
+     */
+    public fun coolingPeriod(): Number? = unwrap(this).getCoolingPeriod()
+
+    /**
+     * Specifies the tiering policy used to transition data. Default value is `SNAPSHOT_ONLY` .
+     *
+     * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
+     * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on your
+     * access patterns.
+     * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
+     * the storage pool tier.
+     * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being moved
+     * to the capacity pool tier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [TieringPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param coolingPeriod Specifies the number of days that user data in a volume must remain
+       * inactive before it is considered "cold" and moved to the capacity pool.
+       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
+       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
+       */
+      public fun coolingPeriod(coolingPeriod: Number)
+
+      /**
+       * @param name Specifies the tiering policy used to transition data. Default value is
+       * `SNAPSHOT_ONLY` .
+       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
+       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
+       * your access patterns.
+       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
+       * the storage pool tier.
+       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
+       * moved to the capacity pool tier.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty.builder()
+
+      /**
+       * @param coolingPeriod Specifies the number of days that user data in a volume must remain
+       * inactive before it is considered "cold" and moved to the capacity pool.
+       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
+       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
+       */
+      override fun coolingPeriod(coolingPeriod: Number) {
+        cdkBuilder.coolingPeriod(coolingPeriod)
+      }
+
+      /**
+       * @param name Specifies the tiering policy used to transition data. Default value is
+       * `SNAPSHOT_ONLY` .
+       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
+       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
+       * your access patterns.
+       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
+       * the storage pool tier.
+       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
+       * moved to the capacity pool tier.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty,
+    ) : CdkObject(cdkObject), TieringPolicyProperty {
+      /**
+       * Specifies the number of days that user data in a volume must remain inactive before it is
+       * considered "cold" and moved to the capacity pool.
+       *
+       * Used with the `AUTO` and `SNAPSHOT_ONLY` tiering policies. Enter a whole number between 2
+       * and 183. Default values are 31 days for `AUTO` and 2 days for `SNAPSHOT_ONLY` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-coolingperiod)
+       */
+      override fun coolingPeriod(): Number? = unwrap(this).getCoolingPeriod()
+
+      /**
+       * Specifies the tiering policy used to transition data. Default value is `SNAPSHOT_ONLY` .
+       *
+       * * `SNAPSHOT_ONLY` - moves cold snapshots to the capacity pool storage tier.
+       * * `AUTO` - moves cold user data and snapshots to the capacity pool storage tier based on
+       * your access patterns.
+       * * `ALL` - moves all user data blocks in both the active file system and Snapshot copies to
+       * the storage pool tier.
+       * * `NONE` - keeps a volume's data in the primary storage tier, preventing it from being
+       * moved to the capacity pool tier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-tieringpolicy.html#cfn-fsx-volume-tieringpolicy-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TieringPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty):
+          TieringPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TieringPolicyProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty
+    }
+  }
+
+  /**
+   * Configures how much storage users and groups can use on the volume.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * UserAndGroupQuotasProperty userAndGroupQuotasProperty = UserAndGroupQuotasProperty.builder()
+   * .id(123)
+   * .storageCapacityQuotaGiB(123)
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html)
+   */
+  public interface UserAndGroupQuotasProperty {
+    /**
+     * The ID of the user or group that the quota applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-id)
+     */
+    public fun id(): Number
+
+    /**
+     * The user or group's storage quota, in gibibytes (GiB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-storagecapacityquotagib)
+     */
+    public fun storageCapacityQuotaGiB(): Number
+
+    /**
+     * Specifies whether the quota applies to a user or group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [UserAndGroupQuotasProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the user or group that the quota applies to. 
+       */
+      public fun id(id: Number)
+
+      /**
+       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). 
+       */
+      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
+
+      /**
+       * @param type Specifies whether the quota applies to a user or group. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty.builder()
+
+      /**
+       * @param id The ID of the user or group that the quota applies to. 
+       */
+      override fun id(id: Number) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param storageCapacityQuotaGiB The user or group's storage quota, in gibibytes (GiB). 
+       */
+      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
+        cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
+      }
+
+      /**
+       * @param type Specifies whether the quota applies to a user or group. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty,
+    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
+      /**
+       * The ID of the user or group that the quota applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-id)
+       */
+      override fun id(): Number = unwrap(this).getId()
+
+      /**
+       * The user or group's storage quota, in gibibytes (GiB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-storagecapacityquotagib)
+       */
+      override fun storageCapacityQuotaGiB(): Number = unwrap(this).getStorageCapacityQuotaGiB()
+
+      /**
+       * Specifies whether the quota applies to a user or group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-userandgroupquotas.html#cfn-fsx-volume-userandgroupquotas-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UserAndGroupQuotasProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty):
+          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
+          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty
     }
   }
 }

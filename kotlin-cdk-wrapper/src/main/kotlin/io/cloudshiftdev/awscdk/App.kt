@@ -50,8 +50,8 @@ import kotlin.collections.Map
  *
  * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/apps.html)
  */
-public open class App internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.App,
+public open class App(
+  cdkObject: software.amazon.awscdk.App,
 ) : Stage(cdkObject) {
   public constructor() : this(software.amazon.awscdk.App()
   )
@@ -380,6 +380,7 @@ public open class App internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.App): App = App(cdkObject)
 
-    internal fun unwrap(wrapped: App): software.amazon.awscdk.App = wrapped.cdkObject
+    internal fun unwrap(wrapped: App): software.amazon.awscdk.App = wrapped.cdkObject as
+        software.amazon.awscdk.App
   }
 }

@@ -18,8 +18,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
  */
-public abstract class DeploymentStrategyId internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
+public abstract class DeploymentStrategyId(
+  cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
 ) : CdkObject(cdkObject) {
   /**
    * The deployment strategy ID.
@@ -27,7 +27,7 @@ public abstract class DeploymentStrategyId internal constructor(
   public open fun id(): String = unwrap(this).getId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
+    cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
   ) : DeploymentStrategyId(cdkObject)
 
   public companion object {

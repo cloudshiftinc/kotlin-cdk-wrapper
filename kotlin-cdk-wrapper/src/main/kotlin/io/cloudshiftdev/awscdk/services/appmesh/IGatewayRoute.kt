@@ -31,7 +31,7 @@ public interface IGatewayRoute : IResource {
   public fun virtualGateway(): IVirtualGateway
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IGatewayRoute,
+    cdkObject: software.amazon.awscdk.services.appmesh.IGatewayRoute,
   ) : CdkObject(cdkObject), IGatewayRoute {
     /**
      * Apply the given removal policy to this resource.

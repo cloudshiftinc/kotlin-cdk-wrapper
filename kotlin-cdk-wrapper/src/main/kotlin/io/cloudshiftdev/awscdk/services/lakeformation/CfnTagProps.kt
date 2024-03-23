@@ -202,7 +202,7 @@ public interface CfnTagProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagProps,
+    cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagProps,
   ) : CdkObject(cdkObject), CfnTagProps {
     /**
      * Catalog id string, not less than 1 or more than 255 bytes long, matching the [single-line

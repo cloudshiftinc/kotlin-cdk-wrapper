@@ -297,7 +297,7 @@ public interface CfnParameterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnParameterProps,
+    cdkObject: software.amazon.awscdk.CfnParameterProps,
   ) : CdkObject(cdkObject), CfnParameterProps {
     /**
      * A regular expression that represents the patterns to allow for String types.

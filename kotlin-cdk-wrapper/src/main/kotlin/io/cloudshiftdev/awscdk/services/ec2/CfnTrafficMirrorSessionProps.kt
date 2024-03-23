@@ -274,7 +274,7 @@ public interface CfnTrafficMirrorSessionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSessionProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSessionProps,
   ) : CdkObject(cdkObject), CfnTrafficMirrorSessionProps {
     /**
      * The description of the Traffic Mirror session.

@@ -115,7 +115,7 @@ public interface HttpDataSourceOptions : DataSourceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceOptions,
+    cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceOptions,
   ) : CdkObject(cdkObject), HttpDataSourceOptions {
     /**
      * The authorization config in case the HTTP endpoint requires authorization.

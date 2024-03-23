@@ -326,7 +326,7 @@ public interface CfnEntityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntityProps,
+    cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntityProps,
   ) : CdkObject(cdkObject), CfnEntityProps {
     /**
      * An object that maps strings to the components in the entity.

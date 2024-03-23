@@ -86,8 +86,7 @@ public interface WebSocketRouteIntegrationBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions,
   ) : CdkObject(cdkObject), WebSocketRouteIntegrationBindOptions {
     /**
      * The route to which this is being bound.

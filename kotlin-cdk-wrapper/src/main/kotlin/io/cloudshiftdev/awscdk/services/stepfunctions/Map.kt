@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html)
  */
-public open class Map internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
+public open class Map(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
 ) : MapBase(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -513,6 +513,6 @@ public open class Map internal constructor(
         Map(cdkObject)
 
     internal fun unwrap(wrapped: Map): software.amazon.awscdk.services.stepfunctions.Map =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Map
   }
 }

@@ -158,7 +158,7 @@ public interface CfnGatewayProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGatewayProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGatewayProps,
   ) : CdkObject(cdkObject), CfnGatewayProps {
     /**
      * The range of IP addresses that are allowed to contribute content or initiate output requests

@@ -960,7 +960,7 @@ public interface CfnFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleetProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnFleetProps,
   ) : CdkObject(cdkObject), CfnFleetProps {
     /**
      * The desired capacity for the fleet.

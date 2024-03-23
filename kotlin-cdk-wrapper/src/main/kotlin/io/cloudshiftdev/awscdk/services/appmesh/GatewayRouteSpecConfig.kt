@@ -337,7 +337,7 @@ public interface GatewayRouteSpecConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig,
   ) : CdkObject(cdkObject), GatewayRouteSpecConfig {
     /**
      * The spec for a grpc gateway route.

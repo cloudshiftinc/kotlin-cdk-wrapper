@@ -77,7 +77,7 @@ public interface GatewayRouteHostnameMatchConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig,
   ) : CdkObject(cdkObject), GatewayRouteHostnameMatchConfig {
     /**
      * GatewayRoute CFN configuration for host name match.

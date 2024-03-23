@@ -52,9 +52,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HttpStepFunctionsIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration,
+public open class HttpStepFunctionsIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration,
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, props: HttpStepFunctionsIntegrationProps) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration(id,
@@ -187,6 +186,7 @@ public open class HttpStepFunctionsIntegration internal constructor(
 
     internal fun unwrap(wrapped: HttpStepFunctionsIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration
   }
 }

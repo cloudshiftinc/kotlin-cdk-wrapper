@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html)
  */
-public open class CfnReplicationSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet,
+public open class CfnReplicationSet(
+  cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -318,7 +318,8 @@ public open class CfnReplicationSet internal constructor(
         CfnReplicationSet = CfnReplicationSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationSet):
-        software.amazon.awscdk.services.ssmincidents.CfnReplicationSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ssmincidents.CfnReplicationSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
   }
 
   /**
@@ -378,8 +379,7 @@ public open class CfnReplicationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty,
     ) : CdkObject(cdkObject), RegionConfigurationProperty {
       /**
        * The AWS Key Management Service key ID to use to encrypt your replication set.
@@ -513,8 +513,7 @@ public open class CfnReplicationSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty,
+      cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty,
     ) : CdkObject(cdkObject), ReplicationRegionProperty {
       /**
        * Specifies the Region configuration.

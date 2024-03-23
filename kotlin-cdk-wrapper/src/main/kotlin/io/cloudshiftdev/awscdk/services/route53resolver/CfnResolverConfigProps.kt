@@ -89,7 +89,7 @@ public interface CfnResolverConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps,
   ) : CdkObject(cdkObject), CfnResolverConfigProps {
     /**
      * Represents the desired status of `AutodefinedReverse` .

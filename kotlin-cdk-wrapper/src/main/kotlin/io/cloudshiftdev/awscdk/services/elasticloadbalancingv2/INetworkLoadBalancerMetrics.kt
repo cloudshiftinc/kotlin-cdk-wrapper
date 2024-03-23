@@ -277,8 +277,7 @@ public interface INetworkLoadBalancerMetrics {
   public fun tcpTargetResetCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerMetrics,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerMetrics,
   ) : CdkObject(cdkObject), INetworkLoadBalancerMetrics {
     /**
      * The total number of concurrent TCP flows (or connections) from clients to targets.

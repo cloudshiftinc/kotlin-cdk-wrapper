@@ -98,7 +98,7 @@ public interface LogOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions,
   ) : CdkObject(cdkObject), LogOptions {
     /**
      * The log group where the execution history events will be logged.

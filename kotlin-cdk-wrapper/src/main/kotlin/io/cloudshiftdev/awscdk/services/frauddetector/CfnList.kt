@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-list.html)
  */
-public open class CfnList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnList,
+public open class CfnList(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -339,6 +339,6 @@ public open class CfnList internal constructor(
         CfnList(cdkObject)
 
     internal fun unwrap(wrapped: CfnList): software.amazon.awscdk.services.frauddetector.CfnList =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.frauddetector.CfnList
   }
 }

@@ -154,7 +154,7 @@ public interface S3DataSource {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource,
   ) : CdkObject(cdkObject), S3DataSource {
     /**
      * List of one or more attribute names to use that are found in a specified augmented manifest

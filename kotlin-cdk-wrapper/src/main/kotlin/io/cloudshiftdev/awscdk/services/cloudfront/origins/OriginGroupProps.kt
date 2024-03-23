@@ -116,7 +116,7 @@ public interface OriginGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps,
   ) : CdkObject(cdkObject), OriginGroupProps {
     /**
      * The fallback origin that should serve requests when the primary fails.

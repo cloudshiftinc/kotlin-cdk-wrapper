@@ -56,7 +56,7 @@ public interface WindowsImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.WindowsImageProps,
+    cdkObject: software.amazon.awscdk.services.ec2.WindowsImageProps,
   ) : CdkObject(cdkObject), WindowsImageProps {
     /**
      * Initial user data.

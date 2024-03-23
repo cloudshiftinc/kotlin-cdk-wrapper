@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class RequestAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.RequestAuthorizer,
+public open class RequestAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigateway.RequestAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -290,6 +290,7 @@ public open class RequestAuthorizer internal constructor(
         RequestAuthorizer = RequestAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: RequestAuthorizer):
-        software.amazon.awscdk.services.apigateway.RequestAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.RequestAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.RequestAuthorizer
   }
 }

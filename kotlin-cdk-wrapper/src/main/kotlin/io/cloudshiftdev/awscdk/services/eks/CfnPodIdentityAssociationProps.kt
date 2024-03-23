@@ -236,7 +236,7 @@ public interface CfnPodIdentityAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps,
+    cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps,
   ) : CdkObject(cdkObject), CfnPodIdentityAssociationProps {
     /**
      * The name of the cluster that the association is in.

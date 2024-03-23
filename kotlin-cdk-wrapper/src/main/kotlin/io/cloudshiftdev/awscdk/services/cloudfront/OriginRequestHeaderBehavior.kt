@@ -31,9 +31,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class OriginRequestHeaderBehavior internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.OriginRequestHeaderBehavior,
+public open class OriginRequestHeaderBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestHeaderBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * The behavior of headers: allow all, none or an allow list.
@@ -64,5 +63,6 @@ public open class OriginRequestHeaderBehavior internal constructor(
 
     internal fun unwrap(wrapped: OriginRequestHeaderBehavior):
         software.amazon.awscdk.services.cloudfront.OriginRequestHeaderBehavior = wrapped.cdkObject
+        as software.amazon.awscdk.services.cloudfront.OriginRequestHeaderBehavior
   }
 }

@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)
  */
-public open class CfnJobQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue,
+public open class CfnJobQueue(
+  cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -468,7 +468,7 @@ public open class CfnJobQueue internal constructor(
         CfnJobQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobQueue): software.amazon.awscdk.services.batch.CfnJobQueue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.batch.CfnJobQueue
   }
 
   /**
@@ -568,8 +568,7 @@ public open class CfnJobQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty,
     ) : CdkObject(cdkObject), ComputeEnvironmentOrderProperty {
       /**
        * The Amazon Resource Name (ARN) of the compute environment.

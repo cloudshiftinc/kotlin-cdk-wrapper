@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)
  */
-public open class CfnEventBusPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy,
+public open class CfnEventBusPolicy(
+  cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -481,7 +481,8 @@ public open class CfnEventBusPolicy internal constructor(
         CfnEventBusPolicy = CfnEventBusPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventBusPolicy):
-        software.amazon.awscdk.services.events.CfnEventBusPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.events.CfnEventBusPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.CfnEventBusPolicy
   }
 
   /**
@@ -595,8 +596,7 @@ public open class CfnEventBusPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty,
     ) : CdkObject(cdkObject), ConditionProperty {
       /**
        * Specifies the key for the condition.

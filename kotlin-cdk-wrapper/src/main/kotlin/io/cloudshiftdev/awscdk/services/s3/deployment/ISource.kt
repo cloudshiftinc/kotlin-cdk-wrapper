@@ -40,7 +40,7 @@ public interface ISource {
       SourceConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.deployment.ISource,
+    cdkObject: software.amazon.awscdk.services.s3.deployment.ISource,
   ) : CdkObject(cdkObject), ISource {
     /**
      * Binds the source to a bucket deployment.

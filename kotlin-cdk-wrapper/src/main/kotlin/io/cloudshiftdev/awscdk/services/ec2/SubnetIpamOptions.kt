@@ -69,7 +69,7 @@ public interface SubnetIpamOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions,
   ) : CdkObject(cdkObject), SubnetIpamOptions {
     /**
      * CIDR Allocations for Subnets.

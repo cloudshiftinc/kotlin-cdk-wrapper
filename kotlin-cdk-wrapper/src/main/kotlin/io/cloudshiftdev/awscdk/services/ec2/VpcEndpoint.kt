@@ -13,8 +13,8 @@ import kotlin.jvm.JvmName
 /**
  *
  */
-public abstract class VpcEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
+public abstract class VpcEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
 ) : Resource(cdkObject), IVpcEndpoint {
   /**
    * Adds a statement to the policy document of the VPC endpoint. The statement must have a
@@ -49,7 +49,7 @@ public abstract class VpcEndpoint internal constructor(
   public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
+    cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
   ) : VpcEndpoint(cdkObject)
 
   public companion object {

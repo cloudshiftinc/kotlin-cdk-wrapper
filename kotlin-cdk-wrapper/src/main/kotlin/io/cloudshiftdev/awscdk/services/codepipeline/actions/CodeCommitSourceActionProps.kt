@@ -303,8 +303,7 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceActionProps,
   ) : CdkObject(cdkObject), CodeCommitSourceActionProps {
     /**
      * The physical, human-readable name of the Action.

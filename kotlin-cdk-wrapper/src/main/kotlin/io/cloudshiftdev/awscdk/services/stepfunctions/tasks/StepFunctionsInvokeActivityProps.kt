@@ -303,8 +303,7 @@ public interface StepFunctionsInvokeActivityProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivityProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivityProps,
   ) : CdkObject(cdkObject), StepFunctionsInvokeActivityProps {
     /**
      * Step Functions Activity to invoke.

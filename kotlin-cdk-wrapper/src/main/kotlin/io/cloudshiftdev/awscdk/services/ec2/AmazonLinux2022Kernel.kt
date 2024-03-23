@@ -17,8 +17,8 @@ import kotlin.String
  * AmazonLinux2022Kernel amazonLinux2022Kernel = AmazonLinux2022Kernel.CDK_LATEST;
  * ```
  */
-public open class AmazonLinux2022Kernel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel,
+public open class AmazonLinux2022Kernel(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel,
 ) : CdkObject(cdkObject) {
   public constructor(version: String) :
       this(software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel(version)
@@ -38,6 +38,7 @@ public open class AmazonLinux2022Kernel internal constructor(
         AmazonLinux2022Kernel = AmazonLinux2022Kernel(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinux2022Kernel):
-        software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel
   }
 }

@@ -338,7 +338,7 @@ public interface CfnAutoScalingRollingUpdate {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnAutoScalingRollingUpdate,
+    cdkObject: software.amazon.awscdk.CfnAutoScalingRollingUpdate,
   ) : CdkObject(cdkObject), CfnAutoScalingRollingUpdate {
     /**
      * Specifies the maximum number of instances that AWS CloudFormation updates.

@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html)
  */
-public open class CfnAccessGrantsLocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation,
+public open class CfnAccessGrantsLocation(
+  cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -286,6 +286,7 @@ public open class CfnAccessGrantsLocation internal constructor(
         CfnAccessGrantsLocation = CfnAccessGrantsLocation(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrantsLocation):
-        software.amazon.awscdk.services.s3.CfnAccessGrantsLocation = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.CfnAccessGrantsLocation = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.CfnAccessGrantsLocation
   }
 }

@@ -41,9 +41,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class WebSocketIamAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer,
+public open class WebSocketIamAuthorizer(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
   public constructor() :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer()
@@ -75,6 +74,7 @@ public open class WebSocketIamAuthorizer internal constructor(
 
     internal fun unwrap(wrapped: WebSocketIamAuthorizer):
         software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer
   }
 }

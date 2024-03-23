@@ -70,7 +70,7 @@ public interface PipelineBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.PipelineBaseProps,
+    cdkObject: software.amazon.awscdk.pipelines.PipelineBaseProps,
   ) : CdkObject(cdkObject), PipelineBaseProps {
     /**
      * The build step that produces the CDK Cloud Assembly.

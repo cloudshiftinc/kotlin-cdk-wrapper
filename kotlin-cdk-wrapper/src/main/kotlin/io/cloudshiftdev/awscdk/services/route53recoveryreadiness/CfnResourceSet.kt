@@ -75,9 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)
  */
-public open class CfnResourceSet internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
+public open class CfnResourceSet(
+  cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -369,10 +368,11 @@ public open class CfnResourceSet internal constructor(
 
     internal fun unwrap(wrapped: CfnResourceSet):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet = wrapped.cdkObject
+        as software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
   }
 
   /**
-   * The target resource that the Route 53 record points to.
+   * A component for DNS/routing control readiness checks and architecture checks.
    *
    * Example:
    *
@@ -380,7 +380,12 @@ public open class CfnResourceSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.route53recoveryreadiness.*;
-   * TargetResourceProperty targetResourceProperty = TargetResourceProperty.builder()
+   * DNSTargetResourceProperty dNSTargetResourceProperty = DNSTargetResourceProperty.builder()
+   * .domainName("domainName")
+   * .hostedZoneArn("hostedZoneArn")
+   * .recordSetId("recordSetId")
+   * .recordType("recordType")
+   * .targetResource(TargetResourceProperty.builder()
    * .nlbResource(NLBResourceProperty.builder()
    * .arn("arn")
    * .build())
@@ -388,155 +393,216 @@ public open class CfnResourceSet internal constructor(
    * .domainName("domainName")
    * .recordSetId("recordSetId")
    * .build())
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html)
    */
-  public interface TargetResourceProperty {
+  public interface DNSTargetResourceProperty {
     /**
-     * The Network Load Balancer resource that a DNS target resource points to.
+     * The domain name that acts as an ingress point to a portion of the customer application.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-nlbresource)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-domainname)
      */
-    public fun nlbResource(): Any? = unwrap(this).getNlbResource()
+    public fun domainName(): String? = unwrap(this).getDomainName()
 
     /**
-     * The Route 53 resource that a DNS target resource record points to.
+     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided
+     * name of the target resource.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-r53resource)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-hostedzonearn)
      */
-    public fun r53Resource(): Any? = unwrap(this).getR53Resource()
+    public fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
 
     /**
-     * A builder for [TargetResourceProperty]
+     * The Amazon Route 53 record set ID that uniquely identifies a DNS record, given a name and a
+     * type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordsetid)
+     */
+    public fun recordSetId(): String? = unwrap(this).getRecordSetId()
+
+    /**
+     * The type of DNS record of the target resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordtype)
+     */
+    public fun recordType(): String? = unwrap(this).getRecordType()
+
+    /**
+     * The target resource that the Route 53 record points to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-targetresource)
+     */
+    public fun targetResource(): Any? = unwrap(this).getTargetResource()
+
+    /**
+     * A builder for [DNSTargetResourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param domainName The domain name that acts as an ingress point to a portion of the
+       * customer application.
        */
-      public fun nlbResource(nlbResource: IResolvable)
+      public fun domainName(domainName: String)
 
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS
+       * record with the provided name of the target resource.
        */
-      public fun nlbResource(nlbResource: NLBResourceProperty)
+      public fun hostedZoneArn(hostedZoneArn: String)
 
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param recordSetId The Amazon Route 53 record set ID that uniquely identifies a DNS record,
+       * given a name and a type.
+       */
+      public fun recordSetId(recordSetId: String)
+
+      /**
+       * @param recordType The type of DNS record of the target resource.
+       */
+      public fun recordType(recordType: String)
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
+       */
+      public fun targetResource(targetResource: IResolvable)
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
+       */
+      public fun targetResource(targetResource: TargetResourceProperty)
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
-      public fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      public fun r53Resource(r53Resource: IResolvable)
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      public fun r53Resource(r53Resource: R53ResourceRecordProperty)
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
-      public fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit)
+      @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
+      public fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty.Builder
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty.Builder
           =
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty.builder()
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty.builder()
 
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param domainName The domain name that acts as an ingress point to a portion of the
+       * customer application.
        */
-      override fun nlbResource(nlbResource: IResolvable) {
-        cdkBuilder.nlbResource(nlbResource.let(IResolvable::unwrap))
+      override fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
       }
 
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS
+       * record with the provided name of the target resource.
        */
-      override fun nlbResource(nlbResource: NLBResourceProperty) {
-        cdkBuilder.nlbResource(nlbResource.let(NLBResourceProperty::unwrap))
+      override fun hostedZoneArn(hostedZoneArn: String) {
+        cdkBuilder.hostedZoneArn(hostedZoneArn)
       }
 
       /**
-       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
+       * @param recordSetId The Amazon Route 53 record set ID that uniquely identifies a DNS record,
+       * given a name and a type.
+       */
+      override fun recordSetId(recordSetId: String) {
+        cdkBuilder.recordSetId(recordSetId)
+      }
+
+      /**
+       * @param recordType The type of DNS record of the target resource.
+       */
+      override fun recordType(recordType: String) {
+        cdkBuilder.recordType(recordType)
+      }
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
+       */
+      override fun targetResource(targetResource: IResolvable) {
+        cdkBuilder.targetResource(targetResource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
+       */
+      override fun targetResource(targetResource: TargetResourceProperty) {
+        cdkBuilder.targetResource(targetResource.let(TargetResourceProperty::unwrap))
+      }
+
+      /**
+       * @param targetResource The target resource that the Route 53 record points to.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
-      override fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit): Unit =
-          nlbResource(NLBResourceProperty(nlbResource))
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      override fun r53Resource(r53Resource: IResolvable) {
-        cdkBuilder.r53Resource(r53Resource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      override fun r53Resource(r53Resource: R53ResourceRecordProperty) {
-        cdkBuilder.r53Resource(r53Resource.let(R53ResourceRecordProperty::unwrap))
-      }
-
-      /**
-       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
-      override fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit): Unit =
-          r53Resource(R53ResourceRecordProperty(r53Resource))
+      @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
+      override fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit): Unit =
+          targetResource(TargetResourceProperty(targetResource))
 
       public fun build():
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
-    ) : CdkObject(cdkObject), TargetResourceProperty {
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
+    ) : CdkObject(cdkObject), DNSTargetResourceProperty {
       /**
-       * The Network Load Balancer resource that a DNS target resource points to.
+       * The domain name that acts as an ingress point to a portion of the customer application.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-nlbresource)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-domainname)
        */
-      override fun nlbResource(): Any? = unwrap(this).getNlbResource()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
       /**
-       * The Route 53 resource that a DNS target resource record points to.
+       * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided
+       * name of the target resource.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-r53resource)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-hostedzonearn)
        */
-      override fun r53Resource(): Any? = unwrap(this).getR53Resource()
+      override fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
+
+      /**
+       * The Amazon Route 53 record set ID that uniquely identifies a DNS record, given a name and a
+       * type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordsetid)
+       */
+      override fun recordSetId(): String? = unwrap(this).getRecordSetId()
+
+      /**
+       * The type of DNS record of the target resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordtype)
+       */
+      override fun recordType(): String? = unwrap(this).getRecordType()
+
+      /**
+       * The target resource that the Route 53 record points to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-targetresource)
+       */
+      override fun targetResource(): Any? = unwrap(this).getTargetResource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetResourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DNSTargetResourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty):
-          TargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetResourceProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty):
+          DNSTargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DNSTargetResourceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TargetResourceProperty):
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
+      internal fun unwrap(wrapped: DNSTargetResourceProperty):
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
     }
   }
 
@@ -594,8 +660,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
     ) : CdkObject(cdkObject), NLBResourceProperty {
       /**
        * The Network Load Balancer resource Amazon Resource Name (ARN).
@@ -697,8 +762,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
     ) : CdkObject(cdkObject), R53ResourceRecordProperty {
       /**
        * The DNS target domain name.
@@ -939,8 +1003,7 @@ public open class CfnResourceSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
     ) : CdkObject(cdkObject), ResourceProperty {
       /**
        * The component identifier of the resource, generated when DNS target resource is used.
@@ -1000,7 +1063,7 @@ public open class CfnResourceSet internal constructor(
   }
 
   /**
-   * A component for DNS/routing control readiness checks and architecture checks.
+   * The target resource that the Route 53 record points to.
    *
    * Example:
    *
@@ -1008,12 +1071,7 @@ public open class CfnResourceSet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.route53recoveryreadiness.*;
-   * DNSTargetResourceProperty dNSTargetResourceProperty = DNSTargetResourceProperty.builder()
-   * .domainName("domainName")
-   * .hostedZoneArn("hostedZoneArn")
-   * .recordSetId("recordSetId")
-   * .recordType("recordType")
-   * .targetResource(TargetResourceProperty.builder()
+   * TargetResourceProperty targetResourceProperty = TargetResourceProperty.builder()
    * .nlbResource(NLBResourceProperty.builder()
    * .arn("arn")
    * .build())
@@ -1021,217 +1079,154 @@ public open class CfnResourceSet internal constructor(
    * .domainName("domainName")
    * .recordSetId("recordSetId")
    * .build())
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html)
    */
-  public interface DNSTargetResourceProperty {
+  public interface TargetResourceProperty {
     /**
-     * The domain name that acts as an ingress point to a portion of the customer application.
+     * The Network Load Balancer resource that a DNS target resource points to.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-domainname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-nlbresource)
      */
-    public fun domainName(): String? = unwrap(this).getDomainName()
+    public fun nlbResource(): Any? = unwrap(this).getNlbResource()
 
     /**
-     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided
-     * name of the target resource.
+     * The Route 53 resource that a DNS target resource record points to.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-hostedzonearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-r53resource)
      */
-    public fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
+    public fun r53Resource(): Any? = unwrap(this).getR53Resource()
 
     /**
-     * The Amazon Route 53 record set ID that uniquely identifies a DNS record, given a name and a
-     * type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordsetid)
-     */
-    public fun recordSetId(): String? = unwrap(this).getRecordSetId()
-
-    /**
-     * The type of DNS record of the target resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordtype)
-     */
-    public fun recordType(): String? = unwrap(this).getRecordType()
-
-    /**
-     * The target resource that the Route 53 record points to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-targetresource)
-     */
-    public fun targetResource(): Any? = unwrap(this).getTargetResource()
-
-    /**
-     * A builder for [DNSTargetResourceProperty]
+     * A builder for [TargetResourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param domainName The domain name that acts as an ingress point to a portion of the
-       * customer application.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
-      public fun domainName(domainName: String)
+      public fun nlbResource(nlbResource: IResolvable)
 
       /**
-       * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS
-       * record with the provided name of the target resource.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
-      public fun hostedZoneArn(hostedZoneArn: String)
+      public fun nlbResource(nlbResource: NLBResourceProperty)
 
       /**
-       * @param recordSetId The Amazon Route 53 record set ID that uniquely identifies a DNS record,
-       * given a name and a type.
-       */
-      public fun recordSetId(recordSetId: String)
-
-      /**
-       * @param recordType The type of DNS record of the target resource.
-       */
-      public fun recordType(recordType: String)
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
-       */
-      public fun targetResource(targetResource: IResolvable)
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
-       */
-      public fun targetResource(targetResource: TargetResourceProperty)
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
-      public fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit)
+      @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
+      public fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      public fun r53Resource(r53Resource: IResolvable)
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      public fun r53Resource(r53Resource: R53ResourceRecordProperty)
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
+      public fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty.Builder
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty.Builder
           =
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty.builder()
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty.builder()
 
       /**
-       * @param domainName The domain name that acts as an ingress point to a portion of the
-       * customer application.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
-      override fun domainName(domainName: String) {
-        cdkBuilder.domainName(domainName)
+      override fun nlbResource(nlbResource: IResolvable) {
+        cdkBuilder.nlbResource(nlbResource.let(IResolvable::unwrap))
       }
 
       /**
-       * @param hostedZoneArn The hosted zone Amazon Resource Name (ARN) that contains the DNS
-       * record with the provided name of the target resource.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
-      override fun hostedZoneArn(hostedZoneArn: String) {
-        cdkBuilder.hostedZoneArn(hostedZoneArn)
+      override fun nlbResource(nlbResource: NLBResourceProperty) {
+        cdkBuilder.nlbResource(nlbResource.let(NLBResourceProperty::unwrap))
       }
 
       /**
-       * @param recordSetId The Amazon Route 53 record set ID that uniquely identifies a DNS record,
-       * given a name and a type.
-       */
-      override fun recordSetId(recordSetId: String) {
-        cdkBuilder.recordSetId(recordSetId)
-      }
-
-      /**
-       * @param recordType The type of DNS record of the target resource.
-       */
-      override fun recordType(recordType: String) {
-        cdkBuilder.recordType(recordType)
-      }
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
-       */
-      override fun targetResource(targetResource: IResolvable) {
-        cdkBuilder.targetResource(targetResource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
-       */
-      override fun targetResource(targetResource: TargetResourceProperty) {
-        cdkBuilder.targetResource(targetResource.let(TargetResourceProperty::unwrap))
-      }
-
-      /**
-       * @param targetResource The target resource that the Route 53 record points to.
+       * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
-      override fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit): Unit =
-          targetResource(TargetResourceProperty(targetResource))
+      @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
+      override fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit): Unit =
+          nlbResource(NLBResourceProperty(nlbResource))
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      override fun r53Resource(r53Resource: IResolvable) {
+        cdkBuilder.r53Resource(r53Resource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      override fun r53Resource(r53Resource: R53ResourceRecordProperty) {
+        cdkBuilder.r53Resource(r53Resource.let(R53ResourceRecordProperty::unwrap))
+      }
+
+      /**
+       * @param r53Resource The Route 53 resource that a DNS target resource record points to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
+      override fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit): Unit =
+          r53Resource(R53ResourceRecordProperty(r53Resource))
 
       public fun build():
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
-    ) : CdkObject(cdkObject), DNSTargetResourceProperty {
+      cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
+    ) : CdkObject(cdkObject), TargetResourceProperty {
       /**
-       * The domain name that acts as an ingress point to a portion of the customer application.
+       * The Network Load Balancer resource that a DNS target resource points to.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-domainname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-nlbresource)
        */
-      override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun nlbResource(): Any? = unwrap(this).getNlbResource()
 
       /**
-       * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided
-       * name of the target resource.
+       * The Route 53 resource that a DNS target resource record points to.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-hostedzonearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html#cfn-route53recoveryreadiness-resourceset-targetresource-r53resource)
        */
-      override fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
-
-      /**
-       * The Amazon Route 53 record set ID that uniquely identifies a DNS record, given a name and a
-       * type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordsetid)
-       */
-      override fun recordSetId(): String? = unwrap(this).getRecordSetId()
-
-      /**
-       * The type of DNS record of the target resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordtype)
-       */
-      override fun recordType(): String? = unwrap(this).getRecordType()
-
-      /**
-       * The target resource that the Route 53 record points to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html#cfn-route53recoveryreadiness-resourceset-dnstargetresource-targetresource)
-       */
-      override fun targetResource(): Any? = unwrap(this).getTargetResource()
+      override fun r53Resource(): Any? = unwrap(this).getR53Resource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DNSTargetResourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetResourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty):
-          DNSTargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DNSTargetResourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty):
+          TargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetResourceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DNSTargetResourceProperty):
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
+      internal fun unwrap(wrapped: TargetResourceProperty):
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
+          software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
     }
   }
 }

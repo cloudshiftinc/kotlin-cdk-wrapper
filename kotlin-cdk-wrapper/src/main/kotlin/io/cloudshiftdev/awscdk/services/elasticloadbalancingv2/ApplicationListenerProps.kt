@@ -227,8 +227,7 @@ public interface ApplicationListenerProps : BaseApplicationListenerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerProps,
   ) : CdkObject(cdkObject), ApplicationListenerProps {
     /**
      * Certificate list of ACM cert ARNs.

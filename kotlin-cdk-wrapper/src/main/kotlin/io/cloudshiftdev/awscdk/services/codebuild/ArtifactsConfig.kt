@@ -82,7 +82,7 @@ public interface ArtifactsConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsConfig,
+    cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsConfig,
   ) : CdkObject(cdkObject), ArtifactsConfig {
     /**
      * The low-level CloudFormation artifacts property.

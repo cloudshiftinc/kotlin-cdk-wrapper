@@ -65,7 +65,7 @@ public interface IResolveContext {
   public fun scope(): IConstruct
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IResolveContext,
+    cdkObject: software.amazon.awscdk.IResolveContext,
   ) : CdkObject(cdkObject), IResolveContext {
     /**
      * Path in the JSON document that is being constructed.

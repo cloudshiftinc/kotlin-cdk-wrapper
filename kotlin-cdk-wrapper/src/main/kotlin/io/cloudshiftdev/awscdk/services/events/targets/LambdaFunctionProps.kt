@@ -136,7 +136,7 @@ public interface LambdaFunctionProps : TargetBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunctionProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunctionProps,
   ) : CdkObject(cdkObject), LambdaFunctionProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a

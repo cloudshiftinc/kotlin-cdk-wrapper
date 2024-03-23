@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html)
  */
-public open class CfnReceiptFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
+public open class CfnReceiptFilter(
+  cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -207,139 +207,8 @@ public open class CfnReceiptFilter internal constructor(
         CfnReceiptFilter = CfnReceiptFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnReceiptFilter):
-        software.amazon.awscdk.services.ses.CfnReceiptFilter = wrapped.cdkObject
-  }
-
-  /**
-   * A receipt IP address filter enables you to specify whether to accept or reject mail originating
-   * from an IP address or range of IP addresses.
-   *
-   * For information about setting up IP address filters, see the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-ip-filtering-console-walkthrough.html)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ses.*;
-   * IpFilterProperty ipFilterProperty = IpFilterProperty.builder()
-   * .cidr("cidr")
-   * .policy("policy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html)
-   */
-  public interface IpFilterProperty {
-    /**
-     * A single IP address or a range of IP addresses to block or allow, specified in Classless
-     * Inter-Domain Routing (CIDR) notation.
-     *
-     * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
-     * 10.0.0.1/24. For more information about CIDR notation, see [RFC
-     * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-cidr)
-     */
-    public fun cidr(): String
-
-    /**
-     * Indicates whether to block or allow incoming mail from the specified IP addresses.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-policy)
-     */
-    public fun policy(): String
-
-    /**
-     * A builder for [IpFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cidr A single IP address or a range of IP addresses to block or allow, specified in
-       * Classless Inter-Domain Routing (CIDR) notation. 
-       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
-       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
-       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
-       */
-      public fun cidr(cidr: String)
-
-      /**
-       * @param policy Indicates whether to block or allow incoming mail from the specified IP
-       * addresses. 
-       */
-      public fun policy(policy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.builder()
-
-      /**
-       * @param cidr A single IP address or a range of IP addresses to block or allow, specified in
-       * Classless Inter-Domain Routing (CIDR) notation. 
-       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
-       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
-       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
-       */
-      override fun cidr(cidr: String) {
-        cdkBuilder.cidr(cidr)
-      }
-
-      /**
-       * @param policy Indicates whether to block or allow incoming mail from the specified IP
-       * addresses. 
-       */
-      override fun policy(policy: String) {
-        cdkBuilder.policy(policy)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
-    ) : CdkObject(cdkObject), IpFilterProperty {
-      /**
-       * A single IP address or a range of IP addresses to block or allow, specified in Classless
-       * Inter-Domain Routing (CIDR) notation.
-       *
-       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
-       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
-       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-cidr)
-       */
-      override fun cidr(): String = unwrap(this).getCidr()
-
-      /**
-       * Indicates whether to block or allow incoming mail from the specified IP addresses.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-policy)
-       */
-      override fun policy(): String = unwrap(this).getPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IpFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty):
-          IpFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? IpFilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IpFilterProperty):
-          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty
-    }
+        software.amazon.awscdk.services.ses.CfnReceiptFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnReceiptFilter
   }
 
   /**
@@ -464,7 +333,7 @@ public open class CfnReceiptFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * A structure that provides the IP addresses to block or allow, and whether to block or allow
@@ -501,6 +370,138 @@ public open class CfnReceiptFilter internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty
+    }
+  }
+
+  /**
+   * A receipt IP address filter enables you to specify whether to accept or reject mail originating
+   * from an IP address or range of IP addresses.
+   *
+   * For information about setting up IP address filters, see the [Amazon SES Developer
+   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-ip-filtering-console-walkthrough.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * IpFilterProperty ipFilterProperty = IpFilterProperty.builder()
+   * .cidr("cidr")
+   * .policy("policy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html)
+   */
+  public interface IpFilterProperty {
+    /**
+     * A single IP address or a range of IP addresses to block or allow, specified in Classless
+     * Inter-Domain Routing (CIDR) notation.
+     *
+     * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
+     * 10.0.0.1/24. For more information about CIDR notation, see [RFC
+     * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-cidr)
+     */
+    public fun cidr(): String
+
+    /**
+     * Indicates whether to block or allow incoming mail from the specified IP addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-policy)
+     */
+    public fun policy(): String
+
+    /**
+     * A builder for [IpFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidr A single IP address or a range of IP addresses to block or allow, specified in
+       * Classless Inter-Domain Routing (CIDR) notation. 
+       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
+       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
+       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param policy Indicates whether to block or allow incoming mail from the specified IP
+       * addresses. 
+       */
+      public fun policy(policy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.builder()
+
+      /**
+       * @param cidr A single IP address or a range of IP addresses to block or allow, specified in
+       * Classless Inter-Domain Routing (CIDR) notation. 
+       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
+       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
+       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param policy Indicates whether to block or allow incoming mail from the specified IP
+       * addresses. 
+       */
+      override fun policy(policy: String) {
+        cdkBuilder.policy(policy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
+    ) : CdkObject(cdkObject), IpFilterProperty {
+      /**
+       * A single IP address or a range of IP addresses to block or allow, specified in Classless
+       * Inter-Domain Routing (CIDR) notation.
+       *
+       * An example of a single email address is 10.0.0.1. An example of a range of IP addresses is
+       * 10.0.0.1/24. For more information about CIDR notation, see [RFC
+       * 2317](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc2317) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-cidr)
+       */
+      override fun cidr(): String = unwrap(this).getCidr()
+
+      /**
+       * Indicates whether to block or allow incoming mail from the specified IP addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html#cfn-ses-receiptfilter-ipfilter-policy)
+       */
+      override fun policy(): String = unwrap(this).getPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IpFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty):
+          IpFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? IpFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IpFilterProperty):
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty
     }
   }
 }

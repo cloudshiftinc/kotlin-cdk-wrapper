@@ -19,8 +19,8 @@ import kotlin.Number
  * .build());
  * ```
  */
-public abstract class VirtualRouterListener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
+public abstract class VirtualRouterListener(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the VirtualRouterListener type is initialized.
@@ -34,7 +34,7 @@ public abstract class VirtualRouterListener internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualRouterListenerConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
   ) : VirtualRouterListener(cdkObject)
 
   public companion object {

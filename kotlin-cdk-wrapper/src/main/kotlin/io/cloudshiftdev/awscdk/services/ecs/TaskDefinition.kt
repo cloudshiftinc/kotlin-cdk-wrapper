@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class TaskDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.TaskDefinition,
+public open class TaskDefinition(
+  cdkObject: software.amazon.awscdk.services.ecs.TaskDefinition,
 ) : Resource(cdkObject), ITaskDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -944,6 +944,6 @@ public open class TaskDefinition internal constructor(
         = TaskDefinition(cdkObject)
 
     internal fun unwrap(wrapped: TaskDefinition): software.amazon.awscdk.services.ecs.TaskDefinition
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ecs.TaskDefinition
   }
 }

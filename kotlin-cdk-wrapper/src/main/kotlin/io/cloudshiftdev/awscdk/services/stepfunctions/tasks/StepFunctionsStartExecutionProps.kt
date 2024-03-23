@@ -376,8 +376,7 @@ public interface StepFunctionsStartExecutionProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecutionProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecutionProps,
   ) : CdkObject(cdkObject), StepFunctionsStartExecutionProps {
     /**
      * Pass the execution ID from the context object to the execution input.

@@ -387,7 +387,7 @@ public interface CfnBridgeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeProps,
   ) : CdkObject(cdkObject), CfnBridgeProps {
     /**
      * Create a bridge with the egress bridge type.

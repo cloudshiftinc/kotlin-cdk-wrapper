@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrModifyInstanceGroupByName internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName,
+public open class EmrModifyInstanceGroupByName(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -529,335 +528,8 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
     internal fun unwrap(wrapped: EmrModifyInstanceGroupByName):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Custom policy for requesting termination protection or termination of specific instances when
-   * shrinking an instance group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.*;
-   * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
-   * InstanceResizePolicyProperty instanceResizePolicyProperty =
-   * InstanceResizePolicyProperty.builder()
-   * .instancesToProtect(List.of("instancesToProtect"))
-   * .instancesToTerminate(List.of("instancesToTerminate"))
-   * .instanceTerminationTimeout(Duration.minutes(30))
-   * .build();
-   * ```
-   *
-   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceResizePolicy.html)
-   */
-  public interface InstanceResizePolicyProperty {
-    /**
-     * Decommissioning timeout override for the specific list of instances to be terminated.
-     *
-     * Default: cdk.Duration.seconds
-     */
-    public fun instanceTerminationTimeout(): Duration? =
-        unwrap(this).getInstanceTerminationTimeout()?.let(Duration::wrap)
-
-    /**
-     * Specific list of instances to be protected when shrinking an instance group.
-     *
-     * Default: - No instances will be protected when shrinking an instance group
-     */
-    public fun instancesToProtect(): List<String> = unwrap(this).getInstancesToProtect() ?:
-        emptyList()
-
-    /**
-     * Specific list of instances to be terminated when shrinking an instance group.
-     *
-     * Default: - No instances will be terminated when shrinking an instance group.
-     */
-    public fun instancesToTerminate(): List<String> = unwrap(this).getInstancesToTerminate() ?:
-        emptyList()
-
-    /**
-     * A builder for [InstanceResizePolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceTerminationTimeout Decommissioning timeout override for the specific list of
-       * instances to be terminated.
-       */
-      public fun instanceTerminationTimeout(instanceTerminationTimeout: Duration)
-
-      /**
-       * @param instancesToProtect Specific list of instances to be protected when shrinking an
-       * instance group.
-       */
-      public fun instancesToProtect(instancesToProtect: List<String>)
-
-      /**
-       * @param instancesToProtect Specific list of instances to be protected when shrinking an
-       * instance group.
-       */
-      public fun instancesToProtect(vararg instancesToProtect: String)
-
-      /**
-       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
-       * instance group.
-       */
-      public fun instancesToTerminate(instancesToTerminate: List<String>)
-
-      /**
-       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
-       * instance group.
-       */
-      public fun instancesToTerminate(vararg instancesToTerminate: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty.builder()
-
-      /**
-       * @param instanceTerminationTimeout Decommissioning timeout override for the specific list of
-       * instances to be terminated.
-       */
-      override fun instanceTerminationTimeout(instanceTerminationTimeout: Duration) {
-        cdkBuilder.instanceTerminationTimeout(instanceTerminationTimeout.let(Duration::unwrap))
-      }
-
-      /**
-       * @param instancesToProtect Specific list of instances to be protected when shrinking an
-       * instance group.
-       */
-      override fun instancesToProtect(instancesToProtect: List<String>) {
-        cdkBuilder.instancesToProtect(instancesToProtect)
-      }
-
-      /**
-       * @param instancesToProtect Specific list of instances to be protected when shrinking an
-       * instance group.
-       */
-      override fun instancesToProtect(vararg instancesToProtect: String): Unit =
-          instancesToProtect(instancesToProtect.toList())
-
-      /**
-       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
-       * instance group.
-       */
-      override fun instancesToTerminate(instancesToTerminate: List<String>) {
-        cdkBuilder.instancesToTerminate(instancesToTerminate)
-      }
-
-      /**
-       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
-       * instance group.
-       */
-      override fun instancesToTerminate(vararg instancesToTerminate: String): Unit =
-          instancesToTerminate(instancesToTerminate.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty,
-    ) : CdkObject(cdkObject), InstanceResizePolicyProperty {
-      /**
-       * Decommissioning timeout override for the specific list of instances to be terminated.
-       *
-       * Default: cdk.Duration.seconds
-       */
-      override fun instanceTerminationTimeout(): Duration? =
-          unwrap(this).getInstanceTerminationTimeout()?.let(Duration::wrap)
-
-      /**
-       * Specific list of instances to be protected when shrinking an instance group.
-       *
-       * Default: - No instances will be protected when shrinking an instance group
-       */
-      override fun instancesToProtect(): List<String> = unwrap(this).getInstancesToProtect() ?:
-          emptyList()
-
-      /**
-       * Specific list of instances to be terminated when shrinking an instance group.
-       *
-       * Default: - No instances will be terminated when shrinking an instance group.
-       */
-      override fun instancesToTerminate(): List<String> = unwrap(this).getInstancesToTerminate() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceResizePolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty):
-          InstanceResizePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceResizePolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceResizePolicyProperty):
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
-    }
-  }
-
-  /**
-   * Policy for customizing shrink operations.
-   *
-   * Allows configuration of decommissioning timeout and targeted instance shrinking.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.*;
-   * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
-   * ShrinkPolicyProperty shrinkPolicyProperty = ShrinkPolicyProperty.builder()
-   * .decommissionTimeout(Duration.minutes(30))
-   * .instanceResizePolicy(InstanceResizePolicyProperty.builder()
-   * .instancesToProtect(List.of("instancesToProtect"))
-   * .instancesToTerminate(List.of("instancesToTerminate"))
-   * .instanceTerminationTimeout(Duration.minutes(30))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
-   */
-  public interface ShrinkPolicyProperty {
-    /**
-     * The desired timeout for decommissioning an instance.
-     *
-     * Overrides the default YARN decommissioning timeout.
-     *
-     * Default: - EMR selected default
-     */
-    public fun decommissionTimeout(): Duration? =
-        unwrap(this).getDecommissionTimeout()?.let(Duration::wrap)
-
-    /**
-     * Custom policy for requesting termination protection or termination of specific instances when
-     * shrinking an instance group.
-     *
-     * Default: - None
-     */
-    public fun instanceResizePolicy(): InstanceResizePolicyProperty? =
-        unwrap(this).getInstanceResizePolicy()?.let(InstanceResizePolicyProperty::wrap)
-
-    /**
-     * A builder for [ShrinkPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param decommissionTimeout The desired timeout for decommissioning an instance.
-       * Overrides the default YARN decommissioning timeout.
-       */
-      public fun decommissionTimeout(decommissionTimeout: Duration)
-
-      /**
-       * @param instanceResizePolicy Custom policy for requesting termination protection or
-       * termination of specific instances when shrinking an instance group.
-       */
-      public fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty)
-
-      /**
-       * @param instanceResizePolicy Custom policy for requesting termination protection or
-       * termination of specific instances when shrinking an instance group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("56d4576baf2f9bf78146137f7d858182ed08b35c01a56f19d4d822f3f246353b")
-      public
-          fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty.builder()
-
-      /**
-       * @param decommissionTimeout The desired timeout for decommissioning an instance.
-       * Overrides the default YARN decommissioning timeout.
-       */
-      override fun decommissionTimeout(decommissionTimeout: Duration) {
-        cdkBuilder.decommissionTimeout(decommissionTimeout.let(Duration::unwrap))
-      }
-
-      /**
-       * @param instanceResizePolicy Custom policy for requesting termination protection or
-       * termination of specific instances when shrinking an instance group.
-       */
-      override fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty) {
-        cdkBuilder.instanceResizePolicy(instanceResizePolicy.let(InstanceResizePolicyProperty::unwrap))
-      }
-
-      /**
-       * @param instanceResizePolicy Custom policy for requesting termination protection or
-       * termination of specific instances when shrinking an instance group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("56d4576baf2f9bf78146137f7d858182ed08b35c01a56f19d4d822f3f246353b")
-      override
-          fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty.Builder.() -> Unit):
-          Unit = instanceResizePolicy(InstanceResizePolicyProperty(instanceResizePolicy))
-
-      public fun build():
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty,
-    ) : CdkObject(cdkObject), ShrinkPolicyProperty {
-      /**
-       * The desired timeout for decommissioning an instance.
-       *
-       * Overrides the default YARN decommissioning timeout.
-       *
-       * Default: - EMR selected default
-       */
-      override fun decommissionTimeout(): Duration? =
-          unwrap(this).getDecommissionTimeout()?.let(Duration::wrap)
-
-      /**
-       * Custom policy for requesting termination protection or termination of specific instances
-       * when shrinking an instance group.
-       *
-       * Default: - None
-       */
-      override fun instanceResizePolicy(): InstanceResizePolicyProperty? =
-          unwrap(this).getInstanceResizePolicy()?.let(InstanceResizePolicyProperty::wrap)
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ShrinkPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty):
-          ShrinkPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ShrinkPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShrinkPolicyProperty):
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
-    }
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
   }
 
   /**
@@ -1030,8 +702,7 @@ public open class EmrModifyInstanceGroupByName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
     ) : CdkObject(cdkObject), InstanceGroupModifyConfigProperty {
       /**
        * A list of new or modified configurations to apply for an instance group.
@@ -1087,6 +758,332 @@ public open class EmrModifyInstanceGroupByName internal constructor(
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty
+    }
+  }
+
+  /**
+   * Custom policy for requesting termination protection or termination of specific instances when
+   * shrinking an instance group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.*;
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+   * InstanceResizePolicyProperty instanceResizePolicyProperty =
+   * InstanceResizePolicyProperty.builder()
+   * .instancesToProtect(List.of("instancesToProtect"))
+   * .instancesToTerminate(List.of("instancesToTerminate"))
+   * .instanceTerminationTimeout(Duration.minutes(30))
+   * .build();
+   * ```
+   *
+   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceResizePolicy.html)
+   */
+  public interface InstanceResizePolicyProperty {
+    /**
+     * Decommissioning timeout override for the specific list of instances to be terminated.
+     *
+     * Default: cdk.Duration.seconds
+     */
+    public fun instanceTerminationTimeout(): Duration? =
+        unwrap(this).getInstanceTerminationTimeout()?.let(Duration::wrap)
+
+    /**
+     * Specific list of instances to be protected when shrinking an instance group.
+     *
+     * Default: - No instances will be protected when shrinking an instance group
+     */
+    public fun instancesToProtect(): List<String> = unwrap(this).getInstancesToProtect() ?:
+        emptyList()
+
+    /**
+     * Specific list of instances to be terminated when shrinking an instance group.
+     *
+     * Default: - No instances will be terminated when shrinking an instance group.
+     */
+    public fun instancesToTerminate(): List<String> = unwrap(this).getInstancesToTerminate() ?:
+        emptyList()
+
+    /**
+     * A builder for [InstanceResizePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceTerminationTimeout Decommissioning timeout override for the specific list of
+       * instances to be terminated.
+       */
+      public fun instanceTerminationTimeout(instanceTerminationTimeout: Duration)
+
+      /**
+       * @param instancesToProtect Specific list of instances to be protected when shrinking an
+       * instance group.
+       */
+      public fun instancesToProtect(instancesToProtect: List<String>)
+
+      /**
+       * @param instancesToProtect Specific list of instances to be protected when shrinking an
+       * instance group.
+       */
+      public fun instancesToProtect(vararg instancesToProtect: String)
+
+      /**
+       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+       * instance group.
+       */
+      public fun instancesToTerminate(instancesToTerminate: List<String>)
+
+      /**
+       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+       * instance group.
+       */
+      public fun instancesToTerminate(vararg instancesToTerminate: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty.builder()
+
+      /**
+       * @param instanceTerminationTimeout Decommissioning timeout override for the specific list of
+       * instances to be terminated.
+       */
+      override fun instanceTerminationTimeout(instanceTerminationTimeout: Duration) {
+        cdkBuilder.instanceTerminationTimeout(instanceTerminationTimeout.let(Duration::unwrap))
+      }
+
+      /**
+       * @param instancesToProtect Specific list of instances to be protected when shrinking an
+       * instance group.
+       */
+      override fun instancesToProtect(instancesToProtect: List<String>) {
+        cdkBuilder.instancesToProtect(instancesToProtect)
+      }
+
+      /**
+       * @param instancesToProtect Specific list of instances to be protected when shrinking an
+       * instance group.
+       */
+      override fun instancesToProtect(vararg instancesToProtect: String): Unit =
+          instancesToProtect(instancesToProtect.toList())
+
+      /**
+       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+       * instance group.
+       */
+      override fun instancesToTerminate(instancesToTerminate: List<String>) {
+        cdkBuilder.instancesToTerminate(instancesToTerminate)
+      }
+
+      /**
+       * @param instancesToTerminate Specific list of instances to be terminated when shrinking an
+       * instance group.
+       */
+      override fun instancesToTerminate(vararg instancesToTerminate: String): Unit =
+          instancesToTerminate(instancesToTerminate.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty,
+    ) : CdkObject(cdkObject), InstanceResizePolicyProperty {
+      /**
+       * Decommissioning timeout override for the specific list of instances to be terminated.
+       *
+       * Default: cdk.Duration.seconds
+       */
+      override fun instanceTerminationTimeout(): Duration? =
+          unwrap(this).getInstanceTerminationTimeout()?.let(Duration::wrap)
+
+      /**
+       * Specific list of instances to be protected when shrinking an instance group.
+       *
+       * Default: - No instances will be protected when shrinking an instance group
+       */
+      override fun instancesToProtect(): List<String> = unwrap(this).getInstancesToProtect() ?:
+          emptyList()
+
+      /**
+       * Specific list of instances to be terminated when shrinking an instance group.
+       *
+       * Default: - No instances will be terminated when shrinking an instance group.
+       */
+      override fun instancesToTerminate(): List<String> = unwrap(this).getInstancesToTerminate() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceResizePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty):
+          InstanceResizePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceResizePolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceResizePolicyProperty):
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
+    }
+  }
+
+  /**
+   * Policy for customizing shrink operations.
+   *
+   * Allows configuration of decommissioning timeout and targeted instance shrinking.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.*;
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+   * ShrinkPolicyProperty shrinkPolicyProperty = ShrinkPolicyProperty.builder()
+   * .decommissionTimeout(Duration.minutes(30))
+   * .instanceResizePolicy(InstanceResizePolicyProperty.builder()
+   * .instancesToProtect(List.of("instancesToProtect"))
+   * .instancesToTerminate(List.of("instancesToTerminate"))
+   * .instanceTerminationTimeout(Duration.minutes(30))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
+   */
+  public interface ShrinkPolicyProperty {
+    /**
+     * The desired timeout for decommissioning an instance.
+     *
+     * Overrides the default YARN decommissioning timeout.
+     *
+     * Default: - EMR selected default
+     */
+    public fun decommissionTimeout(): Duration? =
+        unwrap(this).getDecommissionTimeout()?.let(Duration::wrap)
+
+    /**
+     * Custom policy for requesting termination protection or termination of specific instances when
+     * shrinking an instance group.
+     *
+     * Default: - None
+     */
+    public fun instanceResizePolicy(): InstanceResizePolicyProperty? =
+        unwrap(this).getInstanceResizePolicy()?.let(InstanceResizePolicyProperty::wrap)
+
+    /**
+     * A builder for [ShrinkPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param decommissionTimeout The desired timeout for decommissioning an instance.
+       * Overrides the default YARN decommissioning timeout.
+       */
+      public fun decommissionTimeout(decommissionTimeout: Duration)
+
+      /**
+       * @param instanceResizePolicy Custom policy for requesting termination protection or
+       * termination of specific instances when shrinking an instance group.
+       */
+      public fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty)
+
+      /**
+       * @param instanceResizePolicy Custom policy for requesting termination protection or
+       * termination of specific instances when shrinking an instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56d4576baf2f9bf78146137f7d858182ed08b35c01a56f19d4d822f3f246353b")
+      public
+          fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty.builder()
+
+      /**
+       * @param decommissionTimeout The desired timeout for decommissioning an instance.
+       * Overrides the default YARN decommissioning timeout.
+       */
+      override fun decommissionTimeout(decommissionTimeout: Duration) {
+        cdkBuilder.decommissionTimeout(decommissionTimeout.let(Duration::unwrap))
+      }
+
+      /**
+       * @param instanceResizePolicy Custom policy for requesting termination protection or
+       * termination of specific instances when shrinking an instance group.
+       */
+      override fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty) {
+        cdkBuilder.instanceResizePolicy(instanceResizePolicy.let(InstanceResizePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param instanceResizePolicy Custom policy for requesting termination protection or
+       * termination of specific instances when shrinking an instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56d4576baf2f9bf78146137f7d858182ed08b35c01a56f19d4d822f3f246353b")
+      override
+          fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty.Builder.() -> Unit):
+          Unit = instanceResizePolicy(InstanceResizePolicyProperty(instanceResizePolicy))
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty,
+    ) : CdkObject(cdkObject), ShrinkPolicyProperty {
+      /**
+       * The desired timeout for decommissioning an instance.
+       *
+       * Overrides the default YARN decommissioning timeout.
+       *
+       * Default: - EMR selected default
+       */
+      override fun decommissionTimeout(): Duration? =
+          unwrap(this).getDecommissionTimeout()?.let(Duration::wrap)
+
+      /**
+       * Custom policy for requesting termination protection or termination of specific instances
+       * when shrinking an instance group.
+       *
+       * Default: - None
+       */
+      override fun instanceResizePolicy(): InstanceResizePolicyProperty? =
+          unwrap(this).getInstanceResizePolicy()?.let(InstanceResizePolicyProperty::wrap)
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ShrinkPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty):
+          ShrinkPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ShrinkPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ShrinkPolicyProperty):
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
     }
   }
 }

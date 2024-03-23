@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)
  */
-public open class CfnImagePipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline,
+public open class CfnImagePipeline(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -898,11 +898,13 @@ public open class CfnImagePipeline internal constructor(
         CfnImagePipeline = CfnImagePipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnImagePipeline):
-        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
   }
 
   /**
-   * Contains a key/value pair that sets the named workflow parameter.
+   * Settings that Image Builder uses to configure the ECR repository and the output container
+   * images that Amazon Inspector scans.
    *
    * Example:
    *
@@ -910,114 +912,622 @@ public open class CfnImagePipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * WorkflowParameterProperty workflowParameterProperty = WorkflowParameterProperty.builder()
-   * .name("name")
-   * .value(List.of("value"))
+   * EcrConfigurationProperty ecrConfigurationProperty = EcrConfigurationProperty.builder()
+   * .containerTags(List.of("containerTags"))
+   * .repositoryName("repositoryName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html)
    */
-  public interface WorkflowParameterProperty {
+  public interface EcrConfigurationProperty {
     /**
-     * The name of the workflow parameter to set.
+     * Tags for Image Builder to apply to the output container image that &amp;INS;
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-name)
+     * scans. Tags can help you identify and manage your scanned images.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-containertags)
      */
-    public fun name(): String? = unwrap(this).getName()
+    public fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
 
     /**
-     * Sets the value for the named workflow parameter.
+     * The name of the container repository that Amazon Inspector scans to identify findings for
+     * your container images.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-value)
+     * The name includes the path for the repository location. If you don’t provide this
+     * information, Image Builder creates a repository in your account named
+     * `image-builder-image-scanning-repository` for vulnerability scans of your output container
+     * images.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-repositoryname)
      */
-    public fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+    public fun repositoryName(): String? = unwrap(this).getRepositoryName()
 
     /**
-     * A builder for [WorkflowParameterProperty]
+     * A builder for [EcrConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the workflow parameter to set.
+       * @param containerTags Tags for Image Builder to apply to the output container image that
+       * &amp;INS;.
+       * scans. Tags can help you identify and manage your scanned images.
        */
-      public fun name(name: String)
+      public fun containerTags(containerTags: List<String>)
 
       /**
-       * @param value Sets the value for the named workflow parameter.
+       * @param containerTags Tags for Image Builder to apply to the output container image that
+       * &amp;INS;.
+       * scans. Tags can help you identify and manage your scanned images.
        */
-      public fun `value`(`value`: List<String>)
+      public fun containerTags(vararg containerTags: String)
 
       /**
-       * @param value Sets the value for the named workflow parameter.
+       * @param repositoryName The name of the container repository that Amazon Inspector scans to
+       * identify findings for your container images.
+       * The name includes the path for the repository location. If you don’t provide this
+       * information, Image Builder creates a repository in your account named
+       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
+       * images.
        */
-      public fun `value`(vararg `value`: String)
+      public fun repositoryName(repositoryName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty.Builder
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty.builder()
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty.builder()
 
       /**
-       * @param name The name of the workflow parameter to set.
+       * @param containerTags Tags for Image Builder to apply to the output container image that
+       * &amp;INS;.
+       * scans. Tags can help you identify and manage your scanned images.
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun containerTags(containerTags: List<String>) {
+        cdkBuilder.containerTags(containerTags)
       }
 
       /**
-       * @param value Sets the value for the named workflow parameter.
+       * @param containerTags Tags for Image Builder to apply to the output container image that
+       * &amp;INS;.
+       * scans. Tags can help you identify and manage your scanned images.
        */
-      override fun `value`(`value`: List<String>) {
-        cdkBuilder.`value`(`value`)
-      }
+      override fun containerTags(vararg containerTags: String): Unit =
+          containerTags(containerTags.toList())
 
       /**
-       * @param value Sets the value for the named workflow parameter.
+       * @param repositoryName The name of the container repository that Amazon Inspector scans to
+       * identify findings for your container images.
+       * The name includes the path for the repository location. If you don’t provide this
+       * information, Image Builder creates a repository in your account named
+       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
+       * images.
        */
-      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+      override fun repositoryName(repositoryName: String) {
+        cdkBuilder.repositoryName(repositoryName)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty,
-    ) : CdkObject(cdkObject), WorkflowParameterProperty {
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty,
+    ) : CdkObject(cdkObject), EcrConfigurationProperty {
       /**
-       * The name of the workflow parameter to set.
+       * Tags for Image Builder to apply to the output container image that &amp;INS;
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-name)
+       * scans. Tags can help you identify and manage your scanned images.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-containertags)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
 
       /**
-       * Sets the value for the named workflow parameter.
+       * The name of the container repository that Amazon Inspector scans to identify findings for
+       * your container images.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-value)
+       * The name includes the path for the repository location. If you don’t provide this
+       * information, Image Builder creates a repository in your account named
+       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
+       * images.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-repositoryname)
        */
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun repositoryName(): String? = unwrap(this).getRepositoryName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowParameterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EcrConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty):
-          WorkflowParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WorkflowParameterProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty):
+          EcrConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EcrConfigurationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WorkflowParameterProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
+      internal fun unwrap(wrapped: EcrConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains settings for Image Builder image resource and container image scans.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
+   * ImageScanningConfigurationProperty.builder()
+   * .ecrConfiguration(EcrConfigurationProperty.builder()
+   * .containerTags(List.of("containerTags"))
+   * .repositoryName("repositoryName")
+   * .build())
+   * .imageScanningEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html)
+   */
+  public interface ImageScanningConfigurationProperty {
+    /**
+     * Contains Amazon ECR settings for vulnerability scans.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-ecrconfiguration)
+     */
+    public fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
+
+    /**
+     * A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans
+     * that Amazon Inspector runs against the build instance when you create a new image.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningenabled)
+     */
+    public fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
+
+    /**
+     * A builder for [ImageScanningConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      public fun ecrConfiguration(ecrConfiguration: IResolvable)
+
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty)
+
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
+      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
+       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
+       * create a new image.
+       */
+      public fun imageScanningEnabled(imageScanningEnabled: Boolean)
+
+      /**
+       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
+       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
+       * create a new image.
+       */
+      public fun imageScanningEnabled(imageScanningEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty.builder()
+
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      override fun ecrConfiguration(ecrConfiguration: IResolvable) {
+        cdkBuilder.ecrConfiguration(ecrConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
+        cdkBuilder.ecrConfiguration(ecrConfiguration.let(EcrConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
+      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit):
+          Unit = ecrConfiguration(EcrConfigurationProperty(ecrConfiguration))
+
+      /**
+       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
+       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
+       * create a new image.
+       */
+      override fun imageScanningEnabled(imageScanningEnabled: Boolean) {
+        cdkBuilder.imageScanningEnabled(imageScanningEnabled)
+      }
+
+      /**
+       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
+       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
+       * create a new image.
+       */
+      override fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
+        cdkBuilder.imageScanningEnabled(imageScanningEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty,
+    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
+      /**
+       * Contains Amazon ECR settings for vulnerability scans.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-ecrconfiguration)
+       */
+      override fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
+
+      /**
+       * A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans
+       * that Amazon Inspector runs against the build instance when you create a new image.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningenabled)
+       */
+      override fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ImageScanningConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty):
+          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
+    }
+  }
+
+  /**
+   * When you create an image or container recipe with Image Builder , you can add the build or test
+   * components that your image pipeline uses to create the final image.
+   *
+   * You must have at least one build component to create a recipe, but test components are not
+   * required. Your pipeline runs tests after it builds the image, to ensure that the target image is
+   * functional and can be used reliably for launching Amazon EC2 instances.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ImageTestsConfigurationProperty imageTestsConfigurationProperty =
+   * ImageTestsConfigurationProperty.builder()
+   * .imageTestsEnabled(false)
+   * .timeoutMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html)
+   */
+  public interface ImageTestsConfigurationProperty {
+    /**
+     * Defines if tests should be executed when building this image.
+     *
+     * For example, `true` or `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled)
+     */
+    public fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
+
+    /**
+     * The maximum time in minutes that tests are permitted to run.
+     *
+     *
+     * The timeoutMinutes attribute is not currently active. This value is ignored.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)
+     */
+    public fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
+
+    /**
+     * A builder for [ImageTestsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param imageTestsEnabled Defines if tests should be executed when building this image.
+       * For example, `true` or `false` .
+       */
+      public fun imageTestsEnabled(imageTestsEnabled: Boolean)
+
+      /**
+       * @param imageTestsEnabled Defines if tests should be executed when building this image.
+       * For example, `true` or `false` .
+       */
+      public fun imageTestsEnabled(imageTestsEnabled: IResolvable)
+
+      /**
+       * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
+       *
+       * The timeoutMinutes attribute is not currently active. This value is ignored.
+       */
+      public fun timeoutMinutes(timeoutMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty.builder()
+
+      /**
+       * @param imageTestsEnabled Defines if tests should be executed when building this image.
+       * For example, `true` or `false` .
+       */
+      override fun imageTestsEnabled(imageTestsEnabled: Boolean) {
+        cdkBuilder.imageTestsEnabled(imageTestsEnabled)
+      }
+
+      /**
+       * @param imageTestsEnabled Defines if tests should be executed when building this image.
+       * For example, `true` or `false` .
+       */
+      override fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
+        cdkBuilder.imageTestsEnabled(imageTestsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
+       *
+       * The timeoutMinutes attribute is not currently active. This value is ignored.
+       */
+      override fun timeoutMinutes(timeoutMinutes: Number) {
+        cdkBuilder.timeoutMinutes(timeoutMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty,
+    ) : CdkObject(cdkObject), ImageTestsConfigurationProperty {
+      /**
+       * Defines if tests should be executed when building this image.
+       *
+       * For example, `true` or `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled)
+       */
+      override fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
+
+      /**
+       * The maximum time in minutes that tests are permitted to run.
+       *
+       *
+       * The timeoutMinutes attribute is not currently active. This value is ignored.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)
+       */
+      override fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ImageTestsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty):
+          ImageTestsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageTestsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageTestsConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
+    }
+  }
+
+  /**
+   * A schedule configures when and how often a pipeline will automatically create a new image.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+   * .pipelineExecutionStartCondition("pipelineExecutionStartCondition")
+   * .scheduleExpression("scheduleExpression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html)
+   */
+  public interface ScheduleProperty {
+    /**
+     * The condition configures when the pipeline should trigger a new image build.
+     *
+     * When the `pipelineExecutionStartCondition` is set to
+     * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
+     * the base image or components in your image recipe, Image Builder will build a new image only
+     * when there are new versions of the image or components in your recipe that match the semantic
+     * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every time
+     * the CRON expression matches the current time. For semantic version syntax, see
+     * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
+     * in the *Image Builder API Reference* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-pipelineexecutionstartcondition)
+     */
+    public fun pipelineExecutionStartCondition(): String? =
+        unwrap(this).getPipelineExecutionStartCondition()
+
+    /**
+     * The cron expression determines how often EC2 Image Builder evaluates your
+     * `pipelineExecutionStartCondition` .
+     *
+     * For information on how to format a cron expression in Image Builder, see [Use cron
+     * expressions in EC2 Image
+     * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression)
+     */
+    public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+
+    /**
+     * A builder for [ScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pipelineExecutionStartCondition The condition configures when the pipeline should
+       * trigger a new image build.
+       * When the `pipelineExecutionStartCondition` is set to
+       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
+       * the base image or components in your image recipe, Image Builder will build a new image only
+       * when there are new versions of the image or components in your recipe that match the semantic
+       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
+       * time the CRON expression matches the current time. For semantic version syntax, see
+       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
+       * in the *Image Builder API Reference* .
+       */
+      public fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String)
+
+      /**
+       * @param scheduleExpression The cron expression determines how often EC2 Image Builder
+       * evaluates your `pipelineExecutionStartCondition` .
+       * For information on how to format a cron expression in Image Builder, see [Use cron
+       * expressions in EC2 Image
+       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
+       */
+      public fun scheduleExpression(scheduleExpression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.Builder =
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.builder()
+
+      /**
+       * @param pipelineExecutionStartCondition The condition configures when the pipeline should
+       * trigger a new image build.
+       * When the `pipelineExecutionStartCondition` is set to
+       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
+       * the base image or components in your image recipe, Image Builder will build a new image only
+       * when there are new versions of the image or components in your recipe that match the semantic
+       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
+       * time the CRON expression matches the current time. For semantic version syntax, see
+       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
+       * in the *Image Builder API Reference* .
+       */
+      override fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String) {
+        cdkBuilder.pipelineExecutionStartCondition(pipelineExecutionStartCondition)
+      }
+
+      /**
+       * @param scheduleExpression The cron expression determines how often EC2 Image Builder
+       * evaluates your `pipelineExecutionStartCondition` .
+       * For information on how to format a cron expression in Image Builder, see [Use cron
+       * expressions in EC2 Image
+       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
+       */
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty,
+    ) : CdkObject(cdkObject), ScheduleProperty {
+      /**
+       * The condition configures when the pipeline should trigger a new image build.
+       *
+       * When the `pipelineExecutionStartCondition` is set to
+       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
+       * the base image or components in your image recipe, Image Builder will build a new image only
+       * when there are new versions of the image or components in your recipe that match the semantic
+       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
+       * time the CRON expression matches the current time. For semantic version syntax, see
+       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
+       * in the *Image Builder API Reference* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-pipelineexecutionstartcondition)
+       */
+      override fun pipelineExecutionStartCondition(): String? =
+          unwrap(this).getPipelineExecutionStartCondition()
+
+      /**
+       * The cron expression determines how often EC2 Image Builder evaluates your
+       * `pipelineExecutionStartCondition` .
+       *
+       * For information on how to format a cron expression in Image Builder, see [Use cron
+       * expressions in EC2 Image
+       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression)
+       */
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty):
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty
     }
   }
 
@@ -1183,8 +1693,7 @@ public open class CfnImagePipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty,
     ) : CdkObject(cdkObject), WorkflowConfigurationProperty {
       /**
        * The action to take if the workflow fails.
@@ -1240,12 +1749,7 @@ public open class CfnImagePipeline internal constructor(
   }
 
   /**
-   * When you create an image or container recipe with Image Builder , you can add the build or test
-   * components that your image pipeline uses to create the final image.
-   *
-   * You must have at least one build component to create a recipe, but test components are not
-   * required. Your pipeline runs tests after it builds the image, to ensure that the target image is
-   * functional and can be used reliably for launching Amazon EC2 instances.
+   * Contains a key/value pair that sets the named workflow parameter.
    *
    * Example:
    *
@@ -1253,622 +1757,113 @@ public open class CfnImagePipeline internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ImageTestsConfigurationProperty imageTestsConfigurationProperty =
-   * ImageTestsConfigurationProperty.builder()
-   * .imageTestsEnabled(false)
-   * .timeoutMinutes(123)
+   * WorkflowParameterProperty workflowParameterProperty = WorkflowParameterProperty.builder()
+   * .name("name")
+   * .value(List.of("value"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html)
    */
-  public interface ImageTestsConfigurationProperty {
+  public interface WorkflowParameterProperty {
     /**
-     * Defines if tests should be executed when building this image.
+     * The name of the workflow parameter to set.
      *
-     * For example, `true` or `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-name)
      */
-    public fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
+    public fun name(): String? = unwrap(this).getName()
 
     /**
-     * The maximum time in minutes that tests are permitted to run.
+     * Sets the value for the named workflow parameter.
      *
-     *
-     * The timeoutMinutes attribute is not currently active. This value is ignored.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-value)
      */
-    public fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
+    public fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
 
     /**
-     * A builder for [ImageTestsConfigurationProperty]
+     * A builder for [WorkflowParameterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param imageTestsEnabled Defines if tests should be executed when building this image.
-       * For example, `true` or `false` .
+       * @param name The name of the workflow parameter to set.
        */
-      public fun imageTestsEnabled(imageTestsEnabled: Boolean)
+      public fun name(name: String)
 
       /**
-       * @param imageTestsEnabled Defines if tests should be executed when building this image.
-       * For example, `true` or `false` .
+       * @param value Sets the value for the named workflow parameter.
        */
-      public fun imageTestsEnabled(imageTestsEnabled: IResolvable)
+      public fun `value`(`value`: List<String>)
 
       /**
-       * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
-       *
-       * The timeoutMinutes attribute is not currently active. This value is ignored.
+       * @param value Sets the value for the named workflow parameter.
        */
-      public fun timeoutMinutes(timeoutMinutes: Number)
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty.Builder
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty.Builder
           =
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty.builder()
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty.builder()
 
       /**
-       * @param imageTestsEnabled Defines if tests should be executed when building this image.
-       * For example, `true` or `false` .
+       * @param name The name of the workflow parameter to set.
        */
-      override fun imageTestsEnabled(imageTestsEnabled: Boolean) {
-        cdkBuilder.imageTestsEnabled(imageTestsEnabled)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param imageTestsEnabled Defines if tests should be executed when building this image.
-       * For example, `true` or `false` .
+       * @param value Sets the value for the named workflow parameter.
        */
-      override fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
-        cdkBuilder.imageTestsEnabled(imageTestsEnabled.let(IResolvable::unwrap))
+      override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
       }
 
       /**
-       * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
-       *
-       * The timeoutMinutes attribute is not currently active. This value is ignored.
+       * @param value Sets the value for the named workflow parameter.
        */
-      override fun timeoutMinutes(timeoutMinutes: Number) {
-        cdkBuilder.timeoutMinutes(timeoutMinutes)
-      }
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
 
       public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageTestsConfigurationProperty {
-      /**
-       * Defines if tests should be executed when building this image.
-       *
-       * For example, `true` or `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled)
-       */
-      override fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
-
-      /**
-       * The maximum time in minutes that tests are permitted to run.
-       *
-       *
-       * The timeoutMinutes attribute is not currently active. This value is ignored.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)
-       */
-      override fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ImageTestsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty):
-          ImageTestsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ImageTestsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageTestsConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
-    }
-  }
-
-  /**
-   * Settings that Image Builder uses to configure the ECR repository and the output container
-   * images that Amazon Inspector scans.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * EcrConfigurationProperty ecrConfigurationProperty = EcrConfigurationProperty.builder()
-   * .containerTags(List.of("containerTags"))
-   * .repositoryName("repositoryName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html)
-   */
-  public interface EcrConfigurationProperty {
-    /**
-     * Tags for Image Builder to apply to the output container image that &amp;INS;
-     *
-     * scans. Tags can help you identify and manage your scanned images.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-containertags)
-     */
-    public fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
-
-    /**
-     * The name of the container repository that Amazon Inspector scans to identify findings for
-     * your container images.
-     *
-     * The name includes the path for the repository location. If you don’t provide this
-     * information, Image Builder creates a repository in your account named
-     * `image-builder-image-scanning-repository` for vulnerability scans of your output container
-     * images.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-repositoryname)
-     */
-    public fun repositoryName(): String? = unwrap(this).getRepositoryName()
-
-    /**
-     * A builder for [EcrConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
-       */
-      public fun containerTags(containerTags: List<String>)
-
-      /**
-       * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
-       */
-      public fun containerTags(vararg containerTags: String)
-
-      /**
-       * @param repositoryName The name of the container repository that Amazon Inspector scans to
-       * identify findings for your container images.
-       * The name includes the path for the repository location. If you don’t provide this
-       * information, Image Builder creates a repository in your account named
-       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
-       * images.
-       */
-      public fun repositoryName(repositoryName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty.builder()
-
-      /**
-       * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
-       */
-      override fun containerTags(containerTags: List<String>) {
-        cdkBuilder.containerTags(containerTags)
-      }
-
-      /**
-       * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
-       */
-      override fun containerTags(vararg containerTags: String): Unit =
-          containerTags(containerTags.toList())
-
-      /**
-       * @param repositoryName The name of the container repository that Amazon Inspector scans to
-       * identify findings for your container images.
-       * The name includes the path for the repository location. If you don’t provide this
-       * information, Image Builder creates a repository in your account named
-       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
-       * images.
-       */
-      override fun repositoryName(repositoryName: String) {
-        cdkBuilder.repositoryName(repositoryName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty =
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty,
-    ) : CdkObject(cdkObject), EcrConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty,
+    ) : CdkObject(cdkObject), WorkflowParameterProperty {
       /**
-       * Tags for Image Builder to apply to the output container image that &amp;INS;
+       * The name of the workflow parameter to set.
        *
-       * scans. Tags can help you identify and manage your scanned images.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-containertags)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-name)
        */
-      override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
+      override fun name(): String? = unwrap(this).getName()
 
       /**
-       * The name of the container repository that Amazon Inspector scans to identify findings for
-       * your container images.
+       * Sets the value for the named workflow parameter.
        *
-       * The name includes the path for the repository location. If you don’t provide this
-       * information, Image Builder creates a repository in your account named
-       * `image-builder-image-scanning-repository` for vulnerability scans of your output container
-       * images.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-ecrconfiguration.html#cfn-imagebuilder-imagepipeline-ecrconfiguration-repositoryname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-workflowparameter.html#cfn-imagebuilder-imagepipeline-workflowparameter-value)
        */
-      override fun repositoryName(): String? = unwrap(this).getRepositoryName()
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EcrConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowParameterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty):
-          EcrConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EcrConfigurationProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty):
+          WorkflowParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkflowParameterProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: EcrConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty =
+      internal fun unwrap(wrapped: WorkflowParameterProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty
-    }
-  }
-
-  /**
-   * A schedule configures when and how often a pipeline will automatically create a new image.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
-   * .pipelineExecutionStartCondition("pipelineExecutionStartCondition")
-   * .scheduleExpression("scheduleExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html)
-   */
-  public interface ScheduleProperty {
-    /**
-     * The condition configures when the pipeline should trigger a new image build.
-     *
-     * When the `pipelineExecutionStartCondition` is set to
-     * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
-     * the base image or components in your image recipe, Image Builder will build a new image only
-     * when there are new versions of the image or components in your recipe that match the semantic
-     * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every time
-     * the CRON expression matches the current time. For semantic version syntax, see
-     * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
-     * in the *Image Builder API Reference* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-pipelineexecutionstartcondition)
-     */
-    public fun pipelineExecutionStartCondition(): String? =
-        unwrap(this).getPipelineExecutionStartCondition()
-
-    /**
-     * The cron expression determines how often EC2 Image Builder evaluates your
-     * `pipelineExecutionStartCondition` .
-     *
-     * For information on how to format a cron expression in Image Builder, see [Use cron
-     * expressions in EC2 Image
-     * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression)
-     */
-    public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
-
-    /**
-     * A builder for [ScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pipelineExecutionStartCondition The condition configures when the pipeline should
-       * trigger a new image build.
-       * When the `pipelineExecutionStartCondition` is set to
-       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
-       * the base image or components in your image recipe, Image Builder will build a new image only
-       * when there are new versions of the image or components in your recipe that match the semantic
-       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
-       * time the CRON expression matches the current time. For semantic version syntax, see
-       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
-       * in the *Image Builder API Reference* .
-       */
-      public fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String)
-
-      /**
-       * @param scheduleExpression The cron expression determines how often EC2 Image Builder
-       * evaluates your `pipelineExecutionStartCondition` .
-       * For information on how to format a cron expression in Image Builder, see [Use cron
-       * expressions in EC2 Image
-       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.Builder =
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.builder()
-
-      /**
-       * @param pipelineExecutionStartCondition The condition configures when the pipeline should
-       * trigger a new image build.
-       * When the `pipelineExecutionStartCondition` is set to
-       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
-       * the base image or components in your image recipe, Image Builder will build a new image only
-       * when there are new versions of the image or components in your recipe that match the semantic
-       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
-       * time the CRON expression matches the current time. For semantic version syntax, see
-       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
-       * in the *Image Builder API Reference* .
-       */
-      override fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String) {
-        cdkBuilder.pipelineExecutionStartCondition(pipelineExecutionStartCondition)
-      }
-
-      /**
-       * @param scheduleExpression The cron expression determines how often EC2 Image Builder
-       * evaluates your `pipelineExecutionStartCondition` .
-       * For information on how to format a cron expression in Image Builder, see [Use cron
-       * expressions in EC2 Image
-       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
-      /**
-       * The condition configures when the pipeline should trigger a new image build.
-       *
-       * When the `pipelineExecutionStartCondition` is set to
-       * `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` , and you use semantic version filters on
-       * the base image or components in your image recipe, Image Builder will build a new image only
-       * when there are new versions of the image or components in your recipe that match the semantic
-       * version filter. When it is set to `EXPRESSION_MATCH_ONLY` , it will build a new image every
-       * time the CRON expression matches the current time. For semantic version syntax, see
-       * [CreateComponent](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html)
-       * in the *Image Builder API Reference* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-pipelineexecutionstartcondition)
-       */
-      override fun pipelineExecutionStartCondition(): String? =
-          unwrap(this).getPipelineExecutionStartCondition()
-
-      /**
-       * The cron expression determines how often EC2 Image Builder evaluates your
-       * `pipelineExecutionStartCondition` .
-       *
-       * For information on how to format a cron expression in Image Builder, see [Use cron
-       * expressions in EC2 Image
-       * Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression)
-       */
-      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty
-    }
-  }
-
-  /**
-   * Contains settings for Image Builder image resource and container image scans.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
-   * ImageScanningConfigurationProperty.builder()
-   * .ecrConfiguration(EcrConfigurationProperty.builder()
-   * .containerTags(List.of("containerTags"))
-   * .repositoryName("repositoryName")
-   * .build())
-   * .imageScanningEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html)
-   */
-  public interface ImageScanningConfigurationProperty {
-    /**
-     * Contains Amazon ECR settings for vulnerability scans.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-ecrconfiguration)
-     */
-    public fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
-
-    /**
-     * A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans
-     * that Amazon Inspector runs against the build instance when you create a new image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningenabled)
-     */
-    public fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
-
-    /**
-     * A builder for [ImageScanningConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      public fun ecrConfiguration(ecrConfiguration: IResolvable)
-
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty)
-
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
-      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
-       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
-       * create a new image.
-       */
-      public fun imageScanningEnabled(imageScanningEnabled: Boolean)
-
-      /**
-       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
-       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
-       * create a new image.
-       */
-      public fun imageScanningEnabled(imageScanningEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty.builder()
-
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      override fun ecrConfiguration(ecrConfiguration: IResolvable) {
-        cdkBuilder.ecrConfiguration(ecrConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
-        cdkBuilder.ecrConfiguration(ecrConfiguration.let(EcrConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
-      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit):
-          Unit = ecrConfiguration(EcrConfigurationProperty(ecrConfiguration))
-
-      /**
-       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
-       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
-       * create a new image.
-       */
-      override fun imageScanningEnabled(imageScanningEnabled: Boolean) {
-        cdkBuilder.imageScanningEnabled(imageScanningEnabled)
-      }
-
-      /**
-       * @param imageScanningEnabled A setting that indicates whether Image Builder keeps a snapshot
-       * of the vulnerability scans that Amazon Inspector runs against the build instance when you
-       * create a new image.
-       */
-      override fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
-        cdkBuilder.imageScanningEnabled(imageScanningEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
-      /**
-       * Contains Amazon ECR settings for vulnerability scans.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-ecrconfiguration)
-       */
-      override fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
-
-      /**
-       * A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans
-       * that Amazon Inspector runs against the build instance when you create a new image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html#cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningenabled)
-       */
-      override fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ImageScanningConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty):
-          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty
+          software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty
     }
   }
 }

@@ -226,7 +226,7 @@ public interface LogQueryWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps,
   ) : CdkObject(cdkObject), LogQueryWidgetProps {
     /**
      * Height of the widget.

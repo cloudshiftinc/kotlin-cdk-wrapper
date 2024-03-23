@@ -94,8 +94,7 @@ public interface BedrockInvokeModelOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps,
   ) : CdkObject(cdkObject), BedrockInvokeModelOutputProps {
     /**
      * S3 object where the Bedrock InvokeModel API response is written.

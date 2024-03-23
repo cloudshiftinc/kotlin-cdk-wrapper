@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html)
  */
-public open class CfnSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnSubnetGroup,
+public open class CfnSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.memorydb.CfnSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,6 +296,7 @@ public open class CfnSubnetGroup internal constructor(
         CfnSubnetGroup = CfnSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetGroup):
-        software.amazon.awscdk.services.memorydb.CfnSubnetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.memorydb.CfnSubnetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.memorydb.CfnSubnetGroup
   }
 }

@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html)
  */
-public open class CfnGlobalCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnGlobalCluster,
+public open class CfnGlobalCluster(
+  cdkObject: software.amazon.awscdk.services.rds.CfnGlobalCluster,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.rds.CfnGlobalCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -425,6 +425,7 @@ public open class CfnGlobalCluster internal constructor(
         CfnGlobalCluster = CfnGlobalCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalCluster):
-        software.amazon.awscdk.services.rds.CfnGlobalCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnGlobalCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnGlobalCluster
   }
 }

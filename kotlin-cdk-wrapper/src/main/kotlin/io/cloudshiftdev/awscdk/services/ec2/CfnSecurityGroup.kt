@@ -66,6 +66,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .destinationPrefixListId("destinationPrefixListId")
  * .destinationSecurityGroupId("destinationSecurityGroupId")
  * .fromPort(123)
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
  * .toPort(123)
  * .build()))
  * .securityGroupIngress(List.of(IngressProperty.builder()
@@ -91,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html)
  */
-public open class CfnSecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup,
+public open class CfnSecurityGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -116,7 +117,7 @@ public open class CfnSecurityGroup internal constructor(
   public open fun attrGroupId(): String = unwrap(this).getAttrGroupId()
 
   /**
-   *
+   * The group name or group ID depending on whether the SG is created in default or specific VPC.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -520,7 +521,468 @@ public open class CfnSecurityGroup internal constructor(
         CfnSecurityGroup = CfnSecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroup):
-        software.amazon.awscdk.services.ec2.CfnSecurityGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSecurityGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSecurityGroup
+  }
+
+  /**
+   * Adds the specified outbound (egress) rule to a security group.
+   *
+   * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address range,
+   * the IP address ranges that are specified by a prefix list, or the instances that are associated
+   * with a destination security group. For more information, see [Security group
+   * rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html) .
+   *
+   * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
+   * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is not
+   * added to the security group.
+   *
+   * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
+   * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
+   * specify the ICMP/ICMPv6 type and code.
+   *
+   * Rule changes are propagated to instances associated with the security group as quickly as
+   * possible. However, a small delay might occur.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EgressProperty egressProperty = EgressProperty.builder()
+   * .ipProtocol("ipProtocol")
+   * // the properties below are optional
+   * .cidrIp("cidrIp")
+   * .cidrIpv6("cidrIpv6")
+   * .description("description")
+   * .destinationPrefixListId("destinationPrefixListId")
+   * .destinationSecurityGroupId("destinationSecurityGroupId")
+   * .fromPort(123)
+   * .sourceSecurityGroupId("sourceSecurityGroupId")
+   * .toPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html)
+   */
+  public interface EgressProperty {
+    /**
+     * The IPv4 address range, in CIDR format.
+     *
+     * You must specify a destination security group ( `DestinationPrefixListId` or
+     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     *
+     * For examples of rules that you can add to security groups for specific access scenarios, see
+     * [Security group rules for different use
+     * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidrip)
+     */
+    public fun cidrIp(): String? = unwrap(this).getCidrIp()
+
+    /**
+     * The IPv6 address range, in CIDR format.
+     *
+     * You must specify a destination security group ( `DestinationPrefixListId` or
+     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     *
+     * For examples of rules that you can add to security groups for specific access scenarios, see
+     * [Security group rules for different use
+     * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidripv6)
+     */
+    public fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
+
+    /**
+     * A description for the security group rule.
+     *
+     * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
+     * and ._-:/()#,&#64;[]+=;{}!$*
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The prefix list IDs for the destination AWS service.
+     *
+     * This is the AWS service that you want to access through a VPC endpoint from instances
+     * associated with the security group.
+     *
+     * You must specify a destination security group ( `DestinationPrefixListId` or
+     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
+     */
+    public fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
+
+    /**
+     * The ID of the destination VPC security group.
+     *
+     * You must specify a destination security group ( `DestinationPrefixListId` or
+     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
+     */
+    public fun destinationSecurityGroupId(): String? = unwrap(this).getDestinationSecurityGroupId()
+
+    /**
+     * If the protocol is TCP or UDP, this is the start of the port range.
+     *
+     * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-fromport)
+     */
+    public fun fromPort(): Number? = unwrap(this).getFromPort()
+
+    /**
+     * The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see [Protocol
+     * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+     * ).
+     *
+     * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1` or
+     * a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all ports,
+     * regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must specify a
+     * port range. For `icmpv6` , the port range is optional; if you omit the port range, traffic for
+     * all types and codes is allowed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
+     */
+    public fun ipProtocol(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
+     */
+    public fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
+
+    /**
+     * If the protocol is TCP or UDP, this is the end of the port range.
+     *
+     * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start
+     * port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-toport)
+     */
+    public fun toPort(): Number? = unwrap(this).getToPort()
+
+    /**
+     * A builder for [EgressProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidrIp The IPv4 address range, in CIDR format.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun cidrIp(cidrIp: String)
+
+      /**
+       * @param cidrIpv6 The IPv6 address range, in CIDR format.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun cidrIpv6(cidrIpv6: String)
+
+      /**
+       * @param description A description for the security group rule.
+       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
+       * and ._-:/()#,&#64;[]+=;{}!$*
+       */
+      public fun description(description: String)
+
+      /**
+       * @param destinationPrefixListId The prefix list IDs for the destination AWS service.
+       * This is the AWS service that you want to access through a VPC endpoint from instances
+       * associated with the security group.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       */
+      public fun destinationPrefixListId(destinationPrefixListId: String)
+
+      /**
+       * @param destinationSecurityGroupId The ID of the destination VPC security group.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       */
+      public fun destinationSecurityGroupId(destinationSecurityGroupId: String)
+
+      /**
+       * @param fromPort If the protocol is TCP or UDP, this is the start of the port range.
+       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
+       */
+      public fun fromPort(fromPort: Number)
+
+      /**
+       * @param ipProtocol The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see
+       * [Protocol
+       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+       * ). 
+       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
+       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
+       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
+       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
+       * traffic for all types and codes is allowed.
+       */
+      public fun ipProtocol(ipProtocol: String)
+
+      /**
+       * @param sourceSecurityGroupId the value to be set.
+       */
+      public fun sourceSecurityGroupId(sourceSecurityGroupId: String)
+
+      /**
+       * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
+       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
+       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
+       */
+      public fun toPort(toPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.builder()
+
+      /**
+       * @param cidrIp The IPv4 address range, in CIDR format.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun cidrIp(cidrIp: String) {
+        cdkBuilder.cidrIp(cidrIp)
+      }
+
+      /**
+       * @param cidrIpv6 The IPv6 address range, in CIDR format.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun cidrIpv6(cidrIpv6: String) {
+        cdkBuilder.cidrIpv6(cidrIpv6)
+      }
+
+      /**
+       * @param description A description for the security group rule.
+       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
+       * and ._-:/()#,&#64;[]+=;{}!$*
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param destinationPrefixListId The prefix list IDs for the destination AWS service.
+       * This is the AWS service that you want to access through a VPC endpoint from instances
+       * associated with the security group.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       */
+      override fun destinationPrefixListId(destinationPrefixListId: String) {
+        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
+      }
+
+      /**
+       * @param destinationSecurityGroupId The ID of the destination VPC security group.
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       */
+      override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
+        cdkBuilder.destinationSecurityGroupId(destinationSecurityGroupId)
+      }
+
+      /**
+       * @param fromPort If the protocol is TCP or UDP, this is the start of the port range.
+       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
+       */
+      override fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
+      }
+
+      /**
+       * @param ipProtocol The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see
+       * [Protocol
+       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+       * ). 
+       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
+       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
+       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
+       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
+       * traffic for all types and codes is allowed.
+       */
+      override fun ipProtocol(ipProtocol: String) {
+        cdkBuilder.ipProtocol(ipProtocol)
+      }
+
+      /**
+       * @param sourceSecurityGroupId the value to be set.
+       */
+      override fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
+        cdkBuilder.sourceSecurityGroupId(sourceSecurityGroupId)
+      }
+
+      /**
+       * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
+       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
+       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
+       */
+      override fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
+    ) : CdkObject(cdkObject), EgressProperty {
+      /**
+       * The IPv4 address range, in CIDR format.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidrip)
+       */
+      override fun cidrIp(): String? = unwrap(this).getCidrIp()
+
+      /**
+       * The IPv6 address range, in CIDR format.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * For examples of rules that you can add to security groups for specific access scenarios,
+       * see [Security group rules for different use
+       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidripv6)
+       */
+      override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
+
+      /**
+       * A description for the security group rule.
+       *
+       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
+       * and ._-:/()#,&#64;[]+=;{}!$*
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The prefix list IDs for the destination AWS service.
+       *
+       * This is the AWS service that you want to access through a VPC endpoint from instances
+       * associated with the security group.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
+       */
+      override fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
+
+      /**
+       * The ID of the destination VPC security group.
+       *
+       * You must specify a destination security group ( `DestinationPrefixListId` or
+       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
+       */
+      override fun destinationSecurityGroupId(): String? =
+          unwrap(this).getDestinationSecurityGroupId()
+
+      /**
+       * If the protocol is TCP or UDP, this is the start of the port range.
+       *
+       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-fromport)
+       */
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
+
+      /**
+       * The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see [Protocol
+       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+       * ).
+       *
+       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
+       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
+       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
+       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
+       * traffic for all types and codes is allowed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
+       */
+      override fun ipProtocol(): String = unwrap(this).getIpProtocol()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
+       */
+      override fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
+
+      /**
+       * If the protocol is TCP or UDP, this is the end of the port range.
+       *
+       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
+       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-toport)
+       */
+      override fun toPort(): Number? = unwrap(this).getToPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EgressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty):
+          EgressProperty = CdkObjectWrappers.wrap(cdkObject) as? EgressProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EgressProperty):
+          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty
+    }
   }
 
   /**
@@ -905,7 +1367,7 @@ public open class CfnSecurityGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
     ) : CdkObject(cdkObject), IngressProperty {
       /**
        * The IPv4 address range, in CIDR format.
@@ -1043,443 +1505,6 @@ public open class CfnSecurityGroup internal constructor(
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty
-    }
-  }
-
-  /**
-   * Adds the specified outbound (egress) rule to a security group.
-   *
-   * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address range,
-   * the IP address ranges that are specified by a prefix list, or the instances that are associated
-   * with a destination security group. For more information, see [Security group
-   * rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html) .
-   *
-   * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
-   * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is not
-   * added to the security group.
-   *
-   * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
-   * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
-   * specify the ICMP/ICMPv6 type and code.
-   *
-   * Rule changes are propagated to instances associated with the security group as quickly as
-   * possible. However, a small delay might occur.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EgressProperty egressProperty = EgressProperty.builder()
-   * .ipProtocol("ipProtocol")
-   * // the properties below are optional
-   * .cidrIp("cidrIp")
-   * .cidrIpv6("cidrIpv6")
-   * .description("description")
-   * .destinationPrefixListId("destinationPrefixListId")
-   * .destinationSecurityGroupId("destinationSecurityGroupId")
-   * .fromPort(123)
-   * .toPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html)
-   */
-  public interface EgressProperty {
-    /**
-     * The IPv4 address range, in CIDR format.
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-     *
-     * For examples of rules that you can add to security groups for specific access scenarios, see
-     * [Security group rules for different use
-     * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-     * in the *Amazon EC2 User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidrip)
-     */
-    public fun cidrIp(): String? = unwrap(this).getCidrIp()
-
-    /**
-     * The IPv6 address range, in CIDR format.
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-     *
-     * For examples of rules that you can add to security groups for specific access scenarios, see
-     * [Security group rules for different use
-     * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-     * in the *Amazon EC2 User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidripv6)
-     */
-    public fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
-
-    /**
-     * A description for the security group rule.
-     *
-     * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
-     * and ._-:/()#,&#64;[]+=;{}!$*
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The prefix list IDs for the destination AWS service.
-     *
-     * This is the AWS service that you want to access through a VPC endpoint from instances
-     * associated with the security group.
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
-     */
-    public fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
-
-    /**
-     * The ID of the destination VPC security group.
-     *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
-     */
-    public fun destinationSecurityGroupId(): String? = unwrap(this).getDestinationSecurityGroupId()
-
-    /**
-     * If the protocol is TCP or UDP, this is the start of the port range.
-     *
-     * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-fromport)
-     */
-    public fun fromPort(): Number? = unwrap(this).getFromPort()
-
-    /**
-     * The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see [Protocol
-     * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-     * ).
-     *
-     * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1` or
-     * a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all ports,
-     * regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must specify a
-     * port range. For `icmpv6` , the port range is optional; if you omit the port range, traffic for
-     * all types and codes is allowed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
-     */
-    public fun ipProtocol(): String
-
-    /**
-     * If the protocol is TCP or UDP, this is the end of the port range.
-     *
-     * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start
-     * port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-toport)
-     */
-    public fun toPort(): Number? = unwrap(this).getToPort()
-
-    /**
-     * A builder for [EgressProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       */
-      public fun cidrIp(cidrIp: String)
-
-      /**
-       * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       */
-      public fun cidrIpv6(cidrIpv6: String)
-
-      /**
-       * @param description A description for the security group rule.
-       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
-       * and ._-:/()#,&#64;[]+=;{}!$*
-       */
-      public fun description(description: String)
-
-      /**
-       * @param destinationPrefixListId The prefix list IDs for the destination AWS service.
-       * This is the AWS service that you want to access through a VPC endpoint from instances
-       * associated with the security group.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       */
-      public fun destinationPrefixListId(destinationPrefixListId: String)
-
-      /**
-       * @param destinationSecurityGroupId The ID of the destination VPC security group.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       */
-      public fun destinationSecurityGroupId(destinationSecurityGroupId: String)
-
-      /**
-       * @param fromPort If the protocol is TCP or UDP, this is the start of the port range.
-       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
-       */
-      public fun fromPort(fromPort: Number)
-
-      /**
-       * @param ipProtocol The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see
-       * [Protocol
-       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-       * ). 
-       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
-       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
-       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
-       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
-       * traffic for all types and codes is allowed.
-       */
-      public fun ipProtocol(ipProtocol: String)
-
-      /**
-       * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
-       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
-       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
-       */
-      public fun toPort(toPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.builder()
-
-      /**
-       * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       */
-      override fun cidrIp(cidrIp: String) {
-        cdkBuilder.cidrIp(cidrIp)
-      }
-
-      /**
-       * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       */
-      override fun cidrIpv6(cidrIpv6: String) {
-        cdkBuilder.cidrIpv6(cidrIpv6)
-      }
-
-      /**
-       * @param description A description for the security group rule.
-       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
-       * and ._-:/()#,&#64;[]+=;{}!$*
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param destinationPrefixListId The prefix list IDs for the destination AWS service.
-       * This is the AWS service that you want to access through a VPC endpoint from instances
-       * associated with the security group.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       */
-      override fun destinationPrefixListId(destinationPrefixListId: String) {
-        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
-      }
-
-      /**
-       * @param destinationSecurityGroupId The ID of the destination VPC security group.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       */
-      override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
-        cdkBuilder.destinationSecurityGroupId(destinationSecurityGroupId)
-      }
-
-      /**
-       * @param fromPort If the protocol is TCP or UDP, this is the start of the port range.
-       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
-       */
-      override fun fromPort(fromPort: Number) {
-        cdkBuilder.fromPort(fromPort)
-      }
-
-      /**
-       * @param ipProtocol The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see
-       * [Protocol
-       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-       * ). 
-       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
-       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
-       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
-       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
-       * traffic for all types and codes is allowed.
-       */
-      override fun ipProtocol(ipProtocol: String) {
-        cdkBuilder.ipProtocol(ipProtocol)
-      }
-
-      /**
-       * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
-       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
-       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
-       */
-      override fun toPort(toPort: Number) {
-        cdkBuilder.toPort(toPort)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
-    ) : CdkObject(cdkObject), EgressProperty {
-      /**
-       * The IPv4 address range, in CIDR format.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidrip)
-       */
-      override fun cidrIp(): String? = unwrap(this).getCidrIp()
-
-      /**
-       * The IPv6 address range, in CIDR format.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * For examples of rules that you can add to security groups for specific access scenarios,
-       * see [Security group rules for different use
-       * cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html)
-       * in the *Amazon EC2 User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-cidripv6)
-       */
-      override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
-
-      /**
-       * A description for the security group rule.
-       *
-       * Constraints: Up to 255 characters in length. Allowed characters are a-z, A-Z, 0-9, spaces,
-       * and ._-:/()#,&#64;[]+=;{}!$*
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The prefix list IDs for the destination AWS service.
-       *
-       * This is the AWS service that you want to access through a VPC endpoint from instances
-       * associated with the security group.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
-       */
-      override fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
-
-      /**
-       * The ID of the destination VPC security group.
-       *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
-       */
-      override fun destinationSecurityGroupId(): String? =
-          unwrap(this).getDestinationSecurityGroupId()
-
-      /**
-       * If the protocol is TCP or UDP, this is the start of the port range.
-       *
-       * If the protocol is ICMP or ICMPv6, this is the ICMP type or -1 (all ICMP types).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-fromport)
-       */
-      override fun fromPort(): Number? = unwrap(this).getFromPort()
-
-      /**
-       * The IP protocol name ( `tcp` , `udp` , `icmp` , `icmpv6` ) or number (see [Protocol
-       * Numbers](https://docs.aws.amazon.com/http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-       * ).
-       *
-       * Use `-1` to specify all protocols. When authorizing security group rules, specifying `-1`
-       * or a protocol number other than `tcp` , `udp` , `icmp` , or `icmpv6` allows traffic on all
-       * ports, regardless of any port range you specify. For `tcp` , `udp` , and `icmp` , you must
-       * specify a port range. For `icmpv6` , the port range is optional; if you omit the port range,
-       * traffic for all types and codes is allowed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
-       */
-      override fun ipProtocol(): String = unwrap(this).getIpProtocol()
-
-      /**
-       * If the protocol is TCP or UDP, this is the end of the port range.
-       *
-       * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
-       * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-toport)
-       */
-      override fun toPort(): Number? = unwrap(this).getToPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EgressProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty):
-          EgressProperty = CdkObjectWrappers.wrap(cdkObject) as? EgressProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EgressProperty):
-          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty
     }
   }
 }

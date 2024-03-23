@@ -565,7 +565,12 @@ public interface CfnClusterProps {
    *
    * Default: `5439`
    *
-   * Valid Values: `1150-65535`
+   * Valid Values:
+   *
+   * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+   * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+   * these ranges.)
+   * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
    */
@@ -1191,7 +1196,12 @@ public interface CfnClusterProps {
      *
      * Default: `5439`
      *
-     * Valid Values: `1150-65535`
+     * Valid Values:
+     *
+     * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+     * these ranges.)
+     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
      */
     public fun port(port: Number)
 
@@ -1917,7 +1927,12 @@ public interface CfnClusterProps {
      *
      * Default: `5439`
      *
-     * Valid Values: `1150-65535`
+     * Valid Values:
+     *
+     * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+     * these ranges.)
+     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
      */
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -2087,7 +2102,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.redshift.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * If `true` , major version upgrades can be applied during the maintenance window to the Amazon
@@ -2564,7 +2579,12 @@ public interface CfnClusterProps {
      *
      * Default: `5439`
      *
-     * Valid Values: `1150-65535`
+     * Valid Values:
+     *
+     * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
+     * these ranges.)
+     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      */

@@ -20,8 +20,8 @@ import kotlin.collections.List
  * JsonNull jsonNull = JsonNull.INSTANCE;
  * ```
  */
-public open class JsonNull internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.JsonNull,
+public open class JsonNull(
+  cdkObject: software.amazon.awscdk.JsonNull,
 ) : CdkObject(cdkObject), IResolvable {
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
@@ -50,6 +50,7 @@ public open class JsonNull internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.JsonNull): JsonNull = JsonNull(cdkObject)
 
-    internal fun unwrap(wrapped: JsonNull): software.amazon.awscdk.JsonNull = wrapped.cdkObject
+    internal fun unwrap(wrapped: JsonNull): software.amazon.awscdk.JsonNull = wrapped.cdkObject as
+        software.amazon.awscdk.JsonNull
   }
 }

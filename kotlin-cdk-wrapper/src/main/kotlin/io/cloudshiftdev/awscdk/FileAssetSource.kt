@@ -201,7 +201,7 @@ public interface FileAssetSource {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.FileAssetSource,
+    cdkObject: software.amazon.awscdk.FileAssetSource,
   ) : CdkObject(cdkObject), FileAssetSource {
     /**
      * Whether or not the asset needs to exist beyond deployment time;

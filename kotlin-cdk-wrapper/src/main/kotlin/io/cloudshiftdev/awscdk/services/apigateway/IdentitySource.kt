@@ -25,8 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class IdentitySource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.IdentitySource,
+public open class IdentitySource(
+  cdkObject: software.amazon.awscdk.services.apigateway.IdentitySource,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.apigateway.IdentitySource()
   )
@@ -48,6 +48,7 @@ public open class IdentitySource internal constructor(
         IdentitySource = IdentitySource(cdkObject)
 
     internal fun unwrap(wrapped: IdentitySource):
-        software.amazon.awscdk.services.apigateway.IdentitySource = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.IdentitySource = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.IdentitySource
   }
 }

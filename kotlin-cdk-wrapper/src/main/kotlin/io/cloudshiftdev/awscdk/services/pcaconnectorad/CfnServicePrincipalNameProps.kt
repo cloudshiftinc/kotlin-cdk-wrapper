@@ -95,8 +95,7 @@ public interface CfnServicePrincipalNameProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps,
+    cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps,
   ) : CdkObject(cdkObject), CfnServicePrincipalNameProps {
     /**
      * The Amazon Resource Name (ARN) that was returned when you called

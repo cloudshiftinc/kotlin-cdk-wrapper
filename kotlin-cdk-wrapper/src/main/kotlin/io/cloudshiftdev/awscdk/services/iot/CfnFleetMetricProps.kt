@@ -298,7 +298,7 @@ public interface CfnFleetMetricProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetricProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetricProps,
   ) : CdkObject(cdkObject), CfnFleetMetricProps {
     /**
      * The field to aggregate.

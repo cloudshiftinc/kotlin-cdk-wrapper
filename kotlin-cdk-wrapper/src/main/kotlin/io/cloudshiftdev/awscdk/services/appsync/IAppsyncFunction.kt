@@ -26,7 +26,7 @@ public interface IAppsyncFunction : IResource {
   public fun functionId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.IAppsyncFunction,
+    cdkObject: software.amazon.awscdk.services.appsync.IAppsyncFunction,
   ) : CdkObject(cdkObject), IAppsyncFunction {
     /**
      * Apply the given removal policy to this resource.

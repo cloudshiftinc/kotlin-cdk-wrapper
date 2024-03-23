@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NodejsFunction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.nodejs.NodejsFunction,
+public open class NodejsFunction(
+  cdkObject: software.amazon.awscdk.services.lambda.nodejs.NodejsFunction,
 ) : Function(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.lambda.nodejs.NodejsFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1742,6 +1742,7 @@ public open class NodejsFunction internal constructor(
         NodejsFunction = NodejsFunction(cdkObject)
 
     internal fun unwrap(wrapped: NodejsFunction):
-        software.amazon.awscdk.services.lambda.nodejs.NodejsFunction = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.nodejs.NodejsFunction = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.nodejs.NodejsFunction
   }
 }

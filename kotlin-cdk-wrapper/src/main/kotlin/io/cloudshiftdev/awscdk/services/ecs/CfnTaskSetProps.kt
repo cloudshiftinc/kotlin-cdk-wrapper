@@ -549,7 +549,7 @@ public interface CfnTaskSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSetProps,
+    cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSetProps,
   ) : CdkObject(cdkObject), CfnTaskSetProps {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to

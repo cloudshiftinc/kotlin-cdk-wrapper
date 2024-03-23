@@ -172,7 +172,7 @@ public interface CfnCreationPolicy {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnCreationPolicy,
+    cdkObject: software.amazon.awscdk.CfnCreationPolicy,
   ) : CdkObject(cdkObject), CfnCreationPolicy {
     /**
      * For an Auto Scaling group replacement update, specifies how many instances must signal

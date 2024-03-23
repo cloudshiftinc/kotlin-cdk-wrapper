@@ -211,7 +211,7 @@ public interface CfnEnvironmentTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplateProps,
+    cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplateProps,
   ) : CdkObject(cdkObject), CfnEnvironmentTemplateProps {
     /**
      * A description of the environment template.

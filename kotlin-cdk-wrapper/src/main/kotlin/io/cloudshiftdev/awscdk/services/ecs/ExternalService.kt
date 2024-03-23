@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ExternalService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ExternalService,
+public open class ExternalService(
+  cdkObject: software.amazon.awscdk.services.ecs.ExternalService,
 ) : BaseService(cdkObject), IExternalService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -881,6 +881,7 @@ public open class ExternalService internal constructor(
         ExternalService = ExternalService(cdkObject)
 
     internal fun unwrap(wrapped: ExternalService):
-        software.amazon.awscdk.services.ecs.ExternalService = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.ExternalService = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.ExternalService
   }
 }

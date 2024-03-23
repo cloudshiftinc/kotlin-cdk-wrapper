@@ -27,8 +27,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ProviderAttribute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.ProviderAttribute,
+public open class ProviderAttribute(
+  cdkObject: software.amazon.awscdk.services.cognito.ProviderAttribute,
 ) : CdkObject(cdkObject) {
   /**
    * The attribute value string as recognized by the provider.
@@ -121,6 +121,7 @@ public open class ProviderAttribute internal constructor(
         ProviderAttribute = ProviderAttribute(cdkObject)
 
     internal fun unwrap(wrapped: ProviderAttribute):
-        software.amazon.awscdk.services.cognito.ProviderAttribute = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.ProviderAttribute = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.ProviderAttribute
   }
 }

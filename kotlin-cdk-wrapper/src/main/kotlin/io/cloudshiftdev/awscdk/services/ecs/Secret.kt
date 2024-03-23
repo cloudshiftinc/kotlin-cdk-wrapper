@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class Secret internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.Secret,
+public abstract class Secret(
+  cdkObject: software.amazon.awscdk.services.ecs.Secret,
 ) : CdkObject(cdkObject) {
   /**
    * The ARN of the secret.
@@ -57,7 +57,7 @@ public abstract class Secret internal constructor(
   public open fun hasField(): Boolean? = unwrap(this).getHasField()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Secret,
+    cdkObject: software.amazon.awscdk.services.ecs.Secret,
   ) : Secret(cdkObject)
 
   public companion object {

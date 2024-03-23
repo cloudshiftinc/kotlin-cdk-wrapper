@@ -77,7 +77,7 @@ public interface RenderSignalsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions,
   ) : CdkObject(cdkObject), RenderSignalsOptions {
     /**
      * The desiredCapacity of the ASG.

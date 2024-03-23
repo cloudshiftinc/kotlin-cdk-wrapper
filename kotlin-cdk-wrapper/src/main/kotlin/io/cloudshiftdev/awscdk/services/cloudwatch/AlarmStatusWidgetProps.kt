@@ -206,7 +206,7 @@ public interface AlarmStatusWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps,
   ) : CdkObject(cdkObject), AlarmStatusWidgetProps {
     /**
      * CloudWatch Alarms to show in widget.

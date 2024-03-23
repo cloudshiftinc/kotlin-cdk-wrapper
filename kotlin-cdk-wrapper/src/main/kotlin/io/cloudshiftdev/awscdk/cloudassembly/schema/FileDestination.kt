@@ -115,7 +115,7 @@ public interface FileDestination : AwsDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.FileDestination,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.FileDestination,
   ) : CdkObject(cdkObject), FileDestination {
     /**
      * The role that needs to be assumed while publishing this asset.

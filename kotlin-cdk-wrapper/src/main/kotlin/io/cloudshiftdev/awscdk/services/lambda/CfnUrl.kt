@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-url.html)
  */
-public open class CfnUrl internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnUrl,
+public open class CfnUrl(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnUrl,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -400,7 +400,7 @@ public open class CfnUrl internal constructor(
         CfnUrl(cdkObject)
 
     internal fun unwrap(wrapped: CfnUrl): software.amazon.awscdk.services.lambda.CfnUrl =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.CfnUrl
   }
 
   /**
@@ -679,7 +679,7 @@ public open class CfnUrl internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty,
     ) : CdkObject(cdkObject), CorsProperty {
       /**
        * Whether you want to allow cookies or other credentials in requests to your function URL.

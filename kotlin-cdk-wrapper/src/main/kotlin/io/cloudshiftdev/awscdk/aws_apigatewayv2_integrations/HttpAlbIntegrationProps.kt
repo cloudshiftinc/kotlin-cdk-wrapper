@@ -100,8 +100,7 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps,
+    cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps,
   ) : CdkObject(cdkObject), HttpAlbIntegrationProps {
     /**
      * The HTTP method that must be used to invoke the underlying HTTP proxy.

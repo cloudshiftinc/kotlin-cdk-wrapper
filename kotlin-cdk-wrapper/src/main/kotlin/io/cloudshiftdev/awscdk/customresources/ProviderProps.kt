@@ -422,7 +422,7 @@ public interface ProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.customresources.ProviderProps,
+    cdkObject: software.amazon.awscdk.customresources.ProviderProps,
   ) : CdkObject(cdkObject), ProviderProps {
     /**
      * The AWS Lambda function to invoke in order to determine if the operation is complete.

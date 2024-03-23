@@ -294,7 +294,7 @@ public interface SynthesizeStackArtifactOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.SynthesizeStackArtifactOptions,
+    cdkObject: software.amazon.awscdk.SynthesizeStackArtifactOptions,
   ) : CdkObject(cdkObject), SynthesizeStackArtifactOptions {
     /**
      * Identifiers of additional dependencies.

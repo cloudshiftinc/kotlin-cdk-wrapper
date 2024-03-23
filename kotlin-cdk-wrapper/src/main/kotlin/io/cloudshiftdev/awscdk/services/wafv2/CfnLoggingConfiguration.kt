@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)
  */
-public open class CfnLoggingConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration,
+public open class CfnLoggingConfiguration(
+  cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -449,11 +449,12 @@ public open class CfnLoggingConfiguration internal constructor(
         CfnLoggingConfiguration = CfnLoggingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggingConfiguration):
-        software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
   }
 
   /**
-   * A single label name condition for a condition in a logging filter.
+   * A single action condition for a condition in a logging filter.
    *
    * Example:
    *
@@ -461,510 +462,100 @@ public open class CfnLoggingConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * LabelNameConditionProperty labelNameConditionProperty = LabelNameConditionProperty.builder()
-   * .labelName("labelName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html)
-   */
-  public interface LabelNameConditionProperty {
-    /**
-     * The label name that a log record must contain in order to meet the condition.
-     *
-     * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
-     * namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule
-     * that added the label.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html#cfn-wafv2-loggingconfiguration-labelnamecondition-labelname)
-     */
-    public fun labelName(): String
-
-    /**
-     * A builder for [LabelNameConditionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param labelName The label name that a log record must contain in order to meet the
-       * condition. 
-       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
-       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
-       * rule that added the label.
-       */
-      public fun labelName(labelName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty.Builder
-          =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty.builder()
-
-      /**
-       * @param labelName The label name that a log record must contain in order to meet the
-       * condition. 
-       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
-       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
-       * rule that added the label.
-       */
-      override fun labelName(labelName: String) {
-        cdkBuilder.labelName(labelName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty,
-    ) : CdkObject(cdkObject), LabelNameConditionProperty {
-      /**
-       * The label name that a log record must contain in order to meet the condition.
-       *
-       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
-       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
-       * rule that added the label.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html#cfn-wafv2-loggingconfiguration-labelnamecondition-labelname)
-       */
-      override fun labelName(): String = unwrap(this).getLabelName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LabelNameConditionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty):
-          LabelNameConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LabelNameConditionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LabelNameConditionProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty
-    }
-  }
-
-  /**
-   * A single logging filter, used in `LoggingFilter` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * FilterProperty filterProperty = FilterProperty.builder()
-   * .behavior("behavior")
-   * .conditions(List.of(ConditionProperty.builder()
-   * .actionCondition(ActionConditionProperty.builder()
+   * ActionConditionProperty actionConditionProperty = ActionConditionProperty.builder()
    * .action("action")
-   * .build())
-   * .labelNameCondition(LabelNameConditionProperty.builder()
-   * .labelName("labelName")
-   * .build())
-   * .build()))
-   * .requirement("requirement")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html)
    */
-  public interface FilterProperty {
+  public interface ActionConditionProperty {
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
+     * The action setting that a log record must contain in order to meet the condition.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-behavior)
+     * This is the action that AWS WAF applied to the web request.
+     *
+     * For rule groups, this is either the configured rule action setting, or if you've applied a
+     * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
+     * matches on excluded rules and also on rules that have a rule action override of Count.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html#cfn-wafv2-loggingconfiguration-actioncondition-action)
      */
-    public fun behavior(): String
+    public fun action(): String
 
     /**
-     * Match conditions for the filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-conditions)
-     */
-    public fun conditions(): Any
-
-    /**
-     * Logic to apply to the filtering conditions.
-     *
-     * You can specify that, in order to satisfy the filter, a log must match all conditions or must
-     * match at least one condition.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-requirement)
-     */
-    public fun requirement(): String
-
-    /**
-     * A builder for [FilterProperty]
+     * A builder for [ActionConditionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param behavior How to handle logs that satisfy the filter's conditions and requirement. 
+       * @param action The action setting that a log record must contain in order to meet the
+       * condition. 
+       * This is the action that AWS WAF applied to the web request.
+       *
+       * For rule groups, this is either the configured rule action setting, or if you've applied a
+       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
+       * matches on excluded rules and also on rules that have a rule action override of Count.
        */
-      public fun behavior(behavior: String)
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      public fun conditions(conditions: IResolvable)
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      public fun conditions(conditions: List<Any>)
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      public fun conditions(vararg conditions: Any)
-
-      /**
-       * @param requirement Logic to apply to the filtering conditions. 
-       * You can specify that, in order to satisfy the filter, a log must match all conditions or
-       * must match at least one condition.
-       */
-      public fun requirement(requirement: String)
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.Builder =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.builder()
-
-      /**
-       * @param behavior How to handle logs that satisfy the filter's conditions and requirement. 
-       */
-      override fun behavior(behavior: String) {
-        cdkBuilder.behavior(behavior)
-      }
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      override fun conditions(conditions: IResolvable) {
-        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      override fun conditions(conditions: List<Any>) {
-        cdkBuilder.conditions(conditions)
-      }
-
-      /**
-       * @param conditions Match conditions for the filter. 
-       */
-      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
-
-      /**
-       * @param requirement Logic to apply to the filtering conditions. 
-       * You can specify that, in order to satisfy the filter, a log must match all conditions or
-       * must match at least one condition.
-       */
-      override fun requirement(requirement: String) {
-        cdkBuilder.requirement(requirement)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
-      /**
-       * How to handle logs that satisfy the filter's conditions and requirement.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-behavior)
-       */
-      override fun behavior(): String = unwrap(this).getBehavior()
-
-      /**
-       * Match conditions for the filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-conditions)
-       */
-      override fun conditions(): Any = unwrap(this).getConditions()
-
-      /**
-       * Logic to apply to the filtering conditions.
-       *
-       * You can specify that, in order to satisfy the filter, a log must match all conditions or
-       * must match at least one condition.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-requirement)
-       */
-      override fun requirement(): String = unwrap(this).getRequirement()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty
-    }
-  }
-
-  /**
-   * Filtering that specifies which web requests are kept in the logs and which are dropped, defined
-   * for a web ACL's `LoggingConfiguration` .
-   *
-   * You can filter on the rule action and on the web request labels that were applied by matching
-   * rules during web ACL evaluation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * LoggingFilterProperty loggingFilterProperty = LoggingFilterProperty.builder()
-   * .defaultBehavior("defaultBehavior")
-   * .filters(List.of(FilterProperty.builder()
-   * .behavior("behavior")
-   * .conditions(List.of(ConditionProperty.builder()
-   * .actionCondition(ActionConditionProperty.builder()
-   * .action("action")
-   * .build())
-   * .labelNameCondition(LabelNameConditionProperty.builder()
-   * .labelName("labelName")
-   * .build())
-   * .build()))
-   * .requirement("requirement")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html)
-   */
-  public interface LoggingFilterProperty {
-    /**
-     * Default handling for logs that don't match any of the specified filtering conditions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-defaultbehavior)
-     */
-    public fun defaultBehavior(): String
-
-    /**
-     * The filters that you want to apply to the logs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-filters)
-     */
-    public fun filters(): Any
-
-    /**
-     * A builder for [LoggingFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param defaultBehavior Default handling for logs that don't match any of the specified
-       * filtering conditions. 
-       */
-      public fun defaultBehavior(defaultBehavior: String)
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      public fun filters(filters: IResolvable)
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      public fun filters(filters: List<Any>)
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      public fun filters(vararg filters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty.Builder
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty.Builder
           =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty.builder()
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty.builder()
 
       /**
-       * @param defaultBehavior Default handling for logs that don't match any of the specified
-       * filtering conditions. 
+       * @param action The action setting that a log record must contain in order to meet the
+       * condition. 
+       * This is the action that AWS WAF applied to the web request.
+       *
+       * For rule groups, this is either the configured rule action setting, or if you've applied a
+       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
+       * matches on excluded rules and also on rules that have a rule action override of Count.
        */
-      override fun defaultBehavior(defaultBehavior: String) {
-        cdkBuilder.defaultBehavior(defaultBehavior)
+      override fun action(action: String) {
+        cdkBuilder.action(action)
       }
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
-      }
-
-      /**
-       * @param filters The filters that you want to apply to the logs. 
-       */
-      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty,
-    ) : CdkObject(cdkObject), LoggingFilterProperty {
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty,
+    ) : CdkObject(cdkObject), ActionConditionProperty {
       /**
-       * Default handling for logs that don't match any of the specified filtering conditions.
+       * The action setting that a log record must contain in order to meet the condition.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-defaultbehavior)
-       */
-      override fun defaultBehavior(): String = unwrap(this).getDefaultBehavior()
-
-      /**
-       * The filters that you want to apply to the logs.
+       * This is the action that AWS WAF applied to the web request.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-filters)
+       * For rule groups, this is either the configured rule action setting, or if you've applied a
+       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
+       * matches on excluded rules and also on rules that have a rule action override of Count.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html#cfn-wafv2-loggingconfiguration-actioncondition-action)
        */
-      override fun filters(): Any = unwrap(this).getFilters()
+      override fun action(): String = unwrap(this).getAction()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionConditionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty):
-          LoggingFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFilterProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty):
+          ActionConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionConditionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LoggingFilterProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
+      internal fun unwrap(wrapped: ActionConditionProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty
-    }
-  }
-
-  /**
-   * Inspect one of the headers in the web request, identified by name, for example, `User-Agent` or
-   * `Referer` .
-   *
-   * The name isn't case sensitive.
-   *
-   * You can filter and inspect all headers with the `FieldToMatch` setting `Headers` .
-   *
-   * This is used to indicate the web request component to inspect, in the `FieldToMatch`
-   * specification.
-   *
-   * Example JSON: `"SingleHeader": { "Name": "haystack" }`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * SingleHeaderProperty singleHeaderProperty = SingleHeaderProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html)
-   */
-  public interface SingleHeaderProperty {
-    /**
-     * The name of the query header to inspect.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html#cfn-wafv2-loggingconfiguration-singleheader-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [SingleHeaderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the query header to inspect. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty.Builder
-          =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty.builder()
-
-      /**
-       * @param name The name of the query header to inspect. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty,
-    ) : CdkObject(cdkObject), SingleHeaderProperty {
-      /**
-       * The name of the query header to inspect.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html#cfn-wafv2-loggingconfiguration-singleheader-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SingleHeaderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty):
-          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleHeaderProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SingleHeaderProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty
     }
   }
 
@@ -1131,8 +722,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty,
     ) : CdkObject(cdkObject), ConditionProperty {
       /**
        * A single action condition.
@@ -1170,113 +760,6 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty
-    }
-  }
-
-  /**
-   * A single action condition for a condition in a logging filter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * ActionConditionProperty actionConditionProperty = ActionConditionProperty.builder()
-   * .action("action")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html)
-   */
-  public interface ActionConditionProperty {
-    /**
-     * The action setting that a log record must contain in order to meet the condition.
-     *
-     * This is the action that AWS WAF applied to the web request.
-     *
-     * For rule groups, this is either the configured rule action setting, or if you've applied a
-     * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
-     * matches on excluded rules and also on rules that have a rule action override of Count.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html#cfn-wafv2-loggingconfiguration-actioncondition-action)
-     */
-    public fun action(): String
-
-    /**
-     * A builder for [ActionConditionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The action setting that a log record must contain in order to meet the
-       * condition. 
-       * This is the action that AWS WAF applied to the web request.
-       *
-       * For rule groups, this is either the configured rule action setting, or if you've applied a
-       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
-       * matches on excluded rules and also on rules that have a rule action override of Count.
-       */
-      public fun action(action: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty.Builder
-          =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty.builder()
-
-      /**
-       * @param action The action setting that a log record must contain in order to meet the
-       * condition. 
-       * This is the action that AWS WAF applied to the web request.
-       *
-       * For rule groups, this is either the configured rule action setting, or if you've applied a
-       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
-       * matches on excluded rules and also on rules that have a rule action override of Count.
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty,
-    ) : CdkObject(cdkObject), ActionConditionProperty {
-      /**
-       * The action setting that a log record must contain in order to meet the condition.
-       *
-       * This is the action that AWS WAF applied to the web request.
-       *
-       * For rule groups, this is either the configured rule action setting, or if you've applied a
-       * rule action override to the rule, it's the override action. The value `EXCLUDED_AS_COUNT`
-       * matches on excluded rules and also on rules that have a rule action override of Count.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-actioncondition.html#cfn-wafv2-loggingconfiguration-actioncondition-action)
-       */
-      override fun action(): String = unwrap(this).getAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionConditionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty):
-          ActionConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionConditionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionConditionProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty
     }
   }
 
@@ -1457,8 +940,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-fieldtomatch.html#cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody)
@@ -1526,114 +1008,176 @@ public open class CfnLoggingConfiguration internal constructor(
   }
 
   /**
+   * A single logging filter, used in `LoggingFilter` .
+   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
-   * Object all;
-   * MatchPatternProperty matchPatternProperty = MatchPatternProperty.builder()
-   * .all(all)
-   * .includedPaths(List.of("includedPaths"))
+   * FilterProperty filterProperty = FilterProperty.builder()
+   * .behavior("behavior")
+   * .conditions(List.of(ConditionProperty.builder()
+   * .actionCondition(ActionConditionProperty.builder()
+   * .action("action")
+   * .build())
+   * .labelNameCondition(LabelNameConditionProperty.builder()
+   * .labelName("labelName")
+   * .build())
+   * .build()))
+   * .requirement("requirement")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html)
    */
-  public interface MatchPatternProperty {
+  public interface FilterProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-all)
+     * How to handle logs that satisfy the filter's conditions and requirement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-behavior)
      */
-    public fun all(): Any? = unwrap(this).getAll()
+    public fun behavior(): String
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-includedpaths)
+     * Match conditions for the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-conditions)
      */
-    public fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
+    public fun conditions(): Any
 
     /**
-     * A builder for [MatchPatternProperty]
+     * Logic to apply to the filtering conditions.
+     *
+     * You can specify that, in order to satisfy the filter, a log must match all conditions or must
+     * match at least one condition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-requirement)
+     */
+    public fun requirement(): String
+
+    /**
+     * A builder for [FilterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param all the value to be set.
+       * @param behavior How to handle logs that satisfy the filter's conditions and requirement. 
        */
-      public fun all(all: Any)
+      public fun behavior(behavior: String)
 
       /**
-       * @param includedPaths the value to be set.
+       * @param conditions Match conditions for the filter. 
        */
-      public fun includedPaths(includedPaths: List<String>)
+      public fun conditions(conditions: IResolvable)
 
       /**
-       * @param includedPaths the value to be set.
+       * @param conditions Match conditions for the filter. 
        */
-      public fun includedPaths(vararg includedPaths: String)
+      public fun conditions(conditions: List<Any>)
+
+      /**
+       * @param conditions Match conditions for the filter. 
+       */
+      public fun conditions(vararg conditions: Any)
+
+      /**
+       * @param requirement Logic to apply to the filtering conditions. 
+       * You can specify that, in order to satisfy the filter, a log must match all conditions or
+       * must match at least one condition.
+       */
+      public fun requirement(requirement: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty.Builder
-          =
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty.builder()
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.builder()
 
       /**
-       * @param all the value to be set.
+       * @param behavior How to handle logs that satisfy the filter's conditions and requirement. 
        */
-      override fun all(all: Any) {
-        cdkBuilder.all(all)
+      override fun behavior(behavior: String) {
+        cdkBuilder.behavior(behavior)
       }
 
       /**
-       * @param includedPaths the value to be set.
+       * @param conditions Match conditions for the filter. 
        */
-      override fun includedPaths(includedPaths: List<String>) {
-        cdkBuilder.includedPaths(includedPaths)
+      override fun conditions(conditions: IResolvable) {
+        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param includedPaths the value to be set.
+       * @param conditions Match conditions for the filter. 
        */
-      override fun includedPaths(vararg includedPaths: String): Unit =
-          includedPaths(includedPaths.toList())
+      override fun conditions(conditions: List<Any>) {
+        cdkBuilder.conditions(conditions)
+      }
+
+      /**
+       * @param conditions Match conditions for the filter. 
+       */
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
+
+      /**
+       * @param requirement Logic to apply to the filtering conditions. 
+       * You can specify that, in order to satisfy the filter, a log must match all conditions or
+       * must match at least one condition.
+       */
+      override fun requirement(requirement: String) {
+        cdkBuilder.requirement(requirement)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty,
-    ) : CdkObject(cdkObject), MatchPatternProperty {
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-all)
+       * How to handle logs that satisfy the filter's conditions and requirement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-behavior)
        */
-      override fun all(): Any? = unwrap(this).getAll()
+      override fun behavior(): String = unwrap(this).getBehavior()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-includedpaths)
+       * Match conditions for the filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-conditions)
        */
-      override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
+      override fun conditions(): Any = unwrap(this).getConditions()
+
+      /**
+       * Logic to apply to the filtering conditions.
+       *
+       * You can specify that, in order to satisfy the filter, a log must match all conditions or
+       * must match at least one condition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-filter.html#cfn-wafv2-loggingconfiguration-filter-requirement)
+       */
+      override fun requirement(): String = unwrap(this).getRequirement()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MatchPatternProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty):
-          MatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchPatternProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty):
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MatchPatternProperty):
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty
     }
   }
 
@@ -1754,8 +1298,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty,
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty,
     ) : CdkObject(cdkObject), JsonBodyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-jsonbody.html#cfn-wafv2-loggingconfiguration-jsonbody-invalidfallbackbehavior)
@@ -1788,6 +1331,455 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty
+    }
+  }
+
+  /**
+   * A single label name condition for a condition in a logging filter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * LabelNameConditionProperty labelNameConditionProperty = LabelNameConditionProperty.builder()
+   * .labelName("labelName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html)
+   */
+  public interface LabelNameConditionProperty {
+    /**
+     * The label name that a log record must contain in order to meet the condition.
+     *
+     * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
+     * namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule
+     * that added the label.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html#cfn-wafv2-loggingconfiguration-labelnamecondition-labelname)
+     */
+    public fun labelName(): String
+
+    /**
+     * A builder for [LabelNameConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param labelName The label name that a log record must contain in order to meet the
+       * condition. 
+       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
+       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
+       * rule that added the label.
+       */
+      public fun labelName(labelName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty.builder()
+
+      /**
+       * @param labelName The label name that a log record must contain in order to meet the
+       * condition. 
+       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
+       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
+       * rule that added the label.
+       */
+      override fun labelName(labelName: String) {
+        cdkBuilder.labelName(labelName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty,
+    ) : CdkObject(cdkObject), LabelNameConditionProperty {
+      /**
+       * The label name that a log record must contain in order to meet the condition.
+       *
+       * This must be a fully qualified label name. Fully qualified labels have a prefix, optional
+       * namespaces, and label name. The prefix identifies the rule group or web ACL context of the
+       * rule that added the label.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-labelnamecondition.html#cfn-wafv2-loggingconfiguration-labelnamecondition-labelname)
+       */
+      override fun labelName(): String = unwrap(this).getLabelName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LabelNameConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty):
+          LabelNameConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LabelNameConditionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LabelNameConditionProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty
+    }
+  }
+
+  /**
+   * Filtering that specifies which web requests are kept in the logs and which are dropped, defined
+   * for a web ACL's `LoggingConfiguration` .
+   *
+   * You can filter on the rule action and on the web request labels that were applied by matching
+   * rules during web ACL evaluation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * LoggingFilterProperty loggingFilterProperty = LoggingFilterProperty.builder()
+   * .defaultBehavior("defaultBehavior")
+   * .filters(List.of(FilterProperty.builder()
+   * .behavior("behavior")
+   * .conditions(List.of(ConditionProperty.builder()
+   * .actionCondition(ActionConditionProperty.builder()
+   * .action("action")
+   * .build())
+   * .labelNameCondition(LabelNameConditionProperty.builder()
+   * .labelName("labelName")
+   * .build())
+   * .build()))
+   * .requirement("requirement")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html)
+   */
+  public interface LoggingFilterProperty {
+    /**
+     * Default handling for logs that don't match any of the specified filtering conditions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-defaultbehavior)
+     */
+    public fun defaultBehavior(): String
+
+    /**
+     * The filters that you want to apply to the logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-filters)
+     */
+    public fun filters(): Any
+
+    /**
+     * A builder for [LoggingFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultBehavior Default handling for logs that don't match any of the specified
+       * filtering conditions. 
+       */
+      public fun defaultBehavior(defaultBehavior: String)
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      public fun filters(filters: IResolvable)
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      public fun filters(filters: List<Any>)
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      public fun filters(vararg filters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty.builder()
+
+      /**
+       * @param defaultBehavior Default handling for logs that don't match any of the specified
+       * filtering conditions. 
+       */
+      override fun defaultBehavior(defaultBehavior: String) {
+        cdkBuilder.defaultBehavior(defaultBehavior)
+      }
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      override fun filters(filters: IResolvable) {
+        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      override fun filters(filters: List<Any>) {
+        cdkBuilder.filters(filters)
+      }
+
+      /**
+       * @param filters The filters that you want to apply to the logs. 
+       */
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty,
+    ) : CdkObject(cdkObject), LoggingFilterProperty {
+      /**
+       * Default handling for logs that don't match any of the specified filtering conditions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-defaultbehavior)
+       */
+      override fun defaultBehavior(): String = unwrap(this).getDefaultBehavior()
+
+      /**
+       * The filters that you want to apply to the logs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html#cfn-wafv2-loggingconfiguration-loggingfilter-filters)
+       */
+      override fun filters(): Any = unwrap(this).getFilters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty):
+          LoggingFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingFilterProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * Object all;
+   * MatchPatternProperty matchPatternProperty = MatchPatternProperty.builder()
+   * .all(all)
+   * .includedPaths(List.of("includedPaths"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html)
+   */
+  public interface MatchPatternProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-all)
+     */
+    public fun all(): Any? = unwrap(this).getAll()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-includedpaths)
+     */
+    public fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
+
+    /**
+     * A builder for [MatchPatternProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param all the value to be set.
+       */
+      public fun all(all: Any)
+
+      /**
+       * @param includedPaths the value to be set.
+       */
+      public fun includedPaths(includedPaths: List<String>)
+
+      /**
+       * @param includedPaths the value to be set.
+       */
+      public fun includedPaths(vararg includedPaths: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty.builder()
+
+      /**
+       * @param all the value to be set.
+       */
+      override fun all(all: Any) {
+        cdkBuilder.all(all)
+      }
+
+      /**
+       * @param includedPaths the value to be set.
+       */
+      override fun includedPaths(includedPaths: List<String>) {
+        cdkBuilder.includedPaths(includedPaths)
+      }
+
+      /**
+       * @param includedPaths the value to be set.
+       */
+      override fun includedPaths(vararg includedPaths: String): Unit =
+          includedPaths(includedPaths.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty,
+    ) : CdkObject(cdkObject), MatchPatternProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-all)
+       */
+      override fun all(): Any? = unwrap(this).getAll()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-includedpaths)
+       */
+      override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MatchPatternProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty):
+          MatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchPatternProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MatchPatternProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty
+    }
+  }
+
+  /**
+   * Inspect one of the headers in the web request, identified by name, for example, `User-Agent` or
+   * `Referer` .
+   *
+   * The name isn't case sensitive.
+   *
+   * You can filter and inspect all headers with the `FieldToMatch` setting `Headers` .
+   *
+   * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+   * specification.
+   *
+   * Example JSON: `"SingleHeader": { "Name": "haystack" }`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * SingleHeaderProperty singleHeaderProperty = SingleHeaderProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html)
+   */
+  public interface SingleHeaderProperty {
+    /**
+     * The name of the query header to inspect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html#cfn-wafv2-loggingconfiguration-singleheader-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [SingleHeaderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the query header to inspect. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty.builder()
+
+      /**
+       * @param name The name of the query header to inspect. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty,
+    ) : CdkObject(cdkObject), SingleHeaderProperty {
+      /**
+       * The name of the query header to inspect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-singleheader.html#cfn-wafv2-loggingconfiguration-singleheader-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SingleHeaderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty):
+          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleHeaderProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleHeaderProperty):
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty
     }
   }
 }

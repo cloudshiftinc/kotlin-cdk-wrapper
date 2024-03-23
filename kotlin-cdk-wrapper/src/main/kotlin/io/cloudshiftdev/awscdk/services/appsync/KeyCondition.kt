@@ -17,8 +17,8 @@ import kotlin.String
  * KeyCondition keyCondition = KeyCondition.beginsWith("keyName", "arg");
  * ```
  */
-public open class KeyCondition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.KeyCondition,
+public open class KeyCondition(
+  cdkObject: software.amazon.awscdk.services.appsync.KeyCondition,
 ) : CdkObject(cdkObject) {
   /**
    * Conjunction between two conditions.
@@ -69,6 +69,6 @@ public open class KeyCondition internal constructor(
         = KeyCondition(cdkObject)
 
     internal fun unwrap(wrapped: KeyCondition): software.amazon.awscdk.services.appsync.KeyCondition
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appsync.KeyCondition
   }
 }

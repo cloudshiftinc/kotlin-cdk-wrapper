@@ -40,12 +40,6 @@ import kotlin.collections.List
  * .manageAdminPassword(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
  * .redshiftIdcApplicationArn("redshiftIdcApplicationArn")
- * .snapshotCopyConfigurations(List.of(SnapshotCopyConfigurationProperty.builder()
- * .destinationRegion("destinationRegion")
- * // the properties below are optional
- * .destinationKmsKeyId("destinationKmsKeyId")
- * .snapshotRetentionPeriod(123)
- * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -170,13 +164,6 @@ public interface CfnNamespaceProps {
   public fun redshiftIdcApplicationArn(): String? = unwrap(this).getRedshiftIdcApplicationArn()
 
   /**
-   * The snapshot copy configurations for the namespace.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-   */
-  public fun snapshotCopyConfigurations(): Any? = unwrap(this).getSnapshotCopyConfigurations()
-
-  /**
    * The map of the key-value pairs used to tag the namespace.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-tags)
@@ -293,21 +280,6 @@ public interface CfnNamespaceProps {
      * IAM Identity Center.
      */
     public fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String)
-
-    /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable)
-
-    /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>)
-
-    /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    public fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any)
 
     /**
      * @param tags The map of the key-value pairs used to tag the namespace.
@@ -462,26 +434,6 @@ public interface CfnNamespaceProps {
     }
 
     /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable::unwrap))
-    }
-
-    /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations)
-    }
-
-    /**
-     * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
-     */
-    override fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any): Unit =
-        snapshotCopyConfigurations(snapshotCopyConfigurations.toList())
-
-    /**
      * @param tags The map of the key-value pairs used to tag the namespace.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -498,7 +450,7 @@ public interface CfnNamespaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps,
+    cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps,
   ) : CdkObject(cdkObject), CfnNamespaceProps {
     /**
      * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the namespace's
@@ -614,13 +566,6 @@ public interface CfnNamespaceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-redshiftidcapplicationarn)
      */
     override fun redshiftIdcApplicationArn(): String? = unwrap(this).getRedshiftIdcApplicationArn()
-
-    /**
-     * The snapshot copy configurations for the namespace.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html#cfn-redshiftserverless-namespace-snapshotcopyconfigurations)
-     */
-    override fun snapshotCopyConfigurations(): Any? = unwrap(this).getSnapshotCopyConfigurations()
 
     /**
      * The map of the key-value pairs used to tag the namespace.

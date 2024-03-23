@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ratebasedrule.html)
  */
-public open class CfnRateBasedRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule,
+public open class CfnRateBasedRule(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -395,7 +395,8 @@ public open class CfnRateBasedRule internal constructor(
         CfnRateBasedRule = CfnRateBasedRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnRateBasedRule):
-        software.amazon.awscdk.services.waf.regional.CfnRateBasedRule = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.regional.CfnRateBasedRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.regional.CfnRateBasedRule
   }
 
   /**
@@ -567,8 +568,7 @@ public open class CfnRateBasedRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty,
     ) : CdkObject(cdkObject), PredicateProperty {
       /**
        * A unique identifier for a predicate in a `Rule` , such as `ByteMatchSetId` or `IPSetId` .

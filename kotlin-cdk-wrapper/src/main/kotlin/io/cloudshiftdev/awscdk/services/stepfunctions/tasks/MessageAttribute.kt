@@ -104,7 +104,7 @@ public interface MessageAttribute {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute,
   ) : CdkObject(cdkObject), MessageAttribute {
     /**
      * The data type for the attribute.

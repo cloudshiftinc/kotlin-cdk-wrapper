@@ -30,8 +30,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class InstanceType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InstanceType,
+public open class InstanceType(
+  cdkObject: software.amazon.awscdk.services.ec2.InstanceType,
 ) : CdkObject(cdkObject) {
   public constructor(instanceTypeIdentifier: String) :
       this(software.amazon.awscdk.services.ec2.InstanceType(instanceTypeIdentifier)
@@ -63,6 +63,6 @@ public open class InstanceType internal constructor(
         InstanceType(cdkObject)
 
     internal fun unwrap(wrapped: InstanceType): software.amazon.awscdk.services.ec2.InstanceType =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.InstanceType
   }
 }

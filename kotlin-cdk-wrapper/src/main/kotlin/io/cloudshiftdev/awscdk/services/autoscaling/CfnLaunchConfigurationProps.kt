@@ -1002,7 +1002,7 @@ public interface CfnLaunchConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps,
   ) : CdkObject(cdkObject), CfnLaunchConfigurationProps {
     /**
      * Specifies whether to assign a public IPv4 address to the group's instances.

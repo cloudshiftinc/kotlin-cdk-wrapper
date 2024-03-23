@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html)
  */
-public open class CfnCompositeAlarm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm,
+public open class CfnCompositeAlarm(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -727,6 +727,7 @@ public open class CfnCompositeAlarm internal constructor(
         CfnCompositeAlarm = CfnCompositeAlarm(cdkObject)
 
     internal fun unwrap(wrapped: CfnCompositeAlarm):
-        software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm
   }
 }

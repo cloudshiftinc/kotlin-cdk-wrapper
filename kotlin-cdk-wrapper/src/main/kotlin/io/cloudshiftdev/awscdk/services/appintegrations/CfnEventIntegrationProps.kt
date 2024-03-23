@@ -205,8 +205,7 @@ public interface CfnEventIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.appintegrations.CfnEventIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegrationProps,
   ) : CdkObject(cdkObject), CfnEventIntegrationProps {
     /**
      * The event integration description.

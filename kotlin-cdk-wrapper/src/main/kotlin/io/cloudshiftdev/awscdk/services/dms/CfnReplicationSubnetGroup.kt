@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html)
  */
-public open class CfnReplicationSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup,
+public open class CfnReplicationSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -292,6 +292,7 @@ public open class CfnReplicationSubnetGroup internal constructor(
         CfnReplicationSubnetGroup = CfnReplicationSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationSubnetGroup):
-        software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup
   }
 }

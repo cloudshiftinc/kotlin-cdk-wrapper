@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroup.html)
  */
-public open class CfnSecurityGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroup,
+public open class CfnSecurityGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -212,6 +212,7 @@ public open class CfnSecurityGroup internal constructor(
         CfnSecurityGroup = CfnSecurityGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroup):
-        software.amazon.awscdk.services.elasticache.CfnSecurityGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnSecurityGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnSecurityGroup
   }
 }

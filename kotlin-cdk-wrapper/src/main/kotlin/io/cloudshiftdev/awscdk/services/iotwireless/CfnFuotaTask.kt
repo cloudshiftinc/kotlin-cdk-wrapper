@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html)
  */
-public open class CfnFuotaTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask,
+public open class CfnFuotaTask(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -534,7 +534,8 @@ public open class CfnFuotaTask internal constructor(
         CfnFuotaTask = CfnFuotaTask(cdkObject)
 
     internal fun unwrap(wrapped: CfnFuotaTask):
-        software.amazon.awscdk.services.iotwireless.CfnFuotaTask = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnFuotaTask = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnFuotaTask
   }
 
   /**
@@ -610,8 +611,7 @@ public open class CfnFuotaTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty,
     ) : CdkObject(cdkObject), LoRaWANProperty {
       /**
        * The frequency band (RFRegion) value.

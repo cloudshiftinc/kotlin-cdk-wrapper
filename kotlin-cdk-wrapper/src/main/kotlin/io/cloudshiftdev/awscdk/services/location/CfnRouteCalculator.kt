@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html)
  */
-public open class CfnRouteCalculator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculator,
+public open class CfnRouteCalculator(
+  cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculator,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -411,6 +411,7 @@ public open class CfnRouteCalculator internal constructor(
         CfnRouteCalculator = CfnRouteCalculator(cdkObject)
 
     internal fun unwrap(wrapped: CfnRouteCalculator):
-        software.amazon.awscdk.services.location.CfnRouteCalculator = wrapped.cdkObject
+        software.amazon.awscdk.services.location.CfnRouteCalculator = wrapped.cdkObject as
+        software.amazon.awscdk.services.location.CfnRouteCalculator
   }
 }

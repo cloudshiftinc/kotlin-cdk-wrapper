@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ConfigurationSetEventDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ses.ConfigurationSetEventDestination,
+public open class ConfigurationSetEventDestination(
+  cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestination,
 ) : Resource(cdkObject), IConfigurationSetEventDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,6 +213,7 @@ public open class ConfigurationSetEventDestination internal constructor(
         ConfigurationSetEventDestination = ConfigurationSetEventDestination(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationSetEventDestination):
-        software.amazon.awscdk.services.ses.ConfigurationSetEventDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.ConfigurationSetEventDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.ConfigurationSetEventDestination
   }
 }

@@ -78,7 +78,7 @@ public interface ResolveChangeContextOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ResolveChangeContextOptions,
+    cdkObject: software.amazon.awscdk.ResolveChangeContextOptions,
   ) : CdkObject(cdkObject), ResolveChangeContextOptions {
     /**
      * Change the 'allowIntrinsicKeys' option.

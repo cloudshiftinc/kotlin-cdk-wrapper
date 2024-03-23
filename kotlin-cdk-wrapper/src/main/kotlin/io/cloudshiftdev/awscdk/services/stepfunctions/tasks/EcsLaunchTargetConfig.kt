@@ -62,8 +62,7 @@ public interface EcsLaunchTargetConfig {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig,
   ) : CdkObject(cdkObject), EcsLaunchTargetConfig {
     /**
      * Additional parameters to pass to the base task.

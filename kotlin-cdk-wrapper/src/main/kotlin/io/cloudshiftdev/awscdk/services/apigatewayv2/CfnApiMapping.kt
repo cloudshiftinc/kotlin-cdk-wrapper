@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html)
  */
-public open class CfnApiMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMapping,
+public open class CfnApiMapping(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMapping,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -224,6 +224,7 @@ public open class CfnApiMapping internal constructor(
         CfnApiMapping = CfnApiMapping(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiMapping):
-        software.amazon.awscdk.services.apigatewayv2.CfnApiMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnApiMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnApiMapping
   }
 }

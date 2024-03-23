@@ -34,7 +34,6 @@ import kotlin.jvm.JvmName
  * .name("name")
  * .status("status")
  * // the properties below are optional
- * .modifiedAt("modifiedAt")
  * .sampleDocument("sampleDocument")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -71,14 +70,6 @@ public interface CfnTransformerProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mappingtemplate)
    */
   public fun mappingTemplate(): String
-
-  /**
-   * Returns a timestamp representing the date and time for the most recent change for the
-   * transformer object.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-   */
-  public fun modifiedAt(): String? = unwrap(this).getModifiedAt()
 
   /**
    * Returns the descriptive name for the transformer.
@@ -156,12 +147,6 @@ public interface CfnTransformerProps {
      * for processing the EDI data. 
      */
     public fun mappingTemplate(mappingTemplate: String)
-
-    /**
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object.
-     */
-    public fun modifiedAt(modifiedAt: String)
 
     /**
      * @param name Returns the descriptive name for the transformer. 
@@ -246,14 +231,6 @@ public interface CfnTransformerProps {
     }
 
     /**
-     * @param modifiedAt Returns a timestamp representing the date and time for the most recent
-     * change for the transformer object.
-     */
-    override fun modifiedAt(modifiedAt: String) {
-      cdkBuilder.modifiedAt(modifiedAt)
-    }
-
-    /**
      * @param name Returns the descriptive name for the transformer. 
      */
     override fun name(name: String) {
@@ -296,7 +273,7 @@ public interface CfnTransformerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformerProps,
+    cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformerProps,
   ) : CdkObject(cdkObject), CfnTransformerProps {
     /**
      * Returns the details for the EDI standard that is being used for the transformer.
@@ -323,14 +300,6 @@ public interface CfnTransformerProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mappingtemplate)
      */
     override fun mappingTemplate(): String = unwrap(this).getMappingTemplate()
-
-    /**
-     * Returns a timestamp representing the date and time for the most recent change for the
-     * transformer object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-modifiedat)
-     */
-    override fun modifiedAt(): String? = unwrap(this).getModifiedAt()
 
     /**
      * Returns the descriptive name for the transformer.

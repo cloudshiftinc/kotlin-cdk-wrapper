@@ -25,9 +25,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class GatewayRouteHostnameMatch internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
+public abstract class GatewayRouteHostnameMatch(
+  cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the gateway route host name match configuration.
@@ -38,7 +37,7 @@ public abstract class GatewayRouteHostnameMatch internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
   ) : GatewayRouteHostnameMatch(cdkObject)
 
   public companion object {

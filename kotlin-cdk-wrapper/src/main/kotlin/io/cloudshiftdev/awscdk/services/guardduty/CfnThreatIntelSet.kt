@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html)
  */
-public open class CfnThreatIntelSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSet,
+public open class CfnThreatIntelSet(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -390,6 +390,7 @@ public open class CfnThreatIntelSet internal constructor(
         CfnThreatIntelSet = CfnThreatIntelSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnThreatIntelSet):
-        software.amazon.awscdk.services.guardduty.CfnThreatIntelSet = wrapped.cdkObject
+        software.amazon.awscdk.services.guardduty.CfnThreatIntelSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.guardduty.CfnThreatIntelSet
   }
 }

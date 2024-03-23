@@ -126,7 +126,7 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions,
+    cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions,
   ) : CdkObject(cdkObject), EmptyDirVolumeOptions {
     /**
      * The storage type to use for this Volume.

@@ -602,7 +602,7 @@ public interface CfnTopicRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleProps,
   ) : CdkObject(cdkObject), CfnTopicRuleProps {
     /**
      * The name of the rule.

@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EcsRunTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask,
+public open class EcsRunTask(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask,
 ) : TaskStateBase(cdkObject), IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -733,6 +733,7 @@ public open class EcsRunTask internal constructor(
         EcsRunTask = EcsRunTask(cdkObject)
 
     internal fun unwrap(wrapped: EcsRunTask):
-        software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask
   }
 }

@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-streamprocessor.html)
  */
-public open class CfnStreamProcessor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor,
+public open class CfnStreamProcessor(
+  cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1472,202 +1472,8 @@ public open class CfnStreamProcessor internal constructor(
         CfnStreamProcessor = CfnStreamProcessor(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamProcessor):
-        software.amazon.awscdk.services.rekognition.CfnStreamProcessor = wrapped.cdkObject
-  }
-
-  /**
-   * Allows you to opt in or opt out to share data with Rekognition to improve model performance.
-   *
-   * You can choose this option at the account level or on a per-stream basis. Note that if you opt
-   * out at the account level, this setting is ignored on individual streams. For more information, see
-   * [StreamProcessorDataSharingPreference](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StreamProcessorDataSharingPreference)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rekognition.*;
-   * DataSharingPreferenceProperty dataSharingPreferenceProperty =
-   * DataSharingPreferenceProperty.builder()
-   * .optIn(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html)
-   */
-  public interface DataSharingPreferenceProperty {
-    /**
-     * Describes the opt-in status applied to a stream processor's data sharing policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html#cfn-rekognition-streamprocessor-datasharingpreference-optin)
-     */
-    public fun optIn(): Any
-
-    /**
-     * A builder for [DataSharingPreferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
-       * policy. 
-       */
-      public fun optIn(optIn: Boolean)
-
-      /**
-       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
-       * policy. 
-       */
-      public fun optIn(optIn: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty.builder()
-
-      /**
-       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
-       * policy. 
-       */
-      override fun optIn(optIn: Boolean) {
-        cdkBuilder.optIn(optIn)
-      }
-
-      /**
-       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
-       * policy. 
-       */
-      override fun optIn(optIn: IResolvable) {
-        cdkBuilder.optIn(optIn.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty,
-    ) : CdkObject(cdkObject), DataSharingPreferenceProperty {
-      /**
-       * Describes the opt-in status applied to a stream processor's data sharing policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html#cfn-rekognition-streamprocessor-datasharingpreference-optin)
-       */
-      override fun optIn(): Any = unwrap(this).getOptIn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSharingPreferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty):
-          DataSharingPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DataSharingPreferenceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataSharingPreferenceProperty):
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
-    }
-  }
-
-  /**
-   * The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object
-   * detection results and completion status of a video analysis operation.
-   *
-   * Amazon Rekognition publishes a notification the first time an object of interest or a person is
-   * detected in the video stream. Amazon Rekognition also publishes an an end-of-session notification
-   * with a summary when the stream processing session is complete. For more information, see
-   * [StreamProcessorNotificationChannel](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StreamProcessorNotificationChannel)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rekognition.*;
-   * NotificationChannelProperty notificationChannelProperty = NotificationChannelProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html)
-   */
-  public interface NotificationChannelProperty {
-    /**
-     * The ARN of the SNS topic that receives notifications.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html#cfn-rekognition-streamprocessor-notificationchannel-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [NotificationChannelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The ARN of the SNS topic that receives notifications. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty.Builder
-          =
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty.builder()
-
-      /**
-       * @param arn The ARN of the SNS topic that receives notifications. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty,
-    ) : CdkObject(cdkObject), NotificationChannelProperty {
-      /**
-       * The ARN of the SNS topic that receives notifications.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html#cfn-rekognition-streamprocessor-notificationchannel-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationChannelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty):
-          NotificationChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationChannelProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationChannelProperty):
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
-    }
+        software.amazon.awscdk.services.rekognition.CfnStreamProcessor = wrapped.cdkObject as
+        software.amazon.awscdk.services.rekognition.CfnStreamProcessor
   }
 
   /**
@@ -1803,8 +1609,7 @@ public open class CfnStreamProcessor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.BoundingBoxProperty,
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.BoundingBoxProperty,
     ) : CdkObject(cdkObject), BoundingBoxProperty {
       /**
        * Height of the bounding box as a ratio of the overall image height.
@@ -1967,8 +1772,7 @@ public open class CfnStreamProcessor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty,
     ) : CdkObject(cdkObject), ConnectedHomeSettingsProperty {
       /**
        * Specifies what you want to detect in the video, such as people, packages, or pets.
@@ -2007,12 +1811,11 @@ public open class CfnStreamProcessor internal constructor(
   }
 
   /**
-   * Amazon Rekognition Video Stream Processor take as input a Kinesis video stream (Input) and a
-   * Kinesis data stream (Output).
+   * Allows you to opt in or opt out to share data with Rekognition to improve model performance.
    *
-   * This is the Amazon Kinesis Data Streams instance to which the Amazon Rekognition stream
-   * processor streams the analysis results. This must be created within the constraints specified at
-   * [KinesisDataStream](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_KinesisDataStream)
+   * You can choose this option at the account level or on a per-stream basis. Note that if you opt
+   * out at the account level, this setting is ignored on individual streams. For more information, see
+   * [StreamProcessorDataSharingPreference](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StreamProcessorDataSharingPreference)
    * .
    *
    * Example:
@@ -2021,290 +1824,93 @@ public open class CfnStreamProcessor internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.rekognition.*;
-   * KinesisDataStreamProperty kinesisDataStreamProperty = KinesisDataStreamProperty.builder()
-   * .arn("arn")
+   * DataSharingPreferenceProperty dataSharingPreferenceProperty =
+   * DataSharingPreferenceProperty.builder()
+   * .optIn(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html)
    */
-  public interface KinesisDataStreamProperty {
+  public interface DataSharingPreferenceProperty {
     /**
-     * ARN of the output Amazon Kinesis Data Streams stream.
+     * Describes the opt-in status applied to a stream processor's data sharing policy.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html#cfn-rekognition-streamprocessor-kinesisdatastream-arn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html#cfn-rekognition-streamprocessor-datasharingpreference-optin)
      */
-    public fun arn(): String
+    public fun optIn(): Any
 
     /**
-     * A builder for [KinesisDataStreamProperty]
+     * A builder for [DataSharingPreferenceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param arn ARN of the output Amazon Kinesis Data Streams stream. 
+       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
+       * policy. 
        */
-      public fun arn(arn: String)
+      public fun optIn(optIn: Boolean)
+
+      /**
+       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
+       * policy. 
+       */
+      public fun optIn(optIn: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty.Builder
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty.Builder
           =
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty.builder()
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty.builder()
 
       /**
-       * @param arn ARN of the output Amazon Kinesis Data Streams stream. 
+       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
+       * policy. 
        */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
+      override fun optIn(optIn: Boolean) {
+        cdkBuilder.optIn(optIn)
+      }
+
+      /**
+       * @param optIn Describes the opt-in status applied to a stream processor's data sharing
+       * policy. 
+       */
+      override fun optIn(optIn: IResolvable) {
+        cdkBuilder.optIn(optIn.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty,
-    ) : CdkObject(cdkObject), KinesisDataStreamProperty {
-      /**
-       * ARN of the output Amazon Kinesis Data Streams stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html#cfn-rekognition-streamprocessor-kinesisdatastream-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisDataStreamProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty):
-          KinesisDataStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisDataStreamProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisDataStreamProperty):
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty
-    }
-  }
-
-  /**
-   * The Amazon S3 bucket location to which Amazon Rekognition publishes the detailed inference
-   * results of a video analysis operation.
-   *
-   * These results include the name of the stream processor resource, the session ID of the stream
-   * processing session, and labeled timestamps and bounding boxes for detected labels. For more
-   * information, see
-   * [S3Destination](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_S3Destination) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rekognition.*;
-   * S3DestinationProperty s3DestinationProperty = S3DestinationProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .objectKeyPrefix("objectKeyPrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html)
-   */
-  public interface S3DestinationProperty {
-    /**
-     * Describes the destination Amazon Simple Storage Service (Amazon S3) bucket name of a stream
-     * processor's exports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * Describes the destination Amazon Simple Storage Service (Amazon S3) object keys of a stream
-     * processor's exports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-objectkeyprefix)
-     */
-    public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
-
-    /**
-     * A builder for [S3DestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3)
-       * bucket name of a stream processor's exports. 
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
-       * object keys of a stream processor's exports.
-       */
-      public fun objectKeyPrefix(objectKeyPrefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty.builder()
-
-      /**
-       * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3)
-       * bucket name of a stream processor's exports. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
-       * object keys of a stream processor's exports.
-       */
-      override fun objectKeyPrefix(objectKeyPrefix: String) {
-        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty,
-    ) : CdkObject(cdkObject), S3DestinationProperty {
-      /**
-       * Describes the destination Amazon Simple Storage Service (Amazon S3) bucket name of a stream
-       * processor's exports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * Describes the destination Amazon Simple Storage Service (Amazon S3) object keys of a stream
-       * processor's exports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-objectkeyprefix)
-       */
-      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3DestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty):
-          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DestinationProperty):
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty
-    }
-  }
-
-  /**
-   * The Kinesis video stream that provides the source of the streaming video for an Amazon
-   * Rekognition Video stream processor.
-   *
-   * For more information, see
-   * [KinesisVideoStream](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_KinesisVideoStream)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rekognition.*;
-   * KinesisVideoStreamProperty kinesisVideoStreamProperty = KinesisVideoStreamProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html)
-   */
-  public interface KinesisVideoStreamProperty {
-    /**
-     * ARN of the Kinesis video stream stream that streams the source video.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html#cfn-rekognition-streamprocessor-kinesisvideostream-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [KinesisVideoStreamProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn ARN of the Kinesis video stream stream that streams the source video. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty.Builder
-          =
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty.builder()
-
-      /**
-       * @param arn ARN of the Kinesis video stream stream that streams the source video. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty,
-    ) : CdkObject(cdkObject), KinesisVideoStreamProperty {
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty,
+    ) : CdkObject(cdkObject), DataSharingPreferenceProperty {
       /**
-       * ARN of the Kinesis video stream stream that streams the source video.
+       * Describes the opt-in status applied to a stream processor's data sharing policy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html#cfn-rekognition-streamprocessor-kinesisvideostream-arn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-datasharingpreference.html#cfn-rekognition-streamprocessor-datasharingpreference-optin)
        */
-      override fun arn(): String = unwrap(this).getArn()
+      override fun optIn(): Any = unwrap(this).getOptIn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisVideoStreamProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSharingPreferenceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty):
-          KinesisVideoStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisVideoStreamProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty):
+          DataSharingPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSharingPreferenceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KinesisVideoStreamProperty):
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+      internal fun unwrap(wrapped: DataSharingPreferenceProperty):
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
     }
   }
 
@@ -2402,8 +2008,7 @@ public open class CfnStreamProcessor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty,
     ) : CdkObject(cdkObject), FaceSearchSettingsProperty {
       /**
        * The ID of a collection that contains faces that you want to search for.
@@ -2439,6 +2044,270 @@ public open class CfnStreamProcessor internal constructor(
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty
+    }
+  }
+
+  /**
+   * Amazon Rekognition Video Stream Processor take as input a Kinesis video stream (Input) and a
+   * Kinesis data stream (Output).
+   *
+   * This is the Amazon Kinesis Data Streams instance to which the Amazon Rekognition stream
+   * processor streams the analysis results. This must be created within the constraints specified at
+   * [KinesisDataStream](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_KinesisDataStream)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rekognition.*;
+   * KinesisDataStreamProperty kinesisDataStreamProperty = KinesisDataStreamProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html)
+   */
+  public interface KinesisDataStreamProperty {
+    /**
+     * ARN of the output Amazon Kinesis Data Streams stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html#cfn-rekognition-streamprocessor-kinesisdatastream-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [KinesisDataStreamProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn ARN of the output Amazon Kinesis Data Streams stream. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty.Builder
+          =
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty.builder()
+
+      /**
+       * @param arn ARN of the output Amazon Kinesis Data Streams stream. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty,
+    ) : CdkObject(cdkObject), KinesisDataStreamProperty {
+      /**
+       * ARN of the output Amazon Kinesis Data Streams stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html#cfn-rekognition-streamprocessor-kinesisdatastream-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisDataStreamProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty):
+          KinesisDataStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisDataStreamProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisDataStreamProperty):
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty
+    }
+  }
+
+  /**
+   * The Kinesis video stream that provides the source of the streaming video for an Amazon
+   * Rekognition Video stream processor.
+   *
+   * For more information, see
+   * [KinesisVideoStream](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_KinesisVideoStream)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rekognition.*;
+   * KinesisVideoStreamProperty kinesisVideoStreamProperty = KinesisVideoStreamProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html)
+   */
+  public interface KinesisVideoStreamProperty {
+    /**
+     * ARN of the Kinesis video stream stream that streams the source video.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html#cfn-rekognition-streamprocessor-kinesisvideostream-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [KinesisVideoStreamProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn ARN of the Kinesis video stream stream that streams the source video. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty.Builder
+          =
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty.builder()
+
+      /**
+       * @param arn ARN of the Kinesis video stream stream that streams the source video. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty,
+    ) : CdkObject(cdkObject), KinesisVideoStreamProperty {
+      /**
+       * ARN of the Kinesis video stream stream that streams the source video.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisvideostream.html#cfn-rekognition-streamprocessor-kinesisvideostream-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisVideoStreamProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty):
+          KinesisVideoStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisVideoStreamProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisVideoStreamProperty):
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
+    }
+  }
+
+  /**
+   * The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object
+   * detection results and completion status of a video analysis operation.
+   *
+   * Amazon Rekognition publishes a notification the first time an object of interest or a person is
+   * detected in the video stream. Amazon Rekognition also publishes an an end-of-session notification
+   * with a summary when the stream processing session is complete. For more information, see
+   * [StreamProcessorNotificationChannel](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StreamProcessorNotificationChannel)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rekognition.*;
+   * NotificationChannelProperty notificationChannelProperty = NotificationChannelProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html)
+   */
+  public interface NotificationChannelProperty {
+    /**
+     * The ARN of the SNS topic that receives notifications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html#cfn-rekognition-streamprocessor-notificationchannel-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [NotificationChannelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The ARN of the SNS topic that receives notifications. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty.Builder
+          =
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty.builder()
+
+      /**
+       * @param arn The ARN of the SNS topic that receives notifications. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty,
+    ) : CdkObject(cdkObject), NotificationChannelProperty {
+      /**
+       * The ARN of the SNS topic that receives notifications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-notificationchannel.html#cfn-rekognition-streamprocessor-notificationchannel-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NotificationChannelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty):
+          NotificationChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationChannelProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationChannelProperty):
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
     }
   }
 
@@ -2527,8 +2396,7 @@ public open class CfnStreamProcessor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty,
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty,
     ) : CdkObject(cdkObject), PointProperty {
       /**
        * The value of the X coordinate for a point on a `Polygon` .
@@ -2559,6 +2427,130 @@ public open class CfnStreamProcessor internal constructor(
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 bucket location to which Amazon Rekognition publishes the detailed inference
+   * results of a video analysis operation.
+   *
+   * These results include the name of the stream processor resource, the session ID of the stream
+   * processing session, and labeled timestamps and bounding boxes for detected labels. For more
+   * information, see
+   * [S3Destination](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_S3Destination) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rekognition.*;
+   * S3DestinationProperty s3DestinationProperty = S3DestinationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .objectKeyPrefix("objectKeyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html)
+   */
+  public interface S3DestinationProperty {
+    /**
+     * Describes the destination Amazon Simple Storage Service (Amazon S3) bucket name of a stream
+     * processor's exports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * Describes the destination Amazon Simple Storage Service (Amazon S3) object keys of a stream
+     * processor's exports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-objectkeyprefix)
+     */
+    public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+
+    /**
+     * A builder for [S3DestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3)
+       * bucket name of a stream processor's exports. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
+       * object keys of a stream processor's exports.
+       */
+      public fun objectKeyPrefix(objectKeyPrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty.builder()
+
+      /**
+       * @param bucketName Describes the destination Amazon Simple Storage Service (Amazon S3)
+       * bucket name of a stream processor's exports. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param objectKeyPrefix Describes the destination Amazon Simple Storage Service (Amazon S3)
+       * object keys of a stream processor's exports.
+       */
+      override fun objectKeyPrefix(objectKeyPrefix: String) {
+        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty,
+    ) : CdkObject(cdkObject), S3DestinationProperty {
+      /**
+       * Describes the destination Amazon Simple Storage Service (Amazon S3) bucket name of a stream
+       * processor's exports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * Describes the destination Amazon Simple Storage Service (Amazon S3) object keys of a stream
+       * processor's exports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-s3destination.html#cfn-rekognition-streamprocessor-s3destination-objectkeyprefix)
+       */
+      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3DestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty):
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DestinationProperty):
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty
     }
   }
 }

@@ -120,8 +120,7 @@ public interface CfnStateMachineVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps,
   ) : CdkObject(cdkObject), CfnStateMachineVersionProps {
     /**
      * An optional description of the state machine version.

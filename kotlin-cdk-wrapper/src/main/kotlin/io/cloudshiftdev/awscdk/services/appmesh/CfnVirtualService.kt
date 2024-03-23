@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html)
  */
-public open class CfnVirtualService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
+public open class CfnVirtualService(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -435,7 +435,92 @@ public open class CfnVirtualService internal constructor(
         CfnVirtualService = CfnVirtualService(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualService):
-        software.amazon.awscdk.services.appmesh.CfnVirtualService = wrapped.cdkObject
+        software.amazon.awscdk.services.appmesh.CfnVirtualService = wrapped.cdkObject as
+        software.amazon.awscdk.services.appmesh.CfnVirtualService
+  }
+
+  /**
+   * An object that represents a virtual node service provider.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * VirtualNodeServiceProviderProperty virtualNodeServiceProviderProperty =
+   * VirtualNodeServiceProviderProperty.builder()
+   * .virtualNodeName("virtualNodeName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html)
+   */
+  public interface VirtualNodeServiceProviderProperty {
+    /**
+     * The name of the virtual node that is acting as a service provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename)
+     */
+    public fun virtualNodeName(): String
+
+    /**
+     * A builder for [VirtualNodeServiceProviderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
+       */
+      public fun virtualNodeName(virtualNodeName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty.Builder
+          =
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
+
+      /**
+       * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
+       */
+      override fun virtualNodeName(virtualNodeName: String) {
+        cdkBuilder.virtualNodeName(virtualNodeName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
+    ) : CdkObject(cdkObject), VirtualNodeServiceProviderProperty {
+      /**
+       * The name of the virtual node that is acting as a service provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename)
+       */
+      override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VirtualNodeServiceProviderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty):
+          VirtualNodeServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeServiceProviderProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VirtualNodeServiceProviderProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
+    }
   }
 
   /**
@@ -495,8 +580,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
     ) : CdkObject(cdkObject), VirtualRouterServiceProviderProperty {
       /**
        * The name of the virtual router that is acting as a service provider.
@@ -522,133 +606,6 @@ public open class CfnVirtualService internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty
-    }
-  }
-
-  /**
-   * An object that represents the specification of a virtual service.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualServiceSpecProperty virtualServiceSpecProperty = VirtualServiceSpecProperty.builder()
-   * .provider(VirtualServiceProviderProperty.builder()
-   * .virtualNode(VirtualNodeServiceProviderProperty.builder()
-   * .virtualNodeName("virtualNodeName")
-   * .build())
-   * .virtualRouter(VirtualRouterServiceProviderProperty.builder()
-   * .virtualRouterName("virtualRouterName")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html)
-   */
-  public interface VirtualServiceSpecProperty {
-    /**
-     * The App Mesh object that is acting as the provider for a virtual service.
-     *
-     * You can specify a single virtual node or virtual router.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html#cfn-appmesh-virtualservice-virtualservicespec-provider)
-     */
-    public fun provider(): Any? = unwrap(this).getProvider()
-
-    /**
-     * A builder for [VirtualServiceSpecProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      public fun provider(provider: IResolvable)
-
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      public fun provider(provider: VirtualServiceProviderProperty)
-
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
-      public fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty.builder()
-
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      override fun provider(provider: IResolvable) {
-        cdkBuilder.provider(provider.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      override fun provider(provider: VirtualServiceProviderProperty) {
-        cdkBuilder.provider(provider.let(VirtualServiceProviderProperty::unwrap))
-      }
-
-      /**
-       * @param provider The App Mesh object that is acting as the provider for a virtual service.
-       * You can specify a single virtual node or virtual router.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
-      override fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit): Unit =
-          provider(VirtualServiceProviderProperty(provider))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
-    ) : CdkObject(cdkObject), VirtualServiceSpecProperty {
-      /**
-       * The App Mesh object that is acting as the provider for a virtual service.
-       *
-       * You can specify a single virtual node or virtual router.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html#cfn-appmesh-virtualservice-virtualservicespec-provider)
-       */
-      override fun provider(): Any? = unwrap(this).getProvider()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualServiceSpecProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty):
-          VirtualServiceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualServiceSpecProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualServiceSpecProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty
     }
   }
 
@@ -787,8 +744,7 @@ public open class CfnVirtualService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
     ) : CdkObject(cdkObject), VirtualServiceProviderProperty {
       /**
        * The virtual node associated with a virtual service.
@@ -824,7 +780,7 @@ public open class CfnVirtualService internal constructor(
   }
 
   /**
-   * An object that represents a virtual node service provider.
+   * An object that represents the specification of a virtual service.
    *
    * Example:
    *
@@ -832,79 +788,120 @@ public open class CfnVirtualService internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * VirtualNodeServiceProviderProperty virtualNodeServiceProviderProperty =
-   * VirtualNodeServiceProviderProperty.builder()
+   * VirtualServiceSpecProperty virtualServiceSpecProperty = VirtualServiceSpecProperty.builder()
+   * .provider(VirtualServiceProviderProperty.builder()
+   * .virtualNode(VirtualNodeServiceProviderProperty.builder()
    * .virtualNodeName("virtualNodeName")
+   * .build())
+   * .virtualRouter(VirtualRouterServiceProviderProperty.builder()
+   * .virtualRouterName("virtualRouterName")
+   * .build())
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html)
    */
-  public interface VirtualNodeServiceProviderProperty {
+  public interface VirtualServiceSpecProperty {
     /**
-     * The name of the virtual node that is acting as a service provider.
+     * The App Mesh object that is acting as the provider for a virtual service.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename)
+     * You can specify a single virtual node or virtual router.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html#cfn-appmesh-virtualservice-virtualservicespec-provider)
      */
-    public fun virtualNodeName(): String
+    public fun provider(): Any? = unwrap(this).getProvider()
 
     /**
-     * A builder for [VirtualNodeServiceProviderProperty]
+     * A builder for [VirtualServiceSpecProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
        */
-      public fun virtualNodeName(virtualNodeName: String)
+      public fun provider(provider: IResolvable)
+
+      /**
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
+       */
+      public fun provider(provider: VirtualServiceProviderProperty)
+
+      /**
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
+      public fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty.Builder
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty.Builder
           =
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty.builder()
 
       /**
-       * @param virtualNodeName The name of the virtual node that is acting as a service provider. 
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
        */
-      override fun virtualNodeName(virtualNodeName: String) {
-        cdkBuilder.virtualNodeName(virtualNodeName)
+      override fun provider(provider: IResolvable) {
+        cdkBuilder.provider(provider.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
+       */
+      override fun provider(provider: VirtualServiceProviderProperty) {
+        cdkBuilder.provider(provider.let(VirtualServiceProviderProperty::unwrap))
+      }
+
+      /**
+       * @param provider The App Mesh object that is acting as the provider for a virtual service.
+       * You can specify a single virtual node or virtual router.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
+      override fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit): Unit =
+          provider(VirtualServiceProviderProperty(provider))
+
       public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
-    ) : CdkObject(cdkObject), VirtualNodeServiceProviderProperty {
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
+    ) : CdkObject(cdkObject), VirtualServiceSpecProperty {
       /**
-       * The name of the virtual node that is acting as a service provider.
+       * The App Mesh object that is acting as the provider for a virtual service.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename)
+       * You can specify a single virtual node or virtual router.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualservicespec.html#cfn-appmesh-virtualservice-virtualservicespec-provider)
        */
-      override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
+      override fun provider(): Any? = unwrap(this).getProvider()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VirtualNodeServiceProviderProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualServiceSpecProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty):
-          VirtualNodeServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VirtualNodeServiceProviderProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty):
+          VirtualServiceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualServiceSpecProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VirtualNodeServiceProviderProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty
+      internal fun unwrap(wrapped: VirtualServiceSpecProperty):
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty
     }
   }
 }

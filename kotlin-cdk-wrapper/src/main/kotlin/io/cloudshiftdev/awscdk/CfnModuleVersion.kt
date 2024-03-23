@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)
  */
-public open class CfnModuleVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnModuleVersion,
+public open class CfnModuleVersion(
+  cdkObject: software.amazon.awscdk.CfnModuleVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -240,6 +240,6 @@ public open class CfnModuleVersion internal constructor(
         CfnModuleVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnModuleVersion): software.amazon.awscdk.CfnModuleVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnModuleVersion
   }
 }

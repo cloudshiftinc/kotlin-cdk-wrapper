@@ -24,9 +24,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ElasticsearchVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion,
+public open class ElasticsearchVersion(
+  cdkObject: software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion,
 ) : CdkObject(cdkObject) {
   /**
    * Elasticsearch version number.
@@ -99,6 +98,7 @@ public open class ElasticsearchVersion internal constructor(
         ElasticsearchVersion = ElasticsearchVersion(cdkObject)
 
     internal fun unwrap(wrapped: ElasticsearchVersion):
-        software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion
   }
 }

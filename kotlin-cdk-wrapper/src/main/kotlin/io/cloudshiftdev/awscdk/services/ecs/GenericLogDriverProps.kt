@@ -134,7 +134,7 @@ public interface GenericLogDriverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriverProps,
+    cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriverProps,
   ) : CdkObject(cdkObject), GenericLogDriverProps {
     /**
      * The log driver to use for the container.

@@ -55,8 +55,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class Values internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.Values,
+public open class Values(
+  cdkObject: software.amazon.awscdk.services.appsync.Values,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.appsync.Values()
   )
@@ -75,6 +75,6 @@ public open class Values internal constructor(
         Values(cdkObject)
 
     internal fun unwrap(wrapped: Values): software.amazon.awscdk.services.appsync.Values =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.Values
   }
 }

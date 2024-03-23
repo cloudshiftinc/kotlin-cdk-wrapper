@@ -91,7 +91,7 @@ public interface CaaRecordValue {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CaaRecordValue,
+    cdkObject: software.amazon.awscdk.services.route53.CaaRecordValue,
   ) : CdkObject(cdkObject), CaaRecordValue {
     /**
      * The flag.

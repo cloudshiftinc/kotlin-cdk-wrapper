@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html)
  */
-public open class CfnDocumentationPart internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart,
+public open class CfnDocumentationPart(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -268,7 +268,8 @@ public open class CfnDocumentationPart internal constructor(
         CfnDocumentationPart = CfnDocumentationPart(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentationPart):
-        software.amazon.awscdk.services.apigateway.CfnDocumentationPart = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnDocumentationPart = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnDocumentationPart
   }
 
   /**
@@ -492,8 +493,7 @@ public open class CfnDocumentationPart internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The HTTP verb of a method.

@@ -33,8 +33,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class HeaderMatch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,
+public abstract class HeaderMatch(
+  cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the header match configuration.
@@ -45,7 +45,7 @@ public abstract class HeaderMatch internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(HeaderMatchConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,
   ) : HeaderMatch(cdkObject)
 
   public companion object {

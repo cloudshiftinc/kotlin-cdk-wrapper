@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html)
  */
-public open class CfnFaq internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kendra.CfnFaq,
+public open class CfnFaq(
+  cdkObject: software.amazon.awscdk.services.kendra.CfnFaq,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -490,7 +490,7 @@ public open class CfnFaq internal constructor(
         CfnFaq(cdkObject)
 
     internal fun unwrap(wrapped: CfnFaq): software.amazon.awscdk.services.kendra.CfnFaq =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kendra.CfnFaq
   }
 
   /**
@@ -564,7 +564,7 @@ public open class CfnFaq internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty,
+      cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty,
     ) : CdkObject(cdkObject), S3PathProperty {
       /**
        * The name of the S3 bucket that contains the file.

@@ -164,7 +164,7 @@ public interface CfnAccessPointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPointProps,
+    cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPointProps,
   ) : CdkObject(cdkObject), CfnAccessPointProps {
     /**
      * The Amazon Resource Name (ARN) of the S3 on Outposts bucket that is associated with this

@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class Schedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
+public abstract class Schedule(
+  cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
 ) : CdkObject(cdkObject) {
   /**
    * Retrieve the expression for this schedule.
@@ -34,7 +34,7 @@ public abstract class Schedule internal constructor(
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
+    cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
   ) : Schedule(cdkObject)
 
   public companion object {

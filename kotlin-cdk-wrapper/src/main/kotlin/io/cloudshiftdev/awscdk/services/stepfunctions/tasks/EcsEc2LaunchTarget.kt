@@ -46,9 +46,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/userguide/launch_types.html#launch-type-ec2)
  */
-public open class EcsEc2LaunchTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget,
+public open class EcsEc2LaunchTarget(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget,
 ) : CdkObject(cdkObject), IEcsLaunchTarget {
   public constructor() :
       this(software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget()
@@ -189,5 +188,6 @@ public open class EcsEc2LaunchTarget internal constructor(
 
     internal fun unwrap(wrapped: EcsEc2LaunchTarget):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget = wrapped.cdkObject
+        as software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget
   }
 }

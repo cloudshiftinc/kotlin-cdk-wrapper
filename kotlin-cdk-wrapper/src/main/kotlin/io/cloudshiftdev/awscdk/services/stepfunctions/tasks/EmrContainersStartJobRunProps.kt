@@ -485,8 +485,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRunProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRunProps,
   ) : CdkObject(cdkObject), EmrContainersStartJobRunProps {
     /**
      * The configurations for the application running in the job run.

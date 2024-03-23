@@ -149,7 +149,7 @@ public interface FunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.FunctionProps,
   ) : CdkObject(cdkObject), FunctionProps {
     /**
      * The source code of the function.

@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html)
  */
-public open class CfnClusterSubnetGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup,
+public open class CfnClusterSubnetGroup(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -271,6 +271,7 @@ public open class CfnClusterSubnetGroup internal constructor(
         CfnClusterSubnetGroup = CfnClusterSubnetGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterSubnetGroup):
-        software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup
   }
 }

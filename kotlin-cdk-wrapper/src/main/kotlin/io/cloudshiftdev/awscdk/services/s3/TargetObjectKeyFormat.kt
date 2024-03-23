@@ -21,11 +21,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * .build();
  * ```
  */
-public abstract class TargetObjectKeyFormat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
+public abstract class TargetObjectKeyFormat(
+  cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
+    cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
   ) : TargetObjectKeyFormat(cdkObject)
 
   public companion object {

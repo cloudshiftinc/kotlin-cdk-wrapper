@@ -546,7 +546,7 @@ public interface FargateClusterProps : ClusterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.FargateClusterProps,
+    cdkObject: software.amazon.awscdk.services.eks.FargateClusterProps,
   ) : CdkObject(cdkObject), FargateClusterProps {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.

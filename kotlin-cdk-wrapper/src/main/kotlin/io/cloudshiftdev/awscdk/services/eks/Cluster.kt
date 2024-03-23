@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Cluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.Cluster,
+public open class Cluster(
+  cdkObject: software.amazon.awscdk.services.eks.Cluster,
 ) : Resource(cdkObject), ICluster {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1553,6 +1553,6 @@ public open class Cluster internal constructor(
         Cluster(cdkObject)
 
     internal fun unwrap(wrapped: Cluster): software.amazon.awscdk.services.eks.Cluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.Cluster
   }
 }

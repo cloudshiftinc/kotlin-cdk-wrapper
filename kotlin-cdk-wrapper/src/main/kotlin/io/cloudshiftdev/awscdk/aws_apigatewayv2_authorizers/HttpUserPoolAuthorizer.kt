@@ -35,9 +35,8 @@ import software.amazon.awscdk.services.cognito.IUserPool as AmazonAwscdkServices
  * .build());
  * ```
  */
-public open class HttpUserPoolAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer,
+public open class HttpUserPoolAuthorizer(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor(id: String, pool: CloudshiftdevAwscdkServicesCognitoIUserPool) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
@@ -236,6 +235,7 @@ public open class HttpUserPoolAuthorizer internal constructor(
 
     internal fun unwrap(wrapped: HttpUserPoolAuthorizer):
         software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer
   }
 }

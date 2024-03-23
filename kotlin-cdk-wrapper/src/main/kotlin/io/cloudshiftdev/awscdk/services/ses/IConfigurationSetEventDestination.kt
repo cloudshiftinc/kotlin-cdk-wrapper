@@ -21,7 +21,7 @@ public interface IConfigurationSetEventDestination : IResource {
   public fun configurationSetEventDestinationId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.IConfigurationSetEventDestination,
+    cdkObject: software.amazon.awscdk.services.ses.IConfigurationSetEventDestination,
   ) : CdkObject(cdkObject), IConfigurationSetEventDestination {
     /**
      * Apply the given removal policy to this resource.

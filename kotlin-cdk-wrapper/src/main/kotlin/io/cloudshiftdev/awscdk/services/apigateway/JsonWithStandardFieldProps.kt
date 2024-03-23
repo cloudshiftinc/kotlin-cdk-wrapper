@@ -223,7 +223,7 @@ public interface JsonWithStandardFieldProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps,
   ) : CdkObject(cdkObject), JsonWithStandardFieldProps {
     /**
      * If this flag is enabled, the principal identifier of the caller will be output to the log.

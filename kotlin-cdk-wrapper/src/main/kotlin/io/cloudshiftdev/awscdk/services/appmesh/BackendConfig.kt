@@ -111,7 +111,7 @@ public interface BackendConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.BackendConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.BackendConfig,
   ) : CdkObject(cdkObject), BackendConfig {
     /**
      * Config for a Virtual Service backend.

@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplicationversion.html)
  */
-public open class CfnRobotApplicationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion,
+public open class CfnRobotApplicationVersion(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -170,6 +169,7 @@ public open class CfnRobotApplicationVersion internal constructor(
         CfnRobotApplicationVersion = CfnRobotApplicationVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnRobotApplicationVersion):
-        software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion
   }
 }

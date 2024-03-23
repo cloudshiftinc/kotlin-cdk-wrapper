@@ -215,7 +215,7 @@ public interface IHttpStage : IStage {
   public fun metricServerError(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpStage,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpStage,
   ) : CdkObject(cdkObject), IHttpStage {
     /**
      * The API this stage is associated to.

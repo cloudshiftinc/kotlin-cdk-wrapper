@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class KubernetesObjectValue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValue,
+public open class KubernetesObjectValue(
+  cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValue,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -208,6 +208,7 @@ public open class KubernetesObjectValue internal constructor(
         KubernetesObjectValue = KubernetesObjectValue(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesObjectValue):
-        software.amazon.awscdk.services.eks.KubernetesObjectValue = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.KubernetesObjectValue = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.KubernetesObjectValue
   }
 }

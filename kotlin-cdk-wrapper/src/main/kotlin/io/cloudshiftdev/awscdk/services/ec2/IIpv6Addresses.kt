@@ -94,7 +94,7 @@ public interface IIpv6Addresses {
       List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IIpv6Addresses,
+    cdkObject: software.amazon.awscdk.services.ec2.IIpv6Addresses,
   ) : CdkObject(cdkObject), IIpv6Addresses {
     /**
      * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.

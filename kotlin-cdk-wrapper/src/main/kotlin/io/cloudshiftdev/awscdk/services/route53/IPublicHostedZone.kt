@@ -18,7 +18,7 @@ import kotlin.collections.List
  */
 public interface IPublicHostedZone : IHostedZone {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.IPublicHostedZone,
+    cdkObject: software.amazon.awscdk.services.route53.IPublicHostedZone,
   ) : CdkObject(cdkObject), IPublicHostedZone {
     /**
      * Apply the given removal policy to this resource.

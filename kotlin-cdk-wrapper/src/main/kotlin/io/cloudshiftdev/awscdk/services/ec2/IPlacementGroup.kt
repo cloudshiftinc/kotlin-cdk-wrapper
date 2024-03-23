@@ -63,7 +63,7 @@ public interface IPlacementGroup : IResource {
       unwrap(this).getStrategy()?.let(PlacementGroupStrategy::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IPlacementGroup,
+    cdkObject: software.amazon.awscdk.services.ec2.IPlacementGroup,
   ) : CdkObject(cdkObject), IPlacementGroup {
     /**
      * Apply the given removal policy to this resource.

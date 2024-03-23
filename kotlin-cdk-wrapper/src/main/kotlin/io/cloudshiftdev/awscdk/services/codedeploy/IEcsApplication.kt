@@ -33,7 +33,7 @@ public interface IEcsApplication : IResource {
   public fun applicationName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.IEcsApplication,
+    cdkObject: software.amazon.awscdk.services.codedeploy.IEcsApplication,
   ) : CdkObject(cdkObject), IEcsApplication {
     /**
      *

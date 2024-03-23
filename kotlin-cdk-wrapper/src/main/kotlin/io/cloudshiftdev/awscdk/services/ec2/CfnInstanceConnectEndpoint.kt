@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html)
  */
-public open class CfnInstanceConnectEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint,
+public open class CfnInstanceConnectEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -394,6 +394,7 @@ public open class CfnInstanceConnectEndpoint internal constructor(
         CfnInstanceConnectEndpoint = CfnInstanceConnectEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceConnectEndpoint):
-        software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint
   }
 }

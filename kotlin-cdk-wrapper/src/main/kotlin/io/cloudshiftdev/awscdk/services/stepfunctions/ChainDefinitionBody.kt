@@ -18,9 +18,8 @@ import kotlin.jvm.JvmName
  * DefinitionBody chainDefinitionBody = ChainDefinitionBody.fromChainable(chainable);
  * ```
  */
-public open class ChainDefinitionBody internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
+public open class ChainDefinitionBody(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
 ) : DefinitionBody(cdkObject) {
   public constructor(chainable: IChainable) :
       this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(chainable.let(IChainable::unwrap))
@@ -79,6 +78,7 @@ public open class ChainDefinitionBody internal constructor(
         ChainDefinitionBody = ChainDefinitionBody(cdkObject)
 
     internal fun unwrap(wrapped: ChainDefinitionBody):
-        software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody
   }
 }

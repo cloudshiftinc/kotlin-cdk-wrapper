@@ -392,7 +392,7 @@ public interface InstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.InstanceProps,
+    cdkObject: software.amazon.awscdk.services.rds.InstanceProps,
   ) : CdkObject(cdkObject), InstanceProps {
     /**
      * Whether to allow upgrade of major version for the DB instance.

@@ -224,7 +224,7 @@ public interface CfnDBProxyTargetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps,
   ) : CdkObject(cdkObject), CfnDBProxyTargetGroupProps {
     /**
      * Settings that control the size and behavior of the connection pool associated with a

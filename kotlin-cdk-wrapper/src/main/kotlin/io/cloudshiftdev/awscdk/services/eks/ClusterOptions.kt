@@ -768,7 +768,7 @@ public interface ClusterOptions : CommonClusterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.ClusterOptions,
+    cdkObject: software.amazon.awscdk.services.eks.ClusterOptions,
   ) : CdkObject(cdkObject), ClusterOptions {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.

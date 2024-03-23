@@ -22,8 +22,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AlbControllerVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.AlbControllerVersion,
+public open class AlbControllerVersion(
+  cdkObject: software.amazon.awscdk.services.eks.AlbControllerVersion,
 ) : CdkObject(cdkObject) {
   /**
    * Whether or not its a custom version.
@@ -136,6 +136,7 @@ public open class AlbControllerVersion internal constructor(
         AlbControllerVersion = AlbControllerVersion(cdkObject)
 
     internal fun unwrap(wrapped: AlbControllerVersion):
-        software.amazon.awscdk.services.eks.AlbControllerVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.AlbControllerVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.AlbControllerVersion
   }
 }

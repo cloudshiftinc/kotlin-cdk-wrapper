@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * "conditionsKey", conditions));
  * ```
  */
-public open class PrincipalWithConditions internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.PrincipalWithConditions,
+public open class PrincipalWithConditions(
+  cdkObject: software.amazon.awscdk.services.iam.PrincipalWithConditions,
 ) : PrincipalBase(cdkObject) {
   public constructor(principal: IPrincipal, conditions: Map<String, Any>) :
       this(software.amazon.awscdk.services.iam.PrincipalWithConditions(principal.let(IPrincipal::unwrap),
@@ -165,6 +165,7 @@ public open class PrincipalWithConditions internal constructor(
         PrincipalWithConditions = PrincipalWithConditions(cdkObject)
 
     internal fun unwrap(wrapped: PrincipalWithConditions):
-        software.amazon.awscdk.services.iam.PrincipalWithConditions = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.PrincipalWithConditions = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.PrincipalWithConditions
   }
 }

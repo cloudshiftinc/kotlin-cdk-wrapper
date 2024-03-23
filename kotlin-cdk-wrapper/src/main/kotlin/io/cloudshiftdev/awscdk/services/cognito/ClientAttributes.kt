@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class ClientAttributes internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.ClientAttributes,
+public open class ClientAttributes(
+  cdkObject: software.amazon.awscdk.services.cognito.ClientAttributes,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.cognito.ClientAttributes()
   )
@@ -69,6 +69,7 @@ public open class ClientAttributes internal constructor(
         ClientAttributes = ClientAttributes(cdkObject)
 
     internal fun unwrap(wrapped: ClientAttributes):
-        software.amazon.awscdk.services.cognito.ClientAttributes = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.ClientAttributes = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.ClientAttributes
   }
 }

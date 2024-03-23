@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class InterfaceVpcEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint,
+public open class InterfaceVpcEndpoint(
+  cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint,
 ) : VpcEndpoint(cdkObject), IInterfaceVpcEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -348,6 +348,7 @@ public open class InterfaceVpcEndpoint internal constructor(
         InterfaceVpcEndpoint = InterfaceVpcEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: InterfaceVpcEndpoint):
-        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint
   }
 }

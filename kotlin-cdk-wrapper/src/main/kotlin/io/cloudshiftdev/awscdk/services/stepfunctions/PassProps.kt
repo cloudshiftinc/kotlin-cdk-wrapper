@@ -208,7 +208,7 @@ public interface PassProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.PassProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.PassProps,
   ) : CdkObject(cdkObject), PassProps {
     /**
      * An optional description for this state.

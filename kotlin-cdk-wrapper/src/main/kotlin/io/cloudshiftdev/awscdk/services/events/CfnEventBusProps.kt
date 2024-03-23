@@ -161,7 +161,7 @@ public interface CfnEventBusProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnEventBusProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnEventBusProps,
   ) : CdkObject(cdkObject), CfnEventBusProps {
     /**
      * If you are creating a partner event bus, this specifies the partner event source that the new

@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html)
  */
-public open class CfnAlarm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
+public open class CfnAlarm(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -531,9 +531,6 @@ public open class CfnAlarm internal constructor(
      *
      * The specified statistic value is used as the first operand.
      *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
@@ -938,9 +935,6 @@ public open class CfnAlarm internal constructor(
      *
      * The specified statistic value is used as the first operand.
      *
-     * You can specify the following values: `GreaterThanThreshold` ,
-     * `GreaterThanOrEqualToThreshold` , `LessThanThreshold` , or `LessThanOrEqualToThreshold` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator)
      * @param comparisonOperator The arithmetic operation to use when comparing the specified
      * statistic and threshold. 
@@ -1299,7 +1293,123 @@ public open class CfnAlarm internal constructor(
         CfnAlarm(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarm): software.amazon.awscdk.services.cloudwatch.CfnAlarm =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.CfnAlarm
+  }
+
+  /**
+   * Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type.
+   *
+   * Dimensions are name/value pairs that can be associated with a CloudWatch metric. You can
+   * specify a maximum of 10 dimensions for a given metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * DimensionProperty dimensionProperty = DimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html)
+   */
+  public interface DimensionProperty {
+    /**
+     * The name of the dimension, from 1–255 characters in length.
+     *
+     * This dimension name must have been included when the metric was published.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+     */
+    public fun name(): String
+
+    /**
+     * The value for the dimension, from 1–255 characters in length.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [DimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the dimension, from 1–255 characters in length. 
+       * This dimension name must have been included when the metric was published.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value for the dimension, from 1–255 characters in length. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.Builder =
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.builder()
+
+      /**
+       * @param name The name of the dimension, from 1–255 characters in length. 
+       * This dimension name must have been included when the metric was published.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value for the dimension, from 1–255 characters in length. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
+    ) : CdkObject(cdkObject), DimensionProperty {
+      /**
+       * The name of the dimension, from 1–255 characters in length.
+       *
+       * This dimension name must have been included when the metric was published.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The value for the dimension, from 1–255 characters in length.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty):
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DimensionProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty
+    }
   }
 
   /**
@@ -1670,8 +1780,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
     ) : CdkObject(cdkObject), MetricDataQueryProperty {
       /**
        * The ID of the account where the metrics are located, if this is a cross-account alarm.
@@ -1779,10 +1888,11 @@ public open class CfnAlarm internal constructor(
   }
 
   /**
-   * Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type.
+   * The `Metric` property type represents a specific metric.
    *
-   * Dimensions are name/value pairs that can be associated with a CloudWatch metric. You can
-   * specify a maximum of 10 dimensions for a given metric.
+   * `Metric` is a property of the
+   * [MetricStat](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html)
+   * property type.
    *
    * Example:
    *
@@ -1790,107 +1900,164 @@ public open class CfnAlarm internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * DimensionProperty dimensionProperty = DimensionProperty.builder()
+   * MetricProperty metricProperty = MetricProperty.builder()
+   * .dimensions(List.of(DimensionProperty.builder()
    * .name("name")
    * .value("value")
+   * .build()))
+   * .metricName("metricName")
+   * .namespace("namespace")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html)
    */
-  public interface DimensionProperty {
+  public interface MetricProperty {
     /**
-     * The name of the dimension, from 1–255 characters in length.
+     * The metric dimensions that you want to be used for the metric that the alarm will watch.
      *
-     * This dimension name must have been included when the metric was published.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-dimensions)
      */
-    public fun name(): String
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
 
     /**
-     * The value for the dimension, from 1–255 characters in length.
+     * The name of the metric that you want the alarm to watch.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+     * This is a required field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname)
      */
-    public fun `value`(): String
+    public fun metricName(): String? = unwrap(this).getMetricName()
 
     /**
-     * A builder for [DimensionProperty]
+     * The namespace of the metric that the alarm will watch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace)
+     */
+    public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * A builder for [MetricProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the dimension, from 1–255 characters in length. 
-       * This dimension name must have been included when the metric was published.
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
        */
-      public fun name(name: String)
+      public fun dimensions(dimensions: IResolvable)
 
       /**
-       * @param value The value for the dimension, from 1–255 characters in length. 
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
        */
-      public fun `value`(`value`: String)
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param metricName The name of the metric that you want the alarm to watch.
+       * This is a required field.
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric that the alarm will watch.
+       */
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.Builder =
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.builder()
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.Builder =
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.builder()
 
       /**
-       * @param name The name of the dimension, from 1–255 characters in length. 
-       * This dimension name must have been included when the metric was published.
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param value The value for the dimension, from 1–255 characters in length. 
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
        */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
       }
 
-      public fun build(): software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty =
+      /**
+       * @param dimensions The metric dimensions that you want to be used for the metric that the
+       * alarm will watch.
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      /**
+       * @param metricName The name of the metric that you want the alarm to watch.
+       * This is a required field.
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace of the metric that the alarm will watch.
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build(): software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
+    ) : CdkObject(cdkObject), MetricProperty {
       /**
-       * The name of the dimension, from 1–255 characters in length.
+       * The metric dimensions that you want to be used for the metric that the alarm will watch.
        *
-       * This dimension name must have been included when the metric was published.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-dimensions)
        */
-      override fun name(): String = unwrap(this).getName()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
       /**
-       * The value for the dimension, from 1–255 characters in length.
+       * The name of the metric that you want the alarm to watch.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html#cfn-cloudwatch-alarm-dimension-value)
+       * This is a required field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname)
        */
-      override fun `value`(): String = unwrap(this).getValue()
+      override fun metricName(): String? = unwrap(this).getMetricName()
+
+      /**
+       * The namespace of the metric that the alarm will watch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace)
+       */
+      override fun namespace(): String? = unwrap(this).getNamespace()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty):
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DimensionProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty
+      internal fun unwrap(wrapped: MetricProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty
     }
   }
 
@@ -2111,8 +2278,7 @@ public open class CfnAlarm internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
     ) : CdkObject(cdkObject), MetricStatProperty {
       /**
        * The metric to return, including the metric name, namespace, and dimensions.
@@ -2182,180 +2348,6 @@ public open class CfnAlarm internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty
-    }
-  }
-
-  /**
-   * The `Metric` property type represents a specific metric.
-   *
-   * `Metric` is a property of the
-   * [MetricStat](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricProperty metricProperty = MetricProperty.builder()
-   * .dimensions(List.of(DimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html)
-   */
-  public interface MetricProperty {
-    /**
-     * The metric dimensions that you want to be used for the metric that the alarm will watch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-dimensions)
-     */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
-
-    /**
-     * The name of the metric that you want the alarm to watch.
-     *
-     * This is a required field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname)
-     */
-    public fun metricName(): String? = unwrap(this).getMetricName()
-
-    /**
-     * The namespace of the metric that the alarm will watch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace)
-     */
-    public fun namespace(): String? = unwrap(this).getNamespace()
-
-    /**
-     * A builder for [MetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      public fun dimensions(dimensions: List<Any>)
-
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      public fun dimensions(vararg dimensions: Any)
-
-      /**
-       * @param metricName The name of the metric that you want the alarm to watch.
-       * This is a required field.
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace of the metric that the alarm will watch.
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.Builder =
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.builder()
-
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
-      }
-
-      /**
-       * @param dimensions The metric dimensions that you want to be used for the metric that the
-       * alarm will watch.
-       */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
-
-      /**
-       * @param metricName The name of the metric that you want the alarm to watch.
-       * This is a required field.
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param namespace The namespace of the metric that the alarm will watch.
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build(): software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
-      /**
-       * The metric dimensions that you want to be used for the metric that the alarm will watch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-dimensions)
-       */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
-
-      /**
-       * The name of the metric that you want the alarm to watch.
-       *
-       * This is a required field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-metricname)
-       */
-      override fun metricName(): String? = unwrap(this).getMetricName()
-
-      /**
-       * The namespace of the metric that the alarm will watch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metric.html#cfn-cloudwatch-alarm-metric-namespace)
-       */
-      override fun namespace(): String? = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty
     }
   }
 }

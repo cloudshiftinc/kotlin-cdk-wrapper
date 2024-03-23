@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html)
  */
-public open class CfnTransitGatewayRouteTablePropagation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation,
+public open class CfnTransitGatewayRouteTablePropagation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -169,6 +168,7 @@ public open class CfnTransitGatewayRouteTablePropagation internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayRouteTablePropagation):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation
   }
 }

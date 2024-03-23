@@ -21,8 +21,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public open class TextWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidget,
+public open class TextWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: TextWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.TextWidget(props.let(TextWidgetProps::unwrap))
@@ -145,6 +145,6 @@ public open class TextWidget internal constructor(
         = TextWidget(cdkObject)
 
     internal fun unwrap(wrapped: TextWidget): software.amazon.awscdk.services.cloudwatch.TextWidget
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.TextWidget
   }
 }

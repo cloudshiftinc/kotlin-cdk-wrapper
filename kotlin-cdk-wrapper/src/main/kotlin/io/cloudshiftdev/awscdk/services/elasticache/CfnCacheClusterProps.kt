@@ -1330,7 +1330,7 @@ public interface CfnCacheClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheClusterProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheClusterProps,
   ) : CdkObject(cdkObject), CfnCacheClusterProps {
     /**
      * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want

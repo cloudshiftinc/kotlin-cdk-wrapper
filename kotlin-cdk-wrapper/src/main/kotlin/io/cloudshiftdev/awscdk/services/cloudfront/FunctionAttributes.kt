@@ -94,7 +94,7 @@ public interface FunctionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAttributes,
+    cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAttributes,
   ) : CdkObject(cdkObject), FunctionAttributes {
     /**
      * The ARN of the function.

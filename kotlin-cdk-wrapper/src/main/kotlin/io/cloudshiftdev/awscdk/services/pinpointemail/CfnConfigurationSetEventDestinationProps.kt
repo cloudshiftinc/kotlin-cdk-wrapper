@@ -162,8 +162,7 @@ public interface CfnConfigurationSetEventDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestinationProps,
+    cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestinationProps,
   ) : CdkObject(cdkObject), CfnConfigurationSetEventDestinationProps {
     /**
      * The name of the configuration set that contains the event destination that you want to

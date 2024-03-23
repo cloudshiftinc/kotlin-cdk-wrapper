@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LogGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.LogGroup,
+public open class LogGroup(
+  cdkObject: software.amazon.awscdk.services.logs.LogGroup,
 ) : Resource(cdkObject), ILogGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -443,6 +443,6 @@ public open class LogGroup internal constructor(
         LogGroup(cdkObject)
 
     internal fun unwrap(wrapped: LogGroup): software.amazon.awscdk.services.logs.LogGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.LogGroup
   }
 }

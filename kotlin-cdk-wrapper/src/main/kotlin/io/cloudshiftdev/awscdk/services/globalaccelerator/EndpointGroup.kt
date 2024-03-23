@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * alb.connections.allowFrom(agaSg, Port.tcp(443));
  * ```
  */
-public open class EndpointGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroup,
+public open class EndpointGroup(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroup,
 ) : Resource(cdkObject), IEndpointGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -415,6 +415,7 @@ public open class EndpointGroup internal constructor(
         EndpointGroup = EndpointGroup(cdkObject)
 
     internal fun unwrap(wrapped: EndpointGroup):
-        software.amazon.awscdk.services.globalaccelerator.EndpointGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.EndpointGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.EndpointGroup
   }
 }

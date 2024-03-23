@@ -374,8 +374,7 @@ public interface CallApiGatewayRestApiEndpointProps : CallApiGatewayEndpointBase
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpointProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpointProps,
   ) : CdkObject(cdkObject), CallApiGatewayRestApiEndpointProps {
     /**
      * API to call.

@@ -59,7 +59,7 @@ public interface IClusterEngine : IEngine {
   public fun supportedLogTypes(): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IClusterEngine,
+    cdkObject: software.amazon.awscdk.services.rds.IClusterEngine,
   ) : CdkObject(cdkObject), IClusterEngine {
     /**
      * Method called when the engine is used to create a new cluster.

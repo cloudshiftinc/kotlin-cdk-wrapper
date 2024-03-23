@@ -58,7 +58,7 @@ public interface PluginContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery,
   ) : CdkObject(cdkObject), PluginContextQuery {
     /**
      * The name of the plugin.

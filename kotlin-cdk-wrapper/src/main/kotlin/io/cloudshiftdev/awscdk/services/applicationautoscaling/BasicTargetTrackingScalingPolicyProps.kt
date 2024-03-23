@@ -226,8 +226,7 @@ public interface BasicTargetTrackingScalingPolicyProps : BaseTargetTrackingProps
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.applicationautoscaling.BasicTargetTrackingScalingPolicyProps,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.BasicTargetTrackingScalingPolicyProps,
   ) : CdkObject(cdkObject), BasicTargetTrackingScalingPolicyProps {
     /**
      * A custom metric for application autoscaling.

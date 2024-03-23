@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxopenzfs.html)
  */
-public open class CfnLocationFSxOpenZFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
+public open class CfnLocationFSxOpenZFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -420,7 +420,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
         CfnLocationFSxOpenZFS = CfnLocationFSxOpenZFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxOpenZFS):
-        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
   }
 
   /**
@@ -520,8 +521,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
     ) : CdkObject(cdkObject), MountOptionsProperty {
       /**
        * The specific NFS version that you want DataSync to use to mount your NFS share.
@@ -560,6 +560,121 @@ public open class CfnLocationFSxOpenZFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty
+    }
+  }
+
+  /**
+   * Represents the Network File System (NFS) protocol that AWS DataSync uses to access your Amazon
+   * FSx for OpenZFS file system.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * NFSProperty nFSProperty = NFSProperty.builder()
+   * .mountOptions(MountOptionsProperty.builder()
+   * .version("version")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html)
+   */
+  public interface NFSProperty {
+    /**
+     * Represents the mount options that are available for DataSync to access an NFS location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html#cfn-datasync-locationfsxopenzfs-nfs-mountoptions)
+     */
+    public fun mountOptions(): Any
+
+    /**
+     * A builder for [NFSProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      public fun mountOptions(mountOptions: IResolvable)
+
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      public fun mountOptions(mountOptions: MountOptionsProperty)
+
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
+      public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.builder()
+
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      override fun mountOptions(mountOptions: IResolvable) {
+        cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      override fun mountOptions(mountOptions: MountOptionsProperty) {
+        cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
+      }
+
+      /**
+       * @param mountOptions Represents the mount options that are available for DataSync to access
+       * an NFS location. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
+      override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
+          mountOptions(MountOptionsProperty(mountOptions))
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
+    ) : CdkObject(cdkObject), NFSProperty {
+      /**
+       * Represents the mount options that are available for DataSync to access an NFS location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html#cfn-datasync-locationfsxopenzfs-nfs-mountoptions)
+       */
+      override fun mountOptions(): Any = unwrap(this).getMountOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NFSProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty):
+          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as? NFSProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NFSProperty):
+          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty
     }
   }
 
@@ -654,8 +769,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
     ) : CdkObject(cdkObject), ProtocolProperty {
       /**
        * Represents the Network File System (NFS) protocol that DataSync uses to access your FSx for
@@ -681,122 +795,6 @@ public open class CfnLocationFSxOpenZFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty
-    }
-  }
-
-  /**
-   * Represents the Network File System (NFS) protocol that AWS DataSync uses to access your Amazon
-   * FSx for OpenZFS file system.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * NFSProperty nFSProperty = NFSProperty.builder()
-   * .mountOptions(MountOptionsProperty.builder()
-   * .version("version")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html)
-   */
-  public interface NFSProperty {
-    /**
-     * Represents the mount options that are available for DataSync to access an NFS location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html#cfn-datasync-locationfsxopenzfs-nfs-mountoptions)
-     */
-    public fun mountOptions(): Any
-
-    /**
-     * A builder for [NFSProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      public fun mountOptions(mountOptions: IResolvable)
-
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      public fun mountOptions(mountOptions: MountOptionsProperty)
-
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
-      public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.Builder =
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.builder()
-
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      override fun mountOptions(mountOptions: IResolvable) {
-        cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      override fun mountOptions(mountOptions: MountOptionsProperty) {
-        cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
-      }
-
-      /**
-       * @param mountOptions Represents the mount options that are available for DataSync to access
-       * an NFS location. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
-      override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
-          mountOptions(MountOptionsProperty(mountOptions))
-
-      public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
-    ) : CdkObject(cdkObject), NFSProperty {
-      /**
-       * Represents the mount options that are available for DataSync to access an NFS location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-nfs.html#cfn-datasync-locationfsxopenzfs-nfs-mountoptions)
-       */
-      override fun mountOptions(): Any = unwrap(this).getMountOptions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NFSProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty):
-          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as? NFSProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NFSProperty):
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty
     }
   }
 }

@@ -83,7 +83,7 @@ public interface TlsCertificateConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificateConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificateConfig,
   ) : CdkObject(cdkObject), TlsCertificateConfig {
     /**
      * The CFN shape for a TLS certificate.

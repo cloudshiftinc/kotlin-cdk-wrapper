@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)
  */
-public open class CfnStorageSystem internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
+public open class CfnStorageSystem(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -592,7 +592,121 @@ public open class CfnStorageSystem internal constructor(
         CfnStorageSystem = CfnStorageSystem(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageSystem):
-        software.amazon.awscdk.services.datasync.CfnStorageSystem = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnStorageSystem = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnStorageSystem
+  }
+
+  /**
+   * The network settings that DataSync Discovery uses to connect with your on-premises storage
+   * system's management interface.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * ServerConfigurationProperty serverConfigurationProperty = ServerConfigurationProperty.builder()
+   * .serverHostname("serverHostname")
+   * // the properties below are optional
+   * .serverPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html)
+   */
+  public interface ServerConfigurationProperty {
+    /**
+     * The domain name or IP address of your storage system's management interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverhostname)
+     */
+    public fun serverHostname(): String
+
+    /**
+     * The network port for accessing the storage system's management interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverport)
+     */
+    public fun serverPort(): Number? = unwrap(this).getServerPort()
+
+    /**
+     * A builder for [ServerConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param serverHostname The domain name or IP address of your storage system's management
+       * interface. 
+       */
+      public fun serverHostname(serverHostname: String)
+
+      /**
+       * @param serverPort The network port for accessing the storage system's management interface.
+       */
+      public fun serverPort(serverPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty.builder()
+
+      /**
+       * @param serverHostname The domain name or IP address of your storage system's management
+       * interface. 
+       */
+      override fun serverHostname(serverHostname: String) {
+        cdkBuilder.serverHostname(serverHostname)
+      }
+
+      /**
+       * @param serverPort The network port for accessing the storage system's management interface.
+       */
+      override fun serverPort(serverPort: Number) {
+        cdkBuilder.serverPort(serverPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty,
+    ) : CdkObject(cdkObject), ServerConfigurationProperty {
+      /**
+       * The domain name or IP address of your storage system's management interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverhostname)
+       */
+      override fun serverHostname(): String = unwrap(this).getServerHostname()
+
+      /**
+       * The network port for accessing the storage system's management interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverport)
+       */
+      override fun serverPort(): Number? = unwrap(this).getServerPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ServerConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty):
+          ServerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerConfigurationProperty):
+          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty
+    }
   }
 
   /**
@@ -675,8 +789,7 @@ public open class CfnStorageSystem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty,
     ) : CdkObject(cdkObject), ServerCredentialsProperty {
       /**
        * Specifies the password for your storage system's management interface.
@@ -708,120 +821,6 @@ public open class CfnStorageSystem internal constructor(
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty
-    }
-  }
-
-  /**
-   * The network settings that DataSync Discovery uses to connect with your on-premises storage
-   * system's management interface.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datasync.*;
-   * ServerConfigurationProperty serverConfigurationProperty = ServerConfigurationProperty.builder()
-   * .serverHostname("serverHostname")
-   * // the properties below are optional
-   * .serverPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html)
-   */
-  public interface ServerConfigurationProperty {
-    /**
-     * The domain name or IP address of your storage system's management interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverhostname)
-     */
-    public fun serverHostname(): String
-
-    /**
-     * The network port for accessing the storage system's management interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverport)
-     */
-    public fun serverPort(): Number? = unwrap(this).getServerPort()
-
-    /**
-     * A builder for [ServerConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serverHostname The domain name or IP address of your storage system's management
-       * interface. 
-       */
-      public fun serverHostname(serverHostname: String)
-
-      /**
-       * @param serverPort The network port for accessing the storage system's management interface.
-       */
-      public fun serverPort(serverPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty.builder()
-
-      /**
-       * @param serverHostname The domain name or IP address of your storage system's management
-       * interface. 
-       */
-      override fun serverHostname(serverHostname: String) {
-        cdkBuilder.serverHostname(serverHostname)
-      }
-
-      /**
-       * @param serverPort The network port for accessing the storage system's management interface.
-       */
-      override fun serverPort(serverPort: Number) {
-        cdkBuilder.serverPort(serverPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerConfigurationProperty {
-      /**
-       * The domain name or IP address of your storage system's management interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverhostname)
-       */
-      override fun serverHostname(): String = unwrap(this).getServerHostname()
-
-      /**
-       * The network port for accessing the storage system's management interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html#cfn-datasync-storagesystem-serverconfiguration-serverport)
-       */
-      override fun serverPort(): Number? = unwrap(this).getServerPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ServerConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty):
-          ServerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerConfigurationProperty):
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty
     }
   }
 }

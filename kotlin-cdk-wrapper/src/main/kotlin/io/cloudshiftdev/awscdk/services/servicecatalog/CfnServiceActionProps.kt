@@ -183,7 +183,7 @@ public interface CfnServiceActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps,
   ) : CdkObject(cdkObject), CfnServiceActionProps {
     /**
      * The language code.

@@ -2355,7 +2355,7 @@ public interface CfnInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceProps,
   ) : CdkObject(cdkObject), CfnInstanceProps {
     /**
      * This property is reserved for internal use.

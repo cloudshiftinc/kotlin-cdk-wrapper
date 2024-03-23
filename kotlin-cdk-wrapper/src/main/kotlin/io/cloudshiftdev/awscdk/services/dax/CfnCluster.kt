@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dax.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.dax.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -809,7 +809,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.dax.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.dax.CfnCluster
   }
 
   /**
@@ -881,8 +881,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty,
     ) : CdkObject(cdkObject), SSESpecificationProperty {
       /**
        * Indicates whether server-side encryption is enabled (true) or disabled (false) on the

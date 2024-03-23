@@ -168,7 +168,7 @@ public interface EndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions,
   ) : CdkObject(cdkObject), EndpointOptions {
     /**
      * The ACM certificate for this domain name.

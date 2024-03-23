@@ -36,8 +36,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public abstract class BuildSpec internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
+public abstract class BuildSpec(
+  cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
 ) : CdkObject(cdkObject) {
   /**
    * Whether the buildspec is directly available or deferred until build-time.
@@ -60,7 +60,7 @@ public abstract class BuildSpec internal constructor(
       unwrap(this).toBuildSpec(scope.let(Construct::unwrap))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
+    cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
   ) : BuildSpec(cdkObject)
 
   public companion object {

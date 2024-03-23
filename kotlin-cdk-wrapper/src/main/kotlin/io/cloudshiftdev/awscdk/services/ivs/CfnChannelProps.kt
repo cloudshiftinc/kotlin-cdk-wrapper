@@ -437,7 +437,7 @@ public interface CfnChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ivs.CfnChannelProps,
+    cdkObject: software.amazon.awscdk.services.ivs.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
     /**
      * Whether the channel is authorized.

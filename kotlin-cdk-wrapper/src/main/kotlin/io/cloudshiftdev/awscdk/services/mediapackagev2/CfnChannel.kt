@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -277,7 +277,8 @@ public open class CfnChannel internal constructor(
         CfnChannel = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel):
-        software.amazon.awscdk.services.mediapackagev2.CfnChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackagev2.CfnChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackagev2.CfnChannel
   }
 
   /**
@@ -353,8 +354,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty,
     ) : CdkObject(cdkObject), IngestEndpointProperty {
       /**
        * The identifier associated with the ingest endpoint of the channel.

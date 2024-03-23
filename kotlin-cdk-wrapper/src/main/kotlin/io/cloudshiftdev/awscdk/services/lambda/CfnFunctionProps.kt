@@ -1245,7 +1245,7 @@ public interface CfnFunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunctionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnFunctionProps,
   ) : CdkObject(cdkObject), CfnFunctionProps {
     /**
      * The instruction set architecture that the function supports.

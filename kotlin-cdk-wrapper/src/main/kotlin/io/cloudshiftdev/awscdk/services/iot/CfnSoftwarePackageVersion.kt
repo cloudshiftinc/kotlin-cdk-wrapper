@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html)
  */
-public open class CfnSoftwarePackageVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion,
+public open class CfnSoftwarePackageVersion(
+  cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -330,6 +330,7 @@ public open class CfnSoftwarePackageVersion internal constructor(
         CfnSoftwarePackageVersion = CfnSoftwarePackageVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnSoftwarePackageVersion):
-        software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion
   }
 }

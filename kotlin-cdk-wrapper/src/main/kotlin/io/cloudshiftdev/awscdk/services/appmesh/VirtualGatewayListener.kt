@@ -39,8 +39,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class VirtualGatewayListener internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
+public abstract class VirtualGatewayListener(
+  cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the GatewayListener type is initialized.
@@ -54,7 +54,7 @@ public abstract class VirtualGatewayListener internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualGatewayListenerConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
   ) : VirtualGatewayListener(cdkObject)
 
   public companion object {

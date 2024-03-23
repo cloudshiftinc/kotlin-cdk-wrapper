@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class BastionHostLinux internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinux,
+public open class BastionHostLinux(
+  cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinux,
 ) : Resource(cdkObject), IInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -502,6 +502,7 @@ public open class BastionHostLinux internal constructor(
         BastionHostLinux = BastionHostLinux(cdkObject)
 
     internal fun unwrap(wrapped: BastionHostLinux):
-        software.amazon.awscdk.services.ec2.BastionHostLinux = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.BastionHostLinux = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.BastionHostLinux
   }
 }

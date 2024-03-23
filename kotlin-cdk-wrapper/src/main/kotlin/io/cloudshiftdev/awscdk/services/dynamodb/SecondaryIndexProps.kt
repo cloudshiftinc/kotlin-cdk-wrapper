@@ -109,7 +109,7 @@ public interface SecondaryIndexProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps,
   ) : CdkObject(cdkObject), SecondaryIndexProps {
     /**
      * The name of the secondary index.

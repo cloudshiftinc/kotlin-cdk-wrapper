@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)
  */
-public open class CfnRegistry internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnRegistry,
+public open class CfnRegistry(
+  cdkObject: software.amazon.awscdk.services.glue.CfnRegistry,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,6 +225,6 @@ public open class CfnRegistry internal constructor(
         CfnRegistry(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegistry): software.amazon.awscdk.services.glue.CfnRegistry =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnRegistry
   }
 }

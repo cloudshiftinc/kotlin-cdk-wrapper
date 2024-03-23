@@ -139,7 +139,7 @@ public interface AccessLogConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLogConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.AccessLogConfig,
   ) : CdkObject(cdkObject), AccessLogConfig {
     /**
      * VirtualGateway CFN configuration for Access Logging.

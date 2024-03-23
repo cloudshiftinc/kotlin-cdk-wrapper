@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-outpostresolver.html)
  */
-public open class CfnOutpostResolver internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnOutpostResolver,
+public open class CfnOutpostResolver(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnOutpostResolver,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -330,6 +329,7 @@ public open class CfnOutpostResolver internal constructor(
         CfnOutpostResolver = CfnOutpostResolver(cdkObject)
 
     internal fun unwrap(wrapped: CfnOutpostResolver):
-        software.amazon.awscdk.services.route53resolver.CfnOutpostResolver = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnOutpostResolver = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnOutpostResolver
   }
 }

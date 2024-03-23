@@ -24,8 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Fail internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Fail,
+public open class Fail(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Fail,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -213,6 +213,6 @@ public open class Fail internal constructor(
         Fail(cdkObject)
 
     internal fun unwrap(wrapped: Fail): software.amazon.awscdk.services.stepfunctions.Fail =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Fail
   }
 }

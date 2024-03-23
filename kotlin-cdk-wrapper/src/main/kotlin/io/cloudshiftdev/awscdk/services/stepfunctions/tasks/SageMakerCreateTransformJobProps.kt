@@ -584,8 +584,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJobProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJobProps,
   ) : CdkObject(cdkObject), SageMakerCreateTransformJobProps {
     /**
      * Number of records to include in a mini-batch for an HTTP inference request.

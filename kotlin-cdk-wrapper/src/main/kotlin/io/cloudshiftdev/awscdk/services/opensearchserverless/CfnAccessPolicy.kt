@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-accesspolicy.html)
  */
-public open class CfnAccessPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy,
+public open class CfnAccessPolicy(
+  cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -227,6 +226,7 @@ public open class CfnAccessPolicy internal constructor(
         CfnAccessPolicy = CfnAccessPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPolicy):
-        software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy
   }
 }

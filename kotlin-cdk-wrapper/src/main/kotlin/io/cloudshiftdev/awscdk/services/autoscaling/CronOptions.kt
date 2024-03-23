@@ -140,7 +140,7 @@ public interface CronOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CronOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CronOptions,
   ) : CdkObject(cdkObject), CronOptions {
     /**
      * The day of the month to run this rule at.

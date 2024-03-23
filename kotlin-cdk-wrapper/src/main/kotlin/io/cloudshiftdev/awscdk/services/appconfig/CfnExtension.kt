@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extension.html)
  */
-public open class CfnExtension internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension,
+public open class CfnExtension(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -423,7 +423,8 @@ public open class CfnExtension internal constructor(
         CfnExtension = CfnExtension(cdkObject)
 
     internal fun unwrap(wrapped: CfnExtension):
-        software.amazon.awscdk.services.appconfig.CfnExtension = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.CfnExtension = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.CfnExtension
   }
 
   /**
@@ -565,7 +566,7 @@ public open class CfnExtension internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty,
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
        * Information about the action.
@@ -709,8 +710,7 @@ public open class CfnExtension internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty,
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty,
     ) : CdkObject(cdkObject), ParameterProperty {
       /**
        * Information about the parameter.

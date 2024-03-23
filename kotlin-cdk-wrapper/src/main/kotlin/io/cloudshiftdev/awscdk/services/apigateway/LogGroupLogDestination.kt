@@ -23,9 +23,8 @@ import io.cloudshiftdev.awscdk.services.logs.ILogGroup
  * .build();
  * ```
  */
-public open class LogGroupLogDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
+public open class LogGroupLogDestination(
+  cdkObject: software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
   public constructor(logGroup: ILogGroup) :
       this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(logGroup.let(ILogGroup::unwrap))
@@ -44,6 +43,7 @@ public open class LogGroupLogDestination internal constructor(
         LogGroupLogDestination = LogGroupLogDestination(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupLogDestination):
-        software.amazon.awscdk.services.apigateway.LogGroupLogDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.LogGroupLogDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.LogGroupLogDestination
   }
 }

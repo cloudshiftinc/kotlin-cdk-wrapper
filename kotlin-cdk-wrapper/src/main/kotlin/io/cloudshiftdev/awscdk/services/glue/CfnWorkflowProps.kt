@@ -156,7 +156,7 @@ public interface CfnWorkflowProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnWorkflowProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnWorkflowProps,
   ) : CdkObject(cdkObject), CfnWorkflowProps {
     /**
      * A collection of properties to be used as part of each execution of the workflow.

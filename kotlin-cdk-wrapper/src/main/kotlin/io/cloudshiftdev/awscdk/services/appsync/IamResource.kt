@@ -19,8 +19,8 @@ import kotlin.collections.List
  * api.grant(role, IamResource.custom("types/Mutation/fields/updateExample"), "appsync:GraphQL");
  * ```
  */
-public open class IamResource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.IamResource,
+public open class IamResource(
+  cdkObject: software.amazon.awscdk.services.appsync.IamResource,
 ) : CdkObject(cdkObject) {
   /**
    * Return the Resource ARN.
@@ -45,6 +45,6 @@ public open class IamResource internal constructor(
         IamResource(cdkObject)
 
     internal fun unwrap(wrapped: IamResource): software.amazon.awscdk.services.appsync.IamResource =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.IamResource
   }
 }

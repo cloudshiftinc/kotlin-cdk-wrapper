@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
  */
-public open class CfnRestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
+public open class CfnRestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1024,184 +1024,7 @@ public open class CfnRestApi internal constructor(
         = CfnRestApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestApi): software.amazon.awscdk.services.apigateway.CfnRestApi
-        = wrapped.cdkObject
-  }
-
-  /**
-   * `S3Location` is a property of the
-   * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
-   * resource that specifies the Amazon S3 location of a OpenAPI (formerly Swagger) file that defines a
-   * set of RESTful APIs in JSON or YAML.
-   *
-   *
-   * On January 1, 2016, the Swagger Specification was donated to the [OpenAPI
-   * initiative](https://docs.aws.amazon.com/https://www.openapis.org/) , becoming the foundation of
-   * the OpenAPI Specification.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .eTag("eTag")
-   * .key("key")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * The name of the S3 bucket where the OpenAPI file is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
-     */
-    public fun bucket(): String? = unwrap(this).getBucket()
-
-    /**
-     * The Amazon S3 ETag (a file checksum) of the OpenAPI file.
-     *
-     * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
-     */
-    public fun eTag(): String? = unwrap(this).getETag()
-
-    /**
-     * The file name of the OpenAPI file (Amazon S3 object name).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * For versioning-enabled buckets, a specific version of the OpenAPI file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The name of the S3 bucket where the OpenAPI file is stored.
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param eTag The Amazon S3 ETag (a file checksum) of the OpenAPI file.
-       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
-       */
-      public fun eTag(eTag: String)
-
-      /**
-       * @param key The file name of the OpenAPI file (Amazon S3 object name).
-       */
-      public fun key(key: String)
-
-      /**
-       * @param version For versioning-enabled buckets, a specific version of the OpenAPI file.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.builder()
-
-      /**
-       * @param bucket The name of the S3 bucket where the OpenAPI file is stored.
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param eTag The Amazon S3 ETag (a file checksum) of the OpenAPI file.
-       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
-       */
-      override fun eTag(eTag: String) {
-        cdkBuilder.eTag(eTag)
-      }
-
-      /**
-       * @param key The file name of the OpenAPI file (Amazon S3 object name).
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param version For versioning-enabled buckets, a specific version of the OpenAPI file.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * The name of the S3 bucket where the OpenAPI file is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
-       */
-      override fun bucket(): String? = unwrap(this).getBucket()
-
-      /**
-       * The Amazon S3 ETag (a file checksum) of the OpenAPI file.
-       *
-       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
-       */
-      override fun eTag(): String? = unwrap(this).getETag()
-
-      /**
-       * The file name of the OpenAPI file (Amazon S3 object name).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * For versioning-enabled buckets, a specific version of the OpenAPI file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnRestApi
   }
 
   /**
@@ -1334,8 +1157,7 @@ public open class CfnRestApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject), EndpointConfigurationProperty {
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
@@ -1373,6 +1195,182 @@ public open class CfnRestApi internal constructor(
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty
+    }
+  }
+
+  /**
+   * `S3Location` is a property of the
+   * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
+   * resource that specifies the Amazon S3 location of a OpenAPI (formerly Swagger) file that defines a
+   * set of RESTful APIs in JSON or YAML.
+   *
+   *
+   * On January 1, 2016, the Swagger Specification was donated to the [OpenAPI
+   * initiative](https://docs.aws.amazon.com/https://www.openapis.org/) , becoming the foundation of
+   * the OpenAPI Specification.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .eTag("eTag")
+   * .key("key")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * The name of the S3 bucket where the OpenAPI file is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
+     */
+    public fun bucket(): String? = unwrap(this).getBucket()
+
+    /**
+     * The Amazon S3 ETag (a file checksum) of the OpenAPI file.
+     *
+     * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
+     */
+    public fun eTag(): String? = unwrap(this).getETag()
+
+    /**
+     * The file name of the OpenAPI file (Amazon S3 object name).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * For versioning-enabled buckets, a specific version of the OpenAPI file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The name of the S3 bucket where the OpenAPI file is stored.
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param eTag The Amazon S3 ETag (a file checksum) of the OpenAPI file.
+       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
+       */
+      public fun eTag(eTag: String)
+
+      /**
+       * @param key The file name of the OpenAPI file (Amazon S3 object name).
+       */
+      public fun key(key: String)
+
+      /**
+       * @param version For versioning-enabled buckets, a specific version of the OpenAPI file.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.builder()
+
+      /**
+       * @param bucket The name of the S3 bucket where the OpenAPI file is stored.
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param eTag The Amazon S3 ETag (a file checksum) of the OpenAPI file.
+       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
+       */
+      override fun eTag(eTag: String) {
+        cdkBuilder.eTag(eTag)
+      }
+
+      /**
+       * @param key The file name of the OpenAPI file (Amazon S3 object name).
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param version For versioning-enabled buckets, a specific version of the OpenAPI file.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
+      /**
+       * The name of the S3 bucket where the OpenAPI file is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket)
+       */
+      override fun bucket(): String? = unwrap(this).getBucket()
+
+      /**
+       * The Amazon S3 ETag (a file checksum) of the OpenAPI file.
+       *
+       * If you don't specify a value, API Gateway skips ETag validation of your OpenAPI file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag)
+       */
+      override fun eTag(): String? = unwrap(this).getETag()
+
+      /**
+       * The file name of the OpenAPI file (Amazon S3 object name).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * For versioning-enabled buckets, a specific version of the OpenAPI file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty
     }
   }
 }

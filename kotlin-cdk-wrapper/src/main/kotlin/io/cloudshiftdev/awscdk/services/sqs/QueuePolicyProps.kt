@@ -65,7 +65,7 @@ public interface QueuePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.QueuePolicyProps,
+    cdkObject: software.amazon.awscdk.services.sqs.QueuePolicyProps,
   ) : CdkObject(cdkObject), QueuePolicyProps {
     /**
      * The set of queues this policy applies to.

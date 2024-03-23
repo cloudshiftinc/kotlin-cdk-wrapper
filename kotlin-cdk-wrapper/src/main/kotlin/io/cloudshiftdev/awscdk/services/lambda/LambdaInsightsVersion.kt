@@ -21,8 +21,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class LambdaInsightsVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
+public abstract class LambdaInsightsVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The arn of the Lambda Insights extension.
@@ -30,7 +30,7 @@ public abstract class LambdaInsightsVersion internal constructor(
   public open fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
+    cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
   ) : LambdaInsightsVersion(cdkObject)
 
   public companion object {

@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)
  */
-public open class CfnKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kms.CfnKey,
+public open class CfnKey(
+  cdkObject: software.amazon.awscdk.services.kms.CfnKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1402,6 +1402,6 @@ public open class CfnKey internal constructor(
         CfnKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnKey): software.amazon.awscdk.services.kms.CfnKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kms.CfnKey
   }
 }

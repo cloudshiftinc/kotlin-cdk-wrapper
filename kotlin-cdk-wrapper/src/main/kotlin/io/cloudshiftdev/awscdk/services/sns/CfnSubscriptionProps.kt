@@ -448,7 +448,7 @@ public interface CfnSubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.CfnSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.sns.CfnSubscriptionProps,
   ) : CdkObject(cdkObject), CfnSubscriptionProps {
     /**
      * The delivery policy JSON assigned to the subscription.

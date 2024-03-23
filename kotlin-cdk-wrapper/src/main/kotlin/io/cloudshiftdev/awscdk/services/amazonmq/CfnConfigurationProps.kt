@@ -220,7 +220,7 @@ public interface CfnConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationProps,
   ) : CdkObject(cdkObject), CfnConfigurationProps {
     /**
      * Optional.

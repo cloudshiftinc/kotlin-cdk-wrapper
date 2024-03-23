@@ -41,7 +41,7 @@ public interface UserDefinedObjectMetadata {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata,
+    cdkObject: software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata,
   ) : CdkObject(cdkObject), UserDefinedObjectMetadata
 
   public companion object {

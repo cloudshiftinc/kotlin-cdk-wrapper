@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html)
  */
-public open class CfnEIPAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociation,
+public open class CfnEIPAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnEIPAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -297,6 +297,7 @@ public open class CfnEIPAssociation internal constructor(
         CfnEIPAssociation = CfnEIPAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnEIPAssociation):
-        software.amazon.awscdk.services.ec2.CfnEIPAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnEIPAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnEIPAssociation
   }
 }

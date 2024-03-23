@@ -190,7 +190,7 @@ public interface SelectedSubnets {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SelectedSubnets,
+    cdkObject: software.amazon.awscdk.services.ec2.SelectedSubnets,
   ) : CdkObject(cdkObject), SelectedSubnets {
     /**
      * The respective AZs of each subnet.

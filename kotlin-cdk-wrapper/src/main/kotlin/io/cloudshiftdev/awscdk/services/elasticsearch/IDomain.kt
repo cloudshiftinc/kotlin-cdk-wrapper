@@ -703,7 +703,7 @@ public interface IDomain : IResource {
   public fun metricSearchableDocuments(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.IDomain,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.IDomain,
   ) : CdkObject(cdkObject), IDomain {
     /**
      * Apply the given removal policy to this resource.

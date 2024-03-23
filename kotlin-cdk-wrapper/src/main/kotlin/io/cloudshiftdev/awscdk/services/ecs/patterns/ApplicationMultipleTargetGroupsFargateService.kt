@@ -88,9 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApplicationMultipleTargetGroupsFargateService internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService,
+public open class ApplicationMultipleTargetGroupsFargateService(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService,
 ) : ApplicationMultipleTargetGroupsServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -852,6 +851,7 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsFargateService):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService
   }
 }

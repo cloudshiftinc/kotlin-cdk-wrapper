@@ -49,7 +49,7 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
   public fun grantDataApiAccess(grantee: IGrantable): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IServerlessCluster,
+    cdkObject: software.amazon.awscdk.services.rds.IServerlessCluster,
   ) : CdkObject(cdkObject), IServerlessCluster {
     /**
      * Apply the given removal policy to this resource.

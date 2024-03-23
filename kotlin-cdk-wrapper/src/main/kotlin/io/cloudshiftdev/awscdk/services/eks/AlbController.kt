@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://kubernetes-sigs.github.io/aws-load-balancer-controller)
  */
-public open class AlbController internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.AlbController,
+public open class AlbController(
+  cdkObject: software.amazon.awscdk.services.eks.AlbController,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -187,6 +187,6 @@ public open class AlbController internal constructor(
         AlbController(cdkObject)
 
     internal fun unwrap(wrapped: AlbController): software.amazon.awscdk.services.eks.AlbController =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.AlbController
   }
 }

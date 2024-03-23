@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html)
  */
-public open class CfnClientCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificate,
+public open class CfnClientCertificate(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -206,6 +206,7 @@ public open class CfnClientCertificate internal constructor(
         CfnClientCertificate = CfnClientCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientCertificate):
-        software.amazon.awscdk.services.apigateway.CfnClientCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnClientCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnClientCertificate
   }
 }

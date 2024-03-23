@@ -2120,7 +2120,7 @@ public interface CfnEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpointProps,
+    cdkObject: software.amazon.awscdk.services.dms.CfnEndpointProps,
   ) : CdkObject(cdkObject), CfnEndpointProps {
     /**
      * The Amazon Resource Name (ARN) for the certificate.

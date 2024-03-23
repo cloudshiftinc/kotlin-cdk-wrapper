@@ -114,7 +114,7 @@ public interface RequestedSubnet {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.RequestedSubnet,
+    cdkObject: software.amazon.awscdk.services.ec2.RequestedSubnet,
   ) : CdkObject(cdkObject), RequestedSubnet {
     /**
      * The availability zone for the subnet.

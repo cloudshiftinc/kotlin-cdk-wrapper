@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html)
  */
-public open class CfnCidrCollection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
+public open class CfnCidrCollection(
+  cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,7 +216,8 @@ public open class CfnCidrCollection internal constructor(
         CfnCidrCollection = CfnCidrCollection(cdkObject)
 
     internal fun unwrap(wrapped: CfnCidrCollection):
-        software.amazon.awscdk.services.route53.CfnCidrCollection = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.CfnCidrCollection = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.CfnCidrCollection
   }
 
   /**
@@ -301,8 +302,7 @@ public open class CfnCidrCollection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * List of CIDR blocks.

@@ -96,7 +96,7 @@ public interface GetContextKeyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.GetContextKeyOptions,
+    cdkObject: software.amazon.awscdk.GetContextKeyOptions,
   ) : CdkObject(cdkObject), GetContextKeyOptions {
     /**
      * Whether to include the stack's account and region automatically.

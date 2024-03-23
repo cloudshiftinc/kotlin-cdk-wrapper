@@ -43,8 +43,8 @@ import kotlin.String
  * }
  * ```
  */
-public open class FileSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.FileSet,
+public open class FileSet(
+  cdkObject: software.amazon.awscdk.pipelines.FileSet,
 ) : CdkObject(cdkObject), IFileSetProducer {
   public constructor(id: String) : this(software.amazon.awscdk.pipelines.FileSet(id)
   )
@@ -98,6 +98,6 @@ public open class FileSet internal constructor(
         FileSet(cdkObject)
 
     internal fun unwrap(wrapped: FileSet): software.amazon.awscdk.pipelines.FileSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.pipelines.FileSet
   }
 }

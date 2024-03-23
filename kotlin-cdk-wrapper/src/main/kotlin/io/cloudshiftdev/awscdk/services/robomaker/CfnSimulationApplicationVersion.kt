@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html)
  */
-public open class CfnSimulationApplicationVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersion,
+public open class CfnSimulationApplicationVersion(
+  cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -173,6 +172,7 @@ public open class CfnSimulationApplicationVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnSimulationApplicationVersion):
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersion
   }
 }

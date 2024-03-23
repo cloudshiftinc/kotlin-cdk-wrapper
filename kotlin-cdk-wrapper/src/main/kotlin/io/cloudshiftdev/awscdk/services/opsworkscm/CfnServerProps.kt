@@ -995,7 +995,7 @@ public interface CfnServerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServerProps,
+    cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServerProps,
   ) : CdkObject(cdkObject), CfnServerProps {
     /**
      * Associate a public IP address with a server that you are launching.

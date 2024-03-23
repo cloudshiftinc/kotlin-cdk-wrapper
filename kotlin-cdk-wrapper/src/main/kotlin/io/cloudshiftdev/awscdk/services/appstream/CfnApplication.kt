@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -666,7 +666,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.appstream.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.appstream.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnApplication
   }
 
   /**
@@ -742,8 +743,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The S3 bucket of the S3 object.

@@ -304,8 +304,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html)
  */
-public open class CfnModelPackage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
+public open class CfnModelPackage(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1845,7 +1845,376 @@ public open class CfnModelPackage internal constructor(
         CfnModelPackage = CfnModelPackage(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelPackage):
-        software.amazon.awscdk.services.sagemaker.CfnModelPackage = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnModelPackage = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnModelPackage
+  }
+
+  /**
+   * A structure of additional Inference Specification.
+   *
+   * Additional Inference Specification specifies details about inference jobs that can be run with
+   * models based on this model package
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * Object modelInput;
+   * AdditionalInferenceSpecificationDefinitionProperty
+   * additionalInferenceSpecificationDefinitionProperty =
+   * AdditionalInferenceSpecificationDefinitionProperty.builder()
+   * .containers(List.of(ModelPackageContainerDefinitionProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .containerHostname("containerHostname")
+   * .environment(Map.of(
+   * "environmentKey", "environment"))
+   * .framework("framework")
+   * .frameworkVersion("frameworkVersion")
+   * .imageDigest("imageDigest")
+   * .modelDataUrl("modelDataUrl")
+   * .modelInput(modelInput)
+   * .nearestModelName("nearestModelName")
+   * .build()))
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .supportedContentTypes(List.of("supportedContentTypes"))
+   * .supportedRealtimeInferenceInstanceTypes(List.of("supportedRealtimeInferenceInstanceTypes"))
+   * .supportedResponseMimeTypes(List.of("supportedResponseMimeTypes"))
+   * .supportedTransformInstanceTypes(List.of("supportedTransformInstanceTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html)
+   */
+  public interface AdditionalInferenceSpecificationDefinitionProperty {
+    /**
+     * The Amazon ECR registry path of the Docker image that contains the inference code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-containers)
+     */
+    public fun containers(): Any
+
+    /**
+     * A description of the additional Inference specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * A unique name to identify the additional inference specification.
+     *
+     * The name must be unique within the list of your additional inference specifications for a
+     * particular model package.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-name)
+     */
+    public fun name(): String
+
+    /**
+     * The supported MIME types for the input data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedcontenttypes)
+     */
+    public fun supportedContentTypes(): List<String> = unwrap(this).getSupportedContentTypes() ?:
+        emptyList()
+
+    /**
+     * A list of the instance types that are used to generate inferences in real-time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedrealtimeinferenceinstancetypes)
+     */
+    public fun supportedRealtimeInferenceInstanceTypes(): List<String> =
+        unwrap(this).getSupportedRealtimeInferenceInstanceTypes() ?: emptyList()
+
+    /**
+     * The supported MIME types for the output data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedresponsemimetypes)
+     */
+    public fun supportedResponseMimeTypes(): List<String> =
+        unwrap(this).getSupportedResponseMimeTypes() ?: emptyList()
+
+    /**
+     * A list of the instance types on which a transformation job can be run or on which an endpoint
+     * can be deployed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedtransforminstancetypes)
+     */
+    public fun supportedTransformInstanceTypes(): List<String> =
+        unwrap(this).getSupportedTransformInstanceTypes() ?: emptyList()
+
+    /**
+     * A builder for [AdditionalInferenceSpecificationDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      public fun containers(containers: IResolvable)
+
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      public fun containers(containers: List<Any>)
+
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      public fun containers(vararg containers: Any)
+
+      /**
+       * @param description A description of the additional Inference specification.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param name A unique name to identify the additional inference specification. 
+       * The name must be unique within the list of your additional inference specifications for a
+       * particular model package.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param supportedContentTypes The supported MIME types for the input data.
+       */
+      public fun supportedContentTypes(supportedContentTypes: List<String>)
+
+      /**
+       * @param supportedContentTypes The supported MIME types for the input data.
+       */
+      public fun supportedContentTypes(vararg supportedContentTypes: String)
+
+      /**
+       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
+       * to generate inferences in real-time.
+       */
+      public
+          fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>)
+
+      /**
+       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
+       * to generate inferences in real-time.
+       */
+      public fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String)
+
+      /**
+       * @param supportedResponseMimeTypes The supported MIME types for the output data.
+       */
+      public fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>)
+
+      /**
+       * @param supportedResponseMimeTypes The supported MIME types for the output data.
+       */
+      public fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String)
+
+      /**
+       * @param supportedTransformInstanceTypes A list of the instance types on which a
+       * transformation job can be run or on which an endpoint can be deployed.
+       */
+      public fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>)
+
+      /**
+       * @param supportedTransformInstanceTypes A list of the instance types on which a
+       * transformation job can be run or on which an endpoint can be deployed.
+       */
+      public fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty.builder()
+
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      override fun containers(containers: IResolvable) {
+        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      override fun containers(containers: List<Any>) {
+        cdkBuilder.containers(containers)
+      }
+
+      /**
+       * @param containers The Amazon ECR registry path of the Docker image that contains the
+       * inference code. 
+       */
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
+
+      /**
+       * @param description A description of the additional Inference specification.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param name A unique name to identify the additional inference specification. 
+       * The name must be unique within the list of your additional inference specifications for a
+       * particular model package.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param supportedContentTypes The supported MIME types for the input data.
+       */
+      override fun supportedContentTypes(supportedContentTypes: List<String>) {
+        cdkBuilder.supportedContentTypes(supportedContentTypes)
+      }
+
+      /**
+       * @param supportedContentTypes The supported MIME types for the input data.
+       */
+      override fun supportedContentTypes(vararg supportedContentTypes: String): Unit =
+          supportedContentTypes(supportedContentTypes.toList())
+
+      /**
+       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
+       * to generate inferences in real-time.
+       */
+      override
+          fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>) {
+        cdkBuilder.supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes)
+      }
+
+      /**
+       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
+       * to generate inferences in real-time.
+       */
+      override fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String): Unit =
+          supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes.toList())
+
+      /**
+       * @param supportedResponseMimeTypes The supported MIME types for the output data.
+       */
+      override fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>) {
+        cdkBuilder.supportedResponseMimeTypes(supportedResponseMimeTypes)
+      }
+
+      /**
+       * @param supportedResponseMimeTypes The supported MIME types for the output data.
+       */
+      override fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String): Unit =
+          supportedResponseMimeTypes(supportedResponseMimeTypes.toList())
+
+      /**
+       * @param supportedTransformInstanceTypes A list of the instance types on which a
+       * transformation job can be run or on which an endpoint can be deployed.
+       */
+      override fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>) {
+        cdkBuilder.supportedTransformInstanceTypes(supportedTransformInstanceTypes)
+      }
+
+      /**
+       * @param supportedTransformInstanceTypes A list of the instance types on which a
+       * transformation job can be run or on which an endpoint can be deployed.
+       */
+      override fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String):
+          Unit = supportedTransformInstanceTypes(supportedTransformInstanceTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty,
+    ) : CdkObject(cdkObject), AdditionalInferenceSpecificationDefinitionProperty {
+      /**
+       * The Amazon ECR registry path of the Docker image that contains the inference code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-containers)
+       */
+      override fun containers(): Any = unwrap(this).getContainers()
+
+      /**
+       * A description of the additional Inference specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * A unique name to identify the additional inference specification.
+       *
+       * The name must be unique within the list of your additional inference specifications for a
+       * particular model package.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The supported MIME types for the input data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedcontenttypes)
+       */
+      override fun supportedContentTypes(): List<String> = unwrap(this).getSupportedContentTypes()
+          ?: emptyList()
+
+      /**
+       * A list of the instance types that are used to generate inferences in real-time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedrealtimeinferenceinstancetypes)
+       */
+      override fun supportedRealtimeInferenceInstanceTypes(): List<String> =
+          unwrap(this).getSupportedRealtimeInferenceInstanceTypes() ?: emptyList()
+
+      /**
+       * The supported MIME types for the output data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedresponsemimetypes)
+       */
+      override fun supportedResponseMimeTypes(): List<String> =
+          unwrap(this).getSupportedResponseMimeTypes() ?: emptyList()
+
+      /**
+       * A list of the instance types on which a transformation job can be run or on which an
+       * endpoint can be deployed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedtransforminstancetypes)
+       */
+      override fun supportedTransformInstanceTypes(): List<String> =
+          unwrap(this).getSupportedTransformInstanceTypes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AdditionalInferenceSpecificationDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty):
+          AdditionalInferenceSpecificationDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdditionalInferenceSpecificationDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdditionalInferenceSpecificationDefinitionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
+    }
   }
 
   /**
@@ -2036,8 +2405,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty,
     ) : CdkObject(cdkObject), BiasProperty {
       /**
        * The post-training bias report for a model.
@@ -2079,7 +2447,7 @@ public open class CfnModelPackage internal constructor(
   }
 
   /**
-   * A list of algorithms that were used to create a model package.
+   * Describes the location of the channel data.
    *
    * Example:
    *
@@ -2087,220 +2455,105 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * SourceAlgorithmSpecificationProperty sourceAlgorithmSpecificationProperty =
-   * SourceAlgorithmSpecificationProperty.builder()
-   * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
-   * .algorithmName("algorithmName")
-   * // the properties below are optional
-   * .modelDataUrl("modelDataUrl")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html)
-   */
-  public interface SourceAlgorithmSpecificationProperty {
-    /**
-     * A list of the algorithms that were used to create a model package.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html#cfn-sagemaker-modelpackage-sourcealgorithmspecification-sourcealgorithms)
-     */
-    public fun sourceAlgorithms(): Any
-
-    /**
-     * A builder for [SourceAlgorithmSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      public fun sourceAlgorithms(sourceAlgorithms: IResolvable)
-
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      public fun sourceAlgorithms(sourceAlgorithms: List<Any>)
-
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      public fun sourceAlgorithms(vararg sourceAlgorithms: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty.builder()
-
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      override fun sourceAlgorithms(sourceAlgorithms: IResolvable) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms)
-      }
-
-      /**
-       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
-       */
-      override fun sourceAlgorithms(vararg sourceAlgorithms: Any): Unit =
-          sourceAlgorithms(sourceAlgorithms.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty,
-    ) : CdkObject(cdkObject), SourceAlgorithmSpecificationProperty {
-      /**
-       * A list of the algorithms that were used to create a model package.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html#cfn-sagemaker-modelpackage-sourcealgorithmspecification-sourcealgorithms)
-       */
-      override fun sourceAlgorithms(): Any = unwrap(this).getSourceAlgorithms()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SourceAlgorithmSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty):
-          SourceAlgorithmSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SourceAlgorithmSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceAlgorithmSpecificationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
-    }
-  }
-
-  /**
-   * Contains explainability metrics for a model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ExplainabilityProperty explainabilityProperty = ExplainabilityProperty.builder()
-   * .report(MetricsSourceProperty.builder()
-   * .contentType("contentType")
+   * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
+   * .s3DataSource(S3DataSourceProperty.builder()
+   * .s3DataType("s3DataType")
    * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html)
    */
-  public interface ExplainabilityProperty {
+  public interface DataSourceProperty {
     /**
-     * The explainability report for a model.
+     * The S3 location of the data source that is associated with a channel.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html#cfn-sagemaker-modelpackage-explainability-report)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html#cfn-sagemaker-modelpackage-datasource-s3datasource)
      */
-    public fun report(): Any? = unwrap(this).getReport()
+    public fun s3DataSource(): Any
 
     /**
-     * A builder for [ExplainabilityProperty]
+     * A builder for [DataSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
-      public fun report(report: IResolvable)
+      public fun s3DataSource(s3DataSource: IResolvable)
 
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
-      public fun report(report: MetricsSourceProperty)
+      public fun s3DataSource(s3DataSource: S3DataSourceProperty)
 
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6226d61ca0d55fa1ebe648926a6b2f4a99bd4a20e34c6e80dd3e94c2462663ef")
-      public fun report(report: MetricsSourceProperty.Builder.() -> Unit)
+      @JvmName("4afc4570dd9358bb0cb51b72e74794958c33359c12dfea7c7fe8565f68c181e7")
+      public fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty.builder()
 
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
-      override fun report(report: IResolvable) {
-        cdkBuilder.report(report.let(IResolvable::unwrap))
+      override fun s3DataSource(s3DataSource: IResolvable) {
+        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
       }
 
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
-      override fun report(report: MetricsSourceProperty) {
-        cdkBuilder.report(report.let(MetricsSourceProperty::unwrap))
+      override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
+        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
       }
 
       /**
-       * @param report The explainability report for a model.
+       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6226d61ca0d55fa1ebe648926a6b2f4a99bd4a20e34c6e80dd3e94c2462663ef")
-      override fun report(report: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          report(MetricsSourceProperty(report))
+      @JvmName("4afc4570dd9358bb0cb51b72e74794958c33359c12dfea7c7fe8565f68c181e7")
+      override fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit): Unit =
+          s3DataSource(S3DataSourceProperty(s3DataSource))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty,
-    ) : CdkObject(cdkObject), ExplainabilityProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty,
+    ) : CdkObject(cdkObject), DataSourceProperty {
       /**
-       * The explainability report for a model.
+       * The S3 location of the data source that is associated with a channel.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html#cfn-sagemaker-modelpackage-explainability-report)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html#cfn-sagemaker-modelpackage-datasource-s3datasource)
        */
-      override fun report(): Any? = unwrap(this).getReport()
+      override fun s3DataSource(): Any = unwrap(this).getS3DataSource()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExplainabilityProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty):
-          ExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainabilityProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty):
+          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ExplainabilityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty
+      internal fun unwrap(wrapped: DataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty
     }
   }
 
@@ -2616,8 +2869,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty,
     ) : CdkObject(cdkObject), DriftCheckBaselinesProperty {
       /**
        * Represents the drift check bias baselines that can be used when the model monitor is set
@@ -2671,11 +2923,8 @@ public open class CfnModelPackage internal constructor(
   }
 
   /**
-   * Contains data, such as the inputs and targeted instance types that are used in the process of
-   * validating the model package.
-   *
-   * The data provided in the validation profile is made available to your buyers on AWS
-   * Marketplace.
+   * Represents the drift check bias baselines that can be used when the model monitor is set using
+   * the model package.
    *
    * Example:
    *
@@ -2683,173 +2932,1004 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ValidationProfileProperty validationProfileProperty = ValidationProfileProperty.builder()
-   * .profileName("profileName")
-   * .transformJobDefinition(TransformJobDefinitionProperty.builder()
-   * .transformInput(TransformInputProperty.builder()
-   * .dataSource(DataSourceProperty.builder()
-   * .s3DataSource(S3DataSourceProperty.builder()
-   * .s3DataType("s3DataType")
+   * DriftCheckBiasProperty driftCheckBiasProperty = DriftCheckBiasProperty.builder()
+   * .configFile(FileSourceProperty.builder()
    * .s3Uri("s3Uri")
-   * .build())
-   * .build())
    * // the properties below are optional
-   * .compressionType("compressionType")
+   * .contentDigest("contentDigest")
    * .contentType("contentType")
-   * .splitType("splitType")
    * .build())
-   * .transformOutput(TransformOutputProperty.builder()
-   * .s3OutputPath("s3OutputPath")
+   * .postTrainingConstraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
    * // the properties below are optional
-   * .accept("accept")
-   * .assembleWith("assembleWith")
-   * .kmsKeyId("kmsKeyId")
+   * .contentDigest("contentDigest")
    * .build())
-   * .transformResources(TransformResourcesProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
+   * .preTrainingConstraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
    * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
-   * .build())
-   * // the properties below are optional
-   * .batchStrategy("batchStrategy")
-   * .environment(Map.of(
-   * "environmentKey", "environment"))
-   * .maxConcurrentTransforms(123)
-   * .maxPayloadInMb(123)
+   * .contentDigest("contentDigest")
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html)
    */
-  public interface ValidationProfileProperty {
+  public interface DriftCheckBiasProperty {
     /**
-     * The name of the profile for the model package.
+     * The bias config file for a model.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-profilename)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-configfile)
      */
-    public fun profileName(): String
+    public fun configFile(): Any? = unwrap(this).getConfigFile()
 
     /**
-     * The `TransformJobDefinition` object that describes the transform job used for the validation
-     * of the model package.
+     * The post-training constraints.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-transformjobdefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-posttrainingconstraints)
      */
-    public fun transformJobDefinition(): Any
+    public fun postTrainingConstraints(): Any? = unwrap(this).getPostTrainingConstraints()
 
     /**
-     * A builder for [ValidationProfileProperty]
+     * The pre-training constraints.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-pretrainingconstraints)
+     */
+    public fun preTrainingConstraints(): Any? = unwrap(this).getPreTrainingConstraints()
+
+    /**
+     * A builder for [DriftCheckBiasProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param profileName The name of the profile for the model package. 
+       * @param configFile The bias config file for a model.
        */
-      public fun profileName(profileName: String)
+      public fun configFile(configFile: IResolvable)
 
       /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
+       * @param configFile The bias config file for a model.
        */
-      public fun transformJobDefinition(transformJobDefinition: IResolvable)
+      public fun configFile(configFile: FileSourceProperty)
 
       /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
-       */
-      public fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty)
-
-      /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
+       * @param configFile The bias config file for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a474cb846bb6f45fabf0cac8c72139c0a32686c9dbdc9792327efb3e0ffd582a")
+      @JvmName("6a1df16f6e16a3ef409d3a7961d705d73cb00f4e634cab22f2ba08dcddc9742a")
+      public fun configFile(configFile: FileSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      public fun postTrainingConstraints(postTrainingConstraints: IResolvable)
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      public fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty)
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("193e29a0efc44232891916800aafaf7d157acec86ee43ab8157957009d232bfd")
       public
-          fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty.Builder.() -> Unit)
+          fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      public fun preTrainingConstraints(preTrainingConstraints: IResolvable)
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      public fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty)
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6159add795ca353ab92fcc28608a3bc1265ddb7fb2d5c91a4a2203d244df165c")
+      public
+          fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty.builder()
 
       /**
-       * @param profileName The name of the profile for the model package. 
+       * @param configFile The bias config file for a model.
        */
-      override fun profileName(profileName: String) {
-        cdkBuilder.profileName(profileName)
+      override fun configFile(configFile: IResolvable) {
+        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
       }
 
       /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
+       * @param configFile The bias config file for a model.
        */
-      override fun transformJobDefinition(transformJobDefinition: IResolvable) {
-        cdkBuilder.transformJobDefinition(transformJobDefinition.let(IResolvable::unwrap))
+      override fun configFile(configFile: FileSourceProperty) {
+        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
       }
 
       /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
-       */
-      override fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty) {
-        cdkBuilder.transformJobDefinition(transformJobDefinition.let(TransformJobDefinitionProperty::unwrap))
-      }
-
-      /**
-       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
-       * transform job used for the validation of the model package. 
+       * @param configFile The bias config file for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a474cb846bb6f45fabf0cac8c72139c0a32686c9dbdc9792327efb3e0ffd582a")
+      @JvmName("6a1df16f6e16a3ef409d3a7961d705d73cb00f4e634cab22f2ba08dcddc9742a")
+      override fun configFile(configFile: FileSourceProperty.Builder.() -> Unit): Unit =
+          configFile(FileSourceProperty(configFile))
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      override fun postTrainingConstraints(postTrainingConstraints: IResolvable) {
+        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      override fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty) {
+        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param postTrainingConstraints The post-training constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("193e29a0efc44232891916800aafaf7d157acec86ee43ab8157957009d232bfd")
       override
-          fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty.Builder.() -> Unit):
-          Unit = transformJobDefinition(TransformJobDefinitionProperty(transformJobDefinition))
+          fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit):
+          Unit = postTrainingConstraints(MetricsSourceProperty(postTrainingConstraints))
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      override fun preTrainingConstraints(preTrainingConstraints: IResolvable) {
+        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      override fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty) {
+        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param preTrainingConstraints The pre-training constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6159add795ca353ab92fcc28608a3bc1265ddb7fb2d5c91a4a2203d244df165c")
+      override
+          fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit):
+          Unit = preTrainingConstraints(MetricsSourceProperty(preTrainingConstraints))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty,
-    ) : CdkObject(cdkObject), ValidationProfileProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty,
+    ) : CdkObject(cdkObject), DriftCheckBiasProperty {
       /**
-       * The name of the profile for the model package.
+       * The bias config file for a model.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-profilename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-configfile)
        */
-      override fun profileName(): String = unwrap(this).getProfileName()
+      override fun configFile(): Any? = unwrap(this).getConfigFile()
 
       /**
-       * The `TransformJobDefinition` object that describes the transform job used for the
-       * validation of the model package.
+       * The post-training constraints.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-transformjobdefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-posttrainingconstraints)
        */
-      override fun transformJobDefinition(): Any = unwrap(this).getTransformJobDefinition()
+      override fun postTrainingConstraints(): Any? = unwrap(this).getPostTrainingConstraints()
+
+      /**
+       * The pre-training constraints.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-pretrainingconstraints)
+       */
+      override fun preTrainingConstraints(): Any? = unwrap(this).getPreTrainingConstraints()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ValidationProfileProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckBiasProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty):
-          ValidationProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ValidationProfileProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty):
+          DriftCheckBiasProperty = CdkObjectWrappers.wrap(cdkObject) as? DriftCheckBiasProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ValidationProfileProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty =
+      internal fun unwrap(wrapped: DriftCheckBiasProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty
+    }
+  }
+
+  /**
+   * Represents the drift check explainability baselines that can be used when the model monitor is
+   * set using the model package.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DriftCheckExplainabilityProperty driftCheckExplainabilityProperty =
+   * DriftCheckExplainabilityProperty.builder()
+   * .configFile(FileSourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .contentType("contentType")
+   * .build())
+   * .constraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html)
+   */
+  public interface DriftCheckExplainabilityProperty {
+    /**
+     * The explainability config file for the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-configfile)
+     */
+    public fun configFile(): Any? = unwrap(this).getConfigFile()
+
+    /**
+     * The drift check explainability constraints.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-constraints)
+     */
+    public fun constraints(): Any? = unwrap(this).getConstraints()
+
+    /**
+     * A builder for [DriftCheckExplainabilityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      public fun configFile(configFile: IResolvable)
+
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      public fun configFile(configFile: FileSourceProperty)
+
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c706fe7141916f9bc2539d511c2cf67a8dd0fd1ee2cc7f0843591345917138a6")
+      public fun configFile(configFile: FileSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      public fun constraints(constraints: IResolvable)
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      public fun constraints(constraints: MetricsSourceProperty)
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("510f79405b037af9db3613e9e0b5c9185c9fde2eb6daf836ab525b3d89aff1a7")
+      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty.builder()
+
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      override fun configFile(configFile: IResolvable) {
+        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      override fun configFile(configFile: FileSourceProperty) {
+        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
+      }
+
+      /**
+       * @param configFile The explainability config file for the model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c706fe7141916f9bc2539d511c2cf67a8dd0fd1ee2cc7f0843591345917138a6")
+      override fun configFile(configFile: FileSourceProperty.Builder.() -> Unit): Unit =
+          configFile(FileSourceProperty(configFile))
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      override fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      override fun constraints(constraints: MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check explainability constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("510f79405b037af9db3613e9e0b5c9185c9fde2eb6daf836ab525b3d89aff1a7")
+      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          constraints(MetricsSourceProperty(constraints))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty,
+    ) : CdkObject(cdkObject), DriftCheckExplainabilityProperty {
+      /**
+       * The explainability config file for the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-configfile)
+       */
+      override fun configFile(): Any? = unwrap(this).getConfigFile()
+
+      /**
+       * The drift check explainability constraints.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-constraints)
+       */
+      override fun constraints(): Any? = unwrap(this).getConstraints()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckExplainabilityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty):
+          DriftCheckExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckExplainabilityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DriftCheckExplainabilityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
+    }
+  }
+
+  /**
+   * Represents the drift check data quality baselines that can be used when the model monitor is
+   * set using the model package.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DriftCheckModelDataQualityProperty driftCheckModelDataQualityProperty =
+   * DriftCheckModelDataQualityProperty.builder()
+   * .constraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .statistics(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html)
+   */
+  public interface DriftCheckModelDataQualityProperty {
+    /**
+     * The drift check model data quality constraints.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-constraints)
+     */
+    public fun constraints(): Any? = unwrap(this).getConstraints()
+
+    /**
+     * The drift check model data quality statistics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-statistics)
+     */
+    public fun statistics(): Any? = unwrap(this).getStatistics()
+
+    /**
+     * A builder for [DriftCheckModelDataQualityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      public fun constraints(constraints: IResolvable)
+
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      public fun constraints(constraints: MetricsSourceProperty)
+
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c63d833ca7452ddf2902d2c3e26c2a40251457a7f0c3a61efee884bbdbd6830")
+      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      public fun statistics(statistics: IResolvable)
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      public fun statistics(statistics: MetricsSourceProperty)
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c418561efd00db268003819ccc8a5fdda0063dd30d88acbf5b61b748c58ffda")
+      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty.builder()
+
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      override fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      override fun constraints(constraints: MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check model data quality constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c63d833ca7452ddf2902d2c3e26c2a40251457a7f0c3a61efee884bbdbd6830")
+      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          constraints(MetricsSourceProperty(constraints))
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      override fun statistics(statistics: IResolvable) {
+        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      override fun statistics(statistics: MetricsSourceProperty) {
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param statistics The drift check model data quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c418561efd00db268003819ccc8a5fdda0063dd30d88acbf5b61b748c58ffda")
+      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          statistics(MetricsSourceProperty(statistics))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty,
+    ) : CdkObject(cdkObject), DriftCheckModelDataQualityProperty {
+      /**
+       * The drift check model data quality constraints.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-constraints)
+       */
+      override fun constraints(): Any? = unwrap(this).getConstraints()
+
+      /**
+       * The drift check model data quality statistics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-statistics)
+       */
+      override fun statistics(): Any? = unwrap(this).getStatistics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DriftCheckModelDataQualityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty):
+          DriftCheckModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckModelDataQualityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DriftCheckModelDataQualityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
+    }
+  }
+
+  /**
+   * Represents the drift check model quality baselines that can be used when the model monitor is
+   * set using the model package.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DriftCheckModelQualityProperty driftCheckModelQualityProperty =
+   * DriftCheckModelQualityProperty.builder()
+   * .constraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .statistics(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html)
+   */
+  public interface DriftCheckModelQualityProperty {
+    /**
+     * The drift check model quality constraints.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-constraints)
+     */
+    public fun constraints(): Any? = unwrap(this).getConstraints()
+
+    /**
+     * The drift check model quality statistics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-statistics)
+     */
+    public fun statistics(): Any? = unwrap(this).getStatistics()
+
+    /**
+     * A builder for [DriftCheckModelQualityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      public fun constraints(constraints: IResolvable)
+
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      public fun constraints(constraints: MetricsSourceProperty)
+
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5e279833095b174ae27c37e67729b9102c62f9400b31cc7479e29208376d09e")
+      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      public fun statistics(statistics: IResolvable)
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      public fun statistics(statistics: MetricsSourceProperty)
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3940780e4a07cd964e2f2dcc12f27871b85f89660dc8f88daac10d7a85bfc948")
+      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty.builder()
+
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      override fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      override fun constraints(constraints: MetricsSourceProperty) {
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param constraints The drift check model quality constraints.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f5e279833095b174ae27c37e67729b9102c62f9400b31cc7479e29208376d09e")
+      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          constraints(MetricsSourceProperty(constraints))
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      override fun statistics(statistics: IResolvable) {
+        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      override fun statistics(statistics: MetricsSourceProperty) {
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param statistics The drift check model quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3940780e4a07cd964e2f2dcc12f27871b85f89660dc8f88daac10d7a85bfc948")
+      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          statistics(MetricsSourceProperty(statistics))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty,
+    ) : CdkObject(cdkObject), DriftCheckModelQualityProperty {
+      /**
+       * The drift check model quality constraints.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-constraints)
+       */
+      override fun constraints(): Any? = unwrap(this).getConstraints()
+
+      /**
+       * The drift check model quality statistics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-statistics)
+       */
+      override fun statistics(): Any? = unwrap(this).getStatistics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckModelQualityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty):
+          DriftCheckModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckModelQualityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DriftCheckModelQualityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty
+    }
+  }
+
+  /**
+   * Contains explainability metrics for a model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ExplainabilityProperty explainabilityProperty = ExplainabilityProperty.builder()
+   * .report(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html)
+   */
+  public interface ExplainabilityProperty {
+    /**
+     * The explainability report for a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html#cfn-sagemaker-modelpackage-explainability-report)
+     */
+    public fun report(): Any? = unwrap(this).getReport()
+
+    /**
+     * A builder for [ExplainabilityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param report The explainability report for a model.
+       */
+      public fun report(report: IResolvable)
+
+      /**
+       * @param report The explainability report for a model.
+       */
+      public fun report(report: MetricsSourceProperty)
+
+      /**
+       * @param report The explainability report for a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6226d61ca0d55fa1ebe648926a6b2f4a99bd4a20e34c6e80dd3e94c2462663ef")
+      public fun report(report: MetricsSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty.builder()
+
+      /**
+       * @param report The explainability report for a model.
+       */
+      override fun report(report: IResolvable) {
+        cdkBuilder.report(report.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param report The explainability report for a model.
+       */
+      override fun report(report: MetricsSourceProperty) {
+        cdkBuilder.report(report.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param report The explainability report for a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6226d61ca0d55fa1ebe648926a6b2f4a99bd4a20e34c6e80dd3e94c2462663ef")
+      override fun report(report: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          report(MetricsSourceProperty(report))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty,
+    ) : CdkObject(cdkObject), ExplainabilityProperty {
+      /**
+       * The explainability report for a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-explainability.html#cfn-sagemaker-modelpackage-explainability-report)
+       */
+      override fun report(): Any? = unwrap(this).getReport()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExplainabilityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty):
+          ExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainabilityProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExplainabilityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty
+    }
+  }
+
+  /**
+   * Contains details regarding the file source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * FileSourceProperty fileSourceProperty = FileSourceProperty.builder()
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .contentType("contentType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html)
+   */
+  public interface FileSourceProperty {
+    /**
+     * The digest of the file source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contentdigest)
+     */
+    public fun contentDigest(): String? = unwrap(this).getContentDigest()
+
+    /**
+     * The type of content stored in the file source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contenttype)
+     */
+    public fun contentType(): String? = unwrap(this).getContentType()
+
+    /**
+     * The Amazon S3 URI for the file source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [FileSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentDigest The digest of the file source.
+       */
+      public fun contentDigest(contentDigest: String)
+
+      /**
+       * @param contentType The type of content stored in the file source.
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param s3Uri The Amazon S3 URI for the file source. 
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty.builder()
+
+      /**
+       * @param contentDigest The digest of the file source.
+       */
+      override fun contentDigest(contentDigest: String) {
+        cdkBuilder.contentDigest(contentDigest)
+      }
+
+      /**
+       * @param contentType The type of content stored in the file source.
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param s3Uri The Amazon S3 URI for the file source. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty,
+    ) : CdkObject(cdkObject), FileSourceProperty {
+      /**
+       * The digest of the file source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contentdigest)
+       */
+      override fun contentDigest(): String? = unwrap(this).getContentDigest()
+
+      /**
+       * The type of content stored in the file source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contenttype)
+       */
+      override fun contentType(): String? = unwrap(this).getContentType()
+
+      /**
+       * The Amazon S3 URI for the file source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FileSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty):
+          FileSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FileSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty
     }
   }
 
@@ -3101,8 +4181,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceSpecificationProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
@@ -3167,8 +4246,7 @@ public open class CfnModelPackage internal constructor(
   }
 
   /**
-   * Represents the drift check model quality baselines that can be used when the model monitor is
-   * set using the model package.
+   * Metadata properties of the tracking entity, trial, or trial component.
    *
    * Example:
    *
@@ -3176,8 +4254,306 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DriftCheckModelQualityProperty driftCheckModelQualityProperty =
-   * DriftCheckModelQualityProperty.builder()
+   * MetadataPropertiesProperty metadataPropertiesProperty = MetadataPropertiesProperty.builder()
+   * .commitId("commitId")
+   * .generatedBy("generatedBy")
+   * .projectId("projectId")
+   * .repository("repository")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html)
+   */
+  public interface MetadataPropertiesProperty {
+    /**
+     * The commit ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-commitid)
+     */
+    public fun commitId(): String? = unwrap(this).getCommitId()
+
+    /**
+     * The entity this entity was generated by.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-generatedby)
+     */
+    public fun generatedBy(): String? = unwrap(this).getGeneratedBy()
+
+    /**
+     * The project ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-projectid)
+     */
+    public fun projectId(): String? = unwrap(this).getProjectId()
+
+    /**
+     * The repository.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-repository)
+     */
+    public fun repository(): String? = unwrap(this).getRepository()
+
+    /**
+     * A builder for [MetadataPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param commitId The commit ID.
+       */
+      public fun commitId(commitId: String)
+
+      /**
+       * @param generatedBy The entity this entity was generated by.
+       */
+      public fun generatedBy(generatedBy: String)
+
+      /**
+       * @param projectId The project ID.
+       */
+      public fun projectId(projectId: String)
+
+      /**
+       * @param repository The repository.
+       */
+      public fun repository(repository: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty.builder()
+
+      /**
+       * @param commitId The commit ID.
+       */
+      override fun commitId(commitId: String) {
+        cdkBuilder.commitId(commitId)
+      }
+
+      /**
+       * @param generatedBy The entity this entity was generated by.
+       */
+      override fun generatedBy(generatedBy: String) {
+        cdkBuilder.generatedBy(generatedBy)
+      }
+
+      /**
+       * @param projectId The project ID.
+       */
+      override fun projectId(projectId: String) {
+        cdkBuilder.projectId(projectId)
+      }
+
+      /**
+       * @param repository The repository.
+       */
+      override fun repository(repository: String) {
+        cdkBuilder.repository(repository)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty,
+    ) : CdkObject(cdkObject), MetadataPropertiesProperty {
+      /**
+       * The commit ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-commitid)
+       */
+      override fun commitId(): String? = unwrap(this).getCommitId()
+
+      /**
+       * The entity this entity was generated by.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-generatedby)
+       */
+      override fun generatedBy(): String? = unwrap(this).getGeneratedBy()
+
+      /**
+       * The project ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-projectid)
+       */
+      override fun projectId(): String? = unwrap(this).getProjectId()
+
+      /**
+       * The repository.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-repository)
+       */
+      override fun repository(): String? = unwrap(this).getRepository()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty):
+          MetadataPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataPropertiesProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty
+    }
+  }
+
+  /**
+   * Details about the metrics source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MetricsSourceProperty metricsSourceProperty = MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html)
+   */
+  public interface MetricsSourceProperty {
+    /**
+     * The hash key used for the metrics source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contentdigest)
+     */
+    public fun contentDigest(): String? = unwrap(this).getContentDigest()
+
+    /**
+     * The metric source content type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contenttype)
+     */
+    public fun contentType(): String
+
+    /**
+     * The S3 URI for the metrics source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [MetricsSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentDigest The hash key used for the metrics source.
+       */
+      public fun contentDigest(contentDigest: String)
+
+      /**
+       * @param contentType The metric source content type. 
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param s3Uri The S3 URI for the metrics source. 
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty.builder()
+
+      /**
+       * @param contentDigest The hash key used for the metrics source.
+       */
+      override fun contentDigest(contentDigest: String) {
+        cdkBuilder.contentDigest(contentDigest)
+      }
+
+      /**
+       * @param contentType The metric source content type. 
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param s3Uri The S3 URI for the metrics source. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty,
+    ) : CdkObject(cdkObject), MetricsSourceProperty {
+      /**
+       * The hash key used for the metrics source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contentdigest)
+       */
+      override fun contentDigest(): String? = unwrap(this).getContentDigest()
+
+      /**
+       * The metric source content type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contenttype)
+       */
+      override fun contentType(): String = unwrap(this).getContentType()
+
+      /**
+       * The S3 URI for the metrics source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty):
+          MetricsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricsSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricsSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty
+    }
+  }
+
+  /**
+   * Data quality constraints and statistics for a model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelDataQualityProperty modelDataQualityProperty = ModelDataQualityProperty.builder()
    * .constraints(MetricsSourceProperty.builder()
    * .contentType("contentType")
    * .s3Uri("s3Uri")
@@ -3193,152 +4569,943 @@ public open class CfnModelPackage internal constructor(
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html)
    */
-  public interface DriftCheckModelQualityProperty {
+  public interface ModelDataQualityProperty {
     /**
-     * The drift check model quality constraints.
+     * Data quality constraints for a model.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-constraints)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-constraints)
      */
     public fun constraints(): Any? = unwrap(this).getConstraints()
 
     /**
-     * The drift check model quality statistics.
+     * Data quality statistics for a model.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-statistics)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-statistics)
      */
     public fun statistics(): Any? = unwrap(this).getStatistics()
 
     /**
-     * A builder for [DriftCheckModelQualityProperty]
+     * A builder for [ModelDataQualityProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       public fun constraints(constraints: IResolvable)
 
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       public fun constraints(constraints: MetricsSourceProperty)
 
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5e279833095b174ae27c37e67729b9102c62f9400b31cc7479e29208376d09e")
+      @JvmName("17651debc01e0f4a93ea58087411e4cd218de64194b35b4c14b6973111e8813b")
       public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       public fun statistics(statistics: IResolvable)
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       public fun statistics(statistics: MetricsSourceProperty)
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3940780e4a07cd964e2f2dcc12f27871b85f89660dc8f88daac10d7a85bfc948")
+      @JvmName("eb2c82a1598873be70e3fa2ac906e01ecdbec14bf4b295e56ef6136ee268662f")
       public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty.builder()
 
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       override fun constraints(constraints: IResolvable) {
         cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
       }
 
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
         cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
       }
 
       /**
-       * @param constraints The drift check model quality constraints.
+       * @param constraints Data quality constraints for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f5e279833095b174ae27c37e67729b9102c62f9400b31cc7479e29208376d09e")
+      @JvmName("17651debc01e0f4a93ea58087411e4cd218de64194b35b4c14b6973111e8813b")
       override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
           constraints(MetricsSourceProperty(constraints))
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       override fun statistics(statistics: IResolvable) {
         cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
       }
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       override fun statistics(statistics: MetricsSourceProperty) {
         cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
       }
 
       /**
-       * @param statistics The drift check model quality statistics.
+       * @param statistics Data quality statistics for a model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3940780e4a07cd964e2f2dcc12f27871b85f89660dc8f88daac10d7a85bfc948")
+      @JvmName("eb2c82a1598873be70e3fa2ac906e01ecdbec14bf4b295e56ef6136ee268662f")
       override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
           statistics(MetricsSourceProperty(statistics))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty,
-    ) : CdkObject(cdkObject), DriftCheckModelQualityProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty,
+    ) : CdkObject(cdkObject), ModelDataQualityProperty {
       /**
-       * The drift check model quality constraints.
+       * Data quality constraints for a model.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-constraints)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-constraints)
        */
       override fun constraints(): Any? = unwrap(this).getConstraints()
 
       /**
-       * The drift check model quality statistics.
+       * Data quality statistics for a model.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.html#cfn-sagemaker-modelpackage-driftcheckmodelquality-statistics)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-statistics)
        */
       override fun statistics(): Any? = unwrap(this).getStatistics()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckModelQualityProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelDataQualityProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty):
-          DriftCheckModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DriftCheckModelQualityProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty):
+          ModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataQualityProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DriftCheckModelQualityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty =
+      internal fun unwrap(wrapped: ModelDataQualityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty
+    }
+  }
+
+  /**
+   * Input object for the model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelInputProperty modelInputProperty = ModelInputProperty.builder()
+   * .dataInputConfig("dataInputConfig")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html)
+   */
+  public interface ModelInputProperty {
+    /**
+     * The input configuration object for the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html#cfn-sagemaker-modelpackage-modelinput-datainputconfig)
+     */
+    public fun dataInputConfig(): String
+
+    /**
+     * A builder for [ModelInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataInputConfig The input configuration object for the model. 
+       */
+      public fun dataInputConfig(dataInputConfig: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty.builder()
+
+      /**
+       * @param dataInputConfig The input configuration object for the model. 
+       */
+      override fun dataInputConfig(dataInputConfig: String) {
+        cdkBuilder.dataInputConfig(dataInputConfig)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty,
+    ) : CdkObject(cdkObject), ModelInputProperty {
+      /**
+       * The input configuration object for the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html#cfn-sagemaker-modelpackage-modelinput-datainputconfig)
+       */
+      override fun dataInputConfig(): String = unwrap(this).getDataInputConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty):
+          ModelInputProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty
+    }
+  }
+
+  /**
+   * Contains metrics captured from a model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelMetricsProperty modelMetricsProperty = ModelMetricsProperty.builder()
+   * .bias(BiasProperty.builder()
+   * .postTrainingReport(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .preTrainingReport(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .report(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build())
+   * .explainability(ExplainabilityProperty.builder()
+   * .report(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build())
+   * .modelDataQuality(ModelDataQualityProperty.builder()
+   * .constraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .statistics(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build())
+   * .modelQuality(ModelQualityProperty.builder()
+   * .constraints(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .statistics(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html)
+   */
+  public interface ModelMetricsProperty {
+    /**
+     * Metrics that measure bias in a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-bias)
+     */
+    public fun bias(): Any? = unwrap(this).getBias()
+
+    /**
+     * Metrics that help explain a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-explainability)
+     */
+    public fun explainability(): Any? = unwrap(this).getExplainability()
+
+    /**
+     * Metrics that measure the quality of the input data for a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modeldataquality)
+     */
+    public fun modelDataQuality(): Any? = unwrap(this).getModelDataQuality()
+
+    /**
+     * Metrics that measure the quality of a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modelquality)
+     */
+    public fun modelQuality(): Any? = unwrap(this).getModelQuality()
+
+    /**
+     * A builder for [ModelMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      public fun bias(bias: IResolvable)
+
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      public fun bias(bias: BiasProperty)
+
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8be727ee25583c3ec6c29082be1cc7efe7e399e251b55833351731e30898d433")
+      public fun bias(bias: BiasProperty.Builder.() -> Unit)
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      public fun explainability(explainability: IResolvable)
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      public fun explainability(explainability: ExplainabilityProperty)
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("757bf78a4853ff1eeaa98fd44d4a3e2086fc93915276e3c2a24c189519a37535")
+      public fun explainability(explainability: ExplainabilityProperty.Builder.() -> Unit)
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      public fun modelDataQuality(modelDataQuality: IResolvable)
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      public fun modelDataQuality(modelDataQuality: ModelDataQualityProperty)
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b81ba8038bb18b1965a4318a2c20631d369068a2c2895334d9620ed104af4d54")
+      public fun modelDataQuality(modelDataQuality: ModelDataQualityProperty.Builder.() -> Unit)
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      public fun modelQuality(modelQuality: IResolvable)
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      public fun modelQuality(modelQuality: ModelQualityProperty)
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eaf636a529385f397ecc8e6d59ffda0a3cd8c70617aea70d09e99a3092d3202f")
+      public fun modelQuality(modelQuality: ModelQualityProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty.builder()
+
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      override fun bias(bias: IResolvable) {
+        cdkBuilder.bias(bias.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      override fun bias(bias: BiasProperty) {
+        cdkBuilder.bias(bias.let(BiasProperty::unwrap))
+      }
+
+      /**
+       * @param bias Metrics that measure bias in a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8be727ee25583c3ec6c29082be1cc7efe7e399e251b55833351731e30898d433")
+      override fun bias(bias: BiasProperty.Builder.() -> Unit): Unit = bias(BiasProperty(bias))
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      override fun explainability(explainability: IResolvable) {
+        cdkBuilder.explainability(explainability.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      override fun explainability(explainability: ExplainabilityProperty) {
+        cdkBuilder.explainability(explainability.let(ExplainabilityProperty::unwrap))
+      }
+
+      /**
+       * @param explainability Metrics that help explain a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("757bf78a4853ff1eeaa98fd44d4a3e2086fc93915276e3c2a24c189519a37535")
+      override fun explainability(explainability: ExplainabilityProperty.Builder.() -> Unit): Unit =
+          explainability(ExplainabilityProperty(explainability))
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      override fun modelDataQuality(modelDataQuality: IResolvable) {
+        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      override fun modelDataQuality(modelDataQuality: ModelDataQualityProperty) {
+        cdkBuilder.modelDataQuality(modelDataQuality.let(ModelDataQualityProperty::unwrap))
+      }
+
+      /**
+       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b81ba8038bb18b1965a4318a2c20631d369068a2c2895334d9620ed104af4d54")
+      override fun modelDataQuality(modelDataQuality: ModelDataQualityProperty.Builder.() -> Unit):
+          Unit = modelDataQuality(ModelDataQualityProperty(modelDataQuality))
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      override fun modelQuality(modelQuality: IResolvable) {
+        cdkBuilder.modelQuality(modelQuality.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      override fun modelQuality(modelQuality: ModelQualityProperty) {
+        cdkBuilder.modelQuality(modelQuality.let(ModelQualityProperty::unwrap))
+      }
+
+      /**
+       * @param modelQuality Metrics that measure the quality of a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eaf636a529385f397ecc8e6d59ffda0a3cd8c70617aea70d09e99a3092d3202f")
+      override fun modelQuality(modelQuality: ModelQualityProperty.Builder.() -> Unit): Unit =
+          modelQuality(ModelQualityProperty(modelQuality))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty,
+    ) : CdkObject(cdkObject), ModelMetricsProperty {
+      /**
+       * Metrics that measure bias in a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-bias)
+       */
+      override fun bias(): Any? = unwrap(this).getBias()
+
+      /**
+       * Metrics that help explain a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-explainability)
+       */
+      override fun explainability(): Any? = unwrap(this).getExplainability()
+
+      /**
+       * Metrics that measure the quality of the input data for a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modeldataquality)
+       */
+      override fun modelDataQuality(): Any? = unwrap(this).getModelDataQuality()
+
+      /**
+       * Metrics that measure the quality of a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modelquality)
+       */
+      override fun modelQuality(): Any? = unwrap(this).getModelQuality()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty):
+          ModelMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelMetricsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelMetricsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty
+    }
+  }
+
+  /**
+   * Describes the Docker container for the model package.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * Object modelInput;
+   * ModelPackageContainerDefinitionProperty modelPackageContainerDefinitionProperty =
+   * ModelPackageContainerDefinitionProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .containerHostname("containerHostname")
+   * .environment(Map.of(
+   * "environmentKey", "environment"))
+   * .framework("framework")
+   * .frameworkVersion("frameworkVersion")
+   * .imageDigest("imageDigest")
+   * .modelDataUrl("modelDataUrl")
+   * .modelInput(modelInput)
+   * .nearestModelName("nearestModelName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html)
+   */
+  public interface ModelPackageContainerDefinitionProperty {
+    /**
+     * The DNS host name for the Docker container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname)
+     */
+    public fun containerHostname(): String? = unwrap(this).getContainerHostname()
+
+    /**
+     * The environment variables to set in the Docker container.
+     *
+     * Each key and value in the `Environment` string to string map can have length of up to 1024.
+     * We support up to 16 entries in the map.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)
+     */
+    public fun environment(): Any? = unwrap(this).getEnvironment()
+
+    /**
+     * The machine learning framework of the model package container image.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework)
+     */
+    public fun framework(): String? = unwrap(this).getFramework()
+
+    /**
+     * The framework version of the Model Package Container Image.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion)
+     */
+    public fun frameworkVersion(): String? = unwrap(this).getFrameworkVersion()
+
+    /**
+     * The Amazon EC2 Container Registry (Amazon ECR) path where inference code is stored.
+     *
+     * If you are using your own custom algorithm instead of an algorithm provided by SageMaker, the
+     * inference code must meet SageMaker requirements. SageMaker supports both
+     * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For more
+     * information, see [Using Your Own Algorithms with Amazon
+     * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image)
+     */
+    public fun image(): String
+
+    /**
+     * An MD5 hash of the training algorithm that identifies the Docker image used for training.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
+     */
+    public fun imageDigest(): String? = unwrap(this).getImageDigest()
+
+    /**
+     * The Amazon S3 path where the model artifacts, which result from model training, are stored.
+     *
+     * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+     *
+     *
+     * The model artifacts must be in an S3 bucket that is in the same region as the model package.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldataurl)
+     */
+    public fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
+
+    /**
+     * A structure with Model Input details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput)
+     */
+    public fun modelInput(): Any? = unwrap(this).getModelInput()
+
+    /**
+     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference
+     * Recommender model that matches your model.
+     *
+     * You can find a list of benchmarked models by calling `ListModelMetadata` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)
+     */
+    public fun nearestModelName(): String? = unwrap(this).getNearestModelName()
+
+    /**
+     * A builder for [ModelPackageContainerDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerHostname The DNS host name for the Docker container.
+       */
+      public fun containerHostname(containerHostname: String)
+
+      /**
+       * @param environment The environment variables to set in the Docker container.
+       * Each key and value in the `Environment` string to string map can have length of up to 1024.
+       * We support up to 16 entries in the map.
+       */
+      public fun environment(environment: IResolvable)
+
+      /**
+       * @param environment The environment variables to set in the Docker container.
+       * Each key and value in the `Environment` string to string map can have length of up to 1024.
+       * We support up to 16 entries in the map.
+       */
+      public fun environment(environment: Map<String, String>)
+
+      /**
+       * @param framework The machine learning framework of the model package container image.
+       */
+      public fun framework(framework: String)
+
+      /**
+       * @param frameworkVersion The framework version of the Model Package Container Image.
+       */
+      public fun frameworkVersion(frameworkVersion: String)
+
+      /**
+       * @param image The Amazon EC2 Container Registry (Amazon ECR) path where inference code is
+       * stored. 
+       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
+       * the inference code must meet SageMaker requirements. SageMaker supports both
+       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
+       * more information, see [Using Your Own Algorithms with Amazon
+       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
+       */
+      public fun image(image: String)
+
+      /**
+       * @param imageDigest An MD5 hash of the training algorithm that identifies the Docker image
+       * used for training.
+       */
+      public fun imageDigest(imageDigest: String)
+
+      /**
+       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
+       * training, are stored.
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same region as the model
+       * package.
+       */
+      public fun modelDataUrl(modelDataUrl: String)
+
+      /**
+       * @param modelInput A structure with Model Input details.
+       */
+      public fun modelInput(modelInput: Any)
+
+      /**
+       * @param nearestModelName The name of a pre-trained machine learning benchmarked by Amazon
+       * SageMaker Inference Recommender model that matches your model.
+       * You can find a list of benchmarked models by calling `ListModelMetadata` .
+       */
+      public fun nearestModelName(nearestModelName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty.builder()
+
+      /**
+       * @param containerHostname The DNS host name for the Docker container.
+       */
+      override fun containerHostname(containerHostname: String) {
+        cdkBuilder.containerHostname(containerHostname)
+      }
+
+      /**
+       * @param environment The environment variables to set in the Docker container.
+       * Each key and value in the `Environment` string to string map can have length of up to 1024.
+       * We support up to 16 entries in the map.
+       */
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param environment The environment variables to set in the Docker container.
+       * Each key and value in the `Environment` string to string map can have length of up to 1024.
+       * We support up to 16 entries in the map.
+       */
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
+      }
+
+      /**
+       * @param framework The machine learning framework of the model package container image.
+       */
+      override fun framework(framework: String) {
+        cdkBuilder.framework(framework)
+      }
+
+      /**
+       * @param frameworkVersion The framework version of the Model Package Container Image.
+       */
+      override fun frameworkVersion(frameworkVersion: String) {
+        cdkBuilder.frameworkVersion(frameworkVersion)
+      }
+
+      /**
+       * @param image The Amazon EC2 Container Registry (Amazon ECR) path where inference code is
+       * stored. 
+       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
+       * the inference code must meet SageMaker requirements. SageMaker supports both
+       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
+       * more information, see [Using Your Own Algorithms with Amazon
+       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
+       */
+      override fun image(image: String) {
+        cdkBuilder.image(image)
+      }
+
+      /**
+       * @param imageDigest An MD5 hash of the training algorithm that identifies the Docker image
+       * used for training.
+       */
+      override fun imageDigest(imageDigest: String) {
+        cdkBuilder.imageDigest(imageDigest)
+      }
+
+      /**
+       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
+       * training, are stored.
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same region as the model
+       * package.
+       */
+      override fun modelDataUrl(modelDataUrl: String) {
+        cdkBuilder.modelDataUrl(modelDataUrl)
+      }
+
+      /**
+       * @param modelInput A structure with Model Input details.
+       */
+      override fun modelInput(modelInput: Any) {
+        cdkBuilder.modelInput(modelInput)
+      }
+
+      /**
+       * @param nearestModelName The name of a pre-trained machine learning benchmarked by Amazon
+       * SageMaker Inference Recommender model that matches your model.
+       * You can find a list of benchmarked models by calling `ListModelMetadata` .
+       */
+      override fun nearestModelName(nearestModelName: String) {
+        cdkBuilder.nearestModelName(nearestModelName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty,
+    ) : CdkObject(cdkObject), ModelPackageContainerDefinitionProperty {
+      /**
+       * The DNS host name for the Docker container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname)
+       */
+      override fun containerHostname(): String? = unwrap(this).getContainerHostname()
+
+      /**
+       * The environment variables to set in the Docker container.
+       *
+       * Each key and value in the `Environment` string to string map can have length of up to 1024.
+       * We support up to 16 entries in the map.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)
+       */
+      override fun environment(): Any? = unwrap(this).getEnvironment()
+
+      /**
+       * The machine learning framework of the model package container image.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework)
+       */
+      override fun framework(): String? = unwrap(this).getFramework()
+
+      /**
+       * The framework version of the Model Package Container Image.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion)
+       */
+      override fun frameworkVersion(): String? = unwrap(this).getFrameworkVersion()
+
+      /**
+       * The Amazon EC2 Container Registry (Amazon ECR) path where inference code is stored.
+       *
+       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
+       * the inference code must meet SageMaker requirements. SageMaker supports both
+       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
+       * more information, see [Using Your Own Algorithms with Amazon
+       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image)
+       */
+      override fun image(): String = unwrap(this).getImage()
+
+      /**
+       * An MD5 hash of the training algorithm that identifies the Docker image used for training.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
+       */
+      override fun imageDigest(): String? = unwrap(this).getImageDigest()
+
+      /**
+       * The Amazon S3 path where the model artifacts, which result from model training, are stored.
+       *
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same region as the model
+       * package.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldataurl)
+       */
+      override fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
+
+      /**
+       * A structure with Model Input details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput)
+       */
+      override fun modelInput(): Any? = unwrap(this).getModelInput()
+
+      /**
+       * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference
+       * Recommender model that matches your model.
+       *
+       * You can find a list of benchmarked models by calling `ListModelMetadata` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)
+       */
+      override fun nearestModelName(): String? = unwrap(this).getNearestModelName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ModelPackageContainerDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty):
+          ModelPackageContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelPackageContainerDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelPackageContainerDefinitionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
     }
   }
 
@@ -3425,8 +5592,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty,
     ) : CdkObject(cdkObject), ModelPackageStatusDetailsProperty {
       /**
        * The validation status of the model package.
@@ -3456,8 +5622,7 @@ public open class CfnModelPackage internal constructor(
   }
 
   /**
-   * Describes the resources, including ML instance types and ML instance count, to use for
-   * transform job.
+   * Represents the overall status of a model package.
    *
    * Example:
    *
@@ -3465,244 +5630,137 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * TransformResourcesProperty transformResourcesProperty = TransformResourcesProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
+   * ModelPackageStatusItemProperty modelPackageStatusItemProperty =
+   * ModelPackageStatusItemProperty.builder()
+   * .name("name")
+   * .status("status")
    * // the properties below are optional
-   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .failureReason("failureReason")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html)
    */
-  public interface TransformResourcesProperty {
+  public interface ModelPackageStatusItemProperty {
     /**
-     * The number of ML compute instances to use in the transform job.
+     * if the overall status is `Failed` , the reason for the failure.
      *
-     * The default value is `1` , and the maximum is `100` . For distributed transform jobs, specify
-     * a value greater than `1` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancecount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-failurereason)
      */
-    public fun instanceCount(): Number
+    public fun failureReason(): String? = unwrap(this).getFailureReason()
 
     /**
-     * The ML compute instance type for the transform job.
+     * The name of the model package for which the overall status is being reported.
      *
-     * If you are using built-in algorithms to transform moderately sized datasets, we recommend
-     * using ml.m4.xlarge or `ml.m5.large` instance types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-name)
      */
-    public fun instanceType(): String
+    public fun name(): String
 
     /**
-     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt model
-     * data on the storage volume attached to the ML compute instance(s) that run the batch transform
-     * job.
+     * The current status.
      *
-     *
-     * Certain Nitro-based instances include local storage, dependent on the instance type. Local
-     * storage volumes are encrypted using a hardware module on the instance. You can't request a
-     * `VolumeKmsKeyId` when using an instance type with local storage.
-     *
-     * For a list of instance types that support local instance storage, see [Instance Store
-     * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
-     * .
-     *
-     * For more information about local instance storage encryption, see [SSD Instance Store
-     * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
-     *
-     *
-     * The `VolumeKmsKeyId` can be any of the following formats:
-     *
-     * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
-     * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
-     * * Alias name: `alias/ExampleAlias`
-     * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-volumekmskeyid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-status)
      */
-    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+    public fun status(): String
 
     /**
-     * A builder for [TransformResourcesProperty]
+     * A builder for [ModelPackageStatusItemProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceCount The number of ML compute instances to use in the transform job. 
-       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
-       * specify a value greater than `1` .
+       * @param failureReason if the overall status is `Failed` , the reason for the failure.
        */
-      public fun instanceCount(instanceCount: Number)
+      public fun failureReason(failureReason: String)
 
       /**
-       * @param instanceType The ML compute instance type for the transform job. 
-       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
-       * using ml.m4.xlarge or `ml.m5.large` instance types.
+       * @param name The name of the model package for which the overall status is being reported. 
        */
-      public fun instanceType(instanceType: String)
+      public fun name(name: String)
 
       /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt model data on the storage volume attached to the ML compute instance(s) that
-       * run the batch transform job.
-       *
-       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
-       * storage volumes are encrypted using a hardware module on the instance. You can't request a
-       * `VolumeKmsKeyId` when using an instance type with local storage.
-       *
-       * For a list of instance types that support local instance storage, see [Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
-       * .
-       *
-       * For more information about local instance storage encryption, see [SSD Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
-       *
-       *
-       * The `VolumeKmsKeyId` can be any of the following formats:
-       *
-       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Alias name: `alias/ExampleAlias`
-       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+       * @param status The current status. 
        */
-      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty.builder()
 
       /**
-       * @param instanceCount The number of ML compute instances to use in the transform job. 
-       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
-       * specify a value greater than `1` .
+       * @param failureReason if the overall status is `Failed` , the reason for the failure.
        */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
+      override fun failureReason(failureReason: String) {
+        cdkBuilder.failureReason(failureReason)
       }
 
       /**
-       * @param instanceType The ML compute instance type for the transform job. 
-       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
-       * using ml.m4.xlarge or `ml.m5.large` instance types.
+       * @param name The name of the model package for which the overall status is being reported. 
        */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
-       * uses to encrypt model data on the storage volume attached to the ML compute instance(s) that
-       * run the batch transform job.
-       *
-       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
-       * storage volumes are encrypted using a hardware module on the instance. You can't request a
-       * `VolumeKmsKeyId` when using an instance type with local storage.
-       *
-       * For a list of instance types that support local instance storage, see [Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
-       * .
-       *
-       * For more information about local instance storage encryption, see [SSD Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
-       *
-       *
-       * The `VolumeKmsKeyId` can be any of the following formats:
-       *
-       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Alias name: `alias/ExampleAlias`
-       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+       * @param status The current status. 
        */
-      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
-        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      override fun status(status: String) {
+        cdkBuilder.status(status)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty,
-    ) : CdkObject(cdkObject), TransformResourcesProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty,
+    ) : CdkObject(cdkObject), ModelPackageStatusItemProperty {
       /**
-       * The number of ML compute instances to use in the transform job.
+       * if the overall status is `Failed` , the reason for the failure.
        *
-       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
-       * specify a value greater than `1` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancecount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-failurereason)
        */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+      override fun failureReason(): String? = unwrap(this).getFailureReason()
 
       /**
-       * The ML compute instance type for the transform job.
+       * The name of the model package for which the overall status is being reported.
        *
-       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
-       * using ml.m4.xlarge or `ml.m5.large` instance types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancetype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-name)
        */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun name(): String = unwrap(this).getName()
 
       /**
-       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt model
-       * data on the storage volume attached to the ML compute instance(s) that run the batch transform
-       * job.
+       * The current status.
        *
-       *
-       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
-       * storage volumes are encrypted using a hardware module on the instance. You can't request a
-       * `VolumeKmsKeyId` when using an instance type with local storage.
-       *
-       * For a list of instance types that support local instance storage, see [Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
-       * .
-       *
-       * For more information about local instance storage encryption, see [SSD Instance Store
-       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
-       *
-       *
-       * The `VolumeKmsKeyId` can be any of the following formats:
-       *
-       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
-       * * Alias name: `alias/ExampleAlias`
-       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-volumekmskeyid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-status)
        */
-      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TransformResourcesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelPackageStatusItemProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty):
-          TransformResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TransformResourcesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty):
+          ModelPackageStatusItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelPackageStatusItemProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TransformResourcesProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty =
+      internal fun unwrap(wrapped: ModelPackageStatusItemProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty
     }
   }
 
   /**
-   * Represents the drift check explainability baselines that can be used when the model monitor is
-   * set using the model package.
+   * Model quality statistics and constraints.
    *
    * Example:
    *
@@ -3710,169 +5768,1076 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DriftCheckExplainabilityProperty driftCheckExplainabilityProperty =
-   * DriftCheckExplainabilityProperty.builder()
-   * .configFile(FileSourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .contentType("contentType")
-   * .build())
+   * ModelQualityProperty modelQualityProperty = ModelQualityProperty.builder()
    * .constraints(MetricsSourceProperty.builder()
    * .contentType("contentType")
    * .s3Uri("s3Uri")
    * // the properties below are optional
    * .contentDigest("contentDigest")
    * .build())
+   * .statistics(MetricsSourceProperty.builder()
+   * .contentType("contentType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .contentDigest("contentDigest")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html)
    */
-  public interface DriftCheckExplainabilityProperty {
+  public interface ModelQualityProperty {
     /**
-     * The explainability config file for the model.
+     * Model quality constraints.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-configfile)
-     */
-    public fun configFile(): Any? = unwrap(this).getConfigFile()
-
-    /**
-     * The drift check explainability constraints.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-constraints)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-constraints)
      */
     public fun constraints(): Any? = unwrap(this).getConstraints()
 
     /**
-     * A builder for [DriftCheckExplainabilityProperty]
+     * Model quality statistics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-statistics)
+     */
+    public fun statistics(): Any? = unwrap(this).getStatistics()
+
+    /**
+     * A builder for [ModelQualityProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param configFile The explainability config file for the model.
-       */
-      public fun configFile(configFile: IResolvable)
-
-      /**
-       * @param configFile The explainability config file for the model.
-       */
-      public fun configFile(configFile: FileSourceProperty)
-
-      /**
-       * @param configFile The explainability config file for the model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c706fe7141916f9bc2539d511c2cf67a8dd0fd1ee2cc7f0843591345917138a6")
-      public fun configFile(configFile: FileSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       public fun constraints(constraints: IResolvable)
 
       /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       public fun constraints(constraints: MetricsSourceProperty)
 
       /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("510f79405b037af9db3613e9e0b5c9185c9fde2eb6daf836ab525b3d89aff1a7")
+      @JvmName("8d421f451d6edcc7575ec206c2f7fc907831a315f1b8d72e3d9c37ba1d230d65")
       public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param statistics Model quality statistics.
+       */
+      public fun statistics(statistics: IResolvable)
+
+      /**
+       * @param statistics Model quality statistics.
+       */
+      public fun statistics(statistics: MetricsSourceProperty)
+
+      /**
+       * @param statistics Model quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5732927e06a4e0ac97206ee7529026a9521b8e43367915c6c12ca58e531614ed")
+      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty.builder()
 
       /**
-       * @param configFile The explainability config file for the model.
-       */
-      override fun configFile(configFile: IResolvable) {
-        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configFile The explainability config file for the model.
-       */
-      override fun configFile(configFile: FileSourceProperty) {
-        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
-      }
-
-      /**
-       * @param configFile The explainability config file for the model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c706fe7141916f9bc2539d511c2cf67a8dd0fd1ee2cc7f0843591345917138a6")
-      override fun configFile(configFile: FileSourceProperty.Builder.() -> Unit): Unit =
-          configFile(FileSourceProperty(configFile))
-
-      /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       override fun constraints(constraints: IResolvable) {
         cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
       }
 
       /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
         cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
       }
 
       /**
-       * @param constraints The drift check explainability constraints.
+       * @param constraints Model quality constraints.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("510f79405b037af9db3613e9e0b5c9185c9fde2eb6daf836ab525b3d89aff1a7")
+      @JvmName("8d421f451d6edcc7575ec206c2f7fc907831a315f1b8d72e3d9c37ba1d230d65")
       override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
           constraints(MetricsSourceProperty(constraints))
 
+      /**
+       * @param statistics Model quality statistics.
+       */
+      override fun statistics(statistics: IResolvable) {
+        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param statistics Model quality statistics.
+       */
+      override fun statistics(statistics: MetricsSourceProperty) {
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+      }
+
+      /**
+       * @param statistics Model quality statistics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5732927e06a4e0ac97206ee7529026a9521b8e43367915c6c12ca58e531614ed")
+      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
+          statistics(MetricsSourceProperty(statistics))
+
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty,
-    ) : CdkObject(cdkObject), DriftCheckExplainabilityProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty,
+    ) : CdkObject(cdkObject), ModelQualityProperty {
       /**
-       * The explainability config file for the model.
+       * Model quality constraints.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-configfile)
-       */
-      override fun configFile(): Any? = unwrap(this).getConfigFile()
-
-      /**
-       * The drift check explainability constraints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html#cfn-sagemaker-modelpackage-driftcheckexplainability-constraints)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-constraints)
        */
       override fun constraints(): Any? = unwrap(this).getConstraints()
+
+      /**
+       * Model quality statistics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-statistics)
+       */
+      override fun statistics(): Any? = unwrap(this).getStatistics()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckExplainabilityProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelQualityProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty):
-          DriftCheckExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DriftCheckExplainabilityProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty):
+          ModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelQualityProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DriftCheckExplainabilityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
+      internal fun unwrap(wrapped: ModelQualityProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty
+    }
+  }
+
+  /**
+   * Describes the S3 data source.
+   *
+   * Your input bucket must be in the same AWS region as your training job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html)
+   */
+  public interface S3DataSourceProperty {
+    /**
+     * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
+     *
+     * SageMaker uses all objects that match the specified key name prefix for model training.
+     *
+     * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+     * containing a list of object keys that you want SageMaker to use for model training.
+     *
+     * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+     * manifest file in JSON lines format. This file contains the data you want to use for model
+     * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3datatype)
+     */
+    public fun s3DataType(): String
+
+    /**
+     * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
+     * or a manifest.
+     *
+     * For example:
+     *
+     * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+     * * A manifest might look like this: `s3://bucketname/example.manifest`
+     *
+     * A manifest is an S3 object which is a JSON file consisting of an array of elements. The first
+     * element is a prefix which is followed by one or more suffixes. SageMaker appends the suffix
+     * elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a valid
+     * non-empty `S3Uri` that precludes users from specifying a manifest whose individual `S3Uri` is
+     * sourced from different S3 buckets.
+     *
+     * The following code example shows a valid manifest format:
+     *
+     * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+     *
+     * `"relative/path/to/custdata-1",`
+     *
+     * `"relative/path/custdata-2",`
+     *
+     * `...`
+     *
+     * `"relative/path/custdata-N"`
+     *
+     * `]`
+     *
+     * This JSON is equivalent to the following `S3Uri` list:
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+     *
+     * `...`
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+     *
+     * The complete set of `S3Uri` in this manifest is the input data for the channel for this data
+     * source. The object that each `S3Uri` points to must be readable by the IAM role that SageMaker
+     * uses to perform tasks on your behalf.
+     *
+     * Your input bucket must be located in same AWS region as your training job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [S3DataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       */
+      public fun s3DataType(s3DataType: String)
+
+      /**
+       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
+       * key name prefix or a manifest. 
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty.builder()
+
+      /**
+       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       */
+      override fun s3DataType(s3DataType: String) {
+        cdkBuilder.s3DataType(s3DataType)
+      }
+
+      /**
+       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
+       * key name prefix or a manifest. 
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty,
+    ) : CdkObject(cdkObject), S3DataSourceProperty {
+      /**
+       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
+       *
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3datatype)
+       */
+      override fun s3DataType(): String = unwrap(this).getS3DataType()
+
+      /**
+       * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
+       * or a manifest.
+       *
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3DataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty):
+          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty
+    }
+  }
+
+  /**
+   * Specifies an algorithm that was used to create the model package.
+   *
+   * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm in
+   * AWS Marketplace that you are subscribed to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * SourceAlgorithmProperty sourceAlgorithmProperty = SourceAlgorithmProperty.builder()
+   * .algorithmName("algorithmName")
+   * // the properties below are optional
+   * .modelDataUrl("modelDataUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html)
+   */
+  public interface SourceAlgorithmProperty {
+    /**
+     * The name of an algorithm that was used to create the model package.
+     *
+     * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm
+     * in AWS Marketplace that you are subscribed to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-algorithmname)
+     */
+    public fun algorithmName(): String
+
+    /**
+     * The Amazon S3 path where the model artifacts, which result from model training, are stored.
+     *
+     * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+     *
+     *
+     * The model artifacts must be in an S3 bucket that is in the same AWS region as the algorithm.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-modeldataurl)
+     */
+    public fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
+
+    /**
+     * A builder for [SourceAlgorithmProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param algorithmName The name of an algorithm that was used to create the model package. 
+       * The algorithm must be either an algorithm resource in your SageMaker account or an
+       * algorithm in AWS Marketplace that you are subscribed to.
+       */
+      public fun algorithmName(algorithmName: String)
+
+      /**
+       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
+       * training, are stored.
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
+       * algorithm.
+       */
+      public fun modelDataUrl(modelDataUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty.builder()
+
+      /**
+       * @param algorithmName The name of an algorithm that was used to create the model package. 
+       * The algorithm must be either an algorithm resource in your SageMaker account or an
+       * algorithm in AWS Marketplace that you are subscribed to.
+       */
+      override fun algorithmName(algorithmName: String) {
+        cdkBuilder.algorithmName(algorithmName)
+      }
+
+      /**
+       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
+       * training, are stored.
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
+       * algorithm.
+       */
+      override fun modelDataUrl(modelDataUrl: String) {
+        cdkBuilder.modelDataUrl(modelDataUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty,
+    ) : CdkObject(cdkObject), SourceAlgorithmProperty {
+      /**
+       * The name of an algorithm that was used to create the model package.
+       *
+       * The algorithm must be either an algorithm resource in your SageMaker account or an
+       * algorithm in AWS Marketplace that you are subscribed to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-algorithmname)
+       */
+      override fun algorithmName(): String = unwrap(this).getAlgorithmName()
+
+      /**
+       * The Amazon S3 path where the model artifacts, which result from model training, are stored.
+       *
+       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
+       *
+       *
+       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
+       * algorithm.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-modeldataurl)
+       */
+      override fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceAlgorithmProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty):
+          SourceAlgorithmProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAlgorithmProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceAlgorithmProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty
+    }
+  }
+
+  /**
+   * A list of algorithms that were used to create a model package.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * SourceAlgorithmSpecificationProperty sourceAlgorithmSpecificationProperty =
+   * SourceAlgorithmSpecificationProperty.builder()
+   * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
+   * .algorithmName("algorithmName")
+   * // the properties below are optional
+   * .modelDataUrl("modelDataUrl")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html)
+   */
+  public interface SourceAlgorithmSpecificationProperty {
+    /**
+     * A list of the algorithms that were used to create a model package.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html#cfn-sagemaker-modelpackage-sourcealgorithmspecification-sourcealgorithms)
+     */
+    public fun sourceAlgorithms(): Any
+
+    /**
+     * A builder for [SourceAlgorithmSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      public fun sourceAlgorithms(sourceAlgorithms: IResolvable)
+
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      public fun sourceAlgorithms(sourceAlgorithms: List<Any>)
+
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      public fun sourceAlgorithms(vararg sourceAlgorithms: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty.builder()
+
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      override fun sourceAlgorithms(sourceAlgorithms: IResolvable) {
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms)
+      }
+
+      /**
+       * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
+       */
+      override fun sourceAlgorithms(vararg sourceAlgorithms: Any): Unit =
+          sourceAlgorithms(sourceAlgorithms.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty,
+    ) : CdkObject(cdkObject), SourceAlgorithmSpecificationProperty {
+      /**
+       * A list of the algorithms that were used to create a model package.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithmspecification.html#cfn-sagemaker-modelpackage-sourcealgorithmspecification-sourcealgorithms)
+       */
+      override fun sourceAlgorithms(): Any = unwrap(this).getSourceAlgorithms()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SourceAlgorithmSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty):
+          SourceAlgorithmSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceAlgorithmSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceAlgorithmSpecificationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
+    }
+  }
+
+  /**
+   * Describes the input source of a transform job and the way the transform job consumes it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * TransformInputProperty transformInputProperty = TransformInputProperty.builder()
+   * .dataSource(DataSourceProperty.builder()
+   * .s3DataSource(S3DataSourceProperty.builder()
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .compressionType("compressionType")
+   * .contentType("contentType")
+   * .splitType("splitType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html)
+   */
+  public interface TransformInputProperty {
+    /**
+     * If your transform data is compressed, specify the compression type.
+     *
+     * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
+     * default value is `None` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-compressiontype)
+     */
+    public fun compressionType(): String? = unwrap(this).getCompressionType()
+
+    /**
+     * The multipurpose internet mail extension (MIME) type of the data.
+     *
+     * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
+     * job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-contenttype)
+     */
+    public fun contentType(): String? = unwrap(this).getContentType()
+
+    /**
+     * Describes the location of the channel data, which is, the S3 location of the input data that
+     * the model can consume.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-datasource)
+     */
+    public fun dataSource(): Any
+
+    /**
+     * The method to use to split the transform job's data files into smaller batches.
+     *
+     * Splitting is necessary when the total size of each object is too large to fit in a single
+     * request. You can also use data splitting to improve performance by processing multiple
+     * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
+     * input data files are not split, and request payloads contain the entire contents of an input
+     * object. Set the value of this parameter to `Line` to split records on a newline character
+     * boundary. `SplitType` also supports a number of record-oriented binary data formats. Currently,
+     * the supported record formats are:
+     *
+     * * RecordIO
+     * * TFRecord
+     *
+     * When splitting is enabled, the size of a mini-batch depends on the values of the
+     * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
+     * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to the
+     * `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon SageMaker
+     * sends individual records in each request.
+     *
+     *
+     * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
+     * When splitting is applied to a binary data format, padding is removed if the value of
+     * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
+     * `BatchStrategy` is set to `MultiRecord` .
+     *
+     * For more information about `RecordIO` , see [Create a Dataset Using
+     * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
+     * documentation. For more information about `TFRecord` , see [Consuming TFRecord
+     * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
+     * in the TensorFlow documentation.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-splittype)
+     */
+    public fun splitType(): String? = unwrap(this).getSplitType()
+
+    /**
+     * A builder for [TransformInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param compressionType If your transform data is compressed, specify the compression type.
+       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
+       * default value is `None` .
+       */
+      public fun compressionType(compressionType: String)
+
+      /**
+       * @param contentType The multipurpose internet mail extension (MIME) type of the data.
+       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
+       * job.
+       */
+      public fun contentType(contentType: String)
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      public fun dataSource(dataSource: IResolvable)
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      public fun dataSource(dataSource: DataSourceProperty)
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ae1d3df29f8c64689e55692a2aa40f1471ea240b66d77fdce112ec946154959e")
+      public fun dataSource(dataSource: DataSourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param splitType The method to use to split the transform job's data files into smaller
+       * batches.
+       * Splitting is necessary when the total size of each object is too large to fit in a single
+       * request. You can also use data splitting to improve performance by processing multiple
+       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
+       * input data files are not split, and request payloads contain the entire contents of an input
+       * object. Set the value of this parameter to `Line` to split records on a newline character
+       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
+       * Currently, the supported record formats are:
+       *
+       * * RecordIO
+       * * TFRecord
+       *
+       * When splitting is enabled, the size of a mini-batch depends on the values of the
+       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
+       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
+       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
+       * SageMaker sends individual records in each request.
+       *
+       *
+       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
+       * When splitting is applied to a binary data format, padding is removed if the value of
+       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
+       * `BatchStrategy` is set to `MultiRecord` .
+       *
+       * For more information about `RecordIO` , see [Create a Dataset Using
+       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
+       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
+       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
+       * in the TensorFlow documentation.
+       */
+      public fun splitType(splitType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty.builder()
+
+      /**
+       * @param compressionType If your transform data is compressed, specify the compression type.
+       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
+       * default value is `None` .
+       */
+      override fun compressionType(compressionType: String) {
+        cdkBuilder.compressionType(compressionType)
+      }
+
+      /**
+       * @param contentType The multipurpose internet mail extension (MIME) type of the data.
+       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
+       * job.
+       */
+      override fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+      }
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      override fun dataSource(dataSource: IResolvable) {
+        cdkBuilder.dataSource(dataSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      override fun dataSource(dataSource: DataSourceProperty) {
+        cdkBuilder.dataSource(dataSource.let(DataSourceProperty::unwrap))
+      }
+
+      /**
+       * @param dataSource Describes the location of the channel data, which is, the S3 location of
+       * the input data that the model can consume. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ae1d3df29f8c64689e55692a2aa40f1471ea240b66d77fdce112ec946154959e")
+      override fun dataSource(dataSource: DataSourceProperty.Builder.() -> Unit): Unit =
+          dataSource(DataSourceProperty(dataSource))
+
+      /**
+       * @param splitType The method to use to split the transform job's data files into smaller
+       * batches.
+       * Splitting is necessary when the total size of each object is too large to fit in a single
+       * request. You can also use data splitting to improve performance by processing multiple
+       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
+       * input data files are not split, and request payloads contain the entire contents of an input
+       * object. Set the value of this parameter to `Line` to split records on a newline character
+       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
+       * Currently, the supported record formats are:
+       *
+       * * RecordIO
+       * * TFRecord
+       *
+       * When splitting is enabled, the size of a mini-batch depends on the values of the
+       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
+       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
+       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
+       * SageMaker sends individual records in each request.
+       *
+       *
+       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
+       * When splitting is applied to a binary data format, padding is removed if the value of
+       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
+       * `BatchStrategy` is set to `MultiRecord` .
+       *
+       * For more information about `RecordIO` , see [Create a Dataset Using
+       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
+       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
+       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
+       * in the TensorFlow documentation.
+       */
+      override fun splitType(splitType: String) {
+        cdkBuilder.splitType(splitType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty,
+    ) : CdkObject(cdkObject), TransformInputProperty {
+      /**
+       * If your transform data is compressed, specify the compression type.
+       *
+       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
+       * default value is `None` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-compressiontype)
+       */
+      override fun compressionType(): String? = unwrap(this).getCompressionType()
+
+      /**
+       * The multipurpose internet mail extension (MIME) type of the data.
+       *
+       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
+       * job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-contenttype)
+       */
+      override fun contentType(): String? = unwrap(this).getContentType()
+
+      /**
+       * Describes the location of the channel data, which is, the S3 location of the input data
+       * that the model can consume.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-datasource)
+       */
+      override fun dataSource(): Any = unwrap(this).getDataSource()
+
+      /**
+       * The method to use to split the transform job's data files into smaller batches.
+       *
+       * Splitting is necessary when the total size of each object is too large to fit in a single
+       * request. You can also use data splitting to improve performance by processing multiple
+       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
+       * input data files are not split, and request payloads contain the entire contents of an input
+       * object. Set the value of this parameter to `Line` to split records on a newline character
+       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
+       * Currently, the supported record formats are:
+       *
+       * * RecordIO
+       * * TFRecord
+       *
+       * When splitting is enabled, the size of a mini-batch depends on the values of the
+       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
+       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
+       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
+       * SageMaker sends individual records in each request.
+       *
+       *
+       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
+       * When splitting is applied to a binary data format, padding is removed if the value of
+       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
+       * `BatchStrategy` is set to `MultiRecord` .
+       *
+       * For more information about `RecordIO` , see [Create a Dataset Using
+       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
+       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
+       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
+       * in the TensorFlow documentation.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-splittype)
+       */
+      override fun splitType(): String? = unwrap(this).getSplitType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TransformInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty):
+          TransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as? TransformInputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TransformInputProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty
     }
   }
 
@@ -4209,8 +7174,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty,
     ) : CdkObject(cdkObject), TransformJobDefinitionProperty {
       /**
        * A string that determines the number of records included in a single mini-batch.
@@ -4288,956 +7252,6 @@ public open class CfnModelPackage internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty
-    }
-  }
-
-  /**
-   * Details about the metrics source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MetricsSourceProperty metricsSourceProperty = MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html)
-   */
-  public interface MetricsSourceProperty {
-    /**
-     * The hash key used for the metrics source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contentdigest)
-     */
-    public fun contentDigest(): String? = unwrap(this).getContentDigest()
-
-    /**
-     * The metric source content type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contenttype)
-     */
-    public fun contentType(): String
-
-    /**
-     * The S3 URI for the metrics source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [MetricsSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentDigest The hash key used for the metrics source.
-       */
-      public fun contentDigest(contentDigest: String)
-
-      /**
-       * @param contentType The metric source content type. 
-       */
-      public fun contentType(contentType: String)
-
-      /**
-       * @param s3Uri The S3 URI for the metrics source. 
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty.builder()
-
-      /**
-       * @param contentDigest The hash key used for the metrics source.
-       */
-      override fun contentDigest(contentDigest: String) {
-        cdkBuilder.contentDigest(contentDigest)
-      }
-
-      /**
-       * @param contentType The metric source content type. 
-       */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-      }
-
-      /**
-       * @param s3Uri The S3 URI for the metrics source. 
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty,
-    ) : CdkObject(cdkObject), MetricsSourceProperty {
-      /**
-       * The hash key used for the metrics source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contentdigest)
-       */
-      override fun contentDigest(): String? = unwrap(this).getContentDigest()
-
-      /**
-       * The metric source content type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-contenttype)
-       */
-      override fun contentType(): String = unwrap(this).getContentType()
-
-      /**
-       * The S3 URI for the metrics source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metricssource.html#cfn-sagemaker-modelpackage-metricssource-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricsSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty):
-          MetricsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricsSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricsSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty
-    }
-  }
-
-  /**
-   * Contains metrics captured from a model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelMetricsProperty modelMetricsProperty = ModelMetricsProperty.builder()
-   * .bias(BiasProperty.builder()
-   * .postTrainingReport(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .preTrainingReport(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .report(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build())
-   * .explainability(ExplainabilityProperty.builder()
-   * .report(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build())
-   * .modelDataQuality(ModelDataQualityProperty.builder()
-   * .constraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .statistics(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build())
-   * .modelQuality(ModelQualityProperty.builder()
-   * .constraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .statistics(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html)
-   */
-  public interface ModelMetricsProperty {
-    /**
-     * Metrics that measure bias in a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-bias)
-     */
-    public fun bias(): Any? = unwrap(this).getBias()
-
-    /**
-     * Metrics that help explain a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-explainability)
-     */
-    public fun explainability(): Any? = unwrap(this).getExplainability()
-
-    /**
-     * Metrics that measure the quality of the input data for a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modeldataquality)
-     */
-    public fun modelDataQuality(): Any? = unwrap(this).getModelDataQuality()
-
-    /**
-     * Metrics that measure the quality of a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modelquality)
-     */
-    public fun modelQuality(): Any? = unwrap(this).getModelQuality()
-
-    /**
-     * A builder for [ModelMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      public fun bias(bias: IResolvable)
-
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      public fun bias(bias: BiasProperty)
-
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8be727ee25583c3ec6c29082be1cc7efe7e399e251b55833351731e30898d433")
-      public fun bias(bias: BiasProperty.Builder.() -> Unit)
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      public fun explainability(explainability: IResolvable)
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      public fun explainability(explainability: ExplainabilityProperty)
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("757bf78a4853ff1eeaa98fd44d4a3e2086fc93915276e3c2a24c189519a37535")
-      public fun explainability(explainability: ExplainabilityProperty.Builder.() -> Unit)
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      public fun modelDataQuality(modelDataQuality: IResolvable)
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      public fun modelDataQuality(modelDataQuality: ModelDataQualityProperty)
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b81ba8038bb18b1965a4318a2c20631d369068a2c2895334d9620ed104af4d54")
-      public fun modelDataQuality(modelDataQuality: ModelDataQualityProperty.Builder.() -> Unit)
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      public fun modelQuality(modelQuality: IResolvable)
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      public fun modelQuality(modelQuality: ModelQualityProperty)
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eaf636a529385f397ecc8e6d59ffda0a3cd8c70617aea70d09e99a3092d3202f")
-      public fun modelQuality(modelQuality: ModelQualityProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty.builder()
-
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      override fun bias(bias: IResolvable) {
-        cdkBuilder.bias(bias.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      override fun bias(bias: BiasProperty) {
-        cdkBuilder.bias(bias.let(BiasProperty::unwrap))
-      }
-
-      /**
-       * @param bias Metrics that measure bias in a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8be727ee25583c3ec6c29082be1cc7efe7e399e251b55833351731e30898d433")
-      override fun bias(bias: BiasProperty.Builder.() -> Unit): Unit = bias(BiasProperty(bias))
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      override fun explainability(explainability: IResolvable) {
-        cdkBuilder.explainability(explainability.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      override fun explainability(explainability: ExplainabilityProperty) {
-        cdkBuilder.explainability(explainability.let(ExplainabilityProperty::unwrap))
-      }
-
-      /**
-       * @param explainability Metrics that help explain a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("757bf78a4853ff1eeaa98fd44d4a3e2086fc93915276e3c2a24c189519a37535")
-      override fun explainability(explainability: ExplainabilityProperty.Builder.() -> Unit): Unit =
-          explainability(ExplainabilityProperty(explainability))
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      override fun modelDataQuality(modelDataQuality: IResolvable) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      override fun modelDataQuality(modelDataQuality: ModelDataQualityProperty) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(ModelDataQualityProperty::unwrap))
-      }
-
-      /**
-       * @param modelDataQuality Metrics that measure the quality of the input data for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b81ba8038bb18b1965a4318a2c20631d369068a2c2895334d9620ed104af4d54")
-      override fun modelDataQuality(modelDataQuality: ModelDataQualityProperty.Builder.() -> Unit):
-          Unit = modelDataQuality(ModelDataQualityProperty(modelDataQuality))
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      override fun modelQuality(modelQuality: IResolvable) {
-        cdkBuilder.modelQuality(modelQuality.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      override fun modelQuality(modelQuality: ModelQualityProperty) {
-        cdkBuilder.modelQuality(modelQuality.let(ModelQualityProperty::unwrap))
-      }
-
-      /**
-       * @param modelQuality Metrics that measure the quality of a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eaf636a529385f397ecc8e6d59ffda0a3cd8c70617aea70d09e99a3092d3202f")
-      override fun modelQuality(modelQuality: ModelQualityProperty.Builder.() -> Unit): Unit =
-          modelQuality(ModelQualityProperty(modelQuality))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty,
-    ) : CdkObject(cdkObject), ModelMetricsProperty {
-      /**
-       * Metrics that measure bias in a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-bias)
-       */
-      override fun bias(): Any? = unwrap(this).getBias()
-
-      /**
-       * Metrics that help explain a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-explainability)
-       */
-      override fun explainability(): Any? = unwrap(this).getExplainability()
-
-      /**
-       * Metrics that measure the quality of the input data for a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modeldataquality)
-       */
-      override fun modelDataQuality(): Any? = unwrap(this).getModelDataQuality()
-
-      /**
-       * Metrics that measure the quality of a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelmetrics.html#cfn-sagemaker-modelpackage-modelmetrics-modelquality)
-       */
-      override fun modelQuality(): Any? = unwrap(this).getModelQuality()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelMetricsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty):
-          ModelMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelMetricsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelMetricsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty
-    }
-  }
-
-  /**
-   * Specifies an algorithm that was used to create the model package.
-   *
-   * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm in
-   * AWS Marketplace that you are subscribed to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * SourceAlgorithmProperty sourceAlgorithmProperty = SourceAlgorithmProperty.builder()
-   * .algorithmName("algorithmName")
-   * // the properties below are optional
-   * .modelDataUrl("modelDataUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html)
-   */
-  public interface SourceAlgorithmProperty {
-    /**
-     * The name of an algorithm that was used to create the model package.
-     *
-     * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm
-     * in AWS Marketplace that you are subscribed to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-algorithmname)
-     */
-    public fun algorithmName(): String
-
-    /**
-     * The Amazon S3 path where the model artifacts, which result from model training, are stored.
-     *
-     * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-     *
-     *
-     * The model artifacts must be in an S3 bucket that is in the same AWS region as the algorithm.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-modeldataurl)
-     */
-    public fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
-
-    /**
-     * A builder for [SourceAlgorithmProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param algorithmName The name of an algorithm that was used to create the model package. 
-       * The algorithm must be either an algorithm resource in your SageMaker account or an
-       * algorithm in AWS Marketplace that you are subscribed to.
-       */
-      public fun algorithmName(algorithmName: String)
-
-      /**
-       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
-       * training, are stored.
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
-       * algorithm.
-       */
-      public fun modelDataUrl(modelDataUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty.builder()
-
-      /**
-       * @param algorithmName The name of an algorithm that was used to create the model package. 
-       * The algorithm must be either an algorithm resource in your SageMaker account or an
-       * algorithm in AWS Marketplace that you are subscribed to.
-       */
-      override fun algorithmName(algorithmName: String) {
-        cdkBuilder.algorithmName(algorithmName)
-      }
-
-      /**
-       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
-       * training, are stored.
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
-       * algorithm.
-       */
-      override fun modelDataUrl(modelDataUrl: String) {
-        cdkBuilder.modelDataUrl(modelDataUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty,
-    ) : CdkObject(cdkObject), SourceAlgorithmProperty {
-      /**
-       * The name of an algorithm that was used to create the model package.
-       *
-       * The algorithm must be either an algorithm resource in your SageMaker account or an
-       * algorithm in AWS Marketplace that you are subscribed to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-algorithmname)
-       */
-      override fun algorithmName(): String = unwrap(this).getAlgorithmName()
-
-      /**
-       * The Amazon S3 path where the model artifacts, which result from model training, are stored.
-       *
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same AWS region as the
-       * algorithm.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html#cfn-sagemaker-modelpackage-sourcealgorithm-modeldataurl)
-       */
-      override fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceAlgorithmProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty):
-          SourceAlgorithmProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAlgorithmProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceAlgorithmProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty
-    }
-  }
-
-  /**
-   * Describes the input source of a transform job and the way the transform job consumes it.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * TransformInputProperty transformInputProperty = TransformInputProperty.builder()
-   * .dataSource(DataSourceProperty.builder()
-   * .s3DataSource(S3DataSourceProperty.builder()
-   * .s3DataType("s3DataType")
-   * .s3Uri("s3Uri")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .compressionType("compressionType")
-   * .contentType("contentType")
-   * .splitType("splitType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html)
-   */
-  public interface TransformInputProperty {
-    /**
-     * If your transform data is compressed, specify the compression type.
-     *
-     * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
-     * default value is `None` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-compressiontype)
-     */
-    public fun compressionType(): String? = unwrap(this).getCompressionType()
-
-    /**
-     * The multipurpose internet mail extension (MIME) type of the data.
-     *
-     * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
-     * job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-contenttype)
-     */
-    public fun contentType(): String? = unwrap(this).getContentType()
-
-    /**
-     * Describes the location of the channel data, which is, the S3 location of the input data that
-     * the model can consume.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-datasource)
-     */
-    public fun dataSource(): Any
-
-    /**
-     * The method to use to split the transform job's data files into smaller batches.
-     *
-     * Splitting is necessary when the total size of each object is too large to fit in a single
-     * request. You can also use data splitting to improve performance by processing multiple
-     * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
-     * input data files are not split, and request payloads contain the entire contents of an input
-     * object. Set the value of this parameter to `Line` to split records on a newline character
-     * boundary. `SplitType` also supports a number of record-oriented binary data formats. Currently,
-     * the supported record formats are:
-     *
-     * * RecordIO
-     * * TFRecord
-     *
-     * When splitting is enabled, the size of a mini-batch depends on the values of the
-     * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
-     * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to the
-     * `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon SageMaker
-     * sends individual records in each request.
-     *
-     *
-     * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
-     * When splitting is applied to a binary data format, padding is removed if the value of
-     * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
-     * `BatchStrategy` is set to `MultiRecord` .
-     *
-     * For more information about `RecordIO` , see [Create a Dataset Using
-     * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
-     * documentation. For more information about `TFRecord` , see [Consuming TFRecord
-     * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
-     * in the TensorFlow documentation.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-splittype)
-     */
-    public fun splitType(): String? = unwrap(this).getSplitType()
-
-    /**
-     * A builder for [TransformInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param compressionType If your transform data is compressed, specify the compression type.
-       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
-       * default value is `None` .
-       */
-      public fun compressionType(compressionType: String)
-
-      /**
-       * @param contentType The multipurpose internet mail extension (MIME) type of the data.
-       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
-       * job.
-       */
-      public fun contentType(contentType: String)
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      public fun dataSource(dataSource: IResolvable)
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      public fun dataSource(dataSource: DataSourceProperty)
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ae1d3df29f8c64689e55692a2aa40f1471ea240b66d77fdce112ec946154959e")
-      public fun dataSource(dataSource: DataSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param splitType The method to use to split the transform job's data files into smaller
-       * batches.
-       * Splitting is necessary when the total size of each object is too large to fit in a single
-       * request. You can also use data splitting to improve performance by processing multiple
-       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
-       * input data files are not split, and request payloads contain the entire contents of an input
-       * object. Set the value of this parameter to `Line` to split records on a newline character
-       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
-       * Currently, the supported record formats are:
-       *
-       * * RecordIO
-       * * TFRecord
-       *
-       * When splitting is enabled, the size of a mini-batch depends on the values of the
-       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
-       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
-       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
-       * SageMaker sends individual records in each request.
-       *
-       *
-       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
-       * When splitting is applied to a binary data format, padding is removed if the value of
-       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
-       * `BatchStrategy` is set to `MultiRecord` .
-       *
-       * For more information about `RecordIO` , see [Create a Dataset Using
-       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
-       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
-       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
-       * in the TensorFlow documentation.
-       */
-      public fun splitType(splitType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty.builder()
-
-      /**
-       * @param compressionType If your transform data is compressed, specify the compression type.
-       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
-       * default value is `None` .
-       */
-      override fun compressionType(compressionType: String) {
-        cdkBuilder.compressionType(compressionType)
-      }
-
-      /**
-       * @param contentType The multipurpose internet mail extension (MIME) type of the data.
-       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
-       * job.
-       */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-      }
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      override fun dataSource(dataSource: IResolvable) {
-        cdkBuilder.dataSource(dataSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      override fun dataSource(dataSource: DataSourceProperty) {
-        cdkBuilder.dataSource(dataSource.let(DataSourceProperty::unwrap))
-      }
-
-      /**
-       * @param dataSource Describes the location of the channel data, which is, the S3 location of
-       * the input data that the model can consume. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ae1d3df29f8c64689e55692a2aa40f1471ea240b66d77fdce112ec946154959e")
-      override fun dataSource(dataSource: DataSourceProperty.Builder.() -> Unit): Unit =
-          dataSource(DataSourceProperty(dataSource))
-
-      /**
-       * @param splitType The method to use to split the transform job's data files into smaller
-       * batches.
-       * Splitting is necessary when the total size of each object is too large to fit in a single
-       * request. You can also use data splitting to improve performance by processing multiple
-       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
-       * input data files are not split, and request payloads contain the entire contents of an input
-       * object. Set the value of this parameter to `Line` to split records on a newline character
-       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
-       * Currently, the supported record formats are:
-       *
-       * * RecordIO
-       * * TFRecord
-       *
-       * When splitting is enabled, the size of a mini-batch depends on the values of the
-       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
-       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
-       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
-       * SageMaker sends individual records in each request.
-       *
-       *
-       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
-       * When splitting is applied to a binary data format, padding is removed if the value of
-       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
-       * `BatchStrategy` is set to `MultiRecord` .
-       *
-       * For more information about `RecordIO` , see [Create a Dataset Using
-       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
-       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
-       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
-       * in the TensorFlow documentation.
-       */
-      override fun splitType(splitType: String) {
-        cdkBuilder.splitType(splitType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty,
-    ) : CdkObject(cdkObject), TransformInputProperty {
-      /**
-       * If your transform data is compressed, specify the compression type.
-       *
-       * Amazon SageMaker automatically decompresses the data for the transform job accordingly. The
-       * default value is `None` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-compressiontype)
-       */
-      override fun compressionType(): String? = unwrap(this).getCompressionType()
-
-      /**
-       * The multipurpose internet mail extension (MIME) type of the data.
-       *
-       * Amazon SageMaker uses the MIME type with each http call to transfer data to the transform
-       * job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-contenttype)
-       */
-      override fun contentType(): String? = unwrap(this).getContentType()
-
-      /**
-       * Describes the location of the channel data, which is, the S3 location of the input data
-       * that the model can consume.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-datasource)
-       */
-      override fun dataSource(): Any = unwrap(this).getDataSource()
-
-      /**
-       * The method to use to split the transform job's data files into smaller batches.
-       *
-       * Splitting is necessary when the total size of each object is too large to fit in a single
-       * request. You can also use data splitting to improve performance by processing multiple
-       * concurrent mini-batches. The default value for `SplitType` is `None` , which indicates that
-       * input data files are not split, and request payloads contain the entire contents of an input
-       * object. Set the value of this parameter to `Line` to split records on a newline character
-       * boundary. `SplitType` also supports a number of record-oriented binary data formats.
-       * Currently, the supported record formats are:
-       *
-       * * RecordIO
-       * * TFRecord
-       *
-       * When splitting is enabled, the size of a mini-batch depends on the values of the
-       * `BatchStrategy` and `MaxPayloadInMB` parameters. When the value of `BatchStrategy` is
-       * `MultiRecord` , Amazon SageMaker sends the maximum number of records in each request, up to
-       * the `MaxPayloadInMB` limit. If the value of `BatchStrategy` is `SingleRecord` , Amazon
-       * SageMaker sends individual records in each request.
-       *
-       *
-       * Some data formats represent a record as a binary payload wrapped with extra padding bytes.
-       * When splitting is applied to a binary data format, padding is removed if the value of
-       * `BatchStrategy` is set to `SingleRecord` . Padding is not removed if the value of
-       * `BatchStrategy` is set to `MultiRecord` .
-       *
-       * For more information about `RecordIO` , see [Create a Dataset Using
-       * RecordIO](https://docs.aws.amazon.com/https://mxnet.apache.org/api/faq/recordio) in the MXNet
-       * documentation. For more information about `TFRecord` , see [Consuming TFRecord
-       * data](https://docs.aws.amazon.com/https://www.tensorflow.org/guide/data#consuming_tfrecord_data)
-       * in the TensorFlow documentation.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html#cfn-sagemaker-modelpackage-transforminput-splittype)
-       */
-      override fun splitType(): String? = unwrap(this).getSplitType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TransformInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty):
-          TransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as? TransformInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TransformInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty
     }
   }
 
@@ -5471,8 +7485,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty,
     ) : CdkObject(cdkObject), TransformOutputProperty {
       /**
        * The MIME type used to specify the output data.
@@ -5563,7 +7576,8 @@ public open class CfnModelPackage internal constructor(
   }
 
   /**
-   * Describes the Docker container for the model package.
+   * Describes the resources, including ML instance types and ML instance count, to use for
+   * transform job.
    *
    * Example:
    *
@@ -5571,953 +7585,419 @@ public open class CfnModelPackage internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * Object modelInput;
-   * ModelPackageContainerDefinitionProperty modelPackageContainerDefinitionProperty =
-   * ModelPackageContainerDefinitionProperty.builder()
-   * .image("image")
+   * TransformResourcesProperty transformResourcesProperty = TransformResourcesProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
    * // the properties below are optional
-   * .containerHostname("containerHostname")
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html)
+   */
+  public interface TransformResourcesProperty {
+    /**
+     * The number of ML compute instances to use in the transform job.
+     *
+     * The default value is `1` , and the maximum is `100` . For distributed transform jobs, specify
+     * a value greater than `1` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancecount)
+     */
+    public fun instanceCount(): Number
+
+    /**
+     * The ML compute instance type for the transform job.
+     *
+     * If you are using built-in algorithms to transform moderately sized datasets, we recommend
+     * using ml.m4.xlarge or `ml.m5.large` instance types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt model
+     * data on the storage volume attached to the ML compute instance(s) that run the batch transform
+     * job.
+     *
+     *
+     * Certain Nitro-based instances include local storage, dependent on the instance type. Local
+     * storage volumes are encrypted using a hardware module on the instance. You can't request a
+     * `VolumeKmsKeyId` when using an instance type with local storage.
+     *
+     * For a list of instance types that support local instance storage, see [Instance Store
+     * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
+     * .
+     *
+     * For more information about local instance storage encryption, see [SSD Instance Store
+     * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
+     *
+     *
+     * The `VolumeKmsKeyId` can be any of the following formats:
+     *
+     * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+     * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+     * * Alias name: `alias/ExampleAlias`
+     * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-volumekmskeyid)
+     */
+    public fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+
+    /**
+     * A builder for [TransformResourcesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceCount The number of ML compute instances to use in the transform job. 
+       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
+       * specify a value greater than `1` .
+       */
+      public fun instanceCount(instanceCount: Number)
+
+      /**
+       * @param instanceType The ML compute instance type for the transform job. 
+       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
+       * using ml.m4.xlarge or `ml.m5.large` instance types.
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt model data on the storage volume attached to the ML compute instance(s) that
+       * run the batch transform job.
+       *
+       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
+       * storage volumes are encrypted using a hardware module on the instance. You can't request a
+       * `VolumeKmsKeyId` when using an instance type with local storage.
+       *
+       * For a list of instance types that support local instance storage, see [Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
+       * .
+       *
+       * For more information about local instance storage encryption, see [SSD Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
+       *
+       *
+       * The `VolumeKmsKeyId` can be any of the following formats:
+       *
+       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Alias name: `alias/ExampleAlias`
+       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+       */
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty.builder()
+
+      /**
+       * @param instanceCount The number of ML compute instances to use in the transform job. 
+       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
+       * specify a value greater than `1` .
+       */
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+      }
+
+      /**
+       * @param instanceType The ML compute instance type for the transform job. 
+       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
+       * using ml.m4.xlarge or `ml.m5.large` instance types.
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param volumeKmsKeyId The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker
+       * uses to encrypt model data on the storage volume attached to the ML compute instance(s) that
+       * run the batch transform job.
+       *
+       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
+       * storage volumes are encrypted using a hardware module on the instance. You can't request a
+       * `VolumeKmsKeyId` when using an instance type with local storage.
+       *
+       * For a list of instance types that support local instance storage, see [Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
+       * .
+       *
+       * For more information about local instance storage encryption, see [SSD Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
+       *
+       *
+       * The `VolumeKmsKeyId` can be any of the following formats:
+       *
+       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Alias name: `alias/ExampleAlias`
+       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+       */
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+        cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty,
+    ) : CdkObject(cdkObject), TransformResourcesProperty {
+      /**
+       * The number of ML compute instances to use in the transform job.
+       *
+       * The default value is `1` , and the maximum is `100` . For distributed transform jobs,
+       * specify a value greater than `1` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancecount)
+       */
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+
+      /**
+       * The ML compute instance type for the transform job.
+       *
+       * If you are using built-in algorithms to transform moderately sized datasets, we recommend
+       * using ml.m4.xlarge or `ml.m5.large` instance types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt model
+       * data on the storage volume attached to the ML compute instance(s) that run the batch transform
+       * job.
+       *
+       *
+       * Certain Nitro-based instances include local storage, dependent on the instance type. Local
+       * storage volumes are encrypted using a hardware module on the instance. You can't request a
+       * `VolumeKmsKeyId` when using an instance type with local storage.
+       *
+       * For a list of instance types that support local instance storage, see [Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)
+       * .
+       *
+       * For more information about local instance storage encryption, see [SSD Instance Store
+       * Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html) .
+       *
+       *
+       * The `VolumeKmsKeyId` can be any of the following formats:
+       *
+       * * Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+       * * Alias name: `alias/ExampleAlias`
+       * * Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html#cfn-sagemaker-modelpackage-transformresources-volumekmskeyid)
+       */
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TransformResourcesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty):
+          TransformResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformResourcesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TransformResourcesProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty
+    }
+  }
+
+  /**
+   * Contains data, such as the inputs and targeted instance types that are used in the process of
+   * validating the model package.
+   *
+   * The data provided in the validation profile is made available to your buyers on AWS
+   * Marketplace.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ValidationProfileProperty validationProfileProperty = ValidationProfileProperty.builder()
+   * .profileName("profileName")
+   * .transformJobDefinition(TransformJobDefinitionProperty.builder()
+   * .transformInput(TransformInputProperty.builder()
+   * .dataSource(DataSourceProperty.builder()
+   * .s3DataSource(S3DataSourceProperty.builder()
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .compressionType("compressionType")
+   * .contentType("contentType")
+   * .splitType("splitType")
+   * .build())
+   * .transformOutput(TransformOutputProperty.builder()
+   * .s3OutputPath("s3OutputPath")
+   * // the properties below are optional
+   * .accept("accept")
+   * .assembleWith("assembleWith")
+   * .kmsKeyId("kmsKeyId")
+   * .build())
+   * .transformResources(TransformResourcesProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * // the properties below are optional
+   * .volumeKmsKeyId("volumeKmsKeyId")
+   * .build())
+   * // the properties below are optional
+   * .batchStrategy("batchStrategy")
    * .environment(Map.of(
    * "environmentKey", "environment"))
-   * .framework("framework")
-   * .frameworkVersion("frameworkVersion")
-   * .imageDigest("imageDigest")
-   * .modelDataUrl("modelDataUrl")
-   * .modelInput(modelInput)
-   * .nearestModelName("nearestModelName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html)
-   */
-  public interface ModelPackageContainerDefinitionProperty {
-    /**
-     * The DNS host name for the Docker container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname)
-     */
-    public fun containerHostname(): String? = unwrap(this).getContainerHostname()
-
-    /**
-     * The environment variables to set in the Docker container.
-     *
-     * Each key and value in the `Environment` string to string map can have length of up to 1024.
-     * We support up to 16 entries in the map.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)
-     */
-    public fun environment(): Any? = unwrap(this).getEnvironment()
-
-    /**
-     * The machine learning framework of the model package container image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework)
-     */
-    public fun framework(): String? = unwrap(this).getFramework()
-
-    /**
-     * The framework version of the Model Package Container Image.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion)
-     */
-    public fun frameworkVersion(): String? = unwrap(this).getFrameworkVersion()
-
-    /**
-     * The Amazon EC2 Container Registry (Amazon ECR) path where inference code is stored.
-     *
-     * If you are using your own custom algorithm instead of an algorithm provided by SageMaker, the
-     * inference code must meet SageMaker requirements. SageMaker supports both
-     * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For more
-     * information, see [Using Your Own Algorithms with Amazon
-     * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image)
-     */
-    public fun image(): String
-
-    /**
-     * An MD5 hash of the training algorithm that identifies the Docker image used for training.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
-     */
-    public fun imageDigest(): String? = unwrap(this).getImageDigest()
-
-    /**
-     * The Amazon S3 path where the model artifacts, which result from model training, are stored.
-     *
-     * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-     *
-     *
-     * The model artifacts must be in an S3 bucket that is in the same region as the model package.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldataurl)
-     */
-    public fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
-
-    /**
-     * A structure with Model Input details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput)
-     */
-    public fun modelInput(): Any? = unwrap(this).getModelInput()
-
-    /**
-     * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference
-     * Recommender model that matches your model.
-     *
-     * You can find a list of benchmarked models by calling `ListModelMetadata` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)
-     */
-    public fun nearestModelName(): String? = unwrap(this).getNearestModelName()
-
-    /**
-     * A builder for [ModelPackageContainerDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerHostname The DNS host name for the Docker container.
-       */
-      public fun containerHostname(containerHostname: String)
-
-      /**
-       * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
-       */
-      public fun environment(environment: IResolvable)
-
-      /**
-       * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
-       */
-      public fun environment(environment: Map<String, String>)
-
-      /**
-       * @param framework The machine learning framework of the model package container image.
-       */
-      public fun framework(framework: String)
-
-      /**
-       * @param frameworkVersion The framework version of the Model Package Container Image.
-       */
-      public fun frameworkVersion(frameworkVersion: String)
-
-      /**
-       * @param image The Amazon EC2 Container Registry (Amazon ECR) path where inference code is
-       * stored. 
-       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
-       * the inference code must meet SageMaker requirements. SageMaker supports both
-       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
-       * more information, see [Using Your Own Algorithms with Amazon
-       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
-       */
-      public fun image(image: String)
-
-      /**
-       * @param imageDigest An MD5 hash of the training algorithm that identifies the Docker image
-       * used for training.
-       */
-      public fun imageDigest(imageDigest: String)
-
-      /**
-       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
-       * training, are stored.
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same region as the model
-       * package.
-       */
-      public fun modelDataUrl(modelDataUrl: String)
-
-      /**
-       * @param modelInput A structure with Model Input details.
-       */
-      public fun modelInput(modelInput: Any)
-
-      /**
-       * @param nearestModelName The name of a pre-trained machine learning benchmarked by Amazon
-       * SageMaker Inference Recommender model that matches your model.
-       * You can find a list of benchmarked models by calling `ListModelMetadata` .
-       */
-      public fun nearestModelName(nearestModelName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty.builder()
-
-      /**
-       * @param containerHostname The DNS host name for the Docker container.
-       */
-      override fun containerHostname(containerHostname: String) {
-        cdkBuilder.containerHostname(containerHostname)
-      }
-
-      /**
-       * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
-       */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
-       */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
-      }
-
-      /**
-       * @param framework The machine learning framework of the model package container image.
-       */
-      override fun framework(framework: String) {
-        cdkBuilder.framework(framework)
-      }
-
-      /**
-       * @param frameworkVersion The framework version of the Model Package Container Image.
-       */
-      override fun frameworkVersion(frameworkVersion: String) {
-        cdkBuilder.frameworkVersion(frameworkVersion)
-      }
-
-      /**
-       * @param image The Amazon EC2 Container Registry (Amazon ECR) path where inference code is
-       * stored. 
-       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
-       * the inference code must meet SageMaker requirements. SageMaker supports both
-       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
-       * more information, see [Using Your Own Algorithms with Amazon
-       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
-       */
-      override fun image(image: String) {
-        cdkBuilder.image(image)
-      }
-
-      /**
-       * @param imageDigest An MD5 hash of the training algorithm that identifies the Docker image
-       * used for training.
-       */
-      override fun imageDigest(imageDigest: String) {
-        cdkBuilder.imageDigest(imageDigest)
-      }
-
-      /**
-       * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
-       * training, are stored.
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same region as the model
-       * package.
-       */
-      override fun modelDataUrl(modelDataUrl: String) {
-        cdkBuilder.modelDataUrl(modelDataUrl)
-      }
-
-      /**
-       * @param modelInput A structure with Model Input details.
-       */
-      override fun modelInput(modelInput: Any) {
-        cdkBuilder.modelInput(modelInput)
-      }
-
-      /**
-       * @param nearestModelName The name of a pre-trained machine learning benchmarked by Amazon
-       * SageMaker Inference Recommender model that matches your model.
-       * You can find a list of benchmarked models by calling `ListModelMetadata` .
-       */
-      override fun nearestModelName(nearestModelName: String) {
-        cdkBuilder.nearestModelName(nearestModelName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty,
-    ) : CdkObject(cdkObject), ModelPackageContainerDefinitionProperty {
-      /**
-       * The DNS host name for the Docker container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-containerhostname)
-       */
-      override fun containerHostname(): String? = unwrap(this).getContainerHostname()
-
-      /**
-       * The environment variables to set in the Docker container.
-       *
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-environment)
-       */
-      override fun environment(): Any? = unwrap(this).getEnvironment()
-
-      /**
-       * The machine learning framework of the model package container image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-framework)
-       */
-      override fun framework(): String? = unwrap(this).getFramework()
-
-      /**
-       * The framework version of the Model Package Container Image.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-frameworkversion)
-       */
-      override fun frameworkVersion(): String? = unwrap(this).getFrameworkVersion()
-
-      /**
-       * The Amazon EC2 Container Registry (Amazon ECR) path where inference code is stored.
-       *
-       * If you are using your own custom algorithm instead of an algorithm provided by SageMaker,
-       * the inference code must meet SageMaker requirements. SageMaker supports both
-       * `registry/repository[:tag]` and `registry/repository[&#64;digest]` image path formats. For
-       * more information, see [Using Your Own Algorithms with Amazon
-       * SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-image)
-       */
-      override fun image(): String = unwrap(this).getImage()
-
-      /**
-       * An MD5 hash of the training algorithm that identifies the Docker image used for training.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
-       */
-      override fun imageDigest(): String? = unwrap(this).getImageDigest()
-
-      /**
-       * The Amazon S3 path where the model artifacts, which result from model training, are stored.
-       *
-       * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
-       *
-       *
-       * The model artifacts must be in an S3 bucket that is in the same region as the model
-       * package.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldataurl)
-       */
-      override fun modelDataUrl(): String? = unwrap(this).getModelDataUrl()
-
-      /**
-       * A structure with Model Input details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modelinput)
-       */
-      override fun modelInput(): Any? = unwrap(this).getModelInput()
-
-      /**
-       * The name of a pre-trained machine learning benchmarked by Amazon SageMaker Inference
-       * Recommender model that matches your model.
-       *
-       * You can find a list of benchmarked models by calling `ListModelMetadata` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-nearestmodelname)
-       */
-      override fun nearestModelName(): String? = unwrap(this).getNearestModelName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ModelPackageContainerDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty):
-          ModelPackageContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelPackageContainerDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelPackageContainerDefinitionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
-    }
-  }
-
-  /**
-   * Input object for the model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelInputProperty modelInputProperty = ModelInputProperty.builder()
-   * .dataInputConfig("dataInputConfig")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html)
-   */
-  public interface ModelInputProperty {
-    /**
-     * The input configuration object for the model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html#cfn-sagemaker-modelpackage-modelinput-datainputconfig)
-     */
-    public fun dataInputConfig(): String
-
-    /**
-     * A builder for [ModelInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataInputConfig The input configuration object for the model. 
-       */
-      public fun dataInputConfig(dataInputConfig: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty.builder()
-
-      /**
-       * @param dataInputConfig The input configuration object for the model. 
-       */
-      override fun dataInputConfig(dataInputConfig: String) {
-        cdkBuilder.dataInputConfig(dataInputConfig)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty,
-    ) : CdkObject(cdkObject), ModelInputProperty {
-      /**
-       * The input configuration object for the model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelinput.html#cfn-sagemaker-modelpackage-modelinput-datainputconfig)
-       */
-      override fun dataInputConfig(): String = unwrap(this).getDataInputConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty):
-          ModelInputProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelInputProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelInputProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty
-    }
-  }
-
-  /**
-   * Model quality statistics and constraints.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelQualityProperty modelQualityProperty = ModelQualityProperty.builder()
-   * .constraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .statistics(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
+   * .maxConcurrentTransforms(123)
+   * .maxPayloadInMb(123)
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html)
    */
-  public interface ModelQualityProperty {
+  public interface ValidationProfileProperty {
     /**
-     * Model quality constraints.
+     * The name of the profile for the model package.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-constraints)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-profilename)
      */
-    public fun constraints(): Any? = unwrap(this).getConstraints()
+    public fun profileName(): String
 
     /**
-     * Model quality statistics.
+     * The `TransformJobDefinition` object that describes the transform job used for the validation
+     * of the model package.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-statistics)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-transformjobdefinition)
      */
-    public fun statistics(): Any? = unwrap(this).getStatistics()
+    public fun transformJobDefinition(): Any
 
     /**
-     * A builder for [ModelQualityProperty]
+     * A builder for [ValidationProfileProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param constraints Model quality constraints.
+       * @param profileName The name of the profile for the model package. 
        */
-      public fun constraints(constraints: IResolvable)
+      public fun profileName(profileName: String)
 
       /**
-       * @param constraints Model quality constraints.
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
        */
-      public fun constraints(constraints: MetricsSourceProperty)
+      public fun transformJobDefinition(transformJobDefinition: IResolvable)
 
       /**
-       * @param constraints Model quality constraints.
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
+       */
+      public fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty)
+
+      /**
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8d421f451d6edcc7575ec206c2f7fc907831a315f1b8d72e3d9c37ba1d230d65")
-      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      public fun statistics(statistics: IResolvable)
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      public fun statistics(statistics: MetricsSourceProperty)
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5732927e06a4e0ac97206ee7529026a9521b8e43367915c6c12ca58e531614ed")
-      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
+      @JvmName("a474cb846bb6f45fabf0cac8c72139c0a32686c9dbdc9792327efb3e0ffd582a")
+      public
+          fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty.builder()
-
-      /**
-       * @param constraints Model quality constraints.
-       */
-      override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraints Model quality constraints.
-       */
-      override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param constraints Model quality constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8d421f451d6edcc7575ec206c2f7fc907831a315f1b8d72e3d9c37ba1d230d65")
-      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          constraints(MetricsSourceProperty(constraints))
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param statistics Model quality statistics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5732927e06a4e0ac97206ee7529026a9521b8e43367915c6c12ca58e531614ed")
-      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          statistics(MetricsSourceProperty(statistics))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty,
-    ) : CdkObject(cdkObject), ModelQualityProperty {
-      /**
-       * Model quality constraints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-constraints)
-       */
-      override fun constraints(): Any? = unwrap(this).getConstraints()
-
-      /**
-       * Model quality statistics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelquality.html#cfn-sagemaker-modelpackage-modelquality-statistics)
-       */
-      override fun statistics(): Any? = unwrap(this).getStatistics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelQualityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty):
-          ModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelQualityProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelQualityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty
-    }
-  }
-
-  /**
-   * Represents the overall status of a model package.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelPackageStatusItemProperty modelPackageStatusItemProperty =
-   * ModelPackageStatusItemProperty.builder()
-   * .name("name")
-   * .status("status")
-   * // the properties below are optional
-   * .failureReason("failureReason")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html)
-   */
-  public interface ModelPackageStatusItemProperty {
-    /**
-     * if the overall status is `Failed` , the reason for the failure.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-failurereason)
-     */
-    public fun failureReason(): String? = unwrap(this).getFailureReason()
-
-    /**
-     * The name of the model package for which the overall status is being reported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-name)
-     */
-    public fun name(): String
-
-    /**
-     * The current status.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-status)
-     */
-    public fun status(): String
-
-    /**
-     * A builder for [ModelPackageStatusItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failureReason if the overall status is `Failed` , the reason for the failure.
-       */
-      public fun failureReason(failureReason: String)
-
-      /**
-       * @param name The name of the model package for which the overall status is being reported. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param status The current status. 
-       */
-      public fun status(status: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty.builder()
 
       /**
-       * @param failureReason if the overall status is `Failed` , the reason for the failure.
+       * @param profileName The name of the profile for the model package. 
        */
-      override fun failureReason(failureReason: String) {
-        cdkBuilder.failureReason(failureReason)
+      override fun profileName(profileName: String) {
+        cdkBuilder.profileName(profileName)
       }
 
       /**
-       * @param name The name of the model package for which the overall status is being reported. 
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
        */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun transformJobDefinition(transformJobDefinition: IResolvable) {
+        cdkBuilder.transformJobDefinition(transformJobDefinition.let(IResolvable::unwrap))
       }
 
       /**
-       * @param status The current status. 
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty) {
+        cdkBuilder.transformJobDefinition(transformJobDefinition.let(TransformJobDefinitionProperty::unwrap))
       }
+
+      /**
+       * @param transformJobDefinition The `TransformJobDefinition` object that describes the
+       * transform job used for the validation of the model package. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a474cb846bb6f45fabf0cac8c72139c0a32686c9dbdc9792327efb3e0ffd582a")
+      override
+          fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty.Builder.() -> Unit):
+          Unit = transformJobDefinition(TransformJobDefinitionProperty(transformJobDefinition))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty,
-    ) : CdkObject(cdkObject), ModelPackageStatusItemProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty,
+    ) : CdkObject(cdkObject), ValidationProfileProperty {
       /**
-       * if the overall status is `Failed` , the reason for the failure.
+       * The name of the profile for the model package.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-failurereason)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-profilename)
        */
-      override fun failureReason(): String? = unwrap(this).getFailureReason()
+      override fun profileName(): String = unwrap(this).getProfileName()
 
       /**
-       * The name of the model package for which the overall status is being reported.
+       * The `TransformJobDefinition` object that describes the transform job used for the
+       * validation of the model package.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-validationprofile.html#cfn-sagemaker-modelpackage-validationprofile-transformjobdefinition)
        */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The current status.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html#cfn-sagemaker-modelpackage-modelpackagestatusitem-status)
-       */
-      override fun status(): String = unwrap(this).getStatus()
+      override fun transformJobDefinition(): Any = unwrap(this).getTransformJobDefinition()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelPackageStatusItemProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ValidationProfileProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty):
-          ModelPackageStatusItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ModelPackageStatusItemProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty):
+          ValidationProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationProfileProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ModelPackageStatusItemProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty =
+      internal fun unwrap(wrapped: ValidationProfileProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty
-    }
-  }
-
-  /**
-   * Data quality constraints and statistics for a model.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelDataQualityProperty modelDataQualityProperty = ModelDataQualityProperty.builder()
-   * .constraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .statistics(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html)
-   */
-  public interface ModelDataQualityProperty {
-    /**
-     * Data quality constraints for a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-constraints)
-     */
-    public fun constraints(): Any? = unwrap(this).getConstraints()
-
-    /**
-     * Data quality statistics for a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-statistics)
-     */
-    public fun statistics(): Any? = unwrap(this).getStatistics()
-
-    /**
-     * A builder for [ModelDataQualityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      public fun constraints(constraints: IResolvable)
-
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      public fun constraints(constraints: MetricsSourceProperty)
-
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17651debc01e0f4a93ea58087411e4cd218de64194b35b4c14b6973111e8813b")
-      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      public fun statistics(statistics: IResolvable)
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      public fun statistics(statistics: MetricsSourceProperty)
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eb2c82a1598873be70e3fa2ac906e01ecdbec14bf4b295e56ef6136ee268662f")
-      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty.builder()
-
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param constraints Data quality constraints for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17651debc01e0f4a93ea58087411e4cd218de64194b35b4c14b6973111e8813b")
-      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          constraints(MetricsSourceProperty(constraints))
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param statistics Data quality statistics for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eb2c82a1598873be70e3fa2ac906e01ecdbec14bf4b295e56ef6136ee268662f")
-      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          statistics(MetricsSourceProperty(statistics))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty,
-    ) : CdkObject(cdkObject), ModelDataQualityProperty {
-      /**
-       * Data quality constraints for a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-constraints)
-       */
-      override fun constraints(): Any? = unwrap(this).getConstraints()
-
-      /**
-       * Data quality statistics for a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldataquality.html#cfn-sagemaker-modelpackage-modeldataquality-statistics)
-       */
-      override fun statistics(): Any? = unwrap(this).getStatistics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelDataQualityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty):
-          ModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataQualityProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelDataQualityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty
     }
   }
 
@@ -6661,8 +8141,7 @@ public open class CfnModelPackage internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty,
     ) : CdkObject(cdkObject), ValidationSpecificationProperty {
       /**
        * An array of `ModelPackageValidationProfile` objects, each of which specifies a batch
@@ -6695,1513 +8174,6 @@ public open class CfnModelPackage internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty
-    }
-  }
-
-  /**
-   * Metadata properties of the tracking entity, trial, or trial component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MetadataPropertiesProperty metadataPropertiesProperty = MetadataPropertiesProperty.builder()
-   * .commitId("commitId")
-   * .generatedBy("generatedBy")
-   * .projectId("projectId")
-   * .repository("repository")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html)
-   */
-  public interface MetadataPropertiesProperty {
-    /**
-     * The commit ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-commitid)
-     */
-    public fun commitId(): String? = unwrap(this).getCommitId()
-
-    /**
-     * The entity this entity was generated by.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-generatedby)
-     */
-    public fun generatedBy(): String? = unwrap(this).getGeneratedBy()
-
-    /**
-     * The project ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-projectid)
-     */
-    public fun projectId(): String? = unwrap(this).getProjectId()
-
-    /**
-     * The repository.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-repository)
-     */
-    public fun repository(): String? = unwrap(this).getRepository()
-
-    /**
-     * A builder for [MetadataPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param commitId The commit ID.
-       */
-      public fun commitId(commitId: String)
-
-      /**
-       * @param generatedBy The entity this entity was generated by.
-       */
-      public fun generatedBy(generatedBy: String)
-
-      /**
-       * @param projectId The project ID.
-       */
-      public fun projectId(projectId: String)
-
-      /**
-       * @param repository The repository.
-       */
-      public fun repository(repository: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty.builder()
-
-      /**
-       * @param commitId The commit ID.
-       */
-      override fun commitId(commitId: String) {
-        cdkBuilder.commitId(commitId)
-      }
-
-      /**
-       * @param generatedBy The entity this entity was generated by.
-       */
-      override fun generatedBy(generatedBy: String) {
-        cdkBuilder.generatedBy(generatedBy)
-      }
-
-      /**
-       * @param projectId The project ID.
-       */
-      override fun projectId(projectId: String) {
-        cdkBuilder.projectId(projectId)
-      }
-
-      /**
-       * @param repository The repository.
-       */
-      override fun repository(repository: String) {
-        cdkBuilder.repository(repository)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty,
-    ) : CdkObject(cdkObject), MetadataPropertiesProperty {
-      /**
-       * The commit ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-commitid)
-       */
-      override fun commitId(): String? = unwrap(this).getCommitId()
-
-      /**
-       * The entity this entity was generated by.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-generatedby)
-       */
-      override fun generatedBy(): String? = unwrap(this).getGeneratedBy()
-
-      /**
-       * The project ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-projectid)
-       */
-      override fun projectId(): String? = unwrap(this).getProjectId()
-
-      /**
-       * The repository.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html#cfn-sagemaker-modelpackage-metadataproperties-repository)
-       */
-      override fun repository(): String? = unwrap(this).getRepository()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty):
-          MetadataPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetadataPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetadataPropertiesProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty
-    }
-  }
-
-  /**
-   * Describes the S3 data source.
-   *
-   * Your input bucket must be in the same AWS region as your training job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
-   * .s3DataType("s3DataType")
-   * .s3Uri("s3Uri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html)
-   */
-  public interface S3DataSourceProperty {
-    /**
-     * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
-     *
-     * SageMaker uses all objects that match the specified key name prefix for model training.
-     *
-     * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-     * containing a list of object keys that you want SageMaker to use for model training.
-     *
-     * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-     * manifest file in JSON lines format. This file contains the data you want to use for model
-     * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3datatype)
-     */
-    public fun s3DataType(): String
-
-    /**
-     * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
-     * or a manifest.
-     *
-     * For example:
-     *
-     * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-     * * A manifest might look like this: `s3://bucketname/example.manifest`
-     *
-     * A manifest is an S3 object which is a JSON file consisting of an array of elements. The first
-     * element is a prefix which is followed by one or more suffixes. SageMaker appends the suffix
-     * elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a valid
-     * non-empty `S3Uri` that precludes users from specifying a manifest whose individual `S3Uri` is
-     * sourced from different S3 buckets.
-     *
-     * The following code example shows a valid manifest format:
-     *
-     * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-     *
-     * `"relative/path/to/custdata-1",`
-     *
-     * `"relative/path/custdata-2",`
-     *
-     * `...`
-     *
-     * `"relative/path/custdata-N"`
-     *
-     * `]`
-     *
-     * This JSON is equivalent to the following `S3Uri` list:
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-     *
-     * `...`
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-     *
-     * The complete set of `S3Uri` in this manifest is the input data for the channel for this data
-     * source. The object that each `S3Uri` points to must be readable by the IAM role that SageMaker
-     * uses to perform tasks on your behalf.
-     *
-     * Your input bucket must be located in same AWS region as your training job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [S3DataSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       */
-      public fun s3DataType(s3DataType: String)
-
-      /**
-       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
-       * key name prefix or a manifest. 
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty.builder()
-
-      /**
-       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       */
-      override fun s3DataType(s3DataType: String) {
-        cdkBuilder.s3DataType(s3DataType)
-      }
-
-      /**
-       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
-       * key name prefix or a manifest. 
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty,
-    ) : CdkObject(cdkObject), S3DataSourceProperty {
-      /**
-       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
-       *
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3datatype)
-       */
-      override fun s3DataType(): String = unwrap(this).getS3DataType()
-
-      /**
-       * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
-       * or a manifest.
-       *
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html#cfn-sagemaker-modelpackage-s3datasource-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3DataSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty):
-          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DataSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty
-    }
-  }
-
-  /**
-   * Describes the location of the channel data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
-   * .s3DataSource(S3DataSourceProperty.builder()
-   * .s3DataType("s3DataType")
-   * .s3Uri("s3Uri")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html)
-   */
-  public interface DataSourceProperty {
-    /**
-     * The S3 location of the data source that is associated with a channel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html#cfn-sagemaker-modelpackage-datasource-s3datasource)
-     */
-    public fun s3DataSource(): Any
-
-    /**
-     * A builder for [DataSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      public fun s3DataSource(s3DataSource: IResolvable)
-
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      public fun s3DataSource(s3DataSource: S3DataSourceProperty)
-
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4afc4570dd9358bb0cb51b72e74794958c33359c12dfea7c7fe8565f68c181e7")
-      public fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty.builder()
-
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      override fun s3DataSource(s3DataSource: IResolvable) {
-        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
-        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
-      }
-
-      /**
-       * @param s3DataSource The S3 location of the data source that is associated with a channel. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4afc4570dd9358bb0cb51b72e74794958c33359c12dfea7c7fe8565f68c181e7")
-      override fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit): Unit =
-          s3DataSource(S3DataSourceProperty(s3DataSource))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
-      /**
-       * The S3 location of the data source that is associated with a channel.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-datasource.html#cfn-sagemaker-modelpackage-datasource-s3datasource)
-       */
-      override fun s3DataSource(): Any = unwrap(this).getS3DataSource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty):
-          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty
-    }
-  }
-
-  /**
-   * Represents the drift check data quality baselines that can be used when the model monitor is
-   * set using the model package.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DriftCheckModelDataQualityProperty driftCheckModelDataQualityProperty =
-   * DriftCheckModelDataQualityProperty.builder()
-   * .constraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .statistics(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html)
-   */
-  public interface DriftCheckModelDataQualityProperty {
-    /**
-     * The drift check model data quality constraints.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-constraints)
-     */
-    public fun constraints(): Any? = unwrap(this).getConstraints()
-
-    /**
-     * The drift check model data quality statistics.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-statistics)
-     */
-    public fun statistics(): Any? = unwrap(this).getStatistics()
-
-    /**
-     * A builder for [DriftCheckModelDataQualityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      public fun constraints(constraints: IResolvable)
-
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      public fun constraints(constraints: MetricsSourceProperty)
-
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c63d833ca7452ddf2902d2c3e26c2a40251457a7f0c3a61efee884bbdbd6830")
-      public fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      public fun statistics(statistics: IResolvable)
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      public fun statistics(statistics: MetricsSourceProperty)
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5c418561efd00db268003819ccc8a5fdda0063dd30d88acbf5b61b748c58ffda")
-      public fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty.builder()
-
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param constraints The drift check model data quality constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c63d833ca7452ddf2902d2c3e26c2a40251457a7f0c3a61efee884bbdbd6830")
-      override fun constraints(constraints: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          constraints(MetricsSourceProperty(constraints))
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param statistics The drift check model data quality statistics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5c418561efd00db268003819ccc8a5fdda0063dd30d88acbf5b61b748c58ffda")
-      override fun statistics(statistics: MetricsSourceProperty.Builder.() -> Unit): Unit =
-          statistics(MetricsSourceProperty(statistics))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty,
-    ) : CdkObject(cdkObject), DriftCheckModelDataQualityProperty {
-      /**
-       * The drift check model data quality constraints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-constraints)
-       */
-      override fun constraints(): Any? = unwrap(this).getConstraints()
-
-      /**
-       * The drift check model data quality statistics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html#cfn-sagemaker-modelpackage-driftcheckmodeldataquality-statistics)
-       */
-      override fun statistics(): Any? = unwrap(this).getStatistics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DriftCheckModelDataQualityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty):
-          DriftCheckModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DriftCheckModelDataQualityProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DriftCheckModelDataQualityProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
-    }
-  }
-
-  /**
-   * Represents the drift check bias baselines that can be used when the model monitor is set using
-   * the model package.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DriftCheckBiasProperty driftCheckBiasProperty = DriftCheckBiasProperty.builder()
-   * .configFile(FileSourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .contentType("contentType")
-   * .build())
-   * .postTrainingConstraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .preTrainingConstraints(MetricsSourceProperty.builder()
-   * .contentType("contentType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html)
-   */
-  public interface DriftCheckBiasProperty {
-    /**
-     * The bias config file for a model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-configfile)
-     */
-    public fun configFile(): Any? = unwrap(this).getConfigFile()
-
-    /**
-     * The post-training constraints.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-posttrainingconstraints)
-     */
-    public fun postTrainingConstraints(): Any? = unwrap(this).getPostTrainingConstraints()
-
-    /**
-     * The pre-training constraints.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-pretrainingconstraints)
-     */
-    public fun preTrainingConstraints(): Any? = unwrap(this).getPreTrainingConstraints()
-
-    /**
-     * A builder for [DriftCheckBiasProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      public fun configFile(configFile: IResolvable)
-
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      public fun configFile(configFile: FileSourceProperty)
-
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a1df16f6e16a3ef409d3a7961d705d73cb00f4e634cab22f2ba08dcddc9742a")
-      public fun configFile(configFile: FileSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      public fun postTrainingConstraints(postTrainingConstraints: IResolvable)
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      public fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty)
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("193e29a0efc44232891916800aafaf7d157acec86ee43ab8157957009d232bfd")
-      public
-          fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit)
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      public fun preTrainingConstraints(preTrainingConstraints: IResolvable)
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      public fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty)
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6159add795ca353ab92fcc28608a3bc1265ddb7fb2d5c91a4a2203d244df165c")
-      public
-          fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty.builder()
-
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      override fun configFile(configFile: IResolvable) {
-        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      override fun configFile(configFile: FileSourceProperty) {
-        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
-      }
-
-      /**
-       * @param configFile The bias config file for a model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a1df16f6e16a3ef409d3a7961d705d73cb00f4e634cab22f2ba08dcddc9742a")
-      override fun configFile(configFile: FileSourceProperty.Builder.() -> Unit): Unit =
-          configFile(FileSourceProperty(configFile))
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      override fun postTrainingConstraints(postTrainingConstraints: IResolvable) {
-        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      override fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty) {
-        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param postTrainingConstraints The post-training constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("193e29a0efc44232891916800aafaf7d157acec86ee43ab8157957009d232bfd")
-      override
-          fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit):
-          Unit = postTrainingConstraints(MetricsSourceProperty(postTrainingConstraints))
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      override fun preTrainingConstraints(preTrainingConstraints: IResolvable) {
-        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      override fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty) {
-        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(MetricsSourceProperty::unwrap))
-      }
-
-      /**
-       * @param preTrainingConstraints The pre-training constraints.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6159add795ca353ab92fcc28608a3bc1265ddb7fb2d5c91a4a2203d244df165c")
-      override
-          fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty.Builder.() -> Unit):
-          Unit = preTrainingConstraints(MetricsSourceProperty(preTrainingConstraints))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty,
-    ) : CdkObject(cdkObject), DriftCheckBiasProperty {
-      /**
-       * The bias config file for a model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-configfile)
-       */
-      override fun configFile(): Any? = unwrap(this).getConfigFile()
-
-      /**
-       * The post-training constraints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-posttrainingconstraints)
-       */
-      override fun postTrainingConstraints(): Any? = unwrap(this).getPostTrainingConstraints()
-
-      /**
-       * The pre-training constraints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbias.html#cfn-sagemaker-modelpackage-driftcheckbias-pretrainingconstraints)
-       */
-      override fun preTrainingConstraints(): Any? = unwrap(this).getPreTrainingConstraints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DriftCheckBiasProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty):
-          DriftCheckBiasProperty = CdkObjectWrappers.wrap(cdkObject) as? DriftCheckBiasProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DriftCheckBiasProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty
-    }
-  }
-
-  /**
-   * Contains details regarding the file source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * FileSourceProperty fileSourceProperty = FileSourceProperty.builder()
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .contentDigest("contentDigest")
-   * .contentType("contentType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html)
-   */
-  public interface FileSourceProperty {
-    /**
-     * The digest of the file source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contentdigest)
-     */
-    public fun contentDigest(): String? = unwrap(this).getContentDigest()
-
-    /**
-     * The type of content stored in the file source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contenttype)
-     */
-    public fun contentType(): String? = unwrap(this).getContentType()
-
-    /**
-     * The Amazon S3 URI for the file source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [FileSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentDigest The digest of the file source.
-       */
-      public fun contentDigest(contentDigest: String)
-
-      /**
-       * @param contentType The type of content stored in the file source.
-       */
-      public fun contentType(contentType: String)
-
-      /**
-       * @param s3Uri The Amazon S3 URI for the file source. 
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty.builder()
-
-      /**
-       * @param contentDigest The digest of the file source.
-       */
-      override fun contentDigest(contentDigest: String) {
-        cdkBuilder.contentDigest(contentDigest)
-      }
-
-      /**
-       * @param contentType The type of content stored in the file source.
-       */
-      override fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-      }
-
-      /**
-       * @param s3Uri The Amazon S3 URI for the file source. 
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty,
-    ) : CdkObject(cdkObject), FileSourceProperty {
-      /**
-       * The digest of the file source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contentdigest)
-       */
-      override fun contentDigest(): String? = unwrap(this).getContentDigest()
-
-      /**
-       * The type of content stored in the file source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-contenttype)
-       */
-      override fun contentType(): String? = unwrap(this).getContentType()
-
-      /**
-       * The Amazon S3 URI for the file source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html#cfn-sagemaker-modelpackage-filesource-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FileSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty):
-          FileSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FileSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty
-    }
-  }
-
-  /**
-   * A structure of additional Inference Specification.
-   *
-   * Additional Inference Specification specifies details about inference jobs that can be run with
-   * models based on this model package
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * Object modelInput;
-   * AdditionalInferenceSpecificationDefinitionProperty
-   * additionalInferenceSpecificationDefinitionProperty =
-   * AdditionalInferenceSpecificationDefinitionProperty.builder()
-   * .containers(List.of(ModelPackageContainerDefinitionProperty.builder()
-   * .image("image")
-   * // the properties below are optional
-   * .containerHostname("containerHostname")
-   * .environment(Map.of(
-   * "environmentKey", "environment"))
-   * .framework("framework")
-   * .frameworkVersion("frameworkVersion")
-   * .imageDigest("imageDigest")
-   * .modelDataUrl("modelDataUrl")
-   * .modelInput(modelInput)
-   * .nearestModelName("nearestModelName")
-   * .build()))
-   * .name("name")
-   * // the properties below are optional
-   * .description("description")
-   * .supportedContentTypes(List.of("supportedContentTypes"))
-   * .supportedRealtimeInferenceInstanceTypes(List.of("supportedRealtimeInferenceInstanceTypes"))
-   * .supportedResponseMimeTypes(List.of("supportedResponseMimeTypes"))
-   * .supportedTransformInstanceTypes(List.of("supportedTransformInstanceTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html)
-   */
-  public interface AdditionalInferenceSpecificationDefinitionProperty {
-    /**
-     * The Amazon ECR registry path of the Docker image that contains the inference code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-containers)
-     */
-    public fun containers(): Any
-
-    /**
-     * A description of the additional Inference specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * A unique name to identify the additional inference specification.
-     *
-     * The name must be unique within the list of your additional inference specifications for a
-     * particular model package.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-name)
-     */
-    public fun name(): String
-
-    /**
-     * The supported MIME types for the input data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedcontenttypes)
-     */
-    public fun supportedContentTypes(): List<String> = unwrap(this).getSupportedContentTypes() ?:
-        emptyList()
-
-    /**
-     * A list of the instance types that are used to generate inferences in real-time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedrealtimeinferenceinstancetypes)
-     */
-    public fun supportedRealtimeInferenceInstanceTypes(): List<String> =
-        unwrap(this).getSupportedRealtimeInferenceInstanceTypes() ?: emptyList()
-
-    /**
-     * The supported MIME types for the output data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedresponsemimetypes)
-     */
-    public fun supportedResponseMimeTypes(): List<String> =
-        unwrap(this).getSupportedResponseMimeTypes() ?: emptyList()
-
-    /**
-     * A list of the instance types on which a transformation job can be run or on which an endpoint
-     * can be deployed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedtransforminstancetypes)
-     */
-    public fun supportedTransformInstanceTypes(): List<String> =
-        unwrap(this).getSupportedTransformInstanceTypes() ?: emptyList()
-
-    /**
-     * A builder for [AdditionalInferenceSpecificationDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      public fun containers(containers: IResolvable)
-
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      public fun containers(containers: List<Any>)
-
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      public fun containers(vararg containers: Any)
-
-      /**
-       * @param description A description of the additional Inference specification.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param name A unique name to identify the additional inference specification. 
-       * The name must be unique within the list of your additional inference specifications for a
-       * particular model package.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param supportedContentTypes The supported MIME types for the input data.
-       */
-      public fun supportedContentTypes(supportedContentTypes: List<String>)
-
-      /**
-       * @param supportedContentTypes The supported MIME types for the input data.
-       */
-      public fun supportedContentTypes(vararg supportedContentTypes: String)
-
-      /**
-       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
-       * to generate inferences in real-time.
-       */
-      public
-          fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>)
-
-      /**
-       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
-       * to generate inferences in real-time.
-       */
-      public fun supportedRealtimeInferenceInstanceTypes(vararg
-          supportedRealtimeInferenceInstanceTypes: String)
-
-      /**
-       * @param supportedResponseMimeTypes The supported MIME types for the output data.
-       */
-      public fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>)
-
-      /**
-       * @param supportedResponseMimeTypes The supported MIME types for the output data.
-       */
-      public fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String)
-
-      /**
-       * @param supportedTransformInstanceTypes A list of the instance types on which a
-       * transformation job can be run or on which an endpoint can be deployed.
-       */
-      public fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>)
-
-      /**
-       * @param supportedTransformInstanceTypes A list of the instance types on which a
-       * transformation job can be run or on which an endpoint can be deployed.
-       */
-      public fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty.builder()
-
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
-      }
-
-      /**
-       * @param containers The Amazon ECR registry path of the Docker image that contains the
-       * inference code. 
-       */
-      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
-
-      /**
-       * @param description A description of the additional Inference specification.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param name A unique name to identify the additional inference specification. 
-       * The name must be unique within the list of your additional inference specifications for a
-       * particular model package.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param supportedContentTypes The supported MIME types for the input data.
-       */
-      override fun supportedContentTypes(supportedContentTypes: List<String>) {
-        cdkBuilder.supportedContentTypes(supportedContentTypes)
-      }
-
-      /**
-       * @param supportedContentTypes The supported MIME types for the input data.
-       */
-      override fun supportedContentTypes(vararg supportedContentTypes: String): Unit =
-          supportedContentTypes(supportedContentTypes.toList())
-
-      /**
-       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
-       * to generate inferences in real-time.
-       */
-      override
-          fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>) {
-        cdkBuilder.supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes)
-      }
-
-      /**
-       * @param supportedRealtimeInferenceInstanceTypes A list of the instance types that are used
-       * to generate inferences in real-time.
-       */
-      override fun supportedRealtimeInferenceInstanceTypes(vararg
-          supportedRealtimeInferenceInstanceTypes: String): Unit =
-          supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes.toList())
-
-      /**
-       * @param supportedResponseMimeTypes The supported MIME types for the output data.
-       */
-      override fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>) {
-        cdkBuilder.supportedResponseMimeTypes(supportedResponseMimeTypes)
-      }
-
-      /**
-       * @param supportedResponseMimeTypes The supported MIME types for the output data.
-       */
-      override fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String): Unit =
-          supportedResponseMimeTypes(supportedResponseMimeTypes.toList())
-
-      /**
-       * @param supportedTransformInstanceTypes A list of the instance types on which a
-       * transformation job can be run or on which an endpoint can be deployed.
-       */
-      override fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>) {
-        cdkBuilder.supportedTransformInstanceTypes(supportedTransformInstanceTypes)
-      }
-
-      /**
-       * @param supportedTransformInstanceTypes A list of the instance types on which a
-       * transformation job can be run or on which an endpoint can be deployed.
-       */
-      override fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String):
-          Unit = supportedTransformInstanceTypes(supportedTransformInstanceTypes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty,
-    ) : CdkObject(cdkObject), AdditionalInferenceSpecificationDefinitionProperty {
-      /**
-       * The Amazon ECR registry path of the Docker image that contains the inference code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-containers)
-       */
-      override fun containers(): Any = unwrap(this).getContainers()
-
-      /**
-       * A description of the additional Inference specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * A unique name to identify the additional inference specification.
-       *
-       * The name must be unique within the list of your additional inference specifications for a
-       * particular model package.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The supported MIME types for the input data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedcontenttypes)
-       */
-      override fun supportedContentTypes(): List<String> = unwrap(this).getSupportedContentTypes()
-          ?: emptyList()
-
-      /**
-       * A list of the instance types that are used to generate inferences in real-time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedrealtimeinferenceinstancetypes)
-       */
-      override fun supportedRealtimeInferenceInstanceTypes(): List<String> =
-          unwrap(this).getSupportedRealtimeInferenceInstanceTypes() ?: emptyList()
-
-      /**
-       * The supported MIME types for the output data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedresponsemimetypes)
-       */
-      override fun supportedResponseMimeTypes(): List<String> =
-          unwrap(this).getSupportedResponseMimeTypes() ?: emptyList()
-
-      /**
-       * A list of the instance types on which a transformation job can be run or on which an
-       * endpoint can be deployed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html#cfn-sagemaker-modelpackage-additionalinferencespecificationdefinition-supportedtransforminstancetypes)
-       */
-      override fun supportedTransformInstanceTypes(): List<String> =
-          unwrap(this).getSupportedTransformInstanceTypes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AdditionalInferenceSpecificationDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty):
-          AdditionalInferenceSpecificationDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdditionalInferenceSpecificationDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdditionalInferenceSpecificationDefinitionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty
     }
   }
 }

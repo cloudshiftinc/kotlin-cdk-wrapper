@@ -49,7 +49,7 @@ public interface CfnAliasProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    *
    * **Name formats** - *Function name* - `MyFunction` .
    *
@@ -106,7 +106,7 @@ public interface CfnAliasProps {
     public fun description(description: String)
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* - `MyFunction` .
      *
      * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -189,7 +189,7 @@ public interface CfnAliasProps {
     }
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* - `MyFunction` .
      *
      * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -280,7 +280,7 @@ public interface CfnAliasProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnAliasProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnAliasProps,
   ) : CdkObject(cdkObject), CfnAliasProps {
     /**
      * A description of the alias.
@@ -290,7 +290,7 @@ public interface CfnAliasProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *

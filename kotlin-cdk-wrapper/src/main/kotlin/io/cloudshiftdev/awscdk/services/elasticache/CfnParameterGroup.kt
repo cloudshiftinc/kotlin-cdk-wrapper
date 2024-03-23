@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html)
  */
-public open class CfnParameterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroup,
+public open class CfnParameterGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -336,6 +336,7 @@ public open class CfnParameterGroup internal constructor(
         CfnParameterGroup = CfnParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameterGroup):
-        software.amazon.awscdk.services.elasticache.CfnParameterGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnParameterGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnParameterGroup
   }
 }

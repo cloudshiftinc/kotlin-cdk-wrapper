@@ -92,7 +92,7 @@ public interface ResourceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ResourceAttributes,
+    cdkObject: software.amazon.awscdk.services.apigateway.ResourceAttributes,
   ) : CdkObject(cdkObject), ResourceAttributes {
     /**
      * The full path of this resource.

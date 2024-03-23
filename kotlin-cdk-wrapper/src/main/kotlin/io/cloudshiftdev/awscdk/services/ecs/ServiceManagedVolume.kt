@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * service.addVolume(volume);
  * ```
  */
-public open class ServiceManagedVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolume,
+public open class ServiceManagedVolume(
+  cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolume,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -217,6 +217,7 @@ public open class ServiceManagedVolume internal constructor(
         ServiceManagedVolume = ServiceManagedVolume(cdkObject)
 
     internal fun unwrap(wrapped: ServiceManagedVolume):
-        software.amazon.awscdk.services.ecs.ServiceManagedVolume = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.ServiceManagedVolume = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.ServiceManagedVolume
   }
 }

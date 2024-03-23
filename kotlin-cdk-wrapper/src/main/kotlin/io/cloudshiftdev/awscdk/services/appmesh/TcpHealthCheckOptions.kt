@@ -125,7 +125,7 @@ public interface TcpHealthCheckOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions,
   ) : CdkObject(cdkObject), TcpHealthCheckOptions {
     /**
      * The number of consecutive successful health checks that must occur before declaring listener

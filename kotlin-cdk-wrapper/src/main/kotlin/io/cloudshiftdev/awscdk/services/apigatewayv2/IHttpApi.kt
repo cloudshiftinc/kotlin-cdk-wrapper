@@ -313,7 +313,7 @@ public interface IHttpApi : IApi {
   public fun metricServerError(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpApi,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpApi,
   ) : CdkObject(cdkObject), IHttpApi {
     /**
      * Add a new VpcLink.

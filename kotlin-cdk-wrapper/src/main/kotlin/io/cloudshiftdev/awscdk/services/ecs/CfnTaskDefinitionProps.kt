@@ -1494,7 +1494,7 @@ public interface CfnTaskDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps,
   ) : CdkObject(cdkObject), CfnTaskDefinitionProps {
     /**
      * A list of container definitions in JSON format that describe the different containers that

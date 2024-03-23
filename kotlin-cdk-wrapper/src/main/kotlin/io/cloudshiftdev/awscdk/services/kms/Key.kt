@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Key internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kms.Key,
+public open class Key(
+  cdkObject: software.amazon.awscdk.services.kms.Key,
 ) : Resource(cdkObject), IKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -601,5 +601,6 @@ public open class Key internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.Key): Key = Key(cdkObject)
 
     internal fun unwrap(wrapped: Key): software.amazon.awscdk.services.kms.Key = wrapped.cdkObject
+        as software.amazon.awscdk.services.kms.Key
   }
 }

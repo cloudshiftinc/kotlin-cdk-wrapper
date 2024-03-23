@@ -201,9 +201,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationinsights.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -941,7 +940,109 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.applicationinsights.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.applicationinsights.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.applicationinsights.CfnApplication
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application AlarmMetric` property type defines a metric to
+   * monitor for the component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * AlarmMetricProperty alarmMetricProperty = AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html)
+   */
+  public interface AlarmMetricProperty {
+    /**
+     * The name of the metric to be monitored for the component.
+     *
+     * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
+     * CloudWatch Application
+     * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname)
+     */
+    public fun alarmMetricName(): String
+
+    /**
+     * A builder for [AlarmMetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmMetricName The name of the metric to be monitored for the component. 
+       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
+       * CloudWatch Application
+       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
+       * .
+       */
+      public fun alarmMetricName(alarmMetricName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty.builder()
+
+      /**
+       * @param alarmMetricName The name of the metric to be monitored for the component. 
+       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
+       * CloudWatch Application
+       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
+       * .
+       */
+      override fun alarmMetricName(alarmMetricName: String) {
+        cdkBuilder.alarmMetricName(alarmMetricName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
+    ) : CdkObject(cdkObject), AlarmMetricProperty {
+      /**
+       * The name of the metric to be monitored for the component.
+       *
+       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
+       * CloudWatch Application
+       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname)
+       */
+      override fun alarmMetricName(): String = unwrap(this).getAlarmMetricName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmMetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty):
+          AlarmMetricProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmMetricProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AlarmMetricProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty
+    }
   }
 
   /**
@@ -1019,8 +1120,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
     ) : CdkObject(cdkObject), AlarmProperty {
       /**
        * The name of the CloudWatch alarm to be monitored for the component.
@@ -1051,463 +1151,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application LogPatternSet` property type specifies the log
-   * pattern set.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * LogPatternSetProperty logPatternSetProperty = LogPatternSetProperty.builder()
-   * .logPatterns(List.of(LogPatternProperty.builder()
-   * .pattern("pattern")
-   * .patternName("patternName")
-   * .rank(123)
-   * .build()))
-   * .patternSetName("patternSetName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html)
-   */
-  public interface LogPatternSetProperty {
-    /**
-     * A list of objects that define the log patterns that belong to `LogPatternSet` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-logpatterns)
-     */
-    public fun logPatterns(): Any
-
-    /**
-     * The name of the log pattern.
-     *
-     * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
-     * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname)
-     */
-    public fun patternSetName(): String
-
-    /**
-     * A builder for [LogPatternSetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      public fun logPatterns(logPatterns: IResolvable)
-
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      public fun logPatterns(logPatterns: List<Any>)
-
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      public fun logPatterns(vararg logPatterns: Any)
-
-      /**
-       * @param patternSetName The name of the log pattern. 
-       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-       */
-      public fun patternSetName(patternSetName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty.builder()
-
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      override fun logPatterns(logPatterns: IResolvable) {
-        cdkBuilder.logPatterns(logPatterns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      override fun logPatterns(logPatterns: List<Any>) {
-        cdkBuilder.logPatterns(logPatterns)
-      }
-
-      /**
-       * @param logPatterns A list of objects that define the log patterns that belong to
-       * `LogPatternSet` . 
-       */
-      override fun logPatterns(vararg logPatterns: Any): Unit = logPatterns(logPatterns.toList())
-
-      /**
-       * @param patternSetName The name of the log pattern. 
-       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-       */
-      override fun patternSetName(patternSetName: String) {
-        cdkBuilder.patternSetName(patternSetName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
-    ) : CdkObject(cdkObject), LogPatternSetProperty {
-      /**
-       * A list of objects that define the log patterns that belong to `LogPatternSet` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-logpatterns)
-       */
-      override fun logPatterns(): Any = unwrap(this).getLogPatterns()
-
-      /**
-       * The name of the log pattern.
-       *
-       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname)
-       */
-      override fun patternSetName(): String = unwrap(this).getPatternSetName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogPatternSetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty):
-          LogPatternSetProperty = CdkObjectWrappers.wrap(cdkObject) as? LogPatternSetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogPatternSetProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application WindowsEvent` property type specifies a Windows
-   * Event to monitor for the component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * WindowsEventProperty windowsEventProperty = WindowsEventProperty.builder()
-   * .eventLevels(List.of("eventLevels"))
-   * .eventName("eventName")
-   * .logGroupName("logGroupName")
-   * // the properties below are optional
-   * .patternSet("patternSet")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html)
-   */
-  public interface WindowsEventProperty {
-    /**
-     * The levels of event to log.
-     *
-     * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-     * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event to
-     * log.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventlevels)
-     */
-    public fun eventLevels(): List<String>
-
-    /**
-     * The type of Windows Events to log, equivalent to the Windows Event log channel name.
-     *
-     * For example, System, Security, CustomEventName, and so on. This field is required for each
-     * type of Windows event to log.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventname)
-     */
-    public fun eventName(): String
-
-    /**
-     * The CloudWatch log group name to be associated with the monitored log.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-loggroupname)
-     */
-    public fun logGroupName(): String
-
-    /**
-     * The log pattern set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-patternset)
-     */
-    public fun patternSet(): String? = unwrap(this).getPatternSet()
-
-    /**
-     * A builder for [WindowsEventProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eventLevels The levels of event to log. 
-       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
-       * to log.
-       */
-      public fun eventLevels(eventLevels: List<String>)
-
-      /**
-       * @param eventLevels The levels of event to log. 
-       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
-       * to log.
-       */
-      public fun eventLevels(vararg eventLevels: String)
-
-      /**
-       * @param eventName The type of Windows Events to log, equivalent to the Windows Event log
-       * channel name. 
-       * For example, System, Security, CustomEventName, and so on. This field is required for each
-       * type of Windows event to log.
-       */
-      public fun eventName(eventName: String)
-
-      /**
-       * @param logGroupName The CloudWatch log group name to be associated with the monitored log. 
-       */
-      public fun logGroupName(logGroupName: String)
-
-      /**
-       * @param patternSet The log pattern set.
-       */
-      public fun patternSet(patternSet: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty.builder()
-
-      /**
-       * @param eventLevels The levels of event to log. 
-       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
-       * to log.
-       */
-      override fun eventLevels(eventLevels: List<String>) {
-        cdkBuilder.eventLevels(eventLevels)
-      }
-
-      /**
-       * @param eventLevels The levels of event to log. 
-       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
-       * to log.
-       */
-      override fun eventLevels(vararg eventLevels: String): Unit = eventLevels(eventLevels.toList())
-
-      /**
-       * @param eventName The type of Windows Events to log, equivalent to the Windows Event log
-       * channel name. 
-       * For example, System, Security, CustomEventName, and so on. This field is required for each
-       * type of Windows event to log.
-       */
-      override fun eventName(eventName: String) {
-        cdkBuilder.eventName(eventName)
-      }
-
-      /**
-       * @param logGroupName The CloudWatch log group name to be associated with the monitored log. 
-       */
-      override fun logGroupName(logGroupName: String) {
-        cdkBuilder.logGroupName(logGroupName)
-      }
-
-      /**
-       * @param patternSet The log pattern set.
-       */
-      override fun patternSet(patternSet: String) {
-        cdkBuilder.patternSet(patternSet)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
-    ) : CdkObject(cdkObject), WindowsEventProperty {
-      /**
-       * The levels of event to log.
-       *
-       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
-       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
-       * to log.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventlevels)
-       */
-      override fun eventLevels(): List<String> = unwrap(this).getEventLevels()
-
-      /**
-       * The type of Windows Events to log, equivalent to the Windows Event log channel name.
-       *
-       * For example, System, Security, CustomEventName, and so on. This field is required for each
-       * type of Windows event to log.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventname)
-       */
-      override fun eventName(): String = unwrap(this).getEventName()
-
-      /**
-       * The CloudWatch log group name to be associated with the monitored log.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-loggroupname)
-       */
-      override fun logGroupName(): String = unwrap(this).getLogGroupName()
-
-      /**
-       * The log pattern set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-patternset)
-       */
-      override fun patternSet(): String? = unwrap(this).getPatternSet()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WindowsEventProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty):
-          WindowsEventProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowsEventProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WindowsEventProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application HAClusterPrometheusExporter` property type defines
-   * the HA cluster Prometheus Exporter settings.
-   *
-   * For more information, see the [component
-   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
-   * in the CloudWatch Application Insights documentation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * HAClusterPrometheusExporterProperty hAClusterPrometheusExporterProperty =
-   * HAClusterPrometheusExporterProperty.builder()
-   * .prometheusPort("prometheusPort")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html)
-   */
-  public interface HAClusterPrometheusExporterProperty {
-    /**
-     * The target port to which Prometheus sends metrics.
-     *
-     * If not specified, the default port 9668 is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html#cfn-applicationinsights-application-haclusterprometheusexporter-prometheusport)
-     */
-    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-
-    /**
-     * A builder for [HAClusterPrometheusExporterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param prometheusPort The target port to which Prometheus sends metrics.
-       * If not specified, the default port 9668 is used.
-       */
-      public fun prometheusPort(prometheusPort: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty.builder()
-
-      /**
-       * @param prometheusPort The target port to which Prometheus sends metrics.
-       * If not specified, the default port 9668 is used.
-       */
-      override fun prometheusPort(prometheusPort: String) {
-        cdkBuilder.prometheusPort(prometheusPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), HAClusterPrometheusExporterProperty {
-      /**
-       * The target port to which Prometheus sends metrics.
-       *
-       * If not specified, the default port 9668 is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html#cfn-applicationinsights-application-haclusterprometheusexporter-prometheusport)
-       */
-      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          HAClusterPrometheusExporterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty):
-          HAClusterPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HAClusterPrometheusExporterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HAClusterPrometheusExporterProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
     }
   }
 
@@ -1702,8 +1345,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
     ) : CdkObject(cdkObject), ComponentConfigurationProperty {
       /**
        * The configuration settings.
@@ -1736,6 +1378,505 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application ComponentMonitoringSetting` property type defines
+   * the monitoring setting of the component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * ComponentMonitoringSettingProperty componentMonitoringSettingProperty =
+   * ComponentMonitoringSettingProperty.builder()
+   * .componentConfigurationMode("componentConfigurationMode")
+   * .tier("tier")
+   * // the properties below are optional
+   * .componentArn("componentArn")
+   * .componentName("componentName")
+   * .customComponentConfiguration(ComponentConfigurationProperty.builder()
+   * .configurationDetails(ConfigurationDetailsProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .alarms(List.of(AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * // the properties below are optional
+   * .severity("severity")
+   * .build()))
+   * .haClusterPrometheusExporter(HAClusterPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .hanaPrometheusExporter(HANAPrometheusExporterProperty.builder()
+   * .agreeToInstallHanadbClient(false)
+   * .hanaPort("hanaPort")
+   * .hanaSecretName("hanaSecretName")
+   * .hanasid("hanasid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .jmxPrometheusExporter(JMXPrometheusExporterProperty.builder()
+   * .hostPort("hostPort")
+   * .jmxurl("jmxurl")
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .logs(List.of(LogProperty.builder()
+   * .logType("logType")
+   * // the properties below are optional
+   * .encoding("encoding")
+   * .logGroupName("logGroupName")
+   * .logPath("logPath")
+   * .patternSet("patternSet")
+   * .build()))
+   * .windowsEvents(List.of(WindowsEventProperty.builder()
+   * .eventLevels(List.of("eventLevels"))
+   * .eventName("eventName")
+   * .logGroupName("logGroupName")
+   * // the properties below are optional
+   * .patternSet("patternSet")
+   * .build()))
+   * .build())
+   * .subComponentTypeConfigurations(List.of(SubComponentTypeConfigurationProperty.builder()
+   * .subComponentConfigurationDetails(SubComponentConfigurationDetailsProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .logs(List.of(LogProperty.builder()
+   * .logType("logType")
+   * // the properties below are optional
+   * .encoding("encoding")
+   * .logGroupName("logGroupName")
+   * .logPath("logPath")
+   * .patternSet("patternSet")
+   * .build()))
+   * .windowsEvents(List.of(WindowsEventProperty.builder()
+   * .eventLevels(List.of("eventLevels"))
+   * .eventName("eventName")
+   * .logGroupName("logGroupName")
+   * // the properties below are optional
+   * .patternSet("patternSet")
+   * .build()))
+   * .build())
+   * .subComponentType("subComponentType")
+   * .build()))
+   * .build())
+   * .defaultOverwriteComponentConfiguration(ComponentConfigurationProperty.builder()
+   * .configurationDetails(ConfigurationDetailsProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .alarms(List.of(AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * // the properties below are optional
+   * .severity("severity")
+   * .build()))
+   * .haClusterPrometheusExporter(HAClusterPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .hanaPrometheusExporter(HANAPrometheusExporterProperty.builder()
+   * .agreeToInstallHanadbClient(false)
+   * .hanaPort("hanaPort")
+   * .hanaSecretName("hanaSecretName")
+   * .hanasid("hanasid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .jmxPrometheusExporter(JMXPrometheusExporterProperty.builder()
+   * .hostPort("hostPort")
+   * .jmxurl("jmxurl")
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .logs(List.of(LogProperty.builder()
+   * .logType("logType")
+   * // the properties below are optional
+   * .encoding("encoding")
+   * .logGroupName("logGroupName")
+   * .logPath("logPath")
+   * .patternSet("patternSet")
+   * .build()))
+   * .windowsEvents(List.of(WindowsEventProperty.builder()
+   * .eventLevels(List.of("eventLevels"))
+   * .eventName("eventName")
+   * .logGroupName("logGroupName")
+   * // the properties below are optional
+   * .patternSet("patternSet")
+   * .build()))
+   * .build())
+   * .subComponentTypeConfigurations(List.of(SubComponentTypeConfigurationProperty.builder()
+   * .subComponentConfigurationDetails(SubComponentConfigurationDetailsProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .logs(List.of(LogProperty.builder()
+   * .logType("logType")
+   * // the properties below are optional
+   * .encoding("encoding")
+   * .logGroupName("logGroupName")
+   * .logPath("logPath")
+   * .patternSet("patternSet")
+   * .build()))
+   * .windowsEvents(List.of(WindowsEventProperty.builder()
+   * .eventLevels(List.of("eventLevels"))
+   * .eventName("eventName")
+   * .logGroupName("logGroupName")
+   * // the properties below are optional
+   * .patternSet("patternSet")
+   * .build()))
+   * .build())
+   * .subComponentType("subComponentType")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html)
+   */
+  public interface ComponentMonitoringSettingProperty {
+    /**
+     * The ARN of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
+     */
+    public fun componentArn(): String? = unwrap(this).getComponentArn()
+
+    /**
+     * Component monitoring can be configured in one of the following three modes:.
+     *
+     * * `DEFAULT` : The component will be configured with the recommended default monitoring
+     * settings of the selected `Tier` .
+     * * `CUSTOM` : The component will be configured with the customized monitoring settings that
+     * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
+     * be provided.
+     * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
+     * monitoring settings of the selected `Tier` , and merged with customized overwrite settings that
+     * are specified in `DefaultOverwriteComponentConfiguration` . If used,
+     * `DefaultOverwriteComponentConfiguration` must be provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode)
+     */
+    public fun componentConfigurationMode(): String
+
+    /**
+     * The name of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
+     */
+    public fun componentName(): String? = unwrap(this).getComponentName()
+
+    /**
+     * Customized monitoring settings.
+     *
+     * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-customcomponentconfiguration)
+     */
+    public fun customComponentConfiguration(): Any? = unwrap(this).getCustomComponentConfiguration()
+
+    /**
+     * Customized overwrite monitoring settings.
+     *
+     * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration)
+     */
+    public fun defaultOverwriteComponentConfiguration(): Any? =
+        unwrap(this).getDefaultOverwriteComponentConfiguration()
+
+    /**
+     * The tier of the application component.
+     *
+     * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
+     * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
+     * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
+     * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier)
+     */
+    public fun tier(): String
+
+    /**
+     * A builder for [ComponentMonitoringSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentArn The ARN of the component.
+       */
+      public fun componentArn(componentArn: String)
+
+      /**
+       * @param componentConfigurationMode Component monitoring can be configured in one of the
+       * following three modes:. 
+       * * `DEFAULT` : The component will be configured with the recommended default monitoring
+       * settings of the selected `Tier` .
+       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
+       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
+       * be provided.
+       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
+       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
+       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
+       * `DefaultOverwriteComponentConfiguration` must be provided.
+       */
+      public fun componentConfigurationMode(componentConfigurationMode: String)
+
+      /**
+       * @param componentName The name of the component.
+       */
+      public fun componentName(componentName: String)
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      public fun customComponentConfiguration(customComponentConfiguration: IResolvable)
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      public
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty)
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
+      public
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      public
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable)
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      public
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty)
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
+      public
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param tier The tier of the application component. 
+       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
+       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
+       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
+       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
+       */
+      public fun tier(tier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty.builder()
+
+      /**
+       * @param componentArn The ARN of the component.
+       */
+      override fun componentArn(componentArn: String) {
+        cdkBuilder.componentArn(componentArn)
+      }
+
+      /**
+       * @param componentConfigurationMode Component monitoring can be configured in one of the
+       * following three modes:. 
+       * * `DEFAULT` : The component will be configured with the recommended default monitoring
+       * settings of the selected `Tier` .
+       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
+       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
+       * be provided.
+       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
+       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
+       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
+       * `DefaultOverwriteComponentConfiguration` must be provided.
+       */
+      override fun componentConfigurationMode(componentConfigurationMode: String) {
+        cdkBuilder.componentConfigurationMode(componentConfigurationMode)
+      }
+
+      /**
+       * @param componentName The name of the component.
+       */
+      override fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+      }
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      override fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
+        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      override
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty) {
+        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param customComponentConfiguration Customized monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
+      override
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          customComponentConfiguration(ComponentConfigurationProperty(customComponentConfiguration))
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      override
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable) {
+        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      override
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty) {
+        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
+      override
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          defaultOverwriteComponentConfiguration(ComponentConfigurationProperty(defaultOverwriteComponentConfiguration))
+
+      /**
+       * @param tier The tier of the application component. 
+       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
+       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
+       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
+       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
+       */
+      override fun tier(tier: String) {
+        cdkBuilder.tier(tier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
+    ) : CdkObject(cdkObject), ComponentMonitoringSettingProperty {
+      /**
+       * The ARN of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
+       */
+      override fun componentArn(): String? = unwrap(this).getComponentArn()
+
+      /**
+       * Component monitoring can be configured in one of the following three modes:.
+       *
+       * * `DEFAULT` : The component will be configured with the recommended default monitoring
+       * settings of the selected `Tier` .
+       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
+       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
+       * be provided.
+       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
+       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
+       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
+       * `DefaultOverwriteComponentConfiguration` must be provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode)
+       */
+      override fun componentConfigurationMode(): String =
+          unwrap(this).getComponentConfigurationMode()
+
+      /**
+       * The name of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
+       */
+      override fun componentName(): String? = unwrap(this).getComponentName()
+
+      /**
+       * Customized monitoring settings.
+       *
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-customcomponentconfiguration)
+       */
+      override fun customComponentConfiguration(): Any? =
+          unwrap(this).getCustomComponentConfiguration()
+
+      /**
+       * Customized overwrite monitoring settings.
+       *
+       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration)
+       */
+      override fun defaultOverwriteComponentConfiguration(): Any? =
+          unwrap(this).getDefaultOverwriteComponentConfiguration()
+
+      /**
+       * The tier of the application component.
+       *
+       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
+       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
+       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
+       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier)
+       */
+      override fun tier(): String = unwrap(this).getTier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentMonitoringSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty):
+          ComponentMonitoringSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentMonitoringSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentMonitoringSettingProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
     }
   }
 
@@ -2159,8 +2300,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
     ) : CdkObject(cdkObject), ConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
@@ -2236,6 +2376,1182 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application CustomComponent` property type describes a custom
+   * component by grouping similar standalone instances to monitor.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * CustomComponentProperty customComponentProperty = CustomComponentProperty.builder()
+   * .componentName("componentName")
+   * .resourceList(List.of("resourceList"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html)
+   */
+  public interface CustomComponentProperty {
+    /**
+     * The name of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname)
+     */
+    public fun componentName(): String
+
+    /**
+     * The list of resource ARNs that belong to the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist)
+     */
+    public fun resourceList(): List<String>
+
+    /**
+     * A builder for [CustomComponentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentName The name of the component. 
+       */
+      public fun componentName(componentName: String)
+
+      /**
+       * @param resourceList The list of resource ARNs that belong to the component. 
+       */
+      public fun resourceList(resourceList: List<String>)
+
+      /**
+       * @param resourceList The list of resource ARNs that belong to the component. 
+       */
+      public fun resourceList(vararg resourceList: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty.builder()
+
+      /**
+       * @param componentName The name of the component. 
+       */
+      override fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+      }
+
+      /**
+       * @param resourceList The list of resource ARNs that belong to the component. 
+       */
+      override fun resourceList(resourceList: List<String>) {
+        cdkBuilder.resourceList(resourceList)
+      }
+
+      /**
+       * @param resourceList The list of resource ARNs that belong to the component. 
+       */
+      override fun resourceList(vararg resourceList: String): Unit =
+          resourceList(resourceList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
+    ) : CdkObject(cdkObject), CustomComponentProperty {
+      /**
+       * The name of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname)
+       */
+      override fun componentName(): String = unwrap(this).getComponentName()
+
+      /**
+       * The list of resource ARNs that belong to the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist)
+       */
+      override fun resourceList(): List<String> = unwrap(this).getResourceList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomComponentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty):
+          CustomComponentProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomComponentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomComponentProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application HAClusterPrometheusExporter` property type defines
+   * the HA cluster Prometheus Exporter settings.
+   *
+   * For more information, see the [component
+   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
+   * in the CloudWatch Application Insights documentation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * HAClusterPrometheusExporterProperty hAClusterPrometheusExporterProperty =
+   * HAClusterPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html)
+   */
+  public interface HAClusterPrometheusExporterProperty {
+    /**
+     * The target port to which Prometheus sends metrics.
+     *
+     * If not specified, the default port 9668 is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html#cfn-applicationinsights-application-haclusterprometheusexporter-prometheusport)
+     */
+    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+
+    /**
+     * A builder for [HAClusterPrometheusExporterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param prometheusPort The target port to which Prometheus sends metrics.
+       * If not specified, the default port 9668 is used.
+       */
+      public fun prometheusPort(prometheusPort: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty.builder()
+
+      /**
+       * @param prometheusPort The target port to which Prometheus sends metrics.
+       * If not specified, the default port 9668 is used.
+       */
+      override fun prometheusPort(prometheusPort: String) {
+        cdkBuilder.prometheusPort(prometheusPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
+    ) : CdkObject(cdkObject), HAClusterPrometheusExporterProperty {
+      /**
+       * The target port to which Prometheus sends metrics.
+       *
+       * If not specified, the default port 9668 is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-haclusterprometheusexporter.html#cfn-applicationinsights-application-haclusterprometheusexporter-prometheusport)
+       */
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          HAClusterPrometheusExporterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty):
+          HAClusterPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HAClusterPrometheusExporterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HAClusterPrometheusExporterProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application HANAPrometheusExporter` property type defines the
+   * HANA DB Prometheus Exporter settings.
+   *
+   * For more information, see the [component
+   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
+   * in the CloudWatch Application Insights documentation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * HANAPrometheusExporterProperty hANAPrometheusExporterProperty =
+   * HANAPrometheusExporterProperty.builder()
+   * .agreeToInstallHanadbClient(false)
+   * .hanaPort("hanaPort")
+   * .hanaSecretName("hanaSecretName")
+   * .hanasid("hanasid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html)
+   */
+  public interface HANAPrometheusExporterProperty {
+    /**
+     * Designates whether you agree to install the HANA DB client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-agreetoinstallhanadbclient)
+     */
+    public fun agreeToInstallHanadbClient(): Any
+
+    /**
+     * The HANA database port by which the exporter will query HANA metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanaport)
+     */
+    public fun hanaPort(): String
+
+    /**
+     * The AWS Secrets Manager secret that stores HANA monitoring user credentials.
+     *
+     * The HANA Prometheus exporter uses these credentials to connect to the database and query HANA
+     * metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasecretname)
+     */
+    public fun hanaSecretName(): String
+
+    /**
+     * The three-character SAP system ID (SID) of the SAP HANA system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasid)
+     */
+    public fun hanasid(): String
+
+    /**
+     * The target port to which Prometheus sends metrics.
+     *
+     * If not specified, the default port 9668 is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-prometheusport)
+     */
+    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+
+    /**
+     * A builder for [HANAPrometheusExporterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
+       * client. 
+       */
+      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean)
+
+      /**
+       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
+       * client. 
+       */
+      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable)
+
+      /**
+       * @param hanaPort The HANA database port by which the exporter will query HANA metrics. 
+       */
+      public fun hanaPort(hanaPort: String)
+
+      /**
+       * @param hanaSecretName The AWS Secrets Manager secret that stores HANA monitoring user
+       * credentials. 
+       * The HANA Prometheus exporter uses these credentials to connect to the database and query
+       * HANA metrics.
+       */
+      public fun hanaSecretName(hanaSecretName: String)
+
+      /**
+       * @param hanasid The three-character SAP system ID (SID) of the SAP HANA system. 
+       */
+      public fun hanasid(hanasid: String)
+
+      /**
+       * @param prometheusPort The target port to which Prometheus sends metrics.
+       * If not specified, the default port 9668 is used.
+       */
+      public fun prometheusPort(prometheusPort: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty.builder()
+
+      /**
+       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
+       * client. 
+       */
+      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean) {
+        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient)
+      }
+
+      /**
+       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
+       * client. 
+       */
+      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
+        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param hanaPort The HANA database port by which the exporter will query HANA metrics. 
+       */
+      override fun hanaPort(hanaPort: String) {
+        cdkBuilder.hanaPort(hanaPort)
+      }
+
+      /**
+       * @param hanaSecretName The AWS Secrets Manager secret that stores HANA monitoring user
+       * credentials. 
+       * The HANA Prometheus exporter uses these credentials to connect to the database and query
+       * HANA metrics.
+       */
+      override fun hanaSecretName(hanaSecretName: String) {
+        cdkBuilder.hanaSecretName(hanaSecretName)
+      }
+
+      /**
+       * @param hanasid The three-character SAP system ID (SID) of the SAP HANA system. 
+       */
+      override fun hanasid(hanasid: String) {
+        cdkBuilder.hanasid(hanasid)
+      }
+
+      /**
+       * @param prometheusPort The target port to which Prometheus sends metrics.
+       * If not specified, the default port 9668 is used.
+       */
+      override fun prometheusPort(prometheusPort: String) {
+        cdkBuilder.prometheusPort(prometheusPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
+    ) : CdkObject(cdkObject), HANAPrometheusExporterProperty {
+      /**
+       * Designates whether you agree to install the HANA DB client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-agreetoinstallhanadbclient)
+       */
+      override fun agreeToInstallHanadbClient(): Any = unwrap(this).getAgreeToInstallHanadbClient()
+
+      /**
+       * The HANA database port by which the exporter will query HANA metrics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanaport)
+       */
+      override fun hanaPort(): String = unwrap(this).getHanaPort()
+
+      /**
+       * The AWS Secrets Manager secret that stores HANA monitoring user credentials.
+       *
+       * The HANA Prometheus exporter uses these credentials to connect to the database and query
+       * HANA metrics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasecretname)
+       */
+      override fun hanaSecretName(): String = unwrap(this).getHanaSecretName()
+
+      /**
+       * The three-character SAP system ID (SID) of the SAP HANA system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasid)
+       */
+      override fun hanasid(): String = unwrap(this).getHanasid()
+
+      /**
+       * The target port to which Prometheus sends metrics.
+       *
+       * If not specified, the default port 9668 is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-prometheusport)
+       */
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HANAPrometheusExporterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty):
+          HANAPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HANAPrometheusExporterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HANAPrometheusExporterProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application JMXPrometheusExporter` property type defines the
+   * JMXPrometheus Exporter configuration.
+   *
+   * For more information, see the [component
+   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
+   * in the CloudWatch Application Insights documentation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * JMXPrometheusExporterProperty jMXPrometheusExporterProperty =
+   * JMXPrometheusExporterProperty.builder()
+   * .hostPort("hostPort")
+   * .jmxurl("jmxurl")
+   * .prometheusPort("prometheusPort")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html)
+   */
+  public interface JMXPrometheusExporterProperty {
+    /**
+     * The host and port to connect to through remote JMX.
+     *
+     * Only one of `jmxURL` and `hostPort` can be specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-hostport)
+     */
+    public fun hostPort(): String? = unwrap(this).getHostPort()
+
+    /**
+     * The complete JMX URL to connect to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-jmxurl)
+     */
+    public fun jmxurl(): String? = unwrap(this).getJmxurl()
+
+    /**
+     * The target port to send Prometheus metrics to.
+     *
+     * If not specified, the default port `9404` is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-prometheusport)
+     */
+    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+
+    /**
+     * A builder for [JMXPrometheusExporterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hostPort The host and port to connect to through remote JMX.
+       * Only one of `jmxURL` and `hostPort` can be specified.
+       */
+      public fun hostPort(hostPort: String)
+
+      /**
+       * @param jmxurl The complete JMX URL to connect to.
+       */
+      public fun jmxurl(jmxurl: String)
+
+      /**
+       * @param prometheusPort The target port to send Prometheus metrics to.
+       * If not specified, the default port `9404` is used.
+       */
+      public fun prometheusPort(prometheusPort: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty.builder()
+
+      /**
+       * @param hostPort The host and port to connect to through remote JMX.
+       * Only one of `jmxURL` and `hostPort` can be specified.
+       */
+      override fun hostPort(hostPort: String) {
+        cdkBuilder.hostPort(hostPort)
+      }
+
+      /**
+       * @param jmxurl The complete JMX URL to connect to.
+       */
+      override fun jmxurl(jmxurl: String) {
+        cdkBuilder.jmxurl(jmxurl)
+      }
+
+      /**
+       * @param prometheusPort The target port to send Prometheus metrics to.
+       * If not specified, the default port `9404` is used.
+       */
+      override fun prometheusPort(prometheusPort: String) {
+        cdkBuilder.prometheusPort(prometheusPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
+    ) : CdkObject(cdkObject), JMXPrometheusExporterProperty {
+      /**
+       * The host and port to connect to through remote JMX.
+       *
+       * Only one of `jmxURL` and `hostPort` can be specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-hostport)
+       */
+      override fun hostPort(): String? = unwrap(this).getHostPort()
+
+      /**
+       * The complete JMX URL to connect to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-jmxurl)
+       */
+      override fun jmxurl(): String? = unwrap(this).getJmxurl()
+
+      /**
+       * The target port to send Prometheus metrics to.
+       *
+       * If not specified, the default port `9404` is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-prometheusport)
+       */
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JMXPrometheusExporterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty):
+          JMXPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JMXPrometheusExporterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JMXPrometheusExporterProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application LogPattern` property type specifies an object that
+   * defines the log patterns that belong to a `LogPatternSet` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * LogPatternProperty logPatternProperty = LogPatternProperty.builder()
+   * .pattern("pattern")
+   * .patternName("patternName")
+   * .rank(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html)
+   */
+  public interface LogPatternProperty {
+    /**
+     * A regular expression that defines the log pattern.
+     *
+     * A log pattern can contain up to 50 characters, and it cannot be empty.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern)
+     */
+    public fun pattern(): String
+
+    /**
+     * The name of the log pattern.
+     *
+     * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
+     * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname)
+     */
+    public fun patternName(): String
+
+    /**
+     * The rank of the log pattern.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank)
+     */
+    public fun rank(): Number
+
+    /**
+     * A builder for [LogPatternProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pattern A regular expression that defines the log pattern. 
+       * A log pattern can contain up to 50 characters, and it cannot be empty.
+       */
+      public fun pattern(pattern: String)
+
+      /**
+       * @param patternName The name of the log pattern. 
+       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       */
+      public fun patternName(patternName: String)
+
+      /**
+       * @param rank The rank of the log pattern. 
+       */
+      public fun rank(rank: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty.builder()
+
+      /**
+       * @param pattern A regular expression that defines the log pattern. 
+       * A log pattern can contain up to 50 characters, and it cannot be empty.
+       */
+      override fun pattern(pattern: String) {
+        cdkBuilder.pattern(pattern)
+      }
+
+      /**
+       * @param patternName The name of the log pattern. 
+       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       */
+      override fun patternName(patternName: String) {
+        cdkBuilder.patternName(patternName)
+      }
+
+      /**
+       * @param rank The rank of the log pattern. 
+       */
+      override fun rank(rank: Number) {
+        cdkBuilder.rank(rank)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
+    ) : CdkObject(cdkObject), LogPatternProperty {
+      /**
+       * A regular expression that defines the log pattern.
+       *
+       * A log pattern can contain up to 50 characters, and it cannot be empty.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern)
+       */
+      override fun pattern(): String = unwrap(this).getPattern()
+
+      /**
+       * The name of the log pattern.
+       *
+       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname)
+       */
+      override fun patternName(): String = unwrap(this).getPatternName()
+
+      /**
+       * The rank of the log pattern.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank)
+       */
+      override fun rank(): Number = unwrap(this).getRank()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogPatternProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty):
+          LogPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? LogPatternProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogPatternProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application LogPatternSet` property type specifies the log
+   * pattern set.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * LogPatternSetProperty logPatternSetProperty = LogPatternSetProperty.builder()
+   * .logPatterns(List.of(LogPatternProperty.builder()
+   * .pattern("pattern")
+   * .patternName("patternName")
+   * .rank(123)
+   * .build()))
+   * .patternSetName("patternSetName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html)
+   */
+  public interface LogPatternSetProperty {
+    /**
+     * A list of objects that define the log patterns that belong to `LogPatternSet` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-logpatterns)
+     */
+    public fun logPatterns(): Any
+
+    /**
+     * The name of the log pattern.
+     *
+     * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
+     * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname)
+     */
+    public fun patternSetName(): String
+
+    /**
+     * A builder for [LogPatternSetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      public fun logPatterns(logPatterns: IResolvable)
+
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      public fun logPatterns(logPatterns: List<Any>)
+
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      public fun logPatterns(vararg logPatterns: Any)
+
+      /**
+       * @param patternSetName The name of the log pattern. 
+       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       */
+      public fun patternSetName(patternSetName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty.builder()
+
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      override fun logPatterns(logPatterns: IResolvable) {
+        cdkBuilder.logPatterns(logPatterns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      override fun logPatterns(logPatterns: List<Any>) {
+        cdkBuilder.logPatterns(logPatterns)
+      }
+
+      /**
+       * @param logPatterns A list of objects that define the log patterns that belong to
+       * `LogPatternSet` . 
+       */
+      override fun logPatterns(vararg logPatterns: Any): Unit = logPatterns(logPatterns.toList())
+
+      /**
+       * @param patternSetName The name of the log pattern. 
+       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       */
+      override fun patternSetName(patternSetName: String) {
+        cdkBuilder.patternSetName(patternSetName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
+    ) : CdkObject(cdkObject), LogPatternSetProperty {
+      /**
+       * A list of objects that define the log patterns that belong to `LogPatternSet` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-logpatterns)
+       */
+      override fun logPatterns(): Any = unwrap(this).getLogPatterns()
+
+      /**
+       * The name of the log pattern.
+       *
+       * A log pattern name can contain up to 30 characters, and it cannot be empty. The characters
+       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname)
+       */
+      override fun patternSetName(): String = unwrap(this).getPatternSetName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogPatternSetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty):
+          LogPatternSetProperty = CdkObjectWrappers.wrap(cdkObject) as? LogPatternSetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogPatternSetProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty
+    }
+  }
+
+  /**
+   * The `AWS::ApplicationInsights::Application Log` property type specifies a log to monitor for
+   * the component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * LogProperty logProperty = LogProperty.builder()
+   * .logType("logType")
+   * // the properties below are optional
+   * .encoding("encoding")
+   * .logGroupName("logGroupName")
+   * .logPath("logPath")
+   * .patternSet("patternSet")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html)
+   */
+  public interface LogProperty {
+    /**
+     * The type of encoding of the logs to be monitored.
+     *
+     * The specified encoding should be included in the list of CloudWatch agent supported
+     * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
+     * the log type:
+     *
+     * * `APPLICATION/DEFAULT` : utf-8 encoding
+     * * `SQL_SERVER` : utf-16 encoding
+     * * `IIS` : ascii encoding
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-encoding)
+     */
+    public fun encoding(): String? = unwrap(this).getEncoding()
+
+    /**
+     * The CloudWatch log group name to be associated with the monitored log.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-loggroupname)
+     */
+    public fun logGroupName(): String? = unwrap(this).getLogGroupName()
+
+    /**
+     * The path of the logs to be monitored.
+     *
+     * The log path must be an absolute Windows or Linux system file path. For more information, see
+     * [CloudWatch Agent Configuration File: Logs
+     * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logpath)
+     */
+    public fun logPath(): String? = unwrap(this).getLogPath()
+
+    /**
+     * The log type decides the log patterns against which Application Insights analyzes the log.
+     *
+     * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
+     * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
+     * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
+     * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
+     * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
+     * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
+     * and `DEFAULT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logtype)
+     */
+    public fun logType(): String
+
+    /**
+     * The log pattern set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-patternset)
+     */
+    public fun patternSet(): String? = unwrap(this).getPatternSet()
+
+    /**
+     * A builder for [LogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encoding The type of encoding of the logs to be monitored.
+       * The specified encoding should be included in the list of CloudWatch agent supported
+       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
+       * the log type:
+       *
+       * * `APPLICATION/DEFAULT` : utf-8 encoding
+       * * `SQL_SERVER` : utf-16 encoding
+       * * `IIS` : ascii encoding
+       */
+      public fun encoding(encoding: String)
+
+      /**
+       * @param logGroupName The CloudWatch log group name to be associated with the monitored log.
+       */
+      public fun logGroupName(logGroupName: String)
+
+      /**
+       * @param logPath The path of the logs to be monitored.
+       * The log path must be an absolute Windows or Linux system file path. For more information,
+       * see [CloudWatch Agent Configuration File: Logs
+       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
+       * .
+       */
+      public fun logPath(logPath: String)
+
+      /**
+       * @param logType The log type decides the log patterns against which Application Insights
+       * analyzes the log. 
+       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
+       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
+       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
+       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
+       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
+       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
+       * and `DEFAULT` .
+       */
+      public fun logType(logType: String)
+
+      /**
+       * @param patternSet The log pattern set.
+       */
+      public fun patternSet(patternSet: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.Builder =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.builder()
+
+      /**
+       * @param encoding The type of encoding of the logs to be monitored.
+       * The specified encoding should be included in the list of CloudWatch agent supported
+       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
+       * the log type:
+       *
+       * * `APPLICATION/DEFAULT` : utf-8 encoding
+       * * `SQL_SERVER` : utf-16 encoding
+       * * `IIS` : ascii encoding
+       */
+      override fun encoding(encoding: String) {
+        cdkBuilder.encoding(encoding)
+      }
+
+      /**
+       * @param logGroupName The CloudWatch log group name to be associated with the monitored log.
+       */
+      override fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
+      }
+
+      /**
+       * @param logPath The path of the logs to be monitored.
+       * The log path must be an absolute Windows or Linux system file path. For more information,
+       * see [CloudWatch Agent Configuration File: Logs
+       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
+       * .
+       */
+      override fun logPath(logPath: String) {
+        cdkBuilder.logPath(logPath)
+      }
+
+      /**
+       * @param logType The log type decides the log patterns against which Application Insights
+       * analyzes the log. 
+       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
+       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
+       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
+       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
+       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
+       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
+       * and `DEFAULT` .
+       */
+      override fun logType(logType: String) {
+        cdkBuilder.logType(logType)
+      }
+
+      /**
+       * @param patternSet The log pattern set.
+       */
+      override fun patternSet(patternSet: String) {
+        cdkBuilder.patternSet(patternSet)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
+    ) : CdkObject(cdkObject), LogProperty {
+      /**
+       * The type of encoding of the logs to be monitored.
+       *
+       * The specified encoding should be included in the list of CloudWatch agent supported
+       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
+       * the log type:
+       *
+       * * `APPLICATION/DEFAULT` : utf-8 encoding
+       * * `SQL_SERVER` : utf-16 encoding
+       * * `IIS` : ascii encoding
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-encoding)
+       */
+      override fun encoding(): String? = unwrap(this).getEncoding()
+
+      /**
+       * The CloudWatch log group name to be associated with the monitored log.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-loggroupname)
+       */
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+
+      /**
+       * The path of the logs to be monitored.
+       *
+       * The log path must be an absolute Windows or Linux system file path. For more information,
+       * see [CloudWatch Agent Configuration File: Logs
+       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logpath)
+       */
+      override fun logPath(): String? = unwrap(this).getLogPath()
+
+      /**
+       * The log type decides the log patterns against which Application Insights analyzes the log.
+       *
+       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
+       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
+       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
+       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
+       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
+       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
+       * and `DEFAULT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logtype)
+       */
+      override fun logType(): String = unwrap(this).getLogType()
+
+      /**
+       * The log pattern set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-patternset)
+       */
+      override fun patternSet(): String? = unwrap(this).getPatternSet()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty):
+          LogProperty = CdkObjectWrappers.wrap(cdkObject) as? LogProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty
     }
   }
 
@@ -2442,8 +3758,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
     ) : CdkObject(cdkObject), SubComponentConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
@@ -2489,432 +3804,6 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application JMXPrometheusExporter` property type defines the
-   * JMXPrometheus Exporter configuration.
-   *
-   * For more information, see the [component
-   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
-   * in the CloudWatch Application Insights documentation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * JMXPrometheusExporterProperty jMXPrometheusExporterProperty =
-   * JMXPrometheusExporterProperty.builder()
-   * .hostPort("hostPort")
-   * .jmxurl("jmxurl")
-   * .prometheusPort("prometheusPort")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html)
-   */
-  public interface JMXPrometheusExporterProperty {
-    /**
-     * The host and port to connect to through remote JMX.
-     *
-     * Only one of `jmxURL` and `hostPort` can be specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-hostport)
-     */
-    public fun hostPort(): String? = unwrap(this).getHostPort()
-
-    /**
-     * The complete JMX URL to connect to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-jmxurl)
-     */
-    public fun jmxurl(): String? = unwrap(this).getJmxurl()
-
-    /**
-     * The target port to send Prometheus metrics to.
-     *
-     * If not specified, the default port `9404` is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-prometheusport)
-     */
-    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-
-    /**
-     * A builder for [JMXPrometheusExporterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param hostPort The host and port to connect to through remote JMX.
-       * Only one of `jmxURL` and `hostPort` can be specified.
-       */
-      public fun hostPort(hostPort: String)
-
-      /**
-       * @param jmxurl The complete JMX URL to connect to.
-       */
-      public fun jmxurl(jmxurl: String)
-
-      /**
-       * @param prometheusPort The target port to send Prometheus metrics to.
-       * If not specified, the default port `9404` is used.
-       */
-      public fun prometheusPort(prometheusPort: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty.builder()
-
-      /**
-       * @param hostPort The host and port to connect to through remote JMX.
-       * Only one of `jmxURL` and `hostPort` can be specified.
-       */
-      override fun hostPort(hostPort: String) {
-        cdkBuilder.hostPort(hostPort)
-      }
-
-      /**
-       * @param jmxurl The complete JMX URL to connect to.
-       */
-      override fun jmxurl(jmxurl: String) {
-        cdkBuilder.jmxurl(jmxurl)
-      }
-
-      /**
-       * @param prometheusPort The target port to send Prometheus metrics to.
-       * If not specified, the default port `9404` is used.
-       */
-      override fun prometheusPort(prometheusPort: String) {
-        cdkBuilder.prometheusPort(prometheusPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), JMXPrometheusExporterProperty {
-      /**
-       * The host and port to connect to through remote JMX.
-       *
-       * Only one of `jmxURL` and `hostPort` can be specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-hostport)
-       */
-      override fun hostPort(): String? = unwrap(this).getHostPort()
-
-      /**
-       * The complete JMX URL to connect to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-jmxurl)
-       */
-      override fun jmxurl(): String? = unwrap(this).getJmxurl()
-
-      /**
-       * The target port to send Prometheus metrics to.
-       *
-       * If not specified, the default port `9404` is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-prometheusport)
-       */
-      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JMXPrometheusExporterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty):
-          JMXPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JMXPrometheusExporterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JMXPrometheusExporterProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application Log` property type specifies a log to monitor for
-   * the component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * LogProperty logProperty = LogProperty.builder()
-   * .logType("logType")
-   * // the properties below are optional
-   * .encoding("encoding")
-   * .logGroupName("logGroupName")
-   * .logPath("logPath")
-   * .patternSet("patternSet")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html)
-   */
-  public interface LogProperty {
-    /**
-     * The type of encoding of the logs to be monitored.
-     *
-     * The specified encoding should be included in the list of CloudWatch agent supported
-     * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
-     * the log type:
-     *
-     * * `APPLICATION/DEFAULT` : utf-8 encoding
-     * * `SQL_SERVER` : utf-16 encoding
-     * * `IIS` : ascii encoding
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-encoding)
-     */
-    public fun encoding(): String? = unwrap(this).getEncoding()
-
-    /**
-     * The CloudWatch log group name to be associated with the monitored log.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-loggroupname)
-     */
-    public fun logGroupName(): String? = unwrap(this).getLogGroupName()
-
-    /**
-     * The path of the logs to be monitored.
-     *
-     * The log path must be an absolute Windows or Linux system file path. For more information, see
-     * [CloudWatch Agent Configuration File: Logs
-     * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logpath)
-     */
-    public fun logPath(): String? = unwrap(this).getLogPath()
-
-    /**
-     * The log type decides the log patterns against which Application Insights analyzes the log.
-     *
-     * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
-     * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
-     * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
-     * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
-     * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
-     * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
-     * and `DEFAULT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logtype)
-     */
-    public fun logType(): String
-
-    /**
-     * The log pattern set.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-patternset)
-     */
-    public fun patternSet(): String? = unwrap(this).getPatternSet()
-
-    /**
-     * A builder for [LogProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encoding The type of encoding of the logs to be monitored.
-       * The specified encoding should be included in the list of CloudWatch agent supported
-       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
-       * the log type:
-       *
-       * * `APPLICATION/DEFAULT` : utf-8 encoding
-       * * `SQL_SERVER` : utf-16 encoding
-       * * `IIS` : ascii encoding
-       */
-      public fun encoding(encoding: String)
-
-      /**
-       * @param logGroupName The CloudWatch log group name to be associated with the monitored log.
-       */
-      public fun logGroupName(logGroupName: String)
-
-      /**
-       * @param logPath The path of the logs to be monitored.
-       * The log path must be an absolute Windows or Linux system file path. For more information,
-       * see [CloudWatch Agent Configuration File: Logs
-       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
-       * .
-       */
-      public fun logPath(logPath: String)
-
-      /**
-       * @param logType The log type decides the log patterns against which Application Insights
-       * analyzes the log. 
-       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
-       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
-       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
-       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
-       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
-       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
-       * and `DEFAULT` .
-       */
-      public fun logType(logType: String)
-
-      /**
-       * @param patternSet The log pattern set.
-       */
-      public fun patternSet(patternSet: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.Builder =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.builder()
-
-      /**
-       * @param encoding The type of encoding of the logs to be monitored.
-       * The specified encoding should be included in the list of CloudWatch agent supported
-       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
-       * the log type:
-       *
-       * * `APPLICATION/DEFAULT` : utf-8 encoding
-       * * `SQL_SERVER` : utf-16 encoding
-       * * `IIS` : ascii encoding
-       */
-      override fun encoding(encoding: String) {
-        cdkBuilder.encoding(encoding)
-      }
-
-      /**
-       * @param logGroupName The CloudWatch log group name to be associated with the monitored log.
-       */
-      override fun logGroupName(logGroupName: String) {
-        cdkBuilder.logGroupName(logGroupName)
-      }
-
-      /**
-       * @param logPath The path of the logs to be monitored.
-       * The log path must be an absolute Windows or Linux system file path. For more information,
-       * see [CloudWatch Agent Configuration File: Logs
-       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
-       * .
-       */
-      override fun logPath(logPath: String) {
-        cdkBuilder.logPath(logPath)
-      }
-
-      /**
-       * @param logType The log type decides the log patterns against which Application Insights
-       * analyzes the log. 
-       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
-       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
-       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
-       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
-       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
-       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
-       * and `DEFAULT` .
-       */
-      override fun logType(logType: String) {
-        cdkBuilder.logType(logType)
-      }
-
-      /**
-       * @param patternSet The log pattern set.
-       */
-      override fun patternSet(patternSet: String) {
-        cdkBuilder.patternSet(patternSet)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
-    ) : CdkObject(cdkObject), LogProperty {
-      /**
-       * The type of encoding of the logs to be monitored.
-       *
-       * The specified encoding should be included in the list of CloudWatch agent supported
-       * encodings. If not provided, CloudWatch Application Insights uses the default encoding type for
-       * the log type:
-       *
-       * * `APPLICATION/DEFAULT` : utf-8 encoding
-       * * `SQL_SERVER` : utf-16 encoding
-       * * `IIS` : ascii encoding
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-encoding)
-       */
-      override fun encoding(): String? = unwrap(this).getEncoding()
-
-      /**
-       * The CloudWatch log group name to be associated with the monitored log.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-loggroupname)
-       */
-      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
-
-      /**
-       * The path of the logs to be monitored.
-       *
-       * The log path must be an absolute Windows or Linux system file path. For more information,
-       * see [CloudWatch Agent Configuration File: Logs
-       * Section](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Logssection)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logpath)
-       */
-      override fun logPath(): String? = unwrap(this).getLogPath()
-
-      /**
-       * The log type decides the log patterns against which Application Insights analyzes the log.
-       *
-       * The log type is selected from the following: `SQL_SERVER` , `MYSQL` , `MYSQL_SLOW_QUERY` ,
-       * `POSTGRESQL` , `ORACLE_ALERT` , `ORACLE_LISTENER` , `IIS` , `APPLICATION` , `WINDOWS_EVENTS` ,
-       * `WINDOWS_EVENTS_ACTIVE_DIRECTORY` , `WINDOWS_EVENTS_DNS` , `WINDOWS_EVENTS_IIS` ,
-       * `WINDOWS_EVENTS_SHAREPOINT` , `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` ,
-       * `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `STEP_FUNCTION` , `API_GATEWAY_ACCESS` ,
-       * `API_GATEWAY_EXECUTION` , `SAP_HANA_LOGS` , `SAP_HANA_TRACE` , `SAP_HANA_HIGH_AVAILABILITY` ,
-       * and `DEFAULT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logtype)
-       */
-      override fun logType(): String = unwrap(this).getLogType()
-
-      /**
-       * The log pattern set.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-patternset)
-       */
-      override fun patternSet(): String? = unwrap(this).getPatternSet()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty):
-          LogProperty = CdkObjectWrappers.wrap(cdkObject) as? LogProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty
     }
   }
 
@@ -3045,8 +3934,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
     ) : CdkObject(cdkObject), SubComponentTypeConfigurationProperty {
       /**
        * The configuration settings of the sub-components.
@@ -3084,8 +3972,8 @@ public open class CfnApplication internal constructor(
   }
 
   /**
-   * The `AWS::ApplicationInsights::Application CustomComponent` property type describes a custom
-   * component by grouping similar standalone instances to monitor.
+   * The `AWS::ApplicationInsights::Application WindowsEvent` property type specifies a Windows
+   * Event to monitor for the component.
    *
    * Example:
    *
@@ -3093,1103 +3981,200 @@ public open class CfnApplication internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * CustomComponentProperty customComponentProperty = CustomComponentProperty.builder()
-   * .componentName("componentName")
-   * .resourceList(List.of("resourceList"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html)
-   */
-  public interface CustomComponentProperty {
-    /**
-     * The name of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname)
-     */
-    public fun componentName(): String
-
-    /**
-     * The list of resource ARNs that belong to the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist)
-     */
-    public fun resourceList(): List<String>
-
-    /**
-     * A builder for [CustomComponentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentName The name of the component. 
-       */
-      public fun componentName(componentName: String)
-
-      /**
-       * @param resourceList The list of resource ARNs that belong to the component. 
-       */
-      public fun resourceList(resourceList: List<String>)
-
-      /**
-       * @param resourceList The list of resource ARNs that belong to the component. 
-       */
-      public fun resourceList(vararg resourceList: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty.builder()
-
-      /**
-       * @param componentName The name of the component. 
-       */
-      override fun componentName(componentName: String) {
-        cdkBuilder.componentName(componentName)
-      }
-
-      /**
-       * @param resourceList The list of resource ARNs that belong to the component. 
-       */
-      override fun resourceList(resourceList: List<String>) {
-        cdkBuilder.resourceList(resourceList)
-      }
-
-      /**
-       * @param resourceList The list of resource ARNs that belong to the component. 
-       */
-      override fun resourceList(vararg resourceList: String): Unit =
-          resourceList(resourceList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
-    ) : CdkObject(cdkObject), CustomComponentProperty {
-      /**
-       * The name of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname)
-       */
-      override fun componentName(): String = unwrap(this).getComponentName()
-
-      /**
-       * The list of resource ARNs that belong to the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist)
-       */
-      override fun resourceList(): List<String> = unwrap(this).getResourceList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomComponentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty):
-          CustomComponentProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomComponentProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomComponentProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application HANAPrometheusExporter` property type defines the
-   * HANA DB Prometheus Exporter settings.
-   *
-   * For more information, see the [component
-   * configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus)
-   * in the CloudWatch Application Insights documentation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * HANAPrometheusExporterProperty hANAPrometheusExporterProperty =
-   * HANAPrometheusExporterProperty.builder()
-   * .agreeToInstallHanadbClient(false)
-   * .hanaPort("hanaPort")
-   * .hanaSecretName("hanaSecretName")
-   * .hanasid("hanasid")
+   * WindowsEventProperty windowsEventProperty = WindowsEventProperty.builder()
+   * .eventLevels(List.of("eventLevels"))
+   * .eventName("eventName")
+   * .logGroupName("logGroupName")
    * // the properties below are optional
-   * .prometheusPort("prometheusPort")
+   * .patternSet("patternSet")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html)
    */
-  public interface HANAPrometheusExporterProperty {
+  public interface WindowsEventProperty {
     /**
-     * Designates whether you agree to install the HANA DB client.
+     * The levels of event to log.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-agreetoinstallhanadbclient)
+     * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+     * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event to
+     * log.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventlevels)
      */
-    public fun agreeToInstallHanadbClient(): Any
+    public fun eventLevels(): List<String>
 
     /**
-     * The HANA database port by which the exporter will query HANA metrics.
+     * The type of Windows Events to log, equivalent to the Windows Event log channel name.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanaport)
+     * For example, System, Security, CustomEventName, and so on. This field is required for each
+     * type of Windows event to log.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventname)
      */
-    public fun hanaPort(): String
+    public fun eventName(): String
 
     /**
-     * The AWS Secrets Manager secret that stores HANA monitoring user credentials.
+     * The CloudWatch log group name to be associated with the monitored log.
      *
-     * The HANA Prometheus exporter uses these credentials to connect to the database and query HANA
-     * metrics.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasecretname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-loggroupname)
      */
-    public fun hanaSecretName(): String
+    public fun logGroupName(): String
 
     /**
-     * The three-character SAP system ID (SID) of the SAP HANA system.
+     * The log pattern set.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-patternset)
      */
-    public fun hanasid(): String
+    public fun patternSet(): String? = unwrap(this).getPatternSet()
 
     /**
-     * The target port to which Prometheus sends metrics.
-     *
-     * If not specified, the default port 9668 is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-prometheusport)
-     */
-    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-
-    /**
-     * A builder for [HANAPrometheusExporterProperty]
+     * A builder for [WindowsEventProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
-       * client. 
+       * @param eventLevels The levels of event to log. 
+       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
+       * to log.
        */
-      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean)
+      public fun eventLevels(eventLevels: List<String>)
 
       /**
-       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
-       * client. 
+       * @param eventLevels The levels of event to log. 
+       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
+       * to log.
        */
-      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable)
+      public fun eventLevels(vararg eventLevels: String)
 
       /**
-       * @param hanaPort The HANA database port by which the exporter will query HANA metrics. 
+       * @param eventName The type of Windows Events to log, equivalent to the Windows Event log
+       * channel name. 
+       * For example, System, Security, CustomEventName, and so on. This field is required for each
+       * type of Windows event to log.
        */
-      public fun hanaPort(hanaPort: String)
+      public fun eventName(eventName: String)
 
       /**
-       * @param hanaSecretName The AWS Secrets Manager secret that stores HANA monitoring user
-       * credentials. 
-       * The HANA Prometheus exporter uses these credentials to connect to the database and query
-       * HANA metrics.
+       * @param logGroupName The CloudWatch log group name to be associated with the monitored log. 
        */
-      public fun hanaSecretName(hanaSecretName: String)
+      public fun logGroupName(logGroupName: String)
 
       /**
-       * @param hanasid The three-character SAP system ID (SID) of the SAP HANA system. 
+       * @param patternSet The log pattern set.
        */
-      public fun hanasid(hanasid: String)
-
-      /**
-       * @param prometheusPort The target port to which Prometheus sends metrics.
-       * If not specified, the default port 9668 is used.
-       */
-      public fun prometheusPort(prometheusPort: String)
+      public fun patternSet(patternSet: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty.Builder
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty.Builder
           =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty.builder()
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty.builder()
 
       /**
-       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
-       * client. 
+       * @param eventLevels The levels of event to log. 
+       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
+       * to log.
        */
-      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean) {
-        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient)
+      override fun eventLevels(eventLevels: List<String>) {
+        cdkBuilder.eventLevels(eventLevels)
       }
 
       /**
-       * @param agreeToInstallHanadbClient Designates whether you agree to install the HANA DB
-       * client. 
+       * @param eventLevels The levels of event to log. 
+       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
+       * to log.
        */
-      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
-        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient.let(IResolvable::unwrap))
+      override fun eventLevels(vararg eventLevels: String): Unit = eventLevels(eventLevels.toList())
+
+      /**
+       * @param eventName The type of Windows Events to log, equivalent to the Windows Event log
+       * channel name. 
+       * For example, System, Security, CustomEventName, and so on. This field is required for each
+       * type of Windows event to log.
+       */
+      override fun eventName(eventName: String) {
+        cdkBuilder.eventName(eventName)
       }
 
       /**
-       * @param hanaPort The HANA database port by which the exporter will query HANA metrics. 
+       * @param logGroupName The CloudWatch log group name to be associated with the monitored log. 
        */
-      override fun hanaPort(hanaPort: String) {
-        cdkBuilder.hanaPort(hanaPort)
+      override fun logGroupName(logGroupName: String) {
+        cdkBuilder.logGroupName(logGroupName)
       }
 
       /**
-       * @param hanaSecretName The AWS Secrets Manager secret that stores HANA monitoring user
-       * credentials. 
-       * The HANA Prometheus exporter uses these credentials to connect to the database and query
-       * HANA metrics.
+       * @param patternSet The log pattern set.
        */
-      override fun hanaSecretName(hanaSecretName: String) {
-        cdkBuilder.hanaSecretName(hanaSecretName)
-      }
-
-      /**
-       * @param hanasid The three-character SAP system ID (SID) of the SAP HANA system. 
-       */
-      override fun hanasid(hanasid: String) {
-        cdkBuilder.hanasid(hanasid)
-      }
-
-      /**
-       * @param prometheusPort The target port to which Prometheus sends metrics.
-       * If not specified, the default port 9668 is used.
-       */
-      override fun prometheusPort(prometheusPort: String) {
-        cdkBuilder.prometheusPort(prometheusPort)
+      override fun patternSet(patternSet: String) {
+        cdkBuilder.patternSet(patternSet)
       }
 
       public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), HANAPrometheusExporterProperty {
-      /**
-       * Designates whether you agree to install the HANA DB client.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-agreetoinstallhanadbclient)
-       */
-      override fun agreeToInstallHanadbClient(): Any = unwrap(this).getAgreeToInstallHanadbClient()
-
-      /**
-       * The HANA database port by which the exporter will query HANA metrics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanaport)
-       */
-      override fun hanaPort(): String = unwrap(this).getHanaPort()
-
-      /**
-       * The AWS Secrets Manager secret that stores HANA monitoring user credentials.
-       *
-       * The HANA Prometheus exporter uses these credentials to connect to the database and query
-       * HANA metrics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasecretname)
-       */
-      override fun hanaSecretName(): String = unwrap(this).getHanaSecretName()
-
-      /**
-       * The three-character SAP system ID (SID) of the SAP HANA system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-hanasid)
-       */
-      override fun hanasid(): String = unwrap(this).getHanasid()
-
-      /**
-       * The target port to which Prometheus sends metrics.
-       *
-       * If not specified, the default port 9668 is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-hanaprometheusexporter.html#cfn-applicationinsights-application-hanaprometheusexporter-prometheusport)
-       */
-      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HANAPrometheusExporterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty):
-          HANAPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HANAPrometheusExporterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HANAPrometheusExporterProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application LogPattern` property type specifies an object that
-   * defines the log patterns that belong to a `LogPatternSet` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * LogPatternProperty logPatternProperty = LogPatternProperty.builder()
-   * .pattern("pattern")
-   * .patternName("patternName")
-   * .rank(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html)
-   */
-  public interface LogPatternProperty {
-    /**
-     * A regular expression that defines the log pattern.
-     *
-     * A log pattern can contain up to 50 characters, and it cannot be empty.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern)
-     */
-    public fun pattern(): String
-
-    /**
-     * The name of the log pattern.
-     *
-     * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
-     * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname)
-     */
-    public fun patternName(): String
-
-    /**
-     * The rank of the log pattern.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank)
-     */
-    public fun rank(): Number
-
-    /**
-     * A builder for [LogPatternProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pattern A regular expression that defines the log pattern. 
-       * A log pattern can contain up to 50 characters, and it cannot be empty.
-       */
-      public fun pattern(pattern: String)
-
-      /**
-       * @param patternName The name of the log pattern. 
-       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-       */
-      public fun patternName(patternName: String)
-
-      /**
-       * @param rank The rank of the log pattern. 
-       */
-      public fun rank(rank: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty.builder()
-
-      /**
-       * @param pattern A regular expression that defines the log pattern. 
-       * A log pattern can contain up to 50 characters, and it cannot be empty.
-       */
-      override fun pattern(pattern: String) {
-        cdkBuilder.pattern(pattern)
-      }
-
-      /**
-       * @param patternName The name of the log pattern. 
-       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
-       */
-      override fun patternName(patternName: String) {
-        cdkBuilder.patternName(patternName)
-      }
-
-      /**
-       * @param rank The rank of the log pattern. 
-       */
-      override fun rank(rank: Number) {
-        cdkBuilder.rank(rank)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
-    ) : CdkObject(cdkObject), LogPatternProperty {
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
+    ) : CdkObject(cdkObject), WindowsEventProperty {
       /**
-       * A regular expression that defines the log pattern.
+       * The levels of event to log.
        *
-       * A log pattern can contain up to 50 characters, and it cannot be empty.
+       * You must specify each level to log. Possible values include `INFORMATION` , `WARNING` ,
+       * `ERROR` , `CRITICAL` , and `VERBOSE` . This field is required for each type of Windows Event
+       * to log.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventlevels)
        */
-      override fun pattern(): String = unwrap(this).getPattern()
+      override fun eventLevels(): List<String> = unwrap(this).getEventLevels()
 
       /**
-       * The name of the log pattern.
+       * The type of Windows Events to log, equivalent to the Windows Event log channel name.
        *
-       * A log pattern name can contain up to 50 characters, and it cannot be empty. The characters
-       * can be Unicode letters, digits, or one of the following symbols: period, dash, underscore.
+       * For example, System, Security, CustomEventName, and so on. This field is required for each
+       * type of Windows event to log.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventname)
        */
-      override fun patternName(): String = unwrap(this).getPatternName()
+      override fun eventName(): String = unwrap(this).getEventName()
 
       /**
-       * The rank of the log pattern.
+       * The CloudWatch log group name to be associated with the monitored log.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-loggroupname)
        */
-      override fun rank(): Number = unwrap(this).getRank()
+      override fun logGroupName(): String = unwrap(this).getLogGroupName()
+
+      /**
+       * The log pattern set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-patternset)
+       */
+      override fun patternSet(): String? = unwrap(this).getPatternSet()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LogPatternProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WindowsEventProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty):
-          LogPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? LogPatternProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty):
+          WindowsEventProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowsEventProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LogPatternProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty =
+      internal fun unwrap(wrapped: WindowsEventProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application ComponentMonitoringSetting` property type defines
-   * the monitoring setting of the component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * ComponentMonitoringSettingProperty componentMonitoringSettingProperty =
-   * ComponentMonitoringSettingProperty.builder()
-   * .componentConfigurationMode("componentConfigurationMode")
-   * .tier("tier")
-   * // the properties below are optional
-   * .componentArn("componentArn")
-   * .componentName("componentName")
-   * .customComponentConfiguration(ComponentConfigurationProperty.builder()
-   * .configurationDetails(ConfigurationDetailsProperty.builder()
-   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
-   * .alarmMetricName("alarmMetricName")
-   * .build()))
-   * .alarms(List.of(AlarmProperty.builder()
-   * .alarmName("alarmName")
-   * // the properties below are optional
-   * .severity("severity")
-   * .build()))
-   * .haClusterPrometheusExporter(HAClusterPrometheusExporterProperty.builder()
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .hanaPrometheusExporter(HANAPrometheusExporterProperty.builder()
-   * .agreeToInstallHanadbClient(false)
-   * .hanaPort("hanaPort")
-   * .hanaSecretName("hanaSecretName")
-   * .hanasid("hanasid")
-   * // the properties below are optional
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .jmxPrometheusExporter(JMXPrometheusExporterProperty.builder()
-   * .hostPort("hostPort")
-   * .jmxurl("jmxurl")
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .logs(List.of(LogProperty.builder()
-   * .logType("logType")
-   * // the properties below are optional
-   * .encoding("encoding")
-   * .logGroupName("logGroupName")
-   * .logPath("logPath")
-   * .patternSet("patternSet")
-   * .build()))
-   * .windowsEvents(List.of(WindowsEventProperty.builder()
-   * .eventLevels(List.of("eventLevels"))
-   * .eventName("eventName")
-   * .logGroupName("logGroupName")
-   * // the properties below are optional
-   * .patternSet("patternSet")
-   * .build()))
-   * .build())
-   * .subComponentTypeConfigurations(List.of(SubComponentTypeConfigurationProperty.builder()
-   * .subComponentConfigurationDetails(SubComponentConfigurationDetailsProperty.builder()
-   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
-   * .alarmMetricName("alarmMetricName")
-   * .build()))
-   * .logs(List.of(LogProperty.builder()
-   * .logType("logType")
-   * // the properties below are optional
-   * .encoding("encoding")
-   * .logGroupName("logGroupName")
-   * .logPath("logPath")
-   * .patternSet("patternSet")
-   * .build()))
-   * .windowsEvents(List.of(WindowsEventProperty.builder()
-   * .eventLevels(List.of("eventLevels"))
-   * .eventName("eventName")
-   * .logGroupName("logGroupName")
-   * // the properties below are optional
-   * .patternSet("patternSet")
-   * .build()))
-   * .build())
-   * .subComponentType("subComponentType")
-   * .build()))
-   * .build())
-   * .defaultOverwriteComponentConfiguration(ComponentConfigurationProperty.builder()
-   * .configurationDetails(ConfigurationDetailsProperty.builder()
-   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
-   * .alarmMetricName("alarmMetricName")
-   * .build()))
-   * .alarms(List.of(AlarmProperty.builder()
-   * .alarmName("alarmName")
-   * // the properties below are optional
-   * .severity("severity")
-   * .build()))
-   * .haClusterPrometheusExporter(HAClusterPrometheusExporterProperty.builder()
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .hanaPrometheusExporter(HANAPrometheusExporterProperty.builder()
-   * .agreeToInstallHanadbClient(false)
-   * .hanaPort("hanaPort")
-   * .hanaSecretName("hanaSecretName")
-   * .hanasid("hanasid")
-   * // the properties below are optional
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .jmxPrometheusExporter(JMXPrometheusExporterProperty.builder()
-   * .hostPort("hostPort")
-   * .jmxurl("jmxurl")
-   * .prometheusPort("prometheusPort")
-   * .build())
-   * .logs(List.of(LogProperty.builder()
-   * .logType("logType")
-   * // the properties below are optional
-   * .encoding("encoding")
-   * .logGroupName("logGroupName")
-   * .logPath("logPath")
-   * .patternSet("patternSet")
-   * .build()))
-   * .windowsEvents(List.of(WindowsEventProperty.builder()
-   * .eventLevels(List.of("eventLevels"))
-   * .eventName("eventName")
-   * .logGroupName("logGroupName")
-   * // the properties below are optional
-   * .patternSet("patternSet")
-   * .build()))
-   * .build())
-   * .subComponentTypeConfigurations(List.of(SubComponentTypeConfigurationProperty.builder()
-   * .subComponentConfigurationDetails(SubComponentConfigurationDetailsProperty.builder()
-   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
-   * .alarmMetricName("alarmMetricName")
-   * .build()))
-   * .logs(List.of(LogProperty.builder()
-   * .logType("logType")
-   * // the properties below are optional
-   * .encoding("encoding")
-   * .logGroupName("logGroupName")
-   * .logPath("logPath")
-   * .patternSet("patternSet")
-   * .build()))
-   * .windowsEvents(List.of(WindowsEventProperty.builder()
-   * .eventLevels(List.of("eventLevels"))
-   * .eventName("eventName")
-   * .logGroupName("logGroupName")
-   * // the properties below are optional
-   * .patternSet("patternSet")
-   * .build()))
-   * .build())
-   * .subComponentType("subComponentType")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html)
-   */
-  public interface ComponentMonitoringSettingProperty {
-    /**
-     * The ARN of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
-     */
-    public fun componentArn(): String? = unwrap(this).getComponentArn()
-
-    /**
-     * Component monitoring can be configured in one of the following three modes:.
-     *
-     * * `DEFAULT` : The component will be configured with the recommended default monitoring
-     * settings of the selected `Tier` .
-     * * `CUSTOM` : The component will be configured with the customized monitoring settings that
-     * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
-     * be provided.
-     * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
-     * monitoring settings of the selected `Tier` , and merged with customized overwrite settings that
-     * are specified in `DefaultOverwriteComponentConfiguration` . If used,
-     * `DefaultOverwriteComponentConfiguration` must be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode)
-     */
-    public fun componentConfigurationMode(): String
-
-    /**
-     * The name of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
-     */
-    public fun componentName(): String? = unwrap(this).getComponentName()
-
-    /**
-     * Customized monitoring settings.
-     *
-     * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-customcomponentconfiguration)
-     */
-    public fun customComponentConfiguration(): Any? = unwrap(this).getCustomComponentConfiguration()
-
-    /**
-     * Customized overwrite monitoring settings.
-     *
-     * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration)
-     */
-    public fun defaultOverwriteComponentConfiguration(): Any? =
-        unwrap(this).getDefaultOverwriteComponentConfiguration()
-
-    /**
-     * The tier of the application component.
-     *
-     * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
-     * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
-     * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
-     * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier)
-     */
-    public fun tier(): String
-
-    /**
-     * A builder for [ComponentMonitoringSettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentArn The ARN of the component.
-       */
-      public fun componentArn(componentArn: String)
-
-      /**
-       * @param componentConfigurationMode Component monitoring can be configured in one of the
-       * following three modes:. 
-       * * `DEFAULT` : The component will be configured with the recommended default monitoring
-       * settings of the selected `Tier` .
-       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
-       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
-       * be provided.
-       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
-       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
-       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
-       * `DefaultOverwriteComponentConfiguration` must be provided.
-       */
-      public fun componentConfigurationMode(componentConfigurationMode: String)
-
-      /**
-       * @param componentName The name of the component.
-       */
-      public fun componentName(componentName: String)
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      public fun customComponentConfiguration(customComponentConfiguration: IResolvable)
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      public
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty)
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
-      public
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable)
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty)
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
-      public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param tier The tier of the application component. 
-       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
-       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
-       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
-       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
-       */
-      public fun tier(tier: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty.builder()
-
-      /**
-       * @param componentArn The ARN of the component.
-       */
-      override fun componentArn(componentArn: String) {
-        cdkBuilder.componentArn(componentArn)
-      }
-
-      /**
-       * @param componentConfigurationMode Component monitoring can be configured in one of the
-       * following three modes:. 
-       * * `DEFAULT` : The component will be configured with the recommended default monitoring
-       * settings of the selected `Tier` .
-       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
-       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
-       * be provided.
-       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
-       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
-       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
-       * `DefaultOverwriteComponentConfiguration` must be provided.
-       */
-      override fun componentConfigurationMode(componentConfigurationMode: String) {
-        cdkBuilder.componentConfigurationMode(componentConfigurationMode)
-      }
-
-      /**
-       * @param componentName The name of the component.
-       */
-      override fun componentName(componentName: String) {
-        cdkBuilder.componentName(componentName)
-      }
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      override fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
-        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      override
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty) {
-        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param customComponentConfiguration Customized monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
-      override
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          customComponentConfiguration(ComponentConfigurationProperty(customComponentConfiguration))
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      override
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable) {
-        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      override
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty) {
-        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param defaultOverwriteComponentConfiguration Customized overwrite monitoring settings.
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
-      override
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          defaultOverwriteComponentConfiguration(ComponentConfigurationProperty(defaultOverwriteComponentConfiguration))
-
-      /**
-       * @param tier The tier of the application component. 
-       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
-       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
-       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
-       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
-       */
-      override fun tier(tier: String) {
-        cdkBuilder.tier(tier)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
-    ) : CdkObject(cdkObject), ComponentMonitoringSettingProperty {
-      /**
-       * The ARN of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
-       */
-      override fun componentArn(): String? = unwrap(this).getComponentArn()
-
-      /**
-       * Component monitoring can be configured in one of the following three modes:.
-       *
-       * * `DEFAULT` : The component will be configured with the recommended default monitoring
-       * settings of the selected `Tier` .
-       * * `CUSTOM` : The component will be configured with the customized monitoring settings that
-       * are specified in `CustomComponentConfiguration` . If used, `CustomComponentConfiguration` must
-       * be provided.
-       * * `DEFAULT_WITH_OVERWRITE` : The component will be configured with the recommended default
-       * monitoring settings of the selected `Tier` , and merged with customized overwrite settings
-       * that are specified in `DefaultOverwriteComponentConfiguration` . If used,
-       * `DefaultOverwriteComponentConfiguration` must be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode)
-       */
-      override fun componentConfigurationMode(): String =
-          unwrap(this).getComponentConfigurationMode()
-
-      /**
-       * The name of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
-       */
-      override fun componentName(): String? = unwrap(this).getComponentName()
-
-      /**
-       * Customized monitoring settings.
-       *
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-customcomponentconfiguration)
-       */
-      override fun customComponentConfiguration(): Any? =
-          unwrap(this).getCustomComponentConfiguration()
-
-      /**
-       * Customized overwrite monitoring settings.
-       *
-       * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration)
-       */
-      override fun defaultOverwriteComponentConfiguration(): Any? =
-          unwrap(this).getDefaultOverwriteComponentConfiguration()
-
-      /**
-       * The tier of the application component.
-       *
-       * Supported tiers include `DOT_NET_CORE` , `DOT_NET_WORKER` , `DOT_NET_WEB` , `SQL_SERVER` ,
-       * `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP` , `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE` , `MYSQL` ,
-       * `POSTGRESQL` , `JAVA_JMX` , `ORACLE` , `SAP_HANA_MULTI_NODE` , `SAP_HANA_SINGLE_NODE` ,
-       * `SAP_HANA_HIGH_AVAILABILITY` , `SHAREPOINT` . `ACTIVE_DIRECTORY` , and `DEFAULT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier)
-       */
-      override fun tier(): String = unwrap(this).getTier()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentMonitoringSettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty):
-          ComponentMonitoringSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentMonitoringSettingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentMonitoringSettingProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
-    }
-  }
-
-  /**
-   * The `AWS::ApplicationInsights::Application AlarmMetric` property type defines a metric to
-   * monitor for the component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
-   * AlarmMetricProperty alarmMetricProperty = AlarmMetricProperty.builder()
-   * .alarmMetricName("alarmMetricName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html)
-   */
-  public interface AlarmMetricProperty {
-    /**
-     * The name of the metric to be monitored for the component.
-     *
-     * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
-     * CloudWatch Application
-     * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname)
-     */
-    public fun alarmMetricName(): String
-
-    /**
-     * A builder for [AlarmMetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alarmMetricName The name of the metric to be monitored for the component. 
-       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
-       * CloudWatch Application
-       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
-       * .
-       */
-      public fun alarmMetricName(alarmMetricName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty.Builder
-          =
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty.builder()
-
-      /**
-       * @param alarmMetricName The name of the metric to be monitored for the component. 
-       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
-       * CloudWatch Application
-       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
-       * .
-       */
-      override fun alarmMetricName(alarmMetricName: String) {
-        cdkBuilder.alarmMetricName(alarmMetricName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
-    ) : CdkObject(cdkObject), AlarmMetricProperty {
-      /**
-       * The name of the metric to be monitored for the component.
-       *
-       * For metrics supported by Application Insights, see [Logs and metrics supported by Amazon
-       * CloudWatch Application
-       * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/appinsights-logs-and-metrics.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname)
-       */
-      override fun alarmMetricName(): String = unwrap(this).getAlarmMetricName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmMetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty):
-          AlarmMetricProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmMetricProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AlarmMetricProperty):
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty
     }
   }
 }

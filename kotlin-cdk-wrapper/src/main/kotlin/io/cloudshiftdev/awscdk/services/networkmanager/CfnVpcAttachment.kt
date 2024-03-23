@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html)
  */
-public open class CfnVpcAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
+public open class CfnVpcAttachment(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -530,7 +530,163 @@ public open class CfnVpcAttachment internal constructor(
         CfnVpcAttachment = CfnVpcAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcAttachment):
-        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
+  }
+
+  /**
+   * Describes a proposed segment change.
+   *
+   * In some cases, the segment change must first be evaluated and accepted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * ProposedSegmentChangeProperty proposedSegmentChangeProperty =
+   * ProposedSegmentChangeProperty.builder()
+   * .attachmentPolicyRuleNumber(123)
+   * .segmentName("segmentName")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html)
+   */
+  public interface ProposedSegmentChangeProperty {
+    /**
+     * The rule number in the policy document that applies to this change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-attachmentpolicyrulenumber)
+     */
+    public fun attachmentPolicyRuleNumber(): Number? = unwrap(this).getAttachmentPolicyRuleNumber()
+
+    /**
+     * The name of the segment to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-segmentname)
+     */
+    public fun segmentName(): String? = unwrap(this).getSegmentName()
+
+    /**
+     * The list of key-value tags that changed for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [ProposedSegmentChangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to
+       * this change.
+       */
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
+
+      /**
+       * @param segmentName The name of the segment to change.
+       */
+      public fun segmentName(segmentName: String)
+
+      /**
+       * @param tags The list of key-value tags that changed for the segment.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The list of key-value tags that changed for the segment.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty.builder()
+
+      /**
+       * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to
+       * this change.
+       */
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
+      }
+
+      /**
+       * @param segmentName The name of the segment to change.
+       */
+      override fun segmentName(segmentName: String) {
+        cdkBuilder.segmentName(segmentName)
+      }
+
+      /**
+       * @param tags The list of key-value tags that changed for the segment.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The list of key-value tags that changed for the segment.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
+    ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
+      /**
+       * The rule number in the policy document that applies to this change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-attachmentpolicyrulenumber)
+       */
+      override fun attachmentPolicyRuleNumber(): Number? =
+          unwrap(this).getAttachmentPolicyRuleNumber()
+
+      /**
+       * The name of the segment to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-segmentname)
+       */
+      override fun segmentName(): String? = unwrap(this).getSegmentName()
+
+      /**
+       * The list of key-value tags that changed for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProposedSegmentChangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty):
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedSegmentChangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
+    }
   }
 
   /**
@@ -646,8 +802,7 @@ public open class CfnVpcAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
     ) : CdkObject(cdkObject), VpcOptionsProperty {
       /**
        * Indicates whether appliance mode is supported.
@@ -686,162 +841,6 @@ public open class CfnVpcAttachment internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty
-    }
-  }
-
-  /**
-   * Describes a proposed segment change.
-   *
-   * In some cases, the segment change must first be evaluated and accepted.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
-   * ProposedSegmentChangeProperty proposedSegmentChangeProperty =
-   * ProposedSegmentChangeProperty.builder()
-   * .attachmentPolicyRuleNumber(123)
-   * .segmentName("segmentName")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html)
-   */
-  public interface ProposedSegmentChangeProperty {
-    /**
-     * The rule number in the policy document that applies to this change.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-attachmentpolicyrulenumber)
-     */
-    public fun attachmentPolicyRuleNumber(): Number? = unwrap(this).getAttachmentPolicyRuleNumber()
-
-    /**
-     * The name of the segment to change.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-segmentname)
-     */
-    public fun segmentName(): String? = unwrap(this).getSegmentName()
-
-    /**
-     * The list of key-value tags that changed for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [ProposedSegmentChangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to
-       * this change.
-       */
-      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
-
-      /**
-       * @param segmentName The name of the segment to change.
-       */
-      public fun segmentName(segmentName: String)
-
-      /**
-       * @param tags The list of key-value tags that changed for the segment.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The list of key-value tags that changed for the segment.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty.Builder
-          =
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty.builder()
-
-      /**
-       * @param attachmentPolicyRuleNumber The rule number in the policy document that applies to
-       * this change.
-       */
-      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
-        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
-      }
-
-      /**
-       * @param segmentName The name of the segment to change.
-       */
-      override fun segmentName(segmentName: String) {
-        cdkBuilder.segmentName(segmentName)
-      }
-
-      /**
-       * @param tags The list of key-value tags that changed for the segment.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The list of key-value tags that changed for the segment.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
-    ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
-      /**
-       * The rule number in the policy document that applies to this change.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-attachmentpolicyrulenumber)
-       */
-      override fun attachmentPolicyRuleNumber(): Number? =
-          unwrap(this).getAttachmentPolicyRuleNumber()
-
-      /**
-       * The name of the segment to change.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-segmentname)
-       */
-      override fun segmentName(): String? = unwrap(this).getSegmentName()
-
-      /**
-       * The list of key-value tags that changed for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposedsegmentchange.html#cfn-networkmanager-vpcattachment-proposedsegmentchange-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProposedSegmentChangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProposedSegmentChangeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty
     }
   }
 }

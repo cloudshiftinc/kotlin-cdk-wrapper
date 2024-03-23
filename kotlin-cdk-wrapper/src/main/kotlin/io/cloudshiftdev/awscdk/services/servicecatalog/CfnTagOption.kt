@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html)
  */
-public open class CfnTagOption internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOption,
+public open class CfnTagOption(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOption,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -218,6 +218,7 @@ public open class CfnTagOption internal constructor(
         CfnTagOption = CfnTagOption(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagOption):
-        software.amazon.awscdk.services.servicecatalog.CfnTagOption = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.CfnTagOption = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnTagOption
   }
 }

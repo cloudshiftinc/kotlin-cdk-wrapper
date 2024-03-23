@@ -164,7 +164,7 @@ public interface CfnCRLProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRLProps,
+    cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRLProps,
   ) : CdkObject(cdkObject), CfnCRLProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-crldata)

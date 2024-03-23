@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CrossAccountDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestination,
+public open class CrossAccountDestination(
+  cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestination,
 ) : Resource(cdkObject), ILogSubscriptionDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -196,6 +196,7 @@ public open class CrossAccountDestination internal constructor(
         CrossAccountDestination = CrossAccountDestination(cdkObject)
 
     internal fun unwrap(wrapped: CrossAccountDestination):
-        software.amazon.awscdk.services.logs.CrossAccountDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.CrossAccountDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.CrossAccountDestination
   }
 }

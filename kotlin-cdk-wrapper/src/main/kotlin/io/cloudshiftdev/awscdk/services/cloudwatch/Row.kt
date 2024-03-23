@@ -20,8 +20,8 @@ import kotlin.collections.List
  * new Row(widgetA, widgetB);
  * ```
  */
-public open class Row internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Row,
+public open class Row(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Row,
 ) : CdkObject(cdkObject), IWidget {
   public constructor(widgets: IWidget) :
       this(software.amazon.awscdk.services.cloudwatch.Row(widgets.let(IWidget::unwrap))
@@ -71,6 +71,6 @@ public open class Row internal constructor(
         Row(cdkObject)
 
     internal fun unwrap(wrapped: Row): software.amazon.awscdk.services.cloudwatch.Row =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.Row
   }
 }

@@ -61,7 +61,7 @@ public interface IEcsEc2ContainerDefinition : IEcsContainerDefinition {
   public fun ulimits(): List<Ulimit>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition,
   ) : CdkObject(cdkObject), IEcsEc2ContainerDefinition {
     /**
      * Add a ulimit to this container.

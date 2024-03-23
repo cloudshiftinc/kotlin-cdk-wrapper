@@ -208,7 +208,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
       TargetTrackingScalingPolicy
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.IAutoScalingGroup,
+    cdkObject: software.amazon.awscdk.services.autoscaling.IAutoScalingGroup,
   ) : CdkObject(cdkObject), IAutoScalingGroup {
     /**
      * Send a message to either an SQS queue or SNS topic when instances launch or terminate.

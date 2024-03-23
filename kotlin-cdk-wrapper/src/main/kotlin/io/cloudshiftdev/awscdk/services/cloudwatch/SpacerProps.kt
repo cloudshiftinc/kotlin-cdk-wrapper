@@ -76,7 +76,7 @@ public interface SpacerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps,
   ) : CdkObject(cdkObject), SpacerProps {
     /**
      * Height of the spacer.

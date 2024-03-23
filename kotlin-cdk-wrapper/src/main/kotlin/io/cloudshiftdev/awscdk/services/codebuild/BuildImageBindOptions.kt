@@ -35,7 +35,7 @@ public interface BuildImageBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BuildImageBindOptions,
+    cdkObject: software.amazon.awscdk.services.codebuild.BuildImageBindOptions,
   ) : CdkObject(cdkObject), BuildImageBindOptions
 
   public companion object {

@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)
  */
-public open class CfnMonitor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
+public open class CfnMonitor(
+  cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1045,131 +1045,8 @@ public open class CfnMonitor internal constructor(
         CfnMonitor = CfnMonitor(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitor):
-        software.amazon.awscdk.services.internetmonitor.CfnMonitor = wrapped.cdkObject
-  }
-
-  /**
-   * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.internetmonitor.*;
-   * InternetMeasurementsLogDeliveryProperty internetMeasurementsLogDeliveryProperty =
-   * InternetMeasurementsLogDeliveryProperty.builder()
-   * .s3Config(S3ConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .logDeliveryStatus("logDeliveryStatus")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html)
-   */
-  public interface InternetMeasurementsLogDeliveryProperty {
-    /**
-     * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements to
-     * Amazon S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery-s3config)
-     */
-    public fun s3Config(): Any? = unwrap(this).getS3Config()
-
-    /**
-     * A builder for [InternetMeasurementsLogDeliveryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      public fun s3Config(s3Config: IResolvable)
-
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      public fun s3Config(s3Config: S3ConfigProperty)
-
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
-      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty.Builder
-          =
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty.builder()
-
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      override fun s3Config(s3Config: IResolvable) {
-        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      override fun s3Config(s3Config: S3ConfigProperty) {
-        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
-      }
-
-      /**
-       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
-       * internet measurements to Amazon S3.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
-      override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
-          s3Config(S3ConfigProperty(s3Config))
-
-      public fun build():
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
-    ) : CdkObject(cdkObject), InternetMeasurementsLogDeliveryProperty {
-      /**
-       * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements
-       * to Amazon S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery-s3config)
-       */
-      override fun s3Config(): Any? = unwrap(this).getS3Config()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InternetMeasurementsLogDeliveryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty):
-          InternetMeasurementsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InternetMeasurementsLogDeliveryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InternetMeasurementsLogDeliveryProperty):
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
-    }
+        software.amazon.awscdk.services.internetmonitor.CfnMonitor = wrapped.cdkObject as
+        software.amazon.awscdk.services.internetmonitor.CfnMonitor
   }
 
   /**
@@ -1413,8 +1290,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
     ) : CdkObject(cdkObject), HealthEventsConfigProperty {
       /**
        * The configuration that determines the threshold and other conditions for when Internet
@@ -1472,6 +1348,129 @@ public open class CfnMonitor internal constructor(
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty
+    }
+  }
+
+  /**
+   * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.internetmonitor.*;
+   * InternetMeasurementsLogDeliveryProperty internetMeasurementsLogDeliveryProperty =
+   * InternetMeasurementsLogDeliveryProperty.builder()
+   * .s3Config(S3ConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .logDeliveryStatus("logDeliveryStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html)
+   */
+  public interface InternetMeasurementsLogDeliveryProperty {
+    /**
+     * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements to
+     * Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery-s3config)
+     */
+    public fun s3Config(): Any? = unwrap(this).getS3Config()
+
+    /**
+     * A builder for [InternetMeasurementsLogDeliveryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      public fun s3Config(s3Config: IResolvable)
+
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      public fun s3Config(s3Config: S3ConfigProperty)
+
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
+      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty.Builder
+          =
+          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty.builder()
+
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      override fun s3Config(s3Config: IResolvable) {
+        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      override fun s3Config(s3Config: S3ConfigProperty) {
+        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+      }
+
+      /**
+       * @param s3Config The configuration for publishing Amazon CloudWatch Internet Monitor
+       * internet measurements to Amazon S3.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
+      override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
+          s3Config(S3ConfigProperty(s3Config))
+
+      public fun build():
+          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
+    ) : CdkObject(cdkObject), InternetMeasurementsLogDeliveryProperty {
+      /**
+       * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements
+       * to Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.html#cfn-internetmonitor-monitor-internetmeasurementslogdelivery-s3config)
+       */
+      override fun s3Config(): Any? = unwrap(this).getS3Config()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InternetMeasurementsLogDeliveryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty):
+          InternetMeasurementsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InternetMeasurementsLogDeliveryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InternetMeasurementsLogDeliveryProperty):
+          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
     }
   }
 
@@ -1603,8 +1602,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
     ) : CdkObject(cdkObject), LocalHealthEventsConfigProperty {
       /**
        * The health event threshold percentage set for a local health score.
@@ -1764,8 +1762,7 @@ public open class CfnMonitor internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
+      cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
     ) : CdkObject(cdkObject), S3ConfigProperty {
       /**
        * The Amazon S3 bucket name for internet measurements publishing.

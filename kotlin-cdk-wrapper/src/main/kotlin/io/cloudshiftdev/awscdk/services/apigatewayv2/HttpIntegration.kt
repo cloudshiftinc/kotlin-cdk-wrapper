@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class HttpIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegration,
+public open class HttpIntegration(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegration,
 ) : Resource(cdkObject), IHttpIntegration {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -334,6 +334,7 @@ public open class HttpIntegration internal constructor(
         HttpIntegration = HttpIntegration(cdkObject)
 
     internal fun unwrap(wrapped: HttpIntegration):
-        software.amazon.awscdk.services.apigatewayv2.HttpIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.HttpIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.HttpIntegration
   }
 }

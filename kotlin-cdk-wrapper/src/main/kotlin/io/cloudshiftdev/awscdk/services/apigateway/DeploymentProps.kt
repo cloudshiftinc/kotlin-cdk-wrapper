@@ -121,7 +121,7 @@ public interface DeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.DeploymentProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.DeploymentProps,
   ) : CdkObject(cdkObject), DeploymentProps {
     /**
      * The Rest API to deploy.

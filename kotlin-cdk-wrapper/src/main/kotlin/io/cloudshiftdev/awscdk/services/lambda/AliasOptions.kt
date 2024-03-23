@@ -238,7 +238,7 @@ public interface AliasOptions : EventInvokeConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AliasOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.AliasOptions,
   ) : CdkObject(cdkObject), AliasOptions {
     /**
      * Additional versions with individual weights this alias points to.

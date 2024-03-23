@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApiDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.ApiDestination,
+public open class ApiDestination(
+  cdkObject: software.amazon.awscdk.services.events.ApiDestination,
 ) : Resource(cdkObject), IApiDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -209,6 +209,7 @@ public open class ApiDestination internal constructor(
         ApiDestination = ApiDestination(cdkObject)
 
     internal fun unwrap(wrapped: ApiDestination):
-        software.amazon.awscdk.services.events.ApiDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.events.ApiDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.ApiDestination
   }
 }

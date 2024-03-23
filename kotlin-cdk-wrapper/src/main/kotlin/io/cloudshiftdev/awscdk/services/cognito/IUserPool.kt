@@ -124,7 +124,7 @@ public interface IUserPool : IResource {
   public fun userPoolId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.IUserPool,
+    cdkObject: software.amazon.awscdk.services.cognito.IUserPool,
   ) : CdkObject(cdkObject), IUserPool {
     /**
      * Add a new app client to this user pool.

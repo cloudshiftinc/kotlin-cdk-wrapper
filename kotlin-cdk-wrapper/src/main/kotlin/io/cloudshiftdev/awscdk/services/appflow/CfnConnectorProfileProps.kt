@@ -450,7 +450,7 @@ public interface CfnConnectorProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfileProps,
+    cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfileProps,
   ) : CdkObject(cdkObject), CfnConnectorProfileProps {
     /**
      * Indicates the connection mode and if it is public or private.

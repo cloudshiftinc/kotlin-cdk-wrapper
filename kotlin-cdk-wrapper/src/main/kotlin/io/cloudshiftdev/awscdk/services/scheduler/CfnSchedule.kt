@@ -134,8 +134,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedule.html)
  */
-public open class CfnSchedule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
+public open class CfnSchedule(
+  cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -728,807 +728,7 @@ public open class CfnSchedule internal constructor(
         = CfnSchedule(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchedule): software.amazon.awscdk.services.scheduler.CfnSchedule
-        = wrapped.cdkObject
-  }
-
-  /**
-   * A `RetryPolicy` object that includes information about the retry policy settings, including the
-   * maximum age of an event, and the maximum number of times EventBridge Scheduler will try to deliver
-   * the event to a target.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
-   * .maximumEventAgeInSeconds(123)
-   * .maximumRetryAttempts(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html)
-   */
-  public interface RetryPolicyProperty {
-    /**
-     * The maximum amount of time, in seconds, to continue to make retry attempts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumeventageinseconds)
-     */
-    public fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
-
-    /**
-     * The maximum number of retry attempts to make before the request fails.
-     *
-     * Retry attempts with exponential backoff continue until either the maximum number of attempts
-     * is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumretryattempts)
-     */
-    public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
-
-    /**
-     * A builder for [RetryPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
-       * retry attempts.
-       */
-      public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number)
-
-      /**
-       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
-       * fails.
-       * Retry attempts with exponential backoff continue until either the maximum number of
-       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
-       */
-      public fun maximumRetryAttempts(maximumRetryAttempts: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty.builder()
-
-      /**
-       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
-       * retry attempts.
-       */
-      override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
-        cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
-      }
-
-      /**
-       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
-       * fails.
-       * Retry attempts with exponential backoff continue until either the maximum number of
-       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
-       */
-      override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
-        cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
-      }
-
-      public fun build(): software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty,
-    ) : CdkObject(cdkObject), RetryPolicyProperty {
-      /**
-       * The maximum amount of time, in seconds, to continue to make retry attempts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumeventageinseconds)
-       */
-      override fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
-
-      /**
-       * The maximum number of retry attempts to make before the request fails.
-       *
-       * Retry attempts with exponential backoff continue until either the maximum number of
-       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumretryattempts)
-       */
-      override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetryPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty):
-          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetryPolicyProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty
-    }
-  }
-
-  /**
-   * The templated target type for the Amazon SQS
-   * [`SendMessage`](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessage.html)
-   * API operation. Contains the message group ID to use when the target is a FIFO queue. If you
-   * specify an Amazon SQS FIFO queue as a target, the queue must have content-based deduplication
-   * enabled. For more information, see [Using the Amazon SQS message deduplication
-   * ID](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/using-messagededuplicationid-property.html)
-   * in the *Amazon SQS Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * SqsParametersProperty sqsParametersProperty = SqsParametersProperty.builder()
-   * .messageGroupId("messageGroupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html)
-   */
-  public interface SqsParametersProperty {
-    /**
-     * The FIFO message group ID to use as the target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html#cfn-scheduler-schedule-sqsparameters-messagegroupid)
-     */
-    public fun messageGroupId(): String? = unwrap(this).getMessageGroupId()
-
-    /**
-     * A builder for [SqsParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param messageGroupId The FIFO message group ID to use as the target.
-       */
-      public fun messageGroupId(messageGroupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty.builder()
-
-      /**
-       * @param messageGroupId The FIFO message group ID to use as the target.
-       */
-      override fun messageGroupId(messageGroupId: String) {
-        cdkBuilder.messageGroupId(messageGroupId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty,
-    ) : CdkObject(cdkObject), SqsParametersProperty {
-      /**
-       * The FIFO message group ID to use as the target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html#cfn-scheduler-schedule-sqsparameters-messagegroupid)
-       */
-      override fun messageGroupId(): String? = unwrap(this).getMessageGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SqsParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty):
-          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SqsParametersProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty
-    }
-  }
-
-  /**
-   * The details of a capacity provider strategy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
-   * CapacityProviderStrategyItemProperty.builder()
-   * .capacityProvider("capacityProvider")
-   * // the properties below are optional
-   * .base(123)
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html)
-   */
-  public interface CapacityProviderStrategyItemProperty {
-    /**
-     * The base value designates how many tasks, at a minimum, to run on the specified capacity
-     * provider.
-     *
-     * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-     * value is specified, the default value of `0` is used.
-     *
-     * Default: - 0
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-base)
-     */
-    public fun base(): Number? = unwrap(this).getBase()
-
-    /**
-     * The short name of the capacity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-capacityprovider)
-     */
-    public fun capacityProvider(): String
-
-    /**
-     * The weight value designates the relative percentage of the total number of tasks launched
-     * that should use the specified capacity provider.
-     *
-     * The weight value is taken into consideration after the base value, if defined, is satisfied.
-     *
-     * Default: - 0
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [CapacityProviderStrategyItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param base The base value designates how many tasks, at a minimum, to run on the specified
-       * capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      public fun base(base: Number)
-
-      /**
-       * @param capacityProvider The short name of the capacity provider. 
-       */
-      public fun capacityProvider(capacityProvider: String)
-
-      /**
-       * @param weight The weight value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty.Builder
-          =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty.builder()
-
-      /**
-       * @param base The base value designates how many tasks, at a minimum, to run on the specified
-       * capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      override fun base(base: Number) {
-        cdkBuilder.base(base)
-      }
-
-      /**
-       * @param capacityProvider The short name of the capacity provider. 
-       */
-      override fun capacityProvider(capacityProvider: String) {
-        cdkBuilder.capacityProvider(capacityProvider)
-      }
-
-      /**
-       * @param weight The weight value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
-      /**
-       * The base value designates how many tasks, at a minimum, to run on the specified capacity
-       * provider.
-       *
-       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
-       * value is specified, the default value of `0` is used.
-       *
-       * Default: - 0
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-base)
-       */
-      override fun base(): Number? = unwrap(this).getBase()
-
-      /**
-       * The short name of the capacity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-capacityprovider)
-       */
-      override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
-
-      /**
-       * The weight value designates the relative percentage of the total number of tasks launched
-       * that should use the specified capacity provider.
-       *
-       * The weight value is taken into consideration after the base value, if defined, is
-       * satisfied.
-       *
-       * Default: - 0
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityProviderStrategyItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
-    }
-  }
-
-  /**
-   * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * FlexibleTimeWindowProperty flexibleTimeWindowProperty = FlexibleTimeWindowProperty.builder()
-   * .mode("mode")
-   * // the properties below are optional
-   * .maximumWindowInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html)
-   */
-  public interface FlexibleTimeWindowProperty {
-    /**
-     * The maximum time window during which a schedule can be invoked.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1440`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-maximumwindowinminutes)
-     */
-    public fun maximumWindowInMinutes(): Number? = unwrap(this).getMaximumWindowInMinutes()
-
-    /**
-     * Determines whether the schedule is invoked within a flexible time window.
-     *
-     * You must use quotation marks when you specify this value in your JSON or YAML template.
-     *
-     * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-mode)
-     */
-    public fun mode(): String
-
-    /**
-     * A builder for [FlexibleTimeWindowProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumWindowInMinutes The maximum time window during which a schedule can be
-       * invoked.
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `1440`
-       */
-      public fun maximumWindowInMinutes(maximumWindowInMinutes: Number)
-
-      /**
-       * @param mode Determines whether the schedule is invoked within a flexible time window. 
-       * You must use quotation marks when you specify this value in your JSON or YAML template.
-       *
-       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
-       */
-      public fun mode(mode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty.builder()
-
-      /**
-       * @param maximumWindowInMinutes The maximum time window during which a schedule can be
-       * invoked.
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `1440`
-       */
-      override fun maximumWindowInMinutes(maximumWindowInMinutes: Number) {
-        cdkBuilder.maximumWindowInMinutes(maximumWindowInMinutes)
-      }
-
-      /**
-       * @param mode Determines whether the schedule is invoked within a flexible time window. 
-       * You must use quotation marks when you specify this value in your JSON or YAML template.
-       *
-       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty,
-    ) : CdkObject(cdkObject), FlexibleTimeWindowProperty {
-      /**
-       * The maximum time window during which a schedule can be invoked.
-       *
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `1440`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-maximumwindowinminutes)
-       */
-      override fun maximumWindowInMinutes(): Number? = unwrap(this).getMaximumWindowInMinutes()
-
-      /**
-       * Determines whether the schedule is invoked within a flexible time window.
-       *
-       * You must use quotation marks when you specify this value in your JSON or YAML template.
-       *
-       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-mode)
-       */
-      override fun mode(): String = unwrap(this).getMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FlexibleTimeWindowProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty):
-          FlexibleTimeWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FlexibleTimeWindowProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FlexibleTimeWindowProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty
-    }
-  }
-
-  /**
-   * The templated target type for the EventBridge
-   * [`PutEvents`](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html) API
-   * operation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * EventBridgeParametersProperty eventBridgeParametersProperty =
-   * EventBridgeParametersProperty.builder()
-   * .detailType("detailType")
-   * .source("source")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html)
-   */
-  public interface EventBridgeParametersProperty {
-    /**
-     * A free-form string, with a maximum of 128 characters, used to decide what fields to expect in
-     * the event detail.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-detailtype)
-     */
-    public fun detailType(): String
-
-    /**
-     * The source of the event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-source)
-     */
-    public fun source(): String
-
-    /**
-     * A builder for [EventBridgeParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param detailType A free-form string, with a maximum of 128 characters, used to decide what
-       * fields to expect in the event detail. 
-       */
-      public fun detailType(detailType: String)
-
-      /**
-       * @param source The source of the event. 
-       */
-      public fun source(source: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty.builder()
-
-      /**
-       * @param detailType A free-form string, with a maximum of 128 characters, used to decide what
-       * fields to expect in the event detail. 
-       */
-      override fun detailType(detailType: String) {
-        cdkBuilder.detailType(detailType)
-      }
-
-      /**
-       * @param source The source of the event. 
-       */
-      override fun source(source: String) {
-        cdkBuilder.source(source)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty,
-    ) : CdkObject(cdkObject), EventBridgeParametersProperty {
-      /**
-       * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
-       * in the event detail.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-detailtype)
-       */
-      override fun detailType(): String = unwrap(this).getDetailType()
-
-      /**
-       * The source of the event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-source)
-       */
-      override fun source(): String = unwrap(this).getSource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventBridgeParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty):
-          EventBridgeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EventBridgeParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventBridgeParametersProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty
-    }
-  }
-
-  /**
-   * The task placement strategy for a task or service.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
-   * .field("field")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html)
-   */
-  public interface PlacementStrategyProperty {
-    /**
-     * The field to apply the placement strategy against.
-     *
-     * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which has
-     * the same effect), or any platform or custom attribute that is applied to a container instance,
-     * such as `attribute:ecs.availability-zone` . For the binpack placement strategy, valid values are
-     * `cpu` and `memory` . For the random placement strategy, this field is not used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The type of placement strategy.
-     *
-     * The random placement strategy randomly places tasks on available candidates. The spread
-     * placement strategy spreads placement across available candidates evenly based on the field
-     * parameter. The binpack strategy places tasks on available candidates that have the least
-     * available amount of the resource that is specified with the field parameter. For example, if you
-     * binpack on memory, a task is placed on the instance with the least amount of remaining memory
-     * (but still enough to run the task).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [PlacementStrategyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param field The field to apply the placement strategy against.
-       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
-       * has the same effect), or any platform or custom attribute that is applied to a container
-       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
-       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
-       * used.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param type The type of placement strategy.
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty.builder()
-
-      /**
-       * @param field The field to apply the placement strategy against.
-       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
-       * has the same effect), or any platform or custom attribute that is applied to a container
-       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
-       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
-       * used.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param type The type of placement strategy.
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
-      /**
-       * The field to apply the placement strategy against.
-       *
-       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
-       * has the same effect), or any platform or custom attribute that is applied to a container
-       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
-       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
-       * used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The type of placement strategy.
-       *
-       * The random placement strategy randomly places tasks on available candidates. The spread
-       * placement strategy spreads placement across available candidates evenly based on the field
-       * parameter. The binpack strategy places tasks on available candidates that have the least
-       * available amount of the resource that is specified with the field parameter. For example, if
-       * you binpack on memory, a task is placed on the instance with the least amount of remaining
-       * memory (but still enough to run the task).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty):
-          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementStrategyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementStrategyProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.scheduler.CfnSchedule
   }
 
   /**
@@ -1677,8 +877,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty,
     ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
@@ -1725,6 +924,269 @@ public open class CfnSchedule internal constructor(
           software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty
+    }
+  }
+
+  /**
+   * The details of a capacity provider strategy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+   * CapacityProviderStrategyItemProperty.builder()
+   * .capacityProvider("capacityProvider")
+   * // the properties below are optional
+   * .base(123)
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html)
+   */
+  public interface CapacityProviderStrategyItemProperty {
+    /**
+     * The base value designates how many tasks, at a minimum, to run on the specified capacity
+     * provider.
+     *
+     * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+     * value is specified, the default value of `0` is used.
+     *
+     * Default: - 0
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-base)
+     */
+    public fun base(): Number? = unwrap(this).getBase()
+
+    /**
+     * The short name of the capacity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-capacityprovider)
+     */
+    public fun capacityProvider(): String
+
+    /**
+     * The weight value designates the relative percentage of the total number of tasks launched
+     * that should use the specified capacity provider.
+     *
+     * The weight value is taken into consideration after the base value, if defined, is satisfied.
+     *
+     * Default: - 0
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [CapacityProviderStrategyItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param base The base value designates how many tasks, at a minimum, to run on the specified
+       * capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      public fun base(base: Number)
+
+      /**
+       * @param capacityProvider The short name of the capacity provider. 
+       */
+      public fun capacityProvider(capacityProvider: String)
+
+      /**
+       * @param weight The weight value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty.Builder
+          =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty.builder()
+
+      /**
+       * @param base The base value designates how many tasks, at a minimum, to run on the specified
+       * capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      override fun base(base: Number) {
+        cdkBuilder.base(base)
+      }
+
+      /**
+       * @param capacityProvider The short name of the capacity provider. 
+       */
+      override fun capacityProvider(capacityProvider: String) {
+        cdkBuilder.capacityProvider(capacityProvider)
+      }
+
+      /**
+       * @param weight The weight value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty,
+    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+      /**
+       * The base value designates how many tasks, at a minimum, to run on the specified capacity
+       * provider.
+       *
+       * Only one capacity provider in a capacity provider strategy can have a base defined. If no
+       * value is specified, the default value of `0` is used.
+       *
+       * Default: - 0
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-base)
+       */
+      override fun base(): Number? = unwrap(this).getBase()
+
+      /**
+       * The short name of the capacity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-capacityprovider)
+       */
+      override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
+
+      /**
+       * The weight value designates the relative percentage of the total number of tasks launched
+       * that should use the specified capacity provider.
+       *
+       * The weight value is taken into consideration after the base value, if defined, is
+       * satisfied.
+       *
+       * Default: - 0
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html#cfn-scheduler-schedule-capacityproviderstrategyitem-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityProviderStrategyItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty):
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
+    }
+  }
+
+  /**
+   * An object that contains information about an Amazon SQS queue that EventBridge Scheduler uses
+   * as a dead-letter queue for your schedule.
+   *
+   * If specified, EventBridge Scheduler delivers failed events that could not be successfully
+   * delivered to a target to the queue.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html)
+   */
+  public interface DeadLetterConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
+     * dead-letter queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html#cfn-scheduler-schedule-deadletterconfig-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * A builder for [DeadLetterConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for
+       * the dead-letter queue.
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for
+       * the dead-letter queue.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty,
+    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
+       * dead-letter queue.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html#cfn-scheduler-schedule-deadletterconfig-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty):
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeadLetterConfigProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty
     }
   }
 
@@ -2297,8 +1759,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty,
     ) : CdkObject(cdkObject), EcsParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
@@ -2450,6 +1911,358 @@ public open class CfnSchedule internal constructor(
   }
 
   /**
+   * The templated target type for the EventBridge
+   * [`PutEvents`](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html) API
+   * operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * EventBridgeParametersProperty eventBridgeParametersProperty =
+   * EventBridgeParametersProperty.builder()
+   * .detailType("detailType")
+   * .source("source")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html)
+   */
+  public interface EventBridgeParametersProperty {
+    /**
+     * A free-form string, with a maximum of 128 characters, used to decide what fields to expect in
+     * the event detail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-detailtype)
+     */
+    public fun detailType(): String
+
+    /**
+     * The source of the event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-source)
+     */
+    public fun source(): String
+
+    /**
+     * A builder for [EventBridgeParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param detailType A free-form string, with a maximum of 128 characters, used to decide what
+       * fields to expect in the event detail. 
+       */
+      public fun detailType(detailType: String)
+
+      /**
+       * @param source The source of the event. 
+       */
+      public fun source(source: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty.builder()
+
+      /**
+       * @param detailType A free-form string, with a maximum of 128 characters, used to decide what
+       * fields to expect in the event detail. 
+       */
+      override fun detailType(detailType: String) {
+        cdkBuilder.detailType(detailType)
+      }
+
+      /**
+       * @param source The source of the event. 
+       */
+      override fun source(source: String) {
+        cdkBuilder.source(source)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty,
+    ) : CdkObject(cdkObject), EventBridgeParametersProperty {
+      /**
+       * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
+       * in the event detail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-detailtype)
+       */
+      override fun detailType(): String = unwrap(this).getDetailType()
+
+      /**
+       * The source of the event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-eventbridgeparameters.html#cfn-scheduler-schedule-eventbridgeparameters-source)
+       */
+      override fun source(): String = unwrap(this).getSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventBridgeParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty):
+          EventBridgeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventBridgeParametersProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty
+    }
+  }
+
+  /**
+   * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * FlexibleTimeWindowProperty flexibleTimeWindowProperty = FlexibleTimeWindowProperty.builder()
+   * .mode("mode")
+   * // the properties below are optional
+   * .maximumWindowInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html)
+   */
+  public interface FlexibleTimeWindowProperty {
+    /**
+     * The maximum time window during which a schedule can be invoked.
+     *
+     * *Minimum* : `1`
+     *
+     * *Maximum* : `1440`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-maximumwindowinminutes)
+     */
+    public fun maximumWindowInMinutes(): Number? = unwrap(this).getMaximumWindowInMinutes()
+
+    /**
+     * Determines whether the schedule is invoked within a flexible time window.
+     *
+     * You must use quotation marks when you specify this value in your JSON or YAML template.
+     *
+     * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * A builder for [FlexibleTimeWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumWindowInMinutes The maximum time window during which a schedule can be
+       * invoked.
+       * *Minimum* : `1`
+       *
+       * *Maximum* : `1440`
+       */
+      public fun maximumWindowInMinutes(maximumWindowInMinutes: Number)
+
+      /**
+       * @param mode Determines whether the schedule is invoked within a flexible time window. 
+       * You must use quotation marks when you specify this value in your JSON or YAML template.
+       *
+       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty.builder()
+
+      /**
+       * @param maximumWindowInMinutes The maximum time window during which a schedule can be
+       * invoked.
+       * *Minimum* : `1`
+       *
+       * *Maximum* : `1440`
+       */
+      override fun maximumWindowInMinutes(maximumWindowInMinutes: Number) {
+        cdkBuilder.maximumWindowInMinutes(maximumWindowInMinutes)
+      }
+
+      /**
+       * @param mode Determines whether the schedule is invoked within a flexible time window. 
+       * You must use quotation marks when you specify this value in your JSON or YAML template.
+       *
+       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty,
+    ) : CdkObject(cdkObject), FlexibleTimeWindowProperty {
+      /**
+       * The maximum time window during which a schedule can be invoked.
+       *
+       * *Minimum* : `1`
+       *
+       * *Maximum* : `1440`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-maximumwindowinminutes)
+       */
+      override fun maximumWindowInMinutes(): Number? = unwrap(this).getMaximumWindowInMinutes()
+
+      /**
+       * Determines whether the schedule is invoked within a flexible time window.
+       *
+       * You must use quotation marks when you specify this value in your JSON or YAML template.
+       *
+       * *Allowed Values* : `"OFF"` | `"FLEXIBLE"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html#cfn-scheduler-schedule-flexibletimewindow-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FlexibleTimeWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty):
+          FlexibleTimeWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlexibleTimeWindowProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FlexibleTimeWindowProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty
+    }
+  }
+
+  /**
+   * The templated target type for the Amazon Kinesis
+   * [`PutRecord`](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html) API
+   * operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * KinesisParametersProperty kinesisParametersProperty = KinesisParametersProperty.builder()
+   * .partitionKey("partitionKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html)
+   */
+  public interface KinesisParametersProperty {
+    /**
+     * Specifies the shard to which EventBridge Scheduler sends the event.
+     *
+     * For more information, see [Amazon Kinesis Data Streams terminology and
+     * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
+     * Kinesis Streams Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html#cfn-scheduler-schedule-kinesisparameters-partitionkey)
+     */
+    public fun partitionKey(): String
+
+    /**
+     * A builder for [KinesisParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param partitionKey Specifies the shard to which EventBridge Scheduler sends the event. 
+       * For more information, see [Amazon Kinesis Data Streams terminology and
+       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
+       * Kinesis Streams Developer Guide* .
+       */
+      public fun partitionKey(partitionKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty.builder()
+
+      /**
+       * @param partitionKey Specifies the shard to which EventBridge Scheduler sends the event. 
+       * For more information, see [Amazon Kinesis Data Streams terminology and
+       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
+       * Kinesis Streams Developer Guide* .
+       */
+      override fun partitionKey(partitionKey: String) {
+        cdkBuilder.partitionKey(partitionKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty,
+    ) : CdkObject(cdkObject), KinesisParametersProperty {
+      /**
+       * Specifies the shard to which EventBridge Scheduler sends the event.
+       *
+       * For more information, see [Amazon Kinesis Data Streams terminology and
+       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
+       * Kinesis Streams Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html#cfn-scheduler-schedule-kinesisparameters-partitionkey)
+       */
+      override fun partitionKey(): String = unwrap(this).getPartitionKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty):
+          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisParametersProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty
+    }
+  }
+
+  /**
    * Specifies the network configuration for an ECS task.
    *
    * Example:
@@ -2553,8 +2366,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty,
     ) : CdkObject(cdkObject), NetworkConfigurationProperty {
       /**
        * Specifies the Amazon VPC subnets and security groups for the task, and whether a public IP
@@ -2582,6 +2394,425 @@ public open class CfnSchedule internal constructor(
           software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * An object representing a constraint on task placement.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
+   * .expression("expression")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html)
+   */
+  public interface PlacementConstraintProperty {
+    /**
+     * A cluster query language expression to apply to the constraint.
+     *
+     * You cannot specify an expression if the constraint type is `distinctInstance` . For more
+     * information, see [Cluster query
+     * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in the
+     * *Amazon ECS Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * The type of constraint.
+     *
+     * Use `distinctInstance` to ensure that each task in a particular group is running on a
+     * different container instance. Use `memberOf` to restrict the selection to a group of valid
+     * candidates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [PlacementConstraintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
+       * information, see [Cluster query
+       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
+       * the *Amazon ECS Developer Guide* .
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param type The type of constraint.
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty.Builder
+          =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty.builder()
+
+      /**
+       * @param expression A cluster query language expression to apply to the constraint.
+       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
+       * information, see [Cluster query
+       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
+       * the *Amazon ECS Developer Guide* .
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param type The type of constraint.
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty,
+    ) : CdkObject(cdkObject), PlacementConstraintProperty {
+      /**
+       * A cluster query language expression to apply to the constraint.
+       *
+       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
+       * information, see [Cluster query
+       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
+       * the *Amazon ECS Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-expression)
+       */
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * The type of constraint.
+       *
+       * Use `distinctInstance` to ensure that each task in a particular group is running on a
+       * different container instance. Use `memberOf` to restrict the selection to a group of valid
+       * candidates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty):
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementConstraintProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty
+    }
+  }
+
+  /**
+   * The task placement strategy for a task or service.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
+   * .field("field")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html)
+   */
+  public interface PlacementStrategyProperty {
+    /**
+     * The field to apply the placement strategy against.
+     *
+     * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which has
+     * the same effect), or any platform or custom attribute that is applied to a container instance,
+     * such as `attribute:ecs.availability-zone` . For the binpack placement strategy, valid values are
+     * `cpu` and `memory` . For the random placement strategy, this field is not used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The type of placement strategy.
+     *
+     * The random placement strategy randomly places tasks on available candidates. The spread
+     * placement strategy spreads placement across available candidates evenly based on the field
+     * parameter. The binpack strategy places tasks on available candidates that have the least
+     * available amount of the resource that is specified with the field parameter. For example, if you
+     * binpack on memory, a task is placed on the instance with the least amount of remaining memory
+     * (but still enough to run the task).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [PlacementStrategyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param field The field to apply the placement strategy against.
+       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
+       * has the same effect), or any platform or custom attribute that is applied to a container
+       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
+       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
+       * used.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param type The type of placement strategy.
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty.builder()
+
+      /**
+       * @param field The field to apply the placement strategy against.
+       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
+       * has the same effect), or any platform or custom attribute that is applied to a container
+       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
+       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
+       * used.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param type The type of placement strategy.
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty,
+    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+      /**
+       * The field to apply the placement strategy against.
+       *
+       * For the spread placement strategy, valid values are `instanceId` (or `instanceId` , which
+       * has the same effect), or any platform or custom attribute that is applied to a container
+       * instance, such as `attribute:ecs.availability-zone` . For the binpack placement strategy,
+       * valid values are `cpu` and `memory` . For the random placement strategy, this field is not
+       * used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The type of placement strategy.
+       *
+       * The random placement strategy randomly places tasks on available candidates. The spread
+       * placement strategy spreads placement across available candidates evenly based on the field
+       * parameter. The binpack strategy places tasks on available candidates that have the least
+       * available amount of the resource that is specified with the field parameter. For example, if
+       * you binpack on memory, a task is placed on the instance with the least amount of remaining
+       * memory (but still enough to run the task).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementstrategy.html#cfn-scheduler-schedule-placementstrategy-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementStrategyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty):
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementStrategyProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty
+    }
+  }
+
+  /**
+   * A `RetryPolicy` object that includes information about the retry policy settings, including the
+   * maximum age of an event, and the maximum number of times EventBridge Scheduler will try to deliver
+   * the event to a target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
+   * .maximumEventAgeInSeconds(123)
+   * .maximumRetryAttempts(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html)
+   */
+  public interface RetryPolicyProperty {
+    /**
+     * The maximum amount of time, in seconds, to continue to make retry attempts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumeventageinseconds)
+     */
+    public fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
+
+    /**
+     * The maximum number of retry attempts to make before the request fails.
+     *
+     * Retry attempts with exponential backoff continue until either the maximum number of attempts
+     * is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumretryattempts)
+     */
+    public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
+
+    /**
+     * A builder for [RetryPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
+       * retry attempts.
+       */
+      public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number)
+
+      /**
+       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
+       * fails.
+       * Retry attempts with exponential backoff continue until either the maximum number of
+       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
+       */
+      public fun maximumRetryAttempts(maximumRetryAttempts: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty.builder()
+
+      /**
+       * @param maximumEventAgeInSeconds The maximum amount of time, in seconds, to continue to make
+       * retry attempts.
+       */
+      override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
+        cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
+      }
+
+      /**
+       * @param maximumRetryAttempts The maximum number of retry attempts to make before the request
+       * fails.
+       * Retry attempts with exponential backoff continue until either the maximum number of
+       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
+       */
+      override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
+        cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
+      }
+
+      public fun build(): software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty,
+    ) : CdkObject(cdkObject), RetryPolicyProperty {
+      /**
+       * The maximum amount of time, in seconds, to continue to make retry attempts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumeventageinseconds)
+       */
+      override fun maximumEventAgeInSeconds(): Number? = unwrap(this).getMaximumEventAgeInSeconds()
+
+      /**
+       * The maximum number of retry attempts to make before the request fails.
+       *
+       * Retry attempts with exponential backoff continue until either the maximum number of
+       * attempts is made or until the duration of the `MaximumEventAgeInSeconds` is reached.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html#cfn-scheduler-schedule-retrypolicy-maximumretryattempts)
+       */
+      override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetryPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty):
+          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetryPolicyProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty
     }
   }
 
@@ -2661,8 +2892,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty,
     ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
@@ -2695,6 +2925,213 @@ public open class CfnSchedule internal constructor(
           software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty
+    }
+  }
+
+  /**
+   * The templated target type for the Amazon SageMaker
+   * [`StartPipelineExecution`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StartPipelineExecution.html)
+   * API operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * SageMakerPipelineParametersProperty sageMakerPipelineParametersProperty =
+   * SageMakerPipelineParametersProperty.builder()
+   * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html)
+   */
+  public interface SageMakerPipelineParametersProperty {
+    /**
+     * List of parameter names and values to use when executing the SageMaker Model Building
+     * Pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html#cfn-scheduler-schedule-sagemakerpipelineparameters-pipelineparameterlist)
+     */
+    public fun pipelineParameterList(): Any? = unwrap(this).getPipelineParameterList()
+
+    /**
+     * A builder for [SageMakerPipelineParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      public fun pipelineParameterList(pipelineParameterList: IResolvable)
+
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      public fun pipelineParameterList(pipelineParameterList: List<Any>)
+
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      public fun pipelineParameterList(vararg pipelineParameterList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty.builder()
+
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      override fun pipelineParameterList(pipelineParameterList: IResolvable) {
+        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      override fun pipelineParameterList(pipelineParameterList: List<Any>) {
+        cdkBuilder.pipelineParameterList(pipelineParameterList)
+      }
+
+      /**
+       * @param pipelineParameterList List of parameter names and values to use when executing the
+       * SageMaker Model Building Pipeline.
+       */
+      override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
+          pipelineParameterList(pipelineParameterList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty,
+    ) : CdkObject(cdkObject), SageMakerPipelineParametersProperty {
+      /**
+       * List of parameter names and values to use when executing the SageMaker Model Building
+       * Pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html#cfn-scheduler-schedule-sagemakerpipelineparameters-pipelineparameterlist)
+       */
+      override fun pipelineParameterList(): Any? = unwrap(this).getPipelineParameterList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SageMakerPipelineParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty):
+          SageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SageMakerPipelineParametersProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
+    }
+  }
+
+  /**
+   * The templated target type for the Amazon SQS
+   * [`SendMessage`](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessage.html)
+   * API operation. Contains the message group ID to use when the target is a FIFO queue. If you
+   * specify an Amazon SQS FIFO queue as a target, the queue must have content-based deduplication
+   * enabled. For more information, see [Using the Amazon SQS message deduplication
+   * ID](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/using-messagededuplicationid-property.html)
+   * in the *Amazon SQS Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.scheduler.*;
+   * SqsParametersProperty sqsParametersProperty = SqsParametersProperty.builder()
+   * .messageGroupId("messageGroupId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html)
+   */
+  public interface SqsParametersProperty {
+    /**
+     * The FIFO message group ID to use as the target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html#cfn-scheduler-schedule-sqsparameters-messagegroupid)
+     */
+    public fun messageGroupId(): String? = unwrap(this).getMessageGroupId()
+
+    /**
+     * A builder for [SqsParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param messageGroupId The FIFO message group ID to use as the target.
+       */
+      public fun messageGroupId(messageGroupId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty.Builder =
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty.builder()
+
+      /**
+       * @param messageGroupId The FIFO message group ID to use as the target.
+       */
+      override fun messageGroupId(messageGroupId: String) {
+        cdkBuilder.messageGroupId(messageGroupId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty,
+    ) : CdkObject(cdkObject), SqsParametersProperty {
+      /**
+       * The FIFO message group ID to use as the target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sqsparameters.html#cfn-scheduler-schedule-sqsparameters-messagegroupid)
+       */
+      override fun messageGroupId(): String? = unwrap(this).getMessageGroupId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SqsParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty):
+          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SqsParametersProperty):
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty
     }
   }
 
@@ -3334,7 +3771,7 @@ public open class CfnSchedule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the target.
@@ -3449,457 +3886,6 @@ public open class CfnSchedule internal constructor(
           software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty
-    }
-  }
-
-  /**
-   * An object that contains information about an Amazon SQS queue that EventBridge Scheduler uses
-   * as a dead-letter queue for your schedule.
-   *
-   * If specified, EventBridge Scheduler delivers failed events that could not be successfully
-   * delivered to a target to the queue.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html)
-   */
-  public interface DeadLetterConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
-     * dead-letter queue.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html#cfn-scheduler-schedule-deadletterconfig-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * A builder for [DeadLetterConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for
-       * the dead-letter queue.
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the SQS queue specified as the destination for
-       * the dead-letter queue.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
-       * dead-letter queue.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-deadletterconfig.html#cfn-scheduler-schedule-deadletterconfig-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeadLetterConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeadLetterConfigProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty
-    }
-  }
-
-  /**
-   * The templated target type for the Amazon Kinesis
-   * [`PutRecord`](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html) API
-   * operation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * KinesisParametersProperty kinesisParametersProperty = KinesisParametersProperty.builder()
-   * .partitionKey("partitionKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html)
-   */
-  public interface KinesisParametersProperty {
-    /**
-     * Specifies the shard to which EventBridge Scheduler sends the event.
-     *
-     * For more information, see [Amazon Kinesis Data Streams terminology and
-     * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
-     * Kinesis Streams Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html#cfn-scheduler-schedule-kinesisparameters-partitionkey)
-     */
-    public fun partitionKey(): String
-
-    /**
-     * A builder for [KinesisParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param partitionKey Specifies the shard to which EventBridge Scheduler sends the event. 
-       * For more information, see [Amazon Kinesis Data Streams terminology and
-       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
-       * Kinesis Streams Developer Guide* .
-       */
-      public fun partitionKey(partitionKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty.Builder =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty.builder()
-
-      /**
-       * @param partitionKey Specifies the shard to which EventBridge Scheduler sends the event. 
-       * For more information, see [Amazon Kinesis Data Streams terminology and
-       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
-       * Kinesis Streams Developer Guide* .
-       */
-      override fun partitionKey(partitionKey: String) {
-        cdkBuilder.partitionKey(partitionKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty,
-    ) : CdkObject(cdkObject), KinesisParametersProperty {
-      /**
-       * Specifies the shard to which EventBridge Scheduler sends the event.
-       *
-       * For more information, see [Amazon Kinesis Data Streams terminology and
-       * concepts](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html) in the *Amazon
-       * Kinesis Streams Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-kinesisparameters.html#cfn-scheduler-schedule-kinesisparameters-partitionkey)
-       */
-      override fun partitionKey(): String = unwrap(this).getPartitionKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty):
-          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisParametersProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty
-    }
-  }
-
-  /**
-   * An object representing a constraint on task placement.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
-   * .expression("expression")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html)
-   */
-  public interface PlacementConstraintProperty {
-    /**
-     * A cluster query language expression to apply to the constraint.
-     *
-     * You cannot specify an expression if the constraint type is `distinctInstance` . For more
-     * information, see [Cluster query
-     * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in the
-     * *Amazon ECS Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-expression)
-     */
-    public fun expression(): String? = unwrap(this).getExpression()
-
-    /**
-     * The type of constraint.
-     *
-     * Use `distinctInstance` to ensure that each task in a particular group is running on a
-     * different container instance. Use `memberOf` to restrict the selection to a group of valid
-     * candidates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [PlacementConstraintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
-       * information, see [Cluster query
-       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
-       * the *Amazon ECS Developer Guide* .
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param type The type of constraint.
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty.Builder
-          =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty.builder()
-
-      /**
-       * @param expression A cluster query language expression to apply to the constraint.
-       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
-       * information, see [Cluster query
-       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
-       * the *Amazon ECS Developer Guide* .
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param type The type of constraint.
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
-      /**
-       * A cluster query language expression to apply to the constraint.
-       *
-       * You cannot specify an expression if the constraint type is `distinctInstance` . For more
-       * information, see [Cluster query
-       * language](https://docs.aws.amazon.com/latest/developerguide/cluster-query-language.html) in
-       * the *Amazon ECS Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-expression)
-       */
-      override fun expression(): String? = unwrap(this).getExpression()
-
-      /**
-       * The type of constraint.
-       *
-       * Use `distinctInstance` to ensure that each task in a particular group is running on a
-       * different container instance. Use `memberOf` to restrict the selection to a group of valid
-       * candidates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-placementconstraint.html#cfn-scheduler-schedule-placementconstraint-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementConstraintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty):
-          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementConstraintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementConstraintProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty
-    }
-  }
-
-  /**
-   * The templated target type for the Amazon SageMaker
-   * [`StartPipelineExecution`](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StartPipelineExecution.html)
-   * API operation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.scheduler.*;
-   * SageMakerPipelineParametersProperty sageMakerPipelineParametersProperty =
-   * SageMakerPipelineParametersProperty.builder()
-   * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html)
-   */
-  public interface SageMakerPipelineParametersProperty {
-    /**
-     * List of parameter names and values to use when executing the SageMaker Model Building
-     * Pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html#cfn-scheduler-schedule-sagemakerpipelineparameters-pipelineparameterlist)
-     */
-    public fun pipelineParameterList(): Any? = unwrap(this).getPipelineParameterList()
-
-    /**
-     * A builder for [SageMakerPipelineParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      public fun pipelineParameterList(pipelineParameterList: IResolvable)
-
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      public fun pipelineParameterList(pipelineParameterList: List<Any>)
-
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      public fun pipelineParameterList(vararg pipelineParameterList: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty.builder()
-
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      override fun pipelineParameterList(pipelineParameterList: IResolvable) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      override fun pipelineParameterList(pipelineParameterList: List<Any>) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList)
-      }
-
-      /**
-       * @param pipelineParameterList List of parameter names and values to use when executing the
-       * SageMaker Model Building Pipeline.
-       */
-      override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
-          pipelineParameterList(pipelineParameterList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty,
-    ) : CdkObject(cdkObject), SageMakerPipelineParametersProperty {
-      /**
-       * List of parameter names and values to use when executing the SageMaker Model Building
-       * Pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-sagemakerpipelineparameters.html#cfn-scheduler-schedule-sagemakerpipelineparameters-pipelineparameterlist)
-       */
-      override fun pipelineParameterList(): Any? = unwrap(this).getPipelineParameterList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SageMakerPipelineParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty):
-          SageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SageMakerPipelineParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SageMakerPipelineParametersProperty):
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty
     }
   }
 }

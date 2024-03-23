@@ -19,7 +19,7 @@ public interface IFileSetProducer {
   public fun primaryOutput(): FileSet? = unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer,
+    cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer,
   ) : CdkObject(cdkObject), IFileSetProducer {
     /**
      * The `FileSet` produced by this file set producer.

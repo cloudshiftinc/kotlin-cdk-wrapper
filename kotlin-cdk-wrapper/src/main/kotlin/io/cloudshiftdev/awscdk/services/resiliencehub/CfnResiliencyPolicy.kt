@@ -55,9 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html)
  */
-public open class CfnResiliencyPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy,
+public open class CfnResiliencyPolicy(
+  cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -350,7 +349,8 @@ public open class CfnResiliencyPolicy internal constructor(
         CfnResiliencyPolicy = CfnResiliencyPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnResiliencyPolicy):
-        software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy
   }
 
   /**
@@ -427,8 +427,7 @@ public open class CfnResiliencyPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty,
     ) : CdkObject(cdkObject), FailurePolicyProperty {
       /**
        * Recovery Point Objective (RPO) in seconds.

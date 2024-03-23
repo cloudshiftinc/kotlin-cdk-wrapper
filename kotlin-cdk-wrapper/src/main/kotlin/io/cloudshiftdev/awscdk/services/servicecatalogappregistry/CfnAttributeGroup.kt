@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html)
  */
-public open class CfnAttributeGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup,
+public open class CfnAttributeGroup(
+  cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -252,6 +251,7 @@ public open class CfnAttributeGroup internal constructor(
 
     internal fun unwrap(wrapped: CfnAttributeGroup):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup
   }
 }

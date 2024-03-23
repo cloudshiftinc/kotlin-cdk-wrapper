@@ -674,8 +674,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironmentProps,
   ) : CdkObject(cdkObject), ManagedEc2EcsComputeEnvironmentProps {
     /**
      * The allocation strategy to use if not enough instances of the best fitting instance type can

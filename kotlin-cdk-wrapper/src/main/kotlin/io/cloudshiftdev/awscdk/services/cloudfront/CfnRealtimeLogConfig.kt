@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html)
  */
-public open class CfnRealtimeLogConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
+public open class CfnRealtimeLogConfig(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -351,140 +351,8 @@ public open class CfnRealtimeLogConfig internal constructor(
         CfnRealtimeLogConfig = CfnRealtimeLogConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnRealtimeLogConfig):
-        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig = wrapped.cdkObject
-  }
-
-  /**
-   * Contains information about the Amazon Kinesis data stream where you are sending real-time log
-   * data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * KinesisStreamConfigProperty kinesisStreamConfigProperty = KinesisStreamConfigProperty.builder()
-   * .roleArn("roleArn")
-   * .streamArn("streamArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html)
-   */
-  public interface KinesisStreamConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that
-     * CloudFront can use to send real-time log data to your Kinesis data stream.
-     *
-     * For more information the IAM role, see [Real-time log configuration IAM
-     * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
-     * in the *Amazon CloudFront Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * The Amazon Resource Name (ARN) of the Kinesis data stream where you are sending real-time log
-     * data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-streamarn)
-     */
-    public fun streamArn(): String
-
-    /**
-     * A builder for [KinesisStreamConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of an AWS Identity and Access Management
-       * (IAM) role that CloudFront can use to send real-time log data to your Kinesis data stream. 
-       * For more information the IAM role, see [Real-time log configuration IAM
-       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param streamArn The Amazon Resource Name (ARN) of the Kinesis data stream where you are
-       * sending real-time log data. 
-       */
-      public fun streamArn(streamArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty.builder()
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of an AWS Identity and Access Management
-       * (IAM) role that CloudFront can use to send real-time log data to your Kinesis data stream. 
-       * For more information the IAM role, see [Real-time log configuration IAM
-       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param streamArn The Amazon Resource Name (ARN) of the Kinesis data stream where you are
-       * sending real-time log data. 
-       */
-      override fun streamArn(streamArn: String) {
-        cdkBuilder.streamArn(streamArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
-    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that
-       * CloudFront can use to send real-time log data to your Kinesis data stream.
-       *
-       * For more information the IAM role, see [Real-time log configuration IAM
-       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Kinesis data stream where you are sending real-time
-       * log data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-streamarn)
-       */
-      override fun streamArn(): String = unwrap(this).getStreamArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty):
-          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisStreamConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
-    }
+        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
   }
 
   /**
@@ -604,8 +472,7 @@ public open class CfnRealtimeLogConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
     ) : CdkObject(cdkObject), EndPointProperty {
       /**
        * Contains information about the Amazon Kinesis data stream where you are sending real-time
@@ -640,6 +507,138 @@ public open class CfnRealtimeLogConfig internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty
+    }
+  }
+
+  /**
+   * Contains information about the Amazon Kinesis data stream where you are sending real-time log
+   * data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * KinesisStreamConfigProperty kinesisStreamConfigProperty = KinesisStreamConfigProperty.builder()
+   * .roleArn("roleArn")
+   * .streamArn("streamArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html)
+   */
+  public interface KinesisStreamConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that
+     * CloudFront can use to send real-time log data to your Kinesis data stream.
+     *
+     * For more information the IAM role, see [Real-time log configuration IAM
+     * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the Kinesis data stream where you are sending real-time log
+     * data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-streamarn)
+     */
+    public fun streamArn(): String
+
+    /**
+     * A builder for [KinesisStreamConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of an AWS Identity and Access Management
+       * (IAM) role that CloudFront can use to send real-time log data to your Kinesis data stream. 
+       * For more information the IAM role, see [Real-time log configuration IAM
+       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param streamArn The Amazon Resource Name (ARN) of the Kinesis data stream where you are
+       * sending real-time log data. 
+       */
+      public fun streamArn(streamArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty.builder()
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of an AWS Identity and Access Management
+       * (IAM) role that CloudFront can use to send real-time log data to your Kinesis data stream. 
+       * For more information the IAM role, see [Real-time log configuration IAM
+       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param streamArn The Amazon Resource Name (ARN) of the Kinesis data stream where you are
+       * sending real-time log data. 
+       */
+      override fun streamArn(streamArn: String) {
+        cdkBuilder.streamArn(streamArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
+    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that
+       * CloudFront can use to send real-time log data to your Kinesis data stream.
+       *
+       * For more information the IAM role, see [Real-time log configuration IAM
+       * role](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Kinesis data stream where you are sending real-time
+       * log data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html#cfn-cloudfront-realtimelogconfig-kinesisstreamconfig-streamarn)
+       */
+      override fun streamArn(): String = unwrap(this).getStreamArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty):
+          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisStreamConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
     }
   }
 }

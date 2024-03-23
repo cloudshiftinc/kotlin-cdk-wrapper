@@ -108,7 +108,7 @@ public interface BackupPlanCopyActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.BackupPlanCopyActionProps,
+    cdkObject: software.amazon.awscdk.services.backup.BackupPlanCopyActionProps,
   ) : CdkObject(cdkObject), BackupPlanCopyActionProps {
     /**
      * Specifies the duration after creation that a copied recovery point is deleted from the

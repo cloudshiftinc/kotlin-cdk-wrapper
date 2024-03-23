@@ -114,7 +114,7 @@ public interface PortProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PortProps,
+    cdkObject: software.amazon.awscdk.services.ec2.PortProps,
   ) : CdkObject(cdkObject), PortProps {
     /**
      * The starting port for the range.

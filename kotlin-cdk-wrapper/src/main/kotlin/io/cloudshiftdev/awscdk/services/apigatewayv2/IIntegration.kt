@@ -21,7 +21,7 @@ public interface IIntegration : IResource {
   public fun integrationId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IIntegration,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IIntegration,
   ) : CdkObject(cdkObject), IIntegration {
     /**
      * Apply the given removal policy to this resource.

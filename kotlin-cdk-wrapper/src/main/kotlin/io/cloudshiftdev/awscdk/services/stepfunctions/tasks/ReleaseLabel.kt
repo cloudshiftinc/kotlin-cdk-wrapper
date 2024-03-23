@@ -33,8 +33,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class ReleaseLabel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel,
+public open class ReleaseLabel(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel,
 ) : CdkObject(cdkObject) {
   public constructor(label: String) :
       this(software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel(label)
@@ -64,6 +64,7 @@ public open class ReleaseLabel internal constructor(
         ReleaseLabel = ReleaseLabel(cdkObject)
 
     internal fun unwrap(wrapped: ReleaseLabel):
-        software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel
   }
 }

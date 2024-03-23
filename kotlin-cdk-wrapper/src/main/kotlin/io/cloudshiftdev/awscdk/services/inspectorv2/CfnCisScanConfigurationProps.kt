@@ -228,8 +228,7 @@ public interface CfnCisScanConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps,
   ) : CdkObject(cdkObject), CfnCisScanConfigurationProps {
     /**
      * The name of the CIS scan configuration.

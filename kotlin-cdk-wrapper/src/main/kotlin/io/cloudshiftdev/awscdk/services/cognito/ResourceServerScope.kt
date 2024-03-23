@@ -41,8 +41,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class ResourceServerScope internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScope,
+public open class ResourceServerScope(
+  cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScope,
 ) : CdkObject(cdkObject) {
   public constructor(props: ResourceServerScopeProps) :
       this(software.amazon.awscdk.services.cognito.ResourceServerScope(props.let(ResourceServerScopeProps::unwrap))
@@ -118,6 +118,7 @@ public open class ResourceServerScope internal constructor(
         ResourceServerScope = ResourceServerScope(cdkObject)
 
     internal fun unwrap(wrapped: ResourceServerScope):
-        software.amazon.awscdk.services.cognito.ResourceServerScope = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.ResourceServerScope = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.ResourceServerScope
   }
 }

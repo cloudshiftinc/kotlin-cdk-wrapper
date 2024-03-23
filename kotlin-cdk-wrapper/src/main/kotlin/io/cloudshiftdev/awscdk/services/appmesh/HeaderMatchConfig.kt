@@ -84,7 +84,7 @@ public interface HeaderMatchConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatchConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatchConfig,
   ) : CdkObject(cdkObject), HeaderMatchConfig {
     /**
      * Route CFN configuration for the route header match.

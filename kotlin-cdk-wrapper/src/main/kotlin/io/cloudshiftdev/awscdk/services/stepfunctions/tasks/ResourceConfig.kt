@@ -165,7 +165,7 @@ public interface ResourceConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig,
   ) : CdkObject(cdkObject), ResourceConfig {
     /**
      * The number of ML compute instances to use.

@@ -100,8 +100,7 @@ public interface ApplicationListenerAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes,
   ) : CdkObject(cdkObject), ApplicationListenerAttributes {
     /**
      * The default port on which this listener is listening.

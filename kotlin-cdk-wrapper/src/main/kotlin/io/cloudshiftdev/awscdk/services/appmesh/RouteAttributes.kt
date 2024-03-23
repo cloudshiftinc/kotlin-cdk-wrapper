@@ -73,7 +73,7 @@ public interface RouteAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteAttributes,
+    cdkObject: software.amazon.awscdk.services.appmesh.RouteAttributes,
   ) : CdkObject(cdkObject), RouteAttributes {
     /**
      * The name of the Route.

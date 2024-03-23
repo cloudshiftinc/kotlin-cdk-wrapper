@@ -44,9 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html)
  */
-public open class CfnTransitGatewayMulticastDomain internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain,
+public open class CfnTransitGatewayMulticastDomain(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -257,7 +256,8 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
         CfnTransitGatewayMulticastDomain = CfnTransitGatewayMulticastDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastDomain):
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain
   }
 
   /**
@@ -364,8 +364,7 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty,
     ) : CdkObject(cdkObject), OptionsProperty {
       /**
        * Indicates whether to automatically accept cross-account subnet associations that are

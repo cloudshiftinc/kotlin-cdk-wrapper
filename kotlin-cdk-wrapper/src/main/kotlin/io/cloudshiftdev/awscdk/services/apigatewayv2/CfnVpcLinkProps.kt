@@ -148,7 +148,7 @@ public interface CfnVpcLinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps,
   ) : CdkObject(cdkObject), CfnVpcLinkProps {
     /**
      * The name of the VPC link.

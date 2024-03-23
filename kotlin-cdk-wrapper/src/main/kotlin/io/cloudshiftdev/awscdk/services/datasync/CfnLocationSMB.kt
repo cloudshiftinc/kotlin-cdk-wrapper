@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html)
  */
-public open class CfnLocationSMB internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB,
+public open class CfnLocationSMB(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -562,7 +562,8 @@ public open class CfnLocationSMB internal constructor(
         CfnLocationSMB = CfnLocationSMB(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationSMB):
-        software.amazon.awscdk.services.datasync.CfnLocationSMB = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationSMB = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationSMB
   }
 
   /**
@@ -683,8 +684,7 @@ public open class CfnLocationSMB internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty,
     ) : CdkObject(cdkObject), MountOptionsProperty {
       /**
        * By default, DataSync automatically chooses an SMB protocol version based on negotiation

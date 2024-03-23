@@ -28,9 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApplicationListenerCertificate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate,
+public open class ApplicationListenerCertificate(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -149,6 +148,7 @@ public open class ApplicationListenerCertificate internal constructor(
 
     internal fun unwrap(wrapped: ApplicationListenerCertificate):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate
   }
 }

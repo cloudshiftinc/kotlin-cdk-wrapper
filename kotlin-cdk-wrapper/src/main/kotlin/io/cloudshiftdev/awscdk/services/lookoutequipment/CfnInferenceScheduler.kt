@@ -66,9 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html)
  */
-public open class CfnInferenceScheduler internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
+public open class CfnInferenceScheduler(
+  cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -505,6 +504,7 @@ public open class CfnInferenceScheduler internal constructor(
 
     internal fun unwrap(wrapped: CfnInferenceScheduler):
         software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler = wrapped.cdkObject
+        as software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
   }
 
   /**
@@ -689,8 +689,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
     ) : CdkObject(cdkObject), DataInputConfigurationProperty {
       /**
        * Specifies configuration information for the input data for the inference, including
@@ -732,229 +731,6 @@ public open class CfnInferenceScheduler internal constructor(
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies configuration information for the input data for the inference, including timestamp
-   * format and delimiter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
-   * InputNameConfigurationProperty inputNameConfigurationProperty =
-   * InputNameConfigurationProperty.builder()
-   * .componentTimestampDelimiter("componentTimestampDelimiter")
-   * .timestampFormat("timestampFormat")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html)
-   */
-  public interface InputNameConfigurationProperty {
-    /**
-     * Indicates the delimiter character used between items in the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-componenttimestampdelimiter)
-     */
-    public fun componentTimestampDelimiter(): String? =
-        unwrap(this).getComponentTimestampDelimiter()
-
-    /**
-     * The format of the timestamp, whether Epoch time, or standard, with or without hyphens (-).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-timestampformat)
-     */
-    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
-
-    /**
-     * A builder for [InputNameConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentTimestampDelimiter Indicates the delimiter character used between items in
-       * the data.
-       */
-      public fun componentTimestampDelimiter(componentTimestampDelimiter: String)
-
-      /**
-       * @param timestampFormat The format of the timestamp, whether Epoch time, or standard, with
-       * or without hyphens (-).
-       */
-      public fun timestampFormat(timestampFormat: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty.builder()
-
-      /**
-       * @param componentTimestampDelimiter Indicates the delimiter character used between items in
-       * the data.
-       */
-      override fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
-        cdkBuilder.componentTimestampDelimiter(componentTimestampDelimiter)
-      }
-
-      /**
-       * @param timestampFormat The format of the timestamp, whether Epoch time, or standard, with
-       * or without hyphens (-).
-       */
-      override fun timestampFormat(timestampFormat: String) {
-        cdkBuilder.timestampFormat(timestampFormat)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
-    ) : CdkObject(cdkObject), InputNameConfigurationProperty {
-      /**
-       * Indicates the delimiter character used between items in the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-componenttimestampdelimiter)
-       */
-      override fun componentTimestampDelimiter(): String? =
-          unwrap(this).getComponentTimestampDelimiter()
-
-      /**
-       * The format of the timestamp, whether Epoch time, or standard, with or without hyphens (-).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-timestampformat)
-       */
-      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputNameConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty):
-          InputNameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputNameConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputNameConfigurationProperty):
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies configuration information for the input data for the inference, including input data
-   * S3 location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
-   * S3InputConfigurationProperty s3InputConfigurationProperty =
-   * S3InputConfigurationProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html)
-   */
-  public interface S3InputConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * A builder for [S3InputConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket the value to be set. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param prefix the value to be set.
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty.builder()
-
-      /**
-       * @param bucket the value to be set. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param prefix the value to be set.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
-    ) : CdkObject(cdkObject), S3InputConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-prefix)
-       */
-      override fun prefix(): String? = unwrap(this).getPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3InputConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty):
-          S3InputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3InputConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3InputConfigurationProperty):
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
     }
   }
 
@@ -1075,8 +851,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
     ) : CdkObject(cdkObject), DataOutputConfigurationProperty {
       /**
        * The ID number for the AWS KMS key used to encrypt the inference output.
@@ -1109,6 +884,227 @@ public open class CfnInferenceScheduler internal constructor(
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies configuration information for the input data for the inference, including timestamp
+   * format and delimiter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
+   * InputNameConfigurationProperty inputNameConfigurationProperty =
+   * InputNameConfigurationProperty.builder()
+   * .componentTimestampDelimiter("componentTimestampDelimiter")
+   * .timestampFormat("timestampFormat")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html)
+   */
+  public interface InputNameConfigurationProperty {
+    /**
+     * Indicates the delimiter character used between items in the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-componenttimestampdelimiter)
+     */
+    public fun componentTimestampDelimiter(): String? =
+        unwrap(this).getComponentTimestampDelimiter()
+
+    /**
+     * The format of the timestamp, whether Epoch time, or standard, with or without hyphens (-).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-timestampformat)
+     */
+    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+    /**
+     * A builder for [InputNameConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentTimestampDelimiter Indicates the delimiter character used between items in
+       * the data.
+       */
+      public fun componentTimestampDelimiter(componentTimestampDelimiter: String)
+
+      /**
+       * @param timestampFormat The format of the timestamp, whether Epoch time, or standard, with
+       * or without hyphens (-).
+       */
+      public fun timestampFormat(timestampFormat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty.builder()
+
+      /**
+       * @param componentTimestampDelimiter Indicates the delimiter character used between items in
+       * the data.
+       */
+      override fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
+        cdkBuilder.componentTimestampDelimiter(componentTimestampDelimiter)
+      }
+
+      /**
+       * @param timestampFormat The format of the timestamp, whether Epoch time, or standard, with
+       * or without hyphens (-).
+       */
+      override fun timestampFormat(timestampFormat: String) {
+        cdkBuilder.timestampFormat(timestampFormat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
+    ) : CdkObject(cdkObject), InputNameConfigurationProperty {
+      /**
+       * Indicates the delimiter character used between items in the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-componenttimestampdelimiter)
+       */
+      override fun componentTimestampDelimiter(): String? =
+          unwrap(this).getComponentTimestampDelimiter()
+
+      /**
+       * The format of the timestamp, whether Epoch time, or standard, with or without hyphens (-).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-inputnameconfiguration.html#cfn-lookoutequipment-inferencescheduler-inputnameconfiguration-timestampformat)
+       */
+      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputNameConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty):
+          InputNameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputNameConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputNameConfigurationProperty):
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies configuration information for the input data for the inference, including input data
+   * S3 location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lookoutequipment.*;
+   * S3InputConfigurationProperty s3InputConfigurationProperty =
+   * S3InputConfigurationProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html)
+   */
+  public interface S3InputConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * A builder for [S3InputConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket the value to be set. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param prefix the value to be set.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty.builder()
+
+      /**
+       * @param bucket the value to be set. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param prefix the value to be set.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
+    ) : CdkObject(cdkObject), S3InputConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3InputConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty):
+          S3InputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3InputConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3InputConfigurationProperty):
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
     }
   }
 
@@ -1185,8 +1181,7 @@ public open class CfnInferenceScheduler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
     ) : CdkObject(cdkObject), S3OutputConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3outputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3outputconfiguration-bucket)

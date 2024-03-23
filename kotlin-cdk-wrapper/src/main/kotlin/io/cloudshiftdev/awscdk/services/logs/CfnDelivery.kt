@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html)
  */
-public open class CfnDelivery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.CfnDelivery,
+public open class CfnDelivery(
+  cdkObject: software.amazon.awscdk.services.logs.CfnDelivery,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,6 +245,6 @@ public open class CfnDelivery internal constructor(
         CfnDelivery(cdkObject)
 
     internal fun unwrap(wrapped: CfnDelivery): software.amazon.awscdk.services.logs.CfnDelivery =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.CfnDelivery
   }
 }

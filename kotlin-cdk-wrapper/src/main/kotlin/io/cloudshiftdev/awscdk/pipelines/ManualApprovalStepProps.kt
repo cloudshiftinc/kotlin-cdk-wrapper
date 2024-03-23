@@ -57,7 +57,7 @@ public interface ManualApprovalStepProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStepProps,
+    cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStepProps,
   ) : CdkObject(cdkObject), ManualApprovalStepProps {
     /**
      * The comment to display with this manual approval.

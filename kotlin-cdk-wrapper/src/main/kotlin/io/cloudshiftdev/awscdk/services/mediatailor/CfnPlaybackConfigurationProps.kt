@@ -776,8 +776,7 @@ public interface CfnPlaybackConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps,
   ) : CdkObject(cdkObject), CfnPlaybackConfigurationProps {
     /**
      * The URL for the ad decision server (ADS).

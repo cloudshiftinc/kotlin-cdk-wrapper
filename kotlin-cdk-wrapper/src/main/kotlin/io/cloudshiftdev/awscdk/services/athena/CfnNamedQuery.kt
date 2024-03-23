@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html)
  */
-public open class CfnNamedQuery internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.athena.CfnNamedQuery,
+public open class CfnNamedQuery(
+  cdkObject: software.amazon.awscdk.services.athena.CfnNamedQuery,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -249,6 +249,7 @@ public open class CfnNamedQuery internal constructor(
         CfnNamedQuery = CfnNamedQuery(cdkObject)
 
     internal fun unwrap(wrapped: CfnNamedQuery):
-        software.amazon.awscdk.services.athena.CfnNamedQuery = wrapped.cdkObject
+        software.amazon.awscdk.services.athena.CfnNamedQuery = wrapped.cdkObject as
+        software.amazon.awscdk.services.athena.CfnNamedQuery
   }
 }

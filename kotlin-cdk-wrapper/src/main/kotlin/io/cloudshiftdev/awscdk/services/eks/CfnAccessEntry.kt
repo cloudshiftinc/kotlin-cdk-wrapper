@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-accessentry.html)
  */
-public open class CfnAccessEntry internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry,
+public open class CfnAccessEntry(
+  cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -601,134 +601,7 @@ public open class CfnAccessEntry internal constructor(
         = CfnAccessEntry(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessEntry): software.amazon.awscdk.services.eks.CfnAccessEntry
-        = wrapped.cdkObject
-  }
-
-  /**
-   * The scope of an `AccessPolicy` that's associated to an `AccessEntry` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * AccessScopeProperty accessScopeProperty = AccessScopeProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .namespaces(List.of("namespaces"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html)
-   */
-  public interface AccessScopeProperty {
-    /**
-     * A Kubernetes `namespace` that an access policy is scoped to.
-     *
-     * A value is required if you specified `namespace` for `Type` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-namespaces)
-     */
-    public fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
-
-    /**
-     * The scope type of an access policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [AccessScopeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
-       * A value is required if you specified `namespace` for `Type` .
-       */
-      public fun namespaces(namespaces: List<String>)
-
-      /**
-       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
-       * A value is required if you specified `namespace` for `Type` .
-       */
-      public fun namespaces(vararg namespaces: String)
-
-      /**
-       * @param type The scope type of an access policy. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.builder()
-
-      /**
-       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
-       * A value is required if you specified `namespace` for `Type` .
-       */
-      override fun namespaces(namespaces: List<String>) {
-        cdkBuilder.namespaces(namespaces)
-      }
-
-      /**
-       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
-       * A value is required if you specified `namespace` for `Type` .
-       */
-      override fun namespaces(vararg namespaces: String): Unit = namespaces(namespaces.toList())
-
-      /**
-       * @param type The scope type of an access policy. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty,
-    ) : CdkObject(cdkObject), AccessScopeProperty {
-      /**
-       * A Kubernetes `namespace` that an access policy is scoped to.
-       *
-       * A value is required if you specified `namespace` for `Type` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-namespaces)
-       */
-      override fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
-
-      /**
-       * The scope type of an access policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessScopeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty):
-          AccessScopeProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessScopeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessScopeProperty):
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnAccessEntry
   }
 
   /**
@@ -844,8 +717,7 @@ public open class CfnAccessEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty,
     ) : CdkObject(cdkObject), AccessPolicyProperty {
       /**
        * The scope of an `AccessPolicy` that's associated to an `AccessEntry` .
@@ -877,6 +749,132 @@ public open class CfnAccessEntry internal constructor(
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty
+    }
+  }
+
+  /**
+   * The scope of an `AccessPolicy` that's associated to an `AccessEntry` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * AccessScopeProperty accessScopeProperty = AccessScopeProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .namespaces(List.of("namespaces"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html)
+   */
+  public interface AccessScopeProperty {
+    /**
+     * A Kubernetes `namespace` that an access policy is scoped to.
+     *
+     * A value is required if you specified `namespace` for `Type` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-namespaces)
+     */
+    public fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
+
+    /**
+     * The scope type of an access policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [AccessScopeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
+       * A value is required if you specified `namespace` for `Type` .
+       */
+      public fun namespaces(namespaces: List<String>)
+
+      /**
+       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
+       * A value is required if you specified `namespace` for `Type` .
+       */
+      public fun namespaces(vararg namespaces: String)
+
+      /**
+       * @param type The scope type of an access policy. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.builder()
+
+      /**
+       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
+       * A value is required if you specified `namespace` for `Type` .
+       */
+      override fun namespaces(namespaces: List<String>) {
+        cdkBuilder.namespaces(namespaces)
+      }
+
+      /**
+       * @param namespaces A Kubernetes `namespace` that an access policy is scoped to.
+       * A value is required if you specified `namespace` for `Type` .
+       */
+      override fun namespaces(vararg namespaces: String): Unit = namespaces(namespaces.toList())
+
+      /**
+       * @param type The scope type of an access policy. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty,
+    ) : CdkObject(cdkObject), AccessScopeProperty {
+      /**
+       * A Kubernetes `namespace` that an access policy is scoped to.
+       *
+       * A value is required if you specified `namespace` for `Type` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-namespaces)
+       */
+      override fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
+
+      /**
+       * The scope type of an access policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-accessentry-accessscope.html#cfn-eks-accessentry-accessscope-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessScopeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty):
+          AccessScopeProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessScopeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessScopeProperty):
+          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty
     }
   }
 }

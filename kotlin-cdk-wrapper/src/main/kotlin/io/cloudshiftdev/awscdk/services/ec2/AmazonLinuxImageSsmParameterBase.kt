@@ -9,9 +9,8 @@ import io.cloudshiftdev.constructs.Construct
 /**
  *
  */
-public abstract class AmazonLinuxImageSsmParameterBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
+public abstract class AmazonLinuxImageSsmParameterBase(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
 ) : CdkObject(cdkObject), IMachineImage {
   /**
    * Return the image to use in the given context.
@@ -22,7 +21,7 @@ public abstract class AmazonLinuxImageSsmParameterBase internal constructor(
       unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
+    cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
   ) : AmazonLinuxImageSsmParameterBase(cdkObject)
 
   public companion object {

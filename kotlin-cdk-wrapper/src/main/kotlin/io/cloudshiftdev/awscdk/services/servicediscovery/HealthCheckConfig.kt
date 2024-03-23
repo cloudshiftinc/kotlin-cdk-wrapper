@@ -135,7 +135,7 @@ public interface HealthCheckConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckConfig,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckConfig,
   ) : CdkObject(cdkObject), HealthCheckConfig {
     /**
      * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to

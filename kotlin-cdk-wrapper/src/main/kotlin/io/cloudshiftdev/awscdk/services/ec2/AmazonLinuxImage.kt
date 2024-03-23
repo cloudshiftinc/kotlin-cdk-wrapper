@@ -36,8 +36,8 @@ import kotlin.jvm.JvmName
  * lb.addTarget(new InstanceTarget(instance));
  * ```
  */
-public open class AmazonLinuxImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImage,
+public open class AmazonLinuxImage(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImage,
 ) : GenericSSMParameterImage(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.AmazonLinuxImage()
   )
@@ -280,6 +280,7 @@ public open class AmazonLinuxImage internal constructor(
         AmazonLinuxImage = AmazonLinuxImage(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinuxImage):
-        software.amazon.awscdk.services.ec2.AmazonLinuxImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.AmazonLinuxImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.AmazonLinuxImage
   }
 }

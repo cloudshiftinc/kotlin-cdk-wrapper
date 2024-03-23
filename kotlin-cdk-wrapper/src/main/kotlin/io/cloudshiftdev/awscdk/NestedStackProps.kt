@@ -343,7 +343,7 @@ public interface NestedStackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.NestedStackProps,
+    cdkObject: software.amazon.awscdk.NestedStackProps,
   ) : CdkObject(cdkObject), NestedStackProps {
     /**
      * A description of the stack.

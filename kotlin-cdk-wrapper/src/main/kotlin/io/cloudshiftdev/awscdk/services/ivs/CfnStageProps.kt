@@ -109,7 +109,7 @@ public interface CfnStageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ivs.CfnStageProps,
+    cdkObject: software.amazon.awscdk.services.ivs.CfnStageProps,
   ) : CdkObject(cdkObject), CfnStageProps {
     /**
      * Stage name.

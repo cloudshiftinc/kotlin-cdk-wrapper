@@ -356,7 +356,7 @@ public interface CfnAccessGrantProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantProps,
+    cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantProps,
   ) : CdkObject(cdkObject), CfnAccessGrantProps {
     /**
      * The configuration options of the grant location.

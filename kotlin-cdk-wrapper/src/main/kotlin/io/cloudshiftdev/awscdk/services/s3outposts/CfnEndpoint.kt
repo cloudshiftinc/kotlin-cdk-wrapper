@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -406,7 +406,8 @@ public open class CfnEndpoint internal constructor(
         CfnEndpoint = CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint):
-        software.amazon.awscdk.services.s3outposts.CfnEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.s3outposts.CfnEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3outposts.CfnEndpoint
   }
 
   /**
@@ -484,8 +485,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty,
     ) : CdkObject(cdkObject), FailedReasonProperty {
       /**
        * The failure code, if any, for a create or delete endpoint operation.
@@ -573,8 +573,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * The ID for the network interface.

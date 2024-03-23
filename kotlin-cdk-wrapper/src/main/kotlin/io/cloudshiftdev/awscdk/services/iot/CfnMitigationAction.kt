@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html)
  */
-public open class CfnMitigationAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction,
+public open class CfnMitigationAction(
+  cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -356,277 +356,8 @@ public open class CfnMitigationAction internal constructor(
         CfnMitigationAction = CfnMitigationAction(cdkObject)
 
     internal fun unwrap(wrapped: CfnMitigationAction):
-        software.amazon.awscdk.services.iot.CfnMitigationAction = wrapped.cdkObject
-  }
-
-  /**
-   * Parameters to define a mitigation action that adds a blank policy to restrict permissions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * ReplaceDefaultPolicyVersionParamsProperty replaceDefaultPolicyVersionParamsProperty =
-   * ReplaceDefaultPolicyVersionParamsProperty.builder()
-   * .templateName("templateName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html)
-   */
-  public interface ReplaceDefaultPolicyVersionParamsProperty {
-    /**
-     * The name of the template to be applied.
-     *
-     * The only supported value is `BLANK_POLICY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html#cfn-iot-mitigationaction-replacedefaultpolicyversionparams-templatename)
-     */
-    public fun templateName(): String
-
-    /**
-     * A builder for [ReplaceDefaultPolicyVersionParamsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param templateName The name of the template to be applied. 
-       * The only supported value is `BLANK_POLICY` .
-       */
-      public fun templateName(templateName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.builder()
-
-      /**
-       * @param templateName The name of the template to be applied. 
-       * The only supported value is `BLANK_POLICY` .
-       */
-      override fun templateName(templateName: String) {
-        cdkBuilder.templateName(templateName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty,
-    ) : CdkObject(cdkObject), ReplaceDefaultPolicyVersionParamsProperty {
-      /**
-       * The name of the template to be applied.
-       *
-       * The only supported value is `BLANK_POLICY` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html#cfn-iot-mitigationaction-replacedefaultpolicyversionparams-templatename)
-       */
-      override fun templateName(): String = unwrap(this).getTemplateName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ReplaceDefaultPolicyVersionParamsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty):
-          ReplaceDefaultPolicyVersionParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplaceDefaultPolicyVersionParamsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplaceDefaultPolicyVersionParamsProperty):
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
-    }
-  }
-
-  /**
-   * Parameters to define a mitigation action that publishes findings to Amazon SNS.
-   *
-   * You can implement your own custom actions in response to the Amazon SNS messages.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * PublishFindingToSnsParamsProperty publishFindingToSnsParamsProperty =
-   * PublishFindingToSnsParamsProperty.builder()
-   * .topicArn("topicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html)
-   */
-  public interface PublishFindingToSnsParamsProperty {
-    /**
-     * The ARN of the topic to which you want to publish the findings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html#cfn-iot-mitigationaction-publishfindingtosnsparams-topicarn)
-     */
-    public fun topicArn(): String
-
-    /**
-     * A builder for [PublishFindingToSnsParamsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param topicArn The ARN of the topic to which you want to publish the findings. 
-       */
-      public fun topicArn(topicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
-
-      /**
-       * @param topicArn The ARN of the topic to which you want to publish the findings. 
-       */
-      override fun topicArn(topicArn: String) {
-        cdkBuilder.topicArn(topicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty,
-    ) : CdkObject(cdkObject), PublishFindingToSnsParamsProperty {
-      /**
-       * The ARN of the topic to which you want to publish the findings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html#cfn-iot-mitigationaction-publishfindingtosnsparams-topicarn)
-       */
-      override fun topicArn(): String = unwrap(this).getTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PublishFindingToSnsParamsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty):
-          PublishFindingToSnsParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PublishFindingToSnsParamsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PublishFindingToSnsParamsProperty):
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
-    }
-  }
-
-  /**
-   * Parameters to define a mitigation action that changes the state of the device certificate to
-   * inactive.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * UpdateDeviceCertificateParamsProperty updateDeviceCertificateParamsProperty =
-   * UpdateDeviceCertificateParamsProperty.builder()
-   * .action("action")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html)
-   */
-  public interface UpdateDeviceCertificateParamsProperty {
-    /**
-     * The action that you want to apply to the device certificate.
-     *
-     * The only supported value is `DEACTIVATE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html#cfn-iot-mitigationaction-updatedevicecertificateparams-action)
-     */
-    public fun action(): String
-
-    /**
-     * A builder for [UpdateDeviceCertificateParamsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The action that you want to apply to the device certificate. 
-       * The only supported value is `DEACTIVATE` .
-       */
-      public fun action(action: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty.builder()
-
-      /**
-       * @param action The action that you want to apply to the device certificate. 
-       * The only supported value is `DEACTIVATE` .
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty,
-    ) : CdkObject(cdkObject), UpdateDeviceCertificateParamsProperty {
-      /**
-       * The action that you want to apply to the device certificate.
-       *
-       * The only supported value is `DEACTIVATE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html#cfn-iot-mitigationaction-updatedevicecertificateparams-action)
-       */
-      override fun action(): String = unwrap(this).getAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          UpdateDeviceCertificateParamsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty):
-          UpdateDeviceCertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UpdateDeviceCertificateParamsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UpdateDeviceCertificateParamsProperty):
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
-    }
+        software.amazon.awscdk.services.iot.CfnMitigationAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnMitigationAction
   }
 
   /**
@@ -1045,8 +776,7 @@ public open class CfnMitigationAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty,
     ) : CdkObject(cdkObject), ActionParamsProperty {
       /**
        * Specifies the group to which you want to add the devices.
@@ -1117,98 +847,6 @@ public open class CfnMitigationAction internal constructor(
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty
-    }
-  }
-
-  /**
-   * Parameters to define a mitigation action that changes the state of the CA certificate to
-   * inactive.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iot.*;
-   * UpdateCACertificateParamsProperty updateCACertificateParamsProperty =
-   * UpdateCACertificateParamsProperty.builder()
-   * .action("action")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html)
-   */
-  public interface UpdateCACertificateParamsProperty {
-    /**
-     * The action that you want to apply to the CA certificate.
-     *
-     * The only supported value is `DEACTIVATE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html#cfn-iot-mitigationaction-updatecacertificateparams-action)
-     */
-    public fun action(): String
-
-    /**
-     * A builder for [UpdateCACertificateParamsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The action that you want to apply to the CA certificate. 
-       * The only supported value is `DEACTIVATE` .
-       */
-      public fun action(action: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty.Builder
-          =
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty.builder()
-
-      /**
-       * @param action The action that you want to apply to the CA certificate. 
-       * The only supported value is `DEACTIVATE` .
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty,
-    ) : CdkObject(cdkObject), UpdateCACertificateParamsProperty {
-      /**
-       * The action that you want to apply to the CA certificate.
-       *
-       * The only supported value is `DEACTIVATE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html#cfn-iot-mitigationaction-updatecacertificateparams-action)
-       */
-      override fun action(): String = unwrap(this).getAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          UpdateCACertificateParamsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty):
-          UpdateCACertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UpdateCACertificateParamsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UpdateCACertificateParamsProperty):
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
     }
   }
 
@@ -1331,8 +969,7 @@ public open class CfnMitigationAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty,
     ) : CdkObject(cdkObject), AddThingsToThingGroupParamsProperty {
       /**
        * Specifies if this mitigation action can move the things that triggered the mitigation
@@ -1448,8 +1085,7 @@ public open class CfnMitigationAction internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty,
     ) : CdkObject(cdkObject), EnableIoTLoggingParamsProperty {
       /**
        * Specifies the type of information to be logged.
@@ -1481,6 +1117,364 @@ public open class CfnMitigationAction internal constructor(
           software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty
+    }
+  }
+
+  /**
+   * Parameters to define a mitigation action that publishes findings to Amazon SNS.
+   *
+   * You can implement your own custom actions in response to the Amazon SNS messages.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * PublishFindingToSnsParamsProperty publishFindingToSnsParamsProperty =
+   * PublishFindingToSnsParamsProperty.builder()
+   * .topicArn("topicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html)
+   */
+  public interface PublishFindingToSnsParamsProperty {
+    /**
+     * The ARN of the topic to which you want to publish the findings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html#cfn-iot-mitigationaction-publishfindingtosnsparams-topicarn)
+     */
+    public fun topicArn(): String
+
+    /**
+     * A builder for [PublishFindingToSnsParamsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param topicArn The ARN of the topic to which you want to publish the findings. 
+       */
+      public fun topicArn(topicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
+
+      /**
+       * @param topicArn The ARN of the topic to which you want to publish the findings. 
+       */
+      override fun topicArn(topicArn: String) {
+        cdkBuilder.topicArn(topicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty,
+    ) : CdkObject(cdkObject), PublishFindingToSnsParamsProperty {
+      /**
+       * The ARN of the topic to which you want to publish the findings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html#cfn-iot-mitigationaction-publishfindingtosnsparams-topicarn)
+       */
+      override fun topicArn(): String = unwrap(this).getTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PublishFindingToSnsParamsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty):
+          PublishFindingToSnsParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublishFindingToSnsParamsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PublishFindingToSnsParamsProperty):
+          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
+    }
+  }
+
+  /**
+   * Parameters to define a mitigation action that adds a blank policy to restrict permissions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * ReplaceDefaultPolicyVersionParamsProperty replaceDefaultPolicyVersionParamsProperty =
+   * ReplaceDefaultPolicyVersionParamsProperty.builder()
+   * .templateName("templateName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html)
+   */
+  public interface ReplaceDefaultPolicyVersionParamsProperty {
+    /**
+     * The name of the template to be applied.
+     *
+     * The only supported value is `BLANK_POLICY` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html#cfn-iot-mitigationaction-replacedefaultpolicyversionparams-templatename)
+     */
+    public fun templateName(): String
+
+    /**
+     * A builder for [ReplaceDefaultPolicyVersionParamsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param templateName The name of the template to be applied. 
+       * The only supported value is `BLANK_POLICY` .
+       */
+      public fun templateName(templateName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.builder()
+
+      /**
+       * @param templateName The name of the template to be applied. 
+       * The only supported value is `BLANK_POLICY` .
+       */
+      override fun templateName(templateName: String) {
+        cdkBuilder.templateName(templateName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty,
+    ) : CdkObject(cdkObject), ReplaceDefaultPolicyVersionParamsProperty {
+      /**
+       * The name of the template to be applied.
+       *
+       * The only supported value is `BLANK_POLICY` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html#cfn-iot-mitigationaction-replacedefaultpolicyversionparams-templatename)
+       */
+      override fun templateName(): String = unwrap(this).getTemplateName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReplaceDefaultPolicyVersionParamsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty):
+          ReplaceDefaultPolicyVersionParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplaceDefaultPolicyVersionParamsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplaceDefaultPolicyVersionParamsProperty):
+          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
+    }
+  }
+
+  /**
+   * Parameters to define a mitigation action that changes the state of the CA certificate to
+   * inactive.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * UpdateCACertificateParamsProperty updateCACertificateParamsProperty =
+   * UpdateCACertificateParamsProperty.builder()
+   * .action("action")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html)
+   */
+  public interface UpdateCACertificateParamsProperty {
+    /**
+     * The action that you want to apply to the CA certificate.
+     *
+     * The only supported value is `DEACTIVATE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html#cfn-iot-mitigationaction-updatecacertificateparams-action)
+     */
+    public fun action(): String
+
+    /**
+     * A builder for [UpdateCACertificateParamsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action that you want to apply to the CA certificate. 
+       * The only supported value is `DEACTIVATE` .
+       */
+      public fun action(action: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty.builder()
+
+      /**
+       * @param action The action that you want to apply to the CA certificate. 
+       * The only supported value is `DEACTIVATE` .
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty,
+    ) : CdkObject(cdkObject), UpdateCACertificateParamsProperty {
+      /**
+       * The action that you want to apply to the CA certificate.
+       *
+       * The only supported value is `DEACTIVATE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html#cfn-iot-mitigationaction-updatecacertificateparams-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          UpdateCACertificateParamsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty):
+          UpdateCACertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpdateCACertificateParamsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UpdateCACertificateParamsProperty):
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
+    }
+  }
+
+  /**
+   * Parameters to define a mitigation action that changes the state of the device certificate to
+   * inactive.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * UpdateDeviceCertificateParamsProperty updateDeviceCertificateParamsProperty =
+   * UpdateDeviceCertificateParamsProperty.builder()
+   * .action("action")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html)
+   */
+  public interface UpdateDeviceCertificateParamsProperty {
+    /**
+     * The action that you want to apply to the device certificate.
+     *
+     * The only supported value is `DEACTIVATE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html#cfn-iot-mitigationaction-updatedevicecertificateparams-action)
+     */
+    public fun action(): String
+
+    /**
+     * A builder for [UpdateDeviceCertificateParamsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action that you want to apply to the device certificate. 
+       * The only supported value is `DEACTIVATE` .
+       */
+      public fun action(action: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty.builder()
+
+      /**
+       * @param action The action that you want to apply to the device certificate. 
+       * The only supported value is `DEACTIVATE` .
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty,
+    ) : CdkObject(cdkObject), UpdateDeviceCertificateParamsProperty {
+      /**
+       * The action that you want to apply to the device certificate.
+       *
+       * The only supported value is `DEACTIVATE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html#cfn-iot-mitigationaction-updatedevicecertificateparams-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          UpdateDeviceCertificateParamsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty):
+          UpdateDeviceCertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpdateDeviceCertificateParamsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UpdateDeviceCertificateParamsProperty):
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
     }
   }
 }

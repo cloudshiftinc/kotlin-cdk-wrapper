@@ -350,7 +350,7 @@ public interface BitBucketSourceProps : SourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceProps,
   ) : CdkObject(cdkObject), BitBucketSourceProps {
     /**
      * The commit ID, pull request ID, branch name, or tag name that corresponds to the version of

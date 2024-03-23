@@ -87,7 +87,7 @@ public interface ContainerDependency {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency,
+    cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency,
   ) : CdkObject(cdkObject), ContainerDependency {
     /**
      * The state the container needs to be in to satisfy the dependency and proceed with startup.

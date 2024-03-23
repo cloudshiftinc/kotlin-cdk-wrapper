@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -514,12 +514,11 @@ public open class CfnEndpoint internal constructor(
         CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint): software.amazon.awscdk.services.events.CfnEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.CfnEndpoint
   }
 
   /**
-   * The secondary Region that processes events when failover is triggered or replication is
-   * enabled.
+   * The event buses the endpoint is associated with.
    *
    * Example:
    *
@@ -527,199 +526,75 @@ public open class CfnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.events.*;
-   * SecondaryProperty secondaryProperty = SecondaryProperty.builder()
-   * .route("route")
+   * EndpointEventBusProperty endpointEventBusProperty = EndpointEventBusProperty.builder()
+   * .eventBusArn("eventBusArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html)
    */
-  public interface SecondaryProperty {
+  public interface EndpointEventBusProperty {
     /**
-     * Defines the secondary Region.
+     * The ARN of the event bus the endpoint is associated with.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html#cfn-events-endpoint-secondary-route)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html#cfn-events-endpoint-endpointeventbus-eventbusarn)
      */
-    public fun route(): String
+    public fun eventBusArn(): String
 
     /**
-     * A builder for [SecondaryProperty]
+     * A builder for [EndpointEventBusProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param route Defines the secondary Region. 
+       * @param eventBusArn The ARN of the event bus the endpoint is associated with. 
        */
-      public fun route(route: String)
+      public fun eventBusArn(eventBusArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.Builder =
-          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.builder()
+          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.Builder =
+          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.builder()
 
       /**
-       * @param route Defines the secondary Region. 
+       * @param eventBusArn The ARN of the event bus the endpoint is associated with. 
        */
-      override fun route(route: String) {
-        cdkBuilder.route(route)
+      override fun eventBusArn(eventBusArn: String) {
+        cdkBuilder.eventBusArn(eventBusArn)
       }
 
-      public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty =
+      public fun build():
+          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
-    ) : CdkObject(cdkObject), SecondaryProperty {
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
+    ) : CdkObject(cdkObject), EndpointEventBusProperty {
       /**
-       * Defines the secondary Region.
+       * The ARN of the event bus the endpoint is associated with.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html#cfn-events-endpoint-secondary-route)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html#cfn-events-endpoint-endpointeventbus-eventbusarn)
        */
-      override fun route(): String = unwrap(this).getRoute()
+      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SecondaryProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointEventBusProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty):
-          SecondaryProperty = CdkObjectWrappers.wrap(cdkObject) as? SecondaryProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty):
+          EndpointEventBusProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointEventBusProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SecondaryProperty):
-          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty = (wrapped as
+      internal fun unwrap(wrapped: EndpointEventBusProperty):
+          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty
-    }
-  }
-
-  /**
-   * The routing configuration of the endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * RoutingConfigProperty routingConfigProperty = RoutingConfigProperty.builder()
-   * .failoverConfig(FailoverConfigProperty.builder()
-   * .primary(PrimaryProperty.builder()
-   * .healthCheck("healthCheck")
-   * .build())
-   * .secondary(SecondaryProperty.builder()
-   * .route("route")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html)
-   */
-  public interface RoutingConfigProperty {
-    /**
-     * The failover configuration for an endpoint.
-     *
-     * This includes what triggers failover and what happens when it's triggered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html#cfn-events-endpoint-routingconfig-failoverconfig)
-     */
-    public fun failoverConfig(): Any
-
-    /**
-     * A builder for [RoutingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      public fun failoverConfig(failoverConfig: IResolvable)
-
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      public fun failoverConfig(failoverConfig: FailoverConfigProperty)
-
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
-      public fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.Builder =
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.builder()
-
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      override fun failoverConfig(failoverConfig: IResolvable) {
-        cdkBuilder.failoverConfig(failoverConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      override fun failoverConfig(failoverConfig: FailoverConfigProperty) {
-        cdkBuilder.failoverConfig(failoverConfig.let(FailoverConfigProperty::unwrap))
-      }
-
-      /**
-       * @param failoverConfig The failover configuration for an endpoint. 
-       * This includes what triggers failover and what happens when it's triggered.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
-      override fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit): Unit =
-          failoverConfig(FailoverConfigProperty(failoverConfig))
-
-      public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
-    ) : CdkObject(cdkObject), RoutingConfigProperty {
-      /**
-       * The failover configuration for an endpoint.
-       *
-       * This includes what triggers failover and what happens when it's triggered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html#cfn-events-endpoint-routingconfig-failoverconfig)
-       */
-      override fun failoverConfig(): Any = unwrap(this).getFailoverConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RoutingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty):
-          RoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RoutingConfigProperty):
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty
+          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty
     }
   }
 
@@ -862,8 +737,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
     ) : CdkObject(cdkObject), FailoverConfigProperty {
       /**
        * The main Region of the endpoint.
@@ -896,170 +770,6 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty
-    }
-  }
-
-  /**
-   * Endpoints can replicate all events to the secondary Region.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * ReplicationConfigProperty replicationConfigProperty = ReplicationConfigProperty.builder()
-   * .state("state")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html)
-   */
-  public interface ReplicationConfigProperty {
-    /**
-     * The state of event replication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html#cfn-events-endpoint-replicationconfig-state)
-     */
-    public fun state(): String
-
-    /**
-     * A builder for [ReplicationConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param state The state of event replication. 
-       */
-      public fun state(state: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.Builder =
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.builder()
-
-      /**
-       * @param state The state of event replication. 
-       */
-      override fun state(state: String) {
-        cdkBuilder.state(state)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigProperty {
-      /**
-       * The state of event replication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html#cfn-events-endpoint-replicationconfig-state)
-       */
-      override fun state(): String = unwrap(this).getState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty):
-          ReplicationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReplicationConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReplicationConfigProperty):
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty
-    }
-  }
-
-  /**
-   * The event buses the endpoint is associated with.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.events.*;
-   * EndpointEventBusProperty endpointEventBusProperty = EndpointEventBusProperty.builder()
-   * .eventBusArn("eventBusArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html)
-   */
-  public interface EndpointEventBusProperty {
-    /**
-     * The ARN of the event bus the endpoint is associated with.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html#cfn-events-endpoint-endpointeventbus-eventbusarn)
-     */
-    public fun eventBusArn(): String
-
-    /**
-     * A builder for [EndpointEventBusProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eventBusArn The ARN of the event bus the endpoint is associated with. 
-       */
-      public fun eventBusArn(eventBusArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.Builder =
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.builder()
-
-      /**
-       * @param eventBusArn The ARN of the event bus the endpoint is associated with. 
-       */
-      override fun eventBusArn(eventBusArn: String) {
-        cdkBuilder.eventBusArn(eventBusArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
-    ) : CdkObject(cdkObject), EndpointEventBusProperty {
-      /**
-       * The ARN of the event bus the endpoint is associated with.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-endpointeventbus.html#cfn-events-endpoint-endpointeventbus-eventbusarn)
-       */
-      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointEventBusProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty):
-          EndpointEventBusProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointEventBusProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointEventBusProperty):
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty
     }
   }
 
@@ -1117,7 +827,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
     ) : CdkObject(cdkObject), PrimaryProperty {
       /**
        * The ARN of the health check used by the endpoint to determine whether failover is
@@ -1142,6 +852,292 @@ public open class CfnEndpoint internal constructor(
       internal fun unwrap(wrapped: PrimaryProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty
+    }
+  }
+
+  /**
+   * Endpoints can replicate all events to the secondary Region.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ReplicationConfigProperty replicationConfigProperty = ReplicationConfigProperty.builder()
+   * .state("state")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html)
+   */
+  public interface ReplicationConfigProperty {
+    /**
+     * The state of event replication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html#cfn-events-endpoint-replicationconfig-state)
+     */
+    public fun state(): String
+
+    /**
+     * A builder for [ReplicationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param state The state of event replication. 
+       */
+      public fun state(state: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.Builder =
+          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.builder()
+
+      /**
+       * @param state The state of event replication. 
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
+    ) : CdkObject(cdkObject), ReplicationConfigProperty {
+      /**
+       * The state of event replication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-replicationconfig.html#cfn-events-endpoint-replicationconfig-state)
+       */
+      override fun state(): String = unwrap(this).getState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty):
+          ReplicationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationConfigProperty):
+          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty
+    }
+  }
+
+  /**
+   * The routing configuration of the endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * RoutingConfigProperty routingConfigProperty = RoutingConfigProperty.builder()
+   * .failoverConfig(FailoverConfigProperty.builder()
+   * .primary(PrimaryProperty.builder()
+   * .healthCheck("healthCheck")
+   * .build())
+   * .secondary(SecondaryProperty.builder()
+   * .route("route")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html)
+   */
+  public interface RoutingConfigProperty {
+    /**
+     * The failover configuration for an endpoint.
+     *
+     * This includes what triggers failover and what happens when it's triggered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html#cfn-events-endpoint-routingconfig-failoverconfig)
+     */
+    public fun failoverConfig(): Any
+
+    /**
+     * A builder for [RoutingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      public fun failoverConfig(failoverConfig: IResolvable)
+
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      public fun failoverConfig(failoverConfig: FailoverConfigProperty)
+
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
+      public fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.Builder =
+          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.builder()
+
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      override fun failoverConfig(failoverConfig: IResolvable) {
+        cdkBuilder.failoverConfig(failoverConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      override fun failoverConfig(failoverConfig: FailoverConfigProperty) {
+        cdkBuilder.failoverConfig(failoverConfig.let(FailoverConfigProperty::unwrap))
+      }
+
+      /**
+       * @param failoverConfig The failover configuration for an endpoint. 
+       * This includes what triggers failover and what happens when it's triggered.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
+      override fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit): Unit =
+          failoverConfig(FailoverConfigProperty(failoverConfig))
+
+      public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
+    ) : CdkObject(cdkObject), RoutingConfigProperty {
+      /**
+       * The failover configuration for an endpoint.
+       *
+       * This includes what triggers failover and what happens when it's triggered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html#cfn-events-endpoint-routingconfig-failoverconfig)
+       */
+      override fun failoverConfig(): Any = unwrap(this).getFailoverConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RoutingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty):
+          RoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RoutingConfigProperty):
+          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty
+    }
+  }
+
+  /**
+   * The secondary Region that processes events when failover is triggered or replication is
+   * enabled.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * SecondaryProperty secondaryProperty = SecondaryProperty.builder()
+   * .route("route")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html)
+   */
+  public interface SecondaryProperty {
+    /**
+     * Defines the secondary Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html#cfn-events-endpoint-secondary-route)
+     */
+    public fun route(): String
+
+    /**
+     * A builder for [SecondaryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param route Defines the secondary Region. 
+       */
+      public fun route(route: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.Builder =
+          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.builder()
+
+      /**
+       * @param route Defines the secondary Region. 
+       */
+      override fun route(route: String) {
+        cdkBuilder.route(route)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
+    ) : CdkObject(cdkObject), SecondaryProperty {
+      /**
+       * Defines the secondary Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-secondary.html#cfn-events-endpoint-secondary-route)
+       */
+      override fun route(): String = unwrap(this).getRoute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SecondaryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty):
+          SecondaryProperty = CdkObjectWrappers.wrap(cdkObject) as? SecondaryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecondaryProperty):
+          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty
     }
   }
 }

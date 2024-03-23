@@ -86,7 +86,7 @@ public interface ClientVpnEndpointAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes,
+    cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes,
   ) : CdkObject(cdkObject), ClientVpnEndpointAttributes {
     /**
      * The endpoint ID.

@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-simspaceweaver-simulation.html)
  */
-public open class CfnSimulation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation,
+public open class CfnSimulation(
+  cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -516,7 +516,8 @@ public open class CfnSimulation internal constructor(
         CfnSimulation = CfnSimulation(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulation):
-        software.amazon.awscdk.services.simspaceweaver.CfnSimulation = wrapped.cdkObject
+        software.amazon.awscdk.services.simspaceweaver.CfnSimulation = wrapped.cdkObject as
+        software.amazon.awscdk.services.simspaceweaver.CfnSimulation
   }
 
   /**
@@ -618,8 +619,7 @@ public open class CfnSimulation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The name of an Amazon S3 bucket.

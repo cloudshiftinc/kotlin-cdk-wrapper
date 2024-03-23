@@ -663,7 +663,7 @@ public interface CfnUserProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnUserProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnUserProps,
   ) : CdkObject(cdkObject), CfnUserProps {
     /**
      * A list of group names to which you want to add the user.

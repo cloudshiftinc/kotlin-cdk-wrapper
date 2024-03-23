@@ -324,7 +324,7 @@ public interface EcsDeploymentGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps,
   ) : CdkObject(cdkObject), EcsDeploymentGroupProps {
     /**
      * The CloudWatch alarms associated with this Deployment Group.

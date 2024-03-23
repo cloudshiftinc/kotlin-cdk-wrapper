@@ -228,7 +228,7 @@ public interface CfnIpAccessSettingsProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettingsProps,
+    cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettingsProps,
   ) : CdkObject(cdkObject), CfnIpAccessSettingsProps {
     /**
      * Additional encryption context of the IP access settings.

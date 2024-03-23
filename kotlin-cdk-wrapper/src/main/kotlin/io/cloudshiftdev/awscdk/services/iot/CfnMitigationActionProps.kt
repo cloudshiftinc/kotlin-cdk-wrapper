@@ -197,7 +197,7 @@ public interface CfnMitigationActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnMitigationActionProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnMitigationActionProps,
   ) : CdkObject(cdkObject), CfnMitigationActionProps {
     /**
      * The friendly name of the mitigation action.

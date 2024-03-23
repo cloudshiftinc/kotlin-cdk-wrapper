@@ -29,8 +29,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class CertificateAuthority internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.acmpca.CertificateAuthority,
+public open class CertificateAuthority(
+  cdkObject: software.amazon.awscdk.services.acmpca.CertificateAuthority,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun fromCertificateAuthorityArn(
@@ -45,6 +45,7 @@ public open class CertificateAuthority internal constructor(
         CertificateAuthority = CertificateAuthority(cdkObject)
 
     internal fun unwrap(wrapped: CertificateAuthority):
-        software.amazon.awscdk.services.acmpca.CertificateAuthority = wrapped.cdkObject
+        software.amazon.awscdk.services.acmpca.CertificateAuthority = wrapped.cdkObject as
+        software.amazon.awscdk.services.acmpca.CertificateAuthority
   }
 }

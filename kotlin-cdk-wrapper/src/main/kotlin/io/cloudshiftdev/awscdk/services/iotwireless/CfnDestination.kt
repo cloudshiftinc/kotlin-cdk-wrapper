@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)
  */
-public open class CfnDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnDestination,
+public open class CfnDestination(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnDestination,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -326,6 +326,7 @@ public open class CfnDestination internal constructor(
         CfnDestination = CfnDestination(cdkObject)
 
     internal fun unwrap(wrapped: CfnDestination):
-        software.amazon.awscdk.services.iotwireless.CfnDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnDestination
   }
 }

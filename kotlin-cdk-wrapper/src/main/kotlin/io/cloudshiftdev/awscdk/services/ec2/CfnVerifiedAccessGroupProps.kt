@@ -224,7 +224,7 @@ public interface CfnVerifiedAccessGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroupProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroupProps,
   ) : CdkObject(cdkObject), CfnVerifiedAccessGroupProps {
     /**
      * A description for the AWS Verified Access group.

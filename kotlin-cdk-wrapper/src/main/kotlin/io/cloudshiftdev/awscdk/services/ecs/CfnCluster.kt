@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -877,7 +877,737 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.ecs.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ecs.CfnCluster
+  }
+
+  /**
+   * The `CapacityProviderStrategyItem` property specifies the details of the default capacity
+   * provider strategy for the cluster.
+   *
+   * When services or tasks are run in the cluster with no launch type or capacity provider strategy
+   * specified, the default capacity provider strategy is used.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+   * CapacityProviderStrategyItemProperty.builder()
+   * .base(123)
+   * .capacityProvider("capacityProvider")
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html)
+   */
+  public interface CapacityProviderStrategyItemProperty {
+    /**
+     * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+     * provider.
+     *
+     * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+     * value is specified, the default value of `0` is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-base)
+     */
+    public fun base(): Number? = unwrap(this).getBase()
+
+    /**
+     * The short name of the capacity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-capacityprovider)
+     */
+    public fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+    /**
+     * The *weight* value designates the relative percentage of the total number of tasks launched
+     * that should use the specified capacity provider.
+     *
+     * The `weight` value is taken into consideration after the `base` value, if defined, is
+     * satisfied.
+     *
+     * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+     * providers are specified within a capacity provider strategy, at least one of the capacity
+     * providers must have a weight value greater than zero and any capacity providers with a weight of
+     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
+     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
+     * strategy will fail.
+     *
+     * An example scenario for using weights is defining a strategy that contains two capacity
+     * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+     * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+     * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
+     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [CapacityProviderStrategyItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      public fun base(base: Number)
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      public fun capacityProvider(capacityProvider: String)
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty.builder()
+
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      override fun base(base: Number) {
+        cdkBuilder.base(base)
+      }
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      override fun capacityProvider(capacityProvider: String) {
+        cdkBuilder.capacityProvider(capacityProvider)
+      }
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty,
+    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+      /**
+       * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+       * provider.
+       *
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-base)
+       */
+      override fun base(): Number? = unwrap(this).getBase()
+
+      /**
+       * The short name of the capacity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-capacityprovider)
+       */
+      override fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+      /**
+       * The *weight* value designates the relative percentage of the total number of tasks launched
+       * that should use the specified capacity provider.
+       *
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityProviderStrategyItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty):
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
+          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty
+    }
+  }
+
+  /**
+   * The execute command configuration for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ClusterConfigurationProperty clusterConfigurationProperty =
+   * ClusterConfigurationProperty.builder()
+   * .executeCommandConfiguration(ExecuteCommandConfigurationProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
+   * .cloudWatchEncryptionEnabled(false)
+   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+   * .s3BucketName("s3BucketName")
+   * .s3EncryptionEnabled(false)
+   * .s3KeyPrefix("s3KeyPrefix")
+   * .build())
+   * .logging("logging")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html)
+   */
+  public interface ClusterConfigurationProperty {
+    /**
+     * The details of the execute command configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-executecommandconfiguration)
+     */
+    public fun executeCommandConfiguration(): Any? = unwrap(this).getExecuteCommandConfiguration()
+
+    /**
+     * A builder for [ClusterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      public fun executeCommandConfiguration(executeCommandConfiguration: IResolvable)
+
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      public
+          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty)
+
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2c142dbeb86944d2f38ed48264d7c5a153056a38a629e653a939c6de008408f")
+      public
+          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty.builder()
+
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      override fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      override
+          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty) {
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param executeCommandConfiguration The details of the execute command configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2c142dbeb86944d2f38ed48264d7c5a153056a38a629e653a939c6de008408f")
+      override
+          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          executeCommandConfiguration(ExecuteCommandConfigurationProperty(executeCommandConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty,
+    ) : CdkObject(cdkObject), ClusterConfigurationProperty {
+      /**
+       * The details of the execute command configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-executecommandconfiguration)
+       */
+      override fun executeCommandConfiguration(): Any? =
+          unwrap(this).getExecuteCommandConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty):
+          ClusterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClusterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClusterConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty
+    }
+  }
+
+  /**
+   * The settings to use when creating a cluster.
+   *
+   * This parameter is used to turn on CloudWatch Container Insights for a cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ClusterSettingsProperty clusterSettingsProperty = ClusterSettingsProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html)
+   */
+  public interface ClusterSettingsProperty {
+    /**
+     * The name of the cluster setting.
+     *
+     * The value is `containerInsights` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value to set for the cluster setting. The supported values are `enabled` and `disabled` .
+     *
+     * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
+     * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
+     * account setting is turned on. If a cluster value is specified, it will override the
+     * `containerInsights` value set with
+     * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
+     * or
+     * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ClusterSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the cluster setting.
+       * The value is `containerInsights` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value to set for the cluster setting. The supported values are `enabled`
+       * and `disabled` .
+       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
+       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
+       * account setting is turned on. If a cluster value is specified, it will override the
+       * `containerInsights` value set with
+       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
+       * or
+       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
+       * .
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty.builder()
+
+      /**
+       * @param name The name of the cluster setting.
+       * The value is `containerInsights` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value to set for the cluster setting. The supported values are `enabled`
+       * and `disabled` .
+       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
+       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
+       * account setting is turned on. If a cluster value is specified, it will override the
+       * `containerInsights` value set with
+       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
+       * or
+       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
+       * .
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty,
+    ) : CdkObject(cdkObject), ClusterSettingsProperty {
+      /**
+       * The name of the cluster setting.
+       *
+       * The value is `containerInsights` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The value to set for the cluster setting. The supported values are `enabled` and `disabled`
+       * .
+       *
+       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
+       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
+       * account setting is turned on. If a cluster value is specified, it will override the
+       * `containerInsights` value set with
+       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
+       * or
+       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty):
+          ClusterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClusterSettingsProperty):
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty
+    }
+  }
+
+  /**
+   * The details of the execute command configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ExecuteCommandConfigurationProperty executeCommandConfigurationProperty =
+   * ExecuteCommandConfigurationProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
+   * .cloudWatchEncryptionEnabled(false)
+   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+   * .s3BucketName("s3BucketName")
+   * .s3EncryptionEnabled(false)
+   * .s3KeyPrefix("s3KeyPrefix")
+   * .build())
+   * .logging("logging")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html)
+   */
+  public interface ExecuteCommandConfigurationProperty {
+    /**
+     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and
+     * the container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The log configuration for the results of the execute command actions.
+     *
+     * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+     * specified, a `logConfiguration` must be provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logconfiguration)
+     */
+    public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+
+    /**
+     * The log setting to use for redirecting logs for your execute command results. The following
+     * log settings are available.
+     *
+     * * `NONE` : The execute command session is not logged.
+     * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
+     * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
+     * the task definition, the output won't be logged.
+     * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
+     * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logging)
+     */
+    public fun logging(): String? = unwrap(this).getLogging()
+
+    /**
+     * A builder for [ExecuteCommandConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId Specify an AWS Key Management Service key ID to encrypt the data between
+       * the local client and the container.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      public fun logConfiguration(logConfiguration: IResolvable)
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      public fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty)
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1a24f99e0a31bf052a42f798fef13d0e54580ffb764e0589c190da6b7d7a5013")
+      public
+          fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param logging The log setting to use for redirecting logs for your execute command
+       * results. The following log settings are available.
+       * * `NONE` : The execute command session is not logged.
+       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
+       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
+       * the task definition, the output won't be logged.
+       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
+       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
+       */
+      public fun logging(logging: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty.builder()
+
+      /**
+       * @param kmsKeyId Specify an AWS Key Management Service key ID to encrypt the data between
+       * the local client and the container.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      override fun logConfiguration(logConfiguration: IResolvable) {
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      override fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty) {
+        cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param logConfiguration The log configuration for the results of the execute command
+       * actions.
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1a24f99e0a31bf052a42f798fef13d0e54580ffb764e0589c190da6b7d7a5013")
+      override
+          fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty.Builder.() -> Unit):
+          Unit = logConfiguration(ExecuteCommandLogConfigurationProperty(logConfiguration))
+
+      /**
+       * @param logging The log setting to use for redirecting logs for your execute command
+       * results. The following log settings are available.
+       * * `NONE` : The execute command session is not logged.
+       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
+       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
+       * the task definition, the output won't be logged.
+       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
+       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
+       */
+      override fun logging(logging: String) {
+        cdkBuilder.logging(logging)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty,
+    ) : CdkObject(cdkObject), ExecuteCommandConfigurationProperty {
+      /**
+       * Specify an AWS Key Management Service key ID to encrypt the data between the local client
+       * and the container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * The log configuration for the results of the execute command actions.
+       *
+       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
+       * specified, a `logConfiguration` must be provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logconfiguration)
+       */
+      override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+
+      /**
+       * The log setting to use for redirecting logs for your execute command results. The following
+       * log settings are available.
+       *
+       * * `NONE` : The execute command session is not logged.
+       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
+       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
+       * the task definition, the output won't be logged.
+       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
+       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logging)
+       */
+      override fun logging(): String? = unwrap(this).getLogging()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExecuteCommandConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty):
+          ExecuteCommandConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecuteCommandConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExecuteCommandConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty
+    }
   }
 
   /**
@@ -1073,8 +1803,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty,
     ) : CdkObject(cdkObject), ExecuteCommandLogConfigurationProperty {
       /**
        * Determines whether to use encryption on the CloudWatch logs.
@@ -1141,740 +1870,6 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty
-    }
-  }
-
-  /**
-   * The details of the execute command configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ExecuteCommandConfigurationProperty executeCommandConfigurationProperty =
-   * ExecuteCommandConfigurationProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
-   * .cloudWatchEncryptionEnabled(false)
-   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
-   * .s3BucketName("s3BucketName")
-   * .s3EncryptionEnabled(false)
-   * .s3KeyPrefix("s3KeyPrefix")
-   * .build())
-   * .logging("logging")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html)
-   */
-  public interface ExecuteCommandConfigurationProperty {
-    /**
-     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and
-     * the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * The log configuration for the results of the execute command actions.
-     *
-     * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-     * specified, a `logConfiguration` must be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logconfiguration)
-     */
-    public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
-
-    /**
-     * The log setting to use for redirecting logs for your execute command results. The following
-     * log settings are available.
-     *
-     * * `NONE` : The execute command session is not logged.
-     * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
-     * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
-     * the task definition, the output won't be logged.
-     * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
-     * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logging)
-     */
-    public fun logging(): String? = unwrap(this).getLogging()
-
-    /**
-     * A builder for [ExecuteCommandConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId Specify an AWS Key Management Service key ID to encrypt the data between
-       * the local client and the container.
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      public fun logConfiguration(logConfiguration: IResolvable)
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      public fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty)
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1a24f99e0a31bf052a42f798fef13d0e54580ffb764e0589c190da6b7d7a5013")
-      public
-          fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param logging The log setting to use for redirecting logs for your execute command
-       * results. The following log settings are available.
-       * * `NONE` : The execute command session is not logged.
-       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
-       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
-       * the task definition, the output won't be logged.
-       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
-       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
-       */
-      public fun logging(logging: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty.builder()
-
-      /**
-       * @param kmsKeyId Specify an AWS Key Management Service key ID to encrypt the data between
-       * the local client and the container.
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      override fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param logConfiguration The log configuration for the results of the execute command
-       * actions.
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1a24f99e0a31bf052a42f798fef13d0e54580ffb764e0589c190da6b7d7a5013")
-      override
-          fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty.Builder.() -> Unit):
-          Unit = logConfiguration(ExecuteCommandLogConfigurationProperty(logConfiguration))
-
-      /**
-       * @param logging The log setting to use for redirecting logs for your execute command
-       * results. The following log settings are available.
-       * * `NONE` : The execute command session is not logged.
-       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
-       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
-       * the task definition, the output won't be logged.
-       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
-       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
-       */
-      override fun logging(logging: String) {
-        cdkBuilder.logging(logging)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty,
-    ) : CdkObject(cdkObject), ExecuteCommandConfigurationProperty {
-      /**
-       * Specify an AWS Key Management Service key ID to encrypt the data between the local client
-       * and the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-      /**
-       * The log configuration for the results of the execute command actions.
-       *
-       * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket. When `logging=OVERRIDE` is
-       * specified, a `logConfiguration` must be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logconfiguration)
-       */
-      override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
-
-      /**
-       * The log setting to use for redirecting logs for your execute command results. The following
-       * log settings are available.
-       *
-       * * `NONE` : The execute command session is not logged.
-       * * `DEFAULT` : The `awslogs` configuration in the task definition is used. If no logging
-       * parameter is specified, it defaults to this value. If no `awslogs` log driver is configured in
-       * the task definition, the output won't be logged.
-       * * `OVERRIDE` : Specify the logging details as a part of `logConfiguration` . If the
-       * `OVERRIDE` logging option is specified, the `logConfiguration` is required.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html#cfn-ecs-cluster-executecommandconfiguration-logging)
-       */
-      override fun logging(): String? = unwrap(this).getLogging()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ExecuteCommandConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty):
-          ExecuteCommandConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExecuteCommandConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExecuteCommandConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty
-    }
-  }
-
-  /**
-   * The `CapacityProviderStrategyItem` property specifies the details of the default capacity
-   * provider strategy for the cluster.
-   *
-   * When services or tasks are run in the cluster with no launch type or capacity provider strategy
-   * specified, the default capacity provider strategy is used.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
-   * CapacityProviderStrategyItemProperty.builder()
-   * .base(123)
-   * .capacityProvider("capacityProvider")
-   * .weight(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html)
-   */
-  public interface CapacityProviderStrategyItemProperty {
-    /**
-     * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
-     * provider.
-     *
-     * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-     * value is specified, the default value of `0` is used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-base)
-     */
-    public fun base(): Number? = unwrap(this).getBase()
-
-    /**
-     * The short name of the capacity provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-capacityprovider)
-     */
-    public fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
-
-    /**
-     * The *weight* value designates the relative percentage of the total number of tasks launched
-     * that should use the specified capacity provider.
-     *
-     * The `weight` value is taken into consideration after the `base` value, if defined, is
-     * satisfied.
-     *
-     * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-     * providers are specified within a capacity provider strategy, at least one of the capacity
-     * providers must have a weight value greater than zero and any capacity providers with a weight of
-     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
-     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
-     * strategy will fail.
-     *
-     * An example scenario for using weights is defining a strategy that contains two capacity
-     * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-     * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-     * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
-     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-weight)
-     */
-    public fun weight(): Number? = unwrap(this).getWeight()
-
-    /**
-     * A builder for [CapacityProviderStrategyItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param base The *base* value designates how many tasks, at a minimum, to run on the
-       * specified capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      public fun base(base: Number)
-
-      /**
-       * @param capacityProvider The short name of the capacity provider.
-       */
-      public fun capacityProvider(capacityProvider: String)
-
-      /**
-       * @param weight The *weight* value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       */
-      public fun weight(weight: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty.Builder
-          =
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty.builder()
-
-      /**
-       * @param base The *base* value designates how many tasks, at a minimum, to run on the
-       * specified capacity provider.
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       */
-      override fun base(base: Number) {
-        cdkBuilder.base(base)
-      }
-
-      /**
-       * @param capacityProvider The short name of the capacity provider.
-       */
-      override fun capacityProvider(capacityProvider: String) {
-        cdkBuilder.capacityProvider(capacityProvider)
-      }
-
-      /**
-       * @param weight The *weight* value designates the relative percentage of the total number of
-       * tasks launched that should use the specified capacity provider.
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       */
-      override fun weight(weight: Number) {
-        cdkBuilder.weight(weight)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
-      /**
-       * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
-       * provider.
-       *
-       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
-       * value is specified, the default value of `0` is used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-base)
-       */
-      override fun base(): Number? = unwrap(this).getBase()
-
-      /**
-       * The short name of the capacity provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-capacityprovider)
-       */
-      override fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
-
-      /**
-       * The *weight* value designates the relative percentage of the total number of tasks launched
-       * that should use the specified capacity provider.
-       *
-       * The `weight` value is taken into consideration after the `base` value, if defined, is
-       * satisfied.
-       *
-       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
-       * providers are specified within a capacity provider strategy, at least one of the capacity
-       * providers must have a weight value greater than zero and any capacity providers with a weight
-       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
-       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
-       * provider strategy will fail.
-       *
-       * An example scenario for using weights is defining a strategy that contains two capacity
-       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
-       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
-       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
-       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html#cfn-ecs-cluster-capacityproviderstrategyitem-weight)
-       */
-      override fun weight(): Number? = unwrap(this).getWeight()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CapacityProviderStrategyItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty
-    }
-  }
-
-  /**
-   * The settings to use when creating a cluster.
-   *
-   * This parameter is used to turn on CloudWatch Container Insights for a cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ClusterSettingsProperty clusterSettingsProperty = ClusterSettingsProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html)
-   */
-  public interface ClusterSettingsProperty {
-    /**
-     * The name of the cluster setting.
-     *
-     * The value is `containerInsights` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The value to set for the cluster setting. The supported values are `enabled` and `disabled` .
-     *
-     * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
-     * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
-     * account setting is turned on. If a cluster value is specified, it will override the
-     * `containerInsights` value set with
-     * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
-     * or
-     * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ClusterSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the cluster setting.
-       * The value is `containerInsights` .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value to set for the cluster setting. The supported values are `enabled`
-       * and `disabled` .
-       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
-       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
-       * account setting is turned on. If a cluster value is specified, it will override the
-       * `containerInsights` value set with
-       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
-       * or
-       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
-       * .
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty.builder()
-
-      /**
-       * @param name The name of the cluster setting.
-       * The value is `containerInsights` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value to set for the cluster setting. The supported values are `enabled`
-       * and `disabled` .
-       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
-       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
-       * account setting is turned on. If a cluster value is specified, it will override the
-       * `containerInsights` value set with
-       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
-       * or
-       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
-       * .
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty,
-    ) : CdkObject(cdkObject), ClusterSettingsProperty {
-      /**
-       * The name of the cluster setting.
-       *
-       * The value is `containerInsights` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The value to set for the cluster setting. The supported values are `enabled` and `disabled`
-       * .
-       *
-       * If you set `name` to `containerInsights` and `value` to `enabled` , CloudWatch Container
-       * Insights will be on for the cluster, otherwise it will be off unless the `containerInsights`
-       * account setting is turned on. If a cluster value is specified, it will override the
-       * `containerInsights` value set with
-       * [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html)
-       * or
-       * [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty):
-          ClusterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClusterSettingsProperty):
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty
-    }
-  }
-
-  /**
-   * The execute command configuration for the cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ecs.*;
-   * ClusterConfigurationProperty clusterConfigurationProperty =
-   * ClusterConfigurationProperty.builder()
-   * .executeCommandConfiguration(ExecuteCommandConfigurationProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
-   * .cloudWatchEncryptionEnabled(false)
-   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
-   * .s3BucketName("s3BucketName")
-   * .s3EncryptionEnabled(false)
-   * .s3KeyPrefix("s3KeyPrefix")
-   * .build())
-   * .logging("logging")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html)
-   */
-  public interface ClusterConfigurationProperty {
-    /**
-     * The details of the execute command configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-executecommandconfiguration)
-     */
-    public fun executeCommandConfiguration(): Any? = unwrap(this).getExecuteCommandConfiguration()
-
-    /**
-     * A builder for [ClusterConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      public fun executeCommandConfiguration(executeCommandConfiguration: IResolvable)
-
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      public
-          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty)
-
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2c142dbeb86944d2f38ed48264d7c5a153056a38a629e653a939c6de008408f")
-      public
-          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty.Builder =
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty.builder()
-
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      override fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
-        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      override
-          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty) {
-        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param executeCommandConfiguration The details of the execute command configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2c142dbeb86944d2f38ed48264d7c5a153056a38a629e653a939c6de008408f")
-      override
-          fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          executeCommandConfiguration(ExecuteCommandConfigurationProperty(executeCommandConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty,
-    ) : CdkObject(cdkObject), ClusterConfigurationProperty {
-      /**
-       * The details of the execute command configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-executecommandconfiguration)
-       */
-      override fun executeCommandConfiguration(): Any? =
-          unwrap(this).getExecuteCommandConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ClusterConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty):
-          ClusterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ClusterConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ClusterConfigurationProperty):
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty
     }
   }
 
@@ -2006,8 +2001,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty,
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty,
     ) : CdkObject(cdkObject), ServiceConnectDefaultsProperty {
       /**
        * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace that's

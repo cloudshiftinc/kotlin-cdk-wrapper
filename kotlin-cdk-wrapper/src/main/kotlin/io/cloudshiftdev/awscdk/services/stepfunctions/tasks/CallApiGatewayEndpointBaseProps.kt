@@ -404,8 +404,7 @@ public interface CallApiGatewayEndpointBaseProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps,
   ) : CdkObject(cdkObject), CallApiGatewayEndpointBaseProps {
     /**
      * Path parameters appended after API endpoint.

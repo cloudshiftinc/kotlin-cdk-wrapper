@@ -56,7 +56,7 @@ public interface AppsyncFunctionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes,
+    cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes,
   ) : CdkObject(cdkObject), AppsyncFunctionAttributes {
     /**
      * the ARN of the AppSync function.

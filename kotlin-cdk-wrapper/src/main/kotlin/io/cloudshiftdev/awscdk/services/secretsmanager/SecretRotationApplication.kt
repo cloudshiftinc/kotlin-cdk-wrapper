@@ -27,9 +27,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class SecretRotationApplication internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.SecretRotationApplication,
+public open class SecretRotationApplication(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationApplication,
 ) : CdkObject(cdkObject) {
   public constructor(applicationId: String, semanticVersion: String) :
       this(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication(applicationId,
@@ -176,5 +175,6 @@ public open class SecretRotationApplication internal constructor(
 
     internal fun unwrap(wrapped: SecretRotationApplication):
         software.amazon.awscdk.services.secretsmanager.SecretRotationApplication = wrapped.cdkObject
+        as software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
   }
 }

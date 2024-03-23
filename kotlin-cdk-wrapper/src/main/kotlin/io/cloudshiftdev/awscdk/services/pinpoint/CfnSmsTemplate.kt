@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html)
  */
-public open class CfnSmsTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplate,
+public open class CfnSmsTemplate(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -293,6 +293,7 @@ public open class CfnSmsTemplate internal constructor(
         CfnSmsTemplate = CfnSmsTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnSmsTemplate):
-        software.amazon.awscdk.services.pinpoint.CfnSmsTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnSmsTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnSmsTemplate
   }
 }

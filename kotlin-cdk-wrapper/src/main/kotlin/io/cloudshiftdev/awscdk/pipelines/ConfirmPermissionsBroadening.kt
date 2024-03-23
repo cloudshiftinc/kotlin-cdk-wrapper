@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class ConfirmPermissionsBroadening internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening,
+public open class ConfirmPermissionsBroadening(
+  cdkObject: software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening,
 ) : Step(cdkObject), ICodePipelineActionFactory {
   public constructor(id: String, props: PermissionsBroadeningCheckProps) :
       this(software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening(id,
@@ -129,6 +129,7 @@ public open class ConfirmPermissionsBroadening internal constructor(
         ConfirmPermissionsBroadening = ConfirmPermissionsBroadening(cdkObject)
 
     internal fun unwrap(wrapped: ConfirmPermissionsBroadening):
-        software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening = wrapped.cdkObject
+        software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening = wrapped.cdkObject as
+        software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening
   }
 }

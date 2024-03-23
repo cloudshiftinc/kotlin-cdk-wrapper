@@ -455,7 +455,7 @@ public interface CfnFlowOutputProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutputProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutputProps,
   ) : CdkObject(cdkObject), CfnFlowOutputProps {
     /**
      * The range of IP addresses that are allowed to initiate output requests to this flow.

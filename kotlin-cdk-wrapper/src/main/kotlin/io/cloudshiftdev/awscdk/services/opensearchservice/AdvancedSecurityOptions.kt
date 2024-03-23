@@ -196,8 +196,7 @@ public interface AdvancedSecurityOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions,
   ) : CdkObject(cdkObject), AdvancedSecurityOptions {
     /**
      * ARN for the master user.

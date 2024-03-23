@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)
  */
-public open class CfnEmailTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplate,
+public open class CfnEmailTemplate(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -378,6 +378,7 @@ public open class CfnEmailTemplate internal constructor(
         CfnEmailTemplate = CfnEmailTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailTemplate):
-        software.amazon.awscdk.services.pinpoint.CfnEmailTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnEmailTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnEmailTemplate
   }
 }

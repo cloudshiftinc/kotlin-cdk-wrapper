@@ -38,9 +38,8 @@ import kotlin.Unit
  * time.">https://docs.aws.amazon.com/autoscaling/ec2/userguide/using-systems-manager-parameters.html
  * The AMI ID would be selected at instance launch time.</a>
  */
-public open class ResolveSsmParameterAtLaunchImage internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage,
+public open class ResolveSsmParameterAtLaunchImage(
+  cdkObject: software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(parameterName: String) :
       this(software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage(parameterName)
@@ -205,6 +204,7 @@ public open class ResolveSsmParameterAtLaunchImage internal constructor(
         ResolveSsmParameterAtLaunchImage = ResolveSsmParameterAtLaunchImage(cdkObject)
 
     internal fun unwrap(wrapped: ResolveSsmParameterAtLaunchImage):
-        software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage
   }
 }

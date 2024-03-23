@@ -239,7 +239,7 @@ public interface CfnDevicePoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps,
+    cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps,
   ) : CdkObject(cdkObject), CfnDevicePoolProps {
     /**
      * The device pool's description.

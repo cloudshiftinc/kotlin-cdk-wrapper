@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-syncjob.html)
  */
-public open class CfnSyncJob internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJob,
+public open class CfnSyncJob(
+  cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJob,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -255,6 +255,7 @@ public open class CfnSyncJob internal constructor(
         CfnSyncJob = CfnSyncJob(cdkObject)
 
     internal fun unwrap(wrapped: CfnSyncJob):
-        software.amazon.awscdk.services.iottwinmaker.CfnSyncJob = wrapped.cdkObject
+        software.amazon.awscdk.services.iottwinmaker.CfnSyncJob = wrapped.cdkObject as
+        software.amazon.awscdk.services.iottwinmaker.CfnSyncJob
   }
 }

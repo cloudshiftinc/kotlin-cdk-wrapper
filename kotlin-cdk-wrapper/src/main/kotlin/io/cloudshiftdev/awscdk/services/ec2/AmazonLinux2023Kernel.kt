@@ -22,8 +22,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AmazonLinux2023Kernel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel,
+public open class AmazonLinux2023Kernel(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel,
 ) : CdkObject(cdkObject) {
   public constructor(version: String) :
       this(software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel(version)
@@ -43,6 +43,7 @@ public open class AmazonLinux2023Kernel internal constructor(
         AmazonLinux2023Kernel = AmazonLinux2023Kernel(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinux2023Kernel):
-        software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel
   }
 }

@@ -20,8 +20,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class Architecture internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Architecture,
+public open class Architecture(
+  cdkObject: software.amazon.awscdk.services.lambda.Architecture,
 ) : CdkObject(cdkObject) {
   /**
    * The platform to use for this architecture when building with Docker.
@@ -51,6 +51,6 @@ public open class Architecture internal constructor(
         = Architecture(cdkObject)
 
     internal fun unwrap(wrapped: Architecture): software.amazon.awscdk.services.lambda.Architecture
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lambda.Architecture
   }
 }

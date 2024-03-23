@@ -200,7 +200,7 @@ public interface CfnDomainNameProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainNameProps,
   ) : CdkObject(cdkObject), CfnDomainNameProps {
     /**
      * The custom domain name for your API in Amazon API Gateway.

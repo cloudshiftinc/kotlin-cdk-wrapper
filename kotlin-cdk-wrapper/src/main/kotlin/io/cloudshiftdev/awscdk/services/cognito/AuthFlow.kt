@@ -116,7 +116,7 @@ public interface AuthFlow {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.AuthFlow,
+    cdkObject: software.amazon.awscdk.services.cognito.AuthFlow,
   ) : CdkObject(cdkObject), AuthFlow {
     /**
      * Enable admin based user password authentication flow.

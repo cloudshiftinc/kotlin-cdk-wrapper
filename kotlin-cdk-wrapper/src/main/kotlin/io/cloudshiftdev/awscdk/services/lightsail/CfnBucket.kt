@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-bucket.html)
  */
-public open class CfnBucket internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket,
+public open class CfnBucket(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -566,7 +566,7 @@ public open class CfnBucket internal constructor(
         CfnBucket(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucket): software.amazon.awscdk.services.lightsail.CfnBucket =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnBucket
   }
 
   /**
@@ -731,8 +731,7 @@ public open class CfnBucket internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty,
     ) : CdkObject(cdkObject), AccessRulesProperty {
       /**
        * A Boolean value indicating whether the access control list (ACL) permissions that are

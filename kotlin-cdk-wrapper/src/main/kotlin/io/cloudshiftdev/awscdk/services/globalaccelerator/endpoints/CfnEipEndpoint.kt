@@ -28,9 +28,8 @@ import software.amazon.awscdk.services.ec2.CfnEIP as AmazonAwscdkServicesEc2CfnE
  * .build());
  * ```
  */
-public open class CfnEipEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint,
+public open class CfnEipEndpoint(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP) :
       this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP::unwrap))
@@ -113,6 +112,7 @@ public open class CfnEipEndpoint internal constructor(
 
     internal fun unwrap(wrapped: CfnEipEndpoint):
         software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint
   }
 }

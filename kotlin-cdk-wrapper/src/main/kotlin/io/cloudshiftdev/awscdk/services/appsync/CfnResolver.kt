@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
  */
-public open class CfnResolver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnResolver,
+public open class CfnResolver(
+  cdkObject: software.amazon.awscdk.services.appsync.CfnResolver,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -961,7 +961,447 @@ public open class CfnResolver internal constructor(
         CfnResolver(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolver): software.amazon.awscdk.services.appsync.CfnResolver =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.CfnResolver
+  }
+
+  /**
+   * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
+   *
+   * Specifies the name and version of the runtime to use. Note that if a runtime is specified, code
+   * must also be specified.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * AppSyncRuntimeProperty appSyncRuntimeProperty = AppSyncRuntimeProperty.builder()
+   * .name("name")
+   * .runtimeVersion("runtimeVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html)
+   */
+  public interface AppSyncRuntimeProperty {
+    /**
+     * The `name` of the runtime to use.
+     *
+     * Currently, the only allowed value is `APPSYNC_JS` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-name)
+     */
+    public fun name(): String
+
+    /**
+     * The `version` of the runtime to use.
+     *
+     * Currently, the only allowed version is `1.0.0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-runtimeversion)
+     */
+    public fun runtimeVersion(): String
+
+    /**
+     * A builder for [AppSyncRuntimeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The `name` of the runtime to use. 
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param runtimeVersion The `version` of the runtime to use. 
+       * Currently, the only allowed version is `1.0.0` .
+       */
+      public fun runtimeVersion(runtimeVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty.builder()
+
+      /**
+       * @param name The `name` of the runtime to use. 
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param runtimeVersion The `version` of the runtime to use. 
+       * Currently, the only allowed version is `1.0.0` .
+       */
+      override fun runtimeVersion(runtimeVersion: String) {
+        cdkBuilder.runtimeVersion(runtimeVersion)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty,
+    ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
+      /**
+       * The `name` of the runtime to use.
+       *
+       * Currently, the only allowed value is `APPSYNC_JS` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The `version` of the runtime to use.
+       *
+       * Currently, the only allowed version is `1.0.0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-runtimeversion)
+       */
+      override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncRuntimeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty):
+          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as? AppSyncRuntimeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AppSyncRuntimeProperty):
+          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty
+    }
+  }
+
+  /**
+   * The caching configuration for a resolver that has caching activated.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * CachingConfigProperty cachingConfigProperty = CachingConfigProperty.builder()
+   * .ttl(123)
+   * // the properties below are optional
+   * .cachingKeys(List.of("cachingKeys"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html)
+   */
+  public interface CachingConfigProperty {
+    /**
+     * The caching keys for a resolver that has caching activated.
+     *
+     * Valid values are entries from the `$context.arguments` , `$context.source` , and
+     * `$context.identity` maps.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-cachingkeys)
+     */
+    public fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
+
+    /**
+     * The TTL in seconds for a resolver that has caching activated.
+     *
+     * Valid values are 1–3,600 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl)
+     */
+    public fun ttl(): Number
+
+    /**
+     * A builder for [CachingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cachingKeys The caching keys for a resolver that has caching activated.
+       * Valid values are entries from the `$context.arguments` , `$context.source` , and
+       * `$context.identity` maps.
+       */
+      public fun cachingKeys(cachingKeys: List<String>)
+
+      /**
+       * @param cachingKeys The caching keys for a resolver that has caching activated.
+       * Valid values are entries from the `$context.arguments` , `$context.source` , and
+       * `$context.identity` maps.
+       */
+      public fun cachingKeys(vararg cachingKeys: String)
+
+      /**
+       * @param ttl The TTL in seconds for a resolver that has caching activated. 
+       * Valid values are 1–3,600 seconds.
+       */
+      public fun ttl(ttl: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty.builder()
+
+      /**
+       * @param cachingKeys The caching keys for a resolver that has caching activated.
+       * Valid values are entries from the `$context.arguments` , `$context.source` , and
+       * `$context.identity` maps.
+       */
+      override fun cachingKeys(cachingKeys: List<String>) {
+        cdkBuilder.cachingKeys(cachingKeys)
+      }
+
+      /**
+       * @param cachingKeys The caching keys for a resolver that has caching activated.
+       * Valid values are entries from the `$context.arguments` , `$context.source` , and
+       * `$context.identity` maps.
+       */
+      override fun cachingKeys(vararg cachingKeys: String): Unit = cachingKeys(cachingKeys.toList())
+
+      /**
+       * @param ttl The TTL in seconds for a resolver that has caching activated. 
+       * Valid values are 1–3,600 seconds.
+       */
+      override fun ttl(ttl: Number) {
+        cdkBuilder.ttl(ttl)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty,
+    ) : CdkObject(cdkObject), CachingConfigProperty {
+      /**
+       * The caching keys for a resolver that has caching activated.
+       *
+       * Valid values are entries from the `$context.arguments` , `$context.source` , and
+       * `$context.identity` maps.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-cachingkeys)
+       */
+      override fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
+
+      /**
+       * The TTL in seconds for a resolver that has caching activated.
+       *
+       * Valid values are 1–3,600 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl)
+       */
+      override fun ttl(): Number = unwrap(this).getTtl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CachingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty):
+          CachingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CachingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CachingConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty
+    }
+  }
+
+  /**
+   * The `LambdaConflictHandlerConfig` when configuring LAMBDA as the Conflict Handler.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * LambdaConflictHandlerConfigProperty lambdaConflictHandlerConfigProperty =
+   * LambdaConflictHandlerConfigProperty.builder()
+   * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html)
+   */
+  public interface LambdaConflictHandlerConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html#cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
+     */
+    public fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
+
+    /**
+     * A builder for [LambdaConflictHandlerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
+       * use as the Conflict Handler.
+       */
+      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty.builder()
+
+      /**
+       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
+       * use as the Conflict Handler.
+       */
+      override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
+        cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty,
+    ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html#cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
+       */
+      override fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LambdaConflictHandlerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty):
+          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConflictHandlerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty
+    }
+  }
+
+  /**
+   * Use the `PipelineConfig` property type to specify `PipelineConfig` for an AWS AppSync resolver.
+   *
+   * `PipelineConfig` is a property of the
+   * [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appsync.*;
+   * PipelineConfigProperty pipelineConfigProperty = PipelineConfigProperty.builder()
+   * .functions(List.of("functions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html)
+   */
+  public interface PipelineConfigProperty {
+    /**
+     * A list of `Function` objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions)
+     */
+    public fun functions(): List<String> = unwrap(this).getFunctions() ?: emptyList()
+
+    /**
+     * A builder for [PipelineConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functions A list of `Function` objects.
+       */
+      public fun functions(functions: List<String>)
+
+      /**
+       * @param functions A list of `Function` objects.
+       */
+      public fun functions(vararg functions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty.Builder =
+          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty.builder()
+
+      /**
+       * @param functions A list of `Function` objects.
+       */
+      override fun functions(functions: List<String>) {
+        cdkBuilder.functions(functions)
+      }
+
+      /**
+       * @param functions A list of `Function` objects.
+       */
+      override fun functions(vararg functions: String): Unit = functions(functions.toList())
+
+      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty,
+    ) : CdkObject(cdkObject), PipelineConfigProperty {
+      /**
+       * A list of `Function` objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions)
+       */
+      override fun functions(): List<String> = unwrap(this).getFunctions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty):
+          PipelineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PipelineConfigProperty):
+          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty
+    }
   }
 
   /**
@@ -1125,8 +1565,7 @@ public open class CfnResolver internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty,
     ) : CdkObject(cdkObject), SyncConfigProperty {
       /**
        * The Conflict Detection strategy to use.
@@ -1175,450 +1614,6 @@ public open class CfnResolver internal constructor(
           software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appsync.CfnResolver.SyncConfigProperty
-    }
-  }
-
-  /**
-   * Use the `PipelineConfig` property type to specify `PipelineConfig` for an AWS AppSync resolver.
-   *
-   * `PipelineConfig` is a property of the
-   * [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * PipelineConfigProperty pipelineConfigProperty = PipelineConfigProperty.builder()
-   * .functions(List.of("functions"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html)
-   */
-  public interface PipelineConfigProperty {
-    /**
-     * A list of `Function` objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions)
-     */
-    public fun functions(): List<String> = unwrap(this).getFunctions() ?: emptyList()
-
-    /**
-     * A builder for [PipelineConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param functions A list of `Function` objects.
-       */
-      public fun functions(functions: List<String>)
-
-      /**
-       * @param functions A list of `Function` objects.
-       */
-      public fun functions(vararg functions: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty.builder()
-
-      /**
-       * @param functions A list of `Function` objects.
-       */
-      override fun functions(functions: List<String>) {
-        cdkBuilder.functions(functions)
-      }
-
-      /**
-       * @param functions A list of `Function` objects.
-       */
-      override fun functions(vararg functions: String): Unit = functions(functions.toList())
-
-      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty,
-    ) : CdkObject(cdkObject), PipelineConfigProperty {
-      /**
-       * A list of `Function` objects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions)
-       */
-      override fun functions(): List<String> = unwrap(this).getFunctions() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty):
-          PipelineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PipelineConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty
-    }
-  }
-
-  /**
-   * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
-   *
-   * Specifies the name and version of the runtime to use. Note that if a runtime is specified, code
-   * must also be specified.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * AppSyncRuntimeProperty appSyncRuntimeProperty = AppSyncRuntimeProperty.builder()
-   * .name("name")
-   * .runtimeVersion("runtimeVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html)
-   */
-  public interface AppSyncRuntimeProperty {
-    /**
-     * The `name` of the runtime to use.
-     *
-     * Currently, the only allowed value is `APPSYNC_JS` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-name)
-     */
-    public fun name(): String
-
-    /**
-     * The `version` of the runtime to use.
-     *
-     * Currently, the only allowed version is `1.0.0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-runtimeversion)
-     */
-    public fun runtimeVersion(): String
-
-    /**
-     * A builder for [AppSyncRuntimeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The `name` of the runtime to use. 
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param runtimeVersion The `version` of the runtime to use. 
-       * Currently, the only allowed version is `1.0.0` .
-       */
-      public fun runtimeVersion(runtimeVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty.builder()
-
-      /**
-       * @param name The `name` of the runtime to use. 
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param runtimeVersion The `version` of the runtime to use. 
-       * Currently, the only allowed version is `1.0.0` .
-       */
-      override fun runtimeVersion(runtimeVersion: String) {
-        cdkBuilder.runtimeVersion(runtimeVersion)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty,
-    ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
-      /**
-       * The `name` of the runtime to use.
-       *
-       * Currently, the only allowed value is `APPSYNC_JS` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The `version` of the runtime to use.
-       *
-       * Currently, the only allowed version is `1.0.0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-appsyncruntime.html#cfn-appsync-resolver-appsyncruntime-runtimeversion)
-       */
-      override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AppSyncRuntimeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty):
-          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as? AppSyncRuntimeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AppSyncRuntimeProperty):
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnResolver.AppSyncRuntimeProperty
-    }
-  }
-
-  /**
-   * The `LambdaConflictHandlerConfig` when configuring LAMBDA as the Conflict Handler.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * LambdaConflictHandlerConfigProperty lambdaConflictHandlerConfigProperty =
-   * LambdaConflictHandlerConfigProperty.builder()
-   * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html)
-   */
-  public interface LambdaConflictHandlerConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html#cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
-     */
-    public fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
-
-    /**
-     * A builder for [LambdaConflictHandlerConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
-       * use as the Conflict Handler.
-       */
-      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty.builder()
-
-      /**
-       * @param lambdaConflictHandlerArn The Amazon Resource Name (ARN) for the Lambda function to
-       * use as the Conflict Handler.
-       */
-      override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
-        cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty,
-    ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html#cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn)
-       */
-      override fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LambdaConflictHandlerConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty):
-          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaConflictHandlerConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnResolver.LambdaConflictHandlerConfigProperty
-    }
-  }
-
-  /**
-   * The caching configuration for a resolver that has caching activated.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appsync.*;
-   * CachingConfigProperty cachingConfigProperty = CachingConfigProperty.builder()
-   * .ttl(123)
-   * // the properties below are optional
-   * .cachingKeys(List.of("cachingKeys"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html)
-   */
-  public interface CachingConfigProperty {
-    /**
-     * The caching keys for a resolver that has caching activated.
-     *
-     * Valid values are entries from the `$context.arguments` , `$context.source` , and
-     * `$context.identity` maps.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-cachingkeys)
-     */
-    public fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
-
-    /**
-     * The TTL in seconds for a resolver that has caching activated.
-     *
-     * Valid values are 1–3,600 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl)
-     */
-    public fun ttl(): Number
-
-    /**
-     * A builder for [CachingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cachingKeys The caching keys for a resolver that has caching activated.
-       * Valid values are entries from the `$context.arguments` , `$context.source` , and
-       * `$context.identity` maps.
-       */
-      public fun cachingKeys(cachingKeys: List<String>)
-
-      /**
-       * @param cachingKeys The caching keys for a resolver that has caching activated.
-       * Valid values are entries from the `$context.arguments` , `$context.source` , and
-       * `$context.identity` maps.
-       */
-      public fun cachingKeys(vararg cachingKeys: String)
-
-      /**
-       * @param ttl The TTL in seconds for a resolver that has caching activated. 
-       * Valid values are 1–3,600 seconds.
-       */
-      public fun ttl(ttl: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty.Builder =
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty.builder()
-
-      /**
-       * @param cachingKeys The caching keys for a resolver that has caching activated.
-       * Valid values are entries from the `$context.arguments` , `$context.source` , and
-       * `$context.identity` maps.
-       */
-      override fun cachingKeys(cachingKeys: List<String>) {
-        cdkBuilder.cachingKeys(cachingKeys)
-      }
-
-      /**
-       * @param cachingKeys The caching keys for a resolver that has caching activated.
-       * Valid values are entries from the `$context.arguments` , `$context.source` , and
-       * `$context.identity` maps.
-       */
-      override fun cachingKeys(vararg cachingKeys: String): Unit = cachingKeys(cachingKeys.toList())
-
-      /**
-       * @param ttl The TTL in seconds for a resolver that has caching activated. 
-       * Valid values are 1–3,600 seconds.
-       */
-      override fun ttl(ttl: Number) {
-        cdkBuilder.ttl(ttl)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty,
-    ) : CdkObject(cdkObject), CachingConfigProperty {
-      /**
-       * The caching keys for a resolver that has caching activated.
-       *
-       * Valid values are entries from the `$context.arguments` , `$context.source` , and
-       * `$context.identity` maps.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-cachingkeys)
-       */
-      override fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
-
-      /**
-       * The TTL in seconds for a resolver that has caching activated.
-       *
-       * Valid values are 1–3,600 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl)
-       */
-      override fun ttl(): Number = unwrap(this).getTtl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CachingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty):
-          CachingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CachingConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CachingConfigProperty):
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appsync.CfnResolver.CachingConfigProperty
     }
   }
 }

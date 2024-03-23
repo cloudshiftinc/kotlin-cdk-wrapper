@@ -41,8 +41,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class Metric internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Metric,
+public open class Metric(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Metric,
 ) : CdkObject(cdkObject), IMetric {
   public constructor(props: MetricProps) :
       this(software.amazon.awscdk.services.cloudwatch.Metric(props.let(MetricProps::unwrap))
@@ -490,6 +490,6 @@ public open class Metric internal constructor(
         Metric(cdkObject)
 
     internal fun unwrap(wrapped: Metric): software.amazon.awscdk.services.cloudwatch.Metric =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.Metric
   }
 }

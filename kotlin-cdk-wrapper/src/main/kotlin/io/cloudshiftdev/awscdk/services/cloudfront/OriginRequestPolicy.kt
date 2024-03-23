@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class OriginRequestPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicy,
+public open class OriginRequestPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicy,
 ) : Resource(cdkObject), IOriginRequestPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -224,6 +224,7 @@ public open class OriginRequestPolicy internal constructor(
         OriginRequestPolicy = OriginRequestPolicy(cdkObject)
 
     internal fun unwrap(wrapped: OriginRequestPolicy):
-        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy
   }
 }

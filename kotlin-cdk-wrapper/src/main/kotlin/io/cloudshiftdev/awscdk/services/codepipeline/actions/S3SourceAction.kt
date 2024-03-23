@@ -39,9 +39,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class S3SourceAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.S3SourceAction,
+public open class S3SourceAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceAction,
 ) : Action(cdkObject) {
   public constructor(props: S3SourceActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.S3SourceAction(props.let(S3SourceActionProps::unwrap))
@@ -279,6 +278,7 @@ public open class S3SourceAction internal constructor(
         S3SourceAction = S3SourceAction(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceAction):
-        software.amazon.awscdk.services.codepipeline.actions.S3SourceAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.S3SourceAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.S3SourceAction
   }
 }

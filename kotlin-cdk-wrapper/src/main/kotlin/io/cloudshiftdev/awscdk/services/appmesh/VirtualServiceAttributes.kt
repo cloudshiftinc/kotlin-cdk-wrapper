@@ -77,7 +77,7 @@ public interface VirtualServiceAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceAttributes,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceAttributes,
   ) : CdkObject(cdkObject), VirtualServiceAttributes {
     /**
      * The Mesh which the VirtualService belongs to.

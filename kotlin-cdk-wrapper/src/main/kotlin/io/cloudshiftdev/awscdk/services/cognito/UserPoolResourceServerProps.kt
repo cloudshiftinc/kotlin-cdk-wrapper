@@ -109,7 +109,7 @@ public interface UserPoolResourceServerProps : UserPoolResourceServerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServerProps,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServerProps,
   ) : CdkObject(cdkObject), UserPoolResourceServerProps {
     /**
      * A unique resource server identifier for the resource server.

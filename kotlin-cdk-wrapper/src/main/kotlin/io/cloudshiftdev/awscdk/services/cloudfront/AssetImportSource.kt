@@ -63,8 +63,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetImportSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.AssetImportSource,
+public open class AssetImportSource(
+  cdkObject: software.amazon.awscdk.services.cloudfront.AssetImportSource,
 ) : ImportSource(cdkObject) {
   public constructor(path: String) :
       this(software.amazon.awscdk.services.cloudfront.AssetImportSource(path)
@@ -427,6 +427,7 @@ public open class AssetImportSource internal constructor(
         AssetImportSource = AssetImportSource(cdkObject)
 
     internal fun unwrap(wrapped: AssetImportSource):
-        software.amazon.awscdk.services.cloudfront.AssetImportSource = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.AssetImportSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.AssetImportSource
   }
 }

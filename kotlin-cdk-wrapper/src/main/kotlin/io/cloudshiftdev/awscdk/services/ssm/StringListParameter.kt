@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ParameterValueType.AWS_EC2_IMAGE_ID);
  * ```
  */
-public open class StringListParameter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.StringListParameter,
+public open class StringListParameter(
+  cdkObject: software.amazon.awscdk.services.ssm.StringListParameter,
 ) : Resource(cdkObject), IStringListParameter, IParameter {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -331,6 +331,7 @@ public open class StringListParameter internal constructor(
         StringListParameter = StringListParameter(cdkObject)
 
     internal fun unwrap(wrapped: StringListParameter):
-        software.amazon.awscdk.services.ssm.StringListParameter = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.StringListParameter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.StringListParameter
   }
 }

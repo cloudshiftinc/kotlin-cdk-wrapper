@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html)
  */
-public open class CfnPhoneNumber internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumber,
+public open class CfnPhoneNumber(
+  cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumber,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -385,6 +385,7 @@ public open class CfnPhoneNumber internal constructor(
         CfnPhoneNumber = CfnPhoneNumber(cdkObject)
 
     internal fun unwrap(wrapped: CfnPhoneNumber):
-        software.amazon.awscdk.services.connect.CfnPhoneNumber = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnPhoneNumber = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnPhoneNumber
   }
 }

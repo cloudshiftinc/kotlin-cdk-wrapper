@@ -32,9 +32,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AmazonLinux2023ImageSsmParameter internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter,
+public open class AmazonLinux2023ImageSsmParameter(
+  cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter,
 ) : AmazonLinuxImageSsmParameterBase(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter()
   )
@@ -209,6 +208,7 @@ public open class AmazonLinux2023ImageSsmParameter internal constructor(
         AmazonLinux2023ImageSsmParameter = AmazonLinux2023ImageSsmParameter(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinux2023ImageSsmParameter):
-        software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter
   }
 }

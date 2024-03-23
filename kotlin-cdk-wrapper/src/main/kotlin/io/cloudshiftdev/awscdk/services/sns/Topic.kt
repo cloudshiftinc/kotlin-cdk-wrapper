@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Topic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.Topic,
+public open class Topic(
+  cdkObject: software.amazon.awscdk.services.sns.Topic,
 ) : TopicBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -348,6 +348,6 @@ public open class Topic internal constructor(
         Topic(cdkObject)
 
     internal fun unwrap(wrapped: Topic): software.amazon.awscdk.services.sns.Topic =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sns.Topic
   }
 }

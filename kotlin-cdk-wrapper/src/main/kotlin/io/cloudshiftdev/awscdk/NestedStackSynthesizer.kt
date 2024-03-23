@@ -24,8 +24,8 @@ import kotlin.jvm.JvmName
  * NestedStackSynthesizer nestedStackSynthesizer = new NestedStackSynthesizer(stackSynthesizer);
  * ```
  */
-public open class NestedStackSynthesizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.NestedStackSynthesizer,
+public open class NestedStackSynthesizer(
+  cdkObject: software.amazon.awscdk.NestedStackSynthesizer,
 ) : StackSynthesizer(cdkObject) {
   public constructor(parentDeployment: IStackSynthesizer) :
       this(software.amazon.awscdk.NestedStackSynthesizer(parentDeployment.let(IStackSynthesizer::unwrap))
@@ -123,6 +123,7 @@ public open class NestedStackSynthesizer internal constructor(
         NestedStackSynthesizer = NestedStackSynthesizer(cdkObject)
 
     internal fun unwrap(wrapped: NestedStackSynthesizer):
-        software.amazon.awscdk.NestedStackSynthesizer = wrapped.cdkObject
+        software.amazon.awscdk.NestedStackSynthesizer = wrapped.cdkObject as
+        software.amazon.awscdk.NestedStackSynthesizer
   }
 }

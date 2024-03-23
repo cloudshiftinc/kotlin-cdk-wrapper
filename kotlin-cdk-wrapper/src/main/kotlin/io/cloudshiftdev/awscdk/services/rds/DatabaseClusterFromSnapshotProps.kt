@@ -1270,7 +1270,7 @@ public interface DatabaseClusterFromSnapshotProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps,
   ) : CdkObject(cdkObject), DatabaseClusterFromSnapshotProps {
     /**
      * The number of seconds to set a cluster's target backtrack window to.

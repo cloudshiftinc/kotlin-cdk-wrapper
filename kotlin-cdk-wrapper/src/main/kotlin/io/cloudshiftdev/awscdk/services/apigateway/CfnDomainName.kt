@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
  */
-public open class CfnDomainName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
+public open class CfnDomainName(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -610,7 +610,130 @@ public open class CfnDomainName internal constructor(
         CfnDomainName = CfnDomainName(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainName):
-        software.amazon.awscdk.services.apigateway.CfnDomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CfnDomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CfnDomainName
+  }
+
+  /**
+   * The `EndpointConfiguration` property type specifies the endpoint types of an Amazon API Gateway
+   * domain name.
+   *
+   * `EndpointConfiguration` is a property of the
+   * [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigateway.*;
+   * EndpointConfigurationProperty endpointConfigurationProperty =
+   * EndpointConfigurationProperty.builder()
+   * .types(List.of("types"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html)
+   */
+  public interface EndpointConfigurationProperty {
+    /**
+     * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
+     *
+     * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+     * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+     * the endpoint type is `PRIVATE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
+     */
+    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+
+    /**
+     * A builder for [EndpointConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      public fun types(types: List<String>)
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      public fun types(vararg types: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      override fun types(types: List<String>) {
+        cdkBuilder.types(types)
+      }
+
+      /**
+       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
+       * (DomainName).
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       */
+      override fun types(vararg types: String): Unit = types(types.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
+    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+      /**
+       * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
+       *
+       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
+       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
+       * the endpoint type is `PRIVATE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
+       */
+      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty):
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointConfigurationProperty):
+          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty
+    }
   }
 
   /**
@@ -711,8 +834,7 @@ public open class CfnDomainName internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
       /**
        * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example
@@ -752,129 +874,6 @@ public open class CfnDomainName internal constructor(
           software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty
-    }
-  }
-
-  /**
-   * The `EndpointConfiguration` property type specifies the endpoint types of an Amazon API Gateway
-   * domain name.
-   *
-   * `EndpointConfiguration` is a property of the
-   * [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigateway.*;
-   * EndpointConfigurationProperty endpointConfigurationProperty =
-   * EndpointConfigurationProperty.builder()
-   * .types(List.of("types"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html)
-   */
-  public interface EndpointConfigurationProperty {
-    /**
-     * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
-     *
-     * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-     * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-     * the endpoint type is `PRIVATE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
-     */
-    public fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-
-    /**
-     * A builder for [EndpointConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      public fun types(types: List<String>)
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      public fun types(vararg types: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.builder()
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      override fun types(types: List<String>) {
-        cdkBuilder.types(types)
-      }
-
-      /**
-       * @param types A list of endpoint types of an API (RestApi) or its custom domain name
-       * (DomainName).
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       */
-      override fun types(vararg types: String): Unit = types(types.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
-      /**
-       * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
-       *
-       * For an edge-optimized API and its custom domain name, the endpoint type is `"EDGE"` . For a
-       * regional API and its custom domain name, the endpoint type is `REGIONAL` . For a private API,
-       * the endpoint type is `PRIVATE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-types)
-       */
-      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EndpointConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointConfigurationProperty):
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty
     }
   }
 }

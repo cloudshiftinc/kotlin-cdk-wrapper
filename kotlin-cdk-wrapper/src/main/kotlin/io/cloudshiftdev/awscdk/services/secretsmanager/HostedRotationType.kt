@@ -18,9 +18,8 @@ import kotlin.String
  * HostedRotationType hostedRotationType = HostedRotationType.MARIADB_MULTI_USER;
  * ```
  */
-public open class HostedRotationType internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.HostedRotationType,
+public open class HostedRotationType(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.HostedRotationType,
 ) : CdkObject(cdkObject) {
   /**
    * Whether the rotation uses the mutli user scheme.
@@ -79,6 +78,7 @@ public open class HostedRotationType internal constructor(
         HostedRotationType = HostedRotationType(cdkObject)
 
     internal fun unwrap(wrapped: HostedRotationType):
-        software.amazon.awscdk.services.secretsmanager.HostedRotationType = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.HostedRotationType = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.HostedRotationType
   }
 }

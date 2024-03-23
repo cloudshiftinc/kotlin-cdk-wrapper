@@ -95,7 +95,7 @@ public interface LocationPackageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.LocationPackageOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.LocationPackageOptions,
   ) : CdkObject(cdkObject), LocationPackageOptions {
     /**
      * Identifier key for this package.

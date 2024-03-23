@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LayerVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.LayerVersion,
+public open class LayerVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.LayerVersion,
 ) : Resource(cdkObject), ILayerVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -327,6 +327,6 @@ public open class LayerVersion internal constructor(
         = LayerVersion(cdkObject)
 
     internal fun unwrap(wrapped: LayerVersion): software.amazon.awscdk.services.lambda.LayerVersion
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lambda.LayerVersion
   }
 }

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html)
  */
-public open class CfnAnalysisTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
+public open class CfnAnalysisTemplate(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -522,184 +522,8 @@ public open class CfnAnalysisTemplate internal constructor(
         CfnAnalysisTemplate = CfnAnalysisTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalysisTemplate):
-        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate = wrapped.cdkObject
-  }
-
-  /**
-   * The structure that defines the body of the analysis template.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * AnalysisSourceProperty analysisSourceProperty = AnalysisSourceProperty.builder()
-   * .text("text")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html)
-   */
-  public interface AnalysisSourceProperty {
-    /**
-     * The query text.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html#cfn-cleanrooms-analysistemplate-analysissource-text)
-     */
-    public fun text(): String
-
-    /**
-     * A builder for [AnalysisSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param text The query text. 
-       */
-      public fun text(text: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty.builder()
-
-      /**
-       * @param text The query text. 
-       */
-      override fun text(text: String) {
-        cdkBuilder.text(text)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
-    ) : CdkObject(cdkObject), AnalysisSourceProperty {
-      /**
-       * The query text.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html#cfn-cleanrooms-analysistemplate-analysissource-text)
-       */
-      override fun text(): String = unwrap(this).getText()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty):
-          AnalysisSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisSourceProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty
-    }
-  }
-
-  /**
-   * A relation within an analysis.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * AnalysisSchemaProperty analysisSchemaProperty = AnalysisSchemaProperty.builder()
-   * .referencedTables(List.of("referencedTables"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html)
-   */
-  public interface AnalysisSchemaProperty {
-    /**
-     * The tables referenced in the analysis schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html#cfn-cleanrooms-analysistemplate-analysisschema-referencedtables)
-     */
-    public fun referencedTables(): List<String>
-
-    /**
-     * A builder for [AnalysisSchemaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param referencedTables The tables referenced in the analysis schema. 
-       */
-      public fun referencedTables(referencedTables: List<String>)
-
-      /**
-       * @param referencedTables The tables referenced in the analysis schema. 
-       */
-      public fun referencedTables(vararg referencedTables: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty.builder()
-
-      /**
-       * @param referencedTables The tables referenced in the analysis schema. 
-       */
-      override fun referencedTables(referencedTables: List<String>) {
-        cdkBuilder.referencedTables(referencedTables)
-      }
-
-      /**
-       * @param referencedTables The tables referenced in the analysis schema. 
-       */
-      override fun referencedTables(vararg referencedTables: String): Unit =
-          referencedTables(referencedTables.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
-    ) : CdkObject(cdkObject), AnalysisSchemaProperty {
-      /**
-       * The tables referenced in the analysis schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html#cfn-cleanrooms-analysistemplate-analysisschema-referencedtables)
-       */
-      override fun referencedTables(): List<String> = unwrap(this).getReferencedTables()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisSchemaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty):
-          AnalysisSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSchemaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisSchemaProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty
-    }
+        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate
   }
 
   /**
@@ -814,8 +638,7 @@ public open class CfnAnalysisTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
     ) : CdkObject(cdkObject), AnalysisParameterProperty {
       /**
        * Optional.
@@ -860,6 +683,181 @@ public open class CfnAnalysisTemplate internal constructor(
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty
+    }
+  }
+
+  /**
+   * A relation within an analysis.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * AnalysisSchemaProperty analysisSchemaProperty = AnalysisSchemaProperty.builder()
+   * .referencedTables(List.of("referencedTables"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html)
+   */
+  public interface AnalysisSchemaProperty {
+    /**
+     * The tables referenced in the analysis schema.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html#cfn-cleanrooms-analysistemplate-analysisschema-referencedtables)
+     */
+    public fun referencedTables(): List<String>
+
+    /**
+     * A builder for [AnalysisSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param referencedTables The tables referenced in the analysis schema. 
+       */
+      public fun referencedTables(referencedTables: List<String>)
+
+      /**
+       * @param referencedTables The tables referenced in the analysis schema. 
+       */
+      public fun referencedTables(vararg referencedTables: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty.builder()
+
+      /**
+       * @param referencedTables The tables referenced in the analysis schema. 
+       */
+      override fun referencedTables(referencedTables: List<String>) {
+        cdkBuilder.referencedTables(referencedTables)
+      }
+
+      /**
+       * @param referencedTables The tables referenced in the analysis schema. 
+       */
+      override fun referencedTables(vararg referencedTables: String): Unit =
+          referencedTables(referencedTables.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
+    ) : CdkObject(cdkObject), AnalysisSchemaProperty {
+      /**
+       * The tables referenced in the analysis schema.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysisschema.html#cfn-cleanrooms-analysistemplate-analysisschema-referencedtables)
+       */
+      override fun referencedTables(): List<String> = unwrap(this).getReferencedTables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty):
+          AnalysisSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisSchemaProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty
+    }
+  }
+
+  /**
+   * The structure that defines the body of the analysis template.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * AnalysisSourceProperty analysisSourceProperty = AnalysisSourceProperty.builder()
+   * .text("text")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html)
+   */
+  public interface AnalysisSourceProperty {
+    /**
+     * The query text.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html#cfn-cleanrooms-analysistemplate-analysissource-text)
+     */
+    public fun text(): String
+
+    /**
+     * A builder for [AnalysisSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param text The query text. 
+       */
+      public fun text(text: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty.builder()
+
+      /**
+       * @param text The query text. 
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
+    ) : CdkObject(cdkObject), AnalysisSourceProperty {
+      /**
+       * The query text.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-analysistemplate-analysissource.html#cfn-cleanrooms-analysistemplate-analysissource-text)
+       */
+      override fun text(): String = unwrap(this).getText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty):
+          AnalysisSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisSourceProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty
     }
   }
 }

@@ -133,7 +133,7 @@ public interface ExtensionProps : ExtensionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ExtensionProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.ExtensionProps,
   ) : CdkObject(cdkObject), ExtensionProps {
     /**
      * The actions for the extension.

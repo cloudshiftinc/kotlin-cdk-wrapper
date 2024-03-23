@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html)
  */
-public open class CfnEndpointAccess internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
+public open class CfnEndpointAccess(
+  cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -336,11 +336,12 @@ public open class CfnEndpointAccess internal constructor(
         CfnEndpointAccess = CfnEndpointAccess(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAccess):
-        software.amazon.awscdk.services.redshift.CfnEndpointAccess = wrapped.cdkObject
+        software.amazon.awscdk.services.redshift.CfnEndpointAccess = wrapped.cdkObject as
+        software.amazon.awscdk.services.redshift.CfnEndpointAccess
   }
 
   /**
-   * The security groups associated with the endpoint.
+   * Describes a network interface.
    *
    * Example:
    *
@@ -348,104 +349,157 @@ public open class CfnEndpointAccess internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.redshift.*;
-   * VpcSecurityGroupProperty vpcSecurityGroupProperty = VpcSecurityGroupProperty.builder()
-   * .status("status")
-   * .vpcSecurityGroupId("vpcSecurityGroupId")
+   * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .networkInterfaceId("networkInterfaceId")
+   * .privateIpAddress("privateIpAddress")
+   * .subnetId("subnetId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html)
    */
-  public interface VpcSecurityGroupProperty {
+  public interface NetworkInterfaceProperty {
     /**
-     * The status of the endpoint.
+     * The Availability Zone.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-status)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-availabilityzone)
      */
-    public fun status(): String? = unwrap(this).getStatus()
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
-     * The identifier of the VPC security group.
+     * The network interface identifier.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-vpcsecuritygroupid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-networkinterfaceid)
      */
-    public fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
+    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
     /**
-     * A builder for [VpcSecurityGroupProperty]
+     * The IPv4 address of the network interface within the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-privateipaddress)
+     */
+    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+    /**
+     * The subnet identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-subnetid)
+     */
+    public fun subnetId(): String? = unwrap(this).getSubnetId()
+
+    /**
+     * A builder for [NetworkInterfaceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param status The status of the endpoint.
+       * @param availabilityZone The Availability Zone.
        */
-      public fun status(status: String)
+      public fun availabilityZone(availabilityZone: String)
 
       /**
-       * @param vpcSecurityGroupId The identifier of the VPC security group.
+       * @param networkInterfaceId The network interface identifier.
        */
-      public fun vpcSecurityGroupId(vpcSecurityGroupId: String)
+      public fun networkInterfaceId(networkInterfaceId: String)
+
+      /**
+       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+
+      /**
+       * @param subnetId The subnet identifier.
+       */
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty.Builder
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty.Builder
           =
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty.builder()
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty.builder()
 
       /**
-       * @param status The status of the endpoint.
+       * @param availabilityZone The Availability Zone.
        */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
       }
 
       /**
-       * @param vpcSecurityGroupId The identifier of the VPC security group.
+       * @param networkInterfaceId The network interface identifier.
        */
-      override fun vpcSecurityGroupId(vpcSecurityGroupId: String) {
-        cdkBuilder.vpcSecurityGroupId(vpcSecurityGroupId)
+      override fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+      }
+
+      /**
+       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      /**
+       * @param subnetId The subnet identifier.
+       */
+      override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
       }
 
       public fun build():
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty =
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
-    ) : CdkObject(cdkObject), VpcSecurityGroupProperty {
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
+    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
-       * The status of the endpoint.
+       * The Availability Zone.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-status)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-availabilityzone)
        */
-      override fun status(): String? = unwrap(this).getStatus()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
       /**
-       * The identifier of the VPC security group.
+       * The network interface identifier.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-vpcsecuritygroupid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-networkinterfaceid)
        */
-      override fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+      /**
+       * The IPv4 address of the network interface within the subnet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-privateipaddress)
+       */
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+      /**
+       * The subnet identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-subnetid)
+       */
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcSecurityGroupProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty):
-          VpcSecurityGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcSecurityGroupProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty):
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
           ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VpcSecurityGroupProperty):
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty =
+      internal fun unwrap(wrapped: NetworkInterfaceProperty):
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty
     }
   }
 
@@ -580,8 +634,7 @@ public open class CfnEndpointAccess internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
     ) : CdkObject(cdkObject), VpcEndpointProperty {
       /**
        * One or more network interfaces of the endpoint.
@@ -626,7 +679,7 @@ public open class CfnEndpointAccess internal constructor(
   }
 
   /**
-   * Describes a network interface.
+   * The security groups associated with the endpoint.
    *
    * Example:
    *
@@ -634,158 +687,103 @@ public open class CfnEndpointAccess internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.redshift.*;
-   * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
-   * .availabilityZone("availabilityZone")
-   * .networkInterfaceId("networkInterfaceId")
-   * .privateIpAddress("privateIpAddress")
-   * .subnetId("subnetId")
+   * VpcSecurityGroupProperty vpcSecurityGroupProperty = VpcSecurityGroupProperty.builder()
+   * .status("status")
+   * .vpcSecurityGroupId("vpcSecurityGroupId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html)
    */
-  public interface NetworkInterfaceProperty {
+  public interface VpcSecurityGroupProperty {
     /**
-     * The Availability Zone.
+     * The status of the endpoint.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-availabilityzone)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-status)
      */
-    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+    public fun status(): String? = unwrap(this).getStatus()
 
     /**
-     * The network interface identifier.
+     * The identifier of the VPC security group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-networkinterfaceid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-vpcsecuritygroupid)
      */
-    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+    public fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
 
     /**
-     * The IPv4 address of the network interface within the subnet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-privateipaddress)
-     */
-    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-
-    /**
-     * The subnet identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-subnetid)
-     */
-    public fun subnetId(): String? = unwrap(this).getSubnetId()
-
-    /**
-     * A builder for [NetworkInterfaceProperty]
+     * A builder for [VpcSecurityGroupProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param availabilityZone The Availability Zone.
+       * @param status The status of the endpoint.
        */
-      public fun availabilityZone(availabilityZone: String)
+      public fun status(status: String)
 
       /**
-       * @param networkInterfaceId The network interface identifier.
+       * @param vpcSecurityGroupId The identifier of the VPC security group.
        */
-      public fun networkInterfaceId(networkInterfaceId: String)
-
-      /**
-       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-
-      /**
-       * @param subnetId The subnet identifier.
-       */
-      public fun subnetId(subnetId: String)
+      public fun vpcSecurityGroupId(vpcSecurityGroupId: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty.Builder
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty.Builder
           =
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty.builder()
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty.builder()
 
       /**
-       * @param availabilityZone The Availability Zone.
+       * @param status The status of the endpoint.
        */
-      override fun availabilityZone(availabilityZone: String) {
-        cdkBuilder.availabilityZone(availabilityZone)
+      override fun status(status: String) {
+        cdkBuilder.status(status)
       }
 
       /**
-       * @param networkInterfaceId The network interface identifier.
+       * @param vpcSecurityGroupId The identifier of the VPC security group.
        */
-      override fun networkInterfaceId(networkInterfaceId: String) {
-        cdkBuilder.networkInterfaceId(networkInterfaceId)
-      }
-
-      /**
-       * @param privateIpAddress The IPv4 address of the network interface within the subnet.
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      /**
-       * @param subnetId The subnet identifier.
-       */
-      override fun subnetId(subnetId: String) {
-        cdkBuilder.subnetId(subnetId)
+      override fun vpcSecurityGroupId(vpcSecurityGroupId: String) {
+        cdkBuilder.vpcSecurityGroupId(vpcSecurityGroupId)
       }
 
       public fun build():
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty =
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+      cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
+    ) : CdkObject(cdkObject), VpcSecurityGroupProperty {
       /**
-       * The Availability Zone.
+       * The status of the endpoint.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-availabilityzone)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-status)
        */
-      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun status(): String? = unwrap(this).getStatus()
 
       /**
-       * The network interface identifier.
+       * The identifier of the VPC security group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-networkinterfaceid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-vpcsecuritygroupid)
        */
-      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-      /**
-       * The IPv4 address of the network interface within the subnet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-privateipaddress)
-       */
-      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
-
-      /**
-       * The subnet identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html#cfn-redshift-endpointaccess-networkinterface-subnetid)
-       */
-      override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcSecurityGroupProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty):
+          VpcSecurityGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcSecurityGroupProperty
           ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NetworkInterfaceProperty):
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty =
+      internal fun unwrap(wrapped: VpcSecurityGroupProperty):
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty
+          software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty
     }
   }
 }

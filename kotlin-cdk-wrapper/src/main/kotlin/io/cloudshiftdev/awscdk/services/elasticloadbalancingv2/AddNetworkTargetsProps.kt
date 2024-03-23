@@ -274,8 +274,7 @@ public interface AddNetworkTargetsProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps,
   ) : CdkObject(cdkObject), AddNetworkTargetsProps {
     /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html)
  */
-public open class CfnGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway,
+public open class CfnGateway(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -301,7 +301,8 @@ public open class CfnGateway internal constructor(
         CfnGateway = CfnGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnGateway):
-        software.amazon.awscdk.services.mediaconnect.CfnGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconnect.CfnGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconnect.CfnGateway
   }
 
   /**
@@ -390,8 +391,7 @@ public open class CfnGateway internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty,
     ) : CdkObject(cdkObject), GatewayNetworkProperty {
       /**
        * A unique IP address range to use for this network.

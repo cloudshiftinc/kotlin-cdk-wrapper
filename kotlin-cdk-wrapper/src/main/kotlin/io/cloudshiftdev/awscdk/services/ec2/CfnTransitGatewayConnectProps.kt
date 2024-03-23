@@ -161,7 +161,7 @@ public interface CfnTransitGatewayConnectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnectProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnectProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayConnectProps {
     /**
      * The Connect attachment options.

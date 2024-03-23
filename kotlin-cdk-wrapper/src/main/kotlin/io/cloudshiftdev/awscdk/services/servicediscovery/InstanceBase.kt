@@ -10,8 +10,8 @@ import kotlin.String
 /**
  *
  */
-public abstract class InstanceBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
+public abstract class InstanceBase(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
 ) : Resource(cdkObject), IInstance {
   /**
    * The Id of the instance.
@@ -24,7 +24,7 @@ public abstract class InstanceBase internal constructor(
   public override fun service(): IService = unwrap(this).getService().let(IService::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
   ) : InstanceBase(cdkObject)
 
   public companion object {

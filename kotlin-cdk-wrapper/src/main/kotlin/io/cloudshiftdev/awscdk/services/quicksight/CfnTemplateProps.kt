@@ -449,7 +449,7 @@ public interface CfnTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTemplateProps,
+    cdkObject: software.amazon.awscdk.services.quicksight.CfnTemplateProps,
   ) : CdkObject(cdkObject), CfnTemplateProps {
     /**
      * The ID for the AWS account that the group is in.

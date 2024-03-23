@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Wait internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Wait,
+public open class Wait(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Wait,
 ) : State(cdkObject), INextable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -166,6 +166,6 @@ public open class Wait internal constructor(
         Wait(cdkObject)
 
     internal fun unwrap(wrapped: Wait): software.amazon.awscdk.services.stepfunctions.Wait =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Wait
   }
 }

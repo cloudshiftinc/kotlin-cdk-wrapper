@@ -682,7 +682,7 @@ public interface CfnDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnDataSourceProps,
   ) : CdkObject(cdkObject), CfnDataSourceProps {
     /**
      * Unique AWS AppSync GraphQL API identifier where this data source will be created.

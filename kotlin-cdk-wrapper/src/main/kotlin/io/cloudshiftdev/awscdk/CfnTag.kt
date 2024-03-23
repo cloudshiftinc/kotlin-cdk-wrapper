@@ -70,7 +70,7 @@ public interface CfnTag {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnTag,
+    cdkObject: software.amazon.awscdk.CfnTag,
   ) : CdkObject(cdkObject), CfnTag {
     /**
      *

@@ -67,9 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html)
  */
-public open class CfnOriginRequestPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
+public open class CfnOriginRequestPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,7 +232,352 @@ public open class CfnOriginRequestPolicy internal constructor(
         CfnOriginRequestPolicy = CfnOriginRequestPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginRequestPolicy):
-        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
+  }
+
+  /**
+   * An object that determines whether any cookies in viewer requests (and if so, which cookies) are
+   * included in requests that CloudFront sends to the origin.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * CookiesConfigProperty cookiesConfigProperty = CookiesConfigProperty.builder()
+   * .cookieBehavior("cookieBehavior")
+   * // the properties below are optional
+   * .cookies(List.of("cookies"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html)
+   */
+  public interface CookiesConfigProperty {
+    /**
+     * Determines whether cookies in viewer requests are included in requests that CloudFront sends
+     * to the origin. Valid values are:.
+     *
+     * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
+     * the origin. Even when this field is set to `none` , any cookies that are listed in a
+     * `CachePolicy` *are* included in origin requests.
+     * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
+     * are included in requests that CloudFront sends to the origin.
+     * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
+     * the origin.
+     * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront sends
+     * to the origin, **except** for those listed in the `CookieNames` type, which are not included.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookiebehavior)
+     */
+    public fun cookieBehavior(): String
+
+    /**
+     * Contains a list of cookie names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies)
+     */
+    public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+
+    /**
+     * A builder for [CookiesConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cookieBehavior Determines whether cookies in viewer requests are included in
+       * requests that CloudFront sends to the origin. Valid values are:. 
+       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin. Even when this field is set to `none` , any cookies that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in requests that CloudFront sends to the origin.
+       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin.
+       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
+       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
+       * included.
+       */
+      public fun cookieBehavior(cookieBehavior: String)
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      public fun cookies(cookies: List<String>)
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      public fun cookies(vararg cookies: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty.builder()
+
+      /**
+       * @param cookieBehavior Determines whether cookies in viewer requests are included in
+       * requests that CloudFront sends to the origin. Valid values are:. 
+       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin. Even when this field is set to `none` , any cookies that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in requests that CloudFront sends to the origin.
+       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin.
+       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
+       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
+       * included.
+       */
+      override fun cookieBehavior(cookieBehavior: String) {
+        cdkBuilder.cookieBehavior(cookieBehavior)
+      }
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      override fun cookies(cookies: List<String>) {
+        cdkBuilder.cookies(cookies)
+      }
+
+      /**
+       * @param cookies Contains a list of cookie names.
+       */
+      override fun cookies(vararg cookies: String): Unit = cookies(cookies.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
+    ) : CdkObject(cdkObject), CookiesConfigProperty {
+      /**
+       * Determines whether cookies in viewer requests are included in requests that CloudFront
+       * sends to the origin. Valid values are:.
+       *
+       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin. Even when this field is set to `none` , any cookies that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
+       * type are included in requests that CloudFront sends to the origin.
+       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
+       * the origin.
+       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
+       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
+       * included.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookiebehavior)
+       */
+      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
+
+      /**
+       * Contains a list of cookie names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies)
+       */
+      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CookiesConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty):
+          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CookiesConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty
+    }
+  }
+
+  /**
+   * An object that determines whether any HTTP headers (and if so, which headers) are included in
+   * requests that CloudFront sends to the origin.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * HeadersConfigProperty headersConfigProperty = HeadersConfigProperty.builder()
+   * .headerBehavior("headerBehavior")
+   * // the properties below are optional
+   * .headers(List.of("headers"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html)
+   */
+  public interface HeadersConfigProperty {
+    /**
+     * Determines whether any HTTP headers are included in requests that CloudFront sends to the
+     * origin. Valid values are:.
+     *
+     * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront sends
+     * to the origin. Even when this field is set to `none` , any headers that are listed in a
+     * `CachePolicy` *are* included in origin requests.
+     * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
+     * requests that CloudFront sends to the origin.
+     * * `allViewer` – All HTTP headers in viewer requests are included in requests that CloudFront
+     * sends to the origin.
+     * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the additional
+     * CloudFront headers that are listed in the `Headers` type are included in requests that
+     * CloudFront sends to the origin. The additional headers are added by CloudFront.
+     * * `allExcept` – All HTTP headers in viewer requests are included in requests that CloudFront
+     * sends to the origin, **except** for those listed in the `Headers` type, which are not included.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior)
+     */
+    public fun headerBehavior(): String
+
+    /**
+     * Contains a list of HTTP header names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers)
+     */
+    public fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
+
+    /**
+     * A builder for [HeadersConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param headerBehavior Determines whether any HTTP headers are included in requests that
+       * CloudFront sends to the origin. Valid values are:. 
+       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
+       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
+       * requests that CloudFront sends to the origin.
+       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin.
+       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
+       * additional CloudFront headers that are listed in the `Headers` type are included in requests
+       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
+       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
+       * not included.
+       */
+      public fun headerBehavior(headerBehavior: String)
+
+      /**
+       * @param headers Contains a list of HTTP header names.
+       */
+      public fun headers(headers: List<String>)
+
+      /**
+       * @param headers Contains a list of HTTP header names.
+       */
+      public fun headers(vararg headers: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty.builder()
+
+      /**
+       * @param headerBehavior Determines whether any HTTP headers are included in requests that
+       * CloudFront sends to the origin. Valid values are:. 
+       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
+       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
+       * requests that CloudFront sends to the origin.
+       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin.
+       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
+       * additional CloudFront headers that are listed in the `Headers` type are included in requests
+       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
+       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
+       * not included.
+       */
+      override fun headerBehavior(headerBehavior: String) {
+        cdkBuilder.headerBehavior(headerBehavior)
+      }
+
+      /**
+       * @param headers Contains a list of HTTP header names.
+       */
+      override fun headers(headers: List<String>) {
+        cdkBuilder.headers(headers)
+      }
+
+      /**
+       * @param headers Contains a list of HTTP header names.
+       */
+      override fun headers(vararg headers: String): Unit = headers(headers.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
+    ) : CdkObject(cdkObject), HeadersConfigProperty {
+      /**
+       * Determines whether any HTTP headers are included in requests that CloudFront sends to the
+       * origin. Valid values are:.
+       *
+       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
+       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
+       * `CachePolicy` *are* included in origin requests.
+       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
+       * requests that CloudFront sends to the origin.
+       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin.
+       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
+       * additional CloudFront headers that are listed in the `Headers` type are included in requests
+       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
+       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
+       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
+       * not included.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior)
+       */
+      override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
+
+      /**
+       * Contains a list of HTTP header names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers)
+       */
+      override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HeadersConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty):
+          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeadersConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HeadersConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty
+    }
   }
 
   /**
@@ -499,8 +843,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
     ) : CdkObject(cdkObject), OriginRequestPolicyConfigProperty {
       /**
        * A comment to describe the origin request policy.
@@ -558,352 +901,6 @@ public open class CfnOriginRequestPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty
-    }
-  }
-
-  /**
-   * An object that determines whether any HTTP headers (and if so, which headers) are included in
-   * requests that CloudFront sends to the origin.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * HeadersConfigProperty headersConfigProperty = HeadersConfigProperty.builder()
-   * .headerBehavior("headerBehavior")
-   * // the properties below are optional
-   * .headers(List.of("headers"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html)
-   */
-  public interface HeadersConfigProperty {
-    /**
-     * Determines whether any HTTP headers are included in requests that CloudFront sends to the
-     * origin. Valid values are:.
-     *
-     * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront sends
-     * to the origin. Even when this field is set to `none` , any headers that are listed in a
-     * `CachePolicy` *are* included in origin requests.
-     * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
-     * requests that CloudFront sends to the origin.
-     * * `allViewer` – All HTTP headers in viewer requests are included in requests that CloudFront
-     * sends to the origin.
-     * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the additional
-     * CloudFront headers that are listed in the `Headers` type are included in requests that
-     * CloudFront sends to the origin. The additional headers are added by CloudFront.
-     * * `allExcept` – All HTTP headers in viewer requests are included in requests that CloudFront
-     * sends to the origin, **except** for those listed in the `Headers` type, which are not included.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior)
-     */
-    public fun headerBehavior(): String
-
-    /**
-     * Contains a list of HTTP header names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers)
-     */
-    public fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
-
-    /**
-     * A builder for [HeadersConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param headerBehavior Determines whether any HTTP headers are included in requests that
-       * CloudFront sends to the origin. Valid values are:. 
-       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
-       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
-       * requests that CloudFront sends to the origin.
-       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin.
-       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
-       * additional CloudFront headers that are listed in the `Headers` type are included in requests
-       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
-       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
-       * not included.
-       */
-      public fun headerBehavior(headerBehavior: String)
-
-      /**
-       * @param headers Contains a list of HTTP header names.
-       */
-      public fun headers(headers: List<String>)
-
-      /**
-       * @param headers Contains a list of HTTP header names.
-       */
-      public fun headers(vararg headers: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty.builder()
-
-      /**
-       * @param headerBehavior Determines whether any HTTP headers are included in requests that
-       * CloudFront sends to the origin. Valid values are:. 
-       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
-       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
-       * requests that CloudFront sends to the origin.
-       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin.
-       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
-       * additional CloudFront headers that are listed in the `Headers` type are included in requests
-       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
-       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
-       * not included.
-       */
-      override fun headerBehavior(headerBehavior: String) {
-        cdkBuilder.headerBehavior(headerBehavior)
-      }
-
-      /**
-       * @param headers Contains a list of HTTP header names.
-       */
-      override fun headers(headers: List<String>) {
-        cdkBuilder.headers(headers)
-      }
-
-      /**
-       * @param headers Contains a list of HTTP header names.
-       */
-      override fun headers(vararg headers: String): Unit = headers(headers.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
-    ) : CdkObject(cdkObject), HeadersConfigProperty {
-      /**
-       * Determines whether any HTTP headers are included in requests that CloudFront sends to the
-       * origin. Valid values are:.
-       *
-       * * `none` – No HTTP headers in viewer requests are included in requests that CloudFront
-       * sends to the origin. Even when this field is set to `none` , any headers that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in
-       * requests that CloudFront sends to the origin.
-       * * `allViewer` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin.
-       * * `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the
-       * additional CloudFront headers that are listed in the `Headers` type are included in requests
-       * that CloudFront sends to the origin. The additional headers are added by CloudFront.
-       * * `allExcept` – All HTTP headers in viewer requests are included in requests that
-       * CloudFront sends to the origin, **except** for those listed in the `Headers` type, which are
-       * not included.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior)
-       */
-      override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
-
-      /**
-       * Contains a list of HTTP header names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html#cfn-cloudfront-originrequestpolicy-headersconfig-headers)
-       */
-      override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HeadersConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty):
-          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeadersConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HeadersConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty
-    }
-  }
-
-  /**
-   * An object that determines whether any cookies in viewer requests (and if so, which cookies) are
-   * included in requests that CloudFront sends to the origin.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * CookiesConfigProperty cookiesConfigProperty = CookiesConfigProperty.builder()
-   * .cookieBehavior("cookieBehavior")
-   * // the properties below are optional
-   * .cookies(List.of("cookies"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html)
-   */
-  public interface CookiesConfigProperty {
-    /**
-     * Determines whether cookies in viewer requests are included in requests that CloudFront sends
-     * to the origin. Valid values are:.
-     *
-     * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
-     * the origin. Even when this field is set to `none` , any cookies that are listed in a
-     * `CachePolicy` *are* included in origin requests.
-     * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type
-     * are included in requests that CloudFront sends to the origin.
-     * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
-     * the origin.
-     * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront sends
-     * to the origin, **except** for those listed in the `CookieNames` type, which are not included.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookiebehavior)
-     */
-    public fun cookieBehavior(): String
-
-    /**
-     * Contains a list of cookie names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies)
-     */
-    public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
-
-    /**
-     * A builder for [CookiesConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cookieBehavior Determines whether cookies in viewer requests are included in
-       * requests that CloudFront sends to the origin. Valid values are:. 
-       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin. Even when this field is set to `none` , any cookies that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in requests that CloudFront sends to the origin.
-       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin.
-       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
-       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
-       * included.
-       */
-      public fun cookieBehavior(cookieBehavior: String)
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      public fun cookies(cookies: List<String>)
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      public fun cookies(vararg cookies: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty.builder()
-
-      /**
-       * @param cookieBehavior Determines whether cookies in viewer requests are included in
-       * requests that CloudFront sends to the origin. Valid values are:. 
-       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin. Even when this field is set to `none` , any cookies that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in requests that CloudFront sends to the origin.
-       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin.
-       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
-       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
-       * included.
-       */
-      override fun cookieBehavior(cookieBehavior: String) {
-        cdkBuilder.cookieBehavior(cookieBehavior)
-      }
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      override fun cookies(cookies: List<String>) {
-        cdkBuilder.cookies(cookies)
-      }
-
-      /**
-       * @param cookies Contains a list of cookie names.
-       */
-      override fun cookies(vararg cookies: String): Unit = cookies(cookies.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
-    ) : CdkObject(cdkObject), CookiesConfigProperty {
-      /**
-       * Determines whether cookies in viewer requests are included in requests that CloudFront
-       * sends to the origin. Valid values are:.
-       *
-       * * `none` – No cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin. Even when this field is set to `none` , any cookies that are listed in a
-       * `CachePolicy` *are* included in origin requests.
-       * * `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames`
-       * type are included in requests that CloudFront sends to the origin.
-       * * `all` – All cookies in viewer requests are included in requests that CloudFront sends to
-       * the origin.
-       * * `allExcept` – All cookies in viewer requests are included in requests that CloudFront
-       * sends to the origin, **except** for those listed in the `CookieNames` type, which are not
-       * included.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookiebehavior)
-       */
-      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
-
-      /**
-       * Contains a list of cookie names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html#cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies)
-       */
-      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CookiesConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty):
-          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CookiesConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty
     }
   }
 
@@ -1034,8 +1031,7 @@ public open class CfnOriginRequestPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
     ) : CdkObject(cdkObject), QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in requests that

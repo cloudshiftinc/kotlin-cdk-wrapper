@@ -74,7 +74,7 @@ public interface VirtualGatewayAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes,
   ) : CdkObject(cdkObject), VirtualGatewayAttributes {
     /**
      * The Mesh that the VirtualGateway belongs to.

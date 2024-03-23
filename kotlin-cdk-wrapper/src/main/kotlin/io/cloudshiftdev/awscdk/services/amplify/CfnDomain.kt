@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -743,130 +743,7 @@ public open class CfnDomain internal constructor(
         CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.amplify.CfnDomain =
-        wrapped.cdkObject
-  }
-
-  /**
-   * The SubDomainSetting property type enables you to connect a subdomain (for example,
-   * example.exampledomain.com) to a specific branch.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplify.*;
-   * SubDomainSettingProperty subDomainSettingProperty = SubDomainSettingProperty.builder()
-   * .branchName("branchName")
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html)
-   */
-  public interface SubDomainSettingProperty {
-    /**
-     * The branch name setting for the subdomain.
-     *
-     * *Length Constraints:* Minimum length of 1. Maximum length of 255.
-     *
-     * *Pattern:* (?s).+
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-branchname)
-     */
-    public fun branchName(): String
-
-    /**
-     * The prefix setting for the subdomain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix)
-     */
-    public fun prefix(): String
-
-    /**
-     * A builder for [SubDomainSettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param branchName The branch name setting for the subdomain. 
-       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
-       *
-       * *Pattern:* (?s).+
-       */
-      public fun branchName(branchName: String)
-
-      /**
-       * @param prefix The prefix setting for the subdomain. 
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.Builder =
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.builder()
-
-      /**
-       * @param branchName The branch name setting for the subdomain. 
-       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
-       *
-       * *Pattern:* (?s).+
-       */
-      override fun branchName(branchName: String) {
-        cdkBuilder.branchName(branchName)
-      }
-
-      /**
-       * @param prefix The prefix setting for the subdomain. 
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build(): software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
-    ) : CdkObject(cdkObject), SubDomainSettingProperty {
-      /**
-       * The branch name setting for the subdomain.
-       *
-       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
-       *
-       * *Pattern:* (?s).+
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-branchname)
-       */
-      override fun branchName(): String = unwrap(this).getBranchName()
-
-      /**
-       * The prefix setting for the subdomain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix)
-       */
-      override fun prefix(): String = unwrap(this).getPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SubDomainSettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty):
-          SubDomainSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubDomainSettingProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SubDomainSettingProperty):
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.amplify.CfnDomain
   }
 
   /**
@@ -1001,7 +878,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
     ) : CdkObject(cdkObject), CertificateProperty {
       /**
        * The Amazon resource name (ARN) for a custom certificate that you have already added to AWS
@@ -1163,8 +1040,7 @@ public open class CfnDomain internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
     ) : CdkObject(cdkObject), CertificateSettingsProperty {
       /**
        * The certificate type.
@@ -1208,6 +1084,128 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty
+    }
+  }
+
+  /**
+   * The SubDomainSetting property type enables you to connect a subdomain (for example,
+   * example.exampledomain.com) to a specific branch.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * SubDomainSettingProperty subDomainSettingProperty = SubDomainSettingProperty.builder()
+   * .branchName("branchName")
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html)
+   */
+  public interface SubDomainSettingProperty {
+    /**
+     * The branch name setting for the subdomain.
+     *
+     * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+     *
+     * *Pattern:* (?s).+
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-branchname)
+     */
+    public fun branchName(): String
+
+    /**
+     * The prefix setting for the subdomain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix)
+     */
+    public fun prefix(): String
+
+    /**
+     * A builder for [SubDomainSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param branchName The branch name setting for the subdomain. 
+       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+       *
+       * *Pattern:* (?s).+
+       */
+      public fun branchName(branchName: String)
+
+      /**
+       * @param prefix The prefix setting for the subdomain. 
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.builder()
+
+      /**
+       * @param branchName The branch name setting for the subdomain. 
+       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+       *
+       * *Pattern:* (?s).+
+       */
+      override fun branchName(branchName: String) {
+        cdkBuilder.branchName(branchName)
+      }
+
+      /**
+       * @param prefix The prefix setting for the subdomain. 
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
+    ) : CdkObject(cdkObject), SubDomainSettingProperty {
+      /**
+       * The branch name setting for the subdomain.
+       *
+       * *Length Constraints:* Minimum length of 1. Maximum length of 255.
+       *
+       * *Pattern:* (?s).+
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-branchname)
+       */
+      override fun branchName(): String = unwrap(this).getBranchName()
+
+      /**
+       * The prefix setting for the subdomain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix)
+       */
+      override fun prefix(): String = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubDomainSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty):
+          SubDomainSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubDomainSettingProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubDomainSettingProperty):
+          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty
     }
   }
 }

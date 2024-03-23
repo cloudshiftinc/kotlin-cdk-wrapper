@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html)
  */
-public open class CfnSkill internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
+public open class CfnSkill(
+  cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -377,7 +377,249 @@ public open class CfnSkill internal constructor(
         CfnSkill(cdkObject)
 
     internal fun unwrap(wrapped: CfnSkill): software.amazon.awscdk.alexa.ask.CfnSkill =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.alexa.ask.CfnSkill
+  }
+
+  /**
+   * The `AuthenticationConfiguration` property type specifies the Login with Amazon (LWA)
+   * configuration used to authenticate with the Alexa service.
+   *
+   * Only Login with Amazon security profiles created through the  are supported for authentication.
+   * A client ID, client secret, and refresh token are required. You can generate a client ID and
+   * client secret by creating a new  on the Amazon Developer Portal or you can retrieve them from an
+   * existing profile. You can then retrieve the refresh token using the Alexa Skills Kit CLI. For
+   * instructions, see  in the  .
+   *
+   * `AuthenticationConfiguration` is a property of the `Alexa::ASK::Skill` resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.alexa.ask.*;
+   * AuthenticationConfigurationProperty authenticationConfigurationProperty =
+   * AuthenticationConfigurationProperty.builder()
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .refreshToken("refreshToken")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html)
+   */
+  public interface AuthenticationConfigurationProperty {
+    /**
+     * Client ID from Login with Amazon (LWA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
+     */
+    public fun clientId(): String
+
+    /**
+     * Client secret from Login with Amazon (LWA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
+     */
+    public fun clientSecret(): String
+
+    /**
+     * Refresh token from Login with Amazon (LWA).
+     *
+     * This token is secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
+     */
+    public fun refreshToken(): String
+
+    /**
+     * A builder for [AuthenticationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientId Client ID from Login with Amazon (LWA). 
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret Client secret from Login with Amazon (LWA). 
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param refreshToken Refresh token from Login with Amazon (LWA). 
+       * This token is secret.
+       */
+      public fun refreshToken(refreshToken: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.Builder =
+          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.builder()
+
+      /**
+       * @param clientId Client ID from Login with Amazon (LWA). 
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret Client secret from Login with Amazon (LWA). 
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param refreshToken Refresh token from Login with Amazon (LWA). 
+       * This token is secret.
+       */
+      override fun refreshToken(refreshToken: String) {
+        cdkBuilder.refreshToken(refreshToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
+    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
+      /**
+       * Client ID from Login with Amazon (LWA).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
+       */
+      override fun clientId(): String = unwrap(this).getClientId()
+
+      /**
+       * Client secret from Login with Amazon (LWA).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
+       */
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
+
+      /**
+       * Refresh token from Login with Amazon (LWA).
+       *
+       * This token is secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
+       */
+      override fun refreshToken(): String = unwrap(this).getRefreshToken()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AuthenticationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty):
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
+          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty
+    }
+  }
+
+  /**
+   * The `Overrides` property type provides overrides to the skill package to apply when creating or
+   * updating the skill.
+   *
+   * Values provided here do not modify the contents of the original skill package. Currently, only
+   * overriding values inside of the skill manifest component of the package is supported.
+   *
+   * `Overrides` is a property of the `Alexa::ASK::Skill SkillPackage` property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.alexa.ask.*;
+   * Object manifest;
+   * OverridesProperty overridesProperty = OverridesProperty.builder()
+   * .manifest(manifest)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html)
+   */
+  public interface OverridesProperty {
+    /**
+     * Overrides to apply to the skill manifest inside of the skill package.
+     *
+     * The skill manifest contains metadata about the skill. For more information, see  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
+     */
+    public fun manifest(): Any? = unwrap(this).getManifest()
+
+    /**
+     * A builder for [OverridesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       */
+      public fun manifest(manifest: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.Builder =
+          software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.builder()
+
+      /**
+       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       */
+      override fun manifest(manifest: Any) {
+        cdkBuilder.manifest(manifest)
+      }
+
+      public fun build(): software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
+    ) : CdkObject(cdkObject), OverridesProperty {
+      /**
+       * Overrides to apply to the skill manifest inside of the skill package.
+       *
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
+       */
+      override fun manifest(): Any? = unwrap(this).getManifest()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OverridesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty):
+          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OverridesProperty):
+          software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty
+    }
   }
 
   /**
@@ -585,7 +827,7 @@ public open class CfnSkill internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
+      cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
     ) : CdkObject(cdkObject), SkillPackageProperty {
       /**
        * Overrides to the skill package to apply when creating or updating the skill.
@@ -643,249 +885,6 @@ public open class CfnSkill internal constructor(
       internal fun unwrap(wrapped: SkillPackageProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty
-    }
-  }
-
-  /**
-   * The `Overrides` property type provides overrides to the skill package to apply when creating or
-   * updating the skill.
-   *
-   * Values provided here do not modify the contents of the original skill package. Currently, only
-   * overriding values inside of the skill manifest component of the package is supported.
-   *
-   * `Overrides` is a property of the `Alexa::ASK::Skill SkillPackage` property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.alexa.ask.*;
-   * Object manifest;
-   * OverridesProperty overridesProperty = OverridesProperty.builder()
-   * .manifest(manifest)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html)
-   */
-  public interface OverridesProperty {
-    /**
-     * Overrides to apply to the skill manifest inside of the skill package.
-     *
-     * The skill manifest contains metadata about the skill. For more information, see  .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
-     */
-    public fun manifest(): Any? = unwrap(this).getManifest()
-
-    /**
-     * A builder for [OverridesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
-       * The skill manifest contains metadata about the skill. For more information, see  .
-       */
-      public fun manifest(manifest: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.Builder =
-          software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.builder()
-
-      /**
-       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
-       * The skill manifest contains metadata about the skill. For more information, see  .
-       */
-      override fun manifest(manifest: Any) {
-        cdkBuilder.manifest(manifest)
-      }
-
-      public fun build(): software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
-    ) : CdkObject(cdkObject), OverridesProperty {
-      /**
-       * Overrides to apply to the skill manifest inside of the skill package.
-       *
-       * The skill manifest contains metadata about the skill. For more information, see  .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
-       */
-      override fun manifest(): Any? = unwrap(this).getManifest()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OverridesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty):
-          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OverridesProperty):
-          software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty
-    }
-  }
-
-  /**
-   * The `AuthenticationConfiguration` property type specifies the Login with Amazon (LWA)
-   * configuration used to authenticate with the Alexa service.
-   *
-   * Only Login with Amazon security profiles created through the  are supported for authentication.
-   * A client ID, client secret, and refresh token are required. You can generate a client ID and
-   * client secret by creating a new  on the Amazon Developer Portal or you can retrieve them from an
-   * existing profile. You can then retrieve the refresh token using the Alexa Skills Kit CLI. For
-   * instructions, see  in the  .
-   *
-   * `AuthenticationConfiguration` is a property of the `Alexa::ASK::Skill` resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.alexa.ask.*;
-   * AuthenticationConfigurationProperty authenticationConfigurationProperty =
-   * AuthenticationConfigurationProperty.builder()
-   * .clientId("clientId")
-   * .clientSecret("clientSecret")
-   * .refreshToken("refreshToken")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html)
-   */
-  public interface AuthenticationConfigurationProperty {
-    /**
-     * Client ID from Login with Amazon (LWA).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
-     */
-    public fun clientId(): String
-
-    /**
-     * Client secret from Login with Amazon (LWA).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
-     */
-    public fun clientSecret(): String
-
-    /**
-     * Refresh token from Login with Amazon (LWA).
-     *
-     * This token is secret.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
-     */
-    public fun refreshToken(): String
-
-    /**
-     * A builder for [AuthenticationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clientId Client ID from Login with Amazon (LWA). 
-       */
-      public fun clientId(clientId: String)
-
-      /**
-       * @param clientSecret Client secret from Login with Amazon (LWA). 
-       */
-      public fun clientSecret(clientSecret: String)
-
-      /**
-       * @param refreshToken Refresh token from Login with Amazon (LWA). 
-       * This token is secret.
-       */
-      public fun refreshToken(refreshToken: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.Builder =
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.builder()
-
-      /**
-       * @param clientId Client ID from Login with Amazon (LWA). 
-       */
-      override fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-      }
-
-      /**
-       * @param clientSecret Client secret from Login with Amazon (LWA). 
-       */
-      override fun clientSecret(clientSecret: String) {
-        cdkBuilder.clientSecret(clientSecret)
-      }
-
-      /**
-       * @param refreshToken Refresh token from Login with Amazon (LWA). 
-       * This token is secret.
-       */
-      override fun refreshToken(refreshToken: String) {
-        cdkBuilder.refreshToken(refreshToken)
-      }
-
-      public fun build():
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
-    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
-      /**
-       * Client ID from Login with Amazon (LWA).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
-       */
-      override fun clientId(): String = unwrap(this).getClientId()
-
-      /**
-       * Client secret from Login with Amazon (LWA).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
-       */
-      override fun clientSecret(): String = unwrap(this).getClientSecret()
-
-      /**
-       * Refresh token from Login with Amazon (LWA).
-       *
-       * This token is secret.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
-       */
-      override fun refreshToken(): String = unwrap(this).getRefreshToken()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AuthenticationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty
     }
   }
 }

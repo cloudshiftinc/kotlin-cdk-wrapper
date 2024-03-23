@@ -212,7 +212,7 @@ public interface CfnAssessmentTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTemplateProps,
+    cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTemplateProps,
   ) : CdkObject(cdkObject), CfnAssessmentTemplateProps {
     /**
      * The ARN of the assessment target to be included in the assessment template.

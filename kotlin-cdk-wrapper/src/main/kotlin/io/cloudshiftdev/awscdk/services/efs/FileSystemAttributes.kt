@@ -97,7 +97,7 @@ public interface FileSystemAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes,
+    cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes,
   ) : CdkObject(cdkObject), FileSystemAttributes {
     /**
      * The File System's Arn.

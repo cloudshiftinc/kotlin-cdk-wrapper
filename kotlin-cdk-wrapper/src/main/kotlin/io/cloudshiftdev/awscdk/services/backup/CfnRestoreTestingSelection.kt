@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html)
  */
-public open class CfnRestoreTestingSelection internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
+public open class CfnRestoreTestingSelection(
+  cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -585,7 +584,148 @@ public open class CfnRestoreTestingSelection internal constructor(
         CfnRestoreTestingSelection = CfnRestoreTestingSelection(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestoreTestingSelection):
-        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection = wrapped.cdkObject
+        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection = wrapped.cdkObject as
+        software.amazon.awscdk.services.backup.CfnRestoreTestingSelection
+  }
+
+  /**
+   * Pair of two related strings.
+   *
+   * Allowed characters are letters, white space, and numbers that can be represented in UTF-8 and
+   * the following characters: `+ - = . _ : /`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.backup.*;
+   * KeyValueProperty keyValueProperty = KeyValueProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html)
+   */
+  public interface KeyValueProperty {
+    /**
+     * The tag key (String). The key can't start with `aws:` .
+     *
+     * Length Constraints: Minimum length of 1. Maximum length of 128.
+     *
+     * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the key.
+     *
+     * Length Constraints: Maximum length of 256.
+     *
+     * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [KeyValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag key (String). The key can't start with `aws:` . 
+       * Length Constraints: Minimum length of 1. Maximum length of 128.
+       *
+       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the key. 
+       * Length Constraints: Maximum length of 256.
+       *
+       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty.builder()
+
+      /**
+       * @param key The tag key (String). The key can't start with `aws:` . 
+       * Length Constraints: Minimum length of 1. Maximum length of 128.
+       *
+       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the key. 
+       * Length Constraints: Maximum length of 256.
+       *
+       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
+    ) : CdkObject(cdkObject), KeyValueProperty {
+      /**
+       * The tag key (String). The key can't start with `aws:` .
+       *
+       * Length Constraints: Minimum length of 1. Maximum length of 128.
+       *
+       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the key.
+       *
+       * Length Constraints: Maximum length of 256.
+       *
+       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty):
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyValueProperty):
+          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty
+    }
   }
 
   /**
@@ -748,8 +888,7 @@ public open class CfnRestoreTestingSelection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty,
+      cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty,
     ) : CdkObject(cdkObject), ProtectedResourceConditionsProperty {
       /**
        * Filters the values of your tagged resources for only those resources that you tagged with
@@ -788,147 +927,6 @@ public open class CfnRestoreTestingSelection internal constructor(
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty
-    }
-  }
-
-  /**
-   * Pair of two related strings.
-   *
-   * Allowed characters are letters, white space, and numbers that can be represented in UTF-8 and
-   * the following characters: `+ - = . _ : /`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.backup.*;
-   * KeyValueProperty keyValueProperty = KeyValueProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html)
-   */
-  public interface KeyValueProperty {
-    /**
-     * The tag key (String). The key can't start with `aws:` .
-     *
-     * Length Constraints: Minimum length of 1. Maximum length of 128.
-     *
-     * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of the key.
-     *
-     * Length Constraints: Maximum length of 256.
-     *
-     * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [KeyValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag key (String). The key can't start with `aws:` . 
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the key. 
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty.builder()
-
-      /**
-       * @param key The tag key (String). The key can't start with `aws:` . 
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the key. 
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
-    ) : CdkObject(cdkObject), KeyValueProperty {
-      /**
-       * The tag key (String). The key can't start with `aws:` .
-       *
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of the key.
-       *
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty):
-          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyValueProperty):
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty
     }
   }
 }

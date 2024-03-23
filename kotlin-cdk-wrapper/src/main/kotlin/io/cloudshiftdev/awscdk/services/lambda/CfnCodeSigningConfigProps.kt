@@ -176,7 +176,7 @@ public interface CfnCodeSigningConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps,
   ) : CdkObject(cdkObject), CfnCodeSigningConfigProps {
     /**
      * List of allowed publishers.

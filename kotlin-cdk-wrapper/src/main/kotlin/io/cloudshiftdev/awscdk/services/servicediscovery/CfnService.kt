@@ -72,8 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -756,329 +756,8 @@ public open class CfnService internal constructor(
         CfnService = CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService):
-        software.amazon.awscdk.services.servicediscovery.CfnService = wrapped.cdkObject
-  }
-
-  /**
-   * *Public DNS and HTTP namespaces only.* A complex type that contains settings for an optional
-   * health check. If you specify settings for a health check, AWS Cloud Map associates the health
-   * check with the records that you specify in `DnsConfig` .
-   *
-   *
-   * If you specify a health check configuration, you can specify either `HealthCheckCustomConfig`
-   * or `HealthCheckConfig` but not both.
-   *
-   *
-   * Health checks are basic Route 53 health checks that monitor an AWS endpoint. For information
-   * about pricing for health checks, see [Amazon Route 53
-   * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
-   *
-   * Note the following about configuring health checks.
-   *
-   * * **A and AAAA records** - If `DnsConfig` includes configurations for both `A` and `AAAA`
-   * records, AWS Cloud Map creates a health check that uses the IPv4 address to check the health of
-   * the resource. If the endpoint tthat's specified by the IPv4 address is unhealthy, Route 53
-   * considers both the `A` and `AAAA` records to be unhealthy.
-   * * **CNAME records** - You can't specify settings for `HealthCheckConfig` when the `DNSConfig`
-   * includes `CNAME` for the value of `Type` . If you do, the `CreateService` request will fail with
-   * an `InvalidInput` error.
-   * * **Request interval** - A Route 53 health checker in each health-checking AWS Region sends a
-   * health check request to an endpoint every 30 seconds. On average, your endpoint receives a health
-   * check request about every two seconds. However, health checkers don't coordinate with one another.
-   * Therefore, you might sometimes see several requests in one second that's followed by a few seconds
-   * with no health checks at all.
-   * * **Health checking regions** - Health checkers perform checks from all Route 53
-   * health-checking Regions. For a list of the current Regions, see
-   * [Regions](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Regions)
-   * .
-   * * **Alias records** - When you register an instance, if you include the `AWS_ALIAS_DNS_NAME`
-   * attribute, AWS Cloud Map creates a Route 53 alias record. Note the following:
-   * * Route 53 automatically sets `EvaluateTargetHealth` to true for alias records. When
-   * `EvaluateTargetHealth` is true, the alias record inherits the health of the referenced AWS
-   * resource. such as an ELB load balancer. For more information, see
-   * [EvaluateTargetHealth](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-EvaluateTargetHealth)
-   * .
-   * * If you include `HealthCheckConfig` and then use the service to register an instance that
-   * creates an alias record, Route 53 doesn't create the health check.
-   * * **Charges for health checks** - Health checks are basic Route 53 health checks that monitor
-   * an AWS endpoint. For information about pricing for health checks, see [Amazon Route 53
-   * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
-   * HealthCheckConfigProperty healthCheckConfigProperty = HealthCheckConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .failureThreshold(123)
-   * .resourcePath("resourcePath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html)
-   */
-  public interface HealthCheckConfigProperty {
-    /**
-     * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
-     * change the current status of the endpoint from unhealthy to healthy or the other way around.
-     *
-     * For more information, see [How Route 53 Determines Whether an Endpoint Is
-     * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-     * in the *Route 53 Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-failurethreshold)
-     */
-    public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
-
-    /**
-     * The path that you want Route 53 to request when performing health checks.
-     *
-     * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
-     * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html` .
-     * Route 53 automatically adds the DNS name for the service. If you don't specify a value for
-     * `ResourcePath` , the default value is `/` .
-     *
-     * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-resourcepath)
-     */
-    public fun resourcePath(): String? = unwrap(this).getResourcePath()
-
-    /**
-     * The type of health check that you want to create, which indicates how Route 53 determines
-     * whether an endpoint is healthy.
-     *
-     *
-     * You can't change the value of `Type` after you create a health check.
-     *
-     *
-     * You can create the following types of health checks:
-     *
-     * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
-     * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
-     * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
-     * HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
-     *
-     *
-     * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
-     *
-     *
-     * * *TCP* : Route 53 tries to establish a TCP connection.
-     *
-     * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
-     *
-     * For more information, see [How Route 53 Determines Whether an Endpoint Is
-     * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-     * in the *Route 53 Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [HealthCheckConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failureThreshold The number of consecutive health checks that an endpoint must pass
-       * or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or
-       * the other way around.
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       */
-      public fun failureThreshold(failureThreshold: Number)
-
-      /**
-       * @param resourcePath The path that you want Route 53 to request when performing health
-       * checks.
-       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
-       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
-       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
-       * `ResourcePath` , the default value is `/` .
-       *
-       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
-       */
-      public fun resourcePath(resourcePath: String)
-
-      /**
-       * @param type The type of health check that you want to create, which indicates how Route 53
-       * determines whether an endpoint is healthy. 
-       *
-       * You can't change the value of `Type` after you create a health check.
-       *
-       *
-       * You can create the following types of health checks:
-       *
-       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
-       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
-       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
-       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
-       *
-       *
-       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
-       *
-       *
-       * * *TCP* : Route 53 tries to establish a TCP connection.
-       *
-       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
-       *
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty.builder()
-
-      /**
-       * @param failureThreshold The number of consecutive health checks that an endpoint must pass
-       * or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or
-       * the other way around.
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       */
-      override fun failureThreshold(failureThreshold: Number) {
-        cdkBuilder.failureThreshold(failureThreshold)
-      }
-
-      /**
-       * @param resourcePath The path that you want Route 53 to request when performing health
-       * checks.
-       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
-       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
-       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
-       * `ResourcePath` , the default value is `/` .
-       *
-       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
-       */
-      override fun resourcePath(resourcePath: String) {
-        cdkBuilder.resourcePath(resourcePath)
-      }
-
-      /**
-       * @param type The type of health check that you want to create, which indicates how Route 53
-       * determines whether an endpoint is healthy. 
-       *
-       * You can't change the value of `Type` after you create a health check.
-       *
-       *
-       * You can create the following types of health checks:
-       *
-       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
-       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
-       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
-       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
-       *
-       *
-       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
-       *
-       *
-       * * *TCP* : Route 53 tries to establish a TCP connection.
-       *
-       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
-       *
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
-      /**
-       * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
-       * change the current status of the endpoint from unhealthy to healthy or the other way around.
-       *
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-failurethreshold)
-       */
-      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
-
-      /**
-       * The path that you want Route 53 to request when performing health checks.
-       *
-       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
-       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
-       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
-       * `ResourcePath` , the default value is `/` .
-       *
-       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-resourcepath)
-       */
-      override fun resourcePath(): String? = unwrap(this).getResourcePath()
-
-      /**
-       * The type of health check that you want to create, which indicates how Route 53 determines
-       * whether an endpoint is healthy.
-       *
-       *
-       * You can't change the value of `Type` after you create a health check.
-       *
-       *
-       * You can create the following types of health checks:
-       *
-       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
-       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
-       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
-       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
-       *
-       *
-       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
-       *
-       *
-       * * *TCP* : Route 53 tries to establish a TCP connection.
-       *
-       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
-       *
-       * For more information, see [How Route 53 Determines Whether an Endpoint Is
-       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
-       * in the *Route 53 Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HealthCheckConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HealthCheckConfigProperty):
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty
-    }
+        software.amazon.awscdk.services.servicediscovery.CfnService = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.CfnService
   }
 
   /**
@@ -1346,8 +1025,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
     ) : CdkObject(cdkObject), DnsConfigProperty {
       /**
        * An array that contains one `DnsRecord` object for each Route 53 DNS record that you want
@@ -1434,168 +1112,6 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty
-    }
-  }
-
-  /**
-   * A complex type that contains information about an optional custom health check.
-   *
-   * A custom health check, which requires that you use a third-party health checker to evaluate the
-   * health of your resources, is useful in the following circumstances:
-   *
-   * * You can't use a health check that's defined by `HealthCheckConfig` because the resource isn't
-   * available over the internet. For example, you can use a custom health check when the instance is
-   * in an Amazon VPC. (To check the health of resources in a VPC, the health checker must also be in
-   * the VPC.)
-   * * You want to use a third-party health checker regardless of where your resources are located.
-   *
-   *
-   * If you specify a health check configuration, you can specify either `HealthCheckCustomConfig`
-   * or `HealthCheckConfig` but not both.
-   *
-   *
-   * To change the status of a custom health check, submit an `UpdateInstanceCustomHealthStatus`
-   * request. AWS Cloud Map doesn't monitor the status of the resource, it just keeps a record of the
-   * status specified in the most recent `UpdateInstanceCustomHealthStatus` request.
-   *
-   * Here's how custom health checks work:
-   *
-   * * You create a service.
-   * * You register an instance.
-   * * You configure a third-party health checker to monitor the resource that's associated with the
-   * new instance.
-   *
-   *
-   * AWS Cloud Map doesn't check the health of the resource directly.
-   *
-   *
-   * * The third-party health-checker determines that the resource is unhealthy and notifies your
-   * application.
-   * * Your application submits an `UpdateInstanceCustomHealthStatus` request.
-   * * AWS Cloud Map waits for 30 seconds.
-   * * If another `UpdateInstanceCustomHealthStatus` request doesn't arrive during that time to
-   * change the status back to healthy, AWS Cloud Map stops routing traffic to the resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
-   * HealthCheckCustomConfigProperty healthCheckCustomConfigProperty =
-   * HealthCheckCustomConfigProperty.builder()
-   * .failureThreshold(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html)
-   */
-  public interface HealthCheckCustomConfigProperty {
-    /**
-     * This parameter is no longer supported and is always set to 1.
-     *
-     * AWS Cloud Map waits for approximately 30 seconds after receiving an
-     * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
-     *
-     * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
-     * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
-     * instance.
-     *
-     * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same value
-     * before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits `30`
-     * seconds after the first request to make the change.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold)
-     */
-    public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
-
-    /**
-     * A builder for [HealthCheckCustomConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param failureThreshold This parameter is no longer supported and is always set to 1.
-       * AWS Cloud Map waits for approximately 30 seconds after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
-       *
-       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
-       * instance.
-       *
-       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
-       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
-       * `30` seconds after the first request to make the change.
-       */
-      public fun failureThreshold(failureThreshold: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty.builder()
-
-      /**
-       * @param failureThreshold This parameter is no longer supported and is always set to 1.
-       * AWS Cloud Map waits for approximately 30 seconds after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
-       *
-       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
-       * instance.
-       *
-       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
-       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
-       * `30` seconds after the first request to make the change.
-       */
-      override fun failureThreshold(failureThreshold: Number) {
-        cdkBuilder.failureThreshold(failureThreshold)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckCustomConfigProperty {
-      /**
-       * This parameter is no longer supported and is always set to 1.
-       *
-       * AWS Cloud Map waits for approximately 30 seconds after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
-       *
-       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
-       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
-       * instance.
-       *
-       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
-       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
-       * `30` seconds after the first request to make the change.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold)
-       */
-      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckCustomConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty):
-          HealthCheckCustomConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HealthCheckCustomConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HealthCheckCustomConfigProperty):
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
     }
   }
 
@@ -1877,8 +1393,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
     ) : CdkObject(cdkObject), DnsRecordProperty {
       /**
        * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
@@ -1981,6 +1496,488 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty
+    }
+  }
+
+  /**
+   * *Public DNS and HTTP namespaces only.* A complex type that contains settings for an optional
+   * health check. If you specify settings for a health check, AWS Cloud Map associates the health
+   * check with the records that you specify in `DnsConfig` .
+   *
+   *
+   * If you specify a health check configuration, you can specify either `HealthCheckCustomConfig`
+   * or `HealthCheckConfig` but not both.
+   *
+   *
+   * Health checks are basic Route 53 health checks that monitor an AWS endpoint. For information
+   * about pricing for health checks, see [Amazon Route 53
+   * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
+   *
+   * Note the following about configuring health checks.
+   *
+   * * **A and AAAA records** - If `DnsConfig` includes configurations for both `A` and `AAAA`
+   * records, AWS Cloud Map creates a health check that uses the IPv4 address to check the health of
+   * the resource. If the endpoint tthat's specified by the IPv4 address is unhealthy, Route 53
+   * considers both the `A` and `AAAA` records to be unhealthy.
+   * * **CNAME records** - You can't specify settings for `HealthCheckConfig` when the `DNSConfig`
+   * includes `CNAME` for the value of `Type` . If you do, the `CreateService` request will fail with
+   * an `InvalidInput` error.
+   * * **Request interval** - A Route 53 health checker in each health-checking AWS Region sends a
+   * health check request to an endpoint every 30 seconds. On average, your endpoint receives a health
+   * check request about every two seconds. However, health checkers don't coordinate with one another.
+   * Therefore, you might sometimes see several requests in one second that's followed by a few seconds
+   * with no health checks at all.
+   * * **Health checking regions** - Health checkers perform checks from all Route 53
+   * health-checking Regions. For a list of the current Regions, see
+   * [Regions](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html#Route53-Type-HealthCheckConfig-Regions)
+   * .
+   * * **Alias records** - When you register an instance, if you include the `AWS_ALIAS_DNS_NAME`
+   * attribute, AWS Cloud Map creates a Route 53 alias record. Note the following:
+   * * Route 53 automatically sets `EvaluateTargetHealth` to true for alias records. When
+   * `EvaluateTargetHealth` is true, the alias record inherits the health of the referenced AWS
+   * resource. such as an ELB load balancer. For more information, see
+   * [EvaluateTargetHealth](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-EvaluateTargetHealth)
+   * .
+   * * If you include `HealthCheckConfig` and then use the service to register an instance that
+   * creates an alias record, Route 53 doesn't create the health check.
+   * * **Charges for health checks** - Health checks are basic Route 53 health checks that monitor
+   * an AWS endpoint. For information about pricing for health checks, see [Amazon Route 53
+   * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+   * HealthCheckConfigProperty healthCheckConfigProperty = HealthCheckConfigProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .failureThreshold(123)
+   * .resourcePath("resourcePath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html)
+   */
+  public interface HealthCheckConfigProperty {
+    /**
+     * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
+     * change the current status of the endpoint from unhealthy to healthy or the other way around.
+     *
+     * For more information, see [How Route 53 Determines Whether an Endpoint Is
+     * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+     * in the *Route 53 Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-failurethreshold)
+     */
+    public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+
+    /**
+     * The path that you want Route 53 to request when performing health checks.
+     *
+     * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
+     * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html` .
+     * Route 53 automatically adds the DNS name for the service. If you don't specify a value for
+     * `ResourcePath` , the default value is `/` .
+     *
+     * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-resourcepath)
+     */
+    public fun resourcePath(): String? = unwrap(this).getResourcePath()
+
+    /**
+     * The type of health check that you want to create, which indicates how Route 53 determines
+     * whether an endpoint is healthy.
+     *
+     *
+     * You can't change the value of `Type` after you create a health check.
+     *
+     *
+     * You can create the following types of health checks:
+     *
+     * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
+     * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
+     * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
+     * HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
+     *
+     *
+     * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
+     *
+     *
+     * * *TCP* : Route 53 tries to establish a TCP connection.
+     *
+     * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
+     *
+     * For more information, see [How Route 53 Determines Whether an Endpoint Is
+     * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+     * in the *Route 53 Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [HealthCheckConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param failureThreshold The number of consecutive health checks that an endpoint must pass
+       * or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or
+       * the other way around.
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       */
+      public fun failureThreshold(failureThreshold: Number)
+
+      /**
+       * @param resourcePath The path that you want Route 53 to request when performing health
+       * checks.
+       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
+       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
+       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
+       * `ResourcePath` , the default value is `/` .
+       *
+       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
+       */
+      public fun resourcePath(resourcePath: String)
+
+      /**
+       * @param type The type of health check that you want to create, which indicates how Route 53
+       * determines whether an endpoint is healthy. 
+       *
+       * You can't change the value of `Type` after you create a health check.
+       *
+       *
+       * You can create the following types of health checks:
+       *
+       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
+       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
+       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
+       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
+       *
+       *
+       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
+       *
+       *
+       * * *TCP* : Route 53 tries to establish a TCP connection.
+       *
+       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
+       *
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty.builder()
+
+      /**
+       * @param failureThreshold The number of consecutive health checks that an endpoint must pass
+       * or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or
+       * the other way around.
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       */
+      override fun failureThreshold(failureThreshold: Number) {
+        cdkBuilder.failureThreshold(failureThreshold)
+      }
+
+      /**
+       * @param resourcePath The path that you want Route 53 to request when performing health
+       * checks.
+       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
+       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
+       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
+       * `ResourcePath` , the default value is `/` .
+       *
+       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
+       */
+      override fun resourcePath(resourcePath: String) {
+        cdkBuilder.resourcePath(resourcePath)
+      }
+
+      /**
+       * @param type The type of health check that you want to create, which indicates how Route 53
+       * determines whether an endpoint is healthy. 
+       *
+       * You can't change the value of `Type` after you create a health check.
+       *
+       *
+       * You can create the following types of health checks:
+       *
+       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
+       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
+       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
+       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
+       *
+       *
+       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
+       *
+       *
+       * * *TCP* : Route 53 tries to establish a TCP connection.
+       *
+       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
+       *
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
+    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
+      /**
+       * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
+       * change the current status of the endpoint from unhealthy to healthy or the other way around.
+       *
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-failurethreshold)
+       */
+      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+
+      /**
+       * The path that you want Route 53 to request when performing health checks.
+       *
+       * The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx
+       * format for when the endpoint is healthy. An example file is `/docs/route53-health-check.html`
+       * . Route 53 automatically adds the DNS name for the service. If you don't specify a value for
+       * `ResourcePath` , the default value is `/` .
+       *
+       * If you specify `TCP` for `Type` , you must *not* specify a value for `ResourcePath` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-resourcepath)
+       */
+      override fun resourcePath(): String? = unwrap(this).getResourcePath()
+
+      /**
+       * The type of health check that you want to create, which indicates how Route 53 determines
+       * whether an endpoint is healthy.
+       *
+       *
+       * You can't change the value of `Type` after you create a health check.
+       *
+       *
+       * You can create the following types of health checks:
+       *
+       * * *HTTP* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits an
+       * HTTP request and waits for an HTTP status code of 200 or greater and less than 400.
+       * * *HTTPS* : Route 53 tries to establish a TCP connection. If successful, Route 53 submits
+       * an HTTPS request and waits for an HTTP status code of 200 or greater and less than 400.
+       *
+       *
+       * If you specify HTTPS for the value of `Type` , the endpoint must support TLS v1.0 or later.
+       *
+       *
+       * * *TCP* : Route 53 tries to establish a TCP connection.
+       *
+       * If you specify `TCP` for `Type` , don't specify a value for `ResourcePath` .
+       *
+       * For more information, see [How Route 53 Determines Whether an Endpoint Is
+       * Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)
+       * in the *Route 53 Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckconfig.html#cfn-servicediscovery-service-healthcheckconfig-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty):
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HealthCheckConfigProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty
+    }
+  }
+
+  /**
+   * A complex type that contains information about an optional custom health check.
+   *
+   * A custom health check, which requires that you use a third-party health checker to evaluate the
+   * health of your resources, is useful in the following circumstances:
+   *
+   * * You can't use a health check that's defined by `HealthCheckConfig` because the resource isn't
+   * available over the internet. For example, you can use a custom health check when the instance is
+   * in an Amazon VPC. (To check the health of resources in a VPC, the health checker must also be in
+   * the VPC.)
+   * * You want to use a third-party health checker regardless of where your resources are located.
+   *
+   *
+   * If you specify a health check configuration, you can specify either `HealthCheckCustomConfig`
+   * or `HealthCheckConfig` but not both.
+   *
+   *
+   * To change the status of a custom health check, submit an `UpdateInstanceCustomHealthStatus`
+   * request. AWS Cloud Map doesn't monitor the status of the resource, it just keeps a record of the
+   * status specified in the most recent `UpdateInstanceCustomHealthStatus` request.
+   *
+   * Here's how custom health checks work:
+   *
+   * * You create a service.
+   * * You register an instance.
+   * * You configure a third-party health checker to monitor the resource that's associated with the
+   * new instance.
+   *
+   *
+   * AWS Cloud Map doesn't check the health of the resource directly.
+   *
+   *
+   * * The third-party health-checker determines that the resource is unhealthy and notifies your
+   * application.
+   * * Your application submits an `UpdateInstanceCustomHealthStatus` request.
+   * * AWS Cloud Map waits for 30 seconds.
+   * * If another `UpdateInstanceCustomHealthStatus` request doesn't arrive during that time to
+   * change the status back to healthy, AWS Cloud Map stops routing traffic to the resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+   * HealthCheckCustomConfigProperty healthCheckCustomConfigProperty =
+   * HealthCheckCustomConfigProperty.builder()
+   * .failureThreshold(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html)
+   */
+  public interface HealthCheckCustomConfigProperty {
+    /**
+     * This parameter is no longer supported and is always set to 1.
+     *
+     * AWS Cloud Map waits for approximately 30 seconds after receiving an
+     * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
+     *
+     * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
+     * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
+     * instance.
+     *
+     * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same value
+     * before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits `30`
+     * seconds after the first request to make the change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold)
+     */
+    public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+
+    /**
+     * A builder for [HealthCheckCustomConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param failureThreshold This parameter is no longer supported and is always set to 1.
+       * AWS Cloud Map waits for approximately 30 seconds after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
+       *
+       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
+       * instance.
+       *
+       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
+       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
+       * `30` seconds after the first request to make the change.
+       */
+      public fun failureThreshold(failureThreshold: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty.builder()
+
+      /**
+       * @param failureThreshold This parameter is no longer supported and is always set to 1.
+       * AWS Cloud Map waits for approximately 30 seconds after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
+       *
+       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
+       * instance.
+       *
+       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
+       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
+       * `30` seconds after the first request to make the change.
+       */
+      override fun failureThreshold(failureThreshold: Number) {
+        cdkBuilder.failureThreshold(failureThreshold)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
+    ) : CdkObject(cdkObject), HealthCheckCustomConfigProperty {
+      /**
+       * This parameter is no longer supported and is always set to 1.
+       *
+       * AWS Cloud Map waits for approximately 30 seconds after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance.
+       *
+       * The number of 30-second intervals that you want AWS Cloud Map to wait after receiving an
+       * `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service
+       * instance.
+       *
+       * Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same
+       * value before 30 seconds has passed doesn't accelerate the change. AWS Cloud Map still waits
+       * `30` seconds after the first request to make the change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-healthcheckcustomconfig.html#cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold)
+       */
+      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckCustomConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty):
+          HealthCheckCustomConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckCustomConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HealthCheckCustomConfigProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
     }
   }
 }

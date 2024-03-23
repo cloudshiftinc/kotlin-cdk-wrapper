@@ -124,8 +124,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-storagelens.html)
  */
-public open class CfnStorageLens internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens,
+public open class CfnStorageLens(
+  cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -348,1697 +348,7 @@ public open class CfnStorageLens internal constructor(
         = CfnStorageLens(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageLens): software.amazon.awscdk.services.s3.CfnStorageLens
-        = wrapped.cdkObject
-  }
-
-  /**
-   * This resource contains the details of the Amazon S3 Storage Lens selection criteria.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * SelectionCriteriaProperty selectionCriteriaProperty = SelectionCriteriaProperty.builder()
-   * .delimiter("delimiter")
-   * .maxDepth(123)
-   * .minStorageBytesPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html)
-   */
-  public interface SelectionCriteriaProperty {
-    /**
-     * This property contains the details of the S3 Storage Lens delimiter being used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-delimiter)
-     */
-    public fun delimiter(): String? = unwrap(this).getDelimiter()
-
-    /**
-     * This property contains the details of the max depth that S3 Storage Lens will collect metrics
-     * up to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-maxdepth)
-     */
-    public fun maxDepth(): Number? = unwrap(this).getMaxDepth()
-
-    /**
-     * This property contains the details of the minimum storage bytes percentage threshold that S3
-     * Storage Lens will collect metrics up to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-minstoragebytespercentage)
-     */
-    public fun minStorageBytesPercentage(): Number? = unwrap(this).getMinStorageBytesPercentage()
-
-    /**
-     * A builder for [SelectionCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param delimiter This property contains the details of the S3 Storage Lens delimiter being
-       * used.
-       */
-      public fun delimiter(delimiter: String)
-
-      /**
-       * @param maxDepth This property contains the details of the max depth that S3 Storage Lens
-       * will collect metrics up to.
-       */
-      public fun maxDepth(maxDepth: Number)
-
-      /**
-       * @param minStorageBytesPercentage This property contains the details of the minimum storage
-       * bytes percentage threshold that S3 Storage Lens will collect metrics up to.
-       */
-      public fun minStorageBytesPercentage(minStorageBytesPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty.builder()
-
-      /**
-       * @param delimiter This property contains the details of the S3 Storage Lens delimiter being
-       * used.
-       */
-      override fun delimiter(delimiter: String) {
-        cdkBuilder.delimiter(delimiter)
-      }
-
-      /**
-       * @param maxDepth This property contains the details of the max depth that S3 Storage Lens
-       * will collect metrics up to.
-       */
-      override fun maxDepth(maxDepth: Number) {
-        cdkBuilder.maxDepth(maxDepth)
-      }
-
-      /**
-       * @param minStorageBytesPercentage This property contains the details of the minimum storage
-       * bytes percentage threshold that S3 Storage Lens will collect metrics up to.
-       */
-      override fun minStorageBytesPercentage(minStorageBytesPercentage: Number) {
-        cdkBuilder.minStorageBytesPercentage(minStorageBytesPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty,
-    ) : CdkObject(cdkObject), SelectionCriteriaProperty {
-      /**
-       * This property contains the details of the S3 Storage Lens delimiter being used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-delimiter)
-       */
-      override fun delimiter(): String? = unwrap(this).getDelimiter()
-
-      /**
-       * This property contains the details of the max depth that S3 Storage Lens will collect
-       * metrics up to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-maxdepth)
-       */
-      override fun maxDepth(): Number? = unwrap(this).getMaxDepth()
-
-      /**
-       * This property contains the details of the minimum storage bytes percentage threshold that
-       * S3 Storage Lens will collect metrics up to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-minstoragebytespercentage)
-       */
-      override fun minStorageBytesPercentage(): Number? =
-          unwrap(this).getMinStorageBytesPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SelectionCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty):
-          SelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SelectionCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SelectionCriteriaProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty
-    }
-  }
-
-  /**
-   * A property for the bucket-level storage metrics for Amazon S3 Storage Lens.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * BucketLevelProperty bucketLevelProperty = BucketLevelProperty.builder()
-   * .activityMetrics(ActivityMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build())
-   * .advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build())
-   * .advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build())
-   * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build())
-   * .prefixLevel(PrefixLevelProperty.builder()
-   * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
-   * .isEnabled(false)
-   * .selectionCriteria(SelectionCriteriaProperty.builder()
-   * .delimiter("delimiter")
-   * .maxDepth(123)
-   * .minStorageBytesPercentage(123)
-   * .build())
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html)
-   */
-  public interface BucketLevelProperty {
-    /**
-     * A property for bucket-level activity metrics for S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-activitymetrics)
-     */
-    public fun activityMetrics(): Any? = unwrap(this).getActivityMetrics()
-
-    /**
-     * A property for bucket-level advanced cost optimization metrics for S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advancedcostoptimizationmetrics)
-     */
-    public fun advancedCostOptimizationMetrics(): Any? =
-        unwrap(this).getAdvancedCostOptimizationMetrics()
-
-    /**
-     * A property for bucket-level advanced data protection metrics for S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advanceddataprotectionmetrics)
-     */
-    public fun advancedDataProtectionMetrics(): Any? =
-        unwrap(this).getAdvancedDataProtectionMetrics()
-
-    /**
-     * A property for bucket-level detailed status code metrics for S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-detailedstatuscodesmetrics)
-     */
-    public fun detailedStatusCodesMetrics(): Any? = unwrap(this).getDetailedStatusCodesMetrics()
-
-    /**
-     * A property for bucket-level prefix-level storage metrics for S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-prefixlevel)
-     */
-    public fun prefixLevel(): Any? = unwrap(this).getPrefixLevel()
-
-    /**
-     * A builder for [BucketLevelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      public fun activityMetrics(activityMetrics: IResolvable)
-
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      public fun activityMetrics(activityMetrics: ActivityMetricsProperty)
-
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fe47765aadaaea41205a15bf3a06dbc19951c9ad9203f4a144e6f6c7d80b9f14")
-      public fun activityMetrics(activityMetrics: ActivityMetricsProperty.Builder.() -> Unit)
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      public fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable)
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      public
-          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty)
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d80440846b1119c591429c7efdb10b1bc3cc2f6054f9781a4895937003bbf37c")
-      public
-          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty.Builder.() -> Unit)
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      public fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable)
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      public
-          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty)
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("20e86db47d0fc896c602d9a348093d28716c0dd641fa66a8f6caa23fcc964f21")
-      public
-          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty.Builder.() -> Unit)
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      public fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable)
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      public
-          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty)
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f53994ad2c2a46cb8ab31926fca9652e25fce1b2fb07336c4ac0b5193e28ea2")
-      public
-          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty.Builder.() -> Unit)
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      public fun prefixLevel(prefixLevel: IResolvable)
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      public fun prefixLevel(prefixLevel: PrefixLevelProperty)
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98aa57ca324ca3366fb37329b78060f5a9aaf872aa86b82233a116215da6f19c")
-      public fun prefixLevel(prefixLevel: PrefixLevelProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty.builder()
-
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      override fun activityMetrics(activityMetrics: IResolvable) {
-        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      override fun activityMetrics(activityMetrics: ActivityMetricsProperty) {
-        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fe47765aadaaea41205a15bf3a06dbc19951c9ad9203f4a144e6f6c7d80b9f14")
-      override fun activityMetrics(activityMetrics: ActivityMetricsProperty.Builder.() -> Unit):
-          Unit = activityMetrics(ActivityMetricsProperty(activityMetrics))
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      override fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      override
-          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
-       * optimization metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d80440846b1119c591429c7efdb10b1bc3cc2f6054f9781a4895937003bbf37c")
-      override
-          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty.Builder.() -> Unit):
-          Unit =
-          advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty(advancedCostOptimizationMetrics))
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      override fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      override
-          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
-       * metrics for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("20e86db47d0fc896c602d9a348093d28716c0dd641fa66a8f6caa23fcc964f21")
-      override
-          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty.Builder.() -> Unit):
-          Unit =
-          advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty(advancedDataProtectionMetrics))
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      override fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      override
-          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
-       * for S3 Storage Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f53994ad2c2a46cb8ab31926fca9652e25fce1b2fb07336c4ac0b5193e28ea2")
-      override
-          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty.Builder.() -> Unit):
-          Unit =
-          detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty(detailedStatusCodesMetrics))
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      override fun prefixLevel(prefixLevel: IResolvable) {
-        cdkBuilder.prefixLevel(prefixLevel.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      override fun prefixLevel(prefixLevel: PrefixLevelProperty) {
-        cdkBuilder.prefixLevel(prefixLevel.let(PrefixLevelProperty::unwrap))
-      }
-
-      /**
-       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
-       * Lens.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98aa57ca324ca3366fb37329b78060f5a9aaf872aa86b82233a116215da6f19c")
-      override fun prefixLevel(prefixLevel: PrefixLevelProperty.Builder.() -> Unit): Unit =
-          prefixLevel(PrefixLevelProperty(prefixLevel))
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty,
-    ) : CdkObject(cdkObject), BucketLevelProperty {
-      /**
-       * A property for bucket-level activity metrics for S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-activitymetrics)
-       */
-      override fun activityMetrics(): Any? = unwrap(this).getActivityMetrics()
-
-      /**
-       * A property for bucket-level advanced cost optimization metrics for S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advancedcostoptimizationmetrics)
-       */
-      override fun advancedCostOptimizationMetrics(): Any? =
-          unwrap(this).getAdvancedCostOptimizationMetrics()
-
-      /**
-       * A property for bucket-level advanced data protection metrics for S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advanceddataprotectionmetrics)
-       */
-      override fun advancedDataProtectionMetrics(): Any? =
-          unwrap(this).getAdvancedDataProtectionMetrics()
-
-      /**
-       * A property for bucket-level detailed status code metrics for S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-detailedstatuscodesmetrics)
-       */
-      override fun detailedStatusCodesMetrics(): Any? = unwrap(this).getDetailedStatusCodesMetrics()
-
-      /**
-       * A property for bucket-level prefix-level storage metrics for S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-prefixlevel)
-       */
-      override fun prefixLevel(): Any? = unwrap(this).getPrefixLevel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BucketLevelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty):
-          BucketLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? BucketLevelProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BucketLevelProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty
-    }
-  }
-
-  /**
-   * This resource determines the scope of Storage Lens group data that is displayed in the Storage
-   * Lens dashboard.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * StorageLensGroupLevelProperty storageLensGroupLevelProperty =
-   * StorageLensGroupLevelProperty.builder()
-   * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
-   * .exclude(List.of("exclude"))
-   * .include(List.of("include"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html)
-   */
-  public interface StorageLensGroupLevelProperty {
-    /**
-     * This property indicates which Storage Lens group ARNs to include or exclude in the Storage
-     * Lens group aggregation.
-     *
-     * If this value is left null, then all Storage Lens groups are selected.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html#cfn-s3-storagelens-storagelensgrouplevel-storagelensgroupselectioncriteria)
-     */
-    public fun storageLensGroupSelectionCriteria(): Any? =
-        unwrap(this).getStorageLensGroupSelectionCriteria()
-
-    /**
-     * A builder for [StorageLensGroupLevelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      public fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: IResolvable)
-
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      public
-          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty)
-
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e83137ab128c7708bbd78104bb20f96d86b6b0a15ebd055f7b3c5eb356ca77b")
-      public
-          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty.builder()
-
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      override
-          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: IResolvable) {
-        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      override
-          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty) {
-        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(StorageLensGroupSelectionCriteriaProperty::unwrap))
-      }
-
-      /**
-       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
-       * ARNs to include or exclude in the Storage Lens group aggregation.
-       * If this value is left null, then all Storage Lens groups are selected.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e83137ab128c7708bbd78104bb20f96d86b6b0a15ebd055f7b3c5eb356ca77b")
-      override
-          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty.Builder.() -> Unit):
-          Unit =
-          storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty(storageLensGroupSelectionCriteria))
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty,
-    ) : CdkObject(cdkObject), StorageLensGroupLevelProperty {
-      /**
-       * This property indicates which Storage Lens group ARNs to include or exclude in the Storage
-       * Lens group aggregation.
-       *
-       * If this value is left null, then all Storage Lens groups are selected.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html#cfn-s3-storagelens-storagelensgrouplevel-storagelensgroupselectioncriteria)
-       */
-      override fun storageLensGroupSelectionCriteria(): Any? =
-          unwrap(this).getStorageLensGroupSelectionCriteria()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StorageLensGroupLevelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty):
-          StorageLensGroupLevelProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StorageLensGroupLevelProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StorageLensGroupLevelProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty
-    }
-  }
-
-  /**
-   * This resource enables Amazon S3 Storage Lens advanced cost optimization metrics.
-   *
-   * Advanced cost optimization metrics provide insights that you can use to manage and optimize
-   * your storage costs, for example, lifecycle rule counts for transitions, expirations, and
-   * incomplete multipart uploads.
-   *
-   * For more information, see [Assessing your storage activity and usage with S3 Storage
-   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
-   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
-   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
-   * in the *Amazon S3 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * AdvancedCostOptimizationMetricsProperty advancedCostOptimizationMetricsProperty =
-   * AdvancedCostOptimizationMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html)
-   */
-  public interface AdvancedCostOptimizationMetricsProperty {
-    /**
-     * Indicates whether advanced cost optimization metrics are enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html#cfn-s3-storagelens-advancedcostoptimizationmetrics-isenabled)
-     */
-    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-    /**
-     * A builder for [AdvancedCostOptimizationMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: Boolean)
-
-      /**
-       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty.Builder
-          =
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty.builder()
-
-      /**
-       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: Boolean) {
-        cdkBuilder.isEnabled(isEnabled)
-      }
-
-      /**
-       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty,
-    ) : CdkObject(cdkObject), AdvancedCostOptimizationMetricsProperty {
-      /**
-       * Indicates whether advanced cost optimization metrics are enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html#cfn-s3-storagelens-advancedcostoptimizationmetrics-isenabled)
-       */
-      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AdvancedCostOptimizationMetricsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty):
-          AdvancedCostOptimizationMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdvancedCostOptimizationMetricsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdvancedCostOptimizationMetricsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
-    }
-  }
-
-  /**
-   * Specifies the use of server-side encryption using an AWS Key Management Service key (SSE-KMS)
-   * to encrypt the delivered S3 Storage Lens metrics export file.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * SSEKMSProperty sSEKMSProperty = SSEKMSProperty.builder()
-   * .keyId("keyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html)
-   */
-  public interface SSEKMSProperty {
-    /**
-     * Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to use for
-     * encrypting the S3 Storage Lens metrics export file.
-     *
-     * Amazon S3 only supports symmetric encryption keys. For more information, see [Special-purpose
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html) in the *AWS Key
-     * Management Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html#cfn-s3-storagelens-ssekms-keyid)
-     */
-    public fun keyId(): String
-
-    /**
-     * A builder for [SSEKMSProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param keyId Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key
-       * to use for encrypting the S3 Storage Lens metrics export file. 
-       * Amazon S3 only supports symmetric encryption keys. For more information, see
-       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       */
-      public fun keyId(keyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty.builder()
-
-      /**
-       * @param keyId Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key
-       * to use for encrypting the S3 Storage Lens metrics export file. 
-       * Amazon S3 only supports symmetric encryption keys. For more information, see
-       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       */
-      override fun keyId(keyId: String) {
-        cdkBuilder.keyId(keyId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty,
-    ) : CdkObject(cdkObject), SSEKMSProperty {
-      /**
-       * Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to use for
-       * encrypting the S3 Storage Lens metrics export file.
-       *
-       * Amazon S3 only supports symmetric encryption keys. For more information, see
-       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html#cfn-s3-storagelens-ssekms-keyid)
-       */
-      override fun keyId(): String = unwrap(this).getKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SSEKMSProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty):
-          SSEKMSProperty = CdkObjectWrappers.wrap(cdkObject) as? SSEKMSProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SSEKMSProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty
-    }
-  }
-
-  /**
-   * This resource enables Amazon S3 Storage Lens advanced data protection metrics.
-   *
-   * Advanced data protection metrics provide insights that you can use to perform audits and
-   * protect your data, for example replication rule counts within and across Regions.
-   *
-   * For more information, see [Assessing your storage activity and usage with S3 Storage
-   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
-   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
-   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
-   * in the *Amazon S3 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * AdvancedDataProtectionMetricsProperty advancedDataProtectionMetricsProperty =
-   * AdvancedDataProtectionMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html)
-   */
-  public interface AdvancedDataProtectionMetricsProperty {
-    /**
-     * Indicates whether advanced data protection metrics are enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html#cfn-s3-storagelens-advanceddataprotectionmetrics-isenabled)
-     */
-    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-    /**
-     * A builder for [AdvancedDataProtectionMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: Boolean)
-
-      /**
-       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty.Builder
-          =
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty.builder()
-
-      /**
-       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: Boolean) {
-        cdkBuilder.isEnabled(isEnabled)
-      }
-
-      /**
-       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty,
-    ) : CdkObject(cdkObject), AdvancedDataProtectionMetricsProperty {
-      /**
-       * Indicates whether advanced data protection metrics are enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html#cfn-s3-storagelens-advanceddataprotectionmetrics-isenabled)
-       */
-      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AdvancedDataProtectionMetricsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty):
-          AdvancedDataProtectionMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdvancedDataProtectionMetricsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdvancedDataProtectionMetricsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty
-    }
-  }
-
-  /**
-   * This resource contains the details of the prefix-level storage metrics for Amazon S3 Storage
-   * Lens.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * PrefixLevelStorageMetricsProperty prefixLevelStorageMetricsProperty =
-   * PrefixLevelStorageMetricsProperty.builder()
-   * .isEnabled(false)
-   * .selectionCriteria(SelectionCriteriaProperty.builder()
-   * .delimiter("delimiter")
-   * .maxDepth(123)
-   * .minStorageBytesPercentage(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html)
-   */
-  public interface PrefixLevelStorageMetricsProperty {
-    /**
-     * This property identifies whether the details of the prefix-level storage metrics for S3
-     * Storage Lens are enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-isenabled)
-     */
-    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-    /**
-     * This property identifies whether the details of the prefix-level storage metrics for S3
-     * Storage Lens are enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-selectioncriteria)
-     */
-    public fun selectionCriteria(): Any? = unwrap(this).getSelectionCriteria()
-
-    /**
-     * A builder for [PrefixLevelStorageMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isEnabled This property identifies whether the details of the prefix-level storage
-       * metrics for S3 Storage Lens are enabled.
-       */
-      public fun isEnabled(isEnabled: Boolean)
-
-      /**
-       * @param isEnabled This property identifies whether the details of the prefix-level storage
-       * metrics for S3 Storage Lens are enabled.
-       */
-      public fun isEnabled(isEnabled: IResolvable)
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      public fun selectionCriteria(selectionCriteria: IResolvable)
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      public fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty)
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30c8d88fa709aba8706e56b8e607183d0292254c2baef744b2fd6f14e96d6d8b")
-      public fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty.Builder
-          =
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty.builder()
-
-      /**
-       * @param isEnabled This property identifies whether the details of the prefix-level storage
-       * metrics for S3 Storage Lens are enabled.
-       */
-      override fun isEnabled(isEnabled: Boolean) {
-        cdkBuilder.isEnabled(isEnabled)
-      }
-
-      /**
-       * @param isEnabled This property identifies whether the details of the prefix-level storage
-       * metrics for S3 Storage Lens are enabled.
-       */
-      override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      override fun selectionCriteria(selectionCriteria: IResolvable) {
-        cdkBuilder.selectionCriteria(selectionCriteria.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      override fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty) {
-        cdkBuilder.selectionCriteria(selectionCriteria.let(SelectionCriteriaProperty::unwrap))
-      }
-
-      /**
-       * @param selectionCriteria This property identifies whether the details of the prefix-level
-       * storage metrics for S3 Storage Lens are enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("30c8d88fa709aba8706e56b8e607183d0292254c2baef744b2fd6f14e96d6d8b")
-      override
-          fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty.Builder.() -> Unit):
-          Unit = selectionCriteria(SelectionCriteriaProperty(selectionCriteria))
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty,
-    ) : CdkObject(cdkObject), PrefixLevelStorageMetricsProperty {
-      /**
-       * This property identifies whether the details of the prefix-level storage metrics for S3
-       * Storage Lens are enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-isenabled)
-       */
-      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-      /**
-       * This property identifies whether the details of the prefix-level storage metrics for S3
-       * Storage Lens are enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-selectioncriteria)
-       */
-      override fun selectionCriteria(): Any? = unwrap(this).getSelectionCriteria()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PrefixLevelStorageMetricsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty):
-          PrefixLevelStorageMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrefixLevelStorageMetricsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrefixLevelStorageMetricsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty
-    }
-  }
-
-  /**
-   * This resource contains the details of the prefix-level of the Amazon S3 Storage Lens.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * PrefixLevelProperty prefixLevelProperty = PrefixLevelProperty.builder()
-   * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
-   * .isEnabled(false)
-   * .selectionCriteria(SelectionCriteriaProperty.builder()
-   * .delimiter("delimiter")
-   * .maxDepth(123)
-   * .minStorageBytesPercentage(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html)
-   */
-  public interface PrefixLevelProperty {
-    /**
-     * A property for the prefix-level storage metrics for Amazon S3 Storage Lens.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html#cfn-s3-storagelens-prefixlevel-storagemetrics)
-     */
-    public fun storageMetrics(): Any
-
-    /**
-     * A builder for [PrefixLevelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      public fun storageMetrics(storageMetrics: IResolvable)
-
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      public fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty)
-
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b53e4593b4de08a727bbfc35d8c653d951035cfff8de33c89ba9366c5fcdbe2d")
-      public
-          fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty.builder()
-
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      override fun storageMetrics(storageMetrics: IResolvable) {
-        cdkBuilder.storageMetrics(storageMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      override fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty) {
-        cdkBuilder.storageMetrics(storageMetrics.let(PrefixLevelStorageMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
-       * Lens. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b53e4593b4de08a727bbfc35d8c653d951035cfff8de33c89ba9366c5fcdbe2d")
-      override
-          fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty.Builder.() -> Unit):
-          Unit = storageMetrics(PrefixLevelStorageMetricsProperty(storageMetrics))
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty,
-    ) : CdkObject(cdkObject), PrefixLevelProperty {
-      /**
-       * A property for the prefix-level storage metrics for Amazon S3 Storage Lens.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html#cfn-s3-storagelens-prefixlevel-storagemetrics)
-       */
-      override fun storageMetrics(): Any = unwrap(this).getStorageMetrics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrefixLevelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty):
-          PrefixLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixLevelProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrefixLevelProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty
-    }
-  }
-
-  /**
-   * This resource enables Amazon S3 Storage Lens activity metrics.
-   *
-   * Activity metrics show details about how your storage is requested, such as requests (for
-   * example, All requests, Get requests, Put requests), bytes uploaded or downloaded, and errors.
-   *
-   * For more information, see [Assessing your storage activity and usage with S3 Storage
-   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
-   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
-   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
-   * in the *Amazon S3 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * ActivityMetricsProperty activityMetricsProperty = ActivityMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html)
-   */
-  public interface ActivityMetricsProperty {
-    /**
-     * A property that indicates whether the activity metrics is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html#cfn-s3-storagelens-activitymetrics-isenabled)
-     */
-    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-    /**
-     * A builder for [ActivityMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isEnabled A property that indicates whether the activity metrics is enabled.
-       */
-      public fun isEnabled(isEnabled: Boolean)
-
-      /**
-       * @param isEnabled A property that indicates whether the activity metrics is enabled.
-       */
-      public fun isEnabled(isEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty.builder()
-
-      /**
-       * @param isEnabled A property that indicates whether the activity metrics is enabled.
-       */
-      override fun isEnabled(isEnabled: Boolean) {
-        cdkBuilder.isEnabled(isEnabled)
-      }
-
-      /**
-       * @param isEnabled A property that indicates whether the activity metrics is enabled.
-       */
-      override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty,
-    ) : CdkObject(cdkObject), ActivityMetricsProperty {
-      /**
-       * A property that indicates whether the activity metrics is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html#cfn-s3-storagelens-activitymetrics-isenabled)
-       */
-      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActivityMetricsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty):
-          ActivityMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ActivityMetricsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActivityMetricsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty
-    }
-  }
-
-  /**
-   * This resource indicates which Storage Lens group ARNs to include or exclude in the Storage Lens
-   * group aggregation.
-   *
-   * You can only attach Storage Lens groups to your dashboard if they're included in your Storage
-   * Lens group aggregation. If this value is left null, then all Storage Lens groups are selected.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * StorageLensGroupSelectionCriteriaProperty storageLensGroupSelectionCriteriaProperty =
-   * StorageLensGroupSelectionCriteriaProperty.builder()
-   * .exclude(List.of("exclude"))
-   * .include(List.of("include"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html)
-   */
-  public interface StorageLensGroupSelectionCriteriaProperty {
-    /**
-     * This property indicates which Storage Lens group ARNs to exclude from the Storage Lens group
-     * aggregation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-exclude)
-     */
-    public fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
-
-    /**
-     * This property indicates which Storage Lens group ARNs to include in the Storage Lens group
-     * aggregation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-include)
-     */
-    public fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
-
-    /**
-     * A builder for [StorageLensGroupSelectionCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
-       * Storage Lens group aggregation.
-       */
-      public fun exclude(exclude: List<String>)
-
-      /**
-       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
-       * Storage Lens group aggregation.
-       */
-      public fun exclude(vararg exclude: String)
-
-      /**
-       * @param include This property indicates which Storage Lens group ARNs to include in the
-       * Storage Lens group aggregation.
-       */
-      public fun include(include: List<String>)
-
-      /**
-       * @param include This property indicates which Storage Lens group ARNs to include in the
-       * Storage Lens group aggregation.
-       */
-      public fun include(vararg include: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty.builder()
-
-      /**
-       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
-       * Storage Lens group aggregation.
-       */
-      override fun exclude(exclude: List<String>) {
-        cdkBuilder.exclude(exclude)
-      }
-
-      /**
-       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
-       * Storage Lens group aggregation.
-       */
-      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
-
-      /**
-       * @param include This property indicates which Storage Lens group ARNs to include in the
-       * Storage Lens group aggregation.
-       */
-      override fun include(include: List<String>) {
-        cdkBuilder.include(include)
-      }
-
-      /**
-       * @param include This property indicates which Storage Lens group ARNs to include in the
-       * Storage Lens group aggregation.
-       */
-      override fun include(vararg include: String): Unit = include(include.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty,
-    ) : CdkObject(cdkObject), StorageLensGroupSelectionCriteriaProperty {
-      /**
-       * This property indicates which Storage Lens group ARNs to exclude from the Storage Lens
-       * group aggregation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-exclude)
-       */
-      override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
-
-      /**
-       * This property indicates which Storage Lens group ARNs to include in the Storage Lens group
-       * aggregation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-include)
-       */
-      override fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StorageLensGroupSelectionCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty):
-          StorageLensGroupSelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StorageLensGroupSelectionCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StorageLensGroupSelectionCriteriaProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
-    }
-  }
-
-  /**
-   * This resource contains the details of the buckets and Regions for the Amazon S3 Storage Lens
-   * configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * BucketsAndRegionsProperty bucketsAndRegionsProperty = BucketsAndRegionsProperty.builder()
-   * .buckets(List.of("buckets"))
-   * .regions(List.of("regions"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html)
-   */
-  public interface BucketsAndRegionsProperty {
-    /**
-     * This property contains the details of the buckets for the Amazon S3 Storage Lens
-     * configuration.
-     *
-     * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-     * format
-     * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-     * in the *Amazon S3 API Reference* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-buckets)
-     */
-    public fun buckets(): List<String> = unwrap(this).getBuckets() ?: emptyList()
-
-    /**
-     * This property contains the details of the Regions for the S3 Storage Lens configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-regions)
-     */
-    public fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
-
-    /**
-     * A builder for [BucketsAndRegionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
-       * Lens configuration.
-       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-       * format
-       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-       * in the *Amazon S3 API Reference* .
-       */
-      public fun buckets(buckets: List<String>)
-
-      /**
-       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
-       * Lens configuration.
-       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-       * format
-       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-       * in the *Amazon S3 API Reference* .
-       */
-      public fun buckets(vararg buckets: String)
-
-      /**
-       * @param regions This property contains the details of the Regions for the S3 Storage Lens
-       * configuration.
-       */
-      public fun regions(regions: List<String>)
-
-      /**
-       * @param regions This property contains the details of the Regions for the S3 Storage Lens
-       * configuration.
-       */
-      public fun regions(vararg regions: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty.builder()
-
-      /**
-       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
-       * Lens configuration.
-       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-       * format
-       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-       * in the *Amazon S3 API Reference* .
-       */
-      override fun buckets(buckets: List<String>) {
-        cdkBuilder.buckets(buckets)
-      }
-
-      /**
-       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
-       * Lens configuration.
-       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-       * format
-       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-       * in the *Amazon S3 API Reference* .
-       */
-      override fun buckets(vararg buckets: String): Unit = buckets(buckets.toList())
-
-      /**
-       * @param regions This property contains the details of the Regions for the S3 Storage Lens
-       * configuration.
-       */
-      override fun regions(regions: List<String>) {
-        cdkBuilder.regions(regions)
-      }
-
-      /**
-       * @param regions This property contains the details of the Regions for the S3 Storage Lens
-       * configuration.
-       */
-      override fun regions(vararg regions: String): Unit = regions(regions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty,
-    ) : CdkObject(cdkObject), BucketsAndRegionsProperty {
-      /**
-       * This property contains the details of the buckets for the Amazon S3 Storage Lens
-       * configuration.
-       *
-       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
-       * format
-       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
-       * in the *Amazon S3 API Reference* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-buckets)
-       */
-      override fun buckets(): List<String> = unwrap(this).getBuckets() ?: emptyList()
-
-      /**
-       * This property contains the details of the Regions for the S3 Storage Lens configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-regions)
-       */
-      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BucketsAndRegionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty):
-          BucketsAndRegionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BucketsAndRegionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BucketsAndRegionsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.s3.CfnStorageLens
   }
 
   /**
@@ -2452,8 +762,7 @@ public open class CfnStorageLens internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty,
     ) : CdkObject(cdkObject), AccountLevelProperty {
       /**
        * This property contains the details of account-level activity metrics for S3 Storage Lens.
@@ -2520,6 +829,945 @@ public open class CfnStorageLens internal constructor(
           software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty
+    }
+  }
+
+  /**
+   * This resource enables Amazon S3 Storage Lens activity metrics.
+   *
+   * Activity metrics show details about how your storage is requested, such as requests (for
+   * example, All requests, Get requests, Put requests), bytes uploaded or downloaded, and errors.
+   *
+   * For more information, see [Assessing your storage activity and usage with S3 Storage
+   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
+   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
+   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
+   * in the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * ActivityMetricsProperty activityMetricsProperty = ActivityMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html)
+   */
+  public interface ActivityMetricsProperty {
+    /**
+     * A property that indicates whether the activity metrics is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html#cfn-s3-storagelens-activitymetrics-isenabled)
+     */
+    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+    /**
+     * A builder for [ActivityMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isEnabled A property that indicates whether the activity metrics is enabled.
+       */
+      public fun isEnabled(isEnabled: Boolean)
+
+      /**
+       * @param isEnabled A property that indicates whether the activity metrics is enabled.
+       */
+      public fun isEnabled(isEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty.builder()
+
+      /**
+       * @param isEnabled A property that indicates whether the activity metrics is enabled.
+       */
+      override fun isEnabled(isEnabled: Boolean) {
+        cdkBuilder.isEnabled(isEnabled)
+      }
+
+      /**
+       * @param isEnabled A property that indicates whether the activity metrics is enabled.
+       */
+      override fun isEnabled(isEnabled: IResolvable) {
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty,
+    ) : CdkObject(cdkObject), ActivityMetricsProperty {
+      /**
+       * A property that indicates whether the activity metrics is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html#cfn-s3-storagelens-activitymetrics-isenabled)
+       */
+      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActivityMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty):
+          ActivityMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ActivityMetricsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActivityMetricsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty
+    }
+  }
+
+  /**
+   * This resource enables Amazon S3 Storage Lens advanced cost optimization metrics.
+   *
+   * Advanced cost optimization metrics provide insights that you can use to manage and optimize
+   * your storage costs, for example, lifecycle rule counts for transitions, expirations, and
+   * incomplete multipart uploads.
+   *
+   * For more information, see [Assessing your storage activity and usage with S3 Storage
+   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
+   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
+   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
+   * in the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * AdvancedCostOptimizationMetricsProperty advancedCostOptimizationMetricsProperty =
+   * AdvancedCostOptimizationMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html)
+   */
+  public interface AdvancedCostOptimizationMetricsProperty {
+    /**
+     * Indicates whether advanced cost optimization metrics are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html#cfn-s3-storagelens-advancedcostoptimizationmetrics-isenabled)
+     */
+    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+    /**
+     * A builder for [AdvancedCostOptimizationMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: Boolean)
+
+      /**
+       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty.builder()
+
+      /**
+       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: Boolean) {
+        cdkBuilder.isEnabled(isEnabled)
+      }
+
+      /**
+       * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: IResolvable) {
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty,
+    ) : CdkObject(cdkObject), AdvancedCostOptimizationMetricsProperty {
+      /**
+       * Indicates whether advanced cost optimization metrics are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advancedcostoptimizationmetrics.html#cfn-s3-storagelens-advancedcostoptimizationmetrics-isenabled)
+       */
+      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AdvancedCostOptimizationMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty):
+          AdvancedCostOptimizationMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedCostOptimizationMetricsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdvancedCostOptimizationMetricsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
+    }
+  }
+
+  /**
+   * This resource enables Amazon S3 Storage Lens advanced data protection metrics.
+   *
+   * Advanced data protection metrics provide insights that you can use to perform audits and
+   * protect your data, for example replication rule counts within and across Regions.
+   *
+   * For more information, see [Assessing your storage activity and usage with S3 Storage
+   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
+   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
+   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
+   * in the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * AdvancedDataProtectionMetricsProperty advancedDataProtectionMetricsProperty =
+   * AdvancedDataProtectionMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html)
+   */
+  public interface AdvancedDataProtectionMetricsProperty {
+    /**
+     * Indicates whether advanced data protection metrics are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html#cfn-s3-storagelens-advanceddataprotectionmetrics-isenabled)
+     */
+    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+    /**
+     * A builder for [AdvancedDataProtectionMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: Boolean)
+
+      /**
+       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty.builder()
+
+      /**
+       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: Boolean) {
+        cdkBuilder.isEnabled(isEnabled)
+      }
+
+      /**
+       * @param isEnabled Indicates whether advanced data protection metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: IResolvable) {
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty,
+    ) : CdkObject(cdkObject), AdvancedDataProtectionMetricsProperty {
+      /**
+       * Indicates whether advanced data protection metrics are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-advanceddataprotectionmetrics.html#cfn-s3-storagelens-advanceddataprotectionmetrics-isenabled)
+       */
+      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AdvancedDataProtectionMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty):
+          AdvancedDataProtectionMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedDataProtectionMetricsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdvancedDataProtectionMetricsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the AWS Organization for Amazon S3 Storage Lens.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * AwsOrgProperty awsOrgProperty = AwsOrgProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html)
+   */
+  public interface AwsOrgProperty {
+    /**
+     * This resource contains the ARN of the AWS Organization.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html#cfn-s3-storagelens-awsorg-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [AwsOrgProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn This resource contains the ARN of the AWS Organization. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty.builder()
+
+      /**
+       * @param arn This resource contains the ARN of the AWS Organization. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty,
+    ) : CdkObject(cdkObject), AwsOrgProperty {
+      /**
+       * This resource contains the ARN of the AWS Organization.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html#cfn-s3-storagelens-awsorg-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AwsOrgProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty):
+          AwsOrgProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsOrgProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AwsOrgProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty
+    }
+  }
+
+  /**
+   * A property for the bucket-level storage metrics for Amazon S3 Storage Lens.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * BucketLevelProperty bucketLevelProperty = BucketLevelProperty.builder()
+   * .activityMetrics(ActivityMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build())
+   * .advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build())
+   * .advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build())
+   * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build())
+   * .prefixLevel(PrefixLevelProperty.builder()
+   * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
+   * .isEnabled(false)
+   * .selectionCriteria(SelectionCriteriaProperty.builder()
+   * .delimiter("delimiter")
+   * .maxDepth(123)
+   * .minStorageBytesPercentage(123)
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html)
+   */
+  public interface BucketLevelProperty {
+    /**
+     * A property for bucket-level activity metrics for S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-activitymetrics)
+     */
+    public fun activityMetrics(): Any? = unwrap(this).getActivityMetrics()
+
+    /**
+     * A property for bucket-level advanced cost optimization metrics for S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advancedcostoptimizationmetrics)
+     */
+    public fun advancedCostOptimizationMetrics(): Any? =
+        unwrap(this).getAdvancedCostOptimizationMetrics()
+
+    /**
+     * A property for bucket-level advanced data protection metrics for S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advanceddataprotectionmetrics)
+     */
+    public fun advancedDataProtectionMetrics(): Any? =
+        unwrap(this).getAdvancedDataProtectionMetrics()
+
+    /**
+     * A property for bucket-level detailed status code metrics for S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-detailedstatuscodesmetrics)
+     */
+    public fun detailedStatusCodesMetrics(): Any? = unwrap(this).getDetailedStatusCodesMetrics()
+
+    /**
+     * A property for bucket-level prefix-level storage metrics for S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-prefixlevel)
+     */
+    public fun prefixLevel(): Any? = unwrap(this).getPrefixLevel()
+
+    /**
+     * A builder for [BucketLevelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      public fun activityMetrics(activityMetrics: IResolvable)
+
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      public fun activityMetrics(activityMetrics: ActivityMetricsProperty)
+
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fe47765aadaaea41205a15bf3a06dbc19951c9ad9203f4a144e6f6c7d80b9f14")
+      public fun activityMetrics(activityMetrics: ActivityMetricsProperty.Builder.() -> Unit)
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      public fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable)
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      public
+          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty)
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d80440846b1119c591429c7efdb10b1bc3cc2f6054f9781a4895937003bbf37c")
+      public
+          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty.Builder.() -> Unit)
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      public fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable)
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      public
+          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty)
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("20e86db47d0fc896c602d9a348093d28716c0dd641fa66a8f6caa23fcc964f21")
+      public
+          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty.Builder.() -> Unit)
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      public fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable)
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      public
+          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty)
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f53994ad2c2a46cb8ab31926fca9652e25fce1b2fb07336c4ac0b5193e28ea2")
+      public
+          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty.Builder.() -> Unit)
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      public fun prefixLevel(prefixLevel: IResolvable)
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      public fun prefixLevel(prefixLevel: PrefixLevelProperty)
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98aa57ca324ca3366fb37329b78060f5a9aaf872aa86b82233a116215da6f19c")
+      public fun prefixLevel(prefixLevel: PrefixLevelProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty.builder()
+
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      override fun activityMetrics(activityMetrics: IResolvable) {
+        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      override fun activityMetrics(activityMetrics: ActivityMetricsProperty) {
+        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fe47765aadaaea41205a15bf3a06dbc19951c9ad9203f4a144e6f6c7d80b9f14")
+      override fun activityMetrics(activityMetrics: ActivityMetricsProperty.Builder.() -> Unit):
+          Unit = activityMetrics(ActivityMetricsProperty(activityMetrics))
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      override fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable) {
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      override
+          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty) {
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param advancedCostOptimizationMetrics A property for bucket-level advanced cost
+       * optimization metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d80440846b1119c591429c7efdb10b1bc3cc2f6054f9781a4895937003bbf37c")
+      override
+          fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty.Builder.() -> Unit):
+          Unit =
+          advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty(advancedCostOptimizationMetrics))
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      override fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable) {
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      override
+          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty) {
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param advancedDataProtectionMetrics A property for bucket-level advanced data protection
+       * metrics for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("20e86db47d0fc896c602d9a348093d28716c0dd641fa66a8f6caa23fcc964f21")
+      override
+          fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty.Builder.() -> Unit):
+          Unit =
+          advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty(advancedDataProtectionMetrics))
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      override fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable) {
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      override
+          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty) {
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param detailedStatusCodesMetrics A property for bucket-level detailed status code metrics
+       * for S3 Storage Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f53994ad2c2a46cb8ab31926fca9652e25fce1b2fb07336c4ac0b5193e28ea2")
+      override
+          fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty.Builder.() -> Unit):
+          Unit =
+          detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty(detailedStatusCodesMetrics))
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      override fun prefixLevel(prefixLevel: IResolvable) {
+        cdkBuilder.prefixLevel(prefixLevel.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      override fun prefixLevel(prefixLevel: PrefixLevelProperty) {
+        cdkBuilder.prefixLevel(prefixLevel.let(PrefixLevelProperty::unwrap))
+      }
+
+      /**
+       * @param prefixLevel A property for bucket-level prefix-level storage metrics for S3 Storage
+       * Lens.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98aa57ca324ca3366fb37329b78060f5a9aaf872aa86b82233a116215da6f19c")
+      override fun prefixLevel(prefixLevel: PrefixLevelProperty.Builder.() -> Unit): Unit =
+          prefixLevel(PrefixLevelProperty(prefixLevel))
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty,
+    ) : CdkObject(cdkObject), BucketLevelProperty {
+      /**
+       * A property for bucket-level activity metrics for S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-activitymetrics)
+       */
+      override fun activityMetrics(): Any? = unwrap(this).getActivityMetrics()
+
+      /**
+       * A property for bucket-level advanced cost optimization metrics for S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advancedcostoptimizationmetrics)
+       */
+      override fun advancedCostOptimizationMetrics(): Any? =
+          unwrap(this).getAdvancedCostOptimizationMetrics()
+
+      /**
+       * A property for bucket-level advanced data protection metrics for S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-advanceddataprotectionmetrics)
+       */
+      override fun advancedDataProtectionMetrics(): Any? =
+          unwrap(this).getAdvancedDataProtectionMetrics()
+
+      /**
+       * A property for bucket-level detailed status code metrics for S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-detailedstatuscodesmetrics)
+       */
+      override fun detailedStatusCodesMetrics(): Any? = unwrap(this).getDetailedStatusCodesMetrics()
+
+      /**
+       * A property for bucket-level prefix-level storage metrics for S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html#cfn-s3-storagelens-bucketlevel-prefixlevel)
+       */
+      override fun prefixLevel(): Any? = unwrap(this).getPrefixLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BucketLevelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty):
+          BucketLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? BucketLevelProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BucketLevelProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the buckets and Regions for the Amazon S3 Storage Lens
+   * configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * BucketsAndRegionsProperty bucketsAndRegionsProperty = BucketsAndRegionsProperty.builder()
+   * .buckets(List.of("buckets"))
+   * .regions(List.of("regions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html)
+   */
+  public interface BucketsAndRegionsProperty {
+    /**
+     * This property contains the details of the buckets for the Amazon S3 Storage Lens
+     * configuration.
+     *
+     * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+     * format
+     * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+     * in the *Amazon S3 API Reference* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-buckets)
+     */
+    public fun buckets(): List<String> = unwrap(this).getBuckets() ?: emptyList()
+
+    /**
+     * This property contains the details of the Regions for the S3 Storage Lens configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-regions)
+     */
+    public fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+
+    /**
+     * A builder for [BucketsAndRegionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+       * Lens configuration.
+       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+       * format
+       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+       * in the *Amazon S3 API Reference* .
+       */
+      public fun buckets(buckets: List<String>)
+
+      /**
+       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+       * Lens configuration.
+       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+       * format
+       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+       * in the *Amazon S3 API Reference* .
+       */
+      public fun buckets(vararg buckets: String)
+
+      /**
+       * @param regions This property contains the details of the Regions for the S3 Storage Lens
+       * configuration.
+       */
+      public fun regions(regions: List<String>)
+
+      /**
+       * @param regions This property contains the details of the Regions for the S3 Storage Lens
+       * configuration.
+       */
+      public fun regions(vararg regions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty.builder()
+
+      /**
+       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+       * Lens configuration.
+       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+       * format
+       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+       * in the *Amazon S3 API Reference* .
+       */
+      override fun buckets(buckets: List<String>) {
+        cdkBuilder.buckets(buckets)
+      }
+
+      /**
+       * @param buckets This property contains the details of the buckets for the Amazon S3 Storage
+       * Lens configuration.
+       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+       * format
+       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+       * in the *Amazon S3 API Reference* .
+       */
+      override fun buckets(vararg buckets: String): Unit = buckets(buckets.toList())
+
+      /**
+       * @param regions This property contains the details of the Regions for the S3 Storage Lens
+       * configuration.
+       */
+      override fun regions(regions: List<String>) {
+        cdkBuilder.regions(regions)
+      }
+
+      /**
+       * @param regions This property contains the details of the Regions for the S3 Storage Lens
+       * configuration.
+       */
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty,
+    ) : CdkObject(cdkObject), BucketsAndRegionsProperty {
+      /**
+       * This property contains the details of the buckets for the Amazon S3 Storage Lens
+       * configuration.
+       *
+       * This should be the bucket Amazon Resource Name(ARN). For valid values, see [Buckets ARN
+       * format
+       * here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents)
+       * in the *Amazon S3 API Reference* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-buckets)
+       */
+      override fun buckets(): List<String> = unwrap(this).getBuckets() ?: emptyList()
+
+      /**
+       * This property contains the details of the Regions for the S3 Storage Lens configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-regions)
+       */
+      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BucketsAndRegionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty):
+          BucketsAndRegionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BucketsAndRegionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BucketsAndRegionsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty
     }
   }
 
@@ -2598,8 +1846,7 @@ public open class CfnStorageLens internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty,
     ) : CdkObject(cdkObject), CloudWatchMetricsProperty {
       /**
        * This property identifies whether the CloudWatch publishing option for S3 Storage Lens is
@@ -2625,6 +1872,751 @@ public open class CfnStorageLens internal constructor(
           software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the Amazon S3 Storage Lens metrics export.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * Object sses3;
+   * DataExportProperty dataExportProperty = DataExportProperty.builder()
+   * .cloudWatchMetrics(CloudWatchMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build())
+   * .s3BucketDestination(S3BucketDestinationProperty.builder()
+   * .accountId("accountId")
+   * .arn("arn")
+   * .format("format")
+   * .outputSchemaVersion("outputSchemaVersion")
+   * // the properties below are optional
+   * .encryption(EncryptionProperty.builder()
+   * .ssekms(SSEKMSProperty.builder()
+   * .keyId("keyId")
+   * .build())
+   * .sses3(sses3)
+   * .build())
+   * .prefix("prefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html)
+   */
+  public interface DataExportProperty {
+    /**
+     * This property enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-cloudwatchmetrics)
+     */
+    public fun cloudWatchMetrics(): Any? = unwrap(this).getCloudWatchMetrics()
+
+    /**
+     * This property contains the details of the bucket where the S3 Storage Lens metrics export
+     * will be placed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-s3bucketdestination)
+     */
+    public fun s3BucketDestination(): Any? = unwrap(this).getS3BucketDestination()
+
+    /**
+     * A builder for [DataExportProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      public fun cloudWatchMetrics(cloudWatchMetrics: IResolvable)
+
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      public fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty)
+
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("467a369691b5fe770301e5dbd21eec4ef8b36d60331c37c6bf16ddf66f927ec6")
+      public fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      public fun s3BucketDestination(s3BucketDestination: IResolvable)
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      public fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty)
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9f029381afe0b426630e6f1402634bca1d91ecb86c94084967768609ec5aa9a")
+      public
+          fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty.builder()
+
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      override fun cloudWatchMetrics(cloudWatchMetrics: IResolvable) {
+        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      override fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty) {
+        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(CloudWatchMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
+       * S3 Storage Lens metrics.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("467a369691b5fe770301e5dbd21eec4ef8b36d60331c37c6bf16ddf66f927ec6")
+      override
+          fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty.Builder.() -> Unit):
+          Unit = cloudWatchMetrics(CloudWatchMetricsProperty(cloudWatchMetrics))
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      override fun s3BucketDestination(s3BucketDestination: IResolvable) {
+        cdkBuilder.s3BucketDestination(s3BucketDestination.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      override fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty) {
+        cdkBuilder.s3BucketDestination(s3BucketDestination.let(S3BucketDestinationProperty::unwrap))
+      }
+
+      /**
+       * @param s3BucketDestination This property contains the details of the bucket where the S3
+       * Storage Lens metrics export will be placed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9f029381afe0b426630e6f1402634bca1d91ecb86c94084967768609ec5aa9a")
+      override
+          fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty.Builder.() -> Unit):
+          Unit = s3BucketDestination(S3BucketDestinationProperty(s3BucketDestination))
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty,
+    ) : CdkObject(cdkObject), DataExportProperty {
+      /**
+       * This property enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-cloudwatchmetrics)
+       */
+      override fun cloudWatchMetrics(): Any? = unwrap(this).getCloudWatchMetrics()
+
+      /**
+       * This property contains the details of the bucket where the S3 Storage Lens metrics export
+       * will be placed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-s3bucketdestination)
+       */
+      override fun s3BucketDestination(): Any? = unwrap(this).getS3BucketDestination()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataExportProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty):
+          DataExportProperty = CdkObjectWrappers.wrap(cdkObject) as? DataExportProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataExportProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty
+    }
+  }
+
+  /**
+   * This resource enables Amazon S3 Storage Lens detailed status code metrics.
+   *
+   * Detailed status code metrics generate metrics for HTTP status codes, such as `200 OK` , `403
+   * Forbidden` , `503 Service Unavailable` and others.
+   *
+   * For more information, see [Assessing your storage activity and usage with S3 Storage
+   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
+   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
+   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
+   * in the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * DetailedStatusCodesMetricsProperty detailedStatusCodesMetricsProperty =
+   * DetailedStatusCodesMetricsProperty.builder()
+   * .isEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html)
+   */
+  public interface DetailedStatusCodesMetricsProperty {
+    /**
+     * Indicates whether detailed status code metrics are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html#cfn-s3-storagelens-detailedstatuscodesmetrics-isenabled)
+     */
+    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+    /**
+     * A builder for [DetailedStatusCodesMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isEnabled Indicates whether detailed status code metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: Boolean)
+
+      /**
+       * @param isEnabled Indicates whether detailed status code metrics are enabled.
+       */
+      public fun isEnabled(isEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty.builder()
+
+      /**
+       * @param isEnabled Indicates whether detailed status code metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: Boolean) {
+        cdkBuilder.isEnabled(isEnabled)
+      }
+
+      /**
+       * @param isEnabled Indicates whether detailed status code metrics are enabled.
+       */
+      override fun isEnabled(isEnabled: IResolvable) {
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty,
+    ) : CdkObject(cdkObject), DetailedStatusCodesMetricsProperty {
+      /**
+       * Indicates whether detailed status code metrics are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html#cfn-s3-storagelens-detailedstatuscodesmetrics-isenabled)
+       */
+      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DetailedStatusCodesMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty):
+          DetailedStatusCodesMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DetailedStatusCodesMetricsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DetailedStatusCodesMetricsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty
+    }
+  }
+
+  /**
+   * This resource contains the type of server-side encryption used to encrypt an Amazon S3 Storage
+   * Lens metrics export.
+   *
+   * For valid values, see the
+   * [StorageLensDataExportEncryption](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_StorageLensDataExportEncryption.html)
+   * in the *Amazon S3 API Reference* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * Object sses3;
+   * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
+   * .ssekms(SSEKMSProperty.builder()
+   * .keyId("keyId")
+   * .build())
+   * .sses3(sses3)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html)
+   */
+  public interface EncryptionProperty {
+    /**
+     * Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3 Storage Lens
+     * metrics export file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-ssekms)
+     */
+    public fun ssekms(): Any? = unwrap(this).getSsekms()
+
+    /**
+     * Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage Lens metrics
+     * export file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-sses3)
+     */
+    public fun sses3(): Any? = unwrap(this).getSses3()
+
+    /**
+     * A builder for [EncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      public fun ssekms(ssekms: IResolvable)
+
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      public fun ssekms(ssekms: SSEKMSProperty)
+
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f1f7b40a828125a6eee81f9b1e9d2bb02613804337fb7754b55771795ea8a863")
+      public fun ssekms(ssekms: SSEKMSProperty.Builder.() -> Unit)
+
+      /**
+       * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3
+       * Storage Lens metrics export file.
+       */
+      public fun sses3(sses3: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty.builder()
+
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      override fun ssekms(ssekms: IResolvable) {
+        cdkBuilder.ssekms(ssekms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      override fun ssekms(ssekms: SSEKMSProperty) {
+        cdkBuilder.ssekms(ssekms.let(SSEKMSProperty::unwrap))
+      }
+
+      /**
+       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
+       * S3 Storage Lens metrics export file.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f1f7b40a828125a6eee81f9b1e9d2bb02613804337fb7754b55771795ea8a863")
+      override fun ssekms(ssekms: SSEKMSProperty.Builder.() -> Unit): Unit =
+          ssekms(SSEKMSProperty(ssekms))
+
+      /**
+       * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3
+       * Storage Lens metrics export file.
+       */
+      override fun sses3(sses3: Any) {
+        cdkBuilder.sses3(sses3)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty,
+    ) : CdkObject(cdkObject), EncryptionProperty {
+      /**
+       * Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3 Storage
+       * Lens metrics export file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-ssekms)
+       */
+      override fun ssekms(): Any? = unwrap(this).getSsekms()
+
+      /**
+       * Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage Lens
+       * metrics export file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-sses3)
+       */
+      override fun sses3(): Any? = unwrap(this).getSses3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty):
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the prefix-level of the Amazon S3 Storage Lens.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * PrefixLevelProperty prefixLevelProperty = PrefixLevelProperty.builder()
+   * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
+   * .isEnabled(false)
+   * .selectionCriteria(SelectionCriteriaProperty.builder()
+   * .delimiter("delimiter")
+   * .maxDepth(123)
+   * .minStorageBytesPercentage(123)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html)
+   */
+  public interface PrefixLevelProperty {
+    /**
+     * A property for the prefix-level storage metrics for Amazon S3 Storage Lens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html#cfn-s3-storagelens-prefixlevel-storagemetrics)
+     */
+    public fun storageMetrics(): Any
+
+    /**
+     * A builder for [PrefixLevelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      public fun storageMetrics(storageMetrics: IResolvable)
+
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      public fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty)
+
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b53e4593b4de08a727bbfc35d8c653d951035cfff8de33c89ba9366c5fcdbe2d")
+      public
+          fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty.builder()
+
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      override fun storageMetrics(storageMetrics: IResolvable) {
+        cdkBuilder.storageMetrics(storageMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      override fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty) {
+        cdkBuilder.storageMetrics(storageMetrics.let(PrefixLevelStorageMetricsProperty::unwrap))
+      }
+
+      /**
+       * @param storageMetrics A property for the prefix-level storage metrics for Amazon S3 Storage
+       * Lens. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b53e4593b4de08a727bbfc35d8c653d951035cfff8de33c89ba9366c5fcdbe2d")
+      override
+          fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty.Builder.() -> Unit):
+          Unit = storageMetrics(PrefixLevelStorageMetricsProperty(storageMetrics))
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty,
+    ) : CdkObject(cdkObject), PrefixLevelProperty {
+      /**
+       * A property for the prefix-level storage metrics for Amazon S3 Storage Lens.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevel.html#cfn-s3-storagelens-prefixlevel-storagemetrics)
+       */
+      override fun storageMetrics(): Any = unwrap(this).getStorageMetrics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrefixLevelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty):
+          PrefixLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixLevelProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrefixLevelProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the prefix-level storage metrics for Amazon S3 Storage
+   * Lens.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * PrefixLevelStorageMetricsProperty prefixLevelStorageMetricsProperty =
+   * PrefixLevelStorageMetricsProperty.builder()
+   * .isEnabled(false)
+   * .selectionCriteria(SelectionCriteriaProperty.builder()
+   * .delimiter("delimiter")
+   * .maxDepth(123)
+   * .minStorageBytesPercentage(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html)
+   */
+  public interface PrefixLevelStorageMetricsProperty {
+    /**
+     * This property identifies whether the details of the prefix-level storage metrics for S3
+     * Storage Lens are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-isenabled)
+     */
+    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+    /**
+     * This property identifies whether the details of the prefix-level storage metrics for S3
+     * Storage Lens are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-selectioncriteria)
+     */
+    public fun selectionCriteria(): Any? = unwrap(this).getSelectionCriteria()
+
+    /**
+     * A builder for [PrefixLevelStorageMetricsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isEnabled This property identifies whether the details of the prefix-level storage
+       * metrics for S3 Storage Lens are enabled.
+       */
+      public fun isEnabled(isEnabled: Boolean)
+
+      /**
+       * @param isEnabled This property identifies whether the details of the prefix-level storage
+       * metrics for S3 Storage Lens are enabled.
+       */
+      public fun isEnabled(isEnabled: IResolvable)
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      public fun selectionCriteria(selectionCriteria: IResolvable)
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      public fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty)
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30c8d88fa709aba8706e56b8e607183d0292254c2baef744b2fd6f14e96d6d8b")
+      public fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty.builder()
+
+      /**
+       * @param isEnabled This property identifies whether the details of the prefix-level storage
+       * metrics for S3 Storage Lens are enabled.
+       */
+      override fun isEnabled(isEnabled: Boolean) {
+        cdkBuilder.isEnabled(isEnabled)
+      }
+
+      /**
+       * @param isEnabled This property identifies whether the details of the prefix-level storage
+       * metrics for S3 Storage Lens are enabled.
+       */
+      override fun isEnabled(isEnabled: IResolvable) {
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      override fun selectionCriteria(selectionCriteria: IResolvable) {
+        cdkBuilder.selectionCriteria(selectionCriteria.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      override fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty) {
+        cdkBuilder.selectionCriteria(selectionCriteria.let(SelectionCriteriaProperty::unwrap))
+      }
+
+      /**
+       * @param selectionCriteria This property identifies whether the details of the prefix-level
+       * storage metrics for S3 Storage Lens are enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30c8d88fa709aba8706e56b8e607183d0292254c2baef744b2fd6f14e96d6d8b")
+      override
+          fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty.Builder.() -> Unit):
+          Unit = selectionCriteria(SelectionCriteriaProperty(selectionCriteria))
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty,
+    ) : CdkObject(cdkObject), PrefixLevelStorageMetricsProperty {
+      /**
+       * This property identifies whether the details of the prefix-level storage metrics for S3
+       * Storage Lens are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-isenabled)
+       */
+      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+
+      /**
+       * This property identifies whether the details of the prefix-level storage metrics for S3
+       * Storage Lens are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-selectioncriteria)
+       */
+      override fun selectionCriteria(): Any? = unwrap(this).getSelectionCriteria()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrefixLevelStorageMetricsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty):
+          PrefixLevelStorageMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrefixLevelStorageMetricsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrefixLevelStorageMetricsProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty
     }
   }
 
@@ -2838,8 +2830,7 @@ public open class CfnStorageLens internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty,
     ) : CdkObject(cdkObject), S3BucketDestinationProperty {
       /**
        * This property contains the details of the AWS account ID of the S3 Storage Lens export
@@ -2905,6 +2896,250 @@ public open class CfnStorageLens internal constructor(
           software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty
+    }
+  }
+
+  /**
+   * Specifies the use of server-side encryption using an AWS Key Management Service key (SSE-KMS)
+   * to encrypt the delivered S3 Storage Lens metrics export file.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * SSEKMSProperty sSEKMSProperty = SSEKMSProperty.builder()
+   * .keyId("keyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html)
+   */
+  public interface SSEKMSProperty {
+    /**
+     * Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to use for
+     * encrypting the S3 Storage Lens metrics export file.
+     *
+     * Amazon S3 only supports symmetric encryption keys. For more information, see [Special-purpose
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html#cfn-s3-storagelens-ssekms-keyid)
+     */
+    public fun keyId(): String
+
+    /**
+     * A builder for [SSEKMSProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param keyId Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key
+       * to use for encrypting the S3 Storage Lens metrics export file. 
+       * Amazon S3 only supports symmetric encryption keys. For more information, see
+       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       */
+      public fun keyId(keyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty.builder()
+
+      /**
+       * @param keyId Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key
+       * to use for encrypting the S3 Storage Lens metrics export file. 
+       * Amazon S3 only supports symmetric encryption keys. For more information, see
+       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       */
+      override fun keyId(keyId: String) {
+        cdkBuilder.keyId(keyId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty,
+    ) : CdkObject(cdkObject), SSEKMSProperty {
+      /**
+       * Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to use for
+       * encrypting the S3 Storage Lens metrics export file.
+       *
+       * Amazon S3 only supports symmetric encryption keys. For more information, see
+       * [Special-purpose keys](https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-ssekms.html#cfn-s3-storagelens-ssekms-keyid)
+       */
+      override fun keyId(): String = unwrap(this).getKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SSEKMSProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty):
+          SSEKMSProperty = CdkObjectWrappers.wrap(cdkObject) as? SSEKMSProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SSEKMSProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty
+    }
+  }
+
+  /**
+   * This resource contains the details of the Amazon S3 Storage Lens selection criteria.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * SelectionCriteriaProperty selectionCriteriaProperty = SelectionCriteriaProperty.builder()
+   * .delimiter("delimiter")
+   * .maxDepth(123)
+   * .minStorageBytesPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html)
+   */
+  public interface SelectionCriteriaProperty {
+    /**
+     * This property contains the details of the S3 Storage Lens delimiter being used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-delimiter)
+     */
+    public fun delimiter(): String? = unwrap(this).getDelimiter()
+
+    /**
+     * This property contains the details of the max depth that S3 Storage Lens will collect metrics
+     * up to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-maxdepth)
+     */
+    public fun maxDepth(): Number? = unwrap(this).getMaxDepth()
+
+    /**
+     * This property contains the details of the minimum storage bytes percentage threshold that S3
+     * Storage Lens will collect metrics up to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-minstoragebytespercentage)
+     */
+    public fun minStorageBytesPercentage(): Number? = unwrap(this).getMinStorageBytesPercentage()
+
+    /**
+     * A builder for [SelectionCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param delimiter This property contains the details of the S3 Storage Lens delimiter being
+       * used.
+       */
+      public fun delimiter(delimiter: String)
+
+      /**
+       * @param maxDepth This property contains the details of the max depth that S3 Storage Lens
+       * will collect metrics up to.
+       */
+      public fun maxDepth(maxDepth: Number)
+
+      /**
+       * @param minStorageBytesPercentage This property contains the details of the minimum storage
+       * bytes percentage threshold that S3 Storage Lens will collect metrics up to.
+       */
+      public fun minStorageBytesPercentage(minStorageBytesPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty.builder()
+
+      /**
+       * @param delimiter This property contains the details of the S3 Storage Lens delimiter being
+       * used.
+       */
+      override fun delimiter(delimiter: String) {
+        cdkBuilder.delimiter(delimiter)
+      }
+
+      /**
+       * @param maxDepth This property contains the details of the max depth that S3 Storage Lens
+       * will collect metrics up to.
+       */
+      override fun maxDepth(maxDepth: Number) {
+        cdkBuilder.maxDepth(maxDepth)
+      }
+
+      /**
+       * @param minStorageBytesPercentage This property contains the details of the minimum storage
+       * bytes percentage threshold that S3 Storage Lens will collect metrics up to.
+       */
+      override fun minStorageBytesPercentage(minStorageBytesPercentage: Number) {
+        cdkBuilder.minStorageBytesPercentage(minStorageBytesPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty,
+    ) : CdkObject(cdkObject), SelectionCriteriaProperty {
+      /**
+       * This property contains the details of the S3 Storage Lens delimiter being used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-delimiter)
+       */
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
+
+      /**
+       * This property contains the details of the max depth that S3 Storage Lens will collect
+       * metrics up to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-maxdepth)
+       */
+      override fun maxDepth(): Number? = unwrap(this).getMaxDepth()
+
+      /**
+       * This property contains the details of the minimum storage bytes percentage threshold that
+       * S3 Storage Lens will collect metrics up to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-minstoragebytespercentage)
+       */
+      override fun minStorageBytesPercentage(): Number? =
+          unwrap(this).getMinStorageBytesPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SelectionCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty):
+          SelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelectionCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SelectionCriteriaProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty
     }
   }
 
@@ -3369,8 +3604,7 @@ public open class CfnStorageLens internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensConfigurationProperty,
     ) : CdkObject(cdkObject), StorageLensConfigurationProperty {
       /**
        * This property contains the details of the account-level metrics for Amazon S3 Storage Lens
@@ -3455,12 +3689,8 @@ public open class CfnStorageLens internal constructor(
   }
 
   /**
-   * This resource contains the type of server-side encryption used to encrypt an Amazon S3 Storage
-   * Lens metrics export.
-   *
-   * For valid values, see the
-   * [StorageLensDataExportEncryption](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_StorageLensDataExportEncryption.html)
-   * in the *Amazon S3 API Reference* .
+   * This resource determines the scope of Storage Lens group data that is displayed in the Storage
+   * Lens dashboard.
    *
    * Example:
    *
@@ -3468,522 +3698,279 @@ public open class CfnStorageLens internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.s3.*;
-   * Object sses3;
-   * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
-   * .ssekms(SSEKMSProperty.builder()
-   * .keyId("keyId")
+   * StorageLensGroupLevelProperty storageLensGroupLevelProperty =
+   * StorageLensGroupLevelProperty.builder()
+   * .storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
    * .build())
-   * .sses3(sses3)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html)
    */
-  public interface EncryptionProperty {
+  public interface StorageLensGroupLevelProperty {
     /**
-     * Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3 Storage Lens
-     * metrics export file.
+     * This property indicates which Storage Lens group ARNs to include or exclude in the Storage
+     * Lens group aggregation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-ssekms)
+     * If this value is left null, then all Storage Lens groups are selected.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html#cfn-s3-storagelens-storagelensgrouplevel-storagelensgroupselectioncriteria)
      */
-    public fun ssekms(): Any? = unwrap(this).getSsekms()
+    public fun storageLensGroupSelectionCriteria(): Any? =
+        unwrap(this).getStorageLensGroupSelectionCriteria()
 
     /**
-     * Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage Lens metrics
-     * export file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-sses3)
-     */
-    public fun sses3(): Any? = unwrap(this).getSses3()
-
-    /**
-     * A builder for [EncryptionProperty]
+     * A builder for [StorageLensGroupLevelProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
-      public fun ssekms(ssekms: IResolvable)
+      public fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: IResolvable)
 
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
-      public fun ssekms(ssekms: SSEKMSProperty)
+      public
+          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty)
 
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f1f7b40a828125a6eee81f9b1e9d2bb02613804337fb7754b55771795ea8a863")
-      public fun ssekms(ssekms: SSEKMSProperty.Builder.() -> Unit)
-
-      /**
-       * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3
-       * Storage Lens metrics export file.
-       */
-      public fun sses3(sses3: Any)
+      @JvmName("3e83137ab128c7708bbd78104bb20f96d86b6b0a15ebd055f7b3c5eb356ca77b")
+      public
+          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty.builder()
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty.builder()
 
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
-      override fun ssekms(ssekms: IResolvable) {
-        cdkBuilder.ssekms(ssekms.let(IResolvable::unwrap))
+      override
+          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: IResolvable) {
+        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(IResolvable::unwrap))
       }
 
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
-      override fun ssekms(ssekms: SSEKMSProperty) {
-        cdkBuilder.ssekms(ssekms.let(SSEKMSProperty::unwrap))
+      override
+          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty) {
+        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(StorageLensGroupSelectionCriteriaProperty::unwrap))
       }
 
       /**
-       * @param ssekms Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the
-       * S3 Storage Lens metrics export file.
+       * @param storageLensGroupSelectionCriteria This property indicates which Storage Lens group
+       * ARNs to include or exclude in the Storage Lens group aggregation.
+       * If this value is left null, then all Storage Lens groups are selected.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f1f7b40a828125a6eee81f9b1e9d2bb02613804337fb7754b55771795ea8a863")
-      override fun ssekms(ssekms: SSEKMSProperty.Builder.() -> Unit): Unit =
-          ssekms(SSEKMSProperty(ssekms))
-
-      /**
-       * @param sses3 Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3
-       * Storage Lens metrics export file.
-       */
-      override fun sses3(sses3: Any) {
-        cdkBuilder.sses3(sses3)
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
-      /**
-       * Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3 Storage
-       * Lens metrics export file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-ssekms)
-       */
-      override fun ssekms(): Any? = unwrap(this).getSsekms()
-
-      /**
-       * Specifies the use of an Amazon S3-managed key (SSE-S3) to encrypt the S3 Storage Lens
-       * metrics export file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html#cfn-s3-storagelens-encryption-sses3)
-       */
-      override fun sses3(): Any? = unwrap(this).getSses3()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty
-    }
-  }
-
-  /**
-   * This resource contains the details of the AWS Organization for Amazon S3 Storage Lens.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * AwsOrgProperty awsOrgProperty = AwsOrgProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html)
-   */
-  public interface AwsOrgProperty {
-    /**
-     * This resource contains the ARN of the AWS Organization.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html#cfn-s3-storagelens-awsorg-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [AwsOrgProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn This resource contains the ARN of the AWS Organization. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty.builder()
-
-      /**
-       * @param arn This resource contains the ARN of the AWS Organization. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty,
-    ) : CdkObject(cdkObject), AwsOrgProperty {
-      /**
-       * This resource contains the ARN of the AWS Organization.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-awsorg.html#cfn-s3-storagelens-awsorg-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AwsOrgProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty):
-          AwsOrgProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsOrgProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AwsOrgProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty
-    }
-  }
-
-  /**
-   * This resource enables Amazon S3 Storage Lens detailed status code metrics.
-   *
-   * Detailed status code metrics generate metrics for HTTP status codes, such as `200 OK` , `403
-   * Forbidden` , `503 Service Unavailable` and others.
-   *
-   * For more information, see [Assessing your storage activity and usage with S3 Storage
-   * Lens](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens.html) in the *Amazon S3
-   * User Guide* . For a complete list of metrics, see [S3 Storage Lens metrics
-   * glossary](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_metrics_glossary.html)
-   * in the *Amazon S3 User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * DetailedStatusCodesMetricsProperty detailedStatusCodesMetricsProperty =
-   * DetailedStatusCodesMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html)
-   */
-  public interface DetailedStatusCodesMetricsProperty {
-    /**
-     * Indicates whether detailed status code metrics are enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html#cfn-s3-storagelens-detailedstatuscodesmetrics-isenabled)
-     */
-    public fun isEnabled(): Any? = unwrap(this).getIsEnabled()
-
-    /**
-     * A builder for [DetailedStatusCodesMetricsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isEnabled Indicates whether detailed status code metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: Boolean)
-
-      /**
-       * @param isEnabled Indicates whether detailed status code metrics are enabled.
-       */
-      public fun isEnabled(isEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty.Builder
-          =
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty.builder()
-
-      /**
-       * @param isEnabled Indicates whether detailed status code metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: Boolean) {
-        cdkBuilder.isEnabled(isEnabled)
-      }
-
-      /**
-       * @param isEnabled Indicates whether detailed status code metrics are enabled.
-       */
-      override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
-      }
+      @JvmName("3e83137ab128c7708bbd78104bb20f96d86b6b0a15ebd055f7b3c5eb356ca77b")
+      override
+          fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty.Builder.() -> Unit):
+          Unit =
+          storageLensGroupSelectionCriteria(StorageLensGroupSelectionCriteriaProperty(storageLensGroupSelectionCriteria))
 
       public fun build():
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty =
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty,
-    ) : CdkObject(cdkObject), DetailedStatusCodesMetricsProperty {
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty,
+    ) : CdkObject(cdkObject), StorageLensGroupLevelProperty {
       /**
-       * Indicates whether detailed status code metrics are enabled.
+       * This property indicates which Storage Lens group ARNs to include or exclude in the Storage
+       * Lens group aggregation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-detailedstatuscodesmetrics.html#cfn-s3-storagelens-detailedstatuscodesmetrics-isenabled)
+       * If this value is left null, then all Storage Lens groups are selected.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgrouplevel.html#cfn-s3-storagelens-storagelensgrouplevel-storagelensgroupselectioncriteria)
        */
-      override fun isEnabled(): Any? = unwrap(this).getIsEnabled()
+      override fun storageLensGroupSelectionCriteria(): Any? =
+          unwrap(this).getStorageLensGroupSelectionCriteria()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StorageLensGroupLevelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty):
+          StorageLensGroupLevelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageLensGroupLevelProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StorageLensGroupLevelProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty
+    }
+  }
+
+  /**
+   * This resource indicates which Storage Lens group ARNs to include or exclude in the Storage Lens
+   * group aggregation.
+   *
+   * You can only attach Storage Lens groups to your dashboard if they're included in your Storage
+   * Lens group aggregation. If this value is left null, then all Storage Lens groups are selected.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * StorageLensGroupSelectionCriteriaProperty storageLensGroupSelectionCriteriaProperty =
+   * StorageLensGroupSelectionCriteriaProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html)
+   */
+  public interface StorageLensGroupSelectionCriteriaProperty {
+    /**
+     * This property indicates which Storage Lens group ARNs to exclude from the Storage Lens group
+     * aggregation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-exclude)
+     */
+    public fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+    /**
+     * This property indicates which Storage Lens group ARNs to include in the Storage Lens group
+     * aggregation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-include)
+     */
+    public fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+
+    /**
+     * A builder for [StorageLensGroupSelectionCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
+       * Storage Lens group aggregation.
+       */
+      public fun exclude(exclude: List<String>)
+
+      /**
+       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
+       * Storage Lens group aggregation.
+       */
+      public fun exclude(vararg exclude: String)
+
+      /**
+       * @param include This property indicates which Storage Lens group ARNs to include in the
+       * Storage Lens group aggregation.
+       */
+      public fun include(include: List<String>)
+
+      /**
+       * @param include This property indicates which Storage Lens group ARNs to include in the
+       * Storage Lens group aggregation.
+       */
+      public fun include(vararg include: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty.builder()
+
+      /**
+       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
+       * Storage Lens group aggregation.
+       */
+      override fun exclude(exclude: List<String>) {
+        cdkBuilder.exclude(exclude)
+      }
+
+      /**
+       * @param exclude This property indicates which Storage Lens group ARNs to exclude from the
+       * Storage Lens group aggregation.
+       */
+      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+      /**
+       * @param include This property indicates which Storage Lens group ARNs to include in the
+       * Storage Lens group aggregation.
+       */
+      override fun include(include: List<String>) {
+        cdkBuilder.include(include)
+      }
+
+      /**
+       * @param include This property indicates which Storage Lens group ARNs to include in the
+       * Storage Lens group aggregation.
+       */
+      override fun include(vararg include: String): Unit = include(include.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty,
+    ) : CdkObject(cdkObject), StorageLensGroupSelectionCriteriaProperty {
+      /**
+       * This property indicates which Storage Lens group ARNs to exclude from the Storage Lens
+       * group aggregation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-exclude)
+       */
+      override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+      /**
+       * This property indicates which Storage Lens group ARNs to include in the Storage Lens group
+       * aggregation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensgroupselectioncriteria.html#cfn-s3-storagelens-storagelensgroupselectioncriteria-include)
+       */
+      override fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          DetailedStatusCodesMetricsProperty {
+          StorageLensGroupSelectionCriteriaProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty):
-          DetailedStatusCodesMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DetailedStatusCodesMetricsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty):
+          StorageLensGroupSelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageLensGroupSelectionCriteriaProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DetailedStatusCodesMetricsProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty
-    }
-  }
-
-  /**
-   * This resource contains the details of the Amazon S3 Storage Lens metrics export.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.s3.*;
-   * Object sses3;
-   * DataExportProperty dataExportProperty = DataExportProperty.builder()
-   * .cloudWatchMetrics(CloudWatchMetricsProperty.builder()
-   * .isEnabled(false)
-   * .build())
-   * .s3BucketDestination(S3BucketDestinationProperty.builder()
-   * .accountId("accountId")
-   * .arn("arn")
-   * .format("format")
-   * .outputSchemaVersion("outputSchemaVersion")
-   * // the properties below are optional
-   * .encryption(EncryptionProperty.builder()
-   * .ssekms(SSEKMSProperty.builder()
-   * .keyId("keyId")
-   * .build())
-   * .sses3(sses3)
-   * .build())
-   * .prefix("prefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html)
-   */
-  public interface DataExportProperty {
-    /**
-     * This property enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-cloudwatchmetrics)
-     */
-    public fun cloudWatchMetrics(): Any? = unwrap(this).getCloudWatchMetrics()
-
-    /**
-     * This property contains the details of the bucket where the S3 Storage Lens metrics export
-     * will be placed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-s3bucketdestination)
-     */
-    public fun s3BucketDestination(): Any? = unwrap(this).getS3BucketDestination()
-
-    /**
-     * A builder for [DataExportProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      public fun cloudWatchMetrics(cloudWatchMetrics: IResolvable)
-
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      public fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty)
-
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("467a369691b5fe770301e5dbd21eec4ef8b36d60331c37c6bf16ddf66f927ec6")
-      public fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      public fun s3BucketDestination(s3BucketDestination: IResolvable)
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      public fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty)
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b9f029381afe0b426630e6f1402634bca1d91ecb86c94084967768609ec5aa9a")
-      public
-          fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty.Builder =
-          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty.builder()
-
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      override fun cloudWatchMetrics(cloudWatchMetrics: IResolvable) {
-        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      override fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty) {
-        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(CloudWatchMetricsProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchMetrics This property enables the Amazon CloudWatch publishing option for
-       * S3 Storage Lens metrics.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("467a369691b5fe770301e5dbd21eec4ef8b36d60331c37c6bf16ddf66f927ec6")
-      override
-          fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty.Builder.() -> Unit):
-          Unit = cloudWatchMetrics(CloudWatchMetricsProperty(cloudWatchMetrics))
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      override fun s3BucketDestination(s3BucketDestination: IResolvable) {
-        cdkBuilder.s3BucketDestination(s3BucketDestination.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      override fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty) {
-        cdkBuilder.s3BucketDestination(s3BucketDestination.let(S3BucketDestinationProperty::unwrap))
-      }
-
-      /**
-       * @param s3BucketDestination This property contains the details of the bucket where the S3
-       * Storage Lens metrics export will be placed.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b9f029381afe0b426630e6f1402634bca1d91ecb86c94084967768609ec5aa9a")
-      override
-          fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty.Builder.() -> Unit):
-          Unit = s3BucketDestination(S3BucketDestinationProperty(s3BucketDestination))
-
-      public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty,
-    ) : CdkObject(cdkObject), DataExportProperty {
-      /**
-       * This property enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-cloudwatchmetrics)
-       */
-      override fun cloudWatchMetrics(): Any? = unwrap(this).getCloudWatchMetrics()
-
-      /**
-       * This property contains the details of the bucket where the S3 Storage Lens metrics export
-       * will be placed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-s3bucketdestination)
-       */
-      override fun s3BucketDestination(): Any? = unwrap(this).getS3BucketDestination()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataExportProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty):
-          DataExportProperty = CdkObjectWrappers.wrap(cdkObject) as? DataExportProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataExportProperty):
-          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty
+      internal fun unwrap(wrapped: StorageLensGroupSelectionCriteriaProperty):
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
     }
   }
 }

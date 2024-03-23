@@ -198,7 +198,7 @@ public interface ParallelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps,
   ) : CdkObject(cdkObject), ParallelProps {
     /**
      * An optional description for this state.

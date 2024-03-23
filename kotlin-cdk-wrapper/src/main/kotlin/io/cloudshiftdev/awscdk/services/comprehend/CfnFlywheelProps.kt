@@ -309,7 +309,7 @@ public interface CfnFlywheelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheelProps,
+    cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheelProps,
   ) : CdkObject(cdkObject), CfnFlywheelProps {
     /**
      * The Amazon Resource Number (ARN) of the active model version.

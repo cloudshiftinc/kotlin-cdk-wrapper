@@ -109,7 +109,7 @@ public interface LoggingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.LoggingOptions,
+    cdkObject: software.amazon.awscdk.services.codebuild.LoggingOptions,
   ) : CdkObject(cdkObject), LoggingOptions {
     /**
      * Information about Amazon CloudWatch Logs for a build project.

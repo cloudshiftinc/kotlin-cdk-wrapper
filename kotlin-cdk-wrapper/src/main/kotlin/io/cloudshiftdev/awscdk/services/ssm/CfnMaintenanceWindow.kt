@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html)
  */
-public open class CfnMaintenanceWindow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindow,
+public open class CfnMaintenanceWindow(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -599,6 +599,7 @@ public open class CfnMaintenanceWindow internal constructor(
         CfnMaintenanceWindow = CfnMaintenanceWindow(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindow):
-        software.amazon.awscdk.services.ssm.CfnMaintenanceWindow = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindow = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindow
   }
 }

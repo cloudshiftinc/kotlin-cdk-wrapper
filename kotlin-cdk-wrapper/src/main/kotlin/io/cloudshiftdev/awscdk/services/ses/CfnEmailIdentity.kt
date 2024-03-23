@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html)
  */
-public open class CfnEmailIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity,
+public open class CfnEmailIdentity(
+  cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -695,14 +695,12 @@ public open class CfnEmailIdentity internal constructor(
         CfnEmailIdentity = CfnEmailIdentity(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailIdentity):
-        software.amazon.awscdk.services.ses.CfnEmailIdentity = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnEmailIdentity = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnEmailIdentity
   }
 
   /**
-   * Used to enable or disable feedback forwarding for an identity.
-   *
-   * This setting determines what happens when an identity is used to send an email that results in
-   * a bounce or complaint event.
+   * Used to associate a configuration set with an email identity.
    *
    * Example:
    *
@@ -710,143 +708,83 @@ public open class CfnEmailIdentity internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * FeedbackAttributesProperty feedbackAttributesProperty = FeedbackAttributesProperty.builder()
-   * .emailForwardingEnabled(false)
+   * ConfigurationSetAttributesProperty configurationSetAttributesProperty =
+   * ConfigurationSetAttributesProperty.builder()
+   * .configurationSetName("configurationSetName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html)
    */
-  public interface FeedbackAttributesProperty {
+  public interface ConfigurationSetAttributesProperty {
     /**
-     * Sets the feedback forwarding configuration for the identity.
+     * The configuration set to associate with an email identity.
      *
-     * If the value is `true` , you receive email notifications when bounce or complaint events
-     * occur. These notifications are sent to the address that you specified in the `Return-Path`
-     * header of the original email.
-     *
-     * You're required to have a method of tracking bounces and complaints. If you haven't set up
-     * another mechanism for receiving bounce or complaint notifications (for example, by setting up an
-     * event destination), you receive an email notification when these events occur (even if this
-     * setting is disabled).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html#cfn-ses-emailidentity-feedbackattributes-emailforwardingenabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
      */
-    public fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
+    public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
 
     /**
-     * A builder for [FeedbackAttributesProperty]
+     * A builder for [ConfigurationSetAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
-       * If the value is `true` , you receive email notifications when bounce or complaint events
-       * occur. These notifications are sent to the address that you specified in the `Return-Path`
-       * header of the original email.
-       *
-       * You're required to have a method of tracking bounces and complaints. If you haven't set up
-       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
-       * an event destination), you receive an email notification when these events occur (even if this
-       * setting is disabled).
+       * @param configurationSetName The configuration set to associate with an email identity.
        */
-      public fun emailForwardingEnabled(emailForwardingEnabled: Boolean)
-
-      /**
-       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
-       * If the value is `true` , you receive email notifications when bounce or complaint events
-       * occur. These notifications are sent to the address that you specified in the `Return-Path`
-       * header of the original email.
-       *
-       * You're required to have a method of tracking bounces and complaints. If you haven't set up
-       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
-       * an event destination), you receive an email notification when these events occur (even if this
-       * setting is disabled).
-       */
-      public fun emailForwardingEnabled(emailForwardingEnabled: IResolvable)
+      public fun configurationSetName(configurationSetName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.builder()
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
 
       /**
-       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
-       * If the value is `true` , you receive email notifications when bounce or complaint events
-       * occur. These notifications are sent to the address that you specified in the `Return-Path`
-       * header of the original email.
-       *
-       * You're required to have a method of tracking bounces and complaints. If you haven't set up
-       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
-       * an event destination), you receive an email notification when these events occur (even if this
-       * setting is disabled).
+       * @param configurationSetName The configuration set to associate with an email identity.
        */
-      override fun emailForwardingEnabled(emailForwardingEnabled: Boolean) {
-        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled)
-      }
-
-      /**
-       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
-       * If the value is `true` , you receive email notifications when bounce or complaint events
-       * occur. These notifications are sent to the address that you specified in the `Return-Path`
-       * header of the original email.
-       *
-       * You're required to have a method of tracking bounces and complaints. If you haven't set up
-       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
-       * an event destination), you receive an email notification when these events occur (even if this
-       * setting is disabled).
-       */
-      override fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
-        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled.let(IResolvable::unwrap))
+      override fun configurationSetName(configurationSetName: String) {
+        cdkBuilder.configurationSetName(configurationSetName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
-    ) : CdkObject(cdkObject), FeedbackAttributesProperty {
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
+    ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
       /**
-       * Sets the feedback forwarding configuration for the identity.
+       * The configuration set to associate with an email identity.
        *
-       * If the value is `true` , you receive email notifications when bounce or complaint events
-       * occur. These notifications are sent to the address that you specified in the `Return-Path`
-       * header of the original email.
-       *
-       * You're required to have a method of tracking bounces and complaints. If you haven't set up
-       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
-       * an event destination), you receive an email notification when these events occur (even if this
-       * setting is disabled).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html#cfn-ses-emailidentity-feedbackattributes-emailforwardingenabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
        */
-      override fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
+      override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FeedbackAttributesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConfigurationSetAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty):
-          FeedbackAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FeedbackAttributesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty):
+          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationSetAttributesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FeedbackAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty
+      internal fun unwrap(wrapped: ConfigurationSetAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty
     }
   }
 
   /**
-   * Used to enable or disable the custom Mail-From domain configuration for an email identity.
+   * Used to enable or disable DKIM authentication for an email identity.
    *
    * Example:
    *
@@ -854,167 +792,106 @@ public open class CfnEmailIdentity internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * MailFromAttributesProperty mailFromAttributesProperty = MailFromAttributesProperty.builder()
-   * .behaviorOnMxFailure("behaviorOnMxFailure")
-   * .mailFromDomain("mailFromDomain")
+   * DkimAttributesProperty dkimAttributesProperty = DkimAttributesProperty.builder()
+   * .signingEnabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
    */
-  public interface MailFromAttributesProperty {
+  public interface DkimAttributesProperty {
     /**
-     * The action to take if the required MX record isn't found when you send an email.
+     * Sets the DKIM signing configuration for the identity.
      *
-     * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
-     * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
-     * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
+     * When you set this value `true` , then the messages that are sent from the identity are signed
+     * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
      *
-     * These behaviors are taken when the custom MAIL FROM domain configuration is in the `Pending`
-     * , `Failed` , and `TemporaryFailure` states.
-     *
-     * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-behavioronmxfailure)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
      */
-    public fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
+    public fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
 
     /**
-     * The custom MAIL FROM domain that you want the verified identity to use.
-     *
-     * The MAIL FROM domain must meet the following criteria:
-     *
-     * * It has to be a subdomain of the verified identity.
-     * * It can't be used to receive email.
-     * * It can't be used in a "From" address if the MAIL FROM domain is a destination for feedback
-     * forwarding emails.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-mailfromdomain)
-     */
-    public fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
-
-    /**
-     * A builder for [MailFromAttributesProperty]
+     * A builder for [DkimAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param behaviorOnMxFailure The action to take if the required MX record isn't found when
-       * you send an email.
-       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
-       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
-       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
-       *
-       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
-       * `Pending` , `Failed` , and `TemporaryFailure` states.
-       *
-       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
        */
-      public fun behaviorOnMxFailure(behaviorOnMxFailure: String)
+      public fun signingEnabled(signingEnabled: Boolean)
 
       /**
-       * @param mailFromDomain The custom MAIL FROM domain that you want the verified identity to
-       * use.
-       * The MAIL FROM domain must meet the following criteria:
-       *
-       * * It has to be a subdomain of the verified identity.
-       * * It can't be used to receive email.
-       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
-       * feedback forwarding emails.
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
        */
-      public fun mailFromDomain(mailFromDomain: String)
+      public fun signingEnabled(signingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.builder()
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.builder()
 
       /**
-       * @param behaviorOnMxFailure The action to take if the required MX record isn't found when
-       * you send an email.
-       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
-       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
-       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
-       *
-       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
-       * `Pending` , `Failed` , and `TemporaryFailure` states.
-       *
-       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
        */
-      override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
-        cdkBuilder.behaviorOnMxFailure(behaviorOnMxFailure)
+      override fun signingEnabled(signingEnabled: Boolean) {
+        cdkBuilder.signingEnabled(signingEnabled)
       }
 
       /**
-       * @param mailFromDomain The custom MAIL FROM domain that you want the verified identity to
-       * use.
-       * The MAIL FROM domain must meet the following criteria:
-       *
-       * * It has to be a subdomain of the verified identity.
-       * * It can't be used to receive email.
-       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
-       * feedback forwarding emails.
+       * @param signingEnabled Sets the DKIM signing configuration for the identity.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
        */
-      override fun mailFromDomain(mailFromDomain: String) {
-        cdkBuilder.mailFromDomain(mailFromDomain)
+      override fun signingEnabled(signingEnabled: IResolvable) {
+        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
-    ) : CdkObject(cdkObject), MailFromAttributesProperty {
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
+    ) : CdkObject(cdkObject), DkimAttributesProperty {
       /**
-       * The action to take if the required MX record isn't found when you send an email.
+       * Sets the DKIM signing configuration for the identity.
        *
-       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
-       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
-       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
+       * When you set this value `true` , then the messages that are sent from the identity are
+       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
+       * signing.
        *
-       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
-       * `Pending` , `Failed` , and `TemporaryFailure` states.
-       *
-       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-behavioronmxfailure)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
        */
-      override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
-
-      /**
-       * The custom MAIL FROM domain that you want the verified identity to use.
-       *
-       * The MAIL FROM domain must meet the following criteria:
-       *
-       * * It has to be a subdomain of the verified identity.
-       * * It can't be used to receive email.
-       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
-       * feedback forwarding emails.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-mailfromdomain)
-       */
-      override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
+      override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MailFromAttributesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DkimAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty):
-          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MailFromAttributesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty):
+          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? DkimAttributesProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MailFromAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty
+      internal fun unwrap(wrapped: DkimAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty
     }
   }
 
@@ -1177,8 +1054,7 @@ public open class CfnEmailIdentity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
     ) : CdkObject(cdkObject), DkimSigningAttributesProperty {
       /**
        * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
@@ -1240,7 +1116,10 @@ public open class CfnEmailIdentity internal constructor(
   }
 
   /**
-   * Used to associate a configuration set with an email identity.
+   * Used to enable or disable feedback forwarding for an identity.
+   *
+   * This setting determines what happens when an identity is used to send an email that results in
+   * a bounce or complaint event.
    *
    * Example:
    *
@@ -1248,84 +1127,142 @@ public open class CfnEmailIdentity internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * ConfigurationSetAttributesProperty configurationSetAttributesProperty =
-   * ConfigurationSetAttributesProperty.builder()
-   * .configurationSetName("configurationSetName")
+   * FeedbackAttributesProperty feedbackAttributesProperty = FeedbackAttributesProperty.builder()
+   * .emailForwardingEnabled(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html)
    */
-  public interface ConfigurationSetAttributesProperty {
+  public interface FeedbackAttributesProperty {
     /**
-     * The configuration set to associate with an email identity.
+     * Sets the feedback forwarding configuration for the identity.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
+     * If the value is `true` , you receive email notifications when bounce or complaint events
+     * occur. These notifications are sent to the address that you specified in the `Return-Path`
+     * header of the original email.
+     *
+     * You're required to have a method of tracking bounces and complaints. If you haven't set up
+     * another mechanism for receiving bounce or complaint notifications (for example, by setting up an
+     * event destination), you receive an email notification when these events occur (even if this
+     * setting is disabled).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html#cfn-ses-emailidentity-feedbackattributes-emailforwardingenabled)
      */
-    public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+    public fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
 
     /**
-     * A builder for [ConfigurationSetAttributesProperty]
+     * A builder for [FeedbackAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param configurationSetName The configuration set to associate with an email identity.
+       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
+       * If the value is `true` , you receive email notifications when bounce or complaint events
+       * occur. These notifications are sent to the address that you specified in the `Return-Path`
+       * header of the original email.
+       *
+       * You're required to have a method of tracking bounces and complaints. If you haven't set up
+       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
+       * an event destination), you receive an email notification when these events occur (even if this
+       * setting is disabled).
        */
-      public fun configurationSetName(configurationSetName: String)
+      public fun emailForwardingEnabled(emailForwardingEnabled: Boolean)
+
+      /**
+       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
+       * If the value is `true` , you receive email notifications when bounce or complaint events
+       * occur. These notifications are sent to the address that you specified in the `Return-Path`
+       * header of the original email.
+       *
+       * You're required to have a method of tracking bounces and complaints. If you haven't set up
+       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
+       * an event destination), you receive an email notification when these events occur (even if this
+       * setting is disabled).
+       */
+      public fun emailForwardingEnabled(emailForwardingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.builder()
 
       /**
-       * @param configurationSetName The configuration set to associate with an email identity.
+       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
+       * If the value is `true` , you receive email notifications when bounce or complaint events
+       * occur. These notifications are sent to the address that you specified in the `Return-Path`
+       * header of the original email.
+       *
+       * You're required to have a method of tracking bounces and complaints. If you haven't set up
+       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
+       * an event destination), you receive an email notification when these events occur (even if this
+       * setting is disabled).
        */
-      override fun configurationSetName(configurationSetName: String) {
-        cdkBuilder.configurationSetName(configurationSetName)
+      override fun emailForwardingEnabled(emailForwardingEnabled: Boolean) {
+        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled)
+      }
+
+      /**
+       * @param emailForwardingEnabled Sets the feedback forwarding configuration for the identity.
+       * If the value is `true` , you receive email notifications when bounce or complaint events
+       * occur. These notifications are sent to the address that you specified in the `Return-Path`
+       * header of the original email.
+       *
+       * You're required to have a method of tracking bounces and complaints. If you haven't set up
+       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
+       * an event destination), you receive an email notification when these events occur (even if this
+       * setting is disabled).
+       */
+      override fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
+        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
-    ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
+    ) : CdkObject(cdkObject), FeedbackAttributesProperty {
       /**
-       * The configuration set to associate with an email identity.
+       * Sets the feedback forwarding configuration for the identity.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html#cfn-ses-emailidentity-configurationsetattributes-configurationsetname)
+       * If the value is `true` , you receive email notifications when bounce or complaint events
+       * occur. These notifications are sent to the address that you specified in the `Return-Path`
+       * header of the original email.
+       *
+       * You're required to have a method of tracking bounces and complaints. If you haven't set up
+       * another mechanism for receiving bounce or complaint notifications (for example, by setting up
+       * an event destination), you receive an email notification when these events occur (even if this
+       * setting is disabled).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html#cfn-ses-emailidentity-feedbackattributes-emailforwardingenabled)
        */
-      override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+      override fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConfigurationSetAttributesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FeedbackAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty):
-          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConfigurationSetAttributesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty):
+          FeedbackAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FeedbackAttributesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConfigurationSetAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty
+      internal fun unwrap(wrapped: FeedbackAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty
     }
   }
 
   /**
-   * Used to enable or disable DKIM authentication for an email identity.
+   * Used to enable or disable the custom Mail-From domain configuration for an email identity.
    *
    * Example:
    *
@@ -1333,107 +1270,166 @@ public open class CfnEmailIdentity internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
-   * DkimAttributesProperty dkimAttributesProperty = DkimAttributesProperty.builder()
-   * .signingEnabled(false)
+   * MailFromAttributesProperty mailFromAttributesProperty = MailFromAttributesProperty.builder()
+   * .behaviorOnMxFailure("behaviorOnMxFailure")
+   * .mailFromDomain("mailFromDomain")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html)
    */
-  public interface DkimAttributesProperty {
+  public interface MailFromAttributesProperty {
     /**
-     * Sets the DKIM signing configuration for the identity.
+     * The action to take if the required MX record isn't found when you send an email.
      *
-     * When you set this value `true` , then the messages that are sent from the identity are signed
-     * using DKIM. If you set this value to `false` , your messages are sent without DKIM signing.
+     * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
+     * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
+     * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
+     * These behaviors are taken when the custom MAIL FROM domain configuration is in the `Pending`
+     * , `Failed` , and `TemporaryFailure` states.
+     *
+     * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-behavioronmxfailure)
      */
-    public fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
+    public fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
 
     /**
-     * A builder for [DkimAttributesProperty]
+     * The custom MAIL FROM domain that you want the verified identity to use.
+     *
+     * The MAIL FROM domain must meet the following criteria:
+     *
+     * * It has to be a subdomain of the verified identity.
+     * * It can't be used to receive email.
+     * * It can't be used in a "From" address if the MAIL FROM domain is a destination for feedback
+     * forwarding emails.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-mailfromdomain)
+     */
+    public fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
+
+    /**
+     * A builder for [MailFromAttributesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
+       * @param behaviorOnMxFailure The action to take if the required MX record isn't found when
+       * you send an email.
+       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
+       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
+       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
+       *
+       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
+       * `Pending` , `Failed` , and `TemporaryFailure` states.
+       *
+       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
        */
-      public fun signingEnabled(signingEnabled: Boolean)
+      public fun behaviorOnMxFailure(behaviorOnMxFailure: String)
 
       /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
+       * @param mailFromDomain The custom MAIL FROM domain that you want the verified identity to
+       * use.
+       * The MAIL FROM domain must meet the following criteria:
+       *
+       * * It has to be a subdomain of the verified identity.
+       * * It can't be used to receive email.
+       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
+       * feedback forwarding emails.
        */
-      public fun signingEnabled(signingEnabled: IResolvable)
+      public fun mailFromDomain(mailFromDomain: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.Builder =
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.builder()
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.builder()
 
       /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
+       * @param behaviorOnMxFailure The action to take if the required MX record isn't found when
+       * you send an email.
+       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
+       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
+       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
+       *
+       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
+       * `Pending` , `Failed` , and `TemporaryFailure` states.
+       *
+       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
        */
-      override fun signingEnabled(signingEnabled: Boolean) {
-        cdkBuilder.signingEnabled(signingEnabled)
+      override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
+        cdkBuilder.behaviorOnMxFailure(behaviorOnMxFailure)
       }
 
       /**
-       * @param signingEnabled Sets the DKIM signing configuration for the identity.
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
+       * @param mailFromDomain The custom MAIL FROM domain that you want the verified identity to
+       * use.
+       * The MAIL FROM domain must meet the following criteria:
+       *
+       * * It has to be a subdomain of the verified identity.
+       * * It can't be used to receive email.
+       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
+       * feedback forwarding emails.
        */
-      override fun signingEnabled(signingEnabled: IResolvable) {
-        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
+      override fun mailFromDomain(mailFromDomain: String) {
+        cdkBuilder.mailFromDomain(mailFromDomain)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty =
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
-    ) : CdkObject(cdkObject), DkimAttributesProperty {
+      cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
+    ) : CdkObject(cdkObject), MailFromAttributesProperty {
       /**
-       * Sets the DKIM signing configuration for the identity.
+       * The action to take if the required MX record isn't found when you send an email.
        *
-       * When you set this value `true` , then the messages that are sent from the identity are
-       * signed using DKIM. If you set this value to `false` , your messages are sent without DKIM
-       * signing.
+       * When you set this value to `USE_DEFAULT_VALUE` , the mail is sent using *amazonses.com* as
+       * the MAIL FROM domain. When you set this value to `REJECT_MESSAGE` , the Amazon SES API v2
+       * returns a `MailFromDomainNotVerified` error, and doesn't attempt to deliver the email.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html#cfn-ses-emailidentity-dkimattributes-signingenabled)
+       * These behaviors are taken when the custom MAIL FROM domain configuration is in the
+       * `Pending` , `Failed` , and `TemporaryFailure` states.
+       *
+       * Valid Values: `USE_DEFAULT_VALUE | REJECT_MESSAGE`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-behavioronmxfailure)
        */
-      override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
+      override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
+
+      /**
+       * The custom MAIL FROM domain that you want the verified identity to use.
+       *
+       * The MAIL FROM domain must meet the following criteria:
+       *
+       * * It has to be a subdomain of the verified identity.
+       * * It can't be used to receive email.
+       * * It can't be used in a "From" address if the MAIL FROM domain is a destination for
+       * feedback forwarding emails.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html#cfn-ses-emailidentity-mailfromattributes-mailfromdomain)
+       */
+      override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DkimAttributesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MailFromAttributesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty):
-          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? DkimAttributesProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty):
+          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MailFromAttributesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DkimAttributesProperty):
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty
+      internal fun unwrap(wrapped: MailFromAttributesProperty):
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty
     }
   }
 }

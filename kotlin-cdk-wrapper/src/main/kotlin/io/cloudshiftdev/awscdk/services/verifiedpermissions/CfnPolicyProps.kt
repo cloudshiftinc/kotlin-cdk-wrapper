@@ -144,7 +144,7 @@ public interface CfnPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyProps,
+    cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyProps,
   ) : CdkObject(cdkObject), CfnPolicyProps {
     /**
      * Specifies the policy type and content to use for the new or updated policy.

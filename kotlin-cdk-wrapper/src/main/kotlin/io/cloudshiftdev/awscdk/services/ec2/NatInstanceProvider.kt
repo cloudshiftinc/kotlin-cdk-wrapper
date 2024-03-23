@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * @deprecated use NatInstanceProviderV2. NatInstanceProvider is deprecated since
  * the instance image used has reached EOL on Dec 31 2023
  */
-public open class NatInstanceProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProvider,
+public open class NatInstanceProvider(
+  cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProvider,
 ) : NatProvider(cdkObject), IConnectable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(props: NatInstanceProps) :
@@ -314,6 +314,7 @@ public open class NatInstanceProvider internal constructor(
         NatInstanceProvider = NatInstanceProvider(cdkObject)
 
     internal fun unwrap(wrapped: NatInstanceProvider):
-        software.amazon.awscdk.services.ec2.NatInstanceProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.NatInstanceProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.NatInstanceProvider
   }
 }

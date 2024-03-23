@@ -191,7 +191,7 @@ public interface CfnFlowVpcInterfaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps,
   ) : CdkObject(cdkObject), CfnFlowVpcInterfaceProps {
     /**
      * The Amazon Resource Name (ARN) of the flow.

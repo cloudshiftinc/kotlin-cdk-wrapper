@@ -83,7 +83,7 @@ public interface WindowStartTime {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.WindowStartTime,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.WindowStartTime,
   ) : CdkObject(cdkObject), WindowStartTime {
     /**
      * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.

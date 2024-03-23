@@ -141,7 +141,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * A string that specifies the name of the requested domain.

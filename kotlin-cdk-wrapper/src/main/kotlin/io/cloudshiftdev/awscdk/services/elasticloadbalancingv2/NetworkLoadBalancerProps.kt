@@ -208,8 +208,7 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps,
   ) : CdkObject(cdkObject), NetworkLoadBalancerProps {
     /**
      * Indicates whether cross-zone load balancing is enabled.

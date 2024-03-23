@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html)
  */
-public open class CfnDHCPOptions internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptions,
+public open class CfnDHCPOptions(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptions,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -421,6 +421,6 @@ public open class CfnDHCPOptions internal constructor(
         = CfnDHCPOptions(cdkObject)
 
     internal fun unwrap(wrapped: CfnDHCPOptions): software.amazon.awscdk.services.ec2.CfnDHCPOptions
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnDHCPOptions
   }
 }

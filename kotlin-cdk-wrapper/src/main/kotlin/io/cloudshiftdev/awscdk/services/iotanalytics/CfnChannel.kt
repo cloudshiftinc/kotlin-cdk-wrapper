@@ -61,8 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -403,159 +403,8 @@ public open class CfnChannel internal constructor(
         CfnChannel = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel):
-        software.amazon.awscdk.services.iotanalytics.CfnChannel = wrapped.cdkObject
-  }
-
-  /**
-   * Used to store channel data in an S3 bucket that you manage.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * CustomerManagedS3Property customerManagedS3Property = CustomerManagedS3Property.builder()
-   * .bucket("bucket")
-   * .roleArn("roleArn")
-   * // the properties below are optional
-   * .keyPrefix("keyPrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html)
-   */
-  public interface CustomerManagedS3Property {
-    /**
-     * The name of the S3 bucket in which channel data is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * (Optional) The prefix used to create the keys of the channel data objects.
-     *
-     * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
-     * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-keyprefix)
-     */
-    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
-
-    /**
-     * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon S3
-     * resources.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A builder for [CustomerManagedS3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The name of the S3 bucket in which channel data is stored. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param keyPrefix (Optional) The prefix used to create the keys of the channel data objects.
-       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
-       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
-       */
-      public fun keyPrefix(keyPrefix: String)
-
-      /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
-       * with your Amazon S3 resources. 
-       */
-      public fun roleArn(roleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property.builder()
-
-      /**
-       * @param bucket The name of the S3 bucket in which channel data is stored. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param keyPrefix (Optional) The prefix used to create the keys of the channel data objects.
-       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
-       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
-       */
-      override fun keyPrefix(keyPrefix: String) {
-        cdkBuilder.keyPrefix(keyPrefix)
-      }
-
-      /**
-       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
-       * with your Amazon S3 resources. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property,
-    ) : CdkObject(cdkObject), CustomerManagedS3Property {
-      /**
-       * The name of the S3 bucket in which channel data is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * (Optional) The prefix used to create the keys of the channel data objects.
-       *
-       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
-       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-keyprefix)
-       */
-      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
-
-      /**
-       * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon
-       * S3 resources.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomerManagedS3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property):
-          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomerManagedS3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomerManagedS3Property):
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property
-    }
+        software.amazon.awscdk.services.iotanalytics.CfnChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotanalytics.CfnChannel
   }
 
   /**
@@ -689,8 +538,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty,
     ) : CdkObject(cdkObject), ChannelStorageProperty {
       /**
        * Used to store channel data in an S3 bucket that you manage.
@@ -727,6 +575,157 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty
+    }
+  }
+
+  /**
+   * Used to store channel data in an S3 bucket that you manage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * CustomerManagedS3Property customerManagedS3Property = CustomerManagedS3Property.builder()
+   * .bucket("bucket")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html)
+   */
+  public interface CustomerManagedS3Property {
+    /**
+     * The name of the S3 bucket in which channel data is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * (Optional) The prefix used to create the keys of the channel data objects.
+     *
+     * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
+     * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-keyprefix)
+     */
+    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+    /**
+     * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon S3
+     * resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [CustomerManagedS3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The name of the S3 bucket in which channel data is stored. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param keyPrefix (Optional) The prefix used to create the keys of the channel data objects.
+       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
+       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
+       */
+      public fun keyPrefix(keyPrefix: String)
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
+       * with your Amazon S3 resources. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property.builder()
+
+      /**
+       * @param bucket The name of the S3 bucket in which channel data is stored. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param keyPrefix (Optional) The prefix used to create the keys of the channel data objects.
+       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
+       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
+       */
+      override fun keyPrefix(keyPrefix: String) {
+        cdkBuilder.keyPrefix(keyPrefix)
+      }
+
+      /**
+       * @param roleArn The ARN of the role that grants AWS IoT Analytics permission to interact
+       * with your Amazon S3 resources. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property,
+    ) : CdkObject(cdkObject), CustomerManagedS3Property {
+      /**
+       * The name of the S3 bucket in which channel data is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * (Optional) The prefix used to create the keys of the channel data objects.
+       *
+       * Each object in an S3 bucket has a key that is its unique identifier within the bucket (each
+       * object in a bucket has exactly one key). The prefix must end with a forward slash (/).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-keyprefix)
+       */
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+      /**
+       * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon
+       * S3 resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html#cfn-iotanalytics-channel-customermanageds3-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomerManagedS3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property):
+          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedS3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomerManagedS3Property):
+          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property
     }
   }
 
@@ -819,8 +818,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty,
     ) : CdkObject(cdkObject), RetentionPeriodProperty {
       /**
        * The number of days that message data is kept.

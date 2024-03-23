@@ -84,7 +84,7 @@ public interface PortOverride {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.PortOverride,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.PortOverride,
   ) : CdkObject(cdkObject), PortOverride {
     /**
      * The endpoint port that you want a listener port to be mapped to.

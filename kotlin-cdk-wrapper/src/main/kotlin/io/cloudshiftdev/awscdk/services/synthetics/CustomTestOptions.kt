@@ -80,7 +80,7 @@ public interface CustomTestOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.CustomTestOptions,
+    cdkObject: software.amazon.awscdk.services.synthetics.CustomTestOptions,
   ) : CdkObject(cdkObject), CustomTestOptions {
     /**
      * The code of the canary script.

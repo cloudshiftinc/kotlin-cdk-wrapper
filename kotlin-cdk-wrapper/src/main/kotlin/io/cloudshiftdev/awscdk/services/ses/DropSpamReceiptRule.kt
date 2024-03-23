@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-lambda-example-functions.html)
  */
-public open class DropSpamReceiptRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.DropSpamReceiptRule,
+public open class DropSpamReceiptRule(
+  cdkObject: software.amazon.awscdk.services.ses.DropSpamReceiptRule,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -300,6 +300,7 @@ public open class DropSpamReceiptRule internal constructor(
         DropSpamReceiptRule = DropSpamReceiptRule(cdkObject)
 
     internal fun unwrap(wrapped: DropSpamReceiptRule):
-        software.amazon.awscdk.services.ses.DropSpamReceiptRule = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.DropSpamReceiptRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.DropSpamReceiptRule
   }
 }

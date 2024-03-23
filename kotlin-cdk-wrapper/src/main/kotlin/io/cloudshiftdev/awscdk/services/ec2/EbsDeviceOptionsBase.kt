@@ -118,7 +118,7 @@ public interface EbsDeviceOptionsBase {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase,
+    cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase,
   ) : CdkObject(cdkObject), EbsDeviceOptionsBase {
     /**
      * Indicates whether to delete the volume when the instance is terminated.

@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html)
  */
-public open class CfnResolverRuleAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation,
+public open class CfnResolverRuleAssociation(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -222,6 +221,7 @@ public open class CfnResolverRuleAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnResolverRuleAssociation):
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation
   }
 }

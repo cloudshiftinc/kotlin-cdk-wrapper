@@ -142,7 +142,7 @@ public interface CfnConnectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codestarconnections.CfnConnectionProps,
+    cdkObject: software.amazon.awscdk.services.codestarconnections.CfnConnectionProps,
   ) : CdkObject(cdkObject), CfnConnectionProps {
     /**
      * The name of the connection.

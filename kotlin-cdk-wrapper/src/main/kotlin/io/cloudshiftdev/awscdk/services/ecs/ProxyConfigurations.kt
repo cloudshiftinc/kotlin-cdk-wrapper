@@ -18,8 +18,8 @@ import kotlin.jvm.JvmName
  * ProxyConfigurations proxyConfigurations = new ProxyConfigurations();
  * ```
  */
-public open class ProxyConfigurations internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfigurations,
+public open class ProxyConfigurations(
+  cdkObject: software.amazon.awscdk.services.ecs.ProxyConfigurations,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.ecs.ProxyConfigurations()
   )
@@ -39,6 +39,7 @@ public open class ProxyConfigurations internal constructor(
         ProxyConfigurations = ProxyConfigurations(cdkObject)
 
     internal fun unwrap(wrapped: ProxyConfigurations):
-        software.amazon.awscdk.services.ecs.ProxyConfigurations = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.ProxyConfigurations = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.ProxyConfigurations
   }
 }

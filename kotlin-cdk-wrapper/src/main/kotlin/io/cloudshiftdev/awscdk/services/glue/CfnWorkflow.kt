@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html)
  */
-public open class CfnWorkflow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow,
+public open class CfnWorkflow(
+  cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -287,6 +287,6 @@ public open class CfnWorkflow internal constructor(
         CfnWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.glue.CfnWorkflow =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnWorkflow
   }
 }

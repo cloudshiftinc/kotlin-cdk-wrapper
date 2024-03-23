@@ -312,7 +312,7 @@ public interface FargateComputeEnvironmentProps : ManagedComputeEnvironmentProps
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps,
   ) : CdkObject(cdkObject), FargateComputeEnvironmentProps {
     /**
      * The name of the ComputeEnvironment.

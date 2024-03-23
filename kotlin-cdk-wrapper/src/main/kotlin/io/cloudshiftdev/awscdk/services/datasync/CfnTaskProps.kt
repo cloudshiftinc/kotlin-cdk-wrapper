@@ -638,7 +638,7 @@ public interface CfnTaskProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnTaskProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnTaskProps,
   ) : CdkObject(cdkObject), CfnTaskProps {
     /**
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and

@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html)
  */
-public open class CfnSchedulingPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
+public open class CfnSchedulingPolicy(
+  cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -304,178 +304,8 @@ public open class CfnSchedulingPolicy internal constructor(
         CfnSchedulingPolicy = CfnSchedulingPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchedulingPolicy):
-        software.amazon.awscdk.services.batch.CfnSchedulingPolicy = wrapped.cdkObject
-  }
-
-  /**
-   * Specifies the weights for the fair share identifiers for the fair share policy.
-   *
-   * Fair share identifiers that aren't included have a default weight of `1.0` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.batch.*;
-   * ShareAttributesProperty shareAttributesProperty = ShareAttributesProperty.builder()
-   * .shareIdentifier("shareIdentifier")
-   * .weightFactor(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html)
-   */
-  public interface ShareAttributesProperty {
-    /**
-     * A fair share identifier or fair share identifier prefix.
-     *
-     * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-     * fair share identifiers that start with that prefix. The list of fair share identifiers in a fair
-     * share policy can't overlap. For example, you can't have one that specifies a `shareIdentifier`
-     * of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
-     *
-     * There can be no more than 500 fair share identifiers active in a job queue.
-     *
-     * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk (*).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-shareidentifier)
-     */
-    public fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
-
-    /**
-     * The weight factor for the fair share identifier.
-     *
-     * The default value is 1.0. A lower value has a higher priority for compute resources. For
-     * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
-     * compute resources of jobs that use a share identifier with a weight factor of 1.
-     *
-     * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-weightfactor)
-     */
-    public fun weightFactor(): Number? = unwrap(this).getWeightFactor()
-
-    /**
-     * A builder for [ShareAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
-       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
-       *
-       * There can be no more than 500 fair share identifiers active in a job queue.
-       *
-       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
-       * (*).
-       */
-      public fun shareIdentifier(shareIdentifier: String)
-
-      /**
-       * @param weightFactor The weight factor for the fair share identifier.
-       * The default value is 1.0. A lower value has a higher priority for compute resources. For
-       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
-       * compute resources of jobs that use a share identifier with a weight factor of 1.
-       *
-       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
-       */
-      public fun weightFactor(weightFactor: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.Builder
-          =
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.builder()
-
-      /**
-       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
-       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
-       *
-       * There can be no more than 500 fair share identifiers active in a job queue.
-       *
-       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
-       * (*).
-       */
-      override fun shareIdentifier(shareIdentifier: String) {
-        cdkBuilder.shareIdentifier(shareIdentifier)
-      }
-
-      /**
-       * @param weightFactor The weight factor for the fair share identifier.
-       * The default value is 1.0. A lower value has a higher priority for compute resources. For
-       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
-       * compute resources of jobs that use a share identifier with a weight factor of 1.
-       *
-       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
-       */
-      override fun weightFactor(weightFactor: Number) {
-        cdkBuilder.weightFactor(weightFactor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
-    ) : CdkObject(cdkObject), ShareAttributesProperty {
-      /**
-       * A fair share identifier or fair share identifier prefix.
-       *
-       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
-       *
-       * There can be no more than 500 fair share identifiers active in a job queue.
-       *
-       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
-       * (*).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-shareidentifier)
-       */
-      override fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
-
-      /**
-       * The weight factor for the fair share identifier.
-       *
-       * The default value is 1.0. A lower value has a higher priority for compute resources. For
-       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
-       * compute resources of jobs that use a share identifier with a weight factor of 1.
-       *
-       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-weightfactor)
-       */
-      override fun weightFactor(): Number? = unwrap(this).getWeightFactor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ShareAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty):
-          ShareAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? ShareAttributesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ShareAttributesProperty):
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty
-    }
+        software.amazon.awscdk.services.batch.CfnSchedulingPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.CfnSchedulingPolicy
   }
 
   /**
@@ -663,8 +493,7 @@ public open class CfnSchedulingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
     ) : CdkObject(cdkObject), FairsharePolicyProperty {
       /**
        * A value used to reserve some of the available maximum vCPU for fair share identifiers that
@@ -724,6 +553,176 @@ public open class CfnSchedulingPolicy internal constructor(
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty
+    }
+  }
+
+  /**
+   * Specifies the weights for the fair share identifiers for the fair share policy.
+   *
+   * Fair share identifiers that aren't included have a default weight of `1.0` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * ShareAttributesProperty shareAttributesProperty = ShareAttributesProperty.builder()
+   * .shareIdentifier("shareIdentifier")
+   * .weightFactor(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html)
+   */
+  public interface ShareAttributesProperty {
+    /**
+     * A fair share identifier or fair share identifier prefix.
+     *
+     * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
+     * fair share identifiers that start with that prefix. The list of fair share identifiers in a fair
+     * share policy can't overlap. For example, you can't have one that specifies a `shareIdentifier`
+     * of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+     *
+     * There can be no more than 500 fair share identifiers active in a job queue.
+     *
+     * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk (*).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-shareidentifier)
+     */
+    public fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
+
+    /**
+     * The weight factor for the fair share identifier.
+     *
+     * The default value is 1.0. A lower value has a higher priority for compute resources. For
+     * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
+     * compute resources of jobs that use a share identifier with a weight factor of 1.
+     *
+     * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-weightfactor)
+     */
+    public fun weightFactor(): Number? = unwrap(this).getWeightFactor()
+
+    /**
+     * A builder for [ShareAttributesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
+       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
+       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
+       * fair share policy can't overlap. For example, you can't have one that specifies a
+       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       *
+       * There can be no more than 500 fair share identifiers active in a job queue.
+       *
+       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
+       * (*).
+       */
+      public fun shareIdentifier(shareIdentifier: String)
+
+      /**
+       * @param weightFactor The weight factor for the fair share identifier.
+       * The default value is 1.0. A lower value has a higher priority for compute resources. For
+       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
+       * compute resources of jobs that use a share identifier with a weight factor of 1.
+       *
+       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
+       */
+      public fun weightFactor(weightFactor: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.builder()
+
+      /**
+       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
+       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
+       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
+       * fair share policy can't overlap. For example, you can't have one that specifies a
+       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       *
+       * There can be no more than 500 fair share identifiers active in a job queue.
+       *
+       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
+       * (*).
+       */
+      override fun shareIdentifier(shareIdentifier: String) {
+        cdkBuilder.shareIdentifier(shareIdentifier)
+      }
+
+      /**
+       * @param weightFactor The weight factor for the fair share identifier.
+       * The default value is 1.0. A lower value has a higher priority for compute resources. For
+       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
+       * compute resources of jobs that use a share identifier with a weight factor of 1.
+       *
+       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
+       */
+      override fun weightFactor(weightFactor: Number) {
+        cdkBuilder.weightFactor(weightFactor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
+    ) : CdkObject(cdkObject), ShareAttributesProperty {
+      /**
+       * A fair share identifier or fair share identifier prefix.
+       *
+       * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
+       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
+       * fair share policy can't overlap. For example, you can't have one that specifies a
+       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       *
+       * There can be no more than 500 fair share identifiers active in a job queue.
+       *
+       * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
+       * (*).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-shareidentifier)
+       */
+      override fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
+
+      /**
+       * The weight factor for the fair share identifier.
+       *
+       * The default value is 1.0. A lower value has a higher priority for compute resources. For
+       * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
+       * compute resources of jobs that use a share identifier with a weight factor of 1.
+       *
+       * The smallest supported value is 0.0001, and the largest supported value is 999.9999.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-weightfactor)
+       */
+      override fun weightFactor(): Number? = unwrap(this).getWeightFactor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ShareAttributesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty):
+          ShareAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? ShareAttributesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ShareAttributesProperty):
+          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty
     }
   }
 }

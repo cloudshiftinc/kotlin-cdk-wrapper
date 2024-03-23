@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html)
  */
-public open class CfnLogging internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnLogging,
+public open class CfnLogging(
+  cdkObject: software.amazon.awscdk.services.iot.CfnLogging,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -184,6 +184,6 @@ public open class CfnLogging internal constructor(
         CfnLogging(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogging): software.amazon.awscdk.services.iot.CfnLogging =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnLogging
   }
 }

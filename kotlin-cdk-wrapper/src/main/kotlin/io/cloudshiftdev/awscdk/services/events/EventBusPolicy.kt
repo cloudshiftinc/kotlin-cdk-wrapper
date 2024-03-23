@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EventBusPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.EventBusPolicy,
+public open class EventBusPolicy(
+  cdkObject: software.amazon.awscdk.services.events.EventBusPolicy,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -159,6 +159,7 @@ public open class EventBusPolicy internal constructor(
         EventBusPolicy = EventBusPolicy(cdkObject)
 
     internal fun unwrap(wrapped: EventBusPolicy):
-        software.amazon.awscdk.services.events.EventBusPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.events.EventBusPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.EventBusPolicy
   }
 }

@@ -32,8 +32,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AccessLogFormat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogFormat,
+public open class AccessLogFormat(
+  cdkObject: software.amazon.awscdk.services.apigateway.AccessLogFormat,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun clf(): AccessLogFormat =
@@ -57,6 +57,7 @@ public open class AccessLogFormat internal constructor(
         AccessLogFormat = AccessLogFormat(cdkObject)
 
     internal fun unwrap(wrapped: AccessLogFormat):
-        software.amazon.awscdk.services.apigateway.AccessLogFormat = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.AccessLogFormat = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.AccessLogFormat
   }
 }

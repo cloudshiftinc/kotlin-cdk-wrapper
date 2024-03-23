@@ -75,7 +75,7 @@ public interface IStage {
   public fun stageName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.IStage,
+    cdkObject: software.amazon.awscdk.services.codepipeline.IStage,
   ) : CdkObject(cdkObject), IStage {
     /**
      * The actions belonging to this stage.

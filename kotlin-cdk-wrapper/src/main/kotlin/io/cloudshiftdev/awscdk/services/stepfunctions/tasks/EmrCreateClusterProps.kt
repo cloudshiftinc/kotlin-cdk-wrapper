@@ -777,8 +777,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps,
   ) : CdkObject(cdkObject), EmrCreateClusterProps {
     /**
      * A JSON string for selecting additional features.

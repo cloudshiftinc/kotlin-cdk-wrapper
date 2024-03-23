@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html)
  */
-public open class CfnPermission internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.acmpca.CfnPermission,
+public open class CfnPermission(
+  cdkObject: software.amazon.awscdk.services.acmpca.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -274,6 +274,7 @@ public open class CfnPermission internal constructor(
         CfnPermission = CfnPermission(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermission):
-        software.amazon.awscdk.services.acmpca.CfnPermission = wrapped.cdkObject
+        software.amazon.awscdk.services.acmpca.CfnPermission = wrapped.cdkObject as
+        software.amazon.awscdk.services.acmpca.CfnPermission
   }
 }

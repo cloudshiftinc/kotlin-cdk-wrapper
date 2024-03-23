@@ -206,7 +206,7 @@ public interface IntegrationResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IntegrationResponse,
+    cdkObject: software.amazon.awscdk.services.apigateway.IntegrationResponse,
   ) : CdkObject(cdkObject), IntegrationResponse {
     /**
      * Specifies how to handle request payload content type conversions.

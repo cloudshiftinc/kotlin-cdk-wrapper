@@ -80,7 +80,7 @@ public interface BuildEnvironmentCertificate {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate,
+    cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate,
   ) : CdkObject(cdkObject), BuildEnvironmentCertificate {
     /**
      * The bucket where the certificate is.

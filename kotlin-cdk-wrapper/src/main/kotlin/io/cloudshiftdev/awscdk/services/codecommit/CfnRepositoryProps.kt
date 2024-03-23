@@ -355,7 +355,7 @@ public interface CfnRepositoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepositoryProps,
+    cdkObject: software.amazon.awscdk.services.codecommit.CfnRepositoryProps,
   ) : CdkObject(cdkObject), CfnRepositoryProps {
     /**
      * Information about code to be committed to a repository after it is created in an AWS

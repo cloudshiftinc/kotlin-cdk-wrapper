@@ -874,7 +874,7 @@ public interface CfnGraphQLApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApiProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApiProps,
   ) : CdkObject(cdkObject), CfnGraphQLApiProps {
     /**
      * A list of additional authentication providers for the `GraphqlApi` API.

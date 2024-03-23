@@ -72,7 +72,7 @@ public interface VirtualNodeAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeAttributes,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeAttributes,
   ) : CdkObject(cdkObject), VirtualNodeAttributes {
     /**
      * The Mesh that the VirtualNode belongs to.

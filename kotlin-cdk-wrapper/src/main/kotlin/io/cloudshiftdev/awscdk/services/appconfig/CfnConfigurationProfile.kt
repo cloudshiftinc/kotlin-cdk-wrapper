@@ -74,9 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html)
  */
-public open class CfnConfigurationProfile internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appconfig.CfnConfigurationProfile,
+public open class CfnConfigurationProfile(
+  cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -579,7 +578,8 @@ public open class CfnConfigurationProfile internal constructor(
         CfnConfigurationProfile = CfnConfigurationProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationProfile):
-        software.amazon.awscdk.services.appconfig.CfnConfigurationProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.CfnConfigurationProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
   }
 
   /**
@@ -663,8 +663,7 @@ public open class CfnConfigurationProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty,
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty,
     ) : CdkObject(cdkObject), ValidatorsProperty {
       /**
        * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.

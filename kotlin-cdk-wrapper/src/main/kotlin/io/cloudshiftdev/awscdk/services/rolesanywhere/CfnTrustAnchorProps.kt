@@ -240,7 +240,7 @@ public interface CfnTrustAnchorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps,
+    cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps,
   ) : CdkObject(cdkObject), CfnTrustAnchorProps {
     /**
      * Indicates whether the trust anchor is enabled.

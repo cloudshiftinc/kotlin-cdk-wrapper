@@ -82,8 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html)
  */
-public open class CfnConfigurationRecorder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder,
+public open class CfnConfigurationRecorder(
+  cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -655,26 +655,50 @@ public open class CfnConfigurationRecorder internal constructor(
         CfnConfigurationRecorder = CfnConfigurationRecorder(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationRecorder):
-        software.amazon.awscdk.services.config.CfnConfigurationRecorder = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnConfigurationRecorder = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnConfigurationRecorder
   }
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
-   *
-   * AWS Config supports *Continuous recording* and *Daily recording* .
-   *
-   * * Continuous recording allows you to record configuration changes continuously whenever a
-   * change occurs.
-   * * Daily recording allows you to receive a configuration item (CI) representing the most recent
-   * state of your resources over the last 24-hour period, only if it’s different from the previous CI
+   * Specifies whether the configuration recorder excludes certain resource types from being
    * recorded.
    *
+   * Use the `ResourceTypes` field to enter a comma-separated list of resource types you want to
+   * exclude from recording.
    *
-   * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
-   * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
+   * By default, when AWS Config adds support for a new resource type in the Region where you set up
+   * the configuration recorder, including global resource types, AWS Config starts recording resources
+   * of that type automatically.
    *
    *
-   * You can also override the recording frequency for specific resource types.
+   * *How to use the exclusion recording strategy*
+   *
+   * To use this option, you must set the `useOnly` field of
+   * [RecordingStrategy](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html)
+   * to `EXCLUSION_BY_RESOURCE_TYPES` .
+   *
+   * AWS Config will then record configuration changes for all supported resource types, except the
+   * resource types that you specify to exclude from being recorded.
+   *
+   * *Global resource types and the exclusion recording strategy*
+   *
+   * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+   * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+   *
+   * IAM users, groups, roles, and customer managed policies will be recorded in the Region where
+   * you set up the configuration recorder if that is a Region where AWS Config was available before
+   * February 2022. You cannot be record the global IAM resouce types in Regions supported by AWS
+   * Config after February 2022. This list where you cannot record the global IAM resource types
+   * includes the following Regions:
+   *
+   * * Asia Pacific (Hyderabad)
+   * * Asia Pacific (Melbourne)
+   * * Canada West (Calgary)
+   * * Europe (Spain)
+   * * Europe (Zurich)
+   * * Israel (Tel Aviv)
+   * * Middle East (UAE)
+   *
    *
    * Example:
    *
@@ -682,562 +706,94 @@ public open class CfnConfigurationRecorder internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.config.*;
-   * RecordingModeProperty recordingModeProperty = RecordingModeProperty.builder()
-   * .recordingFrequency("recordingFrequency")
-   * // the properties below are optional
-   * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
-   * .recordingFrequency("recordingFrequency")
+   * ExclusionByResourceTypesProperty exclusionByResourceTypesProperty =
+   * ExclusionByResourceTypesProperty.builder()
    * .resourceTypes(List.of("resourceTypes"))
-   * // the properties below are optional
-   * .description("description")
-   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html)
    */
-  public interface RecordingModeProperty {
+  public interface ExclusionByResourceTypesProperty {
     /**
-     * The default recording frequency that AWS Config uses to record configuration changes.
+     * A comma-separated list of resource types to exclude from recording by the configuration
+     * recorder.
      *
-     *
-     * Daily recording is not supported for the following resource types:
-     *
-     * * `AWS::Config::ResourceCompliance`
-     * * `AWS::Config::ConformancePackCompliance`
-     * * `AWS::Config::ConfigurationRecorder`
-     *
-     * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these resource
-     * types will be set to Continuous recording.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingfrequency)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html#cfn-config-configurationrecorder-exclusionbyresourcetypes-resourcetypes)
      */
-    public fun recordingFrequency(): String
+    public fun resourceTypes(): List<String>
 
     /**
-     * An array of `recordingModeOverride` objects for you to specify your overrides for the
-     * recording mode.
-     *
-     * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-     * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-     * override.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingmodeoverrides)
-     */
-    public fun recordingModeOverrides(): Any? = unwrap(this).getRecordingModeOverrides()
-
-    /**
-     * A builder for [RecordingModeProperty]
+     * A builder for [ExclusionByResourceTypesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param recordingFrequency The default recording frequency that AWS Config uses to record
-       * configuration changes. 
-       *
-       * Daily recording is not supported for the following resource types:
-       *
-       * * `AWS::Config::ResourceCompliance`
-       * * `AWS::Config::ConformancePackCompliance`
-       * * `AWS::Config::ConfigurationRecorder`
-       *
-       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
-       * resource types will be set to Continuous recording.
+       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
+       * the configuration recorder. 
        */
-      public fun recordingFrequency(recordingFrequency: String)
+      public fun resourceTypes(resourceTypes: List<String>)
 
       /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
+       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
+       * the configuration recorder. 
        */
-      public fun recordingModeOverrides(recordingModeOverrides: IResolvable)
-
-      /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
-       */
-      public fun recordingModeOverrides(recordingModeOverrides: List<Any>)
-
-      /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
-       */
-      public fun recordingModeOverrides(vararg recordingModeOverrides: Any)
+      public fun resourceTypes(vararg resourceTypes: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty.Builder
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty.Builder
           =
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty.builder()
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty.builder()
 
       /**
-       * @param recordingFrequency The default recording frequency that AWS Config uses to record
-       * configuration changes. 
-       *
-       * Daily recording is not supported for the following resource types:
-       *
-       * * `AWS::Config::ResourceCompliance`
-       * * `AWS::Config::ConformancePackCompliance`
-       * * `AWS::Config::ConfigurationRecorder`
-       *
-       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
-       * resource types will be set to Continuous recording.
+       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
+       * the configuration recorder. 
        */
-      override fun recordingFrequency(recordingFrequency: String) {
-        cdkBuilder.recordingFrequency(recordingFrequency)
+      override fun resourceTypes(resourceTypes: List<String>) {
+        cdkBuilder.resourceTypes(resourceTypes)
       }
 
       /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
+       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
+       * the configuration recorder. 
        */
-      override fun recordingModeOverrides(recordingModeOverrides: IResolvable) {
-        cdkBuilder.recordingModeOverrides(recordingModeOverrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
-       */
-      override fun recordingModeOverrides(recordingModeOverrides: List<Any>) {
-        cdkBuilder.recordingModeOverrides(recordingModeOverrides)
-      }
-
-      /**
-       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
-       * specify your overrides for the recording mode.
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
-       */
-      override fun recordingModeOverrides(vararg recordingModeOverrides: Any): Unit =
-          recordingModeOverrides(recordingModeOverrides.toList())
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
 
       public fun build():
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty,
-    ) : CdkObject(cdkObject), RecordingModeProperty {
-      /**
-       * The default recording frequency that AWS Config uses to record configuration changes.
-       *
-       *
-       * Daily recording is not supported for the following resource types:
-       *
-       * * `AWS::Config::ResourceCompliance`
-       * * `AWS::Config::ConformancePackCompliance`
-       * * `AWS::Config::ConfigurationRecorder`
-       *
-       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
-       * resource types will be set to Continuous recording.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingfrequency)
-       */
-      override fun recordingFrequency(): String = unwrap(this).getRecordingFrequency()
-
-      /**
-       * An array of `recordingModeOverride` objects for you to specify your overrides for the
-       * recording mode.
-       *
-       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
-       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
-       * override.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingmodeoverrides)
-       */
-      override fun recordingModeOverrides(): Any? = unwrap(this).getRecordingModeOverrides()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecordingModeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty):
-          RecordingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingModeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecordingModeProperty):
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty
-    }
-  }
-
-  /**
-   * Specifies the recording strategy of the configuration recorder.
-   *
-   * Valid values include: `ALL_SUPPORTED_RESOURCE_TYPES` , `INCLUSION_BY_RESOURCE_TYPES` , and
-   * `EXCLUSION_BY_RESOURCE_TYPES` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * RecordingStrategyProperty recordingStrategyProperty = RecordingStrategyProperty.builder()
-   * .useOnly("useOnly")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html)
-   */
-  public interface RecordingStrategyProperty {
-    /**
-     * The recording strategy for the configuration recorder.
-     *
-     * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records configuration
-     * changes for all supported resource types, excluding the global IAM resource types. You also must
-     * set the `AllSupported` field of
-     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-     * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see [Supported
-     * Resource
-     * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
-     * in the *AWS Config developer guide* .
-     * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records configuration
-     * changes for only the resource types that you specify in the `ResourceTypes` field of
-     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-     * .
-     * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records configuration
-     * changes for all supported resource types, except the resource types that you specify to exclude
-     * from being recorded in the `ResourceTypes` field of
-     * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-     * .
-     *
-     *
-     * *Required and optional fields*
-     *
-     * The `recordingStrategy` field is optional when you set the `AllSupported` field of
-     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-     * to `true` .
-     *
-     * The `recordingStrategy` field is optional when you list resource types in the `ResourceTypes`
-     * field of
-     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-     * .
-     *
-     * The `recordingStrategy` field is required if you list resource types to exclude from
-     * recording in the `ResourceTypes` field of
-     * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-     * . &gt; *Overriding fields*
-     *
-     * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
-     * `ExclusionByResourceTypes` field will override other properties in the request.
-     *
-     * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource types
-     * will still be automatically recorded in this option unless those resource types are specifically
-     * listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` . &gt; *Global
-     * resource types and the exclusion recording strategy*
-     *
-     * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
-     * Config adds support for a new resource type in the Region where you set up the configuration
-     * recorder, including global resource types, AWS Config starts recording resources of that type
-     * automatically.
-     *
-     * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
-     * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
-     *
-     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where
-     * you set up the configuration recorder if that is a Region where AWS Config was available before
-     * February 2022. You cannot be record the global IAM resouce types in Regions supported by AWS
-     * Config after February 2022. This list where you cannot record the global IAM resource types
-     * includes the following Regions:
-     *
-     * * Asia Pacific (Hyderabad)
-     * * Asia Pacific (Melbourne)
-     * * Canada West (Calgary)
-     * * Europe (Spain)
-     * * Europe (Zurich)
-     * * Israel (Tel Aviv)
-     * * Middle East (UAE)
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html#cfn-config-configurationrecorder-recordingstrategy-useonly)
-     */
-    public fun useOnly(): String
-
-    /**
-     * A builder for [RecordingStrategyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param useOnly The recording strategy for the configuration recorder. 
-       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, excluding the global IAM resource
-       * types. You also must set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
-       * starts recording resources of that type. For a list of supported resource types, see
-       * [Supported Resource
-       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
-       * in the *AWS Config developer guide* .
-       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for only the resource types that you specify in the `ResourceTypes`
-       * field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, except the resource types that you
-       * specify to exclude from being recorded in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * .
-       *
-       *
-       * *Required and optional fields*
-       *
-       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` .
-       *
-       * The `recordingStrategy` field is optional when you list resource types in the
-       * `ResourceTypes` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       *
-       * The `recordingStrategy` field is required if you list resource types to exclude from
-       * recording in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * . &gt; *Overriding fields*
-       *
-       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
-       * `ExclusionByResourceTypes` field will override other properties in the request.
-       *
-       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
-       * types will still be automatically recorded in this option unless those resource types are
-       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
-       * &gt; *Global resource types and the exclusion recording strategy*
-       *
-       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
-       * Config adds support for a new resource type in the Region where you set up the configuration
-       * recorder, including global resource types, AWS Config starts recording resources of that type
-       * automatically.
-       *
-       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
-       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
-       *
-       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
-       * where you set up the configuration recorder if that is a Region where AWS Config was available
-       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
-       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
-       * types includes the following Regions:
-       *
-       * * Asia Pacific (Hyderabad)
-       * * Asia Pacific (Melbourne)
-       * * Canada West (Calgary)
-       * * Europe (Spain)
-       * * Europe (Zurich)
-       * * Israel (Tel Aviv)
-       * * Middle East (UAE)
-       */
-      public fun useOnly(useOnly: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty.builder()
-
-      /**
-       * @param useOnly The recording strategy for the configuration recorder. 
-       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, excluding the global IAM resource
-       * types. You also must set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
-       * starts recording resources of that type. For a list of supported resource types, see
-       * [Supported Resource
-       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
-       * in the *AWS Config developer guide* .
-       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for only the resource types that you specify in the `ResourceTypes`
-       * field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, except the resource types that you
-       * specify to exclude from being recorded in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * .
-       *
-       *
-       * *Required and optional fields*
-       *
-       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` .
-       *
-       * The `recordingStrategy` field is optional when you list resource types in the
-       * `ResourceTypes` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       *
-       * The `recordingStrategy` field is required if you list resource types to exclude from
-       * recording in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * . &gt; *Overriding fields*
-       *
-       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
-       * `ExclusionByResourceTypes` field will override other properties in the request.
-       *
-       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
-       * types will still be automatically recorded in this option unless those resource types are
-       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
-       * &gt; *Global resource types and the exclusion recording strategy*
-       *
-       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
-       * Config adds support for a new resource type in the Region where you set up the configuration
-       * recorder, including global resource types, AWS Config starts recording resources of that type
-       * automatically.
-       *
-       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
-       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
-       *
-       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
-       * where you set up the configuration recorder if that is a Region where AWS Config was available
-       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
-       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
-       * types includes the following Regions:
-       *
-       * * Asia Pacific (Hyderabad)
-       * * Asia Pacific (Melbourne)
-       * * Canada West (Calgary)
-       * * Europe (Spain)
-       * * Europe (Zurich)
-       * * Israel (Tel Aviv)
-       * * Middle East (UAE)
-       */
-      override fun useOnly(useOnly: String) {
-        cdkBuilder.useOnly(useOnly)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty,
-    ) : CdkObject(cdkObject), RecordingStrategyProperty {
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty,
+    ) : CdkObject(cdkObject), ExclusionByResourceTypesProperty {
       /**
-       * The recording strategy for the configuration recorder.
+       * A comma-separated list of resource types to exclude from recording by the configuration
+       * recorder.
        *
-       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, excluding the global IAM resource
-       * types. You also must set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
-       * starts recording resources of that type. For a list of supported resource types, see
-       * [Supported Resource
-       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
-       * in the *AWS Config developer guide* .
-       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for only the resource types that you specify in the `ResourceTypes`
-       * field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
-       * configuration changes for all supported resource types, except the resource types that you
-       * specify to exclude from being recorded in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * .
-       *
-       *
-       * *Required and optional fields*
-       *
-       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * to `true` .
-       *
-       * The `recordingStrategy` field is optional when you list resource types in the
-       * `ResourceTypes` field of
-       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
-       * .
-       *
-       * The `recordingStrategy` field is required if you list resource types to exclude from
-       * recording in the `ResourceTypes` field of
-       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
-       * . &gt; *Overriding fields*
-       *
-       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
-       * `ExclusionByResourceTypes` field will override other properties in the request.
-       *
-       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
-       * types will still be automatically recorded in this option unless those resource types are
-       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
-       * &gt; *Global resource types and the exclusion recording strategy*
-       *
-       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
-       * Config adds support for a new resource type in the Region where you set up the configuration
-       * recorder, including global resource types, AWS Config starts recording resources of that type
-       * automatically.
-       *
-       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
-       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
-       *
-       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
-       * where you set up the configuration recorder if that is a Region where AWS Config was available
-       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
-       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
-       * types includes the following Regions:
-       *
-       * * Asia Pacific (Hyderabad)
-       * * Asia Pacific (Melbourne)
-       * * Canada West (Calgary)
-       * * Europe (Spain)
-       * * Europe (Zurich)
-       * * Israel (Tel Aviv)
-       * * Middle East (UAE)
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html#cfn-config-configurationrecorder-recordingstrategy-useonly)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html#cfn-config-configurationrecorder-exclusionbyresourcetypes-resourcetypes)
        */
-      override fun useOnly(): String = unwrap(this).getUseOnly()
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecordingStrategyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExclusionByResourceTypesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty):
-          RecordingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RecordingStrategyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty):
+          ExclusionByResourceTypesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExclusionByResourceTypesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RecordingStrategyProperty):
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
+      internal fun unwrap(wrapped: ExclusionByResourceTypesProperty):
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
     }
   }
 
@@ -2562,8 +2118,7 @@ public open class CfnConfigurationRecorder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty,
     ) : CdkObject(cdkObject), RecordingGroupProperty {
       /**
        * Specifies whether AWS Config records configuration changes for all supported resource
@@ -2808,145 +2363,6 @@ public open class CfnConfigurationRecorder internal constructor(
   }
 
   /**
-   * Specifies whether the configuration recorder excludes certain resource types from being
-   * recorded.
-   *
-   * Use the `ResourceTypes` field to enter a comma-separated list of resource types you want to
-   * exclude from recording.
-   *
-   * By default, when AWS Config adds support for a new resource type in the Region where you set up
-   * the configuration recorder, including global resource types, AWS Config starts recording resources
-   * of that type automatically.
-   *
-   *
-   * *How to use the exclusion recording strategy*
-   *
-   * To use this option, you must set the `useOnly` field of
-   * [RecordingStrategy](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html)
-   * to `EXCLUSION_BY_RESOURCE_TYPES` .
-   *
-   * AWS Config will then record configuration changes for all supported resource types, except the
-   * resource types that you specify to exclude from being recorded.
-   *
-   * *Global resource types and the exclusion recording strategy*
-   *
-   * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
-   * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
-   *
-   * IAM users, groups, roles, and customer managed policies will be recorded in the Region where
-   * you set up the configuration recorder if that is a Region where AWS Config was available before
-   * February 2022. You cannot be record the global IAM resouce types in Regions supported by AWS
-   * Config after February 2022. This list where you cannot record the global IAM resource types
-   * includes the following Regions:
-   *
-   * * Asia Pacific (Hyderabad)
-   * * Asia Pacific (Melbourne)
-   * * Canada West (Calgary)
-   * * Europe (Spain)
-   * * Europe (Zurich)
-   * * Israel (Tel Aviv)
-   * * Middle East (UAE)
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * ExclusionByResourceTypesProperty exclusionByResourceTypesProperty =
-   * ExclusionByResourceTypesProperty.builder()
-   * .resourceTypes(List.of("resourceTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html)
-   */
-  public interface ExclusionByResourceTypesProperty {
-    /**
-     * A comma-separated list of resource types to exclude from recording by the configuration
-     * recorder.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html#cfn-config-configurationrecorder-exclusionbyresourcetypes-resourcetypes)
-     */
-    public fun resourceTypes(): List<String>
-
-    /**
-     * A builder for [ExclusionByResourceTypesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
-       * the configuration recorder. 
-       */
-      public fun resourceTypes(resourceTypes: List<String>)
-
-      /**
-       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
-       * the configuration recorder. 
-       */
-      public fun resourceTypes(vararg resourceTypes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty.builder()
-
-      /**
-       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
-       * the configuration recorder. 
-       */
-      override fun resourceTypes(resourceTypes: List<String>) {
-        cdkBuilder.resourceTypes(resourceTypes)
-      }
-
-      /**
-       * @param resourceTypes A comma-separated list of resource types to exclude from recording by
-       * the configuration recorder. 
-       */
-      override fun resourceTypes(vararg resourceTypes: String): Unit =
-          resourceTypes(resourceTypes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty,
-    ) : CdkObject(cdkObject), ExclusionByResourceTypesProperty {
-      /**
-       * A comma-separated list of resource types to exclude from recording by the configuration
-       * recorder.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-exclusionbyresourcetypes.html#cfn-config-configurationrecorder-exclusionbyresourcetypes-resourcetypes)
-       */
-      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExclusionByResourceTypesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty):
-          ExclusionByResourceTypesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ExclusionByResourceTypesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ExclusionByResourceTypesProperty):
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
-    }
-  }
-
-  /**
    * An object for you to specify your overrides for the recording mode.
    *
    * Example:
@@ -3122,8 +2538,7 @@ public open class CfnConfigurationRecorder internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty,
     ) : CdkObject(cdkObject), RecordingModeOverrideProperty {
       /**
        * A description that you provide for the override.
@@ -3183,6 +2598,587 @@ public open class CfnConfigurationRecorder internal constructor(
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty
+    }
+  }
+
+  /**
+   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+   *
+   * AWS Config supports *Continuous recording* and *Daily recording* .
+   *
+   * * Continuous recording allows you to record configuration changes continuously whenever a
+   * change occurs.
+   * * Daily recording allows you to receive a configuration item (CI) representing the most recent
+   * state of your resources over the last 24-hour period, only if it’s different from the previous CI
+   * recorded.
+   *
+   *
+   * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
+   * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
+   *
+   *
+   * You can also override the recording frequency for specific resource types.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * RecordingModeProperty recordingModeProperty = RecordingModeProperty.builder()
+   * .recordingFrequency("recordingFrequency")
+   * // the properties below are optional
+   * .recordingModeOverrides(List.of(RecordingModeOverrideProperty.builder()
+   * .recordingFrequency("recordingFrequency")
+   * .resourceTypes(List.of("resourceTypes"))
+   * // the properties below are optional
+   * .description("description")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html)
+   */
+  public interface RecordingModeProperty {
+    /**
+     * The default recording frequency that AWS Config uses to record configuration changes.
+     *
+     *
+     * Daily recording is not supported for the following resource types:
+     *
+     * * `AWS::Config::ResourceCompliance`
+     * * `AWS::Config::ConformancePackCompliance`
+     * * `AWS::Config::ConfigurationRecorder`
+     *
+     * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these resource
+     * types will be set to Continuous recording.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingfrequency)
+     */
+    public fun recordingFrequency(): String
+
+    /**
+     * An array of `recordingModeOverride` objects for you to specify your overrides for the
+     * recording mode.
+     *
+     * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+     * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+     * override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingmodeoverrides)
+     */
+    public fun recordingModeOverrides(): Any? = unwrap(this).getRecordingModeOverrides()
+
+    /**
+     * A builder for [RecordingModeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recordingFrequency The default recording frequency that AWS Config uses to record
+       * configuration changes. 
+       *
+       * Daily recording is not supported for the following resource types:
+       *
+       * * `AWS::Config::ResourceCompliance`
+       * * `AWS::Config::ConformancePackCompliance`
+       * * `AWS::Config::ConfigurationRecorder`
+       *
+       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
+       * resource types will be set to Continuous recording.
+       */
+      public fun recordingFrequency(recordingFrequency: String)
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      public fun recordingModeOverrides(recordingModeOverrides: IResolvable)
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      public fun recordingModeOverrides(recordingModeOverrides: List<Any>)
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      public fun recordingModeOverrides(vararg recordingModeOverrides: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty.builder()
+
+      /**
+       * @param recordingFrequency The default recording frequency that AWS Config uses to record
+       * configuration changes. 
+       *
+       * Daily recording is not supported for the following resource types:
+       *
+       * * `AWS::Config::ResourceCompliance`
+       * * `AWS::Config::ConformancePackCompliance`
+       * * `AWS::Config::ConfigurationRecorder`
+       *
+       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
+       * resource types will be set to Continuous recording.
+       */
+      override fun recordingFrequency(recordingFrequency: String) {
+        cdkBuilder.recordingFrequency(recordingFrequency)
+      }
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      override fun recordingModeOverrides(recordingModeOverrides: IResolvable) {
+        cdkBuilder.recordingModeOverrides(recordingModeOverrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      override fun recordingModeOverrides(recordingModeOverrides: List<Any>) {
+        cdkBuilder.recordingModeOverrides(recordingModeOverrides)
+      }
+
+      /**
+       * @param recordingModeOverrides An array of `recordingModeOverride` objects for you to
+       * specify your overrides for the recording mode.
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       */
+      override fun recordingModeOverrides(vararg recordingModeOverrides: Any): Unit =
+          recordingModeOverrides(recordingModeOverrides.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty,
+    ) : CdkObject(cdkObject), RecordingModeProperty {
+      /**
+       * The default recording frequency that AWS Config uses to record configuration changes.
+       *
+       *
+       * Daily recording is not supported for the following resource types:
+       *
+       * * `AWS::Config::ResourceCompliance`
+       * * `AWS::Config::ConformancePackCompliance`
+       * * `AWS::Config::ConfigurationRecorder`
+       *
+       * For the *allSupported* ( `ALL_SUPPORTED_RESOURCE_TYPES` ) recording strategy, these
+       * resource types will be set to Continuous recording.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingfrequency)
+       */
+      override fun recordingFrequency(): String = unwrap(this).getRecordingFrequency()
+
+      /**
+       * An array of `recordingModeOverride` objects for you to specify your overrides for the
+       * recording mode.
+       *
+       * The `recordingModeOverride` object in the `recordingModeOverrides` array consists of three
+       * fields: a `description` , the new `recordingFrequency` , and an array of `resourceTypes` to
+       * override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingmode.html#cfn-config-configurationrecorder-recordingmode-recordingmodeoverrides)
+       */
+      override fun recordingModeOverrides(): Any? = unwrap(this).getRecordingModeOverrides()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordingModeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty):
+          RecordingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingModeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordingModeProperty):
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty
+    }
+  }
+
+  /**
+   * Specifies the recording strategy of the configuration recorder.
+   *
+   * Valid values include: `ALL_SUPPORTED_RESOURCE_TYPES` , `INCLUSION_BY_RESOURCE_TYPES` , and
+   * `EXCLUSION_BY_RESOURCE_TYPES` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * RecordingStrategyProperty recordingStrategyProperty = RecordingStrategyProperty.builder()
+   * .useOnly("useOnly")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html)
+   */
+  public interface RecordingStrategyProperty {
+    /**
+     * The recording strategy for the configuration recorder.
+     *
+     * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records configuration
+     * changes for all supported resource types, excluding the global IAM resource types. You also must
+     * set the `AllSupported` field of
+     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+     * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
+     * starts recording resources of that type. For a list of supported resource types, see [Supported
+     * Resource
+     * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
+     * in the *AWS Config developer guide* .
+     * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records configuration
+     * changes for only the resource types that you specify in the `ResourceTypes` field of
+     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+     * .
+     * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records configuration
+     * changes for all supported resource types, except the resource types that you specify to exclude
+     * from being recorded in the `ResourceTypes` field of
+     * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+     * .
+     *
+     *
+     * *Required and optional fields*
+     *
+     * The `recordingStrategy` field is optional when you set the `AllSupported` field of
+     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+     * to `true` .
+     *
+     * The `recordingStrategy` field is optional when you list resource types in the `ResourceTypes`
+     * field of
+     * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+     * .
+     *
+     * The `recordingStrategy` field is required if you list resource types to exclude from
+     * recording in the `ResourceTypes` field of
+     * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+     * . &gt; *Overriding fields*
+     *
+     * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
+     * `ExclusionByResourceTypes` field will override other properties in the request.
+     *
+     * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource types
+     * will still be automatically recorded in this option unless those resource types are specifically
+     * listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` . &gt; *Global
+     * resource types and the exclusion recording strategy*
+     *
+     * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
+     * Config adds support for a new resource type in the Region where you set up the configuration
+     * recorder, including global resource types, AWS Config starts recording resources of that type
+     * automatically.
+     *
+     * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+     * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+     *
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where
+     * you set up the configuration recorder if that is a Region where AWS Config was available before
+     * February 2022. You cannot be record the global IAM resouce types in Regions supported by AWS
+     * Config after February 2022. This list where you cannot record the global IAM resource types
+     * includes the following Regions:
+     *
+     * * Asia Pacific (Hyderabad)
+     * * Asia Pacific (Melbourne)
+     * * Canada West (Calgary)
+     * * Europe (Spain)
+     * * Europe (Zurich)
+     * * Israel (Tel Aviv)
+     * * Middle East (UAE)
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html#cfn-config-configurationrecorder-recordingstrategy-useonly)
+     */
+    public fun useOnly(): String
+
+    /**
+     * A builder for [RecordingStrategyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param useOnly The recording strategy for the configuration recorder. 
+       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, excluding the global IAM resource
+       * types. You also must set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
+       * starts recording resources of that type. For a list of supported resource types, see
+       * [Supported Resource
+       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
+       * in the *AWS Config developer guide* .
+       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for only the resource types that you specify in the `ResourceTypes`
+       * field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, except the resource types that you
+       * specify to exclude from being recorded in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * .
+       *
+       *
+       * *Required and optional fields*
+       *
+       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` .
+       *
+       * The `recordingStrategy` field is optional when you list resource types in the
+       * `ResourceTypes` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       *
+       * The `recordingStrategy` field is required if you list resource types to exclude from
+       * recording in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * . &gt; *Overriding fields*
+       *
+       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
+       * `ExclusionByResourceTypes` field will override other properties in the request.
+       *
+       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
+       * types will still be automatically recorded in this option unless those resource types are
+       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
+       * &gt; *Global resource types and the exclusion recording strategy*
+       *
+       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
+       * Config adds support for a new resource type in the Region where you set up the configuration
+       * recorder, including global resource types, AWS Config starts recording resources of that type
+       * automatically.
+       *
+       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+       *
+       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
+       * where you set up the configuration recorder if that is a Region where AWS Config was available
+       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
+       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
+       * types includes the following Regions:
+       *
+       * * Asia Pacific (Hyderabad)
+       * * Asia Pacific (Melbourne)
+       * * Canada West (Calgary)
+       * * Europe (Spain)
+       * * Europe (Zurich)
+       * * Israel (Tel Aviv)
+       * * Middle East (UAE)
+       */
+      public fun useOnly(useOnly: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty.builder()
+
+      /**
+       * @param useOnly The recording strategy for the configuration recorder. 
+       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, excluding the global IAM resource
+       * types. You also must set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
+       * starts recording resources of that type. For a list of supported resource types, see
+       * [Supported Resource
+       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
+       * in the *AWS Config developer guide* .
+       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for only the resource types that you specify in the `ResourceTypes`
+       * field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, except the resource types that you
+       * specify to exclude from being recorded in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * .
+       *
+       *
+       * *Required and optional fields*
+       *
+       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` .
+       *
+       * The `recordingStrategy` field is optional when you list resource types in the
+       * `ResourceTypes` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       *
+       * The `recordingStrategy` field is required if you list resource types to exclude from
+       * recording in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * . &gt; *Overriding fields*
+       *
+       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
+       * `ExclusionByResourceTypes` field will override other properties in the request.
+       *
+       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
+       * types will still be automatically recorded in this option unless those resource types are
+       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
+       * &gt; *Global resource types and the exclusion recording strategy*
+       *
+       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
+       * Config adds support for a new resource type in the Region where you set up the configuration
+       * recorder, including global resource types, AWS Config starts recording resources of that type
+       * automatically.
+       *
+       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+       *
+       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
+       * where you set up the configuration recorder if that is a Region where AWS Config was available
+       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
+       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
+       * types includes the following Regions:
+       *
+       * * Asia Pacific (Hyderabad)
+       * * Asia Pacific (Melbourne)
+       * * Canada West (Calgary)
+       * * Europe (Spain)
+       * * Europe (Zurich)
+       * * Israel (Tel Aviv)
+       * * Middle East (UAE)
+       */
+      override fun useOnly(useOnly: String) {
+        cdkBuilder.useOnly(useOnly)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty,
+    ) : CdkObject(cdkObject), RecordingStrategyProperty {
+      /**
+       * The recording strategy for the configuration recorder.
+       *
+       * * If you set this option to `ALL_SUPPORTED_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, excluding the global IAM resource
+       * types. You also must set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` . When AWS Config adds support for a new resource type, AWS Config automatically
+       * starts recording resources of that type. For a list of supported resource types, see
+       * [Supported Resource
+       * Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)
+       * in the *AWS Config developer guide* .
+       * * If you set this option to `INCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for only the resource types that you specify in the `ResourceTypes`
+       * field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       * * If you set this option to `EXCLUSION_BY_RESOURCE_TYPES` , AWS Config records
+       * configuration changes for all supported resource types, except the resource types that you
+       * specify to exclude from being recorded in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * .
+       *
+       *
+       * *Required and optional fields*
+       *
+       * The `recordingStrategy` field is optional when you set the `AllSupported` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * to `true` .
+       *
+       * The `recordingStrategy` field is optional when you list resource types in the
+       * `ResourceTypes` field of
+       * [RecordingGroup](https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html)
+       * .
+       *
+       * The `recordingStrategy` field is required if you list resource types to exclude from
+       * recording in the `ResourceTypes` field of
+       * [ExclusionByResourceTypes](https://docs.aws.amazon.com/config/latest/APIReference/API_ExclusionByResourceTypes.html)
+       * . &gt; *Overriding fields*
+       *
+       * If you choose `EXCLUSION_BY_RESOURCE_TYPES` for the recording strategy, the
+       * `ExclusionByResourceTypes` field will override other properties in the request.
+       *
+       * For example, even if you set `IncludeGlobalResourceTypes` to false, global IAM resource
+       * types will still be automatically recorded in this option unless those resource types are
+       * specifically listed as exclusions in the `ResourceTypes` field of `ExclusionByResourceTypes` .
+       * &gt; *Global resource types and the exclusion recording strategy*
+       *
+       * By default, if you choose the `EXCLUSION_BY_RESOURCE_TYPES` recording strategy, when AWS
+       * Config adds support for a new resource type in the Region where you set up the configuration
+       * recorder, including global resource types, AWS Config starts recording resources of that type
+       * automatically.
+       *
+       * Unless specifically listed as exclusions, `AWS::RDS::GlobalCluster` will be recorded
+       * automatically in all supported AWS Config Regions were the configuration recorder is enabled.
+       *
+       * IAM users, groups, roles, and customer managed policies will be recorded in the Region
+       * where you set up the configuration recorder if that is a Region where AWS Config was available
+       * before February 2022. You cannot be record the global IAM resouce types in Regions supported
+       * by AWS Config after February 2022. This list where you cannot record the global IAM resource
+       * types includes the following Regions:
+       *
+       * * Asia Pacific (Hyderabad)
+       * * Asia Pacific (Melbourne)
+       * * Canada West (Calgary)
+       * * Europe (Spain)
+       * * Europe (Zurich)
+       * * Israel (Tel Aviv)
+       * * Middle East (UAE)
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordingstrategy.html#cfn-config-configurationrecorder-recordingstrategy-useonly)
+       */
+      override fun useOnly(): String = unwrap(this).getUseOnly()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordingStrategyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty):
+          RecordingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecordingStrategyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordingStrategyProperty):
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
     }
   }
 }

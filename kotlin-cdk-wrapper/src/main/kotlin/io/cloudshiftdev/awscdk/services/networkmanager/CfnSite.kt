@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html)
  */
-public open class CfnSite internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite,
+public open class CfnSite(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -381,7 +381,7 @@ public open class CfnSite internal constructor(
         CfnSite(cdkObject)
 
     internal fun unwrap(wrapped: CfnSite): software.amazon.awscdk.services.networkmanager.CfnSite =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.networkmanager.CfnSite
   }
 
   /**
@@ -476,8 +476,7 @@ public open class CfnSite internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The physical address.

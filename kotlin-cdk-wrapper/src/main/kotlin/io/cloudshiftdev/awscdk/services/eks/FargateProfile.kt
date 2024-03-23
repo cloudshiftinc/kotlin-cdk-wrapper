@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FargateProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.FargateProfile,
+public open class FargateProfile(
+  cdkObject: software.amazon.awscdk.services.eks.FargateProfile,
 ) : CloudshiftdevConstructsConstruct(cdkObject), ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -337,6 +337,6 @@ public open class FargateProfile internal constructor(
         = FargateProfile(cdkObject)
 
     internal fun unwrap(wrapped: FargateProfile): software.amazon.awscdk.services.eks.FargateProfile
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.FargateProfile
   }
 }

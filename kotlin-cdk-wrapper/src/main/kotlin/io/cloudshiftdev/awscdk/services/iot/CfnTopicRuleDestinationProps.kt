@@ -213,7 +213,7 @@ public interface CfnTopicRuleDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestinationProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestinationProps,
   ) : CdkObject(cdkObject), CfnTopicRuleDestinationProps {
     /**
      * Properties of the HTTP URL.

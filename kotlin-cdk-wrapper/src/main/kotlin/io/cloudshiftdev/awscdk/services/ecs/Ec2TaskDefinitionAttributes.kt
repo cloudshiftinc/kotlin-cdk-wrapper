@@ -99,7 +99,7 @@ public interface Ec2TaskDefinitionAttributes : CommonTaskDefinitionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes,
+    cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes,
   ) : CdkObject(cdkObject), Ec2TaskDefinitionAttributes {
     /**
      * The IAM role that grants containers and Fargate agents permission to make AWS API calls on

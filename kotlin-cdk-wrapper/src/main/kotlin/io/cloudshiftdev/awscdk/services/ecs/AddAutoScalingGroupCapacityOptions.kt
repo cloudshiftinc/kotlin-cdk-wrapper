@@ -173,7 +173,7 @@ public interface AddAutoScalingGroupCapacityOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions,
   ) : CdkObject(cdkObject), AddAutoScalingGroupCapacityOptions {
     /**
      * Specifies whether the containers can access the container instance role.

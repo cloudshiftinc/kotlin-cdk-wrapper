@@ -541,7 +541,7 @@ public interface LifecycleRule {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.LifecycleRule,
+    cdkObject: software.amazon.awscdk.services.s3.LifecycleRule,
   ) : CdkObject(cdkObject), LifecycleRule {
     /**
      * Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket.

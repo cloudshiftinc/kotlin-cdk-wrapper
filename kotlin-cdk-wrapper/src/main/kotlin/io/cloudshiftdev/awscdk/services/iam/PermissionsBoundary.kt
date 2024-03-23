@@ -20,8 +20,8 @@ import io.cloudshiftdev.constructs.IConstruct
  * PermissionsBoundary.of(project).apply(new UntrustedCodeBoundaryPolicy(this, "Boundary"));
  * ```
  */
-public open class PermissionsBoundary internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.PermissionsBoundary,
+public open class PermissionsBoundary(
+  cdkObject: software.amazon.awscdk.services.iam.PermissionsBoundary,
 ) : CdkObject(cdkObject) {
   /**
    * Apply the given policy as Permissions Boundary to all Roles and Users in the scope.
@@ -51,6 +51,7 @@ public open class PermissionsBoundary internal constructor(
         PermissionsBoundary = PermissionsBoundary(cdkObject)
 
     internal fun unwrap(wrapped: PermissionsBoundary):
-        software.amazon.awscdk.services.iam.PermissionsBoundary = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.PermissionsBoundary = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.PermissionsBoundary
   }
 }

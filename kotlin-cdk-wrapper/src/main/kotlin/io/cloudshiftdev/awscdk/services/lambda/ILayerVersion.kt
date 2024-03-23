@@ -64,7 +64,7 @@ public interface ILayerVersion : IResource {
   public fun layerVersionArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.ILayerVersion,
+    cdkObject: software.amazon.awscdk.services.lambda.ILayerVersion,
   ) : CdkObject(cdkObject), ILayerVersion {
     /**
      * Add permission for this layer version to specific entities.

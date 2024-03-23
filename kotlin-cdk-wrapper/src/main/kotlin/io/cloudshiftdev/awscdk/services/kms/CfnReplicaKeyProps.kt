@@ -620,7 +620,7 @@ public interface CfnReplicaKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKeyProps,
+    cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKeyProps,
   ) : CdkObject(cdkObject), CfnReplicaKeyProps {
     /**
      * A description of the KMS key.

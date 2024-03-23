@@ -20,8 +20,8 @@ import kotlin.jvm.JvmName
  *
  * Reused between imported repositories and owned repositories.
  */
-public abstract class RepositoryBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
+public abstract class RepositoryBase(
+  cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
 ) : Resource(cdkObject), IRepository {
   /**
    * Add a policy statement to the repository's resource policy.
@@ -309,7 +309,7 @@ public abstract class RepositoryBase internal constructor(
       unwrap(this).repositoryUriForTagOrDigest(tagOrDigest)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
+    cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
   ) : RepositoryBase(cdkObject)
 
   public companion object {

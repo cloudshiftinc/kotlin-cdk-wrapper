@@ -25,9 +25,8 @@ import kotlin.jvm.JvmName
  * QueueHook queueHook = new QueueHook(queue);
  * ```
  */
-public open class QueueHook internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
+public open class QueueHook(
+  cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(queue.let(IQueue::unwrap))
@@ -67,6 +66,7 @@ public open class QueueHook internal constructor(
         QueueHook = QueueHook(cdkObject)
 
     internal fun unwrap(wrapped: QueueHook):
-        software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook
   }
 }

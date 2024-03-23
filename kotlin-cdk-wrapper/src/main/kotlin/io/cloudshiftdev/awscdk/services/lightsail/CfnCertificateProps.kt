@@ -184,7 +184,7 @@ public interface CfnCertificateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lightsail.CfnCertificateProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnCertificateProps,
   ) : CdkObject(cdkObject), CfnCertificateProps {
     /**
      * The name of the certificate.

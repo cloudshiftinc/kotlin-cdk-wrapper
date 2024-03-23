@@ -62,8 +62,7 @@ public interface LambdaDeploymentConfigImportProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
   ) : CdkObject(cdkObject), LambdaDeploymentConfigImportProps {
     /**
      * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration

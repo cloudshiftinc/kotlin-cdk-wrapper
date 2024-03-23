@@ -60,7 +60,7 @@ public interface BaseDeploymentConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions,
+    cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions,
   ) : CdkObject(cdkObject), BaseDeploymentConfigOptions {
     /**
      * The physical, human-readable name of the Deployment Configuration.

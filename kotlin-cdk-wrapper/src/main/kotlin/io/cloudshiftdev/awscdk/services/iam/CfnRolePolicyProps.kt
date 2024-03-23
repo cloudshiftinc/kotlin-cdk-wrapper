@@ -167,7 +167,7 @@ public interface CfnRolePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnRolePolicyProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnRolePolicyProps,
   ) : CdkObject(cdkObject), CfnRolePolicyProps {
     /**
      * The policy document.

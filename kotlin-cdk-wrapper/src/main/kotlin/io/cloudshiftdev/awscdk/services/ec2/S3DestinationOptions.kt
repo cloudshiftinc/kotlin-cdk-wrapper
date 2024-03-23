@@ -100,7 +100,7 @@ public interface S3DestinationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.S3DestinationOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.S3DestinationOptions,
   ) : CdkObject(cdkObject), S3DestinationOptions {
     /**
      * The format for the flow log.

@@ -583,7 +583,7 @@ public interface VpcAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.VpcAttributes,
+    cdkObject: software.amazon.awscdk.services.ec2.VpcAttributes,
   ) : CdkObject(cdkObject), VpcAttributes {
     /**
      * List of availability zones for the subnets in this VPC.

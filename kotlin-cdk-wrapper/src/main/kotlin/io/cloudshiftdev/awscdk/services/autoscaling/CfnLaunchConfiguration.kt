@@ -99,9 +99,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
  */
-public open class CfnLaunchConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
+public open class CfnLaunchConfiguration(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1375,7 +1374,296 @@ public open class CfnLaunchConfiguration internal constructor(
         CfnLaunchConfiguration = CfnLaunchConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchConfiguration):
-        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
+  }
+
+  /**
+   * `BlockDeviceMapping` specifies a block device mapping for the `BlockDeviceMappings` property of
+   * the
+   * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
+   * resource.
+   *
+   * Each instance that is launched has an associated root device volume, either an Amazon EBS
+   * volume or an instance store volume. You can use block device mappings to specify additional EBS
+   * volumes or instance store volumes to attach to an instance when it is launched.
+   *
+   * For more information, see [Example block device
+   * mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#block-device-mapping-ex)
+   * in the *Amazon EC2 User Guide for Linux Instances* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * // the properties below are optional
+   * .ebs(BlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .snapshotId("snapshotId")
+   * .throughput(123)
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice(false)
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html)
+   */
+  public interface BlockDeviceMappingProperty {
+    /**
+     * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
+     *
+     * For more information, see [Device naming on Linux
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
+     *
+     *
+     * To define a block device mapping, set the device name and exactly one of the following
+     * properties: `Ebs` , `NoDevice` , or `VirtualName` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-devicename)
+     */
+    public fun deviceName(): String
+
+    /**
+     * Information to attach an EBS volume to an instance at launch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * Setting this value to `true` prevents a volume that is included in the block device mapping
+     * of the AMI from being mapped to the specified device name at launch.
+     *
+     * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+     * that case, Amazon EC2 Auto Scaling launches replacement instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-nodevice)
+     */
+    public fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+    /**
+     * The name of the instance store volume (virtual device) to attach to an instance at launch.
+     *
+     * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0), for
+     * example, `ephemeral0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [BlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device name assigned to the volume (for example, `/dev/sdh` or `xvdh`
+       * ). 
+       * For more information, see [Device naming on Linux
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
+       * *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * To define a block device mapping, set the device name and exactly one of the following
+       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      public fun ebs(ebs: BlockDeviceProperty)
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
+      public fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice Setting this value to `true` prevents a volume that is included in the
+       * block device mapping of the AMI from being mapped to the specified device name at launch.
+       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+       * that case, Amazon EC2 Auto Scaling launches replacement instances.
+       */
+      public fun noDevice(noDevice: Boolean)
+
+      /**
+       * @param noDevice Setting this value to `true` prevents a volume that is included in the
+       * block device mapping of the AMI from being mapped to the specified device name at launch.
+       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+       * that case, Amazon EC2 Auto Scaling launches replacement instances.
+       */
+      public fun noDevice(noDevice: IResolvable)
+
+      /**
+       * @param virtualName The name of the instance store volume (virtual device) to attach to an
+       * instance at launch.
+       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
+       * for example, `ephemeral0` .
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device name assigned to the volume (for example, `/dev/sdh` or `xvdh`
+       * ). 
+       * For more information, see [Device naming on Linux
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
+       * *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * To define a block device mapping, set the device name and exactly one of the following
+       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      override fun ebs(ebs: BlockDeviceProperty) {
+        cdkBuilder.ebs(ebs.let(BlockDeviceProperty::unwrap))
+      }
+
+      /**
+       * @param ebs Information to attach an EBS volume to an instance at launch.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
+      override fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit): Unit =
+          ebs(BlockDeviceProperty(ebs))
+
+      /**
+       * @param noDevice Setting this value to `true` prevents a volume that is included in the
+       * block device mapping of the AMI from being mapped to the specified device name at launch.
+       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+       * that case, Amazon EC2 Auto Scaling launches replacement instances.
+       */
+      override fun noDevice(noDevice: Boolean) {
+        cdkBuilder.noDevice(noDevice)
+      }
+
+      /**
+       * @param noDevice Setting this value to `true` prevents a volume that is included in the
+       * block device mapping of the AMI from being mapped to the specified device name at launch.
+       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+       * that case, Amazon EC2 Auto Scaling launches replacement instances.
+       */
+      override fun noDevice(noDevice: IResolvable) {
+        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param virtualName The name of the instance store volume (virtual device) to attach to an
+       * instance at launch.
+       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
+       * for example, `ephemeral0` .
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+      /**
+       * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
+       *
+       * For more information, see [Device naming on Linux
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
+       * *Amazon EC2 User Guide for Linux Instances* .
+       *
+       *
+       * To define a block device mapping, set the device name and exactly one of the following
+       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-devicename)
+       */
+      override fun deviceName(): String = unwrap(this).getDeviceName()
+
+      /**
+       * Information to attach an EBS volume to an instance at launch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * Setting this value to `true` prevents a volume that is included in the block device mapping
+       * of the AMI from being mapped to the specified device name at launch.
+       *
+       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
+       * that case, Amazon EC2 Auto Scaling launches replacement instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-nodevice)
+       */
+      override fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+      /**
+       * The name of the instance store volume (virtual device) to attach to an instance at launch.
+       *
+       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
+       * for example, `ephemeral0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
+    }
   }
 
   /**
@@ -1763,8 +2051,7 @@ public open class CfnLaunchConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
     ) : CdkObject(cdkObject), BlockDeviceProperty {
       /**
        * Indicates whether the volume is deleted on instance termination.
@@ -1885,295 +2172,6 @@ public open class CfnLaunchConfiguration internal constructor(
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty
-    }
-  }
-
-  /**
-   * `BlockDeviceMapping` specifies a block device mapping for the `BlockDeviceMappings` property of
-   * the
-   * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
-   * resource.
-   *
-   * Each instance that is launched has an associated root device volume, either an Amazon EBS
-   * volume or an instance store volume. You can use block device mappings to specify additional EBS
-   * volumes or instance store volumes to attach to an instance when it is launched.
-   *
-   * For more information, see [Example block device
-   * mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#block-device-mapping-ex)
-   * in the *Amazon EC2 User Guide for Linux Instances* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
-   * .deviceName("deviceName")
-   * // the properties below are optional
-   * .ebs(BlockDeviceProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .snapshotId("snapshotId")
-   * .throughput(123)
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build())
-   * .noDevice(false)
-   * .virtualName("virtualName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html)
-   */
-  public interface BlockDeviceMappingProperty {
-    /**
-     * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
-     *
-     * For more information, see [Device naming on Linux
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
-     *
-     *
-     * To define a block device mapping, set the device name and exactly one of the following
-     * properties: `Ebs` , `NoDevice` , or `VirtualName` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-devicename)
-     */
-    public fun deviceName(): String
-
-    /**
-     * Information to attach an EBS volume to an instance at launch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-ebs)
-     */
-    public fun ebs(): Any? = unwrap(this).getEbs()
-
-    /**
-     * Setting this value to `true` prevents a volume that is included in the block device mapping
-     * of the AMI from being mapped to the specified device name at launch.
-     *
-     * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-     * that case, Amazon EC2 Auto Scaling launches replacement instances.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-nodevice)
-     */
-    public fun noDevice(): Any? = unwrap(this).getNoDevice()
-
-    /**
-     * The name of the instance store volume (virtual device) to attach to an instance at launch.
-     *
-     * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0), for
-     * example, `ephemeral0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-virtualname)
-     */
-    public fun virtualName(): String? = unwrap(this).getVirtualName()
-
-    /**
-     * A builder for [BlockDeviceMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deviceName The device name assigned to the volume (for example, `/dev/sdh` or `xvdh`
-       * ). 
-       * For more information, see [Device naming on Linux
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * To define a block device mapping, set the device name and exactly one of the following
-       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
-       */
-      public fun deviceName(deviceName: String)
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      public fun ebs(ebs: IResolvable)
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      public fun ebs(ebs: BlockDeviceProperty)
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
-      public fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit)
-
-      /**
-       * @param noDevice Setting this value to `true` prevents a volume that is included in the
-       * block device mapping of the AMI from being mapped to the specified device name at launch.
-       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-       * that case, Amazon EC2 Auto Scaling launches replacement instances.
-       */
-      public fun noDevice(noDevice: Boolean)
-
-      /**
-       * @param noDevice Setting this value to `true` prevents a volume that is included in the
-       * block device mapping of the AMI from being mapped to the specified device name at launch.
-       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-       * that case, Amazon EC2 Auto Scaling launches replacement instances.
-       */
-      public fun noDevice(noDevice: IResolvable)
-
-      /**
-       * @param virtualName The name of the instance store volume (virtual device) to attach to an
-       * instance at launch.
-       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
-       * for example, `ephemeral0` .
-       */
-      public fun virtualName(virtualName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty.builder()
-
-      /**
-       * @param deviceName The device name assigned to the volume (for example, `/dev/sdh` or `xvdh`
-       * ). 
-       * For more information, see [Device naming on Linux
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * To define a block device mapping, set the device name and exactly one of the following
-       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
-       */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
-      }
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      override fun ebs(ebs: BlockDeviceProperty) {
-        cdkBuilder.ebs(ebs.let(BlockDeviceProperty::unwrap))
-      }
-
-      /**
-       * @param ebs Information to attach an EBS volume to an instance at launch.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
-      override fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit): Unit =
-          ebs(BlockDeviceProperty(ebs))
-
-      /**
-       * @param noDevice Setting this value to `true` prevents a volume that is included in the
-       * block device mapping of the AMI from being mapped to the specified device name at launch.
-       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-       * that case, Amazon EC2 Auto Scaling launches replacement instances.
-       */
-      override fun noDevice(noDevice: Boolean) {
-        cdkBuilder.noDevice(noDevice)
-      }
-
-      /**
-       * @param noDevice Setting this value to `true` prevents a volume that is included in the
-       * block device mapping of the AMI from being mapped to the specified device name at launch.
-       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-       * that case, Amazon EC2 Auto Scaling launches replacement instances.
-       */
-      override fun noDevice(noDevice: IResolvable) {
-        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param virtualName The name of the instance store volume (virtual device) to attach to an
-       * instance at launch.
-       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
-       * for example, `ephemeral0` .
-       */
-      override fun virtualName(virtualName: String) {
-        cdkBuilder.virtualName(virtualName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
-      /**
-       * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
-       *
-       * For more information, see [Device naming on Linux
-       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
-       *
-       *
-       * To define a block device mapping, set the device name and exactly one of the following
-       * properties: `Ebs` , `NoDevice` , or `VirtualName` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-devicename)
-       */
-      override fun deviceName(): String = unwrap(this).getDeviceName()
-
-      /**
-       * Information to attach an EBS volume to an instance at launch.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-ebs)
-       */
-      override fun ebs(): Any? = unwrap(this).getEbs()
-
-      /**
-       * Setting this value to `true` prevents a volume that is included in the block device mapping
-       * of the AMI from being mapped to the specified device name at launch.
-       *
-       * If `NoDevice` is `true` for the root device, instances might fail the EC2 health check. In
-       * that case, Amazon EC2 Auto Scaling launches replacement instances.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-nodevice)
-       */
-      override fun noDevice(): Any? = unwrap(this).getNoDevice()
-
-      /**
-       * The name of the instance store volume (virtual device) to attach to an instance at launch.
-       *
-       * The name must be in the form ephemeral *X* where *X* is a number starting from zero (0),
-       * for example, `ephemeral0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html#cfn-autoscaling-launchconfiguration-blockdevicemapping-virtualname)
-       */
-      override fun virtualName(): String? = unwrap(this).getVirtualName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
     }
   }
 
@@ -2338,8 +2336,7 @@ public open class CfnLaunchConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
     ) : CdkObject(cdkObject), MetadataOptionsProperty {
       /**
        * This parameter enables or disables the HTTP metadata endpoint on your instances.

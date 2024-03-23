@@ -45,9 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html)
  */
-public open class CfnNetworkAnalyzerConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration,
+public open class CfnNetworkAnalyzerConfiguration(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -403,7 +402,8 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnNetworkAnalyzerConfiguration):
         software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
   }
 
   /**
@@ -496,8 +496,7 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty,
     ) : CdkObject(cdkObject), TraceContentProperty {
       /**
        * The log level for a log message.

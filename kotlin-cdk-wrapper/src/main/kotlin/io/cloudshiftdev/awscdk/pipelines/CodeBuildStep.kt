@@ -65,8 +65,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class CodeBuildStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.CodeBuildStep,
+public open class CodeBuildStep(
+  cdkObject: software.amazon.awscdk.pipelines.CodeBuildStep,
 ) : ShellStep(cdkObject) {
   public constructor(id: String, props: CodeBuildStepProps) :
       this(software.amazon.awscdk.pipelines.CodeBuildStep(id, props.let(CodeBuildStepProps::unwrap))
@@ -973,6 +973,6 @@ public open class CodeBuildStep internal constructor(
         CodeBuildStep(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildStep): software.amazon.awscdk.pipelines.CodeBuildStep =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.pipelines.CodeBuildStep
   }
 }

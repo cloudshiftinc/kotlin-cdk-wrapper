@@ -64,7 +64,7 @@ public interface Credentials {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials,
   ) : CdkObject(cdkObject), Credentials {
     /**
      * The role to be assumed for executing the Task.

@@ -319,7 +319,7 @@ public interface LaunchTemplateOverrides {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides,
+    cdkObject: software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides,
   ) : CdkObject(cdkObject), LaunchTemplateOverrides {
     /**
      * The instance requirements.

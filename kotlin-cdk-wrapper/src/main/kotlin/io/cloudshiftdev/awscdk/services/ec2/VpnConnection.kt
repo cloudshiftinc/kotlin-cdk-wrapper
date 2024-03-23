@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Metric state = vpnConnection.metricTunnelState();
  * ```
  */
-public open class VpnConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnection,
+public open class VpnConnection(
+  cdkObject: software.amazon.awscdk.services.ec2.VpnConnection,
 ) : VpnConnectionBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -304,6 +304,6 @@ public open class VpnConnection internal constructor(
         VpnConnection(cdkObject)
 
     internal fun unwrap(wrapped: VpnConnection): software.amazon.awscdk.services.ec2.VpnConnection =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.VpnConnection
   }
 }

@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)
  */
-public open class CfnTracker internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnTracker,
+public open class CfnTracker(
+  cdkObject: software.amazon.awscdk.services.location.CfnTracker,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -542,6 +542,6 @@ public open class CfnTracker internal constructor(
         CfnTracker(cdkObject)
 
     internal fun unwrap(wrapped: CfnTracker): software.amazon.awscdk.services.location.CfnTracker =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.location.CfnTracker
   }
 }

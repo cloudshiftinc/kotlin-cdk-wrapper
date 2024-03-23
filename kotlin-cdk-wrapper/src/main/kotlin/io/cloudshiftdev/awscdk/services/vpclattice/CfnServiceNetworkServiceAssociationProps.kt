@@ -177,8 +177,7 @@ public interface CfnServiceNetworkServiceAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps,
   ) : CdkObject(cdkObject), CfnServiceNetworkServiceAssociationProps {
     /**
      * The DNS information of the service.

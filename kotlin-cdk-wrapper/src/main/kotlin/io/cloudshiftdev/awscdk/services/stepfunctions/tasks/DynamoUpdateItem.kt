@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DynamoUpdateItem internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem,
+public open class DynamoUpdateItem(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -670,6 +669,7 @@ public open class DynamoUpdateItem internal constructor(
         DynamoUpdateItem = DynamoUpdateItem(cdkObject)
 
     internal fun unwrap(wrapped: DynamoUpdateItem):
-        software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem
   }
 }

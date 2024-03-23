@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)
  */
-public open class CfnAssessment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
+public open class CfnAssessment(
+  cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -775,7 +775,8 @@ public open class CfnAssessment internal constructor(
         CfnAssessment = CfnAssessment(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessment):
-        software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject
+        software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject as
+        software.amazon.awscdk.services.auditmanager.CfnAssessment
   }
 
   /**
@@ -872,8 +873,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
     ) : CdkObject(cdkObject), AWSAccountProperty {
       /**
        * The email address that's associated with the AWS account .
@@ -912,6 +912,200 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty
+    }
+  }
+
+  /**
+   * The `AWSService` property type specifies an AWS service such as Amazon S3 , AWS CloudTrail ,
+   * and so on.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.auditmanager.*;
+   * AWSServiceProperty aWSServiceProperty = AWSServiceProperty.builder()
+   * .serviceName("serviceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html)
+   */
+  public interface AWSServiceProperty {
+    /**
+     * The name of the AWS service .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
+     */
+    public fun serviceName(): String? = unwrap(this).getServiceName()
+
+    /**
+     * A builder for [AWSServiceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param serviceName The name of the AWS service .
+       */
+      public fun serviceName(serviceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.Builder =
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.builder()
+
+      /**
+       * @param serviceName The name of the AWS service .
+       */
+      override fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
+    ) : CdkObject(cdkObject), AWSServiceProperty {
+      /**
+       * The name of the AWS service .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
+       */
+      override fun serviceName(): String? = unwrap(this).getServiceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AWSServiceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty):
+          AWSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as? AWSServiceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AWSServiceProperty):
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty
+    }
+  }
+
+  /**
+   * The `AssessmentReportsDestination` property type specifies the location in which AWS Audit
+   * Manager saves assessment reports for the given assessment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.auditmanager.*;
+   * AssessmentReportsDestinationProperty assessmentReportsDestinationProperty =
+   * AssessmentReportsDestinationProperty.builder()
+   * .destination("destination")
+   * .destinationType("destinationType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html)
+   */
+  public interface AssessmentReportsDestinationProperty {
+    /**
+     * The destination bucket where Audit Manager stores assessment reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+     */
+    public fun destination(): String? = unwrap(this).getDestination()
+
+    /**
+     * The destination type, such as Amazon S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+     */
+    public fun destinationType(): String? = unwrap(this).getDestinationType()
+
+    /**
+     * A builder for [AssessmentReportsDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination The destination bucket where Audit Manager stores assessment reports.
+       */
+      public fun destination(destination: String)
+
+      /**
+       * @param destinationType The destination type, such as Amazon S3.
+       */
+      public fun destinationType(destinationType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.builder()
+
+      /**
+       * @param destination The destination bucket where Audit Manager stores assessment reports.
+       */
+      override fun destination(destination: String) {
+        cdkBuilder.destination(destination)
+      }
+
+      /**
+       * @param destinationType The destination type, such as Amazon S3.
+       */
+      override fun destinationType(destinationType: String) {
+        cdkBuilder.destinationType(destinationType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
+    ) : CdkObject(cdkObject), AssessmentReportsDestinationProperty {
+      /**
+       * The destination bucket where Audit Manager stores assessment reports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+       */
+      override fun destination(): String? = unwrap(this).getDestination()
+
+      /**
+       * The destination type, such as Amazon S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+       */
+      override fun destinationType(): String? = unwrap(this).getDestinationType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AssessmentReportsDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty):
+          AssessmentReportsDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssessmentReportsDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssessmentReportsDestinationProperty):
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
     }
   }
 
@@ -1209,8 +1403,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
     ) : CdkObject(cdkObject), DelegationProperty {
       /**
        * The identifier for the assessment that's associated with the delegation.
@@ -1323,8 +1516,8 @@ public open class CfnAssessment internal constructor(
   }
 
   /**
-   * The `AssessmentReportsDestination` property type specifies the location in which AWS Audit
-   * Manager saves assessment reports for the given assessment.
+   * The `Role` property type specifies the wrapper that contains AWS Audit Manager role
+   * information, such as the role type and IAM Amazon Resource Name (ARN).
    *
    * Example:
    *
@@ -1332,106 +1525,128 @@ public open class CfnAssessment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.auditmanager.*;
-   * AssessmentReportsDestinationProperty assessmentReportsDestinationProperty =
-   * AssessmentReportsDestinationProperty.builder()
-   * .destination("destination")
-   * .destinationType("destinationType")
+   * RoleProperty roleProperty = RoleProperty.builder()
+   * .roleArn("roleArn")
+   * .roleType("roleType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html)
    */
-  public interface AssessmentReportsDestinationProperty {
+  public interface RoleProperty {
     /**
-     * The destination bucket where Audit Manager stores assessment reports.
+     * The Amazon Resource Name (ARN) of the IAM role.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
      */
-    public fun destination(): String? = unwrap(this).getDestination()
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     /**
-     * The destination type, such as Amazon S3.
+     * The type of customer persona.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+     *
+     * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+     *
+     * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+     *
+     * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
      */
-    public fun destinationType(): String? = unwrap(this).getDestinationType()
+    public fun roleType(): String? = unwrap(this).getRoleType()
 
     /**
-     * A builder for [AssessmentReportsDestinationProperty]
+     * A builder for [RoleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destination The destination bucket where Audit Manager stores assessment reports.
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
        */
-      public fun destination(destination: String)
+      public fun roleArn(roleArn: String)
 
       /**
-       * @param destinationType The destination type, such as Amazon S3.
+       * @param roleType The type of customer persona.
+       *
+       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
        */
-      public fun destinationType(destinationType: String)
+      public fun roleType(roleType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.builder()
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.Builder =
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.builder()
 
       /**
-       * @param destination The destination bucket where Audit Manager stores assessment reports.
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
        */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
       }
 
       /**
-       * @param destinationType The destination type, such as Amazon S3.
+       * @param roleType The type of customer persona.
+       *
+       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
        */
-      override fun destinationType(destinationType: String) {
-        cdkBuilder.destinationType(destinationType)
+      override fun roleType(roleType: String) {
+        cdkBuilder.roleType(roleType)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
-          = cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
-    ) : CdkObject(cdkObject), AssessmentReportsDestinationProperty {
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
+    ) : CdkObject(cdkObject), RoleProperty {
       /**
-       * The destination bucket where Audit Manager stores assessment reports.
+       * The Amazon Resource Name (ARN) of the IAM role.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
        */
-      override fun destination(): String? = unwrap(this).getDestination()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
       /**
-       * The destination type, such as Amazon S3.
+       * The type of customer persona.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+       *
+       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+       *
+       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
        */
-      override fun destinationType(): String? = unwrap(this).getDestinationType()
+      override fun roleType(): String? = unwrap(this).getRoleType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AssessmentReportsDestinationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RoleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty):
-          AssessmentReportsDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssessmentReportsDestinationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty):
+          RoleProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AssessmentReportsDestinationProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
+      internal fun unwrap(wrapped: RoleProperty):
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty
     }
   }
 
@@ -1558,8 +1773,7 @@ public open class CfnAssessment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
+      cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
     ) : CdkObject(cdkObject), ScopeProperty {
       /**
        * The AWS accounts that are included in the scope of the assessment.
@@ -1590,225 +1804,6 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty
-    }
-  }
-
-  /**
-   * The `Role` property type specifies the wrapper that contains AWS Audit Manager role
-   * information, such as the role type and IAM Amazon Resource Name (ARN).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.auditmanager.*;
-   * RoleProperty roleProperty = RoleProperty.builder()
-   * .roleArn("roleArn")
-   * .roleType("roleType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html)
-   */
-  public interface RoleProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * The type of customer persona.
-     *
-     *
-     * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
-     */
-    public fun roleType(): String? = unwrap(this).getRoleType()
-
-    /**
-     * A builder for [RoleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      public fun roleType(roleType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.builder()
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      override fun roleType(roleType: String) {
-        cdkBuilder.roleType(roleType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
-    ) : CdkObject(cdkObject), RoleProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-
-      /**
-       * The type of customer persona.
-       *
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
-       */
-      override fun roleType(): String? = unwrap(this).getRoleType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RoleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty):
-          RoleProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RoleProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty
-    }
-  }
-
-  /**
-   * The `AWSService` property type specifies an AWS service such as Amazon S3 , AWS CloudTrail ,
-   * and so on.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.auditmanager.*;
-   * AWSServiceProperty aWSServiceProperty = AWSServiceProperty.builder()
-   * .serviceName("serviceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html)
-   */
-  public interface AWSServiceProperty {
-    /**
-     * The name of the AWS service .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
-     */
-    public fun serviceName(): String? = unwrap(this).getServiceName()
-
-    /**
-     * A builder for [AWSServiceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serviceName The name of the AWS service .
-       */
-      public fun serviceName(serviceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.builder()
-
-      /**
-       * @param serviceName The name of the AWS service .
-       */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
-    ) : CdkObject(cdkObject), AWSServiceProperty {
-      /**
-       * The name of the AWS service .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
-       */
-      override fun serviceName(): String? = unwrap(this).getServiceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AWSServiceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty):
-          AWSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as? AWSServiceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AWSServiceProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty
     }
   }
 }

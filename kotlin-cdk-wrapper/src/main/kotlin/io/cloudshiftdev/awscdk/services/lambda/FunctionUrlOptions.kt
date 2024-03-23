@@ -114,7 +114,7 @@ public interface FunctionUrlOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlOptions,
   ) : CdkObject(cdkObject), FunctionUrlOptions {
     /**
      * The type of authentication that your function URL uses.

@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html)
  */
-public open class CfnSubnet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet,
+public open class CfnSubnet(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -970,7 +970,7 @@ public open class CfnSubnet internal constructor(
         CfnSubnet(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnet): software.amazon.awscdk.services.ec2.CfnSubnet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnSubnet
   }
 
   /**
@@ -1111,8 +1111,7 @@ public open class CfnSubnet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty,
     ) : CdkObject(cdkObject), PrivateDnsNameOptionsOnLaunchProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.

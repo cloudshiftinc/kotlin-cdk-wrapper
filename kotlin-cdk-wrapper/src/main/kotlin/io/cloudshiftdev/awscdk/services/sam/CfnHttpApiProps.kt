@@ -590,7 +590,7 @@ public interface CfnHttpApiProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApiProps,
+    cdkObject: software.amazon.awscdk.services.sam.CfnHttpApiProps,
   ) : CdkObject(cdkObject), CfnHttpApiProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-accesslogsetting)

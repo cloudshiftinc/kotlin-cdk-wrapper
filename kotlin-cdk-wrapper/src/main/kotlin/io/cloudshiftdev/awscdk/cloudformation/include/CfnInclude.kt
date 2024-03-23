@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class CfnInclude internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cloudformation.include.CfnInclude,
+public open class CfnInclude(
+  cdkObject: software.amazon.awscdk.cloudformation.include.CfnInclude,
 ) : CfnElement(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -404,6 +404,7 @@ public open class CfnInclude internal constructor(
         CfnInclude = CfnInclude(cdkObject)
 
     internal fun unwrap(wrapped: CfnInclude):
-        software.amazon.awscdk.cloudformation.include.CfnInclude = wrapped.cdkObject
+        software.amazon.awscdk.cloudformation.include.CfnInclude = wrapped.cdkObject as
+        software.amazon.awscdk.cloudformation.include.CfnInclude
   }
 }

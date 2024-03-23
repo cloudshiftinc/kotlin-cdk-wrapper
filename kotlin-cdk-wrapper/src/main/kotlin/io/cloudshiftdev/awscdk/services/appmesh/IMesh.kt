@@ -135,7 +135,7 @@ public interface IMesh : IResource {
   public fun meshName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IMesh,
+    cdkObject: software.amazon.awscdk.services.appmesh.IMesh,
   ) : CdkObject(cdkObject), IMesh {
     /**
      * Creates a new VirtualGateway in this Mesh.

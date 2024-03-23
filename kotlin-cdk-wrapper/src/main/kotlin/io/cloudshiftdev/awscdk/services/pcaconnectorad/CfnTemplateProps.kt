@@ -463,7 +463,7 @@ public interface CfnTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateProps,
+    cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateProps,
   ) : CdkObject(cdkObject), CfnTemplateProps {
     /**
      * The Amazon Resource Name (ARN) that was returned when you called

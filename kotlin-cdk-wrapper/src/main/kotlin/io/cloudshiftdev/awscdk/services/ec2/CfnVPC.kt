@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html)
  */
-public open class CfnVPC internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPC,
+public open class CfnVPC(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPC,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -557,6 +557,6 @@ public open class CfnVPC internal constructor(
         CfnVPC(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPC): software.amazon.awscdk.services.ec2.CfnVPC =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnVPC
   }
 }

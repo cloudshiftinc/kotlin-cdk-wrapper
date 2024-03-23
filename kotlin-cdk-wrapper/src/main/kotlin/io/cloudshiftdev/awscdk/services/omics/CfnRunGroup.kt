@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)
  */
-public open class CfnRunGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnRunGroup,
+public open class CfnRunGroup(
+  cdkObject: software.amazon.awscdk.services.omics.CfnRunGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.omics.CfnRunGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -303,6 +303,6 @@ public open class CfnRunGroup internal constructor(
         CfnRunGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnRunGroup): software.amazon.awscdk.services.omics.CfnRunGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.omics.CfnRunGroup
   }
 }

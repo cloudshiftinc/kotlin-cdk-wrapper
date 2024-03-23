@@ -181,7 +181,7 @@ public interface CfnAnomalyMonitorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps,
+    cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps,
   ) : CdkObject(cdkObject), CfnAnomalyMonitorProps {
     /**
      * The dimensions to evaluate.

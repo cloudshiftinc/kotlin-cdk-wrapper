@@ -281,7 +281,7 @@ public interface CfnProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfileProps,
+    cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfileProps,
   ) : CdkObject(cdkObject), CfnProfileProps {
     /**
      * The number of seconds vended session credentials will be valid for.

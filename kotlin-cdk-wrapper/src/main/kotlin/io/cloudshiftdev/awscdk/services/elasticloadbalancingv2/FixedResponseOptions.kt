@@ -84,8 +84,7 @@ public interface FixedResponseOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
   ) : CdkObject(cdkObject), FixedResponseOptions {
     /**
      * Content Type of the response.

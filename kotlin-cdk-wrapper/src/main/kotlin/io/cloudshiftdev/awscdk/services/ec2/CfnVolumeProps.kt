@@ -73,12 +73,12 @@ public interface CfnVolumeProps {
    * The effect of setting the encryption state to `true` depends on the volume origin (new or from
    * a snapshot), starting encryption state, ownership, and whether encryption by default is enabled.
    * For more information, see [Encryption by
-   * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-   * in the *Amazon Elastic Compute Cloud User Guide* .
+   * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+   * in the *Amazon EBS User Guide* .
    *
    * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption.
    * For more information, see [Supported instance
-   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+   * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
    * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-encrypted)
@@ -207,8 +207,7 @@ public interface CfnVolumeProps {
    * * Magnetic: `standard`
    *
    * For more information, see [Amazon EBS volume
-   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-   * Elastic Compute Cloud User Guide* .
+   * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) .
    *
    * Default: `gp2`
    *
@@ -250,12 +249,12 @@ public interface CfnVolumeProps {
      * The effect of setting the encryption state to `true` depends on the volume origin (new or
      * from a snapshot), starting encryption state, ownership, and whether encryption by default is
      * enabled. For more information, see [Encryption by
-     * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+     * in the *Amazon EBS User Guide* .
      *
      * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS
      * encryption. For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
      * .
      */
     public fun encrypted(encrypted: Boolean)
@@ -265,12 +264,12 @@ public interface CfnVolumeProps {
      * The effect of setting the encryption state to `true` depends on the volume origin (new or
      * from a snapshot), starting encryption state, ownership, and whether encryption by default is
      * enabled. For more information, see [Encryption by
-     * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+     * in the *Amazon EBS User Guide* .
      *
      * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS
      * encryption. For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
      * .
      */
     public fun encrypted(encrypted: IResolvable)
@@ -387,8 +386,7 @@ public interface CfnVolumeProps {
      * * Magnetic: `standard`
      *
      * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) .
      *
      * Default: `gp2`
      */
@@ -434,12 +432,12 @@ public interface CfnVolumeProps {
      * The effect of setting the encryption state to `true` depends on the volume origin (new or
      * from a snapshot), starting encryption state, ownership, and whether encryption by default is
      * enabled. For more information, see [Encryption by
-     * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+     * in the *Amazon EBS User Guide* .
      *
      * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS
      * encryption. For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
      * .
      */
     override fun encrypted(encrypted: Boolean) {
@@ -451,12 +449,12 @@ public interface CfnVolumeProps {
      * The effect of setting the encryption state to `true` depends on the volume origin (new or
      * from a snapshot), starting encryption state, ownership, and whether encryption by default is
      * enabled. For more information, see [Encryption by
-     * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+     * in the *Amazon EBS User Guide* .
      *
      * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS
      * encryption. For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
      * .
      */
     override fun encrypted(encrypted: IResolvable) {
@@ -593,8 +591,7 @@ public interface CfnVolumeProps {
      * * Magnetic: `standard`
      *
      * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) .
      *
      * Default: `gp2`
      */
@@ -606,7 +603,7 @@ public interface CfnVolumeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeProps,
   ) : CdkObject(cdkObject), CfnVolumeProps {
     /**
      * Indicates whether the volume is auto-enabled for I/O operations.
@@ -635,12 +632,12 @@ public interface CfnVolumeProps {
      * The effect of setting the encryption state to `true` depends on the volume origin (new or
      * from a snapshot), starting encryption state, ownership, and whether encryption by default is
      * enabled. For more information, see [Encryption by
-     * default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * default](https://docs.aws.amazon.com/ebs/latest/userguide/work-with-ebs-encr.html#encryption-by-default)
+     * in the *Amazon EBS User Guide* .
      *
      * Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS
      * encryption. For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-encrypted)
@@ -769,8 +766,7 @@ public interface CfnVolumeProps {
      * * Magnetic: `standard`
      *
      * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) .
      *
      * Default: `gp2`
      *

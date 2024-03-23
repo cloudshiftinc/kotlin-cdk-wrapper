@@ -334,8 +334,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html)
  */
-public open class CfnFlow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow,
+public open class CfnFlow(
+  cdkObject: software.amazon.awscdk.services.appflow.CfnFlow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1071,11 +1071,11 @@ public open class CfnFlow internal constructor(
         CfnFlow(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlow): software.amazon.awscdk.services.appflow.CfnFlow =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appflow.CfnFlow
   }
 
   /**
-   * Specifies the configuration used when importing incremental records from the source.
+   * The aggregation settings that you can use to customize the output format of your flow data.
    *
    * Example:
    *
@@ -1083,1234 +1083,123 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * IncrementalPullConfigProperty incrementalPullConfigProperty =
-   * IncrementalPullConfigProperty.builder()
-   * .datetimeTypeFieldName("datetimeTypeFieldName")
+   * AggregationConfigProperty aggregationConfigProperty = AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html)
    */
-  public interface IncrementalPullConfigProperty {
+  public interface AggregationConfigProperty {
     /**
-     * A field that specifies the date time or timestamp field as the criteria to use when importing
-     * incremental records from the source.
+     * Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave
+     * them unaggregated.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html#cfn-appflow-flow-incrementalpullconfig-datetimetypefieldname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-aggregationtype)
      */
-    public fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
+    public fun aggregationType(): String? = unwrap(this).getAggregationType()
 
     /**
-     * A builder for [IncrementalPullConfigProperty]
+     * The desired file size, in MB, for each output file that Amazon AppFlow writes to the flow
+     * destination.
+     *
+     * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual file
+     * sizes might differ from this target based on the number and size of the records that each file
+     * contains.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-targetfilesize)
+     */
+    public fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
+
+    /**
+     * A builder for [AggregationConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param datetimeTypeFieldName A field that specifies the date time or timestamp field as the
-       * criteria to use when importing incremental records from the source.
+       * @param aggregationType Specifies whether Amazon AppFlow aggregates the flow records into a
+       * single file, or leave them unaggregated.
        */
-      public fun datetimeTypeFieldName(datetimeTypeFieldName: String)
+      public fun aggregationType(aggregationType: String)
+
+      /**
+       * @param targetFileSize The desired file size, in MB, for each output file that Amazon
+       * AppFlow writes to the flow destination.
+       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
+       * file sizes might differ from this target based on the number and size of the records that each
+       * file contains.
+       */
+      public fun targetFileSize(targetFileSize: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.builder()
 
       /**
-       * @param datetimeTypeFieldName A field that specifies the date time or timestamp field as the
-       * criteria to use when importing incremental records from the source.
+       * @param aggregationType Specifies whether Amazon AppFlow aggregates the flow records into a
+       * single file, or leave them unaggregated.
        */
-      override fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
-        cdkBuilder.datetimeTypeFieldName(datetimeTypeFieldName)
+      override fun aggregationType(aggregationType: String) {
+        cdkBuilder.aggregationType(aggregationType)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty,
-    ) : CdkObject(cdkObject), IncrementalPullConfigProperty {
       /**
-       * A field that specifies the date time or timestamp field as the criteria to use when
-       * importing incremental records from the source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html#cfn-appflow-flow-incrementalpullconfig-datetimetypefieldname)
+       * @param targetFileSize The desired file size, in MB, for each output file that Amazon
+       * AppFlow writes to the flow destination.
+       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
+       * file sizes might differ from this target based on the number and size of the records that each
+       * file contains.
        */
-      override fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IncrementalPullConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
+      override fun targetFileSize(targetFileSize: Number) {
+        cdkBuilder.targetFileSize(targetFileSize)
       }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty):
-          IncrementalPullConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IncrementalPullConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IncrementalPullConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Amazon Lookout for Metrics is used as a destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * LookoutMetricsDestinationPropertiesProperty lookoutMetricsDestinationPropertiesProperty =
-   * LookoutMetricsDestinationPropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html)
-   */
-  public interface LookoutMetricsDestinationPropertiesProperty {
-    /**
-     * The object specified in the Amazon Lookout for Metrics flow destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html#cfn-appflow-flow-lookoutmetricsdestinationproperties-object)
-     */
-    public fun `object`(): String? = unwrap(this).getObject()
-
-    /**
-     * A builder for [LookoutMetricsDestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Amazon Lookout for Metrics flow destination.
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Amazon Lookout for Metrics flow destination.
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), LookoutMetricsDestinationPropertiesProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty,
+    ) : CdkObject(cdkObject), AggregationConfigProperty {
       /**
-       * The object specified in the Amazon Lookout for Metrics flow destination.
+       * Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave
+       * them unaggregated.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html#cfn-appflow-flow-lookoutmetricsdestinationproperties-object)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-aggregationtype)
        */
-      override fun `object`(): String? = unwrap(this).getObject()
+      override fun aggregationType(): String? = unwrap(this).getAggregationType()
+
+      /**
+       * The desired file size, in MB, for each output file that Amazon AppFlow writes to the flow
+       * destination.
+       *
+       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
+       * file sizes might differ from this target based on the number and size of the records that each
+       * file contains.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-targetfilesize)
+       */
+      override fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LookoutMetricsDestinationPropertiesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AggregationConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty):
-          LookoutMetricsDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LookoutMetricsDestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LookoutMetricsDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when using SAPOData as a flow source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SAPODataSourcePropertiesProperty sAPODataSourcePropertiesProperty =
-   * SAPODataSourcePropertiesProperty.builder()
-   * .objectPath("objectPath")
-   * // the properties below are optional
-   * .paginationConfig(SAPODataPaginationConfigProperty.builder()
-   * .maxPageSize(123)
-   * .build())
-   * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
-   * .maxParallelism(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html)
-   */
-  public interface SAPODataSourcePropertiesProperty {
-    /**
-     * The object path specified in the SAPOData flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath)
-     */
-    public fun objectPath(): String
-
-    /**
-     * SAP Source connector page size.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
-     */
-    public fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
-
-    /**
-     * SAP Source connector parallelism factor.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
-     */
-    public fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
-
-    /**
-     * A builder for [SAPODataSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param objectPath The object path specified in the SAPOData flow source. 
-       */
-      public fun objectPath(objectPath: String)
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      public fun paginationConfig(paginationConfig: IResolvable)
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      public fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty)
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
-      public
-          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      public fun parallelismConfig(parallelismConfig: IResolvable)
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      public fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty)
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
-      public
-          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.builder()
-
-      /**
-       * @param objectPath The object path specified in the SAPOData flow source. 
-       */
-      override fun objectPath(objectPath: String) {
-        cdkBuilder.objectPath(objectPath)
-      }
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      override fun paginationConfig(paginationConfig: IResolvable) {
-        cdkBuilder.paginationConfig(paginationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
-        cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param paginationConfig SAP Source connector page size.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
-      override
-          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit):
-          Unit = paginationConfig(SAPODataPaginationConfigProperty(paginationConfig))
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      override fun parallelismConfig(parallelismConfig: IResolvable) {
-        cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
-        cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty::unwrap))
-      }
-
-      /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
-      override
-          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit):
-          Unit = parallelismConfig(SAPODataParallelismConfigProperty(parallelismConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SAPODataSourcePropertiesProperty {
-      /**
-       * The object path specified in the SAPOData flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath)
-       */
-      override fun objectPath(): String = unwrap(this).getObjectPath()
-
-      /**
-       * SAP Source connector page size.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
-       */
-      override fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
-
-      /**
-       * SAP Source connector parallelism factor.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
-       */
-      override fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SAPODataSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty):
-          SAPODataSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SAPODataSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SAPODataSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when using Trend Micro as a flow source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * TrendmicroSourcePropertiesProperty trendmicroSourcePropertiesProperty =
-   * TrendmicroSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html)
-   */
-  public interface TrendmicroSourcePropertiesProperty {
-    /**
-     * The object specified in the Trend Micro flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html#cfn-appflow-flow-trendmicrosourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [TrendmicroSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Trend Micro flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Trend Micro flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), TrendmicroSourcePropertiesProperty {
-      /**
-       * The object specified in the Trend Micro flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html#cfn-appflow-flow-trendmicrosourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TrendmicroSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty):
-          TrendmicroSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TrendmicroSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TrendmicroSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when ServiceNow is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ServiceNowSourcePropertiesProperty serviceNowSourcePropertiesProperty =
-   * ServiceNowSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html)
-   */
-  public interface ServiceNowSourcePropertiesProperty {
-    /**
-     * The object specified in the ServiceNow flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html#cfn-appflow-flow-servicenowsourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [ServiceNowSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the ServiceNow flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the ServiceNow flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), ServiceNowSourcePropertiesProperty {
-      /**
-       * The object specified in the ServiceNow flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html#cfn-appflow-flow-servicenowsourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceNowSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty):
-          ServiceNowSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceNowSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceNowSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * A class for modeling different type of tasks.
-   *
-   * Task implementation varies based on the `TaskType` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * TaskProperty taskProperty = TaskProperty.builder()
-   * .sourceFields(List.of("sourceFields"))
-   * .taskType("taskType")
-   * // the properties below are optional
-   * .connectorOperator(ConnectorOperatorProperty.builder()
-   * .amplitude("amplitude")
-   * .customConnector("customConnector")
-   * .datadog("datadog")
-   * .dynatrace("dynatrace")
-   * .googleAnalytics("googleAnalytics")
-   * .inforNexus("inforNexus")
-   * .marketo("marketo")
-   * .pardot("pardot")
-   * .s3("s3")
-   * .salesforce("salesforce")
-   * .sapoData("sapoData")
-   * .serviceNow("serviceNow")
-   * .singular("singular")
-   * .slack("slack")
-   * .trendmicro("trendmicro")
-   * .veeva("veeva")
-   * .zendesk("zendesk")
-   * .build())
-   * .destinationField("destinationField")
-   * .taskProperties(List.of(TaskPropertiesObjectProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html)
-   */
-  public interface TaskProperty {
-    /**
-     * The operation to be performed on the provided source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-connectoroperator)
-     */
-    public fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
-
-    /**
-     * A field in a destination connector, or a field value against which Amazon AppFlow validates a
-     * source field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield)
-     */
-    public fun destinationField(): String? = unwrap(this).getDestinationField()
-
-    /**
-     * The source fields to which a particular task is applied.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields)
-     */
-    public fun sourceFields(): List<String>
-
-    /**
-     * A map used to store task-related information.
-     *
-     * The execution service looks for particular information based on the `TaskType` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-taskproperties)
-     */
-    public fun taskProperties(): Any? = unwrap(this).getTaskProperties()
-
-    /**
-     * Specifies the particular task implementation that Amazon AppFlow performs.
-     *
-     * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
-     * `Truncate` | `Validate`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype)
-     */
-    public fun taskType(): String
-
-    /**
-     * A builder for [TaskProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      public fun connectorOperator(connectorOperator: IResolvable)
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty)
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
-      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit)
-
-      /**
-       * @param destinationField A field in a destination connector, or a field value against which
-       * Amazon AppFlow validates a source field.
-       */
-      public fun destinationField(destinationField: String)
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      public fun sourceFields(sourceFields: List<String>)
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      public fun sourceFields(vararg sourceFields: String)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      public fun taskProperties(taskProperties: IResolvable)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      public fun taskProperties(taskProperties: List<Any>)
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      public fun taskProperties(vararg taskProperties: Any)
-
-      /**
-       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
-       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
-       * `Truncate` | `Validate`
-       */
-      public fun taskType(taskType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.builder()
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      override fun connectorOperator(connectorOperator: IResolvable) {
-        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
-        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
-      }
-
-      /**
-       * @param connectorOperator The operation to be performed on the provided source fields.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
-      override
-          fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit):
-          Unit = connectorOperator(ConnectorOperatorProperty(connectorOperator))
-
-      /**
-       * @param destinationField A field in a destination connector, or a field value against which
-       * Amazon AppFlow validates a source field.
-       */
-      override fun destinationField(destinationField: String) {
-        cdkBuilder.destinationField(destinationField)
-      }
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      override fun sourceFields(sourceFields: List<String>) {
-        cdkBuilder.sourceFields(sourceFields)
-      }
-
-      /**
-       * @param sourceFields The source fields to which a particular task is applied. 
-       */
-      override fun sourceFields(vararg sourceFields: String): Unit =
-          sourceFields(sourceFields.toList())
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      override fun taskProperties(taskProperties: IResolvable) {
-        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      override fun taskProperties(taskProperties: List<Any>) {
-        cdkBuilder.taskProperties(taskProperties)
-      }
-
-      /**
-       * @param taskProperties A map used to store task-related information.
-       * The execution service looks for particular information based on the `TaskType` .
-       */
-      override fun taskProperties(vararg taskProperties: Any): Unit =
-          taskProperties(taskProperties.toList())
-
-      /**
-       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
-       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
-       * `Truncate` | `Validate`
-       */
-      override fun taskType(taskType: String) {
-        cdkBuilder.taskType(taskType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty,
-    ) : CdkObject(cdkObject), TaskProperty {
-      /**
-       * The operation to be performed on the provided source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-connectoroperator)
-       */
-      override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
-
-      /**
-       * A field in a destination connector, or a field value against which Amazon AppFlow validates
-       * a source field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield)
-       */
-      override fun destinationField(): String? = unwrap(this).getDestinationField()
-
-      /**
-       * The source fields to which a particular task is applied.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields)
-       */
-      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
-
-      /**
-       * A map used to store task-related information.
-       *
-       * The execution service looks for particular information based on the `TaskType` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-taskproperties)
-       */
-      override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
-
-      /**
-       * Specifies the particular task implementation that Amazon AppFlow performs.
-       *
-       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
-       * `Truncate` | `Validate`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype)
-       */
-      override fun taskType(): String = unwrap(this).getTaskType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaskProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty):
-          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when using Veeva as a flow source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * VeevaSourcePropertiesProperty veevaSourcePropertiesProperty =
-   * VeevaSourcePropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .documentType("documentType")
-   * .includeAllVersions(false)
-   * .includeRenditions(false)
-   * .includeSourceFiles(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html)
-   */
-  public interface VeevaSourcePropertiesProperty {
-    /**
-     * The document type specified in the Veeva document extract flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-documenttype)
-     */
-    public fun documentType(): String? = unwrap(this).getDocumentType()
-
-    /**
-     * Boolean value to include All Versions of files in Veeva document extract flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includeallversions)
-     */
-    public fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
-
-    /**
-     * Boolean value to include file renditions in Veeva document extract flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includerenditions)
-     */
-    public fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
-
-    /**
-     * Boolean value to include source files in Veeva document extract flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includesourcefiles)
-     */
-    public fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
-
-    /**
-     * The object specified in the Veeva flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [VeevaSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param documentType The document type specified in the Veeva document extract flow.
-       */
-      public fun documentType(documentType: String)
-
-      /**
-       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
-       * extract flow.
-       */
-      public fun includeAllVersions(includeAllVersions: Boolean)
-
-      /**
-       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
-       * extract flow.
-       */
-      public fun includeAllVersions(includeAllVersions: IResolvable)
-
-      /**
-       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
-       * flow.
-       */
-      public fun includeRenditions(includeRenditions: Boolean)
-
-      /**
-       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
-       * flow.
-       */
-      public fun includeRenditions(includeRenditions: IResolvable)
-
-      /**
-       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
-       * flow.
-       */
-      public fun includeSourceFiles(includeSourceFiles: Boolean)
-
-      /**
-       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
-       * flow.
-       */
-      public fun includeSourceFiles(includeSourceFiles: IResolvable)
-
-      /**
-       * @param object The object specified in the Veeva flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.builder()
-
-      /**
-       * @param documentType The document type specified in the Veeva document extract flow.
-       */
-      override fun documentType(documentType: String) {
-        cdkBuilder.documentType(documentType)
-      }
-
-      /**
-       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
-       * extract flow.
-       */
-      override fun includeAllVersions(includeAllVersions: Boolean) {
-        cdkBuilder.includeAllVersions(includeAllVersions)
-      }
-
-      /**
-       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
-       * extract flow.
-       */
-      override fun includeAllVersions(includeAllVersions: IResolvable) {
-        cdkBuilder.includeAllVersions(includeAllVersions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
-       * flow.
-       */
-      override fun includeRenditions(includeRenditions: Boolean) {
-        cdkBuilder.includeRenditions(includeRenditions)
-      }
-
-      /**
-       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
-       * flow.
-       */
-      override fun includeRenditions(includeRenditions: IResolvable) {
-        cdkBuilder.includeRenditions(includeRenditions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
-       * flow.
-       */
-      override fun includeSourceFiles(includeSourceFiles: Boolean) {
-        cdkBuilder.includeSourceFiles(includeSourceFiles)
-      }
-
-      /**
-       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
-       * flow.
-       */
-      override fun includeSourceFiles(includeSourceFiles: IResolvable) {
-        cdkBuilder.includeSourceFiles(includeSourceFiles.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param object The object specified in the Veeva flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), VeevaSourcePropertiesProperty {
-      /**
-       * The document type specified in the Veeva document extract flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-documenttype)
-       */
-      override fun documentType(): String? = unwrap(this).getDocumentType()
-
-      /**
-       * Boolean value to include All Versions of files in Veeva document extract flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includeallversions)
-       */
-      override fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
-
-      /**
-       * Boolean value to include file renditions in Veeva document extract flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includerenditions)
-       */
-      override fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
-
-      /**
-       * Boolean value to include source files in Veeva document extract flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includesourcefiles)
-       */
-      override fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
-
-      /**
-       * The object specified in the Veeva flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VeevaSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty):
-          VeevaSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VeevaSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VeevaSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Marketo is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * MarketoSourcePropertiesProperty marketoSourcePropertiesProperty =
-   * MarketoSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html)
-   */
-  public interface MarketoSourcePropertiesProperty {
-    /**
-     * The object specified in the Marketo flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html#cfn-appflow-flow-marketosourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [MarketoSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Marketo flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Marketo flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
-      /**
-       * The object specified in the Marketo flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html#cfn-appflow-flow-marketosourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MarketoSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty):
-          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * SAP Source connector parallelism factor.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SAPODataParallelismConfigProperty sAPODataParallelismConfigProperty =
-   * SAPODataParallelismConfigProperty.builder()
-   * .maxParallelism(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html)
-   */
-  public interface SAPODataParallelismConfigProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
-     */
-    public fun maxParallelism(): Number
-
-    /**
-     * A builder for [SAPODataParallelismConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxParallelism the value to be set. 
-       */
-      public fun maxParallelism(maxParallelism: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.builder()
-
-      /**
-       * @param maxParallelism the value to be set. 
-       */
-      override fun maxParallelism(maxParallelism: Number) {
-        cdkBuilder.maxParallelism(maxParallelism)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty,
-    ) : CdkObject(cdkObject), SAPODataParallelismConfigProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
-       */
-      override fun maxParallelism(): Number = unwrap(this).getMaxParallelism()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SAPODataParallelismConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty):
-          SAPODataParallelismConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SAPODataParallelismConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SAPODataParallelismConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty):
+          AggregationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AggregationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AggregationConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty
     }
   }
 
@@ -2369,8 +1258,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty,
     ) : CdkObject(cdkObject), AmplitudeSourcePropertiesProperty {
       /**
        * The object specified in the Amplitude flow source.
@@ -2400,8 +1288,7 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
-   * destination.
+   * The operation to be performed on the provided source fields.
    *
    * Example:
    *
@@ -2409,942 +1296,510 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * PrefixConfigProperty prefixConfigProperty = PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
+   * ConnectorOperatorProperty connectorOperatorProperty = ConnectorOperatorProperty.builder()
+   * .amplitude("amplitude")
+   * .customConnector("customConnector")
+   * .datadog("datadog")
+   * .dynatrace("dynatrace")
+   * .googleAnalytics("googleAnalytics")
+   * .inforNexus("inforNexus")
+   * .marketo("marketo")
+   * .pardot("pardot")
+   * .s3("s3")
+   * .salesforce("salesforce")
+   * .sapoData("sapoData")
+   * .serviceNow("serviceNow")
+   * .singular("singular")
+   * .slack("slack")
+   * .trendmicro("trendmicro")
+   * .veeva("veeva")
+   * .zendesk("zendesk")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html)
    */
-  public interface PrefixConfigProperty {
+  public interface ConnectorOperatorProperty {
     /**
-     * Specifies whether the destination file path includes either or both of the following
-     * elements:.
+     * The operation to be performed on the provided Amplitude source fields.
      *
-     * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-     * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-     * version number. The version number increases by one when you change any of the following
-     * settings in your flow configuration:
-     * * Source-to-destination field mappings
-     * * Field data types
-     * * Partition keys
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-pathprefixhierarchy)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-amplitude)
      */
-    public fun pathPrefixHierarchy(): List<String> = unwrap(this).getPathPrefixHierarchy() ?:
-        emptyList()
+    public fun amplitude(): String? = unwrap(this).getAmplitude()
 
     /**
-     * Determines the level of granularity for the date and time that's included in the prefix.
+     * Operators supported by the custom connector.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixformat)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-customconnector)
      */
-    public fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
+    public fun customConnector(): String? = unwrap(this).getCustomConnector()
 
     /**
-     * Determines the format of the prefix, and whether it applies to the file name, file path, or
-     * both.
+     * The operation to be performed on the provided Datadog source fields.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixtype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-datadog)
      */
-    public fun prefixType(): String? = unwrap(this).getPrefixType()
+    public fun datadog(): String? = unwrap(this).getDatadog()
 
     /**
-     * A builder for [PrefixConfigProperty]
+     * The operation to be performed on the provided Dynatrace source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-dynatrace)
+     */
+    public fun dynatrace(): String? = unwrap(this).getDynatrace()
+
+    /**
+     * The operation to be performed on the provided Google Analytics source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-googleanalytics)
+     */
+    public fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
+
+    /**
+     * The operation to be performed on the provided Infor Nexus source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-infornexus)
+     */
+    public fun inforNexus(): String? = unwrap(this).getInforNexus()
+
+    /**
+     * The operation to be performed on the provided Marketo source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-marketo)
+     */
+    public fun marketo(): String? = unwrap(this).getMarketo()
+
+    /**
+     * The operation to be performed on the provided Salesforce Pardot source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-pardot)
+     */
+    public fun pardot(): String? = unwrap(this).getPardot()
+
+    /**
+     * The operation to be performed on the provided Amazon S3 source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-s3)
+     */
+    public fun s3(): String? = unwrap(this).getS3()
+
+    /**
+     * The operation to be performed on the provided Salesforce source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-salesforce)
+     */
+    public fun salesforce(): String? = unwrap(this).getSalesforce()
+
+    /**
+     * The operation to be performed on the provided SAPOData source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-sapodata)
+     */
+    public fun sapoData(): String? = unwrap(this).getSapoData()
+
+    /**
+     * The operation to be performed on the provided ServiceNow source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-servicenow)
+     */
+    public fun serviceNow(): String? = unwrap(this).getServiceNow()
+
+    /**
+     * The operation to be performed on the provided Singular source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-singular)
+     */
+    public fun singular(): String? = unwrap(this).getSingular()
+
+    /**
+     * The operation to be performed on the provided Slack source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-slack)
+     */
+    public fun slack(): String? = unwrap(this).getSlack()
+
+    /**
+     * The operation to be performed on the provided Trend Micro source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-trendmicro)
+     */
+    public fun trendmicro(): String? = unwrap(this).getTrendmicro()
+
+    /**
+     * The operation to be performed on the provided Veeva source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-veeva)
+     */
+    public fun veeva(): String? = unwrap(this).getVeeva()
+
+    /**
+     * The operation to be performed on the provided Zendesk source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-zendesk)
+     */
+    public fun zendesk(): String? = unwrap(this).getZendesk()
+
+    /**
+     * A builder for [ConnectorOperatorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
-       * both of the following elements:.
-       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-       * version number. The version number increases by one when you change any of the following
-       * settings in your flow configuration:
-       * * Source-to-destination field mappings
-       * * Field data types
-       * * Partition keys
+       * @param amplitude The operation to be performed on the provided Amplitude source fields.
        */
-      public fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>)
+      public fun amplitude(amplitude: String)
 
       /**
-       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
-       * both of the following elements:.
-       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-       * version number. The version number increases by one when you change any of the following
-       * settings in your flow configuration:
-       * * Source-to-destination field mappings
-       * * Field data types
-       * * Partition keys
+       * @param customConnector Operators supported by the custom connector.
        */
-      public fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String)
+      public fun customConnector(customConnector: String)
 
       /**
-       * @param prefixFormat Determines the level of granularity for the date and time that's
-       * included in the prefix.
+       * @param datadog The operation to be performed on the provided Datadog source fields.
        */
-      public fun prefixFormat(prefixFormat: String)
+      public fun datadog(datadog: String)
 
       /**
-       * @param prefixType Determines the format of the prefix, and whether it applies to the file
-       * name, file path, or both.
+       * @param dynatrace The operation to be performed on the provided Dynatrace source fields.
        */
-      public fun prefixType(prefixType: String)
+      public fun dynatrace(dynatrace: String)
+
+      /**
+       * @param googleAnalytics The operation to be performed on the provided Google Analytics
+       * source fields.
+       */
+      public fun googleAnalytics(googleAnalytics: String)
+
+      /**
+       * @param inforNexus The operation to be performed on the provided Infor Nexus source fields.
+       */
+      public fun inforNexus(inforNexus: String)
+
+      /**
+       * @param marketo The operation to be performed on the provided Marketo source fields.
+       */
+      public fun marketo(marketo: String)
+
+      /**
+       * @param pardot The operation to be performed on the provided Salesforce Pardot source
+       * fields.
+       */
+      public fun pardot(pardot: String)
+
+      /**
+       * @param s3 The operation to be performed on the provided Amazon S3 source fields.
+       */
+      public fun s3(s3: String)
+
+      /**
+       * @param salesforce The operation to be performed on the provided Salesforce source fields.
+       */
+      public fun salesforce(salesforce: String)
+
+      /**
+       * @param sapoData The operation to be performed on the provided SAPOData source fields.
+       */
+      public fun sapoData(sapoData: String)
+
+      /**
+       * @param serviceNow The operation to be performed on the provided ServiceNow source fields.
+       */
+      public fun serviceNow(serviceNow: String)
+
+      /**
+       * @param singular The operation to be performed on the provided Singular source fields.
+       */
+      public fun singular(singular: String)
+
+      /**
+       * @param slack The operation to be performed on the provided Slack source fields.
+       */
+      public fun slack(slack: String)
+
+      /**
+       * @param trendmicro The operation to be performed on the provided Trend Micro source fields.
+       */
+      public fun trendmicro(trendmicro: String)
+
+      /**
+       * @param veeva The operation to be performed on the provided Veeva source fields.
+       */
+      public fun veeva(veeva: String)
+
+      /**
+       * @param zendesk The operation to be performed on the provided Zendesk source fields.
+       */
+      public fun zendesk(zendesk: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.builder()
 
       /**
-       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
-       * both of the following elements:.
-       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-       * version number. The version number increases by one when you change any of the following
-       * settings in your flow configuration:
-       * * Source-to-destination field mappings
-       * * Field data types
-       * * Partition keys
+       * @param amplitude The operation to be performed on the provided Amplitude source fields.
        */
-      override fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
-        cdkBuilder.pathPrefixHierarchy(pathPrefixHierarchy)
+      override fun amplitude(amplitude: String) {
+        cdkBuilder.amplitude(amplitude)
       }
 
       /**
-       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
-       * both of the following elements:.
-       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-       * version number. The version number increases by one when you change any of the following
-       * settings in your flow configuration:
-       * * Source-to-destination field mappings
-       * * Field data types
-       * * Partition keys
+       * @param customConnector Operators supported by the custom connector.
        */
-      override fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String): Unit =
-          pathPrefixHierarchy(pathPrefixHierarchy.toList())
-
-      /**
-       * @param prefixFormat Determines the level of granularity for the date and time that's
-       * included in the prefix.
-       */
-      override fun prefixFormat(prefixFormat: String) {
-        cdkBuilder.prefixFormat(prefixFormat)
+      override fun customConnector(customConnector: String) {
+        cdkBuilder.customConnector(customConnector)
       }
 
       /**
-       * @param prefixType Determines the format of the prefix, and whether it applies to the file
-       * name, file path, or both.
+       * @param datadog The operation to be performed on the provided Datadog source fields.
        */
-      override fun prefixType(prefixType: String) {
-        cdkBuilder.prefixType(prefixType)
+      override fun datadog(datadog: String) {
+        cdkBuilder.datadog(datadog)
       }
 
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty =
-          cdkBuilder.build()
+      /**
+       * @param dynatrace The operation to be performed on the provided Dynatrace source fields.
+       */
+      override fun dynatrace(dynatrace: String) {
+        cdkBuilder.dynatrace(dynatrace)
+      }
+
+      /**
+       * @param googleAnalytics The operation to be performed on the provided Google Analytics
+       * source fields.
+       */
+      override fun googleAnalytics(googleAnalytics: String) {
+        cdkBuilder.googleAnalytics(googleAnalytics)
+      }
+
+      /**
+       * @param inforNexus The operation to be performed on the provided Infor Nexus source fields.
+       */
+      override fun inforNexus(inforNexus: String) {
+        cdkBuilder.inforNexus(inforNexus)
+      }
+
+      /**
+       * @param marketo The operation to be performed on the provided Marketo source fields.
+       */
+      override fun marketo(marketo: String) {
+        cdkBuilder.marketo(marketo)
+      }
+
+      /**
+       * @param pardot The operation to be performed on the provided Salesforce Pardot source
+       * fields.
+       */
+      override fun pardot(pardot: String) {
+        cdkBuilder.pardot(pardot)
+      }
+
+      /**
+       * @param s3 The operation to be performed on the provided Amazon S3 source fields.
+       */
+      override fun s3(s3: String) {
+        cdkBuilder.s3(s3)
+      }
+
+      /**
+       * @param salesforce The operation to be performed on the provided Salesforce source fields.
+       */
+      override fun salesforce(salesforce: String) {
+        cdkBuilder.salesforce(salesforce)
+      }
+
+      /**
+       * @param sapoData The operation to be performed on the provided SAPOData source fields.
+       */
+      override fun sapoData(sapoData: String) {
+        cdkBuilder.sapoData(sapoData)
+      }
+
+      /**
+       * @param serviceNow The operation to be performed on the provided ServiceNow source fields.
+       */
+      override fun serviceNow(serviceNow: String) {
+        cdkBuilder.serviceNow(serviceNow)
+      }
+
+      /**
+       * @param singular The operation to be performed on the provided Singular source fields.
+       */
+      override fun singular(singular: String) {
+        cdkBuilder.singular(singular)
+      }
+
+      /**
+       * @param slack The operation to be performed on the provided Slack source fields.
+       */
+      override fun slack(slack: String) {
+        cdkBuilder.slack(slack)
+      }
+
+      /**
+       * @param trendmicro The operation to be performed on the provided Trend Micro source fields.
+       */
+      override fun trendmicro(trendmicro: String) {
+        cdkBuilder.trendmicro(trendmicro)
+      }
+
+      /**
+       * @param veeva The operation to be performed on the provided Veeva source fields.
+       */
+      override fun veeva(veeva: String) {
+        cdkBuilder.veeva(veeva)
+      }
+
+      /**
+       * @param zendesk The operation to be performed on the provided Zendesk source fields.
+       */
+      override fun zendesk(zendesk: String) {
+        cdkBuilder.zendesk(zendesk)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty,
-    ) : CdkObject(cdkObject), PrefixConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty,
+    ) : CdkObject(cdkObject), ConnectorOperatorProperty {
       /**
-       * Specifies whether the destination file path includes either or both of the following
-       * elements:.
+       * The operation to be performed on the provided Amplitude source fields.
        *
-       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
-       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
-       * version number. The version number increases by one when you change any of the following
-       * settings in your flow configuration:
-       * * Source-to-destination field mappings
-       * * Field data types
-       * * Partition keys
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-pathprefixhierarchy)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-amplitude)
        */
-      override fun pathPrefixHierarchy(): List<String> = unwrap(this).getPathPrefixHierarchy() ?:
-          emptyList()
+      override fun amplitude(): String? = unwrap(this).getAmplitude()
 
       /**
-       * Determines the level of granularity for the date and time that's included in the prefix.
+       * Operators supported by the custom connector.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixformat)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-customconnector)
        */
-      override fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
+      override fun customConnector(): String? = unwrap(this).getCustomConnector()
 
       /**
-       * Determines the format of the prefix, and whether it applies to the file name, file path, or
-       * both.
+       * The operation to be performed on the provided Datadog source fields.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixtype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-datadog)
        */
-      override fun prefixType(): String? = unwrap(this).getPrefixType()
+      override fun datadog(): String? = unwrap(this).getDatadog()
+
+      /**
+       * The operation to be performed on the provided Dynatrace source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-dynatrace)
+       */
+      override fun dynatrace(): String? = unwrap(this).getDynatrace()
+
+      /**
+       * The operation to be performed on the provided Google Analytics source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-googleanalytics)
+       */
+      override fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
+
+      /**
+       * The operation to be performed on the provided Infor Nexus source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-infornexus)
+       */
+      override fun inforNexus(): String? = unwrap(this).getInforNexus()
+
+      /**
+       * The operation to be performed on the provided Marketo source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-marketo)
+       */
+      override fun marketo(): String? = unwrap(this).getMarketo()
+
+      /**
+       * The operation to be performed on the provided Salesforce Pardot source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-pardot)
+       */
+      override fun pardot(): String? = unwrap(this).getPardot()
+
+      /**
+       * The operation to be performed on the provided Amazon S3 source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-s3)
+       */
+      override fun s3(): String? = unwrap(this).getS3()
+
+      /**
+       * The operation to be performed on the provided Salesforce source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-salesforce)
+       */
+      override fun salesforce(): String? = unwrap(this).getSalesforce()
+
+      /**
+       * The operation to be performed on the provided SAPOData source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-sapodata)
+       */
+      override fun sapoData(): String? = unwrap(this).getSapoData()
+
+      /**
+       * The operation to be performed on the provided ServiceNow source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-servicenow)
+       */
+      override fun serviceNow(): String? = unwrap(this).getServiceNow()
+
+      /**
+       * The operation to be performed on the provided Singular source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-singular)
+       */
+      override fun singular(): String? = unwrap(this).getSingular()
+
+      /**
+       * The operation to be performed on the provided Slack source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-slack)
+       */
+      override fun slack(): String? = unwrap(this).getSlack()
+
+      /**
+       * The operation to be performed on the provided Trend Micro source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-trendmicro)
+       */
+      override fun trendmicro(): String? = unwrap(this).getTrendmicro()
+
+      /**
+       * The operation to be performed on the provided Veeva source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-veeva)
+       */
+      override fun veeva(): String? = unwrap(this).getVeeva()
+
+      /**
+       * The operation to be performed on the provided Zendesk source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-zendesk)
+       */
+      override fun zendesk(): String? = unwrap(this).getZendesk()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrefixConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorOperatorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty):
-          PrefixConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixConfigProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty):
+          ConnectorOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorOperatorProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PrefixConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: ConnectorOperatorProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when using Zendesk as a flow source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ZendeskSourcePropertiesProperty zendeskSourcePropertiesProperty =
-   * ZendeskSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html)
-   */
-  public interface ZendeskSourcePropertiesProperty {
-    /**
-     * The object specified in the Zendesk flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html#cfn-appflow-flow-zendesksourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [ZendeskSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Zendesk flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Zendesk flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
-      /**
-       * The object specified in the Zendesk flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html#cfn-appflow-flow-zendesksourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ZendeskSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty):
-          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Snowflake is being used as a destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SnowflakeDestinationPropertiesProperty snowflakeDestinationPropertiesProperty =
-   * SnowflakeDestinationPropertiesProperty.builder()
-   * .intermediateBucketName("intermediateBucketName")
-   * .object("object")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html)
-   */
-  public interface SnowflakeDestinationPropertiesProperty {
-    /**
-     * The object key for the destination bucket in which Amazon AppFlow places the files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * The settings that determine how Amazon AppFlow handles an error when placing data in the
-     * Snowflake destination.
-     *
-     * For example, this setting would determine if the flow should fail after one insertion error,
-     * or continue and attempt to insert every record regardless of the initial failure.
-     * `ErrorHandlingConfig` is a part of the destination connector details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-errorhandlingconfig)
-     */
-    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-    /**
-     * The intermediate bucket that Amazon AppFlow uses when moving data into Snowflake.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-intermediatebucketname)
-     */
-    public fun intermediateBucketName(): String
-
-    /**
-     * The object specified in the Snowflake flow destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [SnowflakeDestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
-       * places the files.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
-      public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
-       * data into Snowflake. 
-       */
-      public fun intermediateBucketName(intermediateBucketName: String)
-
-      /**
-       * @param object The object specified in the Snowflake flow destination. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty.builder()
-
-      /**
-       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
-       * places the files.
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Snowflake destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
-      override
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
-          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
-
-      /**
-       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
-       * data into Snowflake. 
-       */
-      override fun intermediateBucketName(intermediateBucketName: String) {
-        cdkBuilder.intermediateBucketName(intermediateBucketName)
-      }
-
-      /**
-       * @param object The object specified in the Snowflake flow destination. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), SnowflakeDestinationPropertiesProperty {
-      /**
-       * The object key for the destination bucket in which Amazon AppFlow places the files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-bucketprefix)
-       */
-      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-      /**
-       * The settings that determine how Amazon AppFlow handles an error when placing data in the
-       * Snowflake destination.
-       *
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-errorhandlingconfig)
-       */
-      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-      /**
-       * The intermediate bucket that Amazon AppFlow uses when moving data into Snowflake.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-intermediatebucketname)
-       */
-      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
-
-      /**
-       * The object specified in the Snowflake flow destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SnowflakeDestinationPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty):
-          SnowflakeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SnowflakeDestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SnowflakeDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Amazon EventBridge is being used as a destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * EventBridgeDestinationPropertiesProperty eventBridgeDestinationPropertiesProperty =
-   * EventBridgeDestinationPropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html)
-   */
-  public interface EventBridgeDestinationPropertiesProperty {
-    /**
-     * The object specified in the Amplitude flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-errorhandlingconfig)
-     */
-    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-    /**
-     * The object specified in the Amazon EventBridge flow destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [EventBridgeDestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
-
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
-
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
-      public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param object The object specified in the Amazon EventBridge flow destination. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty.builder()
-
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The object specified in the Amplitude flow source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
-      override
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
-          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
-
-      /**
-       * @param object The object specified in the Amazon EventBridge flow destination. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), EventBridgeDestinationPropertiesProperty {
-      /**
-       * The object specified in the Amplitude flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-errorhandlingconfig)
-       */
-      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-      /**
-       * The object specified in the Amazon EventBridge flow destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EventBridgeDestinationPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty):
-          EventBridgeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EventBridgeDestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventBridgeDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Dynatrace is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * DynatraceSourcePropertiesProperty dynatraceSourcePropertiesProperty =
-   * DynatraceSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html)
-   */
-  public interface DynatraceSourcePropertiesProperty {
-    /**
-     * The object specified in the Dynatrace flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html#cfn-appflow-flow-dynatracesourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [DynatraceSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Dynatrace flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Dynatrace flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), DynatraceSourcePropertiesProperty {
-      /**
-       * The object specified in the Dynatrace flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html#cfn-appflow-flow-dynatracesourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DynatraceSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty):
-          DynatraceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DynatraceSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DynatraceSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when the custom connector is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * CustomConnectorSourcePropertiesProperty customConnectorSourcePropertiesProperty =
-   * CustomConnectorSourcePropertiesProperty.builder()
-   * .entityName("entityName")
-   * // the properties below are optional
-   * .customProperties(Map.of(
-   * "customPropertiesKey", "customProperties"))
-   * .dataTransferApi(DataTransferApiProperty.builder()
-   * .name("name")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html)
-   */
-  public interface CustomConnectorSourcePropertiesProperty {
-    /**
-     * Custom properties that are required to use the custom connector as a source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-customproperties)
-     */
-    public fun customProperties(): Any? = unwrap(this).getCustomProperties()
-
-    /**
-     * The API of the connector application that Amazon AppFlow uses to transfer your data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi)
-     */
-    public fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
-
-    /**
-     * The entity specified in the custom connector as a source in the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-entityname)
-     */
-    public fun entityName(): String
-
-    /**
-     * A builder for [CustomConnectorSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param customProperties Custom properties that are required to use the custom connector as
-       * a source.
-       */
-      public fun customProperties(customProperties: IResolvable)
-
-      /**
-       * @param customProperties Custom properties that are required to use the custom connector as
-       * a source.
-       */
-      public fun customProperties(customProperties: Map<String, String>)
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      public fun dataTransferApi(dataTransferApi: IResolvable)
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty)
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
-      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit)
-
-      /**
-       * @param entityName The entity specified in the custom connector as a source in the flow. 
-       */
-      public fun entityName(entityName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty.builder()
-
-      /**
-       * @param customProperties Custom properties that are required to use the custom connector as
-       * a source.
-       */
-      override fun customProperties(customProperties: IResolvable) {
-        cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customProperties Custom properties that are required to use the custom connector as
-       * a source.
-       */
-      override fun customProperties(customProperties: Map<String, String>) {
-        cdkBuilder.customProperties(customProperties)
-      }
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      override fun dataTransferApi(dataTransferApi: IResolvable) {
-        cdkBuilder.dataTransferApi(dataTransferApi.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
-        cdkBuilder.dataTransferApi(dataTransferApi.let(DataTransferApiProperty::unwrap))
-      }
-
-      /**
-       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
-       * transfer your data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
-      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit):
-          Unit = dataTransferApi(DataTransferApiProperty(dataTransferApi))
-
-      /**
-       * @param entityName The entity specified in the custom connector as a source in the flow. 
-       */
-      override fun entityName(entityName: String) {
-        cdkBuilder.entityName(entityName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), CustomConnectorSourcePropertiesProperty {
-      /**
-       * Custom properties that are required to use the custom connector as a source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-customproperties)
-       */
-      override fun customProperties(): Any? = unwrap(this).getCustomProperties()
-
-      /**
-       * The API of the connector application that Amazon AppFlow uses to transfer your data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi)
-       */
-      override fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
-
-      /**
-       * The entity specified in the custom connector as a source in the flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-entityname)
-       */
-      override fun entityName(): String = unwrap(this).getEntityName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomConnectorSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty):
-          CustomConnectorSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomConnectorSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomConnectorSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty
     }
   }
 
@@ -3563,8 +2018,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty,
     ) : CdkObject(cdkObject), CustomConnectorDestinationPropertiesProperty {
       /**
        * The custom properties that are specific to the connector when it's used as a destination in
@@ -3626,7 +2080,7 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * The properties that Amazon AppFlow applies when you use Marketo as a flow destination.
+   * The properties that are applied when the custom connector is being used as a source.
    *
    * Example:
    *
@@ -3634,843 +2088,186 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * MarketoDestinationPropertiesProperty marketoDestinationPropertiesProperty =
-   * MarketoDestinationPropertiesProperty.builder()
-   * .object("object")
+   * CustomConnectorSourcePropertiesProperty customConnectorSourcePropertiesProperty =
+   * CustomConnectorSourcePropertiesProperty.builder()
+   * .entityName("entityName")
    * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
+   * .customProperties(Map.of(
+   * "customPropertiesKey", "customProperties"))
+   * .dataTransferApi(DataTransferApiProperty.builder()
+   * .name("name")
+   * .type("type")
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html)
    */
-  public interface MarketoDestinationPropertiesProperty {
+  public interface CustomConnectorSourcePropertiesProperty {
     /**
-     * The settings that determine how Amazon AppFlow handles an error when placing data in the
-     * destination.
+     * Custom properties that are required to use the custom connector as a source.
      *
-     * For example, this setting would determine if the flow should fail after one insertion error,
-     * or continue and attempt to insert every record regardless of the initial failure.
-     * `ErrorHandlingConfig` is a part of the destination connector details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-errorhandlingconfig)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-customproperties)
      */
-    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+    public fun customProperties(): Any? = unwrap(this).getCustomProperties()
 
     /**
-     * The object specified in the Marketo flow destination.
+     * The API of the connector application that Amazon AppFlow uses to transfer your data.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-object)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi)
      */
-    public fun `object`(): String
+    public fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
 
     /**
-     * A builder for [MarketoDestinationPropertiesProperty]
+     * The entity specified in the custom connector as a source in the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-entityname)
+     */
+    public fun entityName(): String
+
+    /**
+     * A builder for [CustomConnectorSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param customProperties Custom properties that are required to use the custom connector as
+       * a source.
        */
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+      public fun customProperties(customProperties: IResolvable)
 
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param customProperties Custom properties that are required to use the custom connector as
+       * a source.
        */
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+      public fun customProperties(customProperties: Map<String, String>)
 
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
+       */
+      public fun dataTransferApi(dataTransferApi: IResolvable)
+
+      /**
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
+       */
+      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty)
+
+      /**
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
-      public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+      @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
+      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit)
 
       /**
-       * @param object The object specified in the Marketo flow destination. 
+       * @param entityName The entity specified in the custom connector as a source in the flow. 
        */
-      public fun `object`(`object`: String)
+      public fun entityName(entityName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty.builder()
 
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param customProperties Custom properties that are required to use the custom connector as
+       * a source.
        */
-      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      override fun customProperties(customProperties: IResolvable) {
+        cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param customProperties Custom properties that are required to use the custom connector as
+       * a source.
        */
-      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      override fun customProperties(customProperties: Map<String, String>) {
+        cdkBuilder.customProperties(customProperties)
       }
 
       /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
+       */
+      override fun dataTransferApi(dataTransferApi: IResolvable) {
+        cdkBuilder.dataTransferApi(dataTransferApi.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
+       */
+      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
+        cdkBuilder.dataTransferApi(dataTransferApi.let(DataTransferApiProperty::unwrap))
+      }
+
+      /**
+       * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
+       * transfer your data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
-      override
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
-          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+      @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
+      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit):
+          Unit = dataTransferApi(DataTransferApiProperty(dataTransferApi))
 
       /**
-       * @param object The object specified in the Marketo flow destination. 
+       * @param entityName The entity specified in the custom connector as a source in the flow. 
        */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
+      override fun entityName(entityName: String) {
+        cdkBuilder.entityName(entityName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty =
+          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoDestinationPropertiesProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), CustomConnectorSourcePropertiesProperty {
       /**
-       * The settings that determine how Amazon AppFlow handles an error when placing data in the
-       * destination.
+       * Custom properties that are required to use the custom connector as a source.
        *
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-errorhandlingconfig)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-customproperties)
        */
-      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun customProperties(): Any? = unwrap(this).getCustomProperties()
 
       /**
-       * The object specified in the Marketo flow destination.
+       * The API of the connector application that Amazon AppFlow uses to transfer your data.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-object)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-datatransferapi)
        */
-      override fun `object`(): String = unwrap(this).getObject()
+      override fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
+
+      /**
+       * The entity specified in the custom connector as a source in the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html#cfn-appflow-flow-customconnectorsourceproperties-entityname)
+       */
+      override fun entityName(): String = unwrap(this).getEntityName()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          MarketoDestinationPropertiesProperty {
+          CustomConnectorSourcePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty):
-          MarketoDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MarketoDestinationPropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty):
+          CustomConnectorSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorSourcePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MarketoDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty =
+      internal fun unwrap(wrapped: CustomConnectorSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration details of a schedule-triggered flow as defined by the user.
-   *
-   * Currently, these settings only apply to the `Scheduled` trigger type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ScheduledTriggerPropertiesProperty scheduledTriggerPropertiesProperty =
-   * ScheduledTriggerPropertiesProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * // the properties below are optional
-   * .dataPullMode("dataPullMode")
-   * .firstExecutionFrom(123)
-   * .flowErrorDeactivationThreshold(123)
-   * .scheduleEndTime(123)
-   * .scheduleOffset(123)
-   * .scheduleStartTime(123)
-   * .timeZone("timeZone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html)
-   */
-  public interface ScheduledTriggerPropertiesProperty {
-    /**
-     * Specifies whether a scheduled flow has an incremental data transfer or a complete data
-     * transfer for each flow run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-datapullmode)
-     */
-    public fun dataPullMode(): String? = unwrap(this).getDataPullMode()
-
-    /**
-     * Specifies the date range for the records to import from the connector in the first flow run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-firstexecutionfrom)
-     */
-    public fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
-
-    /**
-     * Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates
-     * it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-flowerrordeactivationthreshold)
-     */
-    public fun flowErrorDeactivationThreshold(): Number? =
-        unwrap(this).getFlowErrorDeactivationThreshold()
-
-    /**
-     * The time at which the scheduled flow ends.
-     *
-     * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-     * `2022-04-27T13:00:00-07:00` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime)
-     */
-    public fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
-
-    /**
-     * The scheduling expression that determines the rate at which the schedule will run, for
-     * example `rate(5minutes)` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression)
-     */
-    public fun scheduleExpression(): String
-
-    /**
-     * Specifies the optional offset that is added to the time interval for a schedule-triggered
-     * flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset)
-     */
-    public fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
-
-    /**
-     * The time at which the scheduled flow starts.
-     *
-     * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-     * `2022-04-26T13:00:00-07:00` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime)
-     */
-    public fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
-
-    /**
-     * Specifies the time zone used when referring to the dates and times of a scheduled flow, such
-     * as `America/New_York` .
-     *
-     * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
-     * the timestamps that you specify to schedule the flow.
-     *
-     * If you want to schedule a flow by using times in a particular time zone, indicate the time
-     * zone as a UTC offset in your timestamps. For example, the UTC offsets for the `America/New_York`
-     * timezone are `-04:00` EDT and `-05:00 EST` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-timezone)
-     */
-    public fun timeZone(): String? = unwrap(this).getTimeZone()
-
-    /**
-     * A builder for [ScheduledTriggerPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dataPullMode Specifies whether a scheduled flow has an incremental data transfer or
-       * a complete data transfer for each flow run.
-       */
-      public fun dataPullMode(dataPullMode: String)
-
-      /**
-       * @param firstExecutionFrom Specifies the date range for the records to import from the
-       * connector in the first flow run.
-       */
-      public fun firstExecutionFrom(firstExecutionFrom: Number)
-
-      /**
-       * @param flowErrorDeactivationThreshold Defines how many times a scheduled flow fails
-       * consecutively before Amazon AppFlow deactivates it.
-       */
-      public fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number)
-
-      /**
-       * @param scheduleEndTime The time at which the scheduled flow ends.
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-27T13:00:00-07:00` .
-       */
-      public fun scheduleEndTime(scheduleEndTime: Number)
-
-      /**
-       * @param scheduleExpression The scheduling expression that determines the rate at which the
-       * schedule will run, for example `rate(5minutes)` . 
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-
-      /**
-       * @param scheduleOffset Specifies the optional offset that is added to the time interval for
-       * a schedule-triggered flow.
-       */
-      public fun scheduleOffset(scheduleOffset: Number)
-
-      /**
-       * @param scheduleStartTime The time at which the scheduled flow starts.
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-26T13:00:00-07:00` .
-       */
-      public fun scheduleStartTime(scheduleStartTime: Number)
-
-      /**
-       * @param timeZone Specifies the time zone used when referring to the dates and times of a
-       * scheduled flow, such as `America/New_York` .
-       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
-       * the timestamps that you specify to schedule the flow.
-       *
-       * If you want to schedule a flow by using times in a particular time zone, indicate the time
-       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
-       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
-       */
-      public fun timeZone(timeZone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty.builder()
-
-      /**
-       * @param dataPullMode Specifies whether a scheduled flow has an incremental data transfer or
-       * a complete data transfer for each flow run.
-       */
-      override fun dataPullMode(dataPullMode: String) {
-        cdkBuilder.dataPullMode(dataPullMode)
-      }
-
-      /**
-       * @param firstExecutionFrom Specifies the date range for the records to import from the
-       * connector in the first flow run.
-       */
-      override fun firstExecutionFrom(firstExecutionFrom: Number) {
-        cdkBuilder.firstExecutionFrom(firstExecutionFrom)
-      }
-
-      /**
-       * @param flowErrorDeactivationThreshold Defines how many times a scheduled flow fails
-       * consecutively before Amazon AppFlow deactivates it.
-       */
-      override fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
-        cdkBuilder.flowErrorDeactivationThreshold(flowErrorDeactivationThreshold)
-      }
-
-      /**
-       * @param scheduleEndTime The time at which the scheduled flow ends.
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-27T13:00:00-07:00` .
-       */
-      override fun scheduleEndTime(scheduleEndTime: Number) {
-        cdkBuilder.scheduleEndTime(scheduleEndTime)
-      }
-
-      /**
-       * @param scheduleExpression The scheduling expression that determines the rate at which the
-       * schedule will run, for example `rate(5minutes)` . 
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      /**
-       * @param scheduleOffset Specifies the optional offset that is added to the time interval for
-       * a schedule-triggered flow.
-       */
-      override fun scheduleOffset(scheduleOffset: Number) {
-        cdkBuilder.scheduleOffset(scheduleOffset)
-      }
-
-      /**
-       * @param scheduleStartTime The time at which the scheduled flow starts.
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-26T13:00:00-07:00` .
-       */
-      override fun scheduleStartTime(scheduleStartTime: Number) {
-        cdkBuilder.scheduleStartTime(scheduleStartTime)
-      }
-
-      /**
-       * @param timeZone Specifies the time zone used when referring to the dates and times of a
-       * scheduled flow, such as `America/New_York` .
-       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
-       * the timestamps that you specify to schedule the flow.
-       *
-       * If you want to schedule a flow by using times in a particular time zone, indicate the time
-       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
-       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
-       */
-      override fun timeZone(timeZone: String) {
-        cdkBuilder.timeZone(timeZone)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty,
-    ) : CdkObject(cdkObject), ScheduledTriggerPropertiesProperty {
-      /**
-       * Specifies whether a scheduled flow has an incremental data transfer or a complete data
-       * transfer for each flow run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-datapullmode)
-       */
-      override fun dataPullMode(): String? = unwrap(this).getDataPullMode()
-
-      /**
-       * Specifies the date range for the records to import from the connector in the first flow
-       * run.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-firstexecutionfrom)
-       */
-      override fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
-
-      /**
-       * Defines how many times a scheduled flow fails consecutively before Amazon AppFlow
-       * deactivates it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-flowerrordeactivationthreshold)
-       */
-      override fun flowErrorDeactivationThreshold(): Number? =
-          unwrap(this).getFlowErrorDeactivationThreshold()
-
-      /**
-       * The time at which the scheduled flow ends.
-       *
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-27T13:00:00-07:00` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime)
-       */
-      override fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
-
-      /**
-       * The scheduling expression that determines the rate at which the schedule will run, for
-       * example `rate(5minutes)` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression)
-       */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
-
-      /**
-       * Specifies the optional offset that is added to the time interval for a schedule-triggered
-       * flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset)
-       */
-      override fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
-
-      /**
-       * The time at which the scheduled flow starts.
-       *
-       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
-       * `2022-04-26T13:00:00-07:00` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime)
-       */
-      override fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
-
-      /**
-       * Specifies the time zone used when referring to the dates and times of a scheduled flow,
-       * such as `America/New_York` .
-       *
-       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
-       * the timestamps that you specify to schedule the flow.
-       *
-       * If you want to schedule a flow by using times in a particular time zone, indicate the time
-       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
-       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-timezone)
-       */
-      override fun timeZone(): String? = unwrap(this).getTimeZone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ScheduledTriggerPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty):
-          ScheduledTriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScheduledTriggerPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduledTriggerPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Salesforce Pardot is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * PardotSourcePropertiesProperty pardotSourcePropertiesProperty =
-   * PardotSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html)
-   */
-  public interface PardotSourcePropertiesProperty {
-    /**
-     * The object specified in the Salesforce Pardot flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html#cfn-appflow-flow-pardotsourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [PardotSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Salesforce Pardot flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Salesforce Pardot flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), PardotSourcePropertiesProperty {
-      /**
-       * The object specified in the Salesforce Pardot flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html#cfn-appflow-flow-pardotsourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PardotSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty):
-          PardotSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PardotSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PardotSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Amazon Redshift is being used as a destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * RedshiftDestinationPropertiesProperty redshiftDestinationPropertiesProperty =
-   * RedshiftDestinationPropertiesProperty.builder()
-   * .intermediateBucketName("intermediateBucketName")
-   * .object("object")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html)
-   */
-  public interface RedshiftDestinationPropertiesProperty {
-    /**
-     * The object key for the bucket in which Amazon AppFlow places the destination files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * The settings that determine how Amazon AppFlow handles an error when placing data in the
-     * Amazon Redshift destination.
-     *
-     * For example, this setting would determine if the flow should fail after one insertion error,
-     * or continue and attempt to insert every record regardless of the initial failure.
-     * `ErrorHandlingConfig` is a part of the destination connector details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-errorhandlingconfig)
-     */
-    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-    /**
-     * The intermediate bucket that Amazon AppFlow uses when moving data into Amazon Redshift.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-intermediatebucketname)
-     */
-    public fun intermediateBucketName(): String
-
-    /**
-     * The object specified in the Amazon Redshift flow destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [RedshiftDestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketPrefix The object key for the bucket in which Amazon AppFlow places the
-       * destination files.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
-      public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
-       * data into Amazon Redshift. 
-       */
-      public fun intermediateBucketName(intermediateBucketName: String)
-
-      /**
-       * @param object The object specified in the Amazon Redshift flow destination. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty.builder()
-
-      /**
-       * @param bucketPrefix The object key for the bucket in which Amazon AppFlow places the
-       * destination files.
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the Amazon Redshift destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
-      override
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
-          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
-
-      /**
-       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
-       * data into Amazon Redshift. 
-       */
-      override fun intermediateBucketName(intermediateBucketName: String) {
-        cdkBuilder.intermediateBucketName(intermediateBucketName)
-      }
-
-      /**
-       * @param object The object specified in the Amazon Redshift flow destination. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), RedshiftDestinationPropertiesProperty {
-      /**
-       * The object key for the bucket in which Amazon AppFlow places the destination files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-bucketprefix)
-       */
-      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-      /**
-       * The settings that determine how Amazon AppFlow handles an error when placing data in the
-       * Amazon Redshift destination.
-       *
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-errorhandlingconfig)
-       */
-      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-      /**
-       * The intermediate bucket that Amazon AppFlow uses when moving data into Amazon Redshift.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-intermediatebucketname)
-       */
-      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
-
-      /**
-       * The object specified in the Amazon Redshift flow destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RedshiftDestinationPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty):
-          RedshiftDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RedshiftDestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty
     }
   }
 
@@ -4565,8 +2362,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty,
     ) : CdkObject(cdkObject), DataTransferApiProperty {
       /**
        * The name of the connector application API.
@@ -4609,7 +2405,7 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * The aggregation settings that you can use to customize the output format of your flow data.
+   * The properties that are applied when Datadog is being used as a source.
    *
    * Example:
    *
@@ -4617,124 +2413,76 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * AggregationConfigProperty aggregationConfigProperty = AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
+   * DatadogSourcePropertiesProperty datadogSourcePropertiesProperty =
+   * DatadogSourcePropertiesProperty.builder()
+   * .object("object")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html)
    */
-  public interface AggregationConfigProperty {
+  public interface DatadogSourcePropertiesProperty {
     /**
-     * Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave
-     * them unaggregated.
+     * The object specified in the Datadog flow source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-aggregationtype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html#cfn-appflow-flow-datadogsourceproperties-object)
      */
-    public fun aggregationType(): String? = unwrap(this).getAggregationType()
+    public fun `object`(): String
 
     /**
-     * The desired file size, in MB, for each output file that Amazon AppFlow writes to the flow
-     * destination.
-     *
-     * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual file
-     * sizes might differ from this target based on the number and size of the records that each file
-     * contains.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-targetfilesize)
-     */
-    public fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
-
-    /**
-     * A builder for [AggregationConfigProperty]
+     * A builder for [DatadogSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param aggregationType Specifies whether Amazon AppFlow aggregates the flow records into a
-       * single file, or leave them unaggregated.
+       * @param object The object specified in the Datadog flow source. 
        */
-      public fun aggregationType(aggregationType: String)
-
-      /**
-       * @param targetFileSize The desired file size, in MB, for each output file that Amazon
-       * AppFlow writes to the flow destination.
-       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
-       * file sizes might differ from this target based on the number and size of the records that each
-       * file contains.
-       */
-      public fun targetFileSize(targetFileSize: Number)
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.builder()
 
       /**
-       * @param aggregationType Specifies whether Amazon AppFlow aggregates the flow records into a
-       * single file, or leave them unaggregated.
+       * @param object The object specified in the Datadog flow source. 
        */
-      override fun aggregationType(aggregationType: String) {
-        cdkBuilder.aggregationType(aggregationType)
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
       }
 
-      /**
-       * @param targetFileSize The desired file size, in MB, for each output file that Amazon
-       * AppFlow writes to the flow destination.
-       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
-       * file sizes might differ from this target based on the number and size of the records that each
-       * file contains.
-       */
-      override fun targetFileSize(targetFileSize: Number) {
-        cdkBuilder.targetFileSize(targetFileSize)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty,
-    ) : CdkObject(cdkObject), AggregationConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), DatadogSourcePropertiesProperty {
       /**
-       * Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave
-       * them unaggregated.
+       * The object specified in the Datadog flow source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-aggregationtype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html#cfn-appflow-flow-datadogsourceproperties-object)
        */
-      override fun aggregationType(): String? = unwrap(this).getAggregationType()
-
-      /**
-       * The desired file size, in MB, for each output file that Amazon AppFlow writes to the flow
-       * destination.
-       *
-       * For each file, Amazon AppFlow attempts to achieve the size that you specify. The actual
-       * file sizes might differ from this target based on the number and size of the records that each
-       * file contains.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html#cfn-appflow-flow-aggregationconfig-targetfilesize)
-       */
-      override fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AggregationConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatadogSourcePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty):
-          AggregationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AggregationConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty):
+          DatadogSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatadogSourcePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AggregationConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty
+      internal fun unwrap(wrapped: DatadogSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty
     }
   }
 
@@ -5416,8 +3164,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty,
     ) : CdkObject(cdkObject), DestinationConnectorPropertiesProperty {
       /**
        * The properties that are required to query the custom Connector.
@@ -5513,6 +3260,3566 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty
+    }
+  }
+
+  /**
+   * Contains information about the configuration of destination connectors present in the flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * DestinationFlowConfigProperty destinationFlowConfigProperty =
+   * DestinationFlowConfigProperty.builder()
+   * .connectorType("connectorType")
+   * .destinationConnectorProperties(DestinationConnectorPropertiesProperty.builder()
+   * .customConnector(CustomConnectorDestinationPropertiesProperty.builder()
+   * .entityName("entityName")
+   * // the properties below are optional
+   * .customProperties(Map.of(
+   * "customPropertiesKey", "customProperties"))
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .idFieldNames(List.of("idFieldNames"))
+   * .writeOperationType("writeOperationType")
+   * .build())
+   * .eventBridge(EventBridgeDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build())
+   * .lookoutMetrics(LookoutMetricsDestinationPropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .marketo(MarketoDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build())
+   * .redshift(RedshiftDestinationPropertiesProperty.builder()
+   * .intermediateBucketName("intermediateBucketName")
+   * .object("object")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build())
+   * .s3(S3DestinationPropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .s3OutputFormatConfig(S3OutputFormatConfigProperty.builder()
+   * .aggregationConfig(AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
+   * .build())
+   * .fileType("fileType")
+   * .prefixConfig(PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build())
+   * .preserveSourceDataTyping(false)
+   * .build())
+   * .build())
+   * .salesforce(SalesforceDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .dataTransferApi("dataTransferApi")
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .idFieldNames(List.of("idFieldNames"))
+   * .writeOperationType("writeOperationType")
+   * .build())
+   * .sapoData(SAPODataDestinationPropertiesProperty.builder()
+   * .objectPath("objectPath")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .idFieldNames(List.of("idFieldNames"))
+   * .successResponseHandlingConfig(SuccessResponseHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .build())
+   * .writeOperationType("writeOperationType")
+   * .build())
+   * .snowflake(SnowflakeDestinationPropertiesProperty.builder()
+   * .intermediateBucketName("intermediateBucketName")
+   * .object("object")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build())
+   * .upsolver(UpsolverDestinationPropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .s3OutputFormatConfig(UpsolverS3OutputFormatConfigProperty.builder()
+   * .prefixConfig(PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build())
+   * // the properties below are optional
+   * .aggregationConfig(AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
+   * .build())
+   * .fileType("fileType")
+   * .build())
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .build())
+   * .zendesk(ZendeskDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .idFieldNames(List.of("idFieldNames"))
+   * .writeOperationType("writeOperationType")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .apiVersion("apiVersion")
+   * .connectorProfileName("connectorProfileName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html)
+   */
+  public interface DestinationFlowConfigProperty {
+    /**
+     * The API version that the destination connector uses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-apiversion)
+     */
+    public fun apiVersion(): String? = unwrap(this).getApiVersion()
+
+    /**
+     * The name of the connector profile.
+     *
+     * This name must be unique for each connector profile in the AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectorprofilename)
+     */
+    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+    /**
+     * The type of destination connector, such as Sales force, Amazon S3, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectortype)
+     */
+    public fun connectorType(): String
+
+    /**
+     * This stores the information that is required to query a particular connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties)
+     */
+    public fun destinationConnectorProperties(): Any
+
+    /**
+     * A builder for [DestinationFlowConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiVersion The API version that the destination connector uses.
+       */
+      public fun apiVersion(apiVersion: String)
+
+      /**
+       * @param connectorProfileName The name of the connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      public fun connectorProfileName(connectorProfileName: String)
+
+      /**
+       * @param connectorType The type of destination connector, such as Sales force, Amazon S3, and
+       * so on. 
+       */
+      public fun connectorType(connectorType: String)
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      public fun destinationConnectorProperties(destinationConnectorProperties: IResolvable)
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      public
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty)
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
+      public
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.builder()
+
+      /**
+       * @param apiVersion The API version that the destination connector uses.
+       */
+      override fun apiVersion(apiVersion: String) {
+        cdkBuilder.apiVersion(apiVersion)
+      }
+
+      /**
+       * @param connectorProfileName The name of the connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      override fun connectorProfileName(connectorProfileName: String) {
+        cdkBuilder.connectorProfileName(connectorProfileName)
+      }
+
+      /**
+       * @param connectorType The type of destination connector, such as Sales force, Amazon S3, and
+       * so on. 
+       */
+      override fun connectorType(connectorType: String) {
+        cdkBuilder.connectorType(connectorType)
+      }
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      override fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
+        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      override
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty) {
+        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(DestinationConnectorPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param destinationConnectorProperties This stores the information that is required to query
+       * a particular connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
+      override
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          destinationConnectorProperties(DestinationConnectorPropertiesProperty(destinationConnectorProperties))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty,
+    ) : CdkObject(cdkObject), DestinationFlowConfigProperty {
+      /**
+       * The API version that the destination connector uses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-apiversion)
+       */
+      override fun apiVersion(): String? = unwrap(this).getApiVersion()
+
+      /**
+       * The name of the connector profile.
+       *
+       * This name must be unique for each connector profile in the AWS account .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectorprofilename)
+       */
+      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+      /**
+       * The type of destination connector, such as Sales force, Amazon S3, and so on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectortype)
+       */
+      override fun connectorType(): String = unwrap(this).getConnectorType()
+
+      /**
+       * This stores the information that is required to query a particular connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties)
+       */
+      override fun destinationConnectorProperties(): Any =
+          unwrap(this).getDestinationConnectorProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationFlowConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty):
+          DestinationFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationFlowConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationFlowConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Dynatrace is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * DynatraceSourcePropertiesProperty dynatraceSourcePropertiesProperty =
+   * DynatraceSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html)
+   */
+  public interface DynatraceSourcePropertiesProperty {
+    /**
+     * The object specified in the Dynatrace flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html#cfn-appflow-flow-dynatracesourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [DynatraceSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Dynatrace flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Dynatrace flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), DynatraceSourcePropertiesProperty {
+      /**
+       * The object specified in the Dynatrace flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html#cfn-appflow-flow-dynatracesourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DynatraceSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty):
+          DynatraceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynatraceSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DynatraceSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The settings that determine how Amazon AppFlow handles an error when placing data in the
+   * destination.
+   *
+   * For example, this setting would determine if the flow should fail after one insertion error, or
+   * continue and attempt to insert every record regardless of the initial failure.
+   * `ErrorHandlingConfig` is a part of the destination connector details.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * ErrorHandlingConfigProperty errorHandlingConfigProperty = ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html)
+   */
+  public interface ErrorHandlingConfigProperty {
+    /**
+     * Specifies the name of the Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketname)
+     */
+    public fun bucketName(): String? = unwrap(this).getBucketName()
+
+    /**
+     * Specifies the Amazon S3 bucket prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * Specifies if the flow should fail after the first instance of a failure when attempting to
+     * place data in the destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-failonfirsterror)
+     */
+    public fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
+
+    /**
+     * A builder for [ErrorHandlingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName Specifies the name of the Amazon S3 bucket.
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketPrefix Specifies the Amazon S3 bucket prefix.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
+       * failure when attempting to place data in the destination.
+       */
+      public fun failOnFirstError(failOnFirstError: Boolean)
+
+      /**
+       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
+       * failure when attempting to place data in the destination.
+       */
+      public fun failOnFirstError(failOnFirstError: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.builder()
+
+      /**
+       * @param bucketName Specifies the name of the Amazon S3 bucket.
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketPrefix Specifies the Amazon S3 bucket prefix.
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      /**
+       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
+       * failure when attempting to place data in the destination.
+       */
+      override fun failOnFirstError(failOnFirstError: Boolean) {
+        cdkBuilder.failOnFirstError(failOnFirstError)
+      }
+
+      /**
+       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
+       * failure when attempting to place data in the destination.
+       */
+      override fun failOnFirstError(failOnFirstError: IResolvable) {
+        cdkBuilder.failOnFirstError(failOnFirstError.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty,
+    ) : CdkObject(cdkObject), ErrorHandlingConfigProperty {
+      /**
+       * Specifies the name of the Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketname)
+       */
+      override fun bucketName(): String? = unwrap(this).getBucketName()
+
+      /**
+       * Specifies the Amazon S3 bucket prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketprefix)
+       */
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+      /**
+       * Specifies if the flow should fail after the first instance of a failure when attempting to
+       * place data in the destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-failonfirsterror)
+       */
+      override fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorHandlingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty):
+          ErrorHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ErrorHandlingConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ErrorHandlingConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Amazon EventBridge is being used as a destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * EventBridgeDestinationPropertiesProperty eventBridgeDestinationPropertiesProperty =
+   * EventBridgeDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html)
+   */
+  public interface EventBridgeDestinationPropertiesProperty {
+    /**
+     * The object specified in the Amplitude flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-errorhandlingconfig)
+     */
+    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+    /**
+     * The object specified in the Amazon EventBridge flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [EventBridgeDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
+      public
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param object The object specified in the Amazon EventBridge flow destination. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty.builder()
+
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The object specified in the Amplitude flow source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
+      override
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
+          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+
+      /**
+       * @param object The object specified in the Amazon EventBridge flow destination. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), EventBridgeDestinationPropertiesProperty {
+      /**
+       * The object specified in the Amplitude flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-errorhandlingconfig)
+       */
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+      /**
+       * The object specified in the Amazon EventBridge flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EventBridgeDestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty):
+          EventBridgeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeDestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventBridgeDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * Trigger settings of the flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * GlueDataCatalogProperty glueDataCatalogProperty = GlueDataCatalogProperty.builder()
+   * .databaseName("databaseName")
+   * .roleArn("roleArn")
+   * .tablePrefix("tablePrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html)
+   */
+  public interface GlueDataCatalogProperty {
+    /**
+     * A string containing the value for the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * A string containing the value for the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A string containing the value for the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-tableprefix)
+     */
+    public fun tablePrefix(): String
+
+    /**
+     * A builder for [GlueDataCatalogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName A string containing the value for the tag. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param roleArn A string containing the value for the tag. 
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param tablePrefix A string containing the value for the tag. 
+       */
+      public fun tablePrefix(tablePrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.builder()
+
+      /**
+       * @param databaseName A string containing the value for the tag. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param roleArn A string containing the value for the tag. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param tablePrefix A string containing the value for the tag. 
+       */
+      override fun tablePrefix(tablePrefix: String) {
+        cdkBuilder.tablePrefix(tablePrefix)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty,
+    ) : CdkObject(cdkObject), GlueDataCatalogProperty {
+      /**
+       * A string containing the value for the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * A string containing the value for the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * A string containing the value for the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-tableprefix)
+       */
+      override fun tablePrefix(): String = unwrap(this).getTablePrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlueDataCatalogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty):
+          GlueDataCatalogProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueDataCatalogProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueDataCatalogProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Google Analytics is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * GoogleAnalyticsSourcePropertiesProperty googleAnalyticsSourcePropertiesProperty =
+   * GoogleAnalyticsSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html)
+   */
+  public interface GoogleAnalyticsSourcePropertiesProperty {
+    /**
+     * The object specified in the Google Analytics flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html#cfn-appflow-flow-googleanalyticssourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [GoogleAnalyticsSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Google Analytics flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Google Analytics flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), GoogleAnalyticsSourcePropertiesProperty {
+      /**
+       * The object specified in the Google Analytics flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html#cfn-appflow-flow-googleanalyticssourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GoogleAnalyticsSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty):
+          GoogleAnalyticsSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GoogleAnalyticsSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GoogleAnalyticsSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration used when importing incremental records from the source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * IncrementalPullConfigProperty incrementalPullConfigProperty =
+   * IncrementalPullConfigProperty.builder()
+   * .datetimeTypeFieldName("datetimeTypeFieldName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html)
+   */
+  public interface IncrementalPullConfigProperty {
+    /**
+     * A field that specifies the date time or timestamp field as the criteria to use when importing
+     * incremental records from the source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html#cfn-appflow-flow-incrementalpullconfig-datetimetypefieldname)
+     */
+    public fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
+
+    /**
+     * A builder for [IncrementalPullConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param datetimeTypeFieldName A field that specifies the date time or timestamp field as the
+       * criteria to use when importing incremental records from the source.
+       */
+      public fun datetimeTypeFieldName(datetimeTypeFieldName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.builder()
+
+      /**
+       * @param datetimeTypeFieldName A field that specifies the date time or timestamp field as the
+       * criteria to use when importing incremental records from the source.
+       */
+      override fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
+        cdkBuilder.datetimeTypeFieldName(datetimeTypeFieldName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty,
+    ) : CdkObject(cdkObject), IncrementalPullConfigProperty {
+      /**
+       * A field that specifies the date time or timestamp field as the criteria to use when
+       * importing incremental records from the source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-incrementalpullconfig.html#cfn-appflow-flow-incrementalpullconfig-datetimetypefieldname)
+       */
+      override fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IncrementalPullConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty):
+          IncrementalPullConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IncrementalPullConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IncrementalPullConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Infor Nexus is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * InforNexusSourcePropertiesProperty inforNexusSourcePropertiesProperty =
+   * InforNexusSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html)
+   */
+  public interface InforNexusSourcePropertiesProperty {
+    /**
+     * The object specified in the Infor Nexus flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html#cfn-appflow-flow-infornexussourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [InforNexusSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Infor Nexus flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Infor Nexus flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), InforNexusSourcePropertiesProperty {
+      /**
+       * The object specified in the Infor Nexus flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html#cfn-appflow-flow-infornexussourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InforNexusSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty):
+          InforNexusSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InforNexusSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Amazon Lookout for Metrics is used as a destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * LookoutMetricsDestinationPropertiesProperty lookoutMetricsDestinationPropertiesProperty =
+   * LookoutMetricsDestinationPropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html)
+   */
+  public interface LookoutMetricsDestinationPropertiesProperty {
+    /**
+     * The object specified in the Amazon Lookout for Metrics flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html#cfn-appflow-flow-lookoutmetricsdestinationproperties-object)
+     */
+    public fun `object`(): String? = unwrap(this).getObject()
+
+    /**
+     * A builder for [LookoutMetricsDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Amazon Lookout for Metrics flow destination.
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Amazon Lookout for Metrics flow destination.
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), LookoutMetricsDestinationPropertiesProperty {
+      /**
+       * The object specified in the Amazon Lookout for Metrics flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html#cfn-appflow-flow-lookoutmetricsdestinationproperties-object)
+       */
+      override fun `object`(): String? = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LookoutMetricsDestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty):
+          LookoutMetricsDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LookoutMetricsDestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LookoutMetricsDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that Amazon AppFlow applies when you use Marketo as a flow destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * MarketoDestinationPropertiesProperty marketoDestinationPropertiesProperty =
+   * MarketoDestinationPropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html)
+   */
+  public interface MarketoDestinationPropertiesProperty {
+    /**
+     * The settings that determine how Amazon AppFlow handles an error when placing data in the
+     * destination.
+     *
+     * For example, this setting would determine if the flow should fail after one insertion error,
+     * or continue and attempt to insert every record regardless of the initial failure.
+     * `ErrorHandlingConfig` is a part of the destination connector details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-errorhandlingconfig)
+     */
+    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+    /**
+     * The object specified in the Marketo flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [MarketoDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
+      public
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param object The object specified in the Marketo flow destination. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty.builder()
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
+      override
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
+          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+
+      /**
+       * @param object The object specified in the Marketo flow destination. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), MarketoDestinationPropertiesProperty {
+      /**
+       * The settings that determine how Amazon AppFlow handles an error when placing data in the
+       * destination.
+       *
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-errorhandlingconfig)
+       */
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+      /**
+       * The object specified in the Marketo flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html#cfn-appflow-flow-marketodestinationproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MarketoDestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty):
+          MarketoDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoDestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarketoDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Marketo is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * MarketoSourcePropertiesProperty marketoSourcePropertiesProperty =
+   * MarketoSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html)
+   */
+  public interface MarketoSourcePropertiesProperty {
+    /**
+     * The object specified in the Marketo flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html#cfn-appflow-flow-marketosourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [MarketoSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Marketo flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Marketo flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
+      /**
+       * The object specified in the Marketo flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html#cfn-appflow-flow-marketosourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MarketoSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty):
+          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
+   *
+   * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * MetadataCatalogConfigProperty metadataCatalogConfigProperty =
+   * MetadataCatalogConfigProperty.builder()
+   * .glueDataCatalog(GlueDataCatalogProperty.builder()
+   * .databaseName("databaseName")
+   * .roleArn("roleArn")
+   * .tablePrefix("tablePrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html)
+   */
+  public interface MetadataCatalogConfigProperty {
+    /**
+     * Specifies the configuration that Amazon AppFlow uses when it catalogs your data with the AWS
+     * Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html#cfn-appflow-flow-metadatacatalogconfig-gluedatacatalog)
+     */
+    public fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
+
+    /**
+     * A builder for [MetadataCatalogConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      public fun glueDataCatalog(glueDataCatalog: IResolvable)
+
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty)
+
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
+      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.builder()
+
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      override fun glueDataCatalog(glueDataCatalog: IResolvable) {
+        cdkBuilder.glueDataCatalog(glueDataCatalog.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
+        cdkBuilder.glueDataCatalog(glueDataCatalog.let(GlueDataCatalogProperty::unwrap))
+      }
+
+      /**
+       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
+       * catalogs your data with the AWS Glue Data Catalog .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
+      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit):
+          Unit = glueDataCatalog(GlueDataCatalogProperty(glueDataCatalog))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty,
+    ) : CdkObject(cdkObject), MetadataCatalogConfigProperty {
+      /**
+       * Specifies the configuration that Amazon AppFlow uses when it catalogs your data with the
+       * AWS Glue Data Catalog .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html#cfn-appflow-flow-metadatacatalogconfig-gluedatacatalog)
+       */
+      override fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataCatalogConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty):
+          MetadataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataCatalogConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataCatalogConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Salesforce Pardot is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * PardotSourcePropertiesProperty pardotSourcePropertiesProperty =
+   * PardotSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html)
+   */
+  public interface PardotSourcePropertiesProperty {
+    /**
+     * The object specified in the Salesforce Pardot flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html#cfn-appflow-flow-pardotsourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [PardotSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Salesforce Pardot flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Salesforce Pardot flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), PardotSourcePropertiesProperty {
+      /**
+       * The object specified in the Salesforce Pardot flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-pardotsourceproperties.html#cfn-appflow-flow-pardotsourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PardotSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty):
+          PardotSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PardotSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
+   * destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * PrefixConfigProperty prefixConfigProperty = PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html)
+   */
+  public interface PrefixConfigProperty {
+    /**
+     * Specifies whether the destination file path includes either or both of the following
+     * elements:.
+     *
+     * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+     * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+     * version number. The version number increases by one when you change any of the following
+     * settings in your flow configuration:
+     * * Source-to-destination field mappings
+     * * Field data types
+     * * Partition keys
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-pathprefixhierarchy)
+     */
+    public fun pathPrefixHierarchy(): List<String> = unwrap(this).getPathPrefixHierarchy() ?:
+        emptyList()
+
+    /**
+     * Determines the level of granularity for the date and time that's included in the prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixformat)
+     */
+    public fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
+
+    /**
+     * Determines the format of the prefix, and whether it applies to the file name, file path, or
+     * both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixtype)
+     */
+    public fun prefixType(): String? = unwrap(this).getPrefixType()
+
+    /**
+     * A builder for [PrefixConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+       * both of the following elements:.
+       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+       * version number. The version number increases by one when you change any of the following
+       * settings in your flow configuration:
+       * * Source-to-destination field mappings
+       * * Field data types
+       * * Partition keys
+       */
+      public fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>)
+
+      /**
+       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+       * both of the following elements:.
+       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+       * version number. The version number increases by one when you change any of the following
+       * settings in your flow configuration:
+       * * Source-to-destination field mappings
+       * * Field data types
+       * * Partition keys
+       */
+      public fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String)
+
+      /**
+       * @param prefixFormat Determines the level of granularity for the date and time that's
+       * included in the prefix.
+       */
+      public fun prefixFormat(prefixFormat: String)
+
+      /**
+       * @param prefixType Determines the format of the prefix, and whether it applies to the file
+       * name, file path, or both.
+       */
+      public fun prefixType(prefixType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.builder()
+
+      /**
+       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+       * both of the following elements:.
+       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+       * version number. The version number increases by one when you change any of the following
+       * settings in your flow configuration:
+       * * Source-to-destination field mappings
+       * * Field data types
+       * * Partition keys
+       */
+      override fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
+        cdkBuilder.pathPrefixHierarchy(pathPrefixHierarchy)
+      }
+
+      /**
+       * @param pathPrefixHierarchy Specifies whether the destination file path includes either or
+       * both of the following elements:.
+       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+       * version number. The version number increases by one when you change any of the following
+       * settings in your flow configuration:
+       * * Source-to-destination field mappings
+       * * Field data types
+       * * Partition keys
+       */
+      override fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String): Unit =
+          pathPrefixHierarchy(pathPrefixHierarchy.toList())
+
+      /**
+       * @param prefixFormat Determines the level of granularity for the date and time that's
+       * included in the prefix.
+       */
+      override fun prefixFormat(prefixFormat: String) {
+        cdkBuilder.prefixFormat(prefixFormat)
+      }
+
+      /**
+       * @param prefixType Determines the format of the prefix, and whether it applies to the file
+       * name, file path, or both.
+       */
+      override fun prefixType(prefixType: String) {
+        cdkBuilder.prefixType(prefixType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty,
+    ) : CdkObject(cdkObject), PrefixConfigProperty {
+      /**
+       * Specifies whether the destination file path includes either or both of the following
+       * elements:.
+       *
+       * * **EXECUTION_ID** - The ID that Amazon AppFlow assigns to the flow run.
+       * * **SCHEMA_VERSION** - The version number of your data schema. Amazon AppFlow assigns this
+       * version number. The version number increases by one when you change any of the following
+       * settings in your flow configuration:
+       * * Source-to-destination field mappings
+       * * Field data types
+       * * Partition keys
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-pathprefixhierarchy)
+       */
+      override fun pathPrefixHierarchy(): List<String> = unwrap(this).getPathPrefixHierarchy() ?:
+          emptyList()
+
+      /**
+       * Determines the level of granularity for the date and time that's included in the prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixformat)
+       */
+      override fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
+
+      /**
+       * Determines the format of the prefix, and whether it applies to the file name, file path, or
+       * both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html#cfn-appflow-flow-prefixconfig-prefixtype)
+       */
+      override fun prefixType(): String? = unwrap(this).getPrefixType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrefixConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty):
+          PrefixConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrefixConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Amazon Redshift is being used as a destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * RedshiftDestinationPropertiesProperty redshiftDestinationPropertiesProperty =
+   * RedshiftDestinationPropertiesProperty.builder()
+   * .intermediateBucketName("intermediateBucketName")
+   * .object("object")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html)
+   */
+  public interface RedshiftDestinationPropertiesProperty {
+    /**
+     * The object key for the bucket in which Amazon AppFlow places the destination files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * The settings that determine how Amazon AppFlow handles an error when placing data in the
+     * Amazon Redshift destination.
+     *
+     * For example, this setting would determine if the flow should fail after one insertion error,
+     * or continue and attempt to insert every record regardless of the initial failure.
+     * `ErrorHandlingConfig` is a part of the destination connector details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-errorhandlingconfig)
+     */
+    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+    /**
+     * The intermediate bucket that Amazon AppFlow uses when moving data into Amazon Redshift.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-intermediatebucketname)
+     */
+    public fun intermediateBucketName(): String
+
+    /**
+     * The object specified in the Amazon Redshift flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [RedshiftDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketPrefix The object key for the bucket in which Amazon AppFlow places the
+       * destination files.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
+      public
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
+       * data into Amazon Redshift. 
+       */
+      public fun intermediateBucketName(intermediateBucketName: String)
+
+      /**
+       * @param object The object specified in the Amazon Redshift flow destination. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty.builder()
+
+      /**
+       * @param bucketPrefix The object key for the bucket in which Amazon AppFlow places the
+       * destination files.
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Amazon Redshift destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
+      override
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
+          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+
+      /**
+       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
+       * data into Amazon Redshift. 
+       */
+      override fun intermediateBucketName(intermediateBucketName: String) {
+        cdkBuilder.intermediateBucketName(intermediateBucketName)
+      }
+
+      /**
+       * @param object The object specified in the Amazon Redshift flow destination. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), RedshiftDestinationPropertiesProperty {
+      /**
+       * The object key for the bucket in which Amazon AppFlow places the destination files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-bucketprefix)
+       */
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+      /**
+       * The settings that determine how Amazon AppFlow handles an error when placing data in the
+       * Amazon Redshift destination.
+       *
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-errorhandlingconfig)
+       */
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+      /**
+       * The intermediate bucket that Amazon AppFlow uses when moving data into Amazon Redshift.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-intermediatebucketname)
+       */
+      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
+
+      /**
+       * The object specified in the Amazon Redshift flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftDestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty):
+          RedshiftDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftDestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Amazon S3 is used as a destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * S3DestinationPropertiesProperty s3DestinationPropertiesProperty =
+   * S3DestinationPropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .s3OutputFormatConfig(S3OutputFormatConfigProperty.builder()
+   * .aggregationConfig(AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
+   * .build())
+   * .fileType("fileType")
+   * .prefixConfig(PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build())
+   * .preserveSourceDataTyping(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html)
+   */
+  public interface S3DestinationPropertiesProperty {
+    /**
+     * The Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * The object key for the destination bucket in which Amazon AppFlow places the files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * The configuration that determines how Amazon AppFlow should format the flow output data when
+     * Amazon S3 is used as the destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-s3outputformatconfig)
+     */
+    public fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
+
+    /**
+     * A builder for [S3DestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The Amazon S3 bucket name in which Amazon AppFlow places the transferred
+       * data. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
+       * places the files.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable)
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty)
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
+      public
+          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.builder()
+
+      /**
+       * @param bucketName The Amazon S3 bucket name in which Amazon AppFlow places the transferred
+       * data. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
+       * places the files.
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      override fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(S3OutputFormatConfigProperty::unwrap))
+      }
+
+      /**
+       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
+       * format the flow output data when Amazon S3 is used as the destination.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
+      override
+          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit):
+          Unit = s3OutputFormatConfig(S3OutputFormatConfigProperty(s3OutputFormatConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), S3DestinationPropertiesProperty {
+      /**
+       * The Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * The object key for the destination bucket in which Amazon AppFlow places the files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketprefix)
+       */
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+      /**
+       * The configuration that determines how Amazon AppFlow should format the flow output data
+       * when Amazon S3 is used as the destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-s3outputformatconfig)
+       */
+      override fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3DestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty):
+          S3DestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * When you use Amazon S3 as the source, the configuration format that you provide the flow input
+   * data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * S3InputFormatConfigProperty s3InputFormatConfigProperty = S3InputFormatConfigProperty.builder()
+   * .s3InputFileType("s3InputFileType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html)
+   */
+  public interface S3InputFormatConfigProperty {
+    /**
+     * The file type that Amazon AppFlow gets from your Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html#cfn-appflow-flow-s3inputformatconfig-s3inputfiletype)
+     */
+    public fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
+
+    /**
+     * A builder for [S3InputFormatConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3InputFileType The file type that Amazon AppFlow gets from your Amazon S3 bucket.
+       */
+      public fun s3InputFileType(s3InputFileType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.builder()
+
+      /**
+       * @param s3InputFileType The file type that Amazon AppFlow gets from your Amazon S3 bucket.
+       */
+      override fun s3InputFileType(s3InputFileType: String) {
+        cdkBuilder.s3InputFileType(s3InputFileType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty,
+    ) : CdkObject(cdkObject), S3InputFormatConfigProperty {
+      /**
+       * The file type that Amazon AppFlow gets from your Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html#cfn-appflow-flow-s3inputformatconfig-s3inputfiletype)
+       */
+      override fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3InputFormatConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty):
+          S3InputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3InputFormatConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3InputFormatConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty
+    }
+  }
+
+  /**
+   * The configuration that determines how Amazon AppFlow should format the flow output data when
+   * Amazon S3 is used as the destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * S3OutputFormatConfigProperty s3OutputFormatConfigProperty =
+   * S3OutputFormatConfigProperty.builder()
+   * .aggregationConfig(AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
+   * .build())
+   * .fileType("fileType")
+   * .prefixConfig(PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build())
+   * .preserveSourceDataTyping(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html)
+   */
+  public interface S3OutputFormatConfigProperty {
+    /**
+     * The aggregation settings that you can use to customize the output format of your flow data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-aggregationconfig)
+     */
+    public fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
+
+    /**
+     * Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-filetype)
+     */
+    public fun fileType(): String? = unwrap(this).getFileType()
+
+    /**
+     * Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3 bucket.
+     *
+     * You can name folders according to the flow frequency and date.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-prefixconfig)
+     */
+    public fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
+
+    /**
+     * If your file output format is Parquet, use this parameter to set whether Amazon AppFlow
+     * preserves the data types in your source data when it writes the output to Amazon S3.
+     *
+     * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For example,
+     * an integer or `1` in your source data is still an integer in your output.
+     * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+     * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+     * output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping)
+     */
+    public fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
+
+    /**
+     * A builder for [S3OutputFormatConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      public fun aggregationConfig(aggregationConfig: IResolvable)
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param fileType Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
+       */
+      public fun fileType(fileType: String)
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      public fun prefixConfig(prefixConfig: IResolvable)
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
+       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
+       * output to Amazon S3.
+       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
+       * example, an integer or `1` in your source data is still an integer in your output.
+       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+       * output.
+       */
+      public fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean)
+
+      /**
+       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
+       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
+       * output to Amazon S3.
+       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
+       * example, an integer or `1` in your source data is still an integer in your output.
+       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+       * output.
+       */
+      public fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.builder()
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      override fun aggregationConfig(aggregationConfig: IResolvable) {
+        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
+        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
+      override
+          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
+          Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
+
+      /**
+       * @param fileType Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
+       */
+      override fun fileType(fileType: String) {
+        cdkBuilder.fileType(fileType)
+      }
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      override fun prefixConfig(prefixConfig: IResolvable) {
+        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
+        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
+      }
+
+      /**
+       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
+       * the Amazon S3 bucket.
+       * You can name folders according to the flow frequency and date.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
+          prefixConfig(PrefixConfigProperty(prefixConfig))
+
+      /**
+       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
+       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
+       * output to Amazon S3.
+       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
+       * example, an integer or `1` in your source data is still an integer in your output.
+       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+       * output.
+       */
+      override fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean) {
+        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping)
+      }
+
+      /**
+       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
+       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
+       * output to Amazon S3.
+       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
+       * example, an integer or `1` in your source data is still an integer in your output.
+       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+       * output.
+       */
+      override fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
+        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty,
+    ) : CdkObject(cdkObject), S3OutputFormatConfigProperty {
+      /**
+       * The aggregation settings that you can use to customize the output format of your flow data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-aggregationconfig)
+       */
+      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
+
+      /**
+       * Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-filetype)
+       */
+      override fun fileType(): String? = unwrap(this).getFileType()
+
+      /**
+       * Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3
+       * bucket.
+       *
+       * You can name folders according to the flow frequency and date.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-prefixconfig)
+       */
+      override fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
+
+      /**
+       * If your file output format is Parquet, use this parameter to set whether Amazon AppFlow
+       * preserves the data types in your source data when it writes the output to Amazon S3.
+       *
+       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
+       * example, an integer or `1` in your source data is still an integer in your output.
+       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
+       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
+       * output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping)
+       */
+      override fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputFormatConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty):
+          S3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3OutputFormatConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3OutputFormatConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Amazon S3 is being used as the flow source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * S3SourcePropertiesProperty s3SourcePropertiesProperty = S3SourcePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * // the properties below are optional
+   * .s3InputFormatConfig(S3InputFormatConfigProperty.builder()
+   * .s3InputFileType("s3InputFileType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html)
+   */
+  public interface S3SourcePropertiesProperty {
+    /**
+     * The Amazon S3 bucket name where the source files are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * The object key for the Amazon S3 bucket in which the source files are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketprefix)
+     */
+    public fun bucketPrefix(): String
+
+    /**
+     * When you use Amazon S3 as the source, the configuration format that you provide the flow
+     * input data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig)
+     */
+    public fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
+
+    /**
+     * A builder for [S3SourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The Amazon S3 bucket name where the source files are stored. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketPrefix The object key for the Amazon S3 bucket in which the source files are
+       * stored. 
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      public fun s3InputFormatConfig(s3InputFormatConfig: IResolvable)
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      public fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty)
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
+      public
+          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.builder()
+
+      /**
+       * @param bucketName The Amazon S3 bucket name where the source files are stored. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketPrefix The object key for the Amazon S3 bucket in which the source files are
+       * stored. 
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      override fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
+        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      override fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
+        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(S3InputFormatConfigProperty::unwrap))
+      }
+
+      /**
+       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
+       * that you provide the flow input data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
+      override
+          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit):
+          Unit = s3InputFormatConfig(S3InputFormatConfigProperty(s3InputFormatConfig))
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty,
+    ) : CdkObject(cdkObject), S3SourcePropertiesProperty {
+      /**
+       * The Amazon S3 bucket name where the source files are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * The object key for the Amazon S3 bucket in which the source files are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketprefix)
+       */
+      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
+
+      /**
+       * When you use Amazon S3 as the source, the configuration format that you provide the flow
+       * input data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig)
+       */
+      override fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3SourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty):
+          S3SourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3SourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3SourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when using SAPOData as a flow destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SAPODataDestinationPropertiesProperty sAPODataDestinationPropertiesProperty =
+   * SAPODataDestinationPropertiesProperty.builder()
+   * .objectPath("objectPath")
+   * // the properties below are optional
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .idFieldNames(List.of("idFieldNames"))
+   * .successResponseHandlingConfig(SuccessResponseHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .build())
+   * .writeOperationType("writeOperationType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html)
+   */
+  public interface SAPODataDestinationPropertiesProperty {
+    /**
+     * The settings that determine how Amazon AppFlow handles an error when placing data in the
+     * destination.
+     *
+     * For example, this setting would determine if the flow should fail after one insertion error,
+     * or continue and attempt to insert every record regardless of the initial failure.
+     * `ErrorHandlingConfig` is a part of the destination connector details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-errorhandlingconfig)
+     */
+    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+    /**
+     * A list of field names that can be used as an ID field when performing a write operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-idfieldnames)
+     */
+    public fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
+
+    /**
+     * The object path specified in the SAPOData flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-objectpath)
+     */
+    public fun objectPath(): String
+
+    /**
+     * Determines how Amazon AppFlow handles the success response that it gets from the connector
+     * after placing data.
+     *
+     * For example, this setting would determine where to write the response from a destination
+     * connector upon a successful insert operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-successresponsehandlingconfig)
+     */
+    public fun successResponseHandlingConfig(): Any? =
+        unwrap(this).getSuccessResponseHandlingConfig()
+
+    /**
+     * The possible write operations in the destination connector.
+     *
+     * When this value is not provided, this defaults to the `INSERT` operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-writeoperationtype)
+     */
+    public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+
+    /**
+     * A builder for [SAPODataDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
+      public
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param idFieldNames A list of field names that can be used as an ID field when performing a
+       * write operation.
+       */
+      public fun idFieldNames(idFieldNames: List<String>)
+
+      /**
+       * @param idFieldNames A list of field names that can be used as an ID field when performing a
+       * write operation.
+       */
+      public fun idFieldNames(vararg idFieldNames: String)
+
+      /**
+       * @param objectPath The object path specified in the SAPOData flow destination. 
+       */
+      public fun objectPath(objectPath: String)
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      public fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable)
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      public
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty)
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
+      public
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param writeOperationType The possible write operations in the destination connector.
+       * When this value is not provided, this defaults to the `INSERT` operation.
+       */
+      public fun writeOperationType(writeOperationType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty.builder()
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
+      override
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
+          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+
+      /**
+       * @param idFieldNames A list of field names that can be used as an ID field when performing a
+       * write operation.
+       */
+      override fun idFieldNames(idFieldNames: List<String>) {
+        cdkBuilder.idFieldNames(idFieldNames)
+      }
+
+      /**
+       * @param idFieldNames A list of field names that can be used as an ID field when performing a
+       * write operation.
+       */
+      override fun idFieldNames(vararg idFieldNames: String): Unit =
+          idFieldNames(idFieldNames.toList())
+
+      /**
+       * @param objectPath The object path specified in the SAPOData flow destination. 
+       */
+      override fun objectPath(objectPath: String) {
+        cdkBuilder.objectPath(objectPath)
+      }
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      override fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
+        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      override
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty) {
+        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(SuccessResponseHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
+       * response that it gets from the connector after placing data.
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
+      override
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit):
+          Unit =
+          successResponseHandlingConfig(SuccessResponseHandlingConfigProperty(successResponseHandlingConfig))
+
+      /**
+       * @param writeOperationType The possible write operations in the destination connector.
+       * When this value is not provided, this defaults to the `INSERT` operation.
+       */
+      override fun writeOperationType(writeOperationType: String) {
+        cdkBuilder.writeOperationType(writeOperationType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), SAPODataDestinationPropertiesProperty {
+      /**
+       * The settings that determine how Amazon AppFlow handles an error when placing data in the
+       * destination.
+       *
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-errorhandlingconfig)
+       */
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+      /**
+       * A list of field names that can be used as an ID field when performing a write operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-idfieldnames)
+       */
+      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
+
+      /**
+       * The object path specified in the SAPOData flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-objectpath)
+       */
+      override fun objectPath(): String = unwrap(this).getObjectPath()
+
+      /**
+       * Determines how Amazon AppFlow handles the success response that it gets from the connector
+       * after placing data.
+       *
+       * For example, this setting would determine where to write the response from a destination
+       * connector upon a successful insert operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-successresponsehandlingconfig)
+       */
+      override fun successResponseHandlingConfig(): Any? =
+          unwrap(this).getSuccessResponseHandlingConfig()
+
+      /**
+       * The possible write operations in the destination connector.
+       *
+       * When this value is not provided, this defaults to the `INSERT` operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-writeoperationtype)
+       */
+      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SAPODataDestinationPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty):
+          SAPODataDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataDestinationPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SAPODataDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty
+    }
+  }
+
+  /**
+   * SAP Source connector page size.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SAPODataPaginationConfigProperty sAPODataPaginationConfigProperty =
+   * SAPODataPaginationConfigProperty.builder()
+   * .maxPageSize(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html)
+   */
+  public interface SAPODataPaginationConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
+     */
+    public fun maxPageSize(): Number
+
+    /**
+     * A builder for [SAPODataPaginationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxPageSize the value to be set. 
+       */
+      public fun maxPageSize(maxPageSize: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.builder()
+
+      /**
+       * @param maxPageSize the value to be set. 
+       */
+      override fun maxPageSize(maxPageSize: Number) {
+        cdkBuilder.maxPageSize(maxPageSize)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty,
+    ) : CdkObject(cdkObject), SAPODataPaginationConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
+       */
+      override fun maxPageSize(): Number = unwrap(this).getMaxPageSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SAPODataPaginationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty):
+          SAPODataPaginationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataPaginationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SAPODataPaginationConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty
+    }
+  }
+
+  /**
+   * SAP Source connector parallelism factor.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SAPODataParallelismConfigProperty sAPODataParallelismConfigProperty =
+   * SAPODataParallelismConfigProperty.builder()
+   * .maxParallelism(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html)
+   */
+  public interface SAPODataParallelismConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
+     */
+    public fun maxParallelism(): Number
+
+    /**
+     * A builder for [SAPODataParallelismConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxParallelism the value to be set. 
+       */
+      public fun maxParallelism(maxParallelism: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.builder()
+
+      /**
+       * @param maxParallelism the value to be set. 
+       */
+      override fun maxParallelism(maxParallelism: Number) {
+        cdkBuilder.maxParallelism(maxParallelism)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty,
+    ) : CdkObject(cdkObject), SAPODataParallelismConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
+       */
+      override fun maxParallelism(): Number = unwrap(this).getMaxParallelism()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SAPODataParallelismConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty):
+          SAPODataParallelismConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataParallelismConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SAPODataParallelismConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when using SAPOData as a flow source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SAPODataSourcePropertiesProperty sAPODataSourcePropertiesProperty =
+   * SAPODataSourcePropertiesProperty.builder()
+   * .objectPath("objectPath")
+   * // the properties below are optional
+   * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+   * .maxPageSize(123)
+   * .build())
+   * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+   * .maxParallelism(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html)
+   */
+  public interface SAPODataSourcePropertiesProperty {
+    /**
+     * The object path specified in the SAPOData flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath)
+     */
+    public fun objectPath(): String
+
+    /**
+     * SAP Source connector page size.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
+     */
+    public fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
+
+    /**
+     * SAP Source connector parallelism factor.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
+     */
+    public fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
+
+    /**
+     * A builder for [SAPODataSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param objectPath The object path specified in the SAPOData flow source. 
+       */
+      public fun objectPath(objectPath: String)
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      public fun paginationConfig(paginationConfig: IResolvable)
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      public fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty)
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
+      public
+          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      public fun parallelismConfig(parallelismConfig: IResolvable)
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      public fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty)
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
+      public
+          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.builder()
+
+      /**
+       * @param objectPath The object path specified in the SAPOData flow source. 
+       */
+      override fun objectPath(objectPath: String) {
+        cdkBuilder.objectPath(objectPath)
+      }
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      override fun paginationConfig(paginationConfig: IResolvable) {
+        cdkBuilder.paginationConfig(paginationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
+        cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param paginationConfig SAP Source connector page size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
+      override
+          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit):
+          Unit = paginationConfig(SAPODataPaginationConfigProperty(paginationConfig))
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      override fun parallelismConfig(parallelismConfig: IResolvable) {
+        cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
+        cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty::unwrap))
+      }
+
+      /**
+       * @param parallelismConfig SAP Source connector parallelism factor.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
+      override
+          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit):
+          Unit = parallelismConfig(SAPODataParallelismConfigProperty(parallelismConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), SAPODataSourcePropertiesProperty {
+      /**
+       * The object path specified in the SAPOData flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath)
+       */
+      override fun objectPath(): String = unwrap(this).getObjectPath()
+
+      /**
+       * SAP Source connector page size.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
+       */
+      override fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
+
+      /**
+       * SAP Source connector parallelism factor.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
+       */
+      override fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SAPODataSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty):
+          SAPODataSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SAPODataSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty
     }
   }
 
@@ -5821,8 +7128,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty,
     ) : CdkObject(cdkObject), SalesforceDestinationPropertiesProperty {
       /**
        * Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to
@@ -5913,460 +7219,6 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Google Analytics is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * GoogleAnalyticsSourcePropertiesProperty googleAnalyticsSourcePropertiesProperty =
-   * GoogleAnalyticsSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html)
-   */
-  public interface GoogleAnalyticsSourcePropertiesProperty {
-    /**
-     * The object specified in the Google Analytics flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html#cfn-appflow-flow-googleanalyticssourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [GoogleAnalyticsSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Google Analytics flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Google Analytics flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), GoogleAnalyticsSourcePropertiesProperty {
-      /**
-       * The object specified in the Google Analytics flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html#cfn-appflow-flow-googleanalyticssourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          GoogleAnalyticsSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty):
-          GoogleAnalyticsSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GoogleAnalyticsSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GoogleAnalyticsSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * Contains information about the configuration of the source connector used in the flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SourceFlowConfigProperty sourceFlowConfigProperty = SourceFlowConfigProperty.builder()
-   * .connectorType("connectorType")
-   * .sourceConnectorProperties(SourceConnectorPropertiesProperty.builder()
-   * .amplitude(AmplitudeSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .customConnector(CustomConnectorSourcePropertiesProperty.builder()
-   * .entityName("entityName")
-   * // the properties below are optional
-   * .customProperties(Map.of(
-   * "customPropertiesKey", "customProperties"))
-   * .dataTransferApi(DataTransferApiProperty.builder()
-   * .name("name")
-   * .type("type")
-   * .build())
-   * .build())
-   * .datadog(DatadogSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .dynatrace(DynatraceSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .googleAnalytics(GoogleAnalyticsSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .inforNexus(InforNexusSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .marketo(MarketoSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .pardot(PardotSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .s3(S3SourcePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * // the properties below are optional
-   * .s3InputFormatConfig(S3InputFormatConfigProperty.builder()
-   * .s3InputFileType("s3InputFileType")
-   * .build())
-   * .build())
-   * .salesforce(SalesforceSourcePropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .dataTransferApi("dataTransferApi")
-   * .enableDynamicFieldUpdate(false)
-   * .includeDeletedRecords(false)
-   * .build())
-   * .sapoData(SAPODataSourcePropertiesProperty.builder()
-   * .objectPath("objectPath")
-   * // the properties below are optional
-   * .paginationConfig(SAPODataPaginationConfigProperty.builder()
-   * .maxPageSize(123)
-   * .build())
-   * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
-   * .maxParallelism(123)
-   * .build())
-   * .build())
-   * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .singular(SingularSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .slack(SlackSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .trendmicro(TrendmicroSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .veeva(VeevaSourcePropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .documentType("documentType")
-   * .includeAllVersions(false)
-   * .includeRenditions(false)
-   * .includeSourceFiles(false)
-   * .build())
-   * .zendesk(ZendeskSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .apiVersion("apiVersion")
-   * .connectorProfileName("connectorProfileName")
-   * .incrementalPullConfig(IncrementalPullConfigProperty.builder()
-   * .datetimeTypeFieldName("datetimeTypeFieldName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html)
-   */
-  public interface SourceFlowConfigProperty {
-    /**
-     * The API version of the connector when it's used as a source in the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-apiversion)
-     */
-    public fun apiVersion(): String? = unwrap(this).getApiVersion()
-
-    /**
-     * The name of the connector profile.
-     *
-     * This name must be unique for each connector profile in the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectorprofilename)
-     */
-    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-    /**
-     * The type of connector, such as Salesforce, Amplitude, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectortype)
-     */
-    public fun connectorType(): String
-
-    /**
-     * Defines the configuration for a scheduled incremental data pull.
-     *
-     * If a valid configuration is provided, the fields specified in the configuration are used when
-     * querying for the incremental data pull.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)
-     */
-    public fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
-
-    /**
-     * Specifies the information that is required to query a particular source connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties)
-     */
-    public fun sourceConnectorProperties(): Any
-
-    /**
-     * A builder for [SourceFlowConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param apiVersion The API version of the connector when it's used as a source in the flow.
-       */
-      public fun apiVersion(apiVersion: String)
-
-      /**
-       * @param connectorProfileName The name of the connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      public fun connectorProfileName(connectorProfileName: String)
-
-      /**
-       * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on. 
-       */
-      public fun connectorType(connectorType: String)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      public fun incrementalPullConfig(incrementalPullConfig: IResolvable)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty)
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
-      public
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty)
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
-      public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.builder()
-
-      /**
-       * @param apiVersion The API version of the connector when it's used as a source in the flow.
-       */
-      override fun apiVersion(apiVersion: String) {
-        cdkBuilder.apiVersion(apiVersion)
-      }
-
-      /**
-       * @param connectorProfileName The name of the connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      override fun connectorProfileName(connectorProfileName: String) {
-        cdkBuilder.connectorProfileName(connectorProfileName)
-      }
-
-      /**
-       * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on. 
-       */
-      override fun connectorType(connectorType: String) {
-        cdkBuilder.connectorType(connectorType)
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
-      }
-
-      /**
-       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
-       * pull.
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
-      override
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit):
-          Unit = incrementalPullConfig(IncrementalPullConfigProperty(incrementalPullConfig))
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      override
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param sourceConnectorProperties Specifies the information that is required to query a
-       * particular source connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
-      override
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit):
-          Unit =
-          sourceConnectorProperties(SourceConnectorPropertiesProperty(sourceConnectorProperties))
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty,
-    ) : CdkObject(cdkObject), SourceFlowConfigProperty {
-      /**
-       * The API version of the connector when it's used as a source in the flow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-apiversion)
-       */
-      override fun apiVersion(): String? = unwrap(this).getApiVersion()
-
-      /**
-       * The name of the connector profile.
-       *
-       * This name must be unique for each connector profile in the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectorprofilename)
-       */
-      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-      /**
-       * The type of connector, such as Salesforce, Amplitude, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectortype)
-       */
-      override fun connectorType(): String = unwrap(this).getConnectorType()
-
-      /**
-       * Defines the configuration for a scheduled incremental data pull.
-       *
-       * If a valid configuration is provided, the fields specified in the configuration are used
-       * when querying for the incremental data pull.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)
-       */
-      override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
-
-      /**
-       * Specifies the information that is required to query a particular source connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties)
-       */
-      override fun sourceConnectorProperties(): Any = unwrap(this).getSourceConnectorProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceFlowConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty):
-          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceFlowConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty
     }
   }
 
@@ -6604,8 +7456,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty,
     ) : CdkObject(cdkObject), SalesforceSourcePropertiesProperty {
       /**
        * Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data from
@@ -6686,7 +7537,9 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
+   * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+   *
+   * Currently, these settings only apply to the `Scheduled` trigger type.
    *
    * Example:
    *
@@ -6694,10 +7547,8 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
-   * .triggerType("triggerType")
-   * // the properties below are optional
-   * .triggerProperties(ScheduledTriggerPropertiesProperty.builder()
+   * ScheduledTriggerPropertiesProperty scheduledTriggerPropertiesProperty =
+   * ScheduledTriggerPropertiesProperty.builder()
    * .scheduleExpression("scheduleExpression")
    * // the properties below are optional
    * .dataPullMode("dataPullMode")
@@ -6707,159 +7558,333 @@ public open class CfnFlow internal constructor(
    * .scheduleOffset(123)
    * .scheduleStartTime(123)
    * .timeZone("timeZone")
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html)
    */
-  public interface TriggerConfigProperty {
+  public interface ScheduledTriggerPropertiesProperty {
     /**
-     * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+     * Specifies whether a scheduled flow has an incremental data transfer or a complete data
+     * transfer for each flow run.
      *
-     * Currently, these settings only apply to the `Scheduled` trigger type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggerproperties)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-datapullmode)
      */
-    public fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+    public fun dataPullMode(): String? = unwrap(this).getDataPullMode()
 
     /**
-     * Specifies the type of flow trigger.
+     * Specifies the date range for the records to import from the connector in the first flow run.
      *
-     * This can be `OnDemand` , `Scheduled` , or `Event` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggertype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-firstexecutionfrom)
      */
-    public fun triggerType(): String
+    public fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
 
     /**
-     * A builder for [TriggerConfigProperty]
+     * Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates
+     * it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-flowerrordeactivationthreshold)
+     */
+    public fun flowErrorDeactivationThreshold(): Number? =
+        unwrap(this).getFlowErrorDeactivationThreshold()
+
+    /**
+     * The time at which the scheduled flow ends.
+     *
+     * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+     * `2022-04-27T13:00:00-07:00` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime)
+     */
+    public fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
+
+    /**
+     * The scheduling expression that determines the rate at which the schedule will run, for
+     * example `rate(5minutes)` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression)
+     */
+    public fun scheduleExpression(): String
+
+    /**
+     * Specifies the optional offset that is added to the time interval for a schedule-triggered
+     * flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset)
+     */
+    public fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
+
+    /**
+     * The time at which the scheduled flow starts.
+     *
+     * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+     * `2022-04-26T13:00:00-07:00` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime)
+     */
+    public fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
+
+    /**
+     * Specifies the time zone used when referring to the dates and times of a scheduled flow, such
+     * as `America/New_York` .
+     *
+     * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
+     * the timestamps that you specify to schedule the flow.
+     *
+     * If you want to schedule a flow by using times in a particular time zone, indicate the time
+     * zone as a UTC offset in your timestamps. For example, the UTC offsets for the `America/New_York`
+     * timezone are `-04:00` EDT and `-05:00 EST` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-timezone)
+     */
+    public fun timeZone(): String? = unwrap(this).getTimeZone()
+
+    /**
+     * A builder for [ScheduledTriggerPropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param dataPullMode Specifies whether a scheduled flow has an incremental data transfer or
+       * a complete data transfer for each flow run.
        */
-      public fun triggerProperties(triggerProperties: IResolvable)
+      public fun dataPullMode(dataPullMode: String)
 
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param firstExecutionFrom Specifies the date range for the records to import from the
+       * connector in the first flow run.
        */
-      public fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty)
+      public fun firstExecutionFrom(firstExecutionFrom: Number)
 
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param flowErrorDeactivationThreshold Defines how many times a scheduled flow fails
+       * consecutively before Amazon AppFlow deactivates it.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
-      public
-          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit)
+      public fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number)
 
       /**
-       * @param triggerType Specifies the type of flow trigger. 
-       * This can be `OnDemand` , `Scheduled` , or `Event` .
+       * @param scheduleEndTime The time at which the scheduled flow ends.
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-27T13:00:00-07:00` .
        */
-      public fun triggerType(triggerType: String)
+      public fun scheduleEndTime(scheduleEndTime: Number)
+
+      /**
+       * @param scheduleExpression The scheduling expression that determines the rate at which the
+       * schedule will run, for example `rate(5minutes)` . 
+       */
+      public fun scheduleExpression(scheduleExpression: String)
+
+      /**
+       * @param scheduleOffset Specifies the optional offset that is added to the time interval for
+       * a schedule-triggered flow.
+       */
+      public fun scheduleOffset(scheduleOffset: Number)
+
+      /**
+       * @param scheduleStartTime The time at which the scheduled flow starts.
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-26T13:00:00-07:00` .
+       */
+      public fun scheduleStartTime(scheduleStartTime: Number)
+
+      /**
+       * @param timeZone Specifies the time zone used when referring to the dates and times of a
+       * scheduled flow, such as `America/New_York` .
+       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
+       * the timestamps that you specify to schedule the flow.
+       *
+       * If you want to schedule a flow by using times in a particular time zone, indicate the time
+       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
+       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
+       */
+      public fun timeZone(timeZone: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty.builder()
 
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param dataPullMode Specifies whether a scheduled flow has an incremental data transfer or
+       * a complete data transfer for each flow run.
        */
-      override fun triggerProperties(triggerProperties: IResolvable) {
-        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
+      override fun dataPullMode(dataPullMode: String) {
+        cdkBuilder.dataPullMode(dataPullMode)
       }
 
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param firstExecutionFrom Specifies the date range for the records to import from the
+       * connector in the first flow run.
        */
-      override fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
-        cdkBuilder.triggerProperties(triggerProperties.let(ScheduledTriggerPropertiesProperty::unwrap))
+      override fun firstExecutionFrom(firstExecutionFrom: Number) {
+        cdkBuilder.firstExecutionFrom(firstExecutionFrom)
       }
 
       /**
-       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
-       * as defined by the user.
-       * Currently, these settings only apply to the `Scheduled` trigger type.
+       * @param flowErrorDeactivationThreshold Defines how many times a scheduled flow fails
+       * consecutively before Amazon AppFlow deactivates it.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
-      override
-          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit):
-          Unit = triggerProperties(ScheduledTriggerPropertiesProperty(triggerProperties))
-
-      /**
-       * @param triggerType Specifies the type of flow trigger. 
-       * This can be `OnDemand` , `Scheduled` , or `Event` .
-       */
-      override fun triggerType(triggerType: String) {
-        cdkBuilder.triggerType(triggerType)
+      override fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
+        cdkBuilder.flowErrorDeactivationThreshold(flowErrorDeactivationThreshold)
       }
 
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty =
+      /**
+       * @param scheduleEndTime The time at which the scheduled flow ends.
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-27T13:00:00-07:00` .
+       */
+      override fun scheduleEndTime(scheduleEndTime: Number) {
+        cdkBuilder.scheduleEndTime(scheduleEndTime)
+      }
+
+      /**
+       * @param scheduleExpression The scheduling expression that determines the rate at which the
+       * schedule will run, for example `rate(5minutes)` . 
+       */
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      /**
+       * @param scheduleOffset Specifies the optional offset that is added to the time interval for
+       * a schedule-triggered flow.
+       */
+      override fun scheduleOffset(scheduleOffset: Number) {
+        cdkBuilder.scheduleOffset(scheduleOffset)
+      }
+
+      /**
+       * @param scheduleStartTime The time at which the scheduled flow starts.
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-26T13:00:00-07:00` .
+       */
+      override fun scheduleStartTime(scheduleStartTime: Number) {
+        cdkBuilder.scheduleStartTime(scheduleStartTime)
+      }
+
+      /**
+       * @param timeZone Specifies the time zone used when referring to the dates and times of a
+       * scheduled flow, such as `America/New_York` .
+       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
+       * the timestamps that you specify to schedule the flow.
+       *
+       * If you want to schedule a flow by using times in a particular time zone, indicate the time
+       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
+       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
+       */
+      override fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty,
-    ) : CdkObject(cdkObject), TriggerConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty,
+    ) : CdkObject(cdkObject), ScheduledTriggerPropertiesProperty {
       /**
-       * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+       * Specifies whether a scheduled flow has an incremental data transfer or a complete data
+       * transfer for each flow run.
        *
-       * Currently, these settings only apply to the `Scheduled` trigger type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggerproperties)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-datapullmode)
        */
-      override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+      override fun dataPullMode(): String? = unwrap(this).getDataPullMode()
 
       /**
-       * Specifies the type of flow trigger.
+       * Specifies the date range for the records to import from the connector in the first flow
+       * run.
        *
-       * This can be `OnDemand` , `Scheduled` , or `Event` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggertype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-firstexecutionfrom)
        */
-      override fun triggerType(): String = unwrap(this).getTriggerType()
+      override fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
+
+      /**
+       * Defines how many times a scheduled flow fails consecutively before Amazon AppFlow
+       * deactivates it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-flowerrordeactivationthreshold)
+       */
+      override fun flowErrorDeactivationThreshold(): Number? =
+          unwrap(this).getFlowErrorDeactivationThreshold()
+
+      /**
+       * The time at which the scheduled flow ends.
+       *
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-27T13:00:00-07:00` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime)
+       */
+      override fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
+
+      /**
+       * The scheduling expression that determines the rate at which the schedule will run, for
+       * example `rate(5minutes)` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression)
+       */
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+
+      /**
+       * Specifies the optional offset that is added to the time interval for a schedule-triggered
+       * flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset)
+       */
+      override fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
+
+      /**
+       * The time at which the scheduled flow starts.
+       *
+       * The time is formatted as a timestamp that follows the ISO 8601 standard, such as
+       * `2022-04-26T13:00:00-07:00` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime)
+       */
+      override fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
+
+      /**
+       * Specifies the time zone used when referring to the dates and times of a scheduled flow,
+       * such as `America/New_York` .
+       *
+       * This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets
+       * the timestamps that you specify to schedule the flow.
+       *
+       * If you want to schedule a flow by using times in a particular time zone, indicate the time
+       * zone as a UTC offset in your timestamps. For example, the UTC offsets for the
+       * `America/New_York` timezone are `-04:00` EDT and `-05:00 EST` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-timezone)
+       */
+      override fun timeZone(): String? = unwrap(this).getTimeZone()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ScheduledTriggerPropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty):
-          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty):
+          ScheduledTriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduledTriggerPropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TriggerConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty
+      internal fun unwrap(wrapped: ScheduledTriggerPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty
     }
   }
 
   /**
-   * Determines how Amazon AppFlow handles the success response that it gets from the connector
-   * after placing data.
-   *
-   * For example, this setting would determine where to write the response from the destination
-   * connector upon a successful insert operation.
+   * The properties that are applied when ServiceNow is being used as a source.
    *
    * Example:
    *
@@ -6867,623 +7892,479 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SuccessResponseHandlingConfigProperty successResponseHandlingConfigProperty =
-   * SuccessResponseHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
+   * ServiceNowSourcePropertiesProperty serviceNowSourcePropertiesProperty =
+   * ServiceNowSourcePropertiesProperty.builder()
+   * .object("object")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html)
    */
-  public interface SuccessResponseHandlingConfigProperty {
+  public interface ServiceNowSourcePropertiesProperty {
     /**
-     * The name of the Amazon S3 bucket.
+     * The object specified in the ServiceNow flow source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html#cfn-appflow-flow-servicenowsourceproperties-object)
      */
-    public fun bucketName(): String? = unwrap(this).getBucketName()
+    public fun `object`(): String
 
     /**
-     * The Amazon S3 bucket prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * A builder for [SuccessResponseHandlingConfigProperty]
+     * A builder for [ServiceNowSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucketName The name of the Amazon S3 bucket.
+       * @param object The object specified in the ServiceNow flow source. 
        */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix The Amazon S3 bucket prefix.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty.Builder
+          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty.Builder
           =
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty.builder()
 
       /**
-       * @param bucketName The name of the Amazon S3 bucket.
+       * @param object The object specified in the ServiceNow flow source. 
        */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
       }
 
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), ServiceNowSourcePropertiesProperty {
       /**
-       * @param bucketPrefix The Amazon S3 bucket prefix.
+       * The object specified in the ServiceNow flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html#cfn-appflow-flow-servicenowsourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceNowSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty):
+          ServiceNowSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceNowSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Singular is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SingularSourcePropertiesProperty singularSourcePropertiesProperty =
+   * SingularSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html)
+   */
+  public interface SingularSourcePropertiesProperty {
+    /**
+     * The object specified in the Singular flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html#cfn-appflow-flow-singularsourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [SingularSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Singular flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Singular flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), SingularSourcePropertiesProperty {
+      /**
+       * The object specified in the Singular flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html#cfn-appflow-flow-singularsourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SingularSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty):
+          SingularSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingularSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingularSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Slack is being used as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SlackSourcePropertiesProperty slackSourcePropertiesProperty =
+   * SlackSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html)
+   */
+  public interface SlackSourcePropertiesProperty {
+    /**
+     * The object specified in the Slack flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html#cfn-appflow-flow-slacksourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [SlackSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Slack flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Slack flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), SlackSourcePropertiesProperty {
+      /**
+       * The object specified in the Slack flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html#cfn-appflow-flow-slacksourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SlackSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty):
+          SlackSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlackSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SlackSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when Snowflake is being used as a destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SnowflakeDestinationPropertiesProperty snowflakeDestinationPropertiesProperty =
+   * SnowflakeDestinationPropertiesProperty.builder()
+   * .intermediateBucketName("intermediateBucketName")
+   * .object("object")
+   * // the properties below are optional
+   * .bucketPrefix("bucketPrefix")
+   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .failOnFirstError(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html)
+   */
+  public interface SnowflakeDestinationPropertiesProperty {
+    /**
+     * The object key for the destination bucket in which Amazon AppFlow places the files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * The settings that determine how Amazon AppFlow handles an error when placing data in the
+     * Snowflake destination.
+     *
+     * For example, this setting would determine if the flow should fail after one insertion error,
+     * or continue and attempt to insert every record regardless of the initial failure.
+     * `ErrorHandlingConfig` is a part of the destination connector details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-errorhandlingconfig)
+     */
+    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+    /**
+     * The intermediate bucket that Amazon AppFlow uses when moving data into Snowflake.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-intermediatebucketname)
+     */
+    public fun intermediateBucketName(): String
+
+    /**
+     * The object specified in the Snowflake flow destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [SnowflakeDestinationPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
+       * places the files.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
+      public
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
+       * data into Snowflake. 
+       */
+      public fun intermediateBucketName(intermediateBucketName: String)
+
+      /**
+       * @param object The object specified in the Snowflake flow destination. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty.builder()
+
+      /**
+       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
+       * places the files.
        */
       override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+      }
+
+      /**
+       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
+       * when placing data in the Snowflake destination.
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
+      override
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
+          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
+
+      /**
+       * @param intermediateBucketName The intermediate bucket that Amazon AppFlow uses when moving
+       * data into Snowflake. 
+       */
+      override fun intermediateBucketName(intermediateBucketName: String) {
+        cdkBuilder.intermediateBucketName(intermediateBucketName)
+      }
+
+      /**
+       * @param object The object specified in the Snowflake flow destination. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty =
+          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty,
-    ) : CdkObject(cdkObject), SuccessResponseHandlingConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty,
+    ) : CdkObject(cdkObject), SnowflakeDestinationPropertiesProperty {
       /**
-       * The name of the Amazon S3 bucket.
+       * The object key for the destination bucket in which Amazon AppFlow places the files.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketname)
-       */
-      override fun bucketName(): String? = unwrap(this).getBucketName()
-
-      /**
-       * The Amazon S3 bucket prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketprefix)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-bucketprefix)
        */
       override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+      /**
+       * The settings that determine how Amazon AppFlow handles an error when placing data in the
+       * Snowflake destination.
+       *
+       * For example, this setting would determine if the flow should fail after one insertion
+       * error, or continue and attempt to insert every record regardless of the initial failure.
+       * `ErrorHandlingConfig` is a part of the destination connector details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-errorhandlingconfig)
+       */
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+
+      /**
+       * The intermediate bucket that Amazon AppFlow uses when moving data into Snowflake.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-intermediatebucketname)
+       */
+      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
+
+      /**
+       * The object specified in the Snowflake flow destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          SuccessResponseHandlingConfigProperty {
+          SnowflakeDestinationPropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty):
-          SuccessResponseHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SuccessResponseHandlingConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty):
+          SnowflakeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SuccessResponseHandlingConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty =
+      internal fun unwrap(wrapped: SnowflakeDestinationPropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty
-    }
-  }
-
-  /**
-   * The operation to be performed on the provided source fields.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ConnectorOperatorProperty connectorOperatorProperty = ConnectorOperatorProperty.builder()
-   * .amplitude("amplitude")
-   * .customConnector("customConnector")
-   * .datadog("datadog")
-   * .dynatrace("dynatrace")
-   * .googleAnalytics("googleAnalytics")
-   * .inforNexus("inforNexus")
-   * .marketo("marketo")
-   * .pardot("pardot")
-   * .s3("s3")
-   * .salesforce("salesforce")
-   * .sapoData("sapoData")
-   * .serviceNow("serviceNow")
-   * .singular("singular")
-   * .slack("slack")
-   * .trendmicro("trendmicro")
-   * .veeva("veeva")
-   * .zendesk("zendesk")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html)
-   */
-  public interface ConnectorOperatorProperty {
-    /**
-     * The operation to be performed on the provided Amplitude source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-amplitude)
-     */
-    public fun amplitude(): String? = unwrap(this).getAmplitude()
-
-    /**
-     * Operators supported by the custom connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-customconnector)
-     */
-    public fun customConnector(): String? = unwrap(this).getCustomConnector()
-
-    /**
-     * The operation to be performed on the provided Datadog source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-datadog)
-     */
-    public fun datadog(): String? = unwrap(this).getDatadog()
-
-    /**
-     * The operation to be performed on the provided Dynatrace source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-dynatrace)
-     */
-    public fun dynatrace(): String? = unwrap(this).getDynatrace()
-
-    /**
-     * The operation to be performed on the provided Google Analytics source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-googleanalytics)
-     */
-    public fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
-
-    /**
-     * The operation to be performed on the provided Infor Nexus source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-infornexus)
-     */
-    public fun inforNexus(): String? = unwrap(this).getInforNexus()
-
-    /**
-     * The operation to be performed on the provided Marketo source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-marketo)
-     */
-    public fun marketo(): String? = unwrap(this).getMarketo()
-
-    /**
-     * The operation to be performed on the provided Salesforce Pardot source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-pardot)
-     */
-    public fun pardot(): String? = unwrap(this).getPardot()
-
-    /**
-     * The operation to be performed on the provided Amazon S3 source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-s3)
-     */
-    public fun s3(): String? = unwrap(this).getS3()
-
-    /**
-     * The operation to be performed on the provided Salesforce source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-salesforce)
-     */
-    public fun salesforce(): String? = unwrap(this).getSalesforce()
-
-    /**
-     * The operation to be performed on the provided SAPOData source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-sapodata)
-     */
-    public fun sapoData(): String? = unwrap(this).getSapoData()
-
-    /**
-     * The operation to be performed on the provided ServiceNow source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-servicenow)
-     */
-    public fun serviceNow(): String? = unwrap(this).getServiceNow()
-
-    /**
-     * The operation to be performed on the provided Singular source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-singular)
-     */
-    public fun singular(): String? = unwrap(this).getSingular()
-
-    /**
-     * The operation to be performed on the provided Slack source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-slack)
-     */
-    public fun slack(): String? = unwrap(this).getSlack()
-
-    /**
-     * The operation to be performed on the provided Trend Micro source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-trendmicro)
-     */
-    public fun trendmicro(): String? = unwrap(this).getTrendmicro()
-
-    /**
-     * The operation to be performed on the provided Veeva source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-veeva)
-     */
-    public fun veeva(): String? = unwrap(this).getVeeva()
-
-    /**
-     * The operation to be performed on the provided Zendesk source fields.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-zendesk)
-     */
-    public fun zendesk(): String? = unwrap(this).getZendesk()
-
-    /**
-     * A builder for [ConnectorOperatorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param amplitude The operation to be performed on the provided Amplitude source fields.
-       */
-      public fun amplitude(amplitude: String)
-
-      /**
-       * @param customConnector Operators supported by the custom connector.
-       */
-      public fun customConnector(customConnector: String)
-
-      /**
-       * @param datadog The operation to be performed on the provided Datadog source fields.
-       */
-      public fun datadog(datadog: String)
-
-      /**
-       * @param dynatrace The operation to be performed on the provided Dynatrace source fields.
-       */
-      public fun dynatrace(dynatrace: String)
-
-      /**
-       * @param googleAnalytics The operation to be performed on the provided Google Analytics
-       * source fields.
-       */
-      public fun googleAnalytics(googleAnalytics: String)
-
-      /**
-       * @param inforNexus The operation to be performed on the provided Infor Nexus source fields.
-       */
-      public fun inforNexus(inforNexus: String)
-
-      /**
-       * @param marketo The operation to be performed on the provided Marketo source fields.
-       */
-      public fun marketo(marketo: String)
-
-      /**
-       * @param pardot The operation to be performed on the provided Salesforce Pardot source
-       * fields.
-       */
-      public fun pardot(pardot: String)
-
-      /**
-       * @param s3 The operation to be performed on the provided Amazon S3 source fields.
-       */
-      public fun s3(s3: String)
-
-      /**
-       * @param salesforce The operation to be performed on the provided Salesforce source fields.
-       */
-      public fun salesforce(salesforce: String)
-
-      /**
-       * @param sapoData The operation to be performed on the provided SAPOData source fields.
-       */
-      public fun sapoData(sapoData: String)
-
-      /**
-       * @param serviceNow The operation to be performed on the provided ServiceNow source fields.
-       */
-      public fun serviceNow(serviceNow: String)
-
-      /**
-       * @param singular The operation to be performed on the provided Singular source fields.
-       */
-      public fun singular(singular: String)
-
-      /**
-       * @param slack The operation to be performed on the provided Slack source fields.
-       */
-      public fun slack(slack: String)
-
-      /**
-       * @param trendmicro The operation to be performed on the provided Trend Micro source fields.
-       */
-      public fun trendmicro(trendmicro: String)
-
-      /**
-       * @param veeva The operation to be performed on the provided Veeva source fields.
-       */
-      public fun veeva(veeva: String)
-
-      /**
-       * @param zendesk The operation to be performed on the provided Zendesk source fields.
-       */
-      public fun zendesk(zendesk: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.builder()
-
-      /**
-       * @param amplitude The operation to be performed on the provided Amplitude source fields.
-       */
-      override fun amplitude(amplitude: String) {
-        cdkBuilder.amplitude(amplitude)
-      }
-
-      /**
-       * @param customConnector Operators supported by the custom connector.
-       */
-      override fun customConnector(customConnector: String) {
-        cdkBuilder.customConnector(customConnector)
-      }
-
-      /**
-       * @param datadog The operation to be performed on the provided Datadog source fields.
-       */
-      override fun datadog(datadog: String) {
-        cdkBuilder.datadog(datadog)
-      }
-
-      /**
-       * @param dynatrace The operation to be performed on the provided Dynatrace source fields.
-       */
-      override fun dynatrace(dynatrace: String) {
-        cdkBuilder.dynatrace(dynatrace)
-      }
-
-      /**
-       * @param googleAnalytics The operation to be performed on the provided Google Analytics
-       * source fields.
-       */
-      override fun googleAnalytics(googleAnalytics: String) {
-        cdkBuilder.googleAnalytics(googleAnalytics)
-      }
-
-      /**
-       * @param inforNexus The operation to be performed on the provided Infor Nexus source fields.
-       */
-      override fun inforNexus(inforNexus: String) {
-        cdkBuilder.inforNexus(inforNexus)
-      }
-
-      /**
-       * @param marketo The operation to be performed on the provided Marketo source fields.
-       */
-      override fun marketo(marketo: String) {
-        cdkBuilder.marketo(marketo)
-      }
-
-      /**
-       * @param pardot The operation to be performed on the provided Salesforce Pardot source
-       * fields.
-       */
-      override fun pardot(pardot: String) {
-        cdkBuilder.pardot(pardot)
-      }
-
-      /**
-       * @param s3 The operation to be performed on the provided Amazon S3 source fields.
-       */
-      override fun s3(s3: String) {
-        cdkBuilder.s3(s3)
-      }
-
-      /**
-       * @param salesforce The operation to be performed on the provided Salesforce source fields.
-       */
-      override fun salesforce(salesforce: String) {
-        cdkBuilder.salesforce(salesforce)
-      }
-
-      /**
-       * @param sapoData The operation to be performed on the provided SAPOData source fields.
-       */
-      override fun sapoData(sapoData: String) {
-        cdkBuilder.sapoData(sapoData)
-      }
-
-      /**
-       * @param serviceNow The operation to be performed on the provided ServiceNow source fields.
-       */
-      override fun serviceNow(serviceNow: String) {
-        cdkBuilder.serviceNow(serviceNow)
-      }
-
-      /**
-       * @param singular The operation to be performed on the provided Singular source fields.
-       */
-      override fun singular(singular: String) {
-        cdkBuilder.singular(singular)
-      }
-
-      /**
-       * @param slack The operation to be performed on the provided Slack source fields.
-       */
-      override fun slack(slack: String) {
-        cdkBuilder.slack(slack)
-      }
-
-      /**
-       * @param trendmicro The operation to be performed on the provided Trend Micro source fields.
-       */
-      override fun trendmicro(trendmicro: String) {
-        cdkBuilder.trendmicro(trendmicro)
-      }
-
-      /**
-       * @param veeva The operation to be performed on the provided Veeva source fields.
-       */
-      override fun veeva(veeva: String) {
-        cdkBuilder.veeva(veeva)
-      }
-
-      /**
-       * @param zendesk The operation to be performed on the provided Zendesk source fields.
-       */
-      override fun zendesk(zendesk: String) {
-        cdkBuilder.zendesk(zendesk)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty,
-    ) : CdkObject(cdkObject), ConnectorOperatorProperty {
-      /**
-       * The operation to be performed on the provided Amplitude source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-amplitude)
-       */
-      override fun amplitude(): String? = unwrap(this).getAmplitude()
-
-      /**
-       * Operators supported by the custom connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-customconnector)
-       */
-      override fun customConnector(): String? = unwrap(this).getCustomConnector()
-
-      /**
-       * The operation to be performed on the provided Datadog source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-datadog)
-       */
-      override fun datadog(): String? = unwrap(this).getDatadog()
-
-      /**
-       * The operation to be performed on the provided Dynatrace source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-dynatrace)
-       */
-      override fun dynatrace(): String? = unwrap(this).getDynatrace()
-
-      /**
-       * The operation to be performed on the provided Google Analytics source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-googleanalytics)
-       */
-      override fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
-
-      /**
-       * The operation to be performed on the provided Infor Nexus source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-infornexus)
-       */
-      override fun inforNexus(): String? = unwrap(this).getInforNexus()
-
-      /**
-       * The operation to be performed on the provided Marketo source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-marketo)
-       */
-      override fun marketo(): String? = unwrap(this).getMarketo()
-
-      /**
-       * The operation to be performed on the provided Salesforce Pardot source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-pardot)
-       */
-      override fun pardot(): String? = unwrap(this).getPardot()
-
-      /**
-       * The operation to be performed on the provided Amazon S3 source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-s3)
-       */
-      override fun s3(): String? = unwrap(this).getS3()
-
-      /**
-       * The operation to be performed on the provided Salesforce source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-salesforce)
-       */
-      override fun salesforce(): String? = unwrap(this).getSalesforce()
-
-      /**
-       * The operation to be performed on the provided SAPOData source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-sapodata)
-       */
-      override fun sapoData(): String? = unwrap(this).getSapoData()
-
-      /**
-       * The operation to be performed on the provided ServiceNow source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-servicenow)
-       */
-      override fun serviceNow(): String? = unwrap(this).getServiceNow()
-
-      /**
-       * The operation to be performed on the provided Singular source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-singular)
-       */
-      override fun singular(): String? = unwrap(this).getSingular()
-
-      /**
-       * The operation to be performed on the provided Slack source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-slack)
-       */
-      override fun slack(): String? = unwrap(this).getSlack()
-
-      /**
-       * The operation to be performed on the provided Trend Micro source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-trendmicro)
-       */
-      override fun trendmicro(): String? = unwrap(this).getTrendmicro()
-
-      /**
-       * The operation to be performed on the provided Veeva source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-veeva)
-       */
-      override fun veeva(): String? = unwrap(this).getVeeva()
-
-      /**
-       * The operation to be performed on the provided Zendesk source fields.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html#cfn-appflow-flow-connectoroperator-zendesk)
-       */
-      override fun zendesk(): String? = unwrap(this).getZendesk()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectorOperatorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty):
-          ConnectorOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectorOperatorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectorOperatorProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty
     }
   }
 
@@ -8399,8 +9280,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty,
     ) : CdkObject(cdkObject), SourceConnectorPropertiesProperty {
       /**
        * Specifies the information that is required for querying Amplitude.
@@ -8538,6 +9418,1147 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty
+    }
+  }
+
+  /**
+   * Contains information about the configuration of the source connector used in the flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SourceFlowConfigProperty sourceFlowConfigProperty = SourceFlowConfigProperty.builder()
+   * .connectorType("connectorType")
+   * .sourceConnectorProperties(SourceConnectorPropertiesProperty.builder()
+   * .amplitude(AmplitudeSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .customConnector(CustomConnectorSourcePropertiesProperty.builder()
+   * .entityName("entityName")
+   * // the properties below are optional
+   * .customProperties(Map.of(
+   * "customPropertiesKey", "customProperties"))
+   * .dataTransferApi(DataTransferApiProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build())
+   * .build())
+   * .datadog(DatadogSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .dynatrace(DynatraceSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .googleAnalytics(GoogleAnalyticsSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .inforNexus(InforNexusSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .marketo(MarketoSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .pardot(PardotSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .s3(S3SourcePropertiesProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * // the properties below are optional
+   * .s3InputFormatConfig(S3InputFormatConfigProperty.builder()
+   * .s3InputFileType("s3InputFileType")
+   * .build())
+   * .build())
+   * .salesforce(SalesforceSourcePropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .dataTransferApi("dataTransferApi")
+   * .enableDynamicFieldUpdate(false)
+   * .includeDeletedRecords(false)
+   * .build())
+   * .sapoData(SAPODataSourcePropertiesProperty.builder()
+   * .objectPath("objectPath")
+   * // the properties below are optional
+   * .paginationConfig(SAPODataPaginationConfigProperty.builder()
+   * .maxPageSize(123)
+   * .build())
+   * .parallelismConfig(SAPODataParallelismConfigProperty.builder()
+   * .maxParallelism(123)
+   * .build())
+   * .build())
+   * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .singular(SingularSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .slack(SlackSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .trendmicro(TrendmicroSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .veeva(VeevaSourcePropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .documentType("documentType")
+   * .includeAllVersions(false)
+   * .includeRenditions(false)
+   * .includeSourceFiles(false)
+   * .build())
+   * .zendesk(ZendeskSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .apiVersion("apiVersion")
+   * .connectorProfileName("connectorProfileName")
+   * .incrementalPullConfig(IncrementalPullConfigProperty.builder()
+   * .datetimeTypeFieldName("datetimeTypeFieldName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html)
+   */
+  public interface SourceFlowConfigProperty {
+    /**
+     * The API version of the connector when it's used as a source in the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-apiversion)
+     */
+    public fun apiVersion(): String? = unwrap(this).getApiVersion()
+
+    /**
+     * The name of the connector profile.
+     *
+     * This name must be unique for each connector profile in the AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectorprofilename)
+     */
+    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+    /**
+     * The type of connector, such as Salesforce, Amplitude, and so on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectortype)
+     */
+    public fun connectorType(): String
+
+    /**
+     * Defines the configuration for a scheduled incremental data pull.
+     *
+     * If a valid configuration is provided, the fields specified in the configuration are used when
+     * querying for the incremental data pull.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)
+     */
+    public fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
+
+    /**
+     * Specifies the information that is required to query a particular source connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties)
+     */
+    public fun sourceConnectorProperties(): Any
+
+    /**
+     * A builder for [SourceFlowConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param apiVersion The API version of the connector when it's used as a source in the flow.
+       */
+      public fun apiVersion(apiVersion: String)
+
+      /**
+       * @param connectorProfileName The name of the connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      public fun connectorProfileName(connectorProfileName: String)
+
+      /**
+       * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on. 
+       */
+      public fun connectorType(connectorType: String)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      public fun incrementalPullConfig(incrementalPullConfig: IResolvable)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty)
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
+      public
+          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      public
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty)
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
+      public
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.builder()
+
+      /**
+       * @param apiVersion The API version of the connector when it's used as a source in the flow.
+       */
+      override fun apiVersion(apiVersion: String) {
+        cdkBuilder.apiVersion(apiVersion)
+      }
+
+      /**
+       * @param connectorProfileName The name of the connector profile.
+       * This name must be unique for each connector profile in the AWS account .
+       */
+      override fun connectorProfileName(connectorProfileName: String) {
+        cdkBuilder.connectorProfileName(connectorProfileName)
+      }
+
+      /**
+       * @param connectorType The type of connector, such as Salesforce, Amplitude, and so on. 
+       */
+      override fun connectorType(connectorType: String) {
+        cdkBuilder.connectorType(connectorType)
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
+      }
+
+      /**
+       * @param incrementalPullConfig Defines the configuration for a scheduled incremental data
+       * pull.
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
+      override
+          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit):
+          Unit = incrementalPullConfig(IncrementalPullConfigProperty(incrementalPullConfig))
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      override
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param sourceConnectorProperties Specifies the information that is required to query a
+       * particular source connector. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
+      override
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          sourceConnectorProperties(SourceConnectorPropertiesProperty(sourceConnectorProperties))
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty,
+    ) : CdkObject(cdkObject), SourceFlowConfigProperty {
+      /**
+       * The API version of the connector when it's used as a source in the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-apiversion)
+       */
+      override fun apiVersion(): String? = unwrap(this).getApiVersion()
+
+      /**
+       * The name of the connector profile.
+       *
+       * This name must be unique for each connector profile in the AWS account .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectorprofilename)
+       */
+      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+
+      /**
+       * The type of connector, such as Salesforce, Amplitude, and so on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-connectortype)
+       */
+      override fun connectorType(): String = unwrap(this).getConnectorType()
+
+      /**
+       * Defines the configuration for a scheduled incremental data pull.
+       *
+       * If a valid configuration is provided, the fields specified in the configuration are used
+       * when querying for the incremental data pull.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)
+       */
+      override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
+
+      /**
+       * Specifies the information that is required to query a particular source connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties)
+       */
+      override fun sourceConnectorProperties(): Any = unwrap(this).getSourceConnectorProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceFlowConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty):
+          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceFlowConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty
+    }
+  }
+
+  /**
+   * Determines how Amazon AppFlow handles the success response that it gets from the connector
+   * after placing data.
+   *
+   * For example, this setting would determine where to write the response from the destination
+   * connector upon a successful insert operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * SuccessResponseHandlingConfigProperty successResponseHandlingConfigProperty =
+   * SuccessResponseHandlingConfigProperty.builder()
+   * .bucketName("bucketName")
+   * .bucketPrefix("bucketPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html)
+   */
+  public interface SuccessResponseHandlingConfigProperty {
+    /**
+     * The name of the Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketname)
+     */
+    public fun bucketName(): String? = unwrap(this).getBucketName()
+
+    /**
+     * The Amazon S3 bucket prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketprefix)
+     */
+    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+
+    /**
+     * A builder for [SuccessResponseHandlingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The name of the Amazon S3 bucket.
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketPrefix The Amazon S3 bucket prefix.
+       */
+      public fun bucketPrefix(bucketPrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty.builder()
+
+      /**
+       * @param bucketName The name of the Amazon S3 bucket.
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketPrefix The Amazon S3 bucket prefix.
+       */
+      override fun bucketPrefix(bucketPrefix: String) {
+        cdkBuilder.bucketPrefix(bucketPrefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty,
+    ) : CdkObject(cdkObject), SuccessResponseHandlingConfigProperty {
+      /**
+       * The name of the Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketname)
+       */
+      override fun bucketName(): String? = unwrap(this).getBucketName()
+
+      /**
+       * The Amazon S3 bucket prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html#cfn-appflow-flow-successresponsehandlingconfig-bucketprefix)
+       */
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SuccessResponseHandlingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty):
+          SuccessResponseHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuccessResponseHandlingConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SuccessResponseHandlingConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty
+    }
+  }
+
+  /**
+   * A map used to store task-related information.
+   *
+   * The execution service looks for particular information based on the `TaskType` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * TaskPropertiesObjectProperty taskPropertiesObjectProperty =
+   * TaskPropertiesObjectProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html)
+   */
+  public interface TaskPropertiesObjectProperty {
+    /**
+     * The task property key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-key)
+     */
+    public fun key(): String
+
+    /**
+     * The task property value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [TaskPropertiesObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The task property key. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The task property value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.builder()
+
+      /**
+       * @param key The task property key. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The task property value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty,
+    ) : CdkObject(cdkObject), TaskPropertiesObjectProperty {
+      /**
+       * The task property key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The task property value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaskPropertiesObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty):
+          TaskPropertiesObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TaskPropertiesObjectProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TaskPropertiesObjectProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty
+    }
+  }
+
+  /**
+   * A class for modeling different type of tasks.
+   *
+   * Task implementation varies based on the `TaskType` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * TaskProperty taskProperty = TaskProperty.builder()
+   * .sourceFields(List.of("sourceFields"))
+   * .taskType("taskType")
+   * // the properties below are optional
+   * .connectorOperator(ConnectorOperatorProperty.builder()
+   * .amplitude("amplitude")
+   * .customConnector("customConnector")
+   * .datadog("datadog")
+   * .dynatrace("dynatrace")
+   * .googleAnalytics("googleAnalytics")
+   * .inforNexus("inforNexus")
+   * .marketo("marketo")
+   * .pardot("pardot")
+   * .s3("s3")
+   * .salesforce("salesforce")
+   * .sapoData("sapoData")
+   * .serviceNow("serviceNow")
+   * .singular("singular")
+   * .slack("slack")
+   * .trendmicro("trendmicro")
+   * .veeva("veeva")
+   * .zendesk("zendesk")
+   * .build())
+   * .destinationField("destinationField")
+   * .taskProperties(List.of(TaskPropertiesObjectProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html)
+   */
+  public interface TaskProperty {
+    /**
+     * The operation to be performed on the provided source fields.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-connectoroperator)
+     */
+    public fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
+
+    /**
+     * A field in a destination connector, or a field value against which Amazon AppFlow validates a
+     * source field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield)
+     */
+    public fun destinationField(): String? = unwrap(this).getDestinationField()
+
+    /**
+     * The source fields to which a particular task is applied.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields)
+     */
+    public fun sourceFields(): List<String>
+
+    /**
+     * A map used to store task-related information.
+     *
+     * The execution service looks for particular information based on the `TaskType` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-taskproperties)
+     */
+    public fun taskProperties(): Any? = unwrap(this).getTaskProperties()
+
+    /**
+     * Specifies the particular task implementation that Amazon AppFlow performs.
+     *
+     * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
+     * `Truncate` | `Validate`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype)
+     */
+    public fun taskType(): String
+
+    /**
+     * A builder for [TaskProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      public fun connectorOperator(connectorOperator: IResolvable)
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty)
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit)
+
+      /**
+       * @param destinationField A field in a destination connector, or a field value against which
+       * Amazon AppFlow validates a source field.
+       */
+      public fun destinationField(destinationField: String)
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      public fun sourceFields(sourceFields: List<String>)
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      public fun sourceFields(vararg sourceFields: String)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      public fun taskProperties(taskProperties: IResolvable)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      public fun taskProperties(taskProperties: List<Any>)
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      public fun taskProperties(vararg taskProperties: Any)
+
+      /**
+       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
+       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
+       * `Truncate` | `Validate`
+       */
+      public fun taskType(taskType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.builder()
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      override fun connectorOperator(connectorOperator: IResolvable) {
+        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
+        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
+      }
+
+      /**
+       * @param connectorOperator The operation to be performed on the provided source fields.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
+      override
+          fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit):
+          Unit = connectorOperator(ConnectorOperatorProperty(connectorOperator))
+
+      /**
+       * @param destinationField A field in a destination connector, or a field value against which
+       * Amazon AppFlow validates a source field.
+       */
+      override fun destinationField(destinationField: String) {
+        cdkBuilder.destinationField(destinationField)
+      }
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      override fun sourceFields(sourceFields: List<String>) {
+        cdkBuilder.sourceFields(sourceFields)
+      }
+
+      /**
+       * @param sourceFields The source fields to which a particular task is applied. 
+       */
+      override fun sourceFields(vararg sourceFields: String): Unit =
+          sourceFields(sourceFields.toList())
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      override fun taskProperties(taskProperties: IResolvable) {
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      override fun taskProperties(taskProperties: List<Any>) {
+        cdkBuilder.taskProperties(taskProperties)
+      }
+
+      /**
+       * @param taskProperties A map used to store task-related information.
+       * The execution service looks for particular information based on the `TaskType` .
+       */
+      override fun taskProperties(vararg taskProperties: Any): Unit =
+          taskProperties(taskProperties.toList())
+
+      /**
+       * @param taskType Specifies the particular task implementation that Amazon AppFlow performs. 
+       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
+       * `Truncate` | `Validate`
+       */
+      override fun taskType(taskType: String) {
+        cdkBuilder.taskType(taskType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty,
+    ) : CdkObject(cdkObject), TaskProperty {
+      /**
+       * The operation to be performed on the provided source fields.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-connectoroperator)
+       */
+      override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
+
+      /**
+       * A field in a destination connector, or a field value against which Amazon AppFlow validates
+       * a source field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield)
+       */
+      override fun destinationField(): String? = unwrap(this).getDestinationField()
+
+      /**
+       * The source fields to which a particular task is applied.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields)
+       */
+      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
+
+      /**
+       * A map used to store task-related information.
+       *
+       * The execution service looks for particular information based on the `TaskType` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-taskproperties)
+       */
+      override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
+
+      /**
+       * Specifies the particular task implementation that Amazon AppFlow performs.
+       *
+       * *Allowed values* : `Arithmetic` | `Filter` | `Map` | `Map_all` | `Mask` | `Merge` |
+       * `Truncate` | `Validate`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype)
+       */
+      override fun taskType(): String = unwrap(this).getTaskType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaskProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty):
+          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TaskProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty
+    }
+  }
+
+  /**
+   * The properties that are applied when using Trend Micro as a flow source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * TrendmicroSourcePropertiesProperty trendmicroSourcePropertiesProperty =
+   * TrendmicroSourcePropertiesProperty.builder()
+   * .object("object")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html)
+   */
+  public interface TrendmicroSourcePropertiesProperty {
+    /**
+     * The object specified in the Trend Micro flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html#cfn-appflow-flow-trendmicrosourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [TrendmicroSourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param object The object specified in the Trend Micro flow source. 
+       */
+      public fun `object`(`object`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty.builder()
+
+      /**
+       * @param object The object specified in the Trend Micro flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), TrendmicroSourcePropertiesProperty {
+      /**
+       * The object specified in the Trend Micro flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html#cfn-appflow-flow-trendmicrosourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TrendmicroSourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty):
+          TrendmicroSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrendmicroSourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrendmicroSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty
+    }
+  }
+
+  /**
+   * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appflow.*;
+   * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
+   * .triggerType("triggerType")
+   * // the properties below are optional
+   * .triggerProperties(ScheduledTriggerPropertiesProperty.builder()
+   * .scheduleExpression("scheduleExpression")
+   * // the properties below are optional
+   * .dataPullMode("dataPullMode")
+   * .firstExecutionFrom(123)
+   * .flowErrorDeactivationThreshold(123)
+   * .scheduleEndTime(123)
+   * .scheduleOffset(123)
+   * .scheduleStartTime(123)
+   * .timeZone("timeZone")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html)
+   */
+  public interface TriggerConfigProperty {
+    /**
+     * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+     *
+     * Currently, these settings only apply to the `Scheduled` trigger type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggerproperties)
+     */
+    public fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+
+    /**
+     * Specifies the type of flow trigger.
+     *
+     * This can be `OnDemand` , `Scheduled` , or `Event` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggertype)
+     */
+    public fun triggerType(): String
+
+    /**
+     * A builder for [TriggerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      public fun triggerProperties(triggerProperties: IResolvable)
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      public fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty)
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
+      public
+          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param triggerType Specifies the type of flow trigger. 
+       * This can be `OnDemand` , `Scheduled` , or `Event` .
+       */
+      public fun triggerType(triggerType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.builder()
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      override fun triggerProperties(triggerProperties: IResolvable) {
+        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      override fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
+        cdkBuilder.triggerProperties(triggerProperties.let(ScheduledTriggerPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param triggerProperties Specifies the configuration details of a schedule-triggered flow
+       * as defined by the user.
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
+      override
+          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit):
+          Unit = triggerProperties(ScheduledTriggerPropertiesProperty(triggerProperties))
+
+      /**
+       * @param triggerType Specifies the type of flow trigger. 
+       * This can be `OnDemand` , `Scheduled` , or `Event` .
+       */
+      override fun triggerType(triggerType: String) {
+        cdkBuilder.triggerType(triggerType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty,
+    ) : CdkObject(cdkObject), TriggerConfigProperty {
+      /**
+       * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+       *
+       * Currently, these settings only apply to the `Scheduled` trigger type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggerproperties)
+       */
+      override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+
+      /**
+       * Specifies the type of flow trigger.
+       *
+       * This can be `OnDemand` , `Scheduled` , or `Event` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html#cfn-appflow-flow-triggerconfig-triggertype)
+       */
+      override fun triggerType(): String = unwrap(this).getTriggerType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TriggerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty):
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TriggerConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty
     }
   }
 
@@ -8691,8 +10712,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty,
     ) : CdkObject(cdkObject), UpsolverDestinationPropertiesProperty {
       /**
        * The Upsolver Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
@@ -8738,7 +10758,8 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * SAP Source connector page size.
+   * The configuration that determines how Amazon AppFlow formats the flow output data when Upsolver
+   * is used as the destination.
    *
    * Example:
    *
@@ -8746,80 +10767,216 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SAPODataPaginationConfigProperty sAPODataPaginationConfigProperty =
-   * SAPODataPaginationConfigProperty.builder()
-   * .maxPageSize(123)
+   * UpsolverS3OutputFormatConfigProperty upsolverS3OutputFormatConfigProperty =
+   * UpsolverS3OutputFormatConfigProperty.builder()
+   * .prefixConfig(PrefixConfigProperty.builder()
+   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+   * .prefixFormat("prefixFormat")
+   * .prefixType("prefixType")
+   * .build())
+   * // the properties below are optional
+   * .aggregationConfig(AggregationConfigProperty.builder()
+   * .aggregationType("aggregationType")
+   * .targetFileSize(123)
+   * .build())
+   * .fileType("fileType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html)
    */
-  public interface SAPODataPaginationConfigProperty {
+  public interface UpsolverS3OutputFormatConfigProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
+     * The aggregation settings that you can use to customize the output format of your flow data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-aggregationconfig)
      */
-    public fun maxPageSize(): Number
+    public fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
 
     /**
-     * A builder for [SAPODataPaginationConfigProperty]
+     * Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-filetype)
+     */
+    public fun fileType(): String? = unwrap(this).getFileType()
+
+    /**
+     * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
+     * destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-prefixconfig)
+     */
+    public fun prefixConfig(): Any
+
+    /**
+     * A builder for [UpsolverS3OutputFormatConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxPageSize the value to be set. 
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
        */
-      public fun maxPageSize(maxPageSize: Number)
+      public fun aggregationConfig(aggregationConfig: IResolvable)
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon
+       * S3 bucket.
+       */
+      public fun fileType(fileType: String)
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      public fun prefixConfig(prefixConfig: IResolvable)
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
 
       /**
-       * @param maxPageSize the value to be set. 
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
        */
-      override fun maxPageSize(maxPageSize: Number) {
-        cdkBuilder.maxPageSize(maxPageSize)
+      override fun aggregationConfig(aggregationConfig: IResolvable) {
+        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
+        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param aggregationConfig The aggregation settings that you can use to customize the output
+       * format of your flow data.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
+      override
+          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
+          Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
+
+      /**
+       * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon
+       * S3 bucket.
+       */
+      override fun fileType(fileType: String) {
+        cdkBuilder.fileType(fileType)
+      }
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      override fun prefixConfig(prefixConfig: IResolvable) {
+        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
+        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
+      }
+
+      /**
+       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
+       * names in the flow destination. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
+          prefixConfig(PrefixConfigProperty(prefixConfig))
+
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty =
+          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty,
-    ) : CdkObject(cdkObject), SAPODataPaginationConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty,
+    ) : CdkObject(cdkObject), UpsolverS3OutputFormatConfigProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
+       * The aggregation settings that you can use to customize the output format of your flow data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-aggregationconfig)
        */
-      override fun maxPageSize(): Number = unwrap(this).getMaxPageSize()
+      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
+
+      /**
+       * Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-filetype)
+       */
+      override fun fileType(): String? = unwrap(this).getFileType()
+
+      /**
+       * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
+       * destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-prefixconfig)
+       */
+      override fun prefixConfig(): Any = unwrap(this).getPrefixConfig()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SAPODataPaginationConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          UpsolverS3OutputFormatConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty):
-          SAPODataPaginationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SAPODataPaginationConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty):
+          UpsolverS3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpsolverS3OutputFormatConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SAPODataPaginationConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty =
+      internal fun unwrap(wrapped: UpsolverS3OutputFormatConfigProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty
     }
   }
 
   /**
-   * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
-   *
-   * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
+   * The properties that are applied when using Veeva as a flow source.
    *
    * Example:
    *
@@ -8827,116 +10984,233 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * MetadataCatalogConfigProperty metadataCatalogConfigProperty =
-   * MetadataCatalogConfigProperty.builder()
-   * .glueDataCatalog(GlueDataCatalogProperty.builder()
-   * .databaseName("databaseName")
-   * .roleArn("roleArn")
-   * .tablePrefix("tablePrefix")
-   * .build())
+   * VeevaSourcePropertiesProperty veevaSourcePropertiesProperty =
+   * VeevaSourcePropertiesProperty.builder()
+   * .object("object")
+   * // the properties below are optional
+   * .documentType("documentType")
+   * .includeAllVersions(false)
+   * .includeRenditions(false)
+   * .includeSourceFiles(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html)
    */
-  public interface MetadataCatalogConfigProperty {
+  public interface VeevaSourcePropertiesProperty {
     /**
-     * Specifies the configuration that Amazon AppFlow uses when it catalogs your data with the AWS
-     * Glue Data Catalog .
+     * The document type specified in the Veeva document extract flow.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html#cfn-appflow-flow-metadatacatalogconfig-gluedatacatalog)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-documenttype)
      */
-    public fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
+    public fun documentType(): String? = unwrap(this).getDocumentType()
 
     /**
-     * A builder for [MetadataCatalogConfigProperty]
+     * Boolean value to include All Versions of files in Veeva document extract flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includeallversions)
+     */
+    public fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
+
+    /**
+     * Boolean value to include file renditions in Veeva document extract flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includerenditions)
+     */
+    public fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
+
+    /**
+     * Boolean value to include source files in Veeva document extract flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includesourcefiles)
+     */
+    public fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
+
+    /**
+     * The object specified in the Veeva flow source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-object)
+     */
+    public fun `object`(): String
+
+    /**
+     * A builder for [VeevaSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param documentType The document type specified in the Veeva document extract flow.
        */
-      public fun glueDataCatalog(glueDataCatalog: IResolvable)
+      public fun documentType(documentType: String)
 
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
+       * extract flow.
        */
-      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty)
+      public fun includeAllVersions(includeAllVersions: Boolean)
 
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
+       * extract flow.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
-      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit)
+      public fun includeAllVersions(includeAllVersions: IResolvable)
+
+      /**
+       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
+       * flow.
+       */
+      public fun includeRenditions(includeRenditions: Boolean)
+
+      /**
+       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
+       * flow.
+       */
+      public fun includeRenditions(includeRenditions: IResolvable)
+
+      /**
+       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
+       * flow.
+       */
+      public fun includeSourceFiles(includeSourceFiles: Boolean)
+
+      /**
+       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
+       * flow.
+       */
+      public fun includeSourceFiles(includeSourceFiles: IResolvable)
+
+      /**
+       * @param object The object specified in the Veeva flow source. 
+       */
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.builder()
 
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param documentType The document type specified in the Veeva document extract flow.
        */
-      override fun glueDataCatalog(glueDataCatalog: IResolvable) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog.let(IResolvable::unwrap))
+      override fun documentType(documentType: String) {
+        cdkBuilder.documentType(documentType)
       }
 
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
+       * extract flow.
        */
-      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog.let(GlueDataCatalogProperty::unwrap))
+      override fun includeAllVersions(includeAllVersions: Boolean) {
+        cdkBuilder.includeAllVersions(includeAllVersions)
       }
 
       /**
-       * @param glueDataCatalog Specifies the configuration that Amazon AppFlow uses when it
-       * catalogs your data with the AWS Glue Data Catalog .
+       * @param includeAllVersions Boolean value to include All Versions of files in Veeva document
+       * extract flow.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
-      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit):
-          Unit = glueDataCatalog(GlueDataCatalogProperty(glueDataCatalog))
+      override fun includeAllVersions(includeAllVersions: IResolvable) {
+        cdkBuilder.includeAllVersions(includeAllVersions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
+       * flow.
+       */
+      override fun includeRenditions(includeRenditions: Boolean) {
+        cdkBuilder.includeRenditions(includeRenditions)
+      }
+
+      /**
+       * @param includeRenditions Boolean value to include file renditions in Veeva document extract
+       * flow.
+       */
+      override fun includeRenditions(includeRenditions: IResolvable) {
+        cdkBuilder.includeRenditions(includeRenditions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
+       * flow.
+       */
+      override fun includeSourceFiles(includeSourceFiles: Boolean) {
+        cdkBuilder.includeSourceFiles(includeSourceFiles)
+      }
+
+      /**
+       * @param includeSourceFiles Boolean value to include source files in Veeva document extract
+       * flow.
+       */
+      override fun includeSourceFiles(includeSourceFiles: IResolvable) {
+        cdkBuilder.includeSourceFiles(includeSourceFiles.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param object The object specified in the Veeva flow source. 
+       */
+      override fun `object`(`object`: String) {
+        cdkBuilder.`object`(`object`)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty =
+          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty,
-    ) : CdkObject(cdkObject), MetadataCatalogConfigProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), VeevaSourcePropertiesProperty {
       /**
-       * Specifies the configuration that Amazon AppFlow uses when it catalogs your data with the
-       * AWS Glue Data Catalog .
+       * The document type specified in the Veeva document extract flow.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-metadatacatalogconfig.html#cfn-appflow-flow-metadatacatalogconfig-gluedatacatalog)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-documenttype)
        */
-      override fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
+      override fun documentType(): String? = unwrap(this).getDocumentType()
+
+      /**
+       * Boolean value to include All Versions of files in Veeva document extract flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includeallversions)
+       */
+      override fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
+
+      /**
+       * Boolean value to include file renditions in Veeva document extract flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includerenditions)
+       */
+      override fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
+
+      /**
+       * Boolean value to include source files in Veeva document extract flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-includesourcefiles)
+       */
+      override fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
+
+      /**
+       * The object specified in the Veeva flow source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-object)
+       */
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataCatalogConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VeevaSourcePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty):
-          MetadataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetadataCatalogConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty):
+          VeevaSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaSourcePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MetadataCatalogConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty = (wrapped
+      internal fun unwrap(wrapped: VeevaSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty
     }
   }
 
@@ -9137,8 +11411,7 @@ public open class CfnFlow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty,
     ) : CdkObject(cdkObject), ZendeskDestinationPropertiesProperty {
       /**
        * The settings that determine how Amazon AppFlow handles an error when placing data in the
@@ -9196,7 +11469,7 @@ public open class CfnFlow internal constructor(
   }
 
   /**
-   * The properties that are applied when Amazon S3 is being used as the flow source.
+   * The properties that are applied when using Zendesk as a flow source.
    *
    * Example:
    *
@@ -9204,2396 +11477,76 @@ public open class CfnFlow internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * S3SourcePropertiesProperty s3SourcePropertiesProperty = S3SourcePropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * // the properties below are optional
-   * .s3InputFormatConfig(S3InputFormatConfigProperty.builder()
-   * .s3InputFileType("s3InputFileType")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html)
-   */
-  public interface S3SourcePropertiesProperty {
-    /**
-     * The Amazon S3 bucket name where the source files are stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * The object key for the Amazon S3 bucket in which the source files are stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketprefix)
-     */
-    public fun bucketPrefix(): String
-
-    /**
-     * When you use Amazon S3 as the source, the configuration format that you provide the flow
-     * input data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig)
-     */
-    public fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
-
-    /**
-     * A builder for [S3SourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName The Amazon S3 bucket name where the source files are stored. 
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix The object key for the Amazon S3 bucket in which the source files are
-       * stored. 
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      public fun s3InputFormatConfig(s3InputFormatConfig: IResolvable)
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      public fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty)
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
-      public
-          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.builder()
-
-      /**
-       * @param bucketName The Amazon S3 bucket name where the source files are stored. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param bucketPrefix The object key for the Amazon S3 bucket in which the source files are
-       * stored. 
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      override fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
-        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      override fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
-        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(S3InputFormatConfigProperty::unwrap))
-      }
-
-      /**
-       * @param s3InputFormatConfig When you use Amazon S3 as the source, the configuration format
-       * that you provide the flow input data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
-      override
-          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit):
-          Unit = s3InputFormatConfig(S3InputFormatConfigProperty(s3InputFormatConfig))
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty,
-    ) : CdkObject(cdkObject), S3SourcePropertiesProperty {
-      /**
-       * The Amazon S3 bucket name where the source files are stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * The object key for the Amazon S3 bucket in which the source files are stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-bucketprefix)
-       */
-      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
-
-      /**
-       * When you use Amazon S3 as the source, the configuration format that you provide the flow
-       * input data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig)
-       */
-      override fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3SourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty):
-          S3SourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3SourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3SourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when using SAPOData as a flow destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SAPODataDestinationPropertiesProperty sAPODataDestinationPropertiesProperty =
-   * SAPODataDestinationPropertiesProperty.builder()
-   * .objectPath("objectPath")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .idFieldNames(List.of("idFieldNames"))
-   * .successResponseHandlingConfig(SuccessResponseHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .build())
-   * .writeOperationType("writeOperationType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html)
-   */
-  public interface SAPODataDestinationPropertiesProperty {
-    /**
-     * The settings that determine how Amazon AppFlow handles an error when placing data in the
-     * destination.
-     *
-     * For example, this setting would determine if the flow should fail after one insertion error,
-     * or continue and attempt to insert every record regardless of the initial failure.
-     * `ErrorHandlingConfig` is a part of the destination connector details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-errorhandlingconfig)
-     */
-    public fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-    /**
-     * A list of field names that can be used as an ID field when performing a write operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-idfieldnames)
-     */
-    public fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
-
-    /**
-     * The object path specified in the SAPOData flow destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-objectpath)
-     */
-    public fun objectPath(): String
-
-    /**
-     * Determines how Amazon AppFlow handles the success response that it gets from the connector
-     * after placing data.
-     *
-     * For example, this setting would determine where to write the response from a destination
-     * connector upon a successful insert operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-successresponsehandlingconfig)
-     */
-    public fun successResponseHandlingConfig(): Any? =
-        unwrap(this).getSuccessResponseHandlingConfig()
-
-    /**
-     * The possible write operations in the destination connector.
-     *
-     * When this value is not provided, this defaults to the `INSERT` operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-writeoperationtype)
-     */
-    public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
-
-    /**
-     * A builder for [SAPODataDestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
-      public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param idFieldNames A list of field names that can be used as an ID field when performing a
-       * write operation.
-       */
-      public fun idFieldNames(idFieldNames: List<String>)
-
-      /**
-       * @param idFieldNames A list of field names that can be used as an ID field when performing a
-       * write operation.
-       */
-      public fun idFieldNames(vararg idFieldNames: String)
-
-      /**
-       * @param objectPath The object path specified in the SAPOData flow destination. 
-       */
-      public fun objectPath(objectPath: String)
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      public fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable)
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      public
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty)
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
-      public
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param writeOperationType The possible write operations in the destination connector.
-       * When this value is not provided, this defaults to the `INSERT` operation.
-       */
-      public fun writeOperationType(writeOperationType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty.builder()
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param errorHandlingConfig The settings that determine how Amazon AppFlow handles an error
-       * when placing data in the destination.
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
-      override
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
-          Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
-
-      /**
-       * @param idFieldNames A list of field names that can be used as an ID field when performing a
-       * write operation.
-       */
-      override fun idFieldNames(idFieldNames: List<String>) {
-        cdkBuilder.idFieldNames(idFieldNames)
-      }
-
-      /**
-       * @param idFieldNames A list of field names that can be used as an ID field when performing a
-       * write operation.
-       */
-      override fun idFieldNames(vararg idFieldNames: String): Unit =
-          idFieldNames(idFieldNames.toList())
-
-      /**
-       * @param objectPath The object path specified in the SAPOData flow destination. 
-       */
-      override fun objectPath(objectPath: String) {
-        cdkBuilder.objectPath(objectPath)
-      }
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      override fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
-        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      override
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty) {
-        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(SuccessResponseHandlingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param successResponseHandlingConfig Determines how Amazon AppFlow handles the success
-       * response that it gets from the connector after placing data.
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
-      override
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit):
-          Unit =
-          successResponseHandlingConfig(SuccessResponseHandlingConfigProperty(successResponseHandlingConfig))
-
-      /**
-       * @param writeOperationType The possible write operations in the destination connector.
-       * When this value is not provided, this defaults to the `INSERT` operation.
-       */
-      override fun writeOperationType(writeOperationType: String) {
-        cdkBuilder.writeOperationType(writeOperationType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), SAPODataDestinationPropertiesProperty {
-      /**
-       * The settings that determine how Amazon AppFlow handles an error when placing data in the
-       * destination.
-       *
-       * For example, this setting would determine if the flow should fail after one insertion
-       * error, or continue and attempt to insert every record regardless of the initial failure.
-       * `ErrorHandlingConfig` is a part of the destination connector details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-errorhandlingconfig)
-       */
-      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
-
-      /**
-       * A list of field names that can be used as an ID field when performing a write operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-idfieldnames)
-       */
-      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
-
-      /**
-       * The object path specified in the SAPOData flow destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-objectpath)
-       */
-      override fun objectPath(): String = unwrap(this).getObjectPath()
-
-      /**
-       * Determines how Amazon AppFlow handles the success response that it gets from the connector
-       * after placing data.
-       *
-       * For example, this setting would determine where to write the response from a destination
-       * connector upon a successful insert operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-successresponsehandlingconfig)
-       */
-      override fun successResponseHandlingConfig(): Any? =
-          unwrap(this).getSuccessResponseHandlingConfig()
-
-      /**
-       * The possible write operations in the destination connector.
-       *
-       * When this value is not provided, this defaults to the `INSERT` operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html#cfn-appflow-flow-sapodatadestinationproperties-writeoperationtype)
-       */
-      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SAPODataDestinationPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty):
-          SAPODataDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SAPODataDestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SAPODataDestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * The settings that determine how Amazon AppFlow handles an error when placing data in the
-   * destination.
-   *
-   * For example, this setting would determine if the flow should fail after one insertion error, or
-   * continue and attempt to insert every record regardless of the initial failure.
-   * `ErrorHandlingConfig` is a part of the destination connector details.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * ErrorHandlingConfigProperty errorHandlingConfigProperty = ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html)
-   */
-  public interface ErrorHandlingConfigProperty {
-    /**
-     * Specifies the name of the Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketname)
-     */
-    public fun bucketName(): String? = unwrap(this).getBucketName()
-
-    /**
-     * Specifies the Amazon S3 bucket prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * Specifies if the flow should fail after the first instance of a failure when attempting to
-     * place data in the destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-failonfirsterror)
-     */
-    public fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
-
-    /**
-     * A builder for [ErrorHandlingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName Specifies the name of the Amazon S3 bucket.
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix Specifies the Amazon S3 bucket prefix.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
-       * failure when attempting to place data in the destination.
-       */
-      public fun failOnFirstError(failOnFirstError: Boolean)
-
-      /**
-       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
-       * failure when attempting to place data in the destination.
-       */
-      public fun failOnFirstError(failOnFirstError: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.builder()
-
-      /**
-       * @param bucketName Specifies the name of the Amazon S3 bucket.
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param bucketPrefix Specifies the Amazon S3 bucket prefix.
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
-       * failure when attempting to place data in the destination.
-       */
-      override fun failOnFirstError(failOnFirstError: Boolean) {
-        cdkBuilder.failOnFirstError(failOnFirstError)
-      }
-
-      /**
-       * @param failOnFirstError Specifies if the flow should fail after the first instance of a
-       * failure when attempting to place data in the destination.
-       */
-      override fun failOnFirstError(failOnFirstError: IResolvable) {
-        cdkBuilder.failOnFirstError(failOnFirstError.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty,
-    ) : CdkObject(cdkObject), ErrorHandlingConfigProperty {
-      /**
-       * Specifies the name of the Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketname)
-       */
-      override fun bucketName(): String? = unwrap(this).getBucketName()
-
-      /**
-       * Specifies the Amazon S3 bucket prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketprefix)
-       */
-      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-      /**
-       * Specifies if the flow should fail after the first instance of a failure when attempting to
-       * place data in the destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-failonfirsterror)
-       */
-      override fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorHandlingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty):
-          ErrorHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ErrorHandlingConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ErrorHandlingConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Slack is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SlackSourcePropertiesProperty slackSourcePropertiesProperty =
-   * SlackSourcePropertiesProperty.builder()
+   * ZendeskSourcePropertiesProperty zendeskSourcePropertiesProperty =
+   * ZendeskSourcePropertiesProperty.builder()
    * .object("object")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html)
    */
-  public interface SlackSourcePropertiesProperty {
+  public interface ZendeskSourcePropertiesProperty {
     /**
-     * The object specified in the Slack flow source.
+     * The object specified in the Zendesk flow source.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html#cfn-appflow-flow-slacksourceproperties-object)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html#cfn-appflow-flow-zendesksourceproperties-object)
      */
     public fun `object`(): String
 
     /**
-     * A builder for [SlackSourcePropertiesProperty]
+     * A builder for [ZendeskSourcePropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param object The object specified in the Slack flow source. 
+       * @param object The object specified in the Zendesk flow source. 
        */
       public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.builder()
+          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.Builder =
+          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.builder()
 
       /**
-       * @param object The object specified in the Slack flow source. 
+       * @param object The object specified in the Zendesk flow source. 
        */
       override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
       public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty =
+          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SlackSourcePropertiesProperty {
+      cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty,
+    ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
       /**
-       * The object specified in the Slack flow source.
+       * The object specified in the Zendesk flow source.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html#cfn-appflow-flow-slacksourceproperties-object)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html#cfn-appflow-flow-zendesksourceproperties-object)
        */
       override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SlackSourcePropertiesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ZendeskSourcePropertiesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty):
-          SlackSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SlackSourcePropertiesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty):
+          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SlackSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty = (wrapped
+      internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
+          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Infor Nexus is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * InforNexusSourcePropertiesProperty inforNexusSourcePropertiesProperty =
-   * InforNexusSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html)
-   */
-  public interface InforNexusSourcePropertiesProperty {
-    /**
-     * The object specified in the Infor Nexus flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html#cfn-appflow-flow-infornexussourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [InforNexusSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Infor Nexus flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Infor Nexus flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), InforNexusSourcePropertiesProperty {
-      /**
-       * The object specified in the Infor Nexus flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html#cfn-appflow-flow-infornexussourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InforNexusSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty):
-          InforNexusSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InforNexusSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InforNexusSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The configuration that determines how Amazon AppFlow should format the flow output data when
-   * Amazon S3 is used as the destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * S3OutputFormatConfigProperty s3OutputFormatConfigProperty =
-   * S3OutputFormatConfigProperty.builder()
-   * .aggregationConfig(AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
-   * .build())
-   * .fileType("fileType")
-   * .prefixConfig(PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
-   * .build())
-   * .preserveSourceDataTyping(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html)
-   */
-  public interface S3OutputFormatConfigProperty {
-    /**
-     * The aggregation settings that you can use to customize the output format of your flow data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-aggregationconfig)
-     */
-    public fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
-
-    /**
-     * Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-filetype)
-     */
-    public fun fileType(): String? = unwrap(this).getFileType()
-
-    /**
-     * Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3 bucket.
-     *
-     * You can name folders according to the flow frequency and date.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-prefixconfig)
-     */
-    public fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
-
-    /**
-     * If your file output format is Parquet, use this parameter to set whether Amazon AppFlow
-     * preserves the data types in your source data when it writes the output to Amazon S3.
-     *
-     * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For example,
-     * an integer or `1` in your source data is still an integer in your output.
-     * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-     * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-     * output.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping)
-     */
-    public fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
-
-    /**
-     * A builder for [S3OutputFormatConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      public fun aggregationConfig(aggregationConfig: IResolvable)
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param fileType Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
-       */
-      public fun fileType(fileType: String)
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      public fun prefixConfig(prefixConfig: IResolvable)
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
-       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
-       * output to Amazon S3.
-       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
-       * example, an integer or `1` in your source data is still an integer in your output.
-       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-       * output.
-       */
-      public fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean)
-
-      /**
-       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
-       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
-       * output to Amazon S3.
-       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
-       * example, an integer or `1` in your source data is still an integer in your output.
-       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-       * output.
-       */
-      public fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.builder()
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      override fun aggregationConfig(aggregationConfig: IResolvable) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
-      override
-          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
-          Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
-
-      /**
-       * @param fileType Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
-       */
-      override fun fileType(fileType: String) {
-        cdkBuilder.fileType(fileType)
-      }
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      override fun prefixConfig(prefixConfig: IResolvable) {
-        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
-      }
-
-      /**
-       * @param prefixConfig Determines the prefix that Amazon AppFlow applies to the folder name in
-       * the Amazon S3 bucket.
-       * You can name folders according to the flow frequency and date.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
-      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
-          prefixConfig(PrefixConfigProperty(prefixConfig))
-
-      /**
-       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
-       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
-       * output to Amazon S3.
-       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
-       * example, an integer or `1` in your source data is still an integer in your output.
-       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-       * output.
-       */
-      override fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean) {
-        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping)
-      }
-
-      /**
-       * @param preserveSourceDataTyping If your file output format is Parquet, use this parameter
-       * to set whether Amazon AppFlow preserves the data types in your source data when it writes the
-       * output to Amazon S3.
-       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
-       * example, an integer or `1` in your source data is still an integer in your output.
-       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-       * output.
-       */
-      override fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
-        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty,
-    ) : CdkObject(cdkObject), S3OutputFormatConfigProperty {
-      /**
-       * The aggregation settings that you can use to customize the output format of your flow data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-aggregationconfig)
-       */
-      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
-
-      /**
-       * Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-filetype)
-       */
-      override fun fileType(): String? = unwrap(this).getFileType()
-
-      /**
-       * Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3
-       * bucket.
-       *
-       * You can name folders according to the flow frequency and date.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-prefixconfig)
-       */
-      override fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
-
-      /**
-       * If your file output format is Parquet, use this parameter to set whether Amazon AppFlow
-       * preserves the data types in your source data when it writes the output to Amazon S3.
-       *
-       * * `true` : Amazon AppFlow preserves the data types when it writes to Amazon S3. For
-       * example, an integer or `1` in your source data is still an integer in your output.
-       * * `false` : Amazon AppFlow converts all of the source data into strings when it writes to
-       * Amazon S3. For example, an integer of `1` in your source data becomes the string `"1"` in the
-       * output.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping)
-       */
-      override fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputFormatConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty):
-          S3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3OutputFormatConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3OutputFormatConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty
-    }
-  }
-
-  /**
-   * The configuration that determines how Amazon AppFlow formats the flow output data when Upsolver
-   * is used as the destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * UpsolverS3OutputFormatConfigProperty upsolverS3OutputFormatConfigProperty =
-   * UpsolverS3OutputFormatConfigProperty.builder()
-   * .prefixConfig(PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
-   * .build())
-   * // the properties below are optional
-   * .aggregationConfig(AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
-   * .build())
-   * .fileType("fileType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html)
-   */
-  public interface UpsolverS3OutputFormatConfigProperty {
-    /**
-     * The aggregation settings that you can use to customize the output format of your flow data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-aggregationconfig)
-     */
-    public fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
-
-    /**
-     * Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-filetype)
-     */
-    public fun fileType(): String? = unwrap(this).getFileType()
-
-    /**
-     * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
-     * destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-prefixconfig)
-     */
-    public fun prefixConfig(): Any
-
-    /**
-     * A builder for [UpsolverS3OutputFormatConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      public fun aggregationConfig(aggregationConfig: IResolvable)
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon
-       * S3 bucket.
-       */
-      public fun fileType(fileType: String)
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      public fun prefixConfig(prefixConfig: IResolvable)
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      override fun aggregationConfig(aggregationConfig: IResolvable) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param aggregationConfig The aggregation settings that you can use to customize the output
-       * format of your flow data.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
-      override
-          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
-          Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
-
-      /**
-       * @param fileType Indicates the file type that Amazon AppFlow places in the Upsolver Amazon
-       * S3 bucket.
-       */
-      override fun fileType(fileType: String) {
-        cdkBuilder.fileType(fileType)
-      }
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      override fun prefixConfig(prefixConfig: IResolvable) {
-        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
-      }
-
-      /**
-       * @param prefixConfig Specifies elements that Amazon AppFlow includes in the file and folder
-       * names in the flow destination. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
-      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
-          prefixConfig(PrefixConfigProperty(prefixConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty,
-    ) : CdkObject(cdkObject), UpsolverS3OutputFormatConfigProperty {
-      /**
-       * The aggregation settings that you can use to customize the output format of your flow data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-aggregationconfig)
-       */
-      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
-
-      /**
-       * Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-filetype)
-       */
-      override fun fileType(): String? = unwrap(this).getFileType()
-
-      /**
-       * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
-       * destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolvers3outputformatconfig.html#cfn-appflow-flow-upsolvers3outputformatconfig-prefixconfig)
-       */
-      override fun prefixConfig(): Any = unwrap(this).getPrefixConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          UpsolverS3OutputFormatConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty):
-          UpsolverS3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UpsolverS3OutputFormatConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UpsolverS3OutputFormatConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty
-    }
-  }
-
-  /**
-   * When you use Amazon S3 as the source, the configuration format that you provide the flow input
-   * data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * S3InputFormatConfigProperty s3InputFormatConfigProperty = S3InputFormatConfigProperty.builder()
-   * .s3InputFileType("s3InputFileType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html)
-   */
-  public interface S3InputFormatConfigProperty {
-    /**
-     * The file type that Amazon AppFlow gets from your Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html#cfn-appflow-flow-s3inputformatconfig-s3inputfiletype)
-     */
-    public fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
-
-    /**
-     * A builder for [S3InputFormatConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3InputFileType The file type that Amazon AppFlow gets from your Amazon S3 bucket.
-       */
-      public fun s3InputFileType(s3InputFileType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.builder()
-
-      /**
-       * @param s3InputFileType The file type that Amazon AppFlow gets from your Amazon S3 bucket.
-       */
-      override fun s3InputFileType(s3InputFileType: String) {
-        cdkBuilder.s3InputFileType(s3InputFileType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty,
-    ) : CdkObject(cdkObject), S3InputFormatConfigProperty {
-      /**
-       * The file type that Amazon AppFlow gets from your Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html#cfn-appflow-flow-s3inputformatconfig-s3inputfiletype)
-       */
-      override fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3InputFormatConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty):
-          S3InputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3InputFormatConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3InputFormatConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Datadog is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * DatadogSourcePropertiesProperty datadogSourcePropertiesProperty =
-   * DatadogSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html)
-   */
-  public interface DatadogSourcePropertiesProperty {
-    /**
-     * The object specified in the Datadog flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html#cfn-appflow-flow-datadogsourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [DatadogSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Datadog flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Datadog flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), DatadogSourcePropertiesProperty {
-      /**
-       * The object specified in the Datadog flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html#cfn-appflow-flow-datadogsourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatadogSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty):
-          DatadogSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatadogSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatadogSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Singular is being used as a source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * SingularSourcePropertiesProperty singularSourcePropertiesProperty =
-   * SingularSourcePropertiesProperty.builder()
-   * .object("object")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html)
-   */
-  public interface SingularSourcePropertiesProperty {
-    /**
-     * The object specified in the Singular flow source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html#cfn-appflow-flow-singularsourceproperties-object)
-     */
-    public fun `object`(): String
-
-    /**
-     * A builder for [SingularSourcePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param object The object specified in the Singular flow source. 
-       */
-      public fun `object`(`object`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.builder()
-
-      /**
-       * @param object The object specified in the Singular flow source. 
-       */
-      override fun `object`(`object`: String) {
-        cdkBuilder.`object`(`object`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SingularSourcePropertiesProperty {
-      /**
-       * The object specified in the Singular flow source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html#cfn-appflow-flow-singularsourceproperties-object)
-       */
-      override fun `object`(): String = unwrap(this).getObject()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SingularSourcePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty):
-          SingularSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SingularSourcePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SingularSourcePropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty
-    }
-  }
-
-  /**
-   * Contains information about the configuration of destination connectors present in the flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * DestinationFlowConfigProperty destinationFlowConfigProperty =
-   * DestinationFlowConfigProperty.builder()
-   * .connectorType("connectorType")
-   * .destinationConnectorProperties(DestinationConnectorPropertiesProperty.builder()
-   * .customConnector(CustomConnectorDestinationPropertiesProperty.builder()
-   * .entityName("entityName")
-   * // the properties below are optional
-   * .customProperties(Map.of(
-   * "customPropertiesKey", "customProperties"))
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .idFieldNames(List.of("idFieldNames"))
-   * .writeOperationType("writeOperationType")
-   * .build())
-   * .eventBridge(EventBridgeDestinationPropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build())
-   * .lookoutMetrics(LookoutMetricsDestinationPropertiesProperty.builder()
-   * .object("object")
-   * .build())
-   * .marketo(MarketoDestinationPropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build())
-   * .redshift(RedshiftDestinationPropertiesProperty.builder()
-   * .intermediateBucketName("intermediateBucketName")
-   * .object("object")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build())
-   * .s3(S3DestinationPropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .s3OutputFormatConfig(S3OutputFormatConfigProperty.builder()
-   * .aggregationConfig(AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
-   * .build())
-   * .fileType("fileType")
-   * .prefixConfig(PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
-   * .build())
-   * .preserveSourceDataTyping(false)
-   * .build())
-   * .build())
-   * .salesforce(SalesforceDestinationPropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .dataTransferApi("dataTransferApi")
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .idFieldNames(List.of("idFieldNames"))
-   * .writeOperationType("writeOperationType")
-   * .build())
-   * .sapoData(SAPODataDestinationPropertiesProperty.builder()
-   * .objectPath("objectPath")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .idFieldNames(List.of("idFieldNames"))
-   * .successResponseHandlingConfig(SuccessResponseHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .build())
-   * .writeOperationType("writeOperationType")
-   * .build())
-   * .snowflake(SnowflakeDestinationPropertiesProperty.builder()
-   * .intermediateBucketName("intermediateBucketName")
-   * .object("object")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .build())
-   * .upsolver(UpsolverDestinationPropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * .s3OutputFormatConfig(UpsolverS3OutputFormatConfigProperty.builder()
-   * .prefixConfig(PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
-   * .build())
-   * // the properties below are optional
-   * .aggregationConfig(AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
-   * .build())
-   * .fileType("fileType")
-   * .build())
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .build())
-   * .zendesk(ZendeskDestinationPropertiesProperty.builder()
-   * .object("object")
-   * // the properties below are optional
-   * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
-   * .bucketName("bucketName")
-   * .bucketPrefix("bucketPrefix")
-   * .failOnFirstError(false)
-   * .build())
-   * .idFieldNames(List.of("idFieldNames"))
-   * .writeOperationType("writeOperationType")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .apiVersion("apiVersion")
-   * .connectorProfileName("connectorProfileName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html)
-   */
-  public interface DestinationFlowConfigProperty {
-    /**
-     * The API version that the destination connector uses.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-apiversion)
-     */
-    public fun apiVersion(): String? = unwrap(this).getApiVersion()
-
-    /**
-     * The name of the connector profile.
-     *
-     * This name must be unique for each connector profile in the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectorprofilename)
-     */
-    public fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-    /**
-     * The type of destination connector, such as Sales force, Amazon S3, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectortype)
-     */
-    public fun connectorType(): String
-
-    /**
-     * This stores the information that is required to query a particular connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties)
-     */
-    public fun destinationConnectorProperties(): Any
-
-    /**
-     * A builder for [DestinationFlowConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param apiVersion The API version that the destination connector uses.
-       */
-      public fun apiVersion(apiVersion: String)
-
-      /**
-       * @param connectorProfileName The name of the connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      public fun connectorProfileName(connectorProfileName: String)
-
-      /**
-       * @param connectorType The type of destination connector, such as Sales force, Amazon S3, and
-       * so on. 
-       */
-      public fun connectorType(connectorType: String)
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      public fun destinationConnectorProperties(destinationConnectorProperties: IResolvable)
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      public
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty)
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
-      public
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.builder()
-
-      /**
-       * @param apiVersion The API version that the destination connector uses.
-       */
-      override fun apiVersion(apiVersion: String) {
-        cdkBuilder.apiVersion(apiVersion)
-      }
-
-      /**
-       * @param connectorProfileName The name of the connector profile.
-       * This name must be unique for each connector profile in the AWS account .
-       */
-      override fun connectorProfileName(connectorProfileName: String) {
-        cdkBuilder.connectorProfileName(connectorProfileName)
-      }
-
-      /**
-       * @param connectorType The type of destination connector, such as Sales force, Amazon S3, and
-       * so on. 
-       */
-      override fun connectorType(connectorType: String) {
-        cdkBuilder.connectorType(connectorType)
-      }
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      override fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
-        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      override
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty) {
-        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(DestinationConnectorPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param destinationConnectorProperties This stores the information that is required to query
-       * a particular connector. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
-      override
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit):
-          Unit =
-          destinationConnectorProperties(DestinationConnectorPropertiesProperty(destinationConnectorProperties))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty,
-    ) : CdkObject(cdkObject), DestinationFlowConfigProperty {
-      /**
-       * The API version that the destination connector uses.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-apiversion)
-       */
-      override fun apiVersion(): String? = unwrap(this).getApiVersion()
-
-      /**
-       * The name of the connector profile.
-       *
-       * This name must be unique for each connector profile in the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectorprofilename)
-       */
-      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
-
-      /**
-       * The type of destination connector, such as Sales force, Amazon S3, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-connectortype)
-       */
-      override fun connectorType(): String = unwrap(this).getConnectorType()
-
-      /**
-       * This stores the information that is required to query a particular connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties)
-       */
-      override fun destinationConnectorProperties(): Any =
-          unwrap(this).getDestinationConnectorProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationFlowConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty):
-          DestinationFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DestinationFlowConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DestinationFlowConfigProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty
-    }
-  }
-
-  /**
-   * Trigger settings of the flow.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * GlueDataCatalogProperty glueDataCatalogProperty = GlueDataCatalogProperty.builder()
-   * .databaseName("databaseName")
-   * .roleArn("roleArn")
-   * .tablePrefix("tablePrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html)
-   */
-  public interface GlueDataCatalogProperty {
-    /**
-     * A string containing the value for the tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-databasename)
-     */
-    public fun databaseName(): String
-
-    /**
-     * A string containing the value for the tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * A string containing the value for the tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-tableprefix)
-     */
-    public fun tablePrefix(): String
-
-    /**
-     * A builder for [GlueDataCatalogProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseName A string containing the value for the tag. 
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param roleArn A string containing the value for the tag. 
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param tablePrefix A string containing the value for the tag. 
-       */
-      public fun tablePrefix(tablePrefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.builder()
-
-      /**
-       * @param databaseName A string containing the value for the tag. 
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param roleArn A string containing the value for the tag. 
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param tablePrefix A string containing the value for the tag. 
-       */
-      override fun tablePrefix(tablePrefix: String) {
-        cdkBuilder.tablePrefix(tablePrefix)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty,
-    ) : CdkObject(cdkObject), GlueDataCatalogProperty {
-      /**
-       * A string containing the value for the tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-databasename)
-       */
-      override fun databaseName(): String = unwrap(this).getDatabaseName()
-
-      /**
-       * A string containing the value for the tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * A string containing the value for the tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-gluedatacatalog.html#cfn-appflow-flow-gluedatacatalog-tableprefix)
-       */
-      override fun tablePrefix(): String = unwrap(this).getTablePrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GlueDataCatalogProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty):
-          GlueDataCatalogProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueDataCatalogProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlueDataCatalogProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty
-    }
-  }
-
-  /**
-   * The properties that are applied when Amazon S3 is used as a destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * S3DestinationPropertiesProperty s3DestinationPropertiesProperty =
-   * S3DestinationPropertiesProperty.builder()
-   * .bucketName("bucketName")
-   * // the properties below are optional
-   * .bucketPrefix("bucketPrefix")
-   * .s3OutputFormatConfig(S3OutputFormatConfigProperty.builder()
-   * .aggregationConfig(AggregationConfigProperty.builder()
-   * .aggregationType("aggregationType")
-   * .targetFileSize(123)
-   * .build())
-   * .fileType("fileType")
-   * .prefixConfig(PrefixConfigProperty.builder()
-   * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
-   * .prefixFormat("prefixFormat")
-   * .prefixType("prefixType")
-   * .build())
-   * .preserveSourceDataTyping(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html)
-   */
-  public interface S3DestinationPropertiesProperty {
-    /**
-     * The Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * The object key for the destination bucket in which Amazon AppFlow places the files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketprefix)
-     */
-    public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-    /**
-     * The configuration that determines how Amazon AppFlow should format the flow output data when
-     * Amazon S3 is used as the destination.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-s3outputformatconfig)
-     */
-    public fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
-
-    /**
-     * A builder for [S3DestinationPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName The Amazon S3 bucket name in which Amazon AppFlow places the transferred
-       * data. 
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
-       * places the files.
-       */
-      public fun bucketPrefix(bucketPrefix: String)
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable)
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty)
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
-      public
-          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.builder()
-
-      /**
-       * @param bucketName The Amazon S3 bucket name in which Amazon AppFlow places the transferred
-       * data. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param bucketPrefix The object key for the destination bucket in which Amazon AppFlow
-       * places the files.
-       */
-      override fun bucketPrefix(bucketPrefix: String) {
-        cdkBuilder.bucketPrefix(bucketPrefix)
-      }
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      override fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(S3OutputFormatConfigProperty::unwrap))
-      }
-
-      /**
-       * @param s3OutputFormatConfig The configuration that determines how Amazon AppFlow should
-       * format the flow output data when Amazon S3 is used as the destination.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
-      override
-          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit):
-          Unit = s3OutputFormatConfig(S3OutputFormatConfigProperty(s3OutputFormatConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), S3DestinationPropertiesProperty {
-      /**
-       * The Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * The object key for the destination bucket in which Amazon AppFlow places the files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-bucketprefix)
-       */
-      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
-
-      /**
-       * The configuration that determines how Amazon AppFlow should format the flow output data
-       * when Amazon S3 is used as the destination.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html#cfn-appflow-flow-s3destinationproperties-s3outputformatconfig)
-       */
-      override fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3DestinationPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty):
-          S3DestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3DestinationPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DestinationPropertiesProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty
-    }
-  }
-
-  /**
-   * A map used to store task-related information.
-   *
-   * The execution service looks for particular information based on the `TaskType` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appflow.*;
-   * TaskPropertiesObjectProperty taskPropertiesObjectProperty =
-   * TaskPropertiesObjectProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html)
-   */
-  public interface TaskPropertiesObjectProperty {
-    /**
-     * The task property key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-key)
-     */
-    public fun key(): String
-
-    /**
-     * The task property value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [TaskPropertiesObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The task property key. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The task property value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.Builder =
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.builder()
-
-      /**
-       * @param key The task property key. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The task property value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty,
-    ) : CdkObject(cdkObject), TaskPropertiesObjectProperty {
-      /**
-       * The task property key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The task property value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaskPropertiesObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty):
-          TaskPropertiesObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TaskPropertiesObjectProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskPropertiesObjectProperty):
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty
+          software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty
     }
   }
 }

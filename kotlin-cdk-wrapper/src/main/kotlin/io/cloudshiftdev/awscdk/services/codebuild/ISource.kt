@@ -36,7 +36,7 @@ public interface ISource {
   public fun type(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.ISource,
+    cdkObject: software.amazon.awscdk.services.codebuild.ISource,
   ) : CdkObject(cdkObject), ISource {
     /**
      *

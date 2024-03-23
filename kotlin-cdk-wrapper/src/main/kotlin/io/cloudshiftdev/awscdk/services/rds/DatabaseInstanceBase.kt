@@ -43,8 +43,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class DatabaseInstanceBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
+public abstract class DatabaseInstanceBase(
+  cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
 ) : Resource(cdkObject), IDatabaseInstance {
   /**
    * Add a new db proxy to this instance.
@@ -397,7 +397,7 @@ public abstract class DatabaseInstanceBase internal constructor(
       onEvent(id, OnEventOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
+    cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
   ) : DatabaseInstanceBase(cdkObject)
 
   public companion object {

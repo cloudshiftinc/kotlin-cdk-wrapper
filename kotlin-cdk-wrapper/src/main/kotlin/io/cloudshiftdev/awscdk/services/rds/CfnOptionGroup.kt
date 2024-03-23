@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html)
  */
-public open class CfnOptionGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup,
+public open class CfnOptionGroup(
+  cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -435,7 +435,7 @@ public open class CfnOptionGroup internal constructor(
         = CfnOptionGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnOptionGroup): software.amazon.awscdk.services.rds.CfnOptionGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.rds.CfnOptionGroup
   }
 
   /**
@@ -651,8 +651,7 @@ public open class CfnOptionGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty,
     ) : CdkObject(cdkObject), OptionConfigurationProperty {
       /**
        * A list of DBSecurityGroupMembership name strings used for this option.
@@ -790,8 +789,7 @@ public open class CfnOptionGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty,
     ) : CdkObject(cdkObject), OptionSettingProperty {
       /**
        * The name of the option that has settings that you can set.

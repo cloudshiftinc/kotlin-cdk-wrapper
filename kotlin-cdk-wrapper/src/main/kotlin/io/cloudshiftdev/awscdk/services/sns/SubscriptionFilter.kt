@@ -40,8 +40,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class SubscriptionFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.SubscriptionFilter,
+public open class SubscriptionFilter(
+  cdkObject: software.amazon.awscdk.services.sns.SubscriptionFilter,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.sns.SubscriptionFilter()
   )
@@ -82,6 +82,7 @@ public open class SubscriptionFilter internal constructor(
         SubscriptionFilter = SubscriptionFilter(cdkObject)
 
     internal fun unwrap(wrapped: SubscriptionFilter):
-        software.amazon.awscdk.services.sns.SubscriptionFilter = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.SubscriptionFilter = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.SubscriptionFilter
   }
 }

@@ -31,8 +31,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public abstract class HttpRoutePathMatch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
+public abstract class HttpRoutePathMatch(
+  cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the route path match configuration.
@@ -43,7 +43,7 @@ public abstract class HttpRoutePathMatch internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpRoutePathMatchConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
   ) : HttpRoutePathMatch(cdkObject)
 
   public companion object {

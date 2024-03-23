@@ -121,7 +121,7 @@ public interface CfnAccessGrantsInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstanceProps,
+    cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstanceProps,
   ) : CdkObject(cdkObject), CfnAccessGrantsInstanceProps {
     /**
      * If you would like to associate your S3 Access Grants instance with an AWS IAM Identity Center

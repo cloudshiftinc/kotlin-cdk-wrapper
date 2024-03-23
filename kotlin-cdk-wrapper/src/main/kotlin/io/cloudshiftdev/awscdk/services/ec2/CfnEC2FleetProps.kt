@@ -714,7 +714,7 @@ public interface CfnEC2FleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnEC2FleetProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnEC2FleetProps,
   ) : CdkObject(cdkObject), CfnEC2FleetProps {
     /**
      * Reserved.

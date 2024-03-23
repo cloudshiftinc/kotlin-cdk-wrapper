@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html)
  */
-public open class CfnWorkspace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace,
+public open class CfnWorkspace(
+  cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -522,7 +522,8 @@ public open class CfnWorkspace internal constructor(
         CfnWorkspace = CfnWorkspace(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspace):
-        software.amazon.awscdk.services.workspaces.CfnWorkspace = wrapped.cdkObject
+        software.amazon.awscdk.services.workspaces.CfnWorkspace = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspaces.CfnWorkspace
   }
 
   /**
@@ -711,8 +712,7 @@ public open class CfnWorkspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspaces.CfnWorkspace.WorkspacePropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace.WorkspacePropertiesProperty,
     ) : CdkObject(cdkObject), WorkspacePropertiesProperty {
       /**
        * The compute type.

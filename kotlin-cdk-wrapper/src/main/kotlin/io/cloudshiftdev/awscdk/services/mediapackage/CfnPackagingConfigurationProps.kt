@@ -432,8 +432,7 @@ public interface CfnPackagingConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.mediapackage.CfnPackagingConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfigurationProps,
   ) : CdkObject(cdkObject), CfnPackagingConfigurationProps {
     /**
      * Parameters for CMAF packaging.

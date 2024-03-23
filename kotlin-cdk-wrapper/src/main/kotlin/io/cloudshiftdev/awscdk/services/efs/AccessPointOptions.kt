@@ -202,7 +202,7 @@ public interface AccessPointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.AccessPointOptions,
+    cdkObject: software.amazon.awscdk.services.efs.AccessPointOptions,
   ) : CdkObject(cdkObject), AccessPointOptions {
     /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root

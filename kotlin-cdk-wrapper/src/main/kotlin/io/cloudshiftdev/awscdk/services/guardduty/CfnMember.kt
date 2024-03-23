@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html)
  */
-public open class CfnMember internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnMember,
+public open class CfnMember(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnMember,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -341,6 +341,6 @@ public open class CfnMember internal constructor(
         CfnMember(cdkObject)
 
     internal fun unwrap(wrapped: CfnMember): software.amazon.awscdk.services.guardduty.CfnMember =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.guardduty.CfnMember
   }
 }

@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-eventstream.html)
  */
-public open class CfnEventStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEventStream,
+public open class CfnEventStream(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnEventStream,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -212,6 +212,7 @@ public open class CfnEventStream internal constructor(
         CfnEventStream = CfnEventStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventStream):
-        software.amazon.awscdk.services.pinpoint.CfnEventStream = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnEventStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnEventStream
   }
 }

@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-truststorerevocation.html)
  */
-public open class CfnTrustStoreRevocation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation,
+public open class CfnTrustStoreRevocation(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -235,7 +234,8 @@ public open class CfnTrustStoreRevocation internal constructor(
 
     internal fun unwrap(wrapped: CfnTrustStoreRevocation):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation
   }
 
   /**
@@ -354,8 +354,7 @@ public open class CfnTrustStoreRevocation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty,
     ) : CdkObject(cdkObject), RevocationContentProperty {
       /**
        * The type of revocation file.
@@ -519,8 +518,7 @@ public open class CfnTrustStoreRevocation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty,
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty,
     ) : CdkObject(cdkObject), TrustStoreRevocationProperty {
       /**
        * The number of revoked certificates.

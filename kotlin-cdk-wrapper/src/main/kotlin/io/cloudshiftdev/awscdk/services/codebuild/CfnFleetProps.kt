@@ -323,7 +323,7 @@ public interface CfnFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CfnFleetProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.CfnFleetProps,
   ) : CdkObject(cdkObject), CfnFleetProps {
     /**
      * The initial number of machines allocated to the compute ﬂeet, which deﬁnes the number of

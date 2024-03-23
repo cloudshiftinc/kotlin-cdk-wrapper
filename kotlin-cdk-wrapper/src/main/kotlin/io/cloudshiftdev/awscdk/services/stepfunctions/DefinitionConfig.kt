@@ -117,7 +117,7 @@ public interface DefinitionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionConfig,
   ) : CdkObject(cdkObject), DefinitionConfig {
     /**
      *

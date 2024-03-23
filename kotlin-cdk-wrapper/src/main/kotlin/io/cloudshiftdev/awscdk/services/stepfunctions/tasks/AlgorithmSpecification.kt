@@ -164,8 +164,7 @@ public interface AlgorithmSpecification {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification,
   ) : CdkObject(cdkObject), AlgorithmSpecification {
     /**
      * Name of the algorithm resource to use for the training job.

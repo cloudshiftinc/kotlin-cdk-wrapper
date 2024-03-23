@@ -31,7 +31,7 @@ public interface IInstanceProfile : IResource {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IInstanceProfile,
+    cdkObject: software.amazon.awscdk.services.iam.IInstanceProfile,
   ) : CdkObject(cdkObject), IInstanceProfile {
     /**
      * Apply the given removal policy to this resource.

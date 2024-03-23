@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html)
  */
-public open class CfnEnvironmentEC2 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2,
+public open class CfnEnvironmentEC2(
+  cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -606,7 +606,8 @@ public open class CfnEnvironmentEC2 internal constructor(
         CfnEnvironmentEC2 = CfnEnvironmentEC2(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentEC2):
-        software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2 = wrapped.cdkObject
+        software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2 = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2
   }
 
   /**
@@ -700,8 +701,7 @@ public open class CfnEnvironmentEC2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty,
+      cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty,
     ) : CdkObject(cdkObject), RepositoryProperty {
       /**
        * The path within the development environment's default file system location to clone the AWS

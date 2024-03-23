@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NetworkLoadBalancedEc2Service internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service,
+public open class NetworkLoadBalancedEc2Service(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service,
 ) : NetworkLoadBalancedServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1035,6 +1034,7 @@ public open class NetworkLoadBalancedEc2Service internal constructor(
 
     internal fun unwrap(wrapped: NetworkLoadBalancedEc2Service):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service
   }
 }

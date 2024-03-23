@@ -50,8 +50,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class InitGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitGroup,
+public open class InitGroup(
+  cdkObject: software.amazon.awscdk.services.ec2.InitGroup,
 ) : InitElement(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -70,6 +70,6 @@ public open class InitGroup internal constructor(
         InitGroup(cdkObject)
 
     internal fun unwrap(wrapped: InitGroup): software.amazon.awscdk.services.ec2.InitGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.InitGroup
   }
 }

@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class HostedZone internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.HostedZone,
+public open class HostedZone(
+  cdkObject: software.amazon.awscdk.services.route53.HostedZone,
 ) : Resource(cdkObject), IHostedZone {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -306,6 +306,6 @@ public open class HostedZone internal constructor(
         HostedZone(cdkObject)
 
     internal fun unwrap(wrapped: HostedZone): software.amazon.awscdk.services.route53.HostedZone =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.HostedZone
   }
 }

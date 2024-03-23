@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class DockerImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
+public abstract class DockerImage(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the image is used by a SageMaker task.
@@ -40,7 +40,7 @@ public abstract class DockerImage internal constructor(
       unwrap(this).bind(task.let(ISageMakerTask::unwrap)).let(DockerImageConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
   ) : DockerImage(cdkObject)
 
   public companion object {

@@ -222,7 +222,7 @@ public interface CfnChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannelProps,
+    cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
     /**
      * The name of the channel.

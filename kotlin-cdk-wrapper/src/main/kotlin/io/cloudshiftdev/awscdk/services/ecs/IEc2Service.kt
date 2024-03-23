@@ -15,7 +15,7 @@ import kotlin.String
  */
 public interface IEc2Service : IService {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.IEc2Service,
+    cdkObject: software.amazon.awscdk.services.ecs.IEc2Service,
   ) : CdkObject(cdkObject), IEc2Service {
     /**
      * Apply the given removal policy to this resource.

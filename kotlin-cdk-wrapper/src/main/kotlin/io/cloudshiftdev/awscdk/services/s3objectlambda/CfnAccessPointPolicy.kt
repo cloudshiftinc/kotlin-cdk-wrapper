@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html)
  */
-public open class CfnAccessPointPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy,
+public open class CfnAccessPointPolicy(
+  cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -164,6 +163,7 @@ public open class CfnAccessPointPolicy internal constructor(
         CfnAccessPointPolicy = CfnAccessPointPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPointPolicy):
-        software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy
   }
 }

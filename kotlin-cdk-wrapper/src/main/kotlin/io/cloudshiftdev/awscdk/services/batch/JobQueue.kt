@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ecsJob.grantSubmitJob(user, queue);
  * ```
  */
-public open class JobQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.JobQueue,
+public open class JobQueue(
+  cdkObject: software.amazon.awscdk.services.batch.JobQueue,
 ) : Resource(cdkObject), IJobQueue {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -379,6 +379,6 @@ public open class JobQueue internal constructor(
         JobQueue(cdkObject)
 
     internal fun unwrap(wrapped: JobQueue): software.amazon.awscdk.services.batch.JobQueue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.batch.JobQueue
   }
 }

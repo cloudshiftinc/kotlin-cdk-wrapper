@@ -26,8 +26,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class BottleRocketImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImage,
+public open class BottleRocketImage(
+  cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor() : this(software.amazon.awscdk.services.ecs.BottleRocketImage()
   )
@@ -162,6 +162,7 @@ public open class BottleRocketImage internal constructor(
         BottleRocketImage = BottleRocketImage(cdkObject)
 
     internal fun unwrap(wrapped: BottleRocketImage):
-        software.amazon.awscdk.services.ecs.BottleRocketImage = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.BottleRocketImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.BottleRocketImage
   }
 }

@@ -93,8 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)
  */
-public open class CfnNodegroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
+public open class CfnNodegroup(
+  cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1437,141 +1437,7 @@ public open class CfnNodegroup internal constructor(
         CfnNodegroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnNodegroup): software.amazon.awscdk.services.eks.CfnNodegroup =
-        wrapped.cdkObject
-  }
-
-  /**
-   * A property that allows a node to repel a `Pod` .
-   *
-   * For more information, see [Node taints on managed node
-   * groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html) in
-   * the *Amazon EKS User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * TaintProperty taintProperty = TaintProperty.builder()
-   * .effect("effect")
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html)
-   */
-  public interface TaintProperty {
-    /**
-     * The effect of the taint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-effect)
-     */
-    public fun effect(): String? = unwrap(this).getEffect()
-
-    /**
-     * The key of the taint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value of the taint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [TaintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param effect The effect of the taint.
-       */
-      public fun effect(effect: String)
-
-      /**
-       * @param key The key of the taint.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the taint.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.Builder
-          = software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.builder()
-
-      /**
-       * @param effect The effect of the taint.
-       */
-      override fun effect(effect: String) {
-        cdkBuilder.effect(effect)
-      }
-
-      /**
-       * @param key The key of the taint.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the taint.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
-    ) : CdkObject(cdkObject), TaintProperty {
-      /**
-       * The effect of the taint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-effect)
-       */
-      override fun effect(): String? = unwrap(this).getEffect()
-
-      /**
-       * The key of the taint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value of the taint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty):
-          TaintProperty = CdkObjectWrappers.wrap(cdkObject) as? TaintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaintProperty):
-          software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnNodegroup
   }
 
   /**
@@ -1708,8 +1574,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
     ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
@@ -1897,7 +1762,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
     ) : CdkObject(cdkObject), RemoteAccessProperty {
       /**
        * The Amazon EC2 SSH key name that provides access for SSH communication with the nodes in
@@ -1944,137 +1809,6 @@ public open class CfnNodegroup internal constructor(
           software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty
-    }
-  }
-
-  /**
-   * The update configuration for the node group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * UpdateConfigProperty updateConfigProperty = UpdateConfigProperty.builder()
-   * .maxUnavailable(123)
-   * .maxUnavailablePercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html)
-   */
-  public interface UpdateConfigProperty {
-    /**
-     * The maximum number of nodes unavailable at once during a version update.
-     *
-     * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have a
-     * value.The maximum number is 100.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailable)
-     */
-    public fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
-
-    /**
-     * The maximum percentage of nodes unavailable during a version update.
-     *
-     * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
-     * `maxUnavailable` is required to have a value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
-     */
-    public fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
-
-    /**
-     * A builder for [UpdateConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxUnavailable The maximum number of nodes unavailable at once during a version
-       * update.
-       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
-       * a value.The maximum number is 100.
-       */
-      public fun maxUnavailable(maxUnavailable: Number)
-
-      /**
-       * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a
-       * version update.
-       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
-       * `maxUnavailable` is required to have a value.
-       */
-      public fun maxUnavailablePercentage(maxUnavailablePercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.builder()
-
-      /**
-       * @param maxUnavailable The maximum number of nodes unavailable at once during a version
-       * update.
-       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
-       * a value.The maximum number is 100.
-       */
-      override fun maxUnavailable(maxUnavailable: Number) {
-        cdkBuilder.maxUnavailable(maxUnavailable)
-      }
-
-      /**
-       * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a
-       * version update.
-       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
-       * `maxUnavailable` is required to have a value.
-       */
-      override fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
-        cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
-      }
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
-    ) : CdkObject(cdkObject), UpdateConfigProperty {
-      /**
-       * The maximum number of nodes unavailable at once during a version update.
-       *
-       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
-       * a value.The maximum number is 100.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailable)
-       */
-      override fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
-
-      /**
-       * The maximum percentage of nodes unavailable during a version update.
-       *
-       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
-       * `maxUnavailable` is required to have a value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
-       */
-      override fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UpdateConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty):
-          UpdateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdateConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: UpdateConfigProperty):
-          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty
     }
   }
 
@@ -2242,8 +1976,7 @@ public open class CfnNodegroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
     ) : CdkObject(cdkObject), ScalingConfigProperty {
       /**
        * The current number of nodes that the managed node group should maintain.
@@ -2306,6 +2039,271 @@ public open class CfnNodegroup internal constructor(
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty
+    }
+  }
+
+  /**
+   * A property that allows a node to repel a `Pod` .
+   *
+   * For more information, see [Node taints on managed node
+   * groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html) in
+   * the *Amazon EKS User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * TaintProperty taintProperty = TaintProperty.builder()
+   * .effect("effect")
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html)
+   */
+  public interface TaintProperty {
+    /**
+     * The effect of the taint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-effect)
+     */
+    public fun effect(): String? = unwrap(this).getEffect()
+
+    /**
+     * The key of the taint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value of the taint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [TaintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param effect The effect of the taint.
+       */
+      public fun effect(effect: String)
+
+      /**
+       * @param key The key of the taint.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the taint.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.Builder
+          = software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.builder()
+
+      /**
+       * @param effect The effect of the taint.
+       */
+      override fun effect(effect: String) {
+        cdkBuilder.effect(effect)
+      }
+
+      /**
+       * @param key The key of the taint.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the taint.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
+    ) : CdkObject(cdkObject), TaintProperty {
+      /**
+       * The effect of the taint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-effect)
+       */
+      override fun effect(): String? = unwrap(this).getEffect()
+
+      /**
+       * The key of the taint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value of the taint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-taint.html#cfn-eks-nodegroup-taint-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty):
+          TaintProperty = CdkObjectWrappers.wrap(cdkObject) as? TaintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TaintProperty):
+          software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty
+    }
+  }
+
+  /**
+   * The update configuration for the node group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * UpdateConfigProperty updateConfigProperty = UpdateConfigProperty.builder()
+   * .maxUnavailable(123)
+   * .maxUnavailablePercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html)
+   */
+  public interface UpdateConfigProperty {
+    /**
+     * The maximum number of nodes unavailable at once during a version update.
+     *
+     * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have a
+     * value.The maximum number is 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailable)
+     */
+    public fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
+
+    /**
+     * The maximum percentage of nodes unavailable during a version update.
+     *
+     * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
+     * `maxUnavailable` is required to have a value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
+     */
+    public fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
+
+    /**
+     * A builder for [UpdateConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxUnavailable The maximum number of nodes unavailable at once during a version
+       * update.
+       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
+       * a value.The maximum number is 100.
+       */
+      public fun maxUnavailable(maxUnavailable: Number)
+
+      /**
+       * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a
+       * version update.
+       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
+       * `maxUnavailable` is required to have a value.
+       */
+      public fun maxUnavailablePercentage(maxUnavailablePercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.builder()
+
+      /**
+       * @param maxUnavailable The maximum number of nodes unavailable at once during a version
+       * update.
+       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
+       * a value.The maximum number is 100.
+       */
+      override fun maxUnavailable(maxUnavailable: Number) {
+        cdkBuilder.maxUnavailable(maxUnavailable)
+      }
+
+      /**
+       * @param maxUnavailablePercentage The maximum percentage of nodes unavailable during a
+       * version update.
+       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
+       * `maxUnavailable` is required to have a value.
+       */
+      override fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
+        cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
+    ) : CdkObject(cdkObject), UpdateConfigProperty {
+      /**
+       * The maximum number of nodes unavailable at once during a version update.
+       *
+       * Nodes are updated in parallel. This value or `maxUnavailablePercentage` is required to have
+       * a value.The maximum number is 100.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailable)
+       */
+      override fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
+
+      /**
+       * The maximum percentage of nodes unavailable during a version update.
+       *
+       * This percentage of nodes are updated in parallel, up to 100 nodes at once. This value or
+       * `maxUnavailable` is required to have a value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
+       */
+      override fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UpdateConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty):
+          UpdateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdateConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UpdateConfigProperty):
+          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty
     }
   }
 }

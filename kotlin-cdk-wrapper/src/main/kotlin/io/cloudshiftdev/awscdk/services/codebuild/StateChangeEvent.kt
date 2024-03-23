@@ -10,8 +10,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html#sample-build-notifications-ref)
  */
-public open class StateChangeEvent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.StateChangeEvent,
+public open class StateChangeEvent(
+  cdkObject: software.amazon.awscdk.services.codebuild.StateChangeEvent,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun buildId(): String =
@@ -30,6 +30,7 @@ public open class StateChangeEvent internal constructor(
         StateChangeEvent = StateChangeEvent(cdkObject)
 
     internal fun unwrap(wrapped: StateChangeEvent):
-        software.amazon.awscdk.services.codebuild.StateChangeEvent = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.StateChangeEvent = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.StateChangeEvent
   }
 }

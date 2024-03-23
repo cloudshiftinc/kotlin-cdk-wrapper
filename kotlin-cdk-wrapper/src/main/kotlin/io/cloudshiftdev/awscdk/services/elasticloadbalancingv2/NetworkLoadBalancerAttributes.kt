@@ -170,8 +170,7 @@ public interface NetworkLoadBalancerAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes,
   ) : CdkObject(cdkObject), NetworkLoadBalancerAttributes {
     /**
      * ARN of the load balancer.

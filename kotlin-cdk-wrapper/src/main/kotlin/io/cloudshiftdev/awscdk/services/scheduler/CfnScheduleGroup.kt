@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedulegroup.html)
  */
-public open class CfnScheduleGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroup,
+public open class CfnScheduleGroup(
+  cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -239,6 +239,7 @@ public open class CfnScheduleGroup internal constructor(
         CfnScheduleGroup = CfnScheduleGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduleGroup):
-        software.amazon.awscdk.services.scheduler.CfnScheduleGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.scheduler.CfnScheduleGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.scheduler.CfnScheduleGroup
   }
 }

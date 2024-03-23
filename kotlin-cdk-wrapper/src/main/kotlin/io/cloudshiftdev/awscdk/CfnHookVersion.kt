@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)
  */
-public open class CfnHookVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnHookVersion,
+public open class CfnHookVersion(
+  cdkObject: software.amazon.awscdk.CfnHookVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -369,7 +369,7 @@ public open class CfnHookVersion internal constructor(
         CfnHookVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookVersion): software.amazon.awscdk.CfnHookVersion =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnHookVersion
   }
 
   /**
@@ -449,7 +449,7 @@ public open class CfnHookVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.CfnHookVersion.LoggingConfigProperty,
+      cdkObject: software.amazon.awscdk.CfnHookVersion.LoggingConfigProperty,
     ) : CdkObject(cdkObject), LoggingConfigProperty {
       /**
        * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information

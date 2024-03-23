@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-packageversion.html)
  */
-public open class CfnPackageVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersion,
+public open class CfnPackageVersion(
+  cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,6 +338,7 @@ public open class CfnPackageVersion internal constructor(
         CfnPackageVersion = CfnPackageVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackageVersion):
-        software.amazon.awscdk.services.panorama.CfnPackageVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.panorama.CfnPackageVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.panorama.CfnPackageVersion
   }
 }

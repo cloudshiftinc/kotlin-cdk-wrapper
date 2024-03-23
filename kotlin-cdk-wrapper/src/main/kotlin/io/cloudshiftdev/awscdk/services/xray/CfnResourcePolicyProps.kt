@@ -123,7 +123,7 @@ public interface CfnResourcePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.xray.CfnResourcePolicyProps,
+    cdkObject: software.amazon.awscdk.services.xray.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
     /**
      * A flag to indicate whether to bypass the resource-based policy lockout safety check.

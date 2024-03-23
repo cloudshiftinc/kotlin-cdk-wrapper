@@ -1303,7 +1303,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * `Artifacts` is a property of the

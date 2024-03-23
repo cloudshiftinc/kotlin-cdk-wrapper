@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoverycontrol.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -220,7 +219,8 @@ public open class CfnCluster internal constructor(
         CfnCluster = CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster):
-        software.amazon.awscdk.services.route53recoverycontrol.CfnCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.route53recoverycontrol.CfnCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53recoverycontrol.CfnCluster
   }
 
   /**
@@ -307,8 +307,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty,
     ) : CdkObject(cdkObject), ClusterEndpointProperty {
       /**
        * A cluster endpoint URL for one of the five redundant clusters that you specify to set or

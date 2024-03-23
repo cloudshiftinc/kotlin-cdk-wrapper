@@ -78,7 +78,7 @@ public interface CodeConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codecommit.CodeConfig,
+    cdkObject: software.amazon.awscdk.services.codecommit.CodeConfig,
   ) : CdkObject(cdkObject), CodeConfig {
     /**
      * represents the underlying code structure.

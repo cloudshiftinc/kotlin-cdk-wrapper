@@ -289,7 +289,7 @@ public interface CfnConnectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.transfer.CfnConnectorProps,
+    cdkObject: software.amazon.awscdk.services.transfer.CfnConnectorProps,
   ) : CdkObject(cdkObject), CfnConnectorProps {
     /**
      * Connectors are used to send files using either the AS2 or SFTP protocol.

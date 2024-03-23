@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -541,7 +541,90 @@ public open class CfnService internal constructor(
         CfnService = CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService):
-        software.amazon.awscdk.services.refactorspaces.CfnService = wrapped.cdkObject
+        software.amazon.awscdk.services.refactorspaces.CfnService = wrapped.cdkObject as
+        software.amazon.awscdk.services.refactorspaces.CfnService
+  }
+
+  /**
+   * The input for the AWS Lambda endpoint type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
+   * LambdaEndpointInputProperty lambdaEndpointInputProperty = LambdaEndpointInputProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html)
+   */
+  public interface LambdaEndpointInputProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Lambda function or alias.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html#cfn-refactorspaces-service-lambdaendpointinput-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [LambdaEndpointInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Lambda function or alias. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty.Builder
+          =
+          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the Lambda function or alias. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
+    ) : CdkObject(cdkObject), LambdaEndpointInputProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Lambda function or alias.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html#cfn-refactorspaces-service-lambdaendpointinput-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaEndpointInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty):
+          LambdaEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaEndpointInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaEndpointInputProperty):
+          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty
+    }
   }
 
   /**
@@ -645,8 +728,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
     ) : CdkObject(cdkObject), UrlEndpointInputProperty {
       /**
        * The health check URL of the URL endpoint type.
@@ -688,89 +770,6 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty
-    }
-  }
-
-  /**
-   * The input for the AWS Lambda endpoint type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
-   * LambdaEndpointInputProperty lambdaEndpointInputProperty = LambdaEndpointInputProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html)
-   */
-  public interface LambdaEndpointInputProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the Lambda function or alias.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html#cfn-refactorspaces-service-lambdaendpointinput-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [LambdaEndpointInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Lambda function or alias. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty.Builder
-          =
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the Lambda function or alias. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
-    ) : CdkObject(cdkObject), LambdaEndpointInputProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the Lambda function or alias.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html#cfn-refactorspaces-service-lambdaendpointinput-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaEndpointInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty):
-          LambdaEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaEndpointInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaEndpointInputProperty):
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty
     }
   }
 }

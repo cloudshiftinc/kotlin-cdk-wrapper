@@ -440,8 +440,7 @@ public interface CfnResolverEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps,
   ) : CdkObject(cdkObject), CfnResolverEndpointProps {
     /**
      * Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:.

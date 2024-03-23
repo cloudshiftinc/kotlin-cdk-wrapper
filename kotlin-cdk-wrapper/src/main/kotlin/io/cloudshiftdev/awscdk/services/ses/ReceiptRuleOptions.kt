@@ -199,7 +199,7 @@ public interface ReceiptRuleOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleOptions,
+    cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleOptions,
   ) : CdkObject(cdkObject), ReceiptRuleOptions {
     /**
      * An ordered list of actions to perform on messages that match at least one of the recipient

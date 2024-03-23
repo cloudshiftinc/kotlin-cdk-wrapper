@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)
  */
-public open class CfnNetworkInsightsAnalysis internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis,
+public open class CfnNetworkInsightsAnalysis(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -374,7 +374,818 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         CfnNetworkInsightsAnalysis = CfnNetworkInsightsAnalysis(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAnalysis):
-        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
+  }
+
+  /**
+   * Describes an additional detail for a path analysis.
+   *
+   * For more information, see [Reachability Analyzer additional detail
+   * codes](https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AdditionalDetailProperty additionalDetailProperty = AdditionalDetailProperty.builder()
+   * .additionalDetailType("additionalDetailType")
+   * .component(AnalysisComponentProperty.builder()
+   * .arn("arn")
+   * .id("id")
+   * .build())
+   * .loadBalancers(List.of(AnalysisComponentProperty.builder()
+   * .arn("arn")
+   * .id("id")
+   * .build()))
+   * .serviceName("serviceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html)
+   */
+  public interface AdditionalDetailProperty {
+    /**
+     * The additional detail code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-additionaldetailtype)
+     */
+    public fun additionalDetailType(): String? = unwrap(this).getAdditionalDetailType()
+
+    /**
+     * The path component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-component)
+     */
+    public fun component(): Any? = unwrap(this).getComponent()
+
+    /**
+     * The load balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-loadbalancers)
+     */
+    public fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
+
+    /**
+     * The name of the VPC endpoint service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-servicename)
+     */
+    public fun serviceName(): String? = unwrap(this).getServiceName()
+
+    /**
+     * A builder for [AdditionalDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalDetailType The additional detail code.
+       */
+      public fun additionalDetailType(additionalDetailType: String)
+
+      /**
+       * @param component The path component.
+       */
+      public fun component(component: IResolvable)
+
+      /**
+       * @param component The path component.
+       */
+      public fun component(component: AnalysisComponentProperty)
+
+      /**
+       * @param component The path component.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f87cbbad2b80f87041b5c71b87006ec83d7455fa611376c460436099063db586")
+      public fun component(component: AnalysisComponentProperty.Builder.() -> Unit)
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      public fun loadBalancers(loadBalancers: IResolvable)
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      public fun loadBalancers(loadBalancers: List<Any>)
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      public fun loadBalancers(vararg loadBalancers: Any)
+
+      /**
+       * @param serviceName The name of the VPC endpoint service.
+       */
+      public fun serviceName(serviceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty.builder()
+
+      /**
+       * @param additionalDetailType The additional detail code.
+       */
+      override fun additionalDetailType(additionalDetailType: String) {
+        cdkBuilder.additionalDetailType(additionalDetailType)
+      }
+
+      /**
+       * @param component The path component.
+       */
+      override fun component(component: IResolvable) {
+        cdkBuilder.component(component.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param component The path component.
+       */
+      override fun component(component: AnalysisComponentProperty) {
+        cdkBuilder.component(component.let(AnalysisComponentProperty::unwrap))
+      }
+
+      /**
+       * @param component The path component.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f87cbbad2b80f87041b5c71b87006ec83d7455fa611376c460436099063db586")
+      override fun component(component: AnalysisComponentProperty.Builder.() -> Unit): Unit =
+          component(AnalysisComponentProperty(component))
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      override fun loadBalancers(loadBalancers: IResolvable) {
+        cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      override fun loadBalancers(loadBalancers: List<Any>) {
+        cdkBuilder.loadBalancers(loadBalancers)
+      }
+
+      /**
+       * @param loadBalancers The load balancers.
+       */
+      override fun loadBalancers(vararg loadBalancers: Any): Unit =
+          loadBalancers(loadBalancers.toList())
+
+      /**
+       * @param serviceName The name of the VPC endpoint service.
+       */
+      override fun serviceName(serviceName: String) {
+        cdkBuilder.serviceName(serviceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty,
+    ) : CdkObject(cdkObject), AdditionalDetailProperty {
+      /**
+       * The additional detail code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-additionaldetailtype)
+       */
+      override fun additionalDetailType(): String? = unwrap(this).getAdditionalDetailType()
+
+      /**
+       * The path component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-component)
+       */
+      override fun component(): Any? = unwrap(this).getComponent()
+
+      /**
+       * The load balancers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-loadbalancers)
+       */
+      override fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
+
+      /**
+       * The name of the VPC endpoint service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-servicename)
+       */
+      override fun serviceName(): String? = unwrap(this).getServiceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdditionalDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty):
+          AdditionalDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? AdditionalDetailProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdditionalDetailProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty
+    }
+  }
+
+  /**
+   * Describes an potential intermediate component of a feasible path.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AlternatePathHintProperty alternatePathHintProperty = AlternatePathHintProperty.builder()
+   * .componentArn("componentArn")
+   * .componentId("componentId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html)
+   */
+  public interface AlternatePathHintProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentarn)
+     */
+    public fun componentArn(): String? = unwrap(this).getComponentArn()
+
+    /**
+     * The ID of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentid)
+     */
+    public fun componentId(): String? = unwrap(this).getComponentId()
+
+    /**
+     * A builder for [AlternatePathHintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentArn The Amazon Resource Name (ARN) of the component.
+       */
+      public fun componentArn(componentArn: String)
+
+      /**
+       * @param componentId The ID of the component.
+       */
+      public fun componentId(componentId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty.builder()
+
+      /**
+       * @param componentArn The Amazon Resource Name (ARN) of the component.
+       */
+      override fun componentArn(componentArn: String) {
+        cdkBuilder.componentArn(componentArn)
+      }
+
+      /**
+       * @param componentId The ID of the component.
+       */
+      override fun componentId(componentId: String) {
+        cdkBuilder.componentId(componentId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty,
+    ) : CdkObject(cdkObject), AlternatePathHintProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentarn)
+       */
+      override fun componentArn(): String? = unwrap(this).getComponentArn()
+
+      /**
+       * The ID of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentid)
+       */
+      override fun componentId(): String? = unwrap(this).getComponentId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlternatePathHintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty):
+          AlternatePathHintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AlternatePathHintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AlternatePathHintProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty
+    }
+  }
+
+  /**
+   * Describes a network access control (ACL) rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisAclRuleProperty analysisAclRuleProperty = AnalysisAclRuleProperty.builder()
+   * .cidr("cidr")
+   * .egress(false)
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * .ruleNumber(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html)
+   */
+  public interface AnalysisAclRuleProperty {
+    /**
+     * The IPv4 address range, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-cidr)
+     */
+    public fun cidr(): String? = unwrap(this).getCidr()
+
+    /**
+     * Indicates whether the rule is an outbound rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-egress)
+     */
+    public fun egress(): Any? = unwrap(this).getEgress()
+
+    /**
+     * The range of ports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-portrange)
+     */
+    public fun portRange(): Any? = unwrap(this).getPortRange()
+
+    /**
+     * The protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * Indicates whether to allow or deny traffic that matches the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-ruleaction)
+     */
+    public fun ruleAction(): String? = unwrap(this).getRuleAction()
+
+    /**
+     * The rule number.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-rulenumber)
+     */
+    public fun ruleNumber(): Number? = unwrap(this).getRuleNumber()
+
+    /**
+     * A builder for [AnalysisAclRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidr The IPv4 address range, in CIDR notation.
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param egress Indicates whether the rule is an outbound rule.
+       */
+      public fun egress(egress: Boolean)
+
+      /**
+       * @param egress Indicates whether the rule is an outbound rule.
+       */
+      public fun egress(egress: IResolvable)
+
+      /**
+       * @param portRange The range of ports.
+       */
+      public fun portRange(portRange: IResolvable)
+
+      /**
+       * @param portRange The range of ports.
+       */
+      public fun portRange(portRange: PortRangeProperty)
+
+      /**
+       * @param portRange The range of ports.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a94b034e546168f34c45588194133a56e943d3e9aeabfc5e67024cee93f1186c")
+      public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
+
+      /**
+       * @param protocol The protocol.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param ruleAction Indicates whether to allow or deny traffic that matches the rule.
+       */
+      public fun ruleAction(ruleAction: String)
+
+      /**
+       * @param ruleNumber The rule number.
+       */
+      public fun ruleNumber(ruleNumber: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.builder()
+
+      /**
+       * @param cidr The IPv4 address range, in CIDR notation.
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param egress Indicates whether the rule is an outbound rule.
+       */
+      override fun egress(egress: Boolean) {
+        cdkBuilder.egress(egress)
+      }
+
+      /**
+       * @param egress Indicates whether the rule is an outbound rule.
+       */
+      override fun egress(egress: IResolvable) {
+        cdkBuilder.egress(egress.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portRange The range of ports.
+       */
+      override fun portRange(portRange: IResolvable) {
+        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portRange The range of ports.
+       */
+      override fun portRange(portRange: PortRangeProperty) {
+        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
+      }
+
+      /**
+       * @param portRange The range of ports.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a94b034e546168f34c45588194133a56e943d3e9aeabfc5e67024cee93f1186c")
+      override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
+          portRange(PortRangeProperty(portRange))
+
+      /**
+       * @param protocol The protocol.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param ruleAction Indicates whether to allow or deny traffic that matches the rule.
+       */
+      override fun ruleAction(ruleAction: String) {
+        cdkBuilder.ruleAction(ruleAction)
+      }
+
+      /**
+       * @param ruleNumber The rule number.
+       */
+      override fun ruleNumber(ruleNumber: Number) {
+        cdkBuilder.ruleNumber(ruleNumber)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty,
+    ) : CdkObject(cdkObject), AnalysisAclRuleProperty {
+      /**
+       * The IPv4 address range, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-cidr)
+       */
+      override fun cidr(): String? = unwrap(this).getCidr()
+
+      /**
+       * Indicates whether the rule is an outbound rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-egress)
+       */
+      override fun egress(): Any? = unwrap(this).getEgress()
+
+      /**
+       * The range of ports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-portrange)
+       */
+      override fun portRange(): Any? = unwrap(this).getPortRange()
+
+      /**
+       * The protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * Indicates whether to allow or deny traffic that matches the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-ruleaction)
+       */
+      override fun ruleAction(): String? = unwrap(this).getRuleAction()
+
+      /**
+       * The rule number.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-rulenumber)
+       */
+      override fun ruleNumber(): Number? = unwrap(this).getRuleNumber()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisAclRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty):
+          AnalysisAclRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisAclRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisAclRuleProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty
+    }
+  }
+
+  /**
+   * Describes a path component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisComponentProperty analysisComponentProperty = AnalysisComponentProperty.builder()
+   * .arn("arn")
+   * .id("id")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html)
+   */
+  public interface AnalysisComponentProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * The ID of the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-id)
+     */
+    public fun id(): String? = unwrap(this).getId()
+
+    /**
+     * A builder for [AnalysisComponentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the component.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param id The ID of the component.
+       */
+      public fun id(id: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty.builder()
+
+      /**
+       * @param arn The Amazon Resource Name (ARN) of the component.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param id The ID of the component.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty,
+    ) : CdkObject(cdkObject), AnalysisComponentProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * The ID of the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-id)
+       */
+      override fun id(): String? = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisComponentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty):
+          AnalysisComponentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisComponentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisComponentProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty
+    }
+  }
+
+  /**
+   * Describes a load balancer listener.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisLoadBalancerListenerProperty analysisLoadBalancerListenerProperty =
+   * AnalysisLoadBalancerListenerProperty.builder()
+   * .instancePort(123)
+   * .loadBalancerPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html)
+   */
+  public interface AnalysisLoadBalancerListenerProperty {
+    /**
+     * [Classic Load Balancers] The back-end port for the listener.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-instanceport)
+     */
+    public fun instancePort(): Number? = unwrap(this).getInstancePort()
+
+    /**
+     * The port on which the load balancer is listening.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-loadbalancerport)
+     */
+    public fun loadBalancerPort(): Number? = unwrap(this).getLoadBalancerPort()
+
+    /**
+     * A builder for [AnalysisLoadBalancerListenerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instancePort [Classic Load Balancers] The back-end port for the listener.
+       */
+      public fun instancePort(instancePort: Number)
+
+      /**
+       * @param loadBalancerPort The port on which the load balancer is listening.
+       */
+      public fun loadBalancerPort(loadBalancerPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.builder()
+
+      /**
+       * @param instancePort [Classic Load Balancers] The back-end port for the listener.
+       */
+      override fun instancePort(instancePort: Number) {
+        cdkBuilder.instancePort(instancePort)
+      }
+
+      /**
+       * @param loadBalancerPort The port on which the load balancer is listening.
+       */
+      override fun loadBalancerPort(loadBalancerPort: Number) {
+        cdkBuilder.loadBalancerPort(loadBalancerPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty,
+    ) : CdkObject(cdkObject), AnalysisLoadBalancerListenerProperty {
+      /**
+       * [Classic Load Balancers] The back-end port for the listener.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-instanceport)
+       */
+      override fun instancePort(): Number? = unwrap(this).getInstancePort()
+
+      /**
+       * The port on which the load balancer is listening.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-loadbalancerport)
+       */
+      override fun loadBalancerPort(): Number? = unwrap(this).getLoadBalancerPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AnalysisLoadBalancerListenerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty):
+          AnalysisLoadBalancerListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisLoadBalancerListenerProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisLoadBalancerListenerProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
+    }
   }
 
   /**
@@ -522,8 +1333,7 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty,
     ) : CdkObject(cdkObject), AnalysisLoadBalancerTargetProperty {
       /**
        * The IP address.
@@ -570,6 +1380,917 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty
+    }
+  }
+
+  /**
+   * Describes a header.
+   *
+   * Reflects any changes made by a component as traffic passes through. The fields of an inbound
+   * header are null except for the first component of a path.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisPacketHeaderProperty analysisPacketHeaderProperty =
+   * AnalysisPacketHeaderProperty.builder()
+   * .destinationAddresses(List.of("destinationAddresses"))
+   * .destinationPortRanges(List.of(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build()))
+   * .protocol("protocol")
+   * .sourceAddresses(List.of("sourceAddresses"))
+   * .sourcePortRanges(List.of(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html)
+   */
+  public interface AnalysisPacketHeaderProperty {
+    /**
+     * The destination addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationaddresses)
+     */
+    public fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
+        emptyList()
+
+    /**
+     * The destination port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationportranges)
+     */
+    public fun destinationPortRanges(): Any? = unwrap(this).getDestinationPortRanges()
+
+    /**
+     * The protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The source addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceaddresses)
+     */
+    public fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?: emptyList()
+
+    /**
+     * The source port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceportranges)
+     */
+    public fun sourcePortRanges(): Any? = unwrap(this).getSourcePortRanges()
+
+    /**
+     * A builder for [AnalysisPacketHeaderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
+      public fun destinationAddresses(destinationAddresses: List<String>)
+
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
+      public fun destinationAddresses(vararg destinationAddresses: String)
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      public fun destinationPortRanges(destinationPortRanges: IResolvable)
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      public fun destinationPortRanges(destinationPortRanges: List<Any>)
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      public fun destinationPortRanges(vararg destinationPortRanges: Any)
+
+      /**
+       * @param protocol The protocol.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param sourceAddresses The source addresses.
+       */
+      public fun sourceAddresses(sourceAddresses: List<String>)
+
+      /**
+       * @param sourceAddresses The source addresses.
+       */
+      public fun sourceAddresses(vararg sourceAddresses: String)
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      public fun sourcePortRanges(sourcePortRanges: IResolvable)
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      public fun sourcePortRanges(sourcePortRanges: List<Any>)
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      public fun sourcePortRanges(vararg sourcePortRanges: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty.builder()
+
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
+      override fun destinationAddresses(destinationAddresses: List<String>) {
+        cdkBuilder.destinationAddresses(destinationAddresses)
+      }
+
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
+      override fun destinationAddresses(vararg destinationAddresses: String): Unit =
+          destinationAddresses(destinationAddresses.toList())
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      override fun destinationPortRanges(destinationPortRanges: IResolvable) {
+        cdkBuilder.destinationPortRanges(destinationPortRanges.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      override fun destinationPortRanges(destinationPortRanges: List<Any>) {
+        cdkBuilder.destinationPortRanges(destinationPortRanges)
+      }
+
+      /**
+       * @param destinationPortRanges The destination port ranges.
+       */
+      override fun destinationPortRanges(vararg destinationPortRanges: Any): Unit =
+          destinationPortRanges(destinationPortRanges.toList())
+
+      /**
+       * @param protocol The protocol.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param sourceAddresses The source addresses.
+       */
+      override fun sourceAddresses(sourceAddresses: List<String>) {
+        cdkBuilder.sourceAddresses(sourceAddresses)
+      }
+
+      /**
+       * @param sourceAddresses The source addresses.
+       */
+      override fun sourceAddresses(vararg sourceAddresses: String): Unit =
+          sourceAddresses(sourceAddresses.toList())
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      override fun sourcePortRanges(sourcePortRanges: IResolvable) {
+        cdkBuilder.sourcePortRanges(sourcePortRanges.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      override fun sourcePortRanges(sourcePortRanges: List<Any>) {
+        cdkBuilder.sourcePortRanges(sourcePortRanges)
+      }
+
+      /**
+       * @param sourcePortRanges The source port ranges.
+       */
+      override fun sourcePortRanges(vararg sourcePortRanges: Any): Unit =
+          sourcePortRanges(sourcePortRanges.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty,
+    ) : CdkObject(cdkObject), AnalysisPacketHeaderProperty {
+      /**
+       * The destination addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationaddresses)
+       */
+      override fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
+          emptyList()
+
+      /**
+       * The destination port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationportranges)
+       */
+      override fun destinationPortRanges(): Any? = unwrap(this).getDestinationPortRanges()
+
+      /**
+       * The protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The source addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceaddresses)
+       */
+      override fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?:
+          emptyList()
+
+      /**
+       * The source port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceportranges)
+       */
+      override fun sourcePortRanges(): Any? = unwrap(this).getSourcePortRanges()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisPacketHeaderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty):
+          AnalysisPacketHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisPacketHeaderProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisPacketHeaderProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
+    }
+  }
+
+  /**
+   * Describes a route table route.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisRouteTableRouteProperty analysisRouteTableRouteProperty =
+   * AnalysisRouteTableRouteProperty.builder()
+   * .destinationCidr("destinationCidr")
+   * .destinationPrefixListId("destinationPrefixListId")
+   * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
+   * .gatewayId("gatewayId")
+   * .instanceId("instanceId")
+   * .natGatewayId("natGatewayId")
+   * .networkInterfaceId("networkInterfaceId")
+   * .origin("origin")
+   * .state("state")
+   * .transitGatewayId("transitGatewayId")
+   * .vpcPeeringConnectionId("vpcPeeringConnectionId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html)
+   */
+  public interface AnalysisRouteTableRouteProperty {
+    /**
+     * The destination IPv4 address, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationcidr)
+     */
+    public fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
+
+    /**
+     * The prefix of the AWS service .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
+     */
+    public fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
+
+    /**
+     * The ID of an egress-only internet gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-egressonlyinternetgatewayid)
+     */
+    public fun egressOnlyInternetGatewayId(): String? =
+        unwrap(this).getEgressOnlyInternetGatewayId()
+
+    /**
+     * The ID of the gateway, such as an internet gateway or virtual private gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-gatewayid)
+     */
+    public fun gatewayId(): String? = unwrap(this).getGatewayId()
+
+    /**
+     * The ID of the instance, such as a NAT instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-instanceid)
+     */
+    public fun instanceId(): String? = unwrap(this).getInstanceId()
+
+    /**
+     * The ID of a NAT gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid)
+     */
+    public fun natGatewayId(): String? = unwrap(this).getNatGatewayId()
+
+    /**
+     * The ID of a network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid)
+     */
+    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+    /**
+     * Describes how the route was created. The following are the possible values:.
+     *
+     * * CreateRouteTable - The route was automatically created when the route table was created.
+     * * CreateRoute - The route was manually added to the route table.
+     * * EnableVgwRoutePropagation - The route was propagated by route propagation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin)
+     */
+    public fun origin(): String? = unwrap(this).getOrigin()
+
+    /**
+     * The state. The following are the possible values:.
+     *
+     * * active
+     * * blackhole
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * The ID of a transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid)
+     */
+    public fun transitGatewayId(): String? = unwrap(this).getTransitGatewayId()
+
+    /**
+     * The ID of a VPC peering connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid)
+     */
+    public fun vpcPeeringConnectionId(): String? = unwrap(this).getVpcPeeringConnectionId()
+
+    /**
+     * A builder for [AnalysisRouteTableRouteProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationCidr The destination IPv4 address, in CIDR notation.
+       */
+      public fun destinationCidr(destinationCidr: String)
+
+      /**
+       * @param destinationPrefixListId The prefix of the AWS service .
+       */
+      public fun destinationPrefixListId(destinationPrefixListId: String)
+
+      /**
+       * @param egressOnlyInternetGatewayId The ID of an egress-only internet gateway.
+       */
+      public fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String)
+
+      /**
+       * @param gatewayId The ID of the gateway, such as an internet gateway or virtual private
+       * gateway.
+       */
+      public fun gatewayId(gatewayId: String)
+
+      /**
+       * @param instanceId The ID of the instance, such as a NAT instance.
+       */
+      public fun instanceId(instanceId: String)
+
+      /**
+       * @param natGatewayId The ID of a NAT gateway.
+       */
+      public fun natGatewayId(natGatewayId: String)
+
+      /**
+       * @param networkInterfaceId The ID of a network interface.
+       */
+      public fun networkInterfaceId(networkInterfaceId: String)
+
+      /**
+       * @param origin Describes how the route was created. The following are the possible values:.
+       * * CreateRouteTable - The route was automatically created when the route table was created.
+       * * CreateRoute - The route was manually added to the route table.
+       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
+       */
+      public fun origin(origin: String)
+
+      /**
+       * @param state The state. The following are the possible values:.
+       * * active
+       * * blackhole
+       */
+      public fun state(state: String)
+
+      /**
+       * @param transitGatewayId The ID of a transit gateway.
+       */
+      public fun transitGatewayId(transitGatewayId: String)
+
+      /**
+       * @param vpcPeeringConnectionId The ID of a VPC peering connection.
+       */
+      public fun vpcPeeringConnectionId(vpcPeeringConnectionId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty.builder()
+
+      /**
+       * @param destinationCidr The destination IPv4 address, in CIDR notation.
+       */
+      override fun destinationCidr(destinationCidr: String) {
+        cdkBuilder.destinationCidr(destinationCidr)
+      }
+
+      /**
+       * @param destinationPrefixListId The prefix of the AWS service .
+       */
+      override fun destinationPrefixListId(destinationPrefixListId: String) {
+        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
+      }
+
+      /**
+       * @param egressOnlyInternetGatewayId The ID of an egress-only internet gateway.
+       */
+      override fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String) {
+        cdkBuilder.egressOnlyInternetGatewayId(egressOnlyInternetGatewayId)
+      }
+
+      /**
+       * @param gatewayId The ID of the gateway, such as an internet gateway or virtual private
+       * gateway.
+       */
+      override fun gatewayId(gatewayId: String) {
+        cdkBuilder.gatewayId(gatewayId)
+      }
+
+      /**
+       * @param instanceId The ID of the instance, such as a NAT instance.
+       */
+      override fun instanceId(instanceId: String) {
+        cdkBuilder.instanceId(instanceId)
+      }
+
+      /**
+       * @param natGatewayId The ID of a NAT gateway.
+       */
+      override fun natGatewayId(natGatewayId: String) {
+        cdkBuilder.natGatewayId(natGatewayId)
+      }
+
+      /**
+       * @param networkInterfaceId The ID of a network interface.
+       */
+      override fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+      }
+
+      /**
+       * @param origin Describes how the route was created. The following are the possible values:.
+       * * CreateRouteTable - The route was automatically created when the route table was created.
+       * * CreateRoute - The route was manually added to the route table.
+       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
+       */
+      override fun origin(origin: String) {
+        cdkBuilder.origin(origin)
+      }
+
+      /**
+       * @param state The state. The following are the possible values:.
+       * * active
+       * * blackhole
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      /**
+       * @param transitGatewayId The ID of a transit gateway.
+       */
+      override fun transitGatewayId(transitGatewayId: String) {
+        cdkBuilder.transitGatewayId(transitGatewayId)
+      }
+
+      /**
+       * @param vpcPeeringConnectionId The ID of a VPC peering connection.
+       */
+      override fun vpcPeeringConnectionId(vpcPeeringConnectionId: String) {
+        cdkBuilder.vpcPeeringConnectionId(vpcPeeringConnectionId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty,
+    ) : CdkObject(cdkObject), AnalysisRouteTableRouteProperty {
+      /**
+       * The destination IPv4 address, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationcidr)
+       */
+      override fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
+
+      /**
+       * The prefix of the AWS service .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
+       */
+      override fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
+
+      /**
+       * The ID of an egress-only internet gateway.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-egressonlyinternetgatewayid)
+       */
+      override fun egressOnlyInternetGatewayId(): String? =
+          unwrap(this).getEgressOnlyInternetGatewayId()
+
+      /**
+       * The ID of the gateway, such as an internet gateway or virtual private gateway.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-gatewayid)
+       */
+      override fun gatewayId(): String? = unwrap(this).getGatewayId()
+
+      /**
+       * The ID of the instance, such as a NAT instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-instanceid)
+       */
+      override fun instanceId(): String? = unwrap(this).getInstanceId()
+
+      /**
+       * The ID of a NAT gateway.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid)
+       */
+      override fun natGatewayId(): String? = unwrap(this).getNatGatewayId()
+
+      /**
+       * The ID of a network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid)
+       */
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+      /**
+       * Describes how the route was created. The following are the possible values:.
+       *
+       * * CreateRouteTable - The route was automatically created when the route table was created.
+       * * CreateRoute - The route was manually added to the route table.
+       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin)
+       */
+      override fun origin(): String? = unwrap(this).getOrigin()
+
+      /**
+       * The state. The following are the possible values:.
+       *
+       * * active
+       * * blackhole
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+
+      /**
+       * The ID of a transit gateway.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid)
+       */
+      override fun transitGatewayId(): String? = unwrap(this).getTransitGatewayId()
+
+      /**
+       * The ID of a VPC peering connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid)
+       */
+      override fun vpcPeeringConnectionId(): String? = unwrap(this).getVpcPeeringConnectionId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisRouteTableRouteProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty):
+          AnalysisRouteTableRouteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisRouteTableRouteProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisRouteTableRouteProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
+    }
+  }
+
+  /**
+   * Describes a security group rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AnalysisSecurityGroupRuleProperty analysisSecurityGroupRuleProperty =
+   * AnalysisSecurityGroupRuleProperty.builder()
+   * .cidr("cidr")
+   * .direction("direction")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .prefixListId("prefixListId")
+   * .protocol("protocol")
+   * .securityGroupId("securityGroupId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html)
+   */
+  public interface AnalysisSecurityGroupRuleProperty {
+    /**
+     * The IPv4 address range, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-cidr)
+     */
+    public fun cidr(): String? = unwrap(this).getCidr()
+
+    /**
+     * The direction. The following are the possible values:.
+     *
+     * * egress
+     * * ingress
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-direction)
+     */
+    public fun direction(): String? = unwrap(this).getDirection()
+
+    /**
+     * The port range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-portrange)
+     */
+    public fun portRange(): Any? = unwrap(this).getPortRange()
+
+    /**
+     * The prefix list ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-prefixlistid)
+     */
+    public fun prefixListId(): String? = unwrap(this).getPrefixListId()
+
+    /**
+     * The protocol name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The security group ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-securitygroupid)
+     */
+    public fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
+
+    /**
+     * A builder for [AnalysisSecurityGroupRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidr The IPv4 address range, in CIDR notation.
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param direction The direction. The following are the possible values:.
+       * * egress
+       * * ingress
+       */
+      public fun direction(direction: String)
+
+      /**
+       * @param portRange The port range.
+       */
+      public fun portRange(portRange: IResolvable)
+
+      /**
+       * @param portRange The port range.
+       */
+      public fun portRange(portRange: PortRangeProperty)
+
+      /**
+       * @param portRange The port range.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ca53e01c09765cffc504e3e8819a897e42887deeeaa81072f360fd666dbfa09d")
+      public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
+
+      /**
+       * @param prefixListId The prefix list ID.
+       */
+      public fun prefixListId(prefixListId: String)
+
+      /**
+       * @param protocol The protocol name.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param securityGroupId The security group ID.
+       */
+      public fun securityGroupId(securityGroupId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty.builder()
+
+      /**
+       * @param cidr The IPv4 address range, in CIDR notation.
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param direction The direction. The following are the possible values:.
+       * * egress
+       * * ingress
+       */
+      override fun direction(direction: String) {
+        cdkBuilder.direction(direction)
+      }
+
+      /**
+       * @param portRange The port range.
+       */
+      override fun portRange(portRange: IResolvable) {
+        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param portRange The port range.
+       */
+      override fun portRange(portRange: PortRangeProperty) {
+        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
+      }
+
+      /**
+       * @param portRange The port range.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ca53e01c09765cffc504e3e8819a897e42887deeeaa81072f360fd666dbfa09d")
+      override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
+          portRange(PortRangeProperty(portRange))
+
+      /**
+       * @param prefixListId The prefix list ID.
+       */
+      override fun prefixListId(prefixListId: String) {
+        cdkBuilder.prefixListId(prefixListId)
+      }
+
+      /**
+       * @param protocol The protocol name.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param securityGroupId The security group ID.
+       */
+      override fun securityGroupId(securityGroupId: String) {
+        cdkBuilder.securityGroupId(securityGroupId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty,
+    ) : CdkObject(cdkObject), AnalysisSecurityGroupRuleProperty {
+      /**
+       * The IPv4 address range, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-cidr)
+       */
+      override fun cidr(): String? = unwrap(this).getCidr()
+
+      /**
+       * The direction. The following are the possible values:.
+       *
+       * * egress
+       * * ingress
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-direction)
+       */
+      override fun direction(): String? = unwrap(this).getDirection()
+
+      /**
+       * The port range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-portrange)
+       */
+      override fun portRange(): Any? = unwrap(this).getPortRange()
+
+      /**
+       * The prefix list ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-prefixlistid)
+       */
+      override fun prefixListId(): String? = unwrap(this).getPrefixListId()
+
+      /**
+       * The protocol name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The security group ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-securitygroupid)
+       */
+      override fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AnalysisSecurityGroupRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty):
+          AnalysisSecurityGroupRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisSecurityGroupRuleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisSecurityGroupRuleProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
     }
   }
 
@@ -2778,8 +4499,7 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty,
     ) : CdkObject(cdkObject), ExplanationProperty {
       /**
        * The network ACL.
@@ -3161,979 +4881,6 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty
-    }
-  }
-
-  /**
-   * Describes a header.
-   *
-   * Reflects any changes made by a component as traffic passes through. The fields of an inbound
-   * header are null except for the first component of a path.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisPacketHeaderProperty analysisPacketHeaderProperty =
-   * AnalysisPacketHeaderProperty.builder()
-   * .destinationAddresses(List.of("destinationAddresses"))
-   * .destinationPortRanges(List.of(PortRangeProperty.builder()
-   * .from(123)
-   * .to(123)
-   * .build()))
-   * .protocol("protocol")
-   * .sourceAddresses(List.of("sourceAddresses"))
-   * .sourcePortRanges(List.of(PortRangeProperty.builder()
-   * .from(123)
-   * .to(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html)
-   */
-  public interface AnalysisPacketHeaderProperty {
-    /**
-     * The destination addresses.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationaddresses)
-     */
-    public fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
-        emptyList()
-
-    /**
-     * The destination port ranges.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationportranges)
-     */
-    public fun destinationPortRanges(): Any? = unwrap(this).getDestinationPortRanges()
-
-    /**
-     * The protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * The source addresses.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceaddresses)
-     */
-    public fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?: emptyList()
-
-    /**
-     * The source port ranges.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceportranges)
-     */
-    public fun sourcePortRanges(): Any? = unwrap(this).getSourcePortRanges()
-
-    /**
-     * A builder for [AnalysisPacketHeaderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationAddresses The destination addresses.
-       */
-      public fun destinationAddresses(destinationAddresses: List<String>)
-
-      /**
-       * @param destinationAddresses The destination addresses.
-       */
-      public fun destinationAddresses(vararg destinationAddresses: String)
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      public fun destinationPortRanges(destinationPortRanges: IResolvable)
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      public fun destinationPortRanges(destinationPortRanges: List<Any>)
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      public fun destinationPortRanges(vararg destinationPortRanges: Any)
-
-      /**
-       * @param protocol The protocol.
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param sourceAddresses The source addresses.
-       */
-      public fun sourceAddresses(sourceAddresses: List<String>)
-
-      /**
-       * @param sourceAddresses The source addresses.
-       */
-      public fun sourceAddresses(vararg sourceAddresses: String)
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      public fun sourcePortRanges(sourcePortRanges: IResolvable)
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      public fun sourcePortRanges(sourcePortRanges: List<Any>)
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      public fun sourcePortRanges(vararg sourcePortRanges: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty.builder()
-
-      /**
-       * @param destinationAddresses The destination addresses.
-       */
-      override fun destinationAddresses(destinationAddresses: List<String>) {
-        cdkBuilder.destinationAddresses(destinationAddresses)
-      }
-
-      /**
-       * @param destinationAddresses The destination addresses.
-       */
-      override fun destinationAddresses(vararg destinationAddresses: String): Unit =
-          destinationAddresses(destinationAddresses.toList())
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      override fun destinationPortRanges(destinationPortRanges: IResolvable) {
-        cdkBuilder.destinationPortRanges(destinationPortRanges.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      override fun destinationPortRanges(destinationPortRanges: List<Any>) {
-        cdkBuilder.destinationPortRanges(destinationPortRanges)
-      }
-
-      /**
-       * @param destinationPortRanges The destination port ranges.
-       */
-      override fun destinationPortRanges(vararg destinationPortRanges: Any): Unit =
-          destinationPortRanges(destinationPortRanges.toList())
-
-      /**
-       * @param protocol The protocol.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param sourceAddresses The source addresses.
-       */
-      override fun sourceAddresses(sourceAddresses: List<String>) {
-        cdkBuilder.sourceAddresses(sourceAddresses)
-      }
-
-      /**
-       * @param sourceAddresses The source addresses.
-       */
-      override fun sourceAddresses(vararg sourceAddresses: String): Unit =
-          sourceAddresses(sourceAddresses.toList())
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      override fun sourcePortRanges(sourcePortRanges: IResolvable) {
-        cdkBuilder.sourcePortRanges(sourcePortRanges.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      override fun sourcePortRanges(sourcePortRanges: List<Any>) {
-        cdkBuilder.sourcePortRanges(sourcePortRanges)
-      }
-
-      /**
-       * @param sourcePortRanges The source port ranges.
-       */
-      override fun sourcePortRanges(vararg sourcePortRanges: Any): Unit =
-          sourcePortRanges(sourcePortRanges.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty,
-    ) : CdkObject(cdkObject), AnalysisPacketHeaderProperty {
-      /**
-       * The destination addresses.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationaddresses)
-       */
-      override fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
-          emptyList()
-
-      /**
-       * The destination port ranges.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-destinationportranges)
-       */
-      override fun destinationPortRanges(): Any? = unwrap(this).getDestinationPortRanges()
-
-      /**
-       * The protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * The source addresses.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceaddresses)
-       */
-      override fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?:
-          emptyList()
-
-      /**
-       * The source port ranges.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html#cfn-ec2-networkinsightsanalysis-analysispacketheader-sourceportranges)
-       */
-      override fun sourcePortRanges(): Any? = unwrap(this).getSourcePortRanges()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisPacketHeaderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty):
-          AnalysisPacketHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalysisPacketHeaderProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisPacketHeaderProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
-    }
-  }
-
-  /**
-   * Describes a path component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisComponentProperty analysisComponentProperty = AnalysisComponentProperty.builder()
-   * .arn("arn")
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html)
-   */
-  public interface AnalysisComponentProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-arn)
-     */
-    public fun arn(): String? = unwrap(this).getArn()
-
-    /**
-     * The ID of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * A builder for [AnalysisComponentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the component.
-       */
-      public fun arn(arn: String)
-
-      /**
-       * @param id The ID of the component.
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty.builder()
-
-      /**
-       * @param arn The Amazon Resource Name (ARN) of the component.
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      /**
-       * @param id The ID of the component.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty,
-    ) : CdkObject(cdkObject), AnalysisComponentProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-arn)
-       */
-      override fun arn(): String? = unwrap(this).getArn()
-
-      /**
-       * The ID of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysiscomponent.html#cfn-ec2-networkinsightsanalysis-analysiscomponent-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisComponentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty):
-          AnalysisComponentProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalysisComponentProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisComponentProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty
-    }
-  }
-
-  /**
-   * Describes a range of ports.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
-   * .from(123)
-   * .to(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html)
-   */
-  public interface PortRangeProperty {
-    /**
-     * The first port in the range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-from)
-     */
-    public fun from(): Number? = unwrap(this).getFrom()
-
-    /**
-     * The last port in the range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-to)
-     */
-    public fun to(): Number? = unwrap(this).getTo()
-
-    /**
-     * A builder for [PortRangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param from The first port in the range.
-       */
-      public fun from(from: Number)
-
-      /**
-       * @param to The last port in the range.
-       */
-      public fun to(to: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty.builder()
-
-      /**
-       * @param from The first port in the range.
-       */
-      override fun from(from: Number) {
-        cdkBuilder.from(from)
-      }
-
-      /**
-       * @param to The last port in the range.
-       */
-      override fun to(to: Number) {
-        cdkBuilder.to(to)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
-      /**
-       * The first port in the range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-from)
-       */
-      override fun from(): Number? = unwrap(this).getFrom()
-
-      /**
-       * The last port in the range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-to)
-       */
-      override fun to(): Number? = unwrap(this).getTo()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PortRangeProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty
-    }
-  }
-
-  /**
-   * Describes an potential intermediate component of a feasible path.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AlternatePathHintProperty alternatePathHintProperty = AlternatePathHintProperty.builder()
-   * .componentArn("componentArn")
-   * .componentId("componentId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html)
-   */
-  public interface AlternatePathHintProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentarn)
-     */
-    public fun componentArn(): String? = unwrap(this).getComponentArn()
-
-    /**
-     * The ID of the component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentid)
-     */
-    public fun componentId(): String? = unwrap(this).getComponentId()
-
-    /**
-     * A builder for [AlternatePathHintProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentArn The Amazon Resource Name (ARN) of the component.
-       */
-      public fun componentArn(componentArn: String)
-
-      /**
-       * @param componentId The ID of the component.
-       */
-      public fun componentId(componentId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty.builder()
-
-      /**
-       * @param componentArn The Amazon Resource Name (ARN) of the component.
-       */
-      override fun componentArn(componentArn: String) {
-        cdkBuilder.componentArn(componentArn)
-      }
-
-      /**
-       * @param componentId The ID of the component.
-       */
-      override fun componentId(componentId: String) {
-        cdkBuilder.componentId(componentId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty,
-    ) : CdkObject(cdkObject), AlternatePathHintProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentarn)
-       */
-      override fun componentArn(): String? = unwrap(this).getComponentArn()
-
-      /**
-       * The ID of the component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-alternatepathhint.html#cfn-ec2-networkinsightsanalysis-alternatepathhint-componentid)
-       */
-      override fun componentId(): String? = unwrap(this).getComponentId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlternatePathHintProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty):
-          AlternatePathHintProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AlternatePathHintProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AlternatePathHintProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty
-    }
-  }
-
-  /**
-   * Describes a load balancer listener.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisLoadBalancerListenerProperty analysisLoadBalancerListenerProperty =
-   * AnalysisLoadBalancerListenerProperty.builder()
-   * .instancePort(123)
-   * .loadBalancerPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html)
-   */
-  public interface AnalysisLoadBalancerListenerProperty {
-    /**
-     * [Classic Load Balancers] The back-end port for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-instanceport)
-     */
-    public fun instancePort(): Number? = unwrap(this).getInstancePort()
-
-    /**
-     * The port on which the load balancer is listening.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-loadbalancerport)
-     */
-    public fun loadBalancerPort(): Number? = unwrap(this).getLoadBalancerPort()
-
-    /**
-     * A builder for [AnalysisLoadBalancerListenerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instancePort [Classic Load Balancers] The back-end port for the listener.
-       */
-      public fun instancePort(instancePort: Number)
-
-      /**
-       * @param loadBalancerPort The port on which the load balancer is listening.
-       */
-      public fun loadBalancerPort(loadBalancerPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.builder()
-
-      /**
-       * @param instancePort [Classic Load Balancers] The back-end port for the listener.
-       */
-      override fun instancePort(instancePort: Number) {
-        cdkBuilder.instancePort(instancePort)
-      }
-
-      /**
-       * @param loadBalancerPort The port on which the load balancer is listening.
-       */
-      override fun loadBalancerPort(loadBalancerPort: Number) {
-        cdkBuilder.loadBalancerPort(loadBalancerPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty,
-    ) : CdkObject(cdkObject), AnalysisLoadBalancerListenerProperty {
-      /**
-       * [Classic Load Balancers] The back-end port for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-instanceport)
-       */
-      override fun instancePort(): Number? = unwrap(this).getInstancePort()
-
-      /**
-       * The port on which the load balancer is listening.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html#cfn-ec2-networkinsightsanalysis-analysisloadbalancerlistener-loadbalancerport)
-       */
-      override fun loadBalancerPort(): Number? = unwrap(this).getLoadBalancerPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AnalysisLoadBalancerListenerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty):
-          AnalysisLoadBalancerListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalysisLoadBalancerListenerProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisLoadBalancerListenerProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
-    }
-  }
-
-  /**
-   * Describes a network access control (ACL) rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisAclRuleProperty analysisAclRuleProperty = AnalysisAclRuleProperty.builder()
-   * .cidr("cidr")
-   * .egress(false)
-   * .portRange(PortRangeProperty.builder()
-   * .from(123)
-   * .to(123)
-   * .build())
-   * .protocol("protocol")
-   * .ruleAction("ruleAction")
-   * .ruleNumber(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html)
-   */
-  public interface AnalysisAclRuleProperty {
-    /**
-     * The IPv4 address range, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-cidr)
-     */
-    public fun cidr(): String? = unwrap(this).getCidr()
-
-    /**
-     * Indicates whether the rule is an outbound rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-egress)
-     */
-    public fun egress(): Any? = unwrap(this).getEgress()
-
-    /**
-     * The range of ports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-portrange)
-     */
-    public fun portRange(): Any? = unwrap(this).getPortRange()
-
-    /**
-     * The protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * Indicates whether to allow or deny traffic that matches the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-ruleaction)
-     */
-    public fun ruleAction(): String? = unwrap(this).getRuleAction()
-
-    /**
-     * The rule number.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-rulenumber)
-     */
-    public fun ruleNumber(): Number? = unwrap(this).getRuleNumber()
-
-    /**
-     * A builder for [AnalysisAclRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cidr The IPv4 address range, in CIDR notation.
-       */
-      public fun cidr(cidr: String)
-
-      /**
-       * @param egress Indicates whether the rule is an outbound rule.
-       */
-      public fun egress(egress: Boolean)
-
-      /**
-       * @param egress Indicates whether the rule is an outbound rule.
-       */
-      public fun egress(egress: IResolvable)
-
-      /**
-       * @param portRange The range of ports.
-       */
-      public fun portRange(portRange: IResolvable)
-
-      /**
-       * @param portRange The range of ports.
-       */
-      public fun portRange(portRange: PortRangeProperty)
-
-      /**
-       * @param portRange The range of ports.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a94b034e546168f34c45588194133a56e943d3e9aeabfc5e67024cee93f1186c")
-      public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
-
-      /**
-       * @param protocol The protocol.
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param ruleAction Indicates whether to allow or deny traffic that matches the rule.
-       */
-      public fun ruleAction(ruleAction: String)
-
-      /**
-       * @param ruleNumber The rule number.
-       */
-      public fun ruleNumber(ruleNumber: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.builder()
-
-      /**
-       * @param cidr The IPv4 address range, in CIDR notation.
-       */
-      override fun cidr(cidr: String) {
-        cdkBuilder.cidr(cidr)
-      }
-
-      /**
-       * @param egress Indicates whether the rule is an outbound rule.
-       */
-      override fun egress(egress: Boolean) {
-        cdkBuilder.egress(egress)
-      }
-
-      /**
-       * @param egress Indicates whether the rule is an outbound rule.
-       */
-      override fun egress(egress: IResolvable) {
-        cdkBuilder.egress(egress.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portRange The range of ports.
-       */
-      override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portRange The range of ports.
-       */
-      override fun portRange(portRange: PortRangeProperty) {
-        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
-      }
-
-      /**
-       * @param portRange The range of ports.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a94b034e546168f34c45588194133a56e943d3e9aeabfc5e67024cee93f1186c")
-      override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
-          portRange(PortRangeProperty(portRange))
-
-      /**
-       * @param protocol The protocol.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param ruleAction Indicates whether to allow or deny traffic that matches the rule.
-       */
-      override fun ruleAction(ruleAction: String) {
-        cdkBuilder.ruleAction(ruleAction)
-      }
-
-      /**
-       * @param ruleNumber The rule number.
-       */
-      override fun ruleNumber(ruleNumber: Number) {
-        cdkBuilder.ruleNumber(ruleNumber)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty,
-    ) : CdkObject(cdkObject), AnalysisAclRuleProperty {
-      /**
-       * The IPv4 address range, in CIDR notation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-cidr)
-       */
-      override fun cidr(): String? = unwrap(this).getCidr()
-
-      /**
-       * Indicates whether the rule is an outbound rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-egress)
-       */
-      override fun egress(): Any? = unwrap(this).getEgress()
-
-      /**
-       * The range of ports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-portrange)
-       */
-      override fun portRange(): Any? = unwrap(this).getPortRange()
-
-      /**
-       * The protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * Indicates whether to allow or deny traffic that matches the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-ruleaction)
-       */
-      override fun ruleAction(): String? = unwrap(this).getRuleAction()
-
-      /**
-       * The rule number.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html#cfn-ec2-networkinsightsanalysis-analysisaclrule-rulenumber)
-       */
-      override fun ruleNumber(): Number? = unwrap(this).getRuleNumber()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisAclRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty):
-          AnalysisAclRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisAclRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisAclRuleProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty
     }
   }
 
@@ -5207,8 +5954,7 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty,
     ) : CdkObject(cdkObject), PathComponentProperty {
       /**
        * The network ACL rule.
@@ -5347,6 +6093,114 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty
+    }
+  }
+
+  /**
+   * Describes a range of ports.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html)
+   */
+  public interface PortRangeProperty {
+    /**
+     * The first port in the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-from)
+     */
+    public fun from(): Number? = unwrap(this).getFrom()
+
+    /**
+     * The last port in the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-to)
+     */
+    public fun to(): Number? = unwrap(this).getTo()
+
+    /**
+     * A builder for [PortRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param from The first port in the range.
+       */
+      public fun from(from: Number)
+
+      /**
+       * @param to The last port in the range.
+       */
+      public fun to(to: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty.builder()
+
+      /**
+       * @param from The first port in the range.
+       */
+      override fun from(from: Number) {
+        cdkBuilder.from(from)
+      }
+
+      /**
+       * @param to The last port in the range.
+       */
+      override fun to(to: Number) {
+        cdkBuilder.to(to)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty,
+    ) : CdkObject(cdkObject), PortRangeProperty {
+      /**
+       * The first port in the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-from)
+       */
+      override fun from(): Number? = unwrap(this).getFrom()
+
+      /**
+       * The last port in the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-portrange.html#cfn-ec2-networkinsightsanalysis-portrange-to)
+       */
+      override fun to(): Number? = unwrap(this).getTo()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty):
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PortRangeProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty
     }
   }
 
@@ -5532,8 +6386,7 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty,
     ) : CdkObject(cdkObject), TransitGatewayRouteTableRouteProperty {
       /**
        * The ID of the route attachment.
@@ -5604,871 +6457,6 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty
-    }
-  }
-
-  /**
-   * Describes a security group rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisSecurityGroupRuleProperty analysisSecurityGroupRuleProperty =
-   * AnalysisSecurityGroupRuleProperty.builder()
-   * .cidr("cidr")
-   * .direction("direction")
-   * .portRange(PortRangeProperty.builder()
-   * .from(123)
-   * .to(123)
-   * .build())
-   * .prefixListId("prefixListId")
-   * .protocol("protocol")
-   * .securityGroupId("securityGroupId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html)
-   */
-  public interface AnalysisSecurityGroupRuleProperty {
-    /**
-     * The IPv4 address range, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-cidr)
-     */
-    public fun cidr(): String? = unwrap(this).getCidr()
-
-    /**
-     * The direction. The following are the possible values:.
-     *
-     * * egress
-     * * ingress
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-direction)
-     */
-    public fun direction(): String? = unwrap(this).getDirection()
-
-    /**
-     * The port range.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-portrange)
-     */
-    public fun portRange(): Any? = unwrap(this).getPortRange()
-
-    /**
-     * The prefix list ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-prefixlistid)
-     */
-    public fun prefixListId(): String? = unwrap(this).getPrefixListId()
-
-    /**
-     * The protocol name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * The security group ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-securitygroupid)
-     */
-    public fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
-
-    /**
-     * A builder for [AnalysisSecurityGroupRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cidr The IPv4 address range, in CIDR notation.
-       */
-      public fun cidr(cidr: String)
-
-      /**
-       * @param direction The direction. The following are the possible values:.
-       * * egress
-       * * ingress
-       */
-      public fun direction(direction: String)
-
-      /**
-       * @param portRange The port range.
-       */
-      public fun portRange(portRange: IResolvable)
-
-      /**
-       * @param portRange The port range.
-       */
-      public fun portRange(portRange: PortRangeProperty)
-
-      /**
-       * @param portRange The port range.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ca53e01c09765cffc504e3e8819a897e42887deeeaa81072f360fd666dbfa09d")
-      public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
-
-      /**
-       * @param prefixListId The prefix list ID.
-       */
-      public fun prefixListId(prefixListId: String)
-
-      /**
-       * @param protocol The protocol name.
-       */
-      public fun protocol(protocol: String)
-
-      /**
-       * @param securityGroupId The security group ID.
-       */
-      public fun securityGroupId(securityGroupId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty.builder()
-
-      /**
-       * @param cidr The IPv4 address range, in CIDR notation.
-       */
-      override fun cidr(cidr: String) {
-        cdkBuilder.cidr(cidr)
-      }
-
-      /**
-       * @param direction The direction. The following are the possible values:.
-       * * egress
-       * * ingress
-       */
-      override fun direction(direction: String) {
-        cdkBuilder.direction(direction)
-      }
-
-      /**
-       * @param portRange The port range.
-       */
-      override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portRange The port range.
-       */
-      override fun portRange(portRange: PortRangeProperty) {
-        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
-      }
-
-      /**
-       * @param portRange The port range.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ca53e01c09765cffc504e3e8819a897e42887deeeaa81072f360fd666dbfa09d")
-      override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
-          portRange(PortRangeProperty(portRange))
-
-      /**
-       * @param prefixListId The prefix list ID.
-       */
-      override fun prefixListId(prefixListId: String) {
-        cdkBuilder.prefixListId(prefixListId)
-      }
-
-      /**
-       * @param protocol The protocol name.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
-
-      /**
-       * @param securityGroupId The security group ID.
-       */
-      override fun securityGroupId(securityGroupId: String) {
-        cdkBuilder.securityGroupId(securityGroupId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty,
-    ) : CdkObject(cdkObject), AnalysisSecurityGroupRuleProperty {
-      /**
-       * The IPv4 address range, in CIDR notation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-cidr)
-       */
-      override fun cidr(): String? = unwrap(this).getCidr()
-
-      /**
-       * The direction. The following are the possible values:.
-       *
-       * * egress
-       * * ingress
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-direction)
-       */
-      override fun direction(): String? = unwrap(this).getDirection()
-
-      /**
-       * The port range.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-portrange)
-       */
-      override fun portRange(): Any? = unwrap(this).getPortRange()
-
-      /**
-       * The prefix list ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-prefixlistid)
-       */
-      override fun prefixListId(): String? = unwrap(this).getPrefixListId()
-
-      /**
-       * The protocol name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
-
-      /**
-       * The security group ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html#cfn-ec2-networkinsightsanalysis-analysissecuritygrouprule-securitygroupid)
-       */
-      override fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AnalysisSecurityGroupRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty):
-          AnalysisSecurityGroupRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalysisSecurityGroupRuleProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisSecurityGroupRuleProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
-    }
-  }
-
-  /**
-   * Describes an additional detail for a path analysis.
-   *
-   * For more information, see [Reachability Analyzer additional detail
-   * codes](https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AdditionalDetailProperty additionalDetailProperty = AdditionalDetailProperty.builder()
-   * .additionalDetailType("additionalDetailType")
-   * .component(AnalysisComponentProperty.builder()
-   * .arn("arn")
-   * .id("id")
-   * .build())
-   * .loadBalancers(List.of(AnalysisComponentProperty.builder()
-   * .arn("arn")
-   * .id("id")
-   * .build()))
-   * .serviceName("serviceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html)
-   */
-  public interface AdditionalDetailProperty {
-    /**
-     * The additional detail code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-additionaldetailtype)
-     */
-    public fun additionalDetailType(): String? = unwrap(this).getAdditionalDetailType()
-
-    /**
-     * The path component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-component)
-     */
-    public fun component(): Any? = unwrap(this).getComponent()
-
-    /**
-     * The load balancers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-loadbalancers)
-     */
-    public fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
-
-    /**
-     * The name of the VPC endpoint service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-servicename)
-     */
-    public fun serviceName(): String? = unwrap(this).getServiceName()
-
-    /**
-     * A builder for [AdditionalDetailProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param additionalDetailType The additional detail code.
-       */
-      public fun additionalDetailType(additionalDetailType: String)
-
-      /**
-       * @param component The path component.
-       */
-      public fun component(component: IResolvable)
-
-      /**
-       * @param component The path component.
-       */
-      public fun component(component: AnalysisComponentProperty)
-
-      /**
-       * @param component The path component.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f87cbbad2b80f87041b5c71b87006ec83d7455fa611376c460436099063db586")
-      public fun component(component: AnalysisComponentProperty.Builder.() -> Unit)
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      public fun loadBalancers(loadBalancers: IResolvable)
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      public fun loadBalancers(loadBalancers: List<Any>)
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      public fun loadBalancers(vararg loadBalancers: Any)
-
-      /**
-       * @param serviceName The name of the VPC endpoint service.
-       */
-      public fun serviceName(serviceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty.builder()
-
-      /**
-       * @param additionalDetailType The additional detail code.
-       */
-      override fun additionalDetailType(additionalDetailType: String) {
-        cdkBuilder.additionalDetailType(additionalDetailType)
-      }
-
-      /**
-       * @param component The path component.
-       */
-      override fun component(component: IResolvable) {
-        cdkBuilder.component(component.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param component The path component.
-       */
-      override fun component(component: AnalysisComponentProperty) {
-        cdkBuilder.component(component.let(AnalysisComponentProperty::unwrap))
-      }
-
-      /**
-       * @param component The path component.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f87cbbad2b80f87041b5c71b87006ec83d7455fa611376c460436099063db586")
-      override fun component(component: AnalysisComponentProperty.Builder.() -> Unit): Unit =
-          component(AnalysisComponentProperty(component))
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      override fun loadBalancers(loadBalancers: IResolvable) {
-        cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      override fun loadBalancers(loadBalancers: List<Any>) {
-        cdkBuilder.loadBalancers(loadBalancers)
-      }
-
-      /**
-       * @param loadBalancers The load balancers.
-       */
-      override fun loadBalancers(vararg loadBalancers: Any): Unit =
-          loadBalancers(loadBalancers.toList())
-
-      /**
-       * @param serviceName The name of the VPC endpoint service.
-       */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty,
-    ) : CdkObject(cdkObject), AdditionalDetailProperty {
-      /**
-       * The additional detail code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-additionaldetailtype)
-       */
-      override fun additionalDetailType(): String? = unwrap(this).getAdditionalDetailType()
-
-      /**
-       * The path component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-component)
-       */
-      override fun component(): Any? = unwrap(this).getComponent()
-
-      /**
-       * The load balancers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-loadbalancers)
-       */
-      override fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
-
-      /**
-       * The name of the VPC endpoint service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-additionaldetail.html#cfn-ec2-networkinsightsanalysis-additionaldetail-servicename)
-       */
-      override fun serviceName(): String? = unwrap(this).getServiceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AdditionalDetailProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty):
-          AdditionalDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? AdditionalDetailProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AdditionalDetailProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty
-    }
-  }
-
-  /**
-   * Describes a route table route.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AnalysisRouteTableRouteProperty analysisRouteTableRouteProperty =
-   * AnalysisRouteTableRouteProperty.builder()
-   * .destinationCidr("destinationCidr")
-   * .destinationPrefixListId("destinationPrefixListId")
-   * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
-   * .gatewayId("gatewayId")
-   * .instanceId("instanceId")
-   * .natGatewayId("natGatewayId")
-   * .networkInterfaceId("networkInterfaceId")
-   * .origin("origin")
-   * .state("state")
-   * .transitGatewayId("transitGatewayId")
-   * .vpcPeeringConnectionId("vpcPeeringConnectionId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html)
-   */
-  public interface AnalysisRouteTableRouteProperty {
-    /**
-     * The destination IPv4 address, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationcidr)
-     */
-    public fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
-
-    /**
-     * The prefix of the AWS service .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
-     */
-    public fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
-
-    /**
-     * The ID of an egress-only internet gateway.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-egressonlyinternetgatewayid)
-     */
-    public fun egressOnlyInternetGatewayId(): String? =
-        unwrap(this).getEgressOnlyInternetGatewayId()
-
-    /**
-     * The ID of the gateway, such as an internet gateway or virtual private gateway.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-gatewayid)
-     */
-    public fun gatewayId(): String? = unwrap(this).getGatewayId()
-
-    /**
-     * The ID of the instance, such as a NAT instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-instanceid)
-     */
-    public fun instanceId(): String? = unwrap(this).getInstanceId()
-
-    /**
-     * The ID of a NAT gateway.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid)
-     */
-    public fun natGatewayId(): String? = unwrap(this).getNatGatewayId()
-
-    /**
-     * The ID of a network interface.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid)
-     */
-    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-    /**
-     * Describes how the route was created. The following are the possible values:.
-     *
-     * * CreateRouteTable - The route was automatically created when the route table was created.
-     * * CreateRoute - The route was manually added to the route table.
-     * * EnableVgwRoutePropagation - The route was propagated by route propagation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin)
-     */
-    public fun origin(): String? = unwrap(this).getOrigin()
-
-    /**
-     * The state. The following are the possible values:.
-     *
-     * * active
-     * * blackhole
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state)
-     */
-    public fun state(): String? = unwrap(this).getState()
-
-    /**
-     * The ID of a transit gateway.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid)
-     */
-    public fun transitGatewayId(): String? = unwrap(this).getTransitGatewayId()
-
-    /**
-     * The ID of a VPC peering connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid)
-     */
-    public fun vpcPeeringConnectionId(): String? = unwrap(this).getVpcPeeringConnectionId()
-
-    /**
-     * A builder for [AnalysisRouteTableRouteProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationCidr The destination IPv4 address, in CIDR notation.
-       */
-      public fun destinationCidr(destinationCidr: String)
-
-      /**
-       * @param destinationPrefixListId The prefix of the AWS service .
-       */
-      public fun destinationPrefixListId(destinationPrefixListId: String)
-
-      /**
-       * @param egressOnlyInternetGatewayId The ID of an egress-only internet gateway.
-       */
-      public fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String)
-
-      /**
-       * @param gatewayId The ID of the gateway, such as an internet gateway or virtual private
-       * gateway.
-       */
-      public fun gatewayId(gatewayId: String)
-
-      /**
-       * @param instanceId The ID of the instance, such as a NAT instance.
-       */
-      public fun instanceId(instanceId: String)
-
-      /**
-       * @param natGatewayId The ID of a NAT gateway.
-       */
-      public fun natGatewayId(natGatewayId: String)
-
-      /**
-       * @param networkInterfaceId The ID of a network interface.
-       */
-      public fun networkInterfaceId(networkInterfaceId: String)
-
-      /**
-       * @param origin Describes how the route was created. The following are the possible values:.
-       * * CreateRouteTable - The route was automatically created when the route table was created.
-       * * CreateRoute - The route was manually added to the route table.
-       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
-       */
-      public fun origin(origin: String)
-
-      /**
-       * @param state The state. The following are the possible values:.
-       * * active
-       * * blackhole
-       */
-      public fun state(state: String)
-
-      /**
-       * @param transitGatewayId The ID of a transit gateway.
-       */
-      public fun transitGatewayId(transitGatewayId: String)
-
-      /**
-       * @param vpcPeeringConnectionId The ID of a VPC peering connection.
-       */
-      public fun vpcPeeringConnectionId(vpcPeeringConnectionId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty.builder()
-
-      /**
-       * @param destinationCidr The destination IPv4 address, in CIDR notation.
-       */
-      override fun destinationCidr(destinationCidr: String) {
-        cdkBuilder.destinationCidr(destinationCidr)
-      }
-
-      /**
-       * @param destinationPrefixListId The prefix of the AWS service .
-       */
-      override fun destinationPrefixListId(destinationPrefixListId: String) {
-        cdkBuilder.destinationPrefixListId(destinationPrefixListId)
-      }
-
-      /**
-       * @param egressOnlyInternetGatewayId The ID of an egress-only internet gateway.
-       */
-      override fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String) {
-        cdkBuilder.egressOnlyInternetGatewayId(egressOnlyInternetGatewayId)
-      }
-
-      /**
-       * @param gatewayId The ID of the gateway, such as an internet gateway or virtual private
-       * gateway.
-       */
-      override fun gatewayId(gatewayId: String) {
-        cdkBuilder.gatewayId(gatewayId)
-      }
-
-      /**
-       * @param instanceId The ID of the instance, such as a NAT instance.
-       */
-      override fun instanceId(instanceId: String) {
-        cdkBuilder.instanceId(instanceId)
-      }
-
-      /**
-       * @param natGatewayId The ID of a NAT gateway.
-       */
-      override fun natGatewayId(natGatewayId: String) {
-        cdkBuilder.natGatewayId(natGatewayId)
-      }
-
-      /**
-       * @param networkInterfaceId The ID of a network interface.
-       */
-      override fun networkInterfaceId(networkInterfaceId: String) {
-        cdkBuilder.networkInterfaceId(networkInterfaceId)
-      }
-
-      /**
-       * @param origin Describes how the route was created. The following are the possible values:.
-       * * CreateRouteTable - The route was automatically created when the route table was created.
-       * * CreateRoute - The route was manually added to the route table.
-       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
-       */
-      override fun origin(origin: String) {
-        cdkBuilder.origin(origin)
-      }
-
-      /**
-       * @param state The state. The following are the possible values:.
-       * * active
-       * * blackhole
-       */
-      override fun state(state: String) {
-        cdkBuilder.state(state)
-      }
-
-      /**
-       * @param transitGatewayId The ID of a transit gateway.
-       */
-      override fun transitGatewayId(transitGatewayId: String) {
-        cdkBuilder.transitGatewayId(transitGatewayId)
-      }
-
-      /**
-       * @param vpcPeeringConnectionId The ID of a VPC peering connection.
-       */
-      override fun vpcPeeringConnectionId(vpcPeeringConnectionId: String) {
-        cdkBuilder.vpcPeeringConnectionId(vpcPeeringConnectionId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty,
-    ) : CdkObject(cdkObject), AnalysisRouteTableRouteProperty {
-      /**
-       * The destination IPv4 address, in CIDR notation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationcidr)
-       */
-      override fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
-
-      /**
-       * The prefix of the AWS service .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
-       */
-      override fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
-
-      /**
-       * The ID of an egress-only internet gateway.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-egressonlyinternetgatewayid)
-       */
-      override fun egressOnlyInternetGatewayId(): String? =
-          unwrap(this).getEgressOnlyInternetGatewayId()
-
-      /**
-       * The ID of the gateway, such as an internet gateway or virtual private gateway.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-gatewayid)
-       */
-      override fun gatewayId(): String? = unwrap(this).getGatewayId()
-
-      /**
-       * The ID of the instance, such as a NAT instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-instanceid)
-       */
-      override fun instanceId(): String? = unwrap(this).getInstanceId()
-
-      /**
-       * The ID of a NAT gateway.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid)
-       */
-      override fun natGatewayId(): String? = unwrap(this).getNatGatewayId()
-
-      /**
-       * The ID of a network interface.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid)
-       */
-      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
-
-      /**
-       * Describes how the route was created. The following are the possible values:.
-       *
-       * * CreateRouteTable - The route was automatically created when the route table was created.
-       * * CreateRoute - The route was manually added to the route table.
-       * * EnableVgwRoutePropagation - The route was propagated by route propagation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin)
-       */
-      override fun origin(): String? = unwrap(this).getOrigin()
-
-      /**
-       * The state. The following are the possible values:.
-       *
-       * * active
-       * * blackhole
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state)
-       */
-      override fun state(): String? = unwrap(this).getState()
-
-      /**
-       * The ID of a transit gateway.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid)
-       */
-      override fun transitGatewayId(): String? = unwrap(this).getTransitGatewayId()
-
-      /**
-       * The ID of a VPC peering connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid)
-       */
-      override fun vpcPeeringConnectionId(): String? = unwrap(this).getVpcPeeringConnectionId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisRouteTableRouteProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty):
-          AnalysisRouteTableRouteProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalysisRouteTableRouteProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalysisRouteTableRouteProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty
     }
   }
 }

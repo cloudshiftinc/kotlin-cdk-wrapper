@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html)
  */
-public open class CfnInternetGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGateway,
+public open class CfnInternetGateway(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnInternetGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -165,6 +165,7 @@ public open class CfnInternetGateway internal constructor(
         CfnInternetGateway = CfnInternetGateway(cdkObject)
 
     internal fun unwrap(wrapped: CfnInternetGateway):
-        software.amazon.awscdk.services.ec2.CfnInternetGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnInternetGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnInternetGateway
   }
 }

@@ -57,7 +57,7 @@ public interface IDeploymentStrategy : IResource {
   public fun name(): String? = unwrap(this).getName()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IDeploymentStrategy,
+    cdkObject: software.amazon.awscdk.services.appconfig.IDeploymentStrategy,
   ) : CdkObject(cdkObject), IDeploymentStrategy {
     /**
      * Apply the given removal policy to this resource.

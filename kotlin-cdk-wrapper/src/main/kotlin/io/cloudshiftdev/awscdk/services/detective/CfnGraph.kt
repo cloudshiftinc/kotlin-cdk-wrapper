@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
  */
-public open class CfnGraph internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.detective.CfnGraph,
+public open class CfnGraph(
+  cdkObject: software.amazon.awscdk.services.detective.CfnGraph,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -263,6 +263,6 @@ public open class CfnGraph internal constructor(
         CfnGraph(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraph): software.amazon.awscdk.services.detective.CfnGraph =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.detective.CfnGraph
   }
 }

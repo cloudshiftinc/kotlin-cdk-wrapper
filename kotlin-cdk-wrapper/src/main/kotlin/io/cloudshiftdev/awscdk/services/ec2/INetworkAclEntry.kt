@@ -20,7 +20,7 @@ public interface INetworkAclEntry : IResource {
   public fun networkAcl(): INetworkAcl
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.INetworkAclEntry,
+    cdkObject: software.amazon.awscdk.services.ec2.INetworkAclEntry,
   ) : CdkObject(cdkObject), INetworkAclEntry {
     /**
      * Apply the given removal policy to this resource.

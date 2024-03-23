@@ -350,7 +350,7 @@ public interface CfnAccountProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.organizations.CfnAccountProps,
+    cdkObject: software.amazon.awscdk.services.organizations.CfnAccountProps,
   ) : CdkObject(cdkObject), CfnAccountProps {
     /**
      * The account name given to the account when it was created.

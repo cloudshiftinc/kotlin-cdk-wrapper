@@ -30,9 +30,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class SnsDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.destinations.SnsDestination,
+public open class SnsDestination(
+  cdkObject: software.amazon.awscdk.services.lambda.destinations.SnsDestination,
 ) : CdkObject(cdkObject), IDestination {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.lambda.destinations.SnsDestination(topic.let(ITopic::unwrap))
@@ -84,6 +83,7 @@ public open class SnsDestination internal constructor(
         SnsDestination = SnsDestination(cdkObject)
 
     internal fun unwrap(wrapped: SnsDestination):
-        software.amazon.awscdk.services.lambda.destinations.SnsDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.destinations.SnsDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.destinations.SnsDestination
   }
 }

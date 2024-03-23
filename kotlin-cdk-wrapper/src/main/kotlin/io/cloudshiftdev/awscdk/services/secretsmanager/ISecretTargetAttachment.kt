@@ -29,7 +29,7 @@ public interface ISecretTargetAttachment : ISecret {
   public fun secretTargetAttachmentSecretArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretTargetAttachment,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretTargetAttachment,
   ) : CdkObject(cdkObject), ISecretTargetAttachment {
     /**
      * Adds a rotation schedule to the secret.

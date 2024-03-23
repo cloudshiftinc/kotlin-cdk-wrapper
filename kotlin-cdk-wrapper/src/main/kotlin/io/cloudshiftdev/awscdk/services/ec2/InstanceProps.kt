@@ -762,7 +762,7 @@ public interface InstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InstanceProps,
+    cdkObject: software.amazon.awscdk.services.ec2.InstanceProps,
   ) : CdkObject(cdkObject), InstanceProps {
     /**
      * Whether the instance could initiate IPv6 connections to anywhere by default.

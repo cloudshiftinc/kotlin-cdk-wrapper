@@ -128,7 +128,7 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigProps,
   ) : CdkObject(cdkObject), BaseDeploymentConfigProps {
     /**
      * The destination compute platform for the deployment.

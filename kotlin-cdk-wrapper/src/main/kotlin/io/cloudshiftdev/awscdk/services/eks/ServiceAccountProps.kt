@@ -119,7 +119,7 @@ public interface ServiceAccountProps : ServiceAccountOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.ServiceAccountProps,
+    cdkObject: software.amazon.awscdk.services.eks.ServiceAccountProps,
   ) : CdkObject(cdkObject), ServiceAccountProps {
     /**
      * Additional annotations of the service account.

@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html)
  */
-public open class CfnMonitoringSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
+public open class CfnMonitoringSubscription(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -230,97 +229,8 @@ public open class CfnMonitoringSubscription internal constructor(
         CfnMonitoringSubscription = CfnMonitoringSubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitoringSubscription):
-        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription = wrapped.cdkObject
-  }
-
-  /**
-   * A subscription configuration for additional CloudWatch metrics.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * RealtimeMetricsSubscriptionConfigProperty realtimeMetricsSubscriptionConfigProperty =
-   * RealtimeMetricsSubscriptionConfigProperty.builder()
-   * .realtimeMetricsSubscriptionStatus("realtimeMetricsSubscriptionStatus")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html)
-   */
-  public interface RealtimeMetricsSubscriptionConfigProperty {
-    /**
-     * A flag that indicates whether additional CloudWatch metrics are enabled for a given
-     * CloudFront distribution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html#cfn-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig-realtimemetricssubscriptionstatus)
-     */
-    public fun realtimeMetricsSubscriptionStatus(): String
-
-    /**
-     * A builder for [RealtimeMetricsSubscriptionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param realtimeMetricsSubscriptionStatus A flag that indicates whether additional
-       * CloudWatch metrics are enabled for a given CloudFront distribution. 
-       */
-      public fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.builder()
-
-      /**
-       * @param realtimeMetricsSubscriptionStatus A flag that indicates whether additional
-       * CloudWatch metrics are enabled for a given CloudFront distribution. 
-       */
-      override fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
-        cdkBuilder.realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
-    ) : CdkObject(cdkObject), RealtimeMetricsSubscriptionConfigProperty {
-      /**
-       * A flag that indicates whether additional CloudWatch metrics are enabled for a given
-       * CloudFront distribution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html#cfn-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig-realtimemetricssubscriptionstatus)
-       */
-      override fun realtimeMetricsSubscriptionStatus(): String =
-          unwrap(this).getRealtimeMetricsSubscriptionStatus()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          RealtimeMetricsSubscriptionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty):
-          RealtimeMetricsSubscriptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RealtimeMetricsSubscriptionConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RealtimeMetricsSubscriptionConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
-    }
+        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription
   }
 
   /**
@@ -423,8 +333,7 @@ public open class CfnMonitoringSubscription internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
     ) : CdkObject(cdkObject), MonitoringSubscriptionProperty {
       /**
        * A subscription configuration for additional CloudWatch metrics.
@@ -450,6 +359,95 @@ public open class CfnMonitoringSubscription internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty
+    }
+  }
+
+  /**
+   * A subscription configuration for additional CloudWatch metrics.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * RealtimeMetricsSubscriptionConfigProperty realtimeMetricsSubscriptionConfigProperty =
+   * RealtimeMetricsSubscriptionConfigProperty.builder()
+   * .realtimeMetricsSubscriptionStatus("realtimeMetricsSubscriptionStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html)
+   */
+  public interface RealtimeMetricsSubscriptionConfigProperty {
+    /**
+     * A flag that indicates whether additional CloudWatch metrics are enabled for a given
+     * CloudFront distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html#cfn-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig-realtimemetricssubscriptionstatus)
+     */
+    public fun realtimeMetricsSubscriptionStatus(): String
+
+    /**
+     * A builder for [RealtimeMetricsSubscriptionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param realtimeMetricsSubscriptionStatus A flag that indicates whether additional
+       * CloudWatch metrics are enabled for a given CloudFront distribution. 
+       */
+      public fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.builder()
+
+      /**
+       * @param realtimeMetricsSubscriptionStatus A flag that indicates whether additional
+       * CloudWatch metrics are enabled for a given CloudFront distribution. 
+       */
+      override fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
+        cdkBuilder.realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
+    ) : CdkObject(cdkObject), RealtimeMetricsSubscriptionConfigProperty {
+      /**
+       * A flag that indicates whether additional CloudWatch metrics are enabled for a given
+       * CloudFront distribution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig.html#cfn-cloudfront-monitoringsubscription-realtimemetricssubscriptionconfig-realtimemetricssubscriptionstatus)
+       */
+      override fun realtimeMetricsSubscriptionStatus(): String =
+          unwrap(this).getRealtimeMetricsSubscriptionStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RealtimeMetricsSubscriptionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty):
+          RealtimeMetricsSubscriptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RealtimeMetricsSubscriptionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RealtimeMetricsSubscriptionConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
     }
   }
 }

@@ -225,7 +225,7 @@ public interface CfnOIDCProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProviderProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProviderProps,
   ) : CdkObject(cdkObject), CfnOIDCProviderProps {
     /**
      * A list of client IDs (also known as audiences) that are associated with the specified IAM

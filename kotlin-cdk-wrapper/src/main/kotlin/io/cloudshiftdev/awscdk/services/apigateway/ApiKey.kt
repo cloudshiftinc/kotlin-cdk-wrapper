@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * IApiKey importedKey = ApiKey.fromApiKeyId(this, "imported-key", "&lt;api-key-id&gt;");
  * ```
  */
-public open class ApiKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.ApiKey,
+public open class ApiKey(
+  cdkObject: software.amazon.awscdk.services.apigateway.ApiKey,
 ) : Resource(cdkObject), IApiKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -500,6 +500,6 @@ public open class ApiKey internal constructor(
         ApiKey(cdkObject)
 
     internal fun unwrap(wrapped: ApiKey): software.amazon.awscdk.services.apigateway.ApiKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.ApiKey
   }
 }

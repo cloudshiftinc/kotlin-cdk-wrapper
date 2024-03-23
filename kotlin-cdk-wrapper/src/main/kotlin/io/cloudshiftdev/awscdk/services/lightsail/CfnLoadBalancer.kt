@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancer.html)
  */
-public open class CfnLoadBalancer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancer,
+public open class CfnLoadBalancer(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -552,6 +552,7 @@ public open class CfnLoadBalancer internal constructor(
         CfnLoadBalancer = CfnLoadBalancer(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancer):
-        software.amazon.awscdk.services.lightsail.CfnLoadBalancer = wrapped.cdkObject
+        software.amazon.awscdk.services.lightsail.CfnLoadBalancer = wrapped.cdkObject as
+        software.amazon.awscdk.services.lightsail.CfnLoadBalancer
   }
 }

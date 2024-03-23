@@ -367,7 +367,7 @@ public interface CfnResourceShareProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ram.CfnResourceShareProps,
+    cdkObject: software.amazon.awscdk.services.ram.CfnResourceShareProps,
   ) : CdkObject(cdkObject), CfnResourceShareProps {
     /**
      * Specifies whether principals outside your organization in AWS Organizations can be associated

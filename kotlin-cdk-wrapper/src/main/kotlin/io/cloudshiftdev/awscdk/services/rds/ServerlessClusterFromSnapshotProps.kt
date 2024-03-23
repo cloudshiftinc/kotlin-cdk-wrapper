@@ -440,7 +440,7 @@ public interface ServerlessClusterFromSnapshotProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps,
+    cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps,
   ) : CdkObject(cdkObject), ServerlessClusterFromSnapshotProps {
     /**
      * The number of days during which automatic DB snapshots are retained.

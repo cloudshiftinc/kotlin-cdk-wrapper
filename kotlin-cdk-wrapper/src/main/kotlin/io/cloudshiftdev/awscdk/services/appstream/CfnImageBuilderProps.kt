@@ -580,7 +580,7 @@ public interface CfnImageBuilderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilderProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilderProps,
   ) : CdkObject(cdkObject), CfnImageBuilderProps {
     /**
      * The list of virtual private cloud (VPC) interface endpoint objects.

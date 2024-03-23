@@ -151,7 +151,7 @@ public interface CfnDirectoryBucketProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps,
+    cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps,
   ) : CdkObject(cdkObject), CfnDirectoryBucketProps {
     /**
      * A name for the bucket.

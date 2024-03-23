@@ -124,7 +124,7 @@ public interface CfnAccessKeyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.CfnAccessKeyProps,
+    cdkObject: software.amazon.awscdk.services.iam.CfnAccessKeyProps,
   ) : CdkObject(cdkObject), CfnAccessKeyProps {
     /**
      * This value is specific to CloudFormation and can only be *incremented* .

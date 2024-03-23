@@ -33,7 +33,7 @@ public interface IOrigin {
   public fun bind(scope: Construct, options: OriginBindOptions.Builder.() -> Unit): OriginBindConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IOrigin,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IOrigin,
   ) : CdkObject(cdkObject), IOrigin {
     /**
      * The method called when a given Origin is added (for the first time) to a Distribution.

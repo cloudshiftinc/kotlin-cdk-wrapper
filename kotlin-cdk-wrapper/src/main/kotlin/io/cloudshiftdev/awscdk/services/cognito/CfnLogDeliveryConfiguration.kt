@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html)
  */
-public open class CfnLogDeliveryConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration,
+public open class CfnLogDeliveryConfiguration(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -220,7 +219,130 @@ public open class CfnLogDeliveryConfiguration internal constructor(
         CfnLogDeliveryConfiguration = CfnLogDeliveryConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogDeliveryConfiguration):
-        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration
+  }
+
+  /**
+   * The CloudWatch logging destination of a user pool detailed activity logging configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * CloudWatchLogsConfigurationProperty cloudWatchLogsConfigurationProperty =
+   * CloudWatchLogsConfigurationProperty.builder()
+   * .logGroupArn("logGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html)
+   */
+  public interface CloudWatchLogsConfigurationProperty {
+    /**
+     * The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends
+     * logs.
+     *
+     * The log group must not be encrypted with AWS Key Management Service and must be in the same
+     * AWS account as your user pool.
+     *
+     * To send logs to log groups with a resource policy of a size greater than 5120 characters,
+     * configure a log group with a path that starts with `/aws/vendedlogs` . For more information, see
+     * [Enabling logging from certain AWS
+     * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html#cfn-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration-loggrouparn)
+     */
+    public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+
+    /**
+     * A builder for [CloudWatchLogsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroupArn The Amazon Resource Name (arn) of a CloudWatch Logs log group where your
+       * user pool sends logs.
+       * The log group must not be encrypted with AWS Key Management Service and must be in the same
+       * AWS account as your user pool.
+       *
+       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
+       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
+       * see [Enabling logging from certain AWS
+       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
+       * .
+       */
+      public fun logGroupArn(logGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty.builder()
+
+      /**
+       * @param logGroupArn The Amazon Resource Name (arn) of a CloudWatch Logs log group where your
+       * user pool sends logs.
+       * The log group must not be encrypted with AWS Key Management Service and must be in the same
+       * AWS account as your user pool.
+       *
+       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
+       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
+       * see [Enabling logging from certain AWS
+       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
+       * .
+       */
+      override fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
+      /**
+       * The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends
+       * logs.
+       *
+       * The log group must not be encrypted with AWS Key Management Service and must be in the same
+       * AWS account as your user pool.
+       *
+       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
+       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
+       * see [Enabling logging from certain AWS
+       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html#cfn-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration-loggrouparn)
+       */
+      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CloudWatchLogsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty):
+          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
+          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
+    }
   }
 
   /**
@@ -361,8 +483,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty,
     ) : CdkObject(cdkObject), LogConfigurationProperty {
       /**
        * The CloudWatch logging destination of a user pool detailed activity logging configuration.
@@ -402,129 +523,6 @@ public open class CfnLogDeliveryConfiguration internal constructor(
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty
-    }
-  }
-
-  /**
-   * The CloudWatch logging destination of a user pool detailed activity logging configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * CloudWatchLogsConfigurationProperty cloudWatchLogsConfigurationProperty =
-   * CloudWatchLogsConfigurationProperty.builder()
-   * .logGroupArn("logGroupArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html)
-   */
-  public interface CloudWatchLogsConfigurationProperty {
-    /**
-     * The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends
-     * logs.
-     *
-     * The log group must not be encrypted with AWS Key Management Service and must be in the same
-     * AWS account as your user pool.
-     *
-     * To send logs to log groups with a resource policy of a size greater than 5120 characters,
-     * configure a log group with a path that starts with `/aws/vendedlogs` . For more information, see
-     * [Enabling logging from certain AWS
-     * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html#cfn-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration-loggrouparn)
-     */
-    public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
-
-    /**
-     * A builder for [CloudWatchLogsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logGroupArn The Amazon Resource Name (arn) of a CloudWatch Logs log group where your
-       * user pool sends logs.
-       * The log group must not be encrypted with AWS Key Management Service and must be in the same
-       * AWS account as your user pool.
-       *
-       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
-       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
-       * see [Enabling logging from certain AWS
-       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
-       * .
-       */
-      public fun logGroupArn(logGroupArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty.builder()
-
-      /**
-       * @param logGroupArn The Amazon Resource Name (arn) of a CloudWatch Logs log group where your
-       * user pool sends logs.
-       * The log group must not be encrypted with AWS Key Management Service and must be in the same
-       * AWS account as your user pool.
-       *
-       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
-       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
-       * see [Enabling logging from certain AWS
-       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
-       * .
-       */
-      override fun logGroupArn(logGroupArn: String) {
-        cdkBuilder.logGroupArn(logGroupArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
-      /**
-       * The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends
-       * logs.
-       *
-       * The log group must not be encrypted with AWS Key Management Service and must be in the same
-       * AWS account as your user pool.
-       *
-       * To send logs to log groups with a resource policy of a size greater than 5120 characters,
-       * configure a log group with a path that starts with `/aws/vendedlogs` . For more information,
-       * see [Enabling logging from certain AWS
-       * services](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration.html#cfn-cognito-logdeliveryconfiguration-cloudwatchlogsconfiguration-loggrouparn)
-       */
-      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CloudWatchLogsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty):
-          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchLogsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty
     }
   }
 }

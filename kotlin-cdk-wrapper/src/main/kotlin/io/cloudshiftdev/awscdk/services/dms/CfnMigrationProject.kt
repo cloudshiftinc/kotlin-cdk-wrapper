@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-migrationproject.html)
  */
-public open class CfnMigrationProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject,
+public open class CfnMigrationProject(
+  cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -768,7 +768,8 @@ public open class CfnMigrationProject internal constructor(
         CfnMigrationProject = CfnMigrationProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnMigrationProject):
-        software.amazon.awscdk.services.dms.CfnMigrationProject = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnMigrationProject = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnMigrationProject
   }
 
   /**
@@ -908,8 +909,7 @@ public open class CfnMigrationProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty,
     ) : CdkObject(cdkObject), DataProviderDescriptorProperty {
       /**
        * The Amazon Resource Name (ARN) of the data provider.
@@ -1036,8 +1036,7 @@ public open class CfnMigrationProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty,
     ) : CdkObject(cdkObject), SchemaConversionApplicationAttributesProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-migrationproject-schemaconversionapplicationattributes.html#cfn-dms-migrationproject-schemaconversionapplicationattributes-s3bucketpath)

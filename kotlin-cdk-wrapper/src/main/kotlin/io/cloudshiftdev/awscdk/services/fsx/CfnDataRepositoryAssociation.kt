@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html)
  */
-public open class CfnDataRepositoryAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
+public open class CfnDataRepositoryAssociation(
+  cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -588,7 +588,307 @@ public open class CfnDataRepositoryAssociation internal constructor(
         CfnDataRepositoryAssociation = CfnDataRepositoryAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataRepositoryAssociation):
-        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
+  }
+
+  /**
+   * Describes a data repository association's automatic export policy.
+   *
+   * The `AutoExportPolicy` defines the types of updated objects on the file system that will be
+   * automatically exported to the data repository. As you create, modify, or delete files, Amazon FSx
+   * for Lustre automatically exports the defined changes asynchronously once your application finishes
+   * modifying the file.
+   *
+   * The `AutoExportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
+   * repository association.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * AutoExportPolicyProperty autoExportPolicyProperty = AutoExportPolicyProperty.builder()
+   * .events(List.of("events"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html)
+   */
+  public interface AutoExportPolicyProperty {
+    /**
+     * The `AutoExportPolicy` can have the following event values:.
+     *
+     * * `NEW` - New files and directories are automatically exported to the data repository as they
+     * are added to the file system.
+     * * `CHANGED` - Changes to files and directories on the file system are automatically exported
+     * to the data repository.
+     * * `DELETED` - Files and directories are automatically deleted on the data repository when
+     * they are deleted on the file system.
+     *
+     * You can define any combination of event types for your `AutoExportPolicy` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html#cfn-fsx-datarepositoryassociation-autoexportpolicy-events)
+     */
+    public fun events(): List<String>
+
+    /**
+     * A builder for [AutoExportPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param events The `AutoExportPolicy` can have the following event values:. 
+       * * `NEW` - New files and directories are automatically exported to the data repository as
+       * they are added to the file system.
+       * * `CHANGED` - Changes to files and directories on the file system are automatically
+       * exported to the data repository.
+       * * `DELETED` - Files and directories are automatically deleted on the data repository when
+       * they are deleted on the file system.
+       *
+       * You can define any combination of event types for your `AutoExportPolicy` .
+       */
+      public fun events(events: List<String>)
+
+      /**
+       * @param events The `AutoExportPolicy` can have the following event values:. 
+       * * `NEW` - New files and directories are automatically exported to the data repository as
+       * they are added to the file system.
+       * * `CHANGED` - Changes to files and directories on the file system are automatically
+       * exported to the data repository.
+       * * `DELETED` - Files and directories are automatically deleted on the data repository when
+       * they are deleted on the file system.
+       *
+       * You can define any combination of event types for your `AutoExportPolicy` .
+       */
+      public fun events(vararg events: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty.builder()
+
+      /**
+       * @param events The `AutoExportPolicy` can have the following event values:. 
+       * * `NEW` - New files and directories are automatically exported to the data repository as
+       * they are added to the file system.
+       * * `CHANGED` - Changes to files and directories on the file system are automatically
+       * exported to the data repository.
+       * * `DELETED` - Files and directories are automatically deleted on the data repository when
+       * they are deleted on the file system.
+       *
+       * You can define any combination of event types for your `AutoExportPolicy` .
+       */
+      override fun events(events: List<String>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param events The `AutoExportPolicy` can have the following event values:. 
+       * * `NEW` - New files and directories are automatically exported to the data repository as
+       * they are added to the file system.
+       * * `CHANGED` - Changes to files and directories on the file system are automatically
+       * exported to the data repository.
+       * * `DELETED` - Files and directories are automatically deleted on the data repository when
+       * they are deleted on the file system.
+       *
+       * You can define any combination of event types for your `AutoExportPolicy` .
+       */
+      override fun events(vararg events: String): Unit = events(events.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
+    ) : CdkObject(cdkObject), AutoExportPolicyProperty {
+      /**
+       * The `AutoExportPolicy` can have the following event values:.
+       *
+       * * `NEW` - New files and directories are automatically exported to the data repository as
+       * they are added to the file system.
+       * * `CHANGED` - Changes to files and directories on the file system are automatically
+       * exported to the data repository.
+       * * `DELETED` - Files and directories are automatically deleted on the data repository when
+       * they are deleted on the file system.
+       *
+       * You can define any combination of event types for your `AutoExportPolicy` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html#cfn-fsx-datarepositoryassociation-autoexportpolicy-events)
+       */
+      override fun events(): List<String> = unwrap(this).getEvents()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoExportPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty):
+          AutoExportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoExportPolicyProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoExportPolicyProperty):
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
+    }
+  }
+
+  /**
+   * Describes the data repository association's automatic import policy.
+   *
+   * The AutoImportPolicy defines how Amazon FSx keeps your file metadata and directory listings up
+   * to date by importing changes to your Amazon FSx for Lustre file system as you modify objects in a
+   * linked S3 bucket.
+   *
+   * The `AutoImportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
+   * repository association.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * AutoImportPolicyProperty autoImportPolicyProperty = AutoImportPolicyProperty.builder()
+   * .events(List.of("events"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html)
+   */
+  public interface AutoImportPolicyProperty {
+    /**
+     * The `AutoImportPolicy` can have the following event values:.
+     *
+     * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+     * that do not currently exist in the FSx file system.
+     * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+     * content on the file system as files change in the data repository.
+     * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+     * files are deleted in the data repository.
+     *
+     * You can define any combination of event types for your `AutoImportPolicy` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html#cfn-fsx-datarepositoryassociation-autoimportpolicy-events)
+     */
+    public fun events(): List<String>
+
+    /**
+     * A builder for [AutoImportPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param events The `AutoImportPolicy` can have the following event values:. 
+       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+       * that do not currently exist in the FSx file system.
+       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+       * content on the file system as files change in the data repository.
+       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+       * files are deleted in the data repository.
+       *
+       * You can define any combination of event types for your `AutoImportPolicy` .
+       */
+      public fun events(events: List<String>)
+
+      /**
+       * @param events The `AutoImportPolicy` can have the following event values:. 
+       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+       * that do not currently exist in the FSx file system.
+       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+       * content on the file system as files change in the data repository.
+       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+       * files are deleted in the data repository.
+       *
+       * You can define any combination of event types for your `AutoImportPolicy` .
+       */
+      public fun events(vararg events: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty.builder()
+
+      /**
+       * @param events The `AutoImportPolicy` can have the following event values:. 
+       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+       * that do not currently exist in the FSx file system.
+       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+       * content on the file system as files change in the data repository.
+       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+       * files are deleted in the data repository.
+       *
+       * You can define any combination of event types for your `AutoImportPolicy` .
+       */
+      override fun events(events: List<String>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param events The `AutoImportPolicy` can have the following event values:. 
+       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+       * that do not currently exist in the FSx file system.
+       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+       * content on the file system as files change in the data repository.
+       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+       * files are deleted in the data repository.
+       *
+       * You can define any combination of event types for your `AutoImportPolicy` .
+       */
+      override fun events(vararg events: String): Unit = events(events.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
+    ) : CdkObject(cdkObject), AutoImportPolicyProperty {
+      /**
+       * The `AutoImportPolicy` can have the following event values:.
+       *
+       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
+       * that do not currently exist in the FSx file system.
+       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
+       * content on the file system as files change in the data repository.
+       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
+       * files are deleted in the data repository.
+       *
+       * You can define any combination of event types for your `AutoImportPolicy` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html#cfn-fsx-datarepositoryassociation-autoimportpolicy-events)
+       */
+      override fun events(): List<String> = unwrap(this).getEvents()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoImportPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty):
+          AutoImportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoImportPolicyProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoImportPolicyProperty):
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
+    }
   }
 
   /**
@@ -826,8 +1126,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
+      cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
        * Describes a data repository association's automatic export policy.
@@ -873,307 +1172,6 @@ public open class CfnDataRepositoryAssociation internal constructor(
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property
-    }
-  }
-
-  /**
-   * Describes the data repository association's automatic import policy.
-   *
-   * The AutoImportPolicy defines how Amazon FSx keeps your file metadata and directory listings up
-   * to date by importing changes to your Amazon FSx for Lustre file system as you modify objects in a
-   * linked S3 bucket.
-   *
-   * The `AutoImportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
-   * repository association.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * AutoImportPolicyProperty autoImportPolicyProperty = AutoImportPolicyProperty.builder()
-   * .events(List.of("events"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html)
-   */
-  public interface AutoImportPolicyProperty {
-    /**
-     * The `AutoImportPolicy` can have the following event values:.
-     *
-     * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-     * that do not currently exist in the FSx file system.
-     * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-     * content on the file system as files change in the data repository.
-     * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-     * files are deleted in the data repository.
-     *
-     * You can define any combination of event types for your `AutoImportPolicy` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html#cfn-fsx-datarepositoryassociation-autoimportpolicy-events)
-     */
-    public fun events(): List<String>
-
-    /**
-     * A builder for [AutoImportPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param events The `AutoImportPolicy` can have the following event values:. 
-       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-       * that do not currently exist in the FSx file system.
-       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-       * content on the file system as files change in the data repository.
-       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-       * files are deleted in the data repository.
-       *
-       * You can define any combination of event types for your `AutoImportPolicy` .
-       */
-      public fun events(events: List<String>)
-
-      /**
-       * @param events The `AutoImportPolicy` can have the following event values:. 
-       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-       * that do not currently exist in the FSx file system.
-       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-       * content on the file system as files change in the data repository.
-       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-       * files are deleted in the data repository.
-       *
-       * You can define any combination of event types for your `AutoImportPolicy` .
-       */
-      public fun events(vararg events: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty.builder()
-
-      /**
-       * @param events The `AutoImportPolicy` can have the following event values:. 
-       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-       * that do not currently exist in the FSx file system.
-       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-       * content on the file system as files change in the data repository.
-       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-       * files are deleted in the data repository.
-       *
-       * You can define any combination of event types for your `AutoImportPolicy` .
-       */
-      override fun events(events: List<String>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param events The `AutoImportPolicy` can have the following event values:. 
-       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-       * that do not currently exist in the FSx file system.
-       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-       * content on the file system as files change in the data repository.
-       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-       * files are deleted in the data repository.
-       *
-       * You can define any combination of event types for your `AutoImportPolicy` .
-       */
-      override fun events(vararg events: String): Unit = events(events.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
-    ) : CdkObject(cdkObject), AutoImportPolicyProperty {
-      /**
-       * The `AutoImportPolicy` can have the following event values:.
-       *
-       * * `NEW` - Amazon FSx automatically imports metadata of files added to the linked S3 bucket
-       * that do not currently exist in the FSx file system.
-       * * `CHANGED` - Amazon FSx automatically updates file metadata and invalidates existing file
-       * content on the file system as files change in the data repository.
-       * * `DELETED` - Amazon FSx automatically deletes files on the file system as corresponding
-       * files are deleted in the data repository.
-       *
-       * You can define any combination of event types for your `AutoImportPolicy` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html#cfn-fsx-datarepositoryassociation-autoimportpolicy-events)
-       */
-      override fun events(): List<String> = unwrap(this).getEvents()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoImportPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty):
-          AutoImportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoImportPolicyProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoImportPolicyProperty):
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
-    }
-  }
-
-  /**
-   * Describes a data repository association's automatic export policy.
-   *
-   * The `AutoExportPolicy` defines the types of updated objects on the file system that will be
-   * automatically exported to the data repository. As you create, modify, or delete files, Amazon FSx
-   * for Lustre automatically exports the defined changes asynchronously once your application finishes
-   * modifying the file.
-   *
-   * The `AutoExportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
-   * repository association.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.fsx.*;
-   * AutoExportPolicyProperty autoExportPolicyProperty = AutoExportPolicyProperty.builder()
-   * .events(List.of("events"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html)
-   */
-  public interface AutoExportPolicyProperty {
-    /**
-     * The `AutoExportPolicy` can have the following event values:.
-     *
-     * * `NEW` - New files and directories are automatically exported to the data repository as they
-     * are added to the file system.
-     * * `CHANGED` - Changes to files and directories on the file system are automatically exported
-     * to the data repository.
-     * * `DELETED` - Files and directories are automatically deleted on the data repository when
-     * they are deleted on the file system.
-     *
-     * You can define any combination of event types for your `AutoExportPolicy` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html#cfn-fsx-datarepositoryassociation-autoexportpolicy-events)
-     */
-    public fun events(): List<String>
-
-    /**
-     * A builder for [AutoExportPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param events The `AutoExportPolicy` can have the following event values:. 
-       * * `NEW` - New files and directories are automatically exported to the data repository as
-       * they are added to the file system.
-       * * `CHANGED` - Changes to files and directories on the file system are automatically
-       * exported to the data repository.
-       * * `DELETED` - Files and directories are automatically deleted on the data repository when
-       * they are deleted on the file system.
-       *
-       * You can define any combination of event types for your `AutoExportPolicy` .
-       */
-      public fun events(events: List<String>)
-
-      /**
-       * @param events The `AutoExportPolicy` can have the following event values:. 
-       * * `NEW` - New files and directories are automatically exported to the data repository as
-       * they are added to the file system.
-       * * `CHANGED` - Changes to files and directories on the file system are automatically
-       * exported to the data repository.
-       * * `DELETED` - Files and directories are automatically deleted on the data repository when
-       * they are deleted on the file system.
-       *
-       * You can define any combination of event types for your `AutoExportPolicy` .
-       */
-      public fun events(vararg events: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty.builder()
-
-      /**
-       * @param events The `AutoExportPolicy` can have the following event values:. 
-       * * `NEW` - New files and directories are automatically exported to the data repository as
-       * they are added to the file system.
-       * * `CHANGED` - Changes to files and directories on the file system are automatically
-       * exported to the data repository.
-       * * `DELETED` - Files and directories are automatically deleted on the data repository when
-       * they are deleted on the file system.
-       *
-       * You can define any combination of event types for your `AutoExportPolicy` .
-       */
-      override fun events(events: List<String>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param events The `AutoExportPolicy` can have the following event values:. 
-       * * `NEW` - New files and directories are automatically exported to the data repository as
-       * they are added to the file system.
-       * * `CHANGED` - Changes to files and directories on the file system are automatically
-       * exported to the data repository.
-       * * `DELETED` - Files and directories are automatically deleted on the data repository when
-       * they are deleted on the file system.
-       *
-       * You can define any combination of event types for your `AutoExportPolicy` .
-       */
-      override fun events(vararg events: String): Unit = events(events.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
-    ) : CdkObject(cdkObject), AutoExportPolicyProperty {
-      /**
-       * The `AutoExportPolicy` can have the following event values:.
-       *
-       * * `NEW` - New files and directories are automatically exported to the data repository as
-       * they are added to the file system.
-       * * `CHANGED` - Changes to files and directories on the file system are automatically
-       * exported to the data repository.
-       * * `DELETED` - Files and directories are automatically deleted on the data repository when
-       * they are deleted on the file system.
-       *
-       * You can define any combination of event types for your `AutoExportPolicy` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html#cfn-fsx-datarepositoryassociation-autoexportpolicy-events)
-       */
-      override fun events(): List<String> = unwrap(this).getEvents()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoExportPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty):
-          AutoExportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoExportPolicyProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoExportPolicyProperty):
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
     }
   }
 }

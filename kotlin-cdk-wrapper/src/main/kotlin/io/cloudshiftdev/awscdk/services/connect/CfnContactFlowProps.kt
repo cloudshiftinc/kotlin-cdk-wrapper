@@ -231,7 +231,7 @@ public interface CfnContactFlowProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowProps,
   ) : CdkObject(cdkObject), CfnContactFlowProps {
     /**
      * The content of the flow.

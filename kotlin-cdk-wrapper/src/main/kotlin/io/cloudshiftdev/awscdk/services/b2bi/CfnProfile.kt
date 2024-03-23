@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-profile.html)
  */
-public open class CfnProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnProfile,
+public open class CfnProfile(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -337,6 +337,6 @@ public open class CfnProfile internal constructor(
         CfnProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfile): software.amazon.awscdk.services.b2bi.CfnProfile =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.b2bi.CfnProfile
   }
 }

@@ -134,7 +134,7 @@ public interface CfnKeyValueStoreProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStoreProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStoreProps,
   ) : CdkObject(cdkObject), CfnKeyValueStoreProps {
     /**
      * A comment for the key value store.

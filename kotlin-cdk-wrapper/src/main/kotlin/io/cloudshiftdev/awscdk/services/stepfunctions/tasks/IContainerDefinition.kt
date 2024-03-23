@@ -19,8 +19,7 @@ public interface IContainerDefinition {
   public fun bind(task: ISageMakerTask): ContainerDefinitionConfig
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition,
   ) : CdkObject(cdkObject), IContainerDefinition {
     /**
      * Called when the ContainerDefinition is used by a SageMaker task.

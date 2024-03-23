@@ -571,7 +571,7 @@ public interface CfnFlowSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps,
   ) : CdkObject(cdkObject), CfnFlowSourceProps {
     /**
      * The type of encryption that is used on the content ingested from the source.

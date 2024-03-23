@@ -51,7 +51,7 @@ public interface IVirtualRouter : IResource {
   public fun virtualRouterName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.IVirtualRouter,
+    cdkObject: software.amazon.awscdk.services.appmesh.IVirtualRouter,
   ) : CdkObject(cdkObject), IVirtualRouter {
     /**
      * Add a single route to the router.

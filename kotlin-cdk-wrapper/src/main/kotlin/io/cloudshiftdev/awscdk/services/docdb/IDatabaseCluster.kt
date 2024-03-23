@@ -51,7 +51,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
   public fun securityGroupId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.IDatabaseCluster,
+    cdkObject: software.amazon.awscdk.services.docdb.IDatabaseCluster,
   ) : CdkObject(cdkObject), IDatabaseCluster {
     /**
      * Apply the given removal policy to this resource.

@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html)
  */
-public open class CfnVPCPeeringConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection,
+public open class CfnVPCPeeringConnection(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -360,6 +360,7 @@ public open class CfnVPCPeeringConnection internal constructor(
         CfnVPCPeeringConnection = CfnVPCPeeringConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCPeeringConnection):
-        software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection
   }
 }

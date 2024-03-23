@@ -63,7 +63,7 @@ public interface AllowListReceiptFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilterProps,
+    cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilterProps,
   ) : CdkObject(cdkObject), AllowListReceiptFilterProps {
     /**
      * A list of ip addresses or ranges to allow list.

@@ -198,8 +198,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)
  */
-public open class CfnOriginEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint,
+public open class CfnOriginEndpoint(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1058,11 +1058,12 @@ public open class CfnOriginEndpoint internal constructor(
         CfnOriginEndpoint = CfnOriginEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginEndpoint):
-        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
   }
 
   /**
-   * Parameters for Microsoft Smooth Streaming packaging.
+   * Parameters for enabling CDN authorization on the endpoint.
    *
    * Example:
    *
@@ -1070,8 +1071,126 @@ public open class CfnOriginEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * MssPackageProperty mssPackageProperty = MssPackageProperty.builder()
-   * .encryption(MssEncryptionProperty.builder()
+   * AuthorizationProperty authorizationProperty = AuthorizationProperty.builder()
+   * .cdnIdentifierSecret("cdnIdentifierSecret")
+   * .secretsRoleArn("secretsRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html)
+   */
+  public interface AuthorizationProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that your Content
+     * Delivery Network (CDN) uses for authorization to access your endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-cdnidentifiersecret)
+     */
+    public fun cdnIdentifierSecret(): String
+
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that allows AWS Elemental MediaPackage to
+     * communicate with AWS Secrets Manager .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn)
+     */
+    public fun secretsRoleArn(): String
+
+    /**
+     * A builder for [AuthorizationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in AWS Secrets
+       * Manager that your Content Delivery Network (CDN) uses for authorization to access your
+       * endpoint. 
+       */
+      public fun cdnIdentifierSecret(cdnIdentifierSecret: String)
+
+      /**
+       * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows AWS
+       * Elemental MediaPackage to communicate with AWS Secrets Manager . 
+       */
+      public fun secretsRoleArn(secretsRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty.builder()
+
+      /**
+       * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in AWS Secrets
+       * Manager that your Content Delivery Network (CDN) uses for authorization to access your
+       * endpoint. 
+       */
+      override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
+        cdkBuilder.cdnIdentifierSecret(cdnIdentifierSecret)
+      }
+
+      /**
+       * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows AWS
+       * Elemental MediaPackage to communicate with AWS Secrets Manager . 
+       */
+      override fun secretsRoleArn(secretsRoleArn: String) {
+        cdkBuilder.secretsRoleArn(secretsRoleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty,
+    ) : CdkObject(cdkObject), AuthorizationProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that your Content
+       * Delivery Network (CDN) uses for authorization to access your endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-cdnidentifiersecret)
+       */
+      override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
+
+      /**
+       * The Amazon Resource Name (ARN) for the IAM role that allows AWS Elemental MediaPackage to
+       * communicate with AWS Secrets Manager .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn)
+       */
+      override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AuthorizationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty):
+          AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthorizationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AuthorizationProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty
+    }
+  }
+
+  /**
+   * Holds encryption information so that access to the content can be controlled by a DRM solution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * CmafEncryptionProperty cmafEncryptionProperty = CmafEncryptionProperty.builder()
    * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
    * .resourceId("resourceId")
    * .roleArn("roleArn")
@@ -1084,227 +1203,208 @@ public open class CfnOriginEndpoint internal constructor(
    * .presetSpeke20Video("presetSpeke20Video")
    * .build())
    * .build())
-   * .build())
-   * .manifestWindowSeconds(123)
-   * .segmentDurationSeconds(123)
-   * .streamSelection(StreamSelectionProperty.builder()
-   * .maxVideoBitsPerSecond(123)
-   * .minVideoBitsPerSecond(123)
-   * .streamOrder("streamOrder")
-   * .build())
+   * // the properties below are optional
+   * .constantInitializationVector("constantInitializationVector")
+   * .encryptionMethod("encryptionMethod")
+   * .keyRotationIntervalSeconds(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html)
    */
-  public interface MssPackageProperty {
+  public interface CmafEncryptionProperty {
     /**
-     * Parameters for encrypting content.
+     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in
+     * conjunction with the key for encrypting blocks.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-encryption)
+     * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
+     * initialization vector (IV).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-constantinitializationvector)
      */
-    public fun encryption(): Any? = unwrap(this).getEncryption()
+    public fun constantInitializationVector(): String? =
+        unwrap(this).getConstantInitializationVector()
 
     /**
-     * Time window (in seconds) contained in each manifest.
+     * The encryption method to use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-encryptionmethod)
      */
-    public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+    public fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
 
     /**
-     * Duration (in seconds) of each fragment.
+     * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
      *
-     * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+     * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds)
      */
-    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
 
     /**
-     * Limitations for outputs from the endpoint, based on the video bitrate.
+     * Parameters for the SPEKE key provider.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-streamselection)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider)
      */
-    public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+    public fun spekeKeyProvider(): Any
 
     /**
-     * A builder for [MssPackageProperty]
+     * A builder for [CmafEncryptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a
+       * 32-character string, used in conjunction with the key for encrypting blocks.
+       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
+       * initialization vector (IV).
        */
-      public fun encryption(encryption: IResolvable)
+      public fun constantInitializationVector(constantInitializationVector: String)
 
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param encryptionMethod The encryption method to use.
        */
-      public fun encryption(encryption: MssEncryptionProperty)
+      public fun encryptionMethod(encryptionMethod: String)
 
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
+       * rotates to a new key.
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       */
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
-      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
-       */
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
-
-      /**
-       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-       */
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      public fun streamSelection(streamSelection: IResolvable)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      public fun streamSelection(streamSelection: StreamSelectionProperty)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
+      @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty.Builder
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty.Builder
           =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty.builder()
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty.builder()
 
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a
+       * 32-character string, used in conjunction with the key for encrypting blocks.
+       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
+       * initialization vector (IV).
        */
-      override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      override fun constantInitializationVector(constantInitializationVector: String) {
+        cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param encryptionMethod The encryption method to use.
        */
-      override fun encryption(encryption: MssEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(MssEncryptionProperty::unwrap))
+      override fun encryptionMethod(encryptionMethod: String) {
+        cdkBuilder.encryptionMethod(encryptionMethod)
       }
 
       /**
-       * @param encryption Parameters for encrypting content.
+       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
+       * rotates to a new key.
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       */
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
-      override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
-          encryption(MssEncryptionProperty(encryption))
-
-      /**
-       * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
-       */
-      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-        cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
-      }
-
-      /**
-       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-       */
-      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
-      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
-          Unit = streamSelection(StreamSelectionProperty(streamSelection))
+      @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty,
-    ) : CdkObject(cdkObject), MssPackageProperty {
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty,
+    ) : CdkObject(cdkObject), CmafEncryptionProperty {
       /**
-       * Parameters for encrypting content.
+       * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in
+       * conjunction with the key for encrypting blocks.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-encryption)
+       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
+       * initialization vector (IV).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-constantinitializationvector)
        */
-      override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun constantInitializationVector(): String? =
+          unwrap(this).getConstantInitializationVector()
 
       /**
-       * Time window (in seconds) contained in each manifest.
+       * The encryption method to use.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-encryptionmethod)
        */
-      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
 
       /**
-       * Duration (in seconds) of each fragment.
+       * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
        *
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds)
        */
-      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+      override fun keyRotationIntervalSeconds(): Number? =
+          unwrap(this).getKeyRotationIntervalSeconds()
 
       /**
-       * Limitations for outputs from the endpoint, based on the video bitrate.
+       * Parameters for the SPEKE key provider.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-streamselection)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider)
        */
-      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MssPackageProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CmafEncryptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty):
-          MssPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? MssPackageProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty):
+          CmafEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CmafEncryptionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MssPackageProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
+      internal fun unwrap(wrapped: CmafEncryptionProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty
     }
   }
 
@@ -1574,8 +1674,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty,
     ) : CdkObject(cdkObject), CmafPackageProperty {
       /**
        * Parameters for encrypting content.
@@ -1636,1881 +1735,6 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   /**
-   * Parameters for enabling CDN authorization on the endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * AuthorizationProperty authorizationProperty = AuthorizationProperty.builder()
-   * .cdnIdentifierSecret("cdnIdentifierSecret")
-   * .secretsRoleArn("secretsRoleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html)
-   */
-  public interface AuthorizationProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that your Content
-     * Delivery Network (CDN) uses for authorization to access your endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-cdnidentifiersecret)
-     */
-    public fun cdnIdentifierSecret(): String
-
-    /**
-     * The Amazon Resource Name (ARN) for the IAM role that allows AWS Elemental MediaPackage to
-     * communicate with AWS Secrets Manager .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn)
-     */
-    public fun secretsRoleArn(): String
-
-    /**
-     * A builder for [AuthorizationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in AWS Secrets
-       * Manager that your Content Delivery Network (CDN) uses for authorization to access your
-       * endpoint. 
-       */
-      public fun cdnIdentifierSecret(cdnIdentifierSecret: String)
-
-      /**
-       * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows AWS
-       * Elemental MediaPackage to communicate with AWS Secrets Manager . 
-       */
-      public fun secretsRoleArn(secretsRoleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty.builder()
-
-      /**
-       * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in AWS Secrets
-       * Manager that your Content Delivery Network (CDN) uses for authorization to access your
-       * endpoint. 
-       */
-      override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
-        cdkBuilder.cdnIdentifierSecret(cdnIdentifierSecret)
-      }
-
-      /**
-       * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows AWS
-       * Elemental MediaPackage to communicate with AWS Secrets Manager . 
-       */
-      override fun secretsRoleArn(secretsRoleArn: String) {
-        cdkBuilder.secretsRoleArn(secretsRoleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty,
-    ) : CdkObject(cdkObject), AuthorizationProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that your Content
-       * Delivery Network (CDN) uses for authorization to access your endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-cdnidentifiersecret)
-       */
-      override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
-
-      /**
-       * The Amazon Resource Name (ARN) for the IAM role that allows AWS Elemental MediaPackage to
-       * communicate with AWS Secrets Manager .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn)
-       */
-      override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuthorizationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty):
-          AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthorizationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthorizationProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty
-    }
-  }
-
-  /**
-   * Key provider settings for DRM.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * SpekeKeyProviderProperty spekeKeyProviderProperty = SpekeKeyProviderProperty.builder()
-   * .resourceId("resourceId")
-   * .roleArn("roleArn")
-   * .systemIds(List.of("systemIds"))
-   * .url("url")
-   * // the properties below are optional
-   * .certificateArn("certificateArn")
-   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html)
-   */
-  public interface SpekeKeyProviderProperty {
-    /**
-     * The Amazon Resource Name (ARN) for the certificate that you imported to AWS Certificate
-     * Manager to add content key encryption to this endpoint.
-     *
-     * For this feature to work, your DRM key provider must support content key encryption.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn)
-     */
-    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-    /**
-     * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
-     * your endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys
-     * are used to encrypt the audio and video tracks in your stream. To configure the encryption
-     * contract, specify which audio and video encryption presets to use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
-     */
-    public fun encryptionContractConfiguration(): Any? =
-        unwrap(this).getEncryptionContractConfiguration()
-
-    /**
-     * Unique identifier for this endpoint, as it is configured in the key provider service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid)
-     */
-    public fun resourceId(): String
-
-    /**
-     * The ARN for the IAM role that's granted by the key provider to provide access to the key
-     * provider API.
-     *
-     * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the role,
-     * and it must have a sufficient permissions policy to allow access to the specific key retrieval
-     * URL. Valid format: arn:aws:iam::{accountID}:role/{name}
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn)
-     */
-    public fun roleArn(): String
-
-    /**
-     * List of unique identifiers for the DRM systems to use, as defined in the CPIX specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids)
-     */
-    public fun systemIds(): List<String>
-
-    /**
-     * URL for the key provider’s key retrieval API endpoint.
-     *
-     * Must start with https://.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url)
-     */
-    public fun url(): String
-
-    /**
-     * A builder for [SpekeKeyProviderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateArn The Amazon Resource Name (ARN) for the certificate that you imported
-       * to AWS Certificate Manager to add content key encryption to this endpoint.
-       * For this feature to work, your DRM key provider must support content key encryption.
-       */
-      public fun certificateArn(certificateArn: String)
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
-      public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param resourceId Unique identifier for this endpoint, as it is configured in the key
-       * provider service. 
-       */
-      public fun resourceId(resourceId: String)
-
-      /**
-       * @param roleArn The ARN for the IAM role that's granted by the key provider to provide
-       * access to the key provider API. 
-       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
-       * role, and it must have a sufficient permissions policy to allow access to the specific key
-       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
-       * CPIX specification. 
-       */
-      public fun systemIds(systemIds: List<String>)
-
-      /**
-       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
-       * CPIX specification. 
-       */
-      public fun systemIds(vararg systemIds: String)
-
-      /**
-       * @param url URL for the key provider’s key retrieval API endpoint. 
-       * Must start with https://.
-       */
-      public fun url(url: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty.builder()
-
-      /**
-       * @param certificateArn The Amazon Resource Name (ARN) for the certificate that you imported
-       * to AWS Certificate Manager to add content key encryption to this endpoint.
-       * For this feature to work, your DRM key provider must support content key encryption.
-       */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
-      }
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
-       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
-       * encryption contract defines which content keys are used to encrypt the audio and video tracks
-       * in your stream. To configure the encryption contract, specify which audio and video encryption
-       * presets to use.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
-      override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
-
-      /**
-       * @param resourceId Unique identifier for this endpoint, as it is configured in the key
-       * provider service. 
-       */
-      override fun resourceId(resourceId: String) {
-        cdkBuilder.resourceId(resourceId)
-      }
-
-      /**
-       * @param roleArn The ARN for the IAM role that's granted by the key provider to provide
-       * access to the key provider API. 
-       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
-       * role, and it must have a sufficient permissions policy to allow access to the specific key
-       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
-       * CPIX specification. 
-       */
-      override fun systemIds(systemIds: List<String>) {
-        cdkBuilder.systemIds(systemIds)
-      }
-
-      /**
-       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
-       * CPIX specification. 
-       */
-      override fun systemIds(vararg systemIds: String): Unit = systemIds(systemIds.toList())
-
-      /**
-       * @param url URL for the key provider’s key retrieval API endpoint. 
-       * Must start with https://.
-       */
-      override fun url(url: String) {
-        cdkBuilder.url(url)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty,
-    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
-      /**
-       * The Amazon Resource Name (ARN) for the certificate that you imported to AWS Certificate
-       * Manager to add content key encryption to this endpoint.
-       *
-       * For this feature to work, your DRM key provider must support content key encryption.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn)
-       */
-      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-      /**
-       * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
-       * your endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys
-       * are used to encrypt the audio and video tracks in your stream. To configure the encryption
-       * contract, specify which audio and video encryption presets to use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
-       */
-      override fun encryptionContractConfiguration(): Any? =
-          unwrap(this).getEncryptionContractConfiguration()
-
-      /**
-       * Unique identifier for this endpoint, as it is configured in the key provider service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid)
-       */
-      override fun resourceId(): String = unwrap(this).getResourceId()
-
-      /**
-       * The ARN for the IAM role that's granted by the key provider to provide access to the key
-       * provider API.
-       *
-       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
-       * role, and it must have a sufficient permissions policy to allow access to the specific key
-       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn)
-       */
-      override fun roleArn(): String = unwrap(this).getRoleArn()
-
-      /**
-       * List of unique identifiers for the DRM systems to use, as defined in the CPIX
-       * specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids)
-       */
-      override fun systemIds(): List<String> = unwrap(this).getSystemIds()
-
-      /**
-       * URL for the key provider’s key retrieval API endpoint.
-       *
-       * Must start with https://.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url)
-       */
-      override fun url(): String = unwrap(this).getUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SpekeKeyProviderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty):
-          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SpekeKeyProviderProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty
-    }
-  }
-
-  /**
-   * An HTTP Live Streaming (HLS) manifest configuration on a CMAF endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * HlsManifestProperty hlsManifestProperty = HlsManifestProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .adMarkers("adMarkers")
-   * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
-   * .adTriggers(List.of("adTriggers"))
-   * .includeIframeOnlyStream(false)
-   * .manifestName("manifestName")
-   * .playlistType("playlistType")
-   * .playlistWindowSeconds(123)
-   * .programDateTimeIntervalSeconds(123)
-   * .url("url")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html)
-   */
-  public interface HlsManifestProperty {
-    /**
-     * Controls how ad markers are included in the packaged endpoint.
-     *
-     * Valid values:
-     *
-     * * `NONE` - Omits all SCTE-35 ad markers from the output.
-     * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-     * directly from the input manifest.
-     * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-     * SCTE-35 messages from the input manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-admarkers)
-     */
-    public fun adMarkers(): String? = unwrap(this).getAdMarkers()
-
-    /**
-     * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
-     * the output manifest.
-     *
-     * Valid values:
-     *
-     * * `BREAK`
-     * * `DISTRIBUTOR_ADVERTISEMENT`
-     * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-     * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-     * * `PROVIDER_ADVERTISEMENT`
-     * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-     * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-     * * `SPLICE_INSERT`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)
-     */
-    public fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
-
-    /**
-     * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
-     * MediaPackage to insert ad markers in the output manifest.
-     *
-     * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options in
-     * AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions)
-     */
-    public fun adsOnDeliveryRestrictions(): String? = unwrap(this).getAdsOnDeliveryRestrictions()
-
-    /**
-     * The manifest ID is required and must be unique within the OriginEndpoint.
-     *
-     * The ID can't be changed after the endpoint is created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id)
-     */
-    public fun id(): String
-
-    /**
-     * Applies to stream sets with a single video track only.
-     *
-     * When true, the stream set includes an additional I-frame only stream, along with the other
-     * tracks. If false, this extra stream is not included.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream)
-     */
-    public fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
-
-    /**
-     * A short string that's appended to the end of the endpoint URL to create a unique path to this
-     * endpoint.
-     *
-     * The manifestName on the HLSManifest object overrides the manifestName that you provided on
-     * the originEndpoint object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname)
-     */
-    public fun manifestName(): String? = unwrap(this).getManifestName()
-
-    /**
-     * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
-     * included in the media playlist.
-     *
-     * Indicates if the playlist is live-to-VOD content.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype)
-     */
-    public fun playlistType(): String? = unwrap(this).getPlaylistType()
-
-    /**
-     * Time window (in seconds) contained in each parent manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds)
-     */
-    public fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
-
-    /**
-     * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
-     * specify.
-     *
-     * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-     * content was ingested.
-     *
-     * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-     * through to the HLS output.
-     *
-     * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are not
-     * included in the manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds)
-     */
-    public fun programDateTimeIntervalSeconds(): Number? =
-        unwrap(this).getProgramDateTimeIntervalSeconds()
-
-    /**
-     * The URL that's used to request this manifest from this endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url)
-     */
-    public fun url(): String? = unwrap(this).getUrl()
-
-    /**
-     * A builder for [HlsManifestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       */
-      public fun adMarkers(adMarkers: String)
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      public fun adTriggers(adTriggers: List<String>)
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      public fun adTriggers(vararg adTriggers: String)
-
-      /**
-       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
-       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       */
-      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
-
-      /**
-       * @param id The manifest ID is required and must be unique within the OriginEndpoint. 
-       * The ID can't be changed after the endpoint is created.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
-
-      /**
-       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
-
-      /**
-       * @param manifestName A short string that's appended to the end of the endpoint URL to create
-       * a unique path to this endpoint.
-       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
-       * the originEndpoint object.
-       */
-      public fun manifestName(manifestName: String)
-
-      /**
-       * @param playlistType When specified as either `event` or `vod` , a corresponding
-       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
-       * Indicates if the playlist is live-to-VOD content.
-       */
-      public fun playlistType(playlistType: String)
-
-      /**
-       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
-       */
-      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
-
-      /**
-       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
-       * manifest at the interval that you specify.
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       */
-      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
-
-      /**
-       * @param url The URL that's used to request this manifest from this endpoint.
-       */
-      public fun url(url: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty.builder()
-
-      /**
-       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       */
-      override fun adMarkers(adMarkers: String) {
-        cdkBuilder.adMarkers(adMarkers)
-      }
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      override fun adTriggers(adTriggers: List<String>) {
-        cdkBuilder.adTriggers(adTriggers)
-      }
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
-
-      /**
-       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
-       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       */
-      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
-        cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
-      }
-
-      /**
-       * @param id The manifest ID is required and must be unique within the OriginEndpoint. 
-       * The ID can't be changed after the endpoint is created.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
-      }
-
-      /**
-       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param manifestName A short string that's appended to the end of the endpoint URL to create
-       * a unique path to this endpoint.
-       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
-       * the originEndpoint object.
-       */
-      override fun manifestName(manifestName: String) {
-        cdkBuilder.manifestName(manifestName)
-      }
-
-      /**
-       * @param playlistType When specified as either `event` or `vod` , a corresponding
-       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
-       * Indicates if the playlist is live-to-VOD content.
-       */
-      override fun playlistType(playlistType: String) {
-        cdkBuilder.playlistType(playlistType)
-      }
-
-      /**
-       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
-       */
-      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
-        cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
-      }
-
-      /**
-       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
-       * manifest at the interval that you specify.
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       */
-      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
-        cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
-      }
-
-      /**
-       * @param url The URL that's used to request this manifest from this endpoint.
-       */
-      override fun url(url: String) {
-        cdkBuilder.url(url)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty,
-    ) : CdkObject(cdkObject), HlsManifestProperty {
-      /**
-       * Controls how ad markers are included in the packaged endpoint.
-       *
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-admarkers)
-       */
-      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
-
-      /**
-       * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
-       * the output manifest.
-       *
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)
-       */
-      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
-
-      /**
-       * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
-       * MediaPackage to insert ad markers in the output manifest.
-       *
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions)
-       */
-      override fun adsOnDeliveryRestrictions(): String? =
-          unwrap(this).getAdsOnDeliveryRestrictions()
-
-      /**
-       * The manifest ID is required and must be unique within the OriginEndpoint.
-       *
-       * The ID can't be changed after the endpoint is created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * Applies to stream sets with a single video track only.
-       *
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream)
-       */
-      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
-
-      /**
-       * A short string that's appended to the end of the endpoint URL to create a unique path to
-       * this endpoint.
-       *
-       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
-       * the originEndpoint object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname)
-       */
-      override fun manifestName(): String? = unwrap(this).getManifestName()
-
-      /**
-       * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
-       * included in the media playlist.
-       *
-       * Indicates if the playlist is live-to-VOD content.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype)
-       */
-      override fun playlistType(): String? = unwrap(this).getPlaylistType()
-
-      /**
-       * Time window (in seconds) contained in each parent manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds)
-       */
-      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
-
-      /**
-       * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
-       * specify.
-       *
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds)
-       */
-      override fun programDateTimeIntervalSeconds(): Number? =
-          unwrap(this).getProgramDateTimeIntervalSeconds()
-
-      /**
-       * The URL that's used to request this manifest from this endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url)
-       */
-      override fun url(): String? = unwrap(this).getUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HlsManifestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty):
-          HlsManifestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsManifestProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HlsManifestProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty
-    }
-  }
-
-  /**
-   * Parameters for Apple HLS packaging.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * HlsPackageProperty hlsPackageProperty = HlsPackageProperty.builder()
-   * .adMarkers("adMarkers")
-   * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
-   * .adTriggers(List.of("adTriggers"))
-   * .encryption(HlsEncryptionProperty.builder()
-   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
-   * .resourceId("resourceId")
-   * .roleArn("roleArn")
-   * .systemIds(List.of("systemIds"))
-   * .url("url")
-   * // the properties below are optional
-   * .certificateArn("certificateArn")
-   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .constantInitializationVector("constantInitializationVector")
-   * .encryptionMethod("encryptionMethod")
-   * .keyRotationIntervalSeconds(123)
-   * .repeatExtXKey(false)
-   * .build())
-   * .includeDvbSubtitles(false)
-   * .includeIframeOnlyStream(false)
-   * .playlistType("playlistType")
-   * .playlistWindowSeconds(123)
-   * .programDateTimeIntervalSeconds(123)
-   * .segmentDurationSeconds(123)
-   * .streamSelection(StreamSelectionProperty.builder()
-   * .maxVideoBitsPerSecond(123)
-   * .minVideoBitsPerSecond(123)
-   * .streamOrder("streamOrder")
-   * .build())
-   * .useAudioRenditionGroup(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html)
-   */
-  public interface HlsPackageProperty {
-    /**
-     * Controls how ad markers are included in the packaged endpoint.
-     *
-     * Valid values:
-     *
-     * * `NONE` - Omits all SCTE-35 ad markers from the output.
-     * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-     * directly from the input manifest.
-     * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-     * SCTE-35 messages from the input manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers)
-     */
-    public fun adMarkers(): String? = unwrap(this).getAdMarkers()
-
-    /**
-     * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
-     * the output manifest.
-     *
-     * Valid values:
-     *
-     * * `BREAK`
-     * * `DISTRIBUTOR_ADVERTISEMENT`
-     * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-     * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-     * * `PROVIDER_ADVERTISEMENT`
-     * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-     * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-     * * `SPLICE_INSERT`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers)
-     */
-    public fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
-
-    /**
-     * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
-     * MediaPackage to insert ad markers in the output manifest.
-     *
-     * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options in
-     * AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions)
-     */
-    public fun adsOnDeliveryRestrictions(): String? = unwrap(this).getAdsOnDeliveryRestrictions()
-
-    /**
-     * Parameters for encrypting content.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption)
-     */
-    public fun encryption(): Any? = unwrap(this).getEncryption()
-
-    /**
-     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the
-     * output.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includedvbsubtitles)
-     */
-    public fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
-
-    /**
-     * Only applies to stream sets with a single video track.
-     *
-     * When true, the stream set includes an additional I-frame only stream, along with the other
-     * tracks. If false, this extra stream is not included.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream)
-     */
-    public fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
-
-    /**
-     * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
-     * included in the media playlist.
-     *
-     * Indicates if the playlist is live-to-VOD content.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype)
-     */
-    public fun playlistType(): String? = unwrap(this).getPlaylistType()
-
-    /**
-     * Time window (in seconds) contained in each parent manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds)
-     */
-    public fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
-
-    /**
-     * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
-     * specify.
-     *
-     * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-     * content was ingested.
-     *
-     * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-     * through to the HLS output.
-     *
-     * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are not
-     * included in the manifest.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds)
-     */
-    public fun programDateTimeIntervalSeconds(): Number? =
-        unwrap(this).getProgramDateTimeIntervalSeconds()
-
-    /**
-     * Duration (in seconds) of each fragment.
-     *
-     * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds)
-     */
-    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
-
-    /**
-     * Limitations for outputs from the endpoint, based on the video bitrate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-streamselection)
-     */
-    public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
-
-    /**
-     * When true, AWS Elemental MediaPackage bundles all audio tracks in a rendition group.
-     *
-     * All other tracks in the stream can be used with any audio rendition from the group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup)
-     */
-    public fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
-
-    /**
-     * A builder for [HlsPackageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       */
-      public fun adMarkers(adMarkers: String)
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      public fun adTriggers(adTriggers: List<String>)
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      public fun adTriggers(vararg adTriggers: String)
-
-      /**
-       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
-       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       */
-      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      public fun encryption(encryption: IResolvable)
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      public fun encryption(encryption: HlsEncryptionProperty)
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
-      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit)
-
-      /**
-       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
-       * broadcasting (DVB) subtitles into the output.
-       */
-      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean)
-
-      /**
-       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
-       * broadcasting (DVB) subtitles into the output.
-       */
-      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable)
-
-      /**
-       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
-
-      /**
-       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
-
-      /**
-       * @param playlistType When specified as either `event` or `vod` , a corresponding
-       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
-       * Indicates if the playlist is live-to-VOD content.
-       */
-      public fun playlistType(playlistType: String)
-
-      /**
-       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
-       */
-      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
-
-      /**
-       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
-       * manifest at the interval that you specify.
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       */
-      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
-
-      /**
-       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-       */
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      public fun streamSelection(streamSelection: IResolvable)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      public fun streamSelection(streamSelection: StreamSelectionProperty)
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
-
-      /**
-       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
-       * tracks in a rendition group.
-       * All other tracks in the stream can be used with any audio rendition from the group.
-       */
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean)
-
-      /**
-       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
-       * tracks in a rendition group.
-       * All other tracks in the stream can be used with any audio rendition from the group.
-       */
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty.builder()
-
-      /**
-       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       */
-      override fun adMarkers(adMarkers: String) {
-        cdkBuilder.adMarkers(adMarkers)
-      }
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      override fun adTriggers(adTriggers: List<String>) {
-        cdkBuilder.adTriggers(adTriggers)
-      }
-
-      /**
-       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
-       * treats as ad markers in the output manifest.
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       */
-      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
-
-      /**
-       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
-       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       */
-      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
-        cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
-      }
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      override fun encryption(encryption: HlsEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(HlsEncryptionProperty::unwrap))
-      }
-
-      /**
-       * @param encryption Parameters for encrypting content.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
-      override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
-          encryption(HlsEncryptionProperty(encryption))
-
-      /**
-       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
-       * broadcasting (DVB) subtitles into the output.
-       */
-      override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
-        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles)
-      }
-
-      /**
-       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
-       * broadcasting (DVB) subtitles into the output.
-       */
-      override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
-        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
-      }
-
-      /**
-       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       */
-      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param playlistType When specified as either `event` or `vod` , a corresponding
-       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
-       * Indicates if the playlist is live-to-VOD content.
-       */
-      override fun playlistType(playlistType: String) {
-        cdkBuilder.playlistType(playlistType)
-      }
-
-      /**
-       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
-       */
-      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
-        cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
-      }
-
-      /**
-       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
-       * manifest at the interval that you specify.
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       */
-      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
-        cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
-      }
-
-      /**
-       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-       */
-      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
-      }
-
-      /**
-       * @param streamSelection Limitations for outputs from the endpoint, based on the video
-       * bitrate.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
-      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
-          Unit = streamSelection(StreamSelectionProperty(streamSelection))
-
-      /**
-       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
-       * tracks in a rendition group.
-       * All other tracks in the stream can be used with any audio rendition from the group.
-       */
-      override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
-        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup)
-      }
-
-      /**
-       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
-       * tracks in a rendition group.
-       * All other tracks in the stream can be used with any audio rendition from the group.
-       */
-      override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
-        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty,
-    ) : CdkObject(cdkObject), HlsPackageProperty {
-      /**
-       * Controls how ad markers are included in the packaged endpoint.
-       *
-       * Valid values:
-       *
-       * * `NONE` - Omits all SCTE-35 ad markers from the output.
-       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
-       * directly from the input manifest.
-       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
-       * SCTE-35 messages from the input manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers)
-       */
-      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
-
-      /**
-       * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
-       * the output manifest.
-       *
-       * Valid values:
-       *
-       * * `BREAK`
-       * * `DISTRIBUTOR_ADVERTISEMENT`
-       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_ADVERTISEMENT`
-       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
-       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
-       * * `SPLICE_INSERT`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers)
-       */
-      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
-
-      /**
-       * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
-       * MediaPackage to insert ad markers in the output manifest.
-       *
-       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
-       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions)
-       */
-      override fun adsOnDeliveryRestrictions(): String? =
-          unwrap(this).getAdsOnDeliveryRestrictions()
-
-      /**
-       * Parameters for encrypting content.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption)
-       */
-      override fun encryption(): Any? = unwrap(this).getEncryption()
-
-      /**
-       * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into
-       * the output.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includedvbsubtitles)
-       */
-      override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
-
-      /**
-       * Only applies to stream sets with a single video track.
-       *
-       * When true, the stream set includes an additional I-frame only stream, along with the other
-       * tracks. If false, this extra stream is not included.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream)
-       */
-      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
-
-      /**
-       * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
-       * included in the media playlist.
-       *
-       * Indicates if the playlist is live-to-VOD content.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype)
-       */
-      override fun playlistType(): String? = unwrap(this).getPlaylistType()
-
-      /**
-       * Time window (in seconds) contained in each parent manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds)
-       */
-      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
-
-      /**
-       * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
-       * specify.
-       *
-       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
-       * content was ingested.
-       *
-       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
-       * through to the HLS output.
-       *
-       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
-       * not included in the manifest.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds)
-       */
-      override fun programDateTimeIntervalSeconds(): Number? =
-          unwrap(this).getProgramDateTimeIntervalSeconds()
-
-      /**
-       * Duration (in seconds) of each fragment.
-       *
-       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds)
-       */
-      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
-
-      /**
-       * Limitations for outputs from the endpoint, based on the video bitrate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-streamselection)
-       */
-      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
-
-      /**
-       * When true, AWS Elemental MediaPackage bundles all audio tracks in a rendition group.
-       *
-       * All other tracks in the stream can be used with any audio rendition from the group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup)
-       */
-      override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HlsPackageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty):
-          HlsPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsPackageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HlsPackageProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty
-    }
-  }
-
-  /**
-   * Limitations for outputs from the endpoint, based on the video bitrate.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * StreamSelectionProperty streamSelectionProperty = StreamSelectionProperty.builder()
-   * .maxVideoBitsPerSecond(123)
-   * .minVideoBitsPerSecond(123)
-   * .streamOrder("streamOrder")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html)
-   */
-  public interface StreamSelectionProperty {
-    /**
-     * The upper limit of the bitrates that this endpoint serves.
-     *
-     * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
-     * output. If you don't specify a value, it defaults to 2147483647 bits per second.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond)
-     */
-    public fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
-
-    /**
-     * The lower limit of the bitrates that this endpoint serves.
-     *
-     * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it from
-     * output. If you don't specify a value, it defaults to 0 bits per second.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond)
-     */
-    public fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
-
-    /**
-     * Order in which the different video bitrates are presented to the player.
-     *
-     * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder)
-     */
-    public fun streamOrder(): String? = unwrap(this).getStreamOrder()
-
-    /**
-     * A builder for [StreamSelectionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxVideoBitsPerSecond The upper limit of the bitrates that this endpoint serves.
-       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
-       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
-       */
-      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number)
-
-      /**
-       * @param minVideoBitsPerSecond The lower limit of the bitrates that this endpoint serves.
-       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
-       * from output. If you don't specify a value, it defaults to 0 bits per second.
-       */
-      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number)
-
-      /**
-       * @param streamOrder Order in which the different video bitrates are presented to the player.
-       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
-       */
-      public fun streamOrder(streamOrder: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty.builder()
-
-      /**
-       * @param maxVideoBitsPerSecond The upper limit of the bitrates that this endpoint serves.
-       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
-       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
-       */
-      override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
-        cdkBuilder.maxVideoBitsPerSecond(maxVideoBitsPerSecond)
-      }
-
-      /**
-       * @param minVideoBitsPerSecond The lower limit of the bitrates that this endpoint serves.
-       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
-       * from output. If you don't specify a value, it defaults to 0 bits per second.
-       */
-      override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
-        cdkBuilder.minVideoBitsPerSecond(minVideoBitsPerSecond)
-      }
-
-      /**
-       * @param streamOrder Order in which the different video bitrates are presented to the player.
-       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
-       */
-      override fun streamOrder(streamOrder: String) {
-        cdkBuilder.streamOrder(streamOrder)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty,
-    ) : CdkObject(cdkObject), StreamSelectionProperty {
-      /**
-       * The upper limit of the bitrates that this endpoint serves.
-       *
-       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
-       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond)
-       */
-      override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
-
-      /**
-       * The lower limit of the bitrates that this endpoint serves.
-       *
-       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
-       * from output. If you don't specify a value, it defaults to 0 bits per second.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond)
-       */
-      override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
-
-      /**
-       * Order in which the different video bitrates are presented to the player.
-       *
-       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder)
-       */
-      override fun streamOrder(): String? = unwrap(this).getStreamOrder()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StreamSelectionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty):
-          StreamSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamSelectionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StreamSelectionProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty
-    }
-  }
-
-  /**
    * Holds encryption information so that access to the content can be controlled by a DRM solution.
    *
    * Example:
@@ -3519,7 +1743,7 @@ public open class CfnOriginEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * CmafEncryptionProperty cmafEncryptionProperty = CmafEncryptionProperty.builder()
+   * DashEncryptionProperty dashEncryptionProperty = DashEncryptionProperty.builder()
    * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
    * .resourceId("resourceId")
    * .roleArn("roleArn")
@@ -3533,68 +1757,34 @@ public open class CfnOriginEndpoint internal constructor(
    * .build())
    * .build())
    * // the properties below are optional
-   * .constantInitializationVector("constantInitializationVector")
-   * .encryptionMethod("encryptionMethod")
    * .keyRotationIntervalSeconds(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html)
    */
-  public interface CmafEncryptionProperty {
-    /**
-     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in
-     * conjunction with the key for encrypting blocks.
-     *
-     * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
-     * initialization vector (IV).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-constantinitializationvector)
-     */
-    public fun constantInitializationVector(): String? =
-        unwrap(this).getConstantInitializationVector()
-
-    /**
-     * The encryption method to use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-encryptionmethod)
-     */
-    public fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
-
+  public interface DashEncryptionProperty {
     /**
      * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
      *
      * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds)
      */
     public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
 
     /**
      * Parameters for the SPEKE key provider.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider)
      */
     public fun spekeKeyProvider(): Any
 
     /**
-     * A builder for [CmafEncryptionProperty]
+     * A builder for [DashEncryptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a
-       * 32-character string, used in conjunction with the key for encrypting blocks.
-       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
-       * initialization vector (IV).
-       */
-      public fun constantInitializationVector(constantInitializationVector: String)
-
-      /**
-       * @param encryptionMethod The encryption method to use.
-       */
-      public fun encryptionMethod(encryptionMethod: String)
-
       /**
        * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
        * rotates to a new key.
@@ -3616,32 +1806,15 @@ public open class CfnOriginEndpoint internal constructor(
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
+      @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
       public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty.Builder
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty.Builder
           =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty.builder()
-
-      /**
-       * @param constantInitializationVector An optional 128-bit, 16-byte hex value represented by a
-       * 32-character string, used in conjunction with the key for encrypting blocks.
-       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
-       * initialization vector (IV).
-       */
-      override fun constantInitializationVector(constantInitializationVector: String) {
-        cdkBuilder.constantInitializationVector(constantInitializationVector)
-      }
-
-      /**
-       * @param encryptionMethod The encryption method to use.
-       */
-      override fun encryptionMethod(encryptionMethod: String) {
-        cdkBuilder.encryptionMethod(encryptionMethod)
-      }
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty.builder()
 
       /**
        * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
@@ -3670,44 +1843,24 @@ public open class CfnOriginEndpoint internal constructor(
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
+      @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
           Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty,
-    ) : CdkObject(cdkObject), CmafEncryptionProperty {
-      /**
-       * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in
-       * conjunction with the key for encrypting blocks.
-       *
-       * If you don't specify a value, then AWS Elemental MediaPackage creates the constant
-       * initialization vector (IV).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-constantinitializationvector)
-       */
-      override fun constantInitializationVector(): String? =
-          unwrap(this).getConstantInitializationVector()
-
-      /**
-       * The encryption method to use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-encryptionmethod)
-       */
-      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
-
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty,
+    ) : CdkObject(cdkObject), DashEncryptionProperty {
       /**
        * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
        *
        * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds)
        */
       override fun keyRotationIntervalSeconds(): Number? =
           unwrap(this).getKeyRotationIntervalSeconds()
@@ -3715,553 +1868,26 @@ public open class CfnOriginEndpoint internal constructor(
       /**
        * Parameters for the SPEKE key provider.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider)
        */
       override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CmafEncryptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashEncryptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty):
-          CmafEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CmafEncryptionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty):
+          DashEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? DashEncryptionProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CmafEncryptionProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
+      internal fun unwrap(wrapped: DashEncryptionProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty
-    }
-  }
-
-  /**
-   * Use `encryptionContractConfiguration` to configure one or more content encryption keys for your
-   * endpoints that use SPEKE Version 2.0. The encryption contract defines the content keys used to
-   * encrypt the audio and video tracks in your stream. To configure the encryption contract, specify
-   * which audio and video encryption presets to use. For more information about these presets, see
-   * [SPEKE Version 2.0
-   * Presets](https://docs.aws.amazon.com/mediapackage/latest/ug/drm-content-speke-v2-presets.html) .
-   *
-   * Note the following considerations when using `encryptionContractConfiguration` :
-   *
-   * * You can use `encryptionContractConfiguration` for DASH endpoints that use SPEKE Version 2.0.
-   * SPEKE Version 2.0 relies on the CPIX Version 2.3 specification.
-   * * You cannot combine an `UNENCRYPTED` preset with `UNENCRYPTED` or `SHARED` presets across
-   * `presetSpeke20Audio` and `presetSpeke20Video` .
-   * * When you use a `SHARED` preset, you must use it for both `presetSpeke20Audio` and
-   * `presetSpeke20Video` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * EncryptionContractConfigurationProperty encryptionContractConfigurationProperty =
-   * EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html)
-   */
-  public interface EncryptionContractConfigurationProperty {
-    /**
-     * A collection of audio encryption presets.
-     *
-     * Value description:
-     *
-     * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-     * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-     * content key to encrypt all of the multichannel audio tracks.
-     * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-     * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-     * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-     * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-     * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
-     */
-    public fun presetSpeke20Audio(): String
-
-    /**
-     * A collection of video encryption presets.
-     *
-     * Value description:
-     *
-     * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-     * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
-     * content key for all HD and higher resolutions video tracks.
-     * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
-     * key for HD video tracks and one content key for all UHD video tracks.
-     * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
-     * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
-     * UHD2 video tracks.
-     * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
-     * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
-     * video tracks and one content key for all UHD2 video tracks.
-     * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
-     * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
-     * video tracks.
-     * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-     * content key for HD2 video tracks and one content key for all UHD video tracks.
-     * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-     * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content key
-     * for all UHD2 video tracks.
-     * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-     * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20video)
-     */
-    public fun presetSpeke20Video(): String
-
-    /**
-     * A builder for [EncryptionContractConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param presetSpeke20Audio A collection of audio encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       */
-      public fun presetSpeke20Audio(presetSpeke20Audio: String)
-
-      /**
-       * @param presetSpeke20Video A collection of video encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
-       * content key for all HD and higher resolutions video tracks.
-       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
-       * UHD2 video tracks.
-       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
-       * video tracks and one content key for all UHD2 video tracks.
-       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
-       * video tracks.
-       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
-       * key for all UHD2 video tracks.
-       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
-       */
-      public fun presetSpeke20Video(presetSpeke20Video: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
-
-      /**
-       * @param presetSpeke20Audio A collection of audio encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       */
-      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
-        cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
-      }
-
-      /**
-       * @param presetSpeke20Video A collection of video encryption presets. 
-       * Value description:
-       *
-       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
-       * content key for all HD and higher resolutions video tracks.
-       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
-       * UHD2 video tracks.
-       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
-       * video tracks and one content key for all UHD2 video tracks.
-       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
-       * video tracks.
-       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
-       * key for all UHD2 video tracks.
-       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
-       */
-      override fun presetSpeke20Video(presetSpeke20Video: String) {
-        cdkBuilder.presetSpeke20Video(presetSpeke20Video)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
-      /**
-       * A collection of audio encryption presets.
-       *
-       * Value description:
-       *
-       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
-       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
-       * content key to encrypt all of the multichannel audio tracks.
-       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
-       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
-       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
-       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
-       */
-      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
-
-      /**
-       * A collection of video encryption presets.
-       *
-       * Value description:
-       *
-       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
-       * content key for all HD and higher resolutions video tracks.
-       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
-       * UHD2 video tracks.
-       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
-       * video tracks and one content key for all UHD2 video tracks.
-       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
-       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
-       * video tracks.
-       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks and one content key for all UHD video tracks.
-       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
-       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
-       * key for all UHD2 video tracks.
-       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20video)
-       */
-      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          EncryptionContractConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
-          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
-    }
-  }
-
-  /**
-   * Holds encryption information so that access to the content can be controlled by a DRM solution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * HlsEncryptionProperty hlsEncryptionProperty = HlsEncryptionProperty.builder()
-   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
-   * .resourceId("resourceId")
-   * .roleArn("roleArn")
-   * .systemIds(List.of("systemIds"))
-   * .url("url")
-   * // the properties below are optional
-   * .certificateArn("certificateArn")
-   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
-   * .presetSpeke20Audio("presetSpeke20Audio")
-   * .presetSpeke20Video("presetSpeke20Video")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .constantInitializationVector("constantInitializationVector")
-   * .encryptionMethod("encryptionMethod")
-   * .keyRotationIntervalSeconds(123)
-   * .repeatExtXKey(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html)
-   */
-  public interface HlsEncryptionProperty {
-    /**
-     * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
-     * encrypting blocks.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector)
-     */
-    public fun constantInitializationVector(): String? =
-        unwrap(this).getConstantInitializationVector()
-
-    /**
-     * HLS encryption type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod)
-     */
-    public fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
-
-    /**
-     * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
-     *
-     * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds)
-     */
-    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
-
-    /**
-     * Repeat the `EXT-X-KEY` directive for every media segment.
-     *
-     * This might result in an increase in client requests to the DRM server.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey)
-     */
-    public fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
-
-    /**
-     * Parameters for the SPEKE key provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider)
-     */
-    public fun spekeKeyProvider(): Any
-
-    /**
-     * A builder for [HlsEncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
-       * 32-character string, used with the key for encrypting blocks.
-       */
-      public fun constantInitializationVector(constantInitializationVector: String)
-
-      /**
-       * @param encryptionMethod HLS encryption type.
-       */
-      public fun encryptionMethod(encryptionMethod: String)
-
-      /**
-       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
-       * rotates to a new key.
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-       */
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
-
-      /**
-       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
-       * This might result in an increase in client requests to the DRM server.
-       */
-      public fun repeatExtXKey(repeatExtXKey: Boolean)
-
-      /**
-       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
-       * This might result in an increase in client requests to the DRM server.
-       */
-      public fun repeatExtXKey(repeatExtXKey: IResolvable)
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty.Builder
-          =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty.builder()
-
-      /**
-       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
-       * 32-character string, used with the key for encrypting blocks.
-       */
-      override fun constantInitializationVector(constantInitializationVector: String) {
-        cdkBuilder.constantInitializationVector(constantInitializationVector)
-      }
-
-      /**
-       * @param encryptionMethod HLS encryption type.
-       */
-      override fun encryptionMethod(encryptionMethod: String) {
-        cdkBuilder.encryptionMethod(encryptionMethod)
-      }
-
-      /**
-       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
-       * rotates to a new key.
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-       */
-      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
-      }
-
-      /**
-       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
-       * This might result in an increase in client requests to the DRM server.
-       */
-      override fun repeatExtXKey(repeatExtXKey: Boolean) {
-        cdkBuilder.repeatExtXKey(repeatExtXKey)
-      }
-
-      /**
-       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
-       * This might result in an increase in client requests to the DRM server.
-       */
-      override fun repeatExtXKey(repeatExtXKey: IResolvable) {
-        cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
-      }
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
-          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
-
-      public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty,
-    ) : CdkObject(cdkObject), HlsEncryptionProperty {
-      /**
-       * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
-       * encrypting blocks.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector)
-       */
-      override fun constantInitializationVector(): String? =
-          unwrap(this).getConstantInitializationVector()
-
-      /**
-       * HLS encryption type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod)
-       */
-      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
-
-      /**
-       * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
-       *
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds)
-       */
-      override fun keyRotationIntervalSeconds(): Number? =
-          unwrap(this).getKeyRotationIntervalSeconds()
-
-      /**
-       * Repeat the `EXT-X-KEY` directive for every media segment.
-       *
-       * This might result in an increase in client requests to the DRM server.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey)
-       */
-      override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
-
-      /**
-       * Parameters for the SPEKE key provider.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider)
-       */
-      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HlsEncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty):
-          HlsEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsEncryptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HlsEncryptionProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty
     }
   }
 
@@ -4956,8 +2582,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty,
     ) : CdkObject(cdkObject), DashPackageProperty {
       /**
        * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
@@ -5158,6 +2783,1784 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   /**
+   * Use `encryptionContractConfiguration` to configure one or more content encryption keys for your
+   * endpoints that use SPEKE Version 2.0. The encryption contract defines the content keys used to
+   * encrypt the audio and video tracks in your stream. To configure the encryption contract, specify
+   * which audio and video encryption presets to use. For more information about these presets, see
+   * [SPEKE Version 2.0
+   * Presets](https://docs.aws.amazon.com/mediapackage/latest/ug/drm-content-speke-v2-presets.html) .
+   *
+   * Note the following considerations when using `encryptionContractConfiguration` :
+   *
+   * * You can use `encryptionContractConfiguration` for DASH endpoints that use SPEKE Version 2.0.
+   * SPEKE Version 2.0 relies on the CPIX Version 2.3 specification.
+   * * You cannot combine an `UNENCRYPTED` preset with `UNENCRYPTED` or `SHARED` presets across
+   * `presetSpeke20Audio` and `presetSpeke20Video` .
+   * * When you use a `SHARED` preset, you must use it for both `presetSpeke20Audio` and
+   * `presetSpeke20Video` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * EncryptionContractConfigurationProperty encryptionContractConfigurationProperty =
+   * EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html)
+   */
+  public interface EncryptionContractConfigurationProperty {
+    /**
+     * A collection of audio encryption presets.
+     *
+     * Value description:
+     *
+     * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+     * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+     * content key to encrypt all of the multichannel audio tracks.
+     * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+     * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+     * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+     * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
+     */
+    public fun presetSpeke20Audio(): String
+
+    /**
+     * A collection of video encryption presets.
+     *
+     * Value description:
+     *
+     * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+     * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+     * content key for all HD and higher resolutions video tracks.
+     * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+     * UHD2 video tracks.
+     * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+     * video tracks and one content key for all UHD2 video tracks.
+     * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+     * video tracks.
+     * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     * content key for HD2 video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content key
+     * for all UHD2 video tracks.
+     * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20video)
+     */
+    public fun presetSpeke20Video(): String
+
+    /**
+     * A builder for [EncryptionContractConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param presetSpeke20Audio A collection of audio encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       */
+      public fun presetSpeke20Audio(presetSpeke20Audio: String)
+
+      /**
+       * @param presetSpeke20Video A collection of video encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+       */
+      public fun presetSpeke20Video(presetSpeke20Video: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
+
+      /**
+       * @param presetSpeke20Audio A collection of audio encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       */
+      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
+        cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
+      }
+
+      /**
+       * @param presetSpeke20Video A collection of video encryption presets. 
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+       */
+      override fun presetSpeke20Video(presetSpeke20Video: String) {
+        cdkBuilder.presetSpeke20Video(presetSpeke20Video)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
+    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
+      /**
+       * A collection of audio encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-AUDIO-1` - Use one content key to encrypt all of the audio tracks in your stream.
+       * * `PRESET-AUDIO-2` - Use one content key to encrypt all of the stereo audio tracks and one
+       * content key to encrypt all of the multichannel audio tracks.
+       * * `PRESET-AUDIO-3` - Use one content key to encrypt all of the stereo audio tracks, one
+       * content key to encrypt all of the multichannel audio tracks with 3 to 6 channels, and one
+       * content key to encrypt all of the multichannel audio tracks with more than 6 channels.
+       * * `SHARED` - Use the same content key for all of the audio and video tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the audio tracks in your stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20audio)
+       */
+      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
+
+      /**
+       * A collection of video encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackage-originendpoint-encryptioncontractconfiguration-presetspeke20video)
+       */
+      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EncryptionContractConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
+          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
+    }
+  }
+
+  /**
+   * Holds encryption information so that access to the content can be controlled by a DRM solution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * HlsEncryptionProperty hlsEncryptionProperty = HlsEncryptionProperty.builder()
+   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+   * .resourceId("resourceId")
+   * .roleArn("roleArn")
+   * .systemIds(List.of("systemIds"))
+   * .url("url")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .constantInitializationVector("constantInitializationVector")
+   * .encryptionMethod("encryptionMethod")
+   * .keyRotationIntervalSeconds(123)
+   * .repeatExtXKey(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html)
+   */
+  public interface HlsEncryptionProperty {
+    /**
+     * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
+     * encrypting blocks.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector)
+     */
+    public fun constantInitializationVector(): String? =
+        unwrap(this).getConstantInitializationVector()
+
+    /**
+     * HLS encryption type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod)
+     */
+    public fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
+
+    /**
+     * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
+     *
+     * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds)
+     */
+    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
+
+    /**
+     * Repeat the `EXT-X-KEY` directive for every media segment.
+     *
+     * This might result in an increase in client requests to the DRM server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey)
+     */
+    public fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
+
+    /**
+     * Parameters for the SPEKE key provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider)
+     */
+    public fun spekeKeyProvider(): Any
+
+    /**
+     * A builder for [HlsEncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
+       * 32-character string, used with the key for encrypting blocks.
+       */
+      public fun constantInitializationVector(constantInitializationVector: String)
+
+      /**
+       * @param encryptionMethod HLS encryption type.
+       */
+      public fun encryptionMethod(encryptionMethod: String)
+
+      /**
+       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
+       * rotates to a new key.
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       */
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
+
+      /**
+       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
+       * This might result in an increase in client requests to the DRM server.
+       */
+      public fun repeatExtXKey(repeatExtXKey: Boolean)
+
+      /**
+       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
+       * This might result in an increase in client requests to the DRM server.
+       */
+      public fun repeatExtXKey(repeatExtXKey: IResolvable)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty.builder()
+
+      /**
+       * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a
+       * 32-character string, used with the key for encrypting blocks.
+       */
+      override fun constantInitializationVector(constantInitializationVector: String) {
+        cdkBuilder.constantInitializationVector(constantInitializationVector)
+      }
+
+      /**
+       * @param encryptionMethod HLS encryption type.
+       */
+      override fun encryptionMethod(encryptionMethod: String) {
+        cdkBuilder.encryptionMethod(encryptionMethod)
+      }
+
+      /**
+       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
+       * rotates to a new key.
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       */
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
+      }
+
+      /**
+       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
+       * This might result in an increase in client requests to the DRM server.
+       */
+      override fun repeatExtXKey(repeatExtXKey: Boolean) {
+        cdkBuilder.repeatExtXKey(repeatExtXKey)
+      }
+
+      /**
+       * @param repeatExtXKey Repeat the `EXT-X-KEY` directive for every media segment.
+       * This might result in an increase in client requests to the DRM server.
+       */
+      override fun repeatExtXKey(repeatExtXKey: IResolvable) {
+        cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+      }
+
+      /**
+       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty,
+    ) : CdkObject(cdkObject), HlsEncryptionProperty {
+      /**
+       * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
+       * encrypting blocks.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector)
+       */
+      override fun constantInitializationVector(): String? =
+          unwrap(this).getConstantInitializationVector()
+
+      /**
+       * HLS encryption type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod)
+       */
+      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
+
+      /**
+       * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
+       *
+       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds)
+       */
+      override fun keyRotationIntervalSeconds(): Number? =
+          unwrap(this).getKeyRotationIntervalSeconds()
+
+      /**
+       * Repeat the `EXT-X-KEY` directive for every media segment.
+       *
+       * This might result in an increase in client requests to the DRM server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey)
+       */
+      override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
+
+      /**
+       * Parameters for the SPEKE key provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider)
+       */
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HlsEncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty):
+          HlsEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsEncryptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HlsEncryptionProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty
+    }
+  }
+
+  /**
+   * An HTTP Live Streaming (HLS) manifest configuration on a CMAF endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * HlsManifestProperty hlsManifestProperty = HlsManifestProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .adMarkers("adMarkers")
+   * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+   * .adTriggers(List.of("adTriggers"))
+   * .includeIframeOnlyStream(false)
+   * .manifestName("manifestName")
+   * .playlistType("playlistType")
+   * .playlistWindowSeconds(123)
+   * .programDateTimeIntervalSeconds(123)
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html)
+   */
+  public interface HlsManifestProperty {
+    /**
+     * Controls how ad markers are included in the packaged endpoint.
+     *
+     * Valid values:
+     *
+     * * `NONE` - Omits all SCTE-35 ad markers from the output.
+     * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+     * directly from the input manifest.
+     * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+     * SCTE-35 messages from the input manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-admarkers)
+     */
+    public fun adMarkers(): String? = unwrap(this).getAdMarkers()
+
+    /**
+     * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
+     * the output manifest.
+     *
+     * Valid values:
+     *
+     * * `BREAK`
+     * * `DISTRIBUTOR_ADVERTISEMENT`
+     * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+     * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+     * * `PROVIDER_ADVERTISEMENT`
+     * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+     * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+     * * `SPLICE_INSERT`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)
+     */
+    public fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+
+    /**
+     * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
+     * MediaPackage to insert ad markers in the output manifest.
+     *
+     * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options in
+     * AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions)
+     */
+    public fun adsOnDeliveryRestrictions(): String? = unwrap(this).getAdsOnDeliveryRestrictions()
+
+    /**
+     * The manifest ID is required and must be unique within the OriginEndpoint.
+     *
+     * The ID can't be changed after the endpoint is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id)
+     */
+    public fun id(): String
+
+    /**
+     * Applies to stream sets with a single video track only.
+     *
+     * When true, the stream set includes an additional I-frame only stream, along with the other
+     * tracks. If false, this extra stream is not included.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream)
+     */
+    public fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
+
+    /**
+     * A short string that's appended to the end of the endpoint URL to create a unique path to this
+     * endpoint.
+     *
+     * The manifestName on the HLSManifest object overrides the manifestName that you provided on
+     * the originEndpoint object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname)
+     */
+    public fun manifestName(): String? = unwrap(this).getManifestName()
+
+    /**
+     * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
+     * included in the media playlist.
+     *
+     * Indicates if the playlist is live-to-VOD content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype)
+     */
+    public fun playlistType(): String? = unwrap(this).getPlaylistType()
+
+    /**
+     * Time window (in seconds) contained in each parent manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds)
+     */
+    public fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+
+    /**
+     * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
+     * specify.
+     *
+     * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+     * content was ingested.
+     *
+     * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+     * through to the HLS output.
+     *
+     * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are not
+     * included in the manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds)
+     */
+    public fun programDateTimeIntervalSeconds(): Number? =
+        unwrap(this).getProgramDateTimeIntervalSeconds()
+
+    /**
+     * The URL that's used to request this manifest from this endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * A builder for [HlsManifestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       */
+      public fun adMarkers(adMarkers: String)
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      public fun adTriggers(adTriggers: List<String>)
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      public fun adTriggers(vararg adTriggers: String)
+
+      /**
+       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
+       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       */
+      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
+
+      /**
+       * @param id The manifest ID is required and must be unique within the OriginEndpoint. 
+       * The ID can't be changed after the endpoint is created.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
+
+      /**
+       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
+
+      /**
+       * @param manifestName A short string that's appended to the end of the endpoint URL to create
+       * a unique path to this endpoint.
+       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
+       * the originEndpoint object.
+       */
+      public fun manifestName(manifestName: String)
+
+      /**
+       * @param playlistType When specified as either `event` or `vod` , a corresponding
+       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
+       * Indicates if the playlist is live-to-VOD content.
+       */
+      public fun playlistType(playlistType: String)
+
+      /**
+       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
+       */
+      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
+
+      /**
+       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
+       * manifest at the interval that you specify.
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       */
+      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
+
+      /**
+       * @param url The URL that's used to request this manifest from this endpoint.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty.builder()
+
+      /**
+       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       */
+      override fun adMarkers(adMarkers: String) {
+        cdkBuilder.adMarkers(adMarkers)
+      }
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      override fun adTriggers(adTriggers: List<String>) {
+        cdkBuilder.adTriggers(adTriggers)
+      }
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
+
+      /**
+       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
+       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       */
+      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
+        cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
+      }
+
+      /**
+       * @param id The manifest ID is required and must be unique within the OriginEndpoint. 
+       * The ID can't be changed after the endpoint is created.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
+      }
+
+      /**
+       * @param includeIframeOnlyStream Applies to stream sets with a single video track only.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param manifestName A short string that's appended to the end of the endpoint URL to create
+       * a unique path to this endpoint.
+       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
+       * the originEndpoint object.
+       */
+      override fun manifestName(manifestName: String) {
+        cdkBuilder.manifestName(manifestName)
+      }
+
+      /**
+       * @param playlistType When specified as either `event` or `vod` , a corresponding
+       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
+       * Indicates if the playlist is live-to-VOD content.
+       */
+      override fun playlistType(playlistType: String) {
+        cdkBuilder.playlistType(playlistType)
+      }
+
+      /**
+       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
+       */
+      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
+        cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
+      }
+
+      /**
+       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
+       * manifest at the interval that you specify.
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       */
+      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
+        cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
+      }
+
+      /**
+       * @param url The URL that's used to request this manifest from this endpoint.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty,
+    ) : CdkObject(cdkObject), HlsManifestProperty {
+      /**
+       * Controls how ad markers are included in the packaged endpoint.
+       *
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-admarkers)
+       */
+      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
+
+      /**
+       * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
+       * the output manifest.
+       *
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)
+       */
+      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+
+      /**
+       * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
+       * MediaPackage to insert ad markers in the output manifest.
+       *
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions)
+       */
+      override fun adsOnDeliveryRestrictions(): String? =
+          unwrap(this).getAdsOnDeliveryRestrictions()
+
+      /**
+       * The manifest ID is required and must be unique within the OriginEndpoint.
+       *
+       * The ID can't be changed after the endpoint is created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * Applies to stream sets with a single video track only.
+       *
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream)
+       */
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
+
+      /**
+       * A short string that's appended to the end of the endpoint URL to create a unique path to
+       * this endpoint.
+       *
+       * The manifestName on the HLSManifest object overrides the manifestName that you provided on
+       * the originEndpoint object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname)
+       */
+      override fun manifestName(): String? = unwrap(this).getManifestName()
+
+      /**
+       * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
+       * included in the media playlist.
+       *
+       * Indicates if the playlist is live-to-VOD content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype)
+       */
+      override fun playlistType(): String? = unwrap(this).getPlaylistType()
+
+      /**
+       * Time window (in seconds) contained in each parent manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds)
+       */
+      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+
+      /**
+       * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
+       * specify.
+       *
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds)
+       */
+      override fun programDateTimeIntervalSeconds(): Number? =
+          unwrap(this).getProgramDateTimeIntervalSeconds()
+
+      /**
+       * The URL that's used to request this manifest from this endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HlsManifestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty):
+          HlsManifestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsManifestProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HlsManifestProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty
+    }
+  }
+
+  /**
+   * Parameters for Apple HLS packaging.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * HlsPackageProperty hlsPackageProperty = HlsPackageProperty.builder()
+   * .adMarkers("adMarkers")
+   * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+   * .adTriggers(List.of("adTriggers"))
+   * .encryption(HlsEncryptionProperty.builder()
+   * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+   * .resourceId("resourceId")
+   * .roleArn("roleArn")
+   * .systemIds(List.of("systemIds"))
+   * .url("url")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .constantInitializationVector("constantInitializationVector")
+   * .encryptionMethod("encryptionMethod")
+   * .keyRotationIntervalSeconds(123)
+   * .repeatExtXKey(false)
+   * .build())
+   * .includeDvbSubtitles(false)
+   * .includeIframeOnlyStream(false)
+   * .playlistType("playlistType")
+   * .playlistWindowSeconds(123)
+   * .programDateTimeIntervalSeconds(123)
+   * .segmentDurationSeconds(123)
+   * .streamSelection(StreamSelectionProperty.builder()
+   * .maxVideoBitsPerSecond(123)
+   * .minVideoBitsPerSecond(123)
+   * .streamOrder("streamOrder")
+   * .build())
+   * .useAudioRenditionGroup(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html)
+   */
+  public interface HlsPackageProperty {
+    /**
+     * Controls how ad markers are included in the packaged endpoint.
+     *
+     * Valid values:
+     *
+     * * `NONE` - Omits all SCTE-35 ad markers from the output.
+     * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+     * directly from the input manifest.
+     * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+     * SCTE-35 messages from the input manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers)
+     */
+    public fun adMarkers(): String? = unwrap(this).getAdMarkers()
+
+    /**
+     * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
+     * the output manifest.
+     *
+     * Valid values:
+     *
+     * * `BREAK`
+     * * `DISTRIBUTOR_ADVERTISEMENT`
+     * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+     * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+     * * `PROVIDER_ADVERTISEMENT`
+     * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+     * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+     * * `SPLICE_INSERT`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers)
+     */
+    public fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+
+    /**
+     * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
+     * MediaPackage to insert ad markers in the output manifest.
+     *
+     * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options in
+     * AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions)
+     */
+    public fun adsOnDeliveryRestrictions(): String? = unwrap(this).getAdsOnDeliveryRestrictions()
+
+    /**
+     * Parameters for encrypting content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption)
+     */
+    public fun encryption(): Any? = unwrap(this).getEncryption()
+
+    /**
+     * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the
+     * output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includedvbsubtitles)
+     */
+    public fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
+
+    /**
+     * Only applies to stream sets with a single video track.
+     *
+     * When true, the stream set includes an additional I-frame only stream, along with the other
+     * tracks. If false, this extra stream is not included.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream)
+     */
+    public fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
+
+    /**
+     * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
+     * included in the media playlist.
+     *
+     * Indicates if the playlist is live-to-VOD content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype)
+     */
+    public fun playlistType(): String? = unwrap(this).getPlaylistType()
+
+    /**
+     * Time window (in seconds) contained in each parent manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds)
+     */
+    public fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+
+    /**
+     * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
+     * specify.
+     *
+     * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+     * content was ingested.
+     *
+     * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+     * through to the HLS output.
+     *
+     * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are not
+     * included in the manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds)
+     */
+    public fun programDateTimeIntervalSeconds(): Number? =
+        unwrap(this).getProgramDateTimeIntervalSeconds()
+
+    /**
+     * Duration (in seconds) of each fragment.
+     *
+     * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds)
+     */
+    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+
+    /**
+     * Limitations for outputs from the endpoint, based on the video bitrate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-streamselection)
+     */
+    public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+
+    /**
+     * When true, AWS Elemental MediaPackage bundles all audio tracks in a rendition group.
+     *
+     * All other tracks in the stream can be used with any audio rendition from the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup)
+     */
+    public fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
+
+    /**
+     * A builder for [HlsPackageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       */
+      public fun adMarkers(adMarkers: String)
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      public fun adTriggers(adTriggers: List<String>)
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      public fun adTriggers(vararg adTriggers: String)
+
+      /**
+       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
+       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       */
+      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      public fun encryption(encryption: IResolvable)
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      public fun encryption(encryption: HlsEncryptionProperty)
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
+      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit)
+
+      /**
+       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
+       * broadcasting (DVB) subtitles into the output.
+       */
+      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean)
+
+      /**
+       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
+       * broadcasting (DVB) subtitles into the output.
+       */
+      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable)
+
+      /**
+       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
+
+      /**
+       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
+
+      /**
+       * @param playlistType When specified as either `event` or `vod` , a corresponding
+       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
+       * Indicates if the playlist is live-to-VOD content.
+       */
+      public fun playlistType(playlistType: String)
+
+      /**
+       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
+       */
+      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
+
+      /**
+       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
+       * manifest at the interval that you specify.
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       */
+      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
+
+      /**
+       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       */
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      public fun streamSelection(streamSelection: IResolvable)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
+
+      /**
+       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
+       * tracks in a rendition group.
+       * All other tracks in the stream can be used with any audio rendition from the group.
+       */
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean)
+
+      /**
+       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
+       * tracks in a rendition group.
+       * All other tracks in the stream can be used with any audio rendition from the group.
+       */
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty.builder()
+
+      /**
+       * @param adMarkers Controls how ad markers are included in the packaged endpoint.
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       */
+      override fun adMarkers(adMarkers: String) {
+        cdkBuilder.adMarkers(adMarkers)
+      }
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      override fun adTriggers(adTriggers: List<String>) {
+        cdkBuilder.adTriggers(adTriggers)
+      }
+
+      /**
+       * @param adTriggers Specifies the SCTE-35 message types that AWS Elemental MediaPackage
+       * treats as ad markers in the output manifest.
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       */
+      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
+
+      /**
+       * @param adsOnDeliveryRestrictions The flags on SCTE-35 segmentation descriptors that have to
+       * be present for AWS Elemental MediaPackage to insert ad markers in the output manifest.
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       */
+      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
+        cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
+      }
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      override fun encryption(encryption: IResolvable) {
+        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      override fun encryption(encryption: HlsEncryptionProperty) {
+        cdkBuilder.encryption(encryption.let(HlsEncryptionProperty::unwrap))
+      }
+
+      /**
+       * @param encryption Parameters for encrypting content.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
+      override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
+          encryption(HlsEncryptionProperty(encryption))
+
+      /**
+       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
+       * broadcasting (DVB) subtitles into the output.
+       */
+      override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
+        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles)
+      }
+
+      /**
+       * @param includeDvbSubtitles When enabled, MediaPackage passes through digital video
+       * broadcasting (DVB) subtitles into the output.
+       */
+      override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
+        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
+      }
+
+      /**
+       * @param includeIframeOnlyStream Only applies to stream sets with a single video track.
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       */
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param playlistType When specified as either `event` or `vod` , a corresponding
+       * `EXT-X-PLAYLIST-TYPE` entry is included in the media playlist.
+       * Indicates if the playlist is live-to-VOD content.
+       */
+      override fun playlistType(playlistType: String) {
+        cdkBuilder.playlistType(playlistType)
+      }
+
+      /**
+       * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
+       */
+      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
+        cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
+      }
+
+      /**
+       * @param programDateTimeIntervalSeconds Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output
+       * manifest at the interval that you specify.
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       */
+      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
+        cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
+      }
+
+      /**
+       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       */
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      override fun streamSelection(streamSelection: IResolvable) {
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
+
+      /**
+       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
+       * tracks in a rendition group.
+       * All other tracks in the stream can be used with any audio rendition from the group.
+       */
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
+        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup)
+      }
+
+      /**
+       * @param useAudioRenditionGroup When true, AWS Elemental MediaPackage bundles all audio
+       * tracks in a rendition group.
+       * All other tracks in the stream can be used with any audio rendition from the group.
+       */
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
+        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty,
+    ) : CdkObject(cdkObject), HlsPackageProperty {
+      /**
+       * Controls how ad markers are included in the packaged endpoint.
+       *
+       * Valid values:
+       *
+       * * `NONE` - Omits all SCTE-35 ad markers from the output.
+       * * `PASSTHROUGH` - Creates a copy in the output of the SCTE-35 ad markers (comments) taken
+       * directly from the input manifest.
+       * * `SCTE35_ENHANCED` - Generates ad markers and blackout tags in the output based on the
+       * SCTE-35 messages from the input manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers)
+       */
+      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
+
+      /**
+       * Specifies the SCTE-35 message types that AWS Elemental MediaPackage treats as ad markers in
+       * the output manifest.
+       *
+       * Valid values:
+       *
+       * * `BREAK`
+       * * `DISTRIBUTOR_ADVERTISEMENT`
+       * * `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_ADVERTISEMENT`
+       * * `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
+       * * `PROVIDER_PLACEMENT_OPPORTUNITY`
+       * * `SPLICE_INSERT`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers)
+       */
+      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+
+      /**
+       * The flags on SCTE-35 segmentation descriptors that have to be present for AWS Elemental
+       * MediaPackage to insert ad markers in the output manifest.
+       *
+       * For information about SCTE-35 in AWS Elemental MediaPackage , see [SCTE-35 Message Options
+       * in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions)
+       */
+      override fun adsOnDeliveryRestrictions(): String? =
+          unwrap(this).getAdsOnDeliveryRestrictions()
+
+      /**
+       * Parameters for encrypting content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption)
+       */
+      override fun encryption(): Any? = unwrap(this).getEncryption()
+
+      /**
+       * When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into
+       * the output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includedvbsubtitles)
+       */
+      override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
+
+      /**
+       * Only applies to stream sets with a single video track.
+       *
+       * When true, the stream set includes an additional I-frame only stream, along with the other
+       * tracks. If false, this extra stream is not included.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream)
+       */
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
+
+      /**
+       * When specified as either `event` or `vod` , a corresponding `EXT-X-PLAYLIST-TYPE` entry is
+       * included in the media playlist.
+       *
+       * Indicates if the playlist is live-to-VOD content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype)
+       */
+      override fun playlistType(): String? = unwrap(this).getPlaylistType()
+
+      /**
+       * Time window (in seconds) contained in each parent manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds)
+       */
+      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+
+      /**
+       * Inserts `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest at the interval that you
+       * specify.
+       *
+       * Additionally, ID3Timed metadata messages are generated every 5 seconds starting when the
+       * content was ingested.
+       *
+       * Irrespective of this parameter, if any ID3Timed metadata is in the HLS input, it is passed
+       * through to the HLS output.
+       *
+       * Omit this attribute or enter `0` to indicate that the `EXT-X-PROGRAM-DATE-TIME` tags are
+       * not included in the manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds)
+       */
+      override fun programDateTimeIntervalSeconds(): Number? =
+          unwrap(this).getProgramDateTimeIntervalSeconds()
+
+      /**
+       * Duration (in seconds) of each fragment.
+       *
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds)
+       */
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+
+      /**
+       * Limitations for outputs from the endpoint, based on the video bitrate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-streamselection)
+       */
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+
+      /**
+       * When true, AWS Elemental MediaPackage bundles all audio tracks in a rendition group.
+       *
+       * All other tracks in the stream can be used with any audio rendition from the group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup)
+       */
+      override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HlsPackageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty):
+          HlsPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsPackageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HlsPackageProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty
+    }
+  }
+
+  /**
    * Holds encryption information so that access to the content can be controlled by a DRM solution.
    *
    * Example:
@@ -5249,8 +4652,7 @@ public open class CfnOriginEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty,
     ) : CdkObject(cdkObject), MssEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
@@ -5279,7 +4681,7 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   /**
-   * Holds encryption information so that access to the content can be controlled by a DRM solution.
+   * Parameters for Microsoft Smooth Streaming packaging.
    *
    * Example:
    *
@@ -5287,7 +4689,8 @@ public open class CfnOriginEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediapackage.*;
-   * DashEncryptionProperty dashEncryptionProperty = DashEncryptionProperty.builder()
+   * MssPackageProperty mssPackageProperty = MssPackageProperty.builder()
+   * .encryption(MssEncryptionProperty.builder()
    * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
    * .resourceId("resourceId")
    * .roleArn("roleArn")
@@ -5300,139 +4703,724 @@ public open class CfnOriginEndpoint internal constructor(
    * .presetSpeke20Video("presetSpeke20Video")
    * .build())
    * .build())
-   * // the properties below are optional
-   * .keyRotationIntervalSeconds(123)
+   * .build())
+   * .manifestWindowSeconds(123)
+   * .segmentDurationSeconds(123)
+   * .streamSelection(StreamSelectionProperty.builder()
+   * .maxVideoBitsPerSecond(123)
+   * .minVideoBitsPerSecond(123)
+   * .streamOrder("streamOrder")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html)
    */
-  public interface DashEncryptionProperty {
+  public interface MssPackageProperty {
     /**
-     * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
+     * Parameters for encrypting content.
      *
-     * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-encryption)
      */
-    public fun keyRotationIntervalSeconds(): Number? = unwrap(this).getKeyRotationIntervalSeconds()
+    public fun encryption(): Any? = unwrap(this).getEncryption()
 
     /**
-     * Parameters for the SPEKE key provider.
+     * Time window (in seconds) contained in each manifest.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds)
      */
-    public fun spekeKeyProvider(): Any
+    public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
     /**
-     * A builder for [DashEncryptionProperty]
+     * Duration (in seconds) of each fragment.
+     *
+     * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds)
+     */
+    public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+
+    /**
+     * Limitations for outputs from the endpoint, based on the video bitrate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-streamselection)
+     */
+    public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+
+    /**
+     * A builder for [MssPackageProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
-       * rotates to a new key.
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       * @param encryption Parameters for encrypting content.
        */
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
+      public fun encryption(encryption: IResolvable)
 
       /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       * @param encryption Parameters for encrypting content.
        */
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
+      public fun encryption(encryption: MssEncryptionProperty)
 
       /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       * @param encryption Parameters for encrypting content.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
+      @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
+      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit)
+
+      /**
+       * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
+       */
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
+
+      /**
+       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       */
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      public fun streamSelection(streamSelection: IResolvable)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty.Builder
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty.Builder
           =
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty.builder()
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty.builder()
 
       /**
-       * @param keyRotationIntervalSeconds Number of seconds before AWS Elemental MediaPackage
-       * rotates to a new key.
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
+       * @param encryption Parameters for encrypting content.
        */
-      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-        cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
+      override fun encryption(encryption: IResolvable) {
+        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
       /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       * @param encryption Parameters for encrypting content.
        */
-      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+      override fun encryption(encryption: MssEncryptionProperty) {
+        cdkBuilder.encryption(encryption.let(MssEncryptionProperty::unwrap))
       }
 
       /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
-       */
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
-      }
-
-      /**
-       * @param spekeKeyProvider Parameters for the SPEKE key provider. 
+       * @param encryption Parameters for encrypting content.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
-      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
-          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
+      override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
+          encryption(MssEncryptionProperty(encryption))
+
+      /**
+       * @param manifestWindowSeconds Time window (in seconds) contained in each manifest.
+       */
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+        cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
+      }
+
+      /**
+       * @param segmentDurationSeconds Duration (in seconds) of each fragment.
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       */
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+        cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      override fun streamSelection(streamSelection: IResolvable) {
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+      }
+
+      /**
+       * @param streamSelection Limitations for outputs from the endpoint, based on the video
+       * bitrate.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty,
-    ) : CdkObject(cdkObject), DashEncryptionProperty {
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty,
+    ) : CdkObject(cdkObject), MssPackageProperty {
       /**
-       * Number of seconds before AWS Elemental MediaPackage rotates to a new key.
+       * Parameters for encrypting content.
        *
-       * By default, rotation is set to 60 seconds. Set to `0` to disable key rotation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-encryption)
        */
-      override fun keyRotationIntervalSeconds(): Number? =
-          unwrap(this).getKeyRotationIntervalSeconds()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
       /**
-       * Parameters for the SPEKE key provider.
+       * Time window (in seconds) contained in each manifest.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds)
        */
-      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+
+      /**
+       * Duration (in seconds) of each fragment.
+       *
+       * Actual fragments are rounded to the nearest multiple of the source fragment duration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds)
+       */
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
+
+      /**
+       * Limitations for outputs from the endpoint, based on the video bitrate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-streamselection)
+       */
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DashEncryptionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MssPackageProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty):
-          DashEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? DashEncryptionProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty):
+          MssPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? MssPackageProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DashEncryptionProperty):
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =
+      internal fun unwrap(wrapped: MssPackageProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty
+    }
+  }
+
+  /**
+   * Key provider settings for DRM.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * SpekeKeyProviderProperty spekeKeyProviderProperty = SpekeKeyProviderProperty.builder()
+   * .resourceId("resourceId")
+   * .roleArn("roleArn")
+   * .systemIds(List.of("systemIds"))
+   * .url("url")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+   * .presetSpeke20Audio("presetSpeke20Audio")
+   * .presetSpeke20Video("presetSpeke20Video")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html)
+   */
+  public interface SpekeKeyProviderProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the certificate that you imported to AWS Certificate
+     * Manager to add content key encryption to this endpoint.
+     *
+     * For this feature to work, your DRM key provider must support content key encryption.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
+     * your endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys
+     * are used to encrypt the audio and video tracks in your stream. To configure the encryption
+     * contract, specify which audio and video encryption presets to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
+     */
+    public fun encryptionContractConfiguration(): Any? =
+        unwrap(this).getEncryptionContractConfiguration()
+
+    /**
+     * Unique identifier for this endpoint, as it is configured in the key provider service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid)
+     */
+    public fun resourceId(): String
+
+    /**
+     * The ARN for the IAM role that's granted by the key provider to provide access to the key
+     * provider API.
+     *
+     * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the role,
+     * and it must have a sufficient permissions policy to allow access to the specific key retrieval
+     * URL. Valid format: arn:aws:iam::{accountID}:role/{name}
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * List of unique identifiers for the DRM systems to use, as defined in the CPIX specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids)
+     */
+    public fun systemIds(): List<String>
+
+    /**
+     * URL for the key provider’s key retrieval API endpoint.
+     *
+     * Must start with https://.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url)
+     */
+    public fun url(): String
+
+    /**
+     * A builder for [SpekeKeyProviderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) for the certificate that you imported
+       * to AWS Certificate Manager to add content key encryption to this endpoint.
+       * For this feature to work, your DRM key provider must support content key encryption.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      public
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
+      public
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourceId Unique identifier for this endpoint, as it is configured in the key
+       * provider service. 
+       */
+      public fun resourceId(resourceId: String)
+
+      /**
+       * @param roleArn The ARN for the IAM role that's granted by the key provider to provide
+       * access to the key provider API. 
+       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
+       * role, and it must have a sufficient permissions policy to allow access to the specific key
+       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
+       * CPIX specification. 
+       */
+      public fun systemIds(systemIds: List<String>)
+
+      /**
+       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
+       * CPIX specification. 
+       */
+      public fun systemIds(vararg systemIds: String)
+
+      /**
+       * @param url URL for the key provider’s key retrieval API endpoint. 
+       * Must start with https://.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty.builder()
+
+      /**
+       * @param certificateArn The Amazon Resource Name (ARN) for the certificate that you imported
+       * to AWS Certificate Manager to add content key encryption to this endpoint.
+       * For this feature to work, your DRM key provider must support content key encryption.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      override
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionContractConfiguration Use `encryptionContractConfiguration` to configure
+       * one or more content encryption keys for your endpoints that use SPEKE Version 2.0. The
+       * encryption contract defines which content keys are used to encrypt the audio and video tracks
+       * in your stream. To configure the encryption contract, specify which audio and video encryption
+       * presets to use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
+      override
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
+
+      /**
+       * @param resourceId Unique identifier for this endpoint, as it is configured in the key
+       * provider service. 
+       */
+      override fun resourceId(resourceId: String) {
+        cdkBuilder.resourceId(resourceId)
+      }
+
+      /**
+       * @param roleArn The ARN for the IAM role that's granted by the key provider to provide
+       * access to the key provider API. 
+       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
+       * role, and it must have a sufficient permissions policy to allow access to the specific key
+       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
+       * CPIX specification. 
+       */
+      override fun systemIds(systemIds: List<String>) {
+        cdkBuilder.systemIds(systemIds)
+      }
+
+      /**
+       * @param systemIds List of unique identifiers for the DRM systems to use, as defined in the
+       * CPIX specification. 
+       */
+      override fun systemIds(vararg systemIds: String): Unit = systemIds(systemIds.toList())
+
+      /**
+       * @param url URL for the key provider’s key retrieval API endpoint. 
+       * Must start with https://.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty,
+    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the certificate that you imported to AWS Certificate
+       * Manager to add content key encryption to this endpoint.
+       *
+       * For this feature to work, your DRM key provider must support content key encryption.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
+       * your endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys
+       * are used to encrypt the audio and video tracks in your stream. To configure the encryption
+       * contract, specify which audio and video encryption presets to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration)
+       */
+      override fun encryptionContractConfiguration(): Any? =
+          unwrap(this).getEncryptionContractConfiguration()
+
+      /**
+       * Unique identifier for this endpoint, as it is configured in the key provider service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid)
+       */
+      override fun resourceId(): String = unwrap(this).getResourceId()
+
+      /**
+       * The ARN for the IAM role that's granted by the key provider to provide access to the key
+       * provider API.
+       *
+       * This role must have a trust policy that allows AWS Elemental MediaPackage to assume the
+       * role, and it must have a sufficient permissions policy to allow access to the specific key
+       * retrieval URL. Valid format: arn:aws:iam::{accountID}:role/{name}
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * List of unique identifiers for the DRM systems to use, as defined in the CPIX
+       * specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids)
+       */
+      override fun systemIds(): List<String> = unwrap(this).getSystemIds()
+
+      /**
+       * URL for the key provider’s key retrieval API endpoint.
+       *
+       * Must start with https://.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url)
+       */
+      override fun url(): String = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpekeKeyProviderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty):
+          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpekeKeyProviderProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty
+    }
+  }
+
+  /**
+   * Limitations for outputs from the endpoint, based on the video bitrate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackage.*;
+   * StreamSelectionProperty streamSelectionProperty = StreamSelectionProperty.builder()
+   * .maxVideoBitsPerSecond(123)
+   * .minVideoBitsPerSecond(123)
+   * .streamOrder("streamOrder")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html)
+   */
+  public interface StreamSelectionProperty {
+    /**
+     * The upper limit of the bitrates that this endpoint serves.
+     *
+     * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
+     * output. If you don't specify a value, it defaults to 2147483647 bits per second.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond)
+     */
+    public fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
+
+    /**
+     * The lower limit of the bitrates that this endpoint serves.
+     *
+     * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it from
+     * output. If you don't specify a value, it defaults to 0 bits per second.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond)
+     */
+    public fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
+
+    /**
+     * Order in which the different video bitrates are presented to the player.
+     *
+     * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder)
+     */
+    public fun streamOrder(): String? = unwrap(this).getStreamOrder()
+
+    /**
+     * A builder for [StreamSelectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxVideoBitsPerSecond The upper limit of the bitrates that this endpoint serves.
+       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
+       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
+       */
+      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number)
+
+      /**
+       * @param minVideoBitsPerSecond The lower limit of the bitrates that this endpoint serves.
+       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
+       * from output. If you don't specify a value, it defaults to 0 bits per second.
+       */
+      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number)
+
+      /**
+       * @param streamOrder Order in which the different video bitrates are presented to the player.
+       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
+       */
+      public fun streamOrder(streamOrder: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty.builder()
+
+      /**
+       * @param maxVideoBitsPerSecond The upper limit of the bitrates that this endpoint serves.
+       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
+       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
+       */
+      override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
+        cdkBuilder.maxVideoBitsPerSecond(maxVideoBitsPerSecond)
+      }
+
+      /**
+       * @param minVideoBitsPerSecond The lower limit of the bitrates that this endpoint serves.
+       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
+       * from output. If you don't specify a value, it defaults to 0 bits per second.
+       */
+      override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
+        cdkBuilder.minVideoBitsPerSecond(minVideoBitsPerSecond)
+      }
+
+      /**
+       * @param streamOrder Order in which the different video bitrates are presented to the player.
+       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
+       */
+      override fun streamOrder(streamOrder: String) {
+        cdkBuilder.streamOrder(streamOrder)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty,
+    ) : CdkObject(cdkObject), StreamSelectionProperty {
+      /**
+       * The upper limit of the bitrates that this endpoint serves.
+       *
+       * If the video track exceeds this threshold, then AWS Elemental MediaPackage excludes it from
+       * output. If you don't specify a value, it defaults to 2147483647 bits per second.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond)
+       */
+      override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
+
+      /**
+       * The lower limit of the bitrates that this endpoint serves.
+       *
+       * If the video track is below this threshold, then AWS Elemental MediaPackage excludes it
+       * from output. If you don't specify a value, it defaults to 0 bits per second.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond)
+       */
+      override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
+
+      /**
+       * Order in which the different video bitrates are presented to the player.
+       *
+       * Valid values: `ORIGINAL` , `VIDEO_BITRATE_ASCENDING` , `VIDEO_BITRATE_DESCENDING` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder)
+       */
+      override fun streamOrder(): String? = unwrap(this).getStreamOrder()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StreamSelectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty):
+          StreamSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamSelectionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StreamSelectionProperty):
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty
     }
   }
 }

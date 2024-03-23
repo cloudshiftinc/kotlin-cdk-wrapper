@@ -25,9 +25,8 @@ import kotlin.jvm.JvmName
  * TopicHook topicHook = new TopicHook(topic);
  * ```
  */
-public open class TopicHook internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook,
+public open class TopicHook(
+  cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook(topic.let(ITopic::unwrap))
@@ -67,6 +66,7 @@ public open class TopicHook internal constructor(
         TopicHook = TopicHook(cdkObject)
 
     internal fun unwrap(wrapped: TopicHook):
-        software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook
   }
 }

@@ -116,7 +116,7 @@ public interface Environment {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.Environment,
+    cdkObject: software.amazon.awscdk.Environment,
   ) : CdkObject(cdkObject), Environment {
     /**
      * The AWS account ID for this environment.

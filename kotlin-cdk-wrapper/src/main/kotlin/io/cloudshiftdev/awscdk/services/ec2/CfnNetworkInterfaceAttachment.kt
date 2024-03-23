@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html)
  */
-public open class CfnNetworkInterfaceAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment,
+public open class CfnNetworkInterfaceAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -377,120 +376,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
         CfnNetworkInterfaceAttachment = CfnNetworkInterfaceAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterfaceAttachment):
-        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment = wrapped.cdkObject
-  }
-
-  /**
-   * ENA Express is compatible with both TCP and UDP transport protocols.
-   *
-   * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications are
-   * designed to handle network packets that are out of order, without a need for retransmission, such
-   * as live video broadcasting or other near-real-time applications. For UDP traffic, you can specify
-   * whether to use ENA Express, based on your application environment needs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
-   * EnaSrdUdpSpecificationProperty.builder()
-   * .enaSrdUdpEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html)
-   */
-  public interface EnaSrdUdpSpecificationProperty {
-    /**
-     * Indicates whether UDP traffic to and from the instance uses ENA Express.
-     *
-     * To specify this setting, you must first enable ENA Express.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html#cfn-ec2-networkinterfaceattachment-enasrdudpspecification-enasrdudpenabled)
-     */
-    public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
-
-    /**
-     * A builder for [EnaSrdUdpSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty.builder()
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
-      }
-
-      /**
-       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
-       * Express.
-       * To specify this setting, you must first enable ENA Express.
-       */
-      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
-      /**
-       * Indicates whether UDP traffic to and from the instance uses ENA Express.
-       *
-       * To specify this setting, you must first enable ENA Express.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html#cfn-ec2-networkinterfaceattachment-enasrdudpspecification-enasrdudpenabled)
-       */
-      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdUdpSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty):
-          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
-    }
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment
   }
 
   /**
@@ -620,8 +507,7 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
     ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
       /**
        * Indicates whether ENA Express is enabled for the network interface.
@@ -653,6 +539,118 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty
+    }
+  }
+
+  /**
+   * ENA Express is compatible with both TCP and UDP transport protocols.
+   *
+   * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications are
+   * designed to handle network packets that are out of order, without a need for retransmission, such
+   * as live video broadcasting or other near-real-time applications. For UDP traffic, you can specify
+   * whether to use ENA Express, based on your application environment needs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
+   * EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html)
+   */
+  public interface EnaSrdUdpSpecificationProperty {
+    /**
+     * Indicates whether UDP traffic to and from the instance uses ENA Express.
+     *
+     * To specify this setting, you must first enable ENA Express.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html#cfn-ec2-networkinterfaceattachment-enasrdudpspecification-enasrdudpenabled)
+     */
+    public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+
+    /**
+     * A builder for [EnaSrdUdpSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty.builder()
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
+      }
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
+    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
+      /**
+       * Indicates whether UDP traffic to and from the instance uses ENA Express.
+       *
+       * To specify this setting, you must first enable ENA Express.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterfaceattachment-enasrdudpspecification.html#cfn-ec2-networkinterfaceattachment-enasrdudpspecification-enasrdudpenabled)
+       */
+      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdUdpSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty):
+          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
     }
   }
 }

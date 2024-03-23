@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html)
  */
-public open class CfnReceiptRuleSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSet,
+public open class CfnReceiptRuleSet(
+  cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -135,6 +135,7 @@ public open class CfnReceiptRuleSet internal constructor(
         CfnReceiptRuleSet = CfnReceiptRuleSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnReceiptRuleSet):
-        software.amazon.awscdk.services.ses.CfnReceiptRuleSet = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.CfnReceiptRuleSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.CfnReceiptRuleSet
   }
 }

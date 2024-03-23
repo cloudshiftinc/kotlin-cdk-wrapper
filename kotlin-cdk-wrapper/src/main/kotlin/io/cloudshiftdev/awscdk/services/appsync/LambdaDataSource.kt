@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class LambdaDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSource,
+public open class LambdaDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSource,
 ) : BackedDataSource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -178,6 +178,7 @@ public open class LambdaDataSource internal constructor(
         LambdaDataSource = LambdaDataSource(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDataSource):
-        software.amazon.awscdk.services.appsync.LambdaDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.LambdaDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.LambdaDataSource
   }
 }

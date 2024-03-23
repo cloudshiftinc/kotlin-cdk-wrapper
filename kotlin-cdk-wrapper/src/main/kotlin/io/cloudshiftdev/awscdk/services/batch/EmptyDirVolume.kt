@@ -32,8 +32,8 @@ import kotlin.Unit
  *
  * [Documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
  */
-public open class EmptyDirVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolume,
+public open class EmptyDirVolume(
+  cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: EmptyDirVolumeOptions) :
       this(software.amazon.awscdk.services.batch.EmptyDirVolume(options.let(EmptyDirVolumeOptions::unwrap))
@@ -190,6 +190,7 @@ public open class EmptyDirVolume internal constructor(
         EmptyDirVolume = EmptyDirVolume(cdkObject)
 
     internal fun unwrap(wrapped: EmptyDirVolume):
-        software.amazon.awscdk.services.batch.EmptyDirVolume = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.EmptyDirVolume = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.EmptyDirVolume
   }
 }

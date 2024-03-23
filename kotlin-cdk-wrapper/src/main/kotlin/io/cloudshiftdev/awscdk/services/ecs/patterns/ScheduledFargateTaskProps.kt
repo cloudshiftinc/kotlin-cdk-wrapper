@@ -553,7 +553,7 @@ public interface ScheduledFargateTaskProps : ScheduledTaskBaseProps, FargateServ
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps,
   ) : CdkObject(cdkObject), ScheduledFargateTaskProps {
     /**
      * The name of the cluster that hosts the service.

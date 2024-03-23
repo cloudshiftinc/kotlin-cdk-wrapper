@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SigningProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.signer.SigningProfile,
+public open class SigningProfile(
+  cdkObject: software.amazon.awscdk.services.signer.SigningProfile,
 ) : Resource(cdkObject), ISigningProfile {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -178,6 +178,7 @@ public open class SigningProfile internal constructor(
         SigningProfile = SigningProfile(cdkObject)
 
     internal fun unwrap(wrapped: SigningProfile):
-        software.amazon.awscdk.services.signer.SigningProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.signer.SigningProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.signer.SigningProfile
   }
 }

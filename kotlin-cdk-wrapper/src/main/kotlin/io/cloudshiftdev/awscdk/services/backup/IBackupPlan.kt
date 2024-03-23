@@ -21,7 +21,7 @@ public interface IBackupPlan : IResource {
   public fun backupPlanId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.IBackupPlan,
+    cdkObject: software.amazon.awscdk.services.backup.IBackupPlan,
   ) : CdkObject(cdkObject), IBackupPlan {
     /**
      * Apply the given removal policy to this resource.

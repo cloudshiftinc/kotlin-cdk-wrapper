@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html)
  */
-public open class CfnLayerVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion,
+public open class CfnLayerVersion(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -461,7 +461,8 @@ public open class CfnLayerVersion internal constructor(
         CfnLayerVersion = CfnLayerVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersion):
-        software.amazon.awscdk.services.lambda.CfnLayerVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnLayerVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnLayerVersion
   }
 
   /**
@@ -560,8 +561,7 @@ public open class CfnLayerVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty,
+      cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty,
     ) : CdkObject(cdkObject), ContentProperty {
       /**
        * The Amazon S3 bucket of the layer archive.

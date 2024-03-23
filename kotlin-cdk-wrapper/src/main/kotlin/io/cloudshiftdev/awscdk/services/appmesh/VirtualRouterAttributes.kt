@@ -74,7 +74,7 @@ public interface VirtualRouterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterAttributes,
+    cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterAttributes,
   ) : CdkObject(cdkObject), VirtualRouterAttributes {
     /**
      * The Mesh which the VirtualRouter belongs to.

@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html)
  */
-public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration,
+public open class CfnMicrosoftTeamsChannelConfiguration(
+  cdkObject: software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -529,6 +528,7 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnMicrosoftTeamsChannelConfiguration):
         software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration
   }
 }

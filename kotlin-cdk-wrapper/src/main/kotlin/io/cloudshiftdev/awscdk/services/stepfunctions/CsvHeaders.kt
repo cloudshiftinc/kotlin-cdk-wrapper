@@ -18,8 +18,8 @@ import kotlin.collections.List
  * CsvHeaders csvHeaders = CsvHeaders.use(List.of("headers"));
  * ```
  */
-public open class CsvHeaders internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CsvHeaders,
+public open class CsvHeaders(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CsvHeaders,
 ) : CdkObject(cdkObject) {
   /**
    * Location of headers in CSV file.
@@ -45,6 +45,7 @@ public open class CsvHeaders internal constructor(
         CsvHeaders = CsvHeaders(cdkObject)
 
     internal fun unwrap(wrapped: CsvHeaders):
-        software.amazon.awscdk.services.stepfunctions.CsvHeaders = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CsvHeaders = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CsvHeaders
   }
 }

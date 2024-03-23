@@ -50,7 +50,7 @@ public interface CfnPermissionProps {
   public fun eventSourceToken(): String? = unwrap(this).getEventSourceToken()
 
   /**
-   * The name of the Lambda function, version, or alias.
+   * The name or ARN of the Lambda function, version, or alias.
    *
    * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with alias).
    *
@@ -134,7 +134,7 @@ public interface CfnPermissionProps {
     public fun eventSourceToken(eventSourceToken: String)
 
     /**
-     * @param functionName The name of the Lambda function, version, or alias. 
+     * @param functionName The name or ARN of the Lambda function, version, or alias. 
      * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with
      * alias).
      *
@@ -205,7 +205,7 @@ public interface CfnPermissionProps {
     }
 
     /**
-     * @param functionName The name of the Lambda function, version, or alias. 
+     * @param functionName The name or ARN of the Lambda function, version, or alias. 
      * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with
      * alias).
      *
@@ -272,7 +272,7 @@ public interface CfnPermissionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnPermissionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnPermissionProps,
   ) : CdkObject(cdkObject), CfnPermissionProps {
     /**
      * The action that the principal can use on the function.
@@ -291,7 +291,7 @@ public interface CfnPermissionProps {
     override fun eventSourceToken(): String? = unwrap(this).getEventSourceToken()
 
     /**
-     * The name of the Lambda function, version, or alias.
+     * The name or ARN of the Lambda function, version, or alias.
      *
      * **Name formats** - *Function name* – `my-function` (name-only), `my-function:v1` (with
      * alias).

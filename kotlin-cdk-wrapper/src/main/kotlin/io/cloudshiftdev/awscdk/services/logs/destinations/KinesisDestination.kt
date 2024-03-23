@@ -31,9 +31,8 @@ import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKi
  * .build();
  * ```
  */
-public open class KinesisDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.logs.destinations.KinesisDestination,
+public open class KinesisDestination(
+  cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
       this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
@@ -116,6 +115,7 @@ public open class KinesisDestination internal constructor(
         KinesisDestination = KinesisDestination(cdkObject)
 
     internal fun unwrap(wrapped: KinesisDestination):
-        software.amazon.awscdk.services.logs.destinations.KinesisDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.logs.destinations.KinesisDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.logs.destinations.KinesisDestination
   }
 }

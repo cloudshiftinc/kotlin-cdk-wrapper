@@ -72,7 +72,7 @@ public interface AclCidrConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig,
+    cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig,
   ) : CdkObject(cdkObject), AclCidrConfig {
     /**
      * Ipv4 CIDR.

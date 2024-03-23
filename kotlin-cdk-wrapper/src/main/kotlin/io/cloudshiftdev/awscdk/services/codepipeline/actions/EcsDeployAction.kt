@@ -41,9 +41,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class EcsDeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction,
+public open class EcsDeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: EcsDeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction(props.let(EcsDeployActionProps::unwrap))
@@ -299,6 +298,7 @@ public open class EcsDeployAction internal constructor(
         EcsDeployAction = EcsDeployAction(cdkObject)
 
     internal fun unwrap(wrapped: EcsDeployAction):
-        software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction
   }
 }

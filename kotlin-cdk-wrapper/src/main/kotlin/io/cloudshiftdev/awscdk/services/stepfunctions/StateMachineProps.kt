@@ -285,7 +285,7 @@ public interface StateMachineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineProps,
   ) : CdkObject(cdkObject), StateMachineProps {
     /**
      * Comment that describes this state machine.

@@ -43,8 +43,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html)
  */
-public open class OAuthScope internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.OAuthScope,
+public open class OAuthScope(
+  cdkObject: software.amazon.awscdk.services.cognito.OAuthScope,
 ) : CdkObject(cdkObject) {
   /**
    * The name of this scope as recognized by CloudFormation.
@@ -87,6 +87,6 @@ public open class OAuthScope internal constructor(
         OAuthScope(cdkObject)
 
     internal fun unwrap(wrapped: OAuthScope): software.amazon.awscdk.services.cognito.OAuthScope =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cognito.OAuthScope
   }
 }

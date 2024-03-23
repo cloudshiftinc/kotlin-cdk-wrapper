@@ -351,7 +351,7 @@ public interface CfnSpaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpaceProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpaceProps,
   ) : CdkObject(cdkObject), CfnSpaceProps {
     /**
      * The ID of the associated domain.

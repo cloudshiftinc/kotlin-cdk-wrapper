@@ -29,8 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)
  */
-public open class CfnHookTypeConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnHookTypeConfig,
+public open class CfnHookTypeConfig(
+  cdkObject: software.amazon.awscdk.CfnHookTypeConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,6 +246,6 @@ public open class CfnHookTypeConfig internal constructor(
         CfnHookTypeConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookTypeConfig): software.amazon.awscdk.CfnHookTypeConfig =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnHookTypeConfig
   }
 }

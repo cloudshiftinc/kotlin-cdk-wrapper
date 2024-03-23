@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)
  */
-public open class CfnInfrastructureConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
+public open class CfnInfrastructureConfiguration(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -764,230 +763,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnInfrastructureConfiguration):
         software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Amazon S3 logging configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * S3LogsProperty s3LogsProperty = S3LogsProperty.builder()
-   * .s3BucketName("s3BucketName")
-   * .s3KeyPrefix("s3KeyPrefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html)
-   */
-  public interface S3LogsProperty {
-    /**
-     * The S3 bucket in which to store the logs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname)
-     */
-    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-    /**
-     * The Amazon S3 path to the bucket where the logs are stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix)
-     */
-    public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
-
-    /**
-     * A builder for [S3LogsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3BucketName The S3 bucket in which to store the logs.
-       */
-      public fun s3BucketName(s3BucketName: String)
-
-      /**
-       * @param s3KeyPrefix The Amazon S3 path to the bucket where the logs are stored.
-       */
-      public fun s3KeyPrefix(s3KeyPrefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty.builder()
-
-      /**
-       * @param s3BucketName The S3 bucket in which to store the logs.
-       */
-      override fun s3BucketName(s3BucketName: String) {
-        cdkBuilder.s3BucketName(s3BucketName)
-      }
-
-      /**
-       * @param s3KeyPrefix The Amazon S3 path to the bucket where the logs are stored.
-       */
-      override fun s3KeyPrefix(s3KeyPrefix: String) {
-        cdkBuilder.s3KeyPrefix(s3KeyPrefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
-    ) : CdkObject(cdkObject), S3LogsProperty {
-      /**
-       * The S3 bucket in which to store the logs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname)
-       */
-      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-      /**
-       * The Amazon S3 path to the bucket where the logs are stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix)
-       */
-      override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty):
-          S3LogsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LogsProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
-    }
-  }
-
-  /**
-   * Logging configuration defines where Image Builder uploads your logs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
-   * LoggingProperty loggingProperty = LoggingProperty.builder()
-   * .s3Logs(S3LogsProperty.builder()
-   * .s3BucketName("s3BucketName")
-   * .s3KeyPrefix("s3KeyPrefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html)
-   */
-  public interface LoggingProperty {
-    /**
-     * The Amazon S3 logging configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)
-     */
-    public fun s3Logs(): Any? = unwrap(this).getS3Logs()
-
-    /**
-     * A builder for [LoggingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      public fun s3Logs(s3Logs: IResolvable)
-
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      public fun s3Logs(s3Logs: S3LogsProperty)
-
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
-      public fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty.Builder
-          =
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty.builder()
-
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      override fun s3Logs(s3Logs: IResolvable) {
-        cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      override fun s3Logs(s3Logs: S3LogsProperty) {
-        cdkBuilder.s3Logs(s3Logs.let(S3LogsProperty::unwrap))
-      }
-
-      /**
-       * @param s3Logs The Amazon S3 logging configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
-      override fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit): Unit =
-          s3Logs(S3LogsProperty(s3Logs))
-
-      public fun build():
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
-      /**
-       * The Amazon S3 logging configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)
-       */
-      override fun s3Logs(): Any? = unwrap(this).getS3Logs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingProperty):
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
-    }
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
   }
 
   /**
@@ -1112,8 +889,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
     ) : CdkObject(cdkObject), InstanceMetadataOptionsProperty {
       /**
        * Limit the number of hops that an instance metadata request can traverse to reach its
@@ -1160,6 +936,227 @@ public open class CfnInfrastructureConfiguration internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty
+    }
+  }
+
+  /**
+   * Logging configuration defines where Image Builder uploads your logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * LoggingProperty loggingProperty = LoggingProperty.builder()
+   * .s3Logs(S3LogsProperty.builder()
+   * .s3BucketName("s3BucketName")
+   * .s3KeyPrefix("s3KeyPrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html)
+   */
+  public interface LoggingProperty {
+    /**
+     * The Amazon S3 logging configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)
+     */
+    public fun s3Logs(): Any? = unwrap(this).getS3Logs()
+
+    /**
+     * A builder for [LoggingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      public fun s3Logs(s3Logs: IResolvable)
+
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      public fun s3Logs(s3Logs: S3LogsProperty)
+
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
+      public fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty.builder()
+
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      override fun s3Logs(s3Logs: IResolvable) {
+        cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      override fun s3Logs(s3Logs: S3LogsProperty) {
+        cdkBuilder.s3Logs(s3Logs.let(S3LogsProperty::unwrap))
+      }
+
+      /**
+       * @param s3Logs The Amazon S3 logging configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
+      override fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit): Unit =
+          s3Logs(S3LogsProperty(s3Logs))
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
+    ) : CdkObject(cdkObject), LoggingProperty {
+      /**
+       * The Amazon S3 logging configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)
+       */
+      override fun s3Logs(): Any? = unwrap(this).getS3Logs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty):
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
+    }
+  }
+
+  /**
+   * Amazon S3 logging configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * S3LogsProperty s3LogsProperty = S3LogsProperty.builder()
+   * .s3BucketName("s3BucketName")
+   * .s3KeyPrefix("s3KeyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html)
+   */
+  public interface S3LogsProperty {
+    /**
+     * The S3 bucket in which to store the logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname)
+     */
+    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+    /**
+     * The Amazon S3 path to the bucket where the logs are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix)
+     */
+    public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+
+    /**
+     * A builder for [S3LogsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3BucketName The S3 bucket in which to store the logs.
+       */
+      public fun s3BucketName(s3BucketName: String)
+
+      /**
+       * @param s3KeyPrefix The Amazon S3 path to the bucket where the logs are stored.
+       */
+      public fun s3KeyPrefix(s3KeyPrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty.builder()
+
+      /**
+       * @param s3BucketName The S3 bucket in which to store the logs.
+       */
+      override fun s3BucketName(s3BucketName: String) {
+        cdkBuilder.s3BucketName(s3BucketName)
+      }
+
+      /**
+       * @param s3KeyPrefix The Amazon S3 path to the bucket where the logs are stored.
+       */
+      override fun s3KeyPrefix(s3KeyPrefix: String) {
+        cdkBuilder.s3KeyPrefix(s3KeyPrefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
+    ) : CdkObject(cdkObject), S3LogsProperty {
+      /**
+       * The S3 bucket in which to store the logs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname)
+       */
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+      /**
+       * The Amazon S3 path to the bucket where the logs are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html#cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix)
+       */
+      override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LogsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty):
+          S3LogsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LogsProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
     }
   }
 }

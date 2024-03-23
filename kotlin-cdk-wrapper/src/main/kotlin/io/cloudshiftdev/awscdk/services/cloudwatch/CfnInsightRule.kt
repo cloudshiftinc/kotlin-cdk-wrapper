@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html)
  */
-public open class CfnInsightRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRule,
+public open class CfnInsightRule(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -321,6 +321,7 @@ public open class CfnInsightRule internal constructor(
         CfnInsightRule = CfnInsightRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnInsightRule):
-        software.amazon.awscdk.services.cloudwatch.CfnInsightRule = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.CfnInsightRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnInsightRule
   }
 }

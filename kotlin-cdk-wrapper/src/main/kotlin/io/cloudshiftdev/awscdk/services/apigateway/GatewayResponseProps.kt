@@ -113,7 +113,7 @@ public interface GatewayResponseProps : GatewayResponseOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseProps,
   ) : CdkObject(cdkObject), GatewayResponseProps {
     /**
      * Custom headers parameters for response.

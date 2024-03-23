@@ -543,7 +543,7 @@ public interface RestApiBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiBaseProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.RestApiBaseProps,
   ) : CdkObject(cdkObject), RestApiBaseProps {
     /**
      * Automatically configure an AWS CloudWatch role for API Gateway.

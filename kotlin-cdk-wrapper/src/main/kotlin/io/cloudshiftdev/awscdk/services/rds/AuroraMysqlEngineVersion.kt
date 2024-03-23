@@ -32,8 +32,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class AuroraMysqlEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion,
+public open class AuroraMysqlEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "5.7.mysql_aurora.1.78.3.6".
@@ -48,6 +48,9 @@ public open class AuroraMysqlEngineVersion internal constructor(
   public open fun auroraMysqlMajorVersion(): String = unwrap(this).getAuroraMysqlMajorVersion()
 
   public companion object {
+    public val VER_2_02_3: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_02_3)
+
     public val VER_2_03_2: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_03_2)
 
@@ -84,8 +87,14 @@ public open class AuroraMysqlEngineVersion internal constructor(
     public val VER_2_04_8: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_04_8)
 
+    public val VER_2_04_9: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_04_9)
+
     public val VER_2_05_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_05_0)
+
+    public val VER_2_05_1: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_05_1)
 
     public val VER_2_06_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_06_0)
@@ -180,6 +189,9 @@ public open class AuroraMysqlEngineVersion internal constructor(
     public val VER_2_12_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_12_0)
 
+    public val VER_2_12_1: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_12_1)
+
     public val VER_3_01_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_01_0)
 
@@ -204,6 +216,12 @@ public open class AuroraMysqlEngineVersion internal constructor(
     public val VER_3_03_1: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_03_1)
 
+    public val VER_3_03_2: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_03_2)
+
+    public val VER_3_03_3: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_03_3)
+
     public val VER_3_04_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_04_0)
 
@@ -218,6 +236,9 @@ public open class AuroraMysqlEngineVersion internal constructor(
 
     public val VER_3_05_2: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_05_2)
+
+    public val VER_3_06_0: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_3_06_0)
 
     public val VER_5_7_12: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_5_7_12)
@@ -234,6 +255,7 @@ public open class AuroraMysqlEngineVersion internal constructor(
         AuroraMysqlEngineVersion = AuroraMysqlEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: AuroraMysqlEngineVersion):
-        software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion
   }
 }

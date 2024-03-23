@@ -150,8 +150,7 @@ public interface CfnLaunchTemplateConstraintProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps,
   ) : CdkObject(cdkObject), CfnLaunchTemplateConstraintProps {
     /**
      * The language code.

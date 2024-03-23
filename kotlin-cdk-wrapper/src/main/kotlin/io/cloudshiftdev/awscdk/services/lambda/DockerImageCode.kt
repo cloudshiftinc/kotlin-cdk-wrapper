@@ -20,11 +20,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class DockerImageCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
+public abstract class DockerImageCode(
+  cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
+    cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
   ) : DockerImageCode(cdkObject)
 
   public companion object {

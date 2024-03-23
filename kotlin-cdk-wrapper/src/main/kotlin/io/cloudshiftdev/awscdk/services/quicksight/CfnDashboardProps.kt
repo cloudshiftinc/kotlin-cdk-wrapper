@@ -745,7 +745,7 @@ public interface CfnDashboardProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDashboardProps,
+    cdkObject: software.amazon.awscdk.services.quicksight.CfnDashboardProps,
   ) : CdkObject(cdkObject), CfnDashboardProps {
     /**
      * The ID of the AWS account where you want to create the dashboard.

@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html)
  */
-public open class CfnCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnCertificate,
+public open class CfnCertificate(
+  cdkObject: software.amazon.awscdk.services.dms.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dms.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -203,6 +203,6 @@ public open class CfnCertificate internal constructor(
         = CfnCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificate): software.amazon.awscdk.services.dms.CfnCertificate
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.dms.CfnCertificate
   }
 }

@@ -30,8 +30,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class ServiceConnect internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnect,
+public open class ServiceConnect(
+  cdkObject: software.amazon.awscdk.services.ecs.ServiceConnect,
 ) : CdkObject(cdkObject) {
   public constructor(networkmode: NetworkMode, pm: PortMapping) :
       this(software.amazon.awscdk.services.ecs.ServiceConnect(networkmode.let(NetworkMode::unwrap),
@@ -303,6 +303,6 @@ public open class ServiceConnect internal constructor(
         = ServiceConnect(cdkObject)
 
     internal fun unwrap(wrapped: ServiceConnect): software.amazon.awscdk.services.ecs.ServiceConnect
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ecs.ServiceConnect
   }
 }

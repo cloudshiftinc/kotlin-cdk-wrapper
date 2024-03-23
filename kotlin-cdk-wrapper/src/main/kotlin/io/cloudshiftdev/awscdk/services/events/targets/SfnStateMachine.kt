@@ -43,8 +43,8 @@ import software.amazon.awscdk.services.stepfunctions.IStateMachine as AmazonAwsc
  * .build());
  * ```
  */
-public open class SfnStateMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachine,
+public open class SfnStateMachine(
+  cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachine,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine) :
       this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine::unwrap))
@@ -252,6 +252,7 @@ public open class SfnStateMachine internal constructor(
         SfnStateMachine = SfnStateMachine(cdkObject)
 
     internal fun unwrap(wrapped: SfnStateMachine):
-        software.amazon.awscdk.services.events.targets.SfnStateMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.SfnStateMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.SfnStateMachine
   }
 }

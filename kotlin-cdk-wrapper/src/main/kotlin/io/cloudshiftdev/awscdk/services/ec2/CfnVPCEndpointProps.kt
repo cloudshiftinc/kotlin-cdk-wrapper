@@ -373,7 +373,7 @@ public interface CfnVPCEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointProps,
   ) : CdkObject(cdkObject), CfnVPCEndpointProps {
     /**
      * An endpoint policy, which controls access to the service from the VPC.

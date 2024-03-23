@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html)
  */
-public open class CfnSigningProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile,
+public open class CfnSigningProfile(
+  cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -324,7 +324,8 @@ public open class CfnSigningProfile internal constructor(
         CfnSigningProfile = CfnSigningProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnSigningProfile):
-        software.amazon.awscdk.services.signer.CfnSigningProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.signer.CfnSigningProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.signer.CfnSigningProfile
   }
 
   /**
@@ -402,8 +403,7 @@ public open class CfnSigningProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty,
+      cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty,
     ) : CdkObject(cdkObject), SignatureValidityPeriodProperty {
       /**
        * The time unit for signature validity: DAYS | MONTHS | YEARS.

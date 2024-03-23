@@ -7,7 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 public interface IDependable {
   private class Wrapper(
-    override val cdkObject: software.constructs.IDependable,
+    cdkObject: software.constructs.IDependable,
   ) : CdkObject(cdkObject), IDependable
 
   public companion object {

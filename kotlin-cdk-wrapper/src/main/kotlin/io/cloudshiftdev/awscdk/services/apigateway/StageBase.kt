@@ -14,8 +14,8 @@ import kotlin.jvm.JvmName
 /**
  * Base class for an ApiGateway Stage.
  */
-public abstract class StageBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
+public abstract class StageBase(
+  cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
 ) : Resource(cdkObject), IStage {
   /**
    * Add an ApiKey to this stage.
@@ -344,7 +344,7 @@ public abstract class StageBase internal constructor(
   public open fun urlForPath(path: String): String = unwrap(this).urlForPath(path)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
+    cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
   ) : StageBase(cdkObject)
 
   public companion object {

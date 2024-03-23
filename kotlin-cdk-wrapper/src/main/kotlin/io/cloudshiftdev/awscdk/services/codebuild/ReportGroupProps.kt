@@ -167,7 +167,7 @@ public interface ReportGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.ReportGroupProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.ReportGroupProps,
   ) : CdkObject(cdkObject), ReportGroupProps {
     /**
      * An optional S3 bucket to export the reports to.

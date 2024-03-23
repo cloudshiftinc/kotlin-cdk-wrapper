@@ -169,7 +169,7 @@ public interface ScheduledTaskImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps,
   ) : CdkObject(cdkObject), ScheduledTaskImageProps {
     /**
      * The command that is passed to the container.

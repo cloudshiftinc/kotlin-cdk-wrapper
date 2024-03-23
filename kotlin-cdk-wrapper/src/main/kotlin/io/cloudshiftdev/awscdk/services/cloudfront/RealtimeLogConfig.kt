@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class RealtimeLogConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.RealtimeLogConfig,
+public open class RealtimeLogConfig(
+  cdkObject: software.amazon.awscdk.services.cloudfront.RealtimeLogConfig,
 ) : Resource(cdkObject), IRealtimeLogConfig {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -202,6 +202,7 @@ public open class RealtimeLogConfig internal constructor(
         RealtimeLogConfig = RealtimeLogConfig(cdkObject)
 
     internal fun unwrap(wrapped: RealtimeLogConfig):
-        software.amazon.awscdk.services.cloudfront.RealtimeLogConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.RealtimeLogConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.RealtimeLogConfig
   }
 }

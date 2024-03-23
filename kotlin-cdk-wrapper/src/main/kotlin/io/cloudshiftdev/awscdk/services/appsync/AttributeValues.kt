@@ -56,8 +56,8 @@ import kotlin.collections.List
  * .build());
  * ```
  */
-public open class AttributeValues internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.AttributeValues,
+public open class AttributeValues(
+  cdkObject: software.amazon.awscdk.services.appsync.AttributeValues,
 ) : CdkObject(cdkObject) {
   public constructor(container: String) :
       this(software.amazon.awscdk.services.appsync.AttributeValues(container)
@@ -91,6 +91,7 @@ public open class AttributeValues internal constructor(
         AttributeValues = AttributeValues(cdkObject)
 
     internal fun unwrap(wrapped: AttributeValues):
-        software.amazon.awscdk.services.appsync.AttributeValues = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.AttributeValues = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.AttributeValues
   }
 }

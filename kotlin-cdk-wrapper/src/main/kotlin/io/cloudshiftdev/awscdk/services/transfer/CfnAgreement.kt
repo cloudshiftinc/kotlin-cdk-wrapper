@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html)
  */
-public open class CfnAgreement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnAgreement,
+public open class CfnAgreement(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnAgreement,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -444,6 +444,7 @@ public open class CfnAgreement internal constructor(
         CfnAgreement = CfnAgreement(cdkObject)
 
     internal fun unwrap(wrapped: CfnAgreement):
-        software.amazon.awscdk.services.transfer.CfnAgreement = wrapped.cdkObject
+        software.amazon.awscdk.services.transfer.CfnAgreement = wrapped.cdkObject as
+        software.amazon.awscdk.services.transfer.CfnAgreement
   }
 }

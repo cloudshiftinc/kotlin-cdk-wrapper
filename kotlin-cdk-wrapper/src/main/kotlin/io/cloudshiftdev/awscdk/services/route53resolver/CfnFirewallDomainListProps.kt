@@ -159,8 +159,7 @@ public interface CfnFirewallDomainListProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps,
   ) : CdkObject(cdkObject), CfnFirewallDomainListProps {
     /**
      * The fully qualified URL or URI of the file stored in Amazon Simple Storage Service (Amazon

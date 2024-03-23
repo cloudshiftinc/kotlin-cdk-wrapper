@@ -22,7 +22,7 @@ public interface IBaseDeploymentConfig {
   public fun deploymentConfigName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.IBaseDeploymentConfig,
+    cdkObject: software.amazon.awscdk.services.codedeploy.IBaseDeploymentConfig,
   ) : CdkObject(cdkObject), IBaseDeploymentConfig {
     /**
      * The ARN of the Deployment Configuration.

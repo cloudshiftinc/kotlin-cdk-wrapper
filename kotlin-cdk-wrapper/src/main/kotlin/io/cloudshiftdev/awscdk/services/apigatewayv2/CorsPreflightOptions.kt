@@ -204,7 +204,7 @@ public interface CorsPreflightOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions,
   ) : CdkObject(cdkObject), CorsPreflightOptions {
     /**
      * Specifies whether credentials are included in the CORS request.

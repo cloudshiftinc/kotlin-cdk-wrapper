@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledcontrol.html)
  */
-public open class CfnEnabledControl internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl,
+public open class CfnEnabledControl(
+  cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -320,7 +320,8 @@ public open class CfnEnabledControl internal constructor(
         CfnEnabledControl = CfnEnabledControl(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnabledControl):
-        software.amazon.awscdk.services.controltower.CfnEnabledControl = wrapped.cdkObject
+        software.amazon.awscdk.services.controltower.CfnEnabledControl = wrapped.cdkObject as
+        software.amazon.awscdk.services.controltower.CfnEnabledControl
   }
 
   /**
@@ -415,8 +416,7 @@ public open class CfnEnabledControl internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty,
+      cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty,
     ) : CdkObject(cdkObject), EnabledControlParameterProperty {
       /**
        * The key of a key/value pair.

@@ -58,7 +58,7 @@ public interface OriginBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindOptions,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindOptions,
   ) : CdkObject(cdkObject), OriginBindOptions {
     /**
      * The identifier of this Origin, as assigned by the Distribution this Origin has been used

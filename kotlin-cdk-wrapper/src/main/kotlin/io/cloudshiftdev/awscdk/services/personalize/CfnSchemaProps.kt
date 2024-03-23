@@ -102,7 +102,7 @@ public interface CfnSchemaProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.personalize.CfnSchemaProps,
+    cdkObject: software.amazon.awscdk.services.personalize.CfnSchemaProps,
   ) : CdkObject(cdkObject), CfnSchemaProps {
     /**
      * The domain of a schema that you created for a dataset in a Domain dataset group.

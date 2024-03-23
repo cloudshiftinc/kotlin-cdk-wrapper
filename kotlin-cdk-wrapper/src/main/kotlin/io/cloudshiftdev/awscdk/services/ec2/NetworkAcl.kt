@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NetworkAcl internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.NetworkAcl,
+public open class NetworkAcl(
+  cdkObject: software.amazon.awscdk.services.ec2.NetworkAcl,
 ) : Resource(cdkObject), INetworkAcl {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -247,6 +247,6 @@ public open class NetworkAcl internal constructor(
         NetworkAcl(cdkObject)
 
     internal fun unwrap(wrapped: NetworkAcl): software.amazon.awscdk.services.ec2.NetworkAcl =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.NetworkAcl
   }
 }

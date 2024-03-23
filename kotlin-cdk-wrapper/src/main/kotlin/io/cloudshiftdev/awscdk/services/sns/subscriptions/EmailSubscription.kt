@@ -28,9 +28,8 @@ import kotlin.collections.Map
  * myTopic.addSubscription(new EmailSubscription(emailAddress.getValueAsString()));
  * ```
  */
-public open class EmailSubscription internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sns.subscriptions.EmailSubscription,
+public open class EmailSubscription(
+  cdkObject: software.amazon.awscdk.services.sns.subscriptions.EmailSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(emailAddress: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.EmailSubscription(emailAddress)
@@ -177,6 +176,7 @@ public open class EmailSubscription internal constructor(
         EmailSubscription = EmailSubscription(cdkObject)
 
     internal fun unwrap(wrapped: EmailSubscription):
-        software.amazon.awscdk.services.sns.subscriptions.EmailSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.sns.subscriptions.EmailSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.sns.subscriptions.EmailSubscription
   }
 }

@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html)
  */
-public open class CfnReplicationConfig internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig,
+public open class CfnReplicationConfig(
+  cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -637,7 +637,8 @@ public open class CfnReplicationConfig internal constructor(
         CfnReplicationConfig = CfnReplicationConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationConfig):
-        software.amazon.awscdk.services.dms.CfnReplicationConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.dms.CfnReplicationConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.dms.CfnReplicationConfig
   }
 
   /**
@@ -1010,8 +1011,7 @@ public open class CfnReplicationConfig internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty,
     ) : CdkObject(cdkObject), ComputeConfigProperty {
       /**
        * The Availability Zone where the AWS DMS Serverless replication using this configuration

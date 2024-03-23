@@ -186,7 +186,7 @@ public interface LustreFileSystemProps : FileSystemProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystemProps,
+    cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystemProps,
   ) : CdkObject(cdkObject), LustreFileSystemProps {
     /**
      * The ID of the backup.

@@ -117,7 +117,7 @@ public interface CfnXssMatchSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSetProps,
+    cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSetProps,
   ) : CdkObject(cdkObject), CfnXssMatchSetProps {
     /**
      * The name, if any, of the `XssMatchSet` .

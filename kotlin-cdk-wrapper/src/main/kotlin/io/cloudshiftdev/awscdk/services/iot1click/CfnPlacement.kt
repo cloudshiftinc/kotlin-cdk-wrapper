@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-placement.html)
  */
-public open class CfnPlacement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacement,
+public open class CfnPlacement(
+  cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacement,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,6 +244,7 @@ public open class CfnPlacement internal constructor(
         CfnPlacement = CfnPlacement(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlacement):
-        software.amazon.awscdk.services.iot1click.CfnPlacement = wrapped.cdkObject
+        software.amazon.awscdk.services.iot1click.CfnPlacement = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot1click.CfnPlacement
   }
 }

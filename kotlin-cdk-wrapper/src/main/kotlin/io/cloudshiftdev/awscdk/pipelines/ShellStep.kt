@@ -36,8 +36,8 @@ import kotlin.collections.Map
  * );
  * ```
  */
-public open class ShellStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.ShellStep,
+public open class ShellStep(
+  cdkObject: software.amazon.awscdk.pipelines.ShellStep,
 ) : Step(cdkObject) {
   public constructor(id: String, props: ShellStepProps) :
       this(software.amazon.awscdk.pipelines.ShellStep(id, props.let(ShellStepProps::unwrap))
@@ -393,6 +393,6 @@ public open class ShellStep internal constructor(
         ShellStep(cdkObject)
 
     internal fun unwrap(wrapped: ShellStep): software.amazon.awscdk.pipelines.ShellStep =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.pipelines.ShellStep
   }
 }

@@ -140,8 +140,7 @@ public interface SelfManagedDeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps,
   ) : CdkObject(cdkObject), SelfManagedDeploymentProps {
     /**
      * The IAM role in the administrator account used to assume execution roles in the target

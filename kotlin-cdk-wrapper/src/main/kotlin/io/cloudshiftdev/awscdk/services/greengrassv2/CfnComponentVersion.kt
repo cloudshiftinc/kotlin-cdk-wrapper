@@ -119,8 +119,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-componentversion.html)
  */
-public open class CfnComponentVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
+public open class CfnComponentVersion(
+  cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -401,11 +401,12 @@ public open class CfnComponentVersion internal constructor(
         CfnComponentVersion = CfnComponentVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentVersion):
-        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
   }
 
   /**
-   * Contains information about an AWS Lambda function to import to create a component.
+   * Contains information about a component dependency for a Lambda function component.
    *
    * Example:
    *
@@ -413,360 +414,297 @@ public open class CfnComponentVersion internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * LambdaFunctionRecipeSourceProperty lambdaFunctionRecipeSourceProperty =
-   * LambdaFunctionRecipeSourceProperty.builder()
-   * .componentDependencies(Map.of(
-   * "componentDependenciesKey", ComponentDependencyRequirementProperty.builder()
+   * ComponentDependencyRequirementProperty componentDependencyRequirementProperty =
+   * ComponentDependencyRequirementProperty.builder()
    * .dependencyType("dependencyType")
    * .versionRequirement("versionRequirement")
-   * .build()))
-   * .componentLambdaParameters(LambdaExecutionParametersProperty.builder()
-   * .environmentVariables(Map.of(
-   * "environmentVariablesKey", "environmentVariables"))
-   * .eventSources(List.of(LambdaEventSourceProperty.builder()
-   * .topic("topic")
-   * .type("type")
-   * .build()))
-   * .execArgs(List.of("execArgs"))
-   * .inputPayloadEncodingType("inputPayloadEncodingType")
-   * .linuxProcessParams(LambdaLinuxProcessParamsProperty.builder()
-   * .containerParams(LambdaContainerParamsProperty.builder()
-   * .devices(List.of(LambdaDeviceMountProperty.builder()
-   * .addGroupOwner(false)
-   * .path("path")
-   * .permission("permission")
-   * .build()))
-   * .memorySizeInKb(123)
-   * .mountRoSysfs(false)
-   * .volumes(List.of(LambdaVolumeMountProperty.builder()
-   * .addGroupOwner(false)
-   * .destinationPath("destinationPath")
-   * .permission("permission")
-   * .sourcePath("sourcePath")
-   * .build()))
-   * .build())
-   * .isolationMode("isolationMode")
-   * .build())
-   * .maxIdleTimeInSeconds(123)
-   * .maxInstancesCount(123)
-   * .maxQueueSize(123)
-   * .pinned(false)
-   * .statusTimeoutInSeconds(123)
-   * .timeoutInSeconds(123)
-   * .build())
-   * .componentName("componentName")
-   * .componentPlatforms(List.of(ComponentPlatformProperty.builder()
-   * .attributes(Map.of(
-   * "attributesKey", "attributes"))
-   * .name("name")
-   * .build()))
-   * .componentVersion("componentVersion")
-   * .lambdaArn("lambdaArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html)
    */
-  public interface LambdaFunctionRecipeSourceProperty {
+  public interface ComponentDependencyRequirementProperty {
     /**
-     * The component versions on which this Lambda function component depends.
+     * The type of this dependency. Choose from the following options:.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)
+     * * `SOFT` – The component doesn't restart if the dependency changes state.
+     * * `HARD` – The component restarts if the dependency changes state.
+     *
+     * Default: `HARD`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-dependencytype)
      */
-    public fun componentDependencies(): Any? = unwrap(this).getComponentDependencies()
+    public fun dependencyType(): String? = unwrap(this).getDependencyType()
 
     /**
-     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT
-     * Greengrass core device.
+     * The component version requirement for the component dependency.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters)
+     * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
+     * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-versionrequirement)
      */
-    public fun componentLambdaParameters(): Any? = unwrap(this).getComponentLambdaParameters()
+    public fun versionRequirement(): String? = unwrap(this).getVersionRequirement()
 
     /**
-     * The name of the component.
-     *
-     * Defaults to the name of the Lambda function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname)
-     */
-    public fun componentName(): String? = unwrap(this).getComponentName()
-
-    /**
-     * The platforms that the component version supports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentplatforms)
-     */
-    public fun componentPlatforms(): Any? = unwrap(this).getComponentPlatforms()
-
-    /**
-     * The version of the component.
-     *
-     * Defaults to the version of the Lambda function as a semantic version. For example, if your
-     * function version is `3` , the component version becomes `3.0.0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentversion)
-     */
-    public fun componentVersion(): String? = unwrap(this).getComponentVersion()
-
-    /**
-     * The ARN of the Lambda function.
-     *
-     * The ARN must include the version of the function to import. You can't use version aliases
-     * like `$LATEST` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-lambdaarn)
-     */
-    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
-
-    /**
-     * A builder for [LambdaFunctionRecipeSourceProperty]
+     * A builder for [ComponentDependencyRequirementProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param componentDependencies The component versions on which this Lambda function component
-       * depends.
+       * @param dependencyType The type of this dependency. Choose from the following options:.
+       * * `SOFT` – The component doesn't restart if the dependency changes state.
+       * * `HARD` – The component restarts if the dependency changes state.
+       *
+       * Default: `HARD`
        */
-      public fun componentDependencies(componentDependencies: IResolvable)
+      public fun dependencyType(dependencyType: String)
 
       /**
-       * @param componentDependencies The component versions on which this Lambda function component
-       * depends.
+       * @param versionRequirement The component version requirement for the component dependency.
+       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
+       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
        */
-      public fun componentDependencies(componentDependencies: Map<String, Any>)
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      public fun componentLambdaParameters(componentLambdaParameters: IResolvable)
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      public
-          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty)
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2baaea23fa42a72d73625398b3745773a4ef9501bd5209c28d2a3b7974b71fce")
-      public
-          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty.Builder.() -> Unit)
-
-      /**
-       * @param componentName The name of the component.
-       * Defaults to the name of the Lambda function.
-       */
-      public fun componentName(componentName: String)
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      public fun componentPlatforms(componentPlatforms: IResolvable)
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      public fun componentPlatforms(componentPlatforms: List<Any>)
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      public fun componentPlatforms(vararg componentPlatforms: Any)
-
-      /**
-       * @param componentVersion The version of the component.
-       * Defaults to the version of the Lambda function as a semantic version. For example, if your
-       * function version is `3` , the component version becomes `3.0.0` .
-       */
-      public fun componentVersion(componentVersion: String)
-
-      /**
-       * @param lambdaArn The ARN of the Lambda function.
-       * The ARN must include the version of the function to import. You can't use version aliases
-       * like `$LATEST` .
-       */
-      public fun lambdaArn(lambdaArn: String)
+      public fun versionRequirement(versionRequirement: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty.Builder
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty.Builder
           =
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty.builder()
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty.builder()
 
       /**
-       * @param componentDependencies The component versions on which this Lambda function component
-       * depends.
+       * @param dependencyType The type of this dependency. Choose from the following options:.
+       * * `SOFT` – The component doesn't restart if the dependency changes state.
+       * * `HARD` – The component restarts if the dependency changes state.
+       *
+       * Default: `HARD`
        */
-      override fun componentDependencies(componentDependencies: IResolvable) {
-        cdkBuilder.componentDependencies(componentDependencies.let(IResolvable::unwrap))
+      override fun dependencyType(dependencyType: String) {
+        cdkBuilder.dependencyType(dependencyType)
       }
 
       /**
-       * @param componentDependencies The component versions on which this Lambda function component
-       * depends.
+       * @param versionRequirement The component version requirement for the component dependency.
+       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
+       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
        */
-      override fun componentDependencies(componentDependencies: Map<String, Any>) {
-        cdkBuilder.componentDependencies(componentDependencies)
-      }
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      override fun componentLambdaParameters(componentLambdaParameters: IResolvable) {
-        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      override
-          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty) {
-        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(LambdaExecutionParametersProperty::unwrap))
-      }
-
-      /**
-       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
-       * as it runs on the AWS IoT Greengrass core device.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2baaea23fa42a72d73625398b3745773a4ef9501bd5209c28d2a3b7974b71fce")
-      override
-          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty.Builder.() -> Unit):
-          Unit =
-          componentLambdaParameters(LambdaExecutionParametersProperty(componentLambdaParameters))
-
-      /**
-       * @param componentName The name of the component.
-       * Defaults to the name of the Lambda function.
-       */
-      override fun componentName(componentName: String) {
-        cdkBuilder.componentName(componentName)
-      }
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      override fun componentPlatforms(componentPlatforms: IResolvable) {
-        cdkBuilder.componentPlatforms(componentPlatforms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      override fun componentPlatforms(componentPlatforms: List<Any>) {
-        cdkBuilder.componentPlatforms(componentPlatforms)
-      }
-
-      /**
-       * @param componentPlatforms The platforms that the component version supports.
-       */
-      override fun componentPlatforms(vararg componentPlatforms: Any): Unit =
-          componentPlatforms(componentPlatforms.toList())
-
-      /**
-       * @param componentVersion The version of the component.
-       * Defaults to the version of the Lambda function as a semantic version. For example, if your
-       * function version is `3` , the component version becomes `3.0.0` .
-       */
-      override fun componentVersion(componentVersion: String) {
-        cdkBuilder.componentVersion(componentVersion)
-      }
-
-      /**
-       * @param lambdaArn The ARN of the Lambda function.
-       * The ARN must include the version of the function to import. You can't use version aliases
-       * like `$LATEST` .
-       */
-      override fun lambdaArn(lambdaArn: String) {
-        cdkBuilder.lambdaArn(lambdaArn)
+      override fun versionRequirement(versionRequirement: String) {
+        cdkBuilder.versionRequirement(versionRequirement)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty,
-    ) : CdkObject(cdkObject), LambdaFunctionRecipeSourceProperty {
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty,
+    ) : CdkObject(cdkObject), ComponentDependencyRequirementProperty {
       /**
-       * The component versions on which this Lambda function component depends.
+       * The type of this dependency. Choose from the following options:.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)
+       * * `SOFT` – The component doesn't restart if the dependency changes state.
+       * * `HARD` – The component restarts if the dependency changes state.
+       *
+       * Default: `HARD`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-dependencytype)
        */
-      override fun componentDependencies(): Any? = unwrap(this).getComponentDependencies()
+      override fun dependencyType(): String? = unwrap(this).getDependencyType()
 
       /**
-       * The system and runtime parameters for the Lambda function as it runs on the AWS IoT
-       * Greengrass core device.
+       * The component version requirement for the component dependency.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters)
+       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
+       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-versionrequirement)
        */
-      override fun componentLambdaParameters(): Any? = unwrap(this).getComponentLambdaParameters()
-
-      /**
-       * The name of the component.
-       *
-       * Defaults to the name of the Lambda function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname)
-       */
-      override fun componentName(): String? = unwrap(this).getComponentName()
-
-      /**
-       * The platforms that the component version supports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentplatforms)
-       */
-      override fun componentPlatforms(): Any? = unwrap(this).getComponentPlatforms()
-
-      /**
-       * The version of the component.
-       *
-       * Defaults to the version of the Lambda function as a semantic version. For example, if your
-       * function version is `3` , the component version becomes `3.0.0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentversion)
-       */
-      override fun componentVersion(): String? = unwrap(this).getComponentVersion()
-
-      /**
-       * The ARN of the Lambda function.
-       *
-       * The ARN must include the version of the function to import. You can't use version aliases
-       * like `$LATEST` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-lambdaarn)
-       */
-      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+      override fun versionRequirement(): String? = unwrap(this).getVersionRequirement()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          LambdaFunctionRecipeSourceProperty {
+          ComponentDependencyRequirementProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty):
-          LambdaFunctionRecipeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaFunctionRecipeSourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty):
+          ComponentDependencyRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentDependencyRequirementProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LambdaFunctionRecipeSourceProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
+      internal fun unwrap(wrapped: ComponentDependencyRequirementProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
+    }
+  }
+
+  /**
+   * Contains information about a platform that a component supports.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * ComponentPlatformProperty componentPlatformProperty = ComponentPlatformProperty.builder()
+   * .attributes(Map.of(
+   * "attributesKey", "attributes"))
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html)
+   */
+  public interface ComponentPlatformProperty {
+    /**
+     * A dictionary of attributes for the platform.
+     *
+     * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+     * specify additional platform attributes for a core device when you deploy the AWS IoT Greengrass
+     * nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+     * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+     * in the *AWS IoT Greengrass V2 Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-attributes)
+     */
+    public fun attributes(): Any? = unwrap(this).getAttributes()
+
+    /**
+     * The friendly name of the platform. This name helps you identify the platform.
+     *
+     * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
+     * `architecture` of the platform.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [ComponentPlatformProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes A dictionary of attributes for the platform.
+       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+       * specify additional platform attributes for a core device when you deploy the AWS IoT
+       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      public fun attributes(attributes: IResolvable)
+
+      /**
+       * @param attributes A dictionary of attributes for the platform.
+       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+       * specify additional platform attributes for a core device when you deploy the AWS IoT
+       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      public fun attributes(attributes: Map<String, String>)
+
+      /**
+       * @param name The friendly name of the platform. This name helps you identify the platform.
+       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
+       * `architecture` of the platform.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty.builder()
+
+      /**
+       * @param attributes A dictionary of attributes for the platform.
+       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+       * specify additional platform attributes for a core device when you deploy the AWS IoT
+       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param attributes A dictionary of attributes for the platform.
+       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+       * specify additional platform attributes for a core device when you deploy the AWS IoT
+       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param name The friendly name of the platform. This name helps you identify the platform.
+       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
+       * `architecture` of the platform.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty,
+    ) : CdkObject(cdkObject), ComponentPlatformProperty {
+      /**
+       * A dictionary of attributes for the platform.
+       *
+       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
+       * specify additional platform attributes for a core device when you deploy the AWS IoT
+       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
+       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-attributes)
+       */
+      override fun attributes(): Any? = unwrap(this).getAttributes()
+
+      /**
+       * The friendly name of the platform. This name helps you identify the platform.
+       *
+       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
+       * `architecture` of the platform.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentPlatformProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty):
+          ComponentPlatformProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPlatformProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentPlatformProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
     }
   }
 
@@ -965,8 +903,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty,
     ) : CdkObject(cdkObject), LambdaContainerParamsProperty {
       /**
        * The list of system devices that the container can access.
@@ -1141,8 +1078,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty,
     ) : CdkObject(cdkObject), LambdaDeviceMountProperty {
       /**
        * Whether or not to add the component's system user as an owner of the device.
@@ -1189,7 +1125,10 @@ public open class CfnComponentVersion internal constructor(
   }
 
   /**
-   * Contains information about a component dependency for a Lambda function component.
+   * Contains information about an event source for an AWS Lambda function.
+   *
+   * The event source defines the topics on which this Lambda function subscribes to receive
+   * messages that run the function.
    *
    * Example:
    *
@@ -1197,299 +1136,121 @@ public open class CfnComponentVersion internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * ComponentDependencyRequirementProperty componentDependencyRequirementProperty =
-   * ComponentDependencyRequirementProperty.builder()
-   * .dependencyType("dependencyType")
-   * .versionRequirement("versionRequirement")
+   * LambdaEventSourceProperty lambdaEventSourceProperty = LambdaEventSourceProperty.builder()
+   * .topic("topic")
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html)
    */
-  public interface ComponentDependencyRequirementProperty {
+  public interface LambdaEventSourceProperty {
     /**
-     * The type of this dependency. Choose from the following options:.
+     * The topic to which to subscribe to receive event messages.
      *
-     * * `SOFT` – The component doesn't restart if the dependency changes state.
-     * * `HARD` – The component restarts if the dependency changes state.
-     *
-     * Default: `HARD`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-dependencytype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-topic)
      */
-    public fun dependencyType(): String? = unwrap(this).getDependencyType()
+    public fun topic(): String? = unwrap(this).getTopic()
 
     /**
-     * The component version requirement for the component dependency.
+     * The type of event source. Choose from the following options:.
      *
-     * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
-     * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+     * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
+     * support MQTT wildcards ( `+` and `#` ) in the event source topic.
+     * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
+     * wildcards ( `+` and `#` ) in the event source topic.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-versionrequirement)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-type)
      */
-    public fun versionRequirement(): String? = unwrap(this).getVersionRequirement()
+    public fun type(): String? = unwrap(this).getType()
 
     /**
-     * A builder for [ComponentDependencyRequirementProperty]
+     * A builder for [LambdaEventSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dependencyType The type of this dependency. Choose from the following options:.
-       * * `SOFT` – The component doesn't restart if the dependency changes state.
-       * * `HARD` – The component restarts if the dependency changes state.
-       *
-       * Default: `HARD`
+       * @param topic The topic to which to subscribe to receive event messages.
        */
-      public fun dependencyType(dependencyType: String)
+      public fun topic(topic: String)
 
       /**
-       * @param versionRequirement The component version requirement for the component dependency.
-       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
-       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+       * @param type The type of event source. Choose from the following options:.
+       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
+       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
+       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
+       * MQTT wildcards ( `+` and `#` ) in the event source topic.
        */
-      public fun versionRequirement(versionRequirement: String)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty.Builder
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty.Builder
           =
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty.builder()
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty.builder()
 
       /**
-       * @param dependencyType The type of this dependency. Choose from the following options:.
-       * * `SOFT` – The component doesn't restart if the dependency changes state.
-       * * `HARD` – The component restarts if the dependency changes state.
-       *
-       * Default: `HARD`
+       * @param topic The topic to which to subscribe to receive event messages.
        */
-      override fun dependencyType(dependencyType: String) {
-        cdkBuilder.dependencyType(dependencyType)
+      override fun topic(topic: String) {
+        cdkBuilder.topic(topic)
       }
 
       /**
-       * @param versionRequirement The component version requirement for the component dependency.
-       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
-       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+       * @param type The type of event source. Choose from the following options:.
+       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
+       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
+       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
+       * MQTT wildcards ( `+` and `#` ) in the event source topic.
        */
-      override fun versionRequirement(versionRequirement: String) {
-        cdkBuilder.versionRequirement(versionRequirement)
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty,
-    ) : CdkObject(cdkObject), ComponentDependencyRequirementProperty {
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty,
+    ) : CdkObject(cdkObject), LambdaEventSourceProperty {
       /**
-       * The type of this dependency. Choose from the following options:.
+       * The topic to which to subscribe to receive event messages.
        *
-       * * `SOFT` – The component doesn't restart if the dependency changes state.
-       * * `HARD` – The component restarts if the dependency changes state.
-       *
-       * Default: `HARD`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-dependencytype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-topic)
        */
-      override fun dependencyType(): String? = unwrap(this).getDependencyType()
+      override fun topic(): String? = unwrap(this).getTopic()
 
       /**
-       * The component version requirement for the component dependency.
+       * The type of event source. Choose from the following options:.
        *
-       * AWS IoT Greengrass uses semantic version constraints. For more information, see [Semantic
-       * Versioning](https://docs.aws.amazon.com/https://semver.org/) .
+       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
+       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
+       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
+       * MQTT wildcards ( `+` and `#` ) in the event source topic.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html#cfn-greengrassv2-componentversion-componentdependencyrequirement-versionrequirement)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-type)
        */
-      override fun versionRequirement(): String? = unwrap(this).getVersionRequirement()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentDependencyRequirementProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaEventSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty):
-          ComponentDependencyRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentDependencyRequirementProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty):
+          LambdaEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaEventSourceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ComponentDependencyRequirementProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
+      internal fun unwrap(wrapped: LambdaEventSourceProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
-    }
-  }
-
-  /**
-   * Contains information about a platform that a component supports.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * ComponentPlatformProperty componentPlatformProperty = ComponentPlatformProperty.builder()
-   * .attributes(Map.of(
-   * "attributesKey", "attributes"))
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html)
-   */
-  public interface ComponentPlatformProperty {
-    /**
-     * A dictionary of attributes for the platform.
-     *
-     * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-     * specify additional platform attributes for a core device when you deploy the AWS IoT Greengrass
-     * nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-     * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-     * in the *AWS IoT Greengrass V2 Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-attributes)
-     */
-    public fun attributes(): Any? = unwrap(this).getAttributes()
-
-    /**
-     * The friendly name of the platform. This name helps you identify the platform.
-     *
-     * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
-     * `architecture` of the platform.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [ComponentPlatformProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes A dictionary of attributes for the platform.
-       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-       * specify additional platform attributes for a core device when you deploy the AWS IoT
-       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       */
-      public fun attributes(attributes: IResolvable)
-
-      /**
-       * @param attributes A dictionary of attributes for the platform.
-       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-       * specify additional platform attributes for a core device when you deploy the AWS IoT
-       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       */
-      public fun attributes(attributes: Map<String, String>)
-
-      /**
-       * @param name The friendly name of the platform. This name helps you identify the platform.
-       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
-       * `architecture` of the platform.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty.builder()
-
-      /**
-       * @param attributes A dictionary of attributes for the platform.
-       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-       * specify additional platform attributes for a core device when you deploy the AWS IoT
-       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param attributes A dictionary of attributes for the platform.
-       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-       * specify additional platform attributes for a core device when you deploy the AWS IoT
-       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param name The friendly name of the platform. This name helps you identify the platform.
-       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
-       * `architecture` of the platform.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty,
-    ) : CdkObject(cdkObject), ComponentPlatformProperty {
-      /**
-       * A dictionary of attributes for the platform.
-       *
-       * The AWS IoT Greengrass Core software defines the `os` and `platform` by default. You can
-       * specify additional platform attributes for a core device when you deploy the AWS IoT
-       * Greengrass nucleus component. For more information, see the [AWS IoT Greengrass nucleus
-       * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-attributes)
-       */
-      override fun attributes(): Any? = unwrap(this).getAttributes()
-
-      /**
-       * The friendly name of the platform. This name helps you identify the platform.
-       *
-       * If you omit this parameter, AWS IoT Greengrass creates a friendly name from the `os` and
-       * `architecture` of the platform.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html#cfn-greengrassv2-componentversion-componentplatform-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentPlatformProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty):
-          ComponentPlatformProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentPlatformProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentPlatformProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
     }
   }
 
@@ -1945,8 +1706,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty,
     ) : CdkObject(cdkObject), LambdaExecutionParametersProperty {
       /**
        * The map of environment variables that are available to the Lambda function when it runs.
@@ -2064,10 +1824,7 @@ public open class CfnComponentVersion internal constructor(
   }
 
   /**
-   * Contains information about an event source for an AWS Lambda function.
-   *
-   * The event source defines the topics on which this Lambda function subscribes to receive
-   * messages that run the function.
+   * Contains information about an AWS Lambda function to import to create a component.
    *
    * Example:
    *
@@ -2075,122 +1832,529 @@ public open class CfnComponentVersion internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * LambdaEventSourceProperty lambdaEventSourceProperty = LambdaEventSourceProperty.builder()
+   * LambdaFunctionRecipeSourceProperty lambdaFunctionRecipeSourceProperty =
+   * LambdaFunctionRecipeSourceProperty.builder()
+   * .componentDependencies(Map.of(
+   * "componentDependenciesKey", ComponentDependencyRequirementProperty.builder()
+   * .dependencyType("dependencyType")
+   * .versionRequirement("versionRequirement")
+   * .build()))
+   * .componentLambdaParameters(LambdaExecutionParametersProperty.builder()
+   * .environmentVariables(Map.of(
+   * "environmentVariablesKey", "environmentVariables"))
+   * .eventSources(List.of(LambdaEventSourceProperty.builder()
    * .topic("topic")
    * .type("type")
+   * .build()))
+   * .execArgs(List.of("execArgs"))
+   * .inputPayloadEncodingType("inputPayloadEncodingType")
+   * .linuxProcessParams(LambdaLinuxProcessParamsProperty.builder()
+   * .containerParams(LambdaContainerParamsProperty.builder()
+   * .devices(List.of(LambdaDeviceMountProperty.builder()
+   * .addGroupOwner(false)
+   * .path("path")
+   * .permission("permission")
+   * .build()))
+   * .memorySizeInKb(123)
+   * .mountRoSysfs(false)
+   * .volumes(List.of(LambdaVolumeMountProperty.builder()
+   * .addGroupOwner(false)
+   * .destinationPath("destinationPath")
+   * .permission("permission")
+   * .sourcePath("sourcePath")
+   * .build()))
+   * .build())
+   * .isolationMode("isolationMode")
+   * .build())
+   * .maxIdleTimeInSeconds(123)
+   * .maxInstancesCount(123)
+   * .maxQueueSize(123)
+   * .pinned(false)
+   * .statusTimeoutInSeconds(123)
+   * .timeoutInSeconds(123)
+   * .build())
+   * .componentName("componentName")
+   * .componentPlatforms(List.of(ComponentPlatformProperty.builder()
+   * .attributes(Map.of(
+   * "attributesKey", "attributes"))
+   * .name("name")
+   * .build()))
+   * .componentVersion("componentVersion")
+   * .lambdaArn("lambdaArn")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html)
    */
-  public interface LambdaEventSourceProperty {
+  public interface LambdaFunctionRecipeSourceProperty {
     /**
-     * The topic to which to subscribe to receive event messages.
+     * The component versions on which this Lambda function component depends.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-topic)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)
      */
-    public fun topic(): String? = unwrap(this).getTopic()
+    public fun componentDependencies(): Any? = unwrap(this).getComponentDependencies()
 
     /**
-     * The type of event source. Choose from the following options:.
+     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT
+     * Greengrass core device.
      *
-     * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
-     * support MQTT wildcards ( `+` and `#` ) in the event source topic.
-     * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
-     * wildcards ( `+` and `#` ) in the event source topic.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-type)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters)
      */
-    public fun type(): String? = unwrap(this).getType()
+    public fun componentLambdaParameters(): Any? = unwrap(this).getComponentLambdaParameters()
 
     /**
-     * A builder for [LambdaEventSourceProperty]
+     * The name of the component.
+     *
+     * Defaults to the name of the Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname)
+     */
+    public fun componentName(): String? = unwrap(this).getComponentName()
+
+    /**
+     * The platforms that the component version supports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentplatforms)
+     */
+    public fun componentPlatforms(): Any? = unwrap(this).getComponentPlatforms()
+
+    /**
+     * The version of the component.
+     *
+     * Defaults to the version of the Lambda function as a semantic version. For example, if your
+     * function version is `3` , the component version becomes `3.0.0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentversion)
+     */
+    public fun componentVersion(): String? = unwrap(this).getComponentVersion()
+
+    /**
+     * The ARN of the Lambda function.
+     *
+     * The ARN must include the version of the function to import. You can't use version aliases
+     * like `$LATEST` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-lambdaarn)
+     */
+    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+
+    /**
+     * A builder for [LambdaFunctionRecipeSourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param topic The topic to which to subscribe to receive event messages.
+       * @param componentDependencies The component versions on which this Lambda function component
+       * depends.
        */
-      public fun topic(topic: String)
+      public fun componentDependencies(componentDependencies: IResolvable)
 
       /**
-       * @param type The type of event source. Choose from the following options:.
-       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
-       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
-       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
-       * MQTT wildcards ( `+` and `#` ) in the event source topic.
+       * @param componentDependencies The component versions on which this Lambda function component
+       * depends.
        */
-      public fun type(type: String)
+      public fun componentDependencies(componentDependencies: Map<String, Any>)
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      public fun componentLambdaParameters(componentLambdaParameters: IResolvable)
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      public
+          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty)
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2baaea23fa42a72d73625398b3745773a4ef9501bd5209c28d2a3b7974b71fce")
+      public
+          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param componentName The name of the component.
+       * Defaults to the name of the Lambda function.
+       */
+      public fun componentName(componentName: String)
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      public fun componentPlatforms(componentPlatforms: IResolvable)
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      public fun componentPlatforms(componentPlatforms: List<Any>)
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      public fun componentPlatforms(vararg componentPlatforms: Any)
+
+      /**
+       * @param componentVersion The version of the component.
+       * Defaults to the version of the Lambda function as a semantic version. For example, if your
+       * function version is `3` , the component version becomes `3.0.0` .
+       */
+      public fun componentVersion(componentVersion: String)
+
+      /**
+       * @param lambdaArn The ARN of the Lambda function.
+       * The ARN must include the version of the function to import. You can't use version aliases
+       * like `$LATEST` .
+       */
+      public fun lambdaArn(lambdaArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty.Builder
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty.Builder
           =
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty.builder()
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty.builder()
 
       /**
-       * @param topic The topic to which to subscribe to receive event messages.
+       * @param componentDependencies The component versions on which this Lambda function component
+       * depends.
        */
-      override fun topic(topic: String) {
-        cdkBuilder.topic(topic)
+      override fun componentDependencies(componentDependencies: IResolvable) {
+        cdkBuilder.componentDependencies(componentDependencies.let(IResolvable::unwrap))
       }
 
       /**
-       * @param type The type of event source. Choose from the following options:.
-       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
-       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
-       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
-       * MQTT wildcards ( `+` and `#` ) in the event source topic.
+       * @param componentDependencies The component versions on which this Lambda function component
+       * depends.
        */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun componentDependencies(componentDependencies: Map<String, Any>) {
+        cdkBuilder.componentDependencies(componentDependencies)
+      }
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      override fun componentLambdaParameters(componentLambdaParameters: IResolvable) {
+        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      override
+          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty) {
+        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(LambdaExecutionParametersProperty::unwrap))
+      }
+
+      /**
+       * @param componentLambdaParameters The system and runtime parameters for the Lambda function
+       * as it runs on the AWS IoT Greengrass core device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2baaea23fa42a72d73625398b3745773a4ef9501bd5209c28d2a3b7974b71fce")
+      override
+          fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty.Builder.() -> Unit):
+          Unit =
+          componentLambdaParameters(LambdaExecutionParametersProperty(componentLambdaParameters))
+
+      /**
+       * @param componentName The name of the component.
+       * Defaults to the name of the Lambda function.
+       */
+      override fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+      }
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      override fun componentPlatforms(componentPlatforms: IResolvable) {
+        cdkBuilder.componentPlatforms(componentPlatforms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      override fun componentPlatforms(componentPlatforms: List<Any>) {
+        cdkBuilder.componentPlatforms(componentPlatforms)
+      }
+
+      /**
+       * @param componentPlatforms The platforms that the component version supports.
+       */
+      override fun componentPlatforms(vararg componentPlatforms: Any): Unit =
+          componentPlatforms(componentPlatforms.toList())
+
+      /**
+       * @param componentVersion The version of the component.
+       * Defaults to the version of the Lambda function as a semantic version. For example, if your
+       * function version is `3` , the component version becomes `3.0.0` .
+       */
+      override fun componentVersion(componentVersion: String) {
+        cdkBuilder.componentVersion(componentVersion)
+      }
+
+      /**
+       * @param lambdaArn The ARN of the Lambda function.
+       * The ARN must include the version of the function to import. You can't use version aliases
+       * like `$LATEST` .
+       */
+      override fun lambdaArn(lambdaArn: String) {
+        cdkBuilder.lambdaArn(lambdaArn)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty,
-    ) : CdkObject(cdkObject), LambdaEventSourceProperty {
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty,
+    ) : CdkObject(cdkObject), LambdaFunctionRecipeSourceProperty {
       /**
-       * The topic to which to subscribe to receive event messages.
+       * The component versions on which this Lambda function component depends.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-topic)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentdependencies)
        */
-      override fun topic(): String? = unwrap(this).getTopic()
+      override fun componentDependencies(): Any? = unwrap(this).getComponentDependencies()
 
       /**
-       * The type of event source. Choose from the following options:.
+       * The system and runtime parameters for the Lambda function as it runs on the AWS IoT
+       * Greengrass core device.
        *
-       * * `PUB_SUB` – Subscribe to local publish/subscribe messages. This event source type doesn't
-       * support MQTT wildcards ( `+` and `#` ) in the event source topic.
-       * * `IOT_CORE` – Subscribe to AWS IoT Core MQTT messages. This event source type supports
-       * MQTT wildcards ( `+` and `#` ) in the event source topic.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html#cfn-greengrassv2-componentversion-lambdaeventsource-type)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters)
        */
-      override fun type(): String? = unwrap(this).getType()
+      override fun componentLambdaParameters(): Any? = unwrap(this).getComponentLambdaParameters()
+
+      /**
+       * The name of the component.
+       *
+       * Defaults to the name of the Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentname)
+       */
+      override fun componentName(): String? = unwrap(this).getComponentName()
+
+      /**
+       * The platforms that the component version supports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentplatforms)
+       */
+      override fun componentPlatforms(): Any? = unwrap(this).getComponentPlatforms()
+
+      /**
+       * The version of the component.
+       *
+       * Defaults to the version of the Lambda function as a semantic version. For example, if your
+       * function version is `3` , the component version becomes `3.0.0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentversion)
+       */
+      override fun componentVersion(): String? = unwrap(this).getComponentVersion()
+
+      /**
+       * The ARN of the Lambda function.
+       *
+       * The ARN must include the version of the function to import. You can't use version aliases
+       * like `$LATEST` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html#cfn-greengrassv2-componentversion-lambdafunctionrecipesource-lambdaarn)
+       */
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaEventSourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LambdaFunctionRecipeSourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty):
-          LambdaEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaEventSourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty):
+          LambdaFunctionRecipeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaFunctionRecipeSourceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LambdaEventSourceProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
+      internal fun unwrap(wrapped: LambdaFunctionRecipeSourceProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
+    }
+  }
+
+  /**
+   * Contains parameters for a Linux process that contains an AWS Lambda function.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * LambdaLinuxProcessParamsProperty lambdaLinuxProcessParamsProperty =
+   * LambdaLinuxProcessParamsProperty.builder()
+   * .containerParams(LambdaContainerParamsProperty.builder()
+   * .devices(List.of(LambdaDeviceMountProperty.builder()
+   * .addGroupOwner(false)
+   * .path("path")
+   * .permission("permission")
+   * .build()))
+   * .memorySizeInKb(123)
+   * .mountRoSysfs(false)
+   * .volumes(List.of(LambdaVolumeMountProperty.builder()
+   * .addGroupOwner(false)
+   * .destinationPath("destinationPath")
+   * .permission("permission")
+   * .sourcePath("sourcePath")
+   * .build()))
+   * .build())
+   * .isolationMode("isolationMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html)
+   */
+  public interface LambdaLinuxProcessParamsProperty {
+    /**
+     * The parameters for the container in which the Lambda function runs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-containerparams)
+     */
+    public fun containerParams(): Any? = unwrap(this).getContainerParams()
+
+    /**
+     * The isolation mode for the process that contains the Lambda function.
+     *
+     * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
+     * container, or as a regular process outside any container.
+     *
+     * Default: `GreengrassContainer`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-isolationmode)
+     */
+    public fun isolationMode(): String? = unwrap(this).getIsolationMode()
+
+    /**
+     * A builder for [LambdaLinuxProcessParamsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      public fun containerParams(containerParams: IResolvable)
+
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      public fun containerParams(containerParams: LambdaContainerParamsProperty)
+
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06d50906feca98faf4df750e8c8b2505d20d6d0ec007d1b01d4e003f98aa20d2")
+      public fun containerParams(containerParams: LambdaContainerParamsProperty.Builder.() -> Unit)
+
+      /**
+       * @param isolationMode The isolation mode for the process that contains the Lambda function.
+       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
+       * container, or as a regular process outside any container.
+       *
+       * Default: `GreengrassContainer`
+       */
+      public fun isolationMode(isolationMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty.builder()
+
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      override fun containerParams(containerParams: IResolvable) {
+        cdkBuilder.containerParams(containerParams.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      override fun containerParams(containerParams: LambdaContainerParamsProperty) {
+        cdkBuilder.containerParams(containerParams.let(LambdaContainerParamsProperty::unwrap))
+      }
+
+      /**
+       * @param containerParams The parameters for the container in which the Lambda function runs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06d50906feca98faf4df750e8c8b2505d20d6d0ec007d1b01d4e003f98aa20d2")
+      override
+          fun containerParams(containerParams: LambdaContainerParamsProperty.Builder.() -> Unit):
+          Unit = containerParams(LambdaContainerParamsProperty(containerParams))
+
+      /**
+       * @param isolationMode The isolation mode for the process that contains the Lambda function.
+       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
+       * container, or as a regular process outside any container.
+       *
+       * Default: `GreengrassContainer`
+       */
+      override fun isolationMode(isolationMode: String) {
+        cdkBuilder.isolationMode(isolationMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty,
+    ) : CdkObject(cdkObject), LambdaLinuxProcessParamsProperty {
+      /**
+       * The parameters for the container in which the Lambda function runs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-containerparams)
+       */
+      override fun containerParams(): Any? = unwrap(this).getContainerParams()
+
+      /**
+       * The isolation mode for the process that contains the Lambda function.
+       *
+       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
+       * container, or as a regular process outside any container.
+       *
+       * Default: `GreengrassContainer`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-isolationmode)
+       */
+      override fun isolationMode(): String? = unwrap(this).getIsolationMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaLinuxProcessParamsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty):
+          LambdaLinuxProcessParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaLinuxProcessParamsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaLinuxProcessParamsProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
     }
   }
 
@@ -2339,8 +2503,7 @@ public open class CfnComponentVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty,
     ) : CdkObject(cdkObject), LambdaVolumeMountProperty {
       /**
        * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
@@ -2390,177 +2553,6 @@ public open class CfnComponentVersion internal constructor(
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty
-    }
-  }
-
-  /**
-   * Contains parameters for a Linux process that contains an AWS Lambda function.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * LambdaLinuxProcessParamsProperty lambdaLinuxProcessParamsProperty =
-   * LambdaLinuxProcessParamsProperty.builder()
-   * .containerParams(LambdaContainerParamsProperty.builder()
-   * .devices(List.of(LambdaDeviceMountProperty.builder()
-   * .addGroupOwner(false)
-   * .path("path")
-   * .permission("permission")
-   * .build()))
-   * .memorySizeInKb(123)
-   * .mountRoSysfs(false)
-   * .volumes(List.of(LambdaVolumeMountProperty.builder()
-   * .addGroupOwner(false)
-   * .destinationPath("destinationPath")
-   * .permission("permission")
-   * .sourcePath("sourcePath")
-   * .build()))
-   * .build())
-   * .isolationMode("isolationMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html)
-   */
-  public interface LambdaLinuxProcessParamsProperty {
-    /**
-     * The parameters for the container in which the Lambda function runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-containerparams)
-     */
-    public fun containerParams(): Any? = unwrap(this).getContainerParams()
-
-    /**
-     * The isolation mode for the process that contains the Lambda function.
-     *
-     * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
-     * container, or as a regular process outside any container.
-     *
-     * Default: `GreengrassContainer`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-isolationmode)
-     */
-    public fun isolationMode(): String? = unwrap(this).getIsolationMode()
-
-    /**
-     * A builder for [LambdaLinuxProcessParamsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      public fun containerParams(containerParams: IResolvable)
-
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      public fun containerParams(containerParams: LambdaContainerParamsProperty)
-
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("06d50906feca98faf4df750e8c8b2505d20d6d0ec007d1b01d4e003f98aa20d2")
-      public fun containerParams(containerParams: LambdaContainerParamsProperty.Builder.() -> Unit)
-
-      /**
-       * @param isolationMode The isolation mode for the process that contains the Lambda function.
-       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
-       * container, or as a regular process outside any container.
-       *
-       * Default: `GreengrassContainer`
-       */
-      public fun isolationMode(isolationMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty.builder()
-
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      override fun containerParams(containerParams: IResolvable) {
-        cdkBuilder.containerParams(containerParams.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      override fun containerParams(containerParams: LambdaContainerParamsProperty) {
-        cdkBuilder.containerParams(containerParams.let(LambdaContainerParamsProperty::unwrap))
-      }
-
-      /**
-       * @param containerParams The parameters for the container in which the Lambda function runs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("06d50906feca98faf4df750e8c8b2505d20d6d0ec007d1b01d4e003f98aa20d2")
-      override
-          fun containerParams(containerParams: LambdaContainerParamsProperty.Builder.() -> Unit):
-          Unit = containerParams(LambdaContainerParamsProperty(containerParams))
-
-      /**
-       * @param isolationMode The isolation mode for the process that contains the Lambda function.
-       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
-       * container, or as a regular process outside any container.
-       *
-       * Default: `GreengrassContainer`
-       */
-      override fun isolationMode(isolationMode: String) {
-        cdkBuilder.isolationMode(isolationMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty,
-    ) : CdkObject(cdkObject), LambdaLinuxProcessParamsProperty {
-      /**
-       * The parameters for the container in which the Lambda function runs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-containerparams)
-       */
-      override fun containerParams(): Any? = unwrap(this).getContainerParams()
-
-      /**
-       * The isolation mode for the process that contains the Lambda function.
-       *
-       * The process can run in an isolated runtime environment inside the AWS IoT Greengrass
-       * container, or as a regular process outside any container.
-       *
-       * Default: `GreengrassContainer`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdalinuxprocessparams.html#cfn-greengrassv2-componentversion-lambdalinuxprocessparams-isolationmode)
-       */
-      override fun isolationMode(): String? = unwrap(this).getIsolationMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaLinuxProcessParamsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty):
-          LambdaLinuxProcessParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LambdaLinuxProcessParamsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaLinuxProcessParamsProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty
     }
   }
 }

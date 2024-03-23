@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)
  */
-public open class CfnDBCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster,
+public open class CfnDBCluster(
+  cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1578,7 +1578,7 @@ public open class CfnDBCluster internal constructor(
         = CfnDBCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBCluster): software.amazon.awscdk.services.neptune.CfnDBCluster
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.neptune.CfnDBCluster
   }
 
   /**
@@ -1669,8 +1669,7 @@ public open class CfnDBCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty,
+      cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty,
     ) : CdkObject(cdkObject), DBClusterRoleProperty {
       /**
        * The name of the feature associated with the Amazon Identity and Access Management (IAM)
@@ -1799,8 +1798,7 @@ public open class CfnDBCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty,
     ) : CdkObject(cdkObject), ServerlessScalingConfigurationProperty {
       /**
        * The maximum number of Neptune capacity units (NCUs) for a DB instance in a Neptune

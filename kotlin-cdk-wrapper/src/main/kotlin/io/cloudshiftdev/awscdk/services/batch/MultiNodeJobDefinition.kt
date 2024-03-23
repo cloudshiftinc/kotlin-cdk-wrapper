@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class MultiNodeJobDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinition,
+public open class MultiNodeJobDefinition(
+  cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinition,
 ) : Resource(cdkObject), IJobDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -483,6 +483,7 @@ public open class MultiNodeJobDefinition internal constructor(
         MultiNodeJobDefinition = MultiNodeJobDefinition(cdkObject)
 
     internal fun unwrap(wrapped: MultiNodeJobDefinition):
-        software.amazon.awscdk.services.batch.MultiNodeJobDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.MultiNodeJobDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.MultiNodeJobDefinition
   }
 }

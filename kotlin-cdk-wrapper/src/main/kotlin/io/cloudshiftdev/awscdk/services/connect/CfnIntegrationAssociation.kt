@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html)
  */
-public open class CfnIntegrationAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.connect.CfnIntegrationAssociation,
+public open class CfnIntegrationAssociation(
+  cdkObject: software.amazon.awscdk.services.connect.CfnIntegrationAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -211,6 +210,7 @@ public open class CfnIntegrationAssociation internal constructor(
         CfnIntegrationAssociation = CfnIntegrationAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegrationAssociation):
-        software.amazon.awscdk.services.connect.CfnIntegrationAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnIntegrationAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnIntegrationAssociation
   }
 }

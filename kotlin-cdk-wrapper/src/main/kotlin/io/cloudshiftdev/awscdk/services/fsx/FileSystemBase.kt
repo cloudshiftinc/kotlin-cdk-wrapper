@@ -11,8 +11,8 @@ import kotlin.String
 /**
  * A new or imported FSx file system.
  */
-public abstract class FileSystemBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
+public abstract class FileSystemBase(
+  cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
 ) : Resource(cdkObject), IFileSystem {
   /**
    * The security groups/rules used to allow network connections to the file system.
@@ -31,7 +31,7 @@ public abstract class FileSystemBase internal constructor(
   public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
+    cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
   ) : FileSystemBase(cdkObject)
 
   public companion object {

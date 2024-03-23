@@ -18,8 +18,8 @@ import kotlin.String
  * AclCidr aclCidr = AclCidr.anyIpv4();
  * ```
  */
-public abstract class AclCidr internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AclCidr,
+public abstract class AclCidr(
+  cdkObject: software.amazon.awscdk.services.ec2.AclCidr,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -28,7 +28,7 @@ public abstract class AclCidr internal constructor(
       unwrap(this).toCidrConfig().let(AclCidrConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AclCidr,
+    cdkObject: software.amazon.awscdk.services.ec2.AclCidr,
   ) : AclCidr(cdkObject)
 
   public companion object {

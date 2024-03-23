@@ -814,7 +814,7 @@ public interface CfnStackSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnStackSetProps,
+    cdkObject: software.amazon.awscdk.CfnStackSetProps,
   ) : CdkObject(cdkObject), CfnStackSetProps {
     /**
      * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.

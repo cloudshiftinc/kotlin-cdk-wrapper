@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * fleet.grant(role, "gamelift:ListFleets");
  * ```
  */
-public open class ManagedPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.ManagedPolicy,
+public open class ManagedPolicy(
+  cdkObject: software.amazon.awscdk.services.iam.ManagedPolicy,
 ) : Resource(cdkObject), IManagedPolicy, IGrantable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.ManagedPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -527,6 +527,6 @@ public open class ManagedPolicy internal constructor(
         ManagedPolicy(cdkObject)
 
     internal fun unwrap(wrapped: ManagedPolicy): software.amazon.awscdk.services.iam.ManagedPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.ManagedPolicy
   }
 }

@@ -652,7 +652,7 @@ public interface CfnTopicProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.CfnTopicProps,
+    cdkObject: software.amazon.awscdk.services.sns.CfnTopicProps,
   ) : CdkObject(cdkObject), CfnTopicProps {
     /**
      * The archive policy determines the number of days Amazon SNS retains messages.

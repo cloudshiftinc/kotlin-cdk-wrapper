@@ -59,7 +59,7 @@ public interface SqlServerSeInstanceEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps,
   ) : CdkObject(cdkObject), SqlServerSeInstanceEngineProps {
     /**
      * The exact version of the engine to use.

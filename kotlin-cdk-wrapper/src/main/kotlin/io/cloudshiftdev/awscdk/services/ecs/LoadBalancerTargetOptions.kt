@@ -109,7 +109,7 @@ public interface LoadBalancerTargetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.LoadBalancerTargetOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.LoadBalancerTargetOptions,
   ) : CdkObject(cdkObject), LoadBalancerTargetOptions {
     /**
      * The name of the container.

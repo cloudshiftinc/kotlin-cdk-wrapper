@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Monitor internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
+public abstract class Monitor(
+  cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
 ) : CdkObject(cdkObject) {
   /**
    * The alarm ARN for AWS AppConfig to monitor.
@@ -51,7 +51,7 @@ public abstract class Monitor internal constructor(
   public open fun monitorType(): MonitorType = unwrap(this).getMonitorType().let(MonitorType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
+    cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
   ) : Monitor(cdkObject)
 
   public companion object {

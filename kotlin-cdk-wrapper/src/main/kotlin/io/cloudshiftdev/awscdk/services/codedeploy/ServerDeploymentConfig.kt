@@ -20,9 +20,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ServerDeploymentConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig,
+public open class ServerDeploymentConfig(
+  cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IServerDeploymentConfig {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -127,6 +126,7 @@ public open class ServerDeploymentConfig internal constructor(
         ServerDeploymentConfig = ServerDeploymentConfig(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentConfig):
-        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig
   }
 }

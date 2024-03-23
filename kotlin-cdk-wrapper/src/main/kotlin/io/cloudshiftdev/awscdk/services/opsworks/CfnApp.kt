@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnApp,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -893,7 +893,142 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.opsworks.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.opsworks.CfnApp
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opsworks.*;
+   * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
+   * .arn("arn")
+   * .databaseName("databaseName")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html)
+   */
+  public interface DataSourceProperty {
+    /**
+     * The data source's ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+     */
+    public fun arn(): String? = unwrap(this).getArn()
+
+    /**
+     * The database name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * The data source's type, `AutoSelectOpsworksMysqlInstance` , `OpsworksMysqlInstance` ,
+     * `RdsDbInstance` , or `None` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [DataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The data source's ARN.
+       */
+      public fun arn(arn: String)
+
+      /**
+       * @param databaseName The database name.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param type The data source's type, `AutoSelectOpsworksMysqlInstance` ,
+       * `OpsworksMysqlInstance` , `RdsDbInstance` , or `None` .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.builder()
+
+      /**
+       * @param arn The data source's ARN.
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      /**
+       * @param databaseName The database name.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param type The data source's type, `AutoSelectOpsworksMysqlInstance` ,
+       * `OpsworksMysqlInstance` , `RdsDbInstance` , or `None` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
+    ) : CdkObject(cdkObject), DataSourceProperty {
+      /**
+       * The data source's ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+       */
+      override fun arn(): String? = unwrap(this).getArn()
+
+      /**
+       * The database name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * The data source's type, `AutoSelectOpsworksMysqlInstance` , `OpsworksMysqlInstance` ,
+       * `RdsDbInstance` , or `None` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty):
+          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataSourceProperty):
+          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty
+    }
   }
 
   /**
@@ -1029,8 +1164,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
     ) : CdkObject(cdkObject), EnvironmentVariableProperty {
       /**
        * (Required) The environment variable's name, which can consist of up to 64 characters and
@@ -1078,151 +1212,6 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * SslConfigurationProperty sslConfigurationProperty = SslConfigurationProperty.builder()
-   * .certificate("certificate")
-   * .chain("chain")
-   * .privateKey("privateKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html)
-   */
-  public interface SslConfigurationProperty {
-    /**
-     * The contents of the certificate's domain.crt file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-certificate)
-     */
-    public fun certificate(): String? = unwrap(this).getCertificate()
-
-    /**
-     * Optional.
-     *
-     * Can be used to specify an intermediate certificate authority key or client authentication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-chain)
-     */
-    public fun chain(): String? = unwrap(this).getChain()
-
-    /**
-     * The private key;
-     *
-     * the contents of the certificate's domain.kex file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-privatekey)
-     */
-    public fun privateKey(): String? = unwrap(this).getPrivateKey()
-
-    /**
-     * A builder for [SslConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificate The contents of the certificate's domain.crt file.
-       */
-      public fun certificate(certificate: String)
-
-      /**
-       * @param chain Optional.
-       * Can be used to specify an intermediate certificate authority key or client authentication.
-       */
-      public fun chain(chain: String)
-
-      /**
-       * @param privateKey The private key;.
-       * the contents of the certificate's domain.kex file.
-       */
-      public fun privateKey(privateKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.builder()
-
-      /**
-       * @param certificate The contents of the certificate's domain.crt file.
-       */
-      override fun certificate(certificate: String) {
-        cdkBuilder.certificate(certificate)
-      }
-
-      /**
-       * @param chain Optional.
-       * Can be used to specify an intermediate certificate authority key or client authentication.
-       */
-      override fun chain(chain: String) {
-        cdkBuilder.chain(chain)
-      }
-
-      /**
-       * @param privateKey The private key;.
-       * the contents of the certificate's domain.kex file.
-       */
-      override fun privateKey(privateKey: String) {
-        cdkBuilder.privateKey(privateKey)
-      }
-
-      public fun build(): software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
-    ) : CdkObject(cdkObject), SslConfigurationProperty {
-      /**
-       * The contents of the certificate's domain.crt file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-certificate)
-       */
-      override fun certificate(): String? = unwrap(this).getCertificate()
-
-      /**
-       * Optional.
-       *
-       * Can be used to specify an intermediate certificate authority key or client authentication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-chain)
-       */
-      override fun chain(): String? = unwrap(this).getChain()
-
-      /**
-       * The private key;
-       *
-       * the contents of the certificate's domain.kex file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-privatekey)
-       */
-      override fun privateKey(): String? = unwrap(this).getPrivateKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SslConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty):
-          SslConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SslConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SslConfigurationProperty):
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty
     }
   }
 
@@ -1428,7 +1417,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
     ) : CdkObject(cdkObject), SourceProperty {
       /**
        * When included in a request, the parameter depends on the repository type.
@@ -1517,131 +1506,140 @@ public open class CfnApp internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.opsworks.*;
-   * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
-   * .arn("arn")
-   * .databaseName("databaseName")
-   * .type("type")
+   * SslConfigurationProperty sslConfigurationProperty = SslConfigurationProperty.builder()
+   * .certificate("certificate")
+   * .chain("chain")
+   * .privateKey("privateKey")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html)
    */
-  public interface DataSourceProperty {
+  public interface SslConfigurationProperty {
     /**
-     * The data source's ARN.
+     * The contents of the certificate's domain.crt file.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-certificate)
      */
-    public fun arn(): String? = unwrap(this).getArn()
+    public fun certificate(): String? = unwrap(this).getCertificate()
 
     /**
-     * The database name.
+     * Optional.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+     * Can be used to specify an intermediate certificate authority key or client authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-chain)
      */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+    public fun chain(): String? = unwrap(this).getChain()
 
     /**
-     * The data source's type, `AutoSelectOpsworksMysqlInstance` , `OpsworksMysqlInstance` ,
-     * `RdsDbInstance` , or `None` .
+     * The private key;
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+     * the contents of the certificate's domain.kex file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-privatekey)
      */
-    public fun type(): String? = unwrap(this).getType()
+    public fun privateKey(): String? = unwrap(this).getPrivateKey()
 
     /**
-     * A builder for [DataSourceProperty]
+     * A builder for [SslConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param arn The data source's ARN.
+       * @param certificate The contents of the certificate's domain.crt file.
        */
-      public fun arn(arn: String)
+      public fun certificate(certificate: String)
 
       /**
-       * @param databaseName The database name.
+       * @param chain Optional.
+       * Can be used to specify an intermediate certificate authority key or client authentication.
        */
-      public fun databaseName(databaseName: String)
+      public fun chain(chain: String)
 
       /**
-       * @param type The data source's type, `AutoSelectOpsworksMysqlInstance` ,
-       * `OpsworksMysqlInstance` , `RdsDbInstance` , or `None` .
+       * @param privateKey The private key;.
+       * the contents of the certificate's domain.kex file.
        */
-      public fun type(type: String)
+      public fun privateKey(privateKey: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.Builder =
-          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.builder()
+          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.Builder =
+          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.builder()
 
       /**
-       * @param arn The data source's ARN.
+       * @param certificate The contents of the certificate's domain.crt file.
        */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
+      override fun certificate(certificate: String) {
+        cdkBuilder.certificate(certificate)
       }
 
       /**
-       * @param databaseName The database name.
+       * @param chain Optional.
+       * Can be used to specify an intermediate certificate authority key or client authentication.
        */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
+      override fun chain(chain: String) {
+        cdkBuilder.chain(chain)
       }
 
       /**
-       * @param type The data source's type, `AutoSelectOpsworksMysqlInstance` ,
-       * `OpsworksMysqlInstance` , `RdsDbInstance` , or `None` .
+       * @param privateKey The private key;.
+       * the contents of the certificate's domain.kex file.
        */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun privateKey(privateKey: String) {
+        cdkBuilder.privateKey(privateKey)
       }
 
-      public fun build(): software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty =
+      public fun build(): software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
+      cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
+    ) : CdkObject(cdkObject), SslConfigurationProperty {
       /**
-       * The data source's ARN.
+       * The contents of the certificate's domain.crt file.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-arn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-certificate)
        */
-      override fun arn(): String? = unwrap(this).getArn()
+      override fun certificate(): String? = unwrap(this).getCertificate()
 
       /**
-       * The database name.
+       * Optional.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-databasename)
+       * Can be used to specify an intermediate certificate authority key or client authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-chain)
        */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun chain(): String? = unwrap(this).getChain()
 
       /**
-       * The data source's type, `AutoSelectOpsworksMysqlInstance` , `OpsworksMysqlInstance` ,
-       * `RdsDbInstance` , or `None` .
+       * The private key;
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html#cfn-opsworks-app-datasource-type)
+       * the contents of the certificate's domain.kex file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html#cfn-opsworks-app-sslconfiguration-privatekey)
        */
-      override fun type(): String? = unwrap(this).getType()
+      override fun privateKey(): String? = unwrap(this).getPrivateKey()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SslConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty):
-          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty):
+          SslConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SslConfigurationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DataSourceProperty):
-          software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty
+      internal fun unwrap(wrapped: SslConfigurationProperty):
+          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty
     }
   }
 }

@@ -727,7 +727,7 @@ public interface CfnNotebookInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps,
   ) : CdkObject(cdkObject), CfnNotebookInstanceProps {
     /**
      * A list of Amazon Elastic Inference (EI) instance types to associate with the notebook

@@ -110,7 +110,7 @@ public interface CfnScheduleGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroupProps,
+    cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroupProps,
   ) : CdkObject(cdkObject), CfnScheduleGroupProps {
     /**
      * The name of the schedule group.

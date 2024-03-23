@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html)
  */
-public open class CfnTaskTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
+public open class CfnTaskTemplate(
+  cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -586,119 +586,8 @@ public open class CfnTaskTemplate internal constructor(
         CfnTaskTemplate = CfnTaskTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskTemplate):
-        software.amazon.awscdk.services.connect.CfnTaskTemplate = wrapped.cdkObject
-  }
-
-  /**
-   * Information about a required field.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * RequiredFieldInfoProperty requiredFieldInfoProperty = RequiredFieldInfoProperty.builder()
-   * .id(FieldIdentifierProperty.builder()
-   * .name("name")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html)
-   */
-  public interface RequiredFieldInfoProperty {
-    /**
-     * The unique identifier for the field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html#cfn-connect-tasktemplate-requiredfieldinfo-id)
-     */
-    public fun id(): Any
-
-    /**
-     * A builder for [RequiredFieldInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      public fun id(id: IResolvable)
-
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      public fun id(id: FieldIdentifierProperty)
-
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty.builder()
-
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
-      }
-
-      /**
-       * @param id The unique identifier for the field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
-      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
-          id(FieldIdentifierProperty(id))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
-    ) : CdkObject(cdkObject), RequiredFieldInfoProperty {
-      /**
-       * The unique identifier for the field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html#cfn-connect-tasktemplate-requiredfieldinfo-id)
-       */
-      override fun id(): Any = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RequiredFieldInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty):
-          RequiredFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RequiredFieldInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RequiredFieldInfoProperty):
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty
-    }
+        software.amazon.awscdk.services.connect.CfnTaskTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnTaskTemplate
   }
 
   /**
@@ -875,8 +764,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
     ) : CdkObject(cdkObject), ConstraintsProperty {
       /**
        * Lists the fields that are invisible to agents.
@@ -915,230 +803,6 @@ public open class CfnTaskTemplate internal constructor(
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty
-    }
-  }
-
-  /**
-   * Indicates a field that is read-only to an agent.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * ReadOnlyFieldInfoProperty readOnlyFieldInfoProperty = ReadOnlyFieldInfoProperty.builder()
-   * .id(FieldIdentifierProperty.builder()
-   * .name("name")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html)
-   */
-  public interface ReadOnlyFieldInfoProperty {
-    /**
-     * Identifier of the read-only field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html#cfn-connect-tasktemplate-readonlyfieldinfo-id)
-     */
-    public fun id(): Any
-
-    /**
-     * A builder for [ReadOnlyFieldInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      public fun id(id: IResolvable)
-
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      public fun id(id: FieldIdentifierProperty)
-
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
-
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
-      }
-
-      /**
-       * @param id Identifier of the read-only field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
-      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
-          id(FieldIdentifierProperty(id))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
-    ) : CdkObject(cdkObject), ReadOnlyFieldInfoProperty {
-      /**
-       * Identifier of the read-only field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html#cfn-connect-tasktemplate-readonlyfieldinfo-id)
-       */
-      override fun id(): Any = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReadOnlyFieldInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty):
-          ReadOnlyFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ReadOnlyFieldInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReadOnlyFieldInfoProperty):
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty
-    }
-  }
-
-  /**
-   * A field that is invisible to an agent.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.connect.*;
-   * InvisibleFieldInfoProperty invisibleFieldInfoProperty = InvisibleFieldInfoProperty.builder()
-   * .id(FieldIdentifierProperty.builder()
-   * .name("name")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html)
-   */
-  public interface InvisibleFieldInfoProperty {
-    /**
-     * Identifier of the invisible field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html#cfn-connect-tasktemplate-invisiblefieldinfo-id)
-     */
-    public fun id(): Any
-
-    /**
-     * A builder for [InvisibleFieldInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      public fun id(id: IResolvable)
-
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      public fun id(id: FieldIdentifierProperty)
-
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty.Builder
-          =
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
-
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
-      }
-
-      /**
-       * @param id Identifier of the invisible field. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
-      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
-          id(FieldIdentifierProperty(id))
-
-      public fun build():
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
-    ) : CdkObject(cdkObject), InvisibleFieldInfoProperty {
-      /**
-       * Identifier of the invisible field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html#cfn-connect-tasktemplate-invisiblefieldinfo-id)
-       */
-      override fun id(): Any = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InvisibleFieldInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty):
-          InvisibleFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InvisibleFieldInfoProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InvisibleFieldInfoProperty):
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty
     }
   }
 
@@ -1245,8 +909,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
     ) : CdkObject(cdkObject), DefaultFieldValueProperty {
       /**
        * Default value for the field.
@@ -1334,8 +997,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
     ) : CdkObject(cdkObject), FieldIdentifierProperty {
       /**
        * The name of the task template field.
@@ -1527,7 +1189,7 @@ public open class CfnTaskTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
     ) : CdkObject(cdkObject), FieldProperty {
       /**
        * The description of the field.
@@ -1577,6 +1239,339 @@ public open class CfnTaskTemplate internal constructor(
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty
+    }
+  }
+
+  /**
+   * A field that is invisible to an agent.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * InvisibleFieldInfoProperty invisibleFieldInfoProperty = InvisibleFieldInfoProperty.builder()
+   * .id(FieldIdentifierProperty.builder()
+   * .name("name")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html)
+   */
+  public interface InvisibleFieldInfoProperty {
+    /**
+     * Identifier of the invisible field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html#cfn-connect-tasktemplate-invisiblefieldinfo-id)
+     */
+    public fun id(): Any
+
+    /**
+     * A builder for [InvisibleFieldInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      public fun id(id: IResolvable)
+
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      public fun id(id: FieldIdentifierProperty)
+
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
+
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      override fun id(id: IResolvable) {
+        cdkBuilder.id(id.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      override fun id(id: FieldIdentifierProperty) {
+        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+      }
+
+      /**
+       * @param id Identifier of the invisible field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+          id(FieldIdentifierProperty(id))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
+    ) : CdkObject(cdkObject), InvisibleFieldInfoProperty {
+      /**
+       * Identifier of the invisible field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-invisiblefieldinfo.html#cfn-connect-tasktemplate-invisiblefieldinfo-id)
+       */
+      override fun id(): Any = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InvisibleFieldInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty):
+          InvisibleFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InvisibleFieldInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InvisibleFieldInfoProperty):
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty
+    }
+  }
+
+  /**
+   * Indicates a field that is read-only to an agent.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * ReadOnlyFieldInfoProperty readOnlyFieldInfoProperty = ReadOnlyFieldInfoProperty.builder()
+   * .id(FieldIdentifierProperty.builder()
+   * .name("name")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html)
+   */
+  public interface ReadOnlyFieldInfoProperty {
+    /**
+     * Identifier of the read-only field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html#cfn-connect-tasktemplate-readonlyfieldinfo-id)
+     */
+    public fun id(): Any
+
+    /**
+     * A builder for [ReadOnlyFieldInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      public fun id(id: IResolvable)
+
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      public fun id(id: FieldIdentifierProperty)
+
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
+
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      override fun id(id: IResolvable) {
+        cdkBuilder.id(id.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      override fun id(id: FieldIdentifierProperty) {
+        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+      }
+
+      /**
+       * @param id Identifier of the read-only field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+          id(FieldIdentifierProperty(id))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
+    ) : CdkObject(cdkObject), ReadOnlyFieldInfoProperty {
+      /**
+       * Identifier of the read-only field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-readonlyfieldinfo.html#cfn-connect-tasktemplate-readonlyfieldinfo-id)
+       */
+      override fun id(): Any = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReadOnlyFieldInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty):
+          ReadOnlyFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReadOnlyFieldInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReadOnlyFieldInfoProperty):
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty
+    }
+  }
+
+  /**
+   * Information about a required field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * RequiredFieldInfoProperty requiredFieldInfoProperty = RequiredFieldInfoProperty.builder()
+   * .id(FieldIdentifierProperty.builder()
+   * .name("name")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html)
+   */
+  public interface RequiredFieldInfoProperty {
+    /**
+     * The unique identifier for the field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html#cfn-connect-tasktemplate-requiredfieldinfo-id)
+     */
+    public fun id(): Any
+
+    /**
+     * A builder for [RequiredFieldInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      public fun id(id: IResolvable)
+
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      public fun id(id: FieldIdentifierProperty)
+
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty.builder()
+
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      override fun id(id: IResolvable) {
+        cdkBuilder.id(id.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      override fun id(id: FieldIdentifierProperty) {
+        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+      }
+
+      /**
+       * @param id The unique identifier for the field. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+          id(FieldIdentifierProperty(id))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
+    ) : CdkObject(cdkObject), RequiredFieldInfoProperty {
+      /**
+       * The unique identifier for the field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-requiredfieldinfo.html#cfn-connect-tasktemplate-requiredfieldinfo-id)
+       */
+      override fun id(): Any = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RequiredFieldInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty):
+          RequiredFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RequiredFieldInfoProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RequiredFieldInfoProperty):
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty
     }
   }
 }

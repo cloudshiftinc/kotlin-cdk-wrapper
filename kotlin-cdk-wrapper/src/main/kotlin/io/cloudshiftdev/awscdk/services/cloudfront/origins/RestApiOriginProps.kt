@@ -227,7 +227,7 @@ public interface RestApiOriginProps : OriginProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps,
   ) : CdkObject(cdkObject), RestApiOriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;

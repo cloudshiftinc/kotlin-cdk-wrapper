@@ -117,8 +117,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html)
  */
-public open class CfnOrganizationConfigRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule,
+public open class CfnOrganizationConfigRule(
+  cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -581,450 +581,8 @@ public open class CfnOrganizationConfigRule internal constructor(
         CfnOrganizationConfigRule = CfnOrganizationConfigRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationConfigRule):
-        software.amazon.awscdk.services.config.CfnOrganizationConfigRule = wrapped.cdkObject
-  }
-
-  /**
-   * An object that specifies organization custom rule metadata such as resource type, resource ID
-   * of AWS resource, Lambda function ARN, and organization trigger types that trigger AWS Config to
-   * evaluate your AWS resources against a rule.
-   *
-   * It also provides the frequency with which you want AWS Config to run evaluations for the rule
-   * if the trigger type is periodic.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * OrganizationCustomRuleMetadataProperty organizationCustomRuleMetadataProperty =
-   * OrganizationCustomRuleMetadataProperty.builder()
-   * .lambdaFunctionArn("lambdaFunctionArn")
-   * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
-   * // the properties below are optional
-   * .description("description")
-   * .inputParameters("inputParameters")
-   * .maximumExecutionFrequency("maximumExecutionFrequency")
-   * .resourceIdScope("resourceIdScope")
-   * .resourceTypesScope(List.of("resourceTypesScope"))
-   * .tagKeyScope("tagKeyScope")
-   * .tagValueScope("tagValueScope")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html)
-   */
-  public interface OrganizationCustomRuleMetadataProperty {
-    /**
-     * The description that you provide for your organization AWS Config rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * A string, in JSON format, that is passed to your organization AWS Config rule Lambda
-     * function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-inputparameters)
-     */
-    public fun inputParameters(): String? = unwrap(this).getInputParameters()
-
-    /**
-     * The lambda function ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-lambdafunctionarn)
-     */
-    public fun lambdaFunctionArn(): String
-
-    /**
-     * The maximum frequency with which AWS Config runs evaluations for a rule.
-     *
-     * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
-     * information, see `ConfigSnapshotDeliveryProperties` .
-     *
-     *
-     * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-     * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-maximumexecutionfrequency)
-     */
-    public fun maximumExecutionFrequency(): String? = unwrap(this).getMaximumExecutionFrequency()
-
-    /**
-     * The type of notification that triggers AWS Config to run an evaluation for a rule.
-     *
-     * You can specify the following notification types:
-     *
-     * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-     * configuration item as a result of a resource change.
-     * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-     * delivers an oversized configuration item. AWS Config may generate this notification type when a
-     * resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-     * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-     * `MaximumExecutionFrequency` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-organizationconfigruletriggertypes)
-     */
-    public fun organizationConfigRuleTriggerTypes(): List<String>
-
-    /**
-     * The ID of the AWS resource that was evaluated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourceidscope)
-     */
-    public fun resourceIdScope(): String? = unwrap(this).getResourceIdScope()
-
-    /**
-     * The type of the AWS resource that was evaluated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourcetypesscope)
-     */
-    public fun resourceTypesScope(): List<String> = unwrap(this).getResourceTypesScope() ?:
-        emptyList()
-
-    /**
-     * One part of a key-value pair that make up a tag.
-     *
-     * A key is a general label that acts like a category for more specific tag values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagkeyscope)
-     */
-    public fun tagKeyScope(): String? = unwrap(this).getTagKeyScope()
-
-    /**
-     * The optional part of a key-value pair that make up a tag.
-     *
-     * A value acts as a descriptor within a tag category (key).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagvaluescope)
-     */
-    public fun tagValueScope(): String? = unwrap(this).getTagValueScope()
-
-    /**
-     * A builder for [OrganizationCustomRuleMetadataProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description The description that you provide for your organization AWS Config rule.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param inputParameters A string, in JSON format, that is passed to your organization AWS
-       * Config rule Lambda function.
-       */
-      public fun inputParameters(inputParameters: String)
-
-      /**
-       * @param lambdaFunctionArn The lambda function ARN. 
-       */
-      public fun lambdaFunctionArn(lambdaFunctionArn: String)
-
-      /**
-       * @param maximumExecutionFrequency The maximum frequency with which AWS Config runs
-       * evaluations for a rule.
-       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
-       * information, see `ConfigSnapshotDeliveryProperties` .
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       */
-      public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
-
-      /**
-       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
-       * to run an evaluation for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       */
-      public
-          fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>)
-
-      /**
-       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
-       * to run an evaluation for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       */
-      public fun organizationConfigRuleTriggerTypes(vararg
-          organizationConfigRuleTriggerTypes: String)
-
-      /**
-       * @param resourceIdScope The ID of the AWS resource that was evaluated.
-       */
-      public fun resourceIdScope(resourceIdScope: String)
-
-      /**
-       * @param resourceTypesScope The type of the AWS resource that was evaluated.
-       */
-      public fun resourceTypesScope(resourceTypesScope: List<String>)
-
-      /**
-       * @param resourceTypesScope The type of the AWS resource that was evaluated.
-       */
-      public fun resourceTypesScope(vararg resourceTypesScope: String)
-
-      /**
-       * @param tagKeyScope One part of a key-value pair that make up a tag.
-       * A key is a general label that acts like a category for more specific tag values.
-       */
-      public fun tagKeyScope(tagKeyScope: String)
-
-      /**
-       * @param tagValueScope The optional part of a key-value pair that make up a tag.
-       * A value acts as a descriptor within a tag category (key).
-       */
-      public fun tagValueScope(tagValueScope: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.builder()
-
-      /**
-       * @param description The description that you provide for your organization AWS Config rule.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param inputParameters A string, in JSON format, that is passed to your organization AWS
-       * Config rule Lambda function.
-       */
-      override fun inputParameters(inputParameters: String) {
-        cdkBuilder.inputParameters(inputParameters)
-      }
-
-      /**
-       * @param lambdaFunctionArn The lambda function ARN. 
-       */
-      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
-        cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
-      }
-
-      /**
-       * @param maximumExecutionFrequency The maximum frequency with which AWS Config runs
-       * evaluations for a rule.
-       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
-       * information, see `ConfigSnapshotDeliveryProperties` .
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       */
-      override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
-        cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
-      }
-
-      /**
-       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
-       * to run an evaluation for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       */
-      override
-          fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>) {
-        cdkBuilder.organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes)
-      }
-
-      /**
-       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
-       * to run an evaluation for a rule. 
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       */
-      override fun organizationConfigRuleTriggerTypes(vararg
-          organizationConfigRuleTriggerTypes: String): Unit =
-          organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes.toList())
-
-      /**
-       * @param resourceIdScope The ID of the AWS resource that was evaluated.
-       */
-      override fun resourceIdScope(resourceIdScope: String) {
-        cdkBuilder.resourceIdScope(resourceIdScope)
-      }
-
-      /**
-       * @param resourceTypesScope The type of the AWS resource that was evaluated.
-       */
-      override fun resourceTypesScope(resourceTypesScope: List<String>) {
-        cdkBuilder.resourceTypesScope(resourceTypesScope)
-      }
-
-      /**
-       * @param resourceTypesScope The type of the AWS resource that was evaluated.
-       */
-      override fun resourceTypesScope(vararg resourceTypesScope: String): Unit =
-          resourceTypesScope(resourceTypesScope.toList())
-
-      /**
-       * @param tagKeyScope One part of a key-value pair that make up a tag.
-       * A key is a general label that acts like a category for more specific tag values.
-       */
-      override fun tagKeyScope(tagKeyScope: String) {
-        cdkBuilder.tagKeyScope(tagKeyScope)
-      }
-
-      /**
-       * @param tagValueScope The optional part of a key-value pair that make up a tag.
-       * A value acts as a descriptor within a tag category (key).
-       */
-      override fun tagValueScope(tagValueScope: String) {
-        cdkBuilder.tagValueScope(tagValueScope)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty,
-    ) : CdkObject(cdkObject), OrganizationCustomRuleMetadataProperty {
-      /**
-       * The description that you provide for your organization AWS Config rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * A string, in JSON format, that is passed to your organization AWS Config rule Lambda
-       * function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-inputparameters)
-       */
-      override fun inputParameters(): String? = unwrap(this).getInputParameters()
-
-      /**
-       * The lambda function ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-lambdafunctionarn)
-       */
-      override fun lambdaFunctionArn(): String = unwrap(this).getLambdaFunctionArn()
-
-      /**
-       * The maximum frequency with which AWS Config runs evaluations for a rule.
-       *
-       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
-       * information, see `ConfigSnapshotDeliveryProperties` .
-       *
-       *
-       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
-       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-maximumexecutionfrequency)
-       */
-      override fun maximumExecutionFrequency(): String? =
-          unwrap(this).getMaximumExecutionFrequency()
-
-      /**
-       * The type of notification that triggers AWS Config to run an evaluation for a rule.
-       *
-       * You can specify the following notification types:
-       *
-       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
-       * configuration item as a result of a resource change.
-       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
-       * delivers an oversized configuration item. AWS Config may generate this notification type when
-       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
-       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
-       * `MaximumExecutionFrequency` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-organizationconfigruletriggertypes)
-       */
-      override fun organizationConfigRuleTriggerTypes(): List<String> =
-          unwrap(this).getOrganizationConfigRuleTriggerTypes()
-
-      /**
-       * The ID of the AWS resource that was evaluated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourceidscope)
-       */
-      override fun resourceIdScope(): String? = unwrap(this).getResourceIdScope()
-
-      /**
-       * The type of the AWS resource that was evaluated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourcetypesscope)
-       */
-      override fun resourceTypesScope(): List<String> = unwrap(this).getResourceTypesScope() ?:
-          emptyList()
-
-      /**
-       * One part of a key-value pair that make up a tag.
-       *
-       * A key is a general label that acts like a category for more specific tag values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagkeyscope)
-       */
-      override fun tagKeyScope(): String? = unwrap(this).getTagKeyScope()
-
-      /**
-       * The optional part of a key-value pair that make up a tag.
-       *
-       * A value acts as a descriptor within a tag category (key).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagvaluescope)
-       */
-      override fun tagValueScope(): String? = unwrap(this).getTagValueScope()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OrganizationCustomRuleMetadataProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty):
-          OrganizationCustomRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OrganizationCustomRuleMetadataProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OrganizationCustomRuleMetadataProperty):
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
-    }
+        software.amazon.awscdk.services.config.CfnOrganizationConfigRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnOrganizationConfigRule
   }
 
   /**
@@ -1419,8 +977,7 @@ public open class CfnOrganizationConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty,
     ) : CdkObject(cdkObject), OrganizationCustomPolicyRuleMetadataProperty {
       /**
        * A list of accounts that you can enable debug logging for your organization AWS Config
@@ -1546,6 +1103,448 @@ public open class CfnOrganizationConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty
+    }
+  }
+
+  /**
+   * An object that specifies organization custom rule metadata such as resource type, resource ID
+   * of AWS resource, Lambda function ARN, and organization trigger types that trigger AWS Config to
+   * evaluate your AWS resources against a rule.
+   *
+   * It also provides the frequency with which you want AWS Config to run evaluations for the rule
+   * if the trigger type is periodic.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * OrganizationCustomRuleMetadataProperty organizationCustomRuleMetadataProperty =
+   * OrganizationCustomRuleMetadataProperty.builder()
+   * .lambdaFunctionArn("lambdaFunctionArn")
+   * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
+   * // the properties below are optional
+   * .description("description")
+   * .inputParameters("inputParameters")
+   * .maximumExecutionFrequency("maximumExecutionFrequency")
+   * .resourceIdScope("resourceIdScope")
+   * .resourceTypesScope(List.of("resourceTypesScope"))
+   * .tagKeyScope("tagKeyScope")
+   * .tagValueScope("tagValueScope")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html)
+   */
+  public interface OrganizationCustomRuleMetadataProperty {
+    /**
+     * The description that you provide for your organization AWS Config rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * A string, in JSON format, that is passed to your organization AWS Config rule Lambda
+     * function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-inputparameters)
+     */
+    public fun inputParameters(): String? = unwrap(this).getInputParameters()
+
+    /**
+     * The lambda function ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-lambdafunctionarn)
+     */
+    public fun lambdaFunctionArn(): String
+
+    /**
+     * The maximum frequency with which AWS Config runs evaluations for a rule.
+     *
+     * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
+     * information, see `ConfigSnapshotDeliveryProperties` .
+     *
+     *
+     * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+     * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-maximumexecutionfrequency)
+     */
+    public fun maximumExecutionFrequency(): String? = unwrap(this).getMaximumExecutionFrequency()
+
+    /**
+     * The type of notification that triggers AWS Config to run an evaluation for a rule.
+     *
+     * You can specify the following notification types:
+     *
+     * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+     * configuration item as a result of a resource change.
+     * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+     * delivers an oversized configuration item. AWS Config may generate this notification type when a
+     * resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+     * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+     * `MaximumExecutionFrequency` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-organizationconfigruletriggertypes)
+     */
+    public fun organizationConfigRuleTriggerTypes(): List<String>
+
+    /**
+     * The ID of the AWS resource that was evaluated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourceidscope)
+     */
+    public fun resourceIdScope(): String? = unwrap(this).getResourceIdScope()
+
+    /**
+     * The type of the AWS resource that was evaluated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourcetypesscope)
+     */
+    public fun resourceTypesScope(): List<String> = unwrap(this).getResourceTypesScope() ?:
+        emptyList()
+
+    /**
+     * One part of a key-value pair that make up a tag.
+     *
+     * A key is a general label that acts like a category for more specific tag values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagkeyscope)
+     */
+    public fun tagKeyScope(): String? = unwrap(this).getTagKeyScope()
+
+    /**
+     * The optional part of a key-value pair that make up a tag.
+     *
+     * A value acts as a descriptor within a tag category (key).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagvaluescope)
+     */
+    public fun tagValueScope(): String? = unwrap(this).getTagValueScope()
+
+    /**
+     * A builder for [OrganizationCustomRuleMetadataProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description The description that you provide for your organization AWS Config rule.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inputParameters A string, in JSON format, that is passed to your organization AWS
+       * Config rule Lambda function.
+       */
+      public fun inputParameters(inputParameters: String)
+
+      /**
+       * @param lambdaFunctionArn The lambda function ARN. 
+       */
+      public fun lambdaFunctionArn(lambdaFunctionArn: String)
+
+      /**
+       * @param maximumExecutionFrequency The maximum frequency with which AWS Config runs
+       * evaluations for a rule.
+       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
+       * information, see `ConfigSnapshotDeliveryProperties` .
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       */
+      public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
+
+      /**
+       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
+       * to run an evaluation for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       */
+      public
+          fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>)
+
+      /**
+       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
+       * to run an evaluation for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       */
+      public fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String)
+
+      /**
+       * @param resourceIdScope The ID of the AWS resource that was evaluated.
+       */
+      public fun resourceIdScope(resourceIdScope: String)
+
+      /**
+       * @param resourceTypesScope The type of the AWS resource that was evaluated.
+       */
+      public fun resourceTypesScope(resourceTypesScope: List<String>)
+
+      /**
+       * @param resourceTypesScope The type of the AWS resource that was evaluated.
+       */
+      public fun resourceTypesScope(vararg resourceTypesScope: String)
+
+      /**
+       * @param tagKeyScope One part of a key-value pair that make up a tag.
+       * A key is a general label that acts like a category for more specific tag values.
+       */
+      public fun tagKeyScope(tagKeyScope: String)
+
+      /**
+       * @param tagValueScope The optional part of a key-value pair that make up a tag.
+       * A value acts as a descriptor within a tag category (key).
+       */
+      public fun tagValueScope(tagValueScope: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.builder()
+
+      /**
+       * @param description The description that you provide for your organization AWS Config rule.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inputParameters A string, in JSON format, that is passed to your organization AWS
+       * Config rule Lambda function.
+       */
+      override fun inputParameters(inputParameters: String) {
+        cdkBuilder.inputParameters(inputParameters)
+      }
+
+      /**
+       * @param lambdaFunctionArn The lambda function ARN. 
+       */
+      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
+        cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
+      }
+
+      /**
+       * @param maximumExecutionFrequency The maximum frequency with which AWS Config runs
+       * evaluations for a rule.
+       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
+       * information, see `ConfigSnapshotDeliveryProperties` .
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       */
+      override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
+        cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
+      }
+
+      /**
+       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
+       * to run an evaluation for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       */
+      override
+          fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>) {
+        cdkBuilder.organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes)
+      }
+
+      /**
+       * @param organizationConfigRuleTriggerTypes The type of notification that triggers AWS Config
+       * to run an evaluation for a rule. 
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       */
+      override fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String): Unit =
+          organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes.toList())
+
+      /**
+       * @param resourceIdScope The ID of the AWS resource that was evaluated.
+       */
+      override fun resourceIdScope(resourceIdScope: String) {
+        cdkBuilder.resourceIdScope(resourceIdScope)
+      }
+
+      /**
+       * @param resourceTypesScope The type of the AWS resource that was evaluated.
+       */
+      override fun resourceTypesScope(resourceTypesScope: List<String>) {
+        cdkBuilder.resourceTypesScope(resourceTypesScope)
+      }
+
+      /**
+       * @param resourceTypesScope The type of the AWS resource that was evaluated.
+       */
+      override fun resourceTypesScope(vararg resourceTypesScope: String): Unit =
+          resourceTypesScope(resourceTypesScope.toList())
+
+      /**
+       * @param tagKeyScope One part of a key-value pair that make up a tag.
+       * A key is a general label that acts like a category for more specific tag values.
+       */
+      override fun tagKeyScope(tagKeyScope: String) {
+        cdkBuilder.tagKeyScope(tagKeyScope)
+      }
+
+      /**
+       * @param tagValueScope The optional part of a key-value pair that make up a tag.
+       * A value acts as a descriptor within a tag category (key).
+       */
+      override fun tagValueScope(tagValueScope: String) {
+        cdkBuilder.tagValueScope(tagValueScope)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty,
+    ) : CdkObject(cdkObject), OrganizationCustomRuleMetadataProperty {
+      /**
+       * The description that you provide for your organization AWS Config rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * A string, in JSON format, that is passed to your organization AWS Config rule Lambda
+       * function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-inputparameters)
+       */
+      override fun inputParameters(): String? = unwrap(this).getInputParameters()
+
+      /**
+       * The lambda function ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-lambdafunctionarn)
+       */
+      override fun lambdaFunctionArn(): String = unwrap(this).getLambdaFunctionArn()
+
+      /**
+       * The maximum frequency with which AWS Config runs evaluations for a rule.
+       *
+       * Your custom rule is triggered when AWS Config delivers the configuration snapshot. For more
+       * information, see `ConfigSnapshotDeliveryProperties` .
+       *
+       *
+       * By default, rules with a periodic trigger are evaluated every 24 hours. To change the
+       * frequency, specify a valid value for the `MaximumExecutionFrequency` parameter.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-maximumexecutionfrequency)
+       */
+      override fun maximumExecutionFrequency(): String? =
+          unwrap(this).getMaximumExecutionFrequency()
+
+      /**
+       * The type of notification that triggers AWS Config to run an evaluation for a rule.
+       *
+       * You can specify the following notification types:
+       *
+       * * `ConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config delivers a
+       * configuration item as a result of a resource change.
+       * * `OversizedConfigurationItemChangeNotification` - Triggers an evaluation when AWS Config
+       * delivers an oversized configuration item. AWS Config may generate this notification type when
+       * a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.
+       * * `ScheduledNotification` - Triggers a periodic evaluation at the frequency specified for
+       * `MaximumExecutionFrequency` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-organizationconfigruletriggertypes)
+       */
+      override fun organizationConfigRuleTriggerTypes(): List<String> =
+          unwrap(this).getOrganizationConfigRuleTriggerTypes()
+
+      /**
+       * The ID of the AWS resource that was evaluated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourceidscope)
+       */
+      override fun resourceIdScope(): String? = unwrap(this).getResourceIdScope()
+
+      /**
+       * The type of the AWS resource that was evaluated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-resourcetypesscope)
+       */
+      override fun resourceTypesScope(): List<String> = unwrap(this).getResourceTypesScope() ?:
+          emptyList()
+
+      /**
+       * One part of a key-value pair that make up a tag.
+       *
+       * A key is a general label that acts like a category for more specific tag values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagkeyscope)
+       */
+      override fun tagKeyScope(): String? = unwrap(this).getTagKeyScope()
+
+      /**
+       * The optional part of a key-value pair that make up a tag.
+       *
+       * A value acts as a descriptor within a tag category (key).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html#cfn-config-organizationconfigrule-organizationcustomrulemetadata-tagvaluescope)
+       */
+      override fun tagValueScope(): String? = unwrap(this).getTagValueScope()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OrganizationCustomRuleMetadataProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty):
+          OrganizationCustomRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationCustomRuleMetadataProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OrganizationCustomRuleMetadataProperty):
+          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
     }
   }
 
@@ -1806,8 +1805,7 @@ public open class CfnOrganizationConfigRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty,
     ) : CdkObject(cdkObject), OrganizationManagedRuleMetadataProperty {
       /**
        * The description that you provide for your organization AWS Config rule.

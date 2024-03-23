@@ -32,8 +32,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class PhysicalResourceId internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.customresources.PhysicalResourceId,
+public open class PhysicalResourceId(
+  cdkObject: software.amazon.awscdk.customresources.PhysicalResourceId,
 ) : CdkObject(cdkObject) {
   /**
    * Literal string to be used as the physical id.
@@ -56,6 +56,7 @@ public open class PhysicalResourceId internal constructor(
         PhysicalResourceId = PhysicalResourceId(cdkObject)
 
     internal fun unwrap(wrapped: PhysicalResourceId):
-        software.amazon.awscdk.customresources.PhysicalResourceId = wrapped.cdkObject
+        software.amazon.awscdk.customresources.PhysicalResourceId = wrapped.cdkObject as
+        software.amazon.awscdk.customresources.PhysicalResourceId
   }
 }

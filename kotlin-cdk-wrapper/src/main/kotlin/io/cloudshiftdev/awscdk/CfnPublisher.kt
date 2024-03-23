@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)
  */
-public open class CfnPublisher internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnPublisher,
+public open class CfnPublisher(
+  cdkObject: software.amazon.awscdk.CfnPublisher,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -258,6 +258,6 @@ public open class CfnPublisher internal constructor(
         CfnPublisher(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublisher): software.amazon.awscdk.CfnPublisher =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.CfnPublisher
   }
 }

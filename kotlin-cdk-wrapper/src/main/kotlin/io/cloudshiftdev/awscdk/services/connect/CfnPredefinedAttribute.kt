@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-predefinedattribute.html)
  */
-public open class CfnPredefinedAttribute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute,
+public open class CfnPredefinedAttribute(
+  cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,7 +244,8 @@ public open class CfnPredefinedAttribute internal constructor(
         CfnPredefinedAttribute = CfnPredefinedAttribute(cdkObject)
 
     internal fun unwrap(wrapped: CfnPredefinedAttribute):
-        software.amazon.awscdk.services.connect.CfnPredefinedAttribute = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnPredefinedAttribute = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnPredefinedAttribute
   }
 
   /**
@@ -310,8 +311,7 @@ public open class CfnPredefinedAttribute internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty,
+      cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty,
     ) : CdkObject(cdkObject), ValuesProperty {
       /**
        * Predefined attribute values of type string list.

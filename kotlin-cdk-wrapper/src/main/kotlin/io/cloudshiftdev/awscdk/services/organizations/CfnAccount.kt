@@ -141,8 +141,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-account.html)
  */
-public open class CfnAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.organizations.CfnAccount,
+public open class CfnAccount(
+  cdkObject: software.amazon.awscdk.services.organizations.CfnAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -601,6 +601,7 @@ public open class CfnAccount internal constructor(
         CfnAccount = CfnAccount(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccount):
-        software.amazon.awscdk.services.organizations.CfnAccount = wrapped.cdkObject
+        software.amazon.awscdk.services.organizations.CfnAccount = wrapped.cdkObject as
+        software.amazon.awscdk.services.organizations.CfnAccount
   }
 }

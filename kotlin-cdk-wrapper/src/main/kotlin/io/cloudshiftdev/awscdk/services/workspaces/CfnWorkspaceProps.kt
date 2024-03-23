@@ -303,7 +303,7 @@ public interface CfnWorkspaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspaceProps,
+    cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspaceProps,
   ) : CdkObject(cdkObject), CfnWorkspaceProps {
     /**
      * The identifier of the bundle for the WorkSpace.

@@ -27,7 +27,7 @@ public interface IChainable {
   public fun startState(): State
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.IChainable,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.IChainable,
   ) : CdkObject(cdkObject), IChainable {
     /**
      * The chainable end state(s) of this chainable.

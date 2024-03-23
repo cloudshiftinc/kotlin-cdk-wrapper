@@ -98,8 +98,7 @@ public interface CfnNetworkInsightsAccessScopeAnalysisProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysisProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysisProps,
   ) : CdkObject(cdkObject), CfnNetworkInsightsAccessScopeAnalysisProps {
     /**
      * The ID of the Network Access Scope.

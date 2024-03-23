@@ -18,9 +18,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html)
  */
-public open class FoundationModelIdentifier internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.bedrock.FoundationModelIdentifier,
+public open class FoundationModelIdentifier(
+  cdkObject: software.amazon.awscdk.services.bedrock.FoundationModelIdentifier,
 ) : CdkObject(cdkObject) {
   public constructor(modelId: String) :
       this(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier(modelId)
@@ -90,6 +89,7 @@ public open class FoundationModelIdentifier internal constructor(
         FoundationModelIdentifier = FoundationModelIdentifier(cdkObject)
 
     internal fun unwrap(wrapped: FoundationModelIdentifier):
-        software.amazon.awscdk.services.bedrock.FoundationModelIdentifier = wrapped.cdkObject
+        software.amazon.awscdk.services.bedrock.FoundationModelIdentifier = wrapped.cdkObject as
+        software.amazon.awscdk.services.bedrock.FoundationModelIdentifier
   }
 }

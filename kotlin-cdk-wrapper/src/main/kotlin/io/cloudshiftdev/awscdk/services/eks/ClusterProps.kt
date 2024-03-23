@@ -641,7 +641,7 @@ public interface ClusterProps : ClusterOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.ClusterProps,
+    cdkObject: software.amazon.awscdk.services.eks.ClusterProps,
   ) : CdkObject(cdkObject), ClusterProps {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.

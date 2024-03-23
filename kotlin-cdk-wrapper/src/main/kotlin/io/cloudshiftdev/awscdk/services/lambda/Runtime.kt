@@ -34,8 +34,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Runtime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Runtime,
+public open class Runtime(
+  cdkObject: software.amazon.awscdk.services.lambda.Runtime,
 ) : CdkObject(cdkObject) {
   public constructor(name: String) : this(software.amazon.awscdk.services.lambda.Runtime(name)
   )
@@ -354,6 +354,6 @@ public open class Runtime internal constructor(
         Runtime(cdkObject)
 
     internal fun unwrap(wrapped: Runtime): software.amazon.awscdk.services.lambda.Runtime =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.Runtime
   }
 }

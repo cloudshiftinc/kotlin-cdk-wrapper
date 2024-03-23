@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-label.html)
  */
-public open class CfnLabel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnLabel,
+public open class CfnLabel(
+  cdkObject: software.amazon.awscdk.services.frauddetector.CfnLabel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -253,6 +253,6 @@ public open class CfnLabel internal constructor(
         CfnLabel(cdkObject)
 
     internal fun unwrap(wrapped: CfnLabel): software.amazon.awscdk.services.frauddetector.CfnLabel =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.frauddetector.CfnLabel
   }
 }

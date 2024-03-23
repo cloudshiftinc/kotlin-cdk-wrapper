@@ -191,7 +191,7 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions,
+    cdkObject: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions,
   ) : CdkObject(cdkObject), OnImageScanCompletedOptions {
     /**
      * The scope to use if the source of the rule and its target are in different Stacks (but in the

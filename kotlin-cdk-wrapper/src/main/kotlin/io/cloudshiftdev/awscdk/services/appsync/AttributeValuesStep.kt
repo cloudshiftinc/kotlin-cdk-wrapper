@@ -20,8 +20,8 @@ import kotlin.collections.List
  * List.of(assign));
  * ```
  */
-public open class AttributeValuesStep internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.AttributeValuesStep,
+public open class AttributeValuesStep(
+  cdkObject: software.amazon.awscdk.services.appsync.AttributeValuesStep,
 ) : CdkObject(cdkObject) {
   public constructor(
     attr: String,
@@ -44,6 +44,7 @@ public open class AttributeValuesStep internal constructor(
         AttributeValuesStep = AttributeValuesStep(cdkObject)
 
     internal fun unwrap(wrapped: AttributeValuesStep):
-        software.amazon.awscdk.services.appsync.AttributeValuesStep = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.AttributeValuesStep = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.AttributeValuesStep
   }
 }

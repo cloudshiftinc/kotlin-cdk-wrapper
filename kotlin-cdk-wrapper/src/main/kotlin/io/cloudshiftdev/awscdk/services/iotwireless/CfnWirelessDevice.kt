@@ -78,8 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)
  */
-public open class CfnWirelessDevice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
+public open class CfnWirelessDevice(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -199,12 +199,12 @@ public open class CfnWirelessDevice internal constructor(
   }
 
   /**
-   * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+   * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
    */
   public open fun positioning(): String? = unwrap(this).getPositioning()
 
   /**
-   * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+   * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
    */
   public open fun positioning(`value`: String) {
     unwrap(this).setPositioning(`value`)
@@ -332,10 +332,10 @@ public open class CfnWirelessDevice internal constructor(
     public fun name(name: String)
 
     /**
-     * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+     * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information. 
      */
     public fun positioning(positioning: String)
@@ -467,10 +467,10 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     /**
-     * FPort values for the GNSS, stream, and ClockSync functions of the positioning information.
+     * FPort values for the GNSS, Stream, and ClockSync functions of the positioning information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html#cfn-iotwireless-wirelessdevice-positioning)
-     * @param positioning FPort values for the GNSS, stream, and ClockSync functions of the
+     * @param positioning FPort values for the GNSS, Stream, and ClockSync functions of the
      * positioning information. 
      */
     override fun positioning(positioning: String) {
@@ -540,7 +540,146 @@ public open class CfnWirelessDevice internal constructor(
         CfnWirelessDevice = CfnWirelessDevice(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessDevice):
-        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
+  }
+
+  /**
+   * ABP device object for LoRaWAN specification v1.0.x.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * AbpV10xProperty abpV10xProperty = AbpV10xProperty.builder()
+   * .devAddr("devAddr")
+   * .sessionKeys(SessionKeysAbpV10xProperty.builder()
+   * .appSKey("appSKey")
+   * .nwkSKey("nwkSKey")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html)
+   */
+  public interface AbpV10xProperty {
+    /**
+     * The DevAddr value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-devaddr)
+     */
+    public fun devAddr(): String
+
+    /**
+     * Session keys for ABP v1.0.x.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)
+     */
+    public fun sessionKeys(): Any
+
+    /**
+     * A builder for [AbpV10xProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param devAddr The DevAddr value. 
+       */
+      public fun devAddr(devAddr: String)
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      public fun sessionKeys(sessionKeys: IResolvable)
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty)
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.Builder =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.builder()
+
+      /**
+       * @param devAddr The DevAddr value. 
+       */
+      override fun devAddr(devAddr: String) {
+        cdkBuilder.devAddr(devAddr)
+      }
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      override fun sessionKeys(sessionKeys: IResolvable) {
+        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
+        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV10xProperty::unwrap))
+      }
+
+      /**
+       * @param sessionKeys Session keys for ABP v1.0.x. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit): Unit =
+          sessionKeys(SessionKeysAbpV10xProperty(sessionKeys))
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
+    ) : CdkObject(cdkObject), AbpV10xProperty {
+      /**
+       * The DevAddr value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-devaddr)
+       */
+      override fun devAddr(): String = unwrap(this).getDevAddr()
+
+      /**
+       * Session keys for ABP v1.0.x.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)
+       */
+      override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AbpV10xProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty):
+          AbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? AbpV10xProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AbpV10xProperty):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty
+    }
   }
 
   /**
@@ -648,8 +787,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
     ) : CdkObject(cdkObject), AbpV11Property {
       /**
        * The DevAddr value.
@@ -681,776 +819,6 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property
-    }
-  }
-
-  /**
-   * Session keys for ABP v1.1.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * SessionKeysAbpV11Property sessionKeysAbpV11Property = SessionKeysAbpV11Property.builder()
-   * .appSKey("appSKey")
-   * .fNwkSIntKey("fNwkSIntKey")
-   * .nwkSEncKey("nwkSEncKey")
-   * .sNwkSIntKey("sNwkSIntKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html)
-   */
-  public interface SessionKeysAbpV11Property {
-    /**
-     * The AppSKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-appskey)
-     */
-    public fun appSKey(): String
-
-    /**
-     * The FNwkSIntKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey)
-     */
-    public fun fNwkSIntKey(): String
-
-    /**
-     * The NwkSEncKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey)
-     */
-    public fun nwkSEncKey(): String
-
-    /**
-     * The SNwkSIntKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey)
-     */
-    public fun sNwkSIntKey(): String
-
-    /**
-     * A builder for [SessionKeysAbpV11Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appSKey The AppSKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun appSKey(appSKey: String)
-
-      /**
-       * @param fNwkSIntKey The FNwkSIntKey is a secret key, which you should handle in a similar
-       * way as you would an application password. 
-       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun fNwkSIntKey(fNwkSIntKey: String)
-
-      /**
-       * @param nwkSEncKey The NwkSEncKey is a secret key, which you should handle in a similar way
-       * as you would an application password. 
-       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun nwkSEncKey(nwkSEncKey: String)
-
-      /**
-       * @param sNwkSIntKey The SNwkSIntKey is a secret key, which you should handle in a similar
-       * way as you would an application password. 
-       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun sNwkSIntKey(sNwkSIntKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property.Builder
-          =
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property.builder()
-
-      /**
-       * @param appSKey The AppSKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun appSKey(appSKey: String) {
-        cdkBuilder.appSKey(appSKey)
-      }
-
-      /**
-       * @param fNwkSIntKey The FNwkSIntKey is a secret key, which you should handle in a similar
-       * way as you would an application password. 
-       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun fNwkSIntKey(fNwkSIntKey: String) {
-        cdkBuilder.fNwkSIntKey(fNwkSIntKey)
-      }
-
-      /**
-       * @param nwkSEncKey The NwkSEncKey is a secret key, which you should handle in a similar way
-       * as you would an application password. 
-       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun nwkSEncKey(nwkSEncKey: String) {
-        cdkBuilder.nwkSEncKey(nwkSEncKey)
-      }
-
-      /**
-       * @param sNwkSIntKey The SNwkSIntKey is a secret key, which you should handle in a similar
-       * way as you would an application password. 
-       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun sNwkSIntKey(sNwkSIntKey: String) {
-        cdkBuilder.sNwkSIntKey(sNwkSIntKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
-    ) : CdkObject(cdkObject), SessionKeysAbpV11Property {
-      /**
-       * The AppSKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-appskey)
-       */
-      override fun appSKey(): String = unwrap(this).getAppSKey()
-
-      /**
-       * The FNwkSIntKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey)
-       */
-      override fun fNwkSIntKey(): String = unwrap(this).getFNwkSIntKey()
-
-      /**
-       * The NwkSEncKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey)
-       */
-      override fun nwkSEncKey(): String = unwrap(this).getNwkSEncKey()
-
-      /**
-       * The SNwkSIntKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey)
-       */
-      override fun sNwkSIntKey(): String = unwrap(this).getSNwkSIntKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SessionKeysAbpV11Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property):
-          SessionKeysAbpV11Property = CdkObjectWrappers.wrap(cdkObject) as?
-          SessionKeysAbpV11Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SessionKeysAbpV11Property):
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property
-    }
-  }
-
-  /**
-   * OTAA device object for v1.1 for create APIs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * OtaaV11Property otaaV11Property = OtaaV11Property.builder()
-   * .appKey("appKey")
-   * .joinEui("joinEui")
-   * .nwkKey("nwkKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html)
-   */
-  public interface OtaaV11Property {
-    /**
-     * The AppKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-appkey)
-     */
-    public fun appKey(): String
-
-    /**
-     * The JoinEUI value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-joineui)
-     */
-    public fun joinEui(): String
-
-    /**
-     * The NwkKey is a secret key, which you should handle in a similar way as you would an
-     * application password.
-     *
-     * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-nwkkey)
-     */
-    public fun nwkKey(): String
-
-    /**
-     * A builder for [OtaaV11Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appKey The AppKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun appKey(appKey: String)
-
-      /**
-       * @param joinEui The JoinEUI value. 
-       */
-      public fun joinEui(joinEui: String)
-
-      /**
-       * @param nwkKey The NwkKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      public fun nwkKey(nwkKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.Builder =
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.builder()
-
-      /**
-       * @param appKey The AppKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun appKey(appKey: String) {
-        cdkBuilder.appKey(appKey)
-      }
-
-      /**
-       * @param joinEui The JoinEUI value. 
-       */
-      override fun joinEui(joinEui: String) {
-        cdkBuilder.joinEui(joinEui)
-      }
-
-      /**
-       * @param nwkKey The NwkKey is a secret key, which you should handle in a similar way as you
-       * would an application password. 
-       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       */
-      override fun nwkKey(nwkKey: String) {
-        cdkBuilder.nwkKey(nwkKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
-    ) : CdkObject(cdkObject), OtaaV11Property {
-      /**
-       * The AppKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-appkey)
-       */
-      override fun appKey(): String = unwrap(this).getAppKey()
-
-      /**
-       * The JoinEUI value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-joineui)
-       */
-      override fun joinEui(): String = unwrap(this).getJoinEui()
-
-      /**
-       * The NwkKey is a secret key, which you should handle in a similar way as you would an
-       * application password.
-       *
-       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-nwkkey)
-       */
-      override fun nwkKey(): String = unwrap(this).getNwkKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OtaaV11Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property):
-          OtaaV11Property = CdkObjectWrappers.wrap(cdkObject) as? OtaaV11Property ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OtaaV11Property):
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property
-    }
-  }
-
-  /**
-   * ABP device object for LoRaWAN specification v1.0.x.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * AbpV10xProperty abpV10xProperty = AbpV10xProperty.builder()
-   * .devAddr("devAddr")
-   * .sessionKeys(SessionKeysAbpV10xProperty.builder()
-   * .appSKey("appSKey")
-   * .nwkSKey("nwkSKey")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html)
-   */
-  public interface AbpV10xProperty {
-    /**
-     * The DevAddr value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-devaddr)
-     */
-    public fun devAddr(): String
-
-    /**
-     * Session keys for ABP v1.0.x.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)
-     */
-    public fun sessionKeys(): Any
-
-    /**
-     * A builder for [AbpV10xProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param devAddr The DevAddr value. 
-       */
-      public fun devAddr(devAddr: String)
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      public fun sessionKeys(sessionKeys: IResolvable)
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty)
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.Builder =
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.builder()
-
-      /**
-       * @param devAddr The DevAddr value. 
-       */
-      override fun devAddr(devAddr: String) {
-        cdkBuilder.devAddr(devAddr)
-      }
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      override fun sessionKeys(sessionKeys: IResolvable) {
-        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
-        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV10xProperty::unwrap))
-      }
-
-      /**
-       * @param sessionKeys Session keys for ABP v1.0.x. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
-      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit): Unit =
-          sessionKeys(SessionKeysAbpV10xProperty(sessionKeys))
-
-      public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
-    ) : CdkObject(cdkObject), AbpV10xProperty {
-      /**
-       * The DevAddr value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-devaddr)
-       */
-      override fun devAddr(): String = unwrap(this).getDevAddr()
-
-      /**
-       * Session keys for ABP v1.0.x.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)
-       */
-      override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AbpV10xProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty):
-          AbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? AbpV10xProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AbpV10xProperty):
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * OtaaV10xProperty otaaV10xProperty = OtaaV10xProperty.builder()
-   * .appEui("appEui")
-   * .appKey("appKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html)
-   */
-  public interface OtaaV10xProperty {
-    /**
-     * The AppEUI value.
-     *
-     * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appeui)
-     */
-    public fun appEui(): String
-
-    /**
-     * The AppKey value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appkey)
-     */
-    public fun appKey(): String
-
-    /**
-     * A builder for [OtaaV10xProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appEui The AppEUI value. 
-       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
-       */
-      public fun appEui(appEui: String)
-
-      /**
-       * @param appKey The AppKey value. 
-       */
-      public fun appKey(appKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.Builder =
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.builder()
-
-      /**
-       * @param appEui The AppEUI value. 
-       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
-       */
-      override fun appEui(appEui: String) {
-        cdkBuilder.appEui(appEui)
-      }
-
-      /**
-       * @param appKey The AppKey value. 
-       */
-      override fun appKey(appKey: String) {
-        cdkBuilder.appKey(appKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
-    ) : CdkObject(cdkObject), OtaaV10xProperty {
-      /**
-       * The AppEUI value.
-       *
-       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appeui)
-       */
-      override fun appEui(): String = unwrap(this).getAppEui()
-
-      /**
-       * The AppKey value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appkey)
-       */
-      override fun appKey(): String = unwrap(this).getAppKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OtaaV10xProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty):
-          OtaaV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? OtaaV10xProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OtaaV10xProperty):
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty
-    }
-  }
-
-  /**
-   * Session keys for ABP v1.0.x.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * SessionKeysAbpV10xProperty sessionKeysAbpV10xProperty = SessionKeysAbpV10xProperty.builder()
-   * .appSKey("appSKey")
-   * .nwkSKey("nwkSKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html)
-   */
-  public interface SessionKeysAbpV10xProperty {
-    /**
-     * The AppSKey value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-appskey)
-     */
-    public fun appSKey(): String
-
-    /**
-     * The NwkKey value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey)
-     */
-    public fun nwkSKey(): String
-
-    /**
-     * A builder for [SessionKeysAbpV10xProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appSKey The AppSKey value. 
-       */
-      public fun appSKey(appSKey: String)
-
-      /**
-       * @param nwkSKey The NwkKey value. 
-       */
-      public fun nwkSKey(nwkSKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty.Builder
-          =
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty.builder()
-
-      /**
-       * @param appSKey The AppSKey value. 
-       */
-      override fun appSKey(appSKey: String) {
-        cdkBuilder.appSKey(appSKey)
-      }
-
-      /**
-       * @param nwkSKey The NwkKey value. 
-       */
-      override fun nwkSKey(nwkSKey: String) {
-        cdkBuilder.nwkSKey(nwkSKey)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
-    ) : CdkObject(cdkObject), SessionKeysAbpV10xProperty {
-      /**
-       * The AppSKey value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-appskey)
-       */
-      override fun appSKey(): String = unwrap(this).getAppSKey()
-
-      /**
-       * The NwkKey value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey)
-       */
-      override fun nwkSKey(): String = unwrap(this).getNwkSKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SessionKeysAbpV10xProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty):
-          SessionKeysAbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SessionKeysAbpV10xProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SessionKeysAbpV10xProperty):
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty
     }
   }
 
@@ -1757,8 +1125,7 @@ public open class CfnWirelessDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
     ) : CdkObject(cdkObject), LoRaWANDeviceProperty {
       /**
        * ABP device object for LoRaWAN specification v1.0.x.
@@ -1825,6 +1192,633 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * OtaaV10xProperty otaaV10xProperty = OtaaV10xProperty.builder()
+   * .appEui("appEui")
+   * .appKey("appKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html)
+   */
+  public interface OtaaV10xProperty {
+    /**
+     * The AppEUI value.
+     *
+     * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appeui)
+     */
+    public fun appEui(): String
+
+    /**
+     * The AppKey value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appkey)
+     */
+    public fun appKey(): String
+
+    /**
+     * A builder for [OtaaV10xProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appEui The AppEUI value. 
+       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
+       */
+      public fun appEui(appEui: String)
+
+      /**
+       * @param appKey The AppKey value. 
+       */
+      public fun appKey(appKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.Builder =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.builder()
+
+      /**
+       * @param appEui The AppEUI value. 
+       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
+       */
+      override fun appEui(appEui: String) {
+        cdkBuilder.appEui(appEui)
+      }
+
+      /**
+       * @param appKey The AppKey value. 
+       */
+      override fun appKey(appKey: String) {
+        cdkBuilder.appKey(appKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
+    ) : CdkObject(cdkObject), OtaaV10xProperty {
+      /**
+       * The AppEUI value.
+       *
+       * You specify this value when using LoRaWAN versions v1.0.2 or v1.0.3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appeui)
+       */
+      override fun appEui(): String = unwrap(this).getAppEui()
+
+      /**
+       * The AppKey value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html#cfn-iotwireless-wirelessdevice-otaav10x-appkey)
+       */
+      override fun appKey(): String = unwrap(this).getAppKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OtaaV10xProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty):
+          OtaaV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? OtaaV10xProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OtaaV10xProperty):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty
+    }
+  }
+
+  /**
+   * OTAA device object for v1.1 for create APIs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * OtaaV11Property otaaV11Property = OtaaV11Property.builder()
+   * .appKey("appKey")
+   * .joinEui("joinEui")
+   * .nwkKey("nwkKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html)
+   */
+  public interface OtaaV11Property {
+    /**
+     * The AppKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-appkey)
+     */
+    public fun appKey(): String
+
+    /**
+     * The JoinEUI value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-joineui)
+     */
+    public fun joinEui(): String
+
+    /**
+     * The NwkKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-nwkkey)
+     */
+    public fun nwkKey(): String
+
+    /**
+     * A builder for [OtaaV11Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appKey The AppKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun appKey(appKey: String)
+
+      /**
+       * @param joinEui The JoinEUI value. 
+       */
+      public fun joinEui(joinEui: String)
+
+      /**
+       * @param nwkKey The NwkKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun nwkKey(nwkKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.Builder =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.builder()
+
+      /**
+       * @param appKey The AppKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun appKey(appKey: String) {
+        cdkBuilder.appKey(appKey)
+      }
+
+      /**
+       * @param joinEui The JoinEUI value. 
+       */
+      override fun joinEui(joinEui: String) {
+        cdkBuilder.joinEui(joinEui)
+      }
+
+      /**
+       * @param nwkKey The NwkKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun nwkKey(nwkKey: String) {
+        cdkBuilder.nwkKey(nwkKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
+    ) : CdkObject(cdkObject), OtaaV11Property {
+      /**
+       * The AppKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the AppKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-appkey)
+       */
+      override fun appKey(): String = unwrap(this).getAppKey()
+
+      /**
+       * The JoinEUI value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-joineui)
+       */
+      override fun joinEui(): String = unwrap(this).getJoinEui()
+
+      /**
+       * The NwkKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the NwkKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html#cfn-iotwireless-wirelessdevice-otaav11-nwkkey)
+       */
+      override fun nwkKey(): String = unwrap(this).getNwkKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OtaaV11Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property):
+          OtaaV11Property = CdkObjectWrappers.wrap(cdkObject) as? OtaaV11Property ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OtaaV11Property):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property
+    }
+  }
+
+  /**
+   * Session keys for ABP v1.0.x.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * SessionKeysAbpV10xProperty sessionKeysAbpV10xProperty = SessionKeysAbpV10xProperty.builder()
+   * .appSKey("appSKey")
+   * .nwkSKey("nwkSKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html)
+   */
+  public interface SessionKeysAbpV10xProperty {
+    /**
+     * The AppSKey value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-appskey)
+     */
+    public fun appSKey(): String
+
+    /**
+     * The NwkKey value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey)
+     */
+    public fun nwkSKey(): String
+
+    /**
+     * A builder for [SessionKeysAbpV10xProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appSKey The AppSKey value. 
+       */
+      public fun appSKey(appSKey: String)
+
+      /**
+       * @param nwkSKey The NwkKey value. 
+       */
+      public fun nwkSKey(nwkSKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty.Builder
+          =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty.builder()
+
+      /**
+       * @param appSKey The AppSKey value. 
+       */
+      override fun appSKey(appSKey: String) {
+        cdkBuilder.appSKey(appSKey)
+      }
+
+      /**
+       * @param nwkSKey The NwkKey value. 
+       */
+      override fun nwkSKey(nwkSKey: String) {
+        cdkBuilder.nwkSKey(nwkSKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
+    ) : CdkObject(cdkObject), SessionKeysAbpV10xProperty {
+      /**
+       * The AppSKey value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-appskey)
+       */
+      override fun appSKey(): String = unwrap(this).getAppSKey()
+
+      /**
+       * The NwkKey value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey)
+       */
+      override fun nwkSKey(): String = unwrap(this).getNwkSKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SessionKeysAbpV10xProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty):
+          SessionKeysAbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionKeysAbpV10xProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SessionKeysAbpV10xProperty):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty
+    }
+  }
+
+  /**
+   * Session keys for ABP v1.1.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * SessionKeysAbpV11Property sessionKeysAbpV11Property = SessionKeysAbpV11Property.builder()
+   * .appSKey("appSKey")
+   * .fNwkSIntKey("fNwkSIntKey")
+   * .nwkSEncKey("nwkSEncKey")
+   * .sNwkSIntKey("sNwkSIntKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html)
+   */
+  public interface SessionKeysAbpV11Property {
+    /**
+     * The AppSKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-appskey)
+     */
+    public fun appSKey(): String
+
+    /**
+     * The FNwkSIntKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey)
+     */
+    public fun fNwkSIntKey(): String
+
+    /**
+     * The NwkSEncKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey)
+     */
+    public fun nwkSEncKey(): String
+
+    /**
+     * The SNwkSIntKey is a secret key, which you should handle in a similar way as you would an
+     * application password.
+     *
+     * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey)
+     */
+    public fun sNwkSIntKey(): String
+
+    /**
+     * A builder for [SessionKeysAbpV11Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appSKey The AppSKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun appSKey(appSKey: String)
+
+      /**
+       * @param fNwkSIntKey The FNwkSIntKey is a secret key, which you should handle in a similar
+       * way as you would an application password. 
+       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun fNwkSIntKey(fNwkSIntKey: String)
+
+      /**
+       * @param nwkSEncKey The NwkSEncKey is a secret key, which you should handle in a similar way
+       * as you would an application password. 
+       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun nwkSEncKey(nwkSEncKey: String)
+
+      /**
+       * @param sNwkSIntKey The SNwkSIntKey is a secret key, which you should handle in a similar
+       * way as you would an application password. 
+       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      public fun sNwkSIntKey(sNwkSIntKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property.Builder
+          =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property.builder()
+
+      /**
+       * @param appSKey The AppSKey is a secret key, which you should handle in a similar way as you
+       * would an application password. 
+       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun appSKey(appSKey: String) {
+        cdkBuilder.appSKey(appSKey)
+      }
+
+      /**
+       * @param fNwkSIntKey The FNwkSIntKey is a secret key, which you should handle in a similar
+       * way as you would an application password. 
+       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun fNwkSIntKey(fNwkSIntKey: String) {
+        cdkBuilder.fNwkSIntKey(fNwkSIntKey)
+      }
+
+      /**
+       * @param nwkSEncKey The NwkSEncKey is a secret key, which you should handle in a similar way
+       * as you would an application password. 
+       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun nwkSEncKey(nwkSEncKey: String) {
+        cdkBuilder.nwkSEncKey(nwkSEncKey)
+      }
+
+      /**
+       * @param sNwkSIntKey The SNwkSIntKey is a secret key, which you should handle in a similar
+       * way as you would an application password. 
+       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       */
+      override fun sNwkSIntKey(sNwkSIntKey: String) {
+        cdkBuilder.sNwkSIntKey(sNwkSIntKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
+    ) : CdkObject(cdkObject), SessionKeysAbpV11Property {
+      /**
+       * The AppSKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the AppSKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-appskey)
+       */
+      override fun appSKey(): String = unwrap(this).getAppSKey()
+
+      /**
+       * The FNwkSIntKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the FNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey)
+       */
+      override fun fNwkSIntKey(): String = unwrap(this).getFNwkSIntKey()
+
+      /**
+       * The NwkSEncKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the NwkSEncKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey)
+       */
+      override fun nwkSEncKey(): String = unwrap(this).getNwkSEncKey()
+
+      /**
+       * The SNwkSIntKey is a secret key, which you should handle in a similar way as you would an
+       * application password.
+       *
+       * You can protect the SNwkSIntKey value by storing it in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html#cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey)
+       */
+      override fun sNwkSIntKey(): String = unwrap(this).getSNwkSIntKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SessionKeysAbpV11Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property):
+          SessionKeysAbpV11Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionKeysAbpV11Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SessionKeysAbpV11Property):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property
     }
   }
 }

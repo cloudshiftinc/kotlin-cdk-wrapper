@@ -144,7 +144,7 @@ public interface ILogGroup : IResourceWithPolicy {
   public fun logGroupPhysicalName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.ILogGroup,
+    cdkObject: software.amazon.awscdk.services.logs.ILogGroup,
   ) : CdkObject(cdkObject), ILogGroup {
     /**
      * Create a new Metric Filter on this Log Group.

@@ -200,8 +200,7 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachmentProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayRouteTableAttachmentProps {
     /**
      * The ID of the transit gateway peering.

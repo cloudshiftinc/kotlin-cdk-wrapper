@@ -109,7 +109,7 @@ public interface UsagePlanPerApiStage {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage,
+    cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage,
   ) : CdkObject(cdkObject), UsagePlanPerApiStage {
     /**
      * Default: none

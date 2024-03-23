@@ -192,7 +192,7 @@ public interface HealthCheck {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancing.HealthCheck,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancing.HealthCheck,
   ) : CdkObject(cdkObject), HealthCheck {
     /**
      * After how many successful checks is an instance considered healthy.

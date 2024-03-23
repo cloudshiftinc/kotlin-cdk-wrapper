@@ -62,7 +62,7 @@ public interface IApi : IResource {
   public fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IApi,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IApi,
   ) : CdkObject(cdkObject), IApi {
     /**
      * The default endpoint for an API.

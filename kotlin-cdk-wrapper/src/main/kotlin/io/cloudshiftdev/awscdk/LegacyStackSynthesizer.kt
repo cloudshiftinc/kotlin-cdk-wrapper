@@ -35,8 +35,8 @@ import kotlin.jvm.JvmName
  * LegacyStackSynthesizer legacyStackSynthesizer = new LegacyStackSynthesizer();
  * ```
  */
-public open class LegacyStackSynthesizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.LegacyStackSynthesizer,
+public open class LegacyStackSynthesizer(
+  cdkObject: software.amazon.awscdk.LegacyStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.LegacyStackSynthesizer()
   )
@@ -133,6 +133,7 @@ public open class LegacyStackSynthesizer internal constructor(
         LegacyStackSynthesizer = LegacyStackSynthesizer(cdkObject)
 
     internal fun unwrap(wrapped: LegacyStackSynthesizer):
-        software.amazon.awscdk.LegacyStackSynthesizer = wrapped.cdkObject
+        software.amazon.awscdk.LegacyStackSynthesizer = wrapped.cdkObject as
+        software.amazon.awscdk.LegacyStackSynthesizer
   }
 }

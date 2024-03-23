@@ -59,7 +59,7 @@ public interface TimeConversionOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.TimeConversionOptions,
+    cdkObject: software.amazon.awscdk.TimeConversionOptions,
   ) : CdkObject(cdkObject), TimeConversionOptions {
     /**
      * If `true`, conversions into a larger time unit (e.g. `Seconds` to `Minutes`) will fail if the

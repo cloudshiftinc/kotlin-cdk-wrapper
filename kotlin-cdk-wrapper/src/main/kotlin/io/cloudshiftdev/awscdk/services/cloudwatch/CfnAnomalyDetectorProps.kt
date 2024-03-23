@@ -368,7 +368,7 @@ public interface CfnAnomalyDetectorProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetectorProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetectorProps,
   ) : CdkObject(cdkObject), CfnAnomalyDetectorProps {
     /**
      * Specifies details about how the anomaly detection model is to be trained, including time

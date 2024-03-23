@@ -296,8 +296,7 @@ public interface EmrSetClusterTerminationProtectionProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps,
   ) : CdkObject(cdkObject), EmrSetClusterTerminationProtectionProps {
     /**
      * The ClusterId to update.

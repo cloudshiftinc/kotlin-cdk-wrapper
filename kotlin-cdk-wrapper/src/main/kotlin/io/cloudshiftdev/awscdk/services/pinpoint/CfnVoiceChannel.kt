@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html)
  */
-public open class CfnVoiceChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnVoiceChannel,
+public open class CfnVoiceChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnVoiceChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -195,6 +195,7 @@ public open class CfnVoiceChannel internal constructor(
         CfnVoiceChannel = CfnVoiceChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnVoiceChannel):
-        software.amazon.awscdk.services.pinpoint.CfnVoiceChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnVoiceChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnVoiceChannel
   }
 }

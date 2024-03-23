@@ -106,7 +106,7 @@ public interface ApiKeyConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig,
   ) : CdkObject(cdkObject), ApiKeyConfig {
     /**
      * Description of API key.

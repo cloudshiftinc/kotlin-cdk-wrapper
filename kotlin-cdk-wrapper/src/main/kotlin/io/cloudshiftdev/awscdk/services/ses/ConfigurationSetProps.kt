@@ -189,7 +189,7 @@ public interface ConfigurationSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetProps,
+    cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetProps,
   ) : CdkObject(cdkObject), ConfigurationSetProps {
     /**
      * A name for the configuration set.

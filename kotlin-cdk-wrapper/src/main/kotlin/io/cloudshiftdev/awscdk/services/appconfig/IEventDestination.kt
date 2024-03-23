@@ -28,7 +28,7 @@ public interface IEventDestination {
   public fun type(): SourceType
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination,
+    cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination,
   ) : CdkObject(cdkObject), IEventDestination {
     /**
      * The URI of the extension event destination.

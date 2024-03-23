@@ -27,8 +27,8 @@ import kotlin.collections.Map
  *
  * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#condition-keys-wif)
  */
-public open class FederatedPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.FederatedPrincipal,
+public open class FederatedPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.FederatedPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(federated: String) :
       this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated)
@@ -80,6 +80,7 @@ public open class FederatedPrincipal internal constructor(
         FederatedPrincipal = FederatedPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: FederatedPrincipal):
-        software.amazon.awscdk.services.iam.FederatedPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.FederatedPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.FederatedPrincipal
   }
 }

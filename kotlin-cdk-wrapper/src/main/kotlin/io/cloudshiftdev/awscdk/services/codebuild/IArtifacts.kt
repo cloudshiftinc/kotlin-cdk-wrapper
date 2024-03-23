@@ -34,7 +34,7 @@ public interface IArtifacts {
   public fun type(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
+    cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
   ) : CdkObject(cdkObject), IArtifacts {
     /**
      * Callback when an Artifacts class is used in a CodeBuild Project.

@@ -19,8 +19,8 @@ import kotlin.collections.List
  * TokenizedStringFragments tokenizedStringFragments = new TokenizedStringFragments();
  * ```
  */
-public open class TokenizedStringFragments internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.TokenizedStringFragments,
+public open class TokenizedStringFragments(
+  cdkObject: software.amazon.awscdk.TokenizedStringFragments,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.TokenizedStringFragments()
   )
@@ -89,6 +89,7 @@ public open class TokenizedStringFragments internal constructor(
         TokenizedStringFragments = TokenizedStringFragments(cdkObject)
 
     internal fun unwrap(wrapped: TokenizedStringFragments):
-        software.amazon.awscdk.TokenizedStringFragments = wrapped.cdkObject
+        software.amazon.awscdk.TokenizedStringFragments = wrapped.cdkObject as
+        software.amazon.awscdk.TokenizedStringFragments
   }
 }

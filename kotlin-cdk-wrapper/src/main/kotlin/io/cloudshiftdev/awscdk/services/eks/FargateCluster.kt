@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FargateCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.FargateCluster,
+public open class FargateCluster(
+  cdkObject: software.amazon.awscdk.services.eks.FargateCluster,
 ) : Cluster(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -881,6 +881,6 @@ public open class FargateCluster internal constructor(
         = FargateCluster(cdkObject)
 
     internal fun unwrap(wrapped: FargateCluster): software.amazon.awscdk.services.eks.FargateCluster
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.eks.FargateCluster
   }
 }

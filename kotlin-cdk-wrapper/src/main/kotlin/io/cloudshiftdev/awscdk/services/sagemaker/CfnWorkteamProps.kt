@@ -278,7 +278,7 @@ public interface CfnWorkteamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteamProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteamProps,
   ) : CdkObject(cdkObject), CfnWorkteamProps {
     /**
      * A description of the work team.

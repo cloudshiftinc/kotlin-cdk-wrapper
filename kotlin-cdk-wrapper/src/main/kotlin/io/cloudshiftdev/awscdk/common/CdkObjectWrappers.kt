@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.common
 
+import java.util.IdentityHashMap
 import kotlin.Any
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
@@ -10,10 +11,16 @@ import kotlin.reflect.full.companionObjectInstance
 import kotlin.reflect.full.memberFunctions
 
 internal object CdkObjectWrappers {
-  internal fun wrap(cdkObject: Any): Any? {
-    val kTwin = resolveKTwin(cdkObject::class)
-    return kTwin?.let{resolveWrapperFunction(kTwin)}?.call(kTwin.companionObjectInstance, cdkObject)
+  private val instanceMap: IdentityHashMap<Any, CdkObject> = IdentityHashMap()
+
+  internal fun register(cdkObject: CdkObject) {
+    requireNotNull(cdkObject.cdkObject) { "cdkObject cannot be null" }
+    instanceMap[cdkObject.cdkObject] = cdkObject
   }
+
+  internal fun wrap(cdkObject: Any): Any? = instanceMap[cdkObject] ?:
+      resolveKTwin(cdkObject::class)?.let{resolveWrapperFunction(it)?.call(it.companionObjectInstance,
+      cdkObject)}
 
   private fun resolveWrapperFunction(klass: KClass<*>): KFunction<*>? =
       klass.companionObject?.memberFunctions?.firstOrNull {

@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html)
  */
-public open class CfnEventSubscription internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnEventSubscription,
+public open class CfnEventSubscription(
+  cdkObject: software.amazon.awscdk.services.rds.CfnEventSubscription,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -576,6 +576,7 @@ public open class CfnEventSubscription internal constructor(
         CfnEventSubscription = CfnEventSubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventSubscription):
-        software.amazon.awscdk.services.rds.CfnEventSubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.CfnEventSubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.CfnEventSubscription
   }
 }

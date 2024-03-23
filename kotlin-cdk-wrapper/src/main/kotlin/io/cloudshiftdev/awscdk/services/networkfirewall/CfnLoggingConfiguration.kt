@@ -60,9 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html)
  */
-public open class CfnLoggingConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration,
+public open class CfnLoggingConfiguration(
+  cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -296,6 +295,7 @@ public open class CfnLoggingConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnLoggingConfiguration):
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration = wrapped.cdkObject
+        as software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
   }
 
   /**
@@ -514,8 +514,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty,
     ) : CdkObject(cdkObject), LogDestinationConfigProperty {
       /**
        * The named location for the logs, provided in a key:value mapping that is specific to the
@@ -672,8 +671,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty,
     ) : CdkObject(cdkObject), LoggingConfigurationProperty {
       /**
        * Defines the logging destinations for the logs for a firewall.

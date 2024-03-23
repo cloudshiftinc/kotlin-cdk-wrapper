@@ -323,7 +323,7 @@ public interface CfnMissionProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfileProps,
+    cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfileProps,
   ) : CdkObject(cdkObject), CfnMissionProfileProps {
     /**
      * Amount of time in seconds after a contact ends that you’d like to receive a Ground Station

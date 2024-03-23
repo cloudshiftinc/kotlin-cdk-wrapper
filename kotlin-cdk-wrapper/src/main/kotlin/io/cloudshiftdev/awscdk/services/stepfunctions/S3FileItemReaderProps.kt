@@ -92,7 +92,7 @@ public interface S3FileItemReaderProps : ItemReaderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps,
   ) : CdkObject(cdkObject), S3FileItemReaderProps {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.

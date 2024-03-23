@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html)
  */
-public open class CfnCollaboration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
+public open class CfnCollaboration(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -694,529 +694,8 @@ public open class CfnCollaboration internal constructor(
         CfnCollaboration = CfnCollaboration(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollaboration):
-        software.amazon.awscdk.services.cleanrooms.CfnCollaboration = wrapped.cdkObject
-  }
-
-  /**
-   * An object representing the collaboration member's payment responsibilities set by the
-   * collaboration creator.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * PaymentConfigurationProperty paymentConfigurationProperty =
-   * PaymentConfigurationProperty.builder()
-   * .queryCompute(QueryComputePaymentConfigProperty.builder()
-   * .isResponsible(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html)
-   */
-  public interface PaymentConfigurationProperty {
-    /**
-     * The collaboration member's payment responsibilities set by the collaboration creator for
-     * query compute costs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
-     */
-    public fun queryCompute(): Any
-
-    /**
-     * A builder for [PaymentConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      public fun queryCompute(queryCompute: IResolvable)
-
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty)
-
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.builder()
-
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      override fun queryCompute(queryCompute: IResolvable) {
-        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
-        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
-      }
-
-      /**
-       * @param queryCompute The collaboration member's payment responsibilities set by the
-       * collaboration creator for query compute costs. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit):
-          Unit = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
-    ) : CdkObject(cdkObject), PaymentConfigurationProperty {
-      /**
-       * The collaboration member's payment responsibilities set by the collaboration creator for
-       * query compute costs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
-       */
-      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PaymentConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
-          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PaymentConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PaymentConfigurationProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty
-    }
-  }
-
-  /**
-   * Basic metadata used to construct a new member.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * MemberSpecificationProperty memberSpecificationProperty = MemberSpecificationProperty.builder()
-   * .accountId("accountId")
-   * .displayName("displayName")
-   * .memberAbilities(List.of("memberAbilities"))
-   * // the properties below are optional
-   * .paymentConfiguration(PaymentConfigurationProperty.builder()
-   * .queryCompute(QueryComputePaymentConfigProperty.builder()
-   * .isResponsible(false)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html)
-   */
-  public interface MemberSpecificationProperty {
-    /**
-     * The identifier used to reference members of the collaboration.
-     *
-     * Currently only supports AWS account ID.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-accountid)
-     */
-    public fun accountId(): String
-
-    /**
-     * The member's display name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-displayname)
-     */
-    public fun displayName(): String
-
-    /**
-     * The abilities granted to the collaboration member.
-     *
-     * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-memberabilities)
-     */
-    public fun memberAbilities(): List<String>
-
-    /**
-     * The collaboration member's payment responsibilities set by the collaboration creator.
-     *
-     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-     * costs, then the member who can query is the default payer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-paymentconfiguration)
-     */
-    public fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
-
-    /**
-     * A builder for [MemberSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accountId The identifier used to reference members of the collaboration. 
-       * Currently only supports AWS account ID.
-       */
-      public fun accountId(accountId: String)
-
-      /**
-       * @param displayName The member's display name. 
-       */
-      public fun displayName(displayName: String)
-
-      /**
-       * @param memberAbilities The abilities granted to the collaboration member. 
-       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-       */
-      public fun memberAbilities(memberAbilities: List<String>)
-
-      /**
-       * @param memberAbilities The abilities granted to the collaboration member. 
-       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-       */
-      public fun memberAbilities(vararg memberAbilities: String)
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      public fun paymentConfiguration(paymentConfiguration: IResolvable)
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      public fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty)
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
-      public
-          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty.builder()
-
-      /**
-       * @param accountId The identifier used to reference members of the collaboration. 
-       * Currently only supports AWS account ID.
-       */
-      override fun accountId(accountId: String) {
-        cdkBuilder.accountId(accountId)
-      }
-
-      /**
-       * @param displayName The member's display name. 
-       */
-      override fun displayName(displayName: String) {
-        cdkBuilder.displayName(displayName)
-      }
-
-      /**
-       * @param memberAbilities The abilities granted to the collaboration member. 
-       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-       */
-      override fun memberAbilities(memberAbilities: List<String>) {
-        cdkBuilder.memberAbilities(memberAbilities)
-      }
-
-      /**
-       * @param memberAbilities The abilities granted to the collaboration member. 
-       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-       */
-      override fun memberAbilities(vararg memberAbilities: String): Unit =
-          memberAbilities(memberAbilities.toList())
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      override fun paymentConfiguration(paymentConfiguration: IResolvable) {
-        cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      override fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
-        cdkBuilder.paymentConfiguration(paymentConfiguration.let(PaymentConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
-       * collaboration creator.
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
-      override
-          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit):
-          Unit = paymentConfiguration(PaymentConfigurationProperty(paymentConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
-    ) : CdkObject(cdkObject), MemberSpecificationProperty {
-      /**
-       * The identifier used to reference members of the collaboration.
-       *
-       * Currently only supports AWS account ID.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-accountid)
-       */
-      override fun accountId(): String = unwrap(this).getAccountId()
-
-      /**
-       * The member's display name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-displayname)
-       */
-      override fun displayName(): String = unwrap(this).getDisplayName()
-
-      /**
-       * The abilities granted to the collaboration member.
-       *
-       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-memberabilities)
-       */
-      override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities()
-
-      /**
-       * The collaboration member's payment responsibilities set by the collaboration creator.
-       *
-       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-paymentconfiguration)
-       */
-      override fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MemberSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty):
-          MemberSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MemberSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MemberSpecificationProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty
-    }
-  }
-
-  /**
-   * An object representing the collaboration member's payment responsibilities set by the
-   * collaboration creator for query compute costs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
-   * QueryComputePaymentConfigProperty queryComputePaymentConfigProperty =
-   * QueryComputePaymentConfigProperty.builder()
-   * .isResponsible(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html)
-   */
-  public interface QueryComputePaymentConfigProperty {
-    /**
-     * Indicates whether the collaboration creator has configured the collaboration member to pay
-     * for query compute costs ( `TRUE` ) or has not configured the collaboration member to pay for
-     * query compute costs ( `FALSE` ).
-     *
-     * Exactly one member can be configured to pay for query compute costs. An error is returned if
-     * the collaboration creator sets a `TRUE` value for more than one member in the collaboration.
-     *
-     * If the collaboration creator hasn't specified anyone as the member paying for query compute
-     * costs, then the member who can query is the default payer. An error is returned if the
-     * collaboration creator sets a `FALSE` value for the member who can query.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html#cfn-cleanrooms-collaboration-querycomputepaymentconfig-isresponsible)
-     */
-    public fun isResponsible(): Any
-
-    /**
-     * A builder for [QueryComputePaymentConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isResponsible Indicates whether the collaboration creator has configured the
-       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
-       * collaboration member to pay for query compute costs ( `FALSE` ). 
-       * Exactly one member can be configured to pay for query compute costs. An error is returned
-       * if the collaboration creator sets a `TRUE` value for more than one member in the
-       * collaboration.
-       *
-       * If the collaboration creator hasn't specified anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer. An error is returned if the
-       * collaboration creator sets a `FALSE` value for the member who can query.
-       */
-      public fun isResponsible(isResponsible: Boolean)
-
-      /**
-       * @param isResponsible Indicates whether the collaboration creator has configured the
-       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
-       * collaboration member to pay for query compute costs ( `FALSE` ). 
-       * Exactly one member can be configured to pay for query compute costs. An error is returned
-       * if the collaboration creator sets a `TRUE` value for more than one member in the
-       * collaboration.
-       *
-       * If the collaboration creator hasn't specified anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer. An error is returned if the
-       * collaboration creator sets a `FALSE` value for the member who can query.
-       */
-      public fun isResponsible(isResponsible: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty.builder()
-
-      /**
-       * @param isResponsible Indicates whether the collaboration creator has configured the
-       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
-       * collaboration member to pay for query compute costs ( `FALSE` ). 
-       * Exactly one member can be configured to pay for query compute costs. An error is returned
-       * if the collaboration creator sets a `TRUE` value for more than one member in the
-       * collaboration.
-       *
-       * If the collaboration creator hasn't specified anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer. An error is returned if the
-       * collaboration creator sets a `FALSE` value for the member who can query.
-       */
-      override fun isResponsible(isResponsible: Boolean) {
-        cdkBuilder.isResponsible(isResponsible)
-      }
-
-      /**
-       * @param isResponsible Indicates whether the collaboration creator has configured the
-       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
-       * collaboration member to pay for query compute costs ( `FALSE` ). 
-       * Exactly one member can be configured to pay for query compute costs. An error is returned
-       * if the collaboration creator sets a `TRUE` value for more than one member in the
-       * collaboration.
-       *
-       * If the collaboration creator hasn't specified anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer. An error is returned if the
-       * collaboration creator sets a `FALSE` value for the member who can query.
-       */
-      override fun isResponsible(isResponsible: IResolvable) {
-        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
-    ) : CdkObject(cdkObject), QueryComputePaymentConfigProperty {
-      /**
-       * Indicates whether the collaboration creator has configured the collaboration member to pay
-       * for query compute costs ( `TRUE` ) or has not configured the collaboration member to pay for
-       * query compute costs ( `FALSE` ).
-       *
-       * Exactly one member can be configured to pay for query compute costs. An error is returned
-       * if the collaboration creator sets a `TRUE` value for more than one member in the
-       * collaboration.
-       *
-       * If the collaboration creator hasn't specified anyone as the member paying for query compute
-       * costs, then the member who can query is the default payer. An error is returned if the
-       * collaboration creator sets a `FALSE` value for the member who can query.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html#cfn-cleanrooms-collaboration-querycomputepaymentconfig-isresponsible)
-       */
-      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          QueryComputePaymentConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty):
-          QueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          QueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QueryComputePaymentConfigProperty):
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
-    }
+        software.amazon.awscdk.services.cleanrooms.CfnCollaboration = wrapped.cdkObject as
+        software.amazon.awscdk.services.cleanrooms.CfnCollaboration
   }
 
   /**
@@ -1411,8 +890,7 @@ public open class CfnCollaboration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
     ) : CdkObject(cdkObject), DataEncryptionMetadataProperty {
       /**
        * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
@@ -1464,6 +942,525 @@ public open class CfnCollaboration internal constructor(
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty
+    }
+  }
+
+  /**
+   * Basic metadata used to construct a new member.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MemberSpecificationProperty memberSpecificationProperty = MemberSpecificationProperty.builder()
+   * .accountId("accountId")
+   * .displayName("displayName")
+   * .memberAbilities(List.of("memberAbilities"))
+   * // the properties below are optional
+   * .paymentConfiguration(PaymentConfigurationProperty.builder()
+   * .queryCompute(QueryComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html)
+   */
+  public interface MemberSpecificationProperty {
+    /**
+     * The identifier used to reference members of the collaboration.
+     *
+     * Currently only supports AWS account ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-accountid)
+     */
+    public fun accountId(): String
+
+    /**
+     * The member's display name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-displayname)
+     */
+    public fun displayName(): String
+
+    /**
+     * The abilities granted to the collaboration member.
+     *
+     * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-memberabilities)
+     */
+    public fun memberAbilities(): List<String>
+
+    /**
+     * The collaboration member's payment responsibilities set by the collaboration creator.
+     *
+     * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+     * costs, then the member who can query is the default payer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-paymentconfiguration)
+     */
+    public fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
+
+    /**
+     * A builder for [MemberSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountId The identifier used to reference members of the collaboration. 
+       * Currently only supports AWS account ID.
+       */
+      public fun accountId(accountId: String)
+
+      /**
+       * @param displayName The member's display name. 
+       */
+      public fun displayName(displayName: String)
+
+      /**
+       * @param memberAbilities The abilities granted to the collaboration member. 
+       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+       */
+      public fun memberAbilities(memberAbilities: List<String>)
+
+      /**
+       * @param memberAbilities The abilities granted to the collaboration member. 
+       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+       */
+      public fun memberAbilities(vararg memberAbilities: String)
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      public fun paymentConfiguration(paymentConfiguration: IResolvable)
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      public fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty)
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
+      public
+          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty.builder()
+
+      /**
+       * @param accountId The identifier used to reference members of the collaboration. 
+       * Currently only supports AWS account ID.
+       */
+      override fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+      }
+
+      /**
+       * @param displayName The member's display name. 
+       */
+      override fun displayName(displayName: String) {
+        cdkBuilder.displayName(displayName)
+      }
+
+      /**
+       * @param memberAbilities The abilities granted to the collaboration member. 
+       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+       */
+      override fun memberAbilities(memberAbilities: List<String>) {
+        cdkBuilder.memberAbilities(memberAbilities)
+      }
+
+      /**
+       * @param memberAbilities The abilities granted to the collaboration member. 
+       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+       */
+      override fun memberAbilities(vararg memberAbilities: String): Unit =
+          memberAbilities(memberAbilities.toList())
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      override fun paymentConfiguration(paymentConfiguration: IResolvable) {
+        cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      override fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
+        cdkBuilder.paymentConfiguration(paymentConfiguration.let(PaymentConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param paymentConfiguration The collaboration member's payment responsibilities set by the
+       * collaboration creator.
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
+      override
+          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit):
+          Unit = paymentConfiguration(PaymentConfigurationProperty(paymentConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
+    ) : CdkObject(cdkObject), MemberSpecificationProperty {
+      /**
+       * The identifier used to reference members of the collaboration.
+       *
+       * Currently only supports AWS account ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-accountid)
+       */
+      override fun accountId(): String = unwrap(this).getAccountId()
+
+      /**
+       * The member's display name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-displayname)
+       */
+      override fun displayName(): String = unwrap(this).getDisplayName()
+
+      /**
+       * The abilities granted to the collaboration member.
+       *
+       * *Allowed Values* : `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-memberabilities)
+       */
+      override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities()
+
+      /**
+       * The collaboration member's payment responsibilities set by the collaboration creator.
+       *
+       * If the collaboration creator hasn't speciﬁed anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-paymentconfiguration)
+       */
+      override fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemberSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty):
+          MemberSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemberSpecificationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's payment responsibilities set by the
+   * collaboration creator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * PaymentConfigurationProperty paymentConfigurationProperty =
+   * PaymentConfigurationProperty.builder()
+   * .queryCompute(QueryComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html)
+   */
+  public interface PaymentConfigurationProperty {
+    /**
+     * The collaboration member's payment responsibilities set by the collaboration creator for
+     * query compute costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+     */
+    public fun queryCompute(): Any
+
+    /**
+     * A builder for [PaymentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      public fun queryCompute(queryCompute: IResolvable)
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty)
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.builder()
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      override fun queryCompute(queryCompute: IResolvable) {
+        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
+        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
+      }
+
+      /**
+       * @param queryCompute The collaboration member's payment responsibilities set by the
+       * collaboration creator for query compute costs. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit):
+          Unit = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
+    ) : CdkObject(cdkObject), PaymentConfigurationProperty {
+      /**
+       * The collaboration member's payment responsibilities set by the collaboration creator for
+       * query compute costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-paymentconfiguration.html#cfn-cleanrooms-collaboration-paymentconfiguration-querycompute)
+       */
+      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PaymentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
+          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PaymentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PaymentConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's payment responsibilities set by the
+   * collaboration creator for query compute costs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * QueryComputePaymentConfigProperty queryComputePaymentConfigProperty =
+   * QueryComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html)
+   */
+  public interface QueryComputePaymentConfigProperty {
+    /**
+     * Indicates whether the collaboration creator has configured the collaboration member to pay
+     * for query compute costs ( `TRUE` ) or has not configured the collaboration member to pay for
+     * query compute costs ( `FALSE` ).
+     *
+     * Exactly one member can be configured to pay for query compute costs. An error is returned if
+     * the collaboration creator sets a `TRUE` value for more than one member in the collaboration.
+     *
+     * If the collaboration creator hasn't specified anyone as the member paying for query compute
+     * costs, then the member who can query is the default payer. An error is returned if the
+     * collaboration creator sets a `FALSE` value for the member who can query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html#cfn-cleanrooms-collaboration-querycomputepaymentconfig-isresponsible)
+     */
+    public fun isResponsible(): Any
+
+    /**
+     * A builder for [QueryComputePaymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isResponsible Indicates whether the collaboration creator has configured the
+       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
+       * collaboration member to pay for query compute costs ( `FALSE` ). 
+       * Exactly one member can be configured to pay for query compute costs. An error is returned
+       * if the collaboration creator sets a `TRUE` value for more than one member in the
+       * collaboration.
+       *
+       * If the collaboration creator hasn't specified anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer. An error is returned if the
+       * collaboration creator sets a `FALSE` value for the member who can query.
+       */
+      public fun isResponsible(isResponsible: Boolean)
+
+      /**
+       * @param isResponsible Indicates whether the collaboration creator has configured the
+       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
+       * collaboration member to pay for query compute costs ( `FALSE` ). 
+       * Exactly one member can be configured to pay for query compute costs. An error is returned
+       * if the collaboration creator sets a `TRUE` value for more than one member in the
+       * collaboration.
+       *
+       * If the collaboration creator hasn't specified anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer. An error is returned if the
+       * collaboration creator sets a `FALSE` value for the member who can query.
+       */
+      public fun isResponsible(isResponsible: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty.builder()
+
+      /**
+       * @param isResponsible Indicates whether the collaboration creator has configured the
+       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
+       * collaboration member to pay for query compute costs ( `FALSE` ). 
+       * Exactly one member can be configured to pay for query compute costs. An error is returned
+       * if the collaboration creator sets a `TRUE` value for more than one member in the
+       * collaboration.
+       *
+       * If the collaboration creator hasn't specified anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer. An error is returned if the
+       * collaboration creator sets a `FALSE` value for the member who can query.
+       */
+      override fun isResponsible(isResponsible: Boolean) {
+        cdkBuilder.isResponsible(isResponsible)
+      }
+
+      /**
+       * @param isResponsible Indicates whether the collaboration creator has configured the
+       * collaboration member to pay for query compute costs ( `TRUE` ) or has not configured the
+       * collaboration member to pay for query compute costs ( `FALSE` ). 
+       * Exactly one member can be configured to pay for query compute costs. An error is returned
+       * if the collaboration creator sets a `TRUE` value for more than one member in the
+       * collaboration.
+       *
+       * If the collaboration creator hasn't specified anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer. An error is returned if the
+       * collaboration creator sets a `FALSE` value for the member who can query.
+       */
+      override fun isResponsible(isResponsible: IResolvable) {
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
+    ) : CdkObject(cdkObject), QueryComputePaymentConfigProperty {
+      /**
+       * Indicates whether the collaboration creator has configured the collaboration member to pay
+       * for query compute costs ( `TRUE` ) or has not configured the collaboration member to pay for
+       * query compute costs ( `FALSE` ).
+       *
+       * Exactly one member can be configured to pay for query compute costs. An error is returned
+       * if the collaboration creator sets a `TRUE` value for more than one member in the
+       * collaboration.
+       *
+       * If the collaboration creator hasn't specified anyone as the member paying for query compute
+       * costs, then the member who can query is the default payer. An error is returned if the
+       * collaboration creator sets a `FALSE` value for the member who can query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-querycomputepaymentconfig.html#cfn-cleanrooms-collaboration-querycomputepaymentconfig-isresponsible)
+       */
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          QueryComputePaymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty):
+          QueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryComputePaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
     }
   }
 }

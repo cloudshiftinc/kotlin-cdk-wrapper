@@ -465,7 +465,7 @@ public interface TrailProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.TrailProps,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.TrailProps,
   ) : CdkObject(cdkObject), TrailProps {
     /**
      * The Amazon S3 bucket.

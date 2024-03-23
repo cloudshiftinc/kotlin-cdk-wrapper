@@ -29,9 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EmrCancelStep internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep,
+public open class EmrCancelStep(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -466,6 +465,7 @@ public open class EmrCancelStep internal constructor(
         EmrCancelStep = EmrCancelStep(cdkObject)
 
     internal fun unwrap(wrapped: EmrCancelStep):
-        software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep
   }
 }

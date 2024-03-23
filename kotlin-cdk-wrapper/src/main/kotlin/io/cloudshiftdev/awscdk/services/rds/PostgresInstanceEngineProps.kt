@@ -65,7 +65,7 @@ public interface PostgresInstanceEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.PostgresInstanceEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.PostgresInstanceEngineProps,
   ) : CdkObject(cdkObject), PostgresInstanceEngineProps {
     /**
      * The exact version of the engine to use.

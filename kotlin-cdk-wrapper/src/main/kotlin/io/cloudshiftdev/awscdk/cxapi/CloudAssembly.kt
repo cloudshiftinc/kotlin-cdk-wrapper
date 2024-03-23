@@ -28,8 +28,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class CloudAssembly internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.cxapi.CloudAssembly,
+public open class CloudAssembly(
+  cdkObject: software.amazon.awscdk.cxapi.CloudAssembly,
 ) : CdkObject(cdkObject) {
   public constructor(directory: String) : this(software.amazon.awscdk.cxapi.CloudAssembly(directory)
   )
@@ -247,6 +247,6 @@ public open class CloudAssembly internal constructor(
         CloudAssembly(cdkObject)
 
     internal fun unwrap(wrapped: CloudAssembly): software.amazon.awscdk.cxapi.CloudAssembly =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.cxapi.CloudAssembly
   }
 }

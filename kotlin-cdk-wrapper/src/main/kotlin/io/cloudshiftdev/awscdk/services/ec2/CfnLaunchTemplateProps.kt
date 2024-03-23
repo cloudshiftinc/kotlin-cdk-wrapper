@@ -227,7 +227,7 @@ public interface CfnLaunchTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplateProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplateProps,
   ) : CdkObject(cdkObject), CfnLaunchTemplateProps {
     /**
      * The information for the launch template.

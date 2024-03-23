@@ -145,7 +145,7 @@ public interface CfnStoredQueryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CfnStoredQueryProps,
+    cdkObject: software.amazon.awscdk.services.config.CfnStoredQueryProps,
   ) : CdkObject(cdkObject), CfnStoredQueryProps {
     /**
      * A unique description for the query.

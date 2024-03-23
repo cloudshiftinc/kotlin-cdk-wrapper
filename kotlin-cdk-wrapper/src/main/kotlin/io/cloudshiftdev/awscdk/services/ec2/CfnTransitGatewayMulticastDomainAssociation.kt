@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html)
  */
-public open class CfnTransitGatewayMulticastDomainAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation,
+public open class CfnTransitGatewayMulticastDomainAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -213,6 +212,7 @@ public open class CfnTransitGatewayMulticastDomainAssociation internal construct
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastDomainAssociation):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation
   }
 }

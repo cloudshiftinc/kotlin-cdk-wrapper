@@ -119,8 +119,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-deployment.html)
  */
-public open class CfnDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment,
+public open class CfnDeployment(
+  cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -620,7 +620,210 @@ public open class CfnDeployment internal constructor(
         CfnDeployment = CfnDeployment(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeployment):
-        software.amazon.awscdk.services.greengrassv2.CfnDeployment = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrassv2.CfnDeployment = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrassv2.CfnDeployment
+  }
+
+  /**
+   * Contains information about a deployment's update to a component's configuration on AWS IoT
+   * Greengrass core devices.
+   *
+   * For more information, see [Update component
+   * configurations](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html)
+   * in the *AWS IoT Greengrass V2 Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * ComponentConfigurationUpdateProperty componentConfigurationUpdateProperty =
+   * ComponentConfigurationUpdateProperty.builder()
+   * .merge("merge")
+   * .reset(List.of("reset"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html)
+   */
+  public interface ComponentConfigurationUpdateProperty {
+    /**
+     * A serialized JSON string that contains the configuration object to merge to target devices.
+     *
+     * The core device merges this configuration with the component's existing configuration. If
+     * this is the first time a component deploys on a device, the core device merges this
+     * configuration with the component's default configuration. This means that the core device keeps
+     * it's existing configuration for keys and values that you don't specify in this object. For more
+     * information, see [Merge configuration
+     * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
+     * in the *AWS IoT Greengrass V2 Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-merge)
+     */
+    public fun merge(): String? = unwrap(this).getMerge()
+
+    /**
+     * The list of configuration nodes to reset to default values on target devices.
+     *
+     * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+     * `/` ) and use forward slashes to separate the key for each level in the object. For more
+     * information, see the [JSON pointer
+     * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+     * configuration
+     * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+     * in the *AWS IoT Greengrass V2 Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-reset)
+     */
+    public fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
+
+    /**
+     * A builder for [ComponentConfigurationUpdateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param merge A serialized JSON string that contains the configuration object to merge to
+       * target devices.
+       * The core device merges this configuration with the component's existing configuration. If
+       * this is the first time a component deploys on a device, the core device merges this
+       * configuration with the component's default configuration. This means that the core device
+       * keeps it's existing configuration for keys and values that you don't specify in this object.
+       * For more information, see [Merge configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      public fun merge(merge: String)
+
+      /**
+       * @param reset The list of configuration nodes to reset to default values on target devices.
+       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+       * `/` ) and use forward slashes to separate the key for each level in the object. For more
+       * information, see the [JSON pointer
+       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+       * configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      public fun reset(reset: List<String>)
+
+      /**
+       * @param reset The list of configuration nodes to reset to default values on target devices.
+       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+       * `/` ) and use forward slashes to separate the key for each level in the object. For more
+       * information, see the [JSON pointer
+       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+       * configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      public fun reset(vararg reset: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty.builder()
+
+      /**
+       * @param merge A serialized JSON string that contains the configuration object to merge to
+       * target devices.
+       * The core device merges this configuration with the component's existing configuration. If
+       * this is the first time a component deploys on a device, the core device merges this
+       * configuration with the component's default configuration. This means that the core device
+       * keeps it's existing configuration for keys and values that you don't specify in this object.
+       * For more information, see [Merge configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      override fun merge(merge: String) {
+        cdkBuilder.merge(merge)
+      }
+
+      /**
+       * @param reset The list of configuration nodes to reset to default values on target devices.
+       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+       * `/` ) and use forward slashes to separate the key for each level in the object. For more
+       * information, see the [JSON pointer
+       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+       * configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      override fun reset(reset: List<String>) {
+        cdkBuilder.reset(reset)
+      }
+
+      /**
+       * @param reset The list of configuration nodes to reset to default values on target devices.
+       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+       * `/` ) and use forward slashes to separate the key for each level in the object. For more
+       * information, see the [JSON pointer
+       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+       * configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       */
+      override fun reset(vararg reset: String): Unit = reset(reset.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty,
+    ) : CdkObject(cdkObject), ComponentConfigurationUpdateProperty {
+      /**
+       * A serialized JSON string that contains the configuration object to merge to target devices.
+       *
+       * The core device merges this configuration with the component's existing configuration. If
+       * this is the first time a component deploys on a device, the core device merges this
+       * configuration with the component's default configuration. This means that the core device
+       * keeps it's existing configuration for keys and values that you don't specify in this object.
+       * For more information, see [Merge configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-merge)
+       */
+      override fun merge(): String? = unwrap(this).getMerge()
+
+      /**
+       * The list of configuration nodes to reset to default values on target devices.
+       *
+       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
+       * `/` ) and use forward slashes to separate the key for each level in the object. For more
+       * information, see the [JSON pointer
+       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
+       * configuration
+       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
+       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-reset)
+       */
+      override fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentConfigurationUpdateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty):
+          ComponentConfigurationUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConfigurationUpdateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentConfigurationUpdateProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
+    }
   }
 
   /**
@@ -870,8 +1073,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty,
     ) : CdkObject(cdkObject), ComponentDeploymentSpecificationProperty {
       /**
        * The version of the component.
@@ -929,570 +1131,11 @@ public open class CfnDeployment internal constructor(
   }
 
   /**
-   * Contains criteria that define when and how to cancel a job.
+   * Contains information system user and group that the AWS IoT Greengrass Core software uses to
+   * run component processes on the core device.
    *
-   * The deployment stops if the following conditions are true:
-   *
-   * * The number of things that receive the deployment exceeds the `minNumberOfExecutedThings` .
-   * * The percentage of failures with type `failureType` exceeds the `thresholdPercentage` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * IoTJobAbortCriteriaProperty ioTJobAbortCriteriaProperty = IoTJobAbortCriteriaProperty.builder()
-   * .action("action")
-   * .failureType("failureType")
-   * .minNumberOfExecutedThings(123)
-   * .thresholdPercentage(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html)
-   */
-  public interface IoTJobAbortCriteriaProperty {
-    /**
-     * The action to perform when the criteria are met.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-action)
-     */
-    public fun action(): String
-
-    /**
-     * The type of job deployment failure that can cancel a job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-failuretype)
-     */
-    public fun failureType(): String
-
-    /**
-     * The minimum number of things that receive the configuration before the job can cancel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-minnumberofexecutedthings)
-     */
-    public fun minNumberOfExecutedThings(): Number
-
-    /**
-     * The minimum percentage of `failureType` failures that occur before the job can cancel.
-     *
-     * This parameter supports up to two digits after the decimal (for example, you can specify
-     * `10.9` or `10.99` , but not `10.999` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-thresholdpercentage)
-     */
-    public fun thresholdPercentage(): Number
-
-    /**
-     * A builder for [IoTJobAbortCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The action to perform when the criteria are met. 
-       */
-      public fun action(action: String)
-
-      /**
-       * @param failureType The type of job deployment failure that can cancel a job. 
-       */
-      public fun failureType(failureType: String)
-
-      /**
-       * @param minNumberOfExecutedThings The minimum number of things that receive the
-       * configuration before the job can cancel. 
-       */
-      public fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number)
-
-      /**
-       * @param thresholdPercentage The minimum percentage of `failureType` failures that occur
-       * before the job can cancel. 
-       * This parameter supports up to two digits after the decimal (for example, you can specify
-       * `10.9` or `10.99` , but not `10.999` ).
-       */
-      public fun thresholdPercentage(thresholdPercentage: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty.builder()
-
-      /**
-       * @param action The action to perform when the criteria are met. 
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      /**
-       * @param failureType The type of job deployment failure that can cancel a job. 
-       */
-      override fun failureType(failureType: String) {
-        cdkBuilder.failureType(failureType)
-      }
-
-      /**
-       * @param minNumberOfExecutedThings The minimum number of things that receive the
-       * configuration before the job can cancel. 
-       */
-      override fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
-        cdkBuilder.minNumberOfExecutedThings(minNumberOfExecutedThings)
-      }
-
-      /**
-       * @param thresholdPercentage The minimum percentage of `failureType` failures that occur
-       * before the job can cancel. 
-       * This parameter supports up to two digits after the decimal (for example, you can specify
-       * `10.9` or `10.99` , but not `10.999` ).
-       */
-      override fun thresholdPercentage(thresholdPercentage: Number) {
-        cdkBuilder.thresholdPercentage(thresholdPercentage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty,
-    ) : CdkObject(cdkObject), IoTJobAbortCriteriaProperty {
-      /**
-       * The action to perform when the criteria are met.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-action)
-       */
-      override fun action(): String = unwrap(this).getAction()
-
-      /**
-       * The type of job deployment failure that can cancel a job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-failuretype)
-       */
-      override fun failureType(): String = unwrap(this).getFailureType()
-
-      /**
-       * The minimum number of things that receive the configuration before the job can cancel.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-minnumberofexecutedthings)
-       */
-      override fun minNumberOfExecutedThings(): Number = unwrap(this).getMinNumberOfExecutedThings()
-
-      /**
-       * The minimum percentage of `failureType` failures that occur before the job can cancel.
-       *
-       * This parameter supports up to two digits after the decimal (for example, you can specify
-       * `10.9` or `10.99` , but not `10.999` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-thresholdpercentage)
-       */
-      override fun thresholdPercentage(): Number = unwrap(this).getThresholdPercentage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobAbortCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty):
-          IoTJobAbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IoTJobAbortCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IoTJobAbortCriteriaProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty
-    }
-  }
-
-  /**
-   * Contains information about how long a component on a core device can validate its configuration
-   * updates before it times out.
-   *
-   * Components can use the
-   * [SubscribeToValidateConfigurationUpdates](https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-subscribetovalidateconfigurationupdates)
-   * IPC operation to receive notifications when a deployment specifies a configuration update. Then,
-   * components can respond with the
-   * [SendConfigurationValidityReport](https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-sendconfigurationvalidityreport)
-   * IPC operation. For more information, see the [Create
-   * deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html) in
-   * the *AWS IoT Greengrass V2 Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * DeploymentConfigurationValidationPolicyProperty deploymentConfigurationValidationPolicyProperty
-   * = DeploymentConfigurationValidationPolicyProperty.builder()
-   * .timeoutInSeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html)
-   */
-  public interface DeploymentConfigurationValidationPolicyProperty {
-    /**
-     * The amount of time in seconds that a component can validate its configuration updates.
-     *
-     * If the validation time exceeds this timeout, then the deployment proceeds for the device.
-     *
-     * Default: `30`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html#cfn-greengrassv2-deployment-deploymentconfigurationvalidationpolicy-timeoutinseconds)
-     */
-    public fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
-
-    /**
-     * A builder for [DeploymentConfigurationValidationPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param timeoutInSeconds The amount of time in seconds that a component can validate its
-       * configuration updates.
-       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
-       *
-       * Default: `30`
-       */
-      public fun timeoutInSeconds(timeoutInSeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
-
-      /**
-       * @param timeoutInSeconds The amount of time in seconds that a component can validate its
-       * configuration updates.
-       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
-       *
-       * Default: `30`
-       */
-      override fun timeoutInSeconds(timeoutInSeconds: Number) {
-        cdkBuilder.timeoutInSeconds(timeoutInSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigurationValidationPolicyProperty {
-      /**
-       * The amount of time in seconds that a component can validate its configuration updates.
-       *
-       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
-       *
-       * Default: `30`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html#cfn-greengrassv2-deployment-deploymentconfigurationvalidationpolicy-timeoutinseconds)
-       */
-      override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DeploymentConfigurationValidationPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty):
-          DeploymentConfigurationValidationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentConfigurationValidationPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentConfigurationValidationPolicyProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
-    }
-  }
-
-  /**
-   * Contains information about system resource limits that the  software applies to a component's
-   * processes.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * SystemResourceLimitsProperty systemResourceLimitsProperty =
-   * SystemResourceLimitsProperty.builder()
-   * .cpus(123)
-   * .memory(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html)
-   */
-  public interface SystemResourceLimitsProperty {
-    /**
-     * The maximum amount of CPU time that a component's processes can use on the core device.
-     *
-     * A core device's total CPU time is equivalent to the device's number of CPU cores. For
-     * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the component's
-     * processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you can set this
-     * value to 0.25 to limit the component's processes to 25 percent usage of the CPU. If you set this
-     * value to a number greater than the number of CPU cores, the AWS IoT Greengrass Core software
-     * doesn't limit the component's CPU usage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-cpus)
-     */
-    public fun cpus(): Number? = unwrap(this).getCpus()
-
-    /**
-     * The maximum amount of RAM, expressed in kilobytes, that a component's processes can use on
-     * the core device.
-     *
-     * For more information, see [Configure system resource limits for
-     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-memory)
-     */
-    public fun memory(): Number? = unwrap(this).getMemory()
-
-    /**
-     * A builder for [SystemResourceLimitsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cpus The maximum amount of CPU time that a component's processes can use on the core
-       * device.
-       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
-       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
-       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
-       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
-       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
-       * Core software doesn't limit the component's CPU usage.
-       */
-      public fun cpus(cpus: Number)
-
-      /**
-       * @param memory The maximum amount of RAM, expressed in kilobytes, that a component's
-       * processes can use on the core device.
-       * For more information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       */
-      public fun memory(memory: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty.builder()
-
-      /**
-       * @param cpus The maximum amount of CPU time that a component's processes can use on the core
-       * device.
-       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
-       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
-       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
-       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
-       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
-       * Core software doesn't limit the component's CPU usage.
-       */
-      override fun cpus(cpus: Number) {
-        cdkBuilder.cpus(cpus)
-      }
-
-      /**
-       * @param memory The maximum amount of RAM, expressed in kilobytes, that a component's
-       * processes can use on the core device.
-       * For more information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       */
-      override fun memory(memory: Number) {
-        cdkBuilder.memory(memory)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty,
-    ) : CdkObject(cdkObject), SystemResourceLimitsProperty {
-      /**
-       * The maximum amount of CPU time that a component's processes can use on the core device.
-       *
-       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
-       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
-       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
-       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
-       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
-       * Core software doesn't limit the component's CPU usage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-cpus)
-       */
-      override fun cpus(): Number? = unwrap(this).getCpus()
-
-      /**
-       * The maximum amount of RAM, expressed in kilobytes, that a component's processes can use on
-       * the core device.
-       *
-       * For more information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-memory)
-       */
-      override fun memory(): Number? = unwrap(this).getMemory()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SystemResourceLimitsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty):
-          SystemResourceLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SystemResourceLimitsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SystemResourceLimitsProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty
-    }
-  }
-
-  /**
-   * Contains information about the timeout configuration for a job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * IoTJobTimeoutConfigProperty ioTJobTimeoutConfigProperty = IoTJobTimeoutConfigProperty.builder()
-   * .inProgressTimeoutInMinutes(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html)
-   */
-  public interface IoTJobTimeoutConfigProperty {
-    /**
-     * The amount of time, in minutes, that devices have to complete the job.
-     *
-     * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
-     * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT` .
-     *
-     * The timeout interval must be between 1 minute and 7 days (10080 minutes).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html#cfn-greengrassv2-deployment-iotjobtimeoutconfig-inprogresstimeoutinminutes)
-     */
-    public fun inProgressTimeoutInMinutes(): Number? = unwrap(this).getInProgressTimeoutInMinutes()
-
-    /**
-     * A builder for [IoTJobTimeoutConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inProgressTimeoutInMinutes The amount of time, in minutes, that devices have to
-       * complete the job.
-       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
-       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
-       * .
-       *
-       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
-       */
-      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty.builder()
-
-      /**
-       * @param inProgressTimeoutInMinutes The amount of time, in minutes, that devices have to
-       * complete the job.
-       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
-       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
-       * .
-       *
-       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
-       */
-      override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
-        cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty,
-    ) : CdkObject(cdkObject), IoTJobTimeoutConfigProperty {
-      /**
-       * The amount of time, in minutes, that devices have to complete the job.
-       *
-       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
-       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
-       * .
-       *
-       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html#cfn-greengrassv2-deployment-iotjobtimeoutconfig-inprogresstimeoutinminutes)
-       */
-      override fun inProgressTimeoutInMinutes(): Number? =
-          unwrap(this).getInProgressTimeoutInMinutes()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobTimeoutConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty):
-          IoTJobTimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IoTJobTimeoutConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IoTJobTimeoutConfigProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty
-    }
-  }
-
-  /**
-   * Contains information about a deployment's update to a component's configuration on AWS IoT
-   * Greengrass core devices.
-   *
-   * For more information, see [Update component
-   * configurations](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html)
+   * For more information, see [Configure the user and group that run
+   * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
    * in the *AWS IoT Greengrass V2 Developer Guide* .
    *
    * Example:
@@ -1501,554 +1144,274 @@ public open class CfnDeployment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * ComponentConfigurationUpdateProperty componentConfigurationUpdateProperty =
-   * ComponentConfigurationUpdateProperty.builder()
-   * .merge("merge")
-   * .reset(List.of("reset"))
+   * ComponentRunWithProperty componentRunWithProperty = ComponentRunWithProperty.builder()
+   * .posixUser("posixUser")
+   * .systemResourceLimits(SystemResourceLimitsProperty.builder()
+   * .cpus(123)
+   * .memory(123)
+   * .build())
+   * .windowsUser("windowsUser")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html)
    */
-  public interface ComponentConfigurationUpdateProperty {
+  public interface ComponentRunWithProperty {
     /**
-     * A serialized JSON string that contains the configuration object to merge to target devices.
+     * The POSIX system user and (optional) group to use to run this component.
      *
-     * The core device merges this configuration with the component's existing configuration. If
-     * this is the first time a component deploys on a device, the core device merges this
-     * configuration with the component's default configuration. This means that the core device keeps
-     * it's existing configuration for keys and values that you don't specify in this object. For more
-     * information, see [Merge configuration
-     * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
-     * in the *AWS IoT Greengrass V2 Developer Guide* .
+     * Specify the user and group separated by a colon ( `:` ) in the following format: `user:group`
+     * . The group is optional. If you don't specify a group, the AWS IoT Greengrass Core software uses
+     * the primary user for the group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-merge)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-posixuser)
      */
-    public fun merge(): String? = unwrap(this).getMerge()
+    public fun posixUser(): String? = unwrap(this).getPosixUser()
 
     /**
-     * The list of configuration nodes to reset to default values on target devices.
+     * The system resource limits to apply to this component's process on the core device.
      *
-     * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-     * `/` ) and use forward slashes to separate the key for each level in the object. For more
-     * information, see the [JSON pointer
-     * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-     * configuration
-     * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-     * in the *AWS IoT Greengrass V2 Developer Guide* .
+     * AWS IoT Greengrass supports this feature only on Linux core devices.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-reset)
+     * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+     * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+     * information, see [Configure system resource limits for
+     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-systemresourcelimits)
      */
-    public fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
+    public fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
 
     /**
-     * A builder for [ComponentConfigurationUpdateProperty]
+     * The Windows user to use to run this component on Windows core devices.
+     *
+     * The user must exist on each Windows core device, and its name and password must be in the
+     * LocalSystem account's Credentials Manager instance.
+     *
+     * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
+     * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
+     * [Configure the user and group that run
+     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-windowsuser)
+     */
+    public fun windowsUser(): String? = unwrap(this).getWindowsUser()
+
+    /**
+     * A builder for [ComponentRunWithProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param merge A serialized JSON string that contains the configuration object to merge to
-       * target devices.
-       * The core device merges this configuration with the component's existing configuration. If
-       * this is the first time a component deploys on a device, the core device merges this
-       * configuration with the component's default configuration. This means that the core device
-       * keeps it's existing configuration for keys and values that you don't specify in this object.
-       * For more information, see [Merge configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param posixUser The POSIX system user and (optional) group to use to run this component.
+       * Specify the user and group separated by a colon ( `:` ) in the following format:
+       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
+       * Core software uses the primary user for the group.
        */
-      public fun merge(merge: String)
+      public fun posixUser(posixUser: String)
 
       /**
-       * @param reset The list of configuration nodes to reset to default values on target devices.
-       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-       * `/` ) and use forward slashes to separate the key for each level in the object. For more
-       * information, see the [JSON pointer
-       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-       * configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
        */
-      public fun reset(reset: List<String>)
+      public fun systemResourceLimits(systemResourceLimits: IResolvable)
 
       /**
-       * @param reset The list of configuration nodes to reset to default values on target devices.
-       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-       * `/` ) and use forward slashes to separate the key for each level in the object. For more
-       * information, see the [JSON pointer
-       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-       * configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
        */
-      public fun reset(vararg reset: String)
+      public fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty)
+
+      /**
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
+      public
+          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit)
+
+      /**
+       * @param windowsUser The Windows user to use to run this component on Windows core devices.
+       * The user must exist on each Windows core device, and its name and password must be in the
+       * LocalSystem account's Credentials Manager instance.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
+       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
+       * [Configure the user and group that run
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
+       * .
+       */
+      public fun windowsUser(windowsUser: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty.Builder
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty.Builder
           =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty.builder()
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty.builder()
 
       /**
-       * @param merge A serialized JSON string that contains the configuration object to merge to
-       * target devices.
-       * The core device merges this configuration with the component's existing configuration. If
-       * this is the first time a component deploys on a device, the core device merges this
-       * configuration with the component's default configuration. This means that the core device
-       * keeps it's existing configuration for keys and values that you don't specify in this object.
-       * For more information, see [Merge configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param posixUser The POSIX system user and (optional) group to use to run this component.
+       * Specify the user and group separated by a colon ( `:` ) in the following format:
+       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
+       * Core software uses the primary user for the group.
        */
-      override fun merge(merge: String) {
-        cdkBuilder.merge(merge)
+      override fun posixUser(posixUser: String) {
+        cdkBuilder.posixUser(posixUser)
       }
 
       /**
-       * @param reset The list of configuration nodes to reset to default values on target devices.
-       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-       * `/` ) and use forward slashes to separate the key for each level in the object. For more
-       * information, see the [JSON pointer
-       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-       * configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
        */
-      override fun reset(reset: List<String>) {
-        cdkBuilder.reset(reset)
+      override fun systemResourceLimits(systemResourceLimits: IResolvable) {
+        cdkBuilder.systemResourceLimits(systemResourceLimits.let(IResolvable::unwrap))
       }
 
       /**
-       * @param reset The list of configuration nodes to reset to default values on target devices.
-       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-       * `/` ) and use forward slashes to separate the key for each level in the object. For more
-       * information, see the [JSON pointer
-       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-       * configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
        */
-      override fun reset(vararg reset: String): Unit = reset(reset.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationUpdateProperty {
-      /**
-       * A serialized JSON string that contains the configuration object to merge to target devices.
-       *
-       * The core device merges this configuration with the component's existing configuration. If
-       * this is the first time a component deploys on a device, the core device merges this
-       * configuration with the component's default configuration. This means that the core device
-       * keeps it's existing configuration for keys and values that you don't specify in this object.
-       * For more information, see [Merge configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-merge)
-       */
-      override fun merge(): String? = unwrap(this).getMerge()
-
-      /**
-       * The list of configuration nodes to reset to default values on target devices.
-       *
-       * Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (
-       * `/` ) and use forward slashes to separate the key for each level in the object. For more
-       * information, see the [JSON pointer
-       * specification](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6901) and [Reset
-       * configuration
-       * updates](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update)
-       * in the *AWS IoT Greengrass V2 Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html#cfn-greengrassv2-deployment-componentconfigurationupdate-reset)
-       */
-      override fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentConfigurationUpdateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
+      override fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
+        cdkBuilder.systemResourceLimits(systemResourceLimits.let(SystemResourceLimitsProperty::unwrap))
       }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty):
-          ComponentConfigurationUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentConfigurationUpdateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentConfigurationUpdateProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
-    }
-  }
-
-  /**
-   * Contains information about policies that define how a deployment updates components and handles
-   * failure.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * DeploymentPoliciesProperty deploymentPoliciesProperty = DeploymentPoliciesProperty.builder()
-   * .componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty.builder()
-   * .action("action")
-   * .timeoutInSeconds(123)
-   * .build())
-   * .configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty.builder()
-   * .timeoutInSeconds(123)
-   * .build())
-   * .failureHandlingPolicy("failureHandlingPolicy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html)
-   */
-  public interface DeploymentPoliciesProperty {
-    /**
-     * The component update policy for the configuration deployment.
-     *
-     * This policy defines when it's safe to deploy the configuration to devices.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-componentupdatepolicy)
-     */
-    public fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
-
-    /**
-     * The configuration validation policy for the configuration deployment.
-     *
-     * This policy defines how long each component has to validate its configure updates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-configurationvalidationpolicy)
-     */
-    public fun configurationValidationPolicy(): Any? =
-        unwrap(this).getConfigurationValidationPolicy()
-
-    /**
-     * The failure handling policy for the configuration deployment. This policy defines what to do
-     * if the deployment fails.
-     *
-     * Default: `ROLLBACK`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-failurehandlingpolicy)
-     */
-    public fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
-
-    /**
-     * A builder for [DeploymentPoliciesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
       /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
-       */
-      public fun componentUpdatePolicy(componentUpdatePolicy: IResolvable)
-
-      /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
-       */
-      public
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty)
-
-      /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
+       * @param systemResourceLimits The system resource limits to apply to this component's process
+       * on the core device.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
-      public
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      public fun configurationValidationPolicy(configurationValidationPolicy: IResolvable)
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      public
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty)
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
-      public
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param failureHandlingPolicy The failure handling policy for the configuration deployment.
-       * This policy defines what to do if the deployment fails.
-       * Default: `ROLLBACK`
-       */
-      public fun failureHandlingPolicy(failureHandlingPolicy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty.builder()
-
-      /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
-       */
-      override fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
-        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
-       */
+      @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
       override
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty) {
-        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(DeploymentComponentUpdatePolicyProperty::unwrap))
-      }
+          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit):
+          Unit = systemResourceLimits(SystemResourceLimitsProperty(systemResourceLimits))
 
       /**
-       * @param componentUpdatePolicy The component update policy for the configuration deployment.
-       * This policy defines when it's safe to deploy the configuration to devices.
+       * @param windowsUser The Windows user to use to run this component on Windows core devices.
+       * The user must exist on each Windows core device, and its name and password must be in the
+       * LocalSystem account's Credentials Manager instance.
+       *
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
+       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
+       * [Configure the user and group that run
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
+       * .
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
-      override
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit):
-          Unit =
-          componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty(componentUpdatePolicy))
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      override fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
-        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      override
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty) {
-        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(DeploymentConfigurationValidationPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param configurationValidationPolicy The configuration validation policy for the
-       * configuration deployment.
-       * This policy defines how long each component has to validate its configure updates.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
-      override
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit):
-          Unit =
-          configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty(configurationValidationPolicy))
-
-      /**
-       * @param failureHandlingPolicy The failure handling policy for the configuration deployment.
-       * This policy defines what to do if the deployment fails.
-       * Default: `ROLLBACK`
-       */
-      override fun failureHandlingPolicy(failureHandlingPolicy: String) {
-        cdkBuilder.failureHandlingPolicy(failureHandlingPolicy)
+      override fun windowsUser(windowsUser: String) {
+        cdkBuilder.windowsUser(windowsUser)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty,
-    ) : CdkObject(cdkObject), DeploymentPoliciesProperty {
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty,
+    ) : CdkObject(cdkObject), ComponentRunWithProperty {
       /**
-       * The component update policy for the configuration deployment.
+       * The POSIX system user and (optional) group to use to run this component.
        *
-       * This policy defines when it's safe to deploy the configuration to devices.
+       * Specify the user and group separated by a colon ( `:` ) in the following format:
+       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
+       * Core software uses the primary user for the group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-componentupdatepolicy)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-posixuser)
        */
-      override fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
+      override fun posixUser(): String? = unwrap(this).getPosixUser()
 
       /**
-       * The configuration validation policy for the configuration deployment.
+       * The system resource limits to apply to this component's process on the core device.
        *
-       * This policy defines how long each component has to validate its configure updates.
+       * AWS IoT Greengrass supports this feature only on Linux core devices.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-configurationvalidationpolicy)
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
+       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
+       * information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-systemresourcelimits)
        */
-      override fun configurationValidationPolicy(): Any? =
-          unwrap(this).getConfigurationValidationPolicy()
+      override fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
 
       /**
-       * The failure handling policy for the configuration deployment. This policy defines what to
-       * do if the deployment fails.
+       * The Windows user to use to run this component on Windows core devices.
        *
-       * Default: `ROLLBACK`
+       * The user must exist on each Windows core device, and its name and password must be in the
+       * LocalSystem account's Credentials Manager instance.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-failurehandlingpolicy)
+       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
+       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
+       * [Configure the user and group that run
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-windowsuser)
        */
-      override fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
+      override fun windowsUser(): String? = unwrap(this).getWindowsUser()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentPoliciesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentRunWithProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty):
-          DeploymentPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeploymentPoliciesProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty):
+          ComponentRunWithProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentRunWithProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DeploymentPoliciesProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty =
+      internal fun unwrap(wrapped: ComponentRunWithProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty
-    }
-  }
-
-  /**
-   * Contains a list of criteria that define when and how to cancel a configuration deployment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * IoTJobAbortConfigProperty ioTJobAbortConfigProperty = IoTJobAbortConfigProperty.builder()
-   * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
-   * .action("action")
-   * .failureType("failureType")
-   * .minNumberOfExecutedThings(123)
-   * .thresholdPercentage(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html)
-   */
-  public interface IoTJobAbortConfigProperty {
-    /**
-     * The list of criteria that define when and how to cancel the configuration deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html#cfn-greengrassv2-deployment-iotjobabortconfig-criterialist)
-     */
-    public fun criteriaList(): Any
-
-    /**
-     * A builder for [IoTJobAbortConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      public fun criteriaList(criteriaList: IResolvable)
-
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      public fun criteriaList(criteriaList: List<Any>)
-
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      public fun criteriaList(vararg criteriaList: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty.builder()
-
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      override fun criteriaList(criteriaList: IResolvable) {
-        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      override fun criteriaList(criteriaList: List<Any>) {
-        cdkBuilder.criteriaList(criteriaList)
-      }
-
-      /**
-       * @param criteriaList The list of criteria that define when and how to cancel the
-       * configuration deployment. 
-       */
-      override fun criteriaList(vararg criteriaList: Any): Unit =
-          criteriaList(criteriaList.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty,
-    ) : CdkObject(cdkObject), IoTJobAbortConfigProperty {
-      /**
-       * The list of criteria that define when and how to cancel the configuration deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html#cfn-greengrassv2-deployment-iotjobabortconfig-criterialist)
-       */
-      override fun criteriaList(): Any = unwrap(this).getCriteriaList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobAbortConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty):
-          IoTJobAbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IoTJobAbortConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IoTJobAbortConfigProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty
     }
   }
 
@@ -2194,8 +1557,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty,
     ) : CdkObject(cdkObject), DeploymentComponentUpdatePolicyProperty {
       /**
        * Whether or not to notify components and wait for components to become safe to update.
@@ -2249,6 +1611,116 @@ public open class CfnDeployment internal constructor(
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty
+    }
+  }
+
+  /**
+   * Contains information about how long a component on a core device can validate its configuration
+   * updates before it times out.
+   *
+   * Components can use the
+   * [SubscribeToValidateConfigurationUpdates](https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-subscribetovalidateconfigurationupdates)
+   * IPC operation to receive notifications when a deployment specifies a configuration update. Then,
+   * components can respond with the
+   * [SendConfigurationValidityReport](https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-sendconfigurationvalidityreport)
+   * IPC operation. For more information, see the [Create
+   * deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html) in
+   * the *AWS IoT Greengrass V2 Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * DeploymentConfigurationValidationPolicyProperty deploymentConfigurationValidationPolicyProperty
+   * = DeploymentConfigurationValidationPolicyProperty.builder()
+   * .timeoutInSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html)
+   */
+  public interface DeploymentConfigurationValidationPolicyProperty {
+    /**
+     * The amount of time in seconds that a component can validate its configuration updates.
+     *
+     * If the validation time exceeds this timeout, then the deployment proceeds for the device.
+     *
+     * Default: `30`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html#cfn-greengrassv2-deployment-deploymentconfigurationvalidationpolicy-timeoutinseconds)
+     */
+    public fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
+
+    /**
+     * A builder for [DeploymentConfigurationValidationPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timeoutInSeconds The amount of time in seconds that a component can validate its
+       * configuration updates.
+       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
+       *
+       * Default: `30`
+       */
+      public fun timeoutInSeconds(timeoutInSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
+
+      /**
+       * @param timeoutInSeconds The amount of time in seconds that a component can validate its
+       * configuration updates.
+       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
+       *
+       * Default: `30`
+       */
+      override fun timeoutInSeconds(timeoutInSeconds: Number) {
+        cdkBuilder.timeoutInSeconds(timeoutInSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty,
+    ) : CdkObject(cdkObject), DeploymentConfigurationValidationPolicyProperty {
+      /**
+       * The amount of time in seconds that a component can validate its configuration updates.
+       *
+       * If the validation time exceeds this timeout, then the deployment proceeds for the device.
+       *
+       * Default: `30`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentconfigurationvalidationpolicy.html#cfn-greengrassv2-deployment-deploymentconfigurationvalidationpolicy-timeoutinseconds)
+       */
+      override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DeploymentConfigurationValidationPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty):
+          DeploymentConfigurationValidationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentConfigurationValidationPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentConfigurationValidationPolicyProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
     }
   }
 
@@ -2481,8 +1953,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty,
     ) : CdkObject(cdkObject), DeploymentIoTJobConfigurationProperty {
       /**
        * The stop configuration for the job.
@@ -2533,7 +2004,8 @@ public open class CfnDeployment internal constructor(
   }
 
   /**
-   * Contains information about an exponential rollout rate for a configuration deployment job.
+   * Contains information about policies that define how a deployment updates components and handles
+   * failure.
    *
    * Example:
    *
@@ -2541,440 +2013,535 @@ public open class CfnDeployment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * Object rateIncreaseCriteria;
-   * IoTJobExponentialRolloutRateProperty ioTJobExponentialRolloutRateProperty =
-   * IoTJobExponentialRolloutRateProperty.builder()
-   * .baseRatePerMinute(123)
-   * .incrementFactor(123)
-   * .rateIncreaseCriteria(rateIncreaseCriteria)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html)
-   */
-  public interface IoTJobExponentialRolloutRateProperty {
-    /**
-     * The minimum number of devices that receive a pending job notification, per minute, when the
-     * job starts.
-     *
-     * This parameter defines the initial rollout rate of the job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-baserateperminute)
-     */
-    public fun baseRatePerMinute(): Number
-
-    /**
-     * The exponential factor to increase the rollout rate for the job.
-     *
-     * This parameter supports up to one digit after the decimal (for example, you can specify `1.5`
-     * , but not `1.55` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-incrementfactor)
-     */
-    public fun incrementFactor(): Number
-
-    /**
-     * The criteria to increase the rollout rate for the job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-rateincreasecriteria)
-     */
-    public fun rateIncreaseCriteria(): Any
-
-    /**
-     * A builder for [IoTJobExponentialRolloutRateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param baseRatePerMinute The minimum number of devices that receive a pending job
-       * notification, per minute, when the job starts. 
-       * This parameter defines the initial rollout rate of the job.
-       */
-      public fun baseRatePerMinute(baseRatePerMinute: Number)
-
-      /**
-       * @param incrementFactor The exponential factor to increase the rollout rate for the job. 
-       * This parameter supports up to one digit after the decimal (for example, you can specify
-       * `1.5` , but not `1.55` ).
-       */
-      public fun incrementFactor(incrementFactor: Number)
-
-      /**
-       * @param rateIncreaseCriteria The criteria to increase the rollout rate for the job. 
-       */
-      public fun rateIncreaseCriteria(rateIncreaseCriteria: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty.builder()
-
-      /**
-       * @param baseRatePerMinute The minimum number of devices that receive a pending job
-       * notification, per minute, when the job starts. 
-       * This parameter defines the initial rollout rate of the job.
-       */
-      override fun baseRatePerMinute(baseRatePerMinute: Number) {
-        cdkBuilder.baseRatePerMinute(baseRatePerMinute)
-      }
-
-      /**
-       * @param incrementFactor The exponential factor to increase the rollout rate for the job. 
-       * This parameter supports up to one digit after the decimal (for example, you can specify
-       * `1.5` , but not `1.55` ).
-       */
-      override fun incrementFactor(incrementFactor: Number) {
-        cdkBuilder.incrementFactor(incrementFactor)
-      }
-
-      /**
-       * @param rateIncreaseCriteria The criteria to increase the rollout rate for the job. 
-       */
-      override fun rateIncreaseCriteria(rateIncreaseCriteria: Any) {
-        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty,
-    ) : CdkObject(cdkObject), IoTJobExponentialRolloutRateProperty {
-      /**
-       * The minimum number of devices that receive a pending job notification, per minute, when the
-       * job starts.
-       *
-       * This parameter defines the initial rollout rate of the job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-baserateperminute)
-       */
-      override fun baseRatePerMinute(): Number = unwrap(this).getBaseRatePerMinute()
-
-      /**
-       * The exponential factor to increase the rollout rate for the job.
-       *
-       * This parameter supports up to one digit after the decimal (for example, you can specify
-       * `1.5` , but not `1.55` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-incrementfactor)
-       */
-      override fun incrementFactor(): Number = unwrap(this).getIncrementFactor()
-
-      /**
-       * The criteria to increase the rollout rate for the job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-rateincreasecriteria)
-       */
-      override fun rateIncreaseCriteria(): Any = unwrap(this).getRateIncreaseCriteria()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IoTJobExponentialRolloutRateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty):
-          IoTJobExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IoTJobExponentialRolloutRateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IoTJobExponentialRolloutRateProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
-    }
-  }
-
-  /**
-   * Contains information system user and group that the AWS IoT Greengrass Core software uses to
-   * run component processes on the core device.
-   *
-   * For more information, see [Configure the user and group that run
-   * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
-   * in the *AWS IoT Greengrass V2 Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
-   * ComponentRunWithProperty componentRunWithProperty = ComponentRunWithProperty.builder()
-   * .posixUser("posixUser")
-   * .systemResourceLimits(SystemResourceLimitsProperty.builder()
-   * .cpus(123)
-   * .memory(123)
+   * DeploymentPoliciesProperty deploymentPoliciesProperty = DeploymentPoliciesProperty.builder()
+   * .componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty.builder()
+   * .action("action")
+   * .timeoutInSeconds(123)
    * .build())
-   * .windowsUser("windowsUser")
+   * .configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty.builder()
+   * .timeoutInSeconds(123)
+   * .build())
+   * .failureHandlingPolicy("failureHandlingPolicy")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html)
    */
-  public interface ComponentRunWithProperty {
+  public interface DeploymentPoliciesProperty {
     /**
-     * The POSIX system user and (optional) group to use to run this component.
+     * The component update policy for the configuration deployment.
      *
-     * Specify the user and group separated by a colon ( `:` ) in the following format: `user:group`
-     * . The group is optional. If you don't specify a group, the AWS IoT Greengrass Core software uses
-     * the primary user for the group.
+     * This policy defines when it's safe to deploy the configuration to devices.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-posixuser)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-componentupdatepolicy)
      */
-    public fun posixUser(): String? = unwrap(this).getPosixUser()
+    public fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
 
     /**
-     * The system resource limits to apply to this component's process on the core device.
+     * The configuration validation policy for the configuration deployment.
      *
-     * AWS IoT Greengrass supports this feature only on Linux core devices.
+     * This policy defines how long each component has to validate its configure updates.
      *
-     * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-     * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-     * information, see [Configure system resource limits for
-     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-systemresourcelimits)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-configurationvalidationpolicy)
      */
-    public fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
+    public fun configurationValidationPolicy(): Any? =
+        unwrap(this).getConfigurationValidationPolicy()
 
     /**
-     * The Windows user to use to run this component on Windows core devices.
+     * The failure handling policy for the configuration deployment. This policy defines what to do
+     * if the deployment fails.
      *
-     * The user must exist on each Windows core device, and its name and password must be in the
-     * LocalSystem account's Credentials Manager instance.
+     * Default: `ROLLBACK`
      *
-     * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
-     * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
-     * [Configure the user and group that run
-     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-windowsuser)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-failurehandlingpolicy)
      */
-    public fun windowsUser(): String? = unwrap(this).getWindowsUser()
+    public fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
 
     /**
-     * A builder for [ComponentRunWithProperty]
+     * A builder for [DeploymentPoliciesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param posixUser The POSIX system user and (optional) group to use to run this component.
-       * Specify the user and group separated by a colon ( `:` ) in the following format:
-       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
-       * Core software uses the primary user for the group.
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
-      public fun posixUser(posixUser: String)
+      public fun componentUpdatePolicy(componentUpdatePolicy: IResolvable)
 
       /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
-      public fun systemResourceLimits(systemResourceLimits: IResolvable)
+      public
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty)
 
       /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       */
-      public fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty)
-
-      /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
+      @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
       public
-          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit)
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit)
 
       /**
-       * @param windowsUser The Windows user to use to run this component on Windows core devices.
-       * The user must exist on each Windows core device, and its name and password must be in the
-       * LocalSystem account's Credentials Manager instance.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
-       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
-       * [Configure the user and group that run
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
-       * .
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
        */
-      public fun windowsUser(windowsUser: String)
+      public fun configurationValidationPolicy(configurationValidationPolicy: IResolvable)
+
+      /**
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
+       */
+      public
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty)
+
+      /**
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
+      public
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit)
+
+      /**
+       * @param failureHandlingPolicy The failure handling policy for the configuration deployment.
+       * This policy defines what to do if the deployment fails.
+       * Default: `ROLLBACK`
+       */
+      public fun failureHandlingPolicy(failureHandlingPolicy: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty.Builder
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty.Builder
           =
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty.builder()
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty.builder()
 
       /**
-       * @param posixUser The POSIX system user and (optional) group to use to run this component.
-       * Specify the user and group separated by a colon ( `:` ) in the following format:
-       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
-       * Core software uses the primary user for the group.
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
-      override fun posixUser(posixUser: String) {
-        cdkBuilder.posixUser(posixUser)
+      override fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
+        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(IResolvable::unwrap))
       }
 
       /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
-      override fun systemResourceLimits(systemResourceLimits: IResolvable) {
-        cdkBuilder.systemResourceLimits(systemResourceLimits.let(IResolvable::unwrap))
+      override
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty) {
+        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(DeploymentComponentUpdatePolicyProperty::unwrap))
       }
 
       /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       */
-      override fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
-        cdkBuilder.systemResourceLimits(systemResourceLimits.let(SystemResourceLimitsProperty::unwrap))
-      }
-
-      /**
-       * @param systemResourceLimits The system resource limits to apply to this component's process
-       * on the core device.
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
+       * @param componentUpdatePolicy The component update policy for the configuration deployment.
+       * This policy defines when it's safe to deploy the configuration to devices.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
+      @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
       override
-          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit):
-          Unit = systemResourceLimits(SystemResourceLimitsProperty(systemResourceLimits))
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit):
+          Unit =
+          componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty(componentUpdatePolicy))
 
       /**
-       * @param windowsUser The Windows user to use to run this component on Windows core devices.
-       * The user must exist on each Windows core device, and its name and password must be in the
-       * LocalSystem account's Credentials Manager instance.
-       *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
-       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
-       * [Configure the user and group that run
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
-       * .
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
        */
-      override fun windowsUser(windowsUser: String) {
-        cdkBuilder.windowsUser(windowsUser)
+      override fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
+        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
+       */
+      override
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty) {
+        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(DeploymentConfigurationValidationPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param configurationValidationPolicy The configuration validation policy for the
+       * configuration deployment.
+       * This policy defines how long each component has to validate its configure updates.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
+      override
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit):
+          Unit =
+          configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty(configurationValidationPolicy))
+
+      /**
+       * @param failureHandlingPolicy The failure handling policy for the configuration deployment.
+       * This policy defines what to do if the deployment fails.
+       * Default: `ROLLBACK`
+       */
+      override fun failureHandlingPolicy(failureHandlingPolicy: String) {
+        cdkBuilder.failureHandlingPolicy(failureHandlingPolicy)
       }
 
       public fun build():
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty,
-    ) : CdkObject(cdkObject), ComponentRunWithProperty {
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty,
+    ) : CdkObject(cdkObject), DeploymentPoliciesProperty {
       /**
-       * The POSIX system user and (optional) group to use to run this component.
+       * The component update policy for the configuration deployment.
        *
-       * Specify the user and group separated by a colon ( `:` ) in the following format:
-       * `user:group` . The group is optional. If you don't specify a group, the AWS IoT Greengrass
-       * Core software uses the primary user for the group.
+       * This policy defines when it's safe to deploy the configuration to devices.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-posixuser)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-componentupdatepolicy)
        */
-      override fun posixUser(): String? = unwrap(this).getPosixUser()
+      override fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
 
       /**
-       * The system resource limits to apply to this component's process on the core device.
+       * The configuration validation policy for the configuration deployment.
        *
-       * AWS IoT Greengrass supports this feature only on Linux core devices.
+       * This policy defines how long each component has to validate its configure updates.
        *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default system
-       * resource limits that you configure on the AWS IoT Greengrass nucleus component. For more
-       * information, see [Configure system resource limits for
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-systemresourcelimits)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-configurationvalidationpolicy)
        */
-      override fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
+      override fun configurationValidationPolicy(): Any? =
+          unwrap(this).getConfigurationValidationPolicy()
 
       /**
-       * The Windows user to use to run this component on Windows core devices.
+       * The failure handling policy for the configuration deployment. This policy defines what to
+       * do if the deployment fails.
        *
-       * The user must exist on each Windows core device, and its name and password must be in the
-       * LocalSystem account's Credentials Manager instance.
+       * Default: `ROLLBACK`
        *
-       * If you omit this parameter, the AWS IoT Greengrass Core software uses the default Windows
-       * user that you configure on the AWS IoT Greengrass nucleus component. For more information, see
-       * [Configure the user and group that run
-       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html#cfn-greengrassv2-deployment-componentrunwith-windowsuser)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html#cfn-greengrassv2-deployment-deploymentpolicies-failurehandlingpolicy)
        */
-      override fun windowsUser(): String? = unwrap(this).getWindowsUser()
+      override fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentRunWithProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentPoliciesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty):
-          ComponentRunWithProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentRunWithProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty):
+          DeploymentPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentPoliciesProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ComponentRunWithProperty):
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty =
+      internal fun unwrap(wrapped: DeploymentPoliciesProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty
+    }
+  }
+
+  /**
+   * Contains a list of criteria that define when and how to cancel a configuration deployment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * IoTJobAbortConfigProperty ioTJobAbortConfigProperty = IoTJobAbortConfigProperty.builder()
+   * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
+   * .action("action")
+   * .failureType("failureType")
+   * .minNumberOfExecutedThings(123)
+   * .thresholdPercentage(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html)
+   */
+  public interface IoTJobAbortConfigProperty {
+    /**
+     * The list of criteria that define when and how to cancel the configuration deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html#cfn-greengrassv2-deployment-iotjobabortconfig-criterialist)
+     */
+    public fun criteriaList(): Any
+
+    /**
+     * A builder for [IoTJobAbortConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      public fun criteriaList(criteriaList: IResolvable)
+
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      public fun criteriaList(criteriaList: List<Any>)
+
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      public fun criteriaList(vararg criteriaList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty.builder()
+
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      override fun criteriaList(criteriaList: IResolvable) {
+        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      override fun criteriaList(criteriaList: List<Any>) {
+        cdkBuilder.criteriaList(criteriaList)
+      }
+
+      /**
+       * @param criteriaList The list of criteria that define when and how to cancel the
+       * configuration deployment. 
+       */
+      override fun criteriaList(vararg criteriaList: Any): Unit =
+          criteriaList(criteriaList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty,
+    ) : CdkObject(cdkObject), IoTJobAbortConfigProperty {
+      /**
+       * The list of criteria that define when and how to cancel the configuration deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html#cfn-greengrassv2-deployment-iotjobabortconfig-criterialist)
+       */
+      override fun criteriaList(): Any = unwrap(this).getCriteriaList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobAbortConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty):
+          IoTJobAbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobAbortConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IoTJobAbortConfigProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty
+    }
+  }
+
+  /**
+   * Contains criteria that define when and how to cancel a job.
+   *
+   * The deployment stops if the following conditions are true:
+   *
+   * * The number of things that receive the deployment exceeds the `minNumberOfExecutedThings` .
+   * * The percentage of failures with type `failureType` exceeds the `thresholdPercentage` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * IoTJobAbortCriteriaProperty ioTJobAbortCriteriaProperty = IoTJobAbortCriteriaProperty.builder()
+   * .action("action")
+   * .failureType("failureType")
+   * .minNumberOfExecutedThings(123)
+   * .thresholdPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html)
+   */
+  public interface IoTJobAbortCriteriaProperty {
+    /**
+     * The action to perform when the criteria are met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-action)
+     */
+    public fun action(): String
+
+    /**
+     * The type of job deployment failure that can cancel a job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-failuretype)
+     */
+    public fun failureType(): String
+
+    /**
+     * The minimum number of things that receive the configuration before the job can cancel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-minnumberofexecutedthings)
+     */
+    public fun minNumberOfExecutedThings(): Number
+
+    /**
+     * The minimum percentage of `failureType` failures that occur before the job can cancel.
+     *
+     * This parameter supports up to two digits after the decimal (for example, you can specify
+     * `10.9` or `10.99` , but not `10.999` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-thresholdpercentage)
+     */
+    public fun thresholdPercentage(): Number
+
+    /**
+     * A builder for [IoTJobAbortCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action to perform when the criteria are met. 
+       */
+      public fun action(action: String)
+
+      /**
+       * @param failureType The type of job deployment failure that can cancel a job. 
+       */
+      public fun failureType(failureType: String)
+
+      /**
+       * @param minNumberOfExecutedThings The minimum number of things that receive the
+       * configuration before the job can cancel. 
+       */
+      public fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number)
+
+      /**
+       * @param thresholdPercentage The minimum percentage of `failureType` failures that occur
+       * before the job can cancel. 
+       * This parameter supports up to two digits after the decimal (for example, you can specify
+       * `10.9` or `10.99` , but not `10.999` ).
+       */
+      public fun thresholdPercentage(thresholdPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty.builder()
+
+      /**
+       * @param action The action to perform when the criteria are met. 
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param failureType The type of job deployment failure that can cancel a job. 
+       */
+      override fun failureType(failureType: String) {
+        cdkBuilder.failureType(failureType)
+      }
+
+      /**
+       * @param minNumberOfExecutedThings The minimum number of things that receive the
+       * configuration before the job can cancel. 
+       */
+      override fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
+        cdkBuilder.minNumberOfExecutedThings(minNumberOfExecutedThings)
+      }
+
+      /**
+       * @param thresholdPercentage The minimum percentage of `failureType` failures that occur
+       * before the job can cancel. 
+       * This parameter supports up to two digits after the decimal (for example, you can specify
+       * `10.9` or `10.99` , but not `10.999` ).
+       */
+      override fun thresholdPercentage(thresholdPercentage: Number) {
+        cdkBuilder.thresholdPercentage(thresholdPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty,
+    ) : CdkObject(cdkObject), IoTJobAbortCriteriaProperty {
+      /**
+       * The action to perform when the criteria are met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+
+      /**
+       * The type of job deployment failure that can cancel a job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-failuretype)
+       */
+      override fun failureType(): String = unwrap(this).getFailureType()
+
+      /**
+       * The minimum number of things that receive the configuration before the job can cancel.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-minnumberofexecutedthings)
+       */
+      override fun minNumberOfExecutedThings(): Number = unwrap(this).getMinNumberOfExecutedThings()
+
+      /**
+       * The minimum percentage of `failureType` failures that occur before the job can cancel.
+       *
+       * This parameter supports up to two digits after the decimal (for example, you can specify
+       * `10.9` or `10.99` , but not `10.999` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html#cfn-greengrassv2-deployment-iotjobabortcriteria-thresholdpercentage)
+       */
+      override fun thresholdPercentage(): Number = unwrap(this).getThresholdPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobAbortCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty):
+          IoTJobAbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobAbortCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IoTJobAbortCriteriaProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty
     }
   }
 
@@ -3092,8 +2659,7 @@ public open class CfnDeployment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty,
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty,
     ) : CdkObject(cdkObject), IoTJobExecutionsRolloutConfigProperty {
       /**
        * The exponential rate to increase the job rollout rate.
@@ -3126,6 +2692,428 @@ public open class CfnDeployment internal constructor(
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty
+    }
+  }
+
+  /**
+   * Contains information about an exponential rollout rate for a configuration deployment job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * Object rateIncreaseCriteria;
+   * IoTJobExponentialRolloutRateProperty ioTJobExponentialRolloutRateProperty =
+   * IoTJobExponentialRolloutRateProperty.builder()
+   * .baseRatePerMinute(123)
+   * .incrementFactor(123)
+   * .rateIncreaseCriteria(rateIncreaseCriteria)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html)
+   */
+  public interface IoTJobExponentialRolloutRateProperty {
+    /**
+     * The minimum number of devices that receive a pending job notification, per minute, when the
+     * job starts.
+     *
+     * This parameter defines the initial rollout rate of the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-baserateperminute)
+     */
+    public fun baseRatePerMinute(): Number
+
+    /**
+     * The exponential factor to increase the rollout rate for the job.
+     *
+     * This parameter supports up to one digit after the decimal (for example, you can specify `1.5`
+     * , but not `1.55` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-incrementfactor)
+     */
+    public fun incrementFactor(): Number
+
+    /**
+     * The criteria to increase the rollout rate for the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-rateincreasecriteria)
+     */
+    public fun rateIncreaseCriteria(): Any
+
+    /**
+     * A builder for [IoTJobExponentialRolloutRateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param baseRatePerMinute The minimum number of devices that receive a pending job
+       * notification, per minute, when the job starts. 
+       * This parameter defines the initial rollout rate of the job.
+       */
+      public fun baseRatePerMinute(baseRatePerMinute: Number)
+
+      /**
+       * @param incrementFactor The exponential factor to increase the rollout rate for the job. 
+       * This parameter supports up to one digit after the decimal (for example, you can specify
+       * `1.5` , but not `1.55` ).
+       */
+      public fun incrementFactor(incrementFactor: Number)
+
+      /**
+       * @param rateIncreaseCriteria The criteria to increase the rollout rate for the job. 
+       */
+      public fun rateIncreaseCriteria(rateIncreaseCriteria: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty.builder()
+
+      /**
+       * @param baseRatePerMinute The minimum number of devices that receive a pending job
+       * notification, per minute, when the job starts. 
+       * This parameter defines the initial rollout rate of the job.
+       */
+      override fun baseRatePerMinute(baseRatePerMinute: Number) {
+        cdkBuilder.baseRatePerMinute(baseRatePerMinute)
+      }
+
+      /**
+       * @param incrementFactor The exponential factor to increase the rollout rate for the job. 
+       * This parameter supports up to one digit after the decimal (for example, you can specify
+       * `1.5` , but not `1.55` ).
+       */
+      override fun incrementFactor(incrementFactor: Number) {
+        cdkBuilder.incrementFactor(incrementFactor)
+      }
+
+      /**
+       * @param rateIncreaseCriteria The criteria to increase the rollout rate for the job. 
+       */
+      override fun rateIncreaseCriteria(rateIncreaseCriteria: Any) {
+        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty,
+    ) : CdkObject(cdkObject), IoTJobExponentialRolloutRateProperty {
+      /**
+       * The minimum number of devices that receive a pending job notification, per minute, when the
+       * job starts.
+       *
+       * This parameter defines the initial rollout rate of the job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-baserateperminute)
+       */
+      override fun baseRatePerMinute(): Number = unwrap(this).getBaseRatePerMinute()
+
+      /**
+       * The exponential factor to increase the rollout rate for the job.
+       *
+       * This parameter supports up to one digit after the decimal (for example, you can specify
+       * `1.5` , but not `1.55` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-incrementfactor)
+       */
+      override fun incrementFactor(): Number = unwrap(this).getIncrementFactor()
+
+      /**
+       * The criteria to increase the rollout rate for the job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html#cfn-greengrassv2-deployment-iotjobexponentialrolloutrate-rateincreasecriteria)
+       */
+      override fun rateIncreaseCriteria(): Any = unwrap(this).getRateIncreaseCriteria()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IoTJobExponentialRolloutRateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty):
+          IoTJobExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobExponentialRolloutRateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IoTJobExponentialRolloutRateProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
+    }
+  }
+
+  /**
+   * Contains information about the timeout configuration for a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * IoTJobTimeoutConfigProperty ioTJobTimeoutConfigProperty = IoTJobTimeoutConfigProperty.builder()
+   * .inProgressTimeoutInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html)
+   */
+  public interface IoTJobTimeoutConfigProperty {
+    /**
+     * The amount of time, in minutes, that devices have to complete the job.
+     *
+     * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
+     * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT` .
+     *
+     * The timeout interval must be between 1 minute and 7 days (10080 minutes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html#cfn-greengrassv2-deployment-iotjobtimeoutconfig-inprogresstimeoutinminutes)
+     */
+    public fun inProgressTimeoutInMinutes(): Number? = unwrap(this).getInProgressTimeoutInMinutes()
+
+    /**
+     * A builder for [IoTJobTimeoutConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inProgressTimeoutInMinutes The amount of time, in minutes, that devices have to
+       * complete the job.
+       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
+       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
+       * .
+       *
+       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
+       */
+      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty.builder()
+
+      /**
+       * @param inProgressTimeoutInMinutes The amount of time, in minutes, that devices have to
+       * complete the job.
+       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
+       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
+       * .
+       *
+       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
+       */
+      override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
+        cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty,
+    ) : CdkObject(cdkObject), IoTJobTimeoutConfigProperty {
+      /**
+       * The amount of time, in minutes, that devices have to complete the job.
+       *
+       * The timer starts when the job status is set to `IN_PROGRESS` . If the job status doesn't
+       * change to a terminal state before the time expires, then the job status is set to `TIMED_OUT`
+       * .
+       *
+       * The timeout interval must be between 1 minute and 7 days (10080 minutes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobtimeoutconfig.html#cfn-greengrassv2-deployment-iotjobtimeoutconfig-inprogresstimeoutinminutes)
+       */
+      override fun inProgressTimeoutInMinutes(): Number? =
+          unwrap(this).getInProgressTimeoutInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IoTJobTimeoutConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty):
+          IoTJobTimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobTimeoutConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IoTJobTimeoutConfigProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty
+    }
+  }
+
+  /**
+   * Contains information about system resource limits that the  software applies to a component's
+   * processes.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrassv2.*;
+   * SystemResourceLimitsProperty systemResourceLimitsProperty =
+   * SystemResourceLimitsProperty.builder()
+   * .cpus(123)
+   * .memory(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html)
+   */
+  public interface SystemResourceLimitsProperty {
+    /**
+     * The maximum amount of CPU time that a component's processes can use on the core device.
+     *
+     * A core device's total CPU time is equivalent to the device's number of CPU cores. For
+     * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the component's
+     * processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you can set this
+     * value to 0.25 to limit the component's processes to 25 percent usage of the CPU. If you set this
+     * value to a number greater than the number of CPU cores, the AWS IoT Greengrass Core software
+     * doesn't limit the component's CPU usage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-cpus)
+     */
+    public fun cpus(): Number? = unwrap(this).getCpus()
+
+    /**
+     * The maximum amount of RAM, expressed in kilobytes, that a component's processes can use on
+     * the core device.
+     *
+     * For more information, see [Configure system resource limits for
+     * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-memory)
+     */
+    public fun memory(): Number? = unwrap(this).getMemory()
+
+    /**
+     * A builder for [SystemResourceLimitsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpus The maximum amount of CPU time that a component's processes can use on the core
+       * device.
+       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
+       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
+       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
+       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
+       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
+       * Core software doesn't limit the component's CPU usage.
+       */
+      public fun cpus(cpus: Number)
+
+      /**
+       * @param memory The maximum amount of RAM, expressed in kilobytes, that a component's
+       * processes can use on the core device.
+       * For more information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
+       */
+      public fun memory(memory: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty.builder()
+
+      /**
+       * @param cpus The maximum amount of CPU time that a component's processes can use on the core
+       * device.
+       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
+       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
+       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
+       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
+       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
+       * Core software doesn't limit the component's CPU usage.
+       */
+      override fun cpus(cpus: Number) {
+        cdkBuilder.cpus(cpus)
+      }
+
+      /**
+       * @param memory The maximum amount of RAM, expressed in kilobytes, that a component's
+       * processes can use on the core device.
+       * For more information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
+       */
+      override fun memory(memory: Number) {
+        cdkBuilder.memory(memory)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty,
+    ) : CdkObject(cdkObject), SystemResourceLimitsProperty {
+      /**
+       * The maximum amount of CPU time that a component's processes can use on the core device.
+       *
+       * A core device's total CPU time is equivalent to the device's number of CPU cores. For
+       * example, on a core device with 4 CPU cores, you can set this value to 2 to limit the
+       * component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you
+       * can set this value to 0.25 to limit the component's processes to 25 percent usage of the CPU.
+       * If you set this value to a number greater than the number of CPU cores, the AWS IoT Greengrass
+       * Core software doesn't limit the component's CPU usage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-cpus)
+       */
+      override fun cpus(): Number? = unwrap(this).getCpus()
+
+      /**
+       * The maximum amount of RAM, expressed in kilobytes, that a component's processes can use on
+       * the core device.
+       *
+       * For more information, see [Configure system resource limits for
+       * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html#cfn-greengrassv2-deployment-systemresourcelimits-memory)
+       */
+      override fun memory(): Number? = unwrap(this).getMemory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SystemResourceLimitsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty):
+          SystemResourceLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SystemResourceLimitsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SystemResourceLimitsProperty):
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty
     }
   }
 }

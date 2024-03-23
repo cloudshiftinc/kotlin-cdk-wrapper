@@ -149,8 +149,7 @@ public interface EventBridgePutEventsEntry {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry,
   ) : CdkObject(cdkObject), EventBridgePutEventsEntry {
     /**
      * The event body.

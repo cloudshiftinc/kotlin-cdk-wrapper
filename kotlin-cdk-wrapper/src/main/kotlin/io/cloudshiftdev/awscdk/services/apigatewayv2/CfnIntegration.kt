@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)
  */
-public open class CfnIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration,
+public open class CfnIntegration(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -415,6 +415,9 @@ public open class CfnIntegration internal constructor(
     /**
      * Specifies the integration's HTTP method type.
      *
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod)
      * @param integrationMethod Specifies the integration's HTTP method type. 
      */
@@ -726,6 +729,9 @@ public open class CfnIntegration internal constructor(
     /**
      * Specifies the integration's HTTP method type.
      *
+     * For WebSocket APIs, if you use a Lambda integration, you must set the integration method to
+     * `POST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod)
      * @param integrationMethod Specifies the integration's HTTP method type. 
      */
@@ -991,7 +997,8 @@ public open class CfnIntegration internal constructor(
         CfnIntegration = CfnIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegration):
-        software.amazon.awscdk.services.apigatewayv2.CfnIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnIntegration
   }
 
   /**
@@ -1071,8 +1078,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty,
     ) : CdkObject(cdkObject), ResponseParameterListProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameterlist.html#cfn-apigatewayv2-integration-responseparameterlist-responseparameters)
@@ -1095,105 +1101,6 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty
-    }
-  }
-
-  /**
-   * The `TlsConfig` property specifies the TLS configuration for a private integration.
-   *
-   * If you specify a TLS configuration, private integration traffic uses the HTTPS protocol.
-   * Supported only for HTTP APIs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
-   * TlsConfigProperty tlsConfigProperty = TlsConfigProperty.builder()
-   * .serverNameToVerify("serverNameToVerify")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html)
-   */
-  public interface TlsConfigProperty {
-    /**
-     * If you specify a server name, API Gateway uses it to verify the hostname on the integration's
-     * certificate.
-     *
-     * The server name is also included in the TLS handshake to support Server Name Indication (SNI)
-     * or virtual hosting.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify)
-     */
-    public fun serverNameToVerify(): String? = unwrap(this).getServerNameToVerify()
-
-    /**
-     * A builder for [TlsConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serverNameToVerify If you specify a server name, API Gateway uses it to verify the
-       * hostname on the integration's certificate.
-       * The server name is also included in the TLS handshake to support Server Name Indication
-       * (SNI) or virtual hosting.
-       */
-      public fun serverNameToVerify(serverNameToVerify: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty.Builder =
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty.builder()
-
-      /**
-       * @param serverNameToVerify If you specify a server name, API Gateway uses it to verify the
-       * hostname on the integration's certificate.
-       * The server name is also included in the TLS handshake to support Server Name Indication
-       * (SNI) or virtual hosting.
-       */
-      override fun serverNameToVerify(serverNameToVerify: String) {
-        cdkBuilder.serverNameToVerify(serverNameToVerify)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty,
-    ) : CdkObject(cdkObject), TlsConfigProperty {
-      /**
-       * If you specify a server name, API Gateway uses it to verify the hostname on the
-       * integration's certificate.
-       *
-       * The server name is also included in the TLS handshake to support Server Name Indication
-       * (SNI) or virtual hosting.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify)
-       */
-      override fun serverNameToVerify(): String? = unwrap(this).getServerNameToVerify()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TlsConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty):
-          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TlsConfigProperty):
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty
     }
   }
 
@@ -1265,8 +1172,7 @@ public open class CfnIntegration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty,
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty,
     ) : CdkObject(cdkObject), ResponseParameterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-destination)
@@ -1294,6 +1200,104 @@ public open class CfnIntegration internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty
+    }
+  }
+
+  /**
+   * The `TlsConfig` property specifies the TLS configuration for a private integration.
+   *
+   * If you specify a TLS configuration, private integration traffic uses the HTTPS protocol.
+   * Supported only for HTTP APIs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+   * TlsConfigProperty tlsConfigProperty = TlsConfigProperty.builder()
+   * .serverNameToVerify("serverNameToVerify")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html)
+   */
+  public interface TlsConfigProperty {
+    /**
+     * If you specify a server name, API Gateway uses it to verify the hostname on the integration's
+     * certificate.
+     *
+     * The server name is also included in the TLS handshake to support Server Name Indication (SNI)
+     * or virtual hosting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify)
+     */
+    public fun serverNameToVerify(): String? = unwrap(this).getServerNameToVerify()
+
+    /**
+     * A builder for [TlsConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param serverNameToVerify If you specify a server name, API Gateway uses it to verify the
+       * hostname on the integration's certificate.
+       * The server name is also included in the TLS handshake to support Server Name Indication
+       * (SNI) or virtual hosting.
+       */
+      public fun serverNameToVerify(serverNameToVerify: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty.Builder =
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty.builder()
+
+      /**
+       * @param serverNameToVerify If you specify a server name, API Gateway uses it to verify the
+       * hostname on the integration's certificate.
+       * The server name is also included in the TLS handshake to support Server Name Indication
+       * (SNI) or virtual hosting.
+       */
+      override fun serverNameToVerify(serverNameToVerify: String) {
+        cdkBuilder.serverNameToVerify(serverNameToVerify)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty,
+    ) : CdkObject(cdkObject), TlsConfigProperty {
+      /**
+       * If you specify a server name, API Gateway uses it to verify the hostname on the
+       * integration's certificate.
+       *
+       * The server name is also included in the TLS handshake to support Server Name Indication
+       * (SNI) or virtual hosting.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html#cfn-apigatewayv2-integration-tlsconfig-servernametoverify)
+       */
+      override fun serverNameToVerify(): String? = unwrap(this).getServerNameToVerify()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TlsConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty):
+          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TlsConfigProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty
     }
   }
 }

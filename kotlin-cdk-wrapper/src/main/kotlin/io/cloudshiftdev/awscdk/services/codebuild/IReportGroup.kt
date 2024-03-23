@@ -36,7 +36,7 @@ public interface IReportGroup : IResource {
   public fun reportGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.IReportGroup,
+    cdkObject: software.amazon.awscdk.services.codebuild.IReportGroup,
   ) : CdkObject(cdkObject), IReportGroup {
     /**
      * Apply the given removal policy to this resource.

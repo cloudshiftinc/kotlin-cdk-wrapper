@@ -34,9 +34,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class CloudFormationTemplate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
+public abstract class CloudFormationTemplate(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the product is initialized to allow this object to bind to the stack, add resources
@@ -48,7 +47,7 @@ public abstract class CloudFormationTemplate internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(CloudFormationTemplateConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
   ) : CloudFormationTemplate(cdkObject)
 
   public companion object {

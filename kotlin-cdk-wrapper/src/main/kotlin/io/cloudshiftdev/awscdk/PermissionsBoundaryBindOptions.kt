@@ -35,7 +35,7 @@ public interface PermissionsBoundaryBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.PermissionsBoundaryBindOptions,
+    cdkObject: software.amazon.awscdk.PermissionsBoundaryBindOptions,
   ) : CdkObject(cdkObject), PermissionsBoundaryBindOptions
 
   public companion object {

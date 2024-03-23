@@ -22,8 +22,8 @@ import kotlin.collections.List
  * IProduct product = Product.fromProductArn(this, "MyProduct", "productArn");
  * ```
  */
-public abstract class Product internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
+public abstract class Product(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
 ) : Resource(cdkObject), IProduct {
   /**
    * The asset buckets of a product created via product stack.
@@ -54,7 +54,7 @@ public abstract class Product internal constructor(
   public override fun productId(): String = unwrap(this).getProductId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
+    cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
   ) : Product(cdkObject)
 
   public companion object {

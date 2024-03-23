@@ -260,7 +260,7 @@ public interface CfnRestoreTestingPlanProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps,
+    cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps,
   ) : CdkObject(cdkObject), CfnRestoreTestingPlanProps {
     /**
      * The specified criteria to assign a set of resources, such as recovery point types or backup

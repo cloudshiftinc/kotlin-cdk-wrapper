@@ -34,9 +34,8 @@ import kotlin.Unit
  * ListenerPort listenerPort = new ListenerPort(securityGroup, port);
  * ```
  */
-public open class ListenerPort internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
+public open class ListenerPort(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
 ) : CdkObject(cdkObject), IConnectable {
   public constructor(securityGroup: ISecurityGroup, defaultPort: Port) :
       this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(securityGroup.let(ISecurityGroup::unwrap),
@@ -58,6 +57,7 @@ public open class ListenerPort internal constructor(
         ListenerPort = ListenerPort(cdkObject)
 
     internal fun unwrap(wrapped: ListenerPort):
-        software.amazon.awscdk.services.elasticloadbalancing.ListenerPort = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticloadbalancing.ListenerPort = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancing.ListenerPort
   }
 }

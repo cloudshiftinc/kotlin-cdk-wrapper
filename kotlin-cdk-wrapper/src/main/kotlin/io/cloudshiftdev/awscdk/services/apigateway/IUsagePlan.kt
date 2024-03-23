@@ -49,7 +49,7 @@ public interface IUsagePlan : IResource {
   public fun usagePlanId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IUsagePlan,
+    cdkObject: software.amazon.awscdk.services.apigateway.IUsagePlan,
   ) : CdkObject(cdkObject), IUsagePlan {
     /**
      * Adds an ApiKey.

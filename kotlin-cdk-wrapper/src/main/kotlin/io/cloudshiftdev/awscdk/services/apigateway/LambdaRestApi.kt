@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * item.addMethod("DELETE", new HttpIntegration("http://amazon.com"));
  * ```
  */
-public open class LambdaRestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.LambdaRestApi,
+public open class LambdaRestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.LambdaRestApi,
 ) : RestApi(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1032,6 +1032,7 @@ public open class LambdaRestApi internal constructor(
         LambdaRestApi = LambdaRestApi(cdkObject)
 
     internal fun unwrap(wrapped: LambdaRestApi):
-        software.amazon.awscdk.services.apigateway.LambdaRestApi = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.LambdaRestApi = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.LambdaRestApi
   }
 }

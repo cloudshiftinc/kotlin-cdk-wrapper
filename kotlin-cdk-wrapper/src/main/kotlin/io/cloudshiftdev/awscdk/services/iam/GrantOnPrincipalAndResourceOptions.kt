@@ -202,7 +202,7 @@ public interface GrantOnPrincipalAndResourceOptions : CommonGrantOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions,
+    cdkObject: software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions,
   ) : CdkObject(cdkObject), GrantOnPrincipalAndResourceOptions {
     /**
      * The actions to grant.

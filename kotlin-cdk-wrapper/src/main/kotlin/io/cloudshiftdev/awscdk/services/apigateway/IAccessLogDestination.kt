@@ -17,7 +17,7 @@ public interface IAccessLogDestination {
   public fun bind(stage: IStage): AccessLogDestinationConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IAccessLogDestination,
+    cdkObject: software.amazon.awscdk.services.apigateway.IAccessLogDestination,
   ) : CdkObject(cdkObject), IAccessLogDestination {
     /**
      * Binds this destination to the RestApi Stage.

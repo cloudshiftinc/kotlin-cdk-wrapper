@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-simpletable.html)
  */
-public open class CfnSimpleTable internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
+public open class CfnSimpleTable(
+  cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -396,7 +396,105 @@ public open class CfnSimpleTable internal constructor(
         = CfnSimpleTable(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimpleTable): software.amazon.awscdk.services.sam.CfnSimpleTable
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnSimpleTable
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * PrimaryKeyProperty primaryKeyProperty = PrimaryKeyProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html)
+   */
+  public interface PrimaryKeyProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PrimaryKeyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name the value to be set.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type the value to be set. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.builder()
+
+      /**
+       * @param name the value to be set.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type the value to be set. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
+    ) : CdkObject(cdkObject), PrimaryKeyProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrimaryKeyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty):
+          PrimaryKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? PrimaryKeyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrimaryKeyProperty):
+          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty
+    }
   }
 
   /**
@@ -468,8 +566,7 @@ public open class CfnSimpleTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
     ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-provisionedthroughput.html#cfn-serverless-simpletable-provisionedthroughput-readcapacityunits)
@@ -497,104 +594,6 @@ public open class CfnSimpleTable internal constructor(
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * PrimaryKeyProperty primaryKeyProperty = PrimaryKeyProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html)
-   */
-  public interface PrimaryKeyProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PrimaryKeyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name the value to be set.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type the value to be set. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.builder()
-
-      /**
-       * @param name the value to be set.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type the value to be set. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
-    ) : CdkObject(cdkObject), PrimaryKeyProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrimaryKeyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty):
-          PrimaryKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? PrimaryKeyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrimaryKeyProperty):
-          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty
     }
   }
 
@@ -659,8 +658,7 @@ public open class CfnSimpleTable internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
     ) : CdkObject(cdkObject), SSESpecificationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-ssespecification.html#cfn-serverless-simpletable-ssespecification-sseenabled)

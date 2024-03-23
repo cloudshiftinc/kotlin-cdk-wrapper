@@ -112,8 +112,7 @@ public interface CfnHookDefaultVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps,
+    cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps,
   ) : CdkObject(cdkObject), CfnHookDefaultVersionProps {
     /**
      * The name of the hook.

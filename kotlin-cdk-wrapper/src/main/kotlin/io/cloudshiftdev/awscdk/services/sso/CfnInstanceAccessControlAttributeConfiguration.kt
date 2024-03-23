@@ -63,9 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)
  */
-public open class CfnInstanceAccessControlAttributeConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration,
+public open class CfnInstanceAccessControlAttributeConfiguration(
+  cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -412,7 +411,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
     internal fun unwrap(wrapped: CfnInstanceAccessControlAttributeConfiguration):
         software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
   }
 
   /**
@@ -534,8 +534,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty,
+      cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty,
     ) : CdkObject(cdkObject), AccessControlAttributeProperty {
       /**
        * The name of the attribute associated with your identities in your identity source.
@@ -642,8 +641,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty,
+      cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty,
     ) : CdkObject(cdkObject), AccessControlAttributeValueProperty {
       /**
        * The identity source to use when mapping a specified attribute to IAM Identity Center .
@@ -757,8 +755,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty,
     ) : CdkObject(cdkObject), InstanceAccessControlAttributeConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration.html#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration-accesscontrolattributes)

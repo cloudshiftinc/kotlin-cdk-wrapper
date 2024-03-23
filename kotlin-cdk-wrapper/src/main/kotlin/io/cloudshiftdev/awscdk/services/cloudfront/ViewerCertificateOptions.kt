@@ -131,7 +131,7 @@ public interface ViewerCertificateOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions,
   ) : CdkObject(cdkObject), ViewerCertificateOptions {
     /**
      * Domain names on the certificate (both main domain name and Subject Alternative names).

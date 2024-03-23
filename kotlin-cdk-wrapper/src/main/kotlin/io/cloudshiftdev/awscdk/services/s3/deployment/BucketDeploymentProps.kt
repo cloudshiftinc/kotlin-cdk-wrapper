@@ -936,7 +936,7 @@ public interface BucketDeploymentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps,
+    cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps,
   ) : CdkObject(cdkObject), BucketDeploymentProps {
     /**
      * System-defined x-amz-acl metadata to be set on all objects in the deployment.

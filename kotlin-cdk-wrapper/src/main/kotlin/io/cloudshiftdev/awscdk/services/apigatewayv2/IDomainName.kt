@@ -33,7 +33,7 @@ public interface IDomainName : IResource {
   public fun regionalHostedZoneId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IDomainName,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IDomainName,
   ) : CdkObject(cdkObject), IDomainName {
     /**
      * Apply the given removal policy to this resource.

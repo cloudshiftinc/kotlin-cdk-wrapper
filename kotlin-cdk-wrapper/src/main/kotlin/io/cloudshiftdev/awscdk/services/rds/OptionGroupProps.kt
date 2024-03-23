@@ -158,7 +158,7 @@ public interface OptionGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.OptionGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.OptionGroupProps,
   ) : CdkObject(cdkObject), OptionGroupProps {
     /**
      * The configurations for this option group.

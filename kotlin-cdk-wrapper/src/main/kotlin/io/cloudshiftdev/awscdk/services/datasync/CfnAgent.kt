@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html)
  */
-public open class CfnAgent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnAgent,
+public open class CfnAgent(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnAgent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.datasync.CfnAgent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -497,6 +497,6 @@ public open class CfnAgent internal constructor(
         CfnAgent(cdkObject)
 
     internal fun unwrap(wrapped: CfnAgent): software.amazon.awscdk.services.datasync.CfnAgent =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.datasync.CfnAgent
   }
 }

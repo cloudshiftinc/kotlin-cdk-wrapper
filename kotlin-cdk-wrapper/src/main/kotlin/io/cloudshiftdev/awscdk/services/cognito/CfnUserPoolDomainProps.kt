@@ -172,7 +172,7 @@ public interface CfnUserPoolDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomainProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomainProps,
   ) : CdkObject(cdkObject), CfnUserPoolDomainProps {
     /**
      * The configuration for a custom domain that hosts the sign-up and sign-in pages for your

@@ -327,8 +327,7 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions,
   ) : CdkObject(cdkObject), ScheduledFargateTaskImageOptions {
     /**
      * The command that is passed to the container.

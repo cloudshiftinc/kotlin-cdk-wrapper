@@ -79,7 +79,7 @@ public interface CfnScalableTargetProps {
    * This string consists of the resource type and unique identifier.
    *
    * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-   * and service name. Example: `service/default/sample-webapp` .
+   * and service name. Example: `service/my-cluster/my-service` .
    * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the Spot
    * Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
    * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster
@@ -254,7 +254,7 @@ public interface CfnScalableTargetProps {
      * This string consists of the resource type and unique identifier.
      *
      * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-     * and service name. Example: `service/default/sample-webapp` .
+     * and service name. Example: `service/my-cluster/my-service` .
      * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the
      * Spot Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
      * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster
@@ -471,7 +471,7 @@ public interface CfnScalableTargetProps {
      * This string consists of the resource type and unique identifier.
      *
      * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-     * and service name. Example: `service/default/sample-webapp` .
+     * and service name. Example: `service/my-cluster/my-service` .
      * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the
      * Spot Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
      * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster
@@ -683,8 +683,7 @@ public interface CfnScalableTargetProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps,
   ) : CdkObject(cdkObject), CfnScalableTargetProps {
     /**
      * The maximum value that you plan to scale out to.
@@ -712,7 +711,7 @@ public interface CfnScalableTargetProps {
      * This string consists of the resource type and unique identifier.
      *
      * * ECS service - The resource type is `service` and the unique identifier is the cluster name
-     * and service name. Example: `service/default/sample-webapp` .
+     * and service name. Example: `service/my-cluster/my-service` .
      * * Spot Fleet - The resource type is `spot-fleet-request` and the unique identifier is the
      * Spot Fleet request ID. Example: `spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE` .
      * * EMR cluster - The resource type is `instancegroup` and the unique identifier is the cluster

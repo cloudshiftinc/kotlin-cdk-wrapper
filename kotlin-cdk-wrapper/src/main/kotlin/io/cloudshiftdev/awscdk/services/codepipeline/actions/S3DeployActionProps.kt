@@ -293,8 +293,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.S3DeployActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3DeployActionProps,
   ) : CdkObject(cdkObject), S3DeployActionProps {
     /**
      * The specified canned ACL to objects deployed to Amazon S3.

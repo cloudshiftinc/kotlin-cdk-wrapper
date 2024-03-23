@@ -304,7 +304,7 @@ public interface CfnDecoderManifestProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps,
+    cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps,
   ) : CdkObject(cdkObject), CfnDecoderManifestProps {
     /**
      * (Optional) A brief description of the decoder manifest.

@@ -7,14 +7,14 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.collections.List
 
-public abstract class Dependable internal constructor(
-  internal override val cdkObject: software.constructs.Dependable,
+public abstract class Dependable(
+  cdkObject: software.constructs.Dependable,
 ) : CdkObject(cdkObject) {
   public open fun dependencyRoots(): List<IConstruct> =
       unwrap(this).getDependencyRoots().map(IConstruct::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.constructs.Dependable,
+    cdkObject: software.constructs.Dependable,
   ) : Dependable(cdkObject)
 
   public companion object {

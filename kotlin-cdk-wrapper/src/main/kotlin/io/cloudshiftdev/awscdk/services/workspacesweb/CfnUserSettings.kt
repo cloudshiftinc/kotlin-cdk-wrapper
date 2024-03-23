@@ -70,8 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html)
  */
-public open class CfnUserSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings,
+public open class CfnUserSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,7 +621,145 @@ public open class CfnUserSettings internal constructor(
         CfnUserSettings = CfnUserSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserSettings):
-        software.amazon.awscdk.services.workspacesweb.CfnUserSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnUserSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnUserSettings
+  }
+
+  /**
+   * Specifies a single cookie or set of cookies in an end user's browser.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.workspacesweb.*;
+   * CookieSpecificationProperty cookieSpecificationProperty = CookieSpecificationProperty.builder()
+   * .domain("domain")
+   * // the properties below are optional
+   * .name("name")
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html)
+   */
+  public interface CookieSpecificationProperty {
+    /**
+     * The domain of the cookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-domain)
+     */
+    public fun domain(): String
+
+    /**
+     * The name of the cookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The path of the cookie.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [CookieSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domain The domain of the cookie. 
+       */
+      public fun domain(domain: String)
+
+      /**
+       * @param name The name of the cookie.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param path The path of the cookie.
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty.builder()
+
+      /**
+       * @param domain The domain of the cookie. 
+       */
+      override fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+      }
+
+      /**
+       * @param name The name of the cookie.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param path The path of the cookie.
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
+    ) : CdkObject(cdkObject), CookieSpecificationProperty {
+      /**
+       * The domain of the cookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-domain)
+       */
+      override fun domain(): String = unwrap(this).getDomain()
+
+      /**
+       * The name of the cookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The path of the cookie.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CookieSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty):
+          CookieSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CookieSpecificationProperty):
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
+    }
   }
 
   /**
@@ -768,8 +906,7 @@ public open class CfnUserSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
     ) : CdkObject(cdkObject), CookieSynchronizationConfigurationProperty {
       /**
        * The list of cookie specifications that are allowed to be synchronized to the remote
@@ -804,144 +941,6 @@ public open class CfnUserSettings internal constructor(
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies a single cookie or set of cookies in an end user's browser.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.workspacesweb.*;
-   * CookieSpecificationProperty cookieSpecificationProperty = CookieSpecificationProperty.builder()
-   * .domain("domain")
-   * // the properties below are optional
-   * .name("name")
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html)
-   */
-  public interface CookieSpecificationProperty {
-    /**
-     * The domain of the cookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-domain)
-     */
-    public fun domain(): String
-
-    /**
-     * The name of the cookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The path of the cookie.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [CookieSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param domain The domain of the cookie. 
-       */
-      public fun domain(domain: String)
-
-      /**
-       * @param name The name of the cookie.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param path The path of the cookie.
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty.builder()
-
-      /**
-       * @param domain The domain of the cookie. 
-       */
-      override fun domain(domain: String) {
-        cdkBuilder.domain(domain)
-      }
-
-      /**
-       * @param name The name of the cookie.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param path The path of the cookie.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
-    ) : CdkObject(cdkObject), CookieSpecificationProperty {
-      /**
-       * The domain of the cookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-domain)
-       */
-      override fun domain(): String = unwrap(this).getDomain()
-
-      /**
-       * The name of the cookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The path of the cookie.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-cookiespecification.html#cfn-workspacesweb-usersettings-cookiespecification-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CookieSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty):
-          CookieSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CookieSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CookieSpecificationProperty):
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty
     }
   }
 }

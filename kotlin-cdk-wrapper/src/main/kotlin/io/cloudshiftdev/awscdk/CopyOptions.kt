@@ -118,7 +118,7 @@ public interface CopyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CopyOptions,
+    cdkObject: software.amazon.awscdk.CopyOptions,
   ) : CdkObject(cdkObject), CopyOptions {
     /**
      * File paths matching the patterns will be excluded.

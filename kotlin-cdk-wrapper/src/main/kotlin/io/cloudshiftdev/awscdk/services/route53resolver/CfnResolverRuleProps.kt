@@ -266,7 +266,7 @@ public interface CfnResolverRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps,
   ) : CdkObject(cdkObject), CfnResolverRuleProps {
     /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in

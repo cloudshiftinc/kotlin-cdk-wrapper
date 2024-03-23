@@ -32,8 +32,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class FireLensLogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriver,
+public open class FireLensLogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: FireLensLogDriverProps) :
       this(software.amazon.awscdk.services.ecs.FireLensLogDriver(props.let(FireLensLogDriverProps::unwrap))
@@ -280,6 +280,7 @@ public open class FireLensLogDriver internal constructor(
         FireLensLogDriver = FireLensLogDriver(cdkObject)
 
     internal fun unwrap(wrapped: FireLensLogDriver):
-        software.amazon.awscdk.services.ecs.FireLensLogDriver = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.FireLensLogDriver = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.FireLensLogDriver
   }
 }

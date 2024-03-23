@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DatabaseProxy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseProxy,
+public open class DatabaseProxy(
+  cdkObject: software.amazon.awscdk.services.rds.DatabaseProxy,
 ) : Resource(cdkObject), IConnectable, ISecretAttachmentTarget, IDatabaseProxy {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -718,6 +718,6 @@ public open class DatabaseProxy internal constructor(
         DatabaseProxy(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseProxy): software.amazon.awscdk.services.rds.DatabaseProxy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.DatabaseProxy
   }
 }

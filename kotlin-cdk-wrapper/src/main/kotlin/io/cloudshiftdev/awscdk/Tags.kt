@@ -44,8 +44,8 @@ import kotlin.jvm.JvmName
  * Tags.of(node).add("Environment", "Dev");
  * ```
  */
-public open class Tags internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Tags,
+public open class Tags(
+  cdkObject: software.amazon.awscdk.Tags,
 ) : CdkObject(cdkObject) {
   /**
    * add tags to the node of a construct and all its the taggable children.
@@ -125,6 +125,7 @@ public open class Tags internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Tags): Tags = Tags(cdkObject)
 
-    internal fun unwrap(wrapped: Tags): software.amazon.awscdk.Tags = wrapped.cdkObject
+    internal fun unwrap(wrapped: Tags): software.amazon.awscdk.Tags = wrapped.cdkObject as
+        software.amazon.awscdk.Tags
   }
 }

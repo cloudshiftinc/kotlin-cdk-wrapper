@@ -135,7 +135,7 @@ public interface IEcsContainerDefinition : IConstruct {
   public fun volumes(): List<EcsVolume>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IEcsContainerDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IEcsContainerDefinition,
   ) : CdkObject(cdkObject), IEcsContainerDefinition {
     /**
      * Add a Volume to this container.

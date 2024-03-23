@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html)
  */
-public open class CfnKeyspace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspace,
+public open class CfnKeyspace(
+  cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cassandra.CfnKeyspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -378,7 +378,7 @@ public open class CfnKeyspace internal constructor(
         = CfnKeyspace(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyspace): software.amazon.awscdk.services.cassandra.CfnKeyspace
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.cassandra.CfnKeyspace
   }
 
   /**
@@ -501,8 +501,7 @@ public open class CfnKeyspace internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty,
     ) : CdkObject(cdkObject), ReplicationSpecificationProperty {
       /**
        * Specifies the AWS Regions that the keyspace is replicated in.

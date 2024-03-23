@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html)
  */
-public open class CfnXssMatchSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnXssMatchSet,
+public open class CfnXssMatchSet(
+  cdkObject: software.amazon.awscdk.services.waf.regional.CfnXssMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -244,7 +244,8 @@ public open class CfnXssMatchSet internal constructor(
         CfnXssMatchSet = CfnXssMatchSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnXssMatchSet):
-        software.amazon.awscdk.services.waf.regional.CfnXssMatchSet = wrapped.cdkObject
+        software.amazon.awscdk.services.waf.regional.CfnXssMatchSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.waf.regional.CfnXssMatchSet
   }
 
   /**
@@ -413,8 +414,7 @@ public open class CfnXssMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnXssMatchSet.FieldToMatchProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnXssMatchSet.FieldToMatchProperty,
     ) : CdkObject(cdkObject), FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
@@ -774,8 +774,7 @@ public open class CfnXssMatchSet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.waf.regional.CfnXssMatchSet.XssMatchTupleProperty,
+      cdkObject: software.amazon.awscdk.services.waf.regional.CfnXssMatchSet.XssMatchTupleProperty,
     ) : CdkObject(cdkObject), XssMatchTupleProperty {
       /**
        * The part of a web request that you want AWS WAF to inspect, such as a specified header or a

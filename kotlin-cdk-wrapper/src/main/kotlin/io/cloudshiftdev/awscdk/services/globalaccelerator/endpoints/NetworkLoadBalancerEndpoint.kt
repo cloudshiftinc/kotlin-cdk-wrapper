@@ -46,9 +46,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
  * .build());
  * ```
  */
-public open class NetworkLoadBalancerEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint,
+public open class NetworkLoadBalancerEndpoint(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer)
@@ -141,6 +140,7 @@ public open class NetworkLoadBalancerEndpoint internal constructor(
 
     internal fun unwrap(wrapped: NetworkLoadBalancerEndpoint):
         software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint
   }
 }

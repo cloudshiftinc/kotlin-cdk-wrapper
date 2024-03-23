@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Subscription internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.Subscription,
+public open class Subscription(
+  cdkObject: software.amazon.awscdk.services.sns.Subscription,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -283,6 +283,6 @@ public open class Subscription internal constructor(
         Subscription(cdkObject)
 
     internal fun unwrap(wrapped: Subscription): software.amazon.awscdk.services.sns.Subscription =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sns.Subscription
   }
 }

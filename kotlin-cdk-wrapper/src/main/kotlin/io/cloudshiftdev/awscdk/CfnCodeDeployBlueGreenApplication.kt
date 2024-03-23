@@ -124,7 +124,7 @@ public interface CfnCodeDeployBlueGreenApplication {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication,
+    cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication,
   ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenApplication {
     /**
      * The detailed attributes of the deployed target.

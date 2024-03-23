@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class GraphWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidget,
+public open class GraphWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: GraphWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.GraphWidget(props.let(GraphWidgetProps::unwrap))
@@ -670,6 +670,7 @@ public open class GraphWidget internal constructor(
         GraphWidget = GraphWidget(cdkObject)
 
     internal fun unwrap(wrapped: GraphWidget):
-        software.amazon.awscdk.services.cloudwatch.GraphWidget = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.GraphWidget = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.GraphWidget
   }
 }

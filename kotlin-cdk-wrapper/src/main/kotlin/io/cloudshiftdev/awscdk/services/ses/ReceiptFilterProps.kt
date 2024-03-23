@@ -92,7 +92,7 @@ public interface ReceiptFilterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.ReceiptFilterProps,
+    cdkObject: software.amazon.awscdk.services.ses.ReceiptFilterProps,
   ) : CdkObject(cdkObject), ReceiptFilterProps {
     /**
      * The ip address or range to filter.

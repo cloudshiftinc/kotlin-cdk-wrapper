@@ -488,8 +488,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.emr.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1367,6 +1367,8 @@ public open class CfnCluster internal constructor(
     /**
      * The name of the cluster.
      *
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
      * @param name The name of the cluster. 
      */
@@ -1949,6 +1951,8 @@ public open class CfnCluster internal constructor(
     /**
      * The name of the cluster.
      *
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
      * @param name The name of the cluster. 
      */
@@ -2178,7 +2182,683 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.emr.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.emr.CfnCluster
+  }
+
+  /**
+   * `Application` is a property of `AWS::EMR::Cluster` .
+   *
+   * The `Application` property type defines the open-source big data applications for EMR to
+   * install and configure when a cluster is created.
+   *
+   * With Amazon EMR release version 4.0 and later, the only accepted parameter is the application
+   * `Name` . To pass arguments to these applications, you use configuration classifications specified
+   * using JSON objects in a `Configuration` property. For more information, see [Configuring
+   * Applications](https://docs.aws.amazon.com//emr/latest/ReleaseGuide/emr-configure-apps.html) .
+   *
+   * With earlier Amazon EMR releases, the application is any AWS or third-party software that you
+   * can add to the cluster. You can specify the version of the application and arguments to pass to
+   * it. Amazon EMR accepts and forwards the argument list to the corresponding installation script as
+   * a bootstrap action argument.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ApplicationProperty applicationProperty = ApplicationProperty.builder()
+   * .additionalInfo(Map.of(
+   * "additionalInfoKey", "additionalInfo"))
+   * .args(List.of("args"))
+   * .name("name")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html)
+   */
+  public interface ApplicationProperty {
+    /**
+     * This option is for advanced users only.
+     *
+     * This is meta information about clusters and applications that are used for testing and
+     * troubleshooting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-additionalinfo)
+     */
+    public fun additionalInfo(): Any? = unwrap(this).getAdditionalInfo()
+
+    /**
+     * Arguments for Amazon EMR to pass to the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-args)
+     */
+    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+    /**
+     * The name of the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The version of the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [ApplicationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalInfo This option is for advanced users only.
+       * This is meta information about clusters and applications that are used for testing and
+       * troubleshooting.
+       */
+      public fun additionalInfo(additionalInfo: IResolvable)
+
+      /**
+       * @param additionalInfo This option is for advanced users only.
+       * This is meta information about clusters and applications that are used for testing and
+       * troubleshooting.
+       */
+      public fun additionalInfo(additionalInfo: Map<String, String>)
+
+      /**
+       * @param args Arguments for Amazon EMR to pass to the application.
+       */
+      public fun args(args: List<String>)
+
+      /**
+       * @param args Arguments for Amazon EMR to pass to the application.
+       */
+      public fun args(vararg args: String)
+
+      /**
+       * @param name The name of the application.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param version The version of the application.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty.builder()
+
+      /**
+       * @param additionalInfo This option is for advanced users only.
+       * This is meta information about clusters and applications that are used for testing and
+       * troubleshooting.
+       */
+      override fun additionalInfo(additionalInfo: IResolvable) {
+        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param additionalInfo This option is for advanced users only.
+       * This is meta information about clusters and applications that are used for testing and
+       * troubleshooting.
+       */
+      override fun additionalInfo(additionalInfo: Map<String, String>) {
+        cdkBuilder.additionalInfo(additionalInfo)
+      }
+
+      /**
+       * @param args Arguments for Amazon EMR to pass to the application.
+       */
+      override fun args(args: List<String>) {
+        cdkBuilder.args(args)
+      }
+
+      /**
+       * @param args Arguments for Amazon EMR to pass to the application.
+       */
+      override fun args(vararg args: String): Unit = args(args.toList())
+
+      /**
+       * @param name The name of the application.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param version The version of the application.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty,
+    ) : CdkObject(cdkObject), ApplicationProperty {
+      /**
+       * This option is for advanced users only.
+       *
+       * This is meta information about clusters and applications that are used for testing and
+       * troubleshooting.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-additionalinfo)
+       */
+      override fun additionalInfo(): Any? = unwrap(this).getAdditionalInfo()
+
+      /**
+       * Arguments for Amazon EMR to pass to the application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-args)
+       */
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+      /**
+       * The name of the application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The version of the application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty):
+          ApplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? ApplicationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty
+    }
+  }
+
+  /**
+   * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
+   *
+   * `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances
+   * in response to the value of a CloudWatch metric. For more information, see [Using Automatic
+   * Scaling in Amazon
+   * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) in the
+   * *Amazon EMR Management Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * AutoScalingPolicyProperty autoScalingPolicyProperty = AutoScalingPolicyProperty.builder()
+   * .constraints(ScalingConstraintsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .build())
+   * .rules(List.of(ScalingRuleProperty.builder()
+   * .action(ScalingActionProperty.builder()
+   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .adjustmentType("adjustmentType")
+   * .coolDown(123)
+   * .build())
+   * // the properties below are optional
+   * .market("market")
+   * .build())
+   * .name("name")
+   * .trigger(ScalingTriggerProperty.builder()
+   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .metricName("metricName")
+   * .period(123)
+   * .threshold(123)
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .evaluationPeriods(123)
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * .unit("unit")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .description("description")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html)
+   */
+  public interface AutoScalingPolicyProperty {
+    /**
+     * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
+     *
+     * Automatic scaling activity will not cause an instance group to grow above or below these
+     * limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-constraints)
+     */
+    public fun constraints(): Any
+
+    /**
+     * The scale-in and scale-out rules that comprise the automatic scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-rules)
+     */
+    public fun rules(): Any
+
+    /**
+     * A builder for [AutoScalingPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      public fun constraints(constraints: IResolvable)
+
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      public fun constraints(constraints: ScalingConstraintsProperty)
+
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2297aee95e47f66db144bc25bb2a219bac3fb2ba745f0c8036382aa2ab570e6e")
+      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit)
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      public fun rules(rules: IResolvable)
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      public fun rules(rules: List<Any>)
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      public fun rules(vararg rules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty.builder()
+
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      override fun constraints(constraints: IResolvable) {
+        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      override fun constraints(constraints: ScalingConstraintsProperty) {
+        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
+      }
+
+      /**
+       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
+       * policy. 
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2297aee95e47f66db144bc25bb2a219bac3fb2ba745f0c8036382aa2ab570e6e")
+      override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit): Unit =
+          constraints(ScalingConstraintsProperty(constraints))
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules)
+      }
+
+      /**
+       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
+       */
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty,
+    ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
+      /**
+       * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
+       *
+       * Automatic scaling activity will not cause an instance group to grow above or below these
+       * limits.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-constraints)
+       */
+      override fun constraints(): Any = unwrap(this).getConstraints()
+
+      /**
+       * The scale-in and scale-out rules that comprise the automatic scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-rules)
+       */
+      override fun rules(): Any = unwrap(this).getRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty):
+          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoScalingPolicyProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty
+    }
+  }
+
+  /**
+   * An auto-termination policy for an Amazon EMR cluster.
+   *
+   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+   * automatically terminates. For alternative cluster termination options, see [Control cluster
+   * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * AutoTerminationPolicyProperty autoTerminationPolicyProperty =
+   * AutoTerminationPolicyProperty.builder()
+   * .idleTimeout(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html)
+   */
+  public interface AutoTerminationPolicyProperty {
+    /**
+     * Specifies the amount of idle time in seconds after which the cluster automatically
+     * terminates.
+     *
+     * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html#cfn-emr-cluster-autoterminationpolicy-idletimeout)
+     */
+    public fun idleTimeout(): Number? = unwrap(this).getIdleTimeout()
+
+    /**
+     * A builder for [AutoTerminationPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param idleTimeout Specifies the amount of idle time in seconds after which the cluster
+       * automatically terminates.
+       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+       */
+      public fun idleTimeout(idleTimeout: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty.builder()
+
+      /**
+       * @param idleTimeout Specifies the amount of idle time in seconds after which the cluster
+       * automatically terminates.
+       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+       */
+      override fun idleTimeout(idleTimeout: Number) {
+        cdkBuilder.idleTimeout(idleTimeout)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty,
+    ) : CdkObject(cdkObject), AutoTerminationPolicyProperty {
+      /**
+       * Specifies the amount of idle time in seconds after which the cluster automatically
+       * terminates.
+       *
+       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html#cfn-emr-cluster-autoterminationpolicy-idletimeout)
+       */
+      override fun idleTimeout(): Number? = unwrap(this).getIdleTimeout()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoTerminationPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty):
+          AutoTerminationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoTerminationPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoTerminationPolicyProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty
+    }
+  }
+
+  /**
+   * `BootstrapActionConfig` is a property of `AWS::EMR::Cluster` that can be used to run bootstrap
+   * actions on EMR clusters.
+   *
+   * You can use a bootstrap action to install software and configure EC2 instances for all cluster
+   * nodes before EMR installs and configures open-source big data applications on cluster instances.
+   * For more information, see [Create Bootstrap Actions to Install Additional
+   * Software](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-plan-bootstrap.html) in the
+   * *Amazon EMR Management Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * BootstrapActionConfigProperty bootstrapActionConfigProperty =
+   * BootstrapActionConfigProperty.builder()
+   * .name("name")
+   * .scriptBootstrapAction(ScriptBootstrapActionConfigProperty.builder()
+   * .path("path")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html)
+   */
+  public interface BootstrapActionConfigProperty {
+    /**
+     * The name of the bootstrap action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-name)
+     */
+    public fun name(): String
+
+    /**
+     * The script run by the bootstrap action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction)
+     */
+    public fun scriptBootstrapAction(): Any
+
+    /**
+     * A builder for [BootstrapActionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the bootstrap action. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      public fun scriptBootstrapAction(scriptBootstrapAction: IResolvable)
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      public fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty)
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a865fef280f00048f67690c708ff1b8892cd0b48dc38c0a818102b6a89898b59")
+      public
+          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty.builder()
+
+      /**
+       * @param name The name of the bootstrap action. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      override fun scriptBootstrapAction(scriptBootstrapAction: IResolvable) {
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      override
+          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty::unwrap))
+      }
+
+      /**
+       * @param scriptBootstrapAction The script run by the bootstrap action. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a865fef280f00048f67690c708ff1b8892cd0b48dc38c0a818102b6a89898b59")
+      override
+          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit):
+          Unit = scriptBootstrapAction(ScriptBootstrapActionConfigProperty(scriptBootstrapAction))
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty,
+    ) : CdkObject(cdkObject), BootstrapActionConfigProperty {
+      /**
+       * The name of the bootstrap action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The script run by the bootstrap action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction)
+       */
+      override fun scriptBootstrapAction(): Any = unwrap(this).getScriptBootstrapAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BootstrapActionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty):
+          BootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BootstrapActionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BootstrapActionConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty
+    }
   }
 
   /**
@@ -2458,8 +3138,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty,
     ) : CdkObject(cdkObject), CloudWatchAlarmDefinitionProperty {
       /**
        * Determines how the metric specified by `MetricName` is compared to the value specified by
@@ -2555,710 +3234,6 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty
-    }
-  }
-
-  /**
-   * `MetricDimension` is a subproperty of the `CloudWatchAlarmDefinition` property type.
-   *
-   * `MetricDimension` specifies a CloudWatch dimension, which is specified with a `Key` `Value`
-   * pair. The key is known as a `Name` in CloudWatch. By default, Amazon EMR uses one dimension whose
-   * `Key` is `JobFlowID` and `Value` is a variable representing the cluster ID, which is
-   * `${emr.clusterId}` . This enables the automatic scaling rule for EMR to bootstrap when the cluster
-   * ID becomes available during cluster creation.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html)
-   */
-  public interface MetricDimensionProperty {
-    /**
-     * The dimension name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-key)
-     */
-    public fun key(): String
-
-    /**
-     * The dimension value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [MetricDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The dimension name. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The dimension value. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty.builder()
-
-      /**
-       * @param key The dimension name. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The dimension value. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
-      /**
-       * The dimension name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The dimension value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDimensionProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty
-    }
-  }
-
-  /**
-   * `StepConfig` is a property of the `AWS::EMR::Cluster` resource.
-   *
-   * The `StepConfig` property type specifies a cluster (job flow) step, which runs only on the
-   * master node. Steps are used to submit data processing jobs to the cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * StepConfigProperty stepConfigProperty = StepConfigProperty.builder()
-   * .hadoopJarStep(HadoopJarStepConfigProperty.builder()
-   * .jar("jar")
-   * // the properties below are optional
-   * .args(List.of("args"))
-   * .mainClass("mainClass")
-   * .stepProperties(List.of(KeyValueProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .name("name")
-   * // the properties below are optional
-   * .actionOnFailure("actionOnFailure")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html)
-   */
-  public interface StepConfigProperty {
-    /**
-     * The action to take when the cluster step fails.
-     *
-     * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-actiononfailure)
-     */
-    public fun actionOnFailure(): String? = unwrap(this).getActionOnFailure()
-
-    /**
-     * The JAR file used for the step.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-hadoopjarstep)
-     */
-    public fun hadoopJarStep(): Any
-
-    /**
-     * The name of the step.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [StepConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actionOnFailure The action to take when the cluster step fails.
-       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
-       */
-      public fun actionOnFailure(actionOnFailure: String)
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      public fun hadoopJarStep(hadoopJarStep: IResolvable)
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty)
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("35c8e923fe8dffa0f705d5b8464c7d670916d6d321c8b4ec178d10f9ea0ff2b6")
-      public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The name of the step. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty.builder()
-
-      /**
-       * @param actionOnFailure The action to take when the cluster step fails.
-       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
-       */
-      override fun actionOnFailure(actionOnFailure: String) {
-        cdkBuilder.actionOnFailure(actionOnFailure)
-      }
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      override fun hadoopJarStep(hadoopJarStep: IResolvable) {
-        cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
-        cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty::unwrap))
-      }
-
-      /**
-       * @param hadoopJarStep The JAR file used for the step. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("35c8e923fe8dffa0f705d5b8464c7d670916d6d321c8b4ec178d10f9ea0ff2b6")
-      override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit):
-          Unit = hadoopJarStep(HadoopJarStepConfigProperty(hadoopJarStep))
-
-      /**
-       * @param name The name of the step. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty,
-    ) : CdkObject(cdkObject), StepConfigProperty {
-      /**
-       * The action to take when the cluster step fails.
-       *
-       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-actiononfailure)
-       */
-      override fun actionOnFailure(): String? = unwrap(this).getActionOnFailure()
-
-      /**
-       * The JAR file used for the step.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-hadoopjarstep)
-       */
-      override fun hadoopJarStep(): Any = unwrap(this).getHadoopJarStep()
-
-      /**
-       * The name of the step.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StepConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty):
-          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? StepConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StepConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty
-    }
-  }
-
-  /**
-   * `PlacementType` is a property of the `AWS::EMR::Cluster` resource.
-   *
-   * `PlacementType` determines the Amazon EC2 Availability Zone configuration of the cluster (job
-   * flow).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * PlacementTypeProperty placementTypeProperty = PlacementTypeProperty.builder()
-   * .availabilityZone("availabilityZone")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html)
-   */
-  public interface PlacementTypeProperty {
-    /**
-     * The Amazon EC2 Availability Zone for the cluster.
-     *
-     * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural) is
-     * used for instance fleets.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html#cfn-emr-cluster-placementtype-availabilityzone)
-     */
-    public fun availabilityZone(): String
-
-    /**
-     * A builder for [PlacementTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
-       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
-       * is used for instance fleets.
-       */
-      public fun availabilityZone(availabilityZone: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty.builder()
-
-      /**
-       * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
-       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
-       * is used for instance fleets.
-       */
-      override fun availabilityZone(availabilityZone: String) {
-        cdkBuilder.availabilityZone(availabilityZone)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty,
-    ) : CdkObject(cdkObject), PlacementTypeProperty {
-      /**
-       * The Amazon EC2 Availability Zone for the cluster.
-       *
-       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
-       * is used for instance fleets.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html#cfn-emr-cluster-placementtype-availabilityzone)
-       */
-      override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty):
-          PlacementTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementTypeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementTypeProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty
-    }
-  }
-
-  /**
-   * An auto-termination policy for an Amazon EMR cluster.
-   *
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates. For alternative cluster termination options, see [Control cluster
-   * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * AutoTerminationPolicyProperty autoTerminationPolicyProperty =
-   * AutoTerminationPolicyProperty.builder()
-   * .idleTimeout(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html)
-   */
-  public interface AutoTerminationPolicyProperty {
-    /**
-     * Specifies the amount of idle time in seconds after which the cluster automatically
-     * terminates.
-     *
-     * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html#cfn-emr-cluster-autoterminationpolicy-idletimeout)
-     */
-    public fun idleTimeout(): Number? = unwrap(this).getIdleTimeout()
-
-    /**
-     * A builder for [AutoTerminationPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param idleTimeout Specifies the amount of idle time in seconds after which the cluster
-       * automatically terminates.
-       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
-       */
-      public fun idleTimeout(idleTimeout: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty.builder()
-
-      /**
-       * @param idleTimeout Specifies the amount of idle time in seconds after which the cluster
-       * automatically terminates.
-       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
-       */
-      override fun idleTimeout(idleTimeout: Number) {
-        cdkBuilder.idleTimeout(idleTimeout)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty,
-    ) : CdkObject(cdkObject), AutoTerminationPolicyProperty {
-      /**
-       * Specifies the amount of idle time in seconds after which the cluster automatically
-       * terminates.
-       *
-       * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoterminationpolicy.html#cfn-emr-cluster-autoterminationpolicy-idletimeout)
-       */
-      override fun idleTimeout(): Number? = unwrap(this).getIdleTimeout()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoTerminationPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty):
-          AutoTerminationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoTerminationPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoTerminationPolicyProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty
-    }
-  }
-
-  /**
-   * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
-   *
-   * `AutoScalingPolicy` defines how an instance group dynamically adds and terminates EC2 instances
-   * in response to the value of a CloudWatch metric. For more information, see [Using Automatic
-   * Scaling in Amazon
-   * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) in the
-   * *Amazon EMR Management Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * AutoScalingPolicyProperty autoScalingPolicyProperty = AutoScalingPolicyProperty.builder()
-   * .constraints(ScalingConstraintsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .build())
-   * .rules(List.of(ScalingRuleProperty.builder()
-   * .action(ScalingActionProperty.builder()
-   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .adjustmentType("adjustmentType")
-   * .coolDown(123)
-   * .build())
-   * // the properties below are optional
-   * .market("market")
-   * .build())
-   * .name("name")
-   * .trigger(ScalingTriggerProperty.builder()
-   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .metricName("metricName")
-   * .period(123)
-   * .threshold(123)
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .evaluationPeriods(123)
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * .unit("unit")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .description("description")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html)
-   */
-  public interface AutoScalingPolicyProperty {
-    /**
-     * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
-     *
-     * Automatic scaling activity will not cause an instance group to grow above or below these
-     * limits.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-constraints)
-     */
-    public fun constraints(): Any
-
-    /**
-     * The scale-in and scale-out rules that comprise the automatic scaling policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-rules)
-     */
-    public fun rules(): Any
-
-    /**
-     * A builder for [AutoScalingPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      public fun constraints(constraints: IResolvable)
-
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      public fun constraints(constraints: ScalingConstraintsProperty)
-
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2297aee95e47f66db144bc25bb2a219bac3fb2ba745f0c8036382aa2ab570e6e")
-      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit)
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      public fun rules(rules: IResolvable)
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      public fun rules(rules: List<Any>)
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      public fun rules(vararg rules: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty.builder()
-
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      override fun constraints(constraints: ScalingConstraintsProperty) {
-        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
-      }
-
-      /**
-       * @param constraints The upper and lower Amazon EC2 instance limits for an automatic scaling
-       * policy. 
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2297aee95e47f66db144bc25bb2a219bac3fb2ba745f0c8036382aa2ab570e6e")
-      override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit): Unit =
-          constraints(ScalingConstraintsProperty(constraints))
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
-      }
-
-      /**
-       * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
-       */
-      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty,
-    ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
-      /**
-       * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
-       *
-       * Automatic scaling activity will not cause an instance group to grow above or below these
-       * limits.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-constraints)
-       */
-      override fun constraints(): Any = unwrap(this).getConstraints()
-
-      /**
-       * The scale-in and scale-out rules that comprise the automatic scaling policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-autoscalingpolicy.html#cfn-emr-cluster-autoscalingpolicy-rules)
-       */
-      override fun rules(): Any = unwrap(this).getRules()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoScalingPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty):
-          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoScalingPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoScalingPolicyProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty
     }
   }
 
@@ -3448,7 +3423,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty,
     ) : CdkObject(cdkObject), ComputeLimitsProperty {
       /**
        * The upper boundary of Amazon EC2 units.
@@ -3520,6 +3495,2320 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty
+    }
+  }
+
+  /**
+   * Used only with Amazon EMR release 4.0 and later.
+   *
+   * `Configuration` is a subproperty of `InstanceFleetConfig` or `InstanceGroupConfig` .
+   * `Configuration` specifies optional configurations for customizing open-source big data
+   * applications and environment parameters. A configuration consists of a classification, properties,
+   * and optional nested configurations. A classification refers to an application-specific
+   * configuration file. Properties are the settings you want to change in that file. For more
+   * information, see [Configuring
+   * Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) in the
+   * *Amazon EMR Release Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ConfigurationProperty configurationProperty_;
+   * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
+   * .classification("classification")
+   * .configurationProperties(Map.of(
+   * "configurationPropertiesKey", "configurationProperties"))
+   * .configurations(List.of(configurationProperty_))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html)
+   */
+  public interface ConfigurationProperty {
+    /**
+     * The classification within a configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification)
+     */
+    public fun classification(): String? = unwrap(this).getClassification()
+
+    /**
+     * A list of additional configurations to apply within a configuration object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties)
+     */
+    public fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
+
+    /**
+     * A list of additional configurations to apply within a configuration object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations)
+     */
+    public fun configurations(): Any? = unwrap(this).getConfigurations()
+
+    /**
+     * A builder for [ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param classification The classification within a configuration.
+       */
+      public fun classification(classification: String)
+
+      /**
+       * @param configurationProperties A list of additional configurations to apply within a
+       * configuration object.
+       */
+      public fun configurationProperties(configurationProperties: IResolvable)
+
+      /**
+       * @param configurationProperties A list of additional configurations to apply within a
+       * configuration object.
+       */
+      public fun configurationProperties(configurationProperties: Map<String, String>)
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      public fun configurations(configurations: IResolvable)
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      public fun configurations(configurations: List<Any>)
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      public fun configurations(vararg configurations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty.builder()
+
+      /**
+       * @param classification The classification within a configuration.
+       */
+      override fun classification(classification: String) {
+        cdkBuilder.classification(classification)
+      }
+
+      /**
+       * @param configurationProperties A list of additional configurations to apply within a
+       * configuration object.
+       */
+      override fun configurationProperties(configurationProperties: IResolvable) {
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurationProperties A list of additional configurations to apply within a
+       * configuration object.
+       */
+      override fun configurationProperties(configurationProperties: Map<String, String>) {
+        cdkBuilder.configurationProperties(configurationProperties)
+      }
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      override fun configurations(configurations: IResolvable) {
+        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      override fun configurations(configurations: List<Any>) {
+        cdkBuilder.configurations(configurations)
+      }
+
+      /**
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
+       */
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty,
+    ) : CdkObject(cdkObject), ConfigurationProperty {
+      /**
+       * The classification within a configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification)
+       */
+      override fun classification(): String? = unwrap(this).getClassification()
+
+      /**
+       * A list of additional configurations to apply within a configuration object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties)
+       */
+      override fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
+
+      /**
+       * A list of additional configurations to apply within a configuration object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations)
+       */
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty):
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConfigurationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty
+    }
+  }
+
+  /**
+   * `EbsBlockDeviceConfig` is a subproperty of the `EbsConfiguration` property type.
+   *
+   * `EbsBlockDeviceConfig` defines the number and type of EBS volumes to associate with all EC2
+   * instances in an EMR cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * EbsBlockDeviceConfigProperty ebsBlockDeviceConfigProperty =
+   * EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
+   * // the properties below are optional
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html)
+   */
+  public interface EbsBlockDeviceConfigProperty {
+    /**
+     * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
+     * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumespecification)
+     */
+    public fun volumeSpecification(): Any
+
+    /**
+     * Number of EBS volumes with a specific volume configuration that are associated with every
+     * instance in the instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumesperinstance)
+     */
+    public fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
+
+    /**
+     * A builder for [EbsBlockDeviceConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      public fun volumeSpecification(volumeSpecification: IResolvable)
+
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty)
+
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a6098102f5fe1e7c642ed86c5ea6655bb1f9f5971c6dce82a27acdd3a241902")
+      public
+          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that
+       * are associated with every instance in the instance group.
+       */
+      public fun volumesPerInstance(volumesPerInstance: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty.builder()
+
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      override fun volumeSpecification(volumeSpecification: IResolvable) {
+        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
+        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
+       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
+       * instance in the cluster. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7a6098102f5fe1e7c642ed86c5ea6655bb1f9f5971c6dce82a27acdd3a241902")
+      override
+          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit):
+          Unit = volumeSpecification(VolumeSpecificationProperty(volumeSpecification))
+
+      /**
+       * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that
+       * are associated with every instance in the instance group.
+       */
+      override fun volumesPerInstance(volumesPerInstance: Number) {
+        cdkBuilder.volumesPerInstance(volumesPerInstance)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty,
+    ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
+      /**
+       * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
+       * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumespecification)
+       */
+      override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
+
+      /**
+       * Number of EBS volumes with a specific volume configuration that are associated with every
+       * instance in the instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumesperinstance)
+       */
+      override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty):
+          EbsBlockDeviceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsBlockDeviceConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsBlockDeviceConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty
+    }
+  }
+
+  /**
+   * `EbsConfiguration` is a subproperty of `InstanceFleetConfig` or `InstanceGroupConfig` .
+   *
+   * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
+   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
+   * // the properties below are optional
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build()))
+   * .ebsOptimized(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html)
+   */
+  public interface EbsConfigurationProperty {
+    /**
+     * An array of Amazon EBS volume specifications attached to a cluster instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsblockdeviceconfigs)
+     */
+    public fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
+
+    /**
+     * Indicates whether an Amazon EBS volume is EBS-optimized.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
+     */
+    public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+
+    /**
+     * A builder for [EbsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
+
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
+
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      public fun ebsOptimized(ebsOptimized: Boolean)
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      public fun ebsOptimized(ebsOptimized: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty.builder()
+
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
+      }
+
+      /**
+       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
+       * cluster instance.
+       */
+      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      override fun ebsOptimized(ebsOptimized: Boolean) {
+        cdkBuilder.ebsOptimized(ebsOptimized)
+      }
+
+      /**
+       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       */
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty,
+    ) : CdkObject(cdkObject), EbsConfigurationProperty {
+      /**
+       * An array of Amazon EBS volume specifications attached to a cluster instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsblockdeviceconfigs)
+       */
+      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
+
+      /**
+       * Indicates whether an Amazon EBS volume is EBS-optimized.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
+       */
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty):
+          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsConfigurationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty
+    }
+  }
+
+  /**
+   * The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file
+   * whose main function will be executed.
+   *
+   * The main function submits a job for the cluster to execute as a step on the master node, and
+   * then waits for the job to finish or fail before executing subsequent steps.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * HadoopJarStepConfigProperty hadoopJarStepConfigProperty = HadoopJarStepConfigProperty.builder()
+   * .jar("jar")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .mainClass("mainClass")
+   * .stepProperties(List.of(KeyValueProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html)
+   */
+  public interface HadoopJarStepConfigProperty {
+    /**
+     * A list of command line arguments passed to the JAR file's main function when executed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-args)
+     */
+    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+    /**
+     * A path to a JAR file run during the step.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-jar)
+     */
+    public fun jar(): String
+
+    /**
+     * The name of the main class in the specified Java file.
+     *
+     * If not specified, the JAR file should specify a Main-Class in its manifest file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-mainclass)
+     */
+    public fun mainClass(): String? = unwrap(this).getMainClass()
+
+    /**
+     * A list of Java properties that are set when the step runs.
+     *
+     * You can use these properties to pass key-value pairs to your main function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-stepproperties)
+     */
+    public fun stepProperties(): Any? = unwrap(this).getStepProperties()
+
+    /**
+     * A builder for [HadoopJarStepConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param args A list of command line arguments passed to the JAR file's main function when
+       * executed.
+       */
+      public fun args(args: List<String>)
+
+      /**
+       * @param args A list of command line arguments passed to the JAR file's main function when
+       * executed.
+       */
+      public fun args(vararg args: String)
+
+      /**
+       * @param jar A path to a JAR file run during the step. 
+       */
+      public fun jar(jar: String)
+
+      /**
+       * @param mainClass The name of the main class in the specified Java file.
+       * If not specified, the JAR file should specify a Main-Class in its manifest file.
+       */
+      public fun mainClass(mainClass: String)
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      public fun stepProperties(stepProperties: IResolvable)
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      public fun stepProperties(stepProperties: List<Any>)
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      public fun stepProperties(vararg stepProperties: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty.builder()
+
+      /**
+       * @param args A list of command line arguments passed to the JAR file's main function when
+       * executed.
+       */
+      override fun args(args: List<String>) {
+        cdkBuilder.args(args)
+      }
+
+      /**
+       * @param args A list of command line arguments passed to the JAR file's main function when
+       * executed.
+       */
+      override fun args(vararg args: String): Unit = args(args.toList())
+
+      /**
+       * @param jar A path to a JAR file run during the step. 
+       */
+      override fun jar(jar: String) {
+        cdkBuilder.jar(jar)
+      }
+
+      /**
+       * @param mainClass The name of the main class in the specified Java file.
+       * If not specified, the JAR file should specify a Main-Class in its manifest file.
+       */
+      override fun mainClass(mainClass: String) {
+        cdkBuilder.mainClass(mainClass)
+      }
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      override fun stepProperties(stepProperties: IResolvable) {
+        cdkBuilder.stepProperties(stepProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      override fun stepProperties(stepProperties: List<Any>) {
+        cdkBuilder.stepProperties(stepProperties)
+      }
+
+      /**
+       * @param stepProperties A list of Java properties that are set when the step runs.
+       * You can use these properties to pass key-value pairs to your main function.
+       */
+      override fun stepProperties(vararg stepProperties: Any): Unit =
+          stepProperties(stepProperties.toList())
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty,
+    ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
+      /**
+       * A list of command line arguments passed to the JAR file's main function when executed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-args)
+       */
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+      /**
+       * A path to a JAR file run during the step.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-jar)
+       */
+      override fun jar(): String = unwrap(this).getJar()
+
+      /**
+       * The name of the main class in the specified Java file.
+       *
+       * If not specified, the JAR file should specify a Main-Class in its manifest file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-mainclass)
+       */
+      override fun mainClass(): String? = unwrap(this).getMainClass()
+
+      /**
+       * A list of Java properties that are set when the step runs.
+       *
+       * You can use these properties to pass key-value pairs to your main function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-stepproperties)
+       */
+      override fun stepProperties(): Any? = unwrap(this).getStepProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HadoopJarStepConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty):
+          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HadoopJarStepConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HadoopJarStepConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty
+    }
+  }
+
+  /**
+   * Use `InstanceFleetConfig` to define instance fleets for an EMR cluster.
+   *
+   * A cluster can not use both instance fleets and instance groups. For more information, see
+   * [Configure Instance
+   * Fleets](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
+   * in the *Amazon EMR Management Guide* .
+   *
+   *
+   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+   * excluding 5.0.x versions.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ConfigurationProperty configurationProperty_;
+   * InstanceFleetConfigProperty instanceFleetConfigProperty = InstanceFleetConfigProperty.builder()
+   * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
+   * .instanceType("instanceType")
+   * // the properties below are optional
+   * .bidPrice("bidPrice")
+   * .bidPriceAsPercentageOfOnDemandPrice(123)
+   * .configurations(List.of(ConfigurationProperty.builder()
+   * .classification("classification")
+   * .configurationProperties(Map.of(
+   * "configurationPropertiesKey", "configurationProperties"))
+   * .configurations(List.of(configurationProperty_))
+   * .build()))
+   * .customAmiId("customAmiId")
+   * .ebsConfiguration(EbsConfigurationProperty.builder()
+   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
+   * // the properties below are optional
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build()))
+   * .ebsOptimized(false)
+   * .build())
+   * .weightedCapacity(123)
+   * .build()))
+   * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .build())
+   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+   * .timeoutAction("timeoutAction")
+   * .timeoutDurationMinutes(123)
+   * // the properties below are optional
+   * .allocationStrategy("allocationStrategy")
+   * .blockDurationMinutes(123)
+   * .build())
+   * .build())
+   * .name("name")
+   * .targetOnDemandCapacity(123)
+   * .targetSpotCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html)
+   */
+  public interface InstanceFleetConfigProperty {
+    /**
+     * The instance type configurations that define the Amazon EC2 instances in the instance fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-instancetypeconfigs)
+     */
+    public fun instanceTypeConfigs(): Any? = unwrap(this).getInstanceTypeConfigs()
+
+    /**
+     * The launch specification for the instance fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-launchspecifications)
+     */
+    public fun launchSpecifications(): Any? = unwrap(this).getLaunchSpecifications()
+
+    /**
+     * The friendly name of the instance fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The target capacity of On-Demand units for the instance fleet, which determines how many
+     * On-Demand instances to provision.
+     *
+     * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
+     * specified by `InstanceTypeConfig` . Each instance configuration has a specified
+     * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
+     * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
+     * totally fulfilled, even if this results in an overage. For example, if there are 2 units
+     * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
+     * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is exceeded
+     * by 3 units.
+     *
+     *
+     * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
+     * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
+     * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+     * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetondemandcapacity)
+     */
+    public fun targetOnDemandCapacity(): Number? = unwrap(this).getTargetOnDemandCapacity()
+
+    /**
+     * The target capacity of Spot units for the instance fleet, which determines how many Spot
+     * instances to provision.
+     *
+     * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
+     * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` . When
+     * a Spot instance is provisioned, the `WeightedCapacity` units count toward the target capacity.
+     * Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this
+     * results in an overage. For example, if there are 2 units remaining to fulfill capacity, and
+     * Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units, the instance is
+     * provisioned, and the target capacity is exceeded by 3 units.
+     *
+     *
+     * If not specified or set to 0, only On-Demand instances are provisioned for the instance
+     * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater than
+     * 0. For a master instance fleet, only one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
+     * can be specified, and its value must be 1.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetspotcapacity)
+     */
+    public fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
+
+    /**
+     * A builder for [InstanceFleetConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      public fun instanceTypeConfigs(instanceTypeConfigs: IResolvable)
+
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>)
+
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      public fun instanceTypeConfigs(vararg instanceTypeConfigs: Any)
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      public fun launchSpecifications(launchSpecifications: IResolvable)
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      public
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty)
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c2f85e4274949c23fd43accc57821cbd6c34700468d4a30a07af21ad2c6bddf3")
+      public
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The friendly name of the instance fleet.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
+       * fleet, which determines how many On-Demand instances to provision.
+       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
+       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
+       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
+       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
+       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
+       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
+       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
+       * exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
+       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
+       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       */
+      public fun targetOnDemandCapacity(targetOnDemandCapacity: Number)
+
+      /**
+       * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which
+       * determines how many Spot instances to provision.
+       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
+       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
+       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
+       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
+       * if this results in an overage. For example, if there are 2 units remaining to fulfill
+       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
+       * the instance is provisioned, and the target capacity is exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
+       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
+       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       */
+      public fun targetSpotCapacity(targetSpotCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty.builder()
+
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
+        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
+        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
+      }
+
+      /**
+       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
+       * instances in the instance fleet.
+       */
+      override fun instanceTypeConfigs(vararg instanceTypeConfigs: Any): Unit =
+          instanceTypeConfigs(instanceTypeConfigs.toList())
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      override fun launchSpecifications(launchSpecifications: IResolvable) {
+        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      override
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
+        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
+      }
+
+      /**
+       * @param launchSpecifications The launch specification for the instance fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c2f85e4274949c23fd43accc57821cbd6c34700468d4a30a07af21ad2c6bddf3")
+      override
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit):
+          Unit =
+          launchSpecifications(InstanceFleetProvisioningSpecificationsProperty(launchSpecifications))
+
+      /**
+       * @param name The friendly name of the instance fleet.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
+       * fleet, which determines how many On-Demand instances to provision.
+       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
+       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
+       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
+       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
+       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
+       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
+       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
+       * exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
+       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
+       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       */
+      override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
+        cdkBuilder.targetOnDemandCapacity(targetOnDemandCapacity)
+      }
+
+      /**
+       * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which
+       * determines how many Spot instances to provision.
+       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
+       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
+       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
+       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
+       * if this results in an overage. For example, if there are 2 units remaining to fulfill
+       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
+       * the instance is provisioned, and the target capacity is exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
+       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
+       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       */
+      override fun targetSpotCapacity(targetSpotCapacity: Number) {
+        cdkBuilder.targetSpotCapacity(targetSpotCapacity)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty,
+    ) : CdkObject(cdkObject), InstanceFleetConfigProperty {
+      /**
+       * The instance type configurations that define the Amazon EC2 instances in the instance
+       * fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-instancetypeconfigs)
+       */
+      override fun instanceTypeConfigs(): Any? = unwrap(this).getInstanceTypeConfigs()
+
+      /**
+       * The launch specification for the instance fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-launchspecifications)
+       */
+      override fun launchSpecifications(): Any? = unwrap(this).getLaunchSpecifications()
+
+      /**
+       * The friendly name of the instance fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The target capacity of On-Demand units for the instance fleet, which determines how many
+       * On-Demand instances to provision.
+       *
+       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
+       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
+       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
+       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
+       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
+       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
+       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
+       * exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
+       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
+       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetondemandcapacity)
+       */
+      override fun targetOnDemandCapacity(): Number? = unwrap(this).getTargetOnDemandCapacity()
+
+      /**
+       * The target capacity of Spot units for the instance fleet, which determines how many Spot
+       * instances to provision.
+       *
+       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
+       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
+       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
+       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
+       * if this results in an overage. For example, if there are 2 units remaining to fulfill
+       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
+       * the instance is provisioned, and the target capacity is exceeded by 3 units.
+       *
+       *
+       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
+       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
+       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
+       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetspotcapacity)
+       */
+      override fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceFleetConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty):
+          InstanceFleetConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceFleetConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty
+    }
+  }
+
+  /**
+   * `InstanceFleetProvisioningSpecification` is a subproperty of `InstanceFleetConfig` .
+   *
+   * `InstanceFleetProvisioningSpecification` defines the launch specification for Spot instances in
+   * an instance fleet, which determines the defined duration and provisioning timeout behavior for
+   * Spot instances.
+   *
+   *
+   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+   * excluding 5.0.x versions.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * InstanceFleetProvisioningSpecificationsProperty instanceFleetProvisioningSpecificationsProperty
+   * = InstanceFleetProvisioningSpecificationsProperty.builder()
+   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .build())
+   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+   * .timeoutAction("timeoutAction")
+   * .timeoutDurationMinutes(123)
+   * // the properties below are optional
+   * .allocationStrategy("allocationStrategy")
+   * .blockDurationMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html)
+   */
+  public interface InstanceFleetProvisioningSpecificationsProperty {
+    /**
+     * The launch specification for On-Demand Instances in the instance fleet, which determines the
+     * allocation strategy.
+     *
+     *
+     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+     * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+     * releases 5.12.1 and later.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-ondemandspecification)
+     */
+    public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
+
+    /**
+     * The launch specification for Spot instances in the fleet, which determines the defined
+     * duration, provisioning timeout behavior, and allocation strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
+     */
+    public fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
+
+    /**
+     * A builder for [InstanceFleetProvisioningSpecificationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      public fun onDemandSpecification(onDemandSpecification: IResolvable)
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      public
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("369b092f799a27e0159f3e3505a102216d79aa0c7a478a36e719d41b750073b4")
+      public
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      public fun spotSpecification(spotSpecification: IResolvable)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
+      public
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty.builder()
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      override fun onDemandSpecification(onDemandSpecification: IResolvable) {
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      override
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param onDemandSpecification The launch specification for On-Demand Instances in the
+       * instance fleet, which determines the allocation strategy.
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("369b092f799a27e0159f3e3505a102216d79aa0c7a478a36e719d41b750073b4")
+      override
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      override fun spotSpecification(spotSpecification: IResolvable) {
+        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
+        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param spotSpecification The launch specification for Spot instances in the fleet, which
+       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
+      override
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
+          Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty,
+    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
+      /**
+       * The launch specification for On-Demand Instances in the instance fleet, which determines
+       * the allocation strategy.
+       *
+       *
+       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+       * releases 5.12.1 and later.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-ondemandspecification)
+       */
+      override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
+
+      /**
+       * The launch specification for Spot instances in the fleet, which determines the defined
+       * duration, provisioning timeout behavior, and allocation strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
+       */
+      override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceFleetProvisioningSpecificationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty):
+          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
+    }
+  }
+
+  /**
+   * Use `InstanceGroupConfig` to define instance groups for an EMR cluster.
+   *
+   * A cluster can not use both instance groups and instance fleets. For more information, see
+   * [Create a Cluster with Instance Fleets or Uniform Instance
+   * Groups](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
+   * in the *Amazon EMR Management Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ConfigurationProperty configurationProperty_;
+   * InstanceGroupConfigProperty instanceGroupConfigProperty = InstanceGroupConfigProperty.builder()
+   * .instanceCount(123)
+   * .instanceType("instanceType")
+   * // the properties below are optional
+   * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
+   * .constraints(ScalingConstraintsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .build())
+   * .rules(List.of(ScalingRuleProperty.builder()
+   * .action(ScalingActionProperty.builder()
+   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .adjustmentType("adjustmentType")
+   * .coolDown(123)
+   * .build())
+   * // the properties below are optional
+   * .market("market")
+   * .build())
+   * .name("name")
+   * .trigger(ScalingTriggerProperty.builder()
+   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .metricName("metricName")
+   * .period(123)
+   * .threshold(123)
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .evaluationPeriods(123)
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * .unit("unit")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .description("description")
+   * .build()))
+   * .build())
+   * .bidPrice("bidPrice")
+   * .configurations(List.of(ConfigurationProperty.builder()
+   * .classification("classification")
+   * .configurationProperties(Map.of(
+   * "configurationPropertiesKey", "configurationProperties"))
+   * .configurations(List.of(configurationProperty_))
+   * .build()))
+   * .customAmiId("customAmiId")
+   * .ebsConfiguration(EbsConfigurationProperty.builder()
+   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
+   * // the properties below are optional
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build()))
+   * .ebsOptimized(false)
+   * .build())
+   * .market("market")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html)
+   */
+  public interface InstanceGroupConfigProperty {
+    /**
+     * `AutoScalingPolicy` is a subproperty of the
+     * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+     * property type that specifies the constraints and rules of an automatic scaling policy in Amazon
+     * EMR . The automatic scaling policy defines how an instance group dynamically adds and terminates
+     * EC2 instances in response to the value of a CloudWatch metric. Only core and task instance
+     * groups can use automatic scaling policies. For more information, see [Using Automatic Scaling in
+     * Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-autoscalingpolicy)
+     */
+    public fun autoScalingPolicy(): Any? = unwrap(this).getAutoScalingPolicy()
+
+    /**
+     * If specified, indicates that the instance group uses Spot Instances.
+     *
+     * This is the maximum price you are willing to pay for Spot Instances. Specify `OnDemandPrice`
+     * to set the amount equal to the On-Demand price, or specify an amount in USD.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-bidprice)
+     */
+    public fun bidPrice(): String? = unwrap(this).getBidPrice()
+
+    /**
+     * Amazon EMR releases 4.x or later.
+     *
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify
+     * a separate configuration for each instance group (master, core, and task).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-configurations)
+     */
+    public fun configurations(): Any? = unwrap(this).getConfigurations()
+
+    /**
+     * The custom AMI ID to use for the provisioned instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-customamiid)
+     */
+    public fun customAmiId(): String? = unwrap(this).getCustomAmiId()
+
+    /**
+     * EBS configurations that will be attached to each Amazon EC2 instance in the instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-ebsconfiguration)
+     */
+    public fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
+
+    /**
+     * Target number of instances for the instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancecount)
+     */
+    public fun instanceCount(): Number
+
+    /**
+     * The Amazon EC2 instance type for all instances in the instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * Market type of the Amazon EC2 instances used to create a cluster node.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-market)
+     */
+    public fun market(): String? = unwrap(this).getMarket()
+
+    /**
+     * Friendly name given to the instance group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [InstanceGroupConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
+
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
+
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f89ff2b9dd21c94ae6cfe970e5b0e824d10b8cc152e3a40c855e107a70ed2802")
+      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
+
+      /**
+       * @param bidPrice If specified, indicates that the instance group uses Spot Instances.
+       * This is the maximum price you are willing to pay for Spot Instances. Specify
+       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
+       */
+      public fun bidPrice(bidPrice: String)
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      public fun configurations(configurations: IResolvable)
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      public fun configurations(configurations: List<Any>)
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      public fun configurations(vararg configurations: Any)
+
+      /**
+       * @param customAmiId The custom AMI ID to use for the provisioned instance group.
+       */
+      public fun customAmiId(customAmiId: String)
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      public fun ebsConfiguration(ebsConfiguration: IResolvable)
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("651928770cfe2bc959b58884807e1ce30b436559d9259fb91b9ac7e79a541aff")
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param instanceCount Target number of instances for the instance group. 
+       */
+      public fun instanceCount(instanceCount: Number)
+
+      /**
+       * @param instanceType The Amazon EC2 instance type for all instances in the instance group. 
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param market Market type of the Amazon EC2 instances used to create a cluster node.
+       */
+      public fun market(market: String)
+
+      /**
+       * @param name Friendly name given to the instance group.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty.builder()
+
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f89ff2b9dd21c94ae6cfe970e5b0e824d10b8cc152e3a40c855e107a70ed2802")
+      override
+          fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
+          Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
+
+      /**
+       * @param bidPrice If specified, indicates that the instance group uses Spot Instances.
+       * This is the maximum price you are willing to pay for Spot Instances. Specify
+       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
+       */
+      override fun bidPrice(bidPrice: String) {
+        cdkBuilder.bidPrice(bidPrice)
+      }
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      override fun configurations(configurations: IResolvable) {
+        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      override fun configurations(configurations: List<Any>) {
+        cdkBuilder.configurations(configurations)
+      }
+
+      /**
+       * @param configurations Amazon EMR releases 4.x or later.
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       */
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
+
+      /**
+       * @param customAmiId The custom AMI ID to use for the provisioned instance group.
+       */
+      override fun customAmiId(customAmiId: String) {
+        cdkBuilder.customAmiId(customAmiId)
+      }
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      override fun ebsConfiguration(ebsConfiguration: IResolvable) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
+       * instance in the instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("651928770cfe2bc959b58884807e1ce30b436559d9259fb91b9ac7e79a541aff")
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+
+      /**
+       * @param instanceCount Target number of instances for the instance group. 
+       */
+      override fun instanceCount(instanceCount: Number) {
+        cdkBuilder.instanceCount(instanceCount)
+      }
+
+      /**
+       * @param instanceType The Amazon EC2 instance type for all instances in the instance group. 
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param market Market type of the Amazon EC2 instances used to create a cluster node.
+       */
+      override fun market(market: String) {
+        cdkBuilder.market(market)
+      }
+
+      /**
+       * @param name Friendly name given to the instance group.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty,
+    ) : CdkObject(cdkObject), InstanceGroupConfigProperty {
+      /**
+       * `AutoScalingPolicy` is a subproperty of the
+       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
+       * property type that specifies the constraints and rules of an automatic scaling policy in
+       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
+       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
+       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
+       * Scaling in Amazon
+       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-autoscalingpolicy)
+       */
+      override fun autoScalingPolicy(): Any? = unwrap(this).getAutoScalingPolicy()
+
+      /**
+       * If specified, indicates that the instance group uses Spot Instances.
+       *
+       * This is the maximum price you are willing to pay for Spot Instances. Specify
+       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-bidprice)
+       */
+      override fun bidPrice(): String? = unwrap(this).getBidPrice()
+
+      /**
+       * Amazon EMR releases 4.x or later.
+       *
+       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
+       * specify a separate configuration for each instance group (master, core, and task).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-configurations)
+       */
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
+
+      /**
+       * The custom AMI ID to use for the provisioned instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-customamiid)
+       */
+      override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
+
+      /**
+       * EBS configurations that will be attached to each Amazon EC2 instance in the instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-ebsconfiguration)
+       */
+      override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
+
+      /**
+       * Target number of instances for the instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancecount)
+       */
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+
+      /**
+       * The Amazon EC2 instance type for all instances in the instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * Market type of the Amazon EC2 instances used to create a cluster node.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-market)
+       */
+      override fun market(): String? = unwrap(this).getMarket()
+
+      /**
+       * Friendly name given to the instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceGroupConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty):
+          InstanceGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceGroupConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceGroupConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty
+    }
+  }
+
+  /**
+   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+   * excluding 5.0.x versions.
+   *
+   * `InstanceTypeConfig` is a sub-property of `InstanceFleetConfig` . `InstanceTypeConfig`
+   * determines the EC2 instances that Amazon EMR attempts to provision to fulfill On-Demand and Spot
+   * target capacities.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ConfigurationProperty configurationProperty_;
+   * InstanceTypeConfigProperty instanceTypeConfigProperty = InstanceTypeConfigProperty.builder()
+   * .instanceType("instanceType")
+   * // the properties below are optional
+   * .bidPrice("bidPrice")
+   * .bidPriceAsPercentageOfOnDemandPrice(123)
+   * .configurations(List.of(ConfigurationProperty.builder()
+   * .classification("classification")
+   * .configurationProperties(Map.of(
+   * "configurationPropertiesKey", "configurationProperties"))
+   * .configurations(List.of(configurationProperty_))
+   * .build()))
+   * .customAmiId("customAmiId")
+   * .ebsConfiguration(EbsConfigurationProperty.builder()
+   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+   * .volumeSpecification(VolumeSpecificationProperty.builder()
+   * .sizeInGb(123)
+   * .volumeType("volumeType")
+   * // the properties below are optional
+   * .iops(123)
+   * .throughput(123)
+   * .build())
+   * // the properties below are optional
+   * .volumesPerInstance(123)
+   * .build()))
+   * .ebsOptimized(false)
+   * .build())
+   * .weightedCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html)
+   */
+  public interface InstanceTypeConfigProperty {
+    /**
+     * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
+     *
+     * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
+     * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidprice)
+     */
+    public fun bidPrice(): String? = unwrap(this).getBidPrice()
+
+    /**
+     * The bid price, as a percentage of On-Demand price, for each Amazon EC2 Spot Instance as
+     * defined by `InstanceType` .
+     *
+     * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
+     * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
+     * defaults to 100%.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)
+     */
+    public fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
+        unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
+
+    /**
+     * A configuration classification that applies when provisioning cluster instances, which can
+     * include configurations for applications and software that run on the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-configurations)
+     */
+    public fun configurations(): Any? = unwrap(this).getConfigurations()
+
+    /**
+     * The custom AMI ID to use for the instance type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-customamiid)
+     */
+    public fun customAmiId(): String? = unwrap(this).getCustomAmiId()
+
+    /**
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as
+     * defined by `InstanceType` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-ebsconfiguration)
+     */
+    public fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
+
+    /**
+     * An Amazon EC2 instance type, such as `m3.xlarge` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
+     */
+    public fun instanceType(): String
+
+    /**
+     * The number of units that a provisioned instance of this type provides toward fulfilling the
+     * target capacities defined in `InstanceFleetConfig` .
+     *
+     * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
+     * instance fleets. Defaults to 1 if not specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-weightedcapacity)
+     */
+    public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
+
+    /**
+     * A builder for [InstanceTypeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bidPrice The bid price for each Amazon EC2 Spot Instance type as defined by
+       * `InstanceType` .
+       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
+       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
+       */
+      public fun bidPrice(bidPrice: String)
+
+      /**
+       * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand
+       * price, for each Amazon EC2 Spot Instance as defined by `InstanceType` .
+       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
+       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
+       * defaults to 100%.
+       */
+      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number)
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      public fun configurations(configurations: IResolvable)
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      public fun configurations(configurations: List<Any>)
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      public fun configurations(vararg configurations: Any)
+
+      /**
+       * @param customAmiId The custom AMI ID to use for the instance type.
+       */
+      public fun customAmiId(customAmiId: String)
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      public fun ebsConfiguration(ebsConfiguration: IResolvable)
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2a629b219a80793df3f9931317579967e7b78ea6e2fa9d3e5f9aa2490ad026a")
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param instanceType An Amazon EC2 instance type, such as `m3.xlarge` . 
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
+       * @param weightedCapacity The number of units that a provisioned instance of this type
+       * provides toward fulfilling the target capacities defined in `InstanceFleetConfig` .
+       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
+       * instance fleets. Defaults to 1 if not specified.
+       */
+      public fun weightedCapacity(weightedCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty.builder()
+
+      /**
+       * @param bidPrice The bid price for each Amazon EC2 Spot Instance type as defined by
+       * `InstanceType` .
+       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
+       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
+       */
+      override fun bidPrice(bidPrice: String) {
+        cdkBuilder.bidPrice(bidPrice)
+      }
+
+      /**
+       * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand
+       * price, for each Amazon EC2 Spot Instance as defined by `InstanceType` .
+       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
+       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
+       * defaults to 100%.
+       */
+      override
+          fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
+        cdkBuilder.bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice)
+      }
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      override fun configurations(configurations: IResolvable) {
+        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      override fun configurations(configurations: List<Any>) {
+        cdkBuilder.configurations(configurations)
+      }
+
+      /**
+       * @param configurations A configuration classification that applies when provisioning cluster
+       * instances, which can include configurations for applications and software that run on the
+       * cluster.
+       */
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
+
+      /**
+       * @param customAmiId The custom AMI ID to use for the instance type.
+       */
+      override fun customAmiId(customAmiId: String) {
+        cdkBuilder.customAmiId(customAmiId)
+      }
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      override fun ebsConfiguration(ebsConfiguration: IResolvable) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
+       * attached to each instance as defined by `InstanceType` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2a629b219a80793df3f9931317579967e7b78ea6e2fa9d3e5f9aa2490ad026a")
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+
+      /**
+       * @param instanceType An Amazon EC2 instance type, such as `m3.xlarge` . 
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
+      }
+
+      /**
+       * @param weightedCapacity The number of units that a provisioned instance of this type
+       * provides toward fulfilling the target capacities defined in `InstanceFleetConfig` .
+       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
+       * instance fleets. Defaults to 1 if not specified.
+       */
+      override fun weightedCapacity(weightedCapacity: Number) {
+        cdkBuilder.weightedCapacity(weightedCapacity)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty,
+    ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
+      /**
+       * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
+       *
+       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
+       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidprice)
+       */
+      override fun bidPrice(): String? = unwrap(this).getBidPrice()
+
+      /**
+       * The bid price, as a percentage of On-Demand price, for each Amazon EC2 Spot Instance as
+       * defined by `InstanceType` .
+       *
+       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
+       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
+       * defaults to 100%.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)
+       */
+      override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
+          unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
+
+      /**
+       * A configuration classification that applies when provisioning cluster instances, which can
+       * include configurations for applications and software that run on the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-configurations)
+       */
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
+
+      /**
+       * The custom AMI ID to use for the instance type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-customamiid)
+       */
+      override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
+
+      /**
+       * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as
+       * defined by `InstanceType` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-ebsconfiguration)
+       */
+      override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
+
+      /**
+       * An Amazon EC2 instance type, such as `m3.xlarge` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
+       */
+      override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The number of units that a provisioned instance of this type provides toward fulfilling the
+       * target capacities defined in `InstanceFleetConfig` .
+       *
+       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
+       * instance fleets. Defaults to 1 if not specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-weightedcapacity)
+       */
+      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceTypeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty):
+          InstanceTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceTypeConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceTypeConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty
     }
   }
 
@@ -4092,6 +6381,9 @@ public open class CfnCluster internal constructor(
     public fun terminationProtected(): Any? = unwrap(this).getTerminationProtected()
 
     /**
+     * Indicates whether Amazon EMR should gracefully replace core nodes that have degraded within
+     * the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-unhealthynodereplacement)
      */
     public fun unhealthyNodeReplacement(): Any? = unwrap(this).getUnhealthyNodeReplacement()
@@ -4424,12 +6716,14 @@ public open class CfnCluster internal constructor(
       public fun terminationProtected(terminationProtected: IResolvable)
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       public fun unhealthyNodeReplacement(unhealthyNodeReplacement: Boolean)
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       public fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable)
     }
@@ -4826,14 +7120,16 @@ public open class CfnCluster internal constructor(
       }
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       override fun unhealthyNodeReplacement(unhealthyNodeReplacement: Boolean) {
         cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement)
       }
 
       /**
-       * @param unhealthyNodeReplacement the value to be set.
+       * @param unhealthyNodeReplacement Indicates whether Amazon EMR should gracefully replace core
+       * nodes that have degraded within the cluster.
        */
       override fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable) {
         cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement.let(IResolvable::unwrap))
@@ -4845,8 +7141,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty,
     ) : CdkObject(cdkObject), JobFlowInstancesConfigProperty {
       /**
        * A list of additional Amazon EC2 security group IDs for the master node.
@@ -5041,6 +7336,9 @@ public open class CfnCluster internal constructor(
       override fun terminationProtected(): Any? = unwrap(this).getTerminationProtected()
 
       /**
+       * Indicates whether Amazon EMR should gracefully replace core nodes that have degraded within
+       * the cluster.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig.html#cfn-emr-cluster-jobflowinstancesconfig-unhealthynodereplacement)
        */
       override fun unhealthyNodeReplacement(): Any? = unwrap(this).getUnhealthyNodeReplacement()
@@ -5065,16 +7363,604 @@ public open class CfnCluster internal constructor(
   }
 
   /**
-   * Use `InstanceFleetConfig` to define instance fleets for an EMR cluster.
+   * `KerberosAttributes` is a property of the `AWS::EMR::Cluster` resource.
    *
-   * A cluster can not use both instance fleets and instance groups. For more information, see
-   * [Configure Instance
-   * Fleets](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
-   * in the *Amazon EMR Management Guide* .
+   * `KerberosAttributes` define the cluster-specific Kerberos configuration when Kerberos
+   * authentication is enabled using a security configuration. The cluster-specific configuration must
+   * be compatible with the security configuration. For more information see [Use Kerberos
+   * Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the
+   * *EMR Management Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * KerberosAttributesProperty kerberosAttributesProperty = KerberosAttributesProperty.builder()
+   * .kdcAdminPassword("kdcAdminPassword")
+   * .realm("realm")
+   * // the properties below are optional
+   * .adDomainJoinPassword("adDomainJoinPassword")
+   * .adDomainJoinUser("adDomainJoinUser")
+   * .crossRealmTrustPrincipalPassword("crossRealmTrustPrincipalPassword")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html)
+   */
+  public interface KerberosAttributesProperty {
+    /**
+     * The Active Directory password for `ADDomainJoinUser` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinpassword)
+     */
+    public fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
+
+    /**
+     * Required only when establishing a cross-realm trust with an Active Directory domain.
+     *
+     * A user with sufficient privileges to join resources to the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinuser)
+     */
+    public fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
+
+    /**
+     * Required only when establishing a cross-realm trust with a KDC in a different realm.
+     *
+     * The cross-realm principal password, which must be identical across realms.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
+     */
+    public fun crossRealmTrustPrincipalPassword(): String? =
+        unwrap(this).getCrossRealmTrustPrincipalPassword()
+
+    /**
+     * The password used within the cluster for the kadmin service on the cluster-dedicated KDC,
+     * which maintains Kerberos principals, password policies, and keytabs for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-kdcadminpassword)
+     */
+    public fun kdcAdminPassword(): String
+
+    /**
+     * The name of the Kerberos realm to which all nodes in a cluster belong.
+     *
+     * For example, `EC2.INTERNAL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-realm)
+     */
+    public fun realm(): String
+
+    /**
+     * A builder for [KerberosAttributesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adDomainJoinPassword The Active Directory password for `ADDomainJoinUser` .
+       */
+      public fun adDomainJoinPassword(adDomainJoinPassword: String)
+
+      /**
+       * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
+       * Directory domain.
+       * A user with sufficient privileges to join resources to the domain.
+       */
+      public fun adDomainJoinUser(adDomainJoinUser: String)
+
+      /**
+       * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
+       * with a KDC in a different realm.
+       * The cross-realm principal password, which must be identical across realms.
+       */
+      public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String)
+
+      /**
+       * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
+       * cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for
+       * the cluster. 
+       */
+      public fun kdcAdminPassword(kdcAdminPassword: String)
+
+      /**
+       * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. 
+       * For example, `EC2.INTERNAL` .
+       */
+      public fun realm(realm: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty.builder()
+
+      /**
+       * @param adDomainJoinPassword The Active Directory password for `ADDomainJoinUser` .
+       */
+      override fun adDomainJoinPassword(adDomainJoinPassword: String) {
+        cdkBuilder.adDomainJoinPassword(adDomainJoinPassword)
+      }
+
+      /**
+       * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
+       * Directory domain.
+       * A user with sufficient privileges to join resources to the domain.
+       */
+      override fun adDomainJoinUser(adDomainJoinUser: String) {
+        cdkBuilder.adDomainJoinUser(adDomainJoinUser)
+      }
+
+      /**
+       * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
+       * with a KDC in a different realm.
+       * The cross-realm principal password, which must be identical across realms.
+       */
+      override fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
+        cdkBuilder.crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword)
+      }
+
+      /**
+       * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
+       * cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for
+       * the cluster. 
+       */
+      override fun kdcAdminPassword(kdcAdminPassword: String) {
+        cdkBuilder.kdcAdminPassword(kdcAdminPassword)
+      }
+
+      /**
+       * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. 
+       * For example, `EC2.INTERNAL` .
+       */
+      override fun realm(realm: String) {
+        cdkBuilder.realm(realm)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty,
+    ) : CdkObject(cdkObject), KerberosAttributesProperty {
+      /**
+       * The Active Directory password for `ADDomainJoinUser` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinpassword)
+       */
+      override fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
+
+      /**
+       * Required only when establishing a cross-realm trust with an Active Directory domain.
+       *
+       * A user with sufficient privileges to join resources to the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinuser)
+       */
+      override fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
+
+      /**
+       * Required only when establishing a cross-realm trust with a KDC in a different realm.
+       *
+       * The cross-realm principal password, which must be identical across realms.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
+       */
+      override fun crossRealmTrustPrincipalPassword(): String? =
+          unwrap(this).getCrossRealmTrustPrincipalPassword()
+
+      /**
+       * The password used within the cluster for the kadmin service on the cluster-dedicated KDC,
+       * which maintains Kerberos principals, password policies, and keytabs for the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-kdcadminpassword)
+       */
+      override fun kdcAdminPassword(): String = unwrap(this).getKdcAdminPassword()
+
+      /**
+       * The name of the Kerberos realm to which all nodes in a cluster belong.
+       *
+       * For example, `EC2.INTERNAL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-realm)
+       */
+      override fun realm(): String = unwrap(this).getRealm()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KerberosAttributesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty):
+          KerberosAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KerberosAttributesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KerberosAttributesProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty
+    }
+  }
+
+  /**
+   * `KeyValue` is a subproperty of the `HadoopJarStepConfig` property type.
+   *
+   * `KeyValue` is used to pass parameters to a step.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * KeyValueProperty keyValueProperty = KeyValueProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html)
+   */
+  public interface KeyValueProperty {
+    /**
+     * The unique identifier of a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value part of the identified key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [KeyValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The unique identifier of a key-value pair.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value part of the identified key.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty.builder()
+
+      /**
+       * @param key The unique identifier of a key-value pair.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value part of the identified key.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty,
+    ) : CdkObject(cdkObject), KeyValueProperty {
+      /**
+       * The unique identifier of a key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value part of the identified key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty):
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KeyValueProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty
+    }
+  }
+
+  /**
+   * Managed scaling policy for an Amazon EMR cluster.
+   *
+   * The policy specifies the limits for resources that can be added or terminated from a cluster.
+   * The policy only applies to the core and task nodes. The master node cannot be scaled after initial
+   * configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ManagedScalingPolicyProperty managedScalingPolicyProperty =
+   * ManagedScalingPolicyProperty.builder()
+   * .computeLimits(ComputeLimitsProperty.builder()
+   * .maximumCapacityUnits(123)
+   * .minimumCapacityUnits(123)
+   * .unitType("unitType")
+   * // the properties below are optional
+   * .maximumCoreCapacityUnits(123)
+   * .maximumOnDemandCapacityUnits(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html)
+   */
+  public interface ManagedScalingPolicyProperty {
+    /**
+     * The Amazon EC2 unit limits for a managed scaling policy.
+     *
+     * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+     * The limit only applies to the core and task nodes. The master node cannot be scaled after
+     * initial configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
+     */
+    public fun computeLimits(): Any? = unwrap(this).getComputeLimits()
+
+    /**
+     * A builder for [ManagedScalingPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      public fun computeLimits(computeLimits: IResolvable)
+
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      public fun computeLimits(computeLimits: ComputeLimitsProperty)
+
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("95bc72e2e9aa925adeed929babb4791327d9958ad0bd79ae634df9497a8bec64")
+      public fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty.builder()
+
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      override fun computeLimits(computeLimits: IResolvable) {
+        cdkBuilder.computeLimits(computeLimits.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      override fun computeLimits(computeLimits: ComputeLimitsProperty) {
+        cdkBuilder.computeLimits(computeLimits.let(ComputeLimitsProperty::unwrap))
+      }
+
+      /**
+       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("95bc72e2e9aa925adeed929babb4791327d9958ad0bd79ae634df9497a8bec64")
+      override fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit): Unit =
+          computeLimits(ComputeLimitsProperty(computeLimits))
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty,
+    ) : CdkObject(cdkObject), ManagedScalingPolicyProperty {
+      /**
+       * The Amazon EC2 unit limits for a managed scaling policy.
+       *
+       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
+       * The limit only applies to the core and task nodes. The master node cannot be scaled after
+       * initial configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
+       */
+      override fun computeLimits(): Any? = unwrap(this).getComputeLimits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedScalingPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty):
+          ManagedScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedScalingPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManagedScalingPolicyProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty
+    }
+  }
+
+  /**
+   * `MetricDimension` is a subproperty of the `CloudWatchAlarmDefinition` property type.
+   *
+   * `MetricDimension` specifies a CloudWatch dimension, which is specified with a `Key` `Value`
+   * pair. The key is known as a `Name` in CloudWatch. By default, Amazon EMR uses one dimension whose
+   * `Key` is `JobFlowID` and `Value` is a variable representing the cluster ID, which is
+   * `${emr.clusterId}` . This enables the automatic scaling rule for EMR to bootstrap when the cluster
+   * ID becomes available during cluster creation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html)
+   */
+  public interface MetricDimensionProperty {
+    /**
+     * The dimension name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-key)
+     */
+    public fun key(): String
+
+    /**
+     * The dimension value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [MetricDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The dimension name. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The dimension value. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty.builder()
+
+      /**
+       * @param key The dimension name. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The dimension value. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty,
+    ) : CdkObject(cdkObject), MetricDimensionProperty {
+      /**
+       * The dimension name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The dimension value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-metricdimension.html#cfn-emr-cluster-metricdimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty):
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricDimensionProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty
+    }
+  }
+
+  /**
+   * The launch specification for On-Demand Instances in the instance fleet, which determines the
+   * allocation strategy.
    *
    *
-   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
-   * excluding 5.0.x versions.
+   * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
+   * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
+   * releases 5.12.1 and later.
    *
    *
    * Example:
@@ -5083,408 +7969,1353 @@ public open class CfnCluster internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ConfigurationProperty configurationProperty_;
-   * InstanceFleetConfigProperty instanceFleetConfigProperty = InstanceFleetConfigProperty.builder()
-   * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
-   * .instanceType("instanceType")
-   * // the properties below are optional
-   * .bidPrice("bidPrice")
-   * .bidPriceAsPercentageOfOnDemandPrice(123)
-   * .configurations(List.of(ConfigurationProperty.builder()
-   * .classification("classification")
-   * .configurationProperties(Map.of(
-   * "configurationPropertiesKey", "configurationProperties"))
-   * .configurations(List.of(configurationProperty_))
-   * .build()))
-   * .customAmiId("customAmiId")
-   * .ebsConfiguration(EbsConfigurationProperty.builder()
-   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build()))
-   * .ebsOptimized(false)
-   * .build())
-   * .weightedCapacity(123)
-   * .build()))
-   * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
-   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+   * OnDemandProvisioningSpecificationProperty onDemandProvisioningSpecificationProperty =
+   * OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
-   * .build())
-   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
-   * .timeoutAction("timeoutAction")
-   * .timeoutDurationMinutes(123)
-   * // the properties below are optional
-   * .allocationStrategy("allocationStrategy")
-   * .blockDurationMinutes(123)
-   * .build())
-   * .build())
-   * .name("name")
-   * .targetOnDemandCapacity(123)
-   * .targetSpotCapacity(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html)
    */
-  public interface InstanceFleetConfigProperty {
+  public interface OnDemandProvisioningSpecificationProperty {
     /**
-     * The instance type configurations that define the Amazon EC2 instances in the instance fleet.
+     * Specifies the strategy to use in launching On-Demand instance fleets.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-instancetypeconfigs)
+     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+     * first.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
      */
-    public fun instanceTypeConfigs(): Any? = unwrap(this).getInstanceTypeConfigs()
+    public fun allocationStrategy(): String
 
     /**
-     * The launch specification for the instance fleet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-launchspecifications)
-     */
-    public fun launchSpecifications(): Any? = unwrap(this).getLaunchSpecifications()
-
-    /**
-     * The friendly name of the instance fleet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The target capacity of On-Demand units for the instance fleet, which determines how many
-     * On-Demand instances to provision.
-     *
-     * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
-     * specified by `InstanceTypeConfig` . Each instance configuration has a specified
-     * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
-     * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
-     * totally fulfilled, even if this results in an overage. For example, if there are 2 units
-     * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
-     * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is exceeded
-     * by 3 units.
-     *
-     *
-     * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
-     * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
-     * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-     * `TargetOnDemandCapacity` can be specified, and its value must be 1.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetondemandcapacity)
-     */
-    public fun targetOnDemandCapacity(): Number? = unwrap(this).getTargetOnDemandCapacity()
-
-    /**
-     * The target capacity of Spot units for the instance fleet, which determines how many Spot
-     * instances to provision.
-     *
-     * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
-     * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` . When
-     * a Spot instance is provisioned, the `WeightedCapacity` units count toward the target capacity.
-     * Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this
-     * results in an overage. For example, if there are 2 units remaining to fulfill capacity, and
-     * Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units, the instance is
-     * provisioned, and the target capacity is exceeded by 3 units.
-     *
-     *
-     * If not specified or set to 0, only On-Demand instances are provisioned for the instance
-     * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater than
-     * 0. For a master instance fleet, only one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
-     * can be specified, and its value must be 1.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetspotcapacity)
-     */
-    public fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
-
-    /**
-     * A builder for [InstanceFleetConfigProperty]
+     * A builder for [OnDemandProvisioningSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
+       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
+       * fleets. 
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
        */
-      public fun instanceTypeConfigs(instanceTypeConfigs: IResolvable)
-
-      /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
-       */
-      public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>)
-
-      /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
-       */
-      public fun instanceTypeConfigs(vararg instanceTypeConfigs: Any)
-
-      /**
-       * @param launchSpecifications The launch specification for the instance fleet.
-       */
-      public fun launchSpecifications(launchSpecifications: IResolvable)
-
-      /**
-       * @param launchSpecifications The launch specification for the instance fleet.
-       */
-      public
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty)
-
-      /**
-       * @param launchSpecifications The launch specification for the instance fleet.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c2f85e4274949c23fd43accc57821cbd6c34700468d4a30a07af21ad2c6bddf3")
-      public
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit)
-
-      /**
-       * @param name The friendly name of the instance fleet.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
-       * fleet, which determines how many On-Demand instances to provision.
-       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
-       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
-       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
-       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
-       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
-       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
-       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
-       * exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
-       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
-       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
-       */
-      public fun targetOnDemandCapacity(targetOnDemandCapacity: Number)
-
-      /**
-       * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which
-       * determines how many Spot instances to provision.
-       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
-       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
-       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
-       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
-       * if this results in an overage. For example, if there are 2 units remaining to fulfill
-       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
-       * the instance is provisioned, and the target capacity is exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
-       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
-       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
-       */
-      public fun targetSpotCapacity(targetSpotCapacity: Number)
+      public fun allocationStrategy(allocationStrategy: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty.builder()
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty.builder()
 
       /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
+       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
+       * fleets. 
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
        */
-      override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
-        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty,
+    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
+      /**
+       * Specifies the strategy to use in launching On-Demand instance fleets.
+       *
+       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
+       * first.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
+       */
+      override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnDemandProvisioningSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty):
+          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty
+    }
+  }
+
+  /**
+   * Placement group configuration for an Amazon EMR cluster.
+   *
+   * The configuration specifies the placement strategy that can be applied to instance roles during
+   * cluster creation.
+   *
+   * To use this configuration, consider attaching managed policy
+   * AmazonElasticMapReducePlacementGroupPolicy to the Amazon EMR role.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * PlacementGroupConfigProperty placementGroupConfigProperty =
+   * PlacementGroupConfigProperty.builder()
+   * .instanceRole("instanceRole")
+   * // the properties below are optional
+   * .placementStrategy("placementStrategy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html)
+   */
+  public interface PlacementGroupConfigProperty {
+    /**
+     * Role of the instance in the cluster.
+     *
+     * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-instancerole)
+     */
+    public fun instanceRole(): String
+
+    /**
+     * Amazon EC2 Placement Group strategy associated with instance role.
+     *
+     * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
+     * for the `MASTER` instance role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-placementstrategy)
+     */
+    public fun placementStrategy(): String? = unwrap(this).getPlacementStrategy()
+
+    /**
+     * A builder for [PlacementGroupConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceRole Role of the instance in the cluster. 
+       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
+       */
+      public fun instanceRole(instanceRole: String)
+
+      /**
+       * @param placementStrategy Amazon EC2 Placement Group strategy associated with instance role.
+       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
+       * for the `MASTER` instance role.
+       */
+      public fun placementStrategy(placementStrategy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty.builder()
+
+      /**
+       * @param instanceRole Role of the instance in the cluster. 
+       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
+       */
+      override fun instanceRole(instanceRole: String) {
+        cdkBuilder.instanceRole(instanceRole)
       }
 
       /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
+       * @param placementStrategy Amazon EC2 Placement Group strategy associated with instance role.
+       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
+       * for the `MASTER` instance role.
        */
-      override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
-        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
+      override fun placementStrategy(placementStrategy: String) {
+        cdkBuilder.placementStrategy(placementStrategy)
       }
 
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty,
+    ) : CdkObject(cdkObject), PlacementGroupConfigProperty {
       /**
-       * @param instanceTypeConfigs The instance type configurations that define the Amazon EC2
-       * instances in the instance fleet.
+       * Role of the instance in the cluster.
+       *
+       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-instancerole)
        */
-      override fun instanceTypeConfigs(vararg instanceTypeConfigs: Any): Unit =
-          instanceTypeConfigs(instanceTypeConfigs.toList())
+      override fun instanceRole(): String = unwrap(this).getInstanceRole()
 
       /**
-       * @param launchSpecifications The launch specification for the instance fleet.
+       * Amazon EC2 Placement Group strategy associated with instance role.
+       *
+       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
+       * for the `MASTER` instance role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-placementstrategy)
        */
-      override fun launchSpecifications(launchSpecifications: IResolvable) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+      override fun placementStrategy(): String? = unwrap(this).getPlacementStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementGroupConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
       }
 
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty):
+          PlacementGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementGroupConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementGroupConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty
+    }
+  }
+
+  /**
+   * `PlacementType` is a property of the `AWS::EMR::Cluster` resource.
+   *
+   * `PlacementType` determines the Amazon EC2 Availability Zone configuration of the cluster (job
+   * flow).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * PlacementTypeProperty placementTypeProperty = PlacementTypeProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html)
+   */
+  public interface PlacementTypeProperty {
+    /**
+     * The Amazon EC2 Availability Zone for the cluster.
+     *
+     * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural) is
+     * used for instance fleets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html#cfn-emr-cluster-placementtype-availabilityzone)
+     */
+    public fun availabilityZone(): String
+
+    /**
+     * A builder for [PlacementTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
       /**
-       * @param launchSpecifications The launch specification for the instance fleet.
+       * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
+       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
+       * is used for instance fleets.
        */
-      override
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
-      }
+      public fun availabilityZone(availabilityZone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty.builder()
 
       /**
-       * @param launchSpecifications The launch specification for the instance fleet.
+       * @param availabilityZone The Amazon EC2 Availability Zone for the cluster. 
+       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
+       * is used for instance fleets.
+       */
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty,
+    ) : CdkObject(cdkObject), PlacementTypeProperty {
+      /**
+       * The Amazon EC2 Availability Zone for the cluster.
+       *
+       * `AvailabilityZone` is used for uniform instance groups, while `AvailabilityZones` (plural)
+       * is used for instance fleets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html#cfn-emr-cluster-placementtype-availabilityzone)
+       */
+      override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty):
+          PlacementTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementTypeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementTypeProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty
+    }
+  }
+
+  /**
+   * `ScalingAction` is a subproperty of the `ScalingRule` property type.
+   *
+   * `ScalingAction` determines the type of adjustment the automatic scaling activity makes when
+   * triggered, and the periodicity of the adjustment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ScalingActionProperty scalingActionProperty = ScalingActionProperty.builder()
+   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .adjustmentType("adjustmentType")
+   * .coolDown(123)
+   * .build())
+   * // the properties below are optional
+   * .market("market")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html)
+   */
+  public interface ScalingActionProperty {
+    /**
+     * Not available for instance groups.
+     *
+     * Instance groups use the market type specified for the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-market)
+     */
+    public fun market(): String? = unwrap(this).getMarket()
+
+    /**
+     * The type of adjustment the automatic scaling activity makes when triggered, and the
+     * periodicity of the adjustment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-simplescalingpolicyconfiguration)
+     */
+    public fun simpleScalingPolicyConfiguration(): Any
+
+    /**
+     * A builder for [ScalingActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param market Not available for instance groups.
+       * Instance groups use the market type specified for the group.
+       */
+      public fun market(market: String)
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
+       */
+      public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable)
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
+       */
+      public
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty)
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c2f85e4274949c23fd43accc57821cbd6c34700468d4a30a07af21ad2c6bddf3")
-      override
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit):
-          Unit =
-          launchSpecifications(InstanceFleetProvisioningSpecificationsProperty(launchSpecifications))
+      @JvmName("57b02d666cf409d0da791d543a5027ae708d2738f5d4eb69d19393c49afb51a0")
+      public
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty.builder()
 
       /**
-       * @param name The friendly name of the instance fleet.
+       * @param market Not available for instance groups.
+       * Instance groups use the market type specified for the group.
+       */
+      override fun market(market: String) {
+        cdkBuilder.market(market)
+      }
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
+       */
+      override fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
+       */
+      override
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
+       * activity makes when triggered, and the periodicity of the adjustment. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("57b02d666cf409d0da791d543a5027ae708d2738f5d4eb69d19393c49afb51a0")
+      override
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty(simpleScalingPolicyConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty,
+    ) : CdkObject(cdkObject), ScalingActionProperty {
+      /**
+       * Not available for instance groups.
+       *
+       * Instance groups use the market type specified for the group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-market)
+       */
+      override fun market(): String? = unwrap(this).getMarket()
+
+      /**
+       * The type of adjustment the automatic scaling activity makes when triggered, and the
+       * periodicity of the adjustment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-simplescalingpolicyconfiguration)
+       */
+      override fun simpleScalingPolicyConfiguration(): Any =
+          unwrap(this).getSimpleScalingPolicyConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty):
+          ScalingActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingActionProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty
+    }
+  }
+
+  /**
+   * `ScalingConstraints` is a subproperty of the `AutoScalingPolicy` property type.
+   *
+   * `ScalingConstraints` defines the upper and lower EC2 instance limits for an automatic scaling
+   * policy. Automatic scaling activities triggered by automatic scaling rules will not cause an
+   * instance group to grow above or shrink below these limits.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ScalingConstraintsProperty scalingConstraintsProperty = ScalingConstraintsProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html)
+   */
+  public interface ScalingConstraintsProperty {
+    /**
+     * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
+     * activities are not allowed to grow.
+     *
+     * Scale-out activities will not add instances beyond this boundary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-maxcapacity)
+     */
+    public fun maxCapacity(): Number
+
+    /**
+     * The lower boundary of Amazon EC2 instances in an instance group below which scaling
+     * activities are not allowed to shrink.
+     *
+     * Scale-in activities will not terminate instances below this boundary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-mincapacity)
+     */
+    public fun minCapacity(): Number
+
+    /**
+     * A builder for [ScalingConstraintsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxCapacity The upper boundary of Amazon EC2 instances in an instance group beyond
+       * which scaling activities are not allowed to grow. 
+       * Scale-out activities will not add instances beyond this boundary.
+       */
+      public fun maxCapacity(maxCapacity: Number)
+
+      /**
+       * @param minCapacity The lower boundary of Amazon EC2 instances in an instance group below
+       * which scaling activities are not allowed to shrink. 
+       * Scale-in activities will not terminate instances below this boundary.
+       */
+      public fun minCapacity(minCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty.builder()
+
+      /**
+       * @param maxCapacity The upper boundary of Amazon EC2 instances in an instance group beyond
+       * which scaling activities are not allowed to grow. 
+       * Scale-out activities will not add instances beyond this boundary.
+       */
+      override fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+      }
+
+      /**
+       * @param minCapacity The lower boundary of Amazon EC2 instances in an instance group below
+       * which scaling activities are not allowed to shrink. 
+       * Scale-in activities will not terminate instances below this boundary.
+       */
+      override fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
+      }
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty,
+    ) : CdkObject(cdkObject), ScalingConstraintsProperty {
+      /**
+       * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
+       * activities are not allowed to grow.
+       *
+       * Scale-out activities will not add instances beyond this boundary.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-maxcapacity)
+       */
+      override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+
+      /**
+       * The lower boundary of Amazon EC2 instances in an instance group below which scaling
+       * activities are not allowed to shrink.
+       *
+       * Scale-in activities will not terminate instances below this boundary.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-mincapacity)
+       */
+      override fun minCapacity(): Number = unwrap(this).getMinCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConstraintsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty):
+          ScalingConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalingConstraintsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingConstraintsProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty
+    }
+  }
+
+  /**
+   * `ScalingRule` is a subproperty of the `AutoScalingPolicy` property type.
+   *
+   * `ScalingRule` defines the scale-in or scale-out rules for scaling activity, including the
+   * CloudWatch metric alarm that triggers activity, how EC2 instances are added or removed, and the
+   * periodicity of adjustments. The automatic scaling policy for an instance group can comprise one or
+   * more automatic scaling rules.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ScalingRuleProperty scalingRuleProperty = ScalingRuleProperty.builder()
+   * .action(ScalingActionProperty.builder()
+   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .adjustmentType("adjustmentType")
+   * .coolDown(123)
+   * .build())
+   * // the properties below are optional
+   * .market("market")
+   * .build())
+   * .name("name")
+   * .trigger(ScalingTriggerProperty.builder()
+   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .metricName("metricName")
+   * .period(123)
+   * .threshold(123)
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .evaluationPeriods(123)
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * .unit("unit")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .description("description")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html)
+   */
+  public interface ScalingRuleProperty {
+    /**
+     * The conditions that trigger an automatic scaling activity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-action)
+     */
+    public fun action(): Any
+
+    /**
+     * A friendly, more verbose description of the automatic scaling rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The name used to identify an automatic scaling rule.
+     *
+     * Rule names must be unique within a scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-name)
+     */
+    public fun name(): String
+
+    /**
+     * The CloudWatch alarm definition that determines when automatic scaling activity is triggered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-trigger)
+     */
+    public fun trigger(): Any
+
+    /**
+     * A builder for [ScalingRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      public fun action(action: IResolvable)
+
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      public fun action(action: ScalingActionProperty)
+
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54312c2345469e16a1b194b05d183d8df3a94ae8cf715d7d9766ff89c6fcbf4f")
+      public fun action(action: ScalingActionProperty.Builder.() -> Unit)
+
+      /**
+       * @param description A friendly, more verbose description of the automatic scaling rule.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param name The name used to identify an automatic scaling rule. 
+       * Rule names must be unique within a scaling policy.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
+       */
+      public fun trigger(trigger: IResolvable)
+
+      /**
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
+       */
+      public fun trigger(trigger: ScalingTriggerProperty)
+
+      /**
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed9f626671d043fbff78c239a39dc75380aaa27f98ca356653fb9b4b4426fa22")
+      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty.builder()
+
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      override fun action(action: IResolvable) {
+        cdkBuilder.action(action.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      override fun action(action: ScalingActionProperty) {
+        cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
+      }
+
+      /**
+       * @param action The conditions that trigger an automatic scaling activity. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54312c2345469e16a1b194b05d183d8df3a94ae8cf715d7d9766ff89c6fcbf4f")
+      override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
+          action(ScalingActionProperty(action))
+
+      /**
+       * @param description A friendly, more verbose description of the automatic scaling rule.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param name The name used to identify an automatic scaling rule. 
+       * Rule names must be unique within a scaling policy.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
-       * fleet, which determines how many On-Demand instances to provision.
-       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
-       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
-       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
-       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
-       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
-       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
-       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
-       * exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
-       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
-       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
        */
-      override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
-        cdkBuilder.targetOnDemandCapacity(targetOnDemandCapacity)
+      override fun trigger(trigger: IResolvable) {
+        cdkBuilder.trigger(trigger.let(IResolvable::unwrap))
       }
 
       /**
-       * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which
-       * determines how many Spot instances to provision.
-       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
-       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
-       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
-       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
-       * if this results in an overage. For example, if there are 2 units remaining to fulfill
-       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
-       * the instance is provisioned, and the target capacity is exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
-       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
-       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
        */
-      override fun targetSpotCapacity(targetSpotCapacity: Number) {
-        cdkBuilder.targetSpotCapacity(targetSpotCapacity)
+      override fun trigger(trigger: ScalingTriggerProperty) {
+        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty
-          = cdkBuilder.build()
+      /**
+       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
+       * activity is triggered. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed9f626671d043fbff78c239a39dc75380aaa27f98ca356653fb9b4b4426fa22")
+      override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
+          trigger(ScalingTriggerProperty(trigger))
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty,
-    ) : CdkObject(cdkObject), InstanceFleetConfigProperty {
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty,
+    ) : CdkObject(cdkObject), ScalingRuleProperty {
       /**
-       * The instance type configurations that define the Amazon EC2 instances in the instance
-       * fleet.
+       * The conditions that trigger an automatic scaling activity.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-instancetypeconfigs)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-action)
        */
-      override fun instanceTypeConfigs(): Any? = unwrap(this).getInstanceTypeConfigs()
+      override fun action(): Any = unwrap(this).getAction()
 
       /**
-       * The launch specification for the instance fleet.
+       * A friendly, more verbose description of the automatic scaling rule.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-launchspecifications)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-description)
        */
-      override fun launchSpecifications(): Any? = unwrap(this).getLaunchSpecifications()
+      override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * The friendly name of the instance fleet.
+       * The name used to identify an automatic scaling rule.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
+       * Rule names must be unique within a scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-name)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
       /**
-       * The target capacity of On-Demand units for the instance fleet, which determines how many
-       * On-Demand instances to provision.
+       * The CloudWatch alarm definition that determines when automatic scaling activity is
+       * triggered.
        *
-       * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
-       * specified by `InstanceTypeConfig` . Each instance configuration has a specified
-       * `WeightedCapacity` . When an On-Demand instance is provisioned, the `WeightedCapacity` units
-       * count toward the target capacity. Amazon EMR provisions instances until the target capacity is
-       * totally fulfilled, even if this results in an overage. For example, if there are 2 units
-       * remaining to fulfill capacity, and Amazon EMR can only provision an instance with a
-       * `WeightedCapacity` of 5 units, the instance is provisioned, and the target capacity is
-       * exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only Spot instances are provisioned for the instance fleet
-       * using `TargetSpotCapacity` . At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity`
-       * should be greater than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetondemandcapacity)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-trigger)
        */
-      override fun targetOnDemandCapacity(): Number? = unwrap(this).getTargetOnDemandCapacity()
-
-      /**
-       * The target capacity of Spot units for the instance fleet, which determines how many Spot
-       * instances to provision.
-       *
-       * When the instance fleet launches, Amazon EMR tries to provision Spot instances as specified
-       * by `InstanceTypeConfig` . Each instance configuration has a specified `WeightedCapacity` .
-       * When a Spot instance is provisioned, the `WeightedCapacity` units count toward the target
-       * capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even
-       * if this results in an overage. For example, if there are 2 units remaining to fulfill
-       * capacity, and Amazon EMR can only provision an instance with a `WeightedCapacity` of 5 units,
-       * the instance is provisioned, and the target capacity is exceeded by 3 units.
-       *
-       *
-       * If not specified or set to 0, only On-Demand instances are provisioned for the instance
-       * fleet. At least one of `TargetSpotCapacity` and `TargetOnDemandCapacity` should be greater
-       * than 0. For a master instance fleet, only one of `TargetSpotCapacity` and
-       * `TargetOnDemandCapacity` can be specified, and its value must be 1.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-targetspotcapacity)
-       */
-      override fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
+      override fun trigger(): Any = unwrap(this).getTrigger()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceFleetConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingRuleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty):
-          InstanceFleetConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceFleetConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty):
+          ScalingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingRuleProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InstanceFleetConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty = (wrapped as
+      internal fun unwrap(wrapped: ScalingRuleProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty
+    }
+  }
+
+  /**
+   * `ScalingTrigger` is a subproperty of the `ScalingRule` property type.
+   *
+   * `ScalingTrigger` determines the conditions that trigger an automatic scaling activity.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ScalingTriggerProperty scalingTriggerProperty = ScalingTriggerProperty.builder()
+   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .metricName("metricName")
+   * .period(123)
+   * .threshold(123)
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .evaluationPeriods(123)
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * .unit("unit")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html)
+   */
+  public interface ScalingTriggerProperty {
+    /**
+     * The definition of a CloudWatch metric alarm.
+     *
+     * When the defined alarm conditions are met along with other trigger parameters, scaling
+     * activity begins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html#cfn-emr-cluster-scalingtrigger-cloudwatchalarmdefinition)
+     */
+    public fun cloudWatchAlarmDefinition(): Any
+
+    /**
+     * A builder for [ScalingTriggerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      public fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable)
+
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      public
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty)
+
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("428bcdc3c65c762349543882ce1e400491bb34b9504fac0dc7b95f64dc197e49")
+      public
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty.builder()
+
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      override
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("428bcdc3c65c762349543882ce1e400491bb34b9504fac0dc7b95f64dc197e49")
+      override
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit):
+          Unit =
+          cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty(cloudWatchAlarmDefinition))
+
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty,
+    ) : CdkObject(cdkObject), ScalingTriggerProperty {
+      /**
+       * The definition of a CloudWatch metric alarm.
+       *
+       * When the defined alarm conditions are met along with other trigger parameters, scaling
+       * activity begins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html#cfn-emr-cluster-scalingtrigger-cloudwatchalarmdefinition)
+       */
+      override fun cloudWatchAlarmDefinition(): Any = unwrap(this).getCloudWatchAlarmDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingTriggerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty):
+          ScalingTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingTriggerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingTriggerProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty
+          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty
+    }
+  }
+
+  /**
+   * `ScriptBootstrapActionConfig` is a subproperty of the `BootstrapActionConfig` property type.
+   *
+   * `ScriptBootstrapActionConfig` specifies the arguments and location of the bootstrap script for
+   * EMR to run on all cluster nodes before it installs open-source big data applications on them.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * ScriptBootstrapActionConfigProperty scriptBootstrapActionConfigProperty =
+   * ScriptBootstrapActionConfigProperty.builder()
+   * .path("path")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html)
+   */
+  public interface ScriptBootstrapActionConfigProperty {
+    /**
+     * A list of command line arguments to pass to the bootstrap action script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-args)
+     */
+    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+    /**
+     * Location in Amazon S3 of the script to run during a bootstrap action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-path)
+     */
+    public fun path(): String
+
+    /**
+     * A builder for [ScriptBootstrapActionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param args A list of command line arguments to pass to the bootstrap action script.
+       */
+      public fun args(args: List<String>)
+
+      /**
+       * @param args A list of command line arguments to pass to the bootstrap action script.
+       */
+      public fun args(vararg args: String)
+
+      /**
+       * @param path Location in Amazon S3 of the script to run during a bootstrap action. 
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty.builder()
+
+      /**
+       * @param args A list of command line arguments to pass to the bootstrap action script.
+       */
+      override fun args(args: List<String>) {
+        cdkBuilder.args(args)
+      }
+
+      /**
+       * @param args A list of command line arguments to pass to the bootstrap action script.
+       */
+      override fun args(vararg args: String): Unit = args(args.toList())
+
+      /**
+       * @param path Location in Amazon S3 of the script to run during a bootstrap action. 
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty,
+    ) : CdkObject(cdkObject), ScriptBootstrapActionConfigProperty {
+      /**
+       * A list of command line arguments to pass to the bootstrap action script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-args)
+       */
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+
+      /**
+       * Location in Amazon S3 of the script to run during a bootstrap action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-path)
+       */
+      override fun path(): String = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ScriptBootstrapActionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty):
+          ScriptBootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScriptBootstrapActionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScriptBootstrapActionConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty
+    }
+  }
+
+  /**
+   * `SimpleScalingPolicyConfiguration` is a subproperty of the `ScalingAction` property type.
+   *
+   * `SimpleScalingPolicyConfiguration` determines how an automatic scaling action adds or removes
+   * instances, the cooldown period, and the number of EC2 instances that are added each time the
+   * CloudWatch metric alarm condition is satisfied.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * SimpleScalingPolicyConfigurationProperty simpleScalingPolicyConfigurationProperty =
+   * SimpleScalingPolicyConfigurationProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .adjustmentType("adjustmentType")
+   * .coolDown(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html)
+   */
+  public interface SimpleScalingPolicyConfigurationProperty {
+    /**
+     * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive number)
+     * or terminated (if `ScalingAdjustment` is a negative number) each time the scaling activity is
+     * triggered.
+     *
+     * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
+     * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as an
+     * integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements by
+     * the percentage specified by `ScalingAdjustment` , which should be expressed as an integer. For
+     * example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
+     * indicates the scaling activity results in an instance group with the number of Amazon EC2
+     * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-adjustmenttype)
+     */
+    public fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
+
+    /**
+     * The amount of time, in seconds, after a scaling activity completes before any further
+     * trigger-related scaling activities can start.
+     *
+     * The default value is 0.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-cooldown)
+     */
+    public fun coolDown(): Number? = unwrap(this).getCoolDown()
+
+    /**
+     * The amount by which to scale in or scale out, based on the specified `AdjustmentType` .
+     *
+     * A positive value adds to the instance group's Amazon EC2 instance count while a negative
+     * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
+     * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
+     * value should express the percentage as an integer. For example, -20 indicates a decrease in 20%
+     * increments of cluster capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-scalingadjustment)
+     */
+    public fun scalingAdjustment(): Number
+
+    /**
+     * A builder for [SimpleScalingPolicyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adjustmentType The way in which Amazon EC2 instances are added (if
+       * `ScalingAdjustment` is a positive number) or terminated (if `ScalingAdjustment` is a negative
+       * number) each time the scaling activity is triggered.
+       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
+       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
+       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
+       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
+       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
+       * indicates the scaling activity results in an instance group with the number of Amazon EC2
+       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
+       */
+      public fun adjustmentType(adjustmentType: String)
+
+      /**
+       * @param coolDown The amount of time, in seconds, after a scaling activity completes before
+       * any further trigger-related scaling activities can start.
+       * The default value is 0.
+       */
+      public fun coolDown(coolDown: Number)
+
+      /**
+       * @param scalingAdjustment The amount by which to scale in or scale out, based on the
+       * specified `AdjustmentType` . 
+       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
+       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
+       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
+       * value should express the percentage as an integer. For example, -20 indicates a decrease in
+       * 20% increments of cluster capacity.
+       */
+      public fun scalingAdjustment(scalingAdjustment: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty.builder()
+
+      /**
+       * @param adjustmentType The way in which Amazon EC2 instances are added (if
+       * `ScalingAdjustment` is a positive number) or terminated (if `ScalingAdjustment` is a negative
+       * number) each time the scaling activity is triggered.
+       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
+       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
+       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
+       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
+       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
+       * indicates the scaling activity results in an instance group with the number of Amazon EC2
+       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
+       */
+      override fun adjustmentType(adjustmentType: String) {
+        cdkBuilder.adjustmentType(adjustmentType)
+      }
+
+      /**
+       * @param coolDown The amount of time, in seconds, after a scaling activity completes before
+       * any further trigger-related scaling activities can start.
+       * The default value is 0.
+       */
+      override fun coolDown(coolDown: Number) {
+        cdkBuilder.coolDown(coolDown)
+      }
+
+      /**
+       * @param scalingAdjustment The amount by which to scale in or scale out, based on the
+       * specified `AdjustmentType` . 
+       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
+       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
+       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
+       * value should express the percentage as an integer. For example, -20 indicates a decrease in
+       * 20% increments of cluster capacity.
+       */
+      override fun scalingAdjustment(scalingAdjustment: Number) {
+        cdkBuilder.scalingAdjustment(scalingAdjustment)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty,
+    ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
+      /**
+       * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive
+       * number) or terminated (if `ScalingAdjustment` is a negative number) each time the scaling
+       * activity is triggered.
+       *
+       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
+       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
+       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
+       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
+       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
+       * indicates the scaling activity results in an instance group with the number of Amazon EC2
+       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-adjustmenttype)
+       */
+      override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
+
+      /**
+       * The amount of time, in seconds, after a scaling activity completes before any further
+       * trigger-related scaling activities can start.
+       *
+       * The default value is 0.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-cooldown)
+       */
+      override fun coolDown(): Number? = unwrap(this).getCoolDown()
+
+      /**
+       * The amount by which to scale in or scale out, based on the specified `AdjustmentType` .
+       *
+       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
+       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
+       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
+       * value should express the percentage as an integer. For example, -20 indicates a decrease in
+       * 20% increments of cluster capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-scalingadjustment)
+       */
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SimpleScalingPolicyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty):
+          SimpleScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SimpleScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SimpleScalingPolicyConfigurationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty
     }
   }
 
@@ -5706,8 +9537,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty,
     ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
       /**
        * Specifies one of the following strategies to launch Spot Instance fleets:
@@ -5792,16 +9622,10 @@ public open class CfnCluster internal constructor(
   }
 
   /**
-   * `InstanceFleetProvisioningSpecification` is a subproperty of `InstanceFleetConfig` .
+   * `StepConfig` is a property of the `AWS::EMR::Cluster` resource.
    *
-   * `InstanceFleetProvisioningSpecification` defines the launch specification for Spot instances in
-   * an instance fleet, which determines the defined duration and provisioning timeout behavior for
-   * Spot instances.
-   *
-   *
-   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
-   * excluding 5.0.x versions.
-   *
+   * The `StepConfig` property type specifies a cluster (job flow) step, which runs only on the
+   * master node. Steps are used to submit data processing jobs to the cluster.
    *
    * Example:
    *
@@ -5809,2328 +9633,8 @@ public open class CfnCluster internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.emr.*;
-   * InstanceFleetProvisioningSpecificationsProperty instanceFleetProvisioningSpecificationsProperty
-   * = InstanceFleetProvisioningSpecificationsProperty.builder()
-   * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
-   * .allocationStrategy("allocationStrategy")
-   * .build())
-   * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
-   * .timeoutAction("timeoutAction")
-   * .timeoutDurationMinutes(123)
-   * // the properties below are optional
-   * .allocationStrategy("allocationStrategy")
-   * .blockDurationMinutes(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html)
-   */
-  public interface InstanceFleetProvisioningSpecificationsProperty {
-    /**
-     * The launch specification for On-Demand Instances in the instance fleet, which determines the
-     * allocation strategy.
-     *
-     *
-     * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-     * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-     * releases 5.12.1 and later.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-ondemandspecification)
-     */
-    public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
-
-    /**
-     * The launch specification for Spot instances in the fleet, which determines the defined
-     * duration, provisioning timeout behavior, and allocation strategy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
-     */
-    public fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
-
-    /**
-     * A builder for [InstanceFleetProvisioningSpecificationsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      public fun onDemandSpecification(onDemandSpecification: IResolvable)
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("369b092f799a27e0159f3e3505a102216d79aa0c7a478a36e719d41b750073b4")
-      public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      public fun spotSpecification(spotSpecification: IResolvable)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
-      public
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty.builder()
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      override fun onDemandSpecification(onDemandSpecification: IResolvable) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      override
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("369b092f799a27e0159f3e3505a102216d79aa0c7a478a36e719d41b750073b4")
-      override
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      override fun spotSpecification(spotSpecification: IResolvable) {
-        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
-      override
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
-          Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty,
-    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
-      /**
-       * The launch specification for On-Demand Instances in the instance fleet, which determines
-       * the allocation strategy.
-       *
-       *
-       * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-       * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-       * releases 5.12.1 and later.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-ondemandspecification)
-       */
-      override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
-
-      /**
-       * The launch specification for Spot instances in the fleet, which determines the defined
-       * duration, provisioning timeout behavior, and allocation strategy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
-       */
-      override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceFleetProvisioningSpecificationsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty):
-          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
-    }
-  }
-
-  /**
-   * `SimpleScalingPolicyConfiguration` is a subproperty of the `ScalingAction` property type.
-   *
-   * `SimpleScalingPolicyConfiguration` determines how an automatic scaling action adds or removes
-   * instances, the cooldown period, and the number of EC2 instances that are added each time the
-   * CloudWatch metric alarm condition is satisfied.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * SimpleScalingPolicyConfigurationProperty simpleScalingPolicyConfigurationProperty =
-   * SimpleScalingPolicyConfigurationProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .adjustmentType("adjustmentType")
-   * .coolDown(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html)
-   */
-  public interface SimpleScalingPolicyConfigurationProperty {
-    /**
-     * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive number)
-     * or terminated (if `ScalingAdjustment` is a negative number) each time the scaling activity is
-     * triggered.
-     *
-     * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
-     * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as an
-     * integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements by
-     * the percentage specified by `ScalingAdjustment` , which should be expressed as an integer. For
-     * example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
-     * indicates the scaling activity results in an instance group with the number of Amazon EC2
-     * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-adjustmenttype)
-     */
-    public fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
-
-    /**
-     * The amount of time, in seconds, after a scaling activity completes before any further
-     * trigger-related scaling activities can start.
-     *
-     * The default value is 0.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-cooldown)
-     */
-    public fun coolDown(): Number? = unwrap(this).getCoolDown()
-
-    /**
-     * The amount by which to scale in or scale out, based on the specified `AdjustmentType` .
-     *
-     * A positive value adds to the instance group's Amazon EC2 instance count while a negative
-     * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
-     * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
-     * value should express the percentage as an integer. For example, -20 indicates a decrease in 20%
-     * increments of cluster capacity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-scalingadjustment)
-     */
-    public fun scalingAdjustment(): Number
-
-    /**
-     * A builder for [SimpleScalingPolicyConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adjustmentType The way in which Amazon EC2 instances are added (if
-       * `ScalingAdjustment` is a positive number) or terminated (if `ScalingAdjustment` is a negative
-       * number) each time the scaling activity is triggered.
-       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
-       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
-       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
-       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
-       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
-       * indicates the scaling activity results in an instance group with the number of Amazon EC2
-       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
-       */
-      public fun adjustmentType(adjustmentType: String)
-
-      /**
-       * @param coolDown The amount of time, in seconds, after a scaling activity completes before
-       * any further trigger-related scaling activities can start.
-       * The default value is 0.
-       */
-      public fun coolDown(coolDown: Number)
-
-      /**
-       * @param scalingAdjustment The amount by which to scale in or scale out, based on the
-       * specified `AdjustmentType` . 
-       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
-       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
-       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
-       * value should express the percentage as an integer. For example, -20 indicates a decrease in
-       * 20% increments of cluster capacity.
-       */
-      public fun scalingAdjustment(scalingAdjustment: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty.builder()
-
-      /**
-       * @param adjustmentType The way in which Amazon EC2 instances are added (if
-       * `ScalingAdjustment` is a positive number) or terminated (if `ScalingAdjustment` is a negative
-       * number) each time the scaling activity is triggered.
-       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
-       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
-       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
-       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
-       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
-       * indicates the scaling activity results in an instance group with the number of Amazon EC2
-       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
-       */
-      override fun adjustmentType(adjustmentType: String) {
-        cdkBuilder.adjustmentType(adjustmentType)
-      }
-
-      /**
-       * @param coolDown The amount of time, in seconds, after a scaling activity completes before
-       * any further trigger-related scaling activities can start.
-       * The default value is 0.
-       */
-      override fun coolDown(coolDown: Number) {
-        cdkBuilder.coolDown(coolDown)
-      }
-
-      /**
-       * @param scalingAdjustment The amount by which to scale in or scale out, based on the
-       * specified `AdjustmentType` . 
-       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
-       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
-       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
-       * value should express the percentage as an integer. For example, -20 indicates a decrease in
-       * 20% increments of cluster capacity.
-       */
-      override fun scalingAdjustment(scalingAdjustment: Number) {
-        cdkBuilder.scalingAdjustment(scalingAdjustment)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
-      /**
-       * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive
-       * number) or terminated (if `ScalingAdjustment` is a negative number) each time the scaling
-       * activity is triggered.
-       *
-       * `CHANGE_IN_CAPACITY` is the default. `CHANGE_IN_CAPACITY` indicates that the Amazon EC2
-       * instance count increments or decrements by `ScalingAdjustment` , which should be expressed as
-       * an integer. `PERCENT_CHANGE_IN_CAPACITY` indicates the instance count increments or decrements
-       * by the percentage specified by `ScalingAdjustment` , which should be expressed as an integer.
-       * For example, 20 indicates an increase in 20% increments of cluster capacity. `EXACT_CAPACITY`
-       * indicates the scaling activity results in an instance group with the number of Amazon EC2
-       * instances specified by `ScalingAdjustment` , which should be expressed as a positive integer.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-adjustmenttype)
-       */
-      override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
-
-      /**
-       * The amount of time, in seconds, after a scaling activity completes before any further
-       * trigger-related scaling activities can start.
-       *
-       * The default value is 0.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-cooldown)
-       */
-      override fun coolDown(): Number? = unwrap(this).getCoolDown()
-
-      /**
-       * The amount by which to scale in or scale out, based on the specified `AdjustmentType` .
-       *
-       * A positive value adds to the instance group's Amazon EC2 instance count while a negative
-       * number removes instances. If `AdjustmentType` is set to `EXACT_CAPACITY` , the number should
-       * only be a positive integer. If `AdjustmentType` is set to `PERCENT_CHANGE_IN_CAPACITY` , the
-       * value should express the percentage as an integer. For example, -20 indicates a decrease in
-       * 20% increments of cluster capacity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-simplescalingpolicyconfiguration.html#cfn-emr-cluster-simplescalingpolicyconfiguration-scalingadjustment)
-       */
-      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SimpleScalingPolicyConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty):
-          SimpleScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SimpleScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SimpleScalingPolicyConfigurationProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty
-    }
-  }
-
-  /**
-   * `ScalingConstraints` is a subproperty of the `AutoScalingPolicy` property type.
-   *
-   * `ScalingConstraints` defines the upper and lower EC2 instance limits for an automatic scaling
-   * policy. Automatic scaling activities triggered by automatic scaling rules will not cause an
-   * instance group to grow above or shrink below these limits.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ScalingConstraintsProperty scalingConstraintsProperty = ScalingConstraintsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html)
-   */
-  public interface ScalingConstraintsProperty {
-    /**
-     * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
-     * activities are not allowed to grow.
-     *
-     * Scale-out activities will not add instances beyond this boundary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-maxcapacity)
-     */
-    public fun maxCapacity(): Number
-
-    /**
-     * The lower boundary of Amazon EC2 instances in an instance group below which scaling
-     * activities are not allowed to shrink.
-     *
-     * Scale-in activities will not terminate instances below this boundary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-mincapacity)
-     */
-    public fun minCapacity(): Number
-
-    /**
-     * A builder for [ScalingConstraintsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxCapacity The upper boundary of Amazon EC2 instances in an instance group beyond
-       * which scaling activities are not allowed to grow. 
-       * Scale-out activities will not add instances beyond this boundary.
-       */
-      public fun maxCapacity(maxCapacity: Number)
-
-      /**
-       * @param minCapacity The lower boundary of Amazon EC2 instances in an instance group below
-       * which scaling activities are not allowed to shrink. 
-       * Scale-in activities will not terminate instances below this boundary.
-       */
-      public fun minCapacity(minCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty.builder()
-
-      /**
-       * @param maxCapacity The upper boundary of Amazon EC2 instances in an instance group beyond
-       * which scaling activities are not allowed to grow. 
-       * Scale-out activities will not add instances beyond this boundary.
-       */
-      override fun maxCapacity(maxCapacity: Number) {
-        cdkBuilder.maxCapacity(maxCapacity)
-      }
-
-      /**
-       * @param minCapacity The lower boundary of Amazon EC2 instances in an instance group below
-       * which scaling activities are not allowed to shrink. 
-       * Scale-in activities will not terminate instances below this boundary.
-       */
-      override fun minCapacity(minCapacity: Number) {
-        cdkBuilder.minCapacity(minCapacity)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty,
-    ) : CdkObject(cdkObject), ScalingConstraintsProperty {
-      /**
-       * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
-       * activities are not allowed to grow.
-       *
-       * Scale-out activities will not add instances beyond this boundary.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-maxcapacity)
-       */
-      override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
-
-      /**
-       * The lower boundary of Amazon EC2 instances in an instance group below which scaling
-       * activities are not allowed to shrink.
-       *
-       * Scale-in activities will not terminate instances below this boundary.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingconstraints.html#cfn-emr-cluster-scalingconstraints-mincapacity)
-       */
-      override fun minCapacity(): Number = unwrap(this).getMinCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingConstraintsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty):
-          ScalingConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScalingConstraintsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingConstraintsProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty
-    }
-  }
-
-  /**
-   * `EbsConfiguration` is a subproperty of `InstanceFleetConfig` or `InstanceGroupConfig` .
-   *
-   * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
-   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build()))
-   * .ebsOptimized(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html)
-   */
-  public interface EbsConfigurationProperty {
-    /**
-     * An array of Amazon EBS volume specifications attached to a cluster instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsblockdeviceconfigs)
-     */
-    public fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
-
-    /**
-     * Indicates whether an Amazon EBS volume is EBS-optimized.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
-     */
-    public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
-
-    /**
-     * A builder for [EbsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      public fun ebsOptimized(ebsOptimized: Boolean)
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      public fun ebsOptimized(ebsOptimized: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty.builder()
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
-      }
-
-      /**
-       * @param ebsBlockDeviceConfigs An array of Amazon EBS volume specifications attached to a
-       * cluster instance.
-       */
-      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
-          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      override fun ebsOptimized(ebsOptimized: Boolean) {
-        cdkBuilder.ebsOptimized(ebsOptimized)
-      }
-
-      /**
-       * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
-       */
-      override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty,
-    ) : CdkObject(cdkObject), EbsConfigurationProperty {
-      /**
-       * An array of Amazon EBS volume specifications attached to a cluster instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsblockdeviceconfigs)
-       */
-      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
-
-      /**
-       * Indicates whether an Amazon EBS volume is EBS-optimized.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
-       */
-      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty):
-          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsConfigurationProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty
-    }
-  }
-
-  /**
-   * `KerberosAttributes` is a property of the `AWS::EMR::Cluster` resource.
-   *
-   * `KerberosAttributes` define the cluster-specific Kerberos configuration when Kerberos
-   * authentication is enabled using a security configuration. The cluster-specific configuration must
-   * be compatible with the security configuration. For more information see [Use Kerberos
-   * Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the
-   * *EMR Management Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * KerberosAttributesProperty kerberosAttributesProperty = KerberosAttributesProperty.builder()
-   * .kdcAdminPassword("kdcAdminPassword")
-   * .realm("realm")
-   * // the properties below are optional
-   * .adDomainJoinPassword("adDomainJoinPassword")
-   * .adDomainJoinUser("adDomainJoinUser")
-   * .crossRealmTrustPrincipalPassword("crossRealmTrustPrincipalPassword")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html)
-   */
-  public interface KerberosAttributesProperty {
-    /**
-     * The Active Directory password for `ADDomainJoinUser` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinpassword)
-     */
-    public fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
-
-    /**
-     * Required only when establishing a cross-realm trust with an Active Directory domain.
-     *
-     * A user with sufficient privileges to join resources to the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinuser)
-     */
-    public fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
-
-    /**
-     * Required only when establishing a cross-realm trust with a KDC in a different realm.
-     *
-     * The cross-realm principal password, which must be identical across realms.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
-     */
-    public fun crossRealmTrustPrincipalPassword(): String? =
-        unwrap(this).getCrossRealmTrustPrincipalPassword()
-
-    /**
-     * The password used within the cluster for the kadmin service on the cluster-dedicated KDC,
-     * which maintains Kerberos principals, password policies, and keytabs for the cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-kdcadminpassword)
-     */
-    public fun kdcAdminPassword(): String
-
-    /**
-     * The name of the Kerberos realm to which all nodes in a cluster belong.
-     *
-     * For example, `EC2.INTERNAL` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-realm)
-     */
-    public fun realm(): String
-
-    /**
-     * A builder for [KerberosAttributesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adDomainJoinPassword The Active Directory password for `ADDomainJoinUser` .
-       */
-      public fun adDomainJoinPassword(adDomainJoinPassword: String)
-
-      /**
-       * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
-       * Directory domain.
-       * A user with sufficient privileges to join resources to the domain.
-       */
-      public fun adDomainJoinUser(adDomainJoinUser: String)
-
-      /**
-       * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
-       * with a KDC in a different realm.
-       * The cross-realm principal password, which must be identical across realms.
-       */
-      public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String)
-
-      /**
-       * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
-       * cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for
-       * the cluster. 
-       */
-      public fun kdcAdminPassword(kdcAdminPassword: String)
-
-      /**
-       * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. 
-       * For example, `EC2.INTERNAL` .
-       */
-      public fun realm(realm: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty.builder()
-
-      /**
-       * @param adDomainJoinPassword The Active Directory password for `ADDomainJoinUser` .
-       */
-      override fun adDomainJoinPassword(adDomainJoinPassword: String) {
-        cdkBuilder.adDomainJoinPassword(adDomainJoinPassword)
-      }
-
-      /**
-       * @param adDomainJoinUser Required only when establishing a cross-realm trust with an Active
-       * Directory domain.
-       * A user with sufficient privileges to join resources to the domain.
-       */
-      override fun adDomainJoinUser(adDomainJoinUser: String) {
-        cdkBuilder.adDomainJoinUser(adDomainJoinUser)
-      }
-
-      /**
-       * @param crossRealmTrustPrincipalPassword Required only when establishing a cross-realm trust
-       * with a KDC in a different realm.
-       * The cross-realm principal password, which must be identical across realms.
-       */
-      override fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
-        cdkBuilder.crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword)
-      }
-
-      /**
-       * @param kdcAdminPassword The password used within the cluster for the kadmin service on the
-       * cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for
-       * the cluster. 
-       */
-      override fun kdcAdminPassword(kdcAdminPassword: String) {
-        cdkBuilder.kdcAdminPassword(kdcAdminPassword)
-      }
-
-      /**
-       * @param realm The name of the Kerberos realm to which all nodes in a cluster belong. 
-       * For example, `EC2.INTERNAL` .
-       */
-      override fun realm(realm: String) {
-        cdkBuilder.realm(realm)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty,
-    ) : CdkObject(cdkObject), KerberosAttributesProperty {
-      /**
-       * The Active Directory password for `ADDomainJoinUser` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinpassword)
-       */
-      override fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
-
-      /**
-       * Required only when establishing a cross-realm trust with an Active Directory domain.
-       *
-       * A user with sufficient privileges to join resources to the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-addomainjoinuser)
-       */
-      override fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
-
-      /**
-       * Required only when establishing a cross-realm trust with a KDC in a different realm.
-       *
-       * The cross-realm principal password, which must be identical across realms.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-crossrealmtrustprincipalpassword)
-       */
-      override fun crossRealmTrustPrincipalPassword(): String? =
-          unwrap(this).getCrossRealmTrustPrincipalPassword()
-
-      /**
-       * The password used within the cluster for the kadmin service on the cluster-dedicated KDC,
-       * which maintains Kerberos principals, password policies, and keytabs for the cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-kdcadminpassword)
-       */
-      override fun kdcAdminPassword(): String = unwrap(this).getKdcAdminPassword()
-
-      /**
-       * The name of the Kerberos realm to which all nodes in a cluster belong.
-       *
-       * For example, `EC2.INTERNAL` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html#cfn-emr-cluster-kerberosattributes-realm)
-       */
-      override fun realm(): String = unwrap(this).getRealm()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KerberosAttributesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty):
-          KerberosAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KerberosAttributesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KerberosAttributesProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty
-    }
-  }
-
-  /**
-   * Managed scaling policy for an Amazon EMR cluster.
-   *
-   * The policy specifies the limits for resources that can be added or terminated from a cluster.
-   * The policy only applies to the core and task nodes. The master node cannot be scaled after initial
-   * configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ManagedScalingPolicyProperty managedScalingPolicyProperty =
-   * ManagedScalingPolicyProperty.builder()
-   * .computeLimits(ComputeLimitsProperty.builder()
-   * .maximumCapacityUnits(123)
-   * .minimumCapacityUnits(123)
-   * .unitType("unitType")
-   * // the properties below are optional
-   * .maximumCoreCapacityUnits(123)
-   * .maximumOnDemandCapacityUnits(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html)
-   */
-  public interface ManagedScalingPolicyProperty {
-    /**
-     * The Amazon EC2 unit limits for a managed scaling policy.
-     *
-     * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-     * The limit only applies to the core and task nodes. The master node cannot be scaled after
-     * initial configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
-     */
-    public fun computeLimits(): Any? = unwrap(this).getComputeLimits()
-
-    /**
-     * A builder for [ManagedScalingPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      public fun computeLimits(computeLimits: IResolvable)
-
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      public fun computeLimits(computeLimits: ComputeLimitsProperty)
-
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("95bc72e2e9aa925adeed929babb4791327d9958ad0bd79ae634df9497a8bec64")
-      public fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty.builder()
-
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      override fun computeLimits(computeLimits: IResolvable) {
-        cdkBuilder.computeLimits(computeLimits.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      override fun computeLimits(computeLimits: ComputeLimitsProperty) {
-        cdkBuilder.computeLimits(computeLimits.let(ComputeLimitsProperty::unwrap))
-      }
-
-      /**
-       * @param computeLimits The Amazon EC2 unit limits for a managed scaling policy.
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("95bc72e2e9aa925adeed929babb4791327d9958ad0bd79ae634df9497a8bec64")
-      override fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit): Unit =
-          computeLimits(ComputeLimitsProperty(computeLimits))
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty,
-    ) : CdkObject(cdkObject), ManagedScalingPolicyProperty {
-      /**
-       * The Amazon EC2 unit limits for a managed scaling policy.
-       *
-       * The managed scaling activity of a cluster is not allowed to go above or below these limits.
-       * The limit only applies to the core and task nodes. The master node cannot be scaled after
-       * initial configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
-       */
-      override fun computeLimits(): Any? = unwrap(this).getComputeLimits()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ManagedScalingPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty):
-          ManagedScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ManagedScalingPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ManagedScalingPolicyProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty
-    }
-  }
-
-  /**
-   * The launch specification for On-Demand Instances in the instance fleet, which determines the
-   * allocation strategy.
-   *
-   *
-   * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
-   * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
-   * releases 5.12.1 and later.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * OnDemandProvisioningSpecificationProperty onDemandProvisioningSpecificationProperty =
-   * OnDemandProvisioningSpecificationProperty.builder()
-   * .allocationStrategy("allocationStrategy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html)
-   */
-  public interface OnDemandProvisioningSpecificationProperty {
-    /**
-     * Specifies the strategy to use in launching On-Demand instance fleets.
-     *
-     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-     * first.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
-     */
-    public fun allocationStrategy(): String
-
-    /**
-     * A builder for [OnDemandProvisioningSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
-       * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       */
-      public fun allocationStrategy(allocationStrategy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty.builder()
-
-      /**
-       * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
-       * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       */
-      override fun allocationStrategy(allocationStrategy: String) {
-        cdkBuilder.allocationStrategy(allocationStrategy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
-      /**
-       * Specifies the strategy to use in launching On-Demand instance fleets.
-       *
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
-       */
-      override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OnDemandProvisioningSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty):
-          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty
-    }
-  }
-
-  /**
-   * `BootstrapActionConfig` is a property of `AWS::EMR::Cluster` that can be used to run bootstrap
-   * actions on EMR clusters.
-   *
-   * You can use a bootstrap action to install software and configure EC2 instances for all cluster
-   * nodes before EMR installs and configures open-source big data applications on cluster instances.
-   * For more information, see [Create Bootstrap Actions to Install Additional
-   * Software](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-plan-bootstrap.html) in the
-   * *Amazon EMR Management Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * BootstrapActionConfigProperty bootstrapActionConfigProperty =
-   * BootstrapActionConfigProperty.builder()
-   * .name("name")
-   * .scriptBootstrapAction(ScriptBootstrapActionConfigProperty.builder()
-   * .path("path")
-   * // the properties below are optional
-   * .args(List.of("args"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html)
-   */
-  public interface BootstrapActionConfigProperty {
-    /**
-     * The name of the bootstrap action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-name)
-     */
-    public fun name(): String
-
-    /**
-     * The script run by the bootstrap action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction)
-     */
-    public fun scriptBootstrapAction(): Any
-
-    /**
-     * A builder for [BootstrapActionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the bootstrap action. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      public fun scriptBootstrapAction(scriptBootstrapAction: IResolvable)
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      public fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty)
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a865fef280f00048f67690c708ff1b8892cd0b48dc38c0a818102b6a89898b59")
-      public
-          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty.builder()
-
-      /**
-       * @param name The name of the bootstrap action. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      override fun scriptBootstrapAction(scriptBootstrapAction: IResolvable) {
-        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      override
-          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
-        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty::unwrap))
-      }
-
-      /**
-       * @param scriptBootstrapAction The script run by the bootstrap action. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a865fef280f00048f67690c708ff1b8892cd0b48dc38c0a818102b6a89898b59")
-      override
-          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit):
-          Unit = scriptBootstrapAction(ScriptBootstrapActionConfigProperty(scriptBootstrapAction))
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty,
-    ) : CdkObject(cdkObject), BootstrapActionConfigProperty {
-      /**
-       * The name of the bootstrap action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The script run by the bootstrap action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-bootstrapactionconfig.html#cfn-emr-cluster-bootstrapactionconfig-scriptbootstrapaction)
-       */
-      override fun scriptBootstrapAction(): Any = unwrap(this).getScriptBootstrapAction()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BootstrapActionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty):
-          BootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BootstrapActionConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BootstrapActionConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty
-    }
-  }
-
-  /**
-   * Use `InstanceGroupConfig` to define instance groups for an EMR cluster.
-   *
-   * A cluster can not use both instance groups and instance fleets. For more information, see
-   * [Create a Cluster with Instance Fleets or Uniform Instance
-   * Groups](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
-   * in the *Amazon EMR Management Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ConfigurationProperty configurationProperty_;
-   * InstanceGroupConfigProperty instanceGroupConfigProperty = InstanceGroupConfigProperty.builder()
-   * .instanceCount(123)
-   * .instanceType("instanceType")
-   * // the properties below are optional
-   * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
-   * .constraints(ScalingConstraintsProperty.builder()
-   * .maxCapacity(123)
-   * .minCapacity(123)
-   * .build())
-   * .rules(List.of(ScalingRuleProperty.builder()
-   * .action(ScalingActionProperty.builder()
-   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .adjustmentType("adjustmentType")
-   * .coolDown(123)
-   * .build())
-   * // the properties below are optional
-   * .market("market")
-   * .build())
-   * .name("name")
-   * .trigger(ScalingTriggerProperty.builder()
-   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .metricName("metricName")
-   * .period(123)
-   * .threshold(123)
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .evaluationPeriods(123)
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * .unit("unit")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .description("description")
-   * .build()))
-   * .build())
-   * .bidPrice("bidPrice")
-   * .configurations(List.of(ConfigurationProperty.builder()
-   * .classification("classification")
-   * .configurationProperties(Map.of(
-   * "configurationPropertiesKey", "configurationProperties"))
-   * .configurations(List.of(configurationProperty_))
-   * .build()))
-   * .customAmiId("customAmiId")
-   * .ebsConfiguration(EbsConfigurationProperty.builder()
-   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build()))
-   * .ebsOptimized(false)
-   * .build())
-   * .market("market")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html)
-   */
-  public interface InstanceGroupConfigProperty {
-    /**
-     * `AutoScalingPolicy` is a subproperty of the
-     * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-     * property type that specifies the constraints and rules of an automatic scaling policy in Amazon
-     * EMR . The automatic scaling policy defines how an instance group dynamically adds and terminates
-     * EC2 instances in response to the value of a CloudWatch metric. Only core and task instance
-     * groups can use automatic scaling policies. For more information, see [Using Automatic Scaling in
-     * Amazon EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-autoscalingpolicy)
-     */
-    public fun autoScalingPolicy(): Any? = unwrap(this).getAutoScalingPolicy()
-
-    /**
-     * If specified, indicates that the instance group uses Spot Instances.
-     *
-     * This is the maximum price you are willing to pay for Spot Instances. Specify `OnDemandPrice`
-     * to set the amount equal to the On-Demand price, or specify an amount in USD.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-bidprice)
-     */
-    public fun bidPrice(): String? = unwrap(this).getBidPrice()
-
-    /**
-     * Amazon EMR releases 4.x or later.
-     *
-     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify
-     * a separate configuration for each instance group (master, core, and task).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-configurations)
-     */
-    public fun configurations(): Any? = unwrap(this).getConfigurations()
-
-    /**
-     * The custom AMI ID to use for the provisioned instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-customamiid)
-     */
-    public fun customAmiId(): String? = unwrap(this).getCustomAmiId()
-
-    /**
-     * EBS configurations that will be attached to each Amazon EC2 instance in the instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-ebsconfiguration)
-     */
-    public fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
-
-    /**
-     * Target number of instances for the instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancecount)
-     */
-    public fun instanceCount(): Number
-
-    /**
-     * The Amazon EC2 instance type for all instances in the instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * Market type of the Amazon EC2 instances used to create a cluster node.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-market)
-     */
-    public fun market(): String? = unwrap(this).getMarket()
-
-    /**
-     * Friendly name given to the instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [InstanceGroupConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
-
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
-
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f89ff2b9dd21c94ae6cfe970e5b0e824d10b8cc152e3a40c855e107a70ed2802")
-      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param bidPrice If specified, indicates that the instance group uses Spot Instances.
-       * This is the maximum price you are willing to pay for Spot Instances. Specify
-       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
-       */
-      public fun bidPrice(bidPrice: String)
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      public fun configurations(configurations: IResolvable)
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      public fun configurations(configurations: List<Any>)
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      public fun configurations(vararg configurations: Any)
-
-      /**
-       * @param customAmiId The custom AMI ID to use for the provisioned instance group.
-       */
-      public fun customAmiId(customAmiId: String)
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      public fun ebsConfiguration(ebsConfiguration: IResolvable)
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("651928770cfe2bc959b58884807e1ce30b436559d9259fb91b9ac7e79a541aff")
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param instanceCount Target number of instances for the instance group. 
-       */
-      public fun instanceCount(instanceCount: Number)
-
-      /**
-       * @param instanceType The Amazon EC2 instance type for all instances in the instance group. 
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param market Market type of the Amazon EC2 instances used to create a cluster node.
-       */
-      public fun market(market: String)
-
-      /**
-       * @param name Friendly name given to the instance group.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty.builder()
-
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f89ff2b9dd21c94ae6cfe970e5b0e824d10b8cc152e3a40c855e107a70ed2802")
-      override
-          fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
-          Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
-
-      /**
-       * @param bidPrice If specified, indicates that the instance group uses Spot Instances.
-       * This is the maximum price you are willing to pay for Spot Instances. Specify
-       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
-       */
-      override fun bidPrice(bidPrice: String) {
-        cdkBuilder.bidPrice(bidPrice)
-      }
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
-      }
-
-      /**
-       * @param configurations Amazon EMR releases 4.x or later.
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       */
-      override fun configurations(vararg configurations: Any): Unit =
-          configurations(configurations.toList())
-
-      /**
-       * @param customAmiId The custom AMI ID to use for the provisioned instance group.
-       */
-      override fun customAmiId(customAmiId: String) {
-        cdkBuilder.customAmiId(customAmiId)
-      }
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param ebsConfiguration EBS configurations that will be attached to each Amazon EC2
-       * instance in the instance group.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("651928770cfe2bc959b58884807e1ce30b436559d9259fb91b9ac7e79a541aff")
-      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
-          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
-
-      /**
-       * @param instanceCount Target number of instances for the instance group. 
-       */
-      override fun instanceCount(instanceCount: Number) {
-        cdkBuilder.instanceCount(instanceCount)
-      }
-
-      /**
-       * @param instanceType The Amazon EC2 instance type for all instances in the instance group. 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param market Market type of the Amazon EC2 instances used to create a cluster node.
-       */
-      override fun market(market: String) {
-        cdkBuilder.market(market)
-      }
-
-      /**
-       * @param name Friendly name given to the instance group.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty,
-    ) : CdkObject(cdkObject), InstanceGroupConfigProperty {
-      /**
-       * `AutoScalingPolicy` is a subproperty of the
-       * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
-       * property type that specifies the constraints and rules of an automatic scaling policy in
-       * Amazon EMR . The automatic scaling policy defines how an instance group dynamically adds and
-       * terminates EC2 instances in response to the value of a CloudWatch metric. Only core and task
-       * instance groups can use automatic scaling policies. For more information, see [Using Automatic
-       * Scaling in Amazon
-       * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-autoscalingpolicy)
-       */
-      override fun autoScalingPolicy(): Any? = unwrap(this).getAutoScalingPolicy()
-
-      /**
-       * If specified, indicates that the instance group uses Spot Instances.
-       *
-       * This is the maximum price you are willing to pay for Spot Instances. Specify
-       * `OnDemandPrice` to set the amount equal to the On-Demand price, or specify an amount in USD.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-bidprice)
-       */
-      override fun bidPrice(): String? = unwrap(this).getBidPrice()
-
-      /**
-       * Amazon EMR releases 4.x or later.
-       *
-       * The list of configurations supplied for an Amazon EMR cluster instance group. You can
-       * specify a separate configuration for each instance group (master, core, and task).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-configurations)
-       */
-      override fun configurations(): Any? = unwrap(this).getConfigurations()
-
-      /**
-       * The custom AMI ID to use for the provisioned instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-customamiid)
-       */
-      override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
-
-      /**
-       * EBS configurations that will be attached to each Amazon EC2 instance in the instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-ebsconfiguration)
-       */
-      override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
-
-      /**
-       * Target number of instances for the instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancecount)
-       */
-      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
-
-      /**
-       * The Amazon EC2 instance type for all instances in the instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-
-      /**
-       * Market type of the Amazon EC2 instances used to create a cluster node.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-market)
-       */
-      override fun market(): String? = unwrap(this).getMarket()
-
-      /**
-       * Friendly name given to the instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html#cfn-emr-cluster-instancegroupconfig-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceGroupConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty):
-          InstanceGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceGroupConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceGroupConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty
-    }
-  }
-
-  /**
-   * `KeyValue` is a subproperty of the `HadoopJarStepConfig` property type.
-   *
-   * `KeyValue` is used to pass parameters to a step.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * KeyValueProperty keyValueProperty = KeyValueProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html)
-   */
-  public interface KeyValueProperty {
-    /**
-     * The unique identifier of a key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value part of the identified key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [KeyValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The unique identifier of a key-value pair.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value part of the identified key.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty.builder()
-
-      /**
-       * @param key The unique identifier of a key-value pair.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value part of the identified key.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty,
-    ) : CdkObject(cdkObject), KeyValueProperty {
-      /**
-       * The unique identifier of a key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value part of the identified key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-keyvalue.html#cfn-emr-cluster-keyvalue-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KeyValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty):
-          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KeyValueProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty
-    }
-  }
-
-  /**
-   * `EbsBlockDeviceConfig` is a subproperty of the `EbsConfiguration` property type.
-   *
-   * `EbsBlockDeviceConfig` defines the number and type of EBS volumes to associate with all EC2
-   * instances in an EMR cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * EbsBlockDeviceConfigProperty ebsBlockDeviceConfigProperty =
-   * EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html)
-   */
-  public interface EbsBlockDeviceConfigProperty {
-    /**
-     * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
-     * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumespecification)
-     */
-    public fun volumeSpecification(): Any
-
-    /**
-     * Number of EBS volumes with a specific volume configuration that are associated with every
-     * instance in the instance group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumesperinstance)
-     */
-    public fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
-
-    /**
-     * A builder for [EbsBlockDeviceConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      public fun volumeSpecification(volumeSpecification: IResolvable)
-
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty)
-
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a6098102f5fe1e7c642ed86c5ea6655bb1f9f5971c6dce82a27acdd3a241902")
-      public
-          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that
-       * are associated with every instance in the instance group.
-       */
-      public fun volumesPerInstance(volumesPerInstance: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty.builder()
-
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      override fun volumeSpecification(volumeSpecification: IResolvable) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param volumeSpecification EBS volume specifications such as volume type, IOPS, size (GiB)
-       * and throughput (MiB/s) that are requested for the EBS volume attached to an Amazon EC2
-       * instance in the cluster. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7a6098102f5fe1e7c642ed86c5ea6655bb1f9f5971c6dce82a27acdd3a241902")
-      override
-          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit):
-          Unit = volumeSpecification(VolumeSpecificationProperty(volumeSpecification))
-
-      /**
-       * @param volumesPerInstance Number of EBS volumes with a specific volume configuration that
-       * are associated with every instance in the instance group.
-       */
-      override fun volumesPerInstance(volumesPerInstance: Number) {
-        cdkBuilder.volumesPerInstance(volumesPerInstance)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
-      /**
-       * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
-       * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumespecification)
-       */
-      override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
-
-      /**
-       * Number of EBS volumes with a specific volume configuration that are associated with every
-       * instance in the instance group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsblockdeviceconfig.html#cfn-emr-cluster-ebsblockdeviceconfig-volumesperinstance)
-       */
-      override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty):
-          EbsBlockDeviceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EbsBlockDeviceConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EbsBlockDeviceConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty
-    }
-  }
-
-  /**
-   * `ScalingTrigger` is a subproperty of the `ScalingRule` property type.
-   *
-   * `ScalingTrigger` determines the conditions that trigger an automatic scaling activity.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ScalingTriggerProperty scalingTriggerProperty = ScalingTriggerProperty.builder()
-   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .metricName("metricName")
-   * .period(123)
-   * .threshold(123)
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .evaluationPeriods(123)
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * .unit("unit")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html)
-   */
-  public interface ScalingTriggerProperty {
-    /**
-     * The definition of a CloudWatch metric alarm.
-     *
-     * When the defined alarm conditions are met along with other trigger parameters, scaling
-     * activity begins.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html#cfn-emr-cluster-scalingtrigger-cloudwatchalarmdefinition)
-     */
-    public fun cloudWatchAlarmDefinition(): Any
-
-    /**
-     * A builder for [ScalingTriggerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      public fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable)
-
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty)
-
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("428bcdc3c65c762349543882ce1e400491bb34b9504fac0dc7b95f64dc197e49")
-      public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty.builder()
-
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      override
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
-      }
-
-      /**
-       * @param cloudWatchAlarmDefinition The definition of a CloudWatch metric alarm. 
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("428bcdc3c65c762349543882ce1e400491bb34b9504fac0dc7b95f64dc197e49")
-      override
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit):
-          Unit =
-          cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty(cloudWatchAlarmDefinition))
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty,
-    ) : CdkObject(cdkObject), ScalingTriggerProperty {
-      /**
-       * The definition of a CloudWatch metric alarm.
-       *
-       * When the defined alarm conditions are met along with other trigger parameters, scaling
-       * activity begins.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingtrigger.html#cfn-emr-cluster-scalingtrigger-cloudwatchalarmdefinition)
-       */
-      override fun cloudWatchAlarmDefinition(): Any = unwrap(this).getCloudWatchAlarmDefinition()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingTriggerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty):
-          ScalingTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingTriggerProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingTriggerProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty
-    }
-  }
-
-  /**
-   * The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file
-   * whose main function will be executed.
-   *
-   * The main function submits a job for the cluster to execute as a step on the master node, and
-   * then waits for the job to finish or fail before executing subsequent steps.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * HadoopJarStepConfigProperty hadoopJarStepConfigProperty = HadoopJarStepConfigProperty.builder()
+   * StepConfigProperty stepConfigProperty = StepConfigProperty.builder()
+   * .hadoopJarStep(HadoopJarStepConfigProperty.builder()
    * .jar("jar")
    * // the properties below are optional
    * .args(List.of("args"))
@@ -8139,914 +9643,160 @@ public open class CfnCluster internal constructor(
    * .key("key")
    * .value("value")
    * .build()))
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .actionOnFailure("actionOnFailure")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html)
    */
-  public interface HadoopJarStepConfigProperty {
+  public interface StepConfigProperty {
     /**
-     * A list of command line arguments passed to the JAR file's main function when executed.
+     * The action to take when the cluster step fails.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-args)
+     * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-actiononfailure)
      */
-    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+    public fun actionOnFailure(): String? = unwrap(this).getActionOnFailure()
 
     /**
-     * A path to a JAR file run during the step.
+     * The JAR file used for the step.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-jar)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-hadoopjarstep)
      */
-    public fun jar(): String
+    public fun hadoopJarStep(): Any
 
     /**
-     * The name of the main class in the specified Java file.
+     * The name of the step.
      *
-     * If not specified, the JAR file should specify a Main-Class in its manifest file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-mainclass)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-name)
      */
-    public fun mainClass(): String? = unwrap(this).getMainClass()
+    public fun name(): String
 
     /**
-     * A list of Java properties that are set when the step runs.
-     *
-     * You can use these properties to pass key-value pairs to your main function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-stepproperties)
-     */
-    public fun stepProperties(): Any? = unwrap(this).getStepProperties()
-
-    /**
-     * A builder for [HadoopJarStepConfigProperty]
+     * A builder for [StepConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param args A list of command line arguments passed to the JAR file's main function when
-       * executed.
+       * @param actionOnFailure The action to take when the cluster step fails.
+       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
        */
-      public fun args(args: List<String>)
+      public fun actionOnFailure(actionOnFailure: String)
 
       /**
-       * @param args A list of command line arguments passed to the JAR file's main function when
-       * executed.
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      public fun args(vararg args: String)
+      public fun hadoopJarStep(hadoopJarStep: IResolvable)
 
       /**
-       * @param jar A path to a JAR file run during the step. 
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      public fun jar(jar: String)
+      public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty)
 
       /**
-       * @param mainClass The name of the main class in the specified Java file.
-       * If not specified, the JAR file should specify a Main-Class in its manifest file.
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      public fun mainClass(mainClass: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("35c8e923fe8dffa0f705d5b8464c7d670916d6d321c8b4ec178d10f9ea0ff2b6")
+      public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
+       * @param name The name of the step. 
        */
-      public fun stepProperties(stepProperties: IResolvable)
-
-      /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
-       */
-      public fun stepProperties(stepProperties: List<Any>)
-
-      /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
-       */
-      public fun stepProperties(vararg stepProperties: Any)
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty.builder()
+          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty.builder()
 
       /**
-       * @param args A list of command line arguments passed to the JAR file's main function when
-       * executed.
+       * @param actionOnFailure The action to take when the cluster step fails.
+       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
        */
-      override fun args(args: List<String>) {
-        cdkBuilder.args(args)
+      override fun actionOnFailure(actionOnFailure: String) {
+        cdkBuilder.actionOnFailure(actionOnFailure)
       }
 
       /**
-       * @param args A list of command line arguments passed to the JAR file's main function when
-       * executed.
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      override fun args(vararg args: String): Unit = args(args.toList())
-
-      /**
-       * @param jar A path to a JAR file run during the step. 
-       */
-      override fun jar(jar: String) {
-        cdkBuilder.jar(jar)
+      override fun hadoopJarStep(hadoopJarStep: IResolvable) {
+        cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
       }
 
       /**
-       * @param mainClass The name of the main class in the specified Java file.
-       * If not specified, the JAR file should specify a Main-Class in its manifest file.
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      override fun mainClass(mainClass: String) {
-        cdkBuilder.mainClass(mainClass)
+      override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
+        cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty::unwrap))
       }
 
       /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
+       * @param hadoopJarStep The JAR file used for the step. 
        */
-      override fun stepProperties(stepProperties: IResolvable) {
-        cdkBuilder.stepProperties(stepProperties.let(IResolvable::unwrap))
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("35c8e923fe8dffa0f705d5b8464c7d670916d6d321c8b4ec178d10f9ea0ff2b6")
+      override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit):
+          Unit = hadoopJarStep(HadoopJarStepConfigProperty(hadoopJarStep))
+
+      /**
+       * @param name The name of the step. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
-      /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
-       */
-      override fun stepProperties(stepProperties: List<Any>) {
-        cdkBuilder.stepProperties(stepProperties)
-      }
-
-      /**
-       * @param stepProperties A list of Java properties that are set when the step runs.
-       * You can use these properties to pass key-value pairs to your main function.
-       */
-      override fun stepProperties(vararg stepProperties: Any): Unit =
-          stepProperties(stepProperties.toList())
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty,
-    ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
-      /**
-       * A list of command line arguments passed to the JAR file's main function when executed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-args)
-       */
-      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
-
-      /**
-       * A path to a JAR file run during the step.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-jar)
-       */
-      override fun jar(): String = unwrap(this).getJar()
-
-      /**
-       * The name of the main class in the specified Java file.
-       *
-       * If not specified, the JAR file should specify a Main-Class in its manifest file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-mainclass)
-       */
-      override fun mainClass(): String? = unwrap(this).getMainClass()
-
-      /**
-       * A list of Java properties that are set when the step runs.
-       *
-       * You can use these properties to pass key-value pairs to your main function.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html#cfn-emr-cluster-hadoopjarstepconfig-stepproperties)
-       */
-      override fun stepProperties(): Any? = unwrap(this).getStepProperties()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HadoopJarStepConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty):
-          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HadoopJarStepConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HadoopJarStepConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty
-    }
-  }
-
-  /**
-   * Used only with Amazon EMR release 4.0 and later.
-   *
-   * `Configuration` is a subproperty of `InstanceFleetConfig` or `InstanceGroupConfig` .
-   * `Configuration` specifies optional configurations for customizing open-source big data
-   * applications and environment parameters. A configuration consists of a classification, properties,
-   * and optional nested configurations. A classification refers to an application-specific
-   * configuration file. Properties are the settings you want to change in that file. For more
-   * information, see [Configuring
-   * Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) in the
-   * *Amazon EMR Release Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ConfigurationProperty configurationProperty_;
-   * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
-   * .classification("classification")
-   * .configurationProperties(Map.of(
-   * "configurationPropertiesKey", "configurationProperties"))
-   * .configurations(List.of(configurationProperty_))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html)
-   */
-  public interface ConfigurationProperty {
-    /**
-     * The classification within a configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification)
-     */
-    public fun classification(): String? = unwrap(this).getClassification()
-
-    /**
-     * A list of additional configurations to apply within a configuration object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties)
-     */
-    public fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
-
-    /**
-     * A list of additional configurations to apply within a configuration object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations)
-     */
-    public fun configurations(): Any? = unwrap(this).getConfigurations()
-
-    /**
-     * A builder for [ConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param classification The classification within a configuration.
-       */
-      public fun classification(classification: String)
-
-      /**
-       * @param configurationProperties A list of additional configurations to apply within a
-       * configuration object.
-       */
-      public fun configurationProperties(configurationProperties: IResolvable)
-
-      /**
-       * @param configurationProperties A list of additional configurations to apply within a
-       * configuration object.
-       */
-      public fun configurationProperties(configurationProperties: Map<String, String>)
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      public fun configurations(configurations: IResolvable)
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      public fun configurations(configurations: List<Any>)
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      public fun configurations(vararg configurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty.builder()
-
-      /**
-       * @param classification The classification within a configuration.
-       */
-      override fun classification(classification: String) {
-        cdkBuilder.classification(classification)
-      }
-
-      /**
-       * @param configurationProperties A list of additional configurations to apply within a
-       * configuration object.
-       */
-      override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurationProperties A list of additional configurations to apply within a
-       * configuration object.
-       */
-      override fun configurationProperties(configurationProperties: Map<String, String>) {
-        cdkBuilder.configurationProperties(configurationProperties)
-      }
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
-      }
-
-      /**
-       * @param configurations A list of additional configurations to apply within a configuration
-       * object.
-       */
-      override fun configurations(vararg configurations: Any): Unit =
-          configurations(configurations.toList())
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty =
+      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty,
-    ) : CdkObject(cdkObject), ConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty,
+    ) : CdkObject(cdkObject), StepConfigProperty {
       /**
-       * The classification within a configuration.
+       * The action to take when the cluster step fails.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification)
+       * Possible values are `CANCEL_AND_WAIT` and `CONTINUE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-actiononfailure)
        */
-      override fun classification(): String? = unwrap(this).getClassification()
+      override fun actionOnFailure(): String? = unwrap(this).getActionOnFailure()
 
       /**
-       * A list of additional configurations to apply within a configuration object.
+       * The JAR file used for the step.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-hadoopjarstep)
        */
-      override fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
+      override fun hadoopJarStep(): Any = unwrap(this).getHadoopJarStep()
 
       /**
-       * A list of additional configurations to apply within a configuration object.
+       * The name of the step.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-stepconfig.html#cfn-emr-cluster-stepconfig-name)
        */
-      override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StepConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty):
-          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty):
+          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? StepConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConfigurationProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty
-    }
-  }
-
-  /**
-   * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
-   * excluding 5.0.x versions.
-   *
-   * `InstanceTypeConfig` is a sub-property of `InstanceFleetConfig` . `InstanceTypeConfig`
-   * determines the EC2 instances that Amazon EMR attempts to provision to fulfill On-Demand and Spot
-   * target capacities.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ConfigurationProperty configurationProperty_;
-   * InstanceTypeConfigProperty instanceTypeConfigProperty = InstanceTypeConfigProperty.builder()
-   * .instanceType("instanceType")
-   * // the properties below are optional
-   * .bidPrice("bidPrice")
-   * .bidPriceAsPercentageOfOnDemandPrice(123)
-   * .configurations(List.of(ConfigurationProperty.builder()
-   * .classification("classification")
-   * .configurationProperties(Map.of(
-   * "configurationPropertiesKey", "configurationProperties"))
-   * .configurations(List.of(configurationProperty_))
-   * .build()))
-   * .customAmiId("customAmiId")
-   * .ebsConfiguration(EbsConfigurationProperty.builder()
-   * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
-   * .volumeSpecification(VolumeSpecificationProperty.builder()
-   * .sizeInGb(123)
-   * .volumeType("volumeType")
-   * // the properties below are optional
-   * .iops(123)
-   * .throughput(123)
-   * .build())
-   * // the properties below are optional
-   * .volumesPerInstance(123)
-   * .build()))
-   * .ebsOptimized(false)
-   * .build())
-   * .weightedCapacity(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html)
-   */
-  public interface InstanceTypeConfigProperty {
-    /**
-     * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
-     *
-     * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
-     * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidprice)
-     */
-    public fun bidPrice(): String? = unwrap(this).getBidPrice()
-
-    /**
-     * The bid price, as a percentage of On-Demand price, for each Amazon EC2 Spot Instance as
-     * defined by `InstanceType` .
-     *
-     * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
-     * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
-     * defaults to 100%.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)
-     */
-    public fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
-        unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
-
-    /**
-     * A configuration classification that applies when provisioning cluster instances, which can
-     * include configurations for applications and software that run on the cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-configurations)
-     */
-    public fun configurations(): Any? = unwrap(this).getConfigurations()
-
-    /**
-     * The custom AMI ID to use for the instance type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-customamiid)
-     */
-    public fun customAmiId(): String? = unwrap(this).getCustomAmiId()
-
-    /**
-     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as
-     * defined by `InstanceType` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-ebsconfiguration)
-     */
-    public fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
-
-    /**
-     * An Amazon EC2 instance type, such as `m3.xlarge` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
-     */
-    public fun instanceType(): String
-
-    /**
-     * The number of units that a provisioned instance of this type provides toward fulfilling the
-     * target capacities defined in `InstanceFleetConfig` .
-     *
-     * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
-     * instance fleets. Defaults to 1 if not specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-weightedcapacity)
-     */
-    public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
-
-    /**
-     * A builder for [InstanceTypeConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bidPrice The bid price for each Amazon EC2 Spot Instance type as defined by
-       * `InstanceType` .
-       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
-       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
-       */
-      public fun bidPrice(bidPrice: String)
-
-      /**
-       * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand
-       * price, for each Amazon EC2 Spot Instance as defined by `InstanceType` .
-       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
-       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
-       * defaults to 100%.
-       */
-      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number)
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      public fun configurations(configurations: IResolvable)
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      public fun configurations(configurations: List<Any>)
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      public fun configurations(vararg configurations: Any)
-
-      /**
-       * @param customAmiId The custom AMI ID to use for the instance type.
-       */
-      public fun customAmiId(customAmiId: String)
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      public fun ebsConfiguration(ebsConfiguration: IResolvable)
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2a629b219a80793df3f9931317579967e7b78ea6e2fa9d3e5f9aa2490ad026a")
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param instanceType An Amazon EC2 instance type, such as `m3.xlarge` . 
-       */
-      public fun instanceType(instanceType: String)
-
-      /**
-       * @param weightedCapacity The number of units that a provisioned instance of this type
-       * provides toward fulfilling the target capacities defined in `InstanceFleetConfig` .
-       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
-       * instance fleets. Defaults to 1 if not specified.
-       */
-      public fun weightedCapacity(weightedCapacity: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty.builder()
-
-      /**
-       * @param bidPrice The bid price for each Amazon EC2 Spot Instance type as defined by
-       * `InstanceType` .
-       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
-       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
-       */
-      override fun bidPrice(bidPrice: String) {
-        cdkBuilder.bidPrice(bidPrice)
-      }
-
-      /**
-       * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand
-       * price, for each Amazon EC2 Spot Instance as defined by `InstanceType` .
-       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
-       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
-       * defaults to 100%.
-       */
-      override
-          fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
-        cdkBuilder.bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice)
-      }
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
-      }
-
-      /**
-       * @param configurations A configuration classification that applies when provisioning cluster
-       * instances, which can include configurations for applications and software that run on the
-       * cluster.
-       */
-      override fun configurations(vararg configurations: Any): Unit =
-          configurations(configurations.toList())
-
-      /**
-       * @param customAmiId The custom AMI ID to use for the instance type.
-       */
-      override fun customAmiId(customAmiId: String) {
-        cdkBuilder.customAmiId(customAmiId)
-      }
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param ebsConfiguration The configuration of Amazon Elastic Block Store (Amazon EBS)
-       * attached to each instance as defined by `InstanceType` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2a629b219a80793df3f9931317579967e7b78ea6e2fa9d3e5f9aa2490ad026a")
-      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
-          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
-
-      /**
-       * @param instanceType An Amazon EC2 instance type, such as `m3.xlarge` . 
-       */
-      override fun instanceType(instanceType: String) {
-        cdkBuilder.instanceType(instanceType)
-      }
-
-      /**
-       * @param weightedCapacity The number of units that a provisioned instance of this type
-       * provides toward fulfilling the target capacities defined in `InstanceFleetConfig` .
-       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
-       * instance fleets. Defaults to 1 if not specified.
-       */
-      override fun weightedCapacity(weightedCapacity: Number) {
-        cdkBuilder.weightedCapacity(weightedCapacity)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty,
-    ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
-      /**
-       * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
-       *
-       * Expressed in USD. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is
-       * provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidprice)
-       */
-      override fun bidPrice(): String? = unwrap(this).getBidPrice()
-
-      /**
-       * The bid price, as a percentage of On-Demand price, for each Amazon EC2 Spot Instance as
-       * defined by `InstanceType` .
-       *
-       * Expressed as a number (for example, 20 specifies 20%). If neither `BidPrice` nor
-       * `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice`
-       * defaults to 100%.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)
-       */
-      override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
-          unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
-
-      /**
-       * A configuration classification that applies when provisioning cluster instances, which can
-       * include configurations for applications and software that run on the cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-configurations)
-       */
-      override fun configurations(): Any? = unwrap(this).getConfigurations()
-
-      /**
-       * The custom AMI ID to use for the instance type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-customamiid)
-       */
-      override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
-
-      /**
-       * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as
-       * defined by `InstanceType` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-ebsconfiguration)
-       */
-      override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
-
-      /**
-       * An Amazon EC2 instance type, such as `m3.xlarge` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
-       */
-      override fun instanceType(): String = unwrap(this).getInstanceType()
-
-      /**
-       * The number of units that a provisioned instance of this type provides toward fulfilling the
-       * target capacities defined in `InstanceFleetConfig` .
-       *
-       * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
-       * instance fleets. Defaults to 1 if not specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-weightedcapacity)
-       */
-      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceTypeConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty):
-          InstanceTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceTypeConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceTypeConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty
-    }
-  }
-
-  /**
-   * Placement group configuration for an Amazon EMR cluster.
-   *
-   * The configuration specifies the placement strategy that can be applied to instance roles during
-   * cluster creation.
-   *
-   * To use this configuration, consider attaching managed policy
-   * AmazonElasticMapReducePlacementGroupPolicy to the Amazon EMR role.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * PlacementGroupConfigProperty placementGroupConfigProperty =
-   * PlacementGroupConfigProperty.builder()
-   * .instanceRole("instanceRole")
-   * // the properties below are optional
-   * .placementStrategy("placementStrategy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html)
-   */
-  public interface PlacementGroupConfigProperty {
-    /**
-     * Role of the instance in the cluster.
-     *
-     * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-instancerole)
-     */
-    public fun instanceRole(): String
-
-    /**
-     * Amazon EC2 Placement Group strategy associated with instance role.
-     *
-     * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
-     * for the `MASTER` instance role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-placementstrategy)
-     */
-    public fun placementStrategy(): String? = unwrap(this).getPlacementStrategy()
-
-    /**
-     * A builder for [PlacementGroupConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param instanceRole Role of the instance in the cluster. 
-       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
-       */
-      public fun instanceRole(instanceRole: String)
-
-      /**
-       * @param placementStrategy Amazon EC2 Placement Group strategy associated with instance role.
-       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
-       * for the `MASTER` instance role.
-       */
-      public fun placementStrategy(placementStrategy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty.builder()
-
-      /**
-       * @param instanceRole Role of the instance in the cluster. 
-       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
-       */
-      override fun instanceRole(instanceRole: String) {
-        cdkBuilder.instanceRole(instanceRole)
-      }
-
-      /**
-       * @param placementStrategy Amazon EC2 Placement Group strategy associated with instance role.
-       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
-       * for the `MASTER` instance role.
-       */
-      override fun placementStrategy(placementStrategy: String) {
-        cdkBuilder.placementStrategy(placementStrategy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty,
-    ) : CdkObject(cdkObject), PlacementGroupConfigProperty {
-      /**
-       * Role of the instance in the cluster.
-       *
-       * Starting with Amazon EMR release 5.23.0, the only supported instance role is `MASTER` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-instancerole)
-       */
-      override fun instanceRole(): String = unwrap(this).getInstanceRole()
-
-      /**
-       * Amazon EC2 Placement Group strategy associated with instance role.
-       *
-       * Starting with Amazon EMR release 5.23.0, the only supported placement strategy is `SPREAD`
-       * for the `MASTER` instance role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementgroupconfig.html#cfn-emr-cluster-placementgroupconfig-placementstrategy)
-       */
-      override fun placementStrategy(): String? = unwrap(this).getPlacementStrategy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementGroupConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty):
-          PlacementGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlacementGroupConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlacementGroupConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty
+      internal fun unwrap(wrapped: StepConfigProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty
     }
   }
 
@@ -9181,8 +9931,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty,
     ) : CdkObject(cdkObject), VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.
@@ -9235,763 +9984,6 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty
-    }
-  }
-
-  /**
-   * `Application` is a property of `AWS::EMR::Cluster` .
-   *
-   * The `Application` property type defines the open-source big data applications for EMR to
-   * install and configure when a cluster is created.
-   *
-   * With Amazon EMR release version 4.0 and later, the only accepted parameter is the application
-   * `Name` . To pass arguments to these applications, you use configuration classifications specified
-   * using JSON objects in a `Configuration` property. For more information, see [Configuring
-   * Applications](https://docs.aws.amazon.com//emr/latest/ReleaseGuide/emr-configure-apps.html) .
-   *
-   * With earlier Amazon EMR releases, the application is any AWS or third-party software that you
-   * can add to the cluster. You can specify the version of the application and arguments to pass to
-   * it. Amazon EMR accepts and forwards the argument list to the corresponding installation script as
-   * a bootstrap action argument.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ApplicationProperty applicationProperty = ApplicationProperty.builder()
-   * .additionalInfo(Map.of(
-   * "additionalInfoKey", "additionalInfo"))
-   * .args(List.of("args"))
-   * .name("name")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html)
-   */
-  public interface ApplicationProperty {
-    /**
-     * This option is for advanced users only.
-     *
-     * This is meta information about clusters and applications that are used for testing and
-     * troubleshooting.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-additionalinfo)
-     */
-    public fun additionalInfo(): Any? = unwrap(this).getAdditionalInfo()
-
-    /**
-     * Arguments for Amazon EMR to pass to the application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-args)
-     */
-    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
-
-    /**
-     * The name of the application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The version of the application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [ApplicationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param additionalInfo This option is for advanced users only.
-       * This is meta information about clusters and applications that are used for testing and
-       * troubleshooting.
-       */
-      public fun additionalInfo(additionalInfo: IResolvable)
-
-      /**
-       * @param additionalInfo This option is for advanced users only.
-       * This is meta information about clusters and applications that are used for testing and
-       * troubleshooting.
-       */
-      public fun additionalInfo(additionalInfo: Map<String, String>)
-
-      /**
-       * @param args Arguments for Amazon EMR to pass to the application.
-       */
-      public fun args(args: List<String>)
-
-      /**
-       * @param args Arguments for Amazon EMR to pass to the application.
-       */
-      public fun args(vararg args: String)
-
-      /**
-       * @param name The name of the application.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param version The version of the application.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty.builder()
-
-      /**
-       * @param additionalInfo This option is for advanced users only.
-       * This is meta information about clusters and applications that are used for testing and
-       * troubleshooting.
-       */
-      override fun additionalInfo(additionalInfo: IResolvable) {
-        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param additionalInfo This option is for advanced users only.
-       * This is meta information about clusters and applications that are used for testing and
-       * troubleshooting.
-       */
-      override fun additionalInfo(additionalInfo: Map<String, String>) {
-        cdkBuilder.additionalInfo(additionalInfo)
-      }
-
-      /**
-       * @param args Arguments for Amazon EMR to pass to the application.
-       */
-      override fun args(args: List<String>) {
-        cdkBuilder.args(args)
-      }
-
-      /**
-       * @param args Arguments for Amazon EMR to pass to the application.
-       */
-      override fun args(vararg args: String): Unit = args(args.toList())
-
-      /**
-       * @param name The name of the application.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param version The version of the application.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty,
-    ) : CdkObject(cdkObject), ApplicationProperty {
-      /**
-       * This option is for advanced users only.
-       *
-       * This is meta information about clusters and applications that are used for testing and
-       * troubleshooting.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-additionalinfo)
-       */
-      override fun additionalInfo(): Any? = unwrap(this).getAdditionalInfo()
-
-      /**
-       * Arguments for Amazon EMR to pass to the application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-args)
-       */
-      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
-
-      /**
-       * The name of the application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The version of the application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-application.html#cfn-emr-cluster-application-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty):
-          ApplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? ApplicationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApplicationProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty
-    }
-  }
-
-  /**
-   * `ScalingAction` is a subproperty of the `ScalingRule` property type.
-   *
-   * `ScalingAction` determines the type of adjustment the automatic scaling activity makes when
-   * triggered, and the periodicity of the adjustment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ScalingActionProperty scalingActionProperty = ScalingActionProperty.builder()
-   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .adjustmentType("adjustmentType")
-   * .coolDown(123)
-   * .build())
-   * // the properties below are optional
-   * .market("market")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html)
-   */
-  public interface ScalingActionProperty {
-    /**
-     * Not available for instance groups.
-     *
-     * Instance groups use the market type specified for the group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-market)
-     */
-    public fun market(): String? = unwrap(this).getMarket()
-
-    /**
-     * The type of adjustment the automatic scaling activity makes when triggered, and the
-     * periodicity of the adjustment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-simplescalingpolicyconfiguration)
-     */
-    public fun simpleScalingPolicyConfiguration(): Any
-
-    /**
-     * A builder for [ScalingActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param market Not available for instance groups.
-       * Instance groups use the market type specified for the group.
-       */
-      public fun market(market: String)
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable)
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty)
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("57b02d666cf409d0da791d543a5027ae708d2738f5d4eb69d19393c49afb51a0")
-      public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty.builder()
-
-      /**
-       * @param market Not available for instance groups.
-       * Instance groups use the market type specified for the group.
-       */
-      override fun market(market: String) {
-        cdkBuilder.market(market)
-      }
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      override fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      override
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param simpleScalingPolicyConfiguration The type of adjustment the automatic scaling
-       * activity makes when triggered, and the periodicity of the adjustment. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("57b02d666cf409d0da791d543a5027ae708d2738f5d4eb69d19393c49afb51a0")
-      override
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty(simpleScalingPolicyConfiguration))
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty,
-    ) : CdkObject(cdkObject), ScalingActionProperty {
-      /**
-       * Not available for instance groups.
-       *
-       * Instance groups use the market type specified for the group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-market)
-       */
-      override fun market(): String? = unwrap(this).getMarket()
-
-      /**
-       * The type of adjustment the automatic scaling activity makes when triggered, and the
-       * periodicity of the adjustment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html#cfn-emr-cluster-scalingaction-simplescalingpolicyconfiguration)
-       */
-      override fun simpleScalingPolicyConfiguration(): Any =
-          unwrap(this).getSimpleScalingPolicyConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty):
-          ScalingActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingActionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingActionProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty
-    }
-  }
-
-  /**
-   * `ScalingRule` is a subproperty of the `AutoScalingPolicy` property type.
-   *
-   * `ScalingRule` defines the scale-in or scale-out rules for scaling activity, including the
-   * CloudWatch metric alarm that triggers activity, how EC2 instances are added or removed, and the
-   * periodicity of adjustments. The automatic scaling policy for an instance group can comprise one or
-   * more automatic scaling rules.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ScalingRuleProperty scalingRuleProperty = ScalingRuleProperty.builder()
-   * .action(ScalingActionProperty.builder()
-   * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .adjustmentType("adjustmentType")
-   * .coolDown(123)
-   * .build())
-   * // the properties below are optional
-   * .market("market")
-   * .build())
-   * .name("name")
-   * .trigger(ScalingTriggerProperty.builder()
-   * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .metricName("metricName")
-   * .period(123)
-   * .threshold(123)
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .evaluationPeriods(123)
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * .unit("unit")
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .description("description")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html)
-   */
-  public interface ScalingRuleProperty {
-    /**
-     * The conditions that trigger an automatic scaling activity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-action)
-     */
-    public fun action(): Any
-
-    /**
-     * A friendly, more verbose description of the automatic scaling rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The name used to identify an automatic scaling rule.
-     *
-     * Rule names must be unique within a scaling policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-name)
-     */
-    public fun name(): String
-
-    /**
-     * The CloudWatch alarm definition that determines when automatic scaling activity is triggered.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-trigger)
-     */
-    public fun trigger(): Any
-
-    /**
-     * A builder for [ScalingRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      public fun action(action: IResolvable)
-
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      public fun action(action: ScalingActionProperty)
-
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("54312c2345469e16a1b194b05d183d8df3a94ae8cf715d7d9766ff89c6fcbf4f")
-      public fun action(action: ScalingActionProperty.Builder.() -> Unit)
-
-      /**
-       * @param description A friendly, more verbose description of the automatic scaling rule.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param name The name used to identify an automatic scaling rule. 
-       * Rule names must be unique within a scaling policy.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      public fun trigger(trigger: IResolvable)
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      public fun trigger(trigger: ScalingTriggerProperty)
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ed9f626671d043fbff78c239a39dc75380aaa27f98ca356653fb9b4b4426fa22")
-      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty.Builder =
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty.builder()
-
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      override fun action(action: ScalingActionProperty) {
-        cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
-      }
-
-      /**
-       * @param action The conditions that trigger an automatic scaling activity. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("54312c2345469e16a1b194b05d183d8df3a94ae8cf715d7d9766ff89c6fcbf4f")
-      override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
-          action(ScalingActionProperty(action))
-
-      /**
-       * @param description A friendly, more verbose description of the automatic scaling rule.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param name The name used to identify an automatic scaling rule. 
-       * Rule names must be unique within a scaling policy.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      override fun trigger(trigger: IResolvable) {
-        cdkBuilder.trigger(trigger.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      override fun trigger(trigger: ScalingTriggerProperty) {
-        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
-      }
-
-      /**
-       * @param trigger The CloudWatch alarm definition that determines when automatic scaling
-       * activity is triggered. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ed9f626671d043fbff78c239a39dc75380aaa27f98ca356653fb9b4b4426fa22")
-      override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
-          trigger(ScalingTriggerProperty(trigger))
-
-      public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty,
-    ) : CdkObject(cdkObject), ScalingRuleProperty {
-      /**
-       * The conditions that trigger an automatic scaling activity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-action)
-       */
-      override fun action(): Any = unwrap(this).getAction()
-
-      /**
-       * A friendly, more verbose description of the automatic scaling rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The name used to identify an automatic scaling rule.
-       *
-       * Rule names must be unique within a scaling policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The CloudWatch alarm definition that determines when automatic scaling activity is
-       * triggered.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingrule.html#cfn-emr-cluster-scalingrule-trigger)
-       */
-      override fun trigger(): Any = unwrap(this).getTrigger()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScalingRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty):
-          ScalingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScalingRuleProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty
-    }
-  }
-
-  /**
-   * `ScriptBootstrapActionConfig` is a subproperty of the `BootstrapActionConfig` property type.
-   *
-   * `ScriptBootstrapActionConfig` specifies the arguments and location of the bootstrap script for
-   * EMR to run on all cluster nodes before it installs open-source big data applications on them.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.emr.*;
-   * ScriptBootstrapActionConfigProperty scriptBootstrapActionConfigProperty =
-   * ScriptBootstrapActionConfigProperty.builder()
-   * .path("path")
-   * // the properties below are optional
-   * .args(List.of("args"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html)
-   */
-  public interface ScriptBootstrapActionConfigProperty {
-    /**
-     * A list of command line arguments to pass to the bootstrap action script.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-args)
-     */
-    public fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
-
-    /**
-     * Location in Amazon S3 of the script to run during a bootstrap action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-path)
-     */
-    public fun path(): String
-
-    /**
-     * A builder for [ScriptBootstrapActionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param args A list of command line arguments to pass to the bootstrap action script.
-       */
-      public fun args(args: List<String>)
-
-      /**
-       * @param args A list of command line arguments to pass to the bootstrap action script.
-       */
-      public fun args(vararg args: String)
-
-      /**
-       * @param path Location in Amazon S3 of the script to run during a bootstrap action. 
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty.builder()
-
-      /**
-       * @param args A list of command line arguments to pass to the bootstrap action script.
-       */
-      override fun args(args: List<String>) {
-        cdkBuilder.args(args)
-      }
-
-      /**
-       * @param args A list of command line arguments to pass to the bootstrap action script.
-       */
-      override fun args(vararg args: String): Unit = args(args.toList())
-
-      /**
-       * @param path Location in Amazon S3 of the script to run during a bootstrap action. 
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty,
-    ) : CdkObject(cdkObject), ScriptBootstrapActionConfigProperty {
-      /**
-       * A list of command line arguments to pass to the bootstrap action script.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-args)
-       */
-      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
-
-      /**
-       * Location in Amazon S3 of the script to run during a bootstrap action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html#cfn-emr-cluster-scriptbootstrapactionconfig-path)
-       */
-      override fun path(): String = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ScriptBootstrapActionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty):
-          ScriptBootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ScriptBootstrapActionConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScriptBootstrapActionConfigProperty):
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty
     }
   }
 }

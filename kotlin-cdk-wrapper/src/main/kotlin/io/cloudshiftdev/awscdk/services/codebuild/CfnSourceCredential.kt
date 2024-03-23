@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html)
  */
-public open class CfnSourceCredential internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredential,
+public open class CfnSourceCredential(
+  cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredential,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -246,6 +246,7 @@ public open class CfnSourceCredential internal constructor(
         CfnSourceCredential = CfnSourceCredential(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceCredential):
-        software.amazon.awscdk.services.codebuild.CfnSourceCredential = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.CfnSourceCredential = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.CfnSourceCredential
   }
 }

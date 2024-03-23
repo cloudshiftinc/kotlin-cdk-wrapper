@@ -33,8 +33,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class DateTimeAttribute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.DateTimeAttribute,
+public open class DateTimeAttribute(
+  cdkObject: software.amazon.awscdk.services.cognito.DateTimeAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.DateTimeAttribute()
   )
@@ -111,6 +111,7 @@ public open class DateTimeAttribute internal constructor(
         DateTimeAttribute = DateTimeAttribute(cdkObject)
 
     internal fun unwrap(wrapped: DateTimeAttribute):
-        software.amazon.awscdk.services.cognito.DateTimeAttribute = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.DateTimeAttribute = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.DateTimeAttribute
   }
 }

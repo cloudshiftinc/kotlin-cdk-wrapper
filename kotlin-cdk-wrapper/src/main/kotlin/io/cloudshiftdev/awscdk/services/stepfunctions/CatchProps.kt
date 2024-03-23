@@ -106,7 +106,7 @@ public interface CatchProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps,
   ) : CdkObject(cdkObject), CatchProps {
     /**
      * Errors to recover from by going to the given state.

@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class MxRecord internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.MxRecord,
+public open class MxRecord(
+  cdkObject: software.amazon.awscdk.services.route53.MxRecord,
 ) : RecordSet(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -414,6 +414,6 @@ public open class MxRecord internal constructor(
         MxRecord(cdkObject)
 
     internal fun unwrap(wrapped: MxRecord): software.amazon.awscdk.services.route53.MxRecord =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.MxRecord
   }
 }

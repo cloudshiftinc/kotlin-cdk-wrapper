@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class RecordSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.RecordSet,
+public open class RecordSet(
+  cdkObject: software.amazon.awscdk.services.route53.RecordSet,
 ) : Resource(cdkObject), IRecordSet {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -422,6 +422,6 @@ public open class RecordSet internal constructor(
         RecordSet(cdkObject)
 
     internal fun unwrap(wrapped: RecordSet): software.amazon.awscdk.services.route53.RecordSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.RecordSet
   }
 }

@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Resolver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.Resolver,
+public open class Resolver(
+  cdkObject: software.amazon.awscdk.services.appsync.Resolver,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -338,6 +338,6 @@ public open class Resolver internal constructor(
         Resolver(cdkObject)
 
     internal fun unwrap(wrapped: Resolver): software.amazon.awscdk.services.appsync.Resolver =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appsync.Resolver
   }
 }

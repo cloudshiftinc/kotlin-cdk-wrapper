@@ -31,9 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
  */
-public open class SageMakerUpdateEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpoint,
+public open class SageMakerUpdateEndpoint(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpoint,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -472,6 +471,7 @@ public open class SageMakerUpdateEndpoint internal constructor(
 
     internal fun unwrap(wrapped: SageMakerUpdateEndpoint):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpoint
   }
 }

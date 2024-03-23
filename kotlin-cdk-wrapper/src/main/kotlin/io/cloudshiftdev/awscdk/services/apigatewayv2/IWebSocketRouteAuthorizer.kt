@@ -29,7 +29,7 @@ public interface IWebSocketRouteAuthorizer {
       WebSocketRouteAuthorizerConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketRouteAuthorizer,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketRouteAuthorizer,
   ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
     /**
      * Bind this authorizer to a specified WebSocket route.

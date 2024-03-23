@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class FargateTaskDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinition,
+public open class FargateTaskDefinition(
+  cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinition,
 ) : TaskDefinition(cdkObject), IFargateTaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -500,6 +500,7 @@ public open class FargateTaskDefinition internal constructor(
         FargateTaskDefinition = FargateTaskDefinition(cdkObject)
 
     internal fun unwrap(wrapped: FargateTaskDefinition):
-        software.amazon.awscdk.services.ecs.FargateTaskDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.FargateTaskDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.FargateTaskDefinition
   }
 }

@@ -51,9 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html)
  */
-public open class CfnOriginAccessControl internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl,
+public open class CfnOriginAccessControl(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -210,7 +209,8 @@ public open class CfnOriginAccessControl internal constructor(
         CfnOriginAccessControl = CfnOriginAccessControl(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginAccessControl):
-        software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl
   }
 
   /**
@@ -430,8 +430,7 @@ public open class CfnOriginAccessControl internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty,
     ) : CdkObject(cdkObject), OriginAccessControlConfigProperty {
       /**
        * A description of the origin access control.

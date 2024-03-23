@@ -447,7 +447,7 @@ public interface EmrAddStepProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStepProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStepProps,
   ) : CdkObject(cdkObject), EmrAddStepProps {
     /**
      * The action to take when the cluster step fails.

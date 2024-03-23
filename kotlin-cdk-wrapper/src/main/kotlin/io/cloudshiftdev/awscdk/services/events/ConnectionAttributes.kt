@@ -91,7 +91,7 @@ public interface ConnectionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.ConnectionAttributes,
+    cdkObject: software.amazon.awscdk.services.events.ConnectionAttributes,
   ) : CdkObject(cdkObject), ConnectionAttributes {
     /**
      * The ARN of the connection created.

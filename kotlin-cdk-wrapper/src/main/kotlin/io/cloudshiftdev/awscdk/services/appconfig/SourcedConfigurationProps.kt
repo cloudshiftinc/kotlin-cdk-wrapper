@@ -231,7 +231,7 @@ public interface SourcedConfigurationProps : ConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationProps,
   ) : CdkObject(cdkObject), SourcedConfigurationProps {
     /**
      * The application associated with the configuration.

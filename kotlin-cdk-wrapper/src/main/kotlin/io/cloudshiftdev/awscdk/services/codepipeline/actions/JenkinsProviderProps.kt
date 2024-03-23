@@ -151,8 +151,7 @@ public interface JenkinsProviderProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps,
   ) : CdkObject(cdkObject), JenkinsProviderProps {
     /**
      * Whether to immediately register a Jenkins Provider for the build category.

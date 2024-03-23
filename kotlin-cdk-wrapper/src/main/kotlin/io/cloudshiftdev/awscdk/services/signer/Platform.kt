@@ -28,8 +28,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/signer/latest/developerguide/gs-platform.html)
  */
-public open class Platform internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.signer.Platform,
+public open class Platform(
+  cdkObject: software.amazon.awscdk.services.signer.Platform,
 ) : CdkObject(cdkObject) {
   /**
    * * The id of signing platform.
@@ -59,6 +59,6 @@ public open class Platform internal constructor(
         Platform(cdkObject)
 
     internal fun unwrap(wrapped: Platform): software.amazon.awscdk.services.signer.Platform =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.signer.Platform
   }
 }

@@ -351,7 +351,7 @@ public interface CfnDomainNameProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainNameProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainNameProps,
   ) : CdkObject(cdkObject), CfnDomainNameProps {
     /**
      * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for

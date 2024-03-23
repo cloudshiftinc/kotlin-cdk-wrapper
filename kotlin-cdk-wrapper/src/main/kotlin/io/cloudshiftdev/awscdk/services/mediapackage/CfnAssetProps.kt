@@ -232,7 +232,7 @@ public interface CfnAssetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnAssetProps,
+    cdkObject: software.amazon.awscdk.services.mediapackage.CfnAssetProps,
   ) : CdkObject(cdkObject), CfnAssetProps {
     /**
      * List of playback endpoints that are available for this asset.

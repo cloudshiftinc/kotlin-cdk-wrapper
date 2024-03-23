@@ -270,7 +270,7 @@ public interface BaseResolverProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.BaseResolverProps,
+    cdkObject: software.amazon.awscdk.services.appsync.BaseResolverProps,
   ) : CdkObject(cdkObject), BaseResolverProps {
     /**
      * The caching configuration for this resolver.

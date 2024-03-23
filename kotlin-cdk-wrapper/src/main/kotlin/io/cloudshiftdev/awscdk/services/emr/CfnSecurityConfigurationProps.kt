@@ -114,7 +114,7 @@ public interface CfnSecurityConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnSecurityConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnSecurityConfigurationProps,
   ) : CdkObject(cdkObject), CfnSecurityConfigurationProps {
     /**
      * The name of the security configuration.

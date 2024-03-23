@@ -21,8 +21,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * new VdmAttributes(this, "Vdm");
  * ```
  */
-public open class VdmAttributes internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
+public open class VdmAttributes(
+  cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
 ) : Resource(cdkObject), IVdmAttributes {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -135,6 +135,6 @@ public open class VdmAttributes internal constructor(
         VdmAttributes(cdkObject)
 
     internal fun unwrap(wrapped: VdmAttributes): software.amazon.awscdk.services.ses.VdmAttributes =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.VdmAttributes
   }
 }

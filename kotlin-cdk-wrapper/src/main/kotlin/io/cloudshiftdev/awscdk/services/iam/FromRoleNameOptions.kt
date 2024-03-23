@@ -98,7 +98,7 @@ public interface FromRoleNameOptions : FromRoleArnOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.FromRoleNameOptions,
+    cdkObject: software.amazon.awscdk.services.iam.FromRoleNameOptions,
   ) : CdkObject(cdkObject), FromRoleNameOptions {
     /**
      * For immutable roles: add grants to resources instead of dropping them.

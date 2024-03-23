@@ -161,7 +161,7 @@ public interface MixedInstancesPolicy {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy,
+    cdkObject: software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy,
   ) : CdkObject(cdkObject), MixedInstancesPolicy {
     /**
      * InstancesDistribution to use.

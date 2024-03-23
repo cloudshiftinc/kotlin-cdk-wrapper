@@ -423,7 +423,7 @@ public interface CfnConfigurationSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetProps,
+    cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetProps,
   ) : CdkObject(cdkObject), CfnConfigurationSetProps {
     /**
      * Specifies whether messages that use the configuration set are required to use Transport Layer

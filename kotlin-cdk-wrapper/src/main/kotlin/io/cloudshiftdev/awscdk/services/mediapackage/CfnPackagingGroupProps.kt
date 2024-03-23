@@ -202,7 +202,7 @@ public interface CfnPackagingGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroupProps,
+    cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroupProps,
   ) : CdkObject(cdkObject), CfnPackagingGroupProps {
     /**
      * Parameters for CDN authorization.

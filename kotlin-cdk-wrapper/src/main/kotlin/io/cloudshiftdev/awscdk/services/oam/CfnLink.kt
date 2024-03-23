@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html)
  */
-public open class CfnLink internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.oam.CfnLink,
+public open class CfnLink(
+  cdkObject: software.amazon.awscdk.services.oam.CfnLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -333,6 +333,6 @@ public open class CfnLink internal constructor(
         CfnLink(cdkObject)
 
     internal fun unwrap(wrapped: CfnLink): software.amazon.awscdk.services.oam.CfnLink =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.oam.CfnLink
   }
 }

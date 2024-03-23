@@ -25,8 +25,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class DkimIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
+public abstract class DkimIdentity(
+  cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
 ) : CdkObject(cdkObject) {
   /**
    * Binds this DKIM identity to the email identity.
@@ -48,7 +48,7 @@ public abstract class DkimIdentity internal constructor(
       hostedZone.let(IPublicHostedZone::unwrap))?.let(DkimIdentityConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
+    cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
   ) : DkimIdentity(cdkObject)
 
   public companion object {

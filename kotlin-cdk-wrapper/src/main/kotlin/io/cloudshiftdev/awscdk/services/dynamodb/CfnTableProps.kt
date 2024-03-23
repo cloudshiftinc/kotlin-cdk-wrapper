@@ -1284,7 +1284,7 @@ public interface CfnTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTableProps,
+    cdkObject: software.amazon.awscdk.services.dynamodb.CfnTableProps,
   ) : CdkObject(cdkObject), CfnTableProps {
     /**
      * A list of attributes that describe the key schema for the table and indexes.

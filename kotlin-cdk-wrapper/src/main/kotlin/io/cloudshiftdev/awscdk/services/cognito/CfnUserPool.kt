@@ -157,8 +157,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)
  */
-public open class CfnUserPool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
+public open class CfnUserPool(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -2293,11 +2293,17 @@ public open class CfnUserPool internal constructor(
         CfnUserPool(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPool): software.amazon.awscdk.services.cognito.CfnUserPool =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cognito.CfnUserPool
   }
 
   /**
-   * A custom email sender AWS Lambda trigger.
+   * Use this setting to define which verified available method a user can use to recover their
+   * password when they call `ForgotPassword` .
+   *
+   * It allows you to define a preferred method when a user has more than one method available. With
+   * this setting, SMS does not qualify for a valid password recovery mechanism if the user also has
+   * SMS MFA enabled. In the absence of this setting, Cognito uses the legacy behavior to determine the
+   * recovery method where SMS is preferred over email.
    *
    * Example:
    *
@@ -2305,119 +2311,103 @@ public open class CfnUserPool internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * CustomEmailSenderProperty customEmailSenderProperty = CustomEmailSenderProperty.builder()
-   * .lambdaArn("lambdaArn")
-   * .lambdaVersion("lambdaVersion")
+   * AccountRecoverySettingProperty accountRecoverySettingProperty =
+   * AccountRecoverySettingProperty.builder()
+   * .recoveryMechanisms(List.of(RecoveryOptionProperty.builder()
+   * .name("name")
+   * .priority(123)
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html)
    */
-  public interface CustomEmailSenderProperty {
+  public interface AccountRecoverySettingProperty {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
-     * send email notifications to users.
+     * The list of `RecoveryOptionTypes` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)
      */
-    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+    public fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
 
     /**
-     * The Lambda version represents the signature of the "request" attribute in the "event"
-     * information that Amazon Cognito passes to your custom email sender AWS Lambda function.
-     *
-     * The only supported value is `V1_0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaversion)
-     */
-    public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
-
-    /**
-     * A builder for [CustomEmailSenderProperty]
+     * A builder for [AccountRecoverySettingProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
-       * Cognito triggers to send email notifications to users.
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
-      public fun lambdaArn(lambdaArn: String)
+      public fun recoveryMechanisms(recoveryMechanisms: IResolvable)
 
       /**
-       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
-       * in the "event" information that Amazon Cognito passes to your custom email sender AWS Lambda
-       * function.
-       * The only supported value is `V1_0` .
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
-      public fun lambdaVersion(lambdaVersion: String)
+      public fun recoveryMechanisms(recoveryMechanisms: List<Any>)
+
+      /**
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
+       */
+      public fun recoveryMechanisms(vararg recoveryMechanisms: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty.builder()
 
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
-       * Cognito triggers to send email notifications to users.
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
-      override fun lambdaArn(lambdaArn: String) {
-        cdkBuilder.lambdaArn(lambdaArn)
+      override fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
+        cdkBuilder.recoveryMechanisms(recoveryMechanisms.let(IResolvable::unwrap))
       }
 
       /**
-       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
-       * in the "event" information that Amazon Cognito passes to your custom email sender AWS Lambda
-       * function.
-       * The only supported value is `V1_0` .
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
-      override fun lambdaVersion(lambdaVersion: String) {
-        cdkBuilder.lambdaVersion(lambdaVersion)
+      override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
+        cdkBuilder.recoveryMechanisms(recoveryMechanisms)
       }
+
+      /**
+       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
+       */
+      override fun recoveryMechanisms(vararg recoveryMechanisms: Any): Unit =
+          recoveryMechanisms(recoveryMechanisms.toList())
 
       public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty =
+          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty,
-    ) : CdkObject(cdkObject), CustomEmailSenderProperty {
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty,
+    ) : CdkObject(cdkObject), AccountRecoverySettingProperty {
       /**
-       * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
-       * send email notifications to users.
+       * The list of `RecoveryOptionTypes` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)
        */
-      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
-
-      /**
-       * The Lambda version represents the signature of the "request" attribute in the "event"
-       * information that Amazon Cognito passes to your custom email sender AWS Lambda function.
-       *
-       * The only supported value is `V1_0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaversion)
-       */
-      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+      override fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomEmailSenderProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccountRecoverySettingProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty):
-          CustomEmailSenderProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomEmailSenderProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty):
+          AccountRecoverySettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountRecoverySettingProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CustomEmailSenderProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty
+      internal fun unwrap(wrapped: AccountRecoverySettingProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty
     }
   }
 
@@ -2627,8 +2617,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty,
     ) : CdkObject(cdkObject), AdminCreateUserConfigProperty {
       /**
        * Set to `True` if only the administrator is allowed to create user profiles.
@@ -2689,7 +2678,7 @@ public open class CfnUserPool internal constructor(
   }
 
   /**
-   * The password policy type.
+   * A custom email sender AWS Lambda trigger.
    *
    * Example:
    *
@@ -2697,441 +2686,240 @@ public open class CfnUserPool internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * PasswordPolicyProperty passwordPolicyProperty = PasswordPolicyProperty.builder()
-   * .minimumLength(123)
-   * .requireLowercase(false)
-   * .requireNumbers(false)
-   * .requireSymbols(false)
-   * .requireUppercase(false)
-   * .temporaryPasswordValidityDays(123)
+   * CustomEmailSenderProperty customEmailSenderProperty = CustomEmailSenderProperty.builder()
+   * .lambdaArn("lambdaArn")
+   * .lambdaVersion("lambdaVersion")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html)
    */
-  public interface PasswordPolicyProperty {
+  public interface CustomEmailSenderProperty {
     /**
-     * The minimum length of the password in the policy that you have set.
+     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
+     * send email notifications to users.
      *
-     * This value can't be less than 6.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-minimumlength)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaarn)
      */
-    public fun minimumLength(): Number? = unwrap(this).getMinimumLength()
+    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
 
     /**
-     * In the password policy that you have set, refers to whether you have required users to use at
-     * least one lowercase letter in their password.
+     * The Lambda version represents the signature of the "request" attribute in the "event"
+     * information that Amazon Cognito passes to your custom email sender AWS Lambda function.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase)
+     * The only supported value is `V1_0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaversion)
      */
-    public fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
+    public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
 
     /**
-     * In the password policy that you have set, refers to whether you have required users to use at
-     * least one number in their password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers)
-     */
-    public fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
-
-    /**
-     * In the password policy that you have set, refers to whether you have required users to use at
-     * least one symbol in their password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols)
-     */
-    public fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
-
-    /**
-     * In the password policy that you have set, refers to whether you have required users to use at
-     * least one uppercase letter in their password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase)
-     */
-    public fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
-
-    /**
-     * The number of days a temporary password is valid in the password policy.
-     *
-     * If the user doesn't sign in during this time, an administrator must reset their password.
-     * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
-     * sets `TemporaryPasswordValidityDays` to its default value.
-     *
-     *
-     * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
-     * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)
-     */
-    public fun temporaryPasswordValidityDays(): Number? =
-        unwrap(this).getTemporaryPasswordValidityDays()
-
-    /**
-     * A builder for [PasswordPolicyProperty]
+     * A builder for [CustomEmailSenderProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param minimumLength The minimum length of the password in the policy that you have set.
-       * This value can't be less than 6.
+       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
+       * Cognito triggers to send email notifications to users.
        */
-      public fun minimumLength(minimumLength: Number)
+      public fun lambdaArn(lambdaArn: String)
 
       /**
-       * @param requireLowercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one lowercase letter in their password.
+       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
+       * in the "event" information that Amazon Cognito passes to your custom email sender AWS Lambda
+       * function.
+       * The only supported value is `V1_0` .
        */
-      public fun requireLowercase(requireLowercase: Boolean)
-
-      /**
-       * @param requireLowercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one lowercase letter in their password.
-       */
-      public fun requireLowercase(requireLowercase: IResolvable)
-
-      /**
-       * @param requireNumbers In the password policy that you have set, refers to whether you have
-       * required users to use at least one number in their password.
-       */
-      public fun requireNumbers(requireNumbers: Boolean)
-
-      /**
-       * @param requireNumbers In the password policy that you have set, refers to whether you have
-       * required users to use at least one number in their password.
-       */
-      public fun requireNumbers(requireNumbers: IResolvable)
-
-      /**
-       * @param requireSymbols In the password policy that you have set, refers to whether you have
-       * required users to use at least one symbol in their password.
-       */
-      public fun requireSymbols(requireSymbols: Boolean)
-
-      /**
-       * @param requireSymbols In the password policy that you have set, refers to whether you have
-       * required users to use at least one symbol in their password.
-       */
-      public fun requireSymbols(requireSymbols: IResolvable)
-
-      /**
-       * @param requireUppercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one uppercase letter in their password.
-       */
-      public fun requireUppercase(requireUppercase: Boolean)
-
-      /**
-       * @param requireUppercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one uppercase letter in their password.
-       */
-      public fun requireUppercase(requireUppercase: IResolvable)
-
-      /**
-       * @param temporaryPasswordValidityDays The number of days a temporary password is valid in
-       * the password policy.
-       * If the user doesn't sign in during this time, an administrator must reset their password.
-       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
-       * sets `TemporaryPasswordValidityDays` to its default value.
-       *
-       *
-       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
-       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
-       */
-      public fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number)
+      public fun lambdaVersion(lambdaVersion: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.builder()
 
       /**
-       * @param minimumLength The minimum length of the password in the policy that you have set.
-       * This value can't be less than 6.
+       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
+       * Cognito triggers to send email notifications to users.
        */
-      override fun minimumLength(minimumLength: Number) {
-        cdkBuilder.minimumLength(minimumLength)
+      override fun lambdaArn(lambdaArn: String) {
+        cdkBuilder.lambdaArn(lambdaArn)
       }
 
       /**
-       * @param requireLowercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one lowercase letter in their password.
+       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
+       * in the "event" information that Amazon Cognito passes to your custom email sender AWS Lambda
+       * function.
+       * The only supported value is `V1_0` .
        */
-      override fun requireLowercase(requireLowercase: Boolean) {
-        cdkBuilder.requireLowercase(requireLowercase)
-      }
-
-      /**
-       * @param requireLowercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one lowercase letter in their password.
-       */
-      override fun requireLowercase(requireLowercase: IResolvable) {
-        cdkBuilder.requireLowercase(requireLowercase.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireNumbers In the password policy that you have set, refers to whether you have
-       * required users to use at least one number in their password.
-       */
-      override fun requireNumbers(requireNumbers: Boolean) {
-        cdkBuilder.requireNumbers(requireNumbers)
-      }
-
-      /**
-       * @param requireNumbers In the password policy that you have set, refers to whether you have
-       * required users to use at least one number in their password.
-       */
-      override fun requireNumbers(requireNumbers: IResolvable) {
-        cdkBuilder.requireNumbers(requireNumbers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireSymbols In the password policy that you have set, refers to whether you have
-       * required users to use at least one symbol in their password.
-       */
-      override fun requireSymbols(requireSymbols: Boolean) {
-        cdkBuilder.requireSymbols(requireSymbols)
-      }
-
-      /**
-       * @param requireSymbols In the password policy that you have set, refers to whether you have
-       * required users to use at least one symbol in their password.
-       */
-      override fun requireSymbols(requireSymbols: IResolvable) {
-        cdkBuilder.requireSymbols(requireSymbols.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param requireUppercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one uppercase letter in their password.
-       */
-      override fun requireUppercase(requireUppercase: Boolean) {
-        cdkBuilder.requireUppercase(requireUppercase)
-      }
-
-      /**
-       * @param requireUppercase In the password policy that you have set, refers to whether you
-       * have required users to use at least one uppercase letter in their password.
-       */
-      override fun requireUppercase(requireUppercase: IResolvable) {
-        cdkBuilder.requireUppercase(requireUppercase.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param temporaryPasswordValidityDays The number of days a temporary password is valid in
-       * the password policy.
-       * If the user doesn't sign in during this time, an administrator must reset their password.
-       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
-       * sets `TemporaryPasswordValidityDays` to its default value.
-       *
-       *
-       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
-       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
-       */
-      override fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number) {
-        cdkBuilder.temporaryPasswordValidityDays(temporaryPasswordValidityDays)
-      }
-
-      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty,
-    ) : CdkObject(cdkObject), PasswordPolicyProperty {
-      /**
-       * The minimum length of the password in the policy that you have set.
-       *
-       * This value can't be less than 6.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-minimumlength)
-       */
-      override fun minimumLength(): Number? = unwrap(this).getMinimumLength()
-
-      /**
-       * In the password policy that you have set, refers to whether you have required users to use
-       * at least one lowercase letter in their password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase)
-       */
-      override fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
-
-      /**
-       * In the password policy that you have set, refers to whether you have required users to use
-       * at least one number in their password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers)
-       */
-      override fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
-
-      /**
-       * In the password policy that you have set, refers to whether you have required users to use
-       * at least one symbol in their password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols)
-       */
-      override fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
-
-      /**
-       * In the password policy that you have set, refers to whether you have required users to use
-       * at least one uppercase letter in their password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase)
-       */
-      override fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
-
-      /**
-       * The number of days a temporary password is valid in the password policy.
-       *
-       * If the user doesn't sign in during this time, an administrator must reset their password.
-       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
-       * sets `TemporaryPasswordValidityDays` to its default value.
-       *
-       *
-       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
-       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)
-       */
-      override fun temporaryPasswordValidityDays(): Number? =
-          unwrap(this).getTemporaryPasswordValidityDays()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PasswordPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty):
-          PasswordPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? PasswordPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PasswordPolicyProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty
-    }
-  }
-
-  /**
-   * The `StringAttributeConstraints` property type defines the string attribute constraints of an
-   * Amazon Cognito user pool.
-   *
-   * `StringAttributeConstraints` is a subproperty of the
-   * [SchemaAttribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * StringAttributeConstraintsProperty stringAttributeConstraintsProperty =
-   * StringAttributeConstraintsProperty.builder()
-   * .maxLength("maxLength")
-   * .minLength("minLength")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html)
-   */
-  public interface StringAttributeConstraintsProperty {
-    /**
-     * The maximum length.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
-     */
-    public fun maxLength(): String? = unwrap(this).getMaxLength()
-
-    /**
-     * The minimum length.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength)
-     */
-    public fun minLength(): String? = unwrap(this).getMinLength()
-
-    /**
-     * A builder for [StringAttributeConstraintsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxLength The maximum length.
-       */
-      public fun maxLength(maxLength: String)
-
-      /**
-       * @param minLength The minimum length.
-       */
-      public fun minLength(minLength: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.builder()
-
-      /**
-       * @param maxLength The maximum length.
-       */
-      override fun maxLength(maxLength: String) {
-        cdkBuilder.maxLength(maxLength)
-      }
-
-      /**
-       * @param minLength The minimum length.
-       */
-      override fun minLength(minLength: String) {
-        cdkBuilder.minLength(minLength)
+      override fun lambdaVersion(lambdaVersion: String) {
+        cdkBuilder.lambdaVersion(lambdaVersion)
       }
 
       public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty =
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty,
-    ) : CdkObject(cdkObject), StringAttributeConstraintsProperty {
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty,
+    ) : CdkObject(cdkObject), CustomEmailSenderProperty {
       /**
-       * The maximum length.
+       * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
+       * send email notifications to users.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaarn)
        */
-      override fun maxLength(): String? = unwrap(this).getMaxLength()
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
 
       /**
-       * The minimum length.
+       * The Lambda version represents the signature of the "request" attribute in the "event"
+       * information that Amazon Cognito passes to your custom email sender AWS Lambda function.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength)
+       * The only supported value is `V1_0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html#cfn-cognito-userpool-customemailsender-lambdaversion)
        */
-      override fun minLength(): String? = unwrap(this).getMinLength()
+      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          StringAttributeConstraintsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomEmailSenderProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty):
-          StringAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StringAttributeConstraintsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty):
+          CustomEmailSenderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomEmailSenderProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StringAttributeConstraintsProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty
+      internal fun unwrap(wrapped: CustomEmailSenderProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty
+    }
+  }
+
+  /**
+   * A custom SMS sender AWS Lambda trigger.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * CustomSMSSenderProperty customSMSSenderProperty = CustomSMSSenderProperty.builder()
+   * .lambdaArn("lambdaArn")
+   * .lambdaVersion("lambdaVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html)
+   */
+  public interface CustomSMSSenderProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
+     * send SMS notifications to users.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaarn)
+     */
+    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+
+    /**
+     * The Lambda version represents the signature of the "request" attribute in the "event"
+     * information Amazon Cognito passes to your custom SMS sender Lambda function.
+     *
+     * The only supported value is `V1_0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaversion)
+     */
+    public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+
+    /**
+     * A builder for [CustomSMSSenderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
+       * Cognito triggers to send SMS notifications to users.
+       */
+      public fun lambdaArn(lambdaArn: String)
+
+      /**
+       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
+       * in the "event" information Amazon Cognito passes to your custom SMS sender Lambda function.
+       * The only supported value is `V1_0` .
+       */
+      public fun lambdaVersion(lambdaVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.builder()
+
+      /**
+       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
+       * Cognito triggers to send SMS notifications to users.
+       */
+      override fun lambdaArn(lambdaArn: String) {
+        cdkBuilder.lambdaArn(lambdaArn)
+      }
+
+      /**
+       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
+       * in the "event" information Amazon Cognito passes to your custom SMS sender Lambda function.
+       * The only supported value is `V1_0` .
+       */
+      override fun lambdaVersion(lambdaVersion: String) {
+        cdkBuilder.lambdaVersion(lambdaVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty,
+    ) : CdkObject(cdkObject), CustomSMSSenderProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
+       * send SMS notifications to users.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaarn)
+       */
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+
+      /**
+       * The Lambda version represents the signature of the "request" attribute in the "event"
+       * information Amazon Cognito passes to your custom SMS sender Lambda function.
+       *
+       * The only supported value is `V1_0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaversion)
+       */
+      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomSMSSenderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty):
+          CustomSMSSenderProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomSMSSenderProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomSMSSenderProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty
     }
   }
 
@@ -3328,8 +3116,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty,
     ) : CdkObject(cdkObject), DeviceConfigurationProperty {
       /**
        * When true, a remembered device can sign in with device authentication instead of SMS and
@@ -3379,1507 +3166,6 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty
-    }
-  }
-
-  /**
-   * The policy associated with a user pool.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * PoliciesProperty policiesProperty = PoliciesProperty.builder()
-   * .passwordPolicy(PasswordPolicyProperty.builder()
-   * .minimumLength(123)
-   * .requireLowercase(false)
-   * .requireNumbers(false)
-   * .requireSymbols(false)
-   * .requireUppercase(false)
-   * .temporaryPasswordValidityDays(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html)
-   */
-  public interface PoliciesProperty {
-    /**
-     * The password policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy)
-     */
-    public fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
-
-    /**
-     * A builder for [PoliciesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      public fun passwordPolicy(passwordPolicy: IResolvable)
-
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty)
-
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
-      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.builder()
-
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      override fun passwordPolicy(passwordPolicy: IResolvable) {
-        cdkBuilder.passwordPolicy(passwordPolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
-        cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicyProperty::unwrap))
-      }
-
-      /**
-       * @param passwordPolicy The password policy.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
-      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit): Unit =
-          passwordPolicy(PasswordPolicyProperty(passwordPolicy))
-
-      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty,
-    ) : CdkObject(cdkObject), PoliciesProperty {
-      /**
-       * The password policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy)
-       */
-      override fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PoliciesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty):
-          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PoliciesProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty
-    }
-  }
-
-  /**
-   * A list of the user attributes and their properties in your user pool.
-   *
-   * The attribute schema contains standard attributes, custom attributes with a `custom:` prefix,
-   * and developer attributes with a `dev:` prefix. For more information, see [User pool
-   * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
-   * .
-   *
-   * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients.
-   * You can create and update developer-only attributes only with IAM-authenticated API operations.
-   * Use app client read/write permissions instead.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * SchemaAttributeProperty schemaAttributeProperty = SchemaAttributeProperty.builder()
-   * .attributeDataType("attributeDataType")
-   * .developerOnlyAttribute(false)
-   * .mutable(false)
-   * .name("name")
-   * .numberAttributeConstraints(NumberAttributeConstraintsProperty.builder()
-   * .maxValue("maxValue")
-   * .minValue("minValue")
-   * .build())
-   * .required(false)
-   * .stringAttributeConstraints(StringAttributeConstraintsProperty.builder()
-   * .maxLength("maxLength")
-   * .minLength("minLength")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html)
-   */
-  public interface SchemaAttributeProperty {
-    /**
-     * The data format of the values for your attribute.
-     *
-     * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the data
-     * type. A custom attribute value in your user's ID token is always a string, for example
-     * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype)
-     */
-    public fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
-
-    /**
-     * We recommend that you use
-     * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-     * in the user pool client to control how attributes can be mutated for new use cases instead of
-     * using `DeveloperOnlyAttribute` .
-     *
-     * Specifies whether the attribute type is developer only. This attribute can only be modified
-     * by an administrator. Users will not be able to modify this attribute using their access token.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute)
-     */
-    public fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
-
-    /**
-     * Specifies whether the value of the attribute can be changed.
-     *
-     * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-     * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to your
-     * application through an IdP. If an attribute is immutable, Amazon Cognito throws an error when it
-     * attempts to update the attribute. For more information, see [Specifying Identity Provider
-     * Attribute Mappings for Your User
-     * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable)
-     */
-    public fun mutable(): Any? = unwrap(this).getMutable()
-
-    /**
-     * The name of your user pool attribute.
-     *
-     * When you create or update a user pool, adding a schema attribute creates a custom or
-     * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
-     * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When `DeveloperOnlyAttribute`
-     * is `true` , Amazon Cognito creates your attribute as `dev:MyAttribute` . In an operation that
-     * describes a user pool, Amazon Cognito returns this value as `value` for standard attributes,
-     * `custom:value` for custom attributes, and `dev:value` for developer-only attributes..
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * Specifies the constraints for an attribute of the number type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)
-     */
-    public fun numberAttributeConstraints(): Any? = unwrap(this).getNumberAttributeConstraints()
-
-    /**
-     * Specifies whether a user pool attribute is required.
-     *
-     * If the attribute is required and the user doesn't provide a value, registration or sign-in
-     * will fail.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required)
-     */
-    public fun required(): Any? = unwrap(this).getRequired()
-
-    /**
-     * Specifies the constraints for an attribute of the string type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)
-     */
-    public fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
-
-    /**
-     * A builder for [SchemaAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeDataType The data format of the values for your attribute.
-       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
-       * data type. A custom attribute value in your user's ID token is always a string, for example
-       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
-       */
-      public fun attributeDataType(attributeDataType: String)
-
-      /**
-       * @param developerOnlyAttribute We recommend that you use
-       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-       * in the user pool client to control how attributes can be mutated for new use cases instead of
-       * using `DeveloperOnlyAttribute` .
-       * Specifies whether the attribute type is developer only. This attribute can only be modified
-       * by an administrator. Users will not be able to modify this attribute using their access token.
-       */
-      public fun developerOnlyAttribute(developerOnlyAttribute: Boolean)
-
-      /**
-       * @param developerOnlyAttribute We recommend that you use
-       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-       * in the user pool client to control how attributes can be mutated for new use cases instead of
-       * using `DeveloperOnlyAttribute` .
-       * Specifies whether the attribute type is developer only. This attribute can only be modified
-       * by an administrator. Users will not be able to modify this attribute using their access token.
-       */
-      public fun developerOnlyAttribute(developerOnlyAttribute: IResolvable)
-
-      /**
-       * @param mutable Specifies whether the value of the attribute can be changed.
-       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
-       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
-       * when it attempts to update the attribute. For more information, see [Specifying Identity
-       * Provider Attribute Mappings for Your User
-       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-       * .
-       */
-      public fun mutable(mutable: Boolean)
-
-      /**
-       * @param mutable Specifies whether the value of the attribute can be changed.
-       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
-       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
-       * when it attempts to update the attribute. For more information, see [Specifying Identity
-       * Provider Attribute Mappings for Your User
-       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-       * .
-       */
-      public fun mutable(mutable: IResolvable)
-
-      /**
-       * @param name The name of your user pool attribute.
-       * When you create or update a user pool, adding a schema attribute creates a custom or
-       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
-       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
-       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
-       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
-       * value as `value` for standard attributes, `custom:value` for custom attributes, and
-       * `dev:value` for developer-only attributes..
-       */
-      public fun name(name: String)
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      public fun numberAttributeConstraints(numberAttributeConstraints: IResolvable)
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      public
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty)
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
-      public
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit)
-
-      /**
-       * @param required Specifies whether a user pool attribute is required.
-       * If the attribute is required and the user doesn't provide a value, registration or sign-in
-       * will fail.
-       */
-      public fun required(required: Boolean)
-
-      /**
-       * @param required Specifies whether a user pool attribute is required.
-       * If the attribute is required and the user doesn't provide a value, registration or sign-in
-       * will fail.
-       */
-      public fun required(required: IResolvable)
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      public fun stringAttributeConstraints(stringAttributeConstraints: IResolvable)
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      public
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty)
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
-      public
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.builder()
-
-      /**
-       * @param attributeDataType The data format of the values for your attribute.
-       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
-       * data type. A custom attribute value in your user's ID token is always a string, for example
-       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
-       */
-      override fun attributeDataType(attributeDataType: String) {
-        cdkBuilder.attributeDataType(attributeDataType)
-      }
-
-      /**
-       * @param developerOnlyAttribute We recommend that you use
-       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-       * in the user pool client to control how attributes can be mutated for new use cases instead of
-       * using `DeveloperOnlyAttribute` .
-       * Specifies whether the attribute type is developer only. This attribute can only be modified
-       * by an administrator. Users will not be able to modify this attribute using their access token.
-       */
-      override fun developerOnlyAttribute(developerOnlyAttribute: Boolean) {
-        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute)
-      }
-
-      /**
-       * @param developerOnlyAttribute We recommend that you use
-       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-       * in the user pool client to control how attributes can be mutated for new use cases instead of
-       * using `DeveloperOnlyAttribute` .
-       * Specifies whether the attribute type is developer only. This attribute can only be modified
-       * by an administrator. Users will not be able to modify this attribute using their access token.
-       */
-      override fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
-        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param mutable Specifies whether the value of the attribute can be changed.
-       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
-       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
-       * when it attempts to update the attribute. For more information, see [Specifying Identity
-       * Provider Attribute Mappings for Your User
-       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-       * .
-       */
-      override fun mutable(mutable: Boolean) {
-        cdkBuilder.mutable(mutable)
-      }
-
-      /**
-       * @param mutable Specifies whether the value of the attribute can be changed.
-       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
-       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
-       * when it attempts to update the attribute. For more information, see [Specifying Identity
-       * Provider Attribute Mappings for Your User
-       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-       * .
-       */
-      override fun mutable(mutable: IResolvable) {
-        cdkBuilder.mutable(mutable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param name The name of your user pool attribute.
-       * When you create or update a user pool, adding a schema attribute creates a custom or
-       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
-       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
-       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
-       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
-       * value as `value` for standard attributes, `custom:value` for custom attributes, and
-       * `dev:value` for developer-only attributes..
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      override fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
-        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      override
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty) {
-        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(NumberAttributeConstraintsProperty::unwrap))
-      }
-
-      /**
-       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
-       * type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
-      override
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit):
-          Unit =
-          numberAttributeConstraints(NumberAttributeConstraintsProperty(numberAttributeConstraints))
-
-      /**
-       * @param required Specifies whether a user pool attribute is required.
-       * If the attribute is required and the user doesn't provide a value, registration or sign-in
-       * will fail.
-       */
-      override fun required(required: Boolean) {
-        cdkBuilder.required(required)
-      }
-
-      /**
-       * @param required Specifies whether a user pool attribute is required.
-       * If the attribute is required and the user doesn't provide a value, registration or sign-in
-       * will fail.
-       */
-      override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      override fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
-        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      override
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty) {
-        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(StringAttributeConstraintsProperty::unwrap))
-      }
-
-      /**
-       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
-       * type.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
-      override
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit):
-          Unit =
-          stringAttributeConstraints(StringAttributeConstraintsProperty(stringAttributeConstraints))
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty,
-    ) : CdkObject(cdkObject), SchemaAttributeProperty {
-      /**
-       * The data format of the values for your attribute.
-       *
-       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
-       * data type. A custom attribute value in your user's ID token is always a string, for example
-       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype)
-       */
-      override fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
-
-      /**
-       * We recommend that you use
-       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
-       * in the user pool client to control how attributes can be mutated for new use cases instead of
-       * using `DeveloperOnlyAttribute` .
-       *
-       * Specifies whether the attribute type is developer only. This attribute can only be modified
-       * by an administrator. Users will not be able to modify this attribute using their access token.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute)
-       */
-      override fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
-
-      /**
-       * Specifies whether the value of the attribute can be changed.
-       *
-       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
-       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
-       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
-       * when it attempts to update the attribute. For more information, see [Specifying Identity
-       * Provider Attribute Mappings for Your User
-       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable)
-       */
-      override fun mutable(): Any? = unwrap(this).getMutable()
-
-      /**
-       * The name of your user pool attribute.
-       *
-       * When you create or update a user pool, adding a schema attribute creates a custom or
-       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
-       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
-       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
-       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
-       * value as `value` for standard attributes, `custom:value` for custom attributes, and
-       * `dev:value` for developer-only attributes..
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * Specifies the constraints for an attribute of the number type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)
-       */
-      override fun numberAttributeConstraints(): Any? = unwrap(this).getNumberAttributeConstraints()
-
-      /**
-       * Specifies whether a user pool attribute is required.
-       *
-       * If the attribute is required and the user doesn't provide a value, registration or sign-in
-       * will fail.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required)
-       */
-      override fun required(): Any? = unwrap(this).getRequired()
-
-      /**
-       * Specifies the constraints for an attribute of the string type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)
-       */
-      override fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty):
-          SchemaAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaAttributeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SchemaAttributeProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty
-    }
-  }
-
-  /**
-   * Use this setting to define which verified available method a user can use to recover their
-   * password when they call `ForgotPassword` .
-   *
-   * It allows you to define a preferred method when a user has more than one method available. With
-   * this setting, SMS does not qualify for a valid password recovery mechanism if the user also has
-   * SMS MFA enabled. In the absence of this setting, Cognito uses the legacy behavior to determine the
-   * recovery method where SMS is preferred over email.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * AccountRecoverySettingProperty accountRecoverySettingProperty =
-   * AccountRecoverySettingProperty.builder()
-   * .recoveryMechanisms(List.of(RecoveryOptionProperty.builder()
-   * .name("name")
-   * .priority(123)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html)
-   */
-  public interface AccountRecoverySettingProperty {
-    /**
-     * The list of `RecoveryOptionTypes` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)
-     */
-    public fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
-
-    /**
-     * A builder for [AccountRecoverySettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      public fun recoveryMechanisms(recoveryMechanisms: IResolvable)
-
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      public fun recoveryMechanisms(recoveryMechanisms: List<Any>)
-
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      public fun recoveryMechanisms(vararg recoveryMechanisms: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty.builder()
-
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      override fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
-        cdkBuilder.recoveryMechanisms(recoveryMechanisms.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
-        cdkBuilder.recoveryMechanisms(recoveryMechanisms)
-      }
-
-      /**
-       * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
-       */
-      override fun recoveryMechanisms(vararg recoveryMechanisms: Any): Unit =
-          recoveryMechanisms(recoveryMechanisms.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty,
-    ) : CdkObject(cdkObject), AccountRecoverySettingProperty {
-      /**
-       * The list of `RecoveryOptionTypes` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-accountrecoverysetting.html#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)
-       */
-      override fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccountRecoverySettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty):
-          AccountRecoverySettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccountRecoverySettingProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccountRecoverySettingProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty
-    }
-  }
-
-  /**
-   * The minimum and maximum values of an attribute that is of the number data type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * NumberAttributeConstraintsProperty numberAttributeConstraintsProperty =
-   * NumberAttributeConstraintsProperty.builder()
-   * .maxValue("maxValue")
-   * .minValue("minValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html)
-   */
-  public interface NumberAttributeConstraintsProperty {
-    /**
-     * The maximum value of an attribute that is of the number data type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
-     */
-    public fun maxValue(): String? = unwrap(this).getMaxValue()
-
-    /**
-     * The minimum value of an attribute that is of the number data type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue)
-     */
-    public fun minValue(): String? = unwrap(this).getMinValue()
-
-    /**
-     * A builder for [NumberAttributeConstraintsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxValue The maximum value of an attribute that is of the number data type.
-       */
-      public fun maxValue(maxValue: String)
-
-      /**
-       * @param minValue The minimum value of an attribute that is of the number data type.
-       */
-      public fun minValue(minValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.builder()
-
-      /**
-       * @param maxValue The maximum value of an attribute that is of the number data type.
-       */
-      override fun maxValue(maxValue: String) {
-        cdkBuilder.maxValue(maxValue)
-      }
-
-      /**
-       * @param minValue The minimum value of an attribute that is of the number data type.
-       */
-      override fun minValue(minValue: String) {
-        cdkBuilder.minValue(minValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty,
-    ) : CdkObject(cdkObject), NumberAttributeConstraintsProperty {
-      /**
-       * The maximum value of an attribute that is of the number data type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
-       */
-      override fun maxValue(): String? = unwrap(this).getMaxValue()
-
-      /**
-       * The minimum value of an attribute that is of the number data type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue)
-       */
-      override fun minValue(): String? = unwrap(this).getMinValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NumberAttributeConstraintsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty):
-          NumberAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NumberAttributeConstraintsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NumberAttributeConstraintsProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty
-    }
-  }
-
-  /**
-   * The SMS configuration type that includes the settings the Cognito User Pool needs to call for
-   * the Amazon SNS service to send an SMS message from your AWS account .
-   *
-   * The Cognito User Pool makes the request to the Amazon SNS Service by using an IAM role that you
-   * provide for your AWS account .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * SmsConfigurationProperty smsConfigurationProperty = SmsConfigurationProperty.builder()
-   * .externalId("externalId")
-   * .snsCallerArn("snsCallerArn")
-   * .snsRegion("snsRegion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html)
-   */
-  public interface SmsConfigurationProperty {
-    /**
-     * The external ID is a value.
-     *
-     * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
-     * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the Cognito
-     * User Pool uses it when attempting to assume your IAM role. You can also set your roles trust
-     * policy to require the `ExternalID` . If you use the Cognito Management Console to create a role
-     * for SMS MFA, Cognito creates a role with the required permissions and a trust policy that uses
-     * `ExternalId` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-externalid)
-     */
-    public fun externalId(): String? = unwrap(this).getExternalId()
-
-    /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS caller.
-     *
-     * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send SMS
-     * messages. SMS messages are subject to a [spending
-     * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn)
-     */
-    public fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
-
-    /**
-     * The AWS Region to use with Amazon SNS integration.
-     *
-     * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS alternate
-     * Region* .
-     *
-     * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
-     * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
-     * settings for Amazon Cognito user
-     * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snsregion)
-     */
-    public fun snsRegion(): String? = unwrap(this).getSnsRegion()
-
-    /**
-     * A builder for [SmsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param externalId The external ID is a value.
-       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
-       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
-       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
-       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
-       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
-       * that uses `ExternalId` .
-       */
-      public fun externalId(externalId: String)
-
-      /**
-       * @param snsCallerArn The Amazon Resource Name (ARN) of the Amazon SNS caller.
-       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
-       * SMS messages. SMS messages are subject to a [spending
-       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
-       * .
-       */
-      public fun snsCallerArn(snsCallerArn: String)
-
-      /**
-       * @param snsRegion The AWS Region to use with Amazon SNS integration.
-       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
-       * alternate Region* .
-       *
-       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
-       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
-       * settings for Amazon Cognito user
-       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
-       * .
-       */
-      public fun snsRegion(snsRegion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.builder()
-
-      /**
-       * @param externalId The external ID is a value.
-       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
-       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
-       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
-       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
-       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
-       * that uses `ExternalId` .
-       */
-      override fun externalId(externalId: String) {
-        cdkBuilder.externalId(externalId)
-      }
-
-      /**
-       * @param snsCallerArn The Amazon Resource Name (ARN) of the Amazon SNS caller.
-       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
-       * SMS messages. SMS messages are subject to a [spending
-       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
-       * .
-       */
-      override fun snsCallerArn(snsCallerArn: String) {
-        cdkBuilder.snsCallerArn(snsCallerArn)
-      }
-
-      /**
-       * @param snsRegion The AWS Region to use with Amazon SNS integration.
-       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
-       * alternate Region* .
-       *
-       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
-       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
-       * settings for Amazon Cognito user
-       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
-       * .
-       */
-      override fun snsRegion(snsRegion: String) {
-        cdkBuilder.snsRegion(snsRegion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty,
-    ) : CdkObject(cdkObject), SmsConfigurationProperty {
-      /**
-       * The external ID is a value.
-       *
-       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
-       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
-       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
-       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
-       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
-       * that uses `ExternalId` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-externalid)
-       */
-      override fun externalId(): String? = unwrap(this).getExternalId()
-
-      /**
-       * The Amazon Resource Name (ARN) of the Amazon SNS caller.
-       *
-       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
-       * SMS messages. SMS messages are subject to a [spending
-       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn)
-       */
-      override fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
-
-      /**
-       * The AWS Region to use with Amazon SNS integration.
-       *
-       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
-       * alternate Region* .
-       *
-       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
-       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
-       * settings for Amazon Cognito user
-       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snsregion)
-       */
-      override fun snsRegion(): String? = unwrap(this).getSnsRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SmsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty):
-          SmsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SmsConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SmsConfigurationProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty
-    }
-  }
-
-  /**
-   * A custom SMS sender AWS Lambda trigger.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * CustomSMSSenderProperty customSMSSenderProperty = CustomSMSSenderProperty.builder()
-   * .lambdaArn("lambdaArn")
-   * .lambdaVersion("lambdaVersion")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html)
-   */
-  public interface CustomSMSSenderProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
-     * send SMS notifications to users.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaarn)
-     */
-    public fun lambdaArn(): String? = unwrap(this).getLambdaArn()
-
-    /**
-     * The Lambda version represents the signature of the "request" attribute in the "event"
-     * information Amazon Cognito passes to your custom SMS sender Lambda function.
-     *
-     * The only supported value is `V1_0` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaversion)
-     */
-    public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
-
-    /**
-     * A builder for [CustomSMSSenderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
-       * Cognito triggers to send SMS notifications to users.
-       */
-      public fun lambdaArn(lambdaArn: String)
-
-      /**
-       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
-       * in the "event" information Amazon Cognito passes to your custom SMS sender Lambda function.
-       * The only supported value is `V1_0` .
-       */
-      public fun lambdaVersion(lambdaVersion: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.builder()
-
-      /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon
-       * Cognito triggers to send SMS notifications to users.
-       */
-      override fun lambdaArn(lambdaArn: String) {
-        cdkBuilder.lambdaArn(lambdaArn)
-      }
-
-      /**
-       * @param lambdaVersion The Lambda version represents the signature of the "request" attribute
-       * in the "event" information Amazon Cognito passes to your custom SMS sender Lambda function.
-       * The only supported value is `V1_0` .
-       */
-      override fun lambdaVersion(lambdaVersion: String) {
-        cdkBuilder.lambdaVersion(lambdaVersion)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty,
-    ) : CdkObject(cdkObject), CustomSMSSenderProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Cognito triggers to
-       * send SMS notifications to users.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaarn)
-       */
-      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
-
-      /**
-       * The Lambda version represents the signature of the "request" attribute in the "event"
-       * information Amazon Cognito passes to your custom SMS sender Lambda function.
-       *
-       * The only supported value is `V1_0` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customsmssender.html#cfn-cognito-userpool-customsmssender-lambdaversion)
-       */
-      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomSMSSenderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty):
-          CustomSMSSenderProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomSMSSenderProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomSMSSenderProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty
-    }
-  }
-
-  /**
-   * The template for verification messages.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * VerificationMessageTemplateProperty verificationMessageTemplateProperty =
-   * VerificationMessageTemplateProperty.builder()
-   * .defaultEmailOption("defaultEmailOption")
-   * .emailMessage("emailMessage")
-   * .emailMessageByLink("emailMessageByLink")
-   * .emailSubject("emailSubject")
-   * .emailSubjectByLink("emailSubjectByLink")
-   * .smsMessage("smsMessage")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html)
-   */
-  public interface VerificationMessageTemplateProperty {
-    /**
-     * The default email option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption)
-     */
-    public fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
-
-    /**
-     * The template for email messages that Amazon Cognito sends to your users.
-     *
-     * You can set an `EmailMessage` template only if the value of
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` . When your
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage)
-     */
-    public fun emailMessage(): String? = unwrap(this).getEmailMessage()
-
-    /**
-     * The email message template for sending a confirmation link to the user.
-     *
-     * You can set an `EmailMessageByLink` template only if the value of
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` . When your
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink)
-     */
-    public fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
-
-    /**
-     * The subject line for the email message template.
-     *
-     * You can set an `EmailSubject` template only if the value of
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` . When your
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject)
-     */
-    public fun emailSubject(): String? = unwrap(this).getEmailSubject()
-
-    /**
-     * The subject line for the email message template for sending a confirmation link to the user.
-     *
-     * You can set an `EmailSubjectByLink` template only if the value of
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` . When your
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink)
-     */
-    public fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
-
-    /**
-     * The template for SMS messages that Amazon Cognito sends to your users.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage)
-     */
-    public fun smsMessage(): String? = unwrap(this).getSmsMessage()
-
-    /**
-     * A builder for [VerificationMessageTemplateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param defaultEmailOption The default email option.
-       */
-      public fun defaultEmailOption(defaultEmailOption: String)
-
-      /**
-       * @param emailMessage The template for email messages that Amazon Cognito sends to your
-       * users.
-       * You can set an `EmailMessage` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      public fun emailMessage(emailMessage: String)
-
-      /**
-       * @param emailMessageByLink The email message template for sending a confirmation link to the
-       * user.
-       * You can set an `EmailMessageByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      public fun emailMessageByLink(emailMessageByLink: String)
-
-      /**
-       * @param emailSubject The subject line for the email message template.
-       * You can set an `EmailSubject` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      public fun emailSubject(emailSubject: String)
-
-      /**
-       * @param emailSubjectByLink The subject line for the email message template for sending a
-       * confirmation link to the user.
-       * You can set an `EmailSubjectByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      public fun emailSubjectByLink(emailSubjectByLink: String)
-
-      /**
-       * @param smsMessage The template for SMS messages that Amazon Cognito sends to your users.
-       */
-      public fun smsMessage(smsMessage: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty.builder()
-
-      /**
-       * @param defaultEmailOption The default email option.
-       */
-      override fun defaultEmailOption(defaultEmailOption: String) {
-        cdkBuilder.defaultEmailOption(defaultEmailOption)
-      }
-
-      /**
-       * @param emailMessage The template for email messages that Amazon Cognito sends to your
-       * users.
-       * You can set an `EmailMessage` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      override fun emailMessage(emailMessage: String) {
-        cdkBuilder.emailMessage(emailMessage)
-      }
-
-      /**
-       * @param emailMessageByLink The email message template for sending a confirmation link to the
-       * user.
-       * You can set an `EmailMessageByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      override fun emailMessageByLink(emailMessageByLink: String) {
-        cdkBuilder.emailMessageByLink(emailMessageByLink)
-      }
-
-      /**
-       * @param emailSubject The subject line for the email message template.
-       * You can set an `EmailSubject` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      override fun emailSubject(emailSubject: String) {
-        cdkBuilder.emailSubject(emailSubject)
-      }
-
-      /**
-       * @param emailSubjectByLink The subject line for the email message template for sending a
-       * confirmation link to the user.
-       * You can set an `EmailSubjectByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       */
-      override fun emailSubjectByLink(emailSubjectByLink: String) {
-        cdkBuilder.emailSubjectByLink(emailSubjectByLink)
-      }
-
-      /**
-       * @param smsMessage The template for SMS messages that Amazon Cognito sends to your users.
-       */
-      override fun smsMessage(smsMessage: String) {
-        cdkBuilder.smsMessage(smsMessage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty,
-    ) : CdkObject(cdkObject), VerificationMessageTemplateProperty {
-      /**
-       * The default email option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption)
-       */
-      override fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
-
-      /**
-       * The template for email messages that Amazon Cognito sends to your users.
-       *
-       * You can set an `EmailMessage` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage)
-       */
-      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
-
-      /**
-       * The email message template for sending a confirmation link to the user.
-       *
-       * You can set an `EmailMessageByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink)
-       */
-      override fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
-
-      /**
-       * The subject line for the email message template.
-       *
-       * You can set an `EmailSubject` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject)
-       */
-      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
-
-      /**
-       * The subject line for the email message template for sending a confirmation link to the
-       * user.
-       *
-       * You can set an `EmailSubjectByLink` template only if the value of
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` . When your
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink)
-       */
-      override fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
-
-      /**
-       * The template for SMS messages that Amazon Cognito sends to your users.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage)
-       */
-      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          VerificationMessageTemplateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty):
-          VerificationMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VerificationMessageTemplateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VerificationMessageTemplateProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty
     }
   }
 
@@ -5220,8 +3506,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty,
     ) : CdkObject(cdkObject), EmailConfigurationProperty {
       /**
        * The set of configuration rules that can be applied to emails sent using Amazon SES.
@@ -5345,8 +3630,11 @@ public open class CfnUserPool internal constructor(
   }
 
   /**
-   * The `UsernameConfiguration` property type specifies case sensitivity on the username input for
-   * the selected sign-in option.
+   * The message template to be used for the welcome message to new users.
+   *
+   * See also [Customizing User Invitation
+   * Messages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)
+   * .
    *
    * Example:
    *
@@ -5354,286 +3642,159 @@ public open class CfnUserPool internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * UsernameConfigurationProperty usernameConfigurationProperty =
-   * UsernameConfigurationProperty.builder()
-   * .caseSensitive(false)
+   * InviteMessageTemplateProperty inviteMessageTemplateProperty =
+   * InviteMessageTemplateProperty.builder()
+   * .emailMessage("emailMessage")
+   * .emailSubject("emailSubject")
+   * .smsMessage("smsMessage")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html)
    */
-  public interface UsernameConfigurationProperty {
+  public interface InviteMessageTemplateProperty {
     /**
-     * Specifies whether user name case sensitivity will be applied for all users in the user pool
-     * through Amazon Cognito APIs.
+     * The message template for email messages.
      *
-     * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-     * When usernames and email addresses are case insensitive, users can sign in as the same user when
-     * they enter a different capitalization of their user name.
+     * EmailMessage is allowed only if
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is DEVELOPER.
      *
-     * Valid values include:
-     *
-     * * **True** - Enables case sensitivity for all username input. When this option is set to
-     * `True` , users must sign in using the exact capitalization of their given username, such as
-     * “UserName”. This is the default value.
-     * * **False** - Enables case insensitivity for all username input. For example, when this
-     * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-     * This option also enables both `preferred_username` and `email` alias to be case insensitive, in
-     * addition to the `username` attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage)
      */
-    public fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+    public fun emailMessage(): String? = unwrap(this).getEmailMessage()
 
     /**
-     * A builder for [UsernameConfigurationProperty]
+     * The subject line for email messages.
+     *
+     * EmailSubject is allowed only if
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is DEVELOPER.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject)
+     */
+    public fun emailSubject(): String? = unwrap(this).getEmailSubject()
+
+    /**
+     * The message template for SMS messages.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage)
+     */
+    public fun smsMessage(): String? = unwrap(this).getSmsMessage()
+
+    /**
+     * A builder for [InviteMessageTemplateProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
-       * users in the user pool through Amazon Cognito APIs.
-       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-       * When usernames and email addresses are case insensitive, users can sign in as the same user
-       * when they enter a different capitalization of their user name.
-       *
-       * Valid values include:
-       *
-       * * **True** - Enables case sensitivity for all username input. When this option is set to
-       * `True` , users must sign in using the exact capitalization of their given username, such as
-       * “UserName”. This is the default value.
-       * * **False** - Enables case insensitivity for all username input. For example, when this
-       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
-       * in addition to the `username` attribute.
+       * @param emailMessage The message template for email messages.
+       * EmailMessage is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
        */
-      public fun caseSensitive(caseSensitive: Boolean)
+      public fun emailMessage(emailMessage: String)
 
       /**
-       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
-       * users in the user pool through Amazon Cognito APIs.
-       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-       * When usernames and email addresses are case insensitive, users can sign in as the same user
-       * when they enter a different capitalization of their user name.
-       *
-       * Valid values include:
-       *
-       * * **True** - Enables case sensitivity for all username input. When this option is set to
-       * `True` , users must sign in using the exact capitalization of their given username, such as
-       * “UserName”. This is the default value.
-       * * **False** - Enables case insensitivity for all username input. For example, when this
-       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
-       * in addition to the `username` attribute.
+       * @param emailSubject The subject line for email messages.
+       * EmailSubject is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
        */
-      public fun caseSensitive(caseSensitive: IResolvable)
+      public fun emailSubject(emailSubject: String)
+
+      /**
+       * @param smsMessage The message template for SMS messages.
+       */
+      public fun smsMessage(smsMessage: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty.Builder
+          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty.Builder
           =
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty.builder()
 
       /**
-       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
-       * users in the user pool through Amazon Cognito APIs.
-       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-       * When usernames and email addresses are case insensitive, users can sign in as the same user
-       * when they enter a different capitalization of their user name.
-       *
-       * Valid values include:
-       *
-       * * **True** - Enables case sensitivity for all username input. When this option is set to
-       * `True` , users must sign in using the exact capitalization of their given username, such as
-       * “UserName”. This is the default value.
-       * * **False** - Enables case insensitivity for all username input. For example, when this
-       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
-       * in addition to the `username` attribute.
+       * @param emailMessage The message template for email messages.
+       * EmailMessage is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
        */
-      override fun caseSensitive(caseSensitive: Boolean) {
-        cdkBuilder.caseSensitive(caseSensitive)
+      override fun emailMessage(emailMessage: String) {
+        cdkBuilder.emailMessage(emailMessage)
       }
 
       /**
-       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
-       * users in the user pool through Amazon Cognito APIs.
-       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-       * When usernames and email addresses are case insensitive, users can sign in as the same user
-       * when they enter a different capitalization of their user name.
-       *
-       * Valid values include:
-       *
-       * * **True** - Enables case sensitivity for all username input. When this option is set to
-       * `True` , users must sign in using the exact capitalization of their given username, such as
-       * “UserName”. This is the default value.
-       * * **False** - Enables case insensitivity for all username input. For example, when this
-       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
-       * in addition to the `username` attribute.
+       * @param emailSubject The subject line for email messages.
+       * EmailSubject is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
        */
-      override fun caseSensitive(caseSensitive: IResolvable) {
-        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
+      override fun emailSubject(emailSubject: String) {
+        cdkBuilder.emailSubject(emailSubject)
+      }
+
+      /**
+       * @param smsMessage The message template for SMS messages.
+       */
+      override fun smsMessage(smsMessage: String) {
+        cdkBuilder.smsMessage(smsMessage)
       }
 
       public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty =
+          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty,
-    ) : CdkObject(cdkObject), UsernameConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty,
+    ) : CdkObject(cdkObject), InviteMessageTemplateProperty {
       /**
-       * Specifies whether user name case sensitivity will be applied for all users in the user pool
-       * through Amazon Cognito APIs.
+       * The message template for email messages.
        *
-       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
-       * When usernames and email addresses are case insensitive, users can sign in as the same user
-       * when they enter a different capitalization of their user name.
+       * EmailMessage is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
        *
-       * Valid values include:
-       *
-       * * **True** - Enables case sensitivity for all username input. When this option is set to
-       * `True` , users must sign in using the exact capitalization of their given username, such as
-       * “UserName”. This is the default value.
-       * * **False** - Enables case insensitivity for all username input. For example, when this
-       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
-       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
-       * in addition to the `username` attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage)
        */
-      override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
+
+      /**
+       * The subject line for email messages.
+       *
+       * EmailSubject is allowed only if
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is DEVELOPER.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject)
+       */
+      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+
+      /**
+       * The message template for SMS messages.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage)
+       */
+      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): UsernameConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InviteMessageTemplateProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty):
-          UsernameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          UsernameConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty):
+          InviteMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InviteMessageTemplateProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: UsernameConfigurationProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty =
+      internal fun unwrap(wrapped: InviteMessageTemplateProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty
-    }
-  }
-
-  /**
-   * A map containing a priority as a key, and recovery method name as a value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * RecoveryOptionProperty recoveryOptionProperty = RecoveryOptionProperty.builder()
-   * .name("name")
-   * .priority(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html)
-   */
-  public interface RecoveryOptionProperty {
-    /**
-     * Specifies the recovery method for a user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A positive integer specifying priority of a method with 1 being the highest priority.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority)
-     */
-    public fun priority(): Number? = unwrap(this).getPriority()
-
-    /**
-     * A builder for [RecoveryOptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Specifies the recovery method for a user.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param priority A positive integer specifying priority of a method with 1 being the highest
-       * priority.
-       */
-      public fun priority(priority: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.Builder =
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.builder()
-
-      /**
-       * @param name Specifies the recovery method for a user.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param priority A positive integer specifying priority of a method with 1 being the highest
-       * priority.
-       */
-      override fun priority(priority: Number) {
-        cdkBuilder.priority(priority)
-      }
-
-      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty,
-    ) : CdkObject(cdkObject), RecoveryOptionProperty {
-      /**
-       * Specifies the recovery method for a user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * A positive integer specifying priority of a method with 1 being the highest priority.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority)
-       */
-      override fun priority(): Number? = unwrap(this).getPriority()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecoveryOptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty):
-          RecoveryOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecoveryOptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecoveryOptionProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty
+          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty
     }
   }
 
@@ -6095,8 +4256,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty,
     ) : CdkObject(cdkObject), LambdaConfigProperty {
       /**
        * Creates an authentication challenge.
@@ -6231,6 +4391,570 @@ public open class CfnUserPool internal constructor(
   }
 
   /**
+   * The minimum and maximum values of an attribute that is of the number data type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * NumberAttributeConstraintsProperty numberAttributeConstraintsProperty =
+   * NumberAttributeConstraintsProperty.builder()
+   * .maxValue("maxValue")
+   * .minValue("minValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html)
+   */
+  public interface NumberAttributeConstraintsProperty {
+    /**
+     * The maximum length of a number attribute value.
+     *
+     * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+     * 131072 characters or fewer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
+     */
+    public fun maxValue(): String? = unwrap(this).getMaxValue()
+
+    /**
+     * The minimum value of an attribute that is of the number data type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue)
+     */
+    public fun minValue(): String? = unwrap(this).getMinValue()
+
+    /**
+     * A builder for [NumberAttributeConstraintsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxValue The maximum length of a number attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       */
+      public fun maxValue(maxValue: String)
+
+      /**
+       * @param minValue The minimum value of an attribute that is of the number data type.
+       */
+      public fun minValue(minValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.builder()
+
+      /**
+       * @param maxValue The maximum length of a number attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       */
+      override fun maxValue(maxValue: String) {
+        cdkBuilder.maxValue(maxValue)
+      }
+
+      /**
+       * @param minValue The minimum value of an attribute that is of the number data type.
+       */
+      override fun minValue(minValue: String) {
+        cdkBuilder.minValue(minValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty,
+    ) : CdkObject(cdkObject), NumberAttributeConstraintsProperty {
+      /**
+       * The maximum length of a number attribute value.
+       *
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue)
+       */
+      override fun maxValue(): String? = unwrap(this).getMaxValue()
+
+      /**
+       * The minimum value of an attribute that is of the number data type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue)
+       */
+      override fun minValue(): String? = unwrap(this).getMinValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NumberAttributeConstraintsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty):
+          NumberAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NumberAttributeConstraintsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NumberAttributeConstraintsProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty
+    }
+  }
+
+  /**
+   * The password policy type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * PasswordPolicyProperty passwordPolicyProperty = PasswordPolicyProperty.builder()
+   * .minimumLength(123)
+   * .requireLowercase(false)
+   * .requireNumbers(false)
+   * .requireSymbols(false)
+   * .requireUppercase(false)
+   * .temporaryPasswordValidityDays(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html)
+   */
+  public interface PasswordPolicyProperty {
+    /**
+     * The minimum length of the password in the policy that you have set.
+     *
+     * This value can't be less than 6.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-minimumlength)
+     */
+    public fun minimumLength(): Number? = unwrap(this).getMinimumLength()
+
+    /**
+     * In the password policy that you have set, refers to whether you have required users to use at
+     * least one lowercase letter in their password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase)
+     */
+    public fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
+
+    /**
+     * In the password policy that you have set, refers to whether you have required users to use at
+     * least one number in their password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers)
+     */
+    public fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
+
+    /**
+     * In the password policy that you have set, refers to whether you have required users to use at
+     * least one symbol in their password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols)
+     */
+    public fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
+
+    /**
+     * In the password policy that you have set, refers to whether you have required users to use at
+     * least one uppercase letter in their password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase)
+     */
+    public fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
+
+    /**
+     * The number of days a temporary password is valid in the password policy.
+     *
+     * If the user doesn't sign in during this time, an administrator must reset their password.
+     * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
+     * sets `TemporaryPasswordValidityDays` to its default value.
+     *
+     *
+     * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
+     * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)
+     */
+    public fun temporaryPasswordValidityDays(): Number? =
+        unwrap(this).getTemporaryPasswordValidityDays()
+
+    /**
+     * A builder for [PasswordPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param minimumLength The minimum length of the password in the policy that you have set.
+       * This value can't be less than 6.
+       */
+      public fun minimumLength(minimumLength: Number)
+
+      /**
+       * @param requireLowercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one lowercase letter in their password.
+       */
+      public fun requireLowercase(requireLowercase: Boolean)
+
+      /**
+       * @param requireLowercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one lowercase letter in their password.
+       */
+      public fun requireLowercase(requireLowercase: IResolvable)
+
+      /**
+       * @param requireNumbers In the password policy that you have set, refers to whether you have
+       * required users to use at least one number in their password.
+       */
+      public fun requireNumbers(requireNumbers: Boolean)
+
+      /**
+       * @param requireNumbers In the password policy that you have set, refers to whether you have
+       * required users to use at least one number in their password.
+       */
+      public fun requireNumbers(requireNumbers: IResolvable)
+
+      /**
+       * @param requireSymbols In the password policy that you have set, refers to whether you have
+       * required users to use at least one symbol in their password.
+       */
+      public fun requireSymbols(requireSymbols: Boolean)
+
+      /**
+       * @param requireSymbols In the password policy that you have set, refers to whether you have
+       * required users to use at least one symbol in their password.
+       */
+      public fun requireSymbols(requireSymbols: IResolvable)
+
+      /**
+       * @param requireUppercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one uppercase letter in their password.
+       */
+      public fun requireUppercase(requireUppercase: Boolean)
+
+      /**
+       * @param requireUppercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one uppercase letter in their password.
+       */
+      public fun requireUppercase(requireUppercase: IResolvable)
+
+      /**
+       * @param temporaryPasswordValidityDays The number of days a temporary password is valid in
+       * the password policy.
+       * If the user doesn't sign in during this time, an administrator must reset their password.
+       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
+       * sets `TemporaryPasswordValidityDays` to its default value.
+       *
+       *
+       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
+       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
+       */
+      public fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.builder()
+
+      /**
+       * @param minimumLength The minimum length of the password in the policy that you have set.
+       * This value can't be less than 6.
+       */
+      override fun minimumLength(minimumLength: Number) {
+        cdkBuilder.minimumLength(minimumLength)
+      }
+
+      /**
+       * @param requireLowercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one lowercase letter in their password.
+       */
+      override fun requireLowercase(requireLowercase: Boolean) {
+        cdkBuilder.requireLowercase(requireLowercase)
+      }
+
+      /**
+       * @param requireLowercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one lowercase letter in their password.
+       */
+      override fun requireLowercase(requireLowercase: IResolvable) {
+        cdkBuilder.requireLowercase(requireLowercase.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireNumbers In the password policy that you have set, refers to whether you have
+       * required users to use at least one number in their password.
+       */
+      override fun requireNumbers(requireNumbers: Boolean) {
+        cdkBuilder.requireNumbers(requireNumbers)
+      }
+
+      /**
+       * @param requireNumbers In the password policy that you have set, refers to whether you have
+       * required users to use at least one number in their password.
+       */
+      override fun requireNumbers(requireNumbers: IResolvable) {
+        cdkBuilder.requireNumbers(requireNumbers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireSymbols In the password policy that you have set, refers to whether you have
+       * required users to use at least one symbol in their password.
+       */
+      override fun requireSymbols(requireSymbols: Boolean) {
+        cdkBuilder.requireSymbols(requireSymbols)
+      }
+
+      /**
+       * @param requireSymbols In the password policy that you have set, refers to whether you have
+       * required users to use at least one symbol in their password.
+       */
+      override fun requireSymbols(requireSymbols: IResolvable) {
+        cdkBuilder.requireSymbols(requireSymbols.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param requireUppercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one uppercase letter in their password.
+       */
+      override fun requireUppercase(requireUppercase: Boolean) {
+        cdkBuilder.requireUppercase(requireUppercase)
+      }
+
+      /**
+       * @param requireUppercase In the password policy that you have set, refers to whether you
+       * have required users to use at least one uppercase letter in their password.
+       */
+      override fun requireUppercase(requireUppercase: IResolvable) {
+        cdkBuilder.requireUppercase(requireUppercase.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param temporaryPasswordValidityDays The number of days a temporary password is valid in
+       * the password policy.
+       * If the user doesn't sign in during this time, an administrator must reset their password.
+       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
+       * sets `TemporaryPasswordValidityDays` to its default value.
+       *
+       *
+       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
+       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
+       */
+      override fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number) {
+        cdkBuilder.temporaryPasswordValidityDays(temporaryPasswordValidityDays)
+      }
+
+      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty,
+    ) : CdkObject(cdkObject), PasswordPolicyProperty {
+      /**
+       * The minimum length of the password in the policy that you have set.
+       *
+       * This value can't be less than 6.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-minimumlength)
+       */
+      override fun minimumLength(): Number? = unwrap(this).getMinimumLength()
+
+      /**
+       * In the password policy that you have set, refers to whether you have required users to use
+       * at least one lowercase letter in their password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase)
+       */
+      override fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
+
+      /**
+       * In the password policy that you have set, refers to whether you have required users to use
+       * at least one number in their password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers)
+       */
+      override fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
+
+      /**
+       * In the password policy that you have set, refers to whether you have required users to use
+       * at least one symbol in their password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols)
+       */
+      override fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
+
+      /**
+       * In the password policy that you have set, refers to whether you have required users to use
+       * at least one uppercase letter in their password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase)
+       */
+      override fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
+
+      /**
+       * The number of days a temporary password is valid in the password policy.
+       *
+       * If the user doesn't sign in during this time, an administrator must reset their password.
+       * Defaults to `7` . If you submit a value of `0` , Amazon Cognito treats it as a null value and
+       * sets `TemporaryPasswordValidityDays` to its default value.
+       *
+       *
+       * When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value
+       * for the legacy `UnusedAccountValidityDays` parameter in that user pool.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)
+       */
+      override fun temporaryPasswordValidityDays(): Number? =
+          unwrap(this).getTemporaryPasswordValidityDays()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PasswordPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty):
+          PasswordPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? PasswordPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PasswordPolicyProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty
+    }
+  }
+
+  /**
+   * The policy associated with a user pool.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * PoliciesProperty policiesProperty = PoliciesProperty.builder()
+   * .passwordPolicy(PasswordPolicyProperty.builder()
+   * .minimumLength(123)
+   * .requireLowercase(false)
+   * .requireNumbers(false)
+   * .requireSymbols(false)
+   * .requireUppercase(false)
+   * .temporaryPasswordValidityDays(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html)
+   */
+  public interface PoliciesProperty {
+    /**
+     * The password policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy)
+     */
+    public fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
+
+    /**
+     * A builder for [PoliciesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      public fun passwordPolicy(passwordPolicy: IResolvable)
+
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty)
+
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
+      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.builder()
+
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      override fun passwordPolicy(passwordPolicy: IResolvable) {
+        cdkBuilder.passwordPolicy(passwordPolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
+        cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicyProperty::unwrap))
+      }
+
+      /**
+       * @param passwordPolicy The password policy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
+      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit): Unit =
+          passwordPolicy(PasswordPolicyProperty(passwordPolicy))
+
+      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty,
+    ) : CdkObject(cdkObject), PoliciesProperty {
+      /**
+       * The password policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy)
+       */
+      override fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PoliciesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty):
+          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PoliciesProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty
+    }
+  }
+
+  /**
    * The properties of a pre token generation Lambda trigger.
    *
    * Example:
@@ -6322,8 +5046,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty,
     ) : CdkObject(cdkObject), PreTokenGenerationConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the function that you want to assign to your Lambda
@@ -6366,11 +5089,7 @@ public open class CfnUserPool internal constructor(
   }
 
   /**
-   * The message template to be used for the welcome message to new users.
-   *
-   * See also [Customizing User Invitation
-   * Messages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)
-   * .
+   * A map containing a priority as a key, and recovery method name as a value.
    *
    * Example:
    *
@@ -6378,160 +5097,948 @@ public open class CfnUserPool internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cognito.*;
-   * InviteMessageTemplateProperty inviteMessageTemplateProperty =
-   * InviteMessageTemplateProperty.builder()
-   * .emailMessage("emailMessage")
-   * .emailSubject("emailSubject")
-   * .smsMessage("smsMessage")
+   * RecoveryOptionProperty recoveryOptionProperty = RecoveryOptionProperty.builder()
+   * .name("name")
+   * .priority(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html)
    */
-  public interface InviteMessageTemplateProperty {
+  public interface RecoveryOptionProperty {
     /**
-     * The message template for email messages.
+     * Specifies the recovery method for a user.
      *
-     * EmailMessage is allowed only if
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is DEVELOPER.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-name)
      */
-    public fun emailMessage(): String? = unwrap(this).getEmailMessage()
+    public fun name(): String? = unwrap(this).getName()
 
     /**
-     * The subject line for email messages.
+     * A positive integer specifying priority of a method with 1 being the highest priority.
      *
-     * EmailSubject is allowed only if
-     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-     * is DEVELOPER.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority)
      */
-    public fun emailSubject(): String? = unwrap(this).getEmailSubject()
+    public fun priority(): Number? = unwrap(this).getPriority()
 
     /**
-     * The message template for SMS messages.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage)
-     */
-    public fun smsMessage(): String? = unwrap(this).getSmsMessage()
-
-    /**
-     * A builder for [InviteMessageTemplateProperty]
+     * A builder for [RecoveryOptionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param emailMessage The message template for email messages.
-       * EmailMessage is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
+       * @param name Specifies the recovery method for a user.
        */
-      public fun emailMessage(emailMessage: String)
+      public fun name(name: String)
 
       /**
-       * @param emailSubject The subject line for email messages.
-       * EmailSubject is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
+       * @param priority A positive integer specifying priority of a method with 1 being the highest
+       * priority.
        */
-      public fun emailSubject(emailSubject: String)
-
-      /**
-       * @param smsMessage The message template for SMS messages.
-       */
-      public fun smsMessage(smsMessage: String)
+      public fun priority(priority: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty.Builder
-          =
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty.builder()
+          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.builder()
 
       /**
-       * @param emailMessage The message template for email messages.
-       * EmailMessage is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
+       * @param name Specifies the recovery method for a user.
        */
-      override fun emailMessage(emailMessage: String) {
-        cdkBuilder.emailMessage(emailMessage)
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       /**
-       * @param emailSubject The subject line for email messages.
-       * EmailSubject is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
+       * @param priority A positive integer specifying priority of a method with 1 being the highest
+       * priority.
        */
-      override fun emailSubject(emailSubject: String) {
-        cdkBuilder.emailSubject(emailSubject)
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
       }
 
-      /**
-       * @param smsMessage The message template for SMS messages.
-       */
-      override fun smsMessage(smsMessage: String) {
-        cdkBuilder.smsMessage(smsMessage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty,
-    ) : CdkObject(cdkObject), InviteMessageTemplateProperty {
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty,
+    ) : CdkObject(cdkObject), RecoveryOptionProperty {
       /**
-       * The message template for email messages.
+       * Specifies the recovery method for a user.
        *
-       * EmailMessage is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-name)
        */
-      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
+      override fun name(): String? = unwrap(this).getName()
 
       /**
-       * The subject line for email messages.
+       * A positive integer specifying priority of a method with 1 being the highest priority.
        *
-       * EmailSubject is allowed only if
-       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
-       * is DEVELOPER.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html#cfn-cognito-userpool-recoveryoption-priority)
        */
-      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
-
-      /**
-       * The message template for SMS messages.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage)
-       */
-      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+      override fun priority(): Number? = unwrap(this).getPriority()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InviteMessageTemplateProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecoveryOptionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty):
-          InviteMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InviteMessageTemplateProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty):
+          RecoveryOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecoveryOptionProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InviteMessageTemplateProperty):
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty =
+      internal fun unwrap(wrapped: RecoveryOptionProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty
+    }
+  }
+
+  /**
+   * A list of the user attributes and their properties in your user pool.
+   *
+   * The attribute schema contains standard attributes, custom attributes with a `custom:` prefix,
+   * and developer attributes with a `dev:` prefix. For more information, see [User pool
+   * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+   * .
+   *
+   * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients.
+   * You can create and update developer-only attributes only with IAM-authenticated API operations.
+   * Use app client read/write permissions instead.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * SchemaAttributeProperty schemaAttributeProperty = SchemaAttributeProperty.builder()
+   * .attributeDataType("attributeDataType")
+   * .developerOnlyAttribute(false)
+   * .mutable(false)
+   * .name("name")
+   * .numberAttributeConstraints(NumberAttributeConstraintsProperty.builder()
+   * .maxValue("maxValue")
+   * .minValue("minValue")
+   * .build())
+   * .required(false)
+   * .stringAttributeConstraints(StringAttributeConstraintsProperty.builder()
+   * .maxLength("maxLength")
+   * .minLength("minLength")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html)
+   */
+  public interface SchemaAttributeProperty {
+    /**
+     * The data format of the values for your attribute.
+     *
+     * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the data
+     * type. A custom attribute value in your user's ID token is always a string, for example
+     * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype)
+     */
+    public fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
+
+    /**
+     * We recommend that you use
+     * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+     * in the user pool client to control how attributes can be mutated for new use cases instead of
+     * using `DeveloperOnlyAttribute` .
+     *
+     * Specifies whether the attribute type is developer only. This attribute can only be modified
+     * by an administrator. Users will not be able to modify this attribute using their access token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute)
+     */
+    public fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
+
+    /**
+     * Specifies whether the value of the attribute can be changed.
+     *
+     * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+     * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to your
+     * application through an IdP. If an attribute is immutable, Amazon Cognito throws an error when it
+     * attempts to update the attribute. For more information, see [Specifying Identity Provider
+     * Attribute Mappings for Your User
+     * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable)
+     */
+    public fun mutable(): Any? = unwrap(this).getMutable()
+
+    /**
+     * The name of your user pool attribute.
+     *
+     * When you create or update a user pool, adding a schema attribute creates a custom or
+     * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
+     * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When `DeveloperOnlyAttribute`
+     * is `true` , Amazon Cognito creates your attribute as `dev:MyAttribute` . In an operation that
+     * describes a user pool, Amazon Cognito returns this value as `value` for standard attributes,
+     * `custom:value` for custom attributes, and `dev:value` for developer-only attributes..
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * Specifies the constraints for an attribute of the number type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)
+     */
+    public fun numberAttributeConstraints(): Any? = unwrap(this).getNumberAttributeConstraints()
+
+    /**
+     * Specifies whether a user pool attribute is required.
+     *
+     * If the attribute is required and the user doesn't provide a value, registration or sign-in
+     * will fail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required)
+     */
+    public fun required(): Any? = unwrap(this).getRequired()
+
+    /**
+     * Specifies the constraints for an attribute of the string type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)
+     */
+    public fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
+
+    /**
+     * A builder for [SchemaAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeDataType The data format of the values for your attribute.
+       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
+       * data type. A custom attribute value in your user's ID token is always a string, for example
+       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
+       */
+      public fun attributeDataType(attributeDataType: String)
+
+      /**
+       * @param developerOnlyAttribute We recommend that you use
+       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+       * in the user pool client to control how attributes can be mutated for new use cases instead of
+       * using `DeveloperOnlyAttribute` .
+       * Specifies whether the attribute type is developer only. This attribute can only be modified
+       * by an administrator. Users will not be able to modify this attribute using their access token.
+       */
+      public fun developerOnlyAttribute(developerOnlyAttribute: Boolean)
+
+      /**
+       * @param developerOnlyAttribute We recommend that you use
+       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+       * in the user pool client to control how attributes can be mutated for new use cases instead of
+       * using `DeveloperOnlyAttribute` .
+       * Specifies whether the attribute type is developer only. This attribute can only be modified
+       * by an administrator. Users will not be able to modify this attribute using their access token.
+       */
+      public fun developerOnlyAttribute(developerOnlyAttribute: IResolvable)
+
+      /**
+       * @param mutable Specifies whether the value of the attribute can be changed.
+       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
+       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
+       * when it attempts to update the attribute. For more information, see [Specifying Identity
+       * Provider Attribute Mappings for Your User
+       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+       * .
+       */
+      public fun mutable(mutable: Boolean)
+
+      /**
+       * @param mutable Specifies whether the value of the attribute can be changed.
+       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
+       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
+       * when it attempts to update the attribute. For more information, see [Specifying Identity
+       * Provider Attribute Mappings for Your User
+       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+       * .
+       */
+      public fun mutable(mutable: IResolvable)
+
+      /**
+       * @param name The name of your user pool attribute.
+       * When you create or update a user pool, adding a schema attribute creates a custom or
+       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
+       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
+       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
+       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
+       * value as `value` for standard attributes, `custom:value` for custom attributes, and
+       * `dev:value` for developer-only attributes..
+       */
+      public fun name(name: String)
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      public fun numberAttributeConstraints(numberAttributeConstraints: IResolvable)
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      public
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty)
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
+      public
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit)
+
+      /**
+       * @param required Specifies whether a user pool attribute is required.
+       * If the attribute is required and the user doesn't provide a value, registration or sign-in
+       * will fail.
+       */
+      public fun required(required: Boolean)
+
+      /**
+       * @param required Specifies whether a user pool attribute is required.
+       * If the attribute is required and the user doesn't provide a value, registration or sign-in
+       * will fail.
+       */
+      public fun required(required: IResolvable)
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      public fun stringAttributeConstraints(stringAttributeConstraints: IResolvable)
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      public
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty)
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
+      public
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.builder()
+
+      /**
+       * @param attributeDataType The data format of the values for your attribute.
+       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
+       * data type. A custom attribute value in your user's ID token is always a string, for example
+       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
+       */
+      override fun attributeDataType(attributeDataType: String) {
+        cdkBuilder.attributeDataType(attributeDataType)
+      }
+
+      /**
+       * @param developerOnlyAttribute We recommend that you use
+       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+       * in the user pool client to control how attributes can be mutated for new use cases instead of
+       * using `DeveloperOnlyAttribute` .
+       * Specifies whether the attribute type is developer only. This attribute can only be modified
+       * by an administrator. Users will not be able to modify this attribute using their access token.
+       */
+      override fun developerOnlyAttribute(developerOnlyAttribute: Boolean) {
+        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute)
+      }
+
+      /**
+       * @param developerOnlyAttribute We recommend that you use
+       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+       * in the user pool client to control how attributes can be mutated for new use cases instead of
+       * using `DeveloperOnlyAttribute` .
+       * Specifies whether the attribute type is developer only. This attribute can only be modified
+       * by an administrator. Users will not be able to modify this attribute using their access token.
+       */
+      override fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
+        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mutable Specifies whether the value of the attribute can be changed.
+       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
+       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
+       * when it attempts to update the attribute. For more information, see [Specifying Identity
+       * Provider Attribute Mappings for Your User
+       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+       * .
+       */
+      override fun mutable(mutable: Boolean) {
+        cdkBuilder.mutable(mutable)
+      }
+
+      /**
+       * @param mutable Specifies whether the value of the attribute can be changed.
+       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
+       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
+       * when it attempts to update the attribute. For more information, see [Specifying Identity
+       * Provider Attribute Mappings for Your User
+       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+       * .
+       */
+      override fun mutable(mutable: IResolvable) {
+        cdkBuilder.mutable(mutable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param name The name of your user pool attribute.
+       * When you create or update a user pool, adding a schema attribute creates a custom or
+       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
+       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
+       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
+       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
+       * value as `value` for standard attributes, `custom:value` for custom attributes, and
+       * `dev:value` for developer-only attributes..
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      override fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
+        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      override
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty) {
+        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(NumberAttributeConstraintsProperty::unwrap))
+      }
+
+      /**
+       * @param numberAttributeConstraints Specifies the constraints for an attribute of the number
+       * type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
+      override
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit):
+          Unit =
+          numberAttributeConstraints(NumberAttributeConstraintsProperty(numberAttributeConstraints))
+
+      /**
+       * @param required Specifies whether a user pool attribute is required.
+       * If the attribute is required and the user doesn't provide a value, registration or sign-in
+       * will fail.
+       */
+      override fun required(required: Boolean) {
+        cdkBuilder.required(required)
+      }
+
+      /**
+       * @param required Specifies whether a user pool attribute is required.
+       * If the attribute is required and the user doesn't provide a value, registration or sign-in
+       * will fail.
+       */
+      override fun required(required: IResolvable) {
+        cdkBuilder.required(required.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      override fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
+        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      override
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty) {
+        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(StringAttributeConstraintsProperty::unwrap))
+      }
+
+      /**
+       * @param stringAttributeConstraints Specifies the constraints for an attribute of the string
+       * type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
+      override
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit):
+          Unit =
+          stringAttributeConstraints(StringAttributeConstraintsProperty(stringAttributeConstraints))
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty,
+    ) : CdkObject(cdkObject), SchemaAttributeProperty {
+      /**
+       * The data format of the values for your attribute.
+       *
+       * When you choose an `AttributeDataType` , Amazon Cognito validates the input against the
+       * data type. A custom attribute value in your user's ID token is always a string, for example
+       * `"custom:isMember" : "true"` or `"custom:YearsAsMember" : "12"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype)
+       */
+      override fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
+
+      /**
+       * We recommend that you use
+       * [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes)
+       * in the user pool client to control how attributes can be mutated for new use cases instead of
+       * using `DeveloperOnlyAttribute` .
+       *
+       * Specifies whether the attribute type is developer only. This attribute can only be modified
+       * by an administrator. Users will not be able to modify this attribute using their access token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute)
+       */
+      override fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
+
+      /**
+       * Specifies whether the value of the attribute can be changed.
+       *
+       * Any user pool attribute whose value you map from an IdP attribute must be mutable, with a
+       * parameter value of `true` . Amazon Cognito updates mapped attributes when users sign in to
+       * your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error
+       * when it attempts to update the attribute. For more information, see [Specifying Identity
+       * Provider Attribute Mappings for Your User
+       * Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable)
+       */
+      override fun mutable(): Any? = unwrap(this).getMutable()
+
+      /**
+       * The name of your user pool attribute.
+       *
+       * When you create or update a user pool, adding a schema attribute creates a custom or
+       * developer-only attribute. When you add an attribute with a `Name` value of `MyAttribute` ,
+       * Amazon Cognito creates the custom attribute `custom:MyAttribute` . When
+       * `DeveloperOnlyAttribute` is `true` , Amazon Cognito creates your attribute as
+       * `dev:MyAttribute` . In an operation that describes a user pool, Amazon Cognito returns this
+       * value as `value` for standard attributes, `custom:value` for custom attributes, and
+       * `dev:value` for developer-only attributes..
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * Specifies the constraints for an attribute of the number type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)
+       */
+      override fun numberAttributeConstraints(): Any? = unwrap(this).getNumberAttributeConstraints()
+
+      /**
+       * Specifies whether a user pool attribute is required.
+       *
+       * If the attribute is required and the user doesn't provide a value, registration or sign-in
+       * will fail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required)
+       */
+      override fun required(): Any? = unwrap(this).getRequired()
+
+      /**
+       * Specifies the constraints for an attribute of the string type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)
+       */
+      override fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty):
+          SchemaAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaAttributeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaAttributeProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty
+    }
+  }
+
+  /**
+   * The SMS configuration type that includes the settings the Cognito User Pool needs to call for
+   * the Amazon SNS service to send an SMS message from your AWS account .
+   *
+   * The Cognito User Pool makes the request to the Amazon SNS Service by using an IAM role that you
+   * provide for your AWS account .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * SmsConfigurationProperty smsConfigurationProperty = SmsConfigurationProperty.builder()
+   * .externalId("externalId")
+   * .snsCallerArn("snsCallerArn")
+   * .snsRegion("snsRegion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html)
+   */
+  public interface SmsConfigurationProperty {
+    /**
+     * The external ID is a value.
+     *
+     * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
+     * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the Cognito
+     * User Pool uses it when attempting to assume your IAM role. You can also set your roles trust
+     * policy to require the `ExternalID` . If you use the Cognito Management Console to create a role
+     * for SMS MFA, Cognito creates a role with the required permissions and a trust policy that uses
+     * `ExternalId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-externalid)
+     */
+    public fun externalId(): String? = unwrap(this).getExternalId()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS caller.
+     *
+     * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send SMS
+     * messages. SMS messages are subject to a [spending
+     * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn)
+     */
+    public fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
+
+    /**
+     * The AWS Region to use with Amazon SNS integration.
+     *
+     * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS alternate
+     * Region* .
+     *
+     * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
+     * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
+     * settings for Amazon Cognito user
+     * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snsregion)
+     */
+    public fun snsRegion(): String? = unwrap(this).getSnsRegion()
+
+    /**
+     * A builder for [SmsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param externalId The external ID is a value.
+       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
+       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
+       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
+       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
+       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
+       * that uses `ExternalId` .
+       */
+      public fun externalId(externalId: String)
+
+      /**
+       * @param snsCallerArn The Amazon Resource Name (ARN) of the Amazon SNS caller.
+       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
+       * SMS messages. SMS messages are subject to a [spending
+       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
+       * .
+       */
+      public fun snsCallerArn(snsCallerArn: String)
+
+      /**
+       * @param snsRegion The AWS Region to use with Amazon SNS integration.
+       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
+       * alternate Region* .
+       *
+       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
+       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
+       * settings for Amazon Cognito user
+       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+       * .
+       */
+      public fun snsRegion(snsRegion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.Builder =
+          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.builder()
+
+      /**
+       * @param externalId The external ID is a value.
+       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
+       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
+       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
+       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
+       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
+       * that uses `ExternalId` .
+       */
+      override fun externalId(externalId: String) {
+        cdkBuilder.externalId(externalId)
+      }
+
+      /**
+       * @param snsCallerArn The Amazon Resource Name (ARN) of the Amazon SNS caller.
+       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
+       * SMS messages. SMS messages are subject to a [spending
+       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
+       * .
+       */
+      override fun snsCallerArn(snsCallerArn: String) {
+        cdkBuilder.snsCallerArn(snsCallerArn)
+      }
+
+      /**
+       * @param snsRegion The AWS Region to use with Amazon SNS integration.
+       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
+       * alternate Region* .
+       *
+       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
+       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
+       * settings for Amazon Cognito user
+       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+       * .
+       */
+      override fun snsRegion(snsRegion: String) {
+        cdkBuilder.snsRegion(snsRegion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty,
+    ) : CdkObject(cdkObject), SmsConfigurationProperty {
+      /**
+       * The external ID is a value.
+       *
+       * We recommend you use `ExternalId` to add security to your IAM role, which is used to call
+       * Amazon SNS to send SMS messages for your user pool. If you provide an `ExternalId` , the
+       * Cognito User Pool uses it when attempting to assume your IAM role. You can also set your roles
+       * trust policy to require the `ExternalID` . If you use the Cognito Management Console to create
+       * a role for SMS MFA, Cognito creates a role with the required permissions and a trust policy
+       * that uses `ExternalId` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-externalid)
+       */
+      override fun externalId(): String? = unwrap(this).getExternalId()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon SNS caller.
+       *
+       * This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send
+       * SMS messages. SMS messages are subject to a [spending
+       * limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn)
+       */
+      override fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
+
+      /**
+       * The AWS Region to use with Amazon SNS integration.
+       *
+       * You can choose the same Region as your user pool, or a supported *Legacy Amazon SNS
+       * alternate Region* .
+       *
+       * Amazon Cognito resources in the Asia Pacific (Seoul) AWS Region must use your Amazon SNS
+       * configuration in the Asia Pacific (Tokyo) Region. For more information, see [SMS message
+       * settings for Amazon Cognito user
+       * pools](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snsregion)
+       */
+      override fun snsRegion(): String? = unwrap(this).getSnsRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SmsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty):
+          SmsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SmsConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SmsConfigurationProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty
+    }
+  }
+
+  /**
+   * The `StringAttributeConstraints` property type defines the string attribute constraints of an
+   * Amazon Cognito user pool.
+   *
+   * `StringAttributeConstraints` is a subproperty of the
+   * [SchemaAttribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * StringAttributeConstraintsProperty stringAttributeConstraintsProperty =
+   * StringAttributeConstraintsProperty.builder()
+   * .maxLength("maxLength")
+   * .minLength("minLength")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html)
+   */
+  public interface StringAttributeConstraintsProperty {
+    /**
+     * The maximum length of a string attribute value.
+     *
+     * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+     * 131072 characters or fewer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
+     */
+    public fun maxLength(): String? = unwrap(this).getMaxLength()
+
+    /**
+     * The minimum length.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength)
+     */
+    public fun minLength(): String? = unwrap(this).getMinLength()
+
+    /**
+     * A builder for [StringAttributeConstraintsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxLength The maximum length of a string attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       */
+      public fun maxLength(maxLength: String)
+
+      /**
+       * @param minLength The minimum length.
+       */
+      public fun minLength(minLength: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.builder()
+
+      /**
+       * @param maxLength The maximum length of a string attribute value.
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       */
+      override fun maxLength(maxLength: String) {
+        cdkBuilder.maxLength(maxLength)
+      }
+
+      /**
+       * @param minLength The minimum length.
+       */
+      override fun minLength(minLength: String) {
+        cdkBuilder.minLength(minLength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty,
+    ) : CdkObject(cdkObject), StringAttributeConstraintsProperty {
+      /**
+       * The maximum length of a string attribute value.
+       *
+       * Must be a number less than or equal to `2^1023` , represented as a string with a length of
+       * 131072 characters or fewer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength)
+       */
+      override fun maxLength(): String? = unwrap(this).getMaxLength()
+
+      /**
+       * The minimum length.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength)
+       */
+      override fun minLength(): String? = unwrap(this).getMinLength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          StringAttributeConstraintsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty):
+          StringAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StringAttributeConstraintsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StringAttributeConstraintsProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty
+          software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty
     }
   }
 
@@ -6697,8 +6204,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
     ) : CdkObject(cdkObject), UserAttributeUpdateSettingsProperty {
       /**
        * Requires that your user verifies their email address, phone number, or both before Amazon
@@ -6807,8 +6313,7 @@ public open class CfnUserPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty,
     ) : CdkObject(cdkObject), UserPoolAddOnsProperty {
       /**
        * The operating mode of advanced security features in your user pool.
@@ -6833,6 +6338,502 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty
+    }
+  }
+
+  /**
+   * The `UsernameConfiguration` property type specifies case sensitivity on the username input for
+   * the selected sign-in option.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * UsernameConfigurationProperty usernameConfigurationProperty =
+   * UsernameConfigurationProperty.builder()
+   * .caseSensitive(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html)
+   */
+  public interface UsernameConfigurationProperty {
+    /**
+     * Specifies whether user name case sensitivity will be applied for all users in the user pool
+     * through Amazon Cognito APIs.
+     *
+     * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+     * When usernames and email addresses are case insensitive, users can sign in as the same user when
+     * they enter a different capitalization of their user name.
+     *
+     * Valid values include:
+     *
+     * * **True** - Enables case sensitivity for all username input. When this option is set to
+     * `True` , users must sign in using the exact capitalization of their given username, such as
+     * “UserName”. This is the default value.
+     * * **False** - Enables case insensitivity for all username input. For example, when this
+     * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+     * This option also enables both `preferred_username` and `email` alias to be case insensitive, in
+     * addition to the `username` attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive)
+     */
+    public fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+
+    /**
+     * A builder for [UsernameConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
+       * users in the user pool through Amazon Cognito APIs.
+       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+       * When usernames and email addresses are case insensitive, users can sign in as the same user
+       * when they enter a different capitalization of their user name.
+       *
+       * Valid values include:
+       *
+       * * **True** - Enables case sensitivity for all username input. When this option is set to
+       * `True` , users must sign in using the exact capitalization of their given username, such as
+       * “UserName”. This is the default value.
+       * * **False** - Enables case insensitivity for all username input. For example, when this
+       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
+       * in addition to the `username` attribute.
+       */
+      public fun caseSensitive(caseSensitive: Boolean)
+
+      /**
+       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
+       * users in the user pool through Amazon Cognito APIs.
+       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+       * When usernames and email addresses are case insensitive, users can sign in as the same user
+       * when they enter a different capitalization of their user name.
+       *
+       * Valid values include:
+       *
+       * * **True** - Enables case sensitivity for all username input. When this option is set to
+       * `True` , users must sign in using the exact capitalization of their given username, such as
+       * “UserName”. This is the default value.
+       * * **False** - Enables case insensitivity for all username input. For example, when this
+       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
+       * in addition to the `username` attribute.
+       */
+      public fun caseSensitive(caseSensitive: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty.builder()
+
+      /**
+       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
+       * users in the user pool through Amazon Cognito APIs.
+       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+       * When usernames and email addresses are case insensitive, users can sign in as the same user
+       * when they enter a different capitalization of their user name.
+       *
+       * Valid values include:
+       *
+       * * **True** - Enables case sensitivity for all username input. When this option is set to
+       * `True` , users must sign in using the exact capitalization of their given username, such as
+       * “UserName”. This is the default value.
+       * * **False** - Enables case insensitivity for all username input. For example, when this
+       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
+       * in addition to the `username` attribute.
+       */
+      override fun caseSensitive(caseSensitive: Boolean) {
+        cdkBuilder.caseSensitive(caseSensitive)
+      }
+
+      /**
+       * @param caseSensitive Specifies whether user name case sensitivity will be applied for all
+       * users in the user pool through Amazon Cognito APIs.
+       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+       * When usernames and email addresses are case insensitive, users can sign in as the same user
+       * when they enter a different capitalization of their user name.
+       *
+       * Valid values include:
+       *
+       * * **True** - Enables case sensitivity for all username input. When this option is set to
+       * `True` , users must sign in using the exact capitalization of their given username, such as
+       * “UserName”. This is the default value.
+       * * **False** - Enables case insensitivity for all username input. For example, when this
+       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
+       * in addition to the `username` attribute.
+       */
+      override fun caseSensitive(caseSensitive: IResolvable) {
+        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty,
+    ) : CdkObject(cdkObject), UsernameConfigurationProperty {
+      /**
+       * Specifies whether user name case sensitivity will be applied for all users in the user pool
+       * through Amazon Cognito APIs.
+       *
+       * For most use cases, set case sensitivity to `False` (case insensitive) as a best practice.
+       * When usernames and email addresses are case insensitive, users can sign in as the same user
+       * when they enter a different capitalization of their user name.
+       *
+       * Valid values include:
+       *
+       * * **True** - Enables case sensitivity for all username input. When this option is set to
+       * `True` , users must sign in using the exact capitalization of their given username, such as
+       * “UserName”. This is the default value.
+       * * **False** - Enables case insensitivity for all username input. For example, when this
+       * option is set to `False` , users can sign in using `username` , `USERNAME` , or `UserName` .
+       * This option also enables both `preferred_username` and `email` alias to be case insensitive,
+       * in addition to the `username` attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive)
+       */
+      override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UsernameConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty):
+          UsernameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UsernameConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UsernameConfigurationProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty
+    }
+  }
+
+  /**
+   * The template for verification messages.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * VerificationMessageTemplateProperty verificationMessageTemplateProperty =
+   * VerificationMessageTemplateProperty.builder()
+   * .defaultEmailOption("defaultEmailOption")
+   * .emailMessage("emailMessage")
+   * .emailMessageByLink("emailMessageByLink")
+   * .emailSubject("emailSubject")
+   * .emailSubjectByLink("emailSubjectByLink")
+   * .smsMessage("smsMessage")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html)
+   */
+  public interface VerificationMessageTemplateProperty {
+    /**
+     * The default email option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption)
+     */
+    public fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
+
+    /**
+     * The template for email messages that Amazon Cognito sends to your users.
+     *
+     * You can set an `EmailMessage` template only if the value of
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` . When your
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage)
+     */
+    public fun emailMessage(): String? = unwrap(this).getEmailMessage()
+
+    /**
+     * The email message template for sending a confirmation link to the user.
+     *
+     * You can set an `EmailMessageByLink` template only if the value of
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` . When your
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink)
+     */
+    public fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
+
+    /**
+     * The subject line for the email message template.
+     *
+     * You can set an `EmailSubject` template only if the value of
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` . When your
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject)
+     */
+    public fun emailSubject(): String? = unwrap(this).getEmailSubject()
+
+    /**
+     * The subject line for the email message template for sending a confirmation link to the user.
+     *
+     * You can set an `EmailSubjectByLink` template only if the value of
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` . When your
+     * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+     * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink)
+     */
+    public fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
+
+    /**
+     * The template for SMS messages that Amazon Cognito sends to your users.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage)
+     */
+    public fun smsMessage(): String? = unwrap(this).getSmsMessage()
+
+    /**
+     * A builder for [VerificationMessageTemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultEmailOption The default email option.
+       */
+      public fun defaultEmailOption(defaultEmailOption: String)
+
+      /**
+       * @param emailMessage The template for email messages that Amazon Cognito sends to your
+       * users.
+       * You can set an `EmailMessage` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      public fun emailMessage(emailMessage: String)
+
+      /**
+       * @param emailMessageByLink The email message template for sending a confirmation link to the
+       * user.
+       * You can set an `EmailMessageByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      public fun emailMessageByLink(emailMessageByLink: String)
+
+      /**
+       * @param emailSubject The subject line for the email message template.
+       * You can set an `EmailSubject` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      public fun emailSubject(emailSubject: String)
+
+      /**
+       * @param emailSubjectByLink The subject line for the email message template for sending a
+       * confirmation link to the user.
+       * You can set an `EmailSubjectByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      public fun emailSubjectByLink(emailSubjectByLink: String)
+
+      /**
+       * @param smsMessage The template for SMS messages that Amazon Cognito sends to your users.
+       */
+      public fun smsMessage(smsMessage: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty.builder()
+
+      /**
+       * @param defaultEmailOption The default email option.
+       */
+      override fun defaultEmailOption(defaultEmailOption: String) {
+        cdkBuilder.defaultEmailOption(defaultEmailOption)
+      }
+
+      /**
+       * @param emailMessage The template for email messages that Amazon Cognito sends to your
+       * users.
+       * You can set an `EmailMessage` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      override fun emailMessage(emailMessage: String) {
+        cdkBuilder.emailMessage(emailMessage)
+      }
+
+      /**
+       * @param emailMessageByLink The email message template for sending a confirmation link to the
+       * user.
+       * You can set an `EmailMessageByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      override fun emailMessageByLink(emailMessageByLink: String) {
+        cdkBuilder.emailMessageByLink(emailMessageByLink)
+      }
+
+      /**
+       * @param emailSubject The subject line for the email message template.
+       * You can set an `EmailSubject` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      override fun emailSubject(emailSubject: String) {
+        cdkBuilder.emailSubject(emailSubject)
+      }
+
+      /**
+       * @param emailSubjectByLink The subject line for the email message template for sending a
+       * confirmation link to the user.
+       * You can set an `EmailSubjectByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       */
+      override fun emailSubjectByLink(emailSubjectByLink: String) {
+        cdkBuilder.emailSubjectByLink(emailSubjectByLink)
+      }
+
+      /**
+       * @param smsMessage The template for SMS messages that Amazon Cognito sends to your users.
+       */
+      override fun smsMessage(smsMessage: String) {
+        cdkBuilder.smsMessage(smsMessage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty,
+    ) : CdkObject(cdkObject), VerificationMessageTemplateProperty {
+      /**
+       * The default email option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-defaultemailoption)
+       */
+      override fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
+
+      /**
+       * The template for email messages that Amazon Cognito sends to your users.
+       *
+       * You can set an `EmailMessage` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessage)
+       */
+      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
+
+      /**
+       * The email message template for sending a confirmation link to the user.
+       *
+       * You can set an `EmailMessageByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink)
+       */
+      override fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
+
+      /**
+       * The subject line for the email message template.
+       *
+       * You can set an `EmailSubject` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubject)
+       */
+      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+
+      /**
+       * The subject line for the email message template for sending a confirmation link to the
+       * user.
+       *
+       * You can set an `EmailSubjectByLink` template only if the value of
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` . When your
+       * [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount)
+       * is `DEVELOPER` , your user pool sends email messages with your own Amazon SES configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink)
+       */
+      override fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
+
+      /**
+       * The template for SMS messages that Amazon Cognito sends to your users.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html#cfn-cognito-userpool-verificationmessagetemplate-smsmessage)
+       */
+      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VerificationMessageTemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty):
+          VerificationMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VerificationMessageTemplateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VerificationMessageTemplateProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty
     }
   }
 }

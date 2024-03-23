@@ -293,7 +293,7 @@ public interface EmrCancelStepProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps,
   ) : CdkObject(cdkObject), EmrCancelStepProps {
     /**
      * The ClusterId to update.

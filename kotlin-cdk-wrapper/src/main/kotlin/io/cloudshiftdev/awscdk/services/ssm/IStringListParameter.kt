@@ -26,7 +26,7 @@ public interface IStringListParameter : IParameter {
   public fun stringListValue(): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.IStringListParameter,
+    cdkObject: software.amazon.awscdk.services.ssm.IStringListParameter,
   ) : CdkObject(cdkObject), IStringListParameter {
     /**
      * Apply the given removal policy to this resource.

@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html)
  */
-public open class CfnDiscoverer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer,
+public open class CfnDiscoverer(
+  cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -320,7 +320,8 @@ public open class CfnDiscoverer internal constructor(
         CfnDiscoverer = CfnDiscoverer(cdkObject)
 
     internal fun unwrap(wrapped: CfnDiscoverer):
-        software.amazon.awscdk.services.eventschemas.CfnDiscoverer = wrapped.cdkObject
+        software.amazon.awscdk.services.eventschemas.CfnDiscoverer = wrapped.cdkObject as
+        software.amazon.awscdk.services.eventschemas.CfnDiscoverer
   }
 
   /**
@@ -396,8 +397,7 @@ public open class CfnDiscoverer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The key of a key-value pair.

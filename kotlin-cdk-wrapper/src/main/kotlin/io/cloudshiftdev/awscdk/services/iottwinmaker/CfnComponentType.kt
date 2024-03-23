@@ -111,8 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html)
  */
-public open class CfnComponentType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType,
+public open class CfnComponentType(
+  cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -762,7 +762,245 @@ public open class CfnComponentType internal constructor(
         CfnComponentType = CfnComponentType(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentType):
-        software.amazon.awscdk.services.iottwinmaker.CfnComponentType = wrapped.cdkObject
+        software.amazon.awscdk.services.iottwinmaker.CfnComponentType = wrapped.cdkObject as
+        software.amazon.awscdk.services.iottwinmaker.CfnComponentType
+  }
+
+  /**
+   * Specifies the ID of the composite component type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * CompositeComponentTypeProperty compositeComponentTypeProperty =
+   * CompositeComponentTypeProperty.builder()
+   * .componentTypeId("componentTypeId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html)
+   */
+  public interface CompositeComponentTypeProperty {
+    /**
+     * The ID of the component type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttype-componenttypeid)
+     */
+    public fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
+
+    /**
+     * A builder for [CompositeComponentTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentTypeId The ID of the component type.
+       */
+      public fun componentTypeId(componentTypeId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty.builder()
+
+      /**
+       * @param componentTypeId The ID of the component type.
+       */
+      override fun componentTypeId(componentTypeId: String) {
+        cdkBuilder.componentTypeId(componentTypeId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty,
+    ) : CdkObject(cdkObject), CompositeComponentTypeProperty {
+      /**
+       * The ID of the component type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttype-componenttypeid)
+       */
+      override fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CompositeComponentTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty):
+          CompositeComponentTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompositeComponentTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CompositeComponentTypeProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
+    }
+  }
+
+  /**
+   * The data connector.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * DataConnectorProperty dataConnectorProperty = DataConnectorProperty.builder()
+   * .isNative(false)
+   * .lambda(LambdaFunctionProperty.builder()
+   * .arn("arn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html)
+   */
+  public interface DataConnectorProperty {
+    /**
+     * A boolean value that specifies whether the data connector is native to IoT TwinMaker.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-isnative)
+     */
+    public fun isNative(): Any? = unwrap(this).getIsNative()
+
+    /**
+     * The Lambda function associated with the data connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-lambda)
+     */
+    public fun lambda(): Any? = unwrap(this).getLambda()
+
+    /**
+     * A builder for [DataConnectorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isNative A boolean value that specifies whether the data connector is native to IoT
+       * TwinMaker.
+       */
+      public fun isNative(isNative: Boolean)
+
+      /**
+       * @param isNative A boolean value that specifies whether the data connector is native to IoT
+       * TwinMaker.
+       */
+      public fun isNative(isNative: IResolvable)
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      public fun lambda(lambda: IResolvable)
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      public fun lambda(lambda: LambdaFunctionProperty)
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
+      public fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty.Builder
+          =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty.builder()
+
+      /**
+       * @param isNative A boolean value that specifies whether the data connector is native to IoT
+       * TwinMaker.
+       */
+      override fun isNative(isNative: Boolean) {
+        cdkBuilder.isNative(isNative)
+      }
+
+      /**
+       * @param isNative A boolean value that specifies whether the data connector is native to IoT
+       * TwinMaker.
+       */
+      override fun isNative(isNative: IResolvable) {
+        cdkBuilder.isNative(isNative.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      override fun lambda(lambda: IResolvable) {
+        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      override fun lambda(lambda: LambdaFunctionProperty) {
+        cdkBuilder.lambda(lambda.let(LambdaFunctionProperty::unwrap))
+      }
+
+      /**
+       * @param lambda The Lambda function associated with the data connector.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
+      override fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit): Unit =
+          lambda(LambdaFunctionProperty(lambda))
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty,
+    ) : CdkObject(cdkObject), DataConnectorProperty {
+      /**
+       * A boolean value that specifies whether the data connector is native to IoT TwinMaker.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-isnative)
+       */
+      override fun isNative(): Any? = unwrap(this).getIsNative()
+
+      /**
+       * The Lambda function associated with the data connector.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-lambda)
+       */
+      override fun lambda(): Any? = unwrap(this).getLambda()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataConnectorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty):
+          DataConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as? DataConnectorProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataConnectorProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty
+    }
   }
 
   /**
@@ -997,8 +1235,7 @@ public open class CfnComponentType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty,
     ) : CdkObject(cdkObject), DataTypeProperty {
       /**
        * The allowed values for this data type.
@@ -1053,667 +1290,6 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty
-    }
-  }
-
-  /**
-   * The data connector.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * DataConnectorProperty dataConnectorProperty = DataConnectorProperty.builder()
-   * .isNative(false)
-   * .lambda(LambdaFunctionProperty.builder()
-   * .arn("arn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html)
-   */
-  public interface DataConnectorProperty {
-    /**
-     * A boolean value that specifies whether the data connector is native to IoT TwinMaker.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-isnative)
-     */
-    public fun isNative(): Any? = unwrap(this).getIsNative()
-
-    /**
-     * The Lambda function associated with the data connector.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-lambda)
-     */
-    public fun lambda(): Any? = unwrap(this).getLambda()
-
-    /**
-     * A builder for [DataConnectorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isNative A boolean value that specifies whether the data connector is native to IoT
-       * TwinMaker.
-       */
-      public fun isNative(isNative: Boolean)
-
-      /**
-       * @param isNative A boolean value that specifies whether the data connector is native to IoT
-       * TwinMaker.
-       */
-      public fun isNative(isNative: IResolvable)
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      public fun lambda(lambda: IResolvable)
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      public fun lambda(lambda: LambdaFunctionProperty)
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
-      public fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty.Builder
-          =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty.builder()
-
-      /**
-       * @param isNative A boolean value that specifies whether the data connector is native to IoT
-       * TwinMaker.
-       */
-      override fun isNative(isNative: Boolean) {
-        cdkBuilder.isNative(isNative)
-      }
-
-      /**
-       * @param isNative A boolean value that specifies whether the data connector is native to IoT
-       * TwinMaker.
-       */
-      override fun isNative(isNative: IResolvable) {
-        cdkBuilder.isNative(isNative.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      override fun lambda(lambda: LambdaFunctionProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaFunctionProperty::unwrap))
-      }
-
-      /**
-       * @param lambda The Lambda function associated with the data connector.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
-      override fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit): Unit =
-          lambda(LambdaFunctionProperty(lambda))
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty,
-    ) : CdkObject(cdkObject), DataConnectorProperty {
-      /**
-       * A boolean value that specifies whether the data connector is native to IoT TwinMaker.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-isnative)
-       */
-      override fun isNative(): Any? = unwrap(this).getIsNative()
-
-      /**
-       * The Lambda function associated with the data connector.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html#cfn-iottwinmaker-componenttype-dataconnector-lambda)
-       */
-      override fun lambda(): Any? = unwrap(this).getLambda()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataConnectorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty):
-          DataConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as? DataConnectorProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataConnectorProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty
-    }
-  }
-
-  /**
-   * The Lambda function.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * LambdaFunctionProperty lambdaFunctionProperty = LambdaFunctionProperty.builder()
-   * .arn("arn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html)
-   */
-  public interface LambdaFunctionProperty {
-    /**
-     * The Lambda function ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html#cfn-iottwinmaker-componenttype-lambdafunction-arn)
-     */
-    public fun arn(): String
-
-    /**
-     * A builder for [LambdaFunctionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param arn The Lambda function ARN. 
-       */
-      public fun arn(arn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty.Builder
-          =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty.builder()
-
-      /**
-       * @param arn The Lambda function ARN. 
-       */
-      override fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty,
-    ) : CdkObject(cdkObject), LambdaFunctionProperty {
-      /**
-       * The Lambda function ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html#cfn-iottwinmaker-componenttype-lambdafunction-arn)
-       */
-      override fun arn(): String = unwrap(this).getArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaFunctionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty):
-          LambdaFunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaFunctionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LambdaFunctionProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty
-    }
-  }
-
-  /**
-   * The property group.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
-   * .groupType("groupType")
-   * .propertyNames(List.of("propertyNames"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html)
-   */
-  public interface PropertyGroupProperty {
-    /**
-     * The group type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-grouptype)
-     */
-    public fun groupType(): String? = unwrap(this).getGroupType()
-
-    /**
-     * The property names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-propertynames)
-     */
-    public fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
-
-    /**
-     * A builder for [PropertyGroupProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupType The group type.
-       */
-      public fun groupType(groupType: String)
-
-      /**
-       * @param propertyNames The property names.
-       */
-      public fun propertyNames(propertyNames: List<String>)
-
-      /**
-       * @param propertyNames The property names.
-       */
-      public fun propertyNames(vararg propertyNames: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty.Builder
-          =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty.builder()
-
-      /**
-       * @param groupType The group type.
-       */
-      override fun groupType(groupType: String) {
-        cdkBuilder.groupType(groupType)
-      }
-
-      /**
-       * @param propertyNames The property names.
-       */
-      override fun propertyNames(propertyNames: List<String>) {
-        cdkBuilder.propertyNames(propertyNames)
-      }
-
-      /**
-       * @param propertyNames The property names.
-       */
-      override fun propertyNames(vararg propertyNames: String): Unit =
-          propertyNames(propertyNames.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty,
-    ) : CdkObject(cdkObject), PropertyGroupProperty {
-      /**
-       * The group type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-grouptype)
-       */
-      override fun groupType(): String? = unwrap(this).getGroupType()
-
-      /**
-       * The property names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-propertynames)
-       */
-      override fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PropertyGroupProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty):
-          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PropertyGroupProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty
-    }
-  }
-
-  /**
-   * Specifies the ID of the composite component type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * CompositeComponentTypeProperty compositeComponentTypeProperty =
-   * CompositeComponentTypeProperty.builder()
-   * .componentTypeId("componentTypeId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html)
-   */
-  public interface CompositeComponentTypeProperty {
-    /**
-     * The ID of the component type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttype-componenttypeid)
-     */
-    public fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
-
-    /**
-     * A builder for [CompositeComponentTypeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentTypeId The ID of the component type.
-       */
-      public fun componentTypeId(componentTypeId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty.Builder
-          =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty.builder()
-
-      /**
-       * @param componentTypeId The ID of the component type.
-       */
-      override fun componentTypeId(componentTypeId: String) {
-        cdkBuilder.componentTypeId(componentTypeId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty,
-    ) : CdkObject(cdkObject), CompositeComponentTypeProperty {
-      /**
-       * The ID of the component type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-compositecomponenttype.html#cfn-iottwinmaker-componenttype-compositecomponenttype-componenttypeid)
-       */
-      override fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CompositeComponentTypeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty):
-          CompositeComponentTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CompositeComponentTypeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CompositeComponentTypeProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty
-    }
-  }
-
-  /**
-   * The component type error.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * ErrorProperty errorProperty = ErrorProperty.builder()
-   * .code("code")
-   * .message("message")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html)
-   */
-  public interface ErrorProperty {
-    /**
-     * The component type error code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-code)
-     */
-    public fun code(): String? = unwrap(this).getCode()
-
-    /**
-     * The component type error message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-message)
-     */
-    public fun message(): String? = unwrap(this).getMessage()
-
-    /**
-     * A builder for [ErrorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param code The component type error code.
-       */
-      public fun code(code: String)
-
-      /**
-       * @param message The component type error message.
-       */
-      public fun message(message: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.Builder =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.builder()
-
-      /**
-       * @param code The component type error code.
-       */
-      override fun code(code: String) {
-        cdkBuilder.code(code)
-      }
-
-      /**
-       * @param message The component type error message.
-       */
-      override fun message(message: String) {
-        cdkBuilder.message(message)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty,
-    ) : CdkObject(cdkObject), ErrorProperty {
-      /**
-       * The component type error code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-code)
-       */
-      override fun code(): String? = unwrap(this).getCode()
-
-      /**
-       * The component type error message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-message)
-       */
-      override fun message(): String? = unwrap(this).getMessage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty):
-          ErrorProperty = CdkObjectWrappers.wrap(cdkObject) as? ErrorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ErrorProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty
-    }
-  }
-
-  /**
-   * The component type relationship value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * RelationshipValueProperty relationshipValueProperty = RelationshipValueProperty.builder()
-   * .targetComponentName("targetComponentName")
-   * .targetEntityId("targetEntityId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html)
-   */
-  public interface RelationshipValueProperty {
-    /**
-     * The target component name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetcomponentname)
-     */
-    public fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
-
-    /**
-     * The target entity Id.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetentityid)
-     */
-    public fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
-
-    /**
-     * A builder for [RelationshipValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetComponentName The target component name.
-       */
-      public fun targetComponentName(targetComponentName: String)
-
-      /**
-       * @param targetEntityId The target entity Id.
-       */
-      public fun targetEntityId(targetEntityId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty.Builder
-          =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty.builder()
-
-      /**
-       * @param targetComponentName The target component name.
-       */
-      override fun targetComponentName(targetComponentName: String) {
-        cdkBuilder.targetComponentName(targetComponentName)
-      }
-
-      /**
-       * @param targetEntityId The target entity Id.
-       */
-      override fun targetEntityId(targetEntityId: String) {
-        cdkBuilder.targetEntityId(targetEntityId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty,
-    ) : CdkObject(cdkObject), RelationshipValueProperty {
-      /**
-       * The target component name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetcomponentname)
-       */
-      override fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
-
-      /**
-       * The target entity Id.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetentityid)
-       */
-      override fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RelationshipValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty):
-          RelationshipValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RelationshipValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RelationshipValueProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty
     }
   }
 
@@ -1979,8 +1555,7 @@ public open class CfnComponentType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty,
     ) : CdkObject(cdkObject), DataValueProperty {
       /**
        * A boolean value.
@@ -2065,7 +1640,7 @@ public open class CfnComponentType internal constructor(
   }
 
   /**
-   * The component type status.
+   * The component type error.
    *
    * Example:
    *
@@ -2073,133 +1648,101 @@ public open class CfnComponentType internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
-   * StatusProperty statusProperty = StatusProperty.builder()
-   * .error(ErrorProperty.builder()
+   * ErrorProperty errorProperty = ErrorProperty.builder()
    * .code("code")
    * .message("message")
-   * .build())
-   * .state("state")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html)
    */
-  public interface StatusProperty {
+  public interface ErrorProperty {
     /**
-     * The component type error.
+     * The component type error code.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-error)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-code)
      */
-    public fun error(): Any? = unwrap(this).getError()
+    public fun code(): String? = unwrap(this).getCode()
 
     /**
-     * The component type status state.
+     * The component type error message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-state)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-message)
      */
-    public fun state(): String? = unwrap(this).getState()
+    public fun message(): String? = unwrap(this).getMessage()
 
     /**
-     * A builder for [StatusProperty]
+     * A builder for [ErrorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param error The component type error.
+       * @param code The component type error code.
        */
-      public fun error(error: IResolvable)
+      public fun code(code: String)
 
       /**
-       * @param error The component type error.
+       * @param message The component type error message.
        */
-      public fun error(error: ErrorProperty)
-
-      /**
-       * @param error The component type error.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
-      public fun error(error: ErrorProperty.Builder.() -> Unit)
-
-      /**
-       * @param state The component type status state.
-       */
-      public fun state(state: String)
+      public fun message(message: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.Builder =
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.builder()
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.Builder =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.builder()
 
       /**
-       * @param error The component type error.
+       * @param code The component type error code.
        */
-      override fun error(error: IResolvable) {
-        cdkBuilder.error(error.let(IResolvable::unwrap))
+      override fun code(code: String) {
+        cdkBuilder.code(code)
       }
 
       /**
-       * @param error The component type error.
+       * @param message The component type error message.
        */
-      override fun error(error: ErrorProperty) {
-        cdkBuilder.error(error.let(ErrorProperty::unwrap))
-      }
-
-      /**
-       * @param error The component type error.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
-      override fun error(error: ErrorProperty.Builder.() -> Unit): Unit =
-          error(ErrorProperty(error))
-
-      /**
-       * @param state The component type status state.
-       */
-      override fun state(state: String) {
-        cdkBuilder.state(state)
+      override fun message(message: String) {
+        cdkBuilder.message(message)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty,
-    ) : CdkObject(cdkObject), StatusProperty {
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty,
+    ) : CdkObject(cdkObject), ErrorProperty {
       /**
-       * The component type error.
+       * The component type error code.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-error)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-code)
        */
-      override fun error(): Any? = unwrap(this).getError()
+      override fun code(): String? = unwrap(this).getCode()
 
       /**
-       * The component type status state.
+       * The component type error message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-state)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-error.html#cfn-iottwinmaker-componenttype-error-message)
        */
-      override fun state(): String? = unwrap(this).getState()
+      override fun message(): String? = unwrap(this).getMessage()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StatusProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ErrorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty):
-          StatusProperty = CdkObjectWrappers.wrap(cdkObject) as? StatusProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty):
+          ErrorProperty = CdkObjectWrappers.wrap(cdkObject) as? ErrorProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StatusProperty):
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty = (wrapped as
+      internal fun unwrap(wrapped: ErrorProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty
     }
   }
 
@@ -2340,8 +1883,7 @@ public open class CfnComponentType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty,
     ) : CdkObject(cdkObject), FunctionProperty {
       /**
        * The data connector.
@@ -2381,6 +1923,88 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty
+    }
+  }
+
+  /**
+   * The Lambda function.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * LambdaFunctionProperty lambdaFunctionProperty = LambdaFunctionProperty.builder()
+   * .arn("arn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html)
+   */
+  public interface LambdaFunctionProperty {
+    /**
+     * The Lambda function ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html#cfn-iottwinmaker-componenttype-lambdafunction-arn)
+     */
+    public fun arn(): String
+
+    /**
+     * A builder for [LambdaFunctionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param arn The Lambda function ARN. 
+       */
+      public fun arn(arn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty.Builder
+          =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty.builder()
+
+      /**
+       * @param arn The Lambda function ARN. 
+       */
+      override fun arn(arn: String) {
+        cdkBuilder.arn(arn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty,
+    ) : CdkObject(cdkObject), LambdaFunctionProperty {
+      /**
+       * The Lambda function ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html#cfn-iottwinmaker-componenttype-lambdafunction-arn)
+       */
+      override fun arn(): String = unwrap(this).getArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LambdaFunctionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty):
+          LambdaFunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaFunctionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LambdaFunctionProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty
     }
   }
 
@@ -2735,8 +2359,7 @@ public open class CfnComponentType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty,
     ) : CdkObject(cdkObject), PropertyDefinitionProperty {
       /**
        * A mapping that specifies configuration information about the property.
@@ -2803,6 +2426,126 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty
+    }
+  }
+
+  /**
+   * The property group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
+   * .groupType("groupType")
+   * .propertyNames(List.of("propertyNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html)
+   */
+  public interface PropertyGroupProperty {
+    /**
+     * The group type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-grouptype)
+     */
+    public fun groupType(): String? = unwrap(this).getGroupType()
+
+    /**
+     * The property names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-propertynames)
+     */
+    public fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
+
+    /**
+     * A builder for [PropertyGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupType The group type.
+       */
+      public fun groupType(groupType: String)
+
+      /**
+       * @param propertyNames The property names.
+       */
+      public fun propertyNames(propertyNames: List<String>)
+
+      /**
+       * @param propertyNames The property names.
+       */
+      public fun propertyNames(vararg propertyNames: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty.builder()
+
+      /**
+       * @param groupType The group type.
+       */
+      override fun groupType(groupType: String) {
+        cdkBuilder.groupType(groupType)
+      }
+
+      /**
+       * @param propertyNames The property names.
+       */
+      override fun propertyNames(propertyNames: List<String>) {
+        cdkBuilder.propertyNames(propertyNames)
+      }
+
+      /**
+       * @param propertyNames The property names.
+       */
+      override fun propertyNames(vararg propertyNames: String): Unit =
+          propertyNames(propertyNames.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty,
+    ) : CdkObject(cdkObject), PropertyGroupProperty {
+      /**
+       * The group type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-grouptype)
+       */
+      override fun groupType(): String? = unwrap(this).getGroupType()
+
+      /**
+       * The property names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertygroup.html#cfn-iottwinmaker-componenttype-propertygroup-propertynames)
+       */
+      override fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PropertyGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty):
+          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PropertyGroupProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty
     }
   }
 
@@ -2882,8 +2625,7 @@ public open class CfnComponentType internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty,
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty,
     ) : CdkObject(cdkObject), RelationshipProperty {
       /**
        * The type of the relationship.
@@ -2915,6 +2657,253 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty
+    }
+  }
+
+  /**
+   * The component type relationship value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * RelationshipValueProperty relationshipValueProperty = RelationshipValueProperty.builder()
+   * .targetComponentName("targetComponentName")
+   * .targetEntityId("targetEntityId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html)
+   */
+  public interface RelationshipValueProperty {
+    /**
+     * The target component name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetcomponentname)
+     */
+    public fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
+
+    /**
+     * The target entity Id.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetentityid)
+     */
+    public fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
+
+    /**
+     * A builder for [RelationshipValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetComponentName The target component name.
+       */
+      public fun targetComponentName(targetComponentName: String)
+
+      /**
+       * @param targetEntityId The target entity Id.
+       */
+      public fun targetEntityId(targetEntityId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty.Builder
+          =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty.builder()
+
+      /**
+       * @param targetComponentName The target component name.
+       */
+      override fun targetComponentName(targetComponentName: String) {
+        cdkBuilder.targetComponentName(targetComponentName)
+      }
+
+      /**
+       * @param targetEntityId The target entity Id.
+       */
+      override fun targetEntityId(targetEntityId: String) {
+        cdkBuilder.targetEntityId(targetEntityId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty,
+    ) : CdkObject(cdkObject), RelationshipValueProperty {
+      /**
+       * The target component name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetcomponentname)
+       */
+      override fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
+
+      /**
+       * The target entity Id.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationshipvalue.html#cfn-iottwinmaker-componenttype-relationshipvalue-targetentityid)
+       */
+      override fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RelationshipValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty):
+          RelationshipValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationshipValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RelationshipValueProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty
+    }
+  }
+
+  /**
+   * The component type status.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iottwinmaker.*;
+   * StatusProperty statusProperty = StatusProperty.builder()
+   * .error(ErrorProperty.builder()
+   * .code("code")
+   * .message("message")
+   * .build())
+   * .state("state")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html)
+   */
+  public interface StatusProperty {
+    /**
+     * The component type error.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-error)
+     */
+    public fun error(): Any? = unwrap(this).getError()
+
+    /**
+     * The component type status state.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * A builder for [StatusProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param error The component type error.
+       */
+      public fun error(error: IResolvable)
+
+      /**
+       * @param error The component type error.
+       */
+      public fun error(error: ErrorProperty)
+
+      /**
+       * @param error The component type error.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
+      public fun error(error: ErrorProperty.Builder.() -> Unit)
+
+      /**
+       * @param state The component type status state.
+       */
+      public fun state(state: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.Builder =
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.builder()
+
+      /**
+       * @param error The component type error.
+       */
+      override fun error(error: IResolvable) {
+        cdkBuilder.error(error.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param error The component type error.
+       */
+      override fun error(error: ErrorProperty) {
+        cdkBuilder.error(error.let(ErrorProperty::unwrap))
+      }
+
+      /**
+       * @param error The component type error.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
+      override fun error(error: ErrorProperty.Builder.() -> Unit): Unit =
+          error(ErrorProperty(error))
+
+      /**
+       * @param state The component type status state.
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty,
+    ) : CdkObject(cdkObject), StatusProperty {
+      /**
+       * The component type error.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-error)
+       */
+      override fun error(): Any? = unwrap(this).getError()
+
+      /**
+       * The component type status state.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-status.html#cfn-iottwinmaker-componenttype-status-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StatusProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty):
+          StatusProperty = CdkObjectWrappers.wrap(cdkObject) as? StatusProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StatusProperty):
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty
     }
   }
 }

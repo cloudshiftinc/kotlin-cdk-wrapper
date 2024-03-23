@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html)
  */
-public open class CfnPlaceIndex internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex,
+public open class CfnPlaceIndex(
+  cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -509,7 +509,8 @@ public open class CfnPlaceIndex internal constructor(
         CfnPlaceIndex = CfnPlaceIndex(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaceIndex):
-        software.amazon.awscdk.services.location.CfnPlaceIndex = wrapped.cdkObject
+        software.amazon.awscdk.services.location.CfnPlaceIndex = wrapped.cdkObject as
+        software.amazon.awscdk.services.location.CfnPlaceIndex
   }
 
   /**
@@ -586,8 +587,7 @@ public open class CfnPlaceIndex internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty,
     ) : CdkObject(cdkObject), DataSourceConfigurationProperty {
       /**
        * Specifies how the results of an operation will be stored by the caller.

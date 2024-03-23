@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)
  */
-public open class CfnAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint,
+public open class CfnAccessPoint(
+  cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -483,7 +483,440 @@ public open class CfnAccessPoint internal constructor(
         = CfnAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPoint): software.amazon.awscdk.services.efs.CfnAccessPoint
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.efs.CfnAccessPoint
+  }
+
+  /**
+   * A tag is a key-value pair attached to a file system.
+   *
+   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
+   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * AccessPointTagProperty accessPointTagProperty = AccessPointTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html)
+   */
+  public interface AccessPointTagProperty {
+    /**
+     * The tag key (String).
+     *
+     * The key can't start with `aws:` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value of the tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [AccessPointTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The tag key (String).
+       * The key can't start with `aws:` .
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the tag key.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.builder()
+
+      /**
+       * @param key The tag key (String).
+       * The key can't start with `aws:` .
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the tag key.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
+    ) : CdkObject(cdkObject), AccessPointTagProperty {
+      /**
+       * The tag key (String).
+       *
+       * The key can't start with `aws:` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value of the tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AccessPointTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty):
+          AccessPointTagProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessPointTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessPointTagProperty):
+          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty
+    }
+  }
+
+  /**
+   * Required if the `RootDirectory` &gt; `Path` specified does not exist.
+   *
+   * Specifies the POSIX IDs and permissions to apply to the access point's `RootDirectory` &gt;
+   * `Path` . If the access point root directory does not exist, EFS creates it with these settings
+   * when a client connects to the access point. When specifying `CreationInfo` , you must include
+   * values for all properties.
+   *
+   * Amazon EFS creates a root directory only if you have provided the CreationInfo: OwnUid, OwnGID,
+   * and permissions for the directory. If you do not provide this information, Amazon EFS does not
+   * create the root directory. If the root directory does not exist, attempts to mount using the
+   * access point will fail.
+   *
+   *
+   * If you do not provide `CreationInfo` and the specified `RootDirectory` does not exist, attempts
+   * to mount the file system using the access point will fail.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * CreationInfoProperty creationInfoProperty = CreationInfoProperty.builder()
+   * .ownerGid("ownerGid")
+   * .ownerUid("ownerUid")
+   * .permissions("permissions")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html)
+   */
+  public interface CreationInfoProperty {
+    /**
+     * Specifies the POSIX group ID to apply to the `RootDirectory` .
+     *
+     * Accepts values from 0 to 2^32 (4294967295).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-ownergid)
+     */
+    public fun ownerGid(): String
+
+    /**
+     * Specifies the POSIX user ID to apply to the `RootDirectory` .
+     *
+     * Accepts values from 0 to 2^32 (4294967295).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-owneruid)
+     */
+    public fun ownerUid(): String
+
+    /**
+     * Specifies the POSIX permissions to apply to the `RootDirectory` , in the format of an octal
+     * number representing the file's mode bits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-permissions)
+     */
+    public fun permissions(): String
+
+    /**
+     * A builder for [CreationInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ownerGid Specifies the POSIX group ID to apply to the `RootDirectory` . 
+       * Accepts values from 0 to 2^32 (4294967295).
+       */
+      public fun ownerGid(ownerGid: String)
+
+      /**
+       * @param ownerUid Specifies the POSIX user ID to apply to the `RootDirectory` . 
+       * Accepts values from 0 to 2^32 (4294967295).
+       */
+      public fun ownerUid(ownerUid: String)
+
+      /**
+       * @param permissions Specifies the POSIX permissions to apply to the `RootDirectory` , in the
+       * format of an octal number representing the file's mode bits. 
+       */
+      public fun permissions(permissions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.builder()
+
+      /**
+       * @param ownerGid Specifies the POSIX group ID to apply to the `RootDirectory` . 
+       * Accepts values from 0 to 2^32 (4294967295).
+       */
+      override fun ownerGid(ownerGid: String) {
+        cdkBuilder.ownerGid(ownerGid)
+      }
+
+      /**
+       * @param ownerUid Specifies the POSIX user ID to apply to the `RootDirectory` . 
+       * Accepts values from 0 to 2^32 (4294967295).
+       */
+      override fun ownerUid(ownerUid: String) {
+        cdkBuilder.ownerUid(ownerUid)
+      }
+
+      /**
+       * @param permissions Specifies the POSIX permissions to apply to the `RootDirectory` , in the
+       * format of an octal number representing the file's mode bits. 
+       */
+      override fun permissions(permissions: String) {
+        cdkBuilder.permissions(permissions)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
+    ) : CdkObject(cdkObject), CreationInfoProperty {
+      /**
+       * Specifies the POSIX group ID to apply to the `RootDirectory` .
+       *
+       * Accepts values from 0 to 2^32 (4294967295).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-ownergid)
+       */
+      override fun ownerGid(): String = unwrap(this).getOwnerGid()
+
+      /**
+       * Specifies the POSIX user ID to apply to the `RootDirectory` .
+       *
+       * Accepts values from 0 to 2^32 (4294967295).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-owneruid)
+       */
+      override fun ownerUid(): String = unwrap(this).getOwnerUid()
+
+      /**
+       * Specifies the POSIX permissions to apply to the `RootDirectory` , in the format of an octal
+       * number representing the file's mode bits.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-permissions)
+       */
+      override fun permissions(): String = unwrap(this).getPermissions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CreationInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty):
+          CreationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? CreationInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CreationInfoProperty):
+          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty
+    }
+  }
+
+  /**
+   * The full POSIX identity, including the user ID, group ID, and any secondary group IDs, on the
+   * access point that is used for all file system operations performed by NFS clients using the access
+   * point.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.efs.*;
+   * PosixUserProperty posixUserProperty = PosixUserProperty.builder()
+   * .gid("gid")
+   * .uid("uid")
+   * // the properties below are optional
+   * .secondaryGids(List.of("secondaryGids"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html)
+   */
+  public interface PosixUserProperty {
+    /**
+     * The POSIX group ID used for all file system operations using this access point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-gid)
+     */
+    public fun gid(): String
+
+    /**
+     * Secondary POSIX group IDs used for all file system operations using this access point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-secondarygids)
+     */
+    public fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
+
+    /**
+     * The POSIX user ID used for all file system operations using this access point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-uid)
+     */
+    public fun uid(): String
+
+    /**
+     * A builder for [PosixUserProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param gid The POSIX group ID used for all file system operations using this access point. 
+       */
+      public fun gid(gid: String)
+
+      /**
+       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
+       * this access point.
+       */
+      public fun secondaryGids(secondaryGids: List<String>)
+
+      /**
+       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
+       * this access point.
+       */
+      public fun secondaryGids(vararg secondaryGids: String)
+
+      /**
+       * @param uid The POSIX user ID used for all file system operations using this access point. 
+       */
+      public fun uid(uid: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.Builder =
+          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.builder()
+
+      /**
+       * @param gid The POSIX group ID used for all file system operations using this access point. 
+       */
+      override fun gid(gid: String) {
+        cdkBuilder.gid(gid)
+      }
+
+      /**
+       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
+       * this access point.
+       */
+      override fun secondaryGids(secondaryGids: List<String>) {
+        cdkBuilder.secondaryGids(secondaryGids)
+      }
+
+      /**
+       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
+       * this access point.
+       */
+      override fun secondaryGids(vararg secondaryGids: String): Unit =
+          secondaryGids(secondaryGids.toList())
+
+      /**
+       * @param uid The POSIX user ID used for all file system operations using this access point. 
+       */
+      override fun uid(uid: String) {
+        cdkBuilder.uid(uid)
+      }
+
+      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
+    ) : CdkObject(cdkObject), PosixUserProperty {
+      /**
+       * The POSIX group ID used for all file system operations using this access point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-gid)
+       */
+      override fun gid(): String = unwrap(this).getGid()
+
+      /**
+       * Secondary POSIX group IDs used for all file system operations using this access point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-secondarygids)
+       */
+      override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
+
+      /**
+       * The POSIX user ID used for all file system operations using this access point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-uid)
+       */
+      override fun uid(): String = unwrap(this).getUid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PosixUserProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty):
+          PosixUserProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixUserProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PosixUserProperty):
+          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty
+    }
   }
 
   /**
@@ -661,8 +1094,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
+      cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
     ) : CdkObject(cdkObject), RootDirectoryProperty {
       /**
        * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
@@ -708,441 +1140,6 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty
-    }
-  }
-
-  /**
-   * A tag is a key-value pair attached to a file system.
-   *
-   * Allowed characters in the `Key` and `Value` properties are letters, white space, and numbers
-   * that can be represented in UTF-8, and the following characters: `+ - = . _ : /`
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * AccessPointTagProperty accessPointTagProperty = AccessPointTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html)
-   */
-  public interface AccessPointTagProperty {
-    /**
-     * The tag key (String).
-     *
-     * The key can't start with `aws:` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The value of the tag key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [AccessPointTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The tag key (String).
-       * The key can't start with `aws:` .
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the tag key.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.builder()
-
-      /**
-       * @param key The tag key (String).
-       * The key can't start with `aws:` .
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the tag key.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
-    ) : CdkObject(cdkObject), AccessPointTagProperty {
-      /**
-       * The tag key (String).
-       *
-       * The key can't start with `aws:` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The value of the tag key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html#cfn-efs-accesspoint-accesspointtag-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AccessPointTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty):
-          AccessPointTagProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessPointTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessPointTagProperty):
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty
-    }
-  }
-
-  /**
-   * Required if the `RootDirectory` &gt; `Path` specified does not exist.
-   *
-   * Specifies the POSIX IDs and permissions to apply to the access point's `RootDirectory` &gt;
-   * `Path` . If the access point root directory does not exist, EFS creates it with these settings
-   * when a client connects to the access point. When specifying `CreationInfo` , you must include
-   * values for all properties.
-   *
-   * Amazon EFS creates a root directory only if you have provided the CreationInfo: OwnUid, OwnGID,
-   * and permissions for the directory. If you do not provide this information, Amazon EFS does not
-   * create the root directory. If the root directory does not exist, attempts to mount using the
-   * access point will fail.
-   *
-   *
-   * If you do not provide `CreationInfo` and the specified `RootDirectory` does not exist, attempts
-   * to mount the file system using the access point will fail.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * CreationInfoProperty creationInfoProperty = CreationInfoProperty.builder()
-   * .ownerGid("ownerGid")
-   * .ownerUid("ownerUid")
-   * .permissions("permissions")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html)
-   */
-  public interface CreationInfoProperty {
-    /**
-     * Specifies the POSIX group ID to apply to the `RootDirectory` .
-     *
-     * Accepts values from 0 to 2^32 (4294967295).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-ownergid)
-     */
-    public fun ownerGid(): String
-
-    /**
-     * Specifies the POSIX user ID to apply to the `RootDirectory` .
-     *
-     * Accepts values from 0 to 2^32 (4294967295).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-owneruid)
-     */
-    public fun ownerUid(): String
-
-    /**
-     * Specifies the POSIX permissions to apply to the `RootDirectory` , in the format of an octal
-     * number representing the file's mode bits.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-permissions)
-     */
-    public fun permissions(): String
-
-    /**
-     * A builder for [CreationInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ownerGid Specifies the POSIX group ID to apply to the `RootDirectory` . 
-       * Accepts values from 0 to 2^32 (4294967295).
-       */
-      public fun ownerGid(ownerGid: String)
-
-      /**
-       * @param ownerUid Specifies the POSIX user ID to apply to the `RootDirectory` . 
-       * Accepts values from 0 to 2^32 (4294967295).
-       */
-      public fun ownerUid(ownerUid: String)
-
-      /**
-       * @param permissions Specifies the POSIX permissions to apply to the `RootDirectory` , in the
-       * format of an octal number representing the file's mode bits. 
-       */
-      public fun permissions(permissions: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.builder()
-
-      /**
-       * @param ownerGid Specifies the POSIX group ID to apply to the `RootDirectory` . 
-       * Accepts values from 0 to 2^32 (4294967295).
-       */
-      override fun ownerGid(ownerGid: String) {
-        cdkBuilder.ownerGid(ownerGid)
-      }
-
-      /**
-       * @param ownerUid Specifies the POSIX user ID to apply to the `RootDirectory` . 
-       * Accepts values from 0 to 2^32 (4294967295).
-       */
-      override fun ownerUid(ownerUid: String) {
-        cdkBuilder.ownerUid(ownerUid)
-      }
-
-      /**
-       * @param permissions Specifies the POSIX permissions to apply to the `RootDirectory` , in the
-       * format of an octal number representing the file's mode bits. 
-       */
-      override fun permissions(permissions: String) {
-        cdkBuilder.permissions(permissions)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
-    ) : CdkObject(cdkObject), CreationInfoProperty {
-      /**
-       * Specifies the POSIX group ID to apply to the `RootDirectory` .
-       *
-       * Accepts values from 0 to 2^32 (4294967295).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-ownergid)
-       */
-      override fun ownerGid(): String = unwrap(this).getOwnerGid()
-
-      /**
-       * Specifies the POSIX user ID to apply to the `RootDirectory` .
-       *
-       * Accepts values from 0 to 2^32 (4294967295).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-owneruid)
-       */
-      override fun ownerUid(): String = unwrap(this).getOwnerUid()
-
-      /**
-       * Specifies the POSIX permissions to apply to the `RootDirectory` , in the format of an octal
-       * number representing the file's mode bits.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html#cfn-efs-accesspoint-creationinfo-permissions)
-       */
-      override fun permissions(): String = unwrap(this).getPermissions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CreationInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty):
-          CreationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? CreationInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CreationInfoProperty):
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty
-    }
-  }
-
-  /**
-   * The full POSIX identity, including the user ID, group ID, and any secondary group IDs, on the
-   * access point that is used for all file system operations performed by NFS clients using the access
-   * point.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.efs.*;
-   * PosixUserProperty posixUserProperty = PosixUserProperty.builder()
-   * .gid("gid")
-   * .uid("uid")
-   * // the properties below are optional
-   * .secondaryGids(List.of("secondaryGids"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html)
-   */
-  public interface PosixUserProperty {
-    /**
-     * The POSIX group ID used for all file system operations using this access point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-gid)
-     */
-    public fun gid(): String
-
-    /**
-     * Secondary POSIX group IDs used for all file system operations using this access point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-secondarygids)
-     */
-    public fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
-
-    /**
-     * The POSIX user ID used for all file system operations using this access point.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-uid)
-     */
-    public fun uid(): String
-
-    /**
-     * A builder for [PosixUserProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gid The POSIX group ID used for all file system operations using this access point. 
-       */
-      public fun gid(gid: String)
-
-      /**
-       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
-       * this access point.
-       */
-      public fun secondaryGids(secondaryGids: List<String>)
-
-      /**
-       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
-       * this access point.
-       */
-      public fun secondaryGids(vararg secondaryGids: String)
-
-      /**
-       * @param uid The POSIX user ID used for all file system operations using this access point. 
-       */
-      public fun uid(uid: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.Builder =
-          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.builder()
-
-      /**
-       * @param gid The POSIX group ID used for all file system operations using this access point. 
-       */
-      override fun gid(gid: String) {
-        cdkBuilder.gid(gid)
-      }
-
-      /**
-       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
-       * this access point.
-       */
-      override fun secondaryGids(secondaryGids: List<String>) {
-        cdkBuilder.secondaryGids(secondaryGids)
-      }
-
-      /**
-       * @param secondaryGids Secondary POSIX group IDs used for all file system operations using
-       * this access point.
-       */
-      override fun secondaryGids(vararg secondaryGids: String): Unit =
-          secondaryGids(secondaryGids.toList())
-
-      /**
-       * @param uid The POSIX user ID used for all file system operations using this access point. 
-       */
-      override fun uid(uid: String) {
-        cdkBuilder.uid(uid)
-      }
-
-      public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
-    ) : CdkObject(cdkObject), PosixUserProperty {
-      /**
-       * The POSIX group ID used for all file system operations using this access point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-gid)
-       */
-      override fun gid(): String = unwrap(this).getGid()
-
-      /**
-       * Secondary POSIX group IDs used for all file system operations using this access point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-secondarygids)
-       */
-      override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
-
-      /**
-       * The POSIX user ID used for all file system operations using this access point.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html#cfn-efs-accesspoint-posixuser-uid)
-       */
-      override fun uid(): String = unwrap(this).getUid()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PosixUserProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty):
-          PosixUserProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixUserProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PosixUserProperty):
-          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty
     }
   }
 }

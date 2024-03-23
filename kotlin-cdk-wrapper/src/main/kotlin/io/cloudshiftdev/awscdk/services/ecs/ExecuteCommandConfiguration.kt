@@ -145,7 +145,7 @@ public interface ExecuteCommandConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration,
+    cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration,
   ) : CdkObject(cdkObject), ExecuteCommandConfiguration {
     /**
      * The AWS Key Management Service key ID to encrypt the data between the local client and the

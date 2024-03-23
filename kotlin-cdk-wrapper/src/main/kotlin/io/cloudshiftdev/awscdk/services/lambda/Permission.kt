@@ -309,7 +309,7 @@ public interface Permission {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.Permission,
+    cdkObject: software.amazon.awscdk.services.lambda.Permission,
   ) : CdkObject(cdkObject), Permission {
     /**
      * The Lambda actions that you want to allow in this statement.

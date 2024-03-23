@@ -218,7 +218,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datazone.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * The description of the Amazon DataZone domain.

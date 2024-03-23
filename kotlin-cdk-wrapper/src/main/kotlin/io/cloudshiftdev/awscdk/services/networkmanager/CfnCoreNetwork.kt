@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-corenetwork.html)
  */
-public open class CfnCoreNetwork internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
+public open class CfnCoreNetwork(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -315,7 +315,156 @@ public open class CfnCoreNetwork internal constructor(
         CfnCoreNetwork = CfnCoreNetwork(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreNetwork):
-        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnCoreNetwork
+  }
+
+  /**
+   * Describes a core network edge.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * CoreNetworkEdgeProperty coreNetworkEdgeProperty = CoreNetworkEdgeProperty.builder()
+   * .asn(123)
+   * .edgeLocation("edgeLocation")
+   * .insideCidrBlocks(List.of("insideCidrBlocks"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html)
+   */
+  public interface CoreNetworkEdgeProperty {
+    /**
+     * The ASN of a core network edge.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-asn)
+     */
+    public fun asn(): Number? = unwrap(this).getAsn()
+
+    /**
+     * The Region where a core network edge is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-edgelocation)
+     */
+    public fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
+
+    /**
+     * The inside IP addresses used for core network edges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-insidecidrblocks)
+     */
+    public fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?: emptyList()
+
+    /**
+     * A builder for [CoreNetworkEdgeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param asn The ASN of a core network edge.
+       */
+      public fun asn(asn: Number)
+
+      /**
+       * @param edgeLocation The Region where a core network edge is located.
+       */
+      public fun edgeLocation(edgeLocation: String)
+
+      /**
+       * @param insideCidrBlocks The inside IP addresses used for core network edges.
+       */
+      public fun insideCidrBlocks(insideCidrBlocks: List<String>)
+
+      /**
+       * @param insideCidrBlocks The inside IP addresses used for core network edges.
+       */
+      public fun insideCidrBlocks(vararg insideCidrBlocks: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty.builder()
+
+      /**
+       * @param asn The ASN of a core network edge.
+       */
+      override fun asn(asn: Number) {
+        cdkBuilder.asn(asn)
+      }
+
+      /**
+       * @param edgeLocation The Region where a core network edge is located.
+       */
+      override fun edgeLocation(edgeLocation: String) {
+        cdkBuilder.edgeLocation(edgeLocation)
+      }
+
+      /**
+       * @param insideCidrBlocks The inside IP addresses used for core network edges.
+       */
+      override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
+        cdkBuilder.insideCidrBlocks(insideCidrBlocks)
+      }
+
+      /**
+       * @param insideCidrBlocks The inside IP addresses used for core network edges.
+       */
+      override fun insideCidrBlocks(vararg insideCidrBlocks: String): Unit =
+          insideCidrBlocks(insideCidrBlocks.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
+    ) : CdkObject(cdkObject), CoreNetworkEdgeProperty {
+      /**
+       * The ASN of a core network edge.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-asn)
+       */
+      override fun asn(): Number? = unwrap(this).getAsn()
+
+      /**
+       * The Region where a core network edge is located.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-edgelocation)
+       */
+      override fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
+
+      /**
+       * The inside IP addresses used for core network edges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-insidecidrblocks)
+       */
+      override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CoreNetworkEdgeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty):
+          CoreNetworkEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as? CoreNetworkEdgeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CoreNetworkEdgeProperty):
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty
+    }
   }
 
   /**
@@ -436,8 +585,7 @@ public open class CfnCoreNetwork internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
     ) : CdkObject(cdkObject), CoreNetworkSegmentProperty {
       /**
        * The Regions where the edges are located.
@@ -476,155 +624,6 @@ public open class CfnCoreNetwork internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty
-    }
-  }
-
-  /**
-   * Describes a core network edge.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
-   * CoreNetworkEdgeProperty coreNetworkEdgeProperty = CoreNetworkEdgeProperty.builder()
-   * .asn(123)
-   * .edgeLocation("edgeLocation")
-   * .insideCidrBlocks(List.of("insideCidrBlocks"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html)
-   */
-  public interface CoreNetworkEdgeProperty {
-    /**
-     * The ASN of a core network edge.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-asn)
-     */
-    public fun asn(): Number? = unwrap(this).getAsn()
-
-    /**
-     * The Region where a core network edge is located.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-edgelocation)
-     */
-    public fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
-
-    /**
-     * The inside IP addresses used for core network edges.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-insidecidrblocks)
-     */
-    public fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?: emptyList()
-
-    /**
-     * A builder for [CoreNetworkEdgeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param asn The ASN of a core network edge.
-       */
-      public fun asn(asn: Number)
-
-      /**
-       * @param edgeLocation The Region where a core network edge is located.
-       */
-      public fun edgeLocation(edgeLocation: String)
-
-      /**
-       * @param insideCidrBlocks The inside IP addresses used for core network edges.
-       */
-      public fun insideCidrBlocks(insideCidrBlocks: List<String>)
-
-      /**
-       * @param insideCidrBlocks The inside IP addresses used for core network edges.
-       */
-      public fun insideCidrBlocks(vararg insideCidrBlocks: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty.Builder
-          =
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty.builder()
-
-      /**
-       * @param asn The ASN of a core network edge.
-       */
-      override fun asn(asn: Number) {
-        cdkBuilder.asn(asn)
-      }
-
-      /**
-       * @param edgeLocation The Region where a core network edge is located.
-       */
-      override fun edgeLocation(edgeLocation: String) {
-        cdkBuilder.edgeLocation(edgeLocation)
-      }
-
-      /**
-       * @param insideCidrBlocks The inside IP addresses used for core network edges.
-       */
-      override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
-        cdkBuilder.insideCidrBlocks(insideCidrBlocks)
-      }
-
-      /**
-       * @param insideCidrBlocks The inside IP addresses used for core network edges.
-       */
-      override fun insideCidrBlocks(vararg insideCidrBlocks: String): Unit =
-          insideCidrBlocks(insideCidrBlocks.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
-    ) : CdkObject(cdkObject), CoreNetworkEdgeProperty {
-      /**
-       * The ASN of a core network edge.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-asn)
-       */
-      override fun asn(): Number? = unwrap(this).getAsn()
-
-      /**
-       * The Region where a core network edge is located.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-edgelocation)
-       */
-      override fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
-
-      /**
-       * The inside IP addresses used for core network edges.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html#cfn-networkmanager-corenetwork-corenetworkedge-insidecidrblocks)
-       */
-      override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CoreNetworkEdgeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty):
-          CoreNetworkEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as? CoreNetworkEdgeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CoreNetworkEdgeProperty):
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty
     }
   }
 }

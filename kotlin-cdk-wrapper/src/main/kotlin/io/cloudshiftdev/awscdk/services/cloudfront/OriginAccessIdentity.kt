@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class OriginAccessIdentity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
+public open class OriginAccessIdentity(
+  cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
 ) : Resource(cdkObject), IOriginAccessIdentity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -147,6 +147,7 @@ public open class OriginAccessIdentity internal constructor(
         OriginAccessIdentity = OriginAccessIdentity(cdkObject)
 
     internal fun unwrap(wrapped: OriginAccessIdentity):
-        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity
   }
 }

@@ -245,7 +245,7 @@ public interface Inventory {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.Inventory,
+    cdkObject: software.amazon.awscdk.services.s3.Inventory,
   ) : CdkObject(cdkObject), Inventory {
     /**
      * The destination of the inventory.

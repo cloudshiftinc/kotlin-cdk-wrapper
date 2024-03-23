@@ -36,8 +36,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class Code internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.Code,
+public abstract class Code(
+  cdkObject: software.amazon.awscdk.services.appsync.Code,
 ) : CdkObject(cdkObject) {
   /**
    * Bind source code to an AppSync Function or resolver.
@@ -48,7 +48,7 @@ public abstract class Code internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.Code,
+    cdkObject: software.amazon.awscdk.services.appsync.Code,
   ) : Code(cdkObject)
 
   public companion object {

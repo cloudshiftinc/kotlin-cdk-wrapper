@@ -21,7 +21,7 @@ public interface IKeyGroup : IResource {
   public fun keyGroupId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IKeyGroup,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IKeyGroup,
   ) : CdkObject(cdkObject), IKeyGroup {
     /**
      * Apply the given removal policy to this resource.

@@ -224,7 +224,7 @@ public interface CfnThingTypeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnThingTypeProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnThingTypeProps,
   ) : CdkObject(cdkObject), CfnThingTypeProps {
     /**
      * Deprecates a thing type. You can not associate new things with deprecated thing type.

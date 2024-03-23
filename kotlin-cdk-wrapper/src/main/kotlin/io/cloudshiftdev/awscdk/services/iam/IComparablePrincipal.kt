@@ -22,7 +22,7 @@ public interface IComparablePrincipal : IPrincipal {
   public fun dedupeString(): String?
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IComparablePrincipal,
+    cdkObject: software.amazon.awscdk.services.iam.IComparablePrincipal,
   ) : CdkObject(cdkObject), IComparablePrincipal {
     /**
      * Add to the policy of this principal.

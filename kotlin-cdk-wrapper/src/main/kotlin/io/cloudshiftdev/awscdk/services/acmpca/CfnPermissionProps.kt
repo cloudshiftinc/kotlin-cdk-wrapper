@@ -143,7 +143,7 @@ public interface CfnPermissionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.acmpca.CfnPermissionProps,
+    cdkObject: software.amazon.awscdk.services.acmpca.CfnPermissionProps,
   ) : CdkObject(cdkObject), CfnPermissionProps {
     /**
      * The private CA actions that can be performed by the designated AWS service.

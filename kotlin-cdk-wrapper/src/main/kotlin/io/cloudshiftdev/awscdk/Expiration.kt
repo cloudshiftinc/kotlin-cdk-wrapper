@@ -22,8 +22,8 @@ import kotlin.String
  * Expiration expiration = Expiration.after(Duration.minutes(30));
  * ```
  */
-public open class Expiration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Expiration,
+public open class Expiration(
+  cdkObject: software.amazon.awscdk.Expiration,
 ) : CdkObject(cdkObject) {
   /**
    * Expiration value as a Date object.
@@ -66,5 +66,6 @@ public open class Expiration internal constructor(
         Expiration(cdkObject)
 
     internal fun unwrap(wrapped: Expiration): software.amazon.awscdk.Expiration = wrapped.cdkObject
+        as software.amazon.awscdk.Expiration
   }
 }

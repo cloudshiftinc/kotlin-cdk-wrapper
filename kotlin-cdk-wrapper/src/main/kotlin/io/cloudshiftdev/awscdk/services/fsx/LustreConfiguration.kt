@@ -341,7 +341,7 @@ public interface LustreConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration,
+    cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration,
   ) : CdkObject(cdkObject), LustreConfiguration {
     /**
      * Available with `Scratch` and `Persistent_1` deployment types.

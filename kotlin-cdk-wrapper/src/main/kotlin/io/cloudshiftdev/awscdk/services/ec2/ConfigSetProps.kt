@@ -102,7 +102,7 @@ public interface ConfigSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ConfigSetProps,
+    cdkObject: software.amazon.awscdk.services.ec2.ConfigSetProps,
   ) : CdkObject(cdkObject), ConfigSetProps {
     /**
      * The definitions of each config set.

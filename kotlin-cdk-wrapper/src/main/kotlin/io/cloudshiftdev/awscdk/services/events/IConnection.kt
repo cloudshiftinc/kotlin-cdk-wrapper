@@ -31,7 +31,7 @@ public interface IConnection : IResource {
   public fun connectionSecretArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.IConnection,
+    cdkObject: software.amazon.awscdk.services.events.IConnection,
   ) : CdkObject(cdkObject), IConnection {
     /**
      * Apply the given removal policy to this resource.

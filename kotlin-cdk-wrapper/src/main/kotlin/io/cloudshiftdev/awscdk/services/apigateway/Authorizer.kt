@@ -12,8 +12,8 @@ import kotlin.String
 /**
  * Base class for all custom authorizers.
  */
-public abstract class Authorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
+public abstract class Authorizer(
+  cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
 ) : Resource(cdkObject), IAuthorizer {
   /**
    * The authorization type of this authorizer.
@@ -27,7 +27,7 @@ public abstract class Authorizer internal constructor(
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
+    cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
   ) : Authorizer(cdkObject)
 
   public companion object {

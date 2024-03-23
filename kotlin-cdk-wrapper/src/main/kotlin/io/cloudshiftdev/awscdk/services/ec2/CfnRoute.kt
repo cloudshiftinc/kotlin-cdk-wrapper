@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
  */
-public open class CfnRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnRoute,
+public open class CfnRoute(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnRoute,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -603,6 +603,6 @@ public open class CfnRoute internal constructor(
         CfnRoute(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoute): software.amazon.awscdk.services.ec2.CfnRoute =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnRoute
   }
 }

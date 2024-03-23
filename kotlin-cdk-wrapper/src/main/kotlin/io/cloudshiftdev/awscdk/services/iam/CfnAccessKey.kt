@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-accesskey.html)
  */
-public open class CfnAccessKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnAccessKey,
+public open class CfnAccessKey(
+  cdkObject: software.amazon.awscdk.services.iam.CfnAccessKey,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -227,6 +227,6 @@ public open class CfnAccessKey internal constructor(
         CfnAccessKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessKey): software.amazon.awscdk.services.iam.CfnAccessKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnAccessKey
   }
 }

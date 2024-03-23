@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)
  */
-public open class CfnEndpointGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
+public open class CfnEndpointGroup(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -644,142 +643,8 @@ public open class CfnEndpointGroup internal constructor(
         CfnEndpointGroup = CfnEndpointGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointGroup):
-        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup = wrapped.cdkObject
-  }
-
-  /**
-   * Override specific listener ports used to route traffic to endpoints that are part of an
-   * endpoint group.
-   *
-   * For example, you can create a port override in which the listener receives user traffic on
-   * ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively,
-   * on the endpoints.
-   *
-   * For more information, see [Port
-   * overrides](https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html)
-   * in the *AWS Global Accelerator Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.globalaccelerator.*;
-   * PortOverrideProperty portOverrideProperty = PortOverrideProperty.builder()
-   * .endpointPort(123)
-   * .listenerPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html)
-   */
-  public interface PortOverrideProperty {
-    /**
-     * The endpoint port that you want a listener port to be mapped to.
-     *
-     * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
-     * instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-endpointport)
-     */
-    public fun endpointPort(): Number
-
-    /**
-     * The listener port that you want to map to a specific endpoint port.
-     *
-     * This is the port that user traffic arrives to the Global Accelerator on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-listenerport)
-     */
-    public fun listenerPort(): Number
-
-    /**
-     * A builder for [PortOverrideProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpointPort The endpoint port that you want a listener port to be mapped to. 
-       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
-       * instance.
-       */
-      public fun endpointPort(endpointPort: Number)
-
-      /**
-       * @param listenerPort The listener port that you want to map to a specific endpoint port. 
-       * This is the port that user traffic arrives to the Global Accelerator on.
-       */
-      public fun listenerPort(listenerPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty.Builder
-          =
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty.builder()
-
-      /**
-       * @param endpointPort The endpoint port that you want a listener port to be mapped to. 
-       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
-       * instance.
-       */
-      override fun endpointPort(endpointPort: Number) {
-        cdkBuilder.endpointPort(endpointPort)
-      }
-
-      /**
-       * @param listenerPort The listener port that you want to map to a specific endpoint port. 
-       * This is the port that user traffic arrives to the Global Accelerator on.
-       */
-      override fun listenerPort(listenerPort: Number) {
-        cdkBuilder.listenerPort(listenerPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
-    ) : CdkObject(cdkObject), PortOverrideProperty {
-      /**
-       * The endpoint port that you want a listener port to be mapped to.
-       *
-       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
-       * instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-endpointport)
-       */
-      override fun endpointPort(): Number = unwrap(this).getEndpointPort()
-
-      /**
-       * The listener port that you want to map to a specific endpoint port.
-       *
-       * This is the port that user traffic arrives to the Global Accelerator on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-listenerport)
-       */
-      override fun listenerPort(): Number = unwrap(this).getListenerPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortOverrideProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty):
-          PortOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? PortOverrideProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PortOverrideProperty):
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty
-    }
+        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
   }
 
   /**
@@ -1014,8 +879,7 @@ public open class CfnEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject), EndpointConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints
@@ -1094,6 +958,140 @@ public open class CfnEndpointGroup internal constructor(
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty
+    }
+  }
+
+  /**
+   * Override specific listener ports used to route traffic to endpoints that are part of an
+   * endpoint group.
+   *
+   * For example, you can create a port override in which the listener receives user traffic on
+   * ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively,
+   * on the endpoints.
+   *
+   * For more information, see [Port
+   * overrides](https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html)
+   * in the *AWS Global Accelerator Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.globalaccelerator.*;
+   * PortOverrideProperty portOverrideProperty = PortOverrideProperty.builder()
+   * .endpointPort(123)
+   * .listenerPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html)
+   */
+  public interface PortOverrideProperty {
+    /**
+     * The endpoint port that you want a listener port to be mapped to.
+     *
+     * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
+     * instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-endpointport)
+     */
+    public fun endpointPort(): Number
+
+    /**
+     * The listener port that you want to map to a specific endpoint port.
+     *
+     * This is the port that user traffic arrives to the Global Accelerator on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-listenerport)
+     */
+    public fun listenerPort(): Number
+
+    /**
+     * A builder for [PortOverrideProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointPort The endpoint port that you want a listener port to be mapped to. 
+       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
+       * instance.
+       */
+      public fun endpointPort(endpointPort: Number)
+
+      /**
+       * @param listenerPort The listener port that you want to map to a specific endpoint port. 
+       * This is the port that user traffic arrives to the Global Accelerator on.
+       */
+      public fun listenerPort(listenerPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty.Builder
+          =
+          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty.builder()
+
+      /**
+       * @param endpointPort The endpoint port that you want a listener port to be mapped to. 
+       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
+       * instance.
+       */
+      override fun endpointPort(endpointPort: Number) {
+        cdkBuilder.endpointPort(endpointPort)
+      }
+
+      /**
+       * @param listenerPort The listener port that you want to map to a specific endpoint port. 
+       * This is the port that user traffic arrives to the Global Accelerator on.
+       */
+      override fun listenerPort(listenerPort: Number) {
+        cdkBuilder.listenerPort(listenerPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
+    ) : CdkObject(cdkObject), PortOverrideProperty {
+      /**
+       * The endpoint port that you want a listener port to be mapped to.
+       *
+       * This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2
+       * instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-endpointport)
+       */
+      override fun endpointPort(): Number = unwrap(this).getEndpointPort()
+
+      /**
+       * The listener port that you want to map to a specific endpoint port.
+       *
+       * This is the port that user traffic arrives to the Global Accelerator on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-portoverride.html#cfn-globalaccelerator-endpointgroup-portoverride-listenerport)
+       */
+      override fun listenerPort(): Number = unwrap(this).getListenerPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortOverrideProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty):
+          PortOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? PortOverrideProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PortOverrideProperty):
+          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty
     }
   }
 }

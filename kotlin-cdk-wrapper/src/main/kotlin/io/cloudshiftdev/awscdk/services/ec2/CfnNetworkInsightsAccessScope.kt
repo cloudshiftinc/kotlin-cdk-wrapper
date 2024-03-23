@@ -124,9 +124,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html)
  */
-public open class CfnNetworkInsightsAccessScope internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
+public open class CfnNetworkInsightsAccessScope(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -424,305 +423,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         CfnNetworkInsightsAccessScope = CfnNetworkInsightsAccessScope(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAccessScope):
-        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope = wrapped.cdkObject
-  }
-
-  /**
-   * Describes a through resource statement.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ThroughResourcesStatementRequestProperty throughResourcesStatementRequestProperty =
-   * ThroughResourcesStatementRequestProperty.builder()
-   * .resourceStatement(ResourceStatementRequestProperty.builder()
-   * .resources(List.of("resources"))
-   * .resourceTypes(List.of("resourceTypes"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html)
-   */
-  public interface ThroughResourcesStatementRequestProperty {
-    /**
-     * The resource statement.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
-     */
-    public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
-
-    /**
-     * A builder for [ThroughResourcesStatementRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      public fun resourceStatement(resourceStatement: IResolvable)
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
-      public
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.builder()
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      override fun resourceStatement(resourceStatement: IResolvable) {
-        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
-      }
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
-      override
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
-          Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
-    ) : CdkObject(cdkObject), ThroughResourcesStatementRequestProperty {
-      /**
-       * The resource statement.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
-       */
-      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ThroughResourcesStatementRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty):
-          ThroughResourcesStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ThroughResourcesStatementRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ThroughResourcesStatementRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
-    }
-  }
-
-  /**
-   * Describes a path statement.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PathStatementRequestProperty pathStatementRequestProperty =
-   * PathStatementRequestProperty.builder()
-   * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
-   * .destinationAddresses(List.of("destinationAddresses"))
-   * .destinationPorts(List.of("destinationPorts"))
-   * .destinationPrefixLists(List.of("destinationPrefixLists"))
-   * .protocols(List.of("protocols"))
-   * .sourceAddresses(List.of("sourceAddresses"))
-   * .sourcePorts(List.of("sourcePorts"))
-   * .sourcePrefixLists(List.of("sourcePrefixLists"))
-   * .build())
-   * .resourceStatement(ResourceStatementRequestProperty.builder()
-   * .resources(List.of("resources"))
-   * .resourceTypes(List.of("resourceTypes"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html)
-   */
-  public interface PathStatementRequestProperty {
-    /**
-     * The packet header statement.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
-     */
-    public fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
-
-    /**
-     * The resource statement.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
-     */
-    public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
-
-    /**
-     * A builder for [PathStatementRequestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      public fun packetHeaderStatement(packetHeaderStatement: IResolvable)
-
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      public fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty)
-
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
-      public
-          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit)
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      public fun resourceStatement(resourceStatement: IResolvable)
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
-      public
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.builder()
-
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
-        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      override
-          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
-        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty::unwrap))
-      }
-
-      /**
-       * @param packetHeaderStatement The packet header statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
-      override
-          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit):
-          Unit = packetHeaderStatement(PacketHeaderStatementRequestProperty(packetHeaderStatement))
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      override fun resourceStatement(resourceStatement: IResolvable) {
-        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
-      }
-
-      /**
-       * @param resourceStatement The resource statement.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
-      override
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
-          Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
-    ) : CdkObject(cdkObject), PathStatementRequestProperty {
-      /**
-       * The packet header statement.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
-       */
-      override fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
-
-      /**
-       * The resource statement.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
-       */
-      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PathStatementRequestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty):
-          PathStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PathStatementRequestProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PathStatementRequestProperty):
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
-    }
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope
   }
 
   /**
@@ -930,8 +632,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
     ) : CdkObject(cdkObject), AccessScopePathRequestProperty {
       /**
        * The destination.
@@ -1226,8 +927,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
     ) : CdkObject(cdkObject), PacketHeaderStatementRequestProperty {
       /**
        * The destination addresses.
@@ -1300,6 +1000,186 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty
+    }
+  }
+
+  /**
+   * Describes a path statement.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PathStatementRequestProperty pathStatementRequestProperty =
+   * PathStatementRequestProperty.builder()
+   * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+   * .destinationAddresses(List.of("destinationAddresses"))
+   * .destinationPorts(List.of("destinationPorts"))
+   * .destinationPrefixLists(List.of("destinationPrefixLists"))
+   * .protocols(List.of("protocols"))
+   * .sourceAddresses(List.of("sourceAddresses"))
+   * .sourcePorts(List.of("sourcePorts"))
+   * .sourcePrefixLists(List.of("sourcePrefixLists"))
+   * .build())
+   * .resourceStatement(ResourceStatementRequestProperty.builder()
+   * .resources(List.of("resources"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html)
+   */
+  public interface PathStatementRequestProperty {
+    /**
+     * The packet header statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
+     */
+    public fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
+
+    /**
+     * The resource statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
+     */
+    public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+
+    /**
+     * A builder for [PathStatementRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      public fun packetHeaderStatement(packetHeaderStatement: IResolvable)
+
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      public fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty)
+
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
+      public
+          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      public fun resourceStatement(resourceStatement: IResolvable)
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
+      public
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.builder()
+
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
+        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      override
+          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
+        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty::unwrap))
+      }
+
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
+      override
+          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit):
+          Unit = packetHeaderStatement(PacketHeaderStatementRequestProperty(packetHeaderStatement))
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      override fun resourceStatement(resourceStatement: IResolvable) {
+        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
+        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
+      }
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
+      override
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
+          Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
+    ) : CdkObject(cdkObject), PathStatementRequestProperty {
+      /**
+       * The packet header statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
+       */
+      override fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
+
+      /**
+       * The resource statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
+       */
+      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PathStatementRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty):
+          PathStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PathStatementRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PathStatementRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
     }
   }
 
@@ -1399,8 +1279,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
     ) : CdkObject(cdkObject), ResourceStatementRequestProperty {
       /**
        * The resource types.
@@ -1432,6 +1311,122 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty
+    }
+  }
+
+  /**
+   * Describes a through resource statement.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ThroughResourcesStatementRequestProperty throughResourcesStatementRequestProperty =
+   * ThroughResourcesStatementRequestProperty.builder()
+   * .resourceStatement(ResourceStatementRequestProperty.builder()
+   * .resources(List.of("resources"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html)
+   */
+  public interface ThroughResourcesStatementRequestProperty {
+    /**
+     * The resource statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
+     */
+    public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+
+    /**
+     * A builder for [ThroughResourcesStatementRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      public fun resourceStatement(resourceStatement: IResolvable)
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
+      public
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.builder()
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      override fun resourceStatement(resourceStatement: IResolvable) {
+        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
+        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
+      }
+
+      /**
+       * @param resourceStatement The resource statement.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
+      override
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
+          Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
+    ) : CdkObject(cdkObject), ThroughResourcesStatementRequestProperty {
+      /**
+       * The resource statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
+       */
+      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ThroughResourcesStatementRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty):
+          ThroughResourcesStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThroughResourcesStatementRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ThroughResourcesStatementRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
     }
   }
 }

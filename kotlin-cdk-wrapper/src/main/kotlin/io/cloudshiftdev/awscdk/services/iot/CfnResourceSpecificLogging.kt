@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html)
  */
-public open class CfnResourceSpecificLogging internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnResourceSpecificLogging,
+public open class CfnResourceSpecificLogging(
+  cdkObject: software.amazon.awscdk.services.iot.CfnResourceSpecificLogging,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -193,6 +193,7 @@ public open class CfnResourceSpecificLogging internal constructor(
         CfnResourceSpecificLogging = CfnResourceSpecificLogging(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceSpecificLogging):
-        software.amazon.awscdk.services.iot.CfnResourceSpecificLogging = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnResourceSpecificLogging = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnResourceSpecificLogging
   }
 }

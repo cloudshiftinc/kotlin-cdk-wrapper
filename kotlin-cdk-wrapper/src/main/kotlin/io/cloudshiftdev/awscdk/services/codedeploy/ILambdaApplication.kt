@@ -33,7 +33,7 @@ public interface ILambdaApplication : IResource {
   public fun applicationName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaApplication,
+    cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaApplication,
   ) : CdkObject(cdkObject), ILambdaApplication {
     /**
      *

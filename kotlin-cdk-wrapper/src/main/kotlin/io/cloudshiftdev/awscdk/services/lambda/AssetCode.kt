@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class AssetCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.AssetCode,
+public open class AssetCode(
+  cdkObject: software.amazon.awscdk.services.lambda.AssetCode,
 ) : Code(cdkObject) {
   public constructor(path: String) : this(software.amazon.awscdk.services.lambda.AssetCode(path)
   )
@@ -463,6 +463,6 @@ public open class AssetCode internal constructor(
         AssetCode(cdkObject)
 
     internal fun unwrap(wrapped: AssetCode): software.amazon.awscdk.services.lambda.AssetCode =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.AssetCode
   }
 }

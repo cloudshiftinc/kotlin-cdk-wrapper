@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html)
  */
-public open class CfnDeviceDefinitionVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion,
+public open class CfnDeviceDefinitionVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -237,7 +236,8 @@ public open class CfnDeviceDefinitionVersion internal constructor(
         CfnDeviceDefinitionVersion = CfnDeviceDefinitionVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceDefinitionVersion):
-        software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion
   }
 
   /**
@@ -396,8 +396,7 @@ public open class CfnDeviceDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion.DeviceProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion.DeviceProperty,
     ) : CdkObject(cdkObject), DeviceProperty {
       /**
        * The ARN of the device certificate for the device.

@@ -83,8 +83,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html)
  */
-public open class CfnReplicaKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKey,
+public open class CfnReplicaKey(
+  cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -731,6 +731,6 @@ public open class CfnReplicaKey internal constructor(
         CfnReplicaKey(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicaKey): software.amazon.awscdk.services.kms.CfnReplicaKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.kms.CfnReplicaKey
   }
 }

@@ -232,7 +232,7 @@ public interface CfnFirewallPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicyProps,
+    cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicyProps,
   ) : CdkObject(cdkObject), CfnFirewallPolicyProps {
     /**
      * A description of the firewall policy.

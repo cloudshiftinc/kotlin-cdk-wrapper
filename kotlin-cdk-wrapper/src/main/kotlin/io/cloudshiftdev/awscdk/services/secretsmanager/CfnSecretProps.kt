@@ -579,7 +579,7 @@ public interface CfnSecretProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretProps,
   ) : CdkObject(cdkObject), CfnSecretProps {
     /**
      * The description of the secret.

@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html)
  */
-public open class CfnService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnService,
+public open class CfnService(
+  cdkObject: software.amazon.awscdk.services.vpclattice.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.vpclattice.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -440,7 +440,7 @@ public open class CfnService internal constructor(
         = CfnService(cdkObject)
 
     internal fun unwrap(wrapped: CfnService): software.amazon.awscdk.services.vpclattice.CfnService
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.vpclattice.CfnService
   }
 
   /**
@@ -515,8 +515,7 @@ public open class CfnService internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.vpclattice.CfnService.DnsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnService.DnsEntryProperty,
     ) : CdkObject(cdkObject), DnsEntryProperty {
       /**
        * The domain name of the service.

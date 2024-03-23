@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-stacksetconstraint.html)
  */
-public open class CfnStackSetConstraint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint,
+public open class CfnStackSetConstraint(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -467,6 +466,7 @@ public open class CfnStackSetConstraint internal constructor(
         CfnStackSetConstraint = CfnStackSetConstraint(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackSetConstraint):
-        software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint
   }
 }

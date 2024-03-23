@@ -325,7 +325,7 @@ public interface CfnCustomDataIdentifierProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps,
+    cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps,
   ) : CdkObject(cdkObject), CfnCustomDataIdentifierProps {
     /**
      * A custom description of the custom data identifier. The description can contain 1-512

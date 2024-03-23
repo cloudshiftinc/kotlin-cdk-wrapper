@@ -15,7 +15,7 @@ import kotlin.String
  */
 public interface INetworkListener : IListener {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener,
   ) : CdkObject(cdkObject), INetworkListener {
     /**
      * Apply the given removal policy to this resource.

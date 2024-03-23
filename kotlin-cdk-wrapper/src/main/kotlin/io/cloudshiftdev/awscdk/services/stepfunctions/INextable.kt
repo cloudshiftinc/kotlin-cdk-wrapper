@@ -18,7 +18,7 @@ public interface INextable {
   public fun next(state: IChainable): Chain
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.INextable,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.INextable,
   ) : CdkObject(cdkObject), INextable {
     /**
      * Go to the indicated state after this state.

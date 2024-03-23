@@ -58,7 +58,7 @@ public interface SourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.SourceProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.SourceProps,
   ) : CdkObject(cdkObject), SourceProps {
     /**
      * The source identifier.

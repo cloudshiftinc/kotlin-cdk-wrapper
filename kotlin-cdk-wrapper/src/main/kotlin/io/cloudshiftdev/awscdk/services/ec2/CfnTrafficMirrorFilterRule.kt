@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)
  */
-public open class CfnTrafficMirrorFilterRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule,
+public open class CfnTrafficMirrorFilterRule(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -546,7 +546,8 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
         CfnTrafficMirrorFilterRule = CfnTrafficMirrorFilterRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorFilterRule):
-        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule
   }
 
   /**
@@ -632,8 +633,7 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty,
     ) : CdkObject(cdkObject), TrafficMirrorPortRangeProperty {
       /**
        * The start of the Traffic Mirror port range.

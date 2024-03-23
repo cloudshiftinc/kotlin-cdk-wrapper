@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)
  */
-public open class CfnChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel,
+public open class CfnChannel(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -671,453 +671,7 @@ public open class CfnChannel internal constructor(
         = CfnChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannel): software.amazon.awscdk.services.mediatailor.CfnChannel
-        = wrapped.cdkObject
-  }
-
-  /**
-   * The log configuration for the channel.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * LogConfigurationForChannelProperty logConfigurationForChannelProperty =
-   * LogConfigurationForChannelProperty.builder()
-   * .logTypes(List.of("logTypes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html)
-   */
-  public interface LogConfigurationForChannelProperty {
-    /**
-     * The log types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html#cfn-mediatailor-channel-logconfigurationforchannel-logtypes)
-     */
-    public fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
-
-    /**
-     * A builder for [LogConfigurationForChannelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param logTypes The log types.
-       */
-      public fun logTypes(logTypes: List<String>)
-
-      /**
-       * @param logTypes The log types.
-       */
-      public fun logTypes(vararg logTypes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty.builder()
-
-      /**
-       * @param logTypes The log types.
-       */
-      override fun logTypes(logTypes: List<String>) {
-        cdkBuilder.logTypes(logTypes)
-      }
-
-      /**
-       * @param logTypes The log types.
-       */
-      override fun logTypes(vararg logTypes: String): Unit = logTypes(logTypes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty,
-    ) : CdkObject(cdkObject), LogConfigurationForChannelProperty {
-      /**
-       * The log types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html#cfn-mediatailor-channel-logconfigurationforchannel-logtypes)
-       */
-      override fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LogConfigurationForChannelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty):
-          LogConfigurationForChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LogConfigurationForChannelProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LogConfigurationForChannelProperty):
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
-    }
-  }
-
-  /**
-   * The configuration for time-shifted viewing.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * TimeShiftConfigurationProperty timeShiftConfigurationProperty =
-   * TimeShiftConfigurationProperty.builder()
-   * .maxTimeDelaySeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html)
-   */
-  public interface TimeShiftConfigurationProperty {
-    /**
-     * The maximum time delay for time-shifted viewing.
-     *
-     * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
-     * delay is 21600 seconds (6 hours).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html#cfn-mediatailor-channel-timeshiftconfiguration-maxtimedelayseconds)
-     */
-    public fun maxTimeDelaySeconds(): Number
-
-    /**
-     * A builder for [TimeShiftConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxTimeDelaySeconds The maximum time delay for time-shifted viewing. 
-       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
-       * delay is 21600 seconds (6 hours).
-       */
-      public fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty.builder()
-
-      /**
-       * @param maxTimeDelaySeconds The maximum time delay for time-shifted viewing. 
-       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
-       * delay is 21600 seconds (6 hours).
-       */
-      override fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number) {
-        cdkBuilder.maxTimeDelaySeconds(maxTimeDelaySeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty,
-    ) : CdkObject(cdkObject), TimeShiftConfigurationProperty {
-      /**
-       * The maximum time delay for time-shifted viewing.
-       *
-       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
-       * delay is 21600 seconds (6 hours).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html#cfn-mediatailor-channel-timeshiftconfiguration-maxtimedelayseconds)
-       */
-      override fun maxTimeDelaySeconds(): Number = unwrap(this).getMaxTimeDelaySeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeShiftConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty):
-          TimeShiftConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TimeShiftConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimeShiftConfigurationProperty):
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty
-    }
-  }
-
-  /**
-   * Slate VOD source configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * SlateSourceProperty slateSourceProperty = SlateSourceProperty.builder()
-   * .sourceLocationName("sourceLocationName")
-   * .vodSourceName("vodSourceName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html)
-   */
-  public interface SlateSourceProperty {
-    /**
-     * The name of the source location where the slate VOD source is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-sourcelocationname)
-     */
-    public fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
-
-    /**
-     * The slate VOD source name.
-     *
-     * The VOD source must already exist in a source location before it can be used for slate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-vodsourcename)
-     */
-    public fun vodSourceName(): String? = unwrap(this).getVodSourceName()
-
-    /**
-     * A builder for [SlateSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param sourceLocationName The name of the source location where the slate VOD source is
-       * stored.
-       */
-      public fun sourceLocationName(sourceLocationName: String)
-
-      /**
-       * @param vodSourceName The slate VOD source name.
-       * The VOD source must already exist in a source location before it can be used for slate.
-       */
-      public fun vodSourceName(vodSourceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.Builder =
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.builder()
-
-      /**
-       * @param sourceLocationName The name of the source location where the slate VOD source is
-       * stored.
-       */
-      override fun sourceLocationName(sourceLocationName: String) {
-        cdkBuilder.sourceLocationName(sourceLocationName)
-      }
-
-      /**
-       * @param vodSourceName The slate VOD source name.
-       * The VOD source must already exist in a source location before it can be used for slate.
-       */
-      override fun vodSourceName(vodSourceName: String) {
-        cdkBuilder.vodSourceName(vodSourceName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty,
-    ) : CdkObject(cdkObject), SlateSourceProperty {
-      /**
-       * The name of the source location where the slate VOD source is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-sourcelocationname)
-       */
-      override fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
-
-      /**
-       * The slate VOD source name.
-       *
-       * The VOD source must already exist in a source location before it can be used for slate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-vodsourcename)
-       */
-      override fun vodSourceName(): String? = unwrap(this).getVodSourceName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SlateSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty):
-          SlateSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SlateSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SlateSourceProperty):
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty
-    }
-  }
-
-  /**
-   * HLS playlist configuration parameters.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
-   * HlsPlaylistSettingsProperty hlsPlaylistSettingsProperty = HlsPlaylistSettingsProperty.builder()
-   * .adMarkupType(List.of("adMarkupType"))
-   * .manifestWindowSeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html)
-   */
-  public interface HlsPlaylistSettingsProperty {
-    /**
-     * Determines the type of SCTE 35 tags to use in ad markup.
-     *
-     * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-     * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-admarkuptype)
-     */
-    public fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?: emptyList()
-
-    /**
-     * The total duration (in seconds) of each manifest.
-     *
-     * Minimum value: `30` seconds. Maximum value: `3600` seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-manifestwindowseconds)
-     */
-    public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
-
-    /**
-     * A builder for [HlsPlaylistSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
-       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-       */
-      public fun adMarkupType(adMarkupType: List<String>)
-
-      /**
-       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
-       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-       */
-      public fun adMarkupType(vararg adMarkupType: String)
-
-      /**
-       * @param manifestWindowSeconds The total duration (in seconds) of each manifest.
-       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
-       */
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty.builder()
-
-      /**
-       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
-       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-       */
-      override fun adMarkupType(adMarkupType: List<String>) {
-        cdkBuilder.adMarkupType(adMarkupType)
-      }
-
-      /**
-       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
-       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-       */
-      override fun adMarkupType(vararg adMarkupType: String): Unit =
-          adMarkupType(adMarkupType.toList())
-
-      /**
-       * @param manifestWindowSeconds The total duration (in seconds) of each manifest.
-       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
-       */
-      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-        cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty,
-    ) : CdkObject(cdkObject), HlsPlaylistSettingsProperty {
-      /**
-       * Determines the type of SCTE 35 tags to use in ad markup.
-       *
-       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
-       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-admarkuptype)
-       */
-      override fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?: emptyList()
-
-      /**
-       * The total duration (in seconds) of each manifest.
-       *
-       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-manifestwindowseconds)
-       */
-      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HlsPlaylistSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty):
-          HlsPlaylistSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HlsPlaylistSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HlsPlaylistSettingsProperty):
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.mediatailor.CfnChannel
   }
 
   /**
@@ -1261,8 +815,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty,
     ) : CdkObject(cdkObject), DashPlaylistSettingsProperty {
       /**
        * The total duration (in seconds) of each manifest.
@@ -1320,6 +873,240 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty
+    }
+  }
+
+  /**
+   * HLS playlist configuration parameters.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * HlsPlaylistSettingsProperty hlsPlaylistSettingsProperty = HlsPlaylistSettingsProperty.builder()
+   * .adMarkupType(List.of("adMarkupType"))
+   * .manifestWindowSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html)
+   */
+  public interface HlsPlaylistSettingsProperty {
+    /**
+     * Determines the type of SCTE 35 tags to use in ad markup.
+     *
+     * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+     * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-admarkuptype)
+     */
+    public fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?: emptyList()
+
+    /**
+     * The total duration (in seconds) of each manifest.
+     *
+     * Minimum value: `30` seconds. Maximum value: `3600` seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-manifestwindowseconds)
+     */
+    public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+
+    /**
+     * A builder for [HlsPlaylistSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
+       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+       */
+      public fun adMarkupType(adMarkupType: List<String>)
+
+      /**
+       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
+       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+       */
+      public fun adMarkupType(vararg adMarkupType: String)
+
+      /**
+       * @param manifestWindowSeconds The total duration (in seconds) of each manifest.
+       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
+       */
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty.builder()
+
+      /**
+       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
+       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+       */
+      override fun adMarkupType(adMarkupType: List<String>) {
+        cdkBuilder.adMarkupType(adMarkupType)
+      }
+
+      /**
+       * @param adMarkupType Determines the type of SCTE 35 tags to use in ad markup.
+       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+       */
+      override fun adMarkupType(vararg adMarkupType: String): Unit =
+          adMarkupType(adMarkupType.toList())
+
+      /**
+       * @param manifestWindowSeconds The total duration (in seconds) of each manifest.
+       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
+       */
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+        cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty,
+    ) : CdkObject(cdkObject), HlsPlaylistSettingsProperty {
+      /**
+       * Determines the type of SCTE 35 tags to use in ad markup.
+       *
+       * Specify `DATERANGE` to use `DATERANGE` tags (for live or VOD content). Specify
+       * `SCTE35_ENHANCED` to use `EXT-X-CUE-OUT` and `EXT-X-CUE-IN` tags (for VOD content only).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-admarkuptype)
+       */
+      override fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?: emptyList()
+
+      /**
+       * The total duration (in seconds) of each manifest.
+       *
+       * Minimum value: `30` seconds. Maximum value: `3600` seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-hlsplaylistsettings.html#cfn-mediatailor-channel-hlsplaylistsettings-manifestwindowseconds)
+       */
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HlsPlaylistSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty):
+          HlsPlaylistSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsPlaylistSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HlsPlaylistSettingsProperty):
+          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty
+    }
+  }
+
+  /**
+   * The log configuration for the channel.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * LogConfigurationForChannelProperty logConfigurationForChannelProperty =
+   * LogConfigurationForChannelProperty.builder()
+   * .logTypes(List.of("logTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html)
+   */
+  public interface LogConfigurationForChannelProperty {
+    /**
+     * The log types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html#cfn-mediatailor-channel-logconfigurationforchannel-logtypes)
+     */
+    public fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
+
+    /**
+     * A builder for [LogConfigurationForChannelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logTypes The log types.
+       */
+      public fun logTypes(logTypes: List<String>)
+
+      /**
+       * @param logTypes The log types.
+       */
+      public fun logTypes(vararg logTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty.builder()
+
+      /**
+       * @param logTypes The log types.
+       */
+      override fun logTypes(logTypes: List<String>) {
+        cdkBuilder.logTypes(logTypes)
+      }
+
+      /**
+       * @param logTypes The log types.
+       */
+      override fun logTypes(vararg logTypes: String): Unit = logTypes(logTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty,
+    ) : CdkObject(cdkObject), LogConfigurationForChannelProperty {
+      /**
+       * The log types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-logconfigurationforchannel.html#cfn-mediatailor-channel-logconfigurationforchannel-logtypes)
+       */
+      override fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LogConfigurationForChannelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty):
+          LogConfigurationForChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogConfigurationForChannelProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogConfigurationForChannelProperty):
+          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
     }
   }
 
@@ -1509,8 +1296,7 @@ public open class CfnChannel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty,
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty,
     ) : CdkObject(cdkObject), RequestOutputItemProperty {
       /**
        * DASH manifest configuration parameters.
@@ -1558,6 +1344,214 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty
+    }
+  }
+
+  /**
+   * Slate VOD source configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * SlateSourceProperty slateSourceProperty = SlateSourceProperty.builder()
+   * .sourceLocationName("sourceLocationName")
+   * .vodSourceName("vodSourceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html)
+   */
+  public interface SlateSourceProperty {
+    /**
+     * The name of the source location where the slate VOD source is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-sourcelocationname)
+     */
+    public fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
+
+    /**
+     * The slate VOD source name.
+     *
+     * The VOD source must already exist in a source location before it can be used for slate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-vodsourcename)
+     */
+    public fun vodSourceName(): String? = unwrap(this).getVodSourceName()
+
+    /**
+     * A builder for [SlateSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceLocationName The name of the source location where the slate VOD source is
+       * stored.
+       */
+      public fun sourceLocationName(sourceLocationName: String)
+
+      /**
+       * @param vodSourceName The slate VOD source name.
+       * The VOD source must already exist in a source location before it can be used for slate.
+       */
+      public fun vodSourceName(vodSourceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.Builder =
+          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.builder()
+
+      /**
+       * @param sourceLocationName The name of the source location where the slate VOD source is
+       * stored.
+       */
+      override fun sourceLocationName(sourceLocationName: String) {
+        cdkBuilder.sourceLocationName(sourceLocationName)
+      }
+
+      /**
+       * @param vodSourceName The slate VOD source name.
+       * The VOD source must already exist in a source location before it can be used for slate.
+       */
+      override fun vodSourceName(vodSourceName: String) {
+        cdkBuilder.vodSourceName(vodSourceName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty,
+    ) : CdkObject(cdkObject), SlateSourceProperty {
+      /**
+       * The name of the source location where the slate VOD source is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-sourcelocationname)
+       */
+      override fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
+
+      /**
+       * The slate VOD source name.
+       *
+       * The VOD source must already exist in a source location before it can be used for slate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-slatesource.html#cfn-mediatailor-channel-slatesource-vodsourcename)
+       */
+      override fun vodSourceName(): String? = unwrap(this).getVodSourceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SlateSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty):
+          SlateSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SlateSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SlateSourceProperty):
+          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty
+    }
+  }
+
+  /**
+   * The configuration for time-shifted viewing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * TimeShiftConfigurationProperty timeShiftConfigurationProperty =
+   * TimeShiftConfigurationProperty.builder()
+   * .maxTimeDelaySeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html)
+   */
+  public interface TimeShiftConfigurationProperty {
+    /**
+     * The maximum time delay for time-shifted viewing.
+     *
+     * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
+     * delay is 21600 seconds (6 hours).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html#cfn-mediatailor-channel-timeshiftconfiguration-maxtimedelayseconds)
+     */
+    public fun maxTimeDelaySeconds(): Number
+
+    /**
+     * A builder for [TimeShiftConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxTimeDelaySeconds The maximum time delay for time-shifted viewing. 
+       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
+       * delay is 21600 seconds (6 hours).
+       */
+      public fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty.builder()
+
+      /**
+       * @param maxTimeDelaySeconds The maximum time delay for time-shifted viewing. 
+       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
+       * delay is 21600 seconds (6 hours).
+       */
+      override fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number) {
+        cdkBuilder.maxTimeDelaySeconds(maxTimeDelaySeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty,
+    ) : CdkObject(cdkObject), TimeShiftConfigurationProperty {
+      /**
+       * The maximum time delay for time-shifted viewing.
+       *
+       * The minimum allowed maximum time delay is 0 seconds, and the maximum allowed maximum time
+       * delay is 21600 seconds (6 hours).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-channel-timeshiftconfiguration.html#cfn-mediatailor-channel-timeshiftconfiguration-maxtimedelayseconds)
+       */
+      override fun maxTimeDelaySeconds(): Number = unwrap(this).getMaxTimeDelaySeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeShiftConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty):
+          TimeShiftConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeShiftConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeShiftConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty
     }
   }
 }

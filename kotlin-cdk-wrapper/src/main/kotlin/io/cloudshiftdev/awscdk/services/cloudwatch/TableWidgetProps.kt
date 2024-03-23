@@ -414,7 +414,7 @@ public interface TableWidgetProps : MetricWidgetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidgetProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidgetProps,
   ) : CdkObject(cdkObject), TableWidgetProps {
     /**
      * The end of the time range to use for each widget independently from those of the dashboard.

@@ -248,7 +248,7 @@ public interface CfnWorkspaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.aps.CfnWorkspaceProps,
+    cdkObject: software.amazon.awscdk.services.aps.CfnWorkspaceProps,
   ) : CdkObject(cdkObject), CfnWorkspaceProps {
     /**
      * The alert manager definition, a YAML configuration for the alert manager in your Amazon

@@ -435,7 +435,7 @@ public interface SecretProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretProps,
+    cdkObject: software.amazon.awscdk.services.secretsmanager.SecretProps,
   ) : CdkObject(cdkObject), SecretProps {
     /**
      * An optional, human-friendly description of the secret.

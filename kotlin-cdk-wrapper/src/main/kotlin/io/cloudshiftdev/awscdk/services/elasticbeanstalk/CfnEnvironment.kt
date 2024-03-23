@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-environment.html)
  */
-public open class CfnEnvironment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment,
+public open class CfnEnvironment(
+  cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -815,7 +815,190 @@ public open class CfnEnvironment internal constructor(
         CfnEnvironment = CfnEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironment):
-        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
+  }
+
+  /**
+   * Use the `OptionSetting` property type to specify an option for an AWS Elastic Beanstalk
+   * environment when defining an AWS::ElasticBeanstalk::Environment resource in an AWS CloudFormation
+   * template.
+   *
+   * The `OptionSetting` property type specifies an option for an AWS Elastic Beanstalk environment.
+   *
+   * The `OptionSettings` property of the
+   * [AWS::ElasticBeanstalk::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html)
+   * resource contains a list of `OptionSetting` property types.
+   *
+   * For a list of possible namespaces and option values, see [Option
+   * Values](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS
+   * Elastic Beanstalk Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
+   * OptionSettingProperty optionSettingProperty = OptionSettingProperty.builder()
+   * .namespace("namespace")
+   * .optionName("optionName")
+   * // the properties below are optional
+   * .resourceName("resourceName")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html)
+   */
+  public interface OptionSettingProperty {
+    /**
+     * A unique namespace that identifies the option's associated AWS resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * The name of the configuration option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-optionname)
+     */
+    public fun optionName(): String
+
+    /**
+     * A unique resource name for the option setting.
+     *
+     * Use it for a time–based scaling configuration option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename)
+     */
+    public fun resourceName(): String? = unwrap(this).getResourceName()
+
+    /**
+     * The current value for the configuration option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [OptionSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param namespace A unique namespace that identifies the option's associated AWS resource. 
+       */
+      public fun namespace(namespace: String)
+
+      /**
+       * @param optionName The name of the configuration option. 
+       */
+      public fun optionName(optionName: String)
+
+      /**
+       * @param resourceName A unique resource name for the option setting.
+       * Use it for a time–based scaling configuration option.
+       */
+      public fun resourceName(resourceName: String)
+
+      /**
+       * @param value The current value for the configuration option.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty.builder()
+
+      /**
+       * @param namespace A unique namespace that identifies the option's associated AWS resource. 
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      /**
+       * @param optionName The name of the configuration option. 
+       */
+      override fun optionName(optionName: String) {
+        cdkBuilder.optionName(optionName)
+      }
+
+      /**
+       * @param resourceName A unique resource name for the option setting.
+       * Use it for a time–based scaling configuration option.
+       */
+      override fun resourceName(resourceName: String) {
+        cdkBuilder.resourceName(resourceName)
+      }
+
+      /**
+       * @param value The current value for the configuration option.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty,
+    ) : CdkObject(cdkObject), OptionSettingProperty {
+      /**
+       * A unique namespace that identifies the option's associated AWS resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-namespace)
+       */
+      override fun namespace(): String = unwrap(this).getNamespace()
+
+      /**
+       * The name of the configuration option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-optionname)
+       */
+      override fun optionName(): String = unwrap(this).getOptionName()
+
+      /**
+       * A unique resource name for the option setting.
+       *
+       * Use it for a time–based scaling configuration option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename)
+       */
+      override fun resourceName(): String? = unwrap(this).getResourceName()
+
+      /**
+       * The current value for the configuration option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OptionSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty):
+          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionSettingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OptionSettingProperty):
+          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty
+    }
   }
 
   /**
@@ -965,8 +1148,7 @@ public open class CfnEnvironment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty,
+      cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty,
     ) : CdkObject(cdkObject), TierProperty {
       /**
        * The name of this environment tier.
@@ -1022,189 +1204,6 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty
-    }
-  }
-
-  /**
-   * Use the `OptionSetting` property type to specify an option for an AWS Elastic Beanstalk
-   * environment when defining an AWS::ElasticBeanstalk::Environment resource in an AWS CloudFormation
-   * template.
-   *
-   * The `OptionSetting` property type specifies an option for an AWS Elastic Beanstalk environment.
-   *
-   * The `OptionSettings` property of the
-   * [AWS::ElasticBeanstalk::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html)
-   * resource contains a list of `OptionSetting` property types.
-   *
-   * For a list of possible namespaces and option values, see [Option
-   * Values](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS
-   * Elastic Beanstalk Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.elasticbeanstalk.*;
-   * OptionSettingProperty optionSettingProperty = OptionSettingProperty.builder()
-   * .namespace("namespace")
-   * .optionName("optionName")
-   * // the properties below are optional
-   * .resourceName("resourceName")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html)
-   */
-  public interface OptionSettingProperty {
-    /**
-     * A unique namespace that identifies the option's associated AWS resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-namespace)
-     */
-    public fun namespace(): String
-
-    /**
-     * The name of the configuration option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-optionname)
-     */
-    public fun optionName(): String
-
-    /**
-     * A unique resource name for the option setting.
-     *
-     * Use it for a time–based scaling configuration option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename)
-     */
-    public fun resourceName(): String? = unwrap(this).getResourceName()
-
-    /**
-     * The current value for the configuration option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [OptionSettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param namespace A unique namespace that identifies the option's associated AWS resource. 
-       */
-      public fun namespace(namespace: String)
-
-      /**
-       * @param optionName The name of the configuration option. 
-       */
-      public fun optionName(optionName: String)
-
-      /**
-       * @param resourceName A unique resource name for the option setting.
-       * Use it for a time–based scaling configuration option.
-       */
-      public fun resourceName(resourceName: String)
-
-      /**
-       * @param value The current value for the configuration option.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty.Builder
-          =
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty.builder()
-
-      /**
-       * @param namespace A unique namespace that identifies the option's associated AWS resource. 
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      /**
-       * @param optionName The name of the configuration option. 
-       */
-      override fun optionName(optionName: String) {
-        cdkBuilder.optionName(optionName)
-      }
-
-      /**
-       * @param resourceName A unique resource name for the option setting.
-       * Use it for a time–based scaling configuration option.
-       */
-      override fun resourceName(resourceName: String) {
-        cdkBuilder.resourceName(resourceName)
-      }
-
-      /**
-       * @param value The current value for the configuration option.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty,
-    ) : CdkObject(cdkObject), OptionSettingProperty {
-      /**
-       * A unique namespace that identifies the option's associated AWS resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-namespace)
-       */
-      override fun namespace(): String = unwrap(this).getNamespace()
-
-      /**
-       * The name of the configuration option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-optionname)
-       */
-      override fun optionName(): String = unwrap(this).getOptionName()
-
-      /**
-       * A unique resource name for the option setting.
-       *
-       * Use it for a time–based scaling configuration option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename)
-       */
-      override fun resourceName(): String? = unwrap(this).getResourceName()
-
-      /**
-       * The current value for the configuration option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-optionsetting.html#cfn-elasticbeanstalk-environment-optionsetting-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OptionSettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty):
-          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionSettingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OptionSettingProperty):
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty
     }
   }
 }

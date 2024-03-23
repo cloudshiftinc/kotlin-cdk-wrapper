@@ -36,7 +36,7 @@ public interface IEcsDeploymentGroup : IResource {
   public fun deploymentGroupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.IEcsDeploymentGroup,
+    cdkObject: software.amazon.awscdk.services.codedeploy.IEcsDeploymentGroup,
   ) : CdkObject(cdkObject), IEcsDeploymentGroup {
     /**
      * The reference to the CodeDeploy ECS Application that this Deployment Group belongs to.

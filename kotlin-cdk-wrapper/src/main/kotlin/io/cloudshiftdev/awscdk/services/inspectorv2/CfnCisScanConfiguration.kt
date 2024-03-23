@@ -70,9 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html)
  */
-public open class CfnCisScanConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
+public open class CfnCisScanConfiguration(
+  cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -410,11 +409,12 @@ public open class CfnCisScanConfiguration internal constructor(
         CfnCisScanConfiguration = CfnCisScanConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnCisScanConfiguration):
-        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration
   }
 
   /**
-   * The time.
+   * The CIS targets.
    *
    * Example:
    *
@@ -422,102 +422,239 @@ public open class CfnCisScanConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * TimeProperty timeProperty = TimeProperty.builder()
-   * .timeOfDay("timeOfDay")
-   * .timeZone("timeZone")
+   * CisTargetsProperty cisTargetsProperty = CisTargetsProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * // the properties below are optional
+   * .targetResourceTags(Map.of(
+   * "targetResourceTagsKey", List.of("targetResourceTags")))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html)
    */
-  public interface TimeProperty {
+  public interface CisTargetsProperty {
     /**
-     * The time of day in 24-hour format (00:00).
+     * The CIS target account ids.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timeofday)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-accountids)
      */
-    public fun timeOfDay(): String
+    public fun accountIds(): List<String>
 
     /**
-     * The timezone.
+     * The CIS target resource tags.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timezone)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
      */
-    public fun timeZone(): String
+    public fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
 
     /**
-     * A builder for [TimeProperty]
+     * A builder for [CisTargetsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param timeOfDay The time of day in 24-hour format (00:00). 
+       * @param accountIds The CIS target account ids. 
        */
-      public fun timeOfDay(timeOfDay: String)
+      public fun accountIds(accountIds: List<String>)
 
       /**
-       * @param timeZone The timezone. 
+       * @param accountIds The CIS target account ids. 
        */
-      public fun timeZone(timeZone: String)
+      public fun accountIds(vararg accountIds: String)
+
+      /**
+       * @param targetResourceTags The CIS target resource tags.
+       */
+      public fun targetResourceTags(targetResourceTags: IResolvable)
+
+      /**
+       * @param targetResourceTags The CIS target resource tags.
+       */
+      public fun targetResourceTags(targetResourceTags: Map<String, List<String>>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty.Builder =
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty.builder()
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty.Builder
+          =
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty.builder()
 
       /**
-       * @param timeOfDay The time of day in 24-hour format (00:00). 
+       * @param accountIds The CIS target account ids. 
        */
-      override fun timeOfDay(timeOfDay: String) {
-        cdkBuilder.timeOfDay(timeOfDay)
+      override fun accountIds(accountIds: List<String>) {
+        cdkBuilder.accountIds(accountIds)
       }
 
       /**
-       * @param timeZone The timezone. 
+       * @param accountIds The CIS target account ids. 
        */
-      override fun timeZone(timeZone: String) {
-        cdkBuilder.timeZone(timeZone)
+      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
+
+      /**
+       * @param targetResourceTags The CIS target resource tags.
+       */
+      override fun targetResourceTags(targetResourceTags: IResolvable) {
+        cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param targetResourceTags The CIS target resource tags.
+       */
+      override fun targetResourceTags(targetResourceTags: Map<String, List<String>>) {
+        cdkBuilder.targetResourceTags(targetResourceTags)
       }
 
       public fun build():
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty =
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty,
-    ) : CdkObject(cdkObject), TimeProperty {
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
+    ) : CdkObject(cdkObject), CisTargetsProperty {
       /**
-       * The time of day in 24-hour format (00:00).
+       * The CIS target account ids.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timeofday)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-accountids)
        */
-      override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds()
 
       /**
-       * The timezone.
+       * The CIS target resource tags.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timezone)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
        */
-      override fun timeZone(): String = unwrap(this).getTimeZone()
+      override fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CisTargetsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty):
-          TimeProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty):
+          CisTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? CisTargetsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TimeProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty =
+      internal fun unwrap(wrapped: CisTargetsProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty
+    }
+  }
+
+  /**
+   * A daily schedule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
+   * DailyScheduleProperty dailyScheduleProperty = DailyScheduleProperty.builder()
+   * .startTime(TimeProperty.builder()
+   * .timeOfDay("timeOfDay")
+   * .timeZone("timeZone")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html)
+   */
+  public interface DailyScheduleProperty {
+    /**
+     * The schedule start time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html#cfn-inspectorv2-cisscanconfiguration-dailyschedule-starttime)
+     */
+    public fun startTime(): Any
+
+    /**
+     * A builder for [DailyScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param startTime The schedule start time. 
+       */
+      public fun startTime(startTime: IResolvable)
+
+      /**
+       * @param startTime The schedule start time. 
+       */
+      public fun startTime(startTime: TimeProperty)
+
+      /**
+       * @param startTime The schedule start time. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cb09ecf9eef1da4425c5f6eca151395af85b7ba72e73f27c8eba0e8630743065")
+      public fun startTime(startTime: TimeProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty.Builder
+          =
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty.builder()
+
+      /**
+       * @param startTime The schedule start time. 
+       */
+      override fun startTime(startTime: IResolvable) {
+        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param startTime The schedule start time. 
+       */
+      override fun startTime(startTime: TimeProperty) {
+        cdkBuilder.startTime(startTime.let(TimeProperty::unwrap))
+      }
+
+      /**
+       * @param startTime The schedule start time. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cb09ecf9eef1da4425c5f6eca151395af85b7ba72e73f27c8eba0e8630743065")
+      override fun startTime(startTime: TimeProperty.Builder.() -> Unit): Unit =
+          startTime(TimeProperty(startTime))
+
+      public fun build():
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty,
+    ) : CdkObject(cdkObject), DailyScheduleProperty {
+      /**
+       * The schedule start time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html#cfn-inspectorv2-cisscanconfiguration-dailyschedule-starttime)
+       */
+      override fun startTime(): Any = unwrap(this).getStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DailyScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty):
+          DailyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? DailyScheduleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DailyScheduleProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
     }
   }
 
@@ -625,8 +762,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty,
     ) : CdkObject(cdkObject), MonthlyScheduleProperty {
       /**
        * The monthly schedule's day.
@@ -658,119 +794,6 @@ public open class CfnCisScanConfiguration internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty
-    }
-  }
-
-  /**
-   * A daily schedule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * DailyScheduleProperty dailyScheduleProperty = DailyScheduleProperty.builder()
-   * .startTime(TimeProperty.builder()
-   * .timeOfDay("timeOfDay")
-   * .timeZone("timeZone")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html)
-   */
-  public interface DailyScheduleProperty {
-    /**
-     * The schedule start time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html#cfn-inspectorv2-cisscanconfiguration-dailyschedule-starttime)
-     */
-    public fun startTime(): Any
-
-    /**
-     * A builder for [DailyScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param startTime The schedule start time. 
-       */
-      public fun startTime(startTime: IResolvable)
-
-      /**
-       * @param startTime The schedule start time. 
-       */
-      public fun startTime(startTime: TimeProperty)
-
-      /**
-       * @param startTime The schedule start time. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cb09ecf9eef1da4425c5f6eca151395af85b7ba72e73f27c8eba0e8630743065")
-      public fun startTime(startTime: TimeProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty.Builder
-          =
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty.builder()
-
-      /**
-       * @param startTime The schedule start time. 
-       */
-      override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param startTime The schedule start time. 
-       */
-      override fun startTime(startTime: TimeProperty) {
-        cdkBuilder.startTime(startTime.let(TimeProperty::unwrap))
-      }
-
-      /**
-       * @param startTime The schedule start time. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cb09ecf9eef1da4425c5f6eca151395af85b7ba72e73f27c8eba0e8630743065")
-      override fun startTime(startTime: TimeProperty.Builder.() -> Unit): Unit =
-          startTime(TimeProperty(startTime))
-
-      public fun build():
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty,
-    ) : CdkObject(cdkObject), DailyScheduleProperty {
-      /**
-       * The schedule start time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-dailyschedule.html#cfn-inspectorv2-cisscanconfiguration-dailyschedule-starttime)
-       */
-      override fun startTime(): Any = unwrap(this).getStartTime()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DailyScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty):
-          DailyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? DailyScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DailyScheduleProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
     }
   }
 
@@ -989,8 +1012,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty,
     ) : CdkObject(cdkObject), ScheduleProperty {
       /**
        * A daily schedule.
@@ -1040,7 +1062,7 @@ public open class CfnCisScanConfiguration internal constructor(
   }
 
   /**
-   * The CIS targets.
+   * The time.
    *
    * Example:
    *
@@ -1048,128 +1070,101 @@ public open class CfnCisScanConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * CisTargetsProperty cisTargetsProperty = CisTargetsProperty.builder()
-   * .accountIds(List.of("accountIds"))
-   * // the properties below are optional
-   * .targetResourceTags(Map.of(
-   * "targetResourceTagsKey", List.of("targetResourceTags")))
+   * TimeProperty timeProperty = TimeProperty.builder()
+   * .timeOfDay("timeOfDay")
+   * .timeZone("timeZone")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html)
    */
-  public interface CisTargetsProperty {
+  public interface TimeProperty {
     /**
-     * The CIS target account ids.
+     * The time of day in 24-hour format (00:00).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-accountids)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timeofday)
      */
-    public fun accountIds(): List<String>
+    public fun timeOfDay(): String
 
     /**
-     * The CIS target resource tags.
+     * The timezone.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timezone)
      */
-    public fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
+    public fun timeZone(): String
 
     /**
-     * A builder for [CisTargetsProperty]
+     * A builder for [TimeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accountIds The CIS target account ids. 
+       * @param timeOfDay The time of day in 24-hour format (00:00). 
        */
-      public fun accountIds(accountIds: List<String>)
+      public fun timeOfDay(timeOfDay: String)
 
       /**
-       * @param accountIds The CIS target account ids. 
+       * @param timeZone The timezone. 
        */
-      public fun accountIds(vararg accountIds: String)
-
-      /**
-       * @param targetResourceTags The CIS target resource tags.
-       */
-      public fun targetResourceTags(targetResourceTags: IResolvable)
-
-      /**
-       * @param targetResourceTags The CIS target resource tags.
-       */
-      public fun targetResourceTags(targetResourceTags: Map<String, List<String>>)
+      public fun timeZone(timeZone: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty.Builder
-          =
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty.builder()
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty.Builder =
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty.builder()
 
       /**
-       * @param accountIds The CIS target account ids. 
+       * @param timeOfDay The time of day in 24-hour format (00:00). 
        */
-      override fun accountIds(accountIds: List<String>) {
-        cdkBuilder.accountIds(accountIds)
+      override fun timeOfDay(timeOfDay: String) {
+        cdkBuilder.timeOfDay(timeOfDay)
       }
 
       /**
-       * @param accountIds The CIS target account ids. 
+       * @param timeZone The timezone. 
        */
-      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
-
-      /**
-       * @param targetResourceTags The CIS target resource tags.
-       */
-      override fun targetResourceTags(targetResourceTags: IResolvable) {
-        cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param targetResourceTags The CIS target resource tags.
-       */
-      override fun targetResourceTags(targetResourceTags: Map<String, List<String>>) {
-        cdkBuilder.targetResourceTags(targetResourceTags)
+      override fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
       }
 
       public fun build():
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty =
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
-    ) : CdkObject(cdkObject), CisTargetsProperty {
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty,
+    ) : CdkObject(cdkObject), TimeProperty {
       /**
-       * The CIS target account ids.
+       * The time of day in 24-hour format (00:00).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-accountids)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timeofday)
        */
-      override fun accountIds(): List<String> = unwrap(this).getAccountIds()
+      override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
 
       /**
-       * The CIS target resource tags.
+       * The timezone.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-time.html#cfn-inspectorv2-cisscanconfiguration-time-timezone)
        */
-      override fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
+      override fun timeZone(): String = unwrap(this).getTimeZone()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CisTargetsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty):
-          CisTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? CisTargetsProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty):
+          TimeProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CisTargetsProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty =
+      internal fun unwrap(wrapped: TimeProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty
+          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty
     }
   }
 
@@ -1287,8 +1282,7 @@ public open class CfnCisScanConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
     ) : CdkObject(cdkObject), WeeklyScheduleProperty {
       /**
        * The weekly schedule's days.

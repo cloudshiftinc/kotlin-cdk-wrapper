@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html)
  */
-public open class CfnAcceptedPortfolioShare internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare,
+public open class CfnAcceptedPortfolioShare(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -169,5 +168,6 @@ public open class CfnAcceptedPortfolioShare internal constructor(
 
     internal fun unwrap(wrapped: CfnAcceptedPortfolioShare):
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare
   }
 }

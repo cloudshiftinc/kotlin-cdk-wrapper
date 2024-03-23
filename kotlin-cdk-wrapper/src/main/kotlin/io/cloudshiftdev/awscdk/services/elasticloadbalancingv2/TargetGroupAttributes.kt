@@ -76,8 +76,7 @@ public interface TargetGroupAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes,
   ) : CdkObject(cdkObject), TargetGroupAttributes {
     /**
      * A Token representing the list of ARNs for the load balancer routing to this target group.

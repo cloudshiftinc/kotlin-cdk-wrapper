@@ -77,8 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html)
  */
-public open class CfnDBProxy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy,
+public open class CfnDBProxy(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -730,7 +730,7 @@ public open class CfnDBProxy internal constructor(
         CfnDBProxy(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxy): software.amazon.awscdk.services.rds.CfnDBProxy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.CfnDBProxy
   }
 
   /**
@@ -898,7 +898,7 @@ public open class CfnDBProxy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty,
     ) : CdkObject(cdkObject), AuthFormatProperty {
       /**
        * The type of authentication that the proxy uses for connections from the proxy to the
@@ -1058,7 +1058,7 @@ public open class CfnDBProxy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty,
     ) : CdkObject(cdkObject), TagFormatProperty {
       /**
        * A key is the required name of the tag.

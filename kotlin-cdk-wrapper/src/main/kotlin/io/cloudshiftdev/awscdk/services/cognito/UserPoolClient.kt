@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * client.node.addDependency(provider);
  * ```
  */
-public open class UserPoolClient internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolClient,
+public open class UserPoolClient(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolClient,
 ) : Resource(cdkObject), IUserPoolClient {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -563,6 +563,7 @@ public open class UserPoolClient internal constructor(
         UserPoolClient = UserPoolClient(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolClient):
-        software.amazon.awscdk.services.cognito.UserPoolClient = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.UserPoolClient = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.UserPoolClient
   }
 }

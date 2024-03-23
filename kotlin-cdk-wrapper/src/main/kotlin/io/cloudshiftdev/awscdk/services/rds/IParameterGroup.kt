@@ -71,7 +71,7 @@ public interface IParameterGroup : IResource {
       ParameterGroupInstanceConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IParameterGroup,
+    cdkObject: software.amazon.awscdk.services.rds.IParameterGroup,
   ) : CdkObject(cdkObject), IParameterGroup {
     /**
      * Adds a parameter to this group.

@@ -47,8 +47,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class S3 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.S3,
+public open class S3(
+  cdkObject: software.amazon.awscdk.services.ses.actions.S3,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: S3Props) :
       this(software.amazon.awscdk.services.ses.actions.S3(props.let(S3Props::unwrap))
@@ -167,6 +167,6 @@ public open class S3 internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.S3): S3 = S3(cdkObject)
 
     internal fun unwrap(wrapped: S3): software.amazon.awscdk.services.ses.actions.S3 =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.actions.S3
   }
 }

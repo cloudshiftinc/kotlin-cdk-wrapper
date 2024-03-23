@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html)
  */
-public open class CfnEnclaveCertificateIamRoleAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation,
+public open class CfnEnclaveCertificateIamRoleAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -200,6 +199,7 @@ public open class CfnEnclaveCertificateIamRoleAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnEnclaveCertificateIamRoleAssociation):
         software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation
   }
 }

@@ -343,7 +343,7 @@ public interface CfnBucketProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lightsail.CfnBucketProps,
+    cdkObject: software.amazon.awscdk.services.lightsail.CfnBucketProps,
   ) : CdkObject(cdkObject), CfnBucketProps {
     /**
      * An object that describes the access rules for the bucket.

@@ -283,7 +283,7 @@ public interface CfnScheduledActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScheduledActionProps,
+    cdkObject: software.amazon.awscdk.services.autoscaling.CfnScheduledActionProps,
   ) : CdkObject(cdkObject), CfnScheduledActionProps {
     /**
      * The name of the Auto Scaling group.

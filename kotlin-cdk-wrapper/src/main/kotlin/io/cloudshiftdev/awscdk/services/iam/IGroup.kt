@@ -29,7 +29,7 @@ public interface IGroup : IIdentity {
   public fun groupName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IGroup,
+    cdkObject: software.amazon.awscdk.services.iam.IGroup,
   ) : CdkObject(cdkObject), IGroup {
     /**
      * Attaches a managed policy to this principal.

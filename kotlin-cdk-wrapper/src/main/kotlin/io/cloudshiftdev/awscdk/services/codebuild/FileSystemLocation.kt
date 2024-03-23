@@ -24,8 +24,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class FileSystemLocation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.FileSystemLocation,
+public open class FileSystemLocation(
+  cdkObject: software.amazon.awscdk.services.codebuild.FileSystemLocation,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.codebuild.FileSystemLocation()
   )
@@ -43,6 +43,7 @@ public open class FileSystemLocation internal constructor(
         FileSystemLocation = FileSystemLocation(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemLocation):
-        software.amazon.awscdk.services.codebuild.FileSystemLocation = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.FileSystemLocation = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.FileSystemLocation
   }
 }

@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampool.html)
  */
-public open class CfnIPAMPool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool,
+public open class CfnIPAMPool(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1046,7 +1046,7 @@ public open class CfnIPAMPool internal constructor(
         CfnIPAMPool(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMPool): software.amazon.awscdk.services.ec2.CfnIPAMPool =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnIPAMPool
   }
 
   /**
@@ -1122,8 +1122,7 @@ public open class CfnIPAMPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty,
     ) : CdkObject(cdkObject), ProvisionedCidrProperty {
       /**
        * The CIDR provisioned to the IPAM pool.
@@ -1267,8 +1266,7 @@ public open class CfnIPAMPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty,
     ) : CdkObject(cdkObject), SourceResourceProperty {
       /**
        * The source resource ID.

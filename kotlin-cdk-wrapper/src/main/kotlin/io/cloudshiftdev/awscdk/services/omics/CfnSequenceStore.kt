@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)
  */
-public open class CfnSequenceStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore,
+public open class CfnSequenceStore(
+  cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -332,7 +332,8 @@ public open class CfnSequenceStore internal constructor(
         CfnSequenceStore = CfnSequenceStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnSequenceStore):
-        software.amazon.awscdk.services.omics.CfnSequenceStore = wrapped.cdkObject
+        software.amazon.awscdk.services.omics.CfnSequenceStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.omics.CfnSequenceStore
   }
 
   /**
@@ -408,8 +409,7 @@ public open class CfnSequenceStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty,
     ) : CdkObject(cdkObject), SseConfigProperty {
       /**
        * An encryption key ARN.

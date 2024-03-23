@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html)
  */
-public open class CfnAnomalySubscription internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription,
+public open class CfnAnomalySubscription(
+  cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -556,7 +556,8 @@ public open class CfnAnomalySubscription internal constructor(
         CfnAnomalySubscription = CfnAnomalySubscription(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalySubscription):
-        software.amazon.awscdk.services.ce.CfnAnomalySubscription = wrapped.cdkObject
+        software.amazon.awscdk.services.ce.CfnAnomalySubscription = wrapped.cdkObject as
+        software.amazon.awscdk.services.ce.CfnAnomalySubscription
   }
 
   /**
@@ -642,8 +643,7 @@ public open class CfnAnomalySubscription internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty,
+      cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty,
     ) : CdkObject(cdkObject), ResourceTagProperty {
       /**
        * The key that's associated with the tag.
@@ -774,8 +774,7 @@ public open class CfnAnomalySubscription internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty,
+      cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty,
     ) : CdkObject(cdkObject), SubscriberProperty {
       /**
        * The email address or SNS Topic Amazon Resource Name (ARN), depending on the `Type` .

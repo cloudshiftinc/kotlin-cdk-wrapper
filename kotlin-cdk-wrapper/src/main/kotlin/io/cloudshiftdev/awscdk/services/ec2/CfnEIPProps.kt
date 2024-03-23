@@ -262,7 +262,7 @@ public interface CfnEIPProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnEIPProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnEIPProps,
   ) : CdkObject(cdkObject), CfnEIPProps {
     /**
      * The network ( `vpc` ).

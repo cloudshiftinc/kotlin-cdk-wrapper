@@ -55,7 +55,7 @@ public interface FileCodeOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions,
+    cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions,
   ) : CdkObject(cdkObject), FileCodeOptions {
     /**
      * The path of the file to read the code from.

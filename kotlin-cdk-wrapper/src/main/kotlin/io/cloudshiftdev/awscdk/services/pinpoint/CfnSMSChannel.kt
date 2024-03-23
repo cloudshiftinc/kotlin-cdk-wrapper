@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smschannel.html)
  */
-public open class CfnSMSChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannel,
+public open class CfnSMSChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -294,6 +294,7 @@ public open class CfnSMSChannel internal constructor(
         CfnSMSChannel = CfnSMSChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnSMSChannel):
-        software.amazon.awscdk.services.pinpoint.CfnSMSChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnSMSChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnSMSChannel
   }
 }

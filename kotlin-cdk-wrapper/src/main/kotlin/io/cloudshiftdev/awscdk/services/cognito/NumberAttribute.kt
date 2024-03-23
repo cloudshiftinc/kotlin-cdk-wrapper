@@ -34,8 +34,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class NumberAttribute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.NumberAttribute,
+public open class NumberAttribute(
+  cdkObject: software.amazon.awscdk.services.cognito.NumberAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.NumberAttribute()
   )
@@ -151,6 +151,7 @@ public open class NumberAttribute internal constructor(
         NumberAttribute = NumberAttribute(cdkObject)
 
     internal fun unwrap(wrapped: NumberAttribute):
-        software.amazon.awscdk.services.cognito.NumberAttribute = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.NumberAttribute = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.NumberAttribute
   }
 }

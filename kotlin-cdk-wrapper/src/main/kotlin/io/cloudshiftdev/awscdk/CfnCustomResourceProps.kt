@@ -82,7 +82,7 @@ public interface CfnCustomResourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnCustomResourceProps,
+    cdkObject: software.amazon.awscdk.CfnCustomResourceProps,
   ) : CdkObject(cdkObject), CfnCustomResourceProps {
     /**
      * Only one property is defined by AWS for a custom resource: `ServiceToken` .

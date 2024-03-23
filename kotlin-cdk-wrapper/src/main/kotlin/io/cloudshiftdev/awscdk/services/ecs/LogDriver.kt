@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class LogDriver internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
+public abstract class LogDriver(
+  cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the log driver is configured on a container.
@@ -41,7 +41,7 @@ public abstract class LogDriver internal constructor(
       containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
+    cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
   ) : LogDriver(cdkObject)
 
   public companion object {

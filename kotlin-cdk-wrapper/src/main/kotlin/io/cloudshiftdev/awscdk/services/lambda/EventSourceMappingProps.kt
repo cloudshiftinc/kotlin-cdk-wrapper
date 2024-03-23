@@ -453,7 +453,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingProps,
+    cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingProps,
   ) : CdkObject(cdkObject), EventSourceMappingProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the

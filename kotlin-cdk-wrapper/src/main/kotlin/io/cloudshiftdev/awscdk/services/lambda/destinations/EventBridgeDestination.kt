@@ -28,9 +28,8 @@ import kotlin.jvm.JvmName
  * EventBridgeDestination eventBridgeDestination = new EventBridgeDestination(eventBus);
  * ```
  */
-public open class EventBridgeDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination,
+public open class EventBridgeDestination(
+  cdkObject: software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination,
 ) : CdkObject(cdkObject), IDestination {
   public constructor() :
       this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination()
@@ -87,6 +86,7 @@ public open class EventBridgeDestination internal constructor(
 
     internal fun unwrap(wrapped: EventBridgeDestination):
         software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination
   }
 }

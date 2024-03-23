@@ -43,9 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-templategroupaccesscontrolentry.html)
  */
-public open class CfnTemplateGroupAccessControlEntry internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry,
+public open class CfnTemplateGroupAccessControlEntry(
+  cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -324,7 +323,8 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
 
     internal fun unwrap(wrapped: CfnTemplateGroupAccessControlEntry):
         software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry
   }
 
   /**
@@ -412,8 +412,7 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty,
+      cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty,
     ) : CdkObject(cdkObject), AccessRightsProperty {
       /**
        * Allow or deny an Active Directory group from autoenrolling certificates issued against a

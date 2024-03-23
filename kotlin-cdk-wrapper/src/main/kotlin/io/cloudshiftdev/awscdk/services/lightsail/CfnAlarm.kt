@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-alarm.html)
  */
-public open class CfnAlarm internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarm,
+public open class CfnAlarm(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarm,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -597,6 +597,6 @@ public open class CfnAlarm internal constructor(
         CfnAlarm(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarm): software.amazon.awscdk.services.lightsail.CfnAlarm =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnAlarm
   }
 }

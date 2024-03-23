@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Role.Builder.create(this, "MyRole").assumedBy(principal).build();
  * ```
  */
-public open class CfnJson internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnJson,
+public open class CfnJson(
+  cdkObject: software.amazon.awscdk.CfnJson,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IResolvable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -136,6 +136,7 @@ public open class CfnJson internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnJson): CfnJson = CfnJson(cdkObject)
 
-    internal fun unwrap(wrapped: CfnJson): software.amazon.awscdk.CfnJson = wrapped.cdkObject
+    internal fun unwrap(wrapped: CfnJson): software.amazon.awscdk.CfnJson = wrapped.cdkObject as
+        software.amazon.awscdk.CfnJson
   }
 }

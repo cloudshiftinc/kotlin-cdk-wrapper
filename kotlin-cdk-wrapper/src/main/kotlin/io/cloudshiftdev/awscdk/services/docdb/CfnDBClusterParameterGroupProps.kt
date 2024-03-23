@@ -179,7 +179,7 @@ public interface CfnDBClusterParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBClusterParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.docdb.CfnDBClusterParameterGroupProps,
   ) : CdkObject(cdkObject), CfnDBClusterParameterGroupProps {
     /**
      * The description for the cluster parameter group.

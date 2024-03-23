@@ -426,8 +426,7 @@ public interface ContainerImageAssetMetadataEntry {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry,
   ) : CdkObject(cdkObject), ContainerImageAssetMetadataEntry {
     /**
      * Build args to pass to the `docker build` command.

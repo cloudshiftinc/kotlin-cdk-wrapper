@@ -79,7 +79,7 @@ public interface S3EventSelector {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.S3EventSelector,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.S3EventSelector,
   ) : CdkObject(cdkObject), S3EventSelector {
     /**
      * S3 bucket.

@@ -370,7 +370,7 @@ public interface CfnWebhookProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhookProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhookProps,
   ) : CdkObject(cdkObject), CfnWebhookProps {
     /**
      * Supported options are GITHUB_HMAC, IP, and UNAUTHENTICATED.

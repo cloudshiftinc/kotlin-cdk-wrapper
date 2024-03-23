@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * .build())));
  * ```
  */
-public open class Reason internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.Reason,
+public open class Reason(
+  cdkObject: software.amazon.awscdk.services.batch.Reason,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.batch.Reason()
   )
@@ -57,6 +57,6 @@ public open class Reason internal constructor(
         Reason(cdkObject)
 
     internal fun unwrap(wrapped: Reason): software.amazon.awscdk.services.batch.Reason =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.batch.Reason
   }
 }

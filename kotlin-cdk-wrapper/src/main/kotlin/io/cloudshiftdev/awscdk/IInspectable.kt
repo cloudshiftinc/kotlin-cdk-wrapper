@@ -17,7 +17,7 @@ public interface IInspectable {
   public fun inspect(inspector: TreeInspector)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IInspectable,
+    cdkObject: software.amazon.awscdk.IInspectable,
   ) : CdkObject(cdkObject), IInspectable {
     /**
      * Examines construct.

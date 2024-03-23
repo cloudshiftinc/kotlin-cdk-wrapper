@@ -31,8 +31,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class FunctionRuntime internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.FunctionRuntime,
+public open class FunctionRuntime(
+  cdkObject: software.amazon.awscdk.services.appsync.FunctionRuntime,
 ) : CdkObject(cdkObject) {
   public constructor(family: FunctionRuntimeFamily, version: String) :
       this(software.amazon.awscdk.services.appsync.FunctionRuntime(family.let(FunctionRuntimeFamily::unwrap),
@@ -63,6 +63,7 @@ public open class FunctionRuntime internal constructor(
         FunctionRuntime = FunctionRuntime(cdkObject)
 
     internal fun unwrap(wrapped: FunctionRuntime):
-        software.amazon.awscdk.services.appsync.FunctionRuntime = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.FunctionRuntime = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.FunctionRuntime
   }
 }

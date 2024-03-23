@@ -95,8 +95,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -775,7 +775,209 @@ public open class CfnEndpoint internal constructor(
         = CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint): software.amazon.awscdk.services.sagemaker.CfnEndpoint
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnEndpoint
+  }
+
+  /**
+   * An Amazon CloudWatch alarm configured to monitor metrics on an endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AlarmProperty alarmProperty = AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html)
+   */
+  public interface AlarmProperty {
+    /**
+     * The name of a CloudWatch alarm in your account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html#cfn-sagemaker-endpoint-alarm-alarmname)
+     */
+    public fun alarmName(): String
+
+    /**
+     * A builder for [AlarmProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmName The name of a CloudWatch alarm in your account. 
+       */
+      public fun alarmName(alarmName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.builder()
+
+      /**
+       * @param alarmName The name of a CloudWatch alarm in your account. 
+       */
+      override fun alarmName(alarmName: String) {
+        cdkBuilder.alarmName(alarmName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty,
+    ) : CdkObject(cdkObject), AlarmProperty {
+      /**
+       * The name of a CloudWatch alarm in your account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html#cfn-sagemaker-endpoint-alarm-alarmname)
+       */
+      override fun alarmName(): String = unwrap(this).getAlarmName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty):
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AlarmProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty
+    }
+  }
+
+  /**
+   * Automatic rollback configuration for handling endpoint deployment failures and recovery.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AutoRollbackConfigProperty autoRollbackConfigProperty = AutoRollbackConfigProperty.builder()
+   * .alarms(List.of(AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html)
+   */
+  public interface AutoRollbackConfigProperty {
+    /**
+     * List of CloudWatch alarms in your account that are configured to monitor metrics on an
+     * endpoint.
+     *
+     * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html#cfn-sagemaker-endpoint-autorollbackconfig-alarms)
+     */
+    public fun alarms(): Any
+
+    /**
+     * A builder for [AutoRollbackConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      public fun alarms(alarms: IResolvable)
+
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      public fun alarms(alarms: List<Any>)
+
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      public fun alarms(vararg alarms: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.builder()
+
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      override fun alarms(alarms: IResolvable) {
+        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      override fun alarms(alarms: List<Any>) {
+        cdkBuilder.alarms(alarms)
+      }
+
+      /**
+       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
+       * metrics on an endpoint. 
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       */
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty,
+    ) : CdkObject(cdkObject), AutoRollbackConfigProperty {
+      /**
+       * List of CloudWatch alarms in your account that are configured to monitor metrics on an
+       * endpoint.
+       *
+       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html#cfn-sagemaker-endpoint-autorollbackconfig-alarms)
+       */
+      override fun alarms(): Any = unwrap(this).getAlarms()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoRollbackConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty):
+          AutoRollbackConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoRollbackConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoRollbackConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty
+    }
   }
 
   /**
@@ -946,8 +1148,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty,
     ) : CdkObject(cdkObject), BlueGreenUpdatePolicyProperty {
       /**
        * Maximum execution timeout for the deployment.
@@ -1088,8 +1289,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty,
     ) : CdkObject(cdkObject), CapacitySizeProperty {
       /**
        * Specifies the endpoint capacity type.
@@ -1129,7 +1329,8 @@ public open class CfnEndpoint internal constructor(
   }
 
   /**
-   * An Amazon CloudWatch alarm configured to monitor metrics on an endpoint.
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
    *
    * Example:
    *
@@ -1137,207 +1338,304 @@ public open class CfnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * AlarmProperty alarmProperty = AlarmProperty.builder()
+   * DeploymentConfigProperty deploymentConfigProperty = DeploymentConfigProperty.builder()
+   * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+   * .alarms(List.of(AlarmProperty.builder()
    * .alarmName("alarmName")
+   * .build()))
+   * .build())
+   * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
+   * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .canarySize(CapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .linearStepSize(CapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .waitIntervalInSeconds(123)
+   * .build())
+   * // the properties below are optional
+   * .maximumExecutionTimeoutInSeconds(123)
+   * .terminationWaitInSeconds(123)
+   * .build())
+   * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
+   * .maximumBatchSize(CapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .waitIntervalInSeconds(123)
+   * // the properties below are optional
+   * .maximumExecutionTimeoutInSeconds(123)
+   * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html)
    */
-  public interface AlarmProperty {
+  public interface DeploymentConfigProperty {
     /**
-     * The name of a CloudWatch alarm in your account.
+     * Automatic rollback configuration for handling endpoint deployment failures and recovery.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html#cfn-sagemaker-endpoint-alarm-alarmname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-autorollbackconfiguration)
      */
-    public fun alarmName(): String
+    public fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
 
     /**
-     * A builder for [AlarmProperty]
+     * Update policy for a blue/green deployment.
+     *
+     * If this update policy is specified, SageMaker creates a new fleet during the deployment while
+     * maintaining the old fleet. SageMaker flips traffic to the new fleet according to the specified
+     * traffic routing configuration. Only one update policy should be used in the deployment
+     * configuration. If no update policy is specified, SageMaker uses a blue/green deployment strategy
+     * with all at once traffic shifting by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-bluegreenupdatepolicy)
+     */
+    public fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
+
+    /**
+     * Specifies a rolling deployment strategy for updating a SageMaker endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-rollingupdatepolicy)
+     */
+    public fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
+
+    /**
+     * A builder for [DeploymentConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alarmName The name of a CloudWatch alarm in your account. 
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
        */
-      public fun alarmName(alarmName: String)
+      public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable)
+
+      /**
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
+       */
+      public fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty)
+
+      /**
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
+      public
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       */
+      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable)
+
+      /**
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       */
+      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty)
+
+      /**
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
+      public
+          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      public fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
+      public
+          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.builder()
 
       /**
-       * @param alarmName The name of a CloudWatch alarm in your account. 
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
        */
-      override fun alarmName(alarmName: String) {
-        cdkBuilder.alarmName(alarmName)
+      override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
       }
 
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty,
-    ) : CdkObject(cdkObject), AlarmProperty {
       /**
-       * The name of a CloudWatch alarm in your account.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-alarm.html#cfn-sagemaker-endpoint-alarm-alarmname)
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
        */
-      override fun alarmName(): String = unwrap(this).getAlarmName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
+      override
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty) {
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigProperty::unwrap))
       }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty):
-          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AlarmProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty
-    }
-  }
-
-  /**
-   * Specifies a production variant property type for an Endpoint.
-   *
-   * If you are updating an Endpoint with the
-   * [RetainAllVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-RetainAllVariantProperties)
-   * option set to `true` , the `VarientProperty` objects listed in
-   * [ExcludeRetainedVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-ExcludeRetainedVariantProperties)
-   * override the existing variant properties of the Endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * VariantPropertyProperty variantPropertyProperty = VariantPropertyProperty.builder()
-   * .variantPropertyType("variantPropertyType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html)
-   */
-  public interface VariantPropertyProperty {
-    /**
-     * The type of variant property. The supported values are:.
-     *
-     * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
-     * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
-     * values in the
-     * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-     * .
-     * * `DesiredWeight` : Overrides the existing variant weights using the
-     * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
-     * values in the
-     * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-     * .
-     * * `DataCaptureConfig` : (Not currently supported.)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html#cfn-sagemaker-endpoint-variantproperty-variantpropertytype)
-     */
-    public fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
-
-    /**
-     * A builder for [VariantPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
       /**
-       * @param variantPropertyType The type of variant property. The supported values are:.
-       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
-       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DesiredWeight` : Overrides the existing variant weights using the
-       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DataCaptureConfig` : (Not currently supported.)
+       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
+       * deployment failures and recovery.
        */
-      public fun variantPropertyType(variantPropertyType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.builder()
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
+      override
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit):
+          Unit = autoRollbackConfiguration(AutoRollbackConfigProperty(autoRollbackConfiguration))
 
       /**
-       * @param variantPropertyType The type of variant property. The supported values are:.
-       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
-       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DesiredWeight` : Overrides the existing variant weights using the
-       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DataCaptureConfig` : (Not currently supported.)
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
        */
-      override fun variantPropertyType(variantPropertyType: String) {
-        cdkBuilder.variantPropertyType(variantPropertyType)
+      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
+        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       */
+      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
+        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(BlueGreenUpdatePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
+      override
+          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit):
+          Unit = blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty(blueGreenUpdatePolicy))
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      override fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(RollingUpdatePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
+      override
+          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit):
+          Unit = rollingUpdatePolicy(RollingUpdatePolicyProperty(rollingUpdatePolicy))
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty,
-    ) : CdkObject(cdkObject), VariantPropertyProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty,
+    ) : CdkObject(cdkObject), DeploymentConfigProperty {
       /**
-       * The type of variant property. The supported values are:.
+       * Automatic rollback configuration for handling endpoint deployment failures and recovery.
        *
-       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
-       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DesiredWeight` : Overrides the existing variant weights using the
-       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
-       * values in the
-       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
-       * .
-       * * `DataCaptureConfig` : (Not currently supported.)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html#cfn-sagemaker-endpoint-variantproperty-variantpropertytype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-autorollbackconfiguration)
        */
-      override fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
+      override fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
+
+      /**
+       * Update policy for a blue/green deployment.
+       *
+       * If this update policy is specified, SageMaker creates a new fleet during the deployment
+       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
+       * specified traffic routing configuration. Only one update policy should be used in the
+       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
+       * deployment strategy with all at once traffic shifting by default.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-bluegreenupdatepolicy)
+       */
+      override fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
+
+      /**
+       * Specifies a rolling deployment strategy for updating a SageMaker endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-rollingupdatepolicy)
+       */
+      override fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VariantPropertyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty):
-          VariantPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? VariantPropertyProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty):
+          DeploymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentConfigProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: VariantPropertyProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty = (wrapped
+      internal fun unwrap(wrapped: DeploymentConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty
     }
   }
 
@@ -1570,8 +1868,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty,
     ) : CdkObject(cdkObject), RollingUpdatePolicyProperty {
       /**
        * Batch size for each rolling step to provision capacity and turn on traffic on the new
@@ -1856,8 +2153,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty,
     ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
       /**
        * Batch size for the first step to turn on traffic on the new endpoint fleet.
@@ -1918,7 +2214,13 @@ public open class CfnEndpoint internal constructor(
   }
 
   /**
-   * Automatic rollback configuration for handling endpoint deployment failures and recovery.
+   * Specifies a production variant property type for an Endpoint.
+   *
+   * If you are updating an Endpoint with the
+   * [RetainAllVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-RetainAllVariantProperties)
+   * option set to `true` , the `VarientProperty` objects listed in
+   * [ExcludeRetainedVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-ExcludeRetainedVariantProperties)
+   * override the existing variant properties of the Endpoint.
    *
    * Example:
    *
@@ -1926,430 +2228,121 @@ public open class CfnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * AutoRollbackConfigProperty autoRollbackConfigProperty = AutoRollbackConfigProperty.builder()
-   * .alarms(List.of(AlarmProperty.builder()
-   * .alarmName("alarmName")
-   * .build()))
+   * VariantPropertyProperty variantPropertyProperty = VariantPropertyProperty.builder()
+   * .variantPropertyType("variantPropertyType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html)
    */
-  public interface AutoRollbackConfigProperty {
+  public interface VariantPropertyProperty {
     /**
-     * List of CloudWatch alarms in your account that are configured to monitor metrics on an
-     * endpoint.
+     * The type of variant property. The supported values are:.
      *
-     * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+     * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
+     * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
+     * values in the
+     * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+     * .
+     * * `DesiredWeight` : Overrides the existing variant weights using the
+     * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
+     * values in the
+     * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+     * .
+     * * `DataCaptureConfig` : (Not currently supported.)
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html#cfn-sagemaker-endpoint-autorollbackconfig-alarms)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html#cfn-sagemaker-endpoint-variantproperty-variantpropertytype)
      */
-    public fun alarms(): Any
+    public fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
 
     /**
-     * A builder for [AutoRollbackConfigProperty]
+     * A builder for [VariantPropertyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       * @param variantPropertyType The type of variant property. The supported values are:.
+       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
+       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DesiredWeight` : Overrides the existing variant weights using the
+       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DataCaptureConfig` : (Not currently supported.)
        */
-      public fun alarms(alarms: IResolvable)
-
-      /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
-       */
-      public fun alarms(alarms: List<Any>)
-
-      /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
-       */
-      public fun alarms(vararg alarms: Any)
+      public fun variantPropertyType(variantPropertyType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.builder()
 
       /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       * @param variantPropertyType The type of variant property. The supported values are:.
+       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
+       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DesiredWeight` : Overrides the existing variant weights using the
+       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DataCaptureConfig` : (Not currently supported.)
        */
-      override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+      override fun variantPropertyType(variantPropertyType: String) {
+        cdkBuilder.variantPropertyType(variantPropertyType)
       }
-
-      /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
-       */
-      override fun alarms(alarms: List<Any>) {
-        cdkBuilder.alarms(alarms)
-      }
-
-      /**
-       * @param alarms List of CloudWatch alarms in your account that are configured to monitor
-       * metrics on an endpoint. 
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
-       */
-      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty,
-    ) : CdkObject(cdkObject), AutoRollbackConfigProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty,
+    ) : CdkObject(cdkObject), VariantPropertyProperty {
       /**
-       * List of CloudWatch alarms in your account that are configured to monitor metrics on an
-       * endpoint.
+       * The type of variant property. The supported values are:.
        *
-       * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
+       * * `DesiredInstanceCount` : Overrides the existing variant instance counts using the
+       * [InitialInstanceCount](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialInstanceCount)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DesiredWeight` : Overrides the existing variant weights using the
+       * [InitialVariantWeight](https://docs.aws.amazon.com/sagemaker/latest/dg/API_ProductionVariant.html#SageMaker-Type-ProductionVariant-InitialVariantWeight)
+       * values in the
+       * [ProductionVariants](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html#SageMaker-CreateEndpointConfig-request-ProductionVariants)
+       * .
+       * * `DataCaptureConfig` : (Not currently supported.)
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html#cfn-sagemaker-endpoint-autorollbackconfig-alarms)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html#cfn-sagemaker-endpoint-variantproperty-variantpropertytype)
        */
-      override fun alarms(): Any = unwrap(this).getAlarms()
+      override fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoRollbackConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VariantPropertyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty):
-          AutoRollbackConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoRollbackConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty):
+          VariantPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? VariantPropertyProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AutoRollbackConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty
-    }
-  }
-
-  /**
-   * The deployment configuration for an endpoint, which contains the desired deployment strategy
-   * and rollback configurations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DeploymentConfigProperty deploymentConfigProperty = DeploymentConfigProperty.builder()
-   * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
-   * .alarms(List.of(AlarmProperty.builder()
-   * .alarmName("alarmName")
-   * .build()))
-   * .build())
-   * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
-   * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .canarySize(CapacitySizeProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build())
-   * .linearStepSize(CapacitySizeProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build())
-   * .waitIntervalInSeconds(123)
-   * .build())
-   * // the properties below are optional
-   * .maximumExecutionTimeoutInSeconds(123)
-   * .terminationWaitInSeconds(123)
-   * .build())
-   * .rollingUpdatePolicy(RollingUpdatePolicyProperty.builder()
-   * .maximumBatchSize(CapacitySizeProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build())
-   * .waitIntervalInSeconds(123)
-   * // the properties below are optional
-   * .maximumExecutionTimeoutInSeconds(123)
-   * .rollbackMaximumBatchSize(CapacitySizeProperty.builder()
-   * .type("type")
-   * .value(123)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html)
-   */
-  public interface DeploymentConfigProperty {
-    /**
-     * Automatic rollback configuration for handling endpoint deployment failures and recovery.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-autorollbackconfiguration)
-     */
-    public fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
-
-    /**
-     * Update policy for a blue/green deployment.
-     *
-     * If this update policy is specified, SageMaker creates a new fleet during the deployment while
-     * maintaining the old fleet. SageMaker flips traffic to the new fleet according to the specified
-     * traffic routing configuration. Only one update policy should be used in the deployment
-     * configuration. If no update policy is specified, SageMaker uses a blue/green deployment strategy
-     * with all at once traffic shifting by default.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-bluegreenupdatepolicy)
-     */
-    public fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
-
-    /**
-     * Specifies a rolling deployment strategy for updating a SageMaker endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-rollingupdatepolicy)
-     */
-    public fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
-
-    /**
-     * A builder for [DeploymentConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable)
-
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      public fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty)
-
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
-      public
-          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable)
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty)
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
-      public
-          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit)
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable)
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      public fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty)
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
-      public
-          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.builder()
-
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      override
-          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty) {
-        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigProperty::unwrap))
-      }
-
-      /**
-       * @param autoRollbackConfiguration Automatic rollback configuration for handling endpoint
-       * deployment failures and recovery.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
-      override
-          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit):
-          Unit = autoRollbackConfiguration(AutoRollbackConfigProperty(autoRollbackConfiguration))
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
-        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
-        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(BlueGreenUpdatePolicyProperty::unwrap))
-      }
-
-      /**
-       * @param blueGreenUpdatePolicy Update policy for a blue/green deployment.
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
-      override
-          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit):
-          Unit = blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty(blueGreenUpdatePolicy))
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
-        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      override fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
-        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(RollingUpdatePolicyProperty::unwrap))
-      }
-
-      /**
-       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
-       * endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
-      override
-          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit):
-          Unit = rollingUpdatePolicy(RollingUpdatePolicyProperty(rollingUpdatePolicy))
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigProperty {
-      /**
-       * Automatic rollback configuration for handling endpoint deployment failures and recovery.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-autorollbackconfiguration)
-       */
-      override fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
-
-      /**
-       * Update policy for a blue/green deployment.
-       *
-       * If this update policy is specified, SageMaker creates a new fleet during the deployment
-       * while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the
-       * specified traffic routing configuration. Only one update policy should be used in the
-       * deployment configuration. If no update policy is specified, SageMaker uses a blue/green
-       * deployment strategy with all at once traffic shifting by default.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-bluegreenupdatepolicy)
-       */
-      override fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
-
-      /**
-       * Specifies a rolling deployment strategy for updating a SageMaker endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html#cfn-sagemaker-endpoint-deploymentconfig-rollingupdatepolicy)
-       */
-      override fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty):
-          DeploymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeploymentConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty = (wrapped
+      internal fun unwrap(wrapped: VariantPropertyProperty):
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty
+          software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty
     }
   }
 }

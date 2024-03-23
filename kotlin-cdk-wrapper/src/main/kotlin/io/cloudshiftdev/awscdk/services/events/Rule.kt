@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Rule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Rule,
+public open class Rule(
+  cdkObject: software.amazon.awscdk.services.events.Rule,
 ) : Resource(cdkObject), IRule {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -508,6 +508,6 @@ public open class Rule internal constructor(
         Rule(cdkObject)
 
     internal fun unwrap(wrapped: Rule): software.amazon.awscdk.services.events.Rule =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.Rule
   }
 }

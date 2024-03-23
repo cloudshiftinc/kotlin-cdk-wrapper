@@ -114,7 +114,7 @@ public interface IKey : IResource {
   public fun keyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.IKey,
+    cdkObject: software.amazon.awscdk.services.kms.IKey,
   ) : CdkObject(cdkObject), IKey {
     /**
      * Defines a new alias for the key.

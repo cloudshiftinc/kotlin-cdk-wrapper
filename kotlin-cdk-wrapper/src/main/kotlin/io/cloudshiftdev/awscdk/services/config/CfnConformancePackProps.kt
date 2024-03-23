@@ -258,7 +258,7 @@ public interface CfnConformancePackProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CfnConformancePackProps,
+    cdkObject: software.amazon.awscdk.services.config.CfnConformancePackProps,
   ) : CdkObject(cdkObject), CfnConformancePackProps {
     /**
      * A list of ConformancePackInputParameter objects.

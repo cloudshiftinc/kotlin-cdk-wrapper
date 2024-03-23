@@ -23,8 +23,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class TarballImageAsset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAsset,
+public open class TarballImageAsset(
+  cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAsset,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -143,6 +143,7 @@ public open class TarballImageAsset internal constructor(
         TarballImageAsset = TarballImageAsset(cdkObject)
 
     internal fun unwrap(wrapped: TarballImageAsset):
-        software.amazon.awscdk.services.ecr.assets.TarballImageAsset = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.assets.TarballImageAsset = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.assets.TarballImageAsset
   }
 }

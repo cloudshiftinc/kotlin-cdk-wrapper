@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.ecs.CapacityProviderStrategy
@@ -32,15 +33,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Cluster cluster;
- * NetworkLoadBalancedFargateService loadBalancedFargateService =
+ * Vpc vpc;
+ * SecurityGroup securityGroup;
+ * NetworkLoadBalancedFargateService queueProcessingFargateService =
  * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
- * .cluster(cluster)
- * .memoryLimitMiB(1024)
- * .cpu(512)
+ * .vpc(vpc)
+ * .memoryLimitMiB(512)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
  */
@@ -52,6 +54,16 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
    * Default: false
    */
   public fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+  /**
+   * The security groups to associate with the service.
+   *
+   * If you do not specify a security group, a new security group is created.
+   *
+   * Default: - A new security group is created.
+   */
+  public fun securityGroups(): List<ISecurityGroup> =
+      unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
   /**
    * The subnets to associate with the service.
@@ -307,6 +319,18 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3343dede43e22a7290d2529e00891542cc56d99ec80d51f818b846b200476b07")
     public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
+
+    /**
+     * @param securityGroups The security groups to associate with the service.
+     * If you do not specify a security group, a new security group is created.
+     */
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    /**
+     * @param securityGroups The security groups to associate with the service.
+     * If you do not specify a security group, a new security group is created.
+     */
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     /**
      * @param serviceName The name of the service.
@@ -658,6 +682,21 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
     /**
+     * @param securityGroups The security groups to associate with the service.
+     * If you do not specify a security group, a new security group is created.
+     */
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+    }
+
+    /**
+     * @param securityGroups The security groups to associate with the service.
+     * If you do not specify a security group, a new security group is created.
+     */
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
+    /**
      * @param serviceName The name of the service.
      */
     override fun serviceName(serviceName: String) {
@@ -722,8 +761,7 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateServiceProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateServiceProps,
   ) : CdkObject(cdkObject), NetworkLoadBalancedFargateServiceProps {
     /**
      * Determines whether the service will be assigned a public IP address.
@@ -991,6 +1029,16 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
      */
     override fun runtimePlatform(): RuntimePlatform? =
         unwrap(this).getRuntimePlatform()?.let(RuntimePlatform::wrap)
+
+    /**
+     * The security groups to associate with the service.
+     *
+     * If you do not specify a security group, a new security group is created.
+     *
+     * Default: - A new security group is created.
+     */
+    override fun securityGroups(): List<ISecurityGroup> =
+        unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
     /**
      * The name of the service.

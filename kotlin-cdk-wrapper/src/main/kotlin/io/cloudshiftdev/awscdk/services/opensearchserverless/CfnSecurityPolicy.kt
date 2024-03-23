@@ -44,9 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securitypolicy.html)
  */
-public open class CfnSecurityPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy,
+public open class CfnSecurityPolicy(
+  cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -235,5 +234,6 @@ public open class CfnSecurityPolicy internal constructor(
 
     internal fun unwrap(wrapped: CfnSecurityPolicy):
         software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy = wrapped.cdkObject
+        as software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy
   }
 }

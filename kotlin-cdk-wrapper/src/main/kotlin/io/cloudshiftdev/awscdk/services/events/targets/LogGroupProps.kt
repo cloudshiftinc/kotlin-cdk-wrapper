@@ -181,7 +181,7 @@ public interface LogGroupProps : TargetBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.targets.LogGroupProps,
+    cdkObject: software.amazon.awscdk.services.events.targets.LogGroupProps,
   ) : CdkObject(cdkObject), LogGroupProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a

@@ -199,7 +199,7 @@ public interface CustomResourceProviderBaseProps : CustomResourceProviderOptions
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CustomResourceProviderBaseProps,
+    cdkObject: software.amazon.awscdk.CustomResourceProviderBaseProps,
   ) : CdkObject(cdkObject), CustomResourceProviderBaseProps {
     /**
      * A local file system directory with the provider's code.

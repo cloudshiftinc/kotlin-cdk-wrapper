@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
  */
-public open class CfnIdentityPool internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool,
+public open class CfnIdentityPool(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -737,7 +737,8 @@ public open class CfnIdentityPool internal constructor(
         CfnIdentityPool = CfnIdentityPool(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityPool):
-        software.amazon.awscdk.services.cognito.CfnIdentityPool = wrapped.cdkObject
+        software.amazon.awscdk.services.cognito.CfnIdentityPool = wrapped.cdkObject as
+        software.amazon.awscdk.services.cognito.CfnIdentityPool
   }
 
   /**
@@ -884,8 +885,7 @@ public open class CfnIdentityPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty,
     ) : CdkObject(cdkObject), CognitoIdentityProviderProperty {
       /**
        * The client ID for the Amazon Cognito user pool.
@@ -1048,8 +1048,7 @@ public open class CfnIdentityPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty,
     ) : CdkObject(cdkObject), CognitoStreamsProperty {
       /**
        * The Amazon Resource Name (ARN) of the role Amazon Cognito can assume to publish to the
@@ -1190,8 +1189,7 @@ public open class CfnIdentityPool internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty,
+      cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty,
     ) : CdkObject(cdkObject), PushSyncProperty {
       /**
        * The ARNs of the Amazon SNS platform applications that could be used by clients.

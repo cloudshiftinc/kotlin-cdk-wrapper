@@ -33,8 +33,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AuroraPostgresEngineVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion,
+public open class AuroraPostgresEngineVersion(
+  cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
    * The full version string, for example, "9.6.25.1".
@@ -270,6 +270,9 @@ public open class AuroraPostgresEngineVersion internal constructor(
     public val VER_9_6_19: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_9_6_19)
 
+    public val VER_9_6_22: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_9_6_22)
+
     public val VER_9_6_8: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_9_6_8)
 
@@ -303,6 +306,7 @@ public open class AuroraPostgresEngineVersion internal constructor(
         AuroraPostgresEngineVersion = AuroraPostgresEngineVersion(cdkObject)
 
     internal fun unwrap(wrapped: AuroraPostgresEngineVersion):
-        software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion
   }
 }

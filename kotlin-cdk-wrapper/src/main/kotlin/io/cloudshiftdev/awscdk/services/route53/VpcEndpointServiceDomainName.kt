@@ -26,9 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class VpcEndpointServiceDomainName internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName,
+public open class VpcEndpointServiceDomainName(
+  cdkObject: software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -150,6 +149,7 @@ public open class VpcEndpointServiceDomainName internal constructor(
         VpcEndpointServiceDomainName = VpcEndpointServiceDomainName(cdkObject)
 
     internal fun unwrap(wrapped: VpcEndpointServiceDomainName):
-        software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName
   }
 }

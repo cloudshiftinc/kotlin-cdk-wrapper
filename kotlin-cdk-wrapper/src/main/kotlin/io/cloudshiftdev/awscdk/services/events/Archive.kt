@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Archive internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.Archive,
+public open class Archive(
+  cdkObject: software.amazon.awscdk.services.events.Archive,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -218,6 +218,6 @@ public open class Archive internal constructor(
         Archive(cdkObject)
 
     internal fun unwrap(wrapped: Archive): software.amazon.awscdk.services.events.Archive =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.Archive
   }
 }

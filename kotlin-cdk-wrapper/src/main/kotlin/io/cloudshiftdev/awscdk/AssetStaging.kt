@@ -71,8 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AssetStaging internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.AssetStaging,
+public open class AssetStaging(
+  cdkObject: software.amazon.awscdk.AssetStaging,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -458,6 +458,6 @@ public open class AssetStaging internal constructor(
         AssetStaging(cdkObject)
 
     internal fun unwrap(wrapped: AssetStaging): software.amazon.awscdk.AssetStaging =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.AssetStaging
   }
 }

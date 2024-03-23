@@ -221,7 +221,7 @@ public interface CfnIPSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.guardduty.CfnIPSetProps,
+    cdkObject: software.amazon.awscdk.services.guardduty.CfnIPSetProps,
   ) : CdkObject(cdkObject), CfnIPSetProps {
     /**
      * Indicates whether or not GuardDuty uses the `IPSet` .

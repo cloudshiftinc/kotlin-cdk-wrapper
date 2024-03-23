@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-truststore.html)
  */
-public open class CfnTrustStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnTrustStore,
+public open class CfnTrustStore(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnTrustStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -231,6 +231,7 @@ public open class CfnTrustStore internal constructor(
         CfnTrustStore = CfnTrustStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustStore):
-        software.amazon.awscdk.services.workspacesweb.CfnTrustStore = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnTrustStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnTrustStore
   }
 }

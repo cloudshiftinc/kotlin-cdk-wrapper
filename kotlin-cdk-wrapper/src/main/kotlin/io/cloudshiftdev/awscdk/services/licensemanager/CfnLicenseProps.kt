@@ -428,7 +428,7 @@ public interface CfnLicenseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicenseProps,
+    cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicenseProps,
   ) : CdkObject(cdkObject), CfnLicenseProps {
     /**
      * License beneficiary.

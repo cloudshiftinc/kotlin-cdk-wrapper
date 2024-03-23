@@ -23,8 +23,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SamlProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.SamlProvider,
+public open class SamlProvider(
+  cdkObject: software.amazon.awscdk.services.iam.SamlProvider,
 ) : Resource(cdkObject), ISamlProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -149,6 +149,6 @@ public open class SamlProvider internal constructor(
         SamlProvider(cdkObject)
 
     internal fun unwrap(wrapped: SamlProvider): software.amazon.awscdk.services.iam.SamlProvider =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.SamlProvider
   }
 }

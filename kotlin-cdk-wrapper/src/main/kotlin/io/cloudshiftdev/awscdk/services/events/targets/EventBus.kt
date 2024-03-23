@@ -27,8 +27,8 @@ import software.amazon.awscdk.services.events.IEventBus as AmazonAwscdkServicesE
  * "arn:aws:events:eu-west-1:999999999999:event-bus/test-bus")));
  * ```
  */
-public open class EventBus internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.EventBus,
+public open class EventBus(
+  cdkObject: software.amazon.awscdk.services.events.targets.EventBus,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus) :
       this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus::unwrap))
@@ -153,6 +153,6 @@ public open class EventBus internal constructor(
         = EventBus(cdkObject)
 
     internal fun unwrap(wrapped: EventBus): software.amazon.awscdk.services.events.targets.EventBus
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.events.targets.EventBus
   }
 }

@@ -366,8 +366,7 @@ public interface AwsCloudFormationStackProperties {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties,
   ) : CdkObject(cdkObject), AwsCloudFormationStackProperties {
     /**
      * The role that needs to be assumed to deploy the stack.

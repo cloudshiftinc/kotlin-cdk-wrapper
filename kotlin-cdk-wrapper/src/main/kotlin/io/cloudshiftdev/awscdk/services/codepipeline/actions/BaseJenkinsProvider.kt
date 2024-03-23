@@ -10,9 +10,8 @@ import kotlin.String
 /**
  *
  */
-public abstract class BaseJenkinsProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
+public abstract class BaseJenkinsProvider(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
 ) : Construct(cdkObject), IJenkinsProvider {
   /**
    *
@@ -30,8 +29,7 @@ public abstract class BaseJenkinsProvider internal constructor(
   public override fun version(): String = unwrap(this).getVersion()
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
   ) : BaseJenkinsProvider(cdkObject)
 
   public companion object {

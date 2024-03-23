@@ -136,7 +136,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.refactorspaces.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * A description of the environment.

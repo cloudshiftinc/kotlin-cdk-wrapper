@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
 /**
  *
  */
-public abstract class FunctionBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
+public abstract class FunctionBase(
+  cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
 ) : Resource(cdkObject), IFunction, IClientVpnConnectionHandler {
   /**
    * Adds an event source to this function.
@@ -420,7 +420,7 @@ public abstract class FunctionBase internal constructor(
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
+    cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
   ) : FunctionBase(cdkObject)
 
   public companion object {

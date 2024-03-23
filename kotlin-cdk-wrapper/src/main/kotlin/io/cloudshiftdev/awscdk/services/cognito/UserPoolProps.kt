@@ -861,7 +861,7 @@ public interface UserPoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolProps,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolProps,
   ) : CdkObject(cdkObject), UserPoolProps {
     /**
      * How will a user be able to recover their account?

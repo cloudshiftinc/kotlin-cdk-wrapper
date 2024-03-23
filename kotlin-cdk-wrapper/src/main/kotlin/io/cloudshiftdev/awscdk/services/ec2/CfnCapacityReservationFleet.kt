@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html)
  */
-public open class CfnCapacityReservationFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
+public open class CfnCapacityReservationFleet(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -689,151 +689,8 @@ public open class CfnCapacityReservationFleet internal constructor(
         CfnCapacityReservationFleet = CfnCapacityReservationFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservationFleet):
-        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet = wrapped.cdkObject
-  }
-
-  /**
-   * The tags to apply to a resource when the resource is being created.
-   *
-   * When you specify a tag, you must specify the resource type to tag, otherwise the request will
-   * fail.
-   *
-   *
-   * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
-   * using might not support tagging all of these resource types. If you try to tag a resource type
-   * that is unsupported for the action you're using, you'll get an error.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
-   * .resourceType("resourceType")
-   * .tags(List.of(CfnTag.builder()
-   * .key("key")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html)
-   */
-  public interface TagSpecificationProperty {
-    /**
-     * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .
-     *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-resourcetype)
-     */
-    public fun resourceType(): String? = unwrap(this).getResourceType()
-
-    /**
-     * The tags to apply to the resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [TagSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceType The type of resource to tag on creation. Specify
-       * `capacity-reservation-fleet` .
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       */
-      public fun resourceType(resourceType: String)
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty.builder()
-
-      /**
-       * @param resourceType The type of resource to tag on creation. Specify
-       * `capacity-reservation-fleet` .
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       */
-      override fun resourceType(resourceType: String) {
-        cdkBuilder.resourceType(resourceType)
-      }
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
-
-      /**
-       * @param tags The tags to apply to the resource.
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
-      /**
-       * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .
-       *
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-resourcetype)
-       */
-      override fun resourceType(): String? = unwrap(this).getResourceType()
-
-      /**
-       * The tags to apply to the resource.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TagSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty
-    }
+        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet
   }
 
   /**
@@ -1108,8 +965,7 @@ public open class CfnCapacityReservationFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
     ) : CdkObject(cdkObject), InstanceTypeSpecificationProperty {
       /**
        * The Availability Zone in which the Capacity Reservation Fleet reserves the capacity.
@@ -1202,6 +1058,149 @@ public open class CfnCapacityReservationFleet internal constructor(
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty
+    }
+  }
+
+  /**
+   * The tags to apply to a resource when the resource is being created.
+   *
+   * When you specify a tag, you must specify the resource type to tag, otherwise the request will
+   * fail.
+   *
+   *
+   * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
+   * using might not support tagging all of these resource types. If you try to tag a resource type
+   * that is unsupported for the action you're using, you'll get an error.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+   * .resourceType("resourceType")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html)
+   */
+  public interface TagSpecificationProperty {
+    /**
+     * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .
+     *
+     * To tag a resource after it has been created, see
+     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-resourcetype)
+     */
+    public fun resourceType(): String? = unwrap(this).getResourceType()
+
+    /**
+     * The tags to apply to the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [TagSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceType The type of resource to tag on creation. Specify
+       * `capacity-reservation-fleet` .
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+       */
+      public fun resourceType(resourceType: String)
+
+      /**
+       * @param tags The tags to apply to the resource.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The tags to apply to the resource.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty.builder()
+
+      /**
+       * @param resourceType The type of resource to tag on creation. Specify
+       * `capacity-reservation-fleet` .
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+       */
+      override fun resourceType(resourceType: String) {
+        cdkBuilder.resourceType(resourceType)
+      }
+
+      /**
+       * @param tags The tags to apply to the resource.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      }
+
+      /**
+       * @param tags The tags to apply to the resource.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
+    ) : CdkObject(cdkObject), TagSpecificationProperty {
+      /**
+       * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .
+       *
+       * To tag a resource after it has been created, see
+       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-resourcetype)
+       */
+      override fun resourceType(): String? = unwrap(this).getResourceType()
+
+      /**
+       * The tags to apply to the resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html#cfn-ec2-capacityreservationfleet-tagspecification-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty):
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TagSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty
     }
   }
 }

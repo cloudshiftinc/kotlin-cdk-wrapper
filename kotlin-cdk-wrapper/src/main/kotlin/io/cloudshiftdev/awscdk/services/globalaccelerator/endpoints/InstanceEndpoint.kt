@@ -30,9 +30,8 @@ import software.amazon.awscdk.services.ec2.IInstance as AmazonAwscdkServicesEc2I
  * .build());
  * ```
  */
-public open class InstanceEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint,
+public open class InstanceEndpoint(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance) :
       this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance::unwrap))
@@ -149,6 +148,7 @@ public open class InstanceEndpoint internal constructor(
 
     internal fun unwrap(wrapped: InstanceEndpoint):
         software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint
   }
 }

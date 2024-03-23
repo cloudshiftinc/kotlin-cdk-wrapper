@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * choice.otherwise(tryAgainState);
  * ```
  */
-public open class Pass internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Pass,
+public open class Pass(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Pass,
 ) : State(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -276,6 +276,6 @@ public open class Pass internal constructor(
         Pass(cdkObject)
 
     internal fun unwrap(wrapped: Pass): software.amazon.awscdk.services.stepfunctions.Pass =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Pass
   }
 }

@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html)
  */
-public open class CfnRuleGroupsNamespace internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace,
+public open class CfnRuleGroupsNamespace(
+  cdkObject: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -282,6 +282,7 @@ public open class CfnRuleGroupsNamespace internal constructor(
         CfnRuleGroupsNamespace = CfnRuleGroupsNamespace(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleGroupsNamespace):
-        software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace = wrapped.cdkObject
+        software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace = wrapped.cdkObject as
+        software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace
   }
 }

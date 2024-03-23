@@ -103,7 +103,7 @@ public interface CfnRegistryPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps,
+    cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps,
   ) : CdkObject(cdkObject), CfnRegistryPolicyProps {
     /**
      * A resource-based policy.

@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html)
  */
-public open class CfnAnnotationStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
+public open class CfnAnnotationStore(
+  cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -533,7 +533,8 @@ public open class CfnAnnotationStore internal constructor(
         CfnAnnotationStore = CfnAnnotationStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnnotationStore):
-        software.amazon.awscdk.services.omics.CfnAnnotationStore = wrapped.cdkObject
+        software.amazon.awscdk.services.omics.CfnAnnotationStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.omics.CfnAnnotationStore
   }
 
   /**
@@ -589,8 +590,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
     ) : CdkObject(cdkObject), ReferenceItemProperty {
       /**
        * The reference's ARN.
@@ -615,6 +615,114 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty
+    }
+  }
+
+  /**
+   * Server-side encryption (SSE) settings for a store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.omics.*;
+   * SseConfigProperty sseConfigProperty = SseConfigProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .keyArn("keyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html)
+   */
+  public interface SseConfigProperty {
+    /**
+     * An encryption key ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-keyarn)
+     */
+    public fun keyArn(): String? = unwrap(this).getKeyArn()
+
+    /**
+     * The encryption type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [SseConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param keyArn An encryption key ARN.
+       */
+      public fun keyArn(keyArn: String)
+
+      /**
+       * @param type The encryption type. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.Builder =
+          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.builder()
+
+      /**
+       * @param keyArn An encryption key ARN.
+       */
+      override fun keyArn(keyArn: String) {
+        cdkBuilder.keyArn(keyArn)
+      }
+
+      /**
+       * @param type The encryption type. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
+    ) : CdkObject(cdkObject), SseConfigProperty {
+      /**
+       * An encryption key ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-keyarn)
+       */
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
+
+      /**
+       * The encryption type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SseConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty):
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SseConfigProperty):
+          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty
     }
   }
 
@@ -704,8 +812,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
     ) : CdkObject(cdkObject), StoreOptionsProperty {
       /**
        * Formatting options for a TSV file.
@@ -730,115 +837,6 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty
-    }
-  }
-
-  /**
-   * Server-side encryption (SSE) settings for a store.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.omics.*;
-   * SseConfigProperty sseConfigProperty = SseConfigProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .keyArn("keyArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html)
-   */
-  public interface SseConfigProperty {
-    /**
-     * An encryption key ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-keyarn)
-     */
-    public fun keyArn(): String? = unwrap(this).getKeyArn()
-
-    /**
-     * The encryption type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [SseConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param keyArn An encryption key ARN.
-       */
-      public fun keyArn(keyArn: String)
-
-      /**
-       * @param type The encryption type. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.Builder =
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.builder()
-
-      /**
-       * @param keyArn An encryption key ARN.
-       */
-      override fun keyArn(keyArn: String) {
-        cdkBuilder.keyArn(keyArn)
-      }
-
-      /**
-       * @param type The encryption type. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
-    ) : CdkObject(cdkObject), SseConfigProperty {
-      /**
-       * An encryption key ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-keyarn)
-       */
-      override fun keyArn(): String? = unwrap(this).getKeyArn()
-
-      /**
-       * The encryption type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-sseconfig.html#cfn-omics-annotationstore-sseconfig-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SseConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty):
-          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SseConfigProperty):
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty
     }
   }
 
@@ -949,8 +947,7 @@ public open class CfnAnnotationStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
     ) : CdkObject(cdkObject), TsvStoreOptionsProperty {
       /**
        * The store's annotation type.

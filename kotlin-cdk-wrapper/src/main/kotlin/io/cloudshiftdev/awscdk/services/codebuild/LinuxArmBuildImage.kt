@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
  */
-public open class LinuxArmBuildImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmBuildImage,
+public open class LinuxArmBuildImage(
+  cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
@@ -133,6 +133,7 @@ public open class LinuxArmBuildImage internal constructor(
         LinuxArmBuildImage = LinuxArmBuildImage(cdkObject)
 
     internal fun unwrap(wrapped: LinuxArmBuildImage):
-        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage
   }
 }

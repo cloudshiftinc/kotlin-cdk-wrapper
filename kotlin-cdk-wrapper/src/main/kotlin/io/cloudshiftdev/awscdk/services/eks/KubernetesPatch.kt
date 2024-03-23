@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
  */
-public open class KubernetesPatch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesPatch,
+public open class KubernetesPatch(
+  cdkObject: software.amazon.awscdk.services.eks.KubernetesPatch,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -190,6 +190,7 @@ public open class KubernetesPatch internal constructor(
         KubernetesPatch = KubernetesPatch(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesPatch):
-        software.amazon.awscdk.services.eks.KubernetesPatch = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.KubernetesPatch = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.KubernetesPatch
   }
 }

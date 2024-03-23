@@ -99,7 +99,7 @@ public interface CfnIndexProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps,
+    cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps,
   ) : CdkObject(cdkObject), CfnIndexProps {
     /**
      * The specified tags are attached to only the index created in this AWS Region .

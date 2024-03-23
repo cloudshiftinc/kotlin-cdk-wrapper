@@ -169,7 +169,7 @@ public interface SubnetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.SubnetGroupProps,
+    cdkObject: software.amazon.awscdk.services.rds.SubnetGroupProps,
   ) : CdkObject(cdkObject), SubnetGroupProps {
     /**
      * Description of the subnet group.

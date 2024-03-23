@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * getParameter.getResponseField("Parameter.Value");
  * ```
  */
-public open class AwsCustomResourcePolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.customresources.AwsCustomResourcePolicy,
+public open class AwsCustomResourcePolicy(
+  cdkObject: software.amazon.awscdk.customresources.AwsCustomResourcePolicy,
 ) : CdkObject(cdkObject) {
   /**
    * resources for auto-generated from SDK calls.
@@ -67,6 +67,7 @@ public open class AwsCustomResourcePolicy internal constructor(
         AwsCustomResourcePolicy = AwsCustomResourcePolicy(cdkObject)
 
     internal fun unwrap(wrapped: AwsCustomResourcePolicy):
-        software.amazon.awscdk.customresources.AwsCustomResourcePolicy = wrapped.cdkObject
+        software.amazon.awscdk.customresources.AwsCustomResourcePolicy = wrapped.cdkObject as
+        software.amazon.awscdk.customresources.AwsCustomResourcePolicy
   }
 }

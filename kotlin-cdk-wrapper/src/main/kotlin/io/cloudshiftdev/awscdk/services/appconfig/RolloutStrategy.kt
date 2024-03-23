@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
  */
-public abstract class RolloutStrategy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
+public abstract class RolloutStrategy(
+  cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
 ) : CdkObject(cdkObject) {
   /**
    * The deployment duration of the rollout strategy.
@@ -52,7 +52,7 @@ public abstract class RolloutStrategy internal constructor(
   public open fun growthType(): GrowthType? = unwrap(this).getGrowthType()?.let(GrowthType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
+    cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
   ) : RolloutStrategy(cdkObject)
 
   public companion object {

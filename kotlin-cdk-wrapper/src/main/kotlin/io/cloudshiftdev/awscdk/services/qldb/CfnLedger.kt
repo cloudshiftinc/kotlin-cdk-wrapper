@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html)
  */
-public open class CfnLedger internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.qldb.CfnLedger,
+public open class CfnLedger(
+  cdkObject: software.amazon.awscdk.services.qldb.CfnLedger,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -494,6 +494,6 @@ public open class CfnLedger internal constructor(
         CfnLedger(cdkObject)
 
     internal fun unwrap(wrapped: CfnLedger): software.amazon.awscdk.services.qldb.CfnLedger =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.qldb.CfnLedger
   }
 }

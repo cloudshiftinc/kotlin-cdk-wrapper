@@ -59,9 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class NetworkMultipleTargetGroupsEc2Service internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service,
+public open class NetworkMultipleTargetGroupsEc2Service(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service,
 ) : NetworkMultipleTargetGroupsServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -769,6 +768,7 @@ public open class NetworkMultipleTargetGroupsEc2Service internal constructor(
 
     internal fun unwrap(wrapped: NetworkMultipleTargetGroupsEc2Service):
         software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service
   }
 }

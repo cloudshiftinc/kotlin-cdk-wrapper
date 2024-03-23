@@ -257,8 +257,7 @@ public interface CfnConnectAttachmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps,
   ) : CdkObject(cdkObject), CfnConnectAttachmentProps {
     /**
      * The ID of the core network where the Connect attachment is located.

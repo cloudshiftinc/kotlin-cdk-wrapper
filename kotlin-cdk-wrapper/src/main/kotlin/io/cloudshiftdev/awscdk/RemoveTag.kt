@@ -28,8 +28,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class RemoveTag internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.RemoveTag,
+public open class RemoveTag(
+  cdkObject: software.amazon.awscdk.RemoveTag,
 ) : CdkObject(cdkObject), IAspect {
   public constructor(key: String) : this(software.amazon.awscdk.RemoveTag(key)
   )
@@ -244,6 +244,7 @@ public open class RemoveTag internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.RemoveTag): RemoveTag = RemoveTag(cdkObject)
 
-    internal fun unwrap(wrapped: RemoveTag): software.amazon.awscdk.RemoveTag = wrapped.cdkObject
+    internal fun unwrap(wrapped: RemoveTag): software.amazon.awscdk.RemoveTag = wrapped.cdkObject as
+        software.amazon.awscdk.RemoveTag
   }
 }

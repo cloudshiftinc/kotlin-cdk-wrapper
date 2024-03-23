@@ -61,9 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SageMakerCreateTrainingJob internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob,
+public open class SageMakerCreateTrainingJob(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob,
 ) : TaskStateBase(cdkObject), IGrantable, IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -897,6 +896,7 @@ public open class SageMakerCreateTrainingJob internal constructor(
 
     internal fun unwrap(wrapped: SageMakerCreateTrainingJob):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob
   }
 }

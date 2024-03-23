@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html)
  */
-public open class CfnWorkteam internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
+public open class CfnWorkteam(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -496,94 +496,7 @@ public open class CfnWorkteam internal constructor(
         = CfnWorkteam(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkteam): software.amazon.awscdk.services.sagemaker.CfnWorkteam
-        = wrapped.cdkObject
-  }
-
-  /**
-   * Configures Amazon SNS notifications of available or expiring work items for work teams.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * NotificationConfigurationProperty notificationConfigurationProperty =
-   * NotificationConfigurationProperty.builder()
-   * .notificationTopicArn("notificationTopicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html)
-   */
-  public interface NotificationConfigurationProperty {
-    /**
-     * The ARN for the Amazon SNS topic to which notifications should be published.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html#cfn-sagemaker-workteam-notificationconfiguration-notificationtopicarn)
-     */
-    public fun notificationTopicArn(): String
-
-    /**
-     * A builder for [NotificationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param notificationTopicArn The ARN for the Amazon SNS topic to which notifications should
-       * be published. 
-       */
-      public fun notificationTopicArn(notificationTopicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty.builder()
-
-      /**
-       * @param notificationTopicArn The ARN for the Amazon SNS topic to which notifications should
-       * be published. 
-       */
-      override fun notificationTopicArn(notificationTopicArn: String) {
-        cdkBuilder.notificationTopicArn(notificationTopicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
-      /**
-       * The ARN for the Amazon SNS topic to which notifications should be published.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html#cfn-sagemaker-workteam-notificationconfiguration-notificationtopicarn)
-       */
-      override fun notificationTopicArn(): String = unwrap(this).getNotificationTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          NotificationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          NotificationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NotificationConfigurationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty
-    }
+        = wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnWorkteam
   }
 
   /**
@@ -691,8 +604,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
     ) : CdkObject(cdkObject), CognitoMemberDefinitionProperty {
       /**
        * An identifier for an application client.
@@ -735,101 +647,6 @@ public open class CfnWorkteam internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty
-    }
-  }
-
-  /**
-   * A list of user groups that exist in your OIDC Identity Provider (IdP).
-   *
-   * One to ten groups can be used to create a single private work team. When you add a user group
-   * to the list of `Groups` , you can add that user group to one or more private work teams. If you
-   * add a user group to a private work team, all workers in that user group are added to the work
-   * team.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * OidcMemberDefinitionProperty oidcMemberDefinitionProperty =
-   * OidcMemberDefinitionProperty.builder()
-   * .oidcGroups(List.of("oidcGroups"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html)
-   */
-  public interface OidcMemberDefinitionProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)
-     */
-    public fun oidcGroups(): List<String>
-
-    /**
-     * A builder for [OidcMemberDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param oidcGroups the value to be set. 
-       */
-      public fun oidcGroups(oidcGroups: List<String>)
-
-      /**
-       * @param oidcGroups the value to be set. 
-       */
-      public fun oidcGroups(vararg oidcGroups: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty.builder()
-
-      /**
-       * @param oidcGroups the value to be set. 
-       */
-      override fun oidcGroups(oidcGroups: List<String>) {
-        cdkBuilder.oidcGroups(oidcGroups)
-      }
-
-      /**
-       * @param oidcGroups the value to be set. 
-       */
-      override fun oidcGroups(vararg oidcGroups: String): Unit = oidcGroups(oidcGroups.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
-    ) : CdkObject(cdkObject), OidcMemberDefinitionProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)
-       */
-      override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OidcMemberDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty):
-          OidcMemberDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OidcMemberDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OidcMemberDefinitionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty
     }
   }
 
@@ -1006,8 +823,7 @@ public open class CfnWorkteam internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
     ) : CdkObject(cdkObject), MemberDefinitionProperty {
       /**
        * The Amazon Cognito user group that is part of the work team.
@@ -1044,6 +860,186 @@ public open class CfnWorkteam internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty
+    }
+  }
+
+  /**
+   * Configures Amazon SNS notifications of available or expiring work items for work teams.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * NotificationConfigurationProperty notificationConfigurationProperty =
+   * NotificationConfigurationProperty.builder()
+   * .notificationTopicArn("notificationTopicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html)
+   */
+  public interface NotificationConfigurationProperty {
+    /**
+     * The ARN for the Amazon SNS topic to which notifications should be published.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html#cfn-sagemaker-workteam-notificationconfiguration-notificationtopicarn)
+     */
+    public fun notificationTopicArn(): String
+
+    /**
+     * A builder for [NotificationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param notificationTopicArn The ARN for the Amazon SNS topic to which notifications should
+       * be published. 
+       */
+      public fun notificationTopicArn(notificationTopicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty.builder()
+
+      /**
+       * @param notificationTopicArn The ARN for the Amazon SNS topic to which notifications should
+       * be published. 
+       */
+      override fun notificationTopicArn(notificationTopicArn: String) {
+        cdkBuilder.notificationTopicArn(notificationTopicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
+    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+      /**
+       * The ARN for the Amazon SNS topic to which notifications should be published.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-notificationconfiguration.html#cfn-sagemaker-workteam-notificationconfiguration-notificationtopicarn)
+       */
+      override fun notificationTopicArn(): String = unwrap(this).getNotificationTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NotificationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty):
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NotificationConfigurationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty
+    }
+  }
+
+  /**
+   * A list of user groups that exist in your OIDC Identity Provider (IdP).
+   *
+   * One to ten groups can be used to create a single private work team. When you add a user group
+   * to the list of `Groups` , you can add that user group to one or more private work teams. If you
+   * add a user group to a private work team, all workers in that user group are added to the work
+   * team.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * OidcMemberDefinitionProperty oidcMemberDefinitionProperty =
+   * OidcMemberDefinitionProperty.builder()
+   * .oidcGroups(List.of("oidcGroups"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html)
+   */
+  public interface OidcMemberDefinitionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)
+     */
+    public fun oidcGroups(): List<String>
+
+    /**
+     * A builder for [OidcMemberDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param oidcGroups the value to be set. 
+       */
+      public fun oidcGroups(oidcGroups: List<String>)
+
+      /**
+       * @param oidcGroups the value to be set. 
+       */
+      public fun oidcGroups(vararg oidcGroups: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty.builder()
+
+      /**
+       * @param oidcGroups the value to be set. 
+       */
+      override fun oidcGroups(oidcGroups: List<String>) {
+        cdkBuilder.oidcGroups(oidcGroups)
+      }
+
+      /**
+       * @param oidcGroups the value to be set. 
+       */
+      override fun oidcGroups(vararg oidcGroups: String): Unit = oidcGroups(oidcGroups.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
+    ) : CdkObject(cdkObject), OidcMemberDefinitionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)
+       */
+      override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OidcMemberDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty):
+          OidcMemberDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OidcMemberDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OidcMemberDefinitionProperty):
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty
     }
   }
 }

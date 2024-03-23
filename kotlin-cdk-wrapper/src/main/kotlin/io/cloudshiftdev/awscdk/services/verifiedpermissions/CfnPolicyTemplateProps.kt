@@ -104,8 +104,7 @@ public interface CfnPolicyTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplateProps,
+    cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplateProps,
   ) : CdkObject(cdkObject), CfnPolicyTemplateProps {
     /**
      * The description to attach to the new or updated policy template.

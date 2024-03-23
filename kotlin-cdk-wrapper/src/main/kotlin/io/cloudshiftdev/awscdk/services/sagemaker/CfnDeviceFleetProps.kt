@@ -204,7 +204,7 @@ public interface CfnDeviceFleetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps,
   ) : CdkObject(cdkObject), CfnDeviceFleetProps {
     /**
      * A description of the fleet.

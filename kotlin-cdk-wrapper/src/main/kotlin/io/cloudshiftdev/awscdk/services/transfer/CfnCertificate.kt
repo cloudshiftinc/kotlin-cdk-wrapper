@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html)
  */
-public open class CfnCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnCertificate,
+public open class CfnCertificate(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -416,6 +416,7 @@ public open class CfnCertificate internal constructor(
         CfnCertificate = CfnCertificate(cdkObject)
 
     internal fun unwrap(wrapped: CfnCertificate):
-        software.amazon.awscdk.services.transfer.CfnCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.transfer.CfnCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.transfer.CfnCertificate
   }
 }

@@ -27,8 +27,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class CpuArchitecture internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.CpuArchitecture,
+public open class CpuArchitecture(
+  cdkObject: software.amazon.awscdk.services.ecs.CpuArchitecture,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val ARM64: CpuArchitecture =
@@ -44,6 +44,7 @@ public open class CpuArchitecture internal constructor(
         CpuArchitecture = CpuArchitecture(cdkObject)
 
     internal fun unwrap(wrapped: CpuArchitecture):
-        software.amazon.awscdk.services.ecs.CpuArchitecture = wrapped.cdkObject
+        software.amazon.awscdk.services.ecs.CpuArchitecture = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecs.CpuArchitecture
   }
 }

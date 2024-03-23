@@ -67,8 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-proactiveengagement.html)
  */
-public open class CfnProactiveEngagement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement,
+public open class CfnProactiveEngagement(
+  cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -364,7 +364,8 @@ public open class CfnProactiveEngagement internal constructor(
         CfnProactiveEngagement = CfnProactiveEngagement(cdkObject)
 
     internal fun unwrap(wrapped: CfnProactiveEngagement):
-        software.amazon.awscdk.services.shield.CfnProactiveEngagement = wrapped.cdkObject
+        software.amazon.awscdk.services.shield.CfnProactiveEngagement = wrapped.cdkObject as
+        software.amazon.awscdk.services.shield.CfnProactiveEngagement
   }
 
   /**
@@ -463,8 +464,7 @@ public open class CfnProactiveEngagement internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty,
+      cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty,
     ) : CdkObject(cdkObject), EmergencyContactProperty {
       /**
        * Additional notes regarding the contact.

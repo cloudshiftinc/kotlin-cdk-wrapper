@@ -200,7 +200,7 @@ public interface IntegrationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IntegrationConfig,
+    cdkObject: software.amazon.awscdk.services.apigateway.IntegrationConfig,
   ) : CdkObject(cdkObject), IntegrationConfig {
     /**
      * This value is included in computing the Deployment's fingerprint.

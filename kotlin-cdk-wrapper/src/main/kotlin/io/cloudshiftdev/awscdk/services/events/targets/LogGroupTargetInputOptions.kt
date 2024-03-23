@@ -96,8 +96,7 @@ public interface LogGroupTargetInputOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions,
+    cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions,
   ) : CdkObject(cdkObject), LogGroupTargetInputOptions {
     /**
      * The value provided here will be used in the Log "message" field.

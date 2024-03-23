@@ -260,7 +260,7 @@ public interface JobQueueProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.JobQueueProps,
+    cdkObject: software.amazon.awscdk.services.batch.JobQueueProps,
   ) : CdkObject(cdkObject), JobQueueProps {
     /**
      * The set of compute environments mapped to a job queue and their order relative to each other.

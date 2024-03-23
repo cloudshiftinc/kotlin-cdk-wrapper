@@ -23,9 +23,8 @@ import kotlin.jvm.JvmName
  * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
  * ```
  */
-public open class StepFunctionsIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigateway.StepFunctionsIntegration,
+public open class StepFunctionsIntegration(
+  cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsIntegration,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.apigateway.StepFunctionsIntegration()
   )
@@ -50,6 +49,7 @@ public open class StepFunctionsIntegration internal constructor(
         StepFunctionsIntegration = StepFunctionsIntegration(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsIntegration):
-        software.amazon.awscdk.services.apigateway.StepFunctionsIntegration = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.StepFunctionsIntegration = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.StepFunctionsIntegration
   }
 }

@@ -893,7 +893,7 @@ public interface CfnQueueProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueueProps,
+    cdkObject: software.amazon.awscdk.services.sqs.CfnQueueProps,
   ) : CdkObject(cdkObject), CfnQueueProps {
     /**
      * For first-in-first-out (FIFO) queues, specifies whether to enable content-based

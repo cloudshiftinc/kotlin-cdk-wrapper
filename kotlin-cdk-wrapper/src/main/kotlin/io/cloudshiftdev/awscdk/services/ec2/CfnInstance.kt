@@ -158,8 +158,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html)
  */
-public open class CfnInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
+public open class CfnInstance(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -3450,7 +3450,663 @@ public open class CfnInstance internal constructor(
         CfnInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.ec2.CfnInstance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnInstance
+  }
+
+  /**
+   * Specifies input parameter values for an SSM document in AWS Systems Manager .
+   *
+   * `AssociationParameter` is a property of the [Amazon EC2 Instance
+   * SsmAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html)
+   * property.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * AssociationParameterProperty associationParameterProperty =
+   * AssociationParameterProperty.builder()
+   * .key("key")
+   * .value(List.of("value"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html)
+   */
+  public interface AssociationParameterProperty {
+    /**
+     * The name of an input parameter that is in the associated SSM document.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of an input parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-value)
+     */
+    public fun `value`(): List<String>
+
+    /**
+     * A builder for [AssociationParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The name of an input parameter that is in the associated SSM document. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of an input parameter. 
+       */
+      public fun `value`(`value`: List<String>)
+
+      /**
+       * @param value The value of an input parameter. 
+       */
+      public fun `value`(vararg `value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.builder()
+
+      /**
+       * @param key The name of an input parameter that is in the associated SSM document. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of an input parameter. 
+       */
+      override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      /**
+       * @param value The value of an input parameter. 
+       */
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
+    ) : CdkObject(cdkObject), AssociationParameterProperty {
+      /**
+       * The name of an input parameter that is in the associated SSM document.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of an input parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-value)
+       */
+      override fun `value`(): List<String> = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssociationParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty):
+          AssociationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssociationParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssociationParameterProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty
+    }
+  }
+
+  /**
+   * Specifies a block device mapping for an instance.
+   *
+   * You must specify exactly one of the following properties: `VirtualName` , `Ebs` , or `NoDevice`
+   * .
+   *
+   * `BlockDeviceMapping` is a property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
+   *
+   *
+   * After the instance is running, you can modify only the `DeleteOnTermination` parameter for the
+   * attached volumes without interrupting the instance. Modifying any other parameter results in
+   * instance
+   * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+   * .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * // the properties below are optional
+   * .ebs(EbsProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice(NoDeviceProperty.builder().build())
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html)
+   */
+  public interface BlockDeviceMappingProperty {
+    /**
+     * The device name (for example, `/dev/sdh` or `xvdh` ).
+     *
+     *
+     * After the instance is running, this parameter is used to specify the device name of the block
+     * device mapping to update.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-devicename)
+     */
+    public fun deviceName(): String
+
+    /**
+     * Parameters used to automatically set up EBS volumes when the instance is launched.
+     *
+     *
+     * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+     * the attached volumes without interrupting the instance. Modifying any other parameter results in
+     * instance
+     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * To omit the device from the block device mapping, specify an empty string.
+     *
+     *
+     * After the instance is running, modifying this parameter results in instance
+     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-nodevice)
+     */
+    public fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+    /**
+     * The virtual device name ( `ephemeral` N).
+     *
+     * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
+     * For example, an instance type with 2 available instance store volumes can specify mappings for
+     * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
+     * instance type. After you connect to the instance, you must mount the volume.
+     *
+     * NVMe instance store volumes are automatically enumerated and assigned a device name.
+     * Including them in your block device mapping has no effect.
+     *
+     * *Constraints* : For M3 instances, you must specify instance store volumes in the block device
+     * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
+     * specified in the block device mapping for the AMI.
+     *
+     *
+     * After the instance is running, modifying this parameter results in instance
+     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [BlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ). 
+       *
+       * After the instance is running, this parameter is used to specify the device name of the
+       * block device mapping to update.
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      public fun ebs(ebs: EbsProperty)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
+      public fun ebs(ebs: EbsProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      public fun noDevice(noDevice: IResolvable)
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      public fun noDevice(noDevice: NoDeviceProperty)
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
+      public fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit)
+
+      /**
+       * @param virtualName The virtual device name ( `ephemeral` N).
+       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
+       * For example, an instance type with 2 available instance store volumes can specify mappings for
+       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
+       * instance type. After you connect to the instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
+       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
+       * volumes specified in the block device mapping for the AMI.
+       *
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ). 
+       *
+       * After the instance is running, this parameter is used to specify the device name of the
+       * block device mapping to update.
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      override fun ebs(ebs: EbsProperty) {
+        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
+      override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      override fun noDevice(noDevice: IResolvable) {
+        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      override fun noDevice(noDevice: NoDeviceProperty) {
+        cdkBuilder.noDevice(noDevice.let(NoDeviceProperty::unwrap))
+      }
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
+      override fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit): Unit =
+          noDevice(NoDeviceProperty(noDevice))
+
+      /**
+       * @param virtualName The virtual device name ( `ephemeral` N).
+       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
+       * For example, an instance type with 2 available instance store volumes can specify mappings for
+       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
+       * instance type. After you connect to the instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
+       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
+       * volumes specified in the block device mapping for the AMI.
+       *
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+      /**
+       * The device name (for example, `/dev/sdh` or `xvdh` ).
+       *
+       *
+       * After the instance is running, this parameter is used to specify the device name of the
+       * block device mapping to update.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-devicename)
+       */
+      override fun deviceName(): String = unwrap(this).getDeviceName()
+
+      /**
+       * Parameters used to automatically set up EBS volumes when the instance is launched.
+       *
+       *
+       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
+       * the attached volumes without interrupting the instance. Modifying any other parameter results
+       * in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * To omit the device from the block device mapping, specify an empty string.
+       *
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-nodevice)
+       */
+      override fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+      /**
+       * The virtual device name ( `ephemeral` N).
+       *
+       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
+       * For example, an instance type with 2 available instance store volumes can specify mappings for
+       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
+       * instance type. After you connect to the instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
+       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
+       * volumes specified in the block device mapping for the AMI.
+       *
+       *
+       * After the instance is running, modifying this parameter results in instance
+       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty
+    }
+  }
+
+  /**
+   * Specifies the CPU options for the instance.
+   *
+   * When you specify CPU options, you must specify both the number of CPU cores and threads per
+   * core.
+   *
+   * Modifying the CPU options for an instance results in instance
+   * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+   * .
+   *
+   * For more information, see [Optimize CPU
+   * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
+   * *Amazon Elastic Compute Cloud User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CpuOptionsProperty cpuOptionsProperty = CpuOptionsProperty.builder()
+   * .coreCount(123)
+   * .threadsPerCore(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html)
+   */
+  public interface CpuOptionsProperty {
+    /**
+     * The number of CPU cores for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount)
+     */
+    public fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+    /**
+     * The number of threads per CPU core.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore)
+     */
+    public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+
+    /**
+     * A builder for [CpuOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param coreCount The number of CPU cores for the instance.
+       */
+      public fun coreCount(coreCount: Number)
+
+      /**
+       * @param threadsPerCore The number of threads per CPU core.
+       */
+      public fun threadsPerCore(threadsPerCore: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.builder()
+
+      /**
+       * @param coreCount The number of CPU cores for the instance.
+       */
+      override fun coreCount(coreCount: Number) {
+        cdkBuilder.coreCount(coreCount)
+      }
+
+      /**
+       * @param threadsPerCore The number of threads per CPU core.
+       */
+      override fun threadsPerCore(threadsPerCore: Number) {
+        cdkBuilder.threadsPerCore(threadsPerCore)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
+    ) : CdkObject(cdkObject), CpuOptionsProperty {
+      /**
+       * The number of CPU cores for the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount)
+       */
+      override fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+      /**
+       * The number of threads per CPU core.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore)
+       */
+      override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CpuOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty):
+          CpuOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CpuOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty
+    }
   }
 
   /**
@@ -3524,8 +4180,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
     ) : CdkObject(cdkObject), CreditSpecificationProperty {
       /**
        * The credit option for CPU usage of the instance.
@@ -3554,206 +4209,6 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies the IPv6 address for the instance.
-   *
-   * `InstanceIpv6Address` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * InstanceIpv6AddressProperty instanceIpv6AddressProperty = InstanceIpv6AddressProperty.builder()
-   * .ipv6Address("ipv6Address")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html)
-   */
-  public interface InstanceIpv6AddressProperty {
-    /**
-     * The IPv6 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address)
-     */
-    public fun ipv6Address(): String
-
-    /**
-     * A builder for [InstanceIpv6AddressProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipv6Address The IPv6 address. 
-       */
-      public fun ipv6Address(ipv6Address: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.builder()
-
-      /**
-       * @param ipv6Address The IPv6 address. 
-       */
-      override fun ipv6Address(ipv6Address: String) {
-        cdkBuilder.ipv6Address(ipv6Address)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
-    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
-      /**
-       * The IPv6 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address)
-       */
-      override fun ipv6Address(): String = unwrap(this).getIpv6Address()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceIpv6AddressProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty):
-          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceIpv6AddressProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty
-    }
-  }
-
-  /**
-   * Specifies a volume to attach to an instance.
-   *
-   * `Volume` is an embedded property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * VolumeProperty volumeProperty = VolumeProperty.builder()
-   * .device("device")
-   * .volumeId("volumeId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html)
-   */
-  public interface VolumeProperty {
-    /**
-     * The device name (for example, `/dev/sdh` or `xvdh` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-device)
-     */
-    public fun device(): String
-
-    /**
-     * The ID of the EBS volume.
-     *
-     * The volume and instance must be within the same Availability Zone.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-volumeid)
-     */
-    public fun volumeId(): String
-
-    /**
-     * A builder for [VolumeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param device The device name (for example, `/dev/sdh` or `xvdh` ). 
-       */
-      public fun device(device: String)
-
-      /**
-       * @param volumeId The ID of the EBS volume. 
-       * The volume and instance must be within the same Availability Zone.
-       */
-      public fun volumeId(volumeId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.Builder
-          = software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.builder()
-
-      /**
-       * @param device The device name (for example, `/dev/sdh` or `xvdh` ). 
-       */
-      override fun device(device: String) {
-        cdkBuilder.device(device)
-      }
-
-      /**
-       * @param volumeId The ID of the EBS volume. 
-       * The volume and instance must be within the same Availability Zone.
-       */
-      override fun volumeId(volumeId: String) {
-        cdkBuilder.volumeId(volumeId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
-    ) : CdkObject(cdkObject), VolumeProperty {
-      /**
-       * The device name (for example, `/dev/sdh` or `xvdh` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-device)
-       */
-      override fun device(): String = unwrap(this).getDevice()
-
-      /**
-       * The ID of the EBS volume.
-       *
-       * The volume and instance must be within the same Availability Zone.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-volumeid)
-       */
-      override fun volumeId(): String = unwrap(this).getVolumeId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty):
-          VolumeProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VolumeProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty
     }
   }
 
@@ -4274,7 +4729,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
     ) : CdkObject(cdkObject), EbsProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
@@ -4441,14 +4896,20 @@ public open class CfnInstance internal constructor(
   }
 
   /**
-   * The type of hostnames to assign to instances in the subnet at launch.
+   * Amazon Elastic Graphics reached end of life on January 8, 2024.
    *
-   * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-   * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets,
-   * you can specify whether DNS names use the instance IPv4 address or the instance ID. For more
-   * information, see [Amazon EC2 instance hostname
-   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-   * *Amazon Elastic Compute Cloud User Guide* .
+   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
+   * G4dn, or G5 instances.
+   *
+   * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to your
+   * Amazon EC2 instance to accelerate the graphics performance of your applications. For more
+   * information, see [Amazon EC2 Elastic
+   * GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon
+   * EC2 User Guide for Windows Instances* .
+   *
+   * `ElasticGpuSpecification` is a property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
    *
    * Example:
    *
@@ -4456,232 +4917,220 @@ public open class CfnInstance internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
-   * PrivateDnsNameOptionsProperty.builder()
-   * .enableResourceNameDnsAaaaRecord(false)
-   * .enableResourceNameDnsARecord(false)
-   * .hostnameType("hostnameType")
+   * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
+   * ElasticGpuSpecificationProperty.builder()
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html)
    */
-  public interface PrivateDnsNameOptionsProperty {
+  public interface ElasticGpuSpecificationProperty {
     /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * The type of Elastic Graphics accelerator.
      *
-     * For more information, see [Amazon EC2 instance hostname
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * For more information about the values to specify for `Type` , see [Elastic Graphics
+     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+     * User Guide for Windows Instances* .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsarecord)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
      */
-    public fun enableResourceNameDnsARecord(): Any? = unwrap(this).getEnableResourceNameDnsARecord()
+    public fun type(): String
 
     /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
-     *
-     * For more information, see [Amazon EC2 instance hostname
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsaaaarecord)
-     */
-    public fun enableResourceNameDnsAaaaRecord(): Any? =
-        unwrap(this).getEnableResourceNameDnsAaaaRecord()
-
-    /**
-     * The type of hostnames to assign to instances in the subnet at launch.
-     *
-     * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-     * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-     * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. For
-     * more information, see [Amazon EC2 instance hostname
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-hostnametype)
-     */
-    public fun hostnameType(): String? = unwrap(this).getHostnameType()
-
-    /**
-     * A builder for [PrivateDnsNameOptionsProperty]
+     * A builder for [ElasticGpuSpecificationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * @param type The type of Elastic Graphics accelerator. 
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
        */
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
-
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
-
-      /**
-       * @param hostnameType The type of hostnames to assign to instances in the subnet at launch.
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      public fun hostnameType(hostnameType: String)
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.builder()
 
       /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * @param type The type of Elastic Graphics accelerator. 
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
        */
-      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
-      }
-
-      /**
-       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS A records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
-      }
-
-      /**
-       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
-       * instance hostnames with DNS AAAA records.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param hostnameType The type of hostnames to assign to instances in the subnet at launch.
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       */
-      override fun hostnameType(hostnameType: String) {
-        cdkBuilder.hostnameType(hostnameType)
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty =
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
-    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
+    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
       /**
-       * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+       * The type of Elastic Graphics accelerator.
        *
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * For more information about the values to specify for `Type` , see [Elastic Graphics
+       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
+       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
+       * User Guide for Windows Instances* .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsarecord)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
        */
-      override fun enableResourceNameDnsARecord(): Any? =
-          unwrap(this).getEnableResourceNameDnsARecord()
-
-      /**
-       * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
-       *
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsaaaarecord)
-       */
-      override fun enableResourceNameDnsAaaaRecord(): Any? =
-          unwrap(this).getEnableResourceNameDnsAaaaRecord()
-
-      /**
-       * The type of hostnames to assign to instances in the subnet at launch.
-       *
-       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
-       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
-       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
-       * For more information, see [Amazon EC2 instance hostname
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-hostnametype)
-       */
-      override fun hostnameType(): String? = unwrap(this).getHostnameType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateDnsNameOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticGpuSpecificationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty):
-          PrivateDnsNameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateDnsNameOptionsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty):
+          ElasticGpuSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticGpuSpecificationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty = (wrapped
+      internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty = (wrapped
           as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifies the Elastic Inference Accelerator for the instance.
+   *
+   * `ElasticInferenceAccelerator` is a property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ElasticInferenceAcceleratorProperty elasticInferenceAcceleratorProperty =
+   * ElasticInferenceAcceleratorProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .count(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html)
+   */
+  public interface ElasticInferenceAcceleratorProperty {
+    /**
+     * The number of elastic inference accelerators to attach to the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count)
+     */
+    public fun count(): Number? = unwrap(this).getCount()
+
+    /**
+     * The type of elastic inference accelerator.
+     *
+     * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
+     * `eia2.large` , and `eia2.xlarge` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ElasticInferenceAcceleratorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param count The number of elastic inference accelerators to attach to the instance.
+       */
+      public fun count(count: Number)
+
+      /**
+       * @param type The type of elastic inference accelerator. 
+       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
+       * `eia2.large` , and `eia2.xlarge` .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.builder()
+
+      /**
+       * @param count The number of elastic inference accelerators to attach to the instance.
+       */
+      override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      /**
+       * @param type The type of elastic inference accelerator. 
+       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
+       * `eia2.large` , and `eia2.xlarge` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
+    ) : CdkObject(cdkObject), ElasticInferenceAcceleratorProperty {
+      /**
+       * The number of elastic inference accelerators to attach to the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count)
+       */
+      override fun count(): Number? = unwrap(this).getCount()
+
+      /**
+       * The type of elastic inference accelerator.
+       *
+       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
+       * `eia2.large` , and `eia2.xlarge` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ElasticInferenceAcceleratorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty):
+          ElasticInferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticInferenceAcceleratorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticInferenceAcceleratorProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty
     }
   }
 
@@ -4759,8 +5208,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
     ) : CdkObject(cdkObject), EnclaveOptionsProperty {
       /**
        * If this parameter is set to `true` , the instance is enabled for AWS Nitro Enclaves;
@@ -4787,191 +5235,6 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * NoDeviceProperty noDeviceProperty = NoDeviceProperty.builder().build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-nodevice.html)
-   */
-  public interface NoDeviceProperty {
-    /**
-     * A builder for [NoDeviceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.builder()
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
-    ) : CdkObject(cdkObject), NoDeviceProperty
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NoDeviceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty):
-          NoDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? NoDeviceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NoDeviceProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty
-    }
-  }
-
-  /**
-   * Specifies a secondary private IPv4 address for a network interface.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
-   * PrivateIpAddressSpecificationProperty.builder()
-   * .primary(false)
-   * .privateIpAddress("privateIpAddress")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html)
-   */
-  public interface PrivateIpAddressSpecificationProperty {
-    /**
-     * Indicates whether the private IPv4 address is the primary private IPv4 address.
-     *
-     * Only one IPv4 address can be designated as primary.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-primary)
-     */
-    public fun primary(): Any
-
-    /**
-     * The private IPv4 address.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-privateipaddress)
-     */
-    public fun privateIpAddress(): String
-
-    /**
-     * A builder for [PrivateIpAddressSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address. 
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: Boolean)
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address. 
-       * Only one IPv4 address can be designated as primary.
-       */
-      public fun primary(primary: IResolvable)
-
-      /**
-       * @param privateIpAddress The private IPv4 address. 
-       */
-      public fun privateIpAddress(privateIpAddress: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.builder()
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address. 
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: Boolean) {
-        cdkBuilder.primary(primary)
-      }
-
-      /**
-       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
-       * address. 
-       * Only one IPv4 address can be designated as primary.
-       */
-      override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param privateIpAddress The private IPv4 address. 
-       */
-      override fun privateIpAddress(privateIpAddress: String) {
-        cdkBuilder.privateIpAddress(privateIpAddress)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
-      /**
-       * Indicates whether the private IPv4 address is the primary private IPv4 address.
-       *
-       * Only one IPv4 address can be designated as primary.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-primary)
-       */
-      override fun primary(): Any = unwrap(this).getPrimary()
-
-      /**
-       * The private IPv4 address.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-privateipaddress)
-       */
-      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PrivateIpAddressSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty):
-          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty
     }
   }
 
@@ -5094,8 +5357,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
     ) : CdkObject(cdkObject), HibernationOptionsProperty {
       /**
        * Set to `true` to enable your instance for hibernation.
@@ -5131,6 +5393,283 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies the IPv6 address for the instance.
+   *
+   * `InstanceIpv6Address` is a property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * InstanceIpv6AddressProperty instanceIpv6AddressProperty = InstanceIpv6AddressProperty.builder()
+   * .ipv6Address("ipv6Address")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html)
+   */
+  public interface InstanceIpv6AddressProperty {
+    /**
+     * The IPv6 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address)
+     */
+    public fun ipv6Address(): String
+
+    /**
+     * A builder for [InstanceIpv6AddressProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipv6Address The IPv6 address. 
+       */
+      public fun ipv6Address(ipv6Address: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.builder()
+
+      /**
+       * @param ipv6Address The IPv6 address. 
+       */
+      override fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
+    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
+      /**
+       * The IPv6 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address)
+       */
+      override fun ipv6Address(): String = unwrap(this).getIpv6Address()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceIpv6AddressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty):
+          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceIpv6AddressProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty
+    }
+  }
+
+  /**
+   * Specifies a launch template to use when launching an Amazon EC2 instance.
+   *
+   * You must specify the following:
+   *
+   * * The ID or the name of the launch template, but not both.
+   * * The version of the launch template.
+   *
+   * `LaunchTemplateSpecification` is a property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
+   *
+   * For information about creating a launch template, see
+   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+   * and [Create a launch
+   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
+   * in the *Amazon EC2 User Guide* .
+   *
+   * For examples of launch templates, see
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
+   * LaunchTemplateSpecificationProperty.builder()
+   * .version("version")
+   * // the properties below are optional
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html)
+   */
+  public interface LaunchTemplateSpecificationProperty {
+    /**
+     * The ID of the launch template.
+     *
+     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template.
+     *
+     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The version number of the launch template.
+     *
+     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
+     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
+     * function. For more information, see
+     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [LaunchTemplateSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param version The version number of the launch template. 
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
+    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+      /**
+       * The ID of the launch template.
+       *
+       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template.
+       *
+       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The version number of the launch template.
+       *
+       * Specifying `$Latest` or `$Default` for the template version number is not supported.
+       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
+       * `Fn::GetAtt` intrinsic function. For more information, see
+       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty):
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty
     }
   }
 
@@ -5194,8 +5733,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
     ) : CdkObject(cdkObject), LicenseSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the license configuration.
@@ -5785,8 +6323,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * Indicates whether to assign a carrier IP address to the network interface.
@@ -5941,146 +6478,63 @@ public open class CfnInstance internal constructor(
   }
 
   /**
-   * Specifies input parameter values for an SSM document in AWS Systems Manager .
-   *
-   * `AssociationParameter` is a property of the [Amazon EC2 Instance
-   * SsmAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html)
-   * property.
-   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * AssociationParameterProperty associationParameterProperty =
-   * AssociationParameterProperty.builder()
-   * .key("key")
-   * .value(List.of("value"))
-   * .build();
+   * NoDeviceProperty noDeviceProperty = NoDeviceProperty.builder().build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-nodevice.html)
    */
-  public interface AssociationParameterProperty {
+  public interface NoDeviceProperty {
     /**
-     * The name of an input parameter that is in the associated SSM document.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of an input parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-value)
-     */
-    public fun `value`(): List<String>
-
-    /**
-     * A builder for [AssociationParameterProperty]
+     * A builder for [NoDeviceProperty]
      */
     @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The name of an input parameter that is in the associated SSM document. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of an input parameter. 
-       */
-      public fun `value`(`value`: List<String>)
-
-      /**
-       * @param value The value of an input parameter. 
-       */
-      public fun `value`(vararg `value`: String)
-    }
+    public interface Builder
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.builder()
 
-      /**
-       * @param key The name of an input parameter that is in the associated SSM document. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of an input parameter. 
-       */
-      override fun `value`(`value`: List<String>) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      /**
-       * @param value The value of an input parameter. 
-       */
-      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty =
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
-    ) : CdkObject(cdkObject), AssociationParameterProperty {
-      /**
-       * The name of an input parameter that is in the associated SSM document.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of an input parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-associationparameter.html#cfn-ec2-instance-associationparameter-value)
-       */
-      override fun `value`(): List<String> = unwrap(this).getValue()
-    }
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
+    ) : CdkObject(cdkObject), NoDeviceProperty
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssociationParameterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NoDeviceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty):
-          AssociationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AssociationParameterProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty):
+          NoDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? NoDeviceProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AssociationParameterProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty
+      internal fun unwrap(wrapped: NoDeviceProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty
     }
   }
 
   /**
-   * Specifies a block device mapping for an instance.
+   * The type of hostnames to assign to instances in the subnet at launch.
    *
-   * You must specify exactly one of the following properties: `VirtualName` , `Ebs` , or `NoDevice`
-   * .
-   *
-   * `BlockDeviceMapping` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   *
-   * After the instance is running, you can modify only the `DeleteOnTermination` parameter for the
-   * attached volumes without interrupting the instance. Modifying any other parameter results in
-   * instance
-   * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-   * .
-   *
+   * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+   * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets,
+   * you can specify whether DNS names use the instance IPv4 address or the instance ID. For more
+   * information, see [Amazon EC2 instance hostname
+   * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+   * *Amazon Elastic Compute Cloud User Guide* .
    *
    * Example:
    *
@@ -6088,396 +6542,366 @@ public open class CfnInstance internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
-   * .deviceName("deviceName")
-   * // the properties below are optional
-   * .ebs(EbsProperty.builder()
-   * .deleteOnTermination(false)
-   * .encrypted(false)
-   * .iops(123)
-   * .kmsKeyId("kmsKeyId")
-   * .snapshotId("snapshotId")
-   * .volumeSize(123)
-   * .volumeType("volumeType")
-   * .build())
-   * .noDevice(NoDeviceProperty.builder().build())
-   * .virtualName("virtualName")
+   * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
+   * PrivateDnsNameOptionsProperty.builder()
+   * .enableResourceNameDnsAaaaRecord(false)
+   * .enableResourceNameDnsARecord(false)
+   * .hostnameType("hostnameType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html)
    */
-  public interface BlockDeviceMappingProperty {
+  public interface PrivateDnsNameOptionsProperty {
     /**
-     * The device name (for example, `/dev/sdh` or `xvdh` ).
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
      *
+     * For more information, see [Amazon EC2 instance hostname
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
      *
-     * After the instance is running, this parameter is used to specify the device name of the block
-     * device mapping to update.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-devicename)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsarecord)
      */
-    public fun deviceName(): String
+    public fun enableResourceNameDnsARecord(): Any? = unwrap(this).getEnableResourceNameDnsARecord()
 
     /**
-     * Parameters used to automatically set up EBS volumes when the instance is launched.
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
      *
+     * For more information, see [Amazon EC2 instance hostname
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
      *
-     * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-     * the attached volumes without interrupting the instance. Modifying any other parameter results in
-     * instance
-     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-ebs)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsaaaarecord)
      */
-    public fun ebs(): Any? = unwrap(this).getEbs()
+    public fun enableResourceNameDnsAaaaRecord(): Any? =
+        unwrap(this).getEnableResourceNameDnsAaaaRecord()
 
     /**
-     * To omit the device from the block device mapping, specify an empty string.
+     * The type of hostnames to assign to instances in the subnet at launch.
      *
+     * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+     * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+     * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. For
+     * more information, see [Amazon EC2 instance hostname
+     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+     * *Amazon Elastic Compute Cloud User Guide* .
      *
-     * After the instance is running, modifying this parameter results in instance
-     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-nodevice)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-hostnametype)
      */
-    public fun noDevice(): Any? = unwrap(this).getNoDevice()
+    public fun hostnameType(): String? = unwrap(this).getHostnameType()
 
     /**
-     * The virtual device name ( `ephemeral` N).
-     *
-     * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
-     * For example, an instance type with 2 available instance store volumes can specify mappings for
-     * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
-     * instance type. After you connect to the instance, you must mount the volume.
-     *
-     * NVMe instance store volumes are automatically enumerated and assigned a device name.
-     * Including them in your block device mapping has no effect.
-     *
-     * *Constraints* : For M3 instances, you must specify instance store volumes in the block device
-     * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
-     * specified in the block device mapping for the AMI.
-     *
-     *
-     * After the instance is running, modifying this parameter results in instance
-     * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-     * .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-virtualname)
-     */
-    public fun virtualName(): String? = unwrap(this).getVirtualName()
-
-    /**
-     * A builder for [BlockDeviceMappingProperty]
+     * A builder for [PrivateDnsNameOptionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ). 
-       *
-       * After the instance is running, this parameter is used to specify the device name of the
-       * block device mapping to update.
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      public fun deviceName(deviceName: String)
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      public fun ebs(ebs: IResolvable)
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      public fun ebs(ebs: EbsProperty)
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
-      public fun ebs(ebs: EbsProperty.Builder.() -> Unit)
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
 
       /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
+       * @param hostnameType The type of hostnames to assign to instances in the subnet at launch.
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      public fun noDevice(noDevice: IResolvable)
-
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      public fun noDevice(noDevice: NoDeviceProperty)
-
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
-      public fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit)
-
-      /**
-       * @param virtualName The virtual device name ( `ephemeral` N).
-       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
-       * For example, an instance type with 2 available instance store volumes can specify mappings for
-       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
-       * instance type. After you connect to the instance, you must mount the volume.
-       *
-       * NVMe instance store volumes are automatically enumerated and assigned a device name.
-       * Including them in your block device mapping has no effect.
-       *
-       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
-       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
-       * volumes specified in the block device mapping for the AMI.
-       *
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      public fun virtualName(virtualName: String)
+      public fun hostnameType(hostnameType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.builder()
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.builder()
 
       /**
-       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ). 
-       *
-       * After the instance is running, this parameter is used to specify the device name of the
-       * block device mapping to update.
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      override fun deviceName(deviceName: String) {
-        cdkBuilder.deviceName(deviceName)
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
       }
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsARecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS A records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
       }
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      override fun ebs(ebs: EbsProperty) {
-        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
       }
 
       /**
-       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
-       * launched.
-       *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
+       * @param enableResourceNameDnsAaaaRecord Indicates whether to respond to DNS queries for
+       * instance hostnames with DNS AAAA records.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
-      override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
-
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      override fun noDevice(noDevice: IResolvable) {
-        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
       }
 
       /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
+       * @param hostnameType The type of hostnames to assign to instances in the subnet at launch.
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        */
-      override fun noDevice(noDevice: NoDeviceProperty) {
-        cdkBuilder.noDevice(noDevice.let(NoDeviceProperty::unwrap))
+      override fun hostnameType(hostnameType: String) {
+        cdkBuilder.hostnameType(hostnameType)
       }
 
-      /**
-       * @param noDevice To omit the device from the block device mapping, specify an empty string.
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
-      override fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit): Unit =
-          noDevice(NoDeviceProperty(noDevice))
-
-      /**
-       * @param virtualName The virtual device name ( `ephemeral` N).
-       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
-       * For example, an instance type with 2 available instance store volumes can specify mappings for
-       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
-       * instance type. After you connect to the instance, you must mount the volume.
-       *
-       * NVMe instance store volumes are automatically enumerated and assigned a device name.
-       * Including them in your block device mapping has no effect.
-       *
-       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
-       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
-       * volumes specified in the block device mapping for the AMI.
-       *
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       */
-      override fun virtualName(virtualName: String) {
-        cdkBuilder.virtualName(virtualName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
+    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
       /**
-       * The device name (for example, `/dev/sdh` or `xvdh` ).
+       * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
        *
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        *
-       * After the instance is running, this parameter is used to specify the device name of the
-       * block device mapping to update.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-devicename)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsarecord)
        */
-      override fun deviceName(): String = unwrap(this).getDeviceName()
+      override fun enableResourceNameDnsARecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsARecord()
 
       /**
-       * Parameters used to automatically set up EBS volumes when the instance is launched.
+       * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
        *
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        *
-       * After the instance is running, you can modify only the `DeleteOnTermination` parameter for
-       * the attached volumes without interrupting the instance. Modifying any other parameter results
-       * in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-ebs)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-enableresourcenamednsaaaarecord)
        */
-      override fun ebs(): Any? = unwrap(this).getEbs()
+      override fun enableResourceNameDnsAaaaRecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsAaaaRecord()
 
       /**
-       * To omit the device from the block device mapping, specify an empty string.
+       * The type of hostnames to assign to instances in the subnet at launch.
        *
+       * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For
+       * IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack
+       * subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+       * For more information, see [Amazon EC2 instance hostname
+       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the
+       * *Amazon Elastic Compute Cloud User Guide* .
        *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-nodevice)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html#cfn-ec2-instance-privatednsnameoptions-hostnametype)
        */
-      override fun noDevice(): Any? = unwrap(this).getNoDevice()
-
-      /**
-       * The virtual device name ( `ephemeral` N).
-       *
-       * The name must be in the form `ephemeral` *X* where *X* is a number starting from zero (0).
-       * For example, an instance type with 2 available instance store volumes can specify mappings for
-       * `ephemeral0` and `ephemeral1` . The number of available instance store volumes depends on the
-       * instance type. After you connect to the instance, you must mount the volume.
-       *
-       * NVMe instance store volumes are automatically enumerated and assigned a device name.
-       * Including them in your block device mapping has no effect.
-       *
-       * *Constraints* : For M3 instances, you must specify instance store volumes in the block
-       * device mapping for the instance. When you launch an M3 instance, we ignore any instance store
-       * volumes specified in the block device mapping for the AMI.
-       *
-       *
-       * After the instance is running, modifying this parameter results in instance
-       * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-       * .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html#cfn-ec2-instance-blockdevicemapping-virtualname)
-       */
-      override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun hostnameType(): String? = unwrap(this).getHostnameType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateDnsNameOptionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty):
+          PrivateDnsNameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateDnsNameOptionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty
+      internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty
+    }
+  }
+
+  /**
+   * Specifies a secondary private IPv4 address for a network interface.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
+   * PrivateIpAddressSpecificationProperty.builder()
+   * .primary(false)
+   * .privateIpAddress("privateIpAddress")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html)
+   */
+  public interface PrivateIpAddressSpecificationProperty {
+    /**
+     * Indicates whether the private IPv4 address is the primary private IPv4 address.
+     *
+     * Only one IPv4 address can be designated as primary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-primary)
+     */
+    public fun primary(): Any
+
+    /**
+     * The private IPv4 address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-privateipaddress)
+     */
+    public fun privateIpAddress(): String
+
+    /**
+     * A builder for [PrivateIpAddressSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address. 
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: Boolean)
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address. 
+       * Only one IPv4 address can be designated as primary.
+       */
+      public fun primary(primary: IResolvable)
+
+      /**
+       * @param privateIpAddress The private IPv4 address. 
+       */
+      public fun privateIpAddress(privateIpAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.builder()
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address. 
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: Boolean) {
+        cdkBuilder.primary(primary)
+      }
+
+      /**
+       * @param primary Indicates whether the private IPv4 address is the primary private IPv4
+       * address. 
+       * Only one IPv4 address can be designated as primary.
+       */
+      override fun primary(primary: IResolvable) {
+        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param privateIpAddress The private IPv4 address. 
+       */
+      override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
+    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+      /**
+       * Indicates whether the private IPv4 address is the primary private IPv4 address.
+       *
+       * Only one IPv4 address can be designated as primary.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-primary)
+       */
+      override fun primary(): Any = unwrap(this).getPrimary()
+
+      /**
+       * The private IPv4 address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privateipaddressspecification.html#cfn-ec2-instance-privateipaddressspecification-privateipaddress)
+       */
+      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateIpAddressSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty):
+          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty
     }
   }
 
@@ -6591,8 +7015,7 @@ public open class CfnInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
     ) : CdkObject(cdkObject), SsmAssociationProperty {
       /**
        * The input parameter values to use with the associated SSM document.
@@ -6628,18 +7051,11 @@ public open class CfnInstance internal constructor(
   }
 
   /**
-   * Specifies the CPU options for the instance.
+   * Specifies a volume to attach to an instance.
    *
-   * When you specify CPU options, you must specify both the number of CPU cores and threads per
-   * core.
-   *
-   * Modifying the CPU options for an instance results in instance
-   * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-   * .
-   *
-   * For more information, see [Optimize CPU
-   * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
-   * *Amazon Elastic Compute Cloud User Guide* .
+   * `Volume` is an embedded property of the
+   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+   * resource.
    *
    * Example:
    *
@@ -6647,534 +7063,104 @@ public open class CfnInstance internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CpuOptionsProperty cpuOptionsProperty = CpuOptionsProperty.builder()
-   * .coreCount(123)
-   * .threadsPerCore(123)
+   * VolumeProperty volumeProperty = VolumeProperty.builder()
+   * .device("device")
+   * .volumeId("volumeId")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html)
    */
-  public interface CpuOptionsProperty {
+  public interface VolumeProperty {
     /**
-     * The number of CPU cores for the instance.
+     * The device name (for example, `/dev/sdh` or `xvdh` ).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-device)
      */
-    public fun coreCount(): Number? = unwrap(this).getCoreCount()
+    public fun device(): String
 
     /**
-     * The number of threads per CPU core.
+     * The ID of the EBS volume.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore)
+     * The volume and instance must be within the same Availability Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-volumeid)
      */
-    public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+    public fun volumeId(): String
 
     /**
-     * A builder for [CpuOptionsProperty]
+     * A builder for [VolumeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param coreCount The number of CPU cores for the instance.
+       * @param device The device name (for example, `/dev/sdh` or `xvdh` ). 
        */
-      public fun coreCount(coreCount: Number)
+      public fun device(device: String)
 
       /**
-       * @param threadsPerCore The number of threads per CPU core.
+       * @param volumeId The ID of the EBS volume. 
+       * The volume and instance must be within the same Availability Zone.
        */
-      public fun threadsPerCore(threadsPerCore: Number)
+      public fun volumeId(volumeId: String)
     }
 
     private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.builder()
+      private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.Builder
+          = software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.builder()
 
       /**
-       * @param coreCount The number of CPU cores for the instance.
+       * @param device The device name (for example, `/dev/sdh` or `xvdh` ). 
        */
-      override fun coreCount(coreCount: Number) {
-        cdkBuilder.coreCount(coreCount)
+      override fun device(device: String) {
+        cdkBuilder.device(device)
       }
 
       /**
-       * @param threadsPerCore The number of threads per CPU core.
+       * @param volumeId The ID of the EBS volume. 
+       * The volume and instance must be within the same Availability Zone.
        */
-      override fun threadsPerCore(threadsPerCore: Number) {
-        cdkBuilder.threadsPerCore(threadsPerCore)
+      override fun volumeId(volumeId: String) {
+        cdkBuilder.volumeId(volumeId)
       }
 
-      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty =
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
-    ) : CdkObject(cdkObject), CpuOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
+    ) : CdkObject(cdkObject), VolumeProperty {
       /**
-       * The number of CPU cores for the instance.
+       * The device name (for example, `/dev/sdh` or `xvdh` ).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-device)
        */
-      override fun coreCount(): Number? = unwrap(this).getCoreCount()
+      override fun device(): String = unwrap(this).getDevice()
 
       /**
-       * The number of threads per CPU core.
+       * The ID of the EBS volume.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore)
+       * The volume and instance must be within the same Availability Zone.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-volume.html#cfn-ec2-instance-volume-volumeid)
        */
-      override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+      override fun volumeId(): String = unwrap(this).getVolumeId()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CpuOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty):
-          CpuOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CpuOptionsProperty ?:
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty):
+          VolumeProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CpuOptionsProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty
-    }
-  }
-
-  /**
-   * Specifies the Elastic Inference Accelerator for the instance.
-   *
-   * `ElasticInferenceAccelerator` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ElasticInferenceAcceleratorProperty elasticInferenceAcceleratorProperty =
-   * ElasticInferenceAcceleratorProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .count(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html)
-   */
-  public interface ElasticInferenceAcceleratorProperty {
-    /**
-     * The number of elastic inference accelerators to attach to the instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count)
-     */
-    public fun count(): Number? = unwrap(this).getCount()
-
-    /**
-     * The type of elastic inference accelerator.
-     *
-     * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
-     * `eia2.large` , and `eia2.xlarge` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ElasticInferenceAcceleratorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param count The number of elastic inference accelerators to attach to the instance.
-       */
-      public fun count(count: Number)
-
-      /**
-       * @param type The type of elastic inference accelerator. 
-       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
-       * `eia2.large` , and `eia2.xlarge` .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.builder()
-
-      /**
-       * @param count The number of elastic inference accelerators to attach to the instance.
-       */
-      override fun count(count: Number) {
-        cdkBuilder.count(count)
-      }
-
-      /**
-       * @param type The type of elastic inference accelerator. 
-       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
-       * `eia2.large` , and `eia2.xlarge` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), ElasticInferenceAcceleratorProperty {
-      /**
-       * The number of elastic inference accelerators to attach to the instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count)
-       */
-      override fun count(): Number? = unwrap(this).getCount()
-
-      /**
-       * The type of elastic inference accelerator.
-       *
-       * The possible values are `eia1.medium` , `eia1.large` , `eia1.xlarge` , `eia2.medium` ,
-       * `eia2.large` , and `eia2.xlarge` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ElasticInferenceAcceleratorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty):
-          ElasticInferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticInferenceAcceleratorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticInferenceAcceleratorProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty
-    }
-  }
-
-  /**
-   * Amazon Elastic Graphics reached end of life on January 8, 2024.
-   *
-   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
-   * G4dn, or G5 instances.
-   *
-   * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to your
-   * Amazon EC2 instance to accelerate the graphics performance of your applications. For more
-   * information, see [Amazon EC2 Elastic
-   * GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon
-   * EC2 User Guide for Windows Instances* .
-   *
-   * `ElasticGpuSpecification` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
-   * ElasticGpuSpecificationProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html)
-   */
-  public interface ElasticGpuSpecificationProperty {
-    /**
-     * The type of Elastic Graphics accelerator.
-     *
-     * For more information about the values to specify for `Type` , see [Elastic Graphics
-     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-     * User Guide for Windows Instances* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ElasticGpuSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The type of Elastic Graphics accelerator. 
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.Builder =
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.builder()
-
-      /**
-       * @param type The type of Elastic Graphics accelerator. 
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
-    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
-      /**
-       * The type of Elastic Graphics accelerator.
-       *
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticGpuSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty):
-          ElasticGpuSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticGpuSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty
-    }
-  }
-
-  /**
-   * Specifies a launch template to use when launching an Amazon EC2 instance.
-   *
-   * You must specify the following:
-   *
-   * * The ID or the name of the launch template, but not both.
-   * * The version of the launch template.
-   *
-   * `LaunchTemplateSpecification` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
-   * For information about creating a launch template, see
-   * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-   * and [Create a launch
-   * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
-   * in the *Amazon EC2 User Guide* .
-   *
-   * For examples of launch templates, see
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
-   * LaunchTemplateSpecificationProperty.builder()
-   * .version("version")
-   * // the properties below are optional
-   * .launchTemplateId("launchTemplateId")
-   * .launchTemplateName("launchTemplateName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html)
-   */
-  public interface LaunchTemplateSpecificationProperty {
-    /**
-     * The ID of the launch template.
-     *
-     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
-     */
-    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-    /**
-     * The name of the launch template.
-     *
-     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
-     */
-    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-    /**
-     * The version number of the launch template.
-     *
-     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
-     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
-     * function. For more information, see
-     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [LaunchTemplateSpecificationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-       */
-      public fun launchTemplateId(launchTemplateId: String)
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      public fun launchTemplateName(launchTemplateName: String)
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.builder()
-
-      /**
-       * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-       */
-      override fun launchTemplateId(launchTemplateId: String) {
-        cdkBuilder.launchTemplateId(launchTemplateId)
-      }
-
-      /**
-       * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       */
-      override fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-      }
-
-      /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
-      /**
-       * The ID of the launch template.
-       *
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
-       */
-      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
-
-      /**
-       * The name of the launch template.
-       *
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
-       */
-      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
-
-      /**
-       * The version number of the launch template.
-       *
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          LaunchTemplateSpecificationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty
+      internal fun unwrap(wrapped: VolumeProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty
     }
   }
 }

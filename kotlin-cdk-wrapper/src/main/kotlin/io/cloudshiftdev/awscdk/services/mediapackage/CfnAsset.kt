@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)
  */
-public open class CfnAsset internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset,
+public open class CfnAsset(
+  cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -421,7 +421,7 @@ public open class CfnAsset internal constructor(
         CfnAsset(cdkObject)
 
     internal fun unwrap(wrapped: CfnAsset): software.amazon.awscdk.services.mediapackage.CfnAsset =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.mediapackage.CfnAsset
   }
 
   /**
@@ -499,8 +499,7 @@ public open class CfnAsset internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty,
+      cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty,
     ) : CdkObject(cdkObject), EgressEndpointProperty {
       /**
        * The ID of a packaging configuration that's applied to this asset.

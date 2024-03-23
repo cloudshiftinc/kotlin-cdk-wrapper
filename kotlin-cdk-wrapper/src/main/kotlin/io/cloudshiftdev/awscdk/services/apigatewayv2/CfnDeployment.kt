@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html)
  */
-public open class CfnDeployment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDeployment,
+public open class CfnDeployment(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDeployment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -187,6 +187,7 @@ public open class CfnDeployment internal constructor(
         CfnDeployment = CfnDeployment(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeployment):
-        software.amazon.awscdk.services.apigatewayv2.CfnDeployment = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.CfnDeployment = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.CfnDeployment
   }
 }

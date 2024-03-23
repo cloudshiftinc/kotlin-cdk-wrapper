@@ -105,8 +105,9 @@ public interface CfnLoadBalancerProps {
   public fun appCookieStickinessPolicy(): Any? = unwrap(this).getAppCookieStickinessPolicy()
 
   /**
-   * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-   * instead.
+   * The Availability Zones for a load balancer in a default VPC.
+   *
+   * For a load balancer in a nondefault VPC, specify `Subnets` instead.
    *
    * Update requires replacement if you did not previously specify an Availability Zone or if you
    * are removing all Availability Zones. Otherwise, update requires no interruption.
@@ -299,16 +300,18 @@ public interface CfnLoadBalancerProps {
     public fun appCookieStickinessPolicy(vararg appCookieStickinessPolicy: Any)
 
     /**
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead.
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC.
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
+     *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      */
     public fun availabilityZones(availabilityZones: List<String>)
 
     /**
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead.
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC.
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
+     *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      */
@@ -619,8 +622,9 @@ public interface CfnLoadBalancerProps {
         appCookieStickinessPolicy(appCookieStickinessPolicy.toList())
 
     /**
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead.
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC.
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
+     *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      */
@@ -629,8 +633,9 @@ public interface CfnLoadBalancerProps {
     }
 
     /**
-     * @param availabilityZones The Availability Zones for the load balancer. For load balancers in
-     * a VPC, specify `Subnets` instead.
+     * @param availabilityZones The Availability Zones for a load balancer in a default VPC.
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
+     *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.
      */
@@ -937,8 +942,7 @@ public interface CfnLoadBalancerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancerProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancerProps,
   ) : CdkObject(cdkObject), CfnLoadBalancerProps {
     /**
      * Information about where and how access logs are stored for the load balancer.
@@ -955,8 +959,9 @@ public interface CfnLoadBalancerProps {
     override fun appCookieStickinessPolicy(): Any? = unwrap(this).getAppCookieStickinessPolicy()
 
     /**
-     * The Availability Zones for the load balancer. For load balancers in a VPC, specify `Subnets`
-     * instead.
+     * The Availability Zones for a load balancer in a default VPC.
+     *
+     * For a load balancer in a nondefault VPC, specify `Subnets` instead.
      *
      * Update requires replacement if you did not previously specify an Availability Zone or if you
      * are removing all Availability Zones. Otherwise, update requires no interruption.

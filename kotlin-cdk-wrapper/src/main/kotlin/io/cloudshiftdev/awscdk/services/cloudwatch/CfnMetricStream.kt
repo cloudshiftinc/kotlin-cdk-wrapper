@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html)
  */
-public open class CfnMetricStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
+public open class CfnMetricStream(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -905,283 +905,8 @@ public open class CfnMetricStream internal constructor(
         CfnMetricStream = CfnMetricStream(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricStream):
-        software.amazon.awscdk.services.cloudwatch.CfnMetricStream = wrapped.cdkObject
-  }
-
-  /**
-   * This structure specifies a list of additional statistics to stream, and the metrics to stream
-   * those additional statistics for.
-   *
-   * All metrics that match the combination of metric name and namespace will be streamed with the
-   * additional statistics, no matter their dimensions.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricStreamStatisticsConfigurationProperty metricStreamStatisticsConfigurationProperty =
-   * MetricStreamStatisticsConfigurationProperty.builder()
-   * .additionalStatistics(List.of("additionalStatistics"))
-   * .includeMetrics(List.of(MetricStreamStatisticsMetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html)
-   */
-  public interface MetricStreamStatisticsConfigurationProperty {
-    /**
-     * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-additionalstatistics)
-     */
-    public fun additionalStatistics(): List<String>
-
-    /**
-     * An array that defines the metrics that are to have additional statistics streamed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-includemetrics)
-     */
-    public fun includeMetrics(): Any
-
-    /**
-     * A builder for [MetricStreamStatisticsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param additionalStatistics The additional statistics to stream for the metrics listed in
-       * `IncludeMetrics` . 
-       */
-      public fun additionalStatistics(additionalStatistics: List<String>)
-
-      /**
-       * @param additionalStatistics The additional statistics to stream for the metrics listed in
-       * `IncludeMetrics` . 
-       */
-      public fun additionalStatistics(vararg additionalStatistics: String)
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      public fun includeMetrics(includeMetrics: IResolvable)
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      public fun includeMetrics(includeMetrics: List<Any>)
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      public fun includeMetrics(vararg includeMetrics: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty.builder()
-
-      /**
-       * @param additionalStatistics The additional statistics to stream for the metrics listed in
-       * `IncludeMetrics` . 
-       */
-      override fun additionalStatistics(additionalStatistics: List<String>) {
-        cdkBuilder.additionalStatistics(additionalStatistics)
-      }
-
-      /**
-       * @param additionalStatistics The additional statistics to stream for the metrics listed in
-       * `IncludeMetrics` . 
-       */
-      override fun additionalStatistics(vararg additionalStatistics: String): Unit =
-          additionalStatistics(additionalStatistics.toList())
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      override fun includeMetrics(includeMetrics: IResolvable) {
-        cdkBuilder.includeMetrics(includeMetrics.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      override fun includeMetrics(includeMetrics: List<Any>) {
-        cdkBuilder.includeMetrics(includeMetrics)
-      }
-
-      /**
-       * @param includeMetrics An array that defines the metrics that are to have additional
-       * statistics streamed. 
-       */
-      override fun includeMetrics(vararg includeMetrics: Any): Unit =
-          includeMetrics(includeMetrics.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
-    ) : CdkObject(cdkObject), MetricStreamStatisticsConfigurationProperty {
-      /**
-       * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-additionalstatistics)
-       */
-      override fun additionalStatistics(): List<String> = unwrap(this).getAdditionalStatistics()
-
-      /**
-       * An array that defines the metrics that are to have additional statistics streamed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-includemetrics)
-       */
-      override fun includeMetrics(): Any = unwrap(this).getIncludeMetrics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MetricStreamStatisticsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty):
-          MetricStreamStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricStreamStatisticsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricStreamStatisticsConfigurationProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
-    }
-  }
-
-  /**
-   * A structure that specifies the metric name and namespace for one metric that is going to have
-   * additional statistics included in the stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
-   * MetricStreamStatisticsMetricProperty metricStreamStatisticsMetricProperty =
-   * MetricStreamStatisticsMetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html)
-   */
-  public interface MetricStreamStatisticsMetricProperty {
-    /**
-     * The name of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-metricname)
-     */
-    public fun metricName(): String
-
-    /**
-     * The namespace of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-namespace)
-     */
-    public fun namespace(): String
-
-    /**
-     * A builder for [MetricStreamStatisticsMetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricName The name of the metric. 
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace of the metric. 
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
-
-      /**
-       * @param metricName The name of the metric. 
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param namespace The namespace of the metric. 
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
-    ) : CdkObject(cdkObject), MetricStreamStatisticsMetricProperty {
-      /**
-       * The name of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-metricname)
-       */
-      override fun metricName(): String = unwrap(this).getMetricName()
-
-      /**
-       * The namespace of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-namespace)
-       */
-      override fun namespace(): String = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MetricStreamStatisticsMetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty):
-          MetricStreamStatisticsMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MetricStreamStatisticsMetricProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricStreamStatisticsMetricProperty):
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
-    }
+        software.amazon.awscdk.services.cloudwatch.CfnMetricStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.CfnMetricStream
   }
 
   /**
@@ -1312,8 +1037,7 @@ public open class CfnMetricStream internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
     ) : CdkObject(cdkObject), MetricStreamFilterProperty {
       /**
        * The names of the metrics to either include or exclude from the metric stream.
@@ -1354,6 +1078,280 @@ public open class CfnMetricStream internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty
+    }
+  }
+
+  /**
+   * This structure specifies a list of additional statistics to stream, and the metrics to stream
+   * those additional statistics for.
+   *
+   * All metrics that match the combination of metric name and namespace will be streamed with the
+   * additional statistics, no matter their dimensions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * MetricStreamStatisticsConfigurationProperty metricStreamStatisticsConfigurationProperty =
+   * MetricStreamStatisticsConfigurationProperty.builder()
+   * .additionalStatistics(List.of("additionalStatistics"))
+   * .includeMetrics(List.of(MetricStreamStatisticsMetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html)
+   */
+  public interface MetricStreamStatisticsConfigurationProperty {
+    /**
+     * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-additionalstatistics)
+     */
+    public fun additionalStatistics(): List<String>
+
+    /**
+     * An array that defines the metrics that are to have additional statistics streamed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-includemetrics)
+     */
+    public fun includeMetrics(): Any
+
+    /**
+     * A builder for [MetricStreamStatisticsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalStatistics The additional statistics to stream for the metrics listed in
+       * `IncludeMetrics` . 
+       */
+      public fun additionalStatistics(additionalStatistics: List<String>)
+
+      /**
+       * @param additionalStatistics The additional statistics to stream for the metrics listed in
+       * `IncludeMetrics` . 
+       */
+      public fun additionalStatistics(vararg additionalStatistics: String)
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      public fun includeMetrics(includeMetrics: IResolvable)
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      public fun includeMetrics(includeMetrics: List<Any>)
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      public fun includeMetrics(vararg includeMetrics: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty.builder()
+
+      /**
+       * @param additionalStatistics The additional statistics to stream for the metrics listed in
+       * `IncludeMetrics` . 
+       */
+      override fun additionalStatistics(additionalStatistics: List<String>) {
+        cdkBuilder.additionalStatistics(additionalStatistics)
+      }
+
+      /**
+       * @param additionalStatistics The additional statistics to stream for the metrics listed in
+       * `IncludeMetrics` . 
+       */
+      override fun additionalStatistics(vararg additionalStatistics: String): Unit =
+          additionalStatistics(additionalStatistics.toList())
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      override fun includeMetrics(includeMetrics: IResolvable) {
+        cdkBuilder.includeMetrics(includeMetrics.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      override fun includeMetrics(includeMetrics: List<Any>) {
+        cdkBuilder.includeMetrics(includeMetrics)
+      }
+
+      /**
+       * @param includeMetrics An array that defines the metrics that are to have additional
+       * statistics streamed. 
+       */
+      override fun includeMetrics(vararg includeMetrics: Any): Unit =
+          includeMetrics(includeMetrics.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
+    ) : CdkObject(cdkObject), MetricStreamStatisticsConfigurationProperty {
+      /**
+       * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-additionalstatistics)
+       */
+      override fun additionalStatistics(): List<String> = unwrap(this).getAdditionalStatistics()
+
+      /**
+       * An array that defines the metrics that are to have additional statistics streamed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html#cfn-cloudwatch-metricstream-metricstreamstatisticsconfiguration-includemetrics)
+       */
+      override fun includeMetrics(): Any = unwrap(this).getIncludeMetrics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetricStreamStatisticsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty):
+          MetricStreamStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamStatisticsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricStreamStatisticsConfigurationProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
+    }
+  }
+
+  /**
+   * A structure that specifies the metric name and namespace for one metric that is going to have
+   * additional statistics included in the stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+   * MetricStreamStatisticsMetricProperty metricStreamStatisticsMetricProperty =
+   * MetricStreamStatisticsMetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html)
+   */
+  public interface MetricStreamStatisticsMetricProperty {
+    /**
+     * The name of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-metricname)
+     */
+    public fun metricName(): String
+
+    /**
+     * The namespace of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * A builder for [MetricStreamStatisticsMetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricName The name of the metric. 
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric. 
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
+
+      /**
+       * @param metricName The name of the metric. 
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace of the metric. 
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
+    ) : CdkObject(cdkObject), MetricStreamStatisticsMetricProperty {
+      /**
+       * The name of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-metricname)
+       */
+      override fun metricName(): String = unwrap(this).getMetricName()
+
+      /**
+       * The namespace of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsmetric.html#cfn-cloudwatch-metricstream-metricstreamstatisticsmetric-namespace)
+       */
+      override fun namespace(): String = unwrap(this).getNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetricStreamStatisticsMetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty):
+          MetricStreamStatisticsMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamStatisticsMetricProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricStreamStatisticsMetricProperty):
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
     }
   }
 }

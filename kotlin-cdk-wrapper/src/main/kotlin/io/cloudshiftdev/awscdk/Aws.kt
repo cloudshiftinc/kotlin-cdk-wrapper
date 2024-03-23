@@ -13,8 +13,8 @@ import kotlin.collections.List
  * construct tree, this class takes an scope parameter; the pseudo parameter
  * values can be obtained as properties from an scoped object.
  */
-public open class Aws internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Aws,
+public open class Aws(
+  cdkObject: software.amazon.awscdk.Aws,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val ACCOUNT_ID: String = software.amazon.awscdk.Aws.ACCOUNT_ID
@@ -35,6 +35,7 @@ public open class Aws internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Aws): Aws = Aws(cdkObject)
 
-    internal fun unwrap(wrapped: Aws): software.amazon.awscdk.Aws = wrapped.cdkObject
+    internal fun unwrap(wrapped: Aws): software.amazon.awscdk.Aws = wrapped.cdkObject as
+        software.amazon.awscdk.Aws
   }
 }

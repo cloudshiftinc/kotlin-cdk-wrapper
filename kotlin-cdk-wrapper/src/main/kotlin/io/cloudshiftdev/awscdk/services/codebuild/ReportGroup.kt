@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ReportGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.ReportGroup,
+public open class ReportGroup(
+  cdkObject: software.amazon.awscdk.services.codebuild.ReportGroup,
 ) : Resource(cdkObject), IReportGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -234,6 +234,6 @@ public open class ReportGroup internal constructor(
         = ReportGroup(cdkObject)
 
     internal fun unwrap(wrapped: ReportGroup): software.amazon.awscdk.services.codebuild.ReportGroup
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.codebuild.ReportGroup
   }
 }

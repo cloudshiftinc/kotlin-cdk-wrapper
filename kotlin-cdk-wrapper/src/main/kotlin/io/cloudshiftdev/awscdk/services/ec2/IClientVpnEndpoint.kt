@@ -27,7 +27,7 @@ public interface IClientVpnEndpoint : IResource, IConnectable {
   public fun targetNetworksAssociated(): IDependable
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.IClientVpnEndpoint,
+    cdkObject: software.amazon.awscdk.services.ec2.IClientVpnEndpoint,
   ) : CdkObject(cdkObject), IClientVpnEndpoint {
     /**
      * Apply the given removal policy to this resource.

@@ -216,7 +216,7 @@ public interface CfnAllowListProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowListProps,
+    cdkObject: software.amazon.awscdk.services.macie.CfnAllowListProps,
   ) : CdkObject(cdkObject), CfnAllowListProps {
     /**
      * The criteria that specify the text or text pattern to ignore.

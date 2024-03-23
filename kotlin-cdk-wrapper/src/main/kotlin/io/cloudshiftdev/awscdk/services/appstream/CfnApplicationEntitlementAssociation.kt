@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html)
  */
-public open class CfnApplicationEntitlementAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation,
+public open class CfnApplicationEntitlementAssociation(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -189,6 +188,7 @@ public open class CfnApplicationEntitlementAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnApplicationEntitlementAssociation):
         software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation
   }
 }

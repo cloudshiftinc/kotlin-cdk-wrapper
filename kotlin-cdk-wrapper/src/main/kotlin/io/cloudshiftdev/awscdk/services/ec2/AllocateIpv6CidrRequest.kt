@@ -99,7 +99,7 @@ public interface AllocateIpv6CidrRequest {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest,
+    cdkObject: software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest,
   ) : CdkObject(cdkObject), AllocateIpv6CidrRequest {
     /**
      * List of subnets allocated with IPv4 CIDRs.

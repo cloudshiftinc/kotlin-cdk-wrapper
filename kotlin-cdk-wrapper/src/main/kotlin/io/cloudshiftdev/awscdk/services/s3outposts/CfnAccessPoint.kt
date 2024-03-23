@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html)
  */
-public open class CfnAccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint,
+public open class CfnAccessPoint(
+  cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -302,7 +302,8 @@ public open class CfnAccessPoint internal constructor(
         CfnAccessPoint = CfnAccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPoint):
-        software.amazon.awscdk.services.s3outposts.CfnAccessPoint = wrapped.cdkObject
+        software.amazon.awscdk.services.s3outposts.CfnAccessPoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3outposts.CfnAccessPoint
   }
 
   /**
@@ -359,8 +360,7 @@ public open class CfnAccessPoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty,
     ) : CdkObject(cdkObject), VpcConfigurationProperty {
       /**
        * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.

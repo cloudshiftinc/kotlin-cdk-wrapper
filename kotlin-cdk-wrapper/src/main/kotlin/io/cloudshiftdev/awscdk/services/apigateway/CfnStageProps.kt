@@ -552,7 +552,7 @@ public interface CfnStageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnStageProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnStageProps,
   ) : CdkObject(cdkObject), CfnStageProps {
     /**
      * Access log settings, including the access log format and access log destination ARN.

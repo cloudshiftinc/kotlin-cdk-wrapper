@@ -57,9 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
  */
-public open class CfnLoggerDefinitionVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion,
+public open class CfnLoggerDefinitionVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -238,7 +237,8 @@ public open class CfnLoggerDefinitionVersion internal constructor(
         CfnLoggerDefinitionVersion = CfnLoggerDefinitionVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggerDefinitionVersion):
-        software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion
   }
 
   /**
@@ -426,8 +426,7 @@ public open class CfnLoggerDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion.LoggerProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion.LoggerProperty,
     ) : CdkObject(cdkObject), LoggerProperty {
       /**
        * The source of the log event.

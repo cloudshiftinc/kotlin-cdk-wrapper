@@ -21,7 +21,7 @@ public interface IListenerAction {
   public fun renderRuleActions(): List<CfnListenerRule.ActionProperty>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction,
   ) : CdkObject(cdkObject), IListenerAction {
     /**
      * Render the listener default actions in this chain.

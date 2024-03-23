@@ -76,7 +76,7 @@ public interface SNSActionConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.SNSActionConfig,
+    cdkObject: software.amazon.awscdk.services.ses.SNSActionConfig,
   ) : CdkObject(cdkObject), SNSActionConfig {
     /**
      * The encoding to use for the email within the Amazon SNS notification.

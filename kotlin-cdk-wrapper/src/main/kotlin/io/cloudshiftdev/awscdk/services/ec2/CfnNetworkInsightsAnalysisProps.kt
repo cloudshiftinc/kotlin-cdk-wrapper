@@ -168,7 +168,7 @@ public interface CfnNetworkInsightsAnalysisProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps,
   ) : CdkObject(cdkObject), CfnNetworkInsightsAnalysisProps {
     /**
      * The member accounts that contain resources that the path can traverse.

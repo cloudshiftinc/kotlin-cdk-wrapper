@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connector.html)
  */
-public open class CfnConnector internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appflow.CfnConnector,
+public open class CfnConnector(
+  cdkObject: software.amazon.awscdk.services.appflow.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -293,7 +293,7 @@ public open class CfnConnector internal constructor(
         = CfnConnector(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnector): software.amazon.awscdk.services.appflow.CfnConnector
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appflow.CfnConnector
   }
 
   /**
@@ -387,8 +387,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty,
     ) : CdkObject(cdkObject), ConnectorProvisioningConfigProperty {
       /**
        * Contains information about the configuration of the lambda which is being registered as the
@@ -474,8 +473,7 @@ public open class CfnConnector internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty,
     ) : CdkObject(cdkObject), LambdaConnectorProvisioningConfigProperty {
       /**
        * Lambda ARN of the connector being registered.

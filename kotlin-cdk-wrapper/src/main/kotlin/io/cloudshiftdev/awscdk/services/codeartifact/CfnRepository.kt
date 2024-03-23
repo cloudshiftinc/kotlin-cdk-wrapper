@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html)
  */
-public open class CfnRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepository,
+public open class CfnRepository(
+  cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -466,6 +466,7 @@ public open class CfnRepository internal constructor(
         CfnRepository = CfnRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepository):
-        software.amazon.awscdk.services.codeartifact.CfnRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.codeartifact.CfnRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.codeartifact.CfnRepository
   }
 }

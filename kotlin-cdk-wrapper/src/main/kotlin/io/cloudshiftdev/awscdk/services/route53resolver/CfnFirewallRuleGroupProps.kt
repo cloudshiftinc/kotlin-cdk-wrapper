@@ -150,8 +150,7 @@ public interface CfnFirewallRuleGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps,
+    cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps,
   ) : CdkObject(cdkObject), CfnFirewallRuleGroupProps {
     /**
      * A list of the rules that you have defined.

@@ -497,7 +497,7 @@ public interface CfnConfigurationRecorderProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorderProps,
+    cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorderProps,
   ) : CdkObject(cdkObject), CfnConfigurationRecorderProps {
     /**
      * The name of the configuration recorder. AWS Config automatically assigns the name of

@@ -64,8 +64,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AssetApiDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.AssetApiDefinition,
+public open class AssetApiDefinition(
+  cdkObject: software.amazon.awscdk.services.apigateway.AssetApiDefinition,
 ) : ApiDefinition(cdkObject) {
   public constructor(path: String) :
       this(software.amazon.awscdk.services.apigateway.AssetApiDefinition(path)
@@ -446,6 +446,7 @@ public open class AssetApiDefinition internal constructor(
         AssetApiDefinition = AssetApiDefinition(cdkObject)
 
     internal fun unwrap(wrapped: AssetApiDefinition):
-        software.amazon.awscdk.services.apigateway.AssetApiDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.AssetApiDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.AssetApiDefinition
   }
 }

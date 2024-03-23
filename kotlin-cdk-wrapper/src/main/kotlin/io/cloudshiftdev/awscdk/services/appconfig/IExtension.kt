@@ -59,7 +59,7 @@ public interface IExtension : IResource {
       emptyList()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IExtension,
+    cdkObject: software.amazon.awscdk.services.appconfig.IExtension,
   ) : CdkObject(cdkObject), IExtension {
     /**
      * The actions for the extension.

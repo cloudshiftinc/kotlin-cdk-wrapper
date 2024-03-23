@@ -182,7 +182,7 @@ public interface InitFileOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitFileOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.InitFileOptions,
   ) : CdkObject(cdkObject), InitFileOptions {
     /**
      * True if the inlined content (from a string or file) should be treated as base64 encoded.

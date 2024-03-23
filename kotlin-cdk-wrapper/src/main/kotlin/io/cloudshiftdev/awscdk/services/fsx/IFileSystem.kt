@@ -18,7 +18,7 @@ public interface IFileSystem : IConnectable {
   public fun fileSystemId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fsx.IFileSystem,
+    cdkObject: software.amazon.awscdk.services.fsx.IFileSystem,
   ) : CdkObject(cdkObject), IFileSystem {
     /**
      * The network connections associated with this resource.

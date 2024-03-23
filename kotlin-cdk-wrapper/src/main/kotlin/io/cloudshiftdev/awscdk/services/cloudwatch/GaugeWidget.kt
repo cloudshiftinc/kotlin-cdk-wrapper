@@ -30,8 +30,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class GaugeWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidget,
+public open class GaugeWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: GaugeWidgetProps) :
       this(software.amazon.awscdk.services.cloudwatch.GaugeWidget(props.let(GaugeWidgetProps::unwrap))
@@ -467,6 +467,7 @@ public open class GaugeWidget internal constructor(
         GaugeWidget = GaugeWidget(cdkObject)
 
     internal fun unwrap(wrapped: GaugeWidget):
-        software.amazon.awscdk.services.cloudwatch.GaugeWidget = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.GaugeWidget = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.GaugeWidget
   }
 }

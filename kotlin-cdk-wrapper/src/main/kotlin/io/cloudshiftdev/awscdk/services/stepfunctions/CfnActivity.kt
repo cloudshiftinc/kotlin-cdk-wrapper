@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html)
  */
-public open class CfnActivity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivity,
+public open class CfnActivity(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivity,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,7 +245,8 @@ public open class CfnActivity internal constructor(
         CfnActivity = CfnActivity(cdkObject)
 
     internal fun unwrap(wrapped: CfnActivity):
-        software.amazon.awscdk.services.stepfunctions.CfnActivity = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CfnActivity = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CfnActivity
   }
 
   /**
@@ -321,8 +322,7 @@ public open class CfnActivity internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty,
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty,
     ) : CdkObject(cdkObject), TagsEntryProperty {
       /**
        * The `key` for a key-value pair in a tag entry.

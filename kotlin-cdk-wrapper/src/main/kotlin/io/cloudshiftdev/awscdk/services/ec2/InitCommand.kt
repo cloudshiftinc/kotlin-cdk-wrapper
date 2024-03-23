@@ -19,8 +19,8 @@ import kotlin.jvm.JvmName
  * InitService.enable("nginx", InitServiceOptions.builder().serviceRestartHandle(handle).build()));
  * ```
  */
-public open class InitCommand internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitCommand,
+public open class InitCommand(
+  cdkObject: software.amazon.awscdk.services.ec2.InitCommand,
 ) : InitElement(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -58,6 +58,6 @@ public open class InitCommand internal constructor(
         InitCommand(cdkObject)
 
     internal fun unwrap(wrapped: InitCommand): software.amazon.awscdk.services.ec2.InitCommand =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.InitCommand
   }
 }

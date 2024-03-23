@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class EventBridgeDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSource,
+public open class EventBridgeDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSource,
 ) : BackedDataSource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -175,6 +175,7 @@ public open class EventBridgeDataSource internal constructor(
         EventBridgeDataSource = EventBridgeDataSource(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgeDataSource):
-        software.amazon.awscdk.services.appsync.EventBridgeDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.EventBridgeDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.EventBridgeDataSource
   }
 }

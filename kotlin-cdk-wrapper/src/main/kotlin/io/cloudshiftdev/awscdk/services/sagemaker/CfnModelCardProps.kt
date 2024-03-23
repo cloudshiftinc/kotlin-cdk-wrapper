@@ -540,7 +540,7 @@ public interface CfnModelCardProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCardProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCardProps,
   ) : CdkObject(cdkObject), CfnModelCardProps {
     /**
      * The content of the model card.

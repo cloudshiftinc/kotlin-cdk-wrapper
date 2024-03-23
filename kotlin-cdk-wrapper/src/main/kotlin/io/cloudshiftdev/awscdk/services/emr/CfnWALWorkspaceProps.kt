@@ -119,7 +119,7 @@ public interface CfnWALWorkspaceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspaceProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspaceProps,
   ) : CdkObject(cdkObject), CfnWALWorkspaceProps {
     /**
      * You can add tags when you create a new workspace.

@@ -196,7 +196,7 @@ public interface CompositeAlarmProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarmProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarmProps,
   ) : CdkObject(cdkObject), CompositeAlarmProps {
     /**
      * Whether the actions for this alarm are enabled.

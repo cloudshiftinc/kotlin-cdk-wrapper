@@ -18,8 +18,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Cors internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.Cors,
+public open class Cors(
+  cdkObject: software.amazon.awscdk.services.apigateway.Cors,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val ALL_METHODS: List<String> =
@@ -35,6 +35,6 @@ public open class Cors internal constructor(
         Cors(cdkObject)
 
     internal fun unwrap(wrapped: Cors): software.amazon.awscdk.services.apigateway.Cors =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.Cors
   }
 }

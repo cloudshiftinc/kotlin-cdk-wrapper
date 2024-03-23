@@ -73,7 +73,7 @@ public interface SigningProfileAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes,
+    cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes,
   ) : CdkObject(cdkObject), SigningProfileAttributes {
     /**
      * The name of signing profile.

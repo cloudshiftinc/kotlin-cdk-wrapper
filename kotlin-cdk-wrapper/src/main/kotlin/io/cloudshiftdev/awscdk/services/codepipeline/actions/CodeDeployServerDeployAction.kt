@@ -31,9 +31,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class CodeDeployServerDeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction,
+public open class CodeDeployServerDeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeDeployServerDeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction(props.let(CodeDeployServerDeployActionProps::unwrap))
@@ -208,6 +207,7 @@ public open class CodeDeployServerDeployAction internal constructor(
 
     internal fun unwrap(wrapped: CodeDeployServerDeployAction):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction
   }
 }

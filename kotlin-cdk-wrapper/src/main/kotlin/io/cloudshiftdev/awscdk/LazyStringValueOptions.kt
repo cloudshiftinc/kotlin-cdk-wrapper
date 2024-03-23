@@ -56,7 +56,7 @@ public interface LazyStringValueOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.LazyStringValueOptions,
+    cdkObject: software.amazon.awscdk.LazyStringValueOptions,
   ) : CdkObject(cdkObject), LazyStringValueOptions {
     /**
      * Use the given name as a display hint.

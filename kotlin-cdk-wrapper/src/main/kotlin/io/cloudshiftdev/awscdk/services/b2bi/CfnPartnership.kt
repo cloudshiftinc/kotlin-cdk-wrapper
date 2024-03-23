@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html)
  */
-public open class CfnPartnership internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership,
+public open class CfnPartnership(
+  cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -364,6 +364,7 @@ public open class CfnPartnership internal constructor(
         CfnPartnership = CfnPartnership(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartnership):
-        software.amazon.awscdk.services.b2bi.CfnPartnership = wrapped.cdkObject
+        software.amazon.awscdk.services.b2bi.CfnPartnership = wrapped.cdkObject as
+        software.amazon.awscdk.services.b2bi.CfnPartnership
   }
 }

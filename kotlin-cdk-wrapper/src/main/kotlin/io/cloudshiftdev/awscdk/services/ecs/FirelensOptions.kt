@@ -116,7 +116,7 @@ public interface FirelensOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.FirelensOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.FirelensOptions,
   ) : CdkObject(cdkObject), FirelensOptions {
     /**
      * Custom configuration file, s3 or file.

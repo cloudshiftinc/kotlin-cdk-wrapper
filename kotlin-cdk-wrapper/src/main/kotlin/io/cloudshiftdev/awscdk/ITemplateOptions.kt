@@ -75,7 +75,7 @@ public interface ITemplateOptions {
   public fun transforms(vararg `value`: String): Unit = transforms(`value`.toList())
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ITemplateOptions,
+    cdkObject: software.amazon.awscdk.ITemplateOptions,
   ) : CdkObject(cdkObject), ITemplateOptions {
     /**
      * Gets or sets the description of this stack.

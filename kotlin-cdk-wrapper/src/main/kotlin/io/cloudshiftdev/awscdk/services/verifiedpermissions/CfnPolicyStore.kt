@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html)
  */
-public open class CfnPolicyStore internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
+public open class CfnPolicyStore(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -424,7 +423,113 @@ public open class CfnPolicyStore internal constructor(
         CfnPolicyStore = CfnPolicyStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyStore):
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore
+  }
+
+  /**
+   * Contains a list of principal types, resource types, and actions that can be specified in
+   * policies stored in the same policy store.
+   *
+   * If the validation mode for the policy store is set to `STRICT` , then policies that can't be
+   * validated by this schema are rejected by Verified Permissions and can't be stored in the policy
+   * store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * SchemaDefinitionProperty schemaDefinitionProperty = SchemaDefinitionProperty.builder()
+   * .cedarJson("cedarJson")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html)
+   */
+  public interface SchemaDefinitionProperty {
+    /**
+     * A JSON string representation of the schema supported by applications that use this policy
+     * store.
+     *
+     * For more information, see [Policy store
+     * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
+     * *Amazon Verified Permissions User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
+     */
+    public fun cedarJson(): String? = unwrap(this).getCedarJson()
+
+    /**
+     * A builder for [SchemaDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cedarJson A JSON string representation of the schema supported by applications that
+       * use this policy store.
+       * For more information, see [Policy store
+       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
+       * *Amazon Verified Permissions User Guide* .
+       */
+      public fun cedarJson(cedarJson: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty.builder()
+
+      /**
+       * @param cedarJson A JSON string representation of the schema supported by applications that
+       * use this policy store.
+       * For more information, see [Policy store
+       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
+       * *Amazon Verified Permissions User Guide* .
+       */
+      override fun cedarJson(cedarJson: String) {
+        cdkBuilder.cedarJson(cedarJson)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
+    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
+      /**
+       * A JSON string representation of the schema supported by applications that use this policy
+       * store.
+       *
+       * For more information, see [Policy store
+       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
+       * *Amazon Verified Permissions User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
+       */
+      override fun cedarJson(): String? = unwrap(this).getCedarJson()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty):
+          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaDefinitionProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
+    }
   }
 
   /**
@@ -525,8 +630,7 @@ public open class CfnPolicyStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
     ) : CdkObject(cdkObject), ValidationSettingsProperty {
       /**
        * The validation mode currently configured for this policy store. The valid values are:.
@@ -566,112 +670,6 @@ public open class CfnPolicyStore internal constructor(
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty
-    }
-  }
-
-  /**
-   * Contains a list of principal types, resource types, and actions that can be specified in
-   * policies stored in the same policy store.
-   *
-   * If the validation mode for the policy store is set to `STRICT` , then policies that can't be
-   * validated by this schema are rejected by Verified Permissions and can't be stored in the policy
-   * store.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
-   * SchemaDefinitionProperty schemaDefinitionProperty = SchemaDefinitionProperty.builder()
-   * .cedarJson("cedarJson")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html)
-   */
-  public interface SchemaDefinitionProperty {
-    /**
-     * A JSON string representation of the schema supported by applications that use this policy
-     * store.
-     *
-     * For more information, see [Policy store
-     * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-     * *Amazon Verified Permissions User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
-     */
-    public fun cedarJson(): String? = unwrap(this).getCedarJson()
-
-    /**
-     * A builder for [SchemaDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cedarJson A JSON string representation of the schema supported by applications that
-       * use this policy store.
-       * For more information, see [Policy store
-       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
-       */
-      public fun cedarJson(cedarJson: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty.builder()
-
-      /**
-       * @param cedarJson A JSON string representation of the schema supported by applications that
-       * use this policy store.
-       * For more information, see [Policy store
-       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
-       */
-      override fun cedarJson(cedarJson: String) {
-        cdkBuilder.cedarJson(cedarJson)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
-    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
-      /**
-       * A JSON string representation of the schema supported by applications that use this policy
-       * store.
-       *
-       * For more information, see [Policy store
-       * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
-       */
-      override fun cedarJson(): String? = unwrap(this).getCedarJson()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty):
-          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SchemaDefinitionProperty):
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty
     }
   }
 }

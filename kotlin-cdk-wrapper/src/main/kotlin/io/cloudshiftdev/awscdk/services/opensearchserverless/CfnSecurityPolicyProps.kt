@@ -125,8 +125,7 @@ public interface CfnSecurityPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicyProps,
+    cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicyProps,
   ) : CdkObject(cdkObject), CfnSecurityPolicyProps {
     /**
      * The description of the security policy.

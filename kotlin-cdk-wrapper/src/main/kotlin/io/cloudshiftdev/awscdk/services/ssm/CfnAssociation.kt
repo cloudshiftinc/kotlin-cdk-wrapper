@@ -73,8 +73,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
  */
-public open class CfnAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
+public open class CfnAssociation(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -636,9 +636,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -649,9 +655,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -662,9 +674,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1001,9 +1019,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1016,9 +1040,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1031,9 +1061,15 @@ public open class CfnAssociation internal constructor(
      * The targets for the association.
      *
      * You must specify the `InstanceId` or `Targets` property. You can target all instances in an
-     * AWS account by specifyingt he `InstanceIds` key with a value of `*` . To view a JSON and a YAML
-     * example that targets all instances, see the "Create an association for all managed instances in
-     * an AWS account " later in this page.
+     * AWS account by specifying t he `InstanceIds` key with a value of `*` .
+     *
+     * Supported formats include the following.
+     *
+     * * `Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;,&lt;instance-id-3&gt;`
+     * * `Key=tag-key,Values=&lt;my-tag-key-1&gt;,&lt;my-tag-key-2&gt;`
+     *
+     * To view a JSON and a YAML example that targets all instances, see "Create an association for
+     * all managed instances in an AWS account " on the Examples page.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets)
      * @param targets The targets for the association. 
@@ -1083,7 +1119,291 @@ public open class CfnAssociation internal constructor(
         = CfnAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssociation): software.amazon.awscdk.services.ssm.CfnAssociation
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ssm.CfnAssociation
+  }
+
+  /**
+   * `InstanceAssociationOutputLocation` is a property of the
+   * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
+   * resource that specifies an Amazon S3 bucket where you want to store the results of this
+   * association request.
+   *
+   * For the minimal permissions required to enable Amazon S3 output for an association, see
+   * [Creating
+   * associations](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-state-assoc.html)
+   * in the *Systems Manager User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * InstanceAssociationOutputLocationProperty instanceAssociationOutputLocationProperty =
+   * InstanceAssociationOutputLocationProperty.builder()
+   * .s3Location(S3OutputLocationProperty.builder()
+   * .outputS3BucketName("outputS3BucketName")
+   * .outputS3KeyPrefix("outputS3KeyPrefix")
+   * .outputS3Region("outputS3Region")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+   */
+  public interface InstanceAssociationOutputLocationProperty {
+    /**
+     * `S3OutputLocation` is a property of the
+     * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+     * property that specifies an Amazon S3 bucket where you want to store the results of this request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location)
+     */
+    public fun s3Location(): Any? = unwrap(this).getS3Location()
+
+    /**
+     * A builder for [InstanceAssociationOutputLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      public fun s3Location(s3Location: IResolvable)
+
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      public fun s3Location(s3Location: S3OutputLocationProperty)
+
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
+      public fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty.builder()
+
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      override fun s3Location(s3Location: IResolvable) {
+        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      override fun s3Location(s3Location: S3OutputLocationProperty) {
+        cdkBuilder.s3Location(s3Location.let(S3OutputLocationProperty::unwrap))
+      }
+
+      /**
+       * @param s3Location `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
+      override fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit): Unit =
+          s3Location(S3OutputLocationProperty(s3Location))
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
+    ) : CdkObject(cdkObject), InstanceAssociationOutputLocationProperty {
+      /**
+       * `S3OutputLocation` is a property of the
+       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
+       * property that specifies an Amazon S3 bucket where you want to store the results of this
+       * request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location)
+       */
+      override fun s3Location(): Any? = unwrap(this).getS3Location()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceAssociationOutputLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty):
+          InstanceAssociationOutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceAssociationOutputLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceAssociationOutputLocationProperty):
+          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
+    }
+  }
+
+  /**
+   * `S3OutputLocation` is a property of the
+   * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
+   * resource that specifies an Amazon S3 bucket where you want to store the results of this
+   * association request.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * S3OutputLocationProperty s3OutputLocationProperty = S3OutputLocationProperty.builder()
+   * .outputS3BucketName("outputS3BucketName")
+   * .outputS3KeyPrefix("outputS3KeyPrefix")
+   * .outputS3Region("outputS3Region")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html)
+   */
+  public interface S3OutputLocationProperty {
+    /**
+     * The name of the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname)
+     */
+    public fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
+
+    /**
+     * The S3 bucket subfolder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix)
+     */
+    public fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
+
+    /**
+     * The AWS Region of the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3region)
+     */
+    public fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
+
+    /**
+     * A builder for [S3OutputLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param outputS3BucketName The name of the S3 bucket.
+       */
+      public fun outputS3BucketName(outputS3BucketName: String)
+
+      /**
+       * @param outputS3KeyPrefix The S3 bucket subfolder.
+       */
+      public fun outputS3KeyPrefix(outputS3KeyPrefix: String)
+
+      /**
+       * @param outputS3Region The AWS Region of the S3 bucket.
+       */
+      public fun outputS3Region(outputS3Region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.Builder =
+          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.builder()
+
+      /**
+       * @param outputS3BucketName The name of the S3 bucket.
+       */
+      override fun outputS3BucketName(outputS3BucketName: String) {
+        cdkBuilder.outputS3BucketName(outputS3BucketName)
+      }
+
+      /**
+       * @param outputS3KeyPrefix The S3 bucket subfolder.
+       */
+      override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
+        cdkBuilder.outputS3KeyPrefix(outputS3KeyPrefix)
+      }
+
+      /**
+       * @param outputS3Region The AWS Region of the S3 bucket.
+       */
+      override fun outputS3Region(outputS3Region: String) {
+        cdkBuilder.outputS3Region(outputS3Region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
+    ) : CdkObject(cdkObject), S3OutputLocationProperty {
+      /**
+       * The name of the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname)
+       */
+      override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
+
+      /**
+       * The S3 bucket subfolder.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix)
+       */
+      override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
+
+      /**
+       * The AWS Region of the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3region)
+       */
+      override fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty):
+          S3OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputLocationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3OutputLocationProperty):
+          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty
+    }
   }
 
   /**
@@ -1201,7 +1521,7 @@ public open class CfnAssociation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * User-defined criteria for sending commands that target managed nodes that meet the
@@ -1239,292 +1559,6 @@ public open class CfnAssociation internal constructor(
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty
-    }
-  }
-
-  /**
-   * `S3OutputLocation` is a property of the
-   * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
-   * resource that specifies an Amazon S3 bucket where you want to store the results of this
-   * association request.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * S3OutputLocationProperty s3OutputLocationProperty = S3OutputLocationProperty.builder()
-   * .outputS3BucketName("outputS3BucketName")
-   * .outputS3KeyPrefix("outputS3KeyPrefix")
-   * .outputS3Region("outputS3Region")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html)
-   */
-  public interface S3OutputLocationProperty {
-    /**
-     * The name of the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname)
-     */
-    public fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
-
-    /**
-     * The S3 bucket subfolder.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix)
-     */
-    public fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
-
-    /**
-     * The AWS Region of the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3region)
-     */
-    public fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
-
-    /**
-     * A builder for [S3OutputLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param outputS3BucketName The name of the S3 bucket.
-       */
-      public fun outputS3BucketName(outputS3BucketName: String)
-
-      /**
-       * @param outputS3KeyPrefix The S3 bucket subfolder.
-       */
-      public fun outputS3KeyPrefix(outputS3KeyPrefix: String)
-
-      /**
-       * @param outputS3Region The AWS Region of the S3 bucket.
-       */
-      public fun outputS3Region(outputS3Region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.Builder =
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.builder()
-
-      /**
-       * @param outputS3BucketName The name of the S3 bucket.
-       */
-      override fun outputS3BucketName(outputS3BucketName: String) {
-        cdkBuilder.outputS3BucketName(outputS3BucketName)
-      }
-
-      /**
-       * @param outputS3KeyPrefix The S3 bucket subfolder.
-       */
-      override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
-        cdkBuilder.outputS3KeyPrefix(outputS3KeyPrefix)
-      }
-
-      /**
-       * @param outputS3Region The AWS Region of the S3 bucket.
-       */
-      override fun outputS3Region(outputS3Region: String) {
-        cdkBuilder.outputS3Region(outputS3Region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
-    ) : CdkObject(cdkObject), S3OutputLocationProperty {
-      /**
-       * The name of the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname)
-       */
-      override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
-
-      /**
-       * The S3 bucket subfolder.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix)
-       */
-      override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
-
-      /**
-       * The AWS Region of the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3region)
-       */
-      override fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3OutputLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty):
-          S3OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputLocationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3OutputLocationProperty):
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty
-    }
-  }
-
-  /**
-   * `InstanceAssociationOutputLocation` is a property of the
-   * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
-   * resource that specifies an Amazon S3 bucket where you want to store the results of this
-   * association request.
-   *
-   * For the minimal permissions required to enable Amazon S3 output for an association, see
-   * [Creating
-   * associations](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-state-assoc.html)
-   * in the *Systems Manager User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * InstanceAssociationOutputLocationProperty instanceAssociationOutputLocationProperty =
-   * InstanceAssociationOutputLocationProperty.builder()
-   * .s3Location(S3OutputLocationProperty.builder()
-   * .outputS3BucketName("outputS3BucketName")
-   * .outputS3KeyPrefix("outputS3KeyPrefix")
-   * .outputS3Region("outputS3Region")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-   */
-  public interface InstanceAssociationOutputLocationProperty {
-    /**
-     * `S3OutputLocation` is a property of the
-     * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-     * property that specifies an Amazon S3 bucket where you want to store the results of this request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location)
-     */
-    public fun s3Location(): Any? = unwrap(this).getS3Location()
-
-    /**
-     * A builder for [InstanceAssociationOutputLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      public fun s3Location(s3Location: IResolvable)
-
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      public fun s3Location(s3Location: S3OutputLocationProperty)
-
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
-      public fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty.builder()
-
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      override fun s3Location(s3Location: IResolvable) {
-        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      override fun s3Location(s3Location: S3OutputLocationProperty) {
-        cdkBuilder.s3Location(s3Location.let(S3OutputLocationProperty::unwrap))
-      }
-
-      /**
-       * @param s3Location `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
-      override fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit): Unit =
-          s3Location(S3OutputLocationProperty(s3Location))
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
-    ) : CdkObject(cdkObject), InstanceAssociationOutputLocationProperty {
-      /**
-       * `S3OutputLocation` is a property of the
-       * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
-       * property that specifies an Amazon S3 bucket where you want to store the results of this
-       * request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location)
-       */
-      override fun s3Location(): Any? = unwrap(this).getS3Location()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InstanceAssociationOutputLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty):
-          InstanceAssociationOutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InstanceAssociationOutputLocationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InstanceAssociationOutputLocationProperty):
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
     }
   }
 }

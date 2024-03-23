@@ -742,7 +742,7 @@ public interface CfnWebACLProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLProps,
+    cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLProps,
   ) : CdkObject(cdkObject), CfnWebACLProps {
     /**
      * Specifies custom configurations for the associations between the web ACL and protected

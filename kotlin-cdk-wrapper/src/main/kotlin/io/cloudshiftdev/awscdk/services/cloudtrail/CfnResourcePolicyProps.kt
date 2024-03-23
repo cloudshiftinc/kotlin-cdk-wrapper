@@ -110,7 +110,7 @@ public interface CfnResourcePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps,
+    cdkObject: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
     /**
      * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based

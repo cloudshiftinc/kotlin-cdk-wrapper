@@ -456,7 +456,7 @@ public interface CfnFunctionConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfigurationProps,
   ) : CdkObject(cdkObject), CfnFunctionConfigurationProps {
     /**
      * The AWS AppSync GraphQL API that you want to attach using this function.

@@ -239,7 +239,7 @@ public interface AliasProps : AliasOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AliasProps,
+    cdkObject: software.amazon.awscdk.services.lambda.AliasProps,
   ) : CdkObject(cdkObject), AliasProps {
     /**
      * Additional versions with individual weights this alias points to.

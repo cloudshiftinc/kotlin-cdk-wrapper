@@ -255,7 +255,7 @@ public interface CfnTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnTableProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnTableProps,
   ) : CdkObject(cdkObject), CfnTableProps {
     /**
      * The ID of the Data Catalog in which to create the `Table` .

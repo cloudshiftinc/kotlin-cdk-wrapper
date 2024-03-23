@@ -127,7 +127,7 @@ public interface CommonHostedZoneProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CommonHostedZoneProps,
+    cdkObject: software.amazon.awscdk.services.route53.CommonHostedZoneProps,
   ) : CdkObject(cdkObject), CommonHostedZoneProps {
     /**
      * Whether to add a trailing dot to the zone name.

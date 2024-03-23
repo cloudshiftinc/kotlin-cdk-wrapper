@@ -55,7 +55,7 @@ public interface UserAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
+    cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
   ) : CdkObject(cdkObject), UserAttributes {
     /**
      * The ARN of the user.

@@ -111,7 +111,7 @@ public interface OAuthFlows {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.OAuthFlows,
+    cdkObject: software.amazon.awscdk.services.cognito.OAuthFlows,
   ) : CdkObject(cdkObject), OAuthFlows {
     /**
      * Initiate an authorization code grant flow, which provides an authorization code as the

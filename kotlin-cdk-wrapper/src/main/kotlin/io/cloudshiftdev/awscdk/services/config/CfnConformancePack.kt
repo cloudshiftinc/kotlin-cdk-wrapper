@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)
  */
-public open class CfnConformancePack internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
+public open class CfnConformancePack(
+  cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -415,7 +415,123 @@ public open class CfnConformancePack internal constructor(
         CfnConformancePack = CfnConformancePack(cdkObject)
 
     internal fun unwrap(wrapped: CfnConformancePack):
-        software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnConformancePack
+  }
+
+  /**
+   * Input parameters in the form of key-value pairs for the conformance pack, both of which you
+   * define.
+   *
+   * Keys can have a maximum character length of 255 characters, and values can have a maximum
+   * length of 4096 characters.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.config.*;
+   * ConformancePackInputParameterProperty conformancePackInputParameterProperty =
+   * ConformancePackInputParameterProperty.builder()
+   * .parameterName("parameterName")
+   * .parameterValue("parameterValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html)
+   */
+  public interface ConformancePackInputParameterProperty {
+    /**
+     * One part of a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
+     */
+    public fun parameterName(): String
+
+    /**
+     * Another part of the key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
+     */
+    public fun parameterValue(): String
+
+    /**
+     * A builder for [ConformancePackInputParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameterName One part of a key-value pair. 
+       */
+      public fun parameterName(parameterName: String)
+
+      /**
+       * @param parameterValue Another part of the key-value pair. 
+       */
+      public fun parameterValue(parameterValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.builder()
+
+      /**
+       * @param parameterName One part of a key-value pair. 
+       */
+      override fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
+      }
+
+      /**
+       * @param parameterValue Another part of the key-value pair. 
+       */
+      override fun parameterValue(parameterValue: String) {
+        cdkBuilder.parameterValue(parameterValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
+    ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
+      /**
+       * One part of a key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
+       */
+      override fun parameterName(): String = unwrap(this).getParameterName()
+
+      /**
+       * Another part of the key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
+       */
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConformancePackInputParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty):
+          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConformancePackInputParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
+          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
+    }
   }
 
   /**
@@ -526,8 +642,7 @@ public open class CfnConformancePack internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
     ) : CdkObject(cdkObject), TemplateSSMDocumentDetailsProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance
@@ -570,122 +685,6 @@ public open class CfnConformancePack internal constructor(
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
-    }
-  }
-
-  /**
-   * Input parameters in the form of key-value pairs for the conformance pack, both of which you
-   * define.
-   *
-   * Keys can have a maximum character length of 255 characters, and values can have a maximum
-   * length of 4096 characters.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.config.*;
-   * ConformancePackInputParameterProperty conformancePackInputParameterProperty =
-   * ConformancePackInputParameterProperty.builder()
-   * .parameterName("parameterName")
-   * .parameterValue("parameterValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html)
-   */
-  public interface ConformancePackInputParameterProperty {
-    /**
-     * One part of a key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
-     */
-    public fun parameterName(): String
-
-    /**
-     * Another part of the key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
-     */
-    public fun parameterValue(): String
-
-    /**
-     * A builder for [ConformancePackInputParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param parameterName One part of a key-value pair. 
-       */
-      public fun parameterName(parameterName: String)
-
-      /**
-       * @param parameterValue Another part of the key-value pair. 
-       */
-      public fun parameterValue(parameterValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.builder()
-
-      /**
-       * @param parameterName One part of a key-value pair. 
-       */
-      override fun parameterName(parameterName: String) {
-        cdkBuilder.parameterName(parameterName)
-      }
-
-      /**
-       * @param parameterValue Another part of the key-value pair. 
-       */
-      override fun parameterValue(parameterValue: String) {
-        cdkBuilder.parameterValue(parameterValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
-    ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
-      /**
-       * One part of a key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
-       */
-      override fun parameterName(): String = unwrap(this).getParameterName()
-
-      /**
-       * Another part of the key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
-       */
-      override fun parameterValue(): String = unwrap(this).getParameterValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConformancePackInputParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty):
-          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConformancePackInputParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
     }
   }
 }

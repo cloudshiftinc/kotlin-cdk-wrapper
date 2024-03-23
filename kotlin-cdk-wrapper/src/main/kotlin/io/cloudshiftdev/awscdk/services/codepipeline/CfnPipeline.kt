@@ -150,8 +150,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1140,2303 +1140,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.codepipeline.CfnPipeline = wrapped.cdkObject
-  }
-
-  /**
-   * Represents information about the output of an action.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * OutputArtifactProperty outputArtifactProperty = OutputArtifactProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html)
-   */
-  public interface OutputArtifactProperty {
-    /**
-     * The name of the output of an artifact, such as "My App".
-     *
-     * The output artifact name must exactly match the input artifact declared for a downstream
-     * action. However, the downstream action's input artifact does not have to be the next action in
-     * strict sequence from the action that provided the output artifact. Actions in parallel can
-     * declare different output artifacts, which are in turn consumed by different following actions.
-     *
-     * Output artifact names must be unique within a pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [OutputArtifactProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the output of an artifact, such as "My App". 
-       * The output artifact name must exactly match the input artifact declared for a downstream
-       * action. However, the downstream action's input artifact does not have to be the next action in
-       * strict sequence from the action that provided the output artifact. Actions in parallel can
-       * declare different output artifacts, which are in turn consumed by different following actions.
-       *
-       * Output artifact names must be unique within a pipeline.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.builder()
-
-      /**
-       * @param name The name of the output of an artifact, such as "My App". 
-       * The output artifact name must exactly match the input artifact declared for a downstream
-       * action. However, the downstream action's input artifact does not have to be the next action in
-       * strict sequence from the action that provided the output artifact. Actions in parallel can
-       * declare different output artifacts, which are in turn consumed by different following actions.
-       *
-       * Output artifact names must be unique within a pipeline.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
-    ) : CdkObject(cdkObject), OutputArtifactProperty {
-      /**
-       * The name of the output of an artifact, such as "My App".
-       *
-       * The output artifact name must exactly match the input artifact declared for a downstream
-       * action. However, the downstream action's input artifact does not have to be the next action in
-       * strict sequence from the action that provided the output artifact. Actions in parallel can
-       * declare different output artifacts, which are in turn consumed by different following actions.
-       *
-       * Output artifact names must be unique within a pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OutputArtifactProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty):
-          OutputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputArtifactProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OutputArtifactProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty
-    }
-  }
-
-  /**
-   * The Git tags specified as filter criteria for whether a Git tag repository event will start the
-   * pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * GitTagFilterCriteriaProperty gitTagFilterCriteriaProperty =
-   * GitTagFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html)
-   */
-  public interface GitTagFilterCriteriaProperty {
-    /**
-     * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
-     * pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-excludes)
-     */
-    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-    /**
-     * The list of patterns of Git tags that, when pushed, are to be included as criteria that
-     * starts the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-includes)
-     */
-    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-
-    /**
-     * A builder for [GitTagFilterCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
-       * starting the pipeline.
-       */
-      public fun excludes(excludes: List<String>)
-
-      /**
-       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
-       * starting the pipeline.
-       */
-      public fun excludes(vararg excludes: String)
-
-      /**
-       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
-       * criteria that starts the pipeline.
-       */
-      public fun includes(includes: List<String>)
-
-      /**
-       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
-       * criteria that starts the pipeline.
-       */
-      public fun includes(vararg includes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty.builder()
-
-      /**
-       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
-       * starting the pipeline.
-       */
-      override fun excludes(excludes: List<String>) {
-        cdkBuilder.excludes(excludes)
-      }
-
-      /**
-       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
-       * starting the pipeline.
-       */
-      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
-
-      /**
-       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
-       * criteria that starts the pipeline.
-       */
-      override fun includes(includes: List<String>) {
-        cdkBuilder.includes(includes)
-      }
-
-      /**
-       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
-       * criteria that starts the pipeline.
-       */
-      override fun includes(vararg includes: String): Unit = includes(includes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitTagFilterCriteriaProperty {
-      /**
-       * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
-       * pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-excludes)
-       */
-      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-      /**
-       * The list of patterns of Git tags that, when pushed, are to be included as criteria that
-       * starts the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-includes)
-       */
-      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitTagFilterCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty):
-          GitTagFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GitTagFilterCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitTagFilterCriteriaProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty
-    }
-  }
-
-  /**
-   * The name of the pipeline in which you want to disable the flow of artifacts from one stage to
-   * another.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * StageTransitionProperty stageTransitionProperty = StageTransitionProperty.builder()
-   * .reason("reason")
-   * .stageName("stageName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html)
-   */
-  public interface StageTransitionProperty {
-    /**
-     * The reason given to the user that a stage is disabled, such as waiting for manual approval or
-     * manual tests.
-     *
-     * This message is displayed in the pipeline console UI.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-reason)
-     */
-    public fun reason(): String
-
-    /**
-     * The name of the stage where you want to disable the inbound or outbound transition of
-     * artifacts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-stagename)
-     */
-    public fun stageName(): String
-
-    /**
-     * A builder for [StageTransitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param reason The reason given to the user that a stage is disabled, such as waiting for
-       * manual approval or manual tests. 
-       * This message is displayed in the pipeline console UI.
-       */
-      public fun reason(reason: String)
-
-      /**
-       * @param stageName The name of the stage where you want to disable the inbound or outbound
-       * transition of artifacts. 
-       */
-      public fun stageName(stageName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.builder()
-
-      /**
-       * @param reason The reason given to the user that a stage is disabled, such as waiting for
-       * manual approval or manual tests. 
-       * This message is displayed in the pipeline console UI.
-       */
-      override fun reason(reason: String) {
-        cdkBuilder.reason(reason)
-      }
-
-      /**
-       * @param stageName The name of the stage where you want to disable the inbound or outbound
-       * transition of artifacts. 
-       */
-      override fun stageName(stageName: String) {
-        cdkBuilder.stageName(stageName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
-    ) : CdkObject(cdkObject), StageTransitionProperty {
-      /**
-       * The reason given to the user that a stage is disabled, such as waiting for manual approval
-       * or manual tests.
-       *
-       * This message is displayed in the pipeline console UI.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-reason)
-       */
-      override fun reason(): String = unwrap(this).getReason()
-
-      /**
-       * The name of the stage where you want to disable the inbound or outbound transition of
-       * artifacts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-stagename)
-       */
-      override fun stageName(): String = unwrap(this).getStageName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StageTransitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty):
-          StageTransitionProperty = CdkObjectWrappers.wrap(cdkObject) as? StageTransitionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StageTransitionProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty
-    }
-  }
-
-  /**
-   * A type of trigger configuration for Git-based source actions.
-   *
-   *
-   * You can specify the Git configuration trigger type for all third-party Git-based source actions
-   * that are supported by the `CodeStarSourceConnection` action type.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * GitConfigurationProperty gitConfigurationProperty = GitConfigurationProperty.builder()
-   * .sourceActionName("sourceActionName")
-   * // the properties below are optional
-   * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
-   * .branches(GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .events(List.of("events"))
-   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .build()))
-   * .push(List.of(GitPushFilterProperty.builder()
-   * .branches(GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .tags(GitTagFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html)
-   */
-  public interface GitConfigurationProperty {
-    /**
-     * The field where the repository event that will start the pipeline is specified as pull
-     * requests.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-pullrequest)
-     */
-    public fun pullRequest(): Any? = unwrap(this).getPullRequest()
-
-    /**
-     * The field where the repository event that will start the pipeline, such as pushing Git tags,
-     * is specified with details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-push)
-     */
-    public fun push(): Any? = unwrap(this).getPush()
-
-    /**
-     * The name of the pipeline source action where the trigger configuration, such as Git tags, is
-     * specified.
-     *
-     * The trigger configuration will start the pipeline upon the specified change only.
-     *
-     *
-     * You can only specify one trigger configuration per source action.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-sourceactionname)
-     */
-    public fun sourceActionName(): String
-
-    /**
-     * A builder for [GitConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      public fun pullRequest(pullRequest: IResolvable)
-
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      public fun pullRequest(pullRequest: List<Any>)
-
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      public fun pullRequest(vararg pullRequest: Any)
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      public fun push(push: IResolvable)
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      public fun push(push: List<Any>)
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      public fun push(vararg push: Any)
-
-      /**
-       * @param sourceActionName The name of the pipeline source action where the trigger
-       * configuration, such as Git tags, is specified. 
-       * The trigger configuration will start the pipeline upon the specified change only.
-       *
-       *
-       * You can only specify one trigger configuration per source action.
-       */
-      public fun sourceActionName(sourceActionName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty.builder()
-
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      override fun pullRequest(pullRequest: IResolvable) {
-        cdkBuilder.pullRequest(pullRequest.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      override fun pullRequest(pullRequest: List<Any>) {
-        cdkBuilder.pullRequest(pullRequest)
-      }
-
-      /**
-       * @param pullRequest The field where the repository event that will start the pipeline is
-       * specified as pull requests.
-       */
-      override fun pullRequest(vararg pullRequest: Any): Unit = pullRequest(pullRequest.toList())
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      override fun push(push: IResolvable) {
-        cdkBuilder.push(push.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      override fun push(push: List<Any>) {
-        cdkBuilder.push(push)
-      }
-
-      /**
-       * @param push The field where the repository event that will start the pipeline, such as
-       * pushing Git tags, is specified with details.
-       */
-      override fun push(vararg push: Any): Unit = push(push.toList())
-
-      /**
-       * @param sourceActionName The name of the pipeline source action where the trigger
-       * configuration, such as Git tags, is specified. 
-       * The trigger configuration will start the pipeline upon the specified change only.
-       *
-       *
-       * You can only specify one trigger configuration per source action.
-       */
-      override fun sourceActionName(sourceActionName: String) {
-        cdkBuilder.sourceActionName(sourceActionName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
-    ) : CdkObject(cdkObject), GitConfigurationProperty {
-      /**
-       * The field where the repository event that will start the pipeline is specified as pull
-       * requests.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-pullrequest)
-       */
-      override fun pullRequest(): Any? = unwrap(this).getPullRequest()
-
-      /**
-       * The field where the repository event that will start the pipeline, such as pushing Git
-       * tags, is specified with details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-push)
-       */
-      override fun push(): Any? = unwrap(this).getPush()
-
-      /**
-       * The name of the pipeline source action where the trigger configuration, such as Git tags,
-       * is specified.
-       *
-       * The trigger configuration will start the pipeline upon the specified change only.
-       *
-       *
-       * You can only specify one trigger configuration per source action.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-sourceactionname)
-       */
-      override fun sourceActionName(): String = unwrap(this).getSourceActionName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty):
-          GitConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? GitConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitConfigurationProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty
-    }
-  }
-
-  /**
-   * Represents information about an artifact to be worked on, such as a test or build artifact.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * InputArtifactProperty inputArtifactProperty = InputArtifactProperty.builder()
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html)
-   */
-  public interface InputArtifactProperty {
-    /**
-     * The name of the artifact to be worked on (for example, "My App").
-     *
-     * Artifacts are the files that are worked on by actions in the pipeline. See the action
-     * configuration for each action for details about artifact parameters. For example, the S3 source
-     * action input artifact is a file name (or file path), and the files are generally provided as a
-     * ZIP file. Example artifact name: SampleApp_Windows.zip
-     *
-     * The input artifact of an action must exactly match the output artifact declared in a
-     * preceding action, but the input artifact does not have to be the next action in strict sequence
-     * from the action that provided the output artifact. Actions in parallel can declare different
-     * output artifacts, which are in turn consumed by different following actions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html#cfn-codepipeline-pipeline-inputartifact-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [InputArtifactProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the artifact to be worked on (for example, "My App"). 
-       * Artifacts are the files that are worked on by actions in the pipeline. See the action
-       * configuration for each action for details about artifact parameters. For example, the S3
-       * source action input artifact is a file name (or file path), and the files are generally
-       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
-       *
-       * The input artifact of an action must exactly match the output artifact declared in a
-       * preceding action, but the input artifact does not have to be the next action in strict
-       * sequence from the action that provided the output artifact. Actions in parallel can declare
-       * different output artifacts, which are in turn consumed by different following actions.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.builder()
-
-      /**
-       * @param name The name of the artifact to be worked on (for example, "My App"). 
-       * Artifacts are the files that are worked on by actions in the pipeline. See the action
-       * configuration for each action for details about artifact parameters. For example, the S3
-       * source action input artifact is a file name (or file path), and the files are generally
-       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
-       *
-       * The input artifact of an action must exactly match the output artifact declared in a
-       * preceding action, but the input artifact does not have to be the next action in strict
-       * sequence from the action that provided the output artifact. Actions in parallel can declare
-       * different output artifacts, which are in turn consumed by different following actions.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
-    ) : CdkObject(cdkObject), InputArtifactProperty {
-      /**
-       * The name of the artifact to be worked on (for example, "My App").
-       *
-       * Artifacts are the files that are worked on by actions in the pipeline. See the action
-       * configuration for each action for details about artifact parameters. For example, the S3
-       * source action input artifact is a file name (or file path), and the files are generally
-       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
-       *
-       * The input artifact of an action must exactly match the output artifact declared in a
-       * preceding action, but the input artifact does not have to be the next action in strict
-       * sequence from the action that provided the output artifact. Actions in parallel can declare
-       * different output artifacts, which are in turn consumed by different following actions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html#cfn-codepipeline-pipeline-inputartifact-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputArtifactProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty):
-          InputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as? InputArtifactProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputArtifactProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty
-    }
-  }
-
-  /**
-   * Represents information about the specified trigger configuration, such as the filter criteria
-   * and the source stage for the action that contains the trigger.
-   *
-   *
-   * This is only supported for the `CodeStarSourceConnection` action type. &gt; When a trigger
-   * configuration is specified, default change detection for repository and branch commits is
-   * disabled.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * PipelineTriggerDeclarationProperty pipelineTriggerDeclarationProperty =
-   * PipelineTriggerDeclarationProperty.builder()
-   * .providerType("providerType")
-   * // the properties below are optional
-   * .gitConfiguration(GitConfigurationProperty.builder()
-   * .sourceActionName("sourceActionName")
-   * // the properties below are optional
-   * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
-   * .branches(GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .events(List.of("events"))
-   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .build()))
-   * .push(List.of(GitPushFilterProperty.builder()
-   * .branches(GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .tags(GitTagFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html)
-   */
-  public interface PipelineTriggerDeclarationProperty {
-    /**
-     * Provides the filter criteria and the source stage for the repository event that starts the
-     * pipeline, such as Git tags.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-gitconfiguration)
-     */
-    public fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
-
-    /**
-     * The source provider for the event, such as connections configured for a repository with Git
-     * tags, for the specified trigger configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-providertype)
-     */
-    public fun providerType(): String
-
-    /**
-     * A builder for [PipelineTriggerDeclarationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      public fun gitConfiguration(gitConfiguration: IResolvable)
-
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty)
-
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
-      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param providerType The source provider for the event, such as connections configured for a
-       * repository with Git tags, for the specified trigger configuration. 
-       */
-      public fun providerType(providerType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty.builder()
-
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      override fun gitConfiguration(gitConfiguration: IResolvable) {
-        cdkBuilder.gitConfiguration(gitConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
-        cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param gitConfiguration Provides the filter criteria and the source stage for the
-       * repository event that starts the pipeline, such as Git tags.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
-      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit):
-          Unit = gitConfiguration(GitConfigurationProperty(gitConfiguration))
-
-      /**
-       * @param providerType The source provider for the event, such as connections configured for a
-       * repository with Git tags, for the specified trigger configuration. 
-       */
-      override fun providerType(providerType: String) {
-        cdkBuilder.providerType(providerType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
-    ) : CdkObject(cdkObject), PipelineTriggerDeclarationProperty {
-      /**
-       * Provides the filter criteria and the source stage for the repository event that starts the
-       * pipeline, such as Git tags.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-gitconfiguration)
-       */
-      override fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
-
-      /**
-       * The source provider for the event, such as connections configured for a repository with Git
-       * tags, for the specified trigger configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-providertype)
-       */
-      override fun providerType(): String = unwrap(this).getProviderType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PipelineTriggerDeclarationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty):
-          PipelineTriggerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PipelineTriggerDeclarationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PipelineTriggerDeclarationProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
-    }
-  }
-
-  /**
-   * Represents information about an action type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * ActionTypeIdProperty actionTypeIdProperty = ActionTypeIdProperty.builder()
-   * .category("category")
-   * .owner("owner")
-   * .provider("provider")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html)
-   */
-  public interface ActionTypeIdProperty {
-    /**
-     * A category defines what kind of action can be taken in the stage, and constrains the provider
-     * type for the action.
-     *
-     * Valid categories are limited to one of the values below.
-     *
-     * * `Source`
-     * * `Build`
-     * * `Test`
-     * * `Deploy`
-     * * `Invoke`
-     * * `Approval`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
-     */
-    public fun category(): String
-
-    /**
-     * The creator of the action being called.
-     *
-     * There are three valid values for the `Owner` field in the action category section within your
-     * pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see [Valid
-     * Action Types and Providers in
-     * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-owner)
-     */
-    public fun owner(): String
-
-    /**
-     * The provider of the service being called by the action.
-     *
-     * Valid providers are determined by the action category. For example, an action in the Deploy
-     * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
-     * For more information, see [Valid Action Types and Providers in
-     * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-provider)
-     */
-    public fun provider(): String
-
-    /**
-     * A string that describes the action version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [ActionTypeIdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param category A category defines what kind of action can be taken in the stage, and
-       * constrains the provider type for the action. 
-       * Valid categories are limited to one of the values below.
-       *
-       * * `Source`
-       * * `Build`
-       * * `Test`
-       * * `Deploy`
-       * * `Invoke`
-       * * `Approval`
-       */
-      public fun category(category: String)
-
-      /**
-       * @param owner The creator of the action being called. 
-       * There are three valid values for the `Owner` field in the action category section within
-       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
-       * [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       */
-      public fun owner(owner: String)
-
-      /**
-       * @param provider The provider of the service being called by the action. 
-       * Valid providers are determined by the action category. For example, an action in the Deploy
-       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
-       * For more information, see [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       */
-      public fun provider(provider: String)
-
-      /**
-       * @param version A string that describes the action version. 
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.builder()
-
-      /**
-       * @param category A category defines what kind of action can be taken in the stage, and
-       * constrains the provider type for the action. 
-       * Valid categories are limited to one of the values below.
-       *
-       * * `Source`
-       * * `Build`
-       * * `Test`
-       * * `Deploy`
-       * * `Invoke`
-       * * `Approval`
-       */
-      override fun category(category: String) {
-        cdkBuilder.category(category)
-      }
-
-      /**
-       * @param owner The creator of the action being called. 
-       * There are three valid values for the `Owner` field in the action category section within
-       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
-       * [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       */
-      override fun owner(owner: String) {
-        cdkBuilder.owner(owner)
-      }
-
-      /**
-       * @param provider The provider of the service being called by the action. 
-       * Valid providers are determined by the action category. For example, an action in the Deploy
-       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
-       * For more information, see [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       */
-      override fun provider(provider: String) {
-        cdkBuilder.provider(provider)
-      }
-
-      /**
-       * @param version A string that describes the action version. 
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
-    ) : CdkObject(cdkObject), ActionTypeIdProperty {
-      /**
-       * A category defines what kind of action can be taken in the stage, and constrains the
-       * provider type for the action.
-       *
-       * Valid categories are limited to one of the values below.
-       *
-       * * `Source`
-       * * `Build`
-       * * `Test`
-       * * `Deploy`
-       * * `Invoke`
-       * * `Approval`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
-       */
-      override fun category(): String = unwrap(this).getCategory()
-
-      /**
-       * The creator of the action being called.
-       *
-       * There are three valid values for the `Owner` field in the action category section within
-       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
-       * [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-owner)
-       */
-      override fun owner(): String = unwrap(this).getOwner()
-
-      /**
-       * The provider of the service being called by the action.
-       *
-       * Valid providers are determined by the action category. For example, an action in the Deploy
-       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
-       * For more information, see [Valid Action Types and Providers in
-       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-provider)
-       */
-      override fun provider(): String = unwrap(this).getProvider()
-
-      /**
-       * A string that describes the action version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionTypeIdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty):
-          ActionTypeIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionTypeIdProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionTypeIdProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty
-    }
-  }
-
-  /**
-   * The event criteria for the pull request trigger configuration, such as the lists of branches or
-   * file paths to include and exclude.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * GitPullRequestFilterProperty gitPullRequestFilterProperty =
-   * GitPullRequestFilterProperty.builder()
-   * .branches(GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .events(List.of("events"))
-   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html)
-   */
-  public interface GitPullRequestFilterProperty {
-    /**
-     * The field that specifies to filter on branches for the pull request trigger configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-branches)
-     */
-    public fun branches(): Any? = unwrap(this).getBranches()
-
-    /**
-     * The field that specifies which pull request events to filter on (opened, updated, closed) for
-     * the trigger configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
-     */
-    public fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
-
-    /**
-     * The field that specifies to filter on file paths for the pull request trigger configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-filepaths)
-     */
-    public fun filePaths(): Any? = unwrap(this).getFilePaths()
-
-    /**
-     * A builder for [GitPullRequestFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      public fun branches(branches: IResolvable)
-
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      public fun branches(branches: GitBranchFilterCriteriaProperty)
-
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
-      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit)
-
-      /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
-       */
-      public fun events(events: List<String>)
-
-      /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
-       */
-      public fun events(vararg events: String)
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      public fun filePaths(filePaths: IResolvable)
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty)
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty.builder()
-
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      override fun branches(branches: IResolvable) {
-        cdkBuilder.branches(branches.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      override fun branches(branches: GitBranchFilterCriteriaProperty) {
-        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
-      }
-
-      /**
-       * @param branches The field that specifies to filter on branches for the pull request trigger
-       * configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
-      override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit): Unit =
-          branches(GitBranchFilterCriteriaProperty(branches))
-
-      /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
-       */
-      override fun events(events: List<String>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
-       */
-      override fun events(vararg events: String): Unit = events(events.toList())
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      override fun filePaths(filePaths: IResolvable) {
-        cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
-        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
-      }
-
-      /**
-       * @param filePaths The field that specifies to filter on file paths for the pull request
-       * trigger configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
-      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit
-          = filePaths(GitFilePathFilterCriteriaProperty(filePaths))
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
-    ) : CdkObject(cdkObject), GitPullRequestFilterProperty {
-      /**
-       * The field that specifies to filter on branches for the pull request trigger configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-branches)
-       */
-      override fun branches(): Any? = unwrap(this).getBranches()
-
-      /**
-       * The field that specifies which pull request events to filter on (opened, updated, closed)
-       * for the trigger configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
-       */
-      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
-
-      /**
-       * The field that specifies to filter on file paths for the pull request trigger
-       * configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-filepaths)
-       */
-      override fun filePaths(): Any? = unwrap(this).getFilePaths()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitPullRequestFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty):
-          GitPullRequestFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GitPullRequestFilterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitPullRequestFilterProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty
-    }
-  }
-
-  /**
-   * A mapping of `artifactStore` objects and their corresponding AWS Regions.
-   *
-   * There must be an artifact store for the pipeline Region and for each cross-region action in the
-   * pipeline.
-   *
-   *
-   * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
-   * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * ArtifactStoreMapProperty artifactStoreMapProperty = ArtifactStoreMapProperty.builder()
-   * .artifactStore(ArtifactStoreProperty.builder()
-   * .location("location")
-   * .type("type")
-   * // the properties below are optional
-   * .encryptionKey(EncryptionKeyProperty.builder()
-   * .id("id")
-   * .type("type")
-   * .build())
-   * .build())
-   * .region("region")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html)
-   */
-  public interface ArtifactStoreMapProperty {
-    /**
-     * Represents information about the S3 bucket where artifacts are stored for the pipeline.
-     *
-     *
-     * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
-     * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)
-     */
-    public fun artifactStore(): Any
-
-    /**
-     * The action declaration's AWS Region, such as us-east-1.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region)
-     */
-    public fun region(): String
-
-    /**
-     * A builder for [ArtifactStoreMapProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      public fun artifactStore(artifactStore: IResolvable)
-
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      public fun artifactStore(artifactStore: ArtifactStoreProperty)
-
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
-      public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit)
-
-      /**
-       * @param region The action declaration's AWS Region, such as us-east-1. 
-       */
-      public fun region(region: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty.builder()
-
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      override fun artifactStore(artifactStore: IResolvable) {
-        cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      override fun artifactStore(artifactStore: ArtifactStoreProperty) {
-        cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
-      }
-
-      /**
-       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
-       * for the pipeline. 
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
-      override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit): Unit =
-          artifactStore(ArtifactStoreProperty(artifactStore))
-
-      /**
-       * @param region The action declaration's AWS Region, such as us-east-1. 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
-    ) : CdkObject(cdkObject), ArtifactStoreMapProperty {
-      /**
-       * Represents information about the S3 bucket where artifacts are stored for the pipeline.
-       *
-       *
-       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
-       * cannot use both. If you create a cross-region action in your pipeline, you must use
-       * `artifactStores` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)
-       */
-      override fun artifactStore(): Any = unwrap(this).getArtifactStore()
-
-      /**
-       * The action declaration's AWS Region, such as us-east-1.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactStoreMapProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty):
-          ArtifactStoreMapProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactStoreMapProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ArtifactStoreMapProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty
-    }
-  }
-
-  /**
-   * The S3 bucket where artifacts for the pipeline are stored.
-   *
-   *
-   * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
-   * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * ArtifactStoreProperty artifactStoreProperty = ArtifactStoreProperty.builder()
-   * .location("location")
-   * .type("type")
-   * // the properties below are optional
-   * .encryptionKey(EncryptionKeyProperty.builder()
-   * .id("id")
-   * .type("type")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html)
-   */
-  public interface ArtifactStoreProperty {
-    /**
-     * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
-     * Management Service ( AWS KMS) key.
-     *
-     * If this is undefined, the default key for Amazon S3 is used. To see an example artifact store
-     * encryption key field, see the example structure here:
-     * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey)
-     */
-    public fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
-
-    /**
-     * The S3 bucket used for storing the artifacts for a pipeline.
-     *
-     * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to contain
-     * the pipeline artifacts is created for you based on the name of the pipeline. You can use any S3
-     * bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location)
-     */
-    public fun location(): String
-
-    /**
-     * The type of the artifact store, such as S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [ArtifactStoreProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      public fun encryptionKey(encryptionKey: IResolvable)
-
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      public fun encryptionKey(encryptionKey: EncryptionKeyProperty)
-
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
-      public fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit)
-
-      /**
-       * @param location The S3 bucket used for storing the artifacts for a pipeline. 
-       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
-       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
-       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
-       */
-      public fun location(location: String)
-
-      /**
-       * @param type The type of the artifact store, such as S3. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.builder()
-
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      override fun encryptionKey(encryptionKey: IResolvable) {
-        cdkBuilder.encryptionKey(encryptionKey.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      override fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
-        cdkBuilder.encryptionKey(encryptionKey.let(EncryptionKeyProperty::unwrap))
-      }
-
-      /**
-       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
-       * such as an AWS Key Management Service ( AWS KMS) key.
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
-      override fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit): Unit =
-          encryptionKey(EncryptionKeyProperty(encryptionKey))
-
-      /**
-       * @param location The S3 bucket used for storing the artifacts for a pipeline. 
-       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
-       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
-       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
-       */
-      override fun location(location: String) {
-        cdkBuilder.location(location)
-      }
-
-      /**
-       * @param type The type of the artifact store, such as S3. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
-    ) : CdkObject(cdkObject), ArtifactStoreProperty {
-      /**
-       * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
-       * Management Service ( AWS KMS) key.
-       *
-       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
-       * store encryption key field, see the example structure here:
-       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey)
-       */
-      override fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
-
-      /**
-       * The S3 bucket used for storing the artifacts for a pipeline.
-       *
-       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
-       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
-       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location)
-       */
-      override fun location(): String = unwrap(this).getLocation()
-
-      /**
-       * The type of the artifact store, such as S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactStoreProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty):
-          ArtifactStoreProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactStoreProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ArtifactStoreProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty
-    }
-  }
-
-  /**
-   * Reserved for future use.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * BlockerDeclarationProperty blockerDeclarationProperty = BlockerDeclarationProperty.builder()
-   * .name("name")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html)
-   */
-  public interface BlockerDeclarationProperty {
-    /**
-     * Reserved for future use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-name)
-     */
-    public fun name(): String
-
-    /**
-     * Reserved for future use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [BlockerDeclarationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Reserved for future use. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type Reserved for future use. 
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty.builder()
-
-      /**
-       * @param name Reserved for future use. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type Reserved for future use. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
-    ) : CdkObject(cdkObject), BlockerDeclarationProperty {
-      /**
-       * Reserved for future use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Reserved for future use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BlockerDeclarationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty):
-          BlockerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BlockerDeclarationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BlockerDeclarationProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty
-    }
-  }
-
-  /**
-   * Represents information about a stage and its definition.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * Object configuration;
-   * StageDeclarationProperty stageDeclarationProperty = StageDeclarationProperty.builder()
-   * .actions(List.of(ActionDeclarationProperty.builder()
-   * .actionTypeId(ActionTypeIdProperty.builder()
-   * .category("category")
-   * .owner("owner")
-   * .provider("provider")
-   * .version("version")
-   * .build())
-   * .name("name")
-   * // the properties below are optional
-   * .configuration(configuration)
-   * .inputArtifacts(List.of(InputArtifactProperty.builder()
-   * .name("name")
-   * .build()))
-   * .namespace("namespace")
-   * .outputArtifacts(List.of(OutputArtifactProperty.builder()
-   * .name("name")
-   * .build()))
-   * .region("region")
-   * .roleArn("roleArn")
-   * .runOrder(123)
-   * .build()))
-   * .name("name")
-   * // the properties below are optional
-   * .blockers(List.of(BlockerDeclarationProperty.builder()
-   * .name("name")
-   * .type("type")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html)
-   */
-  public interface StageDeclarationProperty {
-    /**
-     * The actions included in a stage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions)
-     */
-    public fun actions(): Any
-
-    /**
-     * Reserved for future use.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers)
-     */
-    public fun blockers(): Any? = unwrap(this).getBlockers()
-
-    /**
-     * The name of the stage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [StageDeclarationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      public fun actions(actions: IResolvable)
-
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      public fun actions(actions: List<Any>)
-
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      public fun actions(vararg actions: Any)
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      public fun blockers(blockers: IResolvable)
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      public fun blockers(blockers: List<Any>)
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      public fun blockers(vararg blockers: Any)
-
-      /**
-       * @param name The name of the stage. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty.builder()
-
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
-      }
-
-      /**
-       * @param actions The actions included in a stage. 
-       */
-      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      override fun blockers(blockers: IResolvable) {
-        cdkBuilder.blockers(blockers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      override fun blockers(blockers: List<Any>) {
-        cdkBuilder.blockers(blockers)
-      }
-
-      /**
-       * @param blockers Reserved for future use.
-       */
-      override fun blockers(vararg blockers: Any): Unit = blockers(blockers.toList())
-
-      /**
-       * @param name The name of the stage. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
-    ) : CdkObject(cdkObject), StageDeclarationProperty {
-      /**
-       * The actions included in a stage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions)
-       */
-      override fun actions(): Any = unwrap(this).getActions()
-
-      /**
-       * Reserved for future use.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers)
-       */
-      override fun blockers(): Any? = unwrap(this).getBlockers()
-
-      /**
-       * The name of the stage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StageDeclarationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty):
-          StageDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as? StageDeclarationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StageDeclarationProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty
-    }
-  }
-
-  /**
-   * Represents information about the key used to encrypt data in the artifact store, such as an AWS
-   * Key Management Service ( AWS KMS) key.
-   *
-   * `EncryptionKey` is a property of the
-   * [ArtifactStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * EncryptionKeyProperty encryptionKeyProperty = EncryptionKeyProperty.builder()
-   * .id("id")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html)
-   */
-  public interface EncryptionKeyProperty {
-    /**
-     * The ID used to identify the key.
-     *
-     * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
-     *
-     *
-     * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
-     * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
-     * involve using the role from the other account (AccountB), so specifying the key ID will use the
-     * key from the other account (AccountB).
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-id)
-     */
-    public fun id(): String
-
-    /**
-     * The type of encryption key, such as an AWS KMS key.
-     *
-     * When creating or updating a pipeline, the value must be set to 'KMS'.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [EncryptionKeyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID used to identify the key. 
-       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
-       *
-       *
-       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
-       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
-       * involve using the role from the other account (AccountB), so specifying the key ID will use
-       * the key from the other account (AccountB).
-       */
-      public fun id(id: String)
-
-      /**
-       * @param type The type of encryption key, such as an AWS KMS key. 
-       * When creating or updating a pipeline, the value must be set to 'KMS'.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.Builder =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.builder()
-
-      /**
-       * @param id The ID used to identify the key. 
-       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
-       *
-       *
-       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
-       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
-       * involve using the role from the other account (AccountB), so specifying the key ID will use
-       * the key from the other account (AccountB).
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param type The type of encryption key, such as an AWS KMS key. 
-       * When creating or updating a pipeline, the value must be set to 'KMS'.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
-    ) : CdkObject(cdkObject), EncryptionKeyProperty {
-      /**
-       * The ID used to identify the key.
-       *
-       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
-       *
-       *
-       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
-       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
-       * involve using the role from the other account (AccountB), so specifying the key ID will use
-       * the key from the other account (AccountB).
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The type of encryption key, such as an AWS KMS key.
-       *
-       * When creating or updating a pipeline, the value must be set to 'KMS'.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionKeyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty):
-          EncryptionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionKeyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionKeyProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty
-    }
+        software.amazon.awscdk.services.codepipeline.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.CfnPipeline
   }
 
   /**
@@ -3932,8 +1637,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
     ) : CdkObject(cdkObject), ActionDeclarationProperty {
       /**
        * Specifies the action type and the provider of the action.
@@ -4055,6 +1759,1691 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty
+    }
+  }
+
+  /**
+   * Represents information about an action type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * ActionTypeIdProperty actionTypeIdProperty = ActionTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html)
+   */
+  public interface ActionTypeIdProperty {
+    /**
+     * A category defines what kind of action can be taken in the stage, and constrains the provider
+     * type for the action.
+     *
+     * Valid categories are limited to one of the values below.
+     *
+     * * `Source`
+     * * `Build`
+     * * `Test`
+     * * `Deploy`
+     * * `Invoke`
+     * * `Approval`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
+     */
+    public fun category(): String
+
+    /**
+     * The creator of the action being called.
+     *
+     * There are three valid values for the `Owner` field in the action category section within your
+     * pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see [Valid
+     * Action Types and Providers in
+     * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-owner)
+     */
+    public fun owner(): String
+
+    /**
+     * The provider of the service being called by the action.
+     *
+     * Valid providers are determined by the action category. For example, an action in the Deploy
+     * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
+     * For more information, see [Valid Action Types and Providers in
+     * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-provider)
+     */
+    public fun provider(): String
+
+    /**
+     * A string that describes the action version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [ActionTypeIdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param category A category defines what kind of action can be taken in the stage, and
+       * constrains the provider type for the action. 
+       * Valid categories are limited to one of the values below.
+       *
+       * * `Source`
+       * * `Build`
+       * * `Test`
+       * * `Deploy`
+       * * `Invoke`
+       * * `Approval`
+       */
+      public fun category(category: String)
+
+      /**
+       * @param owner The creator of the action being called. 
+       * There are three valid values for the `Owner` field in the action category section within
+       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
+       * [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       */
+      public fun owner(owner: String)
+
+      /**
+       * @param provider The provider of the service being called by the action. 
+       * Valid providers are determined by the action category. For example, an action in the Deploy
+       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
+       * For more information, see [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       */
+      public fun provider(provider: String)
+
+      /**
+       * @param version A string that describes the action version. 
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.builder()
+
+      /**
+       * @param category A category defines what kind of action can be taken in the stage, and
+       * constrains the provider type for the action. 
+       * Valid categories are limited to one of the values below.
+       *
+       * * `Source`
+       * * `Build`
+       * * `Test`
+       * * `Deploy`
+       * * `Invoke`
+       * * `Approval`
+       */
+      override fun category(category: String) {
+        cdkBuilder.category(category)
+      }
+
+      /**
+       * @param owner The creator of the action being called. 
+       * There are three valid values for the `Owner` field in the action category section within
+       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
+       * [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       */
+      override fun owner(owner: String) {
+        cdkBuilder.owner(owner)
+      }
+
+      /**
+       * @param provider The provider of the service being called by the action. 
+       * Valid providers are determined by the action category. For example, an action in the Deploy
+       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
+       * For more information, see [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       */
+      override fun provider(provider: String) {
+        cdkBuilder.provider(provider)
+      }
+
+      /**
+       * @param version A string that describes the action version. 
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
+    ) : CdkObject(cdkObject), ActionTypeIdProperty {
+      /**
+       * A category defines what kind of action can be taken in the stage, and constrains the
+       * provider type for the action.
+       *
+       * Valid categories are limited to one of the values below.
+       *
+       * * `Source`
+       * * `Build`
+       * * `Test`
+       * * `Deploy`
+       * * `Invoke`
+       * * `Approval`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
+       */
+      override fun category(): String = unwrap(this).getCategory()
+
+      /**
+       * The creator of the action being called.
+       *
+       * There are three valid values for the `Owner` field in the action category section within
+       * your pipeline structure: `AWS` , `ThirdParty` , and `Custom` . For more information, see
+       * [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-owner)
+       */
+      override fun owner(): String = unwrap(this).getOwner()
+
+      /**
+       * The provider of the service being called by the action.
+       *
+       * Valid providers are determined by the action category. For example, an action in the Deploy
+       * category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy` .
+       * For more information, see [Valid Action Types and Providers in
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-provider)
+       */
+      override fun provider(): String = unwrap(this).getProvider()
+
+      /**
+       * A string that describes the action version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionTypeIdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty):
+          ActionTypeIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionTypeIdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActionTypeIdProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty
+    }
+  }
+
+  /**
+   * A mapping of `artifactStore` objects and their corresponding AWS Regions.
+   *
+   * There must be an artifact store for the pipeline Region and for each cross-region action in the
+   * pipeline.
+   *
+   *
+   * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
+   * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * ArtifactStoreMapProperty artifactStoreMapProperty = ArtifactStoreMapProperty.builder()
+   * .artifactStore(ArtifactStoreProperty.builder()
+   * .location("location")
+   * .type("type")
+   * // the properties below are optional
+   * .encryptionKey(EncryptionKeyProperty.builder()
+   * .id("id")
+   * .type("type")
+   * .build())
+   * .build())
+   * .region("region")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html)
+   */
+  public interface ArtifactStoreMapProperty {
+    /**
+     * Represents information about the S3 bucket where artifacts are stored for the pipeline.
+     *
+     *
+     * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
+     * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)
+     */
+    public fun artifactStore(): Any
+
+    /**
+     * The action declaration's AWS Region, such as us-east-1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region)
+     */
+    public fun region(): String
+
+    /**
+     * A builder for [ArtifactStoreMapProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      public fun artifactStore(artifactStore: IResolvable)
+
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      public fun artifactStore(artifactStore: ArtifactStoreProperty)
+
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
+      public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit)
+
+      /**
+       * @param region The action declaration's AWS Region, such as us-east-1. 
+       */
+      public fun region(region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty.builder()
+
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      override fun artifactStore(artifactStore: IResolvable) {
+        cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      override fun artifactStore(artifactStore: ArtifactStoreProperty) {
+        cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
+      }
+
+      /**
+       * @param artifactStore Represents information about the S3 bucket where artifacts are stored
+       * for the pipeline. 
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
+      override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit): Unit =
+          artifactStore(ArtifactStoreProperty(artifactStore))
+
+      /**
+       * @param region The action declaration's AWS Region, such as us-east-1. 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
+    ) : CdkObject(cdkObject), ArtifactStoreMapProperty {
+      /**
+       * Represents information about the S3 bucket where artifacts are stored for the pipeline.
+       *
+       *
+       * You must include either `artifactStore` or `artifactStores` in your pipeline, but you
+       * cannot use both. If you create a cross-region action in your pipeline, you must use
+       * `artifactStores` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)
+       */
+      override fun artifactStore(): Any = unwrap(this).getArtifactStore()
+
+      /**
+       * The action declaration's AWS Region, such as us-east-1.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactStoreMapProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty):
+          ArtifactStoreMapProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactStoreMapProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ArtifactStoreMapProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty
+    }
+  }
+
+  /**
+   * The S3 bucket where artifacts for the pipeline are stored.
+   *
+   *
+   * You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot
+   * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * ArtifactStoreProperty artifactStoreProperty = ArtifactStoreProperty.builder()
+   * .location("location")
+   * .type("type")
+   * // the properties below are optional
+   * .encryptionKey(EncryptionKeyProperty.builder()
+   * .id("id")
+   * .type("type")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html)
+   */
+  public interface ArtifactStoreProperty {
+    /**
+     * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
+     * Management Service ( AWS KMS) key.
+     *
+     * If this is undefined, the default key for Amazon S3 is used. To see an example artifact store
+     * encryption key field, see the example structure here:
+     * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey)
+     */
+    public fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
+
+    /**
+     * The S3 bucket used for storing the artifacts for a pipeline.
+     *
+     * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to contain
+     * the pipeline artifacts is created for you based on the name of the pipeline. You can use any S3
+     * bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location)
+     */
+    public fun location(): String
+
+    /**
+     * The type of the artifact store, such as S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ArtifactStoreProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      public fun encryptionKey(encryptionKey: IResolvable)
+
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      public fun encryptionKey(encryptionKey: EncryptionKeyProperty)
+
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
+      public fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit)
+
+      /**
+       * @param location The S3 bucket used for storing the artifacts for a pipeline. 
+       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
+       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
+       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
+       */
+      public fun location(location: String)
+
+      /**
+       * @param type The type of the artifact store, such as S3. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.builder()
+
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      override fun encryptionKey(encryptionKey: IResolvable) {
+        cdkBuilder.encryptionKey(encryptionKey.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      override fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
+        cdkBuilder.encryptionKey(encryptionKey.let(EncryptionKeyProperty::unwrap))
+      }
+
+      /**
+       * @param encryptionKey The encryption key used to encrypt the data in the artifact store,
+       * such as an AWS Key Management Service ( AWS KMS) key.
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
+      override fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit): Unit =
+          encryptionKey(EncryptionKeyProperty(encryptionKey))
+
+      /**
+       * @param location The S3 bucket used for storing the artifacts for a pipeline. 
+       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
+       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
+       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
+       */
+      override fun location(location: String) {
+        cdkBuilder.location(location)
+      }
+
+      /**
+       * @param type The type of the artifact store, such as S3. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
+    ) : CdkObject(cdkObject), ArtifactStoreProperty {
+      /**
+       * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
+       * Management Service ( AWS KMS) key.
+       *
+       * If this is undefined, the default key for Amazon S3 is used. To see an example artifact
+       * store encryption key field, see the example structure here:
+       * [AWS::CodePipeline::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey)
+       */
+      override fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
+
+      /**
+       * The S3 bucket used for storing the artifacts for a pipeline.
+       *
+       * You can specify the name of an S3 bucket but not a folder in the bucket. A folder to
+       * contain the pipeline artifacts is created for you based on the name of the pipeline. You can
+       * use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location)
+       */
+      override fun location(): String = unwrap(this).getLocation()
+
+      /**
+       * The type of the artifact store, such as S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ArtifactStoreProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty):
+          ArtifactStoreProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactStoreProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ArtifactStoreProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty
+    }
+  }
+
+  /**
+   * Reserved for future use.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * BlockerDeclarationProperty blockerDeclarationProperty = BlockerDeclarationProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html)
+   */
+  public interface BlockerDeclarationProperty {
+    /**
+     * Reserved for future use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-name)
+     */
+    public fun name(): String
+
+    /**
+     * Reserved for future use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [BlockerDeclarationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Reserved for future use. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type Reserved for future use. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty.builder()
+
+      /**
+       * @param name Reserved for future use. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type Reserved for future use. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
+    ) : CdkObject(cdkObject), BlockerDeclarationProperty {
+      /**
+       * Reserved for future use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Reserved for future use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html#cfn-codepipeline-pipeline-blockerdeclaration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockerDeclarationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty):
+          BlockerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockerDeclarationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockerDeclarationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty
+    }
+  }
+
+  /**
+   * Represents information about the key used to encrypt data in the artifact store, such as an AWS
+   * Key Management Service ( AWS KMS) key.
+   *
+   * `EncryptionKey` is a property of the
+   * [ArtifactStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * EncryptionKeyProperty encryptionKeyProperty = EncryptionKeyProperty.builder()
+   * .id("id")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html)
+   */
+  public interface EncryptionKeyProperty {
+    /**
+     * The ID used to identify the key.
+     *
+     * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
+     *
+     *
+     * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
+     * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
+     * involve using the role from the other account (AccountB), so specifying the key ID will use the
+     * key from the other account (AccountB).
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-id)
+     */
+    public fun id(): String
+
+    /**
+     * The type of encryption key, such as an AWS KMS key.
+     *
+     * When creating or updating a pipeline, the value must be set to 'KMS'.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [EncryptionKeyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID used to identify the key. 
+       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
+       *
+       *
+       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
+       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
+       * involve using the role from the other account (AccountB), so specifying the key ID will use
+       * the key from the other account (AccountB).
+       */
+      public fun id(id: String)
+
+      /**
+       * @param type The type of encryption key, such as an AWS KMS key. 
+       * When creating or updating a pipeline, the value must be set to 'KMS'.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.builder()
+
+      /**
+       * @param id The ID used to identify the key. 
+       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
+       *
+       *
+       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
+       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
+       * involve using the role from the other account (AccountB), so specifying the key ID will use
+       * the key from the other account (AccountB).
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param type The type of encryption key, such as an AWS KMS key. 
+       * When creating or updating a pipeline, the value must be set to 'KMS'.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
+    ) : CdkObject(cdkObject), EncryptionKeyProperty {
+      /**
+       * The ID used to identify the key.
+       *
+       * For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN.
+       *
+       *
+       * Aliases are recognized only in the account that created the AWS KMS key. For cross-account
+       * actions, you can only use the key ID or key ARN to identify the key. Cross-account actions
+       * involve using the role from the other account (AccountB), so specifying the key ID will use
+       * the key from the other account (AccountB).
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The type of encryption key, such as an AWS KMS key.
+       *
+       * When creating or updating a pipeline, the value must be set to 'KMS'.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html#cfn-codepipeline-pipeline-encryptionkey-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionKeyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty):
+          EncryptionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionKeyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionKeyProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty
+    }
+  }
+
+  /**
+   * The Git repository branches specified as filter criteria to start the pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * GitBranchFilterCriteriaProperty gitBranchFilterCriteriaProperty =
+   * GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html)
+   */
+  public interface GitBranchFilterCriteriaProperty {
+    /**
+     * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
+     * starting the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-excludes)
+     */
+    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+    /**
+     * The list of patterns of Git branches that, when a commit is pushed, are to be included as
+     * criteria that starts the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-includes)
+     */
+    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+
+    /**
+     * A builder for [GitBranchFilterCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be excluded from starting the pipeline.
+       */
+      public fun excludes(excludes: List<String>)
+
+      /**
+       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be excluded from starting the pipeline.
+       */
+      public fun excludes(vararg excludes: String)
+
+      /**
+       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be included as criteria that starts the pipeline.
+       */
+      public fun includes(includes: List<String>)
+
+      /**
+       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be included as criteria that starts the pipeline.
+       */
+      public fun includes(vararg includes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty.builder()
+
+      /**
+       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be excluded from starting the pipeline.
+       */
+      override fun excludes(excludes: List<String>) {
+        cdkBuilder.excludes(excludes)
+      }
+
+      /**
+       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be excluded from starting the pipeline.
+       */
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
+      /**
+       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be included as criteria that starts the pipeline.
+       */
+      override fun includes(includes: List<String>) {
+        cdkBuilder.includes(includes)
+      }
+
+      /**
+       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
+       * be included as criteria that starts the pipeline.
+       */
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
+    ) : CdkObject(cdkObject), GitBranchFilterCriteriaProperty {
+      /**
+       * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
+       * starting the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-excludes)
+       */
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+      /**
+       * The list of patterns of Git branches that, when a commit is pushed, are to be included as
+       * criteria that starts the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-includes)
+       */
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitBranchFilterCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty):
+          GitBranchFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitBranchFilterCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitBranchFilterCriteriaProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty
+    }
+  }
+
+  /**
+   * A type of trigger configuration for Git-based source actions.
+   *
+   *
+   * You can specify the Git configuration trigger type for all third-party Git-based source actions
+   * that are supported by the `CodeStarSourceConnection` action type.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * GitConfigurationProperty gitConfigurationProperty = GitConfigurationProperty.builder()
+   * .sourceActionName("sourceActionName")
+   * // the properties below are optional
+   * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+   * .branches(GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .events(List.of("events"))
+   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .build()))
+   * .push(List.of(GitPushFilterProperty.builder()
+   * .branches(GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .tags(GitTagFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html)
+   */
+  public interface GitConfigurationProperty {
+    /**
+     * The field where the repository event that will start the pipeline is specified as pull
+     * requests.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-pullrequest)
+     */
+    public fun pullRequest(): Any? = unwrap(this).getPullRequest()
+
+    /**
+     * The field where the repository event that will start the pipeline, such as pushing Git tags,
+     * is specified with details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-push)
+     */
+    public fun push(): Any? = unwrap(this).getPush()
+
+    /**
+     * The name of the pipeline source action where the trigger configuration, such as Git tags, is
+     * specified.
+     *
+     * The trigger configuration will start the pipeline upon the specified change only.
+     *
+     *
+     * You can only specify one trigger configuration per source action.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-sourceactionname)
+     */
+    public fun sourceActionName(): String
+
+    /**
+     * A builder for [GitConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      public fun pullRequest(pullRequest: IResolvable)
+
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      public fun pullRequest(pullRequest: List<Any>)
+
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      public fun pullRequest(vararg pullRequest: Any)
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      public fun push(push: IResolvable)
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      public fun push(push: List<Any>)
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      public fun push(vararg push: Any)
+
+      /**
+       * @param sourceActionName The name of the pipeline source action where the trigger
+       * configuration, such as Git tags, is specified. 
+       * The trigger configuration will start the pipeline upon the specified change only.
+       *
+       *
+       * You can only specify one trigger configuration per source action.
+       */
+      public fun sourceActionName(sourceActionName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty.builder()
+
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      override fun pullRequest(pullRequest: IResolvable) {
+        cdkBuilder.pullRequest(pullRequest.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      override fun pullRequest(pullRequest: List<Any>) {
+        cdkBuilder.pullRequest(pullRequest)
+      }
+
+      /**
+       * @param pullRequest The field where the repository event that will start the pipeline is
+       * specified as pull requests.
+       */
+      override fun pullRequest(vararg pullRequest: Any): Unit = pullRequest(pullRequest.toList())
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      override fun push(push: IResolvable) {
+        cdkBuilder.push(push.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      override fun push(push: List<Any>) {
+        cdkBuilder.push(push)
+      }
+
+      /**
+       * @param push The field where the repository event that will start the pipeline, such as
+       * pushing Git tags, is specified with details.
+       */
+      override fun push(vararg push: Any): Unit = push(push.toList())
+
+      /**
+       * @param sourceActionName The name of the pipeline source action where the trigger
+       * configuration, such as Git tags, is specified. 
+       * The trigger configuration will start the pipeline upon the specified change only.
+       *
+       *
+       * You can only specify one trigger configuration per source action.
+       */
+      override fun sourceActionName(sourceActionName: String) {
+        cdkBuilder.sourceActionName(sourceActionName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
+    ) : CdkObject(cdkObject), GitConfigurationProperty {
+      /**
+       * The field where the repository event that will start the pipeline is specified as pull
+       * requests.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-pullrequest)
+       */
+      override fun pullRequest(): Any? = unwrap(this).getPullRequest()
+
+      /**
+       * The field where the repository event that will start the pipeline, such as pushing Git
+       * tags, is specified with details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-push)
+       */
+      override fun push(): Any? = unwrap(this).getPush()
+
+      /**
+       * The name of the pipeline source action where the trigger configuration, such as Git tags,
+       * is specified.
+       *
+       * The trigger configuration will start the pipeline upon the specified change only.
+       *
+       *
+       * You can only specify one trigger configuration per source action.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitconfiguration.html#cfn-codepipeline-pipeline-gitconfiguration-sourceactionname)
+       */
+      override fun sourceActionName(): String = unwrap(this).getSourceActionName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty):
+          GitConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? GitConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitConfigurationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty
+    }
+  }
+
+  /**
+   * The Git repository file paths specified as filter criteria to start the pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * GitFilePathFilterCriteriaProperty gitFilePathFilterCriteriaProperty =
+   * GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html)
+   */
+  public interface GitFilePathFilterCriteriaProperty {
+    /**
+     * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
+     * excluded from starting the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-excludes)
+     */
+    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+    /**
+     * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
+     * included as criteria that starts the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-includes)
+     */
+    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+
+    /**
+     * A builder for [GitFilePathFilterCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be excluded from starting the pipeline.
+       */
+      public fun excludes(excludes: List<String>)
+
+      /**
+       * @param excludes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be excluded from starting the pipeline.
+       */
+      public fun excludes(vararg excludes: String)
+
+      /**
+       * @param includes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be included as criteria that starts the pipeline.
+       */
+      public fun includes(includes: List<String>)
+
+      /**
+       * @param includes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be included as criteria that starts the pipeline.
+       */
+      public fun includes(vararg includes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty.builder()
+
+      /**
+       * @param excludes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be excluded from starting the pipeline.
+       */
+      override fun excludes(excludes: List<String>) {
+        cdkBuilder.excludes(excludes)
+      }
+
+      /**
+       * @param excludes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be excluded from starting the pipeline.
+       */
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
+      /**
+       * @param includes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be included as criteria that starts the pipeline.
+       */
+      override fun includes(includes: List<String>) {
+        cdkBuilder.includes(includes)
+      }
+
+      /**
+       * @param includes The list of patterns of Git repository file paths that, when a commit is
+       * pushed, are to be included as criteria that starts the pipeline.
+       */
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
+    ) : CdkObject(cdkObject), GitFilePathFilterCriteriaProperty {
+      /**
+       * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
+       * excluded from starting the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-excludes)
+       */
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+      /**
+       * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
+       * included as criteria that starts the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-includes)
+       */
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GitFilePathFilterCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty):
+          GitFilePathFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitFilePathFilterCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitFilePathFilterCriteriaProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
+    }
+  }
+
+  /**
+   * The event criteria for the pull request trigger configuration, such as the lists of branches or
+   * file paths to include and exclude.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * GitPullRequestFilterProperty gitPullRequestFilterProperty =
+   * GitPullRequestFilterProperty.builder()
+   * .branches(GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .events(List.of("events"))
+   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html)
+   */
+  public interface GitPullRequestFilterProperty {
+    /**
+     * The field that specifies to filter on branches for the pull request trigger configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-branches)
+     */
+    public fun branches(): Any? = unwrap(this).getBranches()
+
+    /**
+     * The field that specifies which pull request events to filter on (opened, updated, closed) for
+     * the trigger configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
+     */
+    public fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+
+    /**
+     * The field that specifies to filter on file paths for the pull request trigger configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-filepaths)
+     */
+    public fun filePaths(): Any? = unwrap(this).getFilePaths()
+
+    /**
+     * A builder for [GitPullRequestFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      public fun branches(branches: IResolvable)
+
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      public fun branches(branches: GitBranchFilterCriteriaProperty)
+
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
+      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit)
+
+      /**
+       * @param events The field that specifies which pull request events to filter on (opened,
+       * updated, closed) for the trigger configuration.
+       */
+      public fun events(events: List<String>)
+
+      /**
+       * @param events The field that specifies which pull request events to filter on (opened,
+       * updated, closed) for the trigger configuration.
+       */
+      public fun events(vararg events: String)
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      public fun filePaths(filePaths: IResolvable)
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty)
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty.builder()
+
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      override fun branches(branches: IResolvable) {
+        cdkBuilder.branches(branches.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      override fun branches(branches: GitBranchFilterCriteriaProperty) {
+        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
+      }
+
+      /**
+       * @param branches The field that specifies to filter on branches for the pull request trigger
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
+      override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit): Unit =
+          branches(GitBranchFilterCriteriaProperty(branches))
+
+      /**
+       * @param events The field that specifies which pull request events to filter on (opened,
+       * updated, closed) for the trigger configuration.
+       */
+      override fun events(events: List<String>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param events The field that specifies which pull request events to filter on (opened,
+       * updated, closed) for the trigger configuration.
+       */
+      override fun events(vararg events: String): Unit = events(events.toList())
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      override fun filePaths(filePaths: IResolvable) {
+        cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
+        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
+      }
+
+      /**
+       * @param filePaths The field that specifies to filter on file paths for the pull request
+       * trigger configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit
+          = filePaths(GitFilePathFilterCriteriaProperty(filePaths))
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
+    ) : CdkObject(cdkObject), GitPullRequestFilterProperty {
+      /**
+       * The field that specifies to filter on branches for the pull request trigger configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-branches)
+       */
+      override fun branches(): Any? = unwrap(this).getBranches()
+
+      /**
+       * The field that specifies which pull request events to filter on (opened, updated, closed)
+       * for the trigger configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
+       */
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+
+      /**
+       * The field that specifies to filter on file paths for the pull request trigger
+       * configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-filepaths)
+       */
+      override fun filePaths(): Any? = unwrap(this).getFilePaths()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitPullRequestFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty):
+          GitPullRequestFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitPullRequestFilterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitPullRequestFilterProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty
     }
   }
 
@@ -4243,8 +3632,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
     ) : CdkObject(cdkObject), GitPushFilterProperty {
       /**
        * The field that specifies to filter on branches for the push trigger configuration.
@@ -4284,6 +3672,889 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty
+    }
+  }
+
+  /**
+   * The Git tags specified as filter criteria for whether a Git tag repository event will start the
+   * pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * GitTagFilterCriteriaProperty gitTagFilterCriteriaProperty =
+   * GitTagFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html)
+   */
+  public interface GitTagFilterCriteriaProperty {
+    /**
+     * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
+     * pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-excludes)
+     */
+    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+    /**
+     * The list of patterns of Git tags that, when pushed, are to be included as criteria that
+     * starts the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-includes)
+     */
+    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+
+    /**
+     * A builder for [GitTagFilterCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
+       * starting the pipeline.
+       */
+      public fun excludes(excludes: List<String>)
+
+      /**
+       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
+       * starting the pipeline.
+       */
+      public fun excludes(vararg excludes: String)
+
+      /**
+       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
+       * criteria that starts the pipeline.
+       */
+      public fun includes(includes: List<String>)
+
+      /**
+       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
+       * criteria that starts the pipeline.
+       */
+      public fun includes(vararg includes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty.builder()
+
+      /**
+       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
+       * starting the pipeline.
+       */
+      override fun excludes(excludes: List<String>) {
+        cdkBuilder.excludes(excludes)
+      }
+
+      /**
+       * @param excludes The list of patterns of Git tags that, when pushed, are to be excluded from
+       * starting the pipeline.
+       */
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
+      /**
+       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
+       * criteria that starts the pipeline.
+       */
+      override fun includes(includes: List<String>) {
+        cdkBuilder.includes(includes)
+      }
+
+      /**
+       * @param includes The list of patterns of Git tags that, when pushed, are to be included as
+       * criteria that starts the pipeline.
+       */
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
+    ) : CdkObject(cdkObject), GitTagFilterCriteriaProperty {
+      /**
+       * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
+       * pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-excludes)
+       */
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+
+      /**
+       * The list of patterns of Git tags that, when pushed, are to be included as criteria that
+       * starts the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gittagfiltercriteria.html#cfn-codepipeline-pipeline-gittagfiltercriteria-includes)
+       */
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GitTagFilterCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty):
+          GitTagFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitTagFilterCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GitTagFilterCriteriaProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty
+    }
+  }
+
+  /**
+   * Represents information about an artifact to be worked on, such as a test or build artifact.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * InputArtifactProperty inputArtifactProperty = InputArtifactProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html)
+   */
+  public interface InputArtifactProperty {
+    /**
+     * The name of the artifact to be worked on (for example, "My App").
+     *
+     * Artifacts are the files that are worked on by actions in the pipeline. See the action
+     * configuration for each action for details about artifact parameters. For example, the S3 source
+     * action input artifact is a file name (or file path), and the files are generally provided as a
+     * ZIP file. Example artifact name: SampleApp_Windows.zip
+     *
+     * The input artifact of an action must exactly match the output artifact declared in a
+     * preceding action, but the input artifact does not have to be the next action in strict sequence
+     * from the action that provided the output artifact. Actions in parallel can declare different
+     * output artifacts, which are in turn consumed by different following actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html#cfn-codepipeline-pipeline-inputartifact-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [InputArtifactProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the artifact to be worked on (for example, "My App"). 
+       * Artifacts are the files that are worked on by actions in the pipeline. See the action
+       * configuration for each action for details about artifact parameters. For example, the S3
+       * source action input artifact is a file name (or file path), and the files are generally
+       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
+       *
+       * The input artifact of an action must exactly match the output artifact declared in a
+       * preceding action, but the input artifact does not have to be the next action in strict
+       * sequence from the action that provided the output artifact. Actions in parallel can declare
+       * different output artifacts, which are in turn consumed by different following actions.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.builder()
+
+      /**
+       * @param name The name of the artifact to be worked on (for example, "My App"). 
+       * Artifacts are the files that are worked on by actions in the pipeline. See the action
+       * configuration for each action for details about artifact parameters. For example, the S3
+       * source action input artifact is a file name (or file path), and the files are generally
+       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
+       *
+       * The input artifact of an action must exactly match the output artifact declared in a
+       * preceding action, but the input artifact does not have to be the next action in strict
+       * sequence from the action that provided the output artifact. Actions in parallel can declare
+       * different output artifacts, which are in turn consumed by different following actions.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
+    ) : CdkObject(cdkObject), InputArtifactProperty {
+      /**
+       * The name of the artifact to be worked on (for example, "My App").
+       *
+       * Artifacts are the files that are worked on by actions in the pipeline. See the action
+       * configuration for each action for details about artifact parameters. For example, the S3
+       * source action input artifact is a file name (or file path), and the files are generally
+       * provided as a ZIP file. Example artifact name: SampleApp_Windows.zip
+       *
+       * The input artifact of an action must exactly match the output artifact declared in a
+       * preceding action, but the input artifact does not have to be the next action in strict
+       * sequence from the action that provided the output artifact. Actions in parallel can declare
+       * different output artifacts, which are in turn consumed by different following actions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html#cfn-codepipeline-pipeline-inputartifact-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputArtifactProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty):
+          InputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as? InputArtifactProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputArtifactProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty
+    }
+  }
+
+  /**
+   * Represents information about the output of an action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * OutputArtifactProperty outputArtifactProperty = OutputArtifactProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html)
+   */
+  public interface OutputArtifactProperty {
+    /**
+     * The name of the output of an artifact, such as "My App".
+     *
+     * The output artifact name must exactly match the input artifact declared for a downstream
+     * action. However, the downstream action's input artifact does not have to be the next action in
+     * strict sequence from the action that provided the output artifact. Actions in parallel can
+     * declare different output artifacts, which are in turn consumed by different following actions.
+     *
+     * Output artifact names must be unique within a pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [OutputArtifactProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the output of an artifact, such as "My App". 
+       * The output artifact name must exactly match the input artifact declared for a downstream
+       * action. However, the downstream action's input artifact does not have to be the next action in
+       * strict sequence from the action that provided the output artifact. Actions in parallel can
+       * declare different output artifacts, which are in turn consumed by different following actions.
+       *
+       * Output artifact names must be unique within a pipeline.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.builder()
+
+      /**
+       * @param name The name of the output of an artifact, such as "My App". 
+       * The output artifact name must exactly match the input artifact declared for a downstream
+       * action. However, the downstream action's input artifact does not have to be the next action in
+       * strict sequence from the action that provided the output artifact. Actions in parallel can
+       * declare different output artifacts, which are in turn consumed by different following actions.
+       *
+       * Output artifact names must be unique within a pipeline.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
+    ) : CdkObject(cdkObject), OutputArtifactProperty {
+      /**
+       * The name of the output of an artifact, such as "My App".
+       *
+       * The output artifact name must exactly match the input artifact declared for a downstream
+       * action. However, the downstream action's input artifact does not have to be the next action in
+       * strict sequence from the action that provided the output artifact. Actions in parallel can
+       * declare different output artifacts, which are in turn consumed by different following actions.
+       *
+       * Output artifact names must be unique within a pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutputArtifactProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty):
+          OutputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputArtifactProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputArtifactProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty
+    }
+  }
+
+  /**
+   * Represents information about the specified trigger configuration, such as the filter criteria
+   * and the source stage for the action that contains the trigger.
+   *
+   *
+   * This is only supported for the `CodeStarSourceConnection` action type. &gt; When a trigger
+   * configuration is specified, default change detection for repository and branch commits is
+   * disabled.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * PipelineTriggerDeclarationProperty pipelineTriggerDeclarationProperty =
+   * PipelineTriggerDeclarationProperty.builder()
+   * .providerType("providerType")
+   * // the properties below are optional
+   * .gitConfiguration(GitConfigurationProperty.builder()
+   * .sourceActionName("sourceActionName")
+   * // the properties below are optional
+   * .pullRequest(List.of(GitPullRequestFilterProperty.builder()
+   * .branches(GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .events(List.of("events"))
+   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .build()))
+   * .push(List.of(GitPushFilterProperty.builder()
+   * .branches(GitBranchFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .filePaths(GitFilePathFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .tags(GitTagFilterCriteriaProperty.builder()
+   * .excludes(List.of("excludes"))
+   * .includes(List.of("includes"))
+   * .build())
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html)
+   */
+  public interface PipelineTriggerDeclarationProperty {
+    /**
+     * Provides the filter criteria and the source stage for the repository event that starts the
+     * pipeline, such as Git tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-gitconfiguration)
+     */
+    public fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
+
+    /**
+     * The source provider for the event, such as connections configured for a repository with Git
+     * tags, for the specified trigger configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-providertype)
+     */
+    public fun providerType(): String
+
+    /**
+     * A builder for [PipelineTriggerDeclarationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      public fun gitConfiguration(gitConfiguration: IResolvable)
+
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty)
+
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
+      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param providerType The source provider for the event, such as connections configured for a
+       * repository with Git tags, for the specified trigger configuration. 
+       */
+      public fun providerType(providerType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty.builder()
+
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      override fun gitConfiguration(gitConfiguration: IResolvable) {
+        cdkBuilder.gitConfiguration(gitConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
+        cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param gitConfiguration Provides the filter criteria and the source stage for the
+       * repository event that starts the pipeline, such as Git tags.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
+      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit):
+          Unit = gitConfiguration(GitConfigurationProperty(gitConfiguration))
+
+      /**
+       * @param providerType The source provider for the event, such as connections configured for a
+       * repository with Git tags, for the specified trigger configuration. 
+       */
+      override fun providerType(providerType: String) {
+        cdkBuilder.providerType(providerType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
+    ) : CdkObject(cdkObject), PipelineTriggerDeclarationProperty {
+      /**
+       * Provides the filter criteria and the source stage for the repository event that starts the
+       * pipeline, such as Git tags.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-gitconfiguration)
+       */
+      override fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
+
+      /**
+       * The source provider for the event, such as connections configured for a repository with Git
+       * tags, for the specified trigger configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-pipelinetriggerdeclaration.html#cfn-codepipeline-pipeline-pipelinetriggerdeclaration-providertype)
+       */
+      override fun providerType(): String = unwrap(this).getProviderType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PipelineTriggerDeclarationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty):
+          PipelineTriggerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipelineTriggerDeclarationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PipelineTriggerDeclarationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
+    }
+  }
+
+  /**
+   * Represents information about a stage and its definition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * StageDeclarationProperty stageDeclarationProperty = StageDeclarationProperty.builder()
+   * .actions(List.of(ActionDeclarationProperty.builder()
+   * .actionTypeId(ActionTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .namespace("namespace")
+   * .outputArtifacts(List.of(OutputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .region("region")
+   * .roleArn("roleArn")
+   * .runOrder(123)
+   * .build()))
+   * .name("name")
+   * // the properties below are optional
+   * .blockers(List.of(BlockerDeclarationProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html)
+   */
+  public interface StageDeclarationProperty {
+    /**
+     * The actions included in a stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions)
+     */
+    public fun actions(): Any
+
+    /**
+     * Reserved for future use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers)
+     */
+    public fun blockers(): Any? = unwrap(this).getBlockers()
+
+    /**
+     * The name of the stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [StageDeclarationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      public fun actions(actions: IResolvable)
+
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      public fun actions(actions: List<Any>)
+
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      public fun actions(vararg actions: Any)
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      public fun blockers(blockers: IResolvable)
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      public fun blockers(blockers: List<Any>)
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      public fun blockers(vararg blockers: Any)
+
+      /**
+       * @param name The name of the stage. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty.builder()
+
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      override fun actions(actions: IResolvable) {
+        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      override fun actions(actions: List<Any>) {
+        cdkBuilder.actions(actions)
+      }
+
+      /**
+       * @param actions The actions included in a stage. 
+       */
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      override fun blockers(blockers: IResolvable) {
+        cdkBuilder.blockers(blockers.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      override fun blockers(blockers: List<Any>) {
+        cdkBuilder.blockers(blockers)
+      }
+
+      /**
+       * @param blockers Reserved for future use.
+       */
+      override fun blockers(vararg blockers: Any): Unit = blockers(blockers.toList())
+
+      /**
+       * @param name The name of the stage. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
+    ) : CdkObject(cdkObject), StageDeclarationProperty {
+      /**
+       * The actions included in a stage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions)
+       */
+      override fun actions(): Any = unwrap(this).getActions()
+
+      /**
+       * Reserved for future use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers)
+       */
+      override fun blockers(): Any? = unwrap(this).getBlockers()
+
+      /**
+       * The name of the stage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StageDeclarationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty):
+          StageDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as? StageDeclarationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StageDeclarationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty
+    }
+  }
+
+  /**
+   * The name of the pipeline in which you want to disable the flow of artifacts from one stage to
+   * another.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * StageTransitionProperty stageTransitionProperty = StageTransitionProperty.builder()
+   * .reason("reason")
+   * .stageName("stageName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html)
+   */
+  public interface StageTransitionProperty {
+    /**
+     * The reason given to the user that a stage is disabled, such as waiting for manual approval or
+     * manual tests.
+     *
+     * This message is displayed in the pipeline console UI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-reason)
+     */
+    public fun reason(): String
+
+    /**
+     * The name of the stage where you want to disable the inbound or outbound transition of
+     * artifacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-stagename)
+     */
+    public fun stageName(): String
+
+    /**
+     * A builder for [StageTransitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reason The reason given to the user that a stage is disabled, such as waiting for
+       * manual approval or manual tests. 
+       * This message is displayed in the pipeline console UI.
+       */
+      public fun reason(reason: String)
+
+      /**
+       * @param stageName The name of the stage where you want to disable the inbound or outbound
+       * transition of artifacts. 
+       */
+      public fun stageName(stageName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.builder()
+
+      /**
+       * @param reason The reason given to the user that a stage is disabled, such as waiting for
+       * manual approval or manual tests. 
+       * This message is displayed in the pipeline console UI.
+       */
+      override fun reason(reason: String) {
+        cdkBuilder.reason(reason)
+      }
+
+      /**
+       * @param stageName The name of the stage where you want to disable the inbound or outbound
+       * transition of artifacts. 
+       */
+      override fun stageName(stageName: String) {
+        cdkBuilder.stageName(stageName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
+    ) : CdkObject(cdkObject), StageTransitionProperty {
+      /**
+       * The reason given to the user that a stage is disabled, such as waiting for manual approval
+       * or manual tests.
+       *
+       * This message is displayed in the pipeline console UI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-reason)
+       */
+      override fun reason(): String = unwrap(this).getReason()
+
+      /**
+       * The name of the stage where you want to disable the inbound or outbound transition of
+       * artifacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html#cfn-codepipeline-pipeline-stagetransition-stagename)
+       */
+      override fun stageName(): String = unwrap(this).getStageName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StageTransitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty):
+          StageTransitionProperty = CdkObjectWrappers.wrap(cdkObject) as? StageTransitionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StageTransitionProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty
     }
   }
 
@@ -4389,8 +4660,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
     ) : CdkObject(cdkObject), VariableDeclarationProperty {
       /**
        * The value of a pipeline-level variable.
@@ -4432,293 +4702,6 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty
-    }
-  }
-
-  /**
-   * The Git repository file paths specified as filter criteria to start the pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * GitFilePathFilterCriteriaProperty gitFilePathFilterCriteriaProperty =
-   * GitFilePathFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html)
-   */
-  public interface GitFilePathFilterCriteriaProperty {
-    /**
-     * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
-     * excluded from starting the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-excludes)
-     */
-    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-    /**
-     * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
-     * included as criteria that starts the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-includes)
-     */
-    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-
-    /**
-     * A builder for [GitFilePathFilterCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excludes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be excluded from starting the pipeline.
-       */
-      public fun excludes(excludes: List<String>)
-
-      /**
-       * @param excludes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be excluded from starting the pipeline.
-       */
-      public fun excludes(vararg excludes: String)
-
-      /**
-       * @param includes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be included as criteria that starts the pipeline.
-       */
-      public fun includes(includes: List<String>)
-
-      /**
-       * @param includes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be included as criteria that starts the pipeline.
-       */
-      public fun includes(vararg includes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty.builder()
-
-      /**
-       * @param excludes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be excluded from starting the pipeline.
-       */
-      override fun excludes(excludes: List<String>) {
-        cdkBuilder.excludes(excludes)
-      }
-
-      /**
-       * @param excludes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be excluded from starting the pipeline.
-       */
-      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
-
-      /**
-       * @param includes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be included as criteria that starts the pipeline.
-       */
-      override fun includes(includes: List<String>) {
-        cdkBuilder.includes(includes)
-      }
-
-      /**
-       * @param includes The list of patterns of Git repository file paths that, when a commit is
-       * pushed, are to be included as criteria that starts the pipeline.
-       */
-      override fun includes(vararg includes: String): Unit = includes(includes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitFilePathFilterCriteriaProperty {
-      /**
-       * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
-       * excluded from starting the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-excludes)
-       */
-      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-      /**
-       * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
-       * included as criteria that starts the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitfilepathfiltercriteria.html#cfn-codepipeline-pipeline-gitfilepathfiltercriteria-includes)
-       */
-      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          GitFilePathFilterCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty):
-          GitFilePathFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GitFilePathFilterCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitFilePathFilterCriteriaProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
-    }
-  }
-
-  /**
-   * The Git repository branches specified as filter criteria to start the pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
-   * GitBranchFilterCriteriaProperty gitBranchFilterCriteriaProperty =
-   * GitBranchFilterCriteriaProperty.builder()
-   * .excludes(List.of("excludes"))
-   * .includes(List.of("includes"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html)
-   */
-  public interface GitBranchFilterCriteriaProperty {
-    /**
-     * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
-     * starting the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-excludes)
-     */
-    public fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-    /**
-     * The list of patterns of Git branches that, when a commit is pushed, are to be included as
-     * criteria that starts the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-includes)
-     */
-    public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-
-    /**
-     * A builder for [GitBranchFilterCriteriaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be excluded from starting the pipeline.
-       */
-      public fun excludes(excludes: List<String>)
-
-      /**
-       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be excluded from starting the pipeline.
-       */
-      public fun excludes(vararg excludes: String)
-
-      /**
-       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be included as criteria that starts the pipeline.
-       */
-      public fun includes(includes: List<String>)
-
-      /**
-       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be included as criteria that starts the pipeline.
-       */
-      public fun includes(vararg includes: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty.Builder
-          =
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty.builder()
-
-      /**
-       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be excluded from starting the pipeline.
-       */
-      override fun excludes(excludes: List<String>) {
-        cdkBuilder.excludes(excludes)
-      }
-
-      /**
-       * @param excludes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be excluded from starting the pipeline.
-       */
-      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
-
-      /**
-       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be included as criteria that starts the pipeline.
-       */
-      override fun includes(includes: List<String>) {
-        cdkBuilder.includes(includes)
-      }
-
-      /**
-       * @param includes The list of patterns of Git branches that, when a commit is pushed, are to
-       * be included as criteria that starts the pipeline.
-       */
-      override fun includes(vararg includes: String): Unit = includes(includes.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitBranchFilterCriteriaProperty {
-      /**
-       * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
-       * starting the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-excludes)
-       */
-      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
-
-      /**
-       * The list of patterns of Git branches that, when a commit is pushed, are to be included as
-       * criteria that starts the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitbranchfiltercriteria.html#cfn-codepipeline-pipeline-gitbranchfiltercriteria-includes)
-       */
-      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GitBranchFilterCriteriaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty):
-          GitBranchFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GitBranchFilterCriteriaProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GitBranchFilterCriteriaProperty):
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty
     }
   }
 }

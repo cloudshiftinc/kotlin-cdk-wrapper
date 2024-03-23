@@ -119,7 +119,7 @@ public interface CfnAggregationAuthorizationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps,
+    cdkObject: software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps,
   ) : CdkObject(cdkObject), CfnAggregationAuthorizationProps {
     /**
      * The 12-digit account ID of the account authorized to aggregate data.

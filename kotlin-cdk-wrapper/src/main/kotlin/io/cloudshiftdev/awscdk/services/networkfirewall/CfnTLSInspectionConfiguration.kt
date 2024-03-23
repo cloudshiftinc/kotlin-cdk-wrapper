@@ -85,9 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
  */
-public open class CfnTLSInspectionConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration,
+public open class CfnTLSInspectionConfiguration(
+  cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -455,288 +454,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
     internal fun unwrap(wrapped: CfnTLSInspectionConfiguration):
         software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration =
-        wrapped.cdkObject
-  }
-
-  /**
-   * A single port range specification.
-   *
-   * This is used for source and destination port ranges in the stateless rule
-   * [MatchAttributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
-   * , `SourcePorts` , and `DestinationPorts` settings.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html)
-   */
-  public interface PortRangeProperty {
-    /**
-     * The lower limit of the port range.
-     *
-     * This must be less than or equal to the `ToPort` specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-fromport)
-     */
-    public fun fromPort(): Number
-
-    /**
-     * The upper limit of the port range.
-     *
-     * This must be greater than or equal to the `FromPort` specification.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-toport)
-     */
-    public fun toPort(): Number
-
-    /**
-     * A builder for [PortRangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fromPort The lower limit of the port range. 
-       * This must be less than or equal to the `ToPort` specification.
-       */
-      public fun fromPort(fromPort: Number)
-
-      /**
-       * @param toPort The upper limit of the port range. 
-       * This must be greater than or equal to the `FromPort` specification.
-       */
-      public fun toPort(toPort: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty.builder()
-
-      /**
-       * @param fromPort The lower limit of the port range. 
-       * This must be less than or equal to the `ToPort` specification.
-       */
-      override fun fromPort(fromPort: Number) {
-        cdkBuilder.fromPort(fromPort)
-      }
-
-      /**
-       * @param toPort The upper limit of the port range. 
-       * This must be greater than or equal to the `FromPort` specification.
-       */
-      override fun toPort(toPort: Number) {
-        cdkBuilder.toPort(toPort)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
-      /**
-       * The lower limit of the port range.
-       *
-       * This must be less than or equal to the `ToPort` specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-fromport)
-       */
-      override fun fromPort(): Number = unwrap(this).getFromPort()
-
-      /**
-       * The upper limit of the port range.
-       *
-       * This must be greater than or equal to the `FromPort` specification.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-toport)
-       */
-      override fun toPort(): Number = unwrap(this).getToPort()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PortRangeProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
-    }
-  }
-
-  /**
-   * The object that defines a TLS inspection configuration. This defines the TLS inspection
-   * configuration.
-   *
-   * AWS Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall
-   * re-encrypts the traffic before sending it to its destination.
-   *
-   * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy,
-   * then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to
-   * decrypt and inspect the traffic traveling through your firewalls. You can reference a TLS
-   * inspection configuration from more than one firewall policy, and you can use a firewall policy in
-   * more than one firewall. For more information about using TLS inspection configurations, see
-   * [Inspecting SSL/TLS traffic with TLS inspection
-   * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html)
-   * in the *AWS Network Firewall Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * TLSInspectionConfigurationProperty tLSInspectionConfigurationProperty =
-   * TLSInspectionConfigurationProperty.builder()
-   * .serverCertificateConfigurations(List.of(ServerCertificateConfigurationProperty.builder()
-   * .certificateAuthorityArn("certificateAuthorityArn")
-   * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
-   * .revokedStatusAction("revokedStatusAction")
-   * .unknownStatusAction("unknownStatusAction")
-   * .build())
-   * .scopes(List.of(ServerCertificateScopeProperty.builder()
-   * .destinationPorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .destinations(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .protocols(List.of(123))
-   * .sourcePorts(List.of(PortRangeProperty.builder()
-   * .fromPort(123)
-   * .toPort(123)
-   * .build()))
-   * .sources(List.of(AddressProperty.builder()
-   * .addressDefinition("addressDefinition")
-   * .build()))
-   * .build()))
-   * .serverCertificates(List.of(ServerCertificateProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build()))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html)
-   */
-  public interface TLSInspectionConfigurationProperty {
-    /**
-     * Lists the server certificate configurations that are associated with the TLS configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration-servercertificateconfigurations)
-     */
-    public fun serverCertificateConfigurations(): Any? =
-        unwrap(this).getServerCertificateConfigurations()
-
-    /**
-     * A builder for [TLSInspectionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      public fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable)
-
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      public fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>)
-
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      public fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.builder()
-
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      override fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
-        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      override fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
-        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations)
-      }
-
-      /**
-       * @param serverCertificateConfigurations Lists the server certificate configurations that are
-       * associated with the TLS configuration.
-       */
-      override fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any):
-          Unit = serverCertificateConfigurations(serverCertificateConfigurations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty,
-    ) : CdkObject(cdkObject), TLSInspectionConfigurationProperty {
-      /**
-       * Lists the server certificate configurations that are associated with the TLS configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration-servercertificateconfigurations)
-       */
-      override fun serverCertificateConfigurations(): Any? =
-          unwrap(this).getServerCertificateConfigurations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TLSInspectionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty):
-          TLSInspectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TLSInspectionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TLSInspectionConfigurationProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
-    }
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration
   }
 
   /**
@@ -854,8 +573,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty,
     ) : CdkObject(cdkObject), AddressProperty {
       /**
        * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
@@ -900,105 +618,6 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty
-    }
-  }
-
-  /**
-   * Any AWS Certificate Manager (ACM) Secure Sockets Layer/Transport Layer Security (SSL/TLS)
-   * server certificate that's associated with a
-   * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
-   * . Used in a
-   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
-   * for inspection of inbound traffic to your firewall. You must request or import a SSL/TLS
-   * certificate into ACM for each domain Network Firewall needs to decrypt and inspect. AWS Network
-   * Firewall uses the SSL/TLS certificates to decrypt specified inbound SSL/TLS traffic going to your
-   * firewall. For information about working with certificates in AWS Certificate Manager , see
-   * [Request a public
-   * certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) or
-   * [Importing certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html)
-   * in the *AWS Certificate Manager User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * ServerCertificateProperty serverCertificateProperty = ServerCertificateProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html)
-   */
-  public interface ServerCertificateProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS server certificate
-     * that's used for inbound SSL/TLS inspection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificate-resourcearn)
-     */
-    public fun resourceArn(): String? = unwrap(this).getResourceArn()
-
-    /**
-     * A builder for [ServerCertificateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS
-       * server certificate that's used for inbound SSL/TLS inspection.
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty.Builder
-          =
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty.builder()
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS
-       * server certificate that's used for inbound SSL/TLS inspection.
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty,
-    ) : CdkObject(cdkObject), ServerCertificateProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS server certificate
-       * that's used for inbound SSL/TLS inspection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificate-resourcearn)
-       */
-      override fun resourceArn(): String? = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ServerCertificateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty):
-          ServerCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerCertificateProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerCertificateProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
     }
   }
 
@@ -1142,8 +761,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty,
     ) : CdkObject(cdkObject), CheckCertificateRevocationStatusProperty {
       /**
        * Configures how Network Firewall processes traffic when it determines that the certificate
@@ -1196,6 +814,627 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty
+    }
+  }
+
+  /**
+   * A single port range specification.
+   *
+   * This is used for source and destination port ranges in the stateless rule
+   * [MatchAttributes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
+   * , `SourcePorts` , and `DestinationPorts` settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html)
+   */
+  public interface PortRangeProperty {
+    /**
+     * The lower limit of the port range.
+     *
+     * This must be less than or equal to the `ToPort` specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-fromport)
+     */
+    public fun fromPort(): Number
+
+    /**
+     * The upper limit of the port range.
+     *
+     * This must be greater than or equal to the `FromPort` specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-toport)
+     */
+    public fun toPort(): Number
+
+    /**
+     * A builder for [PortRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fromPort The lower limit of the port range. 
+       * This must be less than or equal to the `ToPort` specification.
+       */
+      public fun fromPort(fromPort: Number)
+
+      /**
+       * @param toPort The upper limit of the port range. 
+       * This must be greater than or equal to the `FromPort` specification.
+       */
+      public fun toPort(toPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty.builder()
+
+      /**
+       * @param fromPort The lower limit of the port range. 
+       * This must be less than or equal to the `ToPort` specification.
+       */
+      override fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
+      }
+
+      /**
+       * @param toPort The upper limit of the port range. 
+       * This must be greater than or equal to the `FromPort` specification.
+       */
+      override fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty,
+    ) : CdkObject(cdkObject), PortRangeProperty {
+      /**
+       * The lower limit of the port range.
+       *
+       * This must be less than or equal to the `ToPort` specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-fromport)
+       */
+      override fun fromPort(): Number = unwrap(this).getFromPort()
+
+      /**
+       * The upper limit of the port range.
+       *
+       * This must be greater than or equal to the `FromPort` specification.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-portrange.html#cfn-networkfirewall-tlsinspectionconfiguration-portrange-toport)
+       */
+      override fun toPort(): Number = unwrap(this).getToPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty):
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PortRangeProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
+    }
+  }
+
+  /**
+   * Configures the AWS Certificate Manager certificates and scope that Network Firewall uses to
+   * decrypt and re-encrypt traffic using a
+   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+   * . You can configure `ServerCertificates` for inbound SSL/TLS inspection, a
+   * `CertificateAuthorityArn` for outbound SSL/TLS inspection, or both. For information about working
+   * with certificates for TLS inspection, see [Using SSL/TLS server certficiates with TLS inspection
+   * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+   * in the *AWS Network Firewall Developer Guide* .
+   *
+   *
+   * If a server certificate that's associated with your
+   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+   * is revoked, deleted, or expired it can result in client-side TLS errors.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * ServerCertificateConfigurationProperty serverCertificateConfigurationProperty =
+   * ServerCertificateConfigurationProperty.builder()
+   * .certificateAuthorityArn("certificateAuthorityArn")
+   * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
+   * .revokedStatusAction("revokedStatusAction")
+   * .unknownStatusAction("unknownStatusAction")
+   * .build())
+   * .scopes(List.of(ServerCertificateScopeProperty.builder()
+   * .destinationPorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .destinations(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .protocols(List.of(123))
+   * .sourcePorts(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .sources(List.of(AddressProperty.builder()
+   * .addressDefinition("addressDefinition")
+   * .build()))
+   * .build()))
+   * .serverCertificates(List.of(ServerCertificateProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
+   */
+  public interface ServerCertificateConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the imported certificate authority (CA) certificate within
+     * AWS Certificate Manager (ACM) to use for outbound SSL/TLS inspection.
+     *
+     * The following limitations apply:
+     *
+     * * You can use CA certificates that you imported into ACM, but you can't generate CA
+     * certificates with ACM.
+     * * You can't use certificates issued by AWS Private Certificate Authority .
+     *
+     * For more information about configuring certificates for outbound inspection, see [Using
+     * SSL/TLS certificates with certificates with TLS inspection
+     * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+     * in the *AWS Network Firewall Developer Guide* .
+     *
+     * For information about working with certificates in ACM, see [Importing
+     * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
+     * *AWS Certificate Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-certificateauthorityarn)
+     */
+    public fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
+
+    /**
+     * When enabled, Network Firewall checks if the server certificate presented by the server in
+     * the SSL/TLS connection has a revoked or unkown status.
+     *
+     * If the certificate has an unknown or revoked status, you must specify the actions that
+     * Network Firewall takes on outbound traffic. To check the certificate revocation status, you must
+     * also specify a `CertificateAuthorityArn` in
+     * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-checkcertificaterevocationstatus)
+     */
+    public fun checkCertificateRevocationStatus(): Any? =
+        unwrap(this).getCheckCertificateRevocationStatus()
+
+    /**
+     * A list of scopes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-scopes)
+     */
+    public fun scopes(): Any? = unwrap(this).getScopes()
+
+    /**
+     * The list of server certificates to use for inbound SSL/TLS inspection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-servercertificates)
+     */
+    public fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
+
+    /**
+     * A builder for [ServerCertificateConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateAuthorityArn The Amazon Resource Name (ARN) of the imported certificate
+       * authority (CA) certificate within AWS Certificate Manager (ACM) to use for outbound SSL/TLS
+       * inspection.
+       * The following limitations apply:
+       *
+       * * You can use CA certificates that you imported into ACM, but you can't generate CA
+       * certificates with ACM.
+       * * You can't use certificates issued by AWS Private Certificate Authority .
+       *
+       * For more information about configuring certificates for outbound inspection, see [Using
+       * SSL/TLS certificates with certificates with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       *
+       * For information about working with certificates in ACM, see [Importing
+       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
+       * *AWS Certificate Manager User Guide* .
+       */
+      public fun certificateAuthorityArn(certificateAuthorityArn: String)
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      public fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable)
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      public
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty)
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
+      public
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit)
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      public fun scopes(scopes: IResolvable)
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      public fun scopes(scopes: List<Any>)
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      public fun scopes(vararg scopes: Any)
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      public fun serverCertificates(serverCertificates: IResolvable)
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      public fun serverCertificates(serverCertificates: List<Any>)
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      public fun serverCertificates(vararg serverCertificates: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty.builder()
+
+      /**
+       * @param certificateAuthorityArn The Amazon Resource Name (ARN) of the imported certificate
+       * authority (CA) certificate within AWS Certificate Manager (ACM) to use for outbound SSL/TLS
+       * inspection.
+       * The following limitations apply:
+       *
+       * * You can use CA certificates that you imported into ACM, but you can't generate CA
+       * certificates with ACM.
+       * * You can't use certificates issued by AWS Private Certificate Authority .
+       *
+       * For more information about configuring certificates for outbound inspection, see [Using
+       * SSL/TLS certificates with certificates with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       *
+       * For information about working with certificates in ACM, see [Importing
+       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
+       * *AWS Certificate Manager User Guide* .
+       */
+      override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+        cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
+      }
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      override fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
+        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      override
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty) {
+        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(CheckCertificateRevocationStatusProperty::unwrap))
+      }
+
+      /**
+       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
+       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
+      override
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit):
+          Unit =
+          checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty(checkCertificateRevocationStatus))
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      override fun scopes(scopes: IResolvable) {
+        cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      override fun scopes(scopes: List<Any>) {
+        cdkBuilder.scopes(scopes)
+      }
+
+      /**
+       * @param scopes A list of scopes.
+       */
+      override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      override fun serverCertificates(serverCertificates: IResolvable) {
+        cdkBuilder.serverCertificates(serverCertificates.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      override fun serverCertificates(serverCertificates: List<Any>) {
+        cdkBuilder.serverCertificates(serverCertificates)
+      }
+
+      /**
+       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
+       * inspection.
+       */
+      override fun serverCertificates(vararg serverCertificates: Any): Unit =
+          serverCertificates(serverCertificates.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty,
+    ) : CdkObject(cdkObject), ServerCertificateConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the imported certificate authority (CA) certificate
+       * within AWS Certificate Manager (ACM) to use for outbound SSL/TLS inspection.
+       *
+       * The following limitations apply:
+       *
+       * * You can use CA certificates that you imported into ACM, but you can't generate CA
+       * certificates with ACM.
+       * * You can't use certificates issued by AWS Private Certificate Authority .
+       *
+       * For more information about configuring certificates for outbound inspection, see [Using
+       * SSL/TLS certificates with certificates with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+       * in the *AWS Network Firewall Developer Guide* .
+       *
+       * For information about working with certificates in ACM, see [Importing
+       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
+       * *AWS Certificate Manager User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-certificateauthorityarn)
+       */
+      override fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
+
+      /**
+       * When enabled, Network Firewall checks if the server certificate presented by the server in
+       * the SSL/TLS connection has a revoked or unkown status.
+       *
+       * If the certificate has an unknown or revoked status, you must specify the actions that
+       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
+       * must also specify a `CertificateAuthorityArn` in
+       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-checkcertificaterevocationstatus)
+       */
+      override fun checkCertificateRevocationStatus(): Any? =
+          unwrap(this).getCheckCertificateRevocationStatus()
+
+      /**
+       * A list of scopes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-scopes)
+       */
+      override fun scopes(): Any? = unwrap(this).getScopes()
+
+      /**
+       * The list of server certificates to use for inbound SSL/TLS inspection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-servercertificates)
+       */
+      override fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServerCertificateConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty):
+          ServerCertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerCertificateConfigurationProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+    }
+  }
+
+  /**
+   * Any AWS Certificate Manager (ACM) Secure Sockets Layer/Transport Layer Security (SSL/TLS)
+   * server certificate that's associated with a
+   * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
+   * . Used in a
+   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
+   * for inspection of inbound traffic to your firewall. You must request or import a SSL/TLS
+   * certificate into ACM for each domain Network Firewall needs to decrypt and inspect. AWS Network
+   * Firewall uses the SSL/TLS certificates to decrypt specified inbound SSL/TLS traffic going to your
+   * firewall. For information about working with certificates in AWS Certificate Manager , see
+   * [Request a public
+   * certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) or
+   * [Importing certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html)
+   * in the *AWS Certificate Manager User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * ServerCertificateProperty serverCertificateProperty = ServerCertificateProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html)
+   */
+  public interface ServerCertificateProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS server certificate
+     * that's used for inbound SSL/TLS inspection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificate-resourcearn)
+     */
+    public fun resourceArn(): String? = unwrap(this).getResourceArn()
+
+    /**
+     * A builder for [ServerCertificateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS
+       * server certificate that's used for inbound SSL/TLS inspection.
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty.builder()
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS
+       * server certificate that's used for inbound SSL/TLS inspection.
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty,
+    ) : CdkObject(cdkObject), ServerCertificateProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS server certificate
+       * that's used for inbound SSL/TLS inspection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificate.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificate-resourcearn)
+       */
+      override fun resourceArn(): String? = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ServerCertificateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty):
+          ServerCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerCertificateProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
     }
   }
 
@@ -1585,8 +1824,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty,
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty,
     ) : CdkObject(cdkObject), ServerCertificateScopeProperty {
       /**
        * The destination ports to decrypt for inspection, in Transmission Control Protocol (TCP)
@@ -1664,20 +1902,20 @@ public open class CfnTLSInspectionConfiguration internal constructor(
   }
 
   /**
-   * Configures the AWS Certificate Manager certificates and scope that Network Firewall uses to
-   * decrypt and re-encrypt traffic using a
-   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
-   * . You can configure `ServerCertificates` for inbound SSL/TLS inspection, a
-   * `CertificateAuthorityArn` for outbound SSL/TLS inspection, or both. For information about working
-   * with certificates for TLS inspection, see [Using SSL/TLS server certficiates with TLS inspection
-   * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
+   * The object that defines a TLS inspection configuration. This defines the TLS inspection
+   * configuration.
+   *
+   * AWS Network Firewall uses a TLS inspection configuration to decrypt traffic. Network Firewall
+   * re-encrypts the traffic before sending it to its destination.
+   *
+   * To use a TLS inspection configuration, you add it to a new Network Firewall firewall policy,
+   * then you apply the firewall policy to a firewall. Network Firewall acts as a proxy service to
+   * decrypt and inspect the traffic traveling through your firewalls. You can reference a TLS
+   * inspection configuration from more than one firewall policy, and you can use a firewall policy in
+   * more than one firewall. For more information about using TLS inspection configurations, see
+   * [Inspecting SSL/TLS traffic with TLS inspection
+   * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html)
    * in the *AWS Network Firewall Developer Guide* .
-   *
-   *
-   * If a server certificate that's associated with your
-   * [TLSInspectionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-tlsinspectionconfiguration.html)
-   * is revoked, deleted, or expired it can result in client-side TLS errors.
-   *
    *
    * Example:
    *
@@ -1685,8 +1923,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
-   * ServerCertificateConfigurationProperty serverCertificateConfigurationProperty =
-   * ServerCertificateConfigurationProperty.builder()
+   * TLSInspectionConfigurationProperty tLSInspectionConfigurationProperty =
+   * TLSInspectionConfigurationProperty.builder()
+   * .serverCertificateConfigurations(List.of(ServerCertificateConfigurationProperty.builder()
    * .certificateAuthorityArn("certificateAuthorityArn")
    * .checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty.builder()
    * .revokedStatusAction("revokedStatusAction")
@@ -1712,353 +1951,107 @@ public open class CfnTLSInspectionConfiguration internal constructor(
    * .serverCertificates(List.of(ServerCertificateProperty.builder()
    * .resourceArn("resourceArn")
    * .build()))
+   * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html)
    */
-  public interface ServerCertificateConfigurationProperty {
+  public interface TLSInspectionConfigurationProperty {
     /**
-     * The Amazon Resource Name (ARN) of the imported certificate authority (CA) certificate within
-     * AWS Certificate Manager (ACM) to use for outbound SSL/TLS inspection.
+     * Lists the server certificate configurations that are associated with the TLS configuration.
      *
-     * The following limitations apply:
-     *
-     * * You can use CA certificates that you imported into ACM, but you can't generate CA
-     * certificates with ACM.
-     * * You can't use certificates issued by AWS Private Certificate Authority .
-     *
-     * For more information about configuring certificates for outbound inspection, see [Using
-     * SSL/TLS certificates with certificates with TLS inspection
-     * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
-     * in the *AWS Network Firewall Developer Guide* .
-     *
-     * For information about working with certificates in ACM, see [Importing
-     * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
-     * *AWS Certificate Manager User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-certificateauthorityarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration-servercertificateconfigurations)
      */
-    public fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
+    public fun serverCertificateConfigurations(): Any? =
+        unwrap(this).getServerCertificateConfigurations()
 
     /**
-     * When enabled, Network Firewall checks if the server certificate presented by the server in
-     * the SSL/TLS connection has a revoked or unkown status.
-     *
-     * If the certificate has an unknown or revoked status, you must specify the actions that
-     * Network Firewall takes on outbound traffic. To check the certificate revocation status, you must
-     * also specify a `CertificateAuthorityArn` in
-     * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-checkcertificaterevocationstatus)
-     */
-    public fun checkCertificateRevocationStatus(): Any? =
-        unwrap(this).getCheckCertificateRevocationStatus()
-
-    /**
-     * A list of scopes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-scopes)
-     */
-    public fun scopes(): Any? = unwrap(this).getScopes()
-
-    /**
-     * The list of server certificates to use for inbound SSL/TLS inspection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-servercertificates)
-     */
-    public fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
-
-    /**
-     * A builder for [ServerCertificateConfigurationProperty]
+     * A builder for [TLSInspectionConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param certificateAuthorityArn The Amazon Resource Name (ARN) of the imported certificate
-       * authority (CA) certificate within AWS Certificate Manager (ACM) to use for outbound SSL/TLS
-       * inspection.
-       * The following limitations apply:
-       *
-       * * You can use CA certificates that you imported into ACM, but you can't generate CA
-       * certificates with ACM.
-       * * You can't use certificates issued by AWS Private Certificate Authority .
-       *
-       * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
-       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       *
-       * For information about working with certificates in ACM, see [Importing
-       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
-       * *AWS Certificate Manager User Guide* .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      public fun certificateAuthorityArn(certificateAuthorityArn: String)
+      public fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable)
 
       /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      public fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable)
+      public fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>)
 
       /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      public
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty)
-
-      /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
-      public
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit)
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      public fun scopes(scopes: IResolvable)
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      public fun scopes(scopes: List<Any>)
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      public fun scopes(vararg scopes: Any)
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      public fun serverCertificates(serverCertificates: IResolvable)
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      public fun serverCertificates(serverCertificates: List<Any>)
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      public fun serverCertificates(vararg serverCertificates: Any)
+      public fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty.Builder
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty.builder()
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.builder()
 
       /**
-       * @param certificateAuthorityArn The Amazon Resource Name (ARN) of the imported certificate
-       * authority (CA) certificate within AWS Certificate Manager (ACM) to use for outbound SSL/TLS
-       * inspection.
-       * The following limitations apply:
-       *
-       * * You can use CA certificates that you imported into ACM, but you can't generate CA
-       * certificates with ACM.
-       * * You can't use certificates issued by AWS Private Certificate Authority .
-       *
-       * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
-       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       *
-       * For information about working with certificates in ACM, see [Importing
-       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
-       * *AWS Certificate Manager User Guide* .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      override fun certificateAuthorityArn(certificateAuthorityArn: String) {
-        cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
+      override fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
+        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      override fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
-        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(IResolvable::unwrap))
+      override fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
+        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations)
       }
 
       /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
+       * @param serverCertificateConfigurations Lists the server certificate configurations that are
+       * associated with the TLS configuration.
        */
-      override
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty) {
-        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(CheckCertificateRevocationStatusProperty::unwrap))
-      }
-
-      /**
-       * @param checkCertificateRevocationStatus When enabled, Network Firewall checks if the server
-       * certificate presented by the server in the SSL/TLS connection has a revoked or unkown status.
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
-      override
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit):
-          Unit =
-          checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty(checkCertificateRevocationStatus))
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      override fun scopes(scopes: IResolvable) {
-        cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      override fun scopes(scopes: List<Any>) {
-        cdkBuilder.scopes(scopes)
-      }
-
-      /**
-       * @param scopes A list of scopes.
-       */
-      override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      override fun serverCertificates(serverCertificates: IResolvable) {
-        cdkBuilder.serverCertificates(serverCertificates.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      override fun serverCertificates(serverCertificates: List<Any>) {
-        cdkBuilder.serverCertificates(serverCertificates)
-      }
-
-      /**
-       * @param serverCertificates The list of server certificates to use for inbound SSL/TLS
-       * inspection.
-       */
-      override fun serverCertificates(vararg serverCertificates: Any): Unit =
-          serverCertificates(serverCertificates.toList())
+      override fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any):
+          Unit = serverCertificateConfigurations(serverCertificateConfigurations.toList())
 
       public fun build():
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerCertificateConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty,
+    ) : CdkObject(cdkObject), TLSInspectionConfigurationProperty {
       /**
-       * The Amazon Resource Name (ARN) of the imported certificate authority (CA) certificate
-       * within AWS Certificate Manager (ACM) to use for outbound SSL/TLS inspection.
+       * Lists the server certificate configurations that are associated with the TLS configuration.
        *
-       * The following limitations apply:
-       *
-       * * You can use CA certificates that you imported into ACM, but you can't generate CA
-       * certificates with ACM.
-       * * You can't use certificates issued by AWS Private Certificate Authority .
-       *
-       * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
-       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
-       * in the *AWS Network Firewall Developer Guide* .
-       *
-       * For information about working with certificates in ACM, see [Importing
-       * certificates](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the
-       * *AWS Certificate Manager User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-certificateauthorityarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-tlsinspectionconfiguration-servercertificateconfigurations)
        */
-      override fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
-
-      /**
-       * When enabled, Network Firewall checks if the server certificate presented by the server in
-       * the SSL/TLS connection has a revoked or unkown status.
-       *
-       * If the certificate has an unknown or revoked status, you must specify the actions that
-       * Network Firewall takes on outbound traffic. To check the certificate revocation status, you
-       * must also specify a `CertificateAuthorityArn` in
-       * [ServerCertificateConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-servercertificateconfiguration.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-checkcertificaterevocationstatus)
-       */
-      override fun checkCertificateRevocationStatus(): Any? =
-          unwrap(this).getCheckCertificateRevocationStatus()
-
-      /**
-       * A list of scopes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-scopes)
-       */
-      override fun scopes(): Any? = unwrap(this).getScopes()
-
-      /**
-       * The list of server certificates to use for inbound SSL/TLS inspection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration.html#cfn-networkfirewall-tlsinspectionconfiguration-servercertificateconfiguration-servercertificates)
-       */
-      override fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
+      override fun serverCertificateConfigurations(): Any? =
+          unwrap(this).getServerCertificateConfigurations()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServerCertificateConfigurationProperty {
+          TLSInspectionConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty):
-          ServerCertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerCertificateConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty):
+          TLSInspectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TLSInspectionConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ServerCertificateConfigurationProperty):
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+      internal fun unwrap(wrapped: TLSInspectionConfigurationProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty
+          software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
     }
   }
 }

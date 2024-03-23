@@ -199,7 +199,7 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions,
   ) : CdkObject(cdkObject), GrpcRouteSpecOptions {
     /**
      * The criterion for determining a request match for this Route.

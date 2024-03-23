@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcgatewayattachment.html)
  */
-public open class CfnVPCGatewayAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment,
+public open class CfnVPCGatewayAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -197,6 +197,7 @@ public open class CfnVPCGatewayAttachment internal constructor(
         CfnVPCGatewayAttachment = CfnVPCGatewayAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCGatewayAttachment):
-        software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment
   }
 }

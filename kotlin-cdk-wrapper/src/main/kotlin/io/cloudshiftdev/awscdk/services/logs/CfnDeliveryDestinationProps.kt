@@ -148,7 +148,7 @@ public interface CfnDeliveryDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnDeliveryDestinationProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnDeliveryDestinationProps,
   ) : CdkObject(cdkObject), CfnDeliveryDestinationProps {
     /**
      * A structure that contains information about one delivery destination policy.

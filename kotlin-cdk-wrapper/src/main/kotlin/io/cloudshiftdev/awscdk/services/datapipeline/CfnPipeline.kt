@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html)
  */
-public open class CfnPipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline,
+public open class CfnPipeline(
+  cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -634,642 +634,8 @@ public open class CfnPipeline internal constructor(
         CfnPipeline = CfnPipeline(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeline):
-        software.amazon.awscdk.services.datapipeline.CfnPipeline = wrapped.cdkObject
-  }
-
-  /**
-   * Contains information about a parameter object.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * ParameterObjectProperty parameterObjectProperty = ParameterObjectProperty.builder()
-   * .attributes(List.of(ParameterAttributeProperty.builder()
-   * .key("key")
-   * .stringValue("stringValue")
-   * .build()))
-   * .id("id")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html)
-   */
-  public interface ParameterObjectProperty {
-    /**
-     * The attributes of the parameter object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-attributes)
-     */
-    public fun attributes(): Any
-
-    /**
-     * The ID of the parameter object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-id)
-     */
-    public fun id(): String
-
-    /**
-     * A builder for [ParameterObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      public fun attributes(attributes: IResolvable)
-
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      public fun attributes(attributes: List<Any>)
-
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      public fun attributes(vararg attributes: Any)
-
-      /**
-       * @param id The ID of the parameter object. 
-       */
-      public fun id(id: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.Builder =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.builder()
-
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param attributes The attributes of the parameter object. 
-       */
-      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
-
-      /**
-       * @param id The ID of the parameter object. 
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
-    ) : CdkObject(cdkObject), ParameterObjectProperty {
-      /**
-       * The attributes of the parameter object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-attributes)
-       */
-      override fun attributes(): Any = unwrap(this).getAttributes()
-
-      /**
-       * The ID of the parameter object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty):
-          ParameterObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterObjectProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParameterObjectProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty
-    }
-  }
-
-  /**
-   * A value or list of parameter values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * ParameterValueProperty parameterValueProperty = ParameterValueProperty.builder()
-   * .id("id")
-   * .stringValue("stringValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html)
-   */
-  public interface ParameterValueProperty {
-    /**
-     * The ID of the parameter value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-id)
-     */
-    public fun id(): String
-
-    /**
-     * The field value, expressed as a String.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-stringvalue)
-     */
-    public fun stringValue(): String
-
-    /**
-     * A builder for [ParameterValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The ID of the parameter value. 
-       */
-      public fun id(id: String)
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      public fun stringValue(stringValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.Builder =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.builder()
-
-      /**
-       * @param id The ID of the parameter value. 
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      override fun stringValue(stringValue: String) {
-        cdkBuilder.stringValue(stringValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
-    ) : CdkObject(cdkObject), ParameterValueProperty {
-      /**
-       * The ID of the parameter value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The field value, expressed as a String.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-stringvalue)
-       */
-      override fun stringValue(): String = unwrap(this).getStringValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty):
-          ParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterValueProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParameterValueProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty
-    }
-  }
-
-  /**
-   * PipelineObject is property of the AWS::DataPipeline::Pipeline resource that contains
-   * information about a pipeline object.
-   *
-   * This can be a logical, physical, or physical attempt pipeline object. The complete set of
-   * components of a pipeline defines the pipeline.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * PipelineObjectProperty pipelineObjectProperty = PipelineObjectProperty.builder()
-   * .fields(List.of(FieldProperty.builder()
-   * .key("key")
-   * // the properties below are optional
-   * .refValue("refValue")
-   * .stringValue("stringValue")
-   * .build()))
-   * .id("id")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html)
-   */
-  public interface PipelineObjectProperty {
-    /**
-     * Key-value pairs that define the properties of the object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-fields)
-     */
-    public fun fields(): Any
-
-    /**
-     * The ID of the object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-id)
-     */
-    public fun id(): String
-
-    /**
-     * The name of the object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-name)
-     */
-    public fun name(): String
-
-    /**
-     * A builder for [PipelineObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      public fun fields(fields: IResolvable)
-
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      public fun fields(fields: List<Any>)
-
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      public fun fields(vararg fields: Any)
-
-      /**
-       * @param id The ID of the object. 
-       */
-      public fun id(id: String)
-
-      /**
-       * @param name The name of the object. 
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.Builder =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.builder()
-
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      override fun fields(fields: IResolvable) {
-        cdkBuilder.fields(fields.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      override fun fields(fields: List<Any>) {
-        cdkBuilder.fields(fields)
-      }
-
-      /**
-       * @param fields Key-value pairs that define the properties of the object. 
-       */
-      override fun fields(vararg fields: Any): Unit = fields(fields.toList())
-
-      /**
-       * @param id The ID of the object. 
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param name The name of the object. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
-    ) : CdkObject(cdkObject), PipelineObjectProperty {
-      /**
-       * Key-value pairs that define the properties of the object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-fields)
-       */
-      override fun fields(): Any = unwrap(this).getFields()
-
-      /**
-       * The ID of the object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The name of the object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty):
-          PipelineObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineObjectProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PipelineObjectProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty
-    }
-  }
-
-  /**
-   * `Attribute` is a property of `ParameterObject` that defines the attributes of a parameter
-   * object as key-value pairs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * ParameterAttributeProperty parameterAttributeProperty = ParameterAttributeProperty.builder()
-   * .key("key")
-   * .stringValue("stringValue")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html)
-   */
-  public interface ParameterAttributeProperty {
-    /**
-     * The field identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
-     */
-    public fun key(): String
-
-    /**
-     * The field value, expressed as a String.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
-     */
-    public fun stringValue(): String
-
-    /**
-     * A builder for [ParameterAttributeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The field identifier. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      public fun stringValue(stringValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.Builder
-          =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.builder()
-
-      /**
-       * @param key The field identifier. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param stringValue The field value, expressed as a String. 
-       */
-      override fun stringValue(stringValue: String) {
-        cdkBuilder.stringValue(stringValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
-    ) : CdkObject(cdkObject), ParameterAttributeProperty {
-      /**
-       * The field identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The field value, expressed as a String.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
-       */
-      override fun stringValue(): String = unwrap(this).getStringValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty):
-          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ParameterAttributeProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParameterAttributeProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty
-    }
-  }
-
-  /**
-   * A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to
-   * control permissions.
-   *
-   * For more information, see [Controlling Access to Pipelines and
-   * Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html)
-   * in the *AWS Data Pipeline Developer Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
-   * PipelineTagProperty pipelineTagProperty = PipelineTagProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html)
-   */
-  public interface PipelineTagProperty {
-    /**
-     * The key name of a tag.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value to associate with the key name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [PipelineTagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key name of a tag. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value to associate with the key name. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.Builder =
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.builder()
-
-      /**
-       * @param key The key name of a tag. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value to associate with the key name. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
-    ) : CdkObject(cdkObject), PipelineTagProperty {
-      /**
-       * The key name of a tag.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value to associate with the key name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineTagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty):
-          PipelineTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineTagProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PipelineTagProperty):
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty
-    }
+        software.amazon.awscdk.services.datapipeline.CfnPipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.datapipeline.CfnPipeline
   }
 
   /**
@@ -1434,8 +800,7 @@ public open class CfnPipeline internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
     ) : CdkObject(cdkObject), FieldProperty {
       /**
        * Specifies the name of a field for a particular object.
@@ -1496,6 +861,636 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty
+    }
+  }
+
+  /**
+   * `Attribute` is a property of `ParameterObject` that defines the attributes of a parameter
+   * object as key-value pairs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * ParameterAttributeProperty parameterAttributeProperty = ParameterAttributeProperty.builder()
+   * .key("key")
+   * .stringValue("stringValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html)
+   */
+  public interface ParameterAttributeProperty {
+    /**
+     * The field identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
+     */
+    public fun key(): String
+
+    /**
+     * The field value, expressed as a String.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
+     */
+    public fun stringValue(): String
+
+    /**
+     * A builder for [ParameterAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The field identifier. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      public fun stringValue(stringValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.builder()
+
+      /**
+       * @param key The field identifier. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      override fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
+    ) : CdkObject(cdkObject), ParameterAttributeProperty {
+      /**
+       * The field identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The field value, expressed as a String.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterattribute.html#cfn-datapipeline-pipeline-parameterattribute-stringvalue)
+       */
+      override fun stringValue(): String = unwrap(this).getStringValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty):
+          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterAttributeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterAttributeProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty
+    }
+  }
+
+  /**
+   * Contains information about a parameter object.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * ParameterObjectProperty parameterObjectProperty = ParameterObjectProperty.builder()
+   * .attributes(List.of(ParameterAttributeProperty.builder()
+   * .key("key")
+   * .stringValue("stringValue")
+   * .build()))
+   * .id("id")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html)
+   */
+  public interface ParameterObjectProperty {
+    /**
+     * The attributes of the parameter object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-attributes)
+     */
+    public fun attributes(): Any
+
+    /**
+     * The ID of the parameter object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-id)
+     */
+    public fun id(): String
+
+    /**
+     * A builder for [ParameterObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      public fun attributes(attributes: IResolvable)
+
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      public fun attributes(attributes: List<Any>)
+
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      public fun attributes(vararg attributes: Any)
+
+      /**
+       * @param id The ID of the parameter object. 
+       */
+      public fun id(id: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.Builder =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.builder()
+
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      override fun attributes(attributes: List<Any>) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param attributes The attributes of the parameter object. 
+       */
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
+
+      /**
+       * @param id The ID of the parameter object. 
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
+    ) : CdkObject(cdkObject), ParameterObjectProperty {
+      /**
+       * The attributes of the parameter object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-attributes)
+       */
+      override fun attributes(): Any = unwrap(this).getAttributes()
+
+      /**
+       * The ID of the parameter object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html#cfn-datapipeline-pipeline-parameterobject-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty):
+          ParameterObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterObjectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterObjectProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty
+    }
+  }
+
+  /**
+   * A value or list of parameter values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * ParameterValueProperty parameterValueProperty = ParameterValueProperty.builder()
+   * .id("id")
+   * .stringValue("stringValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html)
+   */
+  public interface ParameterValueProperty {
+    /**
+     * The ID of the parameter value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-id)
+     */
+    public fun id(): String
+
+    /**
+     * The field value, expressed as a String.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-stringvalue)
+     */
+    public fun stringValue(): String
+
+    /**
+     * A builder for [ParameterValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the parameter value. 
+       */
+      public fun id(id: String)
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      public fun stringValue(stringValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.Builder =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.builder()
+
+      /**
+       * @param id The ID of the parameter value. 
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param stringValue The field value, expressed as a String. 
+       */
+      override fun stringValue(stringValue: String) {
+        cdkBuilder.stringValue(stringValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
+    ) : CdkObject(cdkObject), ParameterValueProperty {
+      /**
+       * The ID of the parameter value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The field value, expressed as a String.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html#cfn-datapipeline-pipeline-parametervalue-stringvalue)
+       */
+      override fun stringValue(): String = unwrap(this).getStringValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty):
+          ParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterValueProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterValueProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty
+    }
+  }
+
+  /**
+   * PipelineObject is property of the AWS::DataPipeline::Pipeline resource that contains
+   * information about a pipeline object.
+   *
+   * This can be a logical, physical, or physical attempt pipeline object. The complete set of
+   * components of a pipeline defines the pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * PipelineObjectProperty pipelineObjectProperty = PipelineObjectProperty.builder()
+   * .fields(List.of(FieldProperty.builder()
+   * .key("key")
+   * // the properties below are optional
+   * .refValue("refValue")
+   * .stringValue("stringValue")
+   * .build()))
+   * .id("id")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html)
+   */
+  public interface PipelineObjectProperty {
+    /**
+     * Key-value pairs that define the properties of the object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-fields)
+     */
+    public fun fields(): Any
+
+    /**
+     * The ID of the object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-id)
+     */
+    public fun id(): String
+
+    /**
+     * The name of the object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [PipelineObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      public fun fields(fields: IResolvable)
+
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      public fun fields(fields: List<Any>)
+
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      public fun fields(vararg fields: Any)
+
+      /**
+       * @param id The ID of the object. 
+       */
+      public fun id(id: String)
+
+      /**
+       * @param name The name of the object. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.Builder =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.builder()
+
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      override fun fields(fields: IResolvable) {
+        cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      override fun fields(fields: List<Any>) {
+        cdkBuilder.fields(fields)
+      }
+
+      /**
+       * @param fields Key-value pairs that define the properties of the object. 
+       */
+      override fun fields(vararg fields: Any): Unit = fields(fields.toList())
+
+      /**
+       * @param id The ID of the object. 
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param name The name of the object. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
+    ) : CdkObject(cdkObject), PipelineObjectProperty {
+      /**
+       * Key-value pairs that define the properties of the object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-fields)
+       */
+      override fun fields(): Any = unwrap(this).getFields()
+
+      /**
+       * The ID of the object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The name of the object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html#cfn-datapipeline-pipeline-pipelineobject-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty):
+          PipelineObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineObjectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PipelineObjectProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty
+    }
+  }
+
+  /**
+   * A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to
+   * control permissions.
+   *
+   * For more information, see [Controlling Access to Pipelines and
+   * Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html)
+   * in the *AWS Data Pipeline Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datapipeline.*;
+   * PipelineTagProperty pipelineTagProperty = PipelineTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html)
+   */
+  public interface PipelineTagProperty {
+    /**
+     * The key name of a tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value to associate with the key name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [PipelineTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key name of a tag. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value to associate with the key name. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.Builder =
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.builder()
+
+      /**
+       * @param key The key name of a tag. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value to associate with the key name. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
+    ) : CdkObject(cdkObject), PipelineTagProperty {
+      /**
+       * The key name of a tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value to associate with the key name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelinetag.html#cfn-datapipeline-pipeline-pipelinetag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty):
+          PipelineTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PipelineTagProperty):
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty
     }
   }
 }

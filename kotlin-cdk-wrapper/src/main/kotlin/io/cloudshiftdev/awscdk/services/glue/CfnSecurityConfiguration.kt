@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html)
  */
-public open class CfnSecurityConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration,
+public open class CfnSecurityConfiguration(
+  cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -243,7 +243,120 @@ public open class CfnSecurityConfiguration internal constructor(
         CfnSecurityConfiguration = CfnSecurityConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfiguration):
-        software.amazon.awscdk.services.glue.CfnSecurityConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnSecurityConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnSecurityConfiguration
+  }
+
+  /**
+   * Specifies how Amazon CloudWatch data should be encrypted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * CloudWatchEncryptionProperty cloudWatchEncryptionProperty =
+   * CloudWatchEncryptionProperty.builder()
+   * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+   * .kmsKeyArn("kmsKeyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html)
+   */
+  public interface CloudWatchEncryptionProperty {
+    /**
+     * The encryption mode to use for CloudWatch data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+     */
+    public fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+
+    /**
+     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * A builder for [CloudWatchEncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       */
+      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String)
+
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.Builder
+          =
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.builder()
+
+      /**
+       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
+       */
+      override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
+        cdkBuilder.cloudWatchEncryptionMode(cloudWatchEncryptionMode)
+      }
+
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
+    ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
+      /**
+       * The encryption mode to use for CloudWatch data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
+       */
+      override fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
+
+      /**
+       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty):
+          CloudWatchEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchEncryptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchEncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
+    }
   }
 
   /**
@@ -437,8 +550,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
     ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
       /**
        * The encryption configuration for Amazon CloudWatch.
@@ -477,231 +589,6 @@ public open class CfnSecurityConfiguration internal constructor(
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies how Amazon CloudWatch data should be encrypted.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * CloudWatchEncryptionProperty cloudWatchEncryptionProperty =
-   * CloudWatchEncryptionProperty.builder()
-   * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
-   * .kmsKeyArn("kmsKeyArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html)
-   */
-  public interface CloudWatchEncryptionProperty {
-    /**
-     * The encryption mode to use for CloudWatch data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
-     */
-    public fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
-
-    /**
-     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
-     */
-    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-    /**
-     * A builder for [CloudWatchEncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
-       */
-      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String)
-
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      public fun kmsKeyArn(kmsKeyArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.Builder
-          =
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.builder()
-
-      /**
-       * @param cloudWatchEncryptionMode The encryption mode to use for CloudWatch data.
-       */
-      override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
-        cdkBuilder.cloudWatchEncryptionMode(cloudWatchEncryptionMode)
-      }
-
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
-    ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
-      /**
-       * The encryption mode to use for CloudWatch data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode)
-       */
-      override fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
-
-      /**
-       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn)
-       */
-      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchEncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty):
-          CloudWatchEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchEncryptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchEncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
-    }
-  }
-
-  /**
-   * Specifies how Amazon Simple Storage Service (Amazon S3) data should be encrypted.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * S3EncryptionProperty s3EncryptionProperty = S3EncryptionProperty.builder()
-   * .kmsKeyArn("kmsKeyArn")
-   * .s3EncryptionMode("s3EncryptionMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html)
-   */
-  public interface S3EncryptionProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-kmskeyarn)
-     */
-    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-    /**
-     * The encryption mode to use for Amazon S3 data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-s3encryptionmode)
-     */
-    public fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
-
-    /**
-     * A builder for [S3EncryptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      public fun kmsKeyArn(kmsKeyArn: String)
-
-      /**
-       * @param s3EncryptionMode The encryption mode to use for Amazon S3 data.
-       */
-      public fun s3EncryptionMode(s3EncryptionMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty.Builder
-          =
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty.builder()
-
-      /**
-       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
-       * data.
-       */
-      override fun kmsKeyArn(kmsKeyArn: String) {
-        cdkBuilder.kmsKeyArn(kmsKeyArn)
-      }
-
-      /**
-       * @param s3EncryptionMode The encryption mode to use for Amazon S3 data.
-       */
-      override fun s3EncryptionMode(s3EncryptionMode: String) {
-        cdkBuilder.s3EncryptionMode(s3EncryptionMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
-    ) : CdkObject(cdkObject), S3EncryptionProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-kmskeyarn)
-       */
-      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
-
-      /**
-       * The encryption mode to use for Amazon S3 data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-s3encryptionmode)
-       */
-      override fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3EncryptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty):
-          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? S3EncryptionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3EncryptionProperty):
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty
     }
   }
 
@@ -782,8 +669,7 @@ public open class CfnSecurityConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
     ) : CdkObject(cdkObject), JobBookmarksEncryptionProperty {
       /**
        * The encryption mode to use for job bookmarks data.
@@ -816,6 +702,117 @@ public open class CfnSecurityConfiguration internal constructor(
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty
+    }
+  }
+
+  /**
+   * Specifies how Amazon Simple Storage Service (Amazon S3) data should be encrypted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * S3EncryptionProperty s3EncryptionProperty = S3EncryptionProperty.builder()
+   * .kmsKeyArn("kmsKeyArn")
+   * .s3EncryptionMode("s3EncryptionMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html)
+   */
+  public interface S3EncryptionProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * The encryption mode to use for Amazon S3 data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-s3encryptionmode)
+     */
+    public fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
+
+    /**
+     * A builder for [S3EncryptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+
+      /**
+       * @param s3EncryptionMode The encryption mode to use for Amazon S3 data.
+       */
+      public fun s3EncryptionMode(s3EncryptionMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty.Builder
+          =
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty.builder()
+
+      /**
+       * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the
+       * data.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      /**
+       * @param s3EncryptionMode The encryption mode to use for Amazon S3 data.
+       */
+      override fun s3EncryptionMode(s3EncryptionMode: String) {
+        cdkBuilder.s3EncryptionMode(s3EncryptionMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
+    ) : CdkObject(cdkObject), S3EncryptionProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+      /**
+       * The encryption mode to use for Amazon S3 data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html#cfn-glue-securityconfiguration-s3encryption-s3encryptionmode)
+       */
+      override fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3EncryptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty):
+          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? S3EncryptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3EncryptionProperty):
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty
     }
   }
 }

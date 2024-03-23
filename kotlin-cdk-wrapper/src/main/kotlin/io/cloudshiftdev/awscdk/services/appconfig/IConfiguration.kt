@@ -68,7 +68,7 @@ public interface IConfiguration : IConstruct {
   public fun versionNumber(): String? = unwrap(this).getVersionNumber()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IConfiguration,
+    cdkObject: software.amazon.awscdk.services.appconfig.IConfiguration,
   ) : CdkObject(cdkObject), IConfiguration {
     /**
      * The application associated with the configuration.

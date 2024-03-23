@@ -34,7 +34,7 @@ public interface IAlias : IKey {
   public fun aliasTargetKey(): IKey
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.IAlias,
+    cdkObject: software.amazon.awscdk.services.kms.IAlias,
   ) : CdkObject(cdkObject), IAlias {
     /**
      * Defines a new alias for the key.

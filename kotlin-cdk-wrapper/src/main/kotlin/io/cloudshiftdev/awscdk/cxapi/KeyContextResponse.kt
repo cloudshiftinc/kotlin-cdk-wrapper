@@ -54,7 +54,7 @@ public interface KeyContextResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.KeyContextResponse,
+    cdkObject: software.amazon.awscdk.cxapi.KeyContextResponse,
   ) : CdkObject(cdkObject), KeyContextResponse {
     /**
      * Id of the key.

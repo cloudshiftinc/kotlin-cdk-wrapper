@@ -23,11 +23,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class UserPoolEmail internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
+public abstract class UserPoolEmail(
+  cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
+    cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
   ) : UserPoolEmail(cdkObject)
 
   public companion object {

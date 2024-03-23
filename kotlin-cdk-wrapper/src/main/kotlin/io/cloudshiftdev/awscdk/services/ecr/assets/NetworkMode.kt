@@ -19,8 +19,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class NetworkMode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.NetworkMode,
+public open class NetworkMode(
+  cdkObject: software.amazon.awscdk.services.ecr.assets.NetworkMode,
 ) : CdkObject(cdkObject) {
   /**
    * The networking mode to use for docker build.
@@ -47,6 +47,7 @@ public open class NetworkMode internal constructor(
         NetworkMode = NetworkMode(cdkObject)
 
     internal fun unwrap(wrapped: NetworkMode):
-        software.amazon.awscdk.services.ecr.assets.NetworkMode = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.assets.NetworkMode = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.assets.NetworkMode
   }
 }

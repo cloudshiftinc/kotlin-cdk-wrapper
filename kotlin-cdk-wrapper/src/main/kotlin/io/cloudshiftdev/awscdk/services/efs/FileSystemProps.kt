@@ -492,7 +492,7 @@ public interface FileSystemProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.FileSystemProps,
+    cdkObject: software.amazon.awscdk.services.efs.FileSystemProps,
   ) : CdkObject(cdkObject), FileSystemProps {
     /**
      * Allow access from anonymous client that doesn't use IAM authentication.

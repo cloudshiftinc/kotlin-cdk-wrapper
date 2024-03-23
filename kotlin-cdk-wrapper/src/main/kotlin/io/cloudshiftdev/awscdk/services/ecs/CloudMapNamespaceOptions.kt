@@ -138,7 +138,7 @@ public interface CloudMapNamespaceOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions,
   ) : CdkObject(cdkObject), CloudMapNamespaceOptions {
     /**
      * The name of the namespace, such as example.com.

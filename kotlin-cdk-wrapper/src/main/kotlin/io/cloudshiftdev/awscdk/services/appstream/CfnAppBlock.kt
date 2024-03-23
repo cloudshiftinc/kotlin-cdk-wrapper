@@ -76,8 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)
  */
-public open class CfnAppBlock internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock,
+public open class CfnAppBlock(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -582,7 +582,7 @@ public open class CfnAppBlock internal constructor(
         = CfnAppBlock(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppBlock): software.amazon.awscdk.services.appstream.CfnAppBlock
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appstream.CfnAppBlock
   }
 
   /**
@@ -662,8 +662,7 @@ public open class CfnAppBlock internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * The S3 bucket of the app block.
@@ -845,8 +844,7 @@ public open class CfnAppBlock internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty,
     ) : CdkObject(cdkObject), ScriptDetailsProperty {
       /**
        * The parameters used in the run path for the script.

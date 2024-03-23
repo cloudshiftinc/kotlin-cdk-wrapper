@@ -12,11 +12,11 @@ import kotlin.collections.Map
 /**
  * Partial and special matching during template assertions.
  */
-public abstract class Match internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.Match,
+public abstract class Match(
+  cdkObject: software.amazon.awscdk.assertions.Match,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.assertions.Match,
+    cdkObject: software.amazon.awscdk.assertions.Match,
   ) : Match(cdkObject)
 
   public companion object {

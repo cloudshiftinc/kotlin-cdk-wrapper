@@ -133,7 +133,7 @@ public interface ExternalDockerCredentialOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions,
+    cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions,
   ) : CdkObject(cdkObject), ExternalDockerCredentialOptions {
     /**
      * An IAM role to assume prior to accessing the secret.

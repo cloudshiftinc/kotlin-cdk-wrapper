@@ -118,7 +118,7 @@ public interface PrefixListProps : PrefixListOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.PrefixListProps,
+    cdkObject: software.amazon.awscdk.services.ec2.PrefixListProps,
   ) : CdkObject(cdkObject), PrefixListProps {
     /**
      * The address family of the prefix list.

@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class CloudFormationInit internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CloudFormationInit,
+public open class CloudFormationInit(
+  cdkObject: software.amazon.awscdk.services.ec2.CloudFormationInit,
 ) : CdkObject(cdkObject) {
   /**
    * Add a config with the given name to this CloudFormationInit object.
@@ -136,6 +136,7 @@ public open class CloudFormationInit internal constructor(
         CloudFormationInit = CloudFormationInit(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationInit):
-        software.amazon.awscdk.services.ec2.CloudFormationInit = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CloudFormationInit = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CloudFormationInit
   }
 }

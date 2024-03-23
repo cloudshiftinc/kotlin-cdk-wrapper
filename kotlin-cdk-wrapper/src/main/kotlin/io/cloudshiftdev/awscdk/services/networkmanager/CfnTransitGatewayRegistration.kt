@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html)
  */
-public open class CfnTransitGatewayRegistration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration,
+public open class CfnTransitGatewayRegistration(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -164,6 +163,7 @@ public open class CfnTransitGatewayRegistration internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayRegistration):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration
   }
 }

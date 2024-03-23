@@ -357,7 +357,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps,
+    cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps,
   ) : CdkObject(cdkObject), ScheduledEc2TaskProps {
     /**
      * The name of the cluster that hosts the service.

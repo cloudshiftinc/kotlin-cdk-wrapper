@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html)
  */
-public open class CfnSimpleAD internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleAD,
+public open class CfnSimpleAD(
+  cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleAD,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -580,7 +580,8 @@ public open class CfnSimpleAD internal constructor(
         CfnSimpleAD = CfnSimpleAD(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimpleAD):
-        software.amazon.awscdk.services.directoryservice.CfnSimpleAD = wrapped.cdkObject
+        software.amazon.awscdk.services.directoryservice.CfnSimpleAD = wrapped.cdkObject as
+        software.amazon.awscdk.services.directoryservice.CfnSimpleAD
   }
 
   /**
@@ -681,8 +682,7 @@ public open class CfnSimpleAD internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.directoryservice.CfnSimpleAD.VpcSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleAD.VpcSettingsProperty,
     ) : CdkObject(cdkObject), VpcSettingsProperty {
       /**
        * The identifiers of the subnets for the directory servers.

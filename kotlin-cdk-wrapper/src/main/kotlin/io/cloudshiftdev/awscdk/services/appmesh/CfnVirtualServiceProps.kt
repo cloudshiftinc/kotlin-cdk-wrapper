@@ -228,7 +228,7 @@ public interface CfnVirtualServiceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps,
   ) : CdkObject(cdkObject), CfnVirtualServiceProps {
     /**
      * The name of the service mesh to create the virtual service in.

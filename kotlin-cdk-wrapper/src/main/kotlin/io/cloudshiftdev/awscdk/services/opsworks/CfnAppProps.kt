@@ -563,7 +563,7 @@ public interface CfnAppProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opsworks.CfnAppProps,
+    cdkObject: software.amazon.awscdk.services.opsworks.CfnAppProps,
   ) : CdkObject(cdkObject), CfnAppProps {
     /**
      * A `Source` object that specifies the app repository.

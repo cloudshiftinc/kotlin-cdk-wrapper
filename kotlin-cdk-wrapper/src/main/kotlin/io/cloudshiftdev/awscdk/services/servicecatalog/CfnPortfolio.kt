@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html)
  */
-public open class CfnPortfolio internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolio,
+public open class CfnPortfolio(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolio,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -294,6 +294,7 @@ public open class CfnPortfolio internal constructor(
         CfnPortfolio = CfnPortfolio(cdkObject)
 
     internal fun unwrap(wrapped: CfnPortfolio):
-        software.amazon.awscdk.services.servicecatalog.CfnPortfolio = wrapped.cdkObject
+        software.amazon.awscdk.services.servicecatalog.CfnPortfolio = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnPortfolio
   }
 }

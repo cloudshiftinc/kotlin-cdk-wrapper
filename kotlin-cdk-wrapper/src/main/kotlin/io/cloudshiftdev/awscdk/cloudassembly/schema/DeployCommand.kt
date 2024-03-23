@@ -135,7 +135,7 @@ public interface DeployCommand : CdkCommand {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.DeployCommand,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.DeployCommand,
   ) : CdkObject(cdkObject), DeployCommand {
     /**
      * Additional arguments to pass to the command This can be used to test specific CLI

@@ -892,7 +892,7 @@ public interface CfnInstanceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opsworks.CfnInstanceProps,
+    cdkObject: software.amazon.awscdk.services.opsworks.CfnInstanceProps,
   ) : CdkObject(cdkObject), CfnInstanceProps {
     /**
      * The default AWS OpsWorks Stacks agent version. You have the following options:.

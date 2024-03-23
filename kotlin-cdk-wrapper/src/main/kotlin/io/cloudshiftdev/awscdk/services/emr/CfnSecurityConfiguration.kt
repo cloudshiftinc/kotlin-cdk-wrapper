@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html)
  */
-public open class CfnSecurityConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.emr.CfnSecurityConfiguration,
+public open class CfnSecurityConfiguration(
+  cdkObject: software.amazon.awscdk.services.emr.CfnSecurityConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -190,6 +190,7 @@ public open class CfnSecurityConfiguration internal constructor(
         CfnSecurityConfiguration = CfnSecurityConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfiguration):
-        software.amazon.awscdk.services.emr.CfnSecurityConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.emr.CfnSecurityConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.emr.CfnSecurityConfiguration
   }
 }

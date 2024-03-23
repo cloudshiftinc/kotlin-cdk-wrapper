@@ -20,8 +20,8 @@ import kotlin.String
  * .build());
  * ```
  */
-public open class Color internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Color,
+public open class Color(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.Color,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val BLUE: String = software.amazon.awscdk.services.cloudwatch.Color.BLUE
@@ -44,6 +44,6 @@ public open class Color internal constructor(
         Color(cdkObject)
 
     internal fun unwrap(wrapped: Color): software.amazon.awscdk.services.cloudwatch.Color =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudwatch.Color
   }
 }

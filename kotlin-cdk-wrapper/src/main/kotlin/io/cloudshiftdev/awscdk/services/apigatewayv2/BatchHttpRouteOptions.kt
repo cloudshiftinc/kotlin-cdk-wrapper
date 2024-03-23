@@ -58,7 +58,7 @@ public interface BatchHttpRouteOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions,
   ) : CdkObject(cdkObject), BatchHttpRouteOptions {
     /**
      * The integration to be configured on this route.

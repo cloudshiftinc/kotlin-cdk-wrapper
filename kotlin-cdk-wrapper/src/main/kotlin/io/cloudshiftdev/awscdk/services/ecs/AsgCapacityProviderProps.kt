@@ -411,7 +411,7 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProviderProps,
+    cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProviderProps,
   ) : CdkObject(cdkObject), AsgCapacityProviderProps {
     /**
      * The autoscaling group to add as a Capacity Provider.

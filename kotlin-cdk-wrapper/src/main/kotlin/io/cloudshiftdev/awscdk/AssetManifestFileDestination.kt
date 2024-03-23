@@ -115,7 +115,7 @@ public interface AssetManifestFileDestination {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.AssetManifestFileDestination,
+    cdkObject: software.amazon.awscdk.AssetManifestFileDestination,
   ) : CdkObject(cdkObject), AssetManifestFileDestination {
     /**
      * Bucket name where the file asset should be written.

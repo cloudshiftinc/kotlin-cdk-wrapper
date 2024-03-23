@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html)
  */
-public open class CfnDevice internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice,
+public open class CfnDevice(
+  cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -595,7 +595,8 @@ public open class CfnDevice internal constructor(
         CfnDevice = CfnDevice(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevice):
-        software.amazon.awscdk.services.networkmanager.CfnDevice = wrapped.cdkObject
+        software.amazon.awscdk.services.networkmanager.CfnDevice = wrapped.cdkObject as
+        software.amazon.awscdk.services.networkmanager.CfnDevice
   }
 
   /**
@@ -677,8 +678,7 @@ public open class CfnDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty,
     ) : CdkObject(cdkObject), AWSLocationProperty {
       /**
        * The Amazon Resource Name (ARN) of the subnet that the device is located in.
@@ -807,8 +807,7 @@ public open class CfnDevice internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The physical address.

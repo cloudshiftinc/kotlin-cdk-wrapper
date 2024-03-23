@@ -19,8 +19,8 @@ import kotlin.Unit
  * BounceTemplate bounceTemplate = BounceTemplate.MAILBOX_DOES_NOT_EXIST;
  * ```
  */
-public open class BounceTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplate,
+public open class BounceTemplate(
+  cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplate,
 ) : CdkObject(cdkObject) {
   public constructor(props: BounceTemplateProps) :
       this(software.amazon.awscdk.services.ses.actions.BounceTemplate(props.let(BounceTemplateProps::unwrap))
@@ -127,6 +127,7 @@ public open class BounceTemplate internal constructor(
         BounceTemplate = BounceTemplate(cdkObject)
 
     internal fun unwrap(wrapped: BounceTemplate):
-        software.amazon.awscdk.services.ses.actions.BounceTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.ses.actions.BounceTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.ses.actions.BounceTemplate
   }
 }

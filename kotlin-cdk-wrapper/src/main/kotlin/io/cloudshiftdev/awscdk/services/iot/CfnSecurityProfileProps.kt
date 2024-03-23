@@ -407,7 +407,7 @@ public interface CfnSecurityProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfileProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfileProps,
   ) : CdkObject(cdkObject), CfnSecurityProfileProps {
     /**
      * A list of metrics whose data is retained (stored).

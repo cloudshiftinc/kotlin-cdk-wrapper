@@ -113,7 +113,7 @@ public interface EventBusPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.EventBusPolicyProps,
+    cdkObject: software.amazon.awscdk.services.events.EventBusPolicyProps,
   ) : CdkObject(cdkObject), EventBusPolicyProps {
     /**
      * The event bus to which the policy applies.

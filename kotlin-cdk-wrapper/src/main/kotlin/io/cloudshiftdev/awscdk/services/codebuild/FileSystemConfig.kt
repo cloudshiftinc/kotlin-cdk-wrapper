@@ -80,7 +80,7 @@ public interface FileSystemConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.FileSystemConfig,
+    cdkObject: software.amazon.awscdk.services.codebuild.FileSystemConfig,
   ) : CdkObject(cdkObject), FileSystemConfig {
     /**
      * File system location wrapper property.

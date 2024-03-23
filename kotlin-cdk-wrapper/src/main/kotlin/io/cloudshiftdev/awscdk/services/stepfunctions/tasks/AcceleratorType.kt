@@ -22,9 +22,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ei.html)
  */
-public open class AcceleratorType internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType,
+public open class AcceleratorType(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType,
 ) : CdkObject(cdkObject) {
   public constructor(instanceTypeIdentifier: String) :
       this(software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType(instanceTypeIdentifier)
@@ -40,6 +39,7 @@ public open class AcceleratorType internal constructor(
         AcceleratorType = AcceleratorType(cdkObject)
 
     internal fun unwrap(wrapped: AcceleratorType):
-        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType
   }
 }

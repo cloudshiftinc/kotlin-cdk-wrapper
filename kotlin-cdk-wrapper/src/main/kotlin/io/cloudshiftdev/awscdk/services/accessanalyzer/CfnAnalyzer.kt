@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html)
  */
-public open class CfnAnalyzer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer,
+public open class CfnAnalyzer(
+  cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -443,7 +443,280 @@ public open class CfnAnalyzer internal constructor(
         CfnAnalyzer = CfnAnalyzer(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalyzer):
-        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer = wrapped.cdkObject
+        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer = wrapped.cdkObject as
+        software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
+  }
+
+  /**
+   * Contains information about the configuration of an unused access analyzer for an AWS
+   * organization or account.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * AnalyzerConfigurationProperty analyzerConfigurationProperty =
+   * AnalyzerConfigurationProperty.builder()
+   * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
+   * .unusedAccessAge(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html)
+   */
+  public interface AnalyzerConfigurationProperty {
+    /**
+     * Specifies the configuration of an unused access analyzer for an AWS organization or account.
+     *
+     * External access analyzers do not support any configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
+     */
+    public fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
+
+    /**
+     * A builder for [AnalyzerConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      public fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable)
+
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      public
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty)
+
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
+      public
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.builder()
+
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
+        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      override
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
+        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(UnusedAccessConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
+       * for an AWS organization or account.
+       * External access analyzers do not support any configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
+      override
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          unusedAccessConfiguration(UnusedAccessConfigurationProperty(unusedAccessConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
+    ) : CdkObject(cdkObject), AnalyzerConfigurationProperty {
+      /**
+       * Specifies the configuration of an unused access analyzer for an AWS organization or
+       * account.
+       *
+       * External access analyzers do not support any configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
+       */
+      override fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalyzerConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty):
+          AnalyzerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalyzerConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalyzerConfigurationProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains information about an archive rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * ArchiveRuleProperty archiveRuleProperty = ArchiveRuleProperty.builder()
+   * .filter(List.of(FilterProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .contains(List.of("contains"))
+   * .eq(List.of("eq"))
+   * .exists(false)
+   * .neq(List.of("neq"))
+   * .build()))
+   * .ruleName("ruleName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html)
+   */
+  public interface ArchiveRuleProperty {
+    /**
+     * The criteria for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-filter)
+     */
+    public fun filter(): Any
+
+    /**
+     * The name of the rule to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename)
+     */
+    public fun ruleName(): String
+
+    /**
+     * A builder for [ArchiveRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      public fun filter(filter: IResolvable)
+
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      public fun filter(filter: List<Any>)
+
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      public fun filter(vararg filter: Any)
+
+      /**
+       * @param ruleName The name of the rule to create. 
+       */
+      public fun ruleName(ruleName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.Builder =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.builder()
+
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      override fun filter(filter: IResolvable) {
+        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      override fun filter(filter: List<Any>) {
+        cdkBuilder.filter(filter)
+      }
+
+      /**
+       * @param filter The criteria for the rule. 
+       */
+      override fun filter(vararg filter: Any): Unit = filter(filter.toList())
+
+      /**
+       * @param ruleName The name of the rule to create. 
+       */
+      override fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
+    ) : CdkObject(cdkObject), ArchiveRuleProperty {
+      /**
+       * The criteria for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-filter)
+       */
+      override fun filter(): Any = unwrap(this).getFilter()
+
+      /**
+       * The name of the rule to create.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename)
+       */
+      override fun ruleName(): String = unwrap(this).getRuleName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ArchiveRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty):
+          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ArchiveRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ArchiveRuleProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty
+    }
   }
 
   /**
@@ -625,8 +898,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
     ) : CdkObject(cdkObject), FilterProperty {
       /**
        * A "contains" condition to match for the rule.
@@ -679,280 +951,6 @@ public open class CfnAnalyzer internal constructor(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
-    }
-  }
-
-  /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
-   * AnalyzerConfigurationProperty analyzerConfigurationProperty =
-   * AnalyzerConfigurationProperty.builder()
-   * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
-   * .unusedAccessAge(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html)
-   */
-  public interface AnalyzerConfigurationProperty {
-    /**
-     * Specifies the configuration of an unused access analyzer for an AWS organization or account.
-     *
-     * External access analyzers do not support any configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
-     */
-    public fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
-
-    /**
-     * A builder for [AnalyzerConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      public fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable)
-
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      public
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty)
-
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
-      public
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.builder()
-
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
-        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      override
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
-        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(UnusedAccessConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
-       * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
-      override
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          unusedAccessConfiguration(UnusedAccessConfigurationProperty(unusedAccessConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
-    ) : CdkObject(cdkObject), AnalyzerConfigurationProperty {
-      /**
-       * Specifies the configuration of an unused access analyzer for an AWS organization or
-       * account.
-       *
-       * External access analyzers do not support any configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
-       */
-      override fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AnalyzerConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty):
-          AnalyzerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AnalyzerConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AnalyzerConfigurationProperty):
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty
-    }
-  }
-
-  /**
-   * Contains information about an archive rule.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
-   * ArchiveRuleProperty archiveRuleProperty = ArchiveRuleProperty.builder()
-   * .filter(List.of(FilterProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .contains(List.of("contains"))
-   * .eq(List.of("eq"))
-   * .exists(false)
-   * .neq(List.of("neq"))
-   * .build()))
-   * .ruleName("ruleName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html)
-   */
-  public interface ArchiveRuleProperty {
-    /**
-     * The criteria for the rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-filter)
-     */
-    public fun filter(): Any
-
-    /**
-     * The name of the rule to create.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename)
-     */
-    public fun ruleName(): String
-
-    /**
-     * A builder for [ArchiveRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      public fun filter(filter: IResolvable)
-
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      public fun filter(filter: List<Any>)
-
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      public fun filter(vararg filter: Any)
-
-      /**
-       * @param ruleName The name of the rule to create. 
-       */
-      public fun ruleName(ruleName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.Builder =
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.builder()
-
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      override fun filter(filter: List<Any>) {
-        cdkBuilder.filter(filter)
-      }
-
-      /**
-       * @param filter The criteria for the rule. 
-       */
-      override fun filter(vararg filter: Any): Unit = filter(filter.toList())
-
-      /**
-       * @param ruleName The name of the rule to create. 
-       */
-      override fun ruleName(ruleName: String) {
-        cdkBuilder.ruleName(ruleName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
-    ) : CdkObject(cdkObject), ArchiveRuleProperty {
-      /**
-       * The criteria for the rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-filter)
-       */
-      override fun filter(): Any = unwrap(this).getFilter()
-
-      /**
-       * The name of the rule to create.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html#cfn-accessanalyzer-analyzer-archiverule-rulename)
-       */
-      override fun ruleName(): String = unwrap(this).getRuleName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ArchiveRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty):
-          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ArchiveRuleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ArchiveRuleProperty):
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty
     }
   }
 
@@ -1023,8 +1021,7 @@ public open class CfnAnalyzer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
     ) : CdkObject(cdkObject), UnusedAccessConfigurationProperty {
       /**
        * The specified access age in days for which to generate findings for unused access.

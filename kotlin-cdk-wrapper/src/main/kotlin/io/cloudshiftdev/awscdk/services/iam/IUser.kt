@@ -36,7 +36,7 @@ public interface IUser : IIdentity {
   public fun userName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IUser,
+    cdkObject: software.amazon.awscdk.services.iam.IUser,
   ) : CdkObject(cdkObject), IUser {
     /**
      * Attaches a managed policy to this principal.

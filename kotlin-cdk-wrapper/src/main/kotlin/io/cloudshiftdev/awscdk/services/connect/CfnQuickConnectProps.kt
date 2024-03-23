@@ -208,7 +208,7 @@ public interface CfnQuickConnectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnectProps,
+    cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnectProps,
   ) : CdkObject(cdkObject), CfnQuickConnectProps {
     /**
      * The description of the quick connect.

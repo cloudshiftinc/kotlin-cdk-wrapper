@@ -906,7 +906,7 @@ public interface IStream : IResource {
   public fun streamName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kinesis.IStream,
+    cdkObject: software.amazon.awscdk.services.kinesis.IStream,
   ) : CdkObject(cdkObject), IStream {
     /**
      * Apply the given removal policy to this resource.

@@ -134,7 +134,7 @@ public interface EcrSourceVariables {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceVariables,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceVariables,
   ) : CdkObject(cdkObject), EcrSourceVariables {
     /**
      * The digest of the current image, in the form '<digest type>:<digest value>'.

@@ -52,9 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class QueueProcessingEc2Service internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service,
+public open class QueueProcessingEc2Service(
+  cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service,
 ) : QueueProcessingServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1232,5 +1231,6 @@ public open class QueueProcessingEc2Service internal constructor(
 
     internal fun unwrap(wrapped: QueueProcessingEc2Service):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service = wrapped.cdkObject
+        as software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service
   }
 }

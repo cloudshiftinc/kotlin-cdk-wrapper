@@ -186,7 +186,7 @@ public interface CfnResourceSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.fms.CfnResourceSetProps,
+    cdkObject: software.amazon.awscdk.services.fms.CfnResourceSetProps,
   ) : CdkObject(cdkObject), CfnResourceSetProps {
     /**
      * A description of the resource set.

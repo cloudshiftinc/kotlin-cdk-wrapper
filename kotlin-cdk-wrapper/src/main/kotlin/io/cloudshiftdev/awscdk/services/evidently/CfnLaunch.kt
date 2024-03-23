@@ -89,8 +89,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html)
  */
-public open class CfnLaunch internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch,
+public open class CfnLaunch(
+  cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -785,179 +785,7 @@ public open class CfnLaunch internal constructor(
         CfnLaunch(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunch): software.amazon.awscdk.services.evidently.CfnLaunch =
-        wrapped.cdkObject
-  }
-
-  /**
-   * A structure that defines one launch group in a launch.
-   *
-   * A launch group is a variation of the feature that you are including in the launch.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.evidently.*;
-   * LaunchGroupObjectProperty launchGroupObjectProperty = LaunchGroupObjectProperty.builder()
-   * .feature("feature")
-   * .groupName("groupName")
-   * .variation("variation")
-   * // the properties below are optional
-   * .description("description")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html)
-   */
-  public interface LaunchGroupObjectProperty {
-    /**
-     * A description of the launch group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * The feature that this launch is using.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-feature)
-     */
-    public fun feature(): String
-
-    /**
-     * A name for this launch group.
-     *
-     * It can include up to 127 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-groupname)
-     */
-    public fun groupName(): String
-
-    /**
-     * The feature variation to use for this launch group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-variation)
-     */
-    public fun variation(): String
-
-    /**
-     * A builder for [LaunchGroupObjectProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description A description of the launch group.
-       */
-      public fun description(description: String)
-
-      /**
-       * @param feature The feature that this launch is using. 
-       */
-      public fun feature(feature: String)
-
-      /**
-       * @param groupName A name for this launch group. 
-       * It can include up to 127 characters.
-       */
-      public fun groupName(groupName: String)
-
-      /**
-       * @param variation The feature variation to use for this launch group. 
-       */
-      public fun variation(variation: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.Builder =
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.builder()
-
-      /**
-       * @param description A description of the launch group.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
-
-      /**
-       * @param feature The feature that this launch is using. 
-       */
-      override fun feature(feature: String) {
-        cdkBuilder.feature(feature)
-      }
-
-      /**
-       * @param groupName A name for this launch group. 
-       * It can include up to 127 characters.
-       */
-      override fun groupName(groupName: String) {
-        cdkBuilder.groupName(groupName)
-      }
-
-      /**
-       * @param variation The feature variation to use for this launch group. 
-       */
-      override fun variation(variation: String) {
-        cdkBuilder.variation(variation)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty,
-    ) : CdkObject(cdkObject), LaunchGroupObjectProperty {
-      /**
-       * A description of the launch group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
-
-      /**
-       * The feature that this launch is using.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-feature)
-       */
-      override fun feature(): String = unwrap(this).getFeature()
-
-      /**
-       * A name for this launch group.
-       *
-       * It can include up to 127 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-groupname)
-       */
-      override fun groupName(): String = unwrap(this).getGroupName()
-
-      /**
-       * The feature variation to use for this launch group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-variation)
-       */
-      override fun variation(): String = unwrap(this).getVariation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchGroupObjectProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty):
-          LaunchGroupObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LaunchGroupObjectProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LaunchGroupObjectProperty):
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.evidently.CfnLaunch
   }
 
   /**
@@ -1070,8 +898,7 @@ public open class CfnLaunch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty,
     ) : CdkObject(cdkObject), ExecutionStatusObjectProperty {
       /**
        * If you are using AWS CloudFormation to stop this launch, specify either `COMPLETED` or
@@ -1202,8 +1029,7 @@ public open class CfnLaunch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty,
     ) : CdkObject(cdkObject), GroupToWeightProperty {
       /**
        * The name of the launch group.
@@ -1240,6 +1066,177 @@ public open class CfnLaunch internal constructor(
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty
+    }
+  }
+
+  /**
+   * A structure that defines one launch group in a launch.
+   *
+   * A launch group is a variation of the feature that you are including in the launch.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.evidently.*;
+   * LaunchGroupObjectProperty launchGroupObjectProperty = LaunchGroupObjectProperty.builder()
+   * .feature("feature")
+   * .groupName("groupName")
+   * .variation("variation")
+   * // the properties below are optional
+   * .description("description")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html)
+   */
+  public interface LaunchGroupObjectProperty {
+    /**
+     * A description of the launch group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The feature that this launch is using.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-feature)
+     */
+    public fun feature(): String
+
+    /**
+     * A name for this launch group.
+     *
+     * It can include up to 127 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-groupname)
+     */
+    public fun groupName(): String
+
+    /**
+     * The feature variation to use for this launch group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-variation)
+     */
+    public fun variation(): String
+
+    /**
+     * A builder for [LaunchGroupObjectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description A description of the launch group.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param feature The feature that this launch is using. 
+       */
+      public fun feature(feature: String)
+
+      /**
+       * @param groupName A name for this launch group. 
+       * It can include up to 127 characters.
+       */
+      public fun groupName(groupName: String)
+
+      /**
+       * @param variation The feature variation to use for this launch group. 
+       */
+      public fun variation(variation: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.Builder =
+          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.builder()
+
+      /**
+       * @param description A description of the launch group.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param feature The feature that this launch is using. 
+       */
+      override fun feature(feature: String) {
+        cdkBuilder.feature(feature)
+      }
+
+      /**
+       * @param groupName A name for this launch group. 
+       * It can include up to 127 characters.
+       */
+      override fun groupName(groupName: String) {
+        cdkBuilder.groupName(groupName)
+      }
+
+      /**
+       * @param variation The feature variation to use for this launch group. 
+       */
+      override fun variation(variation: String) {
+        cdkBuilder.variation(variation)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty,
+    ) : CdkObject(cdkObject), LaunchGroupObjectProperty {
+      /**
+       * A description of the launch group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The feature that this launch is using.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-feature)
+       */
+      override fun feature(): String = unwrap(this).getFeature()
+
+      /**
+       * A name for this launch group.
+       *
+       * It can include up to 127 characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-groupname)
+       */
+      override fun groupName(): String = unwrap(this).getGroupName()
+
+      /**
+       * The feature variation to use for this launch group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html#cfn-evidently-launch-launchgroupobject-variation)
+       */
+      override fun variation(): String = unwrap(this).getVariation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LaunchGroupObjectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty):
+          LaunchGroupObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchGroupObjectProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchGroupObjectProperty):
+          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty
     }
   }
 
@@ -1398,8 +1395,7 @@ public open class CfnLaunch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty,
     ) : CdkObject(cdkObject), MetricDefinitionObjectProperty {
       /**
        * The entity, such as a user or session, that does an action that causes a metric value to be
@@ -1627,8 +1623,7 @@ public open class CfnLaunch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty,
     ) : CdkObject(cdkObject), SegmentOverrideProperty {
       /**
        * A number indicating the order to use to evaluate segment overrides, if there are more than
@@ -1895,8 +1890,7 @@ public open class CfnLaunch internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty,
+      cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty,
     ) : CdkObject(cdkObject), StepConfigProperty {
       /**
        * An array of structures that define how much launch traffic to allocate to each launch group

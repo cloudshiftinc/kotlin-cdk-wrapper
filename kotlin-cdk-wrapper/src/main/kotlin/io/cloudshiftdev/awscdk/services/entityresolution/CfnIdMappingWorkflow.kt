@@ -70,9 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html)
  */
-public open class CfnIdMappingWorkflow internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
+public open class CfnIdMappingWorkflow(
+  cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -577,129 +576,8 @@ public open class CfnIdMappingWorkflow internal constructor(
         CfnIdMappingWorkflow = CfnIdMappingWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdMappingWorkflow):
-        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow = wrapped.cdkObject
-  }
-
-  /**
-   * A list of `IdMappingWorkflowOutputSource` objects, each of which contains fields `OutputS3Path`
-   * and `Output` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * IdMappingWorkflowOutputSourceProperty idMappingWorkflowOutputSourceProperty =
-   * IdMappingWorkflowOutputSourceProperty.builder()
-   * .outputS3Path("outputS3Path")
-   * // the properties below are optional
-   * .kmsArn("kmsArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html)
-   */
-  public interface IdMappingWorkflowOutputSourceProperty {
-    /**
-     * Customer AWS KMS ARN for encryption at rest.
-     *
-     * If not provided, system will use an AWS Entity Resolution managed KMS key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-kmsarn)
-     */
-    public fun kmsArn(): String? = unwrap(this).getKmsArn()
-
-    /**
-     * The S3 path to which AWS Entity Resolution will write the output table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-outputs3path)
-     */
-    public fun outputS3Path(): String
-
-    /**
-     * A builder for [IdMappingWorkflowOutputSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsArn Customer AWS KMS ARN for encryption at rest.
-       * If not provided, system will use an AWS Entity Resolution managed KMS key.
-       */
-      public fun kmsArn(kmsArn: String)
-
-      /**
-       * @param outputS3Path The S3 path to which AWS Entity Resolution will write the output table.
-       * 
-       */
-      public fun outputS3Path(outputS3Path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty.Builder
-          =
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty.builder()
-
-      /**
-       * @param kmsArn Customer AWS KMS ARN for encryption at rest.
-       * If not provided, system will use an AWS Entity Resolution managed KMS key.
-       */
-      override fun kmsArn(kmsArn: String) {
-        cdkBuilder.kmsArn(kmsArn)
-      }
-
-      /**
-       * @param outputS3Path The S3 path to which AWS Entity Resolution will write the output table.
-       * 
-       */
-      override fun outputS3Path(outputS3Path: String) {
-        cdkBuilder.outputS3Path(outputS3Path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
-    ) : CdkObject(cdkObject), IdMappingWorkflowOutputSourceProperty {
-      /**
-       * Customer AWS KMS ARN for encryption at rest.
-       *
-       * If not provided, system will use an AWS Entity Resolution managed KMS key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-kmsarn)
-       */
-      override fun kmsArn(): String? = unwrap(this).getKmsArn()
-
-      /**
-       * The S3 path to which AWS Entity Resolution will write the output table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-outputs3path)
-       */
-      override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IdMappingWorkflowOutputSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty):
-          IdMappingWorkflowOutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IdMappingWorkflowOutputSourceProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IdMappingWorkflowOutputSourceProperty):
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
-    }
+        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow = wrapped.cdkObject as
+        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow
   }
 
   /**
@@ -819,8 +697,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
     ) : CdkObject(cdkObject), IdMappingTechniquesProperty {
       /**
        * The type of ID mapping.
@@ -932,8 +809,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
     ) : CdkObject(cdkObject), IdMappingWorkflowInputSourceProperty {
       /**
        * An AWS Glue table ARN for the input source table.
@@ -967,6 +843,219 @@ public open class CfnIdMappingWorkflow internal constructor(
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty
+    }
+  }
+
+  /**
+   * A list of `IdMappingWorkflowOutputSource` objects, each of which contains fields `OutputS3Path`
+   * and `Output` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * IdMappingWorkflowOutputSourceProperty idMappingWorkflowOutputSourceProperty =
+   * IdMappingWorkflowOutputSourceProperty.builder()
+   * .outputS3Path("outputS3Path")
+   * // the properties below are optional
+   * .kmsArn("kmsArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html)
+   */
+  public interface IdMappingWorkflowOutputSourceProperty {
+    /**
+     * Customer AWS KMS ARN for encryption at rest.
+     *
+     * If not provided, system will use an AWS Entity Resolution managed KMS key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-kmsarn)
+     */
+    public fun kmsArn(): String? = unwrap(this).getKmsArn()
+
+    /**
+     * The S3 path to which AWS Entity Resolution will write the output table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-outputs3path)
+     */
+    public fun outputS3Path(): String
+
+    /**
+     * A builder for [IdMappingWorkflowOutputSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsArn Customer AWS KMS ARN for encryption at rest.
+       * If not provided, system will use an AWS Entity Resolution managed KMS key.
+       */
+      public fun kmsArn(kmsArn: String)
+
+      /**
+       * @param outputS3Path The S3 path to which AWS Entity Resolution will write the output table.
+       * 
+       */
+      public fun outputS3Path(outputS3Path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty.builder()
+
+      /**
+       * @param kmsArn Customer AWS KMS ARN for encryption at rest.
+       * If not provided, system will use an AWS Entity Resolution managed KMS key.
+       */
+      override fun kmsArn(kmsArn: String) {
+        cdkBuilder.kmsArn(kmsArn)
+      }
+
+      /**
+       * @param outputS3Path The S3 path to which AWS Entity Resolution will write the output table.
+       * 
+       */
+      override fun outputS3Path(outputS3Path: String) {
+        cdkBuilder.outputS3Path(outputS3Path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
+    ) : CdkObject(cdkObject), IdMappingWorkflowOutputSourceProperty {
+      /**
+       * Customer AWS KMS ARN for encryption at rest.
+       *
+       * If not provided, system will use an AWS Entity Resolution managed KMS key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-kmsarn)
+       */
+      override fun kmsArn(): String? = unwrap(this).getKmsArn()
+
+      /**
+       * The S3 path to which AWS Entity Resolution will write the output table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowoutputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowoutputsource-outputs3path)
+       */
+      override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IdMappingWorkflowOutputSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty):
+          IdMappingWorkflowOutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdMappingWorkflowOutputSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdMappingWorkflowOutputSourceProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
+    }
+  }
+
+  /**
+   * The Amazon S3 location that temporarily stores your data while it processes.
+   *
+   * Your information won't be saved permanently.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * IntermediateSourceConfigurationProperty intermediateSourceConfigurationProperty =
+   * IntermediateSourceConfigurationProperty.builder()
+   * .intermediateS3Path("intermediateS3Path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html)
+   */
+  public interface IntermediateSourceConfigurationProperty {
+    /**
+     * The Amazon S3 location (bucket and prefix).
+     *
+     * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-idmappingworkflow-intermediatesourceconfiguration-intermediates3path)
+     */
+    public fun intermediateS3Path(): String
+
+    /**
+     * A builder for [IntermediateSourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       */
+      public fun intermediateS3Path(intermediateS3Path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty.builder()
+
+      /**
+       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       */
+      override fun intermediateS3Path(intermediateS3Path: String) {
+        cdkBuilder.intermediateS3Path(intermediateS3Path)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
+    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
+      /**
+       * The Amazon S3 location (bucket and prefix).
+       *
+       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-idmappingworkflow-intermediatesourceconfiguration-intermediates3path)
+       */
+      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IntermediateSourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty):
+          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
     }
   }
 
@@ -1132,8 +1221,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
     ) : CdkObject(cdkObject), ProviderPropertiesProperty {
       /**
        * The Amazon S3 location that temporarily stores your data while it processes.
@@ -1175,99 +1263,6 @@ public open class CfnIdMappingWorkflow internal constructor(
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty
-    }
-  }
-
-  /**
-   * The Amazon S3 location that temporarily stores your data while it processes.
-   *
-   * Your information won't be saved permanently.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
-   * IntermediateSourceConfigurationProperty intermediateSourceConfigurationProperty =
-   * IntermediateSourceConfigurationProperty.builder()
-   * .intermediateS3Path("intermediateS3Path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html)
-   */
-  public interface IntermediateSourceConfigurationProperty {
-    /**
-     * The Amazon S3 location (bucket and prefix).
-     *
-     * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-idmappingworkflow-intermediatesourceconfiguration-intermediates3path)
-     */
-    public fun intermediateS3Path(): String
-
-    /**
-     * A builder for [IntermediateSourceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-       */
-      public fun intermediateS3Path(intermediateS3Path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty.builder()
-
-      /**
-       * @param intermediateS3Path The Amazon S3 location (bucket and prefix). 
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-       */
-      override fun intermediateS3Path(intermediateS3Path: String) {
-        cdkBuilder.intermediateS3Path(intermediateS3Path)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
-    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
-      /**
-       * The Amazon S3 location (bucket and prefix).
-       *
-       * For example: `s3://provider_bucket/DOC-EXAMPLE-BUCKET`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-intermediatesourceconfiguration.html#cfn-entityresolution-idmappingworkflow-intermediatesourceconfiguration-intermediates3path)
-       */
-      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IntermediateSourceConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty):
-          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty
     }
   }
 }

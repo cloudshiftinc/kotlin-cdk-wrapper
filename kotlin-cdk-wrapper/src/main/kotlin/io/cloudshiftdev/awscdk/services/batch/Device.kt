@@ -114,7 +114,7 @@ public interface Device {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.Device,
+    cdkObject: software.amazon.awscdk.services.batch.Device,
   ) : CdkObject(cdkObject), Device {
     /**
      * The path inside the container at which to expose the host device.

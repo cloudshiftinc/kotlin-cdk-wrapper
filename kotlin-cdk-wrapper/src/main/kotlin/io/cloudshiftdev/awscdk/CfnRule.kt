@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyParameter has to be m1.small");
  * ```
  */
-public open class CfnRule internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnRule,
+public open class CfnRule(
+  cdkObject: software.amazon.awscdk.CfnRule,
 ) : CfnRefElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
@@ -161,6 +161,7 @@ public open class CfnRule internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnRule): CfnRule = CfnRule(cdkObject)
 
-    internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.CfnRule = wrapped.cdkObject
+    internal fun unwrap(wrapped: CfnRule): software.amazon.awscdk.CfnRule = wrapped.cdkObject as
+        software.amazon.awscdk.CfnRule
   }
 }

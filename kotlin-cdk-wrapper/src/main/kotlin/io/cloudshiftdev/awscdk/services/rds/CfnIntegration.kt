@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html)
  */
-public open class CfnIntegration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnIntegration,
+public open class CfnIntegration(
+  cdkObject: software.amazon.awscdk.services.rds.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -413,6 +413,6 @@ public open class CfnIntegration internal constructor(
         = CfnIntegration(cdkObject)
 
     internal fun unwrap(wrapped: CfnIntegration): software.amazon.awscdk.services.rds.CfnIntegration
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.rds.CfnIntegration
   }
 }

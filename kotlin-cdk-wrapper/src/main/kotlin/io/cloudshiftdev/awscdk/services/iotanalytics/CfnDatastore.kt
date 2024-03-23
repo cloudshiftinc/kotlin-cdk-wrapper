@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)
  */
-public open class CfnDatastore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore,
+public open class CfnDatastore(
+  cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -673,121 +673,8 @@ public open class CfnDatastore internal constructor(
         CfnDatastore = CfnDatastore(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatastore):
-        software.amazon.awscdk.services.iotanalytics.CfnDatastore = wrapped.cdkObject
-  }
-
-  /**
-   * Information about the partition dimensions in a data store.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * DatastorePartitionsProperty datastorePartitionsProperty = DatastorePartitionsProperty.builder()
-   * .partitions(List.of(DatastorePartitionProperty.builder()
-   * .partition(PartitionProperty.builder()
-   * .attributeName("attributeName")
-   * .build())
-   * .timestampPartition(TimestampPartitionProperty.builder()
-   * .attributeName("attributeName")
-   * // the properties below are optional
-   * .timestampFormat("timestampFormat")
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
-   */
-  public interface DatastorePartitionsProperty {
-    /**
-     * A list of partition dimensions in a data store.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html#cfn-iotanalytics-datastore-datastorepartitions-partitions)
-     */
-    public fun partitions(): Any? = unwrap(this).getPartitions()
-
-    /**
-     * A builder for [DatastorePartitionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      public fun partitions(partitions: IResolvable)
-
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      public fun partitions(partitions: List<Any>)
-
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      public fun partitions(vararg partitions: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty.builder()
-
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      override fun partitions(partitions: IResolvable) {
-        cdkBuilder.partitions(partitions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      override fun partitions(partitions: List<Any>) {
-        cdkBuilder.partitions(partitions)
-      }
-
-      /**
-       * @param partitions A list of partition dimensions in a data store.
-       */
-      override fun partitions(vararg partitions: Any): Unit = partitions(partitions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty,
-    ) : CdkObject(cdkObject), DatastorePartitionsProperty {
-      /**
-       * A list of partition dimensions in a data store.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html#cfn-iotanalytics-datastore-datastorepartitions-partitions)
-       */
-      override fun partitions(): Any? = unwrap(this).getPartitions()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DatastorePartitionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty):
-          DatastorePartitionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DatastorePartitionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DatastorePartitionsProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty
-    }
+        software.amazon.awscdk.services.iotanalytics.CfnDatastore = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotanalytics.CfnDatastore
   }
 
   /**
@@ -872,8 +759,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty,
     ) : CdkObject(cdkObject), ColumnProperty {
       /**
        * The name of the column.
@@ -909,263 +795,6 @@ public open class CfnDatastore internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty
-    }
-  }
-
-  /**
-   * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
-   *
-   * You can't change the choice of Amazon S3 storage after your data store is created.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * IotSiteWiseMultiLayerStorageProperty iotSiteWiseMultiLayerStorageProperty =
-   * IotSiteWiseMultiLayerStorageProperty.builder()
-   * .customerManagedS3Storage(CustomerManagedS3StorageProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .keyPrefix("keyPrefix")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html)
-   */
-  public interface IotSiteWiseMultiLayerStorageProperty {
-    /**
-     * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html#cfn-iotanalytics-datastore-iotsitewisemultilayerstorage-customermanageds3storage)
-     */
-    public fun customerManagedS3Storage(): Any? = unwrap(this).getCustomerManagedS3Storage()
-
-    /**
-     * A builder for [IotSiteWiseMultiLayerStorageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      public fun customerManagedS3Storage(customerManagedS3Storage: IResolvable)
-
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      public
-          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty)
-
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3a22945323d518fe4f389f03e55fe2e3851e104f380a566bfe61d268c55c8026")
-      public
-          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty.builder()
-
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      override fun customerManagedS3Storage(customerManagedS3Storage: IResolvable) {
-        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      override
-          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty) {
-        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(CustomerManagedS3StorageProperty::unwrap))
-      }
-
-      /**
-       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
-       * that you manage.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3a22945323d518fe4f389f03e55fe2e3851e104f380a566bfe61d268c55c8026")
-      override
-          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty.Builder.() -> Unit):
-          Unit =
-          customerManagedS3Storage(CustomerManagedS3StorageProperty(customerManagedS3Storage))
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty,
-    ) : CdkObject(cdkObject), IotSiteWiseMultiLayerStorageProperty {
-      /**
-       * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html#cfn-iotanalytics-datastore-iotsitewisemultilayerstorage-customermanageds3storage)
-       */
-      override fun customerManagedS3Storage(): Any? = unwrap(this).getCustomerManagedS3Storage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          IotSiteWiseMultiLayerStorageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty):
-          IotSiteWiseMultiLayerStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          IotSiteWiseMultiLayerStorageProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IotSiteWiseMultiLayerStorageProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
-    }
-  }
-
-  /**
-   * How long, in days, message data is kept.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
-   * .numberOfDays(123)
-   * .unlimited(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html)
-   */
-  public interface RetentionPeriodProperty {
-    /**
-     * The number of days that message data is kept.
-     *
-     * The `unlimited` parameter must be false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-numberofdays)
-     */
-    public fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
-
-    /**
-     * If true, message data is kept indefinitely.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-unlimited)
-     */
-    public fun unlimited(): Any? = unwrap(this).getUnlimited()
-
-    /**
-     * A builder for [RetentionPeriodProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param numberOfDays The number of days that message data is kept.
-       * The `unlimited` parameter must be false.
-       */
-      public fun numberOfDays(numberOfDays: Number)
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      public fun unlimited(unlimited: Boolean)
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      public fun unlimited(unlimited: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty.builder()
-
-      /**
-       * @param numberOfDays The number of days that message data is kept.
-       * The `unlimited` parameter must be false.
-       */
-      override fun numberOfDays(numberOfDays: Number) {
-        cdkBuilder.numberOfDays(numberOfDays)
-      }
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      override fun unlimited(unlimited: Boolean) {
-        cdkBuilder.unlimited(unlimited)
-      }
-
-      /**
-       * @param unlimited If true, message data is kept indefinitely.
-       */
-      override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
-      /**
-       * The number of days that message data is kept.
-       *
-       * The `unlimited` parameter must be false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-numberofdays)
-       */
-      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
-
-      /**
-       * If true, message data is kept indefinitely.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-unlimited)
-       */
-      override fun unlimited(): Any? = unwrap(this).getUnlimited()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty):
-          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RetentionPeriodProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty
     }
   }
 
@@ -1279,8 +908,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3Property,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3Property,
     ) : CdkObject(cdkObject), CustomerManagedS3Property {
       /**
        * The name of the Amazon S3 bucket where your data is stored.
@@ -1327,7 +955,10 @@ public open class CfnDatastore internal constructor(
   }
 
   /**
-   * Contains the configuration information of the Parquet format.
+   * Amazon S3 -customer-managed;
+   *
+   * When you choose customer-managed storage, the `retentionPeriod` parameter is ignored. You can't
+   * change the choice of Amazon S3 storage after your data store is created.
    *
    * Example:
    *
@@ -1335,110 +966,117 @@ public open class CfnDatastore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * ParquetConfigurationProperty parquetConfigurationProperty =
-   * ParquetConfigurationProperty.builder()
-   * .schemaDefinition(SchemaDefinitionProperty.builder()
-   * .columns(List.of(ColumnProperty.builder()
-   * .name("name")
-   * .type("type")
-   * .build()))
-   * .build())
+   * CustomerManagedS3StorageProperty customerManagedS3StorageProperty =
+   * CustomerManagedS3StorageProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html)
    */
-  public interface ParquetConfigurationProperty {
+  public interface CustomerManagedS3StorageProperty {
     /**
-     * Information needed to define a schema.
+     * The name of the Amazon S3 bucket where your data is stored.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html#cfn-iotanalytics-datastore-parquetconfiguration-schemadefinition)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-bucket)
      */
-    public fun schemaDefinition(): Any? = unwrap(this).getSchemaDefinition()
+    public fun bucket(): String
 
     /**
-     * A builder for [ParquetConfigurationProperty]
+     * (Optional) The prefix used to create the keys of the data store data objects.
+     *
+     * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
+     * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-keyprefix)
+     */
+    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+    /**
+     * A builder for [CustomerManagedS3StorageProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param schemaDefinition Information needed to define a schema.
+       * @param bucket The name of the Amazon S3 bucket where your data is stored. 
        */
-      public fun schemaDefinition(schemaDefinition: IResolvable)
+      public fun bucket(bucket: String)
 
       /**
-       * @param schemaDefinition Information needed to define a schema.
+       * @param keyPrefix (Optional) The prefix used to create the keys of the data store data
+       * objects.
+       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
+       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
        */
-      public fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty)
-
-      /**
-       * @param schemaDefinition Information needed to define a schema.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d666703f2b9cf5d1c319939feb1f61fca98f5e4f0c4178bc8b6999d3cae2876")
-      public fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty.Builder.() -> Unit)
+      public fun keyPrefix(keyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty.Builder
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty.Builder
           =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty.builder()
 
       /**
-       * @param schemaDefinition Information needed to define a schema.
+       * @param bucket The name of the Amazon S3 bucket where your data is stored. 
        */
-      override fun schemaDefinition(schemaDefinition: IResolvable) {
-        cdkBuilder.schemaDefinition(schemaDefinition.let(IResolvable::unwrap))
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
       }
 
       /**
-       * @param schemaDefinition Information needed to define a schema.
+       * @param keyPrefix (Optional) The prefix used to create the keys of the data store data
+       * objects.
+       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
+       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
        */
-      override fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty) {
-        cdkBuilder.schemaDefinition(schemaDefinition.let(SchemaDefinitionProperty::unwrap))
+      override fun keyPrefix(keyPrefix: String) {
+        cdkBuilder.keyPrefix(keyPrefix)
       }
-
-      /**
-       * @param schemaDefinition Information needed to define a schema.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d666703f2b9cf5d1c319939feb1f61fca98f5e4f0c4178bc8b6999d3cae2876")
-      override fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty.Builder.() -> Unit):
-          Unit = schemaDefinition(SchemaDefinitionProperty(schemaDefinition))
 
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty,
-    ) : CdkObject(cdkObject), ParquetConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty,
+    ) : CdkObject(cdkObject), CustomerManagedS3StorageProperty {
       /**
-       * Information needed to define a schema.
+       * The name of the Amazon S3 bucket where your data is stored.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html#cfn-iotanalytics-datastore-parquetconfiguration-schemadefinition)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-bucket)
        */
-      override fun schemaDefinition(): Any? = unwrap(this).getSchemaDefinition()
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * (Optional) The prefix used to create the keys of the data store data objects.
+       *
+       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
+       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-keyprefix)
+       */
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParquetConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomerManagedS3StorageProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty):
-          ParquetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ParquetConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty):
+          CustomerManagedS3StorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedS3StorageProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ParquetConfigurationProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty
+      internal fun unwrap(wrapped: CustomerManagedS3StorageProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
     }
   }
 
@@ -1580,8 +1218,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionProperty,
     ) : CdkObject(cdkObject), DatastorePartitionProperty {
       /**
        * A partition dimension defined by an attribute.
@@ -1617,7 +1254,7 @@ public open class CfnDatastore internal constructor(
   }
 
   /**
-   * Information needed to define a schema.
+   * Information about the partition dimensions in a data store.
    *
    * Example:
    *
@@ -1625,229 +1262,107 @@ public open class CfnDatastore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * SchemaDefinitionProperty schemaDefinitionProperty = SchemaDefinitionProperty.builder()
-   * .columns(List.of(ColumnProperty.builder()
-   * .name("name")
-   * .type("type")
+   * DatastorePartitionsProperty datastorePartitionsProperty = DatastorePartitionsProperty.builder()
+   * .partitions(List.of(DatastorePartitionProperty.builder()
+   * .partition(PartitionProperty.builder()
+   * .attributeName("attributeName")
+   * .build())
+   * .timestampPartition(TimestampPartitionProperty.builder()
+   * .attributeName("attributeName")
+   * // the properties below are optional
+   * .timestampFormat("timestampFormat")
+   * .build())
    * .build()))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
    */
-  public interface SchemaDefinitionProperty {
+  public interface DatastorePartitionsProperty {
     /**
-     * Specifies one or more columns that store your data.
+     * A list of partition dimensions in a data store.
      *
-     * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html#cfn-iotanalytics-datastore-schemadefinition-columns)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html#cfn-iotanalytics-datastore-datastorepartitions-partitions)
      */
-    public fun columns(): Any? = unwrap(this).getColumns()
+    public fun partitions(): Any? = unwrap(this).getPartitions()
 
     /**
-     * A builder for [SchemaDefinitionProperty]
+     * A builder for [DatastorePartitionsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      public fun columns(columns: IResolvable)
+      public fun partitions(partitions: IResolvable)
 
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      public fun columns(columns: List<Any>)
+      public fun partitions(partitions: List<Any>)
 
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      public fun columns(vararg columns: Any)
+      public fun partitions(vararg partitions: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty.Builder
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty.Builder
           =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty.builder()
 
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+      override fun partitions(partitions: IResolvable) {
+        cdkBuilder.partitions(partitions.let(IResolvable::unwrap))
       }
 
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+      override fun partitions(partitions: List<Any>) {
+        cdkBuilder.partitions(partitions)
       }
 
       /**
-       * @param columns Specifies one or more columns that store your data.
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       * @param partitions A list of partition dimensions in a data store.
        */
-      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+      override fun partitions(vararg partitions: Any): Unit = partitions(partitions.toList())
 
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty,
-    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty,
+    ) : CdkObject(cdkObject), DatastorePartitionsProperty {
       /**
-       * Specifies one or more columns that store your data.
+       * A list of partition dimensions in a data store.
        *
-       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html#cfn-iotanalytics-datastore-schemadefinition-columns)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html#cfn-iotanalytics-datastore-datastorepartitions-partitions)
        */
-      override fun columns(): Any? = unwrap(this).getColumns()
+      override fun partitions(): Any? = unwrap(this).getPartitions()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaDefinitionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatastorePartitionsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty):
-          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty):
+          DatastorePartitionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatastorePartitionsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SchemaDefinitionProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =
+      internal fun unwrap(wrapped: DatastorePartitionsProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
           (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty
-    }
-  }
-
-  /**
-   * A partition dimension defined by a timestamp attribute.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * TimestampPartitionProperty timestampPartitionProperty = TimestampPartitionProperty.builder()
-   * .attributeName("attributeName")
-   * // the properties below are optional
-   * .timestampFormat("timestampFormat")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html)
-   */
-  public interface TimestampPartitionProperty {
-    /**
-     * The attribute name of the partition defined by a timestamp.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-attributename)
-     */
-    public fun attributeName(): String
-
-    /**
-     * The timestamp format of a partition defined by a timestamp.
-     *
-     * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-timestampformat)
-     */
-    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
-
-    /**
-     * A builder for [TimestampPartitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeName The attribute name of the partition defined by a timestamp. 
-       */
-      public fun attributeName(attributeName: String)
-
-      /**
-       * @param timestampFormat The timestamp format of a partition defined by a timestamp.
-       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
-       */
-      public fun timestampFormat(timestampFormat: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty.Builder
-          =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty.builder()
-
-      /**
-       * @param attributeName The attribute name of the partition defined by a timestamp. 
-       */
-      override fun attributeName(attributeName: String) {
-        cdkBuilder.attributeName(attributeName)
-      }
-
-      /**
-       * @param timestampFormat The timestamp format of a partition defined by a timestamp.
-       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
-       */
-      override fun timestampFormat(timestampFormat: String) {
-        cdkBuilder.timestampFormat(timestampFormat)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty,
-    ) : CdkObject(cdkObject), TimestampPartitionProperty {
-      /**
-       * The attribute name of the partition defined by a timestamp.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-attributename)
-       */
-      override fun attributeName(): String = unwrap(this).getAttributeName()
-
-      /**
-       * The timestamp format of a partition defined by a timestamp.
-       *
-       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-timestampformat)
-       */
-      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TimestampPartitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty):
-          TimestampPartitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TimestampPartitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TimestampPartitionProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty
     }
   }
 
@@ -2055,8 +1570,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastoreStorageProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastoreStorageProperty,
     ) : CdkObject(cdkObject), DatastoreStorageProperty {
       /**
        * Use this to store data store data in an S3 bucket that you manage.
@@ -2224,8 +1738,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty,
     ) : CdkObject(cdkObject), FileFormatConfigurationProperty {
       /**
        * Contains the configuration information of the JSON format.
@@ -2257,6 +1770,249 @@ public open class CfnDatastore internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty
+    }
+  }
+
+  /**
+   * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
+   *
+   * You can't change the choice of Amazon S3 storage after your data store is created.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * IotSiteWiseMultiLayerStorageProperty iotSiteWiseMultiLayerStorageProperty =
+   * IotSiteWiseMultiLayerStorageProperty.builder()
+   * .customerManagedS3Storage(CustomerManagedS3StorageProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html)
+   */
+  public interface IotSiteWiseMultiLayerStorageProperty {
+    /**
+     * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html#cfn-iotanalytics-datastore-iotsitewisemultilayerstorage-customermanageds3storage)
+     */
+    public fun customerManagedS3Storage(): Any? = unwrap(this).getCustomerManagedS3Storage()
+
+    /**
+     * A builder for [IotSiteWiseMultiLayerStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      public fun customerManagedS3Storage(customerManagedS3Storage: IResolvable)
+
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      public
+          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty)
+
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a22945323d518fe4f389f03e55fe2e3851e104f380a566bfe61d268c55c8026")
+      public
+          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty.builder()
+
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      override fun customerManagedS3Storage(customerManagedS3Storage: IResolvable) {
+        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      override
+          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty) {
+        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(CustomerManagedS3StorageProperty::unwrap))
+      }
+
+      /**
+       * @param customerManagedS3Storage Stores data used by AWS IoT SiteWise in an Amazon S3 bucket
+       * that you manage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a22945323d518fe4f389f03e55fe2e3851e104f380a566bfe61d268c55c8026")
+      override
+          fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty.Builder.() -> Unit):
+          Unit =
+          customerManagedS3Storage(CustomerManagedS3StorageProperty(customerManagedS3Storage))
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty,
+    ) : CdkObject(cdkObject), IotSiteWiseMultiLayerStorageProperty {
+      /**
+       * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html#cfn-iotanalytics-datastore-iotsitewisemultilayerstorage-customermanageds3storage)
+       */
+      override fun customerManagedS3Storage(): Any? = unwrap(this).getCustomerManagedS3Storage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IotSiteWiseMultiLayerStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty):
+          IotSiteWiseMultiLayerStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IotSiteWiseMultiLayerStorageProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IotSiteWiseMultiLayerStorageProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
+    }
+  }
+
+  /**
+   * Contains the configuration information of the Parquet format.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * ParquetConfigurationProperty parquetConfigurationProperty =
+   * ParquetConfigurationProperty.builder()
+   * .schemaDefinition(SchemaDefinitionProperty.builder()
+   * .columns(List.of(ColumnProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html)
+   */
+  public interface ParquetConfigurationProperty {
+    /**
+     * Information needed to define a schema.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html#cfn-iotanalytics-datastore-parquetconfiguration-schemadefinition)
+     */
+    public fun schemaDefinition(): Any? = unwrap(this).getSchemaDefinition()
+
+    /**
+     * A builder for [ParquetConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      public fun schemaDefinition(schemaDefinition: IResolvable)
+
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      public fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty)
+
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9d666703f2b9cf5d1c319939feb1f61fca98f5e4f0c4178bc8b6999d3cae2876")
+      public fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty.builder()
+
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      override fun schemaDefinition(schemaDefinition: IResolvable) {
+        cdkBuilder.schemaDefinition(schemaDefinition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      override fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty) {
+        cdkBuilder.schemaDefinition(schemaDefinition.let(SchemaDefinitionProperty::unwrap))
+      }
+
+      /**
+       * @param schemaDefinition Information needed to define a schema.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9d666703f2b9cf5d1c319939feb1f61fca98f5e4f0c4178bc8b6999d3cae2876")
+      override fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty.Builder.() -> Unit):
+          Unit = schemaDefinition(SchemaDefinitionProperty(schemaDefinition))
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty,
+    ) : CdkObject(cdkObject), ParquetConfigurationProperty {
+      /**
+       * Information needed to define a schema.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-parquetconfiguration.html#cfn-iotanalytics-datastore-parquetconfiguration-schemadefinition)
+       */
+      override fun schemaDefinition(): Any? = unwrap(this).getSchemaDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParquetConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty):
+          ParquetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParquetConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParquetConfigurationProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty
     }
   }
 
@@ -2315,8 +2071,7 @@ public open class CfnDatastore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.PartitionProperty,
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.PartitionProperty,
     ) : CdkObject(cdkObject), PartitionProperty {
       /**
        * The name of the attribute that defines a partition dimension.
@@ -2345,10 +2100,7 @@ public open class CfnDatastore internal constructor(
   }
 
   /**
-   * Amazon S3 -customer-managed;
-   *
-   * When you choose customer-managed storage, the `retentionPeriod` parameter is ignored. You can't
-   * change the choice of Amazon S3 storage after your data store is created.
+   * How long, in days, message data is kept.
    *
    * Example:
    *
@@ -2356,118 +2108,354 @@ public open class CfnDatastore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
-   * CustomerManagedS3StorageProperty customerManagedS3StorageProperty =
-   * CustomerManagedS3StorageProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .keyPrefix("keyPrefix")
+   * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
+   * .numberOfDays(123)
+   * .unlimited(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html)
    */
-  public interface CustomerManagedS3StorageProperty {
+  public interface RetentionPeriodProperty {
     /**
-     * The name of the Amazon S3 bucket where your data is stored.
+     * The number of days that message data is kept.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-bucket)
+     * The `unlimited` parameter must be false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-numberofdays)
      */
-    public fun bucket(): String
+    public fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
 
     /**
-     * (Optional) The prefix used to create the keys of the data store data objects.
+     * If true, message data is kept indefinitely.
      *
-     * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
-     * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-keyprefix)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-unlimited)
      */
-    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+    public fun unlimited(): Any? = unwrap(this).getUnlimited()
 
     /**
-     * A builder for [CustomerManagedS3StorageProperty]
+     * A builder for [RetentionPeriodProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucket The name of the Amazon S3 bucket where your data is stored. 
+       * @param numberOfDays The number of days that message data is kept.
+       * The `unlimited` parameter must be false.
        */
-      public fun bucket(bucket: String)
+      public fun numberOfDays(numberOfDays: Number)
 
       /**
-       * @param keyPrefix (Optional) The prefix used to create the keys of the data store data
-       * objects.
-       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
-       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
+       * @param unlimited If true, message data is kept indefinitely.
        */
-      public fun keyPrefix(keyPrefix: String)
+      public fun unlimited(unlimited: Boolean)
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      public fun unlimited(unlimited: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty.Builder
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty.Builder
           =
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty.builder()
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty.builder()
 
       /**
-       * @param bucket The name of the Amazon S3 bucket where your data is stored. 
+       * @param numberOfDays The number of days that message data is kept.
+       * The `unlimited` parameter must be false.
        */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
+      override fun numberOfDays(numberOfDays: Number) {
+        cdkBuilder.numberOfDays(numberOfDays)
       }
 
       /**
-       * @param keyPrefix (Optional) The prefix used to create the keys of the data store data
-       * objects.
-       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
-       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
+       * @param unlimited If true, message data is kept indefinitely.
        */
-      override fun keyPrefix(keyPrefix: String) {
-        cdkBuilder.keyPrefix(keyPrefix)
+      override fun unlimited(unlimited: Boolean) {
+        cdkBuilder.unlimited(unlimited)
+      }
+
+      /**
+       * @param unlimited If true, message data is kept indefinitely.
+       */
+      override fun unlimited(unlimited: IResolvable) {
+        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty,
-    ) : CdkObject(cdkObject), CustomerManagedS3StorageProperty {
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty,
+    ) : CdkObject(cdkObject), RetentionPeriodProperty {
       /**
-       * The name of the Amazon S3 bucket where your data is stored.
+       * The number of days that message data is kept.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-bucket)
+       * The `unlimited` parameter must be false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-numberofdays)
        */
-      override fun bucket(): String = unwrap(this).getBucket()
+      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
 
       /**
-       * (Optional) The prefix used to create the keys of the data store data objects.
+       * If true, message data is kept indefinitely.
        *
-       * Each object in an Amazon S3 bucket has a key that is its unique identifier in the bucket.
-       * Each object in a bucket has exactly one key. The prefix must end with a forward slash (/).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html#cfn-iotanalytics-datastore-customermanageds3storage-keyprefix)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html#cfn-iotanalytics-datastore-retentionperiod-unlimited)
        */
-      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+      override fun unlimited(): Any? = unwrap(this).getUnlimited()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomerManagedS3StorageProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetentionPeriodProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty):
-          CustomerManagedS3StorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomerManagedS3StorageProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty):
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CustomerManagedS3StorageProperty):
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty
+      internal fun unwrap(wrapped: RetentionPeriodProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty
+    }
+  }
+
+  /**
+   * Information needed to define a schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * SchemaDefinitionProperty schemaDefinitionProperty = SchemaDefinitionProperty.builder()
+   * .columns(List.of(ColumnProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html)
+   */
+  public interface SchemaDefinitionProperty {
+    /**
+     * Specifies one or more columns that store your data.
+     *
+     * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html#cfn-iotanalytics-datastore-schemadefinition-columns)
+     */
+    public fun columns(): Any? = unwrap(this).getColumns()
+
+    /**
+     * A builder for [SchemaDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      public fun columns(columns: IResolvable)
+
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      public fun columns(columns: List<Any>)
+
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      public fun columns(vararg columns: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty.builder()
+
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      override fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      override fun columns(columns: List<Any>) {
+        cdkBuilder.columns(columns)
+      }
+
+      /**
+       * @param columns Specifies one or more columns that store your data.
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       */
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty,
+    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
+      /**
+       * Specifies one or more columns that store your data.
+       *
+       * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-schemadefinition.html#cfn-iotanalytics-datastore-schemadefinition-columns)
+       */
+      override fun columns(): Any? = unwrap(this).getColumns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty):
+          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaDefinitionProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty
+    }
+  }
+
+  /**
+   * A partition dimension defined by a timestamp attribute.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotanalytics.*;
+   * TimestampPartitionProperty timestampPartitionProperty = TimestampPartitionProperty.builder()
+   * .attributeName("attributeName")
+   * // the properties below are optional
+   * .timestampFormat("timestampFormat")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html)
+   */
+  public interface TimestampPartitionProperty {
+    /**
+     * The attribute name of the partition defined by a timestamp.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-attributename)
+     */
+    public fun attributeName(): String
+
+    /**
+     * The timestamp format of a partition defined by a timestamp.
+     *
+     * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-timestampformat)
+     */
+    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+    /**
+     * A builder for [TimestampPartitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeName The attribute name of the partition defined by a timestamp. 
+       */
+      public fun attributeName(attributeName: String)
+
+      /**
+       * @param timestampFormat The timestamp format of a partition defined by a timestamp.
+       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
+       */
+      public fun timestampFormat(timestampFormat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty.Builder
+          =
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty.builder()
+
+      /**
+       * @param attributeName The attribute name of the partition defined by a timestamp. 
+       */
+      override fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+      }
+
+      /**
+       * @param timestampFormat The timestamp format of a partition defined by a timestamp.
+       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
+       */
+      override fun timestampFormat(timestampFormat: String) {
+        cdkBuilder.timestampFormat(timestampFormat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty,
+    ) : CdkObject(cdkObject), TimestampPartitionProperty {
+      /**
+       * The attribute name of the partition defined by a timestamp.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-attributename)
+       */
+      override fun attributeName(): String = unwrap(this).getAttributeName()
+
+      /**
+       * The timestamp format of a partition defined by a timestamp.
+       *
+       * The default format is seconds since epoch (January 1, 1970 at midnight UTC time).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html#cfn-iotanalytics-datastore-timestamppartition-timestampformat)
+       */
+      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimestampPartitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty):
+          TimestampPartitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimestampPartitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimestampPartitionProperty):
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty
     }
   }
 }

@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
  */
-public open class CfnSecretTargetAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment,
+public open class CfnSecretTargetAttachment(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,5 +232,6 @@ public open class CfnSecretTargetAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnSecretTargetAttachment):
         software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment = wrapped.cdkObject
+        as software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment
   }
 }

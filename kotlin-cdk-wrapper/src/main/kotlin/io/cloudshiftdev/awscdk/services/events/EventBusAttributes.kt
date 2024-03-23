@@ -112,7 +112,7 @@ public interface EventBusAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.EventBusAttributes,
+    cdkObject: software.amazon.awscdk.services.events.EventBusAttributes,
   ) : CdkObject(cdkObject), EventBusAttributes {
     /**
      * The ARN of this event bus resource.

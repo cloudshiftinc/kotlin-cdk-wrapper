@@ -1067,8 +1067,7 @@ public interface EdgeFunctionProps : FunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps,
+    cdkObject: software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps,
   ) : CdkObject(cdkObject), EdgeFunctionProps {
     /**
      * Specify the configuration of AWS Distro for OpenTelemetry (ADOT) instrumentation.

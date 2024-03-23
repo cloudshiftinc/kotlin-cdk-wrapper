@@ -103,8 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html)
  */
-public open class CfnCrawler internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
+public open class CfnCrawler(
+  cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -894,7 +894,1090 @@ public open class CfnCrawler internal constructor(
         CfnCrawler(cdkObject)
 
     internal fun unwrap(wrapped: CfnCrawler): software.amazon.awscdk.services.glue.CfnCrawler =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.glue.CfnCrawler
+  }
+
+  /**
+   * Specifies an AWS Glue Data Catalog target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * CatalogTargetProperty catalogTargetProperty = CatalogTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .databaseName("databaseName")
+   * .dlqEventQueueArn("dlqEventQueueArn")
+   * .eventQueueArn("eventQueueArn")
+   * .tables(List.of("tables"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html)
+   */
+  public interface CatalogTargetProperty {
+    /**
+     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
+     * crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * The name of the database to be synchronized.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * A valid Amazon dead-letter SQS ARN.
+     *
+     * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-dlqeventqueuearn)
+     */
+    public fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
+
+    /**
+     * A valid Amazon SQS ARN.
+     *
+     * For example, `arn:aws:sqs:region:account:sqs` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-eventqueuearn)
+     */
+    public fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
+
+    /**
+     * A list of the tables to be synchronized.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-tables)
+     */
+    public fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
+
+    /**
+     * A builder for [CatalogTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection for an Amazon S3-backed Data Catalog table
+       * to be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK`
+       * Connection type.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param databaseName The name of the database to be synchronized.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param dlqEventQueueArn A valid Amazon dead-letter SQS ARN.
+       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
+       */
+      public fun dlqEventQueueArn(dlqEventQueueArn: String)
+
+      /**
+       * @param eventQueueArn A valid Amazon SQS ARN.
+       * For example, `arn:aws:sqs:region:account:sqs` .
+       */
+      public fun eventQueueArn(eventQueueArn: String)
+
+      /**
+       * @param tables A list of the tables to be synchronized.
+       */
+      public fun tables(tables: List<String>)
+
+      /**
+       * @param tables A list of the tables to be synchronized.
+       */
+      public fun tables(vararg tables: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection for an Amazon S3-backed Data Catalog table
+       * to be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK`
+       * Connection type.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param databaseName The name of the database to be synchronized.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param dlqEventQueueArn A valid Amazon dead-letter SQS ARN.
+       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
+       */
+      override fun dlqEventQueueArn(dlqEventQueueArn: String) {
+        cdkBuilder.dlqEventQueueArn(dlqEventQueueArn)
+      }
+
+      /**
+       * @param eventQueueArn A valid Amazon SQS ARN.
+       * For example, `arn:aws:sqs:region:account:sqs` .
+       */
+      override fun eventQueueArn(eventQueueArn: String) {
+        cdkBuilder.eventQueueArn(eventQueueArn)
+      }
+
+      /**
+       * @param tables A list of the tables to be synchronized.
+       */
+      override fun tables(tables: List<String>) {
+        cdkBuilder.tables(tables)
+      }
+
+      /**
+       * @param tables A list of the tables to be synchronized.
+       */
+      override fun tables(vararg tables: String): Unit = tables(tables.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
+    ) : CdkObject(cdkObject), CatalogTargetProperty {
+      /**
+       * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
+       * crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * The name of the database to be synchronized.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * A valid Amazon dead-letter SQS ARN.
+       *
+       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-dlqeventqueuearn)
+       */
+      override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
+
+      /**
+       * A valid Amazon SQS ARN.
+       *
+       * For example, `arn:aws:sqs:region:account:sqs` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-eventqueuearn)
+       */
+      override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
+
+      /**
+       * A list of the tables to be synchronized.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-tables)
+       */
+      override fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CatalogTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty):
+          CatalogTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? CatalogTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CatalogTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty
+    }
+  }
+
+  /**
+   * Specifies a Delta data store to crawl one or more Delta tables.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * DeltaTargetProperty deltaTargetProperty = DeltaTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .createNativeDeltaTable(false)
+   * .deltaTables(List.of("deltaTables"))
+   * .writeManifest(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html)
+   */
+  public interface DeltaTargetProperty {
+    /**
+     * The name of the connection to use to connect to the Delta table target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * Specifies whether the crawler will create native tables, to allow integration with query
+     * engines that support querying of the Delta transaction log directly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-createnativedeltatable)
+     */
+    public fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
+
+    /**
+     * A list of the Amazon S3 paths to the Delta tables.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-deltatables)
+     */
+    public fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
+
+    /**
+     * Specifies whether to write the manifest files to the Delta table path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-writemanifest)
+     */
+    public fun writeManifest(): Any? = unwrap(this).getWriteManifest()
+
+    /**
+     * A builder for [DeltaTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection to use to connect to the Delta table
+       * target.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
+       * allow integration with query engines that support querying of the Delta transaction log
+       * directly.
+       */
+      public fun createNativeDeltaTable(createNativeDeltaTable: Boolean)
+
+      /**
+       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
+       * allow integration with query engines that support querying of the Delta transaction log
+       * directly.
+       */
+      public fun createNativeDeltaTable(createNativeDeltaTable: IResolvable)
+
+      /**
+       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
+       */
+      public fun deltaTables(deltaTables: List<String>)
+
+      /**
+       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
+       */
+      public fun deltaTables(vararg deltaTables: String)
+
+      /**
+       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
+       */
+      public fun writeManifest(writeManifest: Boolean)
+
+      /**
+       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
+       */
+      public fun writeManifest(writeManifest: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection to use to connect to the Delta table
+       * target.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
+       * allow integration with query engines that support querying of the Delta transaction log
+       * directly.
+       */
+      override fun createNativeDeltaTable(createNativeDeltaTable: Boolean) {
+        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable)
+      }
+
+      /**
+       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
+       * allow integration with query engines that support querying of the Delta transaction log
+       * directly.
+       */
+      override fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
+        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
+       */
+      override fun deltaTables(deltaTables: List<String>) {
+        cdkBuilder.deltaTables(deltaTables)
+      }
+
+      /**
+       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
+       */
+      override fun deltaTables(vararg deltaTables: String): Unit = deltaTables(deltaTables.toList())
+
+      /**
+       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
+       */
+      override fun writeManifest(writeManifest: Boolean) {
+        cdkBuilder.writeManifest(writeManifest)
+      }
+
+      /**
+       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
+       */
+      override fun writeManifest(writeManifest: IResolvable) {
+        cdkBuilder.writeManifest(writeManifest.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
+    ) : CdkObject(cdkObject), DeltaTargetProperty {
+      /**
+       * The name of the connection to use to connect to the Delta table target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * Specifies whether the crawler will create native tables, to allow integration with query
+       * engines that support querying of the Delta transaction log directly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-createnativedeltatable)
+       */
+      override fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
+
+      /**
+       * A list of the Amazon S3 paths to the Delta tables.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-deltatables)
+       */
+      override fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
+
+      /**
+       * Specifies whether to write the manifest files to the Delta table path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-writemanifest)
+       */
+      override fun writeManifest(): Any? = unwrap(this).getWriteManifest()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeltaTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty):
+          DeltaTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeltaTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty
+    }
+  }
+
+  /**
+   * Specifies an Amazon DynamoDB table to crawl.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * DynamoDBTargetProperty dynamoDBTargetProperty = DynamoDBTargetProperty.builder()
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html)
+   */
+  public interface DynamoDBTargetProperty {
+    /**
+     * The name of the DynamoDB table to crawl.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html#cfn-glue-crawler-dynamodbtarget-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [DynamoDBTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param path The name of the DynamoDB table to crawl.
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.builder()
+
+      /**
+       * @param path The name of the DynamoDB table to crawl.
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
+    ) : CdkObject(cdkObject), DynamoDBTargetProperty {
+      /**
+       * The name of the DynamoDB table to crawl.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html#cfn-glue-crawler-dynamodbtarget-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DynamoDBTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty):
+          DynamoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DynamoDBTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty
+    }
+  }
+
+  /**
+   * Specifies Apache Iceberg data store targets.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * IcebergTargetProperty icebergTargetProperty = IcebergTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .exclusions(List.of("exclusions"))
+   * .maximumTraversalDepth(123)
+   * .paths(List.of("paths"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html)
+   */
+  public interface IcebergTargetProperty {
+    /**
+     * The name of the connection to use to connect to the Iceberg target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * A list of global patterns used to exclude from the crawl.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-exclusions)
+     */
+    public fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+    /**
+     * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Iceberg
+     * metadata folder in your Amazon S3 path.
+     *
+     * Used to limit the crawler run time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-maximumtraversaldepth)
+     */
+    public fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
+
+    /**
+     * One or more Amazon S3 paths that contains Iceberg metadata folders as s3://bucket/prefix .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-paths)
+     */
+    public fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
+
+    /**
+     * A builder for [IcebergTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection to use to connect to the Iceberg target.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param exclusions A list of global patterns used to exclude from the crawl.
+       */
+      public fun exclusions(exclusions: List<String>)
+
+      /**
+       * @param exclusions A list of global patterns used to exclude from the crawl.
+       */
+      public fun exclusions(vararg exclusions: String)
+
+      /**
+       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
+       * traverse to discover the Iceberg metadata folder in your Amazon S3 path.
+       * Used to limit the crawler run time.
+       */
+      public fun maximumTraversalDepth(maximumTraversalDepth: Number)
+
+      /**
+       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+       * s3://bucket/prefix .
+       */
+      public fun paths(paths: List<String>)
+
+      /**
+       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+       * s3://bucket/prefix .
+       */
+      public fun paths(vararg paths: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection to use to connect to the Iceberg target.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param exclusions A list of global patterns used to exclude from the crawl.
+       */
+      override fun exclusions(exclusions: List<String>) {
+        cdkBuilder.exclusions(exclusions)
+      }
+
+      /**
+       * @param exclusions A list of global patterns used to exclude from the crawl.
+       */
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
+
+      /**
+       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
+       * traverse to discover the Iceberg metadata folder in your Amazon S3 path.
+       * Used to limit the crawler run time.
+       */
+      override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
+        cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
+      }
+
+      /**
+       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+       * s3://bucket/prefix .
+       */
+      override fun paths(paths: List<String>) {
+        cdkBuilder.paths(paths)
+      }
+
+      /**
+       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
+       * s3://bucket/prefix .
+       */
+      override fun paths(vararg paths: String): Unit = paths(paths.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
+    ) : CdkObject(cdkObject), IcebergTargetProperty {
+      /**
+       * The name of the connection to use to connect to the Iceberg target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * A list of global patterns used to exclude from the crawl.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-exclusions)
+       */
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+      /**
+       * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Iceberg
+       * metadata folder in your Amazon S3 path.
+       *
+       * Used to limit the crawler run time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-maximumtraversaldepth)
+       */
+      override fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
+
+      /**
+       * One or more Amazon S3 paths that contains Iceberg metadata folders as s3://bucket/prefix .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-paths)
+       */
+      override fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IcebergTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty):
+          IcebergTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? IcebergTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IcebergTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty
+    }
+  }
+
+  /**
+   * Specifies a JDBC data store to crawl.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * JdbcTargetProperty jdbcTargetProperty = JdbcTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .exclusions(List.of("exclusions"))
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html)
+   */
+  public interface JdbcTargetProperty {
+    /**
+     * The name of the connection to use to connect to the JDBC target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * A list of glob patterns used to exclude from the crawl.
+     *
+     * For more information, see [Catalog Tables with a
+     * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-exclusions)
+     */
+    public fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+    /**
+     * The path of the JDBC target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [JdbcTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection to use to connect to the JDBC target.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      public fun exclusions(exclusions: List<String>)
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      public fun exclusions(vararg exclusions: String)
+
+      /**
+       * @param path The path of the JDBC target.
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection to use to connect to the JDBC target.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      override fun exclusions(exclusions: List<String>) {
+        cdkBuilder.exclusions(exclusions)
+      }
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
+
+      /**
+       * @param path The path of the JDBC target.
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
+    ) : CdkObject(cdkObject), JdbcTargetProperty {
+      /**
+       * The name of the connection to use to connect to the JDBC target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * A list of glob patterns used to exclude from the crawl.
+       *
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-exclusions)
+       */
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+      /**
+       * The path of the JDBC target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JdbcTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty):
+          JdbcTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? JdbcTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JdbcTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty
+    }
+  }
+
+  /**
+   * Specifies an Amazon DocumentDB or MongoDB data store to crawl.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * MongoDBTargetProperty mongoDBTargetProperty = MongoDBTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .path("path")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html)
+   */
+  public interface MongoDBTargetProperty {
+    /**
+     * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-path)
+     */
+    public fun path(): String? = unwrap(this).getPath()
+
+    /**
+     * A builder for [MongoDBTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection to use to connect to the Amazon DocumentDB
+       * or MongoDB target.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
+       */
+      public fun path(path: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection to use to connect to the Amazon DocumentDB
+       * or MongoDB target.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
+       */
+      override fun path(path: String) {
+        cdkBuilder.path(path)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
+    ) : CdkObject(cdkObject), MongoDBTargetProperty {
+      /**
+       * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-path)
+       */
+      override fun path(): String? = unwrap(this).getPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDBTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty):
+          MongoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDBTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MongoDBTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty
+    }
+  }
+
+  /**
+   * When crawling an Amazon S3 data source after the first crawl is complete, specifies whether to
+   * crawl the entire dataset again or to crawl only folders that were added since the last crawler
+   * run.
+   *
+   * For more information, see [Incremental Crawls in AWS
+   * Glue](https://docs.aws.amazon.com/glue/latest/dg/incremental-crawls.html) in the developer guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * RecrawlPolicyProperty recrawlPolicyProperty = RecrawlPolicyProperty.builder()
+   * .recrawlBehavior("recrawlBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html)
+   */
+  public interface RecrawlPolicyProperty {
+    /**
+     * Specifies whether to crawl the entire dataset again or to crawl only folders that were added
+     * since the last crawler run.
+     *
+     * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+     *
+     * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since the
+     * last crawler run.
+     *
+     * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
+     * events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html#cfn-glue-crawler-recrawlpolicy-recrawlbehavior)
+     */
+    public fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
+
+    /**
+     * A builder for [RecrawlPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only
+       * folders that were added since the last crawler run.
+       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+       *
+       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
+       * the last crawler run.
+       *
+       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
+       * events.
+       */
+      public fun recrawlBehavior(recrawlBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.builder()
+
+      /**
+       * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only
+       * folders that were added since the last crawler run.
+       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+       *
+       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
+       * the last crawler run.
+       *
+       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
+       * events.
+       */
+      override fun recrawlBehavior(recrawlBehavior: String) {
+        cdkBuilder.recrawlBehavior(recrawlBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
+    ) : CdkObject(cdkObject), RecrawlPolicyProperty {
+      /**
+       * Specifies whether to crawl the entire dataset again or to crawl only folders that were
+       * added since the last crawler run.
+       *
+       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+       *
+       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
+       * the last crawler run.
+       *
+       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
+       * events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html#cfn-glue-crawler-recrawlpolicy-recrawlbehavior)
+       */
+      override fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecrawlPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty):
+          RecrawlPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecrawlPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecrawlPolicyProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty
+    }
   }
 
   /**
@@ -1088,7 +2171,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
     ) : CdkObject(cdkObject), S3TargetProperty {
       /**
        * The name of a connection which allows a job or crawler to access data in Amazon S3 within
@@ -1162,12 +2245,7 @@ public open class CfnCrawler internal constructor(
   }
 
   /**
-   * When crawling an Amazon S3 data source after the first crawl is complete, specifies whether to
-   * crawl the entire dataset again or to crawl only folders that were added since the last crawler
-   * run.
-   *
-   * For more information, see [Incremental Crawls in AWS
-   * Glue](https://docs.aws.amazon.com/glue/latest/dg/incremental-crawls.html) in the developer guide.
+   * A scheduling object using a `cron` statement to schedule an event.
    *
    * Example:
    *
@@ -1175,324 +2253,87 @@ public open class CfnCrawler internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.glue.*;
-   * RecrawlPolicyProperty recrawlPolicyProperty = RecrawlPolicyProperty.builder()
-   * .recrawlBehavior("recrawlBehavior")
+   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+   * .scheduleExpression("scheduleExpression")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html)
    */
-  public interface RecrawlPolicyProperty {
+  public interface ScheduleProperty {
     /**
-     * Specifies whether to crawl the entire dataset again or to crawl only folders that were added
-     * since the last crawler run.
+     * A `cron` expression used to specify the schedule.
      *
-     * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+     * For more information, see [Time-Based Schedules for Jobs and
+     * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) . For
+     * example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
      *
-     * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since the
-     * last crawler run.
-     *
-     * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
-     * events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html#cfn-glue-crawler-recrawlpolicy-recrawlbehavior)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html#cfn-glue-crawler-schedule-scheduleexpression)
      */
-    public fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
+    public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
 
     /**
-     * A builder for [RecrawlPolicyProperty]
+     * A builder for [ScheduleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only
-       * folders that were added since the last crawler run.
-       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
-       *
-       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
-       * the last crawler run.
-       *
-       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
-       * events.
+       * @param scheduleExpression A `cron` expression used to specify the schedule.
+       * For more information, see [Time-Based Schedules for Jobs and
+       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
+       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
        */
-      public fun recrawlBehavior(recrawlBehavior: String)
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.builder()
+          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.builder()
 
       /**
-       * @param recrawlBehavior Specifies whether to crawl the entire dataset again or to crawl only
-       * folders that were added since the last crawler run.
-       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
-       *
-       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
-       * the last crawler run.
-       *
-       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
-       * events.
+       * @param scheduleExpression A `cron` expression used to specify the schedule.
+       * For more information, see [Time-Based Schedules for Jobs and
+       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
+       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
        */
-      override fun recrawlBehavior(recrawlBehavior: String) {
-        cdkBuilder.recrawlBehavior(recrawlBehavior)
+      override fun scheduleExpression(scheduleExpression: String) {
+        cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty =
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
-    ) : CdkObject(cdkObject), RecrawlPolicyProperty {
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
+    ) : CdkObject(cdkObject), ScheduleProperty {
       /**
-       * Specifies whether to crawl the entire dataset again or to crawl only folders that were
-       * added since the last crawler run.
+       * A `cron` expression used to specify the schedule.
        *
-       * A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again.
+       * For more information, see [Time-Based Schedules for Jobs and
+       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
+       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
        *
-       * A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since
-       * the last crawler run.
-       *
-       * A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3
-       * events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html#cfn-glue-crawler-recrawlpolicy-recrawlbehavior)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html#cfn-glue-crawler-schedule-scheduleexpression)
        */
-      override fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecrawlPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty):
-          RecrawlPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecrawlPolicyProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty):
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RecrawlPolicyProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty
-    }
-  }
-
-  /**
-   * Specifies an AWS Glue Data Catalog target.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * CatalogTargetProperty catalogTargetProperty = CatalogTargetProperty.builder()
-   * .connectionName("connectionName")
-   * .databaseName("databaseName")
-   * .dlqEventQueueArn("dlqEventQueueArn")
-   * .eventQueueArn("eventQueueArn")
-   * .tables(List.of("tables"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html)
-   */
-  public interface CatalogTargetProperty {
-    /**
-     * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
-     * crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * The name of the database to be synchronized.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * A valid Amazon dead-letter SQS ARN.
-     *
-     * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-dlqeventqueuearn)
-     */
-    public fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
-
-    /**
-     * A valid Amazon SQS ARN.
-     *
-     * For example, `arn:aws:sqs:region:account:sqs` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-eventqueuearn)
-     */
-    public fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
-
-    /**
-     * A list of the tables to be synchronized.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-tables)
-     */
-    public fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
-
-    /**
-     * A builder for [CatalogTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionName The name of the connection for an Amazon S3-backed Data Catalog table
-       * to be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK`
-       * Connection type.
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param databaseName The name of the database to be synchronized.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param dlqEventQueueArn A valid Amazon dead-letter SQS ARN.
-       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
-       */
-      public fun dlqEventQueueArn(dlqEventQueueArn: String)
-
-      /**
-       * @param eventQueueArn A valid Amazon SQS ARN.
-       * For example, `arn:aws:sqs:region:account:sqs` .
-       */
-      public fun eventQueueArn(eventQueueArn: String)
-
-      /**
-       * @param tables A list of the tables to be synchronized.
-       */
-      public fun tables(tables: List<String>)
-
-      /**
-       * @param tables A list of the tables to be synchronized.
-       */
-      public fun tables(vararg tables: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.builder()
-
-      /**
-       * @param connectionName The name of the connection for an Amazon S3-backed Data Catalog table
-       * to be a target of the crawl when using a `Catalog` connection type paired with a `NETWORK`
-       * Connection type.
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param databaseName The name of the database to be synchronized.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param dlqEventQueueArn A valid Amazon dead-letter SQS ARN.
-       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
-       */
-      override fun dlqEventQueueArn(dlqEventQueueArn: String) {
-        cdkBuilder.dlqEventQueueArn(dlqEventQueueArn)
-      }
-
-      /**
-       * @param eventQueueArn A valid Amazon SQS ARN.
-       * For example, `arn:aws:sqs:region:account:sqs` .
-       */
-      override fun eventQueueArn(eventQueueArn: String) {
-        cdkBuilder.eventQueueArn(eventQueueArn)
-      }
-
-      /**
-       * @param tables A list of the tables to be synchronized.
-       */
-      override fun tables(tables: List<String>) {
-        cdkBuilder.tables(tables)
-      }
-
-      /**
-       * @param tables A list of the tables to be synchronized.
-       */
-      override fun tables(vararg tables: String): Unit = tables(tables.toList())
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
-    ) : CdkObject(cdkObject), CatalogTargetProperty {
-      /**
-       * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
-       * crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * The name of the database to be synchronized.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * A valid Amazon dead-letter SQS ARN.
-       *
-       * For example, `arn:aws:sqs:region:account:deadLetterQueue` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-dlqeventqueuearn)
-       */
-      override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
-
-      /**
-       * A valid Amazon SQS ARN.
-       *
-       * For example, `arn:aws:sqs:region:account:sqs` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-eventqueuearn)
-       */
-      override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
-
-      /**
-       * A list of the tables to be synchronized.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html#cfn-glue-crawler-catalogtarget-tables)
-       */
-      override fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CatalogTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty):
-          CatalogTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? CatalogTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CatalogTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty
+      internal fun unwrap(wrapped: ScheduleProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty
     }
   }
 
@@ -1622,8 +2463,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
     ) : CdkObject(cdkObject), SchemaChangePolicyProperty {
       /**
        * The deletion behavior when the crawler finds a deleted object.
@@ -1672,306 +2512,6 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty
-    }
-  }
-
-  /**
-   * Specifies a Delta data store to crawl one or more Delta tables.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * DeltaTargetProperty deltaTargetProperty = DeltaTargetProperty.builder()
-   * .connectionName("connectionName")
-   * .createNativeDeltaTable(false)
-   * .deltaTables(List.of("deltaTables"))
-   * .writeManifest(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html)
-   */
-  public interface DeltaTargetProperty {
-    /**
-     * The name of the connection to use to connect to the Delta table target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * Specifies whether the crawler will create native tables, to allow integration with query
-     * engines that support querying of the Delta transaction log directly.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-createnativedeltatable)
-     */
-    public fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
-
-    /**
-     * A list of the Amazon S3 paths to the Delta tables.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-deltatables)
-     */
-    public fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
-
-    /**
-     * Specifies whether to write the manifest files to the Delta table path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-writemanifest)
-     */
-    public fun writeManifest(): Any? = unwrap(this).getWriteManifest()
-
-    /**
-     * A builder for [DeltaTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionName The name of the connection to use to connect to the Delta table
-       * target.
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
-       * allow integration with query engines that support querying of the Delta transaction log
-       * directly.
-       */
-      public fun createNativeDeltaTable(createNativeDeltaTable: Boolean)
-
-      /**
-       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
-       * allow integration with query engines that support querying of the Delta transaction log
-       * directly.
-       */
-      public fun createNativeDeltaTable(createNativeDeltaTable: IResolvable)
-
-      /**
-       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
-       */
-      public fun deltaTables(deltaTables: List<String>)
-
-      /**
-       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
-       */
-      public fun deltaTables(vararg deltaTables: String)
-
-      /**
-       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
-       */
-      public fun writeManifest(writeManifest: Boolean)
-
-      /**
-       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
-       */
-      public fun writeManifest(writeManifest: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.builder()
-
-      /**
-       * @param connectionName The name of the connection to use to connect to the Delta table
-       * target.
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
-       * allow integration with query engines that support querying of the Delta transaction log
-       * directly.
-       */
-      override fun createNativeDeltaTable(createNativeDeltaTable: Boolean) {
-        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable)
-      }
-
-      /**
-       * @param createNativeDeltaTable Specifies whether the crawler will create native tables, to
-       * allow integration with query engines that support querying of the Delta transaction log
-       * directly.
-       */
-      override fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
-        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
-       */
-      override fun deltaTables(deltaTables: List<String>) {
-        cdkBuilder.deltaTables(deltaTables)
-      }
-
-      /**
-       * @param deltaTables A list of the Amazon S3 paths to the Delta tables.
-       */
-      override fun deltaTables(vararg deltaTables: String): Unit = deltaTables(deltaTables.toList())
-
-      /**
-       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
-       */
-      override fun writeManifest(writeManifest: Boolean) {
-        cdkBuilder.writeManifest(writeManifest)
-      }
-
-      /**
-       * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
-       */
-      override fun writeManifest(writeManifest: IResolvable) {
-        cdkBuilder.writeManifest(writeManifest.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
-    ) : CdkObject(cdkObject), DeltaTargetProperty {
-      /**
-       * The name of the connection to use to connect to the Delta table target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * Specifies whether the crawler will create native tables, to allow integration with query
-       * engines that support querying of the Delta transaction log directly.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-createnativedeltatable)
-       */
-      override fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
-
-      /**
-       * A list of the Amazon S3 paths to the Delta tables.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-deltatables)
-       */
-      override fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
-
-      /**
-       * Specifies whether to write the manifest files to the Delta table path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html#cfn-glue-crawler-deltatarget-writemanifest)
-       */
-      override fun writeManifest(): Any? = unwrap(this).getWriteManifest()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeltaTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty):
-          DeltaTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeltaTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty
-    }
-  }
-
-  /**
-   * A scheduling object using a `cron` statement to schedule an event.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
-   * .scheduleExpression("scheduleExpression")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html)
-   */
-  public interface ScheduleProperty {
-    /**
-     * A `cron` expression used to specify the schedule.
-     *
-     * For more information, see [Time-Based Schedules for Jobs and
-     * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) . For
-     * example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html#cfn-glue-crawler-schedule-scheduleexpression)
-     */
-    public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
-
-    /**
-     * A builder for [ScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param scheduleExpression A `cron` expression used to specify the schedule.
-       * For more information, see [Time-Based Schedules for Jobs and
-       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
-       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
-       */
-      public fun scheduleExpression(scheduleExpression: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.builder()
-
-      /**
-       * @param scheduleExpression A `cron` expression used to specify the schedule.
-       * For more information, see [Time-Based Schedules for Jobs and
-       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
-       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
-       */
-      override fun scheduleExpression(scheduleExpression: String) {
-        cdkBuilder.scheduleExpression(scheduleExpression)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
-      /**
-       * A `cron` expression used to specify the schedule.
-       *
-       * For more information, see [Time-Based Schedules for Jobs and
-       * Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html) .
-       * For example, to run something every day at 12:15 UTC, specify `cron(15 12 * * ? *)` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html#cfn-glue-crawler-schedule-scheduleexpression)
-       */
-      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ScheduleProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty
     }
   }
 
@@ -2338,7 +2878,7 @@ public open class CfnCrawler internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
     ) : CdkObject(cdkObject), TargetsProperty {
       /**
        * Specifies AWS Glue Data Catalog targets.
@@ -2403,548 +2943,6 @@ public open class CfnCrawler internal constructor(
       internal fun unwrap(wrapped: TargetsProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty
-    }
-  }
-
-  /**
-   * Specifies an Amazon DynamoDB table to crawl.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * DynamoDBTargetProperty dynamoDBTargetProperty = DynamoDBTargetProperty.builder()
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html)
-   */
-  public interface DynamoDBTargetProperty {
-    /**
-     * The name of the DynamoDB table to crawl.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html#cfn-glue-crawler-dynamodbtarget-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [DynamoDBTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param path The name of the DynamoDB table to crawl.
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.builder()
-
-      /**
-       * @param path The name of the DynamoDB table to crawl.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
-    ) : CdkObject(cdkObject), DynamoDBTargetProperty {
-      /**
-       * The name of the DynamoDB table to crawl.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-dynamodbtarget.html#cfn-glue-crawler-dynamodbtarget-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DynamoDBTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty):
-          DynamoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DynamoDBTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty
-    }
-  }
-
-  /**
-   * Specifies an Amazon DocumentDB or MongoDB data store to crawl.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * MongoDBTargetProperty mongoDBTargetProperty = MongoDBTargetProperty.builder()
-   * .connectionName("connectionName")
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html)
-   */
-  public interface MongoDBTargetProperty {
-    /**
-     * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [MongoDBTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionName The name of the connection to use to connect to the Amazon DocumentDB
-       * or MongoDB target.
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.builder()
-
-      /**
-       * @param connectionName The name of the connection to use to connect to the Amazon DocumentDB
-       * or MongoDB target.
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
-    ) : CdkObject(cdkObject), MongoDBTargetProperty {
-      /**
-       * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * The path of the Amazon DocumentDB or MongoDB target (database/collection).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-mongodbtarget.html#cfn-glue-crawler-mongodbtarget-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDBTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty):
-          MongoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDBTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MongoDBTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty
-    }
-  }
-
-  /**
-   * Specifies Apache Iceberg data store targets.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * IcebergTargetProperty icebergTargetProperty = IcebergTargetProperty.builder()
-   * .connectionName("connectionName")
-   * .exclusions(List.of("exclusions"))
-   * .maximumTraversalDepth(123)
-   * .paths(List.of("paths"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html)
-   */
-  public interface IcebergTargetProperty {
-    /**
-     * The name of the connection to use to connect to the Iceberg target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * A list of global patterns used to exclude from the crawl.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-exclusions)
-     */
-    public fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
-
-    /**
-     * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Iceberg
-     * metadata folder in your Amazon S3 path.
-     *
-     * Used to limit the crawler run time.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-maximumtraversaldepth)
-     */
-    public fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
-
-    /**
-     * One or more Amazon S3 paths that contains Iceberg metadata folders as s3://bucket/prefix .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-paths)
-     */
-    public fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
-
-    /**
-     * A builder for [IcebergTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionName The name of the connection to use to connect to the Iceberg target.
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param exclusions A list of global patterns used to exclude from the crawl.
-       */
-      public fun exclusions(exclusions: List<String>)
-
-      /**
-       * @param exclusions A list of global patterns used to exclude from the crawl.
-       */
-      public fun exclusions(vararg exclusions: String)
-
-      /**
-       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
-       * traverse to discover the Iceberg metadata folder in your Amazon S3 path.
-       * Used to limit the crawler run time.
-       */
-      public fun maximumTraversalDepth(maximumTraversalDepth: Number)
-
-      /**
-       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
-       * s3://bucket/prefix .
-       */
-      public fun paths(paths: List<String>)
-
-      /**
-       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
-       * s3://bucket/prefix .
-       */
-      public fun paths(vararg paths: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.builder()
-
-      /**
-       * @param connectionName The name of the connection to use to connect to the Iceberg target.
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param exclusions A list of global patterns used to exclude from the crawl.
-       */
-      override fun exclusions(exclusions: List<String>) {
-        cdkBuilder.exclusions(exclusions)
-      }
-
-      /**
-       * @param exclusions A list of global patterns used to exclude from the crawl.
-       */
-      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
-
-      /**
-       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
-       * traverse to discover the Iceberg metadata folder in your Amazon S3 path.
-       * Used to limit the crawler run time.
-       */
-      override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
-        cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
-      }
-
-      /**
-       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
-       * s3://bucket/prefix .
-       */
-      override fun paths(paths: List<String>) {
-        cdkBuilder.paths(paths)
-      }
-
-      /**
-       * @param paths One or more Amazon S3 paths that contains Iceberg metadata folders as
-       * s3://bucket/prefix .
-       */
-      override fun paths(vararg paths: String): Unit = paths(paths.toList())
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
-    ) : CdkObject(cdkObject), IcebergTargetProperty {
-      /**
-       * The name of the connection to use to connect to the Iceberg target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * A list of global patterns used to exclude from the crawl.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-exclusions)
-       */
-      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
-
-      /**
-       * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Iceberg
-       * metadata folder in your Amazon S3 path.
-       *
-       * Used to limit the crawler run time.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-maximumtraversaldepth)
-       */
-      override fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
-
-      /**
-       * One or more Amazon S3 paths that contains Iceberg metadata folders as s3://bucket/prefix .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-icebergtarget.html#cfn-glue-crawler-icebergtarget-paths)
-       */
-      override fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IcebergTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty):
-          IcebergTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? IcebergTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IcebergTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty
-    }
-  }
-
-  /**
-   * Specifies a JDBC data store to crawl.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.glue.*;
-   * JdbcTargetProperty jdbcTargetProperty = JdbcTargetProperty.builder()
-   * .connectionName("connectionName")
-   * .exclusions(List.of("exclusions"))
-   * .path("path")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html)
-   */
-  public interface JdbcTargetProperty {
-    /**
-     * The name of the connection to use to connect to the JDBC target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
-     */
-    public fun connectionName(): String? = unwrap(this).getConnectionName()
-
-    /**
-     * A list of glob patterns used to exclude from the crawl.
-     *
-     * For more information, see [Catalog Tables with a
-     * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-exclusions)
-     */
-    public fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
-
-    /**
-     * The path of the JDBC target.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [JdbcTargetProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param connectionName The name of the connection to use to connect to the JDBC target.
-       */
-      public fun connectionName(connectionName: String)
-
-      /**
-       * @param exclusions A list of glob patterns used to exclude from the crawl.
-       * For more information, see [Catalog Tables with a
-       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-       */
-      public fun exclusions(exclusions: List<String>)
-
-      /**
-       * @param exclusions A list of glob patterns used to exclude from the crawl.
-       * For more information, see [Catalog Tables with a
-       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-       */
-      public fun exclusions(vararg exclusions: String)
-
-      /**
-       * @param path The path of the JDBC target.
-       */
-      public fun path(path: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.builder()
-
-      /**
-       * @param connectionName The name of the connection to use to connect to the JDBC target.
-       */
-      override fun connectionName(connectionName: String) {
-        cdkBuilder.connectionName(connectionName)
-      }
-
-      /**
-       * @param exclusions A list of glob patterns used to exclude from the crawl.
-       * For more information, see [Catalog Tables with a
-       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-       */
-      override fun exclusions(exclusions: List<String>) {
-        cdkBuilder.exclusions(exclusions)
-      }
-
-      /**
-       * @param exclusions A list of glob patterns used to exclude from the crawl.
-       * For more information, see [Catalog Tables with a
-       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-       */
-      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
-
-      /**
-       * @param path The path of the JDBC target.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
-    ) : CdkObject(cdkObject), JdbcTargetProperty {
-      /**
-       * The name of the connection to use to connect to the JDBC target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
-       */
-      override fun connectionName(): String? = unwrap(this).getConnectionName()
-
-      /**
-       * A list of glob patterns used to exclude from the crawl.
-       *
-       * For more information, see [Catalog Tables with a
-       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-exclusions)
-       */
-      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
-
-      /**
-       * The path of the JDBC target.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JdbcTargetProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty):
-          JdbcTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? JdbcTargetProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JdbcTargetProperty):
-          software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty
     }
   }
 }

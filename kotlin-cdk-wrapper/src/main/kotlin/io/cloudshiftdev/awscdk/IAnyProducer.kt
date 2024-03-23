@@ -18,7 +18,7 @@ public interface IAnyProducer {
   public fun produce(context: IResolveContext): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IAnyProducer,
+    cdkObject: software.amazon.awscdk.IAnyProducer,
   ) : CdkObject(cdkObject), IAnyProducer {
     /**
      * Produce the value.

@@ -36,7 +36,7 @@ import kotlin.collections.List
  */
 public interface CfnLandingZoneProps {
   /**
-   * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+   * The landing zone manifest JSON text file that specifies the landing zone configurations.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-landingzone.html#cfn-controltower-landingzone-manifest)
    */
@@ -62,7 +62,7 @@ public interface CfnLandingZoneProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param manifest The landing zone `manifest.yaml` text file that specifies the landing zone
+     * @param manifest The landing zone manifest JSON text file that specifies the landing zone
      * configurations. 
      */
     public fun manifest(manifest: Any)
@@ -88,7 +88,7 @@ public interface CfnLandingZoneProps {
         = software.amazon.awscdk.services.controltower.CfnLandingZoneProps.builder()
 
     /**
-     * @param manifest The landing zone `manifest.yaml` text file that specifies the landing zone
+     * @param manifest The landing zone manifest JSON text file that specifies the landing zone
      * configurations. 
      */
     override fun manifest(manifest: Any) {
@@ -119,10 +119,10 @@ public interface CfnLandingZoneProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZoneProps,
+    cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZoneProps,
   ) : CdkObject(cdkObject), CfnLandingZoneProps {
     /**
-     * The landing zone `manifest.yaml` text file that specifies the landing zone configurations.
+     * The landing zone manifest JSON text file that specifies the landing zone configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-landingzone.html#cfn-controltower-landingzone-manifest)
      */

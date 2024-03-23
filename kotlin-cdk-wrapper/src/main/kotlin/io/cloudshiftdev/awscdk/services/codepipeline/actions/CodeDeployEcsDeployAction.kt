@@ -45,9 +45,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class CodeDeployEcsDeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction,
+public open class CodeDeployEcsDeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeDeployEcsDeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction(props.let(CodeDeployEcsDeployActionProps::unwrap))
@@ -407,6 +406,7 @@ public open class CodeDeployEcsDeployAction internal constructor(
 
     internal fun unwrap(wrapped: CodeDeployEcsDeployAction):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction
   }
 }

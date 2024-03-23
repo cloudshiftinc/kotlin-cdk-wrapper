@@ -45,8 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html)
  */
-public open class CfnVPCConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection,
+public open class CfnVPCConnection(
+  cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -521,7 +521,8 @@ public open class CfnVPCConnection internal constructor(
         CfnVPCConnection = CfnVPCConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCConnection):
-        software.amazon.awscdk.services.quicksight.CfnVPCConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.quicksight.CfnVPCConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.quicksight.CfnVPCConnection
   }
 
   /**
@@ -658,8 +659,7 @@ public open class CfnVPCConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty,
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty,
     ) : CdkObject(cdkObject), NetworkInterfaceProperty {
       /**
        * The availability zone that the network interface resides in.

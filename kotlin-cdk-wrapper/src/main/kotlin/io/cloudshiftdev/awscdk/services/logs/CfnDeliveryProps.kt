@@ -118,7 +118,7 @@ public interface CfnDeliveryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnDeliveryProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnDeliveryProps,
   ) : CdkObject(cdkObject), CfnDeliveryProps {
     /**
      * The ARN of the delivery destination that is associated with this delivery.

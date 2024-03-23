@@ -83,7 +83,7 @@ public interface AllocatedSubnet {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AllocatedSubnet,
+    cdkObject: software.amazon.awscdk.services.ec2.AllocatedSubnet,
   ) : CdkObject(cdkObject), AllocatedSubnet {
     /**
      * IPv4 CIDR Allocations for a Subnet.

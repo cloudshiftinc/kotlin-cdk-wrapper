@@ -53,9 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)
  */
-public open class CfnWirelessDeviceImportTask internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask,
+public open class CfnWirelessDeviceImportTask(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -116,7 +115,7 @@ public open class CfnWirelessDeviceImportTask internal constructor(
       unwrap(this).getAttrPendingImportedDevicesCount()
 
   /**
-   *
+   * List of Sidewalk devices that are added to the import task.
    */
   public open fun attrSidewalkDeviceCreationFileList(): List<String> =
       unwrap(this).getAttrSidewalkDeviceCreationFileList()
@@ -367,6 +366,7 @@ public open class CfnWirelessDeviceImportTask internal constructor(
 
     internal fun unwrap(wrapped: CfnWirelessDeviceImportTask):
         software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask = wrapped.cdkObject
+        as software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask
   }
 
   /**
@@ -501,8 +501,7 @@ public open class CfnWirelessDeviceImportTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty,
     ) : CdkObject(cdkObject), SidewalkProperty {
       /**
        * The CSV file contained in an S3 bucket that's used for adding devices to an import task.

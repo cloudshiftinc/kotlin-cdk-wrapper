@@ -303,8 +303,7 @@ public interface CfnInferenceSchedulerProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps,
+    cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps,
   ) : CdkObject(cdkObject), CfnInferenceSchedulerProps {
     /**
      * A period of time (in minutes) by which inference on the data is delayed after the data

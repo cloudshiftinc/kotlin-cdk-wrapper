@@ -116,8 +116,7 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery,
   ) : CdkObject(cdkObject), EndpointServiceAvailabilityZonesContextQuery {
     /**
      * Query account.

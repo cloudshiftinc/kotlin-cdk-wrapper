@@ -470,7 +470,7 @@ public interface CfnJobTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplateProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplateProps,
   ) : CdkObject(cdkObject), CfnJobTemplateProps {
     /**
      * The criteria that determine when and how a job abort takes place.

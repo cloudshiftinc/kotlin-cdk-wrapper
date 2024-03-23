@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class RestApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.RestApi,
+public open class RestApi(
+  cdkObject: software.amazon.awscdk.services.apigateway.RestApi,
 ) : RestApiBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.RestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1036,6 +1036,6 @@ public open class RestApi internal constructor(
         RestApi(cdkObject)
 
     internal fun unwrap(wrapped: RestApi): software.amazon.awscdk.services.apigateway.RestApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigateway.RestApi
   }
 }

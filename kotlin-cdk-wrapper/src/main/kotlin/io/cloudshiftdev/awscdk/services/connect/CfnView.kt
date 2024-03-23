@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-view.html)
  */
-public open class CfnView internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnView,
+public open class CfnView(
+  cdkObject: software.amazon.awscdk.services.connect.CfnView,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -350,6 +350,6 @@ public open class CfnView internal constructor(
         CfnView(cdkObject)
 
     internal fun unwrap(wrapped: CfnView): software.amazon.awscdk.services.connect.CfnView =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnView
   }
 }

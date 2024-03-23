@@ -106,7 +106,7 @@ public interface SigningProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.signer.SigningProfileProps,
+    cdkObject: software.amazon.awscdk.services.signer.SigningProfileProps,
   ) : CdkObject(cdkObject), SigningProfileProps {
     /**
      * The Signing Platform available for signing profile.

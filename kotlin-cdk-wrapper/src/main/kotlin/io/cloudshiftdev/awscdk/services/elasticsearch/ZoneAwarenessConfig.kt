@@ -140,7 +140,7 @@ public interface ZoneAwarenessConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig,
+    cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig,
   ) : CdkObject(cdkObject), ZoneAwarenessConfig {
     /**
      * (deprecated) If you enabled multiple Availability Zones (AZs), the number of AZs that you

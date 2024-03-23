@@ -27,8 +27,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class Stop internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Stop,
+public open class Stop(
+  cdkObject: software.amazon.awscdk.services.ses.actions.Stop,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor() : this(software.amazon.awscdk.services.ses.actions.Stop()
   )
@@ -87,6 +87,6 @@ public open class Stop internal constructor(
         Stop(cdkObject)
 
     internal fun unwrap(wrapped: Stop): software.amazon.awscdk.services.ses.actions.Stop =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ses.actions.Stop
   }
 }

@@ -22,8 +22,8 @@ import kotlin.String
  * ValidationResult validationResult = new ValidationResult("errorMessage", validationResults);
  * ```
  */
-public open class ValidationResult internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.ValidationResult,
+public open class ValidationResult(
+  cdkObject: software.amazon.awscdk.ValidationResult,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.ValidationResult()
   )
@@ -78,6 +78,6 @@ public open class ValidationResult internal constructor(
         ValidationResult(cdkObject)
 
     internal fun unwrap(wrapped: ValidationResult): software.amazon.awscdk.ValidationResult =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.ValidationResult
   }
 }

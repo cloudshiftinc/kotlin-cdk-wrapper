@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DomainName internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainName,
+public open class DomainName(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainName,
 ) : Resource(cdkObject), IDomainName {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -313,6 +313,7 @@ public open class DomainName internal constructor(
         DomainName = DomainName(cdkObject)
 
     internal fun unwrap(wrapped: DomainName):
-        software.amazon.awscdk.services.apigatewayv2.DomainName = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.DomainName = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.DomainName
   }
 }

@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * importedVault.grant(role, "backup:StartBackupJob");
  * ```
  */
-public open class BackupVault internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.backup.BackupVault,
+public open class BackupVault(
+  cdkObject: software.amazon.awscdk.services.backup.BackupVault,
 ) : Resource(cdkObject), IBackupVault {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -404,6 +404,6 @@ public open class BackupVault internal constructor(
         BackupVault(cdkObject)
 
     internal fun unwrap(wrapped: BackupVault): software.amazon.awscdk.services.backup.BackupVault =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.backup.BackupVault
   }
 }

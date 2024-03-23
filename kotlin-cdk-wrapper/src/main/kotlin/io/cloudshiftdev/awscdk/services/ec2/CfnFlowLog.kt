@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html)
  */
-public open class CfnFlowLog internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog,
+public open class CfnFlowLog(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -665,7 +665,7 @@ public open class CfnFlowLog internal constructor(
         CfnFlowLog(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowLog): software.amazon.awscdk.services.ec2.CfnFlowLog =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnFlowLog
   }
 
   /**
@@ -804,8 +804,7 @@ public open class CfnFlowLog internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty,
     ) : CdkObject(cdkObject), DestinationOptionsProperty {
       /**
        * The format for the flow log.

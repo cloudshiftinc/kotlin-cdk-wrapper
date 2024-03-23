@@ -61,7 +61,7 @@ public interface CfnJsonProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnJsonProps,
+    cdkObject: software.amazon.awscdk.CfnJsonProps,
   ) : CdkObject(cdkObject), CfnJsonProps {
     /**
      * The value to resolve.

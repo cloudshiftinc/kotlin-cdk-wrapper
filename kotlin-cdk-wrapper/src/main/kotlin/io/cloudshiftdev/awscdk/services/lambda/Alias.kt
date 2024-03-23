@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class Alias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.Alias,
+public open class Alias(
+  cdkObject: software.amazon.awscdk.services.lambda.Alias,
 ) : QualifiedFunctionBase(cdkObject), IAlias {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -469,6 +469,6 @@ public open class Alias internal constructor(
         Alias(cdkObject)
 
     internal fun unwrap(wrapped: Alias): software.amazon.awscdk.services.lambda.Alias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.lambda.Alias
   }
 }

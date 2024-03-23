@@ -595,7 +595,7 @@ public interface TableOptions : SchemaOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableOptions,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TableOptions,
   ) : CdkObject(cdkObject), TableOptions {
     /**
      * Specify how you are charged for read and write throughput and how you manage capacity.

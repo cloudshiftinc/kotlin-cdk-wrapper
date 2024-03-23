@@ -588,7 +588,7 @@ public interface CfnServerlessCacheProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps,
   ) : CdkObject(cdkObject), CfnServerlessCacheProps {
     /**
      * The cache usage limit for the serverless cache.

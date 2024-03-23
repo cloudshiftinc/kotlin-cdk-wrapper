@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html)
  */
-public open class CfnQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueue,
+public open class CfnQueue(
+  cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -310,6 +310,6 @@ public open class CfnQueue internal constructor(
         CfnQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueue): software.amazon.awscdk.services.mediaconvert.CfnQueue =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.mediaconvert.CfnQueue
   }
 }

@@ -50,9 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html)
  */
-public open class CfnLocationObjectStorage internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.datasync.CfnLocationObjectStorage,
+public open class CfnLocationObjectStorage(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -561,6 +560,7 @@ public open class CfnLocationObjectStorage internal constructor(
         CfnLocationObjectStorage = CfnLocationObjectStorage(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationObjectStorage):
-        software.amazon.awscdk.services.datasync.CfnLocationObjectStorage = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationObjectStorage = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationObjectStorage
   }
 }

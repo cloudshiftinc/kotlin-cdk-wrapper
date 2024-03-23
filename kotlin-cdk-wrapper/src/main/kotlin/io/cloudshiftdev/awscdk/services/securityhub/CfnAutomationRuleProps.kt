@@ -540,7 +540,7 @@ public interface CfnAutomationRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRuleProps,
+    cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRuleProps,
   ) : CdkObject(cdkObject), CfnAutomationRuleProps {
     /**
      * One or more actions to update finding fields if a finding matches the conditions specified in

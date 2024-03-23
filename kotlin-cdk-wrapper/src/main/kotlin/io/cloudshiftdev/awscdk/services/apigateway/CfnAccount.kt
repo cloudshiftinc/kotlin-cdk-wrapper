@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html)
  */
-public open class CfnAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnAccount,
+public open class CfnAccount(
+  cdkObject: software.amazon.awscdk.services.apigateway.CfnAccount,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -134,6 +134,6 @@ public open class CfnAccount internal constructor(
         = CfnAccount(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccount): software.amazon.awscdk.services.apigateway.CfnAccount
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.apigateway.CfnAccount
   }
 }

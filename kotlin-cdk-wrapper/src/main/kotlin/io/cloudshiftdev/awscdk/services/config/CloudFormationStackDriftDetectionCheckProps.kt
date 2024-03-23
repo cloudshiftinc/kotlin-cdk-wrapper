@@ -161,8 +161,7 @@ public interface CloudFormationStackDriftDetectionCheckProps : RuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps,
+    cdkObject: software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps,
   ) : CdkObject(cdkObject), CloudFormationStackDriftDetectionCheckProps {
     /**
      * A name for the AWS Config rule.

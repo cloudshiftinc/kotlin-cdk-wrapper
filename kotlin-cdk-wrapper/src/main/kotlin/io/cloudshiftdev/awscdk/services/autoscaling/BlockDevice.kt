@@ -86,7 +86,7 @@ public interface BlockDevice {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.BlockDevice,
+    cdkObject: software.amazon.awscdk.services.autoscaling.BlockDevice,
   ) : CdkObject(cdkObject), BlockDevice {
     /**
      * The device name exposed to the EC2 instance.

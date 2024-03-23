@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-privategraphendpoint.html)
  */
-public open class CfnPrivateGraphEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint,
+public open class CfnPrivateGraphEndpoint(
+  cdkObject: software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -287,6 +286,7 @@ public open class CfnPrivateGraphEndpoint internal constructor(
         CfnPrivateGraphEndpoint = CfnPrivateGraphEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrivateGraphEndpoint):
-        software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint = wrapped.cdkObject
+        software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint = wrapped.cdkObject as
+        software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint
   }
 }

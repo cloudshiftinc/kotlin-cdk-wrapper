@@ -59,7 +59,7 @@ public interface CfnProjectProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rekognition.CfnProjectProps,
+    cdkObject: software.amazon.awscdk.services.rekognition.CfnProjectProps,
   ) : CdkObject(cdkObject), CfnProjectProps {
     /**
      * The name of the project to create.

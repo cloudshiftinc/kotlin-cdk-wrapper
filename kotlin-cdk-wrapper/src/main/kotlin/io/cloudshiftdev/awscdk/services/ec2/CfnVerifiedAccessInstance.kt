@@ -70,8 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)
  */
-public open class CfnVerifiedAccessInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
+public open class CfnVerifiedAccessInstance(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -525,7 +525,422 @@ public open class CfnVerifiedAccessInstance internal constructor(
         CfnVerifiedAccessInstance = CfnVerifiedAccessInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessInstance):
-        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
+  }
+
+  /**
+   * Options for CloudWatch Logs as a logging destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CloudWatchLogsProperty cloudWatchLogsProperty = CloudWatchLogsProperty.builder()
+   * .enabled(false)
+   * .logGroup("logGroup")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html)
+   */
+  public interface CloudWatchLogsProperty {
+    /**
+     * Indicates whether logging is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The ID of the CloudWatch Logs log group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-loggroup)
+     */
+    public fun logGroup(): String? = unwrap(this).getLogGroup()
+
+    /**
+     * A builder for [CloudWatchLogsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param logGroup The ID of the CloudWatch Logs log group.
+       */
+      public fun logGroup(logGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logGroup The ID of the CloudWatch Logs log group.
+       */
+      override fun logGroup(logGroup: String) {
+        cdkBuilder.logGroup(logGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
+    ) : CdkObject(cdkObject), CloudWatchLogsProperty {
+      /**
+       * Indicates whether logging is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The ID of the CloudWatch Logs log group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-loggroup)
+       */
+      override fun logGroup(): String? = unwrap(this).getLogGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty):
+          CloudWatchLogsProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudWatchLogsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchLogsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty
+    }
+  }
+
+  /**
+   * Options for Kinesis as a logging destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * KinesisDataFirehoseProperty kinesisDataFirehoseProperty = KinesisDataFirehoseProperty.builder()
+   * .deliveryStream("deliveryStream")
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html)
+   */
+  public interface KinesisDataFirehoseProperty {
+    /**
+     * The ID of the delivery stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-deliverystream)
+     */
+    public fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
+
+    /**
+     * Indicates whether logging is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [KinesisDataFirehoseProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStream The ID of the delivery stream.
+       */
+      public fun deliveryStream(deliveryStream: String)
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.builder()
+
+      /**
+       * @param deliveryStream The ID of the delivery stream.
+       */
+      override fun deliveryStream(deliveryStream: String) {
+        cdkBuilder.deliveryStream(deliveryStream)
+      }
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
+    ) : CdkObject(cdkObject), KinesisDataFirehoseProperty {
+      /**
+       * The ID of the delivery stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-deliverystream)
+       */
+      override fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
+
+      /**
+       * Indicates whether logging is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisDataFirehoseProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty):
+          KinesisDataFirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisDataFirehoseProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisDataFirehoseProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
+    }
+  }
+
+  /**
+   * Options for Amazon S3 as a logging destination.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * S3Property s3Property = S3Property.builder()
+   * .bucketName("bucketName")
+   * .bucketOwner("bucketOwner")
+   * .enabled(false)
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html)
+   */
+  public interface S3Property {
+    /**
+     * The bucket name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketname)
+     */
+    public fun bucketName(): String? = unwrap(this).getBucketName()
+
+    /**
+     * The AWS account number that owns the bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketowner)
+     */
+    public fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+
+    /**
+     * Indicates whether logging is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The bucket prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * A builder for [S3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The bucket name.
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param bucketOwner The AWS account number that owns the bucket.
+       */
+      public fun bucketOwner(bucketOwner: String)
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param prefix The bucket prefix.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.Builder =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.builder()
+
+      /**
+       * @param bucketName The bucket name.
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param bucketOwner The AWS account number that owns the bucket.
+       */
+      override fun bucketOwner(bucketOwner: String) {
+        cdkBuilder.bucketOwner(bucketOwner)
+      }
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates whether logging is enabled.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefix The bucket prefix.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
+    ) : CdkObject(cdkObject), S3Property {
+      /**
+       * The bucket name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketname)
+       */
+      override fun bucketName(): String? = unwrap(this).getBucketName()
+
+      /**
+       * The AWS account number that owns the bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketowner)
+       */
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+
+      /**
+       * Indicates whether logging is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The bucket prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property):
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3Property):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property
+    }
   }
 
   /**
@@ -775,8 +1190,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
     ) : CdkObject(cdkObject), VerifiedAccessLogsProperty {
       /**
        * CloudWatch Logs logging destination.
@@ -831,423 +1245,6 @@ public open class CfnVerifiedAccessInstance internal constructor(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty
-    }
-  }
-
-  /**
-   * Options for Amazon S3 as a logging destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * S3Property s3Property = S3Property.builder()
-   * .bucketName("bucketName")
-   * .bucketOwner("bucketOwner")
-   * .enabled(false)
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html)
-   */
-  public interface S3Property {
-    /**
-     * The bucket name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketname)
-     */
-    public fun bucketName(): String? = unwrap(this).getBucketName()
-
-    /**
-     * The AWS account number that owns the bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketowner)
-     */
-    public fun bucketOwner(): String? = unwrap(this).getBucketOwner()
-
-    /**
-     * Indicates whether logging is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The bucket prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-prefix)
-     */
-    public fun prefix(): String? = unwrap(this).getPrefix()
-
-    /**
-     * A builder for [S3Property]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName The bucket name.
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param bucketOwner The AWS account number that owns the bucket.
-       */
-      public fun bucketOwner(bucketOwner: String)
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param prefix The bucket prefix.
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.Builder =
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.builder()
-
-      /**
-       * @param bucketName The bucket name.
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param bucketOwner The AWS account number that owns the bucket.
-       */
-      override fun bucketOwner(bucketOwner: String) {
-        cdkBuilder.bucketOwner(bucketOwner)
-      }
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefix The bucket prefix.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build(): software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
-      /**
-       * The bucket name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketname)
-       */
-      override fun bucketName(): String? = unwrap(this).getBucketName()
-
-      /**
-       * The AWS account number that owns the bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-bucketowner)
-       */
-      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
-
-      /**
-       * Indicates whether logging is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The bucket prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html#cfn-ec2-verifiedaccessinstance-s3-prefix)
-       */
-      override fun prefix(): String? = unwrap(this).getPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3Property {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3Property):
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property
-    }
-  }
-
-  /**
-   * Options for CloudWatch Logs as a logging destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * CloudWatchLogsProperty cloudWatchLogsProperty = CloudWatchLogsProperty.builder()
-   * .enabled(false)
-   * .logGroup("logGroup")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html)
-   */
-  public interface CloudWatchLogsProperty {
-    /**
-     * Indicates whether logging is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * The ID of the CloudWatch Logs log group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-loggroup)
-     */
-    public fun logGroup(): String? = unwrap(this).getLogGroup()
-
-    /**
-     * A builder for [CloudWatchLogsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param logGroup The ID of the CloudWatch Logs log group.
-       */
-      public fun logGroup(logGroup: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param logGroup The ID of the CloudWatch Logs log group.
-       */
-      override fun logGroup(logGroup: String) {
-        cdkBuilder.logGroup(logGroup)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsProperty {
-      /**
-       * Indicates whether logging is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-
-      /**
-       * The ID of the CloudWatch Logs log group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html#cfn-ec2-verifiedaccessinstance-cloudwatchlogs-loggroup)
-       */
-      override fun logGroup(): String? = unwrap(this).getLogGroup()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLogsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty):
-          CloudWatchLogsProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudWatchLogsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchLogsProperty):
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty
-    }
-  }
-
-  /**
-   * Options for Kinesis as a logging destination.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ec2.*;
-   * KinesisDataFirehoseProperty kinesisDataFirehoseProperty = KinesisDataFirehoseProperty.builder()
-   * .deliveryStream("deliveryStream")
-   * .enabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html)
-   */
-  public interface KinesisDataFirehoseProperty {
-    /**
-     * The ID of the delivery stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-deliverystream)
-     */
-    public fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
-
-    /**
-     * Indicates whether logging is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-enabled)
-     */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
-
-    /**
-     * A builder for [KinesisDataFirehoseProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deliveryStream The ID of the delivery stream.
-       */
-      public fun deliveryStream(deliveryStream: String)
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      public fun enabled(enabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.Builder
-          =
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.builder()
-
-      /**
-       * @param deliveryStream The ID of the delivery stream.
-       */
-      override fun deliveryStream(deliveryStream: String) {
-        cdkBuilder.deliveryStream(deliveryStream)
-      }
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Indicates whether logging is enabled.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
-    ) : CdkObject(cdkObject), KinesisDataFirehoseProperty {
-      /**
-       * The ID of the delivery stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-deliverystream)
-       */
-      override fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
-
-      /**
-       * Indicates whether logging is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html#cfn-ec2-verifiedaccessinstance-kinesisdatafirehose-enabled)
-       */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisDataFirehoseProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty):
-          KinesisDataFirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisDataFirehoseProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisDataFirehoseProperty):
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
     }
   }
 
@@ -1391,8 +1388,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
     ) : CdkObject(cdkObject), VerifiedAccessTrustProviderProperty {
       /**
        * A description for the AWS Verified Access trust provider.

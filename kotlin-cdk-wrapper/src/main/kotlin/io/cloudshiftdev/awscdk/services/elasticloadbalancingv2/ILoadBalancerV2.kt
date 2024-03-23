@@ -30,7 +30,7 @@ public interface ILoadBalancerV2 : IResource {
   public fun loadBalancerDnsName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2,
   ) : CdkObject(cdkObject), ILoadBalancerV2 {
     /**
      * Apply the given removal policy to this resource.

@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-schema.html)
  */
-public open class CfnSchema internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.personalize.CfnSchema,
+public open class CfnSchema(
+  cdkObject: software.amazon.awscdk.services.personalize.CfnSchema,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -204,6 +204,6 @@ public open class CfnSchema internal constructor(
         CfnSchema(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchema): software.amazon.awscdk.services.personalize.CfnSchema =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.personalize.CfnSchema
   }
 }

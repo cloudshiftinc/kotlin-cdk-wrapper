@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)
  */
-public open class CfnWebACLAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLAssociation,
+public open class CfnWebACLAssociation(
+  cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -225,6 +225,7 @@ public open class CfnWebACLAssociation internal constructor(
         CfnWebACLAssociation = CfnWebACLAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACLAssociation):
-        software.amazon.awscdk.services.wafv2.CfnWebACLAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.wafv2.CfnWebACLAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.wafv2.CfnWebACLAssociation
   }
 }

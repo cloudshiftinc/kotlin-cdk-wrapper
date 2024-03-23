@@ -284,7 +284,7 @@ public interface CfnLocationEFSProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFSProps,
+    cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFSProps,
   ) : CdkObject(cdkObject), CfnLocationEFSProps {
     /**
      * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to access the

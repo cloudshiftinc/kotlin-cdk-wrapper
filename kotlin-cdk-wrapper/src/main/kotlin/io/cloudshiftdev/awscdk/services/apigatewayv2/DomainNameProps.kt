@@ -179,7 +179,7 @@ public interface DomainNameProps : EndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameProps,
   ) : CdkObject(cdkObject), DomainNameProps {
     /**
      * The ACM certificate for this domain name.

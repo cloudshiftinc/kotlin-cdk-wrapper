@@ -146,7 +146,7 @@ public interface GrpcRouteMatch {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteMatch,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteMatch,
   ) : CdkObject(cdkObject), GrpcRouteMatch {
     /**
      * Create metadata based gRPC route match.

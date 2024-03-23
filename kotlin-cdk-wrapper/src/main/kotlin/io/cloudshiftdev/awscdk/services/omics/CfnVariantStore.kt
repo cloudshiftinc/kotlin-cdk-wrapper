@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-variantstore.html)
  */
-public open class CfnVariantStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore,
+public open class CfnVariantStore(
+  cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -407,7 +407,89 @@ public open class CfnVariantStore internal constructor(
         CfnVariantStore = CfnVariantStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariantStore):
-        software.amazon.awscdk.services.omics.CfnVariantStore = wrapped.cdkObject
+        software.amazon.awscdk.services.omics.CfnVariantStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.omics.CfnVariantStore
+  }
+
+  /**
+   * The read set's genome reference ARN.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.omics.*;
+   * ReferenceItemProperty referenceItemProperty = ReferenceItemProperty.builder()
+   * .referenceArn("referenceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html)
+   */
+  public interface ReferenceItemProperty {
+    /**
+     * The reference's ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html#cfn-omics-variantstore-referenceitem-referencearn)
+     */
+    public fun referenceArn(): String
+
+    /**
+     * A builder for [ReferenceItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param referenceArn The reference's ARN. 
+       */
+      public fun referenceArn(referenceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.Builder =
+          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.builder()
+
+      /**
+       * @param referenceArn The reference's ARN. 
+       */
+      override fun referenceArn(referenceArn: String) {
+        cdkBuilder.referenceArn(referenceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty,
+    ) : CdkObject(cdkObject), ReferenceItemProperty {
+      /**
+       * The reference's ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html#cfn-omics-variantstore-referenceitem-referencearn)
+       */
+      override fun referenceArn(): String = unwrap(this).getReferenceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty):
+          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceItemProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReferenceItemProperty):
+          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty
+    }
   }
 
   /**
@@ -483,8 +565,7 @@ public open class CfnVariantStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty,
+      cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty,
     ) : CdkObject(cdkObject), SseConfigProperty {
       /**
        * An encryption key ARN.
@@ -516,88 +597,6 @@ public open class CfnVariantStore internal constructor(
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty
-    }
-  }
-
-  /**
-   * The read set's genome reference ARN.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.omics.*;
-   * ReferenceItemProperty referenceItemProperty = ReferenceItemProperty.builder()
-   * .referenceArn("referenceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html)
-   */
-  public interface ReferenceItemProperty {
-    /**
-     * The reference's ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html#cfn-omics-variantstore-referenceitem-referencearn)
-     */
-    public fun referenceArn(): String
-
-    /**
-     * A builder for [ReferenceItemProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param referenceArn The reference's ARN. 
-       */
-      public fun referenceArn(referenceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.Builder =
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.builder()
-
-      /**
-       * @param referenceArn The reference's ARN. 
-       */
-      override fun referenceArn(referenceArn: String) {
-        cdkBuilder.referenceArn(referenceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty,
-    ) : CdkObject(cdkObject), ReferenceItemProperty {
-      /**
-       * The reference's ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-variantstore-referenceitem.html#cfn-omics-variantstore-referenceitem-referencearn)
-       */
-      override fun referenceArn(): String = unwrap(this).getReferenceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceItemProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty):
-          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceItemProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReferenceItemProperty):
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty
     }
   }
 }

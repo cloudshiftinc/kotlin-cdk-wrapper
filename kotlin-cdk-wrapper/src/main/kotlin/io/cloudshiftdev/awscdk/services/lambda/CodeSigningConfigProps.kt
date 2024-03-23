@@ -135,7 +135,7 @@ public interface CodeSigningConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfigProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfigProps,
   ) : CdkObject(cdkObject), CodeSigningConfigProps {
     /**
      * Code signing configuration description.

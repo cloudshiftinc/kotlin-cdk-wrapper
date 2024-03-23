@@ -37,8 +37,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class EfsVolume internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.EfsVolume,
+public open class EfsVolume(
+  cdkObject: software.amazon.awscdk.services.batch.EfsVolume,
 ) : EcsVolume(cdkObject) {
   public constructor(options: EfsVolumeOptions) :
       this(software.amazon.awscdk.services.batch.EfsVolume(options.let(EfsVolumeOptions::unwrap))
@@ -352,6 +352,6 @@ public open class EfsVolume internal constructor(
         EfsVolume(cdkObject)
 
     internal fun unwrap(wrapped: EfsVolume): software.amazon.awscdk.services.batch.EfsVolume =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.batch.EfsVolume
   }
 }

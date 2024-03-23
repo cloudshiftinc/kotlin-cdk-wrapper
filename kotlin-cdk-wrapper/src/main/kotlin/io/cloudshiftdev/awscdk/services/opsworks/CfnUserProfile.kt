@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html)
  */
-public open class CfnUserProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnUserProfile,
+public open class CfnUserProfile(
+  cdkObject: software.amazon.awscdk.services.opsworks.CfnUserProfile,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -270,6 +270,7 @@ public open class CfnUserProfile internal constructor(
         CfnUserProfile = CfnUserProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserProfile):
-        software.amazon.awscdk.services.opsworks.CfnUserProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.opsworks.CfnUserProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.opsworks.CfnUserProfile
   }
 }

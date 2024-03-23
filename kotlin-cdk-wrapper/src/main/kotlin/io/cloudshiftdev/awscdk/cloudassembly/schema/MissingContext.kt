@@ -386,7 +386,7 @@ public interface MissingContext {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.MissingContext,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.MissingContext,
   ) : CdkObject(cdkObject), MissingContext {
     /**
      * The missing context key.

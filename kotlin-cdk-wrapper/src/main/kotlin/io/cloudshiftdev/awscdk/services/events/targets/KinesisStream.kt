@@ -25,8 +25,8 @@ import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKi
  * KinesisStream(stream)).build());
  * ```
  */
-public open class KinesisStream internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.KinesisStream,
+public open class KinesisStream(
+  cdkObject: software.amazon.awscdk.services.events.targets.KinesisStream,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
       this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
@@ -132,6 +132,7 @@ public open class KinesisStream internal constructor(
         KinesisStream = KinesisStream(cdkObject)
 
     internal fun unwrap(wrapped: KinesisStream):
-        software.amazon.awscdk.services.events.targets.KinesisStream = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.KinesisStream = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.KinesisStream
   }
 }

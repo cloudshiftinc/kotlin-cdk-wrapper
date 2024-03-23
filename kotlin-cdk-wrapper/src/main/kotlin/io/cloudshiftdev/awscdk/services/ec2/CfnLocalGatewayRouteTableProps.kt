@@ -117,7 +117,7 @@ public interface CfnLocalGatewayRouteTableProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableProps,
   ) : CdkObject(cdkObject), CfnLocalGatewayRouteTableProps {
     /**
      * The ID of the local gateway.

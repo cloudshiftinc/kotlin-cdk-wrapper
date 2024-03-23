@@ -25,9 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class GitHubSourceCredentials internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codebuild.GitHubSourceCredentials,
+public open class GitHubSourceCredentials(
+  cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentials,
 ) : Resource(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -93,6 +92,7 @@ public open class GitHubSourceCredentials internal constructor(
         GitHubSourceCredentials = GitHubSourceCredentials(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceCredentials):
-        software.amazon.awscdk.services.codebuild.GitHubSourceCredentials = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.GitHubSourceCredentials = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.GitHubSourceCredentials
   }
 }

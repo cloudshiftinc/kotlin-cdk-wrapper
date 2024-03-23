@@ -945,7 +945,7 @@ public interface CfnDataSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSetProps,
+    cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSetProps,
   ) : CdkObject(cdkObject), CfnDataSetProps {
     /**
      * The AWS account ID.

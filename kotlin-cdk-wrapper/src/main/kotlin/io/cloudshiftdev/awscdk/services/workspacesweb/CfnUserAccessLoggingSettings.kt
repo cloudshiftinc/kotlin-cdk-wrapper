@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html)
  */
-public open class CfnUserAccessLoggingSettings internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings,
+public open class CfnUserAccessLoggingSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -223,6 +222,7 @@ public open class CfnUserAccessLoggingSettings internal constructor(
 
     internal fun unwrap(wrapped: CfnUserAccessLoggingSettings):
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings
   }
 }

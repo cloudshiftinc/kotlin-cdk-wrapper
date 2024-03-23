@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html)
  */
-public open class CfnSubnetCidrBlock internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock,
+public open class CfnSubnetCidrBlock(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -221,6 +221,7 @@ public open class CfnSubnetCidrBlock internal constructor(
         CfnSubnetCidrBlock = CfnSubnetCidrBlock(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetCidrBlock):
-        software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock
   }
 }

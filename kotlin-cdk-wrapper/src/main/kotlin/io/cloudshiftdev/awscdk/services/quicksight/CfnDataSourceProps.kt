@@ -916,7 +916,7 @@ public interface CfnDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSourceProps,
   ) : CdkObject(cdkObject), CfnDataSourceProps {
     /**
      * A set of alternate data source parameters that you want to share for the credentials stored

@@ -200,8 +200,7 @@ public interface AlexaSkillDeployActionProps : CommonActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps,
   ) : CdkObject(cdkObject), AlexaSkillDeployActionProps {
     /**
      * The physical, human-readable name of the Action.

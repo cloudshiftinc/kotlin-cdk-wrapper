@@ -101,7 +101,7 @@ public interface ExternalTaskDefinitionAttributes : CommonTaskDefinitionAttribut
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes,
+    cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes,
   ) : CdkObject(cdkObject), ExternalTaskDefinitionAttributes {
     /**
      * The IAM role that grants containers and Fargate agents permission to make AWS API calls on

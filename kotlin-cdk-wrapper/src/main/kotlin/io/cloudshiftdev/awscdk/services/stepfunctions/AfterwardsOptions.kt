@@ -93,7 +93,7 @@ public interface AfterwardsOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions,
   ) : CdkObject(cdkObject), AfterwardsOptions {
     /**
      * Whether to include error handling states.

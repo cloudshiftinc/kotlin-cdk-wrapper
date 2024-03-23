@@ -33,9 +33,8 @@ import kotlin.collections.Map
  *
  * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-invoke-lambda-function.html)
  */
-public open class LambdaInvokeAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction,
+public open class LambdaInvokeAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction,
 ) : Action(cdkObject) {
   public constructor(props: LambdaInvokeActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction(props.let(LambdaInvokeActionProps::unwrap))
@@ -383,5 +382,6 @@ public open class LambdaInvokeAction internal constructor(
 
     internal fun unwrap(wrapped: LambdaInvokeAction):
         software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction = wrapped.cdkObject
+        as software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction
   }
 }

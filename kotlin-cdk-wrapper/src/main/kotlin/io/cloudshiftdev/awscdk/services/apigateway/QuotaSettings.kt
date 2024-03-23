@@ -102,7 +102,7 @@ public interface QuotaSettings {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.QuotaSettings,
+    cdkObject: software.amazon.awscdk.services.apigateway.QuotaSettings,
   ) : CdkObject(cdkObject), QuotaSettings {
     /**
      * The maximum number of requests that users can make within the specified time period.

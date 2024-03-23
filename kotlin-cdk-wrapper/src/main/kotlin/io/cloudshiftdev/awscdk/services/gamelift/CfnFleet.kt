@@ -111,8 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1947,112 +1947,7 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.gamelift.CfnFleet =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Settings for a target-based scaling policy.
-   *
-   * A target-based policy tracks a particular fleet metric specifies a target value for the metric.
-   * As player usage changes, the policy triggers Amazon GameLift to adjust capacity so that the metric
-   * returns to the target value. The target configuration specifies settings as needed for the target
-   * based policy, including the target value.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * TargetConfigurationProperty targetConfigurationProperty = TargetConfigurationProperty.builder()
-   * .targetValue(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html)
-   */
-  public interface TargetConfigurationProperty {
-    /**
-     * Desired value to use with a target-based scaling policy.
-     *
-     * The value must be relevant for whatever metric the scaling policy is using. For example, in a
-     * policy using the metric PercentAvailableGameSessions, the target value should be the preferred
-     * size of the fleet's buffer (the percent of capacity that should be idle and ready for new game
-     * sessions).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html#cfn-gamelift-fleet-targetconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param targetValue Desired value to use with a target-based scaling policy. 
-       * The value must be relevant for whatever metric the scaling policy is using. For example, in
-       * a policy using the metric PercentAvailableGameSessions, the target value should be the
-       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
-       * for new game sessions).
-       */
-      public fun targetValue(targetValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.Builder =
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.builder()
-
-      /**
-       * @param targetValue Desired value to use with a target-based scaling policy. 
-       * The value must be relevant for whatever metric the scaling policy is using. For example, in
-       * a policy using the metric PercentAvailableGameSessions, the target value should be the
-       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
-       * for new game sessions).
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetConfigurationProperty {
-      /**
-       * Desired value to use with a target-based scaling policy.
-       *
-       * The value must be relevant for whatever metric the scaling policy is using. For example, in
-       * a policy using the metric PercentAvailableGameSessions, the target value should be the
-       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
-       * for new game sessions).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html#cfn-gamelift-fleet-targetconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TargetConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty):
-          TargetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetConfigurationProperty):
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnFleet
   }
 
   /**
@@ -2122,8 +2017,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty,
     ) : CdkObject(cdkObject), AnywhereConfigurationProperty {
       /**
        * The cost to run your fleet per hour.
@@ -2153,6 +2047,112 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty
+    }
+  }
+
+  /**
+   * Determines whether a TLS/SSL certificate is generated for a fleet.
+   *
+   * This feature must be enabled when creating the fleet. All instances in a fleet share the same
+   * certificate. The certificate can be retrieved by calling the [GameLift Server
+   * SDK](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html)
+   * operation `GetInstanceCertificate` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * CertificateConfigurationProperty certificateConfigurationProperty =
+   * CertificateConfigurationProperty.builder()
+   * .certificateType("certificateType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html)
+   */
+  public interface CertificateConfigurationProperty {
+    /**
+     * Indicates whether a TLS/SSL certificate is generated for a fleet.
+     *
+     * Valid values include:
+     *
+     * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
+     * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html#cfn-gamelift-fleet-certificateconfiguration-certificatetype)
+     */
+    public fun certificateType(): String
+
+    /**
+     * A builder for [CertificateConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateType Indicates whether a TLS/SSL certificate is generated for a fleet. 
+       * Valid values include:
+       *
+       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
+       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+       */
+      public fun certificateType(certificateType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty.builder()
+
+      /**
+       * @param certificateType Indicates whether a TLS/SSL certificate is generated for a fleet. 
+       * Valid values include:
+       *
+       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
+       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+       */
+      override fun certificateType(certificateType: String) {
+        cdkBuilder.certificateType(certificateType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty,
+    ) : CdkObject(cdkObject), CertificateConfigurationProperty {
+      /**
+       * Indicates whether a TLS/SSL certificate is generated for a fleet.
+       *
+       * Valid values include:
+       *
+       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
+       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html#cfn-gamelift-fleet-certificateconfiguration-certificatetype)
+       */
+      override fun certificateType(): String = unwrap(this).getCertificateType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty):
+          CertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertificateConfigurationProperty):
+          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty
     }
   }
 
@@ -2307,8 +2307,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty,
     ) : CdkObject(cdkObject), IpPermissionProperty {
       /**
        * A starting value for a range of allowed port numbers.
@@ -2371,16 +2370,17 @@ public open class CfnFleet internal constructor(
   }
 
   /**
-   * A policy that limits the number of game sessions a player can create on the same fleet.
+   * Current resource capacity settings in a specified fleet or location.
    *
-   * This optional policy gives game owners control over how players can consume available game
-   * server resources. A resource creation policy makes the following statement: "An individual player
-   * can create a maximum number of new game sessions within a specified time period".
+   * The location value might refer to a fleet's remote location or its home Region.
    *
-   * The policy is evaluated when a player tries to create a new game session. For example, assume
-   * you have a policy of 10 new game sessions and a time period of 60 minutes. On receiving a
-   * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
-   * has created fewer than 10 game sessions in the past 60 minutes.
+   * *Related actions*
+   *
+   * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
+   * |
+   * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
+   * |
+   * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
    *
    * Example:
    *
@@ -2388,135 +2388,159 @@ public open class CfnFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * ResourceCreationLimitPolicyProperty resourceCreationLimitPolicyProperty =
-   * ResourceCreationLimitPolicyProperty.builder()
-   * .newGameSessionsPerCreator(123)
-   * .policyPeriodInMinutes(123)
+   * LocationCapacityProperty locationCapacityProperty = LocationCapacityProperty.builder()
+   * .desiredEc2Instances(123)
+   * .maxSize(123)
+   * .minSize(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html)
    */
-  public interface ResourceCreationLimitPolicyProperty {
+  public interface LocationCapacityProperty {
     /**
-     * A policy that puts limits on the number of game sessions that a player can create within a
-     * specified span of time.
+     * The number of Amazon EC2 instances you want to maintain in the specified fleet location.
      *
-     * With this policy, you can control players' ability to consume available resources.
+     * This value must fall between the minimum and maximum size limits. Changes in desired instance
+     * value can take up to 1 minute to be reflected when viewing the fleet's capacity settings.
      *
-     * The policy is evaluated when a player tries to create a new game session. On receiving a
-     * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
-     * has created fewer than game session limit in the specified time period.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-desiredec2instances)
      */
-    public fun newGameSessionsPerCreator(): Number? = unwrap(this).getNewGameSessionsPerCreator()
+    public fun desiredEc2Instances(): Number
 
     /**
-     * The time span used in evaluating the resource creation limit policy.
+     * The maximum number of instances that are allowed in the specified fleet location.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes)
+     * If this parameter is not set, the default is 1.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-maxsize)
      */
-    public fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
+    public fun maxSize(): Number
 
     /**
-     * A builder for [ResourceCreationLimitPolicyProperty]
+     * The minimum number of instances that are allowed in the specified fleet location.
+     *
+     * If this parameter is not set, the default is 0.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-minsize)
+     */
+    public fun minSize(): Number
+
+    /**
+     * A builder for [LocationCapacityProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions
-       * that a player can create within a specified span of time.
-       * With this policy, you can control players' ability to consume available resources.
-       *
-       * The policy is evaluated when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
+       * @param desiredEc2Instances The number of Amazon EC2 instances you want to maintain in the
+       * specified fleet location. 
+       * This value must fall between the minimum and maximum size limits. Changes in desired
+       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
+       * settings.
        */
-      public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number)
+      public fun desiredEc2Instances(desiredEc2Instances: Number)
 
       /**
-       * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
-       * policy.
+       * @param maxSize The maximum number of instances that are allowed in the specified fleet
+       * location. 
+       * If this parameter is not set, the default is 1.
        */
-      public fun policyPeriodInMinutes(policyPeriodInMinutes: Number)
+      public fun maxSize(maxSize: Number)
+
+      /**
+       * @param minSize The minimum number of instances that are allowed in the specified fleet
+       * location. 
+       * If this parameter is not set, the default is 0.
+       */
+      public fun minSize(minSize: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty.builder()
+          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.Builder =
+          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.builder()
 
       /**
-       * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions
-       * that a player can create within a specified span of time.
-       * With this policy, you can control players' ability to consume available resources.
-       *
-       * The policy is evaluated when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
+       * @param desiredEc2Instances The number of Amazon EC2 instances you want to maintain in the
+       * specified fleet location. 
+       * This value must fall between the minimum and maximum size limits. Changes in desired
+       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
+       * settings.
        */
-      override fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
-        cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
+      override fun desiredEc2Instances(desiredEc2Instances: Number) {
+        cdkBuilder.desiredEc2Instances(desiredEc2Instances)
       }
 
       /**
-       * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
-       * policy.
+       * @param maxSize The maximum number of instances that are allowed in the specified fleet
+       * location. 
+       * If this parameter is not set, the default is 1.
        */
-      override fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
-        cdkBuilder.policyPeriodInMinutes(policyPeriodInMinutes)
+      override fun maxSize(maxSize: Number) {
+        cdkBuilder.maxSize(maxSize)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty =
-          cdkBuilder.build()
+      /**
+       * @param minSize The minimum number of instances that are allowed in the specified fleet
+       * location. 
+       * If this parameter is not set, the default is 0.
+       */
+      override fun minSize(minSize: Number) {
+        cdkBuilder.minSize(minSize)
+      }
+
+      public fun build(): software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty,
-    ) : CdkObject(cdkObject), ResourceCreationLimitPolicyProperty {
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty,
+    ) : CdkObject(cdkObject), LocationCapacityProperty {
       /**
-       * A policy that puts limits on the number of game sessions that a player can create within a
-       * specified span of time.
+       * The number of Amazon EC2 instances you want to maintain in the specified fleet location.
        *
-       * With this policy, you can control players' ability to consume available resources.
+       * This value must fall between the minimum and maximum size limits. Changes in desired
+       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
+       * settings.
        *
-       * The policy is evaluated when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-desiredec2instances)
        */
-      override fun newGameSessionsPerCreator(): Number? =
-          unwrap(this).getNewGameSessionsPerCreator()
+      override fun desiredEc2Instances(): Number = unwrap(this).getDesiredEc2Instances()
 
       /**
-       * The time span used in evaluating the resource creation limit policy.
+       * The maximum number of instances that are allowed in the specified fleet location.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes)
+       * If this parameter is not set, the default is 1.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-maxsize)
        */
-      override fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
+      override fun maxSize(): Number = unwrap(this).getMaxSize()
+
+      /**
+       * The minimum number of instances that are allowed in the specified fleet location.
+       *
+       * If this parameter is not set, the default is 0.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-minsize)
+       */
+      override fun minSize(): Number = unwrap(this).getMinSize()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ResourceCreationLimitPolicyProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LocationCapacityProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty):
-          ResourceCreationLimitPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResourceCreationLimitPolicyProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty):
+          LocationCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationCapacityProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ResourceCreationLimitPolicyProperty):
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty
+      internal fun unwrap(wrapped: LocationCapacityProperty):
+          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty
     }
   }
 
@@ -2696,8 +2720,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty,
     ) : CdkObject(cdkObject), LocationConfigurationProperty {
       /**
        * An AWS Region code, such as `us-west-2` .
@@ -2743,9 +2766,16 @@ public open class CfnFleet internal constructor(
   }
 
   /**
-   * A set of instructions for launching server processes on each instance in a fleet.
+   * A policy that limits the number of game sessions a player can create on the same fleet.
    *
-   * Server processes run either an executable in a custom game build or a Realtime Servers script.
+   * This optional policy gives game owners control over how players can consume available game
+   * server resources. A resource creation policy makes the following statement: "An individual player
+   * can create a maximum number of new game sessions within a specified time period".
+   *
+   * The policy is evaluated when a player tries to create a new game session. For example, assume
+   * you have a policy of 10 new game sessions and a time period of 60 minutes. On receiving a
+   * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
+   * has created fewer than 10 game sessions in the past 60 minutes.
    *
    * Example:
    *
@@ -2753,195 +2783,134 @@ public open class CfnFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * ServerProcessProperty serverProcessProperty = ServerProcessProperty.builder()
-   * .concurrentExecutions(123)
-   * .launchPath("launchPath")
-   * // the properties below are optional
-   * .parameters("parameters")
+   * ResourceCreationLimitPolicyProperty resourceCreationLimitPolicyProperty =
+   * ResourceCreationLimitPolicyProperty.builder()
+   * .newGameSessionsPerCreator(123)
+   * .policyPeriodInMinutes(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html)
    */
-  public interface ServerProcessProperty {
+  public interface ResourceCreationLimitPolicyProperty {
     /**
-     * The number of server processes using this configuration that run concurrently on each
-     * instance.
+     * A policy that puts limits on the number of game sessions that a player can create within a
+     * specified span of time.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-concurrentexecutions)
+     * With this policy, you can control players' ability to consume available resources.
+     *
+     * The policy is evaluated when a player tries to create a new game session. On receiving a
+     * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
+     * has created fewer than game session limit in the specified time period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator)
      */
-    public fun concurrentExecutions(): Number
+    public fun newGameSessionsPerCreator(): Number? = unwrap(this).getNewGameSessionsPerCreator()
 
     /**
-     * The location of a game build executable or Realtime script.
+     * The time span used in evaluating the resource creation limit policy.
      *
-     * Game builds and Realtime scripts are installed on instances at the root:
-     *
-     * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
-     * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
-     * `/local/game/MyRealtimeScript.js` "
-     *
-     *
-     * Amazon GameLift doesn't support the use of setup scripts that launch the game executable. For
-     * custom game builds, this parameter must indicate the executable that calls the server SDK
-     * operations `initSDK()` and `ProcessReady()` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-launchpath)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes)
      */
-    public fun launchPath(): String
+    public fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
 
     /**
-     * An optional list of parameters to pass to the server executable or Realtime script on launch.
-     *
-     * Length Constraints: Minimum length of 1. Maximum length of 1024.
-     *
-     * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-parameters)
-     */
-    public fun parameters(): String? = unwrap(this).getParameters()
-
-    /**
-     * A builder for [ServerProcessProperty]
+     * A builder for [ResourceCreationLimitPolicyProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param concurrentExecutions The number of server processes using this configuration that
-       * run concurrently on each instance. 
+       * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions
+       * that a player can create within a specified span of time.
+       * With this policy, you can control players' ability to consume available resources.
+       *
+       * The policy is evaluated when a player tries to create a new game session. On receiving a
+       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
+       * ) has created fewer than game session limit in the specified time period.
        */
-      public fun concurrentExecutions(concurrentExecutions: Number)
+      public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number)
 
       /**
-       * @param launchPath The location of a game build executable or Realtime script. 
-       * Game builds and Realtime scripts are installed on instances at the root:
-       *
-       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
-       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
-       * `/local/game/MyRealtimeScript.js` "
-       *
-       *
-       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
-       * For custom game builds, this parameter must indicate the executable that calls the server SDK
-       * operations `initSDK()` and `ProcessReady()` .
+       * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
+       * policy.
        */
-      public fun launchPath(launchPath: String)
-
-      /**
-       * @param parameters An optional list of parameters to pass to the server executable or
-       * Realtime script on launch.
-       * Length Constraints: Minimum length of 1. Maximum length of 1024.
-       *
-       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
-       */
-      public fun parameters(parameters: String)
+      public fun policyPeriodInMinutes(policyPeriodInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.Builder =
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.builder()
+          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty.builder()
 
       /**
-       * @param concurrentExecutions The number of server processes using this configuration that
-       * run concurrently on each instance. 
+       * @param newGameSessionsPerCreator A policy that puts limits on the number of game sessions
+       * that a player can create within a specified span of time.
+       * With this policy, you can control players' ability to consume available resources.
+       *
+       * The policy is evaluated when a player tries to create a new game session. On receiving a
+       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
+       * ) has created fewer than game session limit in the specified time period.
        */
-      override fun concurrentExecutions(concurrentExecutions: Number) {
-        cdkBuilder.concurrentExecutions(concurrentExecutions)
+      override fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
+        cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
       }
 
       /**
-       * @param launchPath The location of a game build executable or Realtime script. 
-       * Game builds and Realtime scripts are installed on instances at the root:
-       *
-       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
-       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
-       * `/local/game/MyRealtimeScript.js` "
-       *
-       *
-       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
-       * For custom game builds, this parameter must indicate the executable that calls the server SDK
-       * operations `initSDK()` and `ProcessReady()` .
+       * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit
+       * policy.
        */
-      override fun launchPath(launchPath: String) {
-        cdkBuilder.launchPath(launchPath)
+      override fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
+        cdkBuilder.policyPeriodInMinutes(policyPeriodInMinutes)
       }
 
-      /**
-       * @param parameters An optional list of parameters to pass to the server executable or
-       * Realtime script on launch.
-       * Length Constraints: Minimum length of 1. Maximum length of 1024.
-       *
-       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
-       */
-      override fun parameters(parameters: String) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      public fun build(): software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty =
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty,
-    ) : CdkObject(cdkObject), ServerProcessProperty {
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty,
+    ) : CdkObject(cdkObject), ResourceCreationLimitPolicyProperty {
       /**
-       * The number of server processes using this configuration that run concurrently on each
-       * instance.
+       * A policy that puts limits on the number of game sessions that a player can create within a
+       * specified span of time.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-concurrentexecutions)
+       * With this policy, you can control players' ability to consume available resources.
+       *
+       * The policy is evaluated when a player tries to create a new game session. On receiving a
+       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
+       * ) has created fewer than game session limit in the specified time period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator)
        */
-      override fun concurrentExecutions(): Number = unwrap(this).getConcurrentExecutions()
+      override fun newGameSessionsPerCreator(): Number? =
+          unwrap(this).getNewGameSessionsPerCreator()
 
       /**
-       * The location of a game build executable or Realtime script.
+       * The time span used in evaluating the resource creation limit policy.
        *
-       * Game builds and Realtime scripts are installed on instances at the root:
-       *
-       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
-       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
-       * `/local/game/MyRealtimeScript.js` "
-       *
-       *
-       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
-       * For custom game builds, this parameter must indicate the executable that calls the server SDK
-       * operations `initSDK()` and `ProcessReady()` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-launchpath)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes)
        */
-      override fun launchPath(): String = unwrap(this).getLaunchPath()
-
-      /**
-       * An optional list of parameters to pass to the server executable or Realtime script on
-       * launch.
-       *
-       * Length Constraints: Minimum length of 1. Maximum length of 1024.
-       *
-       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-parameters)
-       */
-      override fun parameters(): String? = unwrap(this).getParameters()
+      override fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ServerProcessProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ResourceCreationLimitPolicyProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty):
-          ServerProcessProperty = CdkObjectWrappers.wrap(cdkObject) as? ServerProcessProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty):
+          ResourceCreationLimitPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceCreationLimitPolicyProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ServerProcessProperty):
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty
+      internal fun unwrap(wrapped: ResourceCreationLimitPolicyProperty):
+          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty
     }
   }
 
@@ -3110,8 +3079,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty,
     ) : CdkObject(cdkObject), RuntimeConfigurationProperty {
       /**
        * The maximum amount of time (in seconds) allowed to launch a new game session and have it
@@ -3161,182 +3129,6 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty
-    }
-  }
-
-  /**
-   * Current resource capacity settings in a specified fleet or location.
-   *
-   * The location value might refer to a fleet's remote location or its home Region.
-   *
-   * *Related actions*
-   *
-   * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-   * |
-   * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-   * |
-   * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * LocationCapacityProperty locationCapacityProperty = LocationCapacityProperty.builder()
-   * .desiredEc2Instances(123)
-   * .maxSize(123)
-   * .minSize(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html)
-   */
-  public interface LocationCapacityProperty {
-    /**
-     * The number of Amazon EC2 instances you want to maintain in the specified fleet location.
-     *
-     * This value must fall between the minimum and maximum size limits. Changes in desired instance
-     * value can take up to 1 minute to be reflected when viewing the fleet's capacity settings.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-desiredec2instances)
-     */
-    public fun desiredEc2Instances(): Number
-
-    /**
-     * The maximum number of instances that are allowed in the specified fleet location.
-     *
-     * If this parameter is not set, the default is 1.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-maxsize)
-     */
-    public fun maxSize(): Number
-
-    /**
-     * The minimum number of instances that are allowed in the specified fleet location.
-     *
-     * If this parameter is not set, the default is 0.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-minsize)
-     */
-    public fun minSize(): Number
-
-    /**
-     * A builder for [LocationCapacityProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param desiredEc2Instances The number of Amazon EC2 instances you want to maintain in the
-       * specified fleet location. 
-       * This value must fall between the minimum and maximum size limits. Changes in desired
-       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
-       * settings.
-       */
-      public fun desiredEc2Instances(desiredEc2Instances: Number)
-
-      /**
-       * @param maxSize The maximum number of instances that are allowed in the specified fleet
-       * location. 
-       * If this parameter is not set, the default is 1.
-       */
-      public fun maxSize(maxSize: Number)
-
-      /**
-       * @param minSize The minimum number of instances that are allowed in the specified fleet
-       * location. 
-       * If this parameter is not set, the default is 0.
-       */
-      public fun minSize(minSize: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.Builder =
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.builder()
-
-      /**
-       * @param desiredEc2Instances The number of Amazon EC2 instances you want to maintain in the
-       * specified fleet location. 
-       * This value must fall between the minimum and maximum size limits. Changes in desired
-       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
-       * settings.
-       */
-      override fun desiredEc2Instances(desiredEc2Instances: Number) {
-        cdkBuilder.desiredEc2Instances(desiredEc2Instances)
-      }
-
-      /**
-       * @param maxSize The maximum number of instances that are allowed in the specified fleet
-       * location. 
-       * If this parameter is not set, the default is 1.
-       */
-      override fun maxSize(maxSize: Number) {
-        cdkBuilder.maxSize(maxSize)
-      }
-
-      /**
-       * @param minSize The minimum number of instances that are allowed in the specified fleet
-       * location. 
-       * If this parameter is not set, the default is 0.
-       */
-      override fun minSize(minSize: Number) {
-        cdkBuilder.minSize(minSize)
-      }
-
-      public fun build(): software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty,
-    ) : CdkObject(cdkObject), LocationCapacityProperty {
-      /**
-       * The number of Amazon EC2 instances you want to maintain in the specified fleet location.
-       *
-       * This value must fall between the minimum and maximum size limits. Changes in desired
-       * instance value can take up to 1 minute to be reflected when viewing the fleet's capacity
-       * settings.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-desiredec2instances)
-       */
-      override fun desiredEc2Instances(): Number = unwrap(this).getDesiredEc2Instances()
-
-      /**
-       * The maximum number of instances that are allowed in the specified fleet location.
-       *
-       * If this parameter is not set, the default is 1.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-maxsize)
-       */
-      override fun maxSize(): Number = unwrap(this).getMaxSize()
-
-      /**
-       * The minimum number of instances that are allowed in the specified fleet location.
-       *
-       * If this parameter is not set, the default is 0.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-minsize)
-       */
-      override fun minSize(): Number = unwrap(this).getMinSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LocationCapacityProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty):
-          LocationCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationCapacityProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LocationCapacityProperty):
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty
     }
   }
 
@@ -3812,8 +3604,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty,
     ) : CdkObject(cdkObject), ScalingPolicyProperty {
       /**
        * Comparison operator to use when measuring a metric against the threshold value.
@@ -3974,12 +3765,9 @@ public open class CfnFleet internal constructor(
   }
 
   /**
-   * Determines whether a TLS/SSL certificate is generated for a fleet.
+   * A set of instructions for launching server processes on each instance in a fleet.
    *
-   * This feature must be enabled when creating the fleet. All instances in a fleet share the same
-   * certificate. The certificate can be retrieved by calling the [GameLift Server
-   * SDK](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html)
-   * operation `GetInstanceCertificate` .
+   * Server processes run either an executable in a custom game build or a Realtime Servers script.
    *
    * Example:
    *
@@ -3987,96 +3775,298 @@ public open class CfnFleet internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * CertificateConfigurationProperty certificateConfigurationProperty =
-   * CertificateConfigurationProperty.builder()
-   * .certificateType("certificateType")
+   * ServerProcessProperty serverProcessProperty = ServerProcessProperty.builder()
+   * .concurrentExecutions(123)
+   * .launchPath("launchPath")
+   * // the properties below are optional
+   * .parameters("parameters")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html)
    */
-  public interface CertificateConfigurationProperty {
+  public interface ServerProcessProperty {
     /**
-     * Indicates whether a TLS/SSL certificate is generated for a fleet.
+     * The number of server processes using this configuration that run concurrently on each
+     * instance.
      *
-     * Valid values include:
-     *
-     * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
-     * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html#cfn-gamelift-fleet-certificateconfiguration-certificatetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-concurrentexecutions)
      */
-    public fun certificateType(): String
+    public fun concurrentExecutions(): Number
 
     /**
-     * A builder for [CertificateConfigurationProperty]
+     * The location of a game build executable or Realtime script.
+     *
+     * Game builds and Realtime scripts are installed on instances at the root:
+     *
+     * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
+     * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
+     * `/local/game/MyRealtimeScript.js` "
+     *
+     *
+     * Amazon GameLift doesn't support the use of setup scripts that launch the game executable. For
+     * custom game builds, this parameter must indicate the executable that calls the server SDK
+     * operations `initSDK()` and `ProcessReady()` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-launchpath)
+     */
+    public fun launchPath(): String
+
+    /**
+     * An optional list of parameters to pass to the server executable or Realtime script on launch.
+     *
+     * Length Constraints: Minimum length of 1. Maximum length of 1024.
+     *
+     * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-parameters)
+     */
+    public fun parameters(): String? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [ServerProcessProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param certificateType Indicates whether a TLS/SSL certificate is generated for a fleet. 
-       * Valid values include:
-       *
-       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
-       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+       * @param concurrentExecutions The number of server processes using this configuration that
+       * run concurrently on each instance. 
        */
-      public fun certificateType(certificateType: String)
+      public fun concurrentExecutions(concurrentExecutions: Number)
+
+      /**
+       * @param launchPath The location of a game build executable or Realtime script. 
+       * Game builds and Realtime scripts are installed on instances at the root:
+       *
+       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
+       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
+       * `/local/game/MyRealtimeScript.js` "
+       *
+       *
+       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
+       * For custom game builds, this parameter must indicate the executable that calls the server SDK
+       * operations `initSDK()` and `ProcessReady()` .
+       */
+      public fun launchPath(launchPath: String)
+
+      /**
+       * @param parameters An optional list of parameters to pass to the server executable or
+       * Realtime script on launch.
+       * Length Constraints: Minimum length of 1. Maximum length of 1024.
+       *
+       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
+       */
+      public fun parameters(parameters: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty.builder()
+          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.Builder =
+          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.builder()
 
       /**
-       * @param certificateType Indicates whether a TLS/SSL certificate is generated for a fleet. 
-       * Valid values include:
-       *
-       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
-       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
+       * @param concurrentExecutions The number of server processes using this configuration that
+       * run concurrently on each instance. 
        */
-      override fun certificateType(certificateType: String) {
-        cdkBuilder.certificateType(certificateType)
+      override fun concurrentExecutions(concurrentExecutions: Number) {
+        cdkBuilder.concurrentExecutions(concurrentExecutions)
       }
 
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty =
+      /**
+       * @param launchPath The location of a game build executable or Realtime script. 
+       * Game builds and Realtime scripts are installed on instances at the root:
+       *
+       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
+       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
+       * `/local/game/MyRealtimeScript.js` "
+       *
+       *
+       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
+       * For custom game builds, this parameter must indicate the executable that calls the server SDK
+       * operations `initSDK()` and `ProcessReady()` .
+       */
+      override fun launchPath(launchPath: String) {
+        cdkBuilder.launchPath(launchPath)
+      }
+
+      /**
+       * @param parameters An optional list of parameters to pass to the server executable or
+       * Realtime script on launch.
+       * Length Constraints: Minimum length of 1. Maximum length of 1024.
+       *
+       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
+       */
+      override fun parameters(parameters: String) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      public fun build(): software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty,
-    ) : CdkObject(cdkObject), CertificateConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty,
+    ) : CdkObject(cdkObject), ServerProcessProperty {
       /**
-       * Indicates whether a TLS/SSL certificate is generated for a fleet.
+       * The number of server processes using this configuration that run concurrently on each
+       * instance.
        *
-       * Valid values include:
-       *
-       * * *GENERATED* - Generate a TLS/SSL certificate for this fleet.
-       * * *DISABLED* - (default) Do not generate a TLS/SSL certificate for this fleet.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html#cfn-gamelift-fleet-certificateconfiguration-certificatetype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-concurrentexecutions)
        */
-      override fun certificateType(): String = unwrap(this).getCertificateType()
+      override fun concurrentExecutions(): Number = unwrap(this).getConcurrentExecutions()
+
+      /**
+       * The location of a game build executable or Realtime script.
+       *
+       * Game builds and Realtime scripts are installed on instances at the root:
+       *
+       * * Windows (custom game builds only): `C:\game` . Example: " `C:\game\MyGame\server.exe` "
+       * * Linux: `/local/game` . Examples: " `/local/game/MyGame/server.exe` " or "
+       * `/local/game/MyRealtimeScript.js` "
+       *
+       *
+       * Amazon GameLift doesn't support the use of setup scripts that launch the game executable.
+       * For custom game builds, this parameter must indicate the executable that calls the server SDK
+       * operations `initSDK()` and `ProcessReady()` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-launchpath)
+       */
+      override fun launchPath(): String = unwrap(this).getLaunchPath()
+
+      /**
+       * An optional list of parameters to pass to the server executable or Realtime script on
+       * launch.
+       *
+       * Length Constraints: Minimum length of 1. Maximum length of 1024.
+       *
+       * Pattern: [A-Za-z0-9_:.+/- =&#64;{},?'[]"]+
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-parameters)
+       */
+      override fun parameters(): String? = unwrap(this).getParameters()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ServerProcessProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty):
-          CertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CertificateConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty):
+          ServerProcessProperty = CdkObjectWrappers.wrap(cdkObject) as? ServerProcessProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CertificateConfigurationProperty):
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty
+      internal fun unwrap(wrapped: ServerProcessProperty):
+          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty
+    }
+  }
+
+  /**
+   * Settings for a target-based scaling policy.
+   *
+   * A target-based policy tracks a particular fleet metric specifies a target value for the metric.
+   * As player usage changes, the policy triggers Amazon GameLift to adjust capacity so that the metric
+   * returns to the target value. The target configuration specifies settings as needed for the target
+   * based policy, including the target value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * TargetConfigurationProperty targetConfigurationProperty = TargetConfigurationProperty.builder()
+   * .targetValue(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html)
+   */
+  public interface TargetConfigurationProperty {
+    /**
+     * Desired value to use with a target-based scaling policy.
+     *
+     * The value must be relevant for whatever metric the scaling policy is using. For example, in a
+     * policy using the metric PercentAvailableGameSessions, the target value should be the preferred
+     * size of the fleet's buffer (the percent of capacity that should be idle and ready for new game
+     * sessions).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html#cfn-gamelift-fleet-targetconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number
+
+    /**
+     * A builder for [TargetConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param targetValue Desired value to use with a target-based scaling policy. 
+       * The value must be relevant for whatever metric the scaling policy is using. For example, in
+       * a policy using the metric PercentAvailableGameSessions, the target value should be the
+       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
+       * for new game sessions).
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.Builder =
+          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.builder()
+
+      /**
+       * @param targetValue Desired value to use with a target-based scaling policy. 
+       * The value must be relevant for whatever metric the scaling policy is using. For example, in
+       * a policy using the metric PercentAvailableGameSessions, the target value should be the
+       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
+       * for new game sessions).
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetConfigurationProperty {
+      /**
+       * Desired value to use with a target-based scaling policy.
+       *
+       * The value must be relevant for whatever metric the scaling policy is using. For example, in
+       * a policy using the metric PercentAvailableGameSessions, the target value should be the
+       * preferred size of the fleet's buffer (the percent of capacity that should be idle and ready
+       * for new game sessions).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-targetconfiguration.html#cfn-gamelift-fleet-targetconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TargetConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty):
+          TargetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetConfigurationProperty):
+          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty
     }
   }
 }

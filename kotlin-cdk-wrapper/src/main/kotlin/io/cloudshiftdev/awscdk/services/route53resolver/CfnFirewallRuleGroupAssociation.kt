@@ -42,9 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html)
  */
-public open class CfnFirewallRuleGroupAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation,
+public open class CfnFirewallRuleGroupAssociation(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -402,6 +401,7 @@ public open class CfnFirewallRuleGroupAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnFirewallRuleGroupAssociation):
         software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation
   }
 }

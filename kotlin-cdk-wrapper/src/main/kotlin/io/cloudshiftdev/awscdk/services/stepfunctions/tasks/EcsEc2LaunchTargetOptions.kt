@@ -124,8 +124,7 @@ public interface EcsEc2LaunchTargetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOptions,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOptions,
   ) : CdkObject(cdkObject), EcsEc2LaunchTargetOptions {
     /**
      * Placement constraints.

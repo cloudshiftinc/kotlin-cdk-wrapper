@@ -68,9 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html)
  */
-public open class CfnStreamingDistribution internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
+public open class CfnStreamingDistribution(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -297,7 +296,382 @@ public open class CfnStreamingDistribution internal constructor(
         CfnStreamingDistribution = CfnStreamingDistribution(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamingDistribution):
-        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
+  }
+
+  /**
+   * A complex type that controls whether access logs are written for the streaming distribution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * LoggingProperty loggingProperty = LoggingProperty.builder()
+   * .bucket("bucket")
+   * .enabled(false)
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html)
+   */
+  public interface LoggingProperty {
+    /**
+     * The Amazon S3 bucket to store the access logs in, for example,
+     * `myawslogbucket.s3.amazonaws.com` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket.
+     *
+     * If you don't want to enable logging when you create a streaming distribution or if you want
+     * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+     * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+     * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * An optional string that you want CloudFront to prefix to the access log filenames for this
+     * streaming distribution, for example, `myprefix/` .
+     *
+     * If you want to enable logging, but you don't want to specify a prefix, you still must include
+     * an empty `Prefix` element in the `Logging` element.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix)
+     */
+    public fun prefix(): String
+
+    /**
+     * A builder for [LoggingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The Amazon S3 bucket to store the access logs in, for example,
+       * `myawslogbucket.s3.amazonaws.com` . 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
+       * bucket. 
+       * If you don't want to enable logging when you create a streaming distribution or if you want
+       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
+       * bucket. 
+       * If you don't want to enable logging when you create a streaming distribution or if you want
+       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param prefix An optional string that you want CloudFront to prefix to the access log
+       * filenames for this streaming distribution, for example, `myprefix/` . 
+       * If you want to enable logging, but you don't want to specify a prefix, you still must
+       * include an empty `Prefix` element in the `Logging` element.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty.builder()
+
+      /**
+       * @param bucket The Amazon S3 bucket to store the access logs in, for example,
+       * `myawslogbucket.s3.amazonaws.com` . 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
+       * bucket. 
+       * If you don't want to enable logging when you create a streaming distribution or if you want
+       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
+       * bucket. 
+       * If you don't want to enable logging when you create a streaming distribution or if you want
+       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param prefix An optional string that you want CloudFront to prefix to the access log
+       * filenames for this streaming distribution, for example, `myprefix/` . 
+       * If you want to enable logging, but you don't want to specify a prefix, you still must
+       * include an empty `Prefix` element in the `Logging` element.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
+    ) : CdkObject(cdkObject), LoggingProperty {
+      /**
+       * The Amazon S3 bucket to store the access logs in, for example,
+       * `myawslogbucket.s3.amazonaws.com` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket.
+       *
+       * If you don't want to enable logging when you create a streaming distribution or if you want
+       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
+       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
+       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+
+      /**
+       * An optional string that you want CloudFront to prefix to the access log filenames for this
+       * streaming distribution, for example, `myprefix/` .
+       *
+       * If you want to enable logging, but you don't want to specify a prefix, you still must
+       * include an empty `Prefix` element in the `Logging` element.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix)
+       */
+      override fun prefix(): String = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty):
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingProperty):
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty
+    }
+  }
+
+  /**
+   * A complex type that contains information about the Amazon S3 bucket from which you want
+   * CloudFront to get your media files for distribution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * S3OriginProperty s3OriginProperty = S3OriginProperty.builder()
+   * .domainName("domainName")
+   * .originAccessIdentity("originAccessIdentity")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html)
+   */
+  public interface S3OriginProperty {
+    /**
+     * The DNS name of the Amazon S3 origin.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-domainname)
+     */
+    public fun domainName(): String
+
+    /**
+     * The CloudFront origin access identity to associate with the distribution.
+     *
+     * Use an origin access identity to configure the distribution so that end users can only access
+     * objects in an Amazon S3 bucket through CloudFront.
+     *
+     * If you want end users to be able to access objects using either the CloudFront URL or the
+     * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
+     *
+     * To delete the origin access identity from an existing distribution, update the distribution
+     * configuration and include an empty `OriginAccessIdentity` element.
+     *
+     * To replace the origin access identity, update the distribution configuration and specify the
+     * new origin access identity.
+     *
+     * For more information, see [Using an Origin Access Identity to Restrict Access to Your Amazon
+     * S3
+     * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)
+     */
+    public fun originAccessIdentity(): String
+
+    /**
+     * A builder for [S3OriginProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domainName The DNS name of the Amazon S3 origin. 
+       */
+      public fun domainName(domainName: String)
+
+      /**
+       * @param originAccessIdentity The CloudFront origin access identity to associate with the
+       * distribution. 
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 bucket through CloudFront.
+       *
+       * If you want end users to be able to access objects using either the CloudFront URL or the
+       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
+       *
+       * To delete the origin access identity from an existing distribution, update the distribution
+       * configuration and include an empty `OriginAccessIdentity` element.
+       *
+       * To replace the origin access identity, update the distribution configuration and specify
+       * the new origin access identity.
+       *
+       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
+       * Amazon S3
+       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun originAccessIdentity(originAccessIdentity: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty.builder()
+
+      /**
+       * @param domainName The DNS name of the Amazon S3 origin. 
+       */
+      override fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+      }
+
+      /**
+       * @param originAccessIdentity The CloudFront origin access identity to associate with the
+       * distribution. 
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 bucket through CloudFront.
+       *
+       * If you want end users to be able to access objects using either the CloudFront URL or the
+       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
+       *
+       * To delete the origin access identity from an existing distribution, update the distribution
+       * configuration and include an empty `OriginAccessIdentity` element.
+       *
+       * To replace the origin access identity, update the distribution configuration and specify
+       * the new origin access identity.
+       *
+       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
+       * Amazon S3
+       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun originAccessIdentity(originAccessIdentity: String) {
+        cdkBuilder.originAccessIdentity(originAccessIdentity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
+    ) : CdkObject(cdkObject), S3OriginProperty {
+      /**
+       * The DNS name of the Amazon S3 origin.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-domainname)
+       */
+      override fun domainName(): String = unwrap(this).getDomainName()
+
+      /**
+       * The CloudFront origin access identity to associate with the distribution.
+       *
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 bucket through CloudFront.
+       *
+       * If you want end users to be able to access objects using either the CloudFront URL or the
+       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
+       *
+       * To delete the origin access identity from an existing distribution, update the distribution
+       * configuration and include an empty `OriginAccessIdentity` element.
+       *
+       * To replace the origin access identity, update the distribution configuration and specify
+       * the new origin access identity.
+       *
+       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
+       * Amazon S3
+       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)
+       */
+      override fun originAccessIdentity(): String = unwrap(this).getOriginAccessIdentity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3OriginProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty):
+          S3OriginProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OriginProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3OriginProperty):
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty
+    }
   }
 
   /**
@@ -657,8 +1031,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
     ) : CdkObject(cdkObject), StreamingDistributionConfigProperty {
       /**
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
@@ -736,382 +1109,6 @@ public open class CfnStreamingDistribution internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty
-    }
-  }
-
-  /**
-   * A complex type that contains information about the Amazon S3 bucket from which you want
-   * CloudFront to get your media files for distribution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * S3OriginProperty s3OriginProperty = S3OriginProperty.builder()
-   * .domainName("domainName")
-   * .originAccessIdentity("originAccessIdentity")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html)
-   */
-  public interface S3OriginProperty {
-    /**
-     * The DNS name of the Amazon S3 origin.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-domainname)
-     */
-    public fun domainName(): String
-
-    /**
-     * The CloudFront origin access identity to associate with the distribution.
-     *
-     * Use an origin access identity to configure the distribution so that end users can only access
-     * objects in an Amazon S3 bucket through CloudFront.
-     *
-     * If you want end users to be able to access objects using either the CloudFront URL or the
-     * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
-     *
-     * To delete the origin access identity from an existing distribution, update the distribution
-     * configuration and include an empty `OriginAccessIdentity` element.
-     *
-     * To replace the origin access identity, update the distribution configuration and specify the
-     * new origin access identity.
-     *
-     * For more information, see [Using an Origin Access Identity to Restrict Access to Your Amazon
-     * S3
-     * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
-     * in the *Amazon CloudFront Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)
-     */
-    public fun originAccessIdentity(): String
-
-    /**
-     * A builder for [S3OriginProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param domainName The DNS name of the Amazon S3 origin. 
-       */
-      public fun domainName(domainName: String)
-
-      /**
-       * @param originAccessIdentity The CloudFront origin access identity to associate with the
-       * distribution. 
-       * Use an origin access identity to configure the distribution so that end users can only
-       * access objects in an Amazon S3 bucket through CloudFront.
-       *
-       * If you want end users to be able to access objects using either the CloudFront URL or the
-       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
-       *
-       * To delete the origin access identity from an existing distribution, update the distribution
-       * configuration and include an empty `OriginAccessIdentity` element.
-       *
-       * To replace the origin access identity, update the distribution configuration and specify
-       * the new origin access identity.
-       *
-       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
-       * Amazon S3
-       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      public fun originAccessIdentity(originAccessIdentity: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty.builder()
-
-      /**
-       * @param domainName The DNS name of the Amazon S3 origin. 
-       */
-      override fun domainName(domainName: String) {
-        cdkBuilder.domainName(domainName)
-      }
-
-      /**
-       * @param originAccessIdentity The CloudFront origin access identity to associate with the
-       * distribution. 
-       * Use an origin access identity to configure the distribution so that end users can only
-       * access objects in an Amazon S3 bucket through CloudFront.
-       *
-       * If you want end users to be able to access objects using either the CloudFront URL or the
-       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
-       *
-       * To delete the origin access identity from an existing distribution, update the distribution
-       * configuration and include an empty `OriginAccessIdentity` element.
-       *
-       * To replace the origin access identity, update the distribution configuration and specify
-       * the new origin access identity.
-       *
-       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
-       * Amazon S3
-       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       */
-      override fun originAccessIdentity(originAccessIdentity: String) {
-        cdkBuilder.originAccessIdentity(originAccessIdentity)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
-    ) : CdkObject(cdkObject), S3OriginProperty {
-      /**
-       * The DNS name of the Amazon S3 origin.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-domainname)
-       */
-      override fun domainName(): String = unwrap(this).getDomainName()
-
-      /**
-       * The CloudFront origin access identity to associate with the distribution.
-       *
-       * Use an origin access identity to configure the distribution so that end users can only
-       * access objects in an Amazon S3 bucket through CloudFront.
-       *
-       * If you want end users to be able to access objects using either the CloudFront URL or the
-       * Amazon S3 URL, specify an empty `OriginAccessIdentity` element.
-       *
-       * To delete the origin access identity from an existing distribution, update the distribution
-       * configuration and include an empty `OriginAccessIdentity` element.
-       *
-       * To replace the origin access identity, update the distribution configuration and specify
-       * the new origin access identity.
-       *
-       * For more information, see [Using an Origin Access Identity to Restrict Access to Your
-       * Amazon S3
-       * Content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
-       * in the *Amazon CloudFront Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html#cfn-cloudfront-streamingdistribution-s3origin-originaccessidentity)
-       */
-      override fun originAccessIdentity(): String = unwrap(this).getOriginAccessIdentity()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3OriginProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty):
-          S3OriginProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OriginProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3OriginProperty):
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty
-    }
-  }
-
-  /**
-   * A complex type that controls whether access logs are written for the streaming distribution.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * LoggingProperty loggingProperty = LoggingProperty.builder()
-   * .bucket("bucket")
-   * .enabled(false)
-   * .prefix("prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html)
-   */
-  public interface LoggingProperty {
-    /**
-     * The Amazon S3 bucket to store the access logs in, for example,
-     * `myawslogbucket.s3.amazonaws.com` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket.
-     *
-     * If you don't want to enable logging when you create a streaming distribution or if you want
-     * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-     * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-     * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * An optional string that you want CloudFront to prefix to the access log filenames for this
-     * streaming distribution, for example, `myprefix/` .
-     *
-     * If you want to enable logging, but you don't want to specify a prefix, you still must include
-     * an empty `Prefix` element in the `Logging` element.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix)
-     */
-    public fun prefix(): String
-
-    /**
-     * A builder for [LoggingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
-       * bucket. 
-       * If you don't want to enable logging when you create a streaming distribution or if you want
-       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
-       * bucket. 
-       * If you don't want to enable logging when you create a streaming distribution or if you want
-       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param prefix An optional string that you want CloudFront to prefix to the access log
-       * filenames for this streaming distribution, for example, `myprefix/` . 
-       * If you want to enable logging, but you don't want to specify a prefix, you still must
-       * include an empty `Prefix` element in the `Logging` element.
-       */
-      public fun prefix(prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty.builder()
-
-      /**
-       * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
-       * bucket. 
-       * If you don't want to enable logging when you create a streaming distribution or if you want
-       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled Specifies whether you want CloudFront to save access logs to an Amazon S3
-       * bucket. 
-       * If you don't want to enable logging when you create a streaming distribution or if you want
-       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param prefix An optional string that you want CloudFront to prefix to the access log
-       * filenames for this streaming distribution, for example, `myprefix/` . 
-       * If you want to enable logging, but you don't want to specify a prefix, you still must
-       * include an empty `Prefix` element in the `Logging` element.
-       */
-      override fun prefix(prefix: String) {
-        cdkBuilder.prefix(prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
-      /**
-       * The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket.
-       *
-       * If you don't want to enable logging when you create a streaming distribution or if you want
-       * to disable logging for an existing streaming distribution, specify `false` for `Enabled` , and
-       * specify `empty Bucket` and `Prefix` elements. If you specify `false` for `Enabled` but you
-       * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-
-      /**
-       * An optional string that you want CloudFront to prefix to the access log filenames for this
-       * streaming distribution, for example, `myprefix/` .
-       *
-       * If you want to enable logging, but you don't want to specify a prefix, you still must
-       * include an empty `Prefix` element in the `Logging` element.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix)
-       */
-      override fun prefix(): String = unwrap(this).getPrefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingProperty):
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty
     }
   }
 
@@ -1242,8 +1239,7 @@ public open class CfnStreamingDistribution internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
     ) : CdkObject(cdkObject), TrustedSignersProperty {
       /**
        * An AWS account number that contains active CloudFront key pairs that CloudFront can use to

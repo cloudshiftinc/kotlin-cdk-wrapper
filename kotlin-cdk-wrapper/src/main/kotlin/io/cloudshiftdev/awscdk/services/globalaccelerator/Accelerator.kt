@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class Accelerator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.Accelerator,
+public open class Accelerator(
+  cdkObject: software.amazon.awscdk.services.globalaccelerator.Accelerator,
 ) : Resource(cdkObject), IAccelerator {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -330,6 +330,7 @@ public open class Accelerator internal constructor(
         Accelerator = Accelerator(cdkObject)
 
     internal fun unwrap(wrapped: Accelerator):
-        software.amazon.awscdk.services.globalaccelerator.Accelerator = wrapped.cdkObject
+        software.amazon.awscdk.services.globalaccelerator.Accelerator = wrapped.cdkObject as
+        software.amazon.awscdk.services.globalaccelerator.Accelerator
   }
 }

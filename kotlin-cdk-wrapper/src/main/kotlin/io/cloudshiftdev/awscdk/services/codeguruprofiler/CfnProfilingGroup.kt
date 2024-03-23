@@ -49,9 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)
  */
-public open class CfnProfilingGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup,
+public open class CfnProfilingGroup(
+  cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -397,7 +396,8 @@ public open class CfnProfilingGroup internal constructor(
         CfnProfilingGroup = CfnProfilingGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfilingGroup):
-        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
   }
 
   /**
@@ -464,8 +464,7 @@ public open class CfnProfilingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
+      cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
     ) : CdkObject(cdkObject), AgentPermissionsProperty {
       /**
        * The principals for the agent permissions.
@@ -570,8 +569,7 @@ public open class CfnProfilingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty,
+      cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty,
     ) : CdkObject(cdkObject), ChannelProperty {
       /**
        * The channel ID.

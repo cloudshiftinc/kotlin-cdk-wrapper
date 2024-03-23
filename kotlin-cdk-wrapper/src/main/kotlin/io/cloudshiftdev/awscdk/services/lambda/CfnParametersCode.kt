@@ -126,8 +126,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class CfnParametersCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnParametersCode,
+public open class CfnParametersCode(
+  cdkObject: software.amazon.awscdk.services.lambda.CfnParametersCode,
 ) : Code(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.lambda.CfnParametersCode()
   )
@@ -280,6 +280,7 @@ public open class CfnParametersCode internal constructor(
         CfnParametersCode = CfnParametersCode(cdkObject)
 
     internal fun unwrap(wrapped: CfnParametersCode):
-        software.amazon.awscdk.services.lambda.CfnParametersCode = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.CfnParametersCode = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.CfnParametersCode
   }
 }

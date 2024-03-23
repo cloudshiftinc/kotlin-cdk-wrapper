@@ -88,9 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
  */
-public open class CfnDataflowEndpointGroup internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
+public open class CfnDataflowEndpointGroup(
+  cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -393,10 +392,380 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
     internal fun unwrap(wrapped: CfnDataflowEndpointGroup):
         software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup = wrapped.cdkObject
+        as software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
   }
 
   /**
-   * The address of the endpoint, such as `192.168.1.1` .
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.groundstation.*;
+   * AwsGroundStationAgentEndpointProperty awsGroundStationAgentEndpointProperty =
+   * AwsGroundStationAgentEndpointProperty.builder()
+   * .agentStatus("agentStatus")
+   * .auditResults("auditResults")
+   * .egressAddress(ConnectionDetailsProperty.builder()
+   * .mtu(123)
+   * .socketAddress(SocketAddressProperty.builder()
+   * .name("name")
+   * .port(123)
+   * .build())
+   * .build())
+   * .ingressAddress(RangedConnectionDetailsProperty.builder()
+   * .mtu(123)
+   * .socketAddress(RangedSocketAddressProperty.builder()
+   * .name("name")
+   * .portRange(IntegerRangeProperty.builder()
+   * .maximum(123)
+   * .minimum(123)
+   * .build())
+   * .build())
+   * .build())
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html)
+   */
+  public interface AwsGroundStationAgentEndpointProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
+     */
+    public fun agentStatus(): String? = unwrap(this).getAgentStatus()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
+     */
+    public fun auditResults(): String? = unwrap(this).getAuditResults()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
+     */
+    public fun egressAddress(): Any? = unwrap(this).getEgressAddress()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
+     */
+    public fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [AwsGroundStationAgentEndpointProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agentStatus the value to be set.
+       */
+      public fun agentStatus(agentStatus: String)
+
+      /**
+       * @param auditResults the value to be set.
+       */
+      public fun auditResults(auditResults: String)
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      public fun egressAddress(egressAddress: IResolvable)
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      public fun egressAddress(egressAddress: ConnectionDetailsProperty)
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
+      public fun egressAddress(egressAddress: ConnectionDetailsProperty.Builder.() -> Unit)
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      public fun ingressAddress(ingressAddress: IResolvable)
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty)
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
+      public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty.Builder.() -> Unit)
+
+      /**
+       * @param name the value to be set.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.Builder
+          =
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.builder()
+
+      /**
+       * @param agentStatus the value to be set.
+       */
+      override fun agentStatus(agentStatus: String) {
+        cdkBuilder.agentStatus(agentStatus)
+      }
+
+      /**
+       * @param auditResults the value to be set.
+       */
+      override fun auditResults(auditResults: String) {
+        cdkBuilder.auditResults(auditResults)
+      }
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      override fun egressAddress(egressAddress: IResolvable) {
+        cdkBuilder.egressAddress(egressAddress.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      override fun egressAddress(egressAddress: ConnectionDetailsProperty) {
+        cdkBuilder.egressAddress(egressAddress.let(ConnectionDetailsProperty::unwrap))
+      }
+
+      /**
+       * @param egressAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
+      override fun egressAddress(egressAddress: ConnectionDetailsProperty.Builder.() -> Unit): Unit
+          = egressAddress(ConnectionDetailsProperty(egressAddress))
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      override fun ingressAddress(ingressAddress: IResolvable) {
+        cdkBuilder.ingressAddress(ingressAddress.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      override fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty) {
+        cdkBuilder.ingressAddress(ingressAddress.let(RangedConnectionDetailsProperty::unwrap))
+      }
+
+      /**
+       * @param ingressAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
+      override
+          fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty.Builder.() -> Unit):
+          Unit = ingressAddress(RangedConnectionDetailsProperty(ingressAddress))
+
+      /**
+       * @param name the value to be set.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty,
+    ) : CdkObject(cdkObject), AwsGroundStationAgentEndpointProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
+       */
+      override fun agentStatus(): String? = unwrap(this).getAgentStatus()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
+       */
+      override fun auditResults(): String? = unwrap(this).getAuditResults()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
+       */
+      override fun egressAddress(): Any? = unwrap(this).getEgressAddress()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
+       */
+      override fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AwsGroundStationAgentEndpointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty):
+          AwsGroundStationAgentEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsGroundStationAgentEndpointProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AwsGroundStationAgentEndpointProperty):
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.groundstation.*;
+   * ConnectionDetailsProperty connectionDetailsProperty = ConnectionDetailsProperty.builder()
+   * .mtu(123)
+   * .socketAddress(SocketAddressProperty.builder()
+   * .name("name")
+   * .port(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html)
+   */
+  public interface ConnectionDetailsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
+     */
+    public fun mtu(): Number? = unwrap(this).getMtu()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
+     */
+    public fun socketAddress(): Any? = unwrap(this).getSocketAddress()
+
+    /**
+     * A builder for [ConnectionDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mtu the value to be set.
+       */
+      public fun mtu(mtu: Number)
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      public fun socketAddress(socketAddress: IResolvable)
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      public fun socketAddress(socketAddress: SocketAddressProperty)
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
+      public fun socketAddress(socketAddress: SocketAddressProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty.builder()
+
+      /**
+       * @param mtu the value to be set.
+       */
+      override fun mtu(mtu: Number) {
+        cdkBuilder.mtu(mtu)
+      }
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      override fun socketAddress(socketAddress: IResolvable) {
+        cdkBuilder.socketAddress(socketAddress.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      override fun socketAddress(socketAddress: SocketAddressProperty) {
+        cdkBuilder.socketAddress(socketAddress.let(SocketAddressProperty::unwrap))
+      }
+
+      /**
+       * @param socketAddress the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
+      override fun socketAddress(socketAddress: SocketAddressProperty.Builder.() -> Unit): Unit =
+          socketAddress(SocketAddressProperty(socketAddress))
+
+      public fun build():
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty,
+    ) : CdkObject(cdkObject), ConnectionDetailsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
+       */
+      override fun mtu(): Number? = unwrap(this).getMtu()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
+       */
+      override fun socketAddress(): Any? = unwrap(this).getSocketAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty):
+          ConnectionDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectionDetailsProperty):
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
+    }
+  }
+
+  /**
+   * Contains information such as socket address and name that defines an endpoint.
    *
    * Example:
    *
@@ -404,104 +773,174 @@ public open class CfnDataflowEndpointGroup internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * SocketAddressProperty socketAddressProperty = SocketAddressProperty.builder()
+   * DataflowEndpointProperty dataflowEndpointProperty = DataflowEndpointProperty.builder()
+   * .address(SocketAddressProperty.builder()
    * .name("name")
    * .port(123)
+   * .build())
+   * .mtu(123)
+   * .name("name")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
    */
-  public interface SocketAddressProperty {
+  public interface DataflowEndpointProperty {
     /**
-     * The name of the endpoint, such as `Endpoint 1` .
+     * The address and port of an endpoint.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-name)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)
+     */
+    public fun address(): Any? = unwrap(this).getAddress()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
+     */
+    public fun mtu(): Number? = unwrap(this).getMtu()
+
+    /**
+     * The endpoint name.
+     *
+     * When listing available contacts for a satellite, Ground Station searches for a dataflow
+     * endpoint whose name matches the value specified by the dataflow endpoint config of the selected
+     * mission profile. If no matching dataflow endpoints are found then Ground Station will not
+     * display any available contacts for the satellite.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
     /**
-     * The port of the endpoint, such as `55888` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * A builder for [SocketAddressProperty]
+     * A builder for [DataflowEndpointProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the endpoint, such as `Endpoint 1` .
+       * @param address The address and port of an endpoint.
        */
-      public fun name(name: String)
+      public fun address(address: IResolvable)
 
       /**
-       * @param port The port of the endpoint, such as `55888` .
+       * @param address The address and port of an endpoint.
        */
-      public fun port(port: Number)
+      public fun address(address: SocketAddressProperty)
+
+      /**
+       * @param address The address and port of an endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0c22281e2c1be722282ec553df97b7e8c25b0d1520a7c5d2582e1117650aa4fe")
+      public fun address(address: SocketAddressProperty.Builder.() -> Unit)
+
+      /**
+       * @param mtu the value to be set.
+       */
+      public fun mtu(mtu: Number)
+
+      /**
+       * @param name The endpoint name.
+       * When listing available contacts for a satellite, Ground Station searches for a dataflow
+       * endpoint whose name matches the value specified by the dataflow endpoint config of the
+       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
+       * not display any available contacts for the satellite.
+       */
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty.Builder
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty.Builder
           =
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty.builder()
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty.builder()
 
       /**
-       * @param name The name of the endpoint, such as `Endpoint 1` .
+       * @param address The address and port of an endpoint.
+       */
+      override fun address(address: IResolvable) {
+        cdkBuilder.address(address.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param address The address and port of an endpoint.
+       */
+      override fun address(address: SocketAddressProperty) {
+        cdkBuilder.address(address.let(SocketAddressProperty::unwrap))
+      }
+
+      /**
+       * @param address The address and port of an endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0c22281e2c1be722282ec553df97b7e8c25b0d1520a7c5d2582e1117650aa4fe")
+      override fun address(address: SocketAddressProperty.Builder.() -> Unit): Unit =
+          address(SocketAddressProperty(address))
+
+      /**
+       * @param mtu the value to be set.
+       */
+      override fun mtu(mtu: Number) {
+        cdkBuilder.mtu(mtu)
+      }
+
+      /**
+       * @param name The endpoint name.
+       * When listing available contacts for a satellite, Ground Station searches for a dataflow
+       * endpoint whose name matches the value specified by the dataflow endpoint config of the
+       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
+       * not display any available contacts for the satellite.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      /**
-       * @param port The port of the endpoint, such as `55888` .
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
       public fun build():
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty,
-    ) : CdkObject(cdkObject), SocketAddressProperty {
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty,
+    ) : CdkObject(cdkObject), DataflowEndpointProperty {
       /**
-       * The name of the endpoint, such as `Endpoint 1` .
+       * The address and port of an endpoint.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-name)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun address(): Any? = unwrap(this).getAddress()
 
       /**
-       * The port of the endpoint, such as `55888` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-port)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
        */
-      override fun port(): Number? = unwrap(this).getPort()
+      override fun mtu(): Number? = unwrap(this).getMtu()
+
+      /**
+       * The endpoint name.
+       *
+       * When listing available contacts for a satellite, Ground Station searches for a dataflow
+       * endpoint whose name matches the value specified by the dataflow endpoint config of the
+       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
+       * not display any available contacts for the satellite.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SocketAddressProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataflowEndpointProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty):
-          SocketAddressProperty = CdkObjectWrappers.wrap(cdkObject) as? SocketAddressProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty):
+          DataflowEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? DataflowEndpointProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SocketAddressProperty):
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
+      internal fun unwrap(wrapped: DataflowEndpointProperty):
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
     }
   }
 
@@ -716,8 +1155,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty,
     ) : CdkObject(cdkObject), EndpointDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint)
@@ -755,6 +1193,105 @@ public open class CfnDataflowEndpointGroup internal constructor(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.groundstation.*;
+   * IntegerRangeProperty integerRangeProperty = IntegerRangeProperty.builder()
+   * .maximum(123)
+   * .minimum(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html)
+   */
+  public interface IntegerRangeProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
+     */
+    public fun maximum(): Number? = unwrap(this).getMaximum()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
+     */
+    public fun minimum(): Number? = unwrap(this).getMinimum()
+
+    /**
+     * A builder for [IntegerRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximum the value to be set.
+       */
+      public fun maximum(maximum: Number)
+
+      /**
+       * @param minimum the value to be set.
+       */
+      public fun minimum(minimum: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty.Builder
+          =
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
+
+      /**
+       * @param maximum the value to be set.
+       */
+      override fun maximum(maximum: Number) {
+        cdkBuilder.maximum(maximum)
+      }
+
+      /**
+       * @param minimum the value to be set.
+       */
+      override fun minimum(minimum: Number) {
+        cdkBuilder.minimum(minimum)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty,
+    ) : CdkObject(cdkObject), IntegerRangeProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
+       */
+      override fun maximum(): Number? = unwrap(this).getMaximum()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
+       */
+      override fun minimum(): Number? = unwrap(this).getMinimum()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IntegerRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty):
+          IntegerRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegerRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IntegerRangeProperty):
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
     }
   }
 
@@ -860,8 +1397,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty,
     ) : CdkObject(cdkObject), RangedConnectionDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-mtu)
@@ -889,428 +1425,6 @@ public open class CfnDataflowEndpointGroup internal constructor(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * AwsGroundStationAgentEndpointProperty awsGroundStationAgentEndpointProperty =
-   * AwsGroundStationAgentEndpointProperty.builder()
-   * .agentStatus("agentStatus")
-   * .auditResults("auditResults")
-   * .egressAddress(ConnectionDetailsProperty.builder()
-   * .mtu(123)
-   * .socketAddress(SocketAddressProperty.builder()
-   * .name("name")
-   * .port(123)
-   * .build())
-   * .build())
-   * .ingressAddress(RangedConnectionDetailsProperty.builder()
-   * .mtu(123)
-   * .socketAddress(RangedSocketAddressProperty.builder()
-   * .name("name")
-   * .portRange(IntegerRangeProperty.builder()
-   * .maximum(123)
-   * .minimum(123)
-   * .build())
-   * .build())
-   * .build())
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html)
-   */
-  public interface AwsGroundStationAgentEndpointProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
-     */
-    public fun agentStatus(): String? = unwrap(this).getAgentStatus()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
-     */
-    public fun auditResults(): String? = unwrap(this).getAuditResults()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
-     */
-    public fun egressAddress(): Any? = unwrap(this).getEgressAddress()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
-     */
-    public fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [AwsGroundStationAgentEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param agentStatus the value to be set.
-       */
-      public fun agentStatus(agentStatus: String)
-
-      /**
-       * @param auditResults the value to be set.
-       */
-      public fun auditResults(auditResults: String)
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      public fun egressAddress(egressAddress: IResolvable)
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      public fun egressAddress(egressAddress: ConnectionDetailsProperty)
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
-      public fun egressAddress(egressAddress: ConnectionDetailsProperty.Builder.() -> Unit)
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      public fun ingressAddress(ingressAddress: IResolvable)
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty)
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
-      public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty.Builder.() -> Unit)
-
-      /**
-       * @param name the value to be set.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.Builder
-          =
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.builder()
-
-      /**
-       * @param agentStatus the value to be set.
-       */
-      override fun agentStatus(agentStatus: String) {
-        cdkBuilder.agentStatus(agentStatus)
-      }
-
-      /**
-       * @param auditResults the value to be set.
-       */
-      override fun auditResults(auditResults: String) {
-        cdkBuilder.auditResults(auditResults)
-      }
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      override fun egressAddress(egressAddress: IResolvable) {
-        cdkBuilder.egressAddress(egressAddress.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      override fun egressAddress(egressAddress: ConnectionDetailsProperty) {
-        cdkBuilder.egressAddress(egressAddress.let(ConnectionDetailsProperty::unwrap))
-      }
-
-      /**
-       * @param egressAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
-      override fun egressAddress(egressAddress: ConnectionDetailsProperty.Builder.() -> Unit): Unit
-          = egressAddress(ConnectionDetailsProperty(egressAddress))
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      override fun ingressAddress(ingressAddress: IResolvable) {
-        cdkBuilder.ingressAddress(ingressAddress.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      override fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty) {
-        cdkBuilder.ingressAddress(ingressAddress.let(RangedConnectionDetailsProperty::unwrap))
-      }
-
-      /**
-       * @param ingressAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
-      override
-          fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty.Builder.() -> Unit):
-          Unit = ingressAddress(RangedConnectionDetailsProperty(ingressAddress))
-
-      /**
-       * @param name the value to be set.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty,
-    ) : CdkObject(cdkObject), AwsGroundStationAgentEndpointProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
-       */
-      override fun agentStatus(): String? = unwrap(this).getAgentStatus()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
-       */
-      override fun auditResults(): String? = unwrap(this).getAuditResults()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
-       */
-      override fun egressAddress(): Any? = unwrap(this).getEgressAddress()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
-       */
-      override fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AwsGroundStationAgentEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty):
-          AwsGroundStationAgentEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AwsGroundStationAgentEndpointProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AwsGroundStationAgentEndpointProperty):
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
-    }
-  }
-
-  /**
-   * Contains information such as socket address and name that defines an endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * DataflowEndpointProperty dataflowEndpointProperty = DataflowEndpointProperty.builder()
-   * .address(SocketAddressProperty.builder()
-   * .name("name")
-   * .port(123)
-   * .build())
-   * .mtu(123)
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
-   */
-  public interface DataflowEndpointProperty {
-    /**
-     * The address and port of an endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)
-     */
-    public fun address(): Any? = unwrap(this).getAddress()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
-     */
-    public fun mtu(): Number? = unwrap(this).getMtu()
-
-    /**
-     * The endpoint name.
-     *
-     * When listing available contacts for a satellite, Ground Station searches for a dataflow
-     * endpoint whose name matches the value specified by the dataflow endpoint config of the selected
-     * mission profile. If no matching dataflow endpoints are found then Ground Station will not
-     * display any available contacts for the satellite.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [DataflowEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      public fun address(address: IResolvable)
-
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      public fun address(address: SocketAddressProperty)
-
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0c22281e2c1be722282ec553df97b7e8c25b0d1520a7c5d2582e1117650aa4fe")
-      public fun address(address: SocketAddressProperty.Builder.() -> Unit)
-
-      /**
-       * @param mtu the value to be set.
-       */
-      public fun mtu(mtu: Number)
-
-      /**
-       * @param name The endpoint name.
-       * When listing available contacts for a satellite, Ground Station searches for a dataflow
-       * endpoint whose name matches the value specified by the dataflow endpoint config of the
-       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
-       * not display any available contacts for the satellite.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty.Builder
-          =
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty.builder()
-
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      override fun address(address: IResolvable) {
-        cdkBuilder.address(address.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      override fun address(address: SocketAddressProperty) {
-        cdkBuilder.address(address.let(SocketAddressProperty::unwrap))
-      }
-
-      /**
-       * @param address The address and port of an endpoint.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0c22281e2c1be722282ec553df97b7e8c25b0d1520a7c5d2582e1117650aa4fe")
-      override fun address(address: SocketAddressProperty.Builder.() -> Unit): Unit =
-          address(SocketAddressProperty(address))
-
-      /**
-       * @param mtu the value to be set.
-       */
-      override fun mtu(mtu: Number) {
-        cdkBuilder.mtu(mtu)
-      }
-
-      /**
-       * @param name The endpoint name.
-       * When listing available contacts for a satellite, Ground Station searches for a dataflow
-       * endpoint whose name matches the value specified by the dataflow endpoint config of the
-       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
-       * not display any available contacts for the satellite.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty,
-    ) : CdkObject(cdkObject), DataflowEndpointProperty {
-      /**
-       * The address and port of an endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)
-       */
-      override fun address(): Any? = unwrap(this).getAddress()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
-       */
-      override fun mtu(): Number? = unwrap(this).getMtu()
-
-      /**
-       * The endpoint name.
-       *
-       * When listing available contacts for a satellite, Ground Station searches for a dataflow
-       * endpoint whose name matches the value specified by the dataflow endpoint config of the
-       * selected mission profile. If no matching dataflow endpoints are found then Ground Station will
-       * not display any available contacts for the satellite.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DataflowEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty):
-          DataflowEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? DataflowEndpointProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DataflowEndpointProperty):
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
     }
   }
 
@@ -1412,8 +1526,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty,
     ) : CdkObject(cdkObject), RangedSocketAddressProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-name)
@@ -1441,236 +1554,6 @@ public open class CfnDataflowEndpointGroup internal constructor(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * ConnectionDetailsProperty connectionDetailsProperty = ConnectionDetailsProperty.builder()
-   * .mtu(123)
-   * .socketAddress(SocketAddressProperty.builder()
-   * .name("name")
-   * .port(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html)
-   */
-  public interface ConnectionDetailsProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
-     */
-    public fun mtu(): Number? = unwrap(this).getMtu()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
-     */
-    public fun socketAddress(): Any? = unwrap(this).getSocketAddress()
-
-    /**
-     * A builder for [ConnectionDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mtu the value to be set.
-       */
-      public fun mtu(mtu: Number)
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      public fun socketAddress(socketAddress: IResolvable)
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      public fun socketAddress(socketAddress: SocketAddressProperty)
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
-      public fun socketAddress(socketAddress: SocketAddressProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty.builder()
-
-      /**
-       * @param mtu the value to be set.
-       */
-      override fun mtu(mtu: Number) {
-        cdkBuilder.mtu(mtu)
-      }
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      override fun socketAddress(socketAddress: IResolvable) {
-        cdkBuilder.socketAddress(socketAddress.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      override fun socketAddress(socketAddress: SocketAddressProperty) {
-        cdkBuilder.socketAddress(socketAddress.let(SocketAddressProperty::unwrap))
-      }
-
-      /**
-       * @param socketAddress the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
-      override fun socketAddress(socketAddress: SocketAddressProperty.Builder.() -> Unit): Unit =
-          socketAddress(SocketAddressProperty(socketAddress))
-
-      public fun build():
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty,
-    ) : CdkObject(cdkObject), ConnectionDetailsProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
-       */
-      override fun mtu(): Number? = unwrap(this).getMtu()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
-       */
-      override fun socketAddress(): Any? = unwrap(this).getSocketAddress()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty):
-          ConnectionDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectionDetailsProperty):
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.groundstation.*;
-   * IntegerRangeProperty integerRangeProperty = IntegerRangeProperty.builder()
-   * .maximum(123)
-   * .minimum(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html)
-   */
-  public interface IntegerRangeProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
-     */
-    public fun maximum(): Number? = unwrap(this).getMaximum()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
-     */
-    public fun minimum(): Number? = unwrap(this).getMinimum()
-
-    /**
-     * A builder for [IntegerRangeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximum the value to be set.
-       */
-      public fun maximum(maximum: Number)
-
-      /**
-       * @param minimum the value to be set.
-       */
-      public fun minimum(minimum: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty.Builder
-          =
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
-
-      /**
-       * @param maximum the value to be set.
-       */
-      override fun maximum(maximum: Number) {
-        cdkBuilder.maximum(maximum)
-      }
-
-      /**
-       * @param minimum the value to be set.
-       */
-      override fun minimum(minimum: Number) {
-        cdkBuilder.minimum(minimum)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty,
-    ) : CdkObject(cdkObject), IntegerRangeProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
-       */
-      override fun maximum(): Number? = unwrap(this).getMaximum()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
-       */
-      override fun minimum(): Number? = unwrap(this).getMinimum()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IntegerRangeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty):
-          IntegerRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegerRangeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IntegerRangeProperty):
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
     }
   }
 
@@ -1807,8 +1690,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty,
     ) : CdkObject(cdkObject), SecurityDetailsProperty {
       /**
        * The ARN of a role which Ground Station has permission to assume, such as
@@ -1853,6 +1735,115 @@ public open class CfnDataflowEndpointGroup internal constructor(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty
+    }
+  }
+
+  /**
+   * The address of the endpoint, such as `192.168.1.1` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.groundstation.*;
+   * SocketAddressProperty socketAddressProperty = SocketAddressProperty.builder()
+   * .name("name")
+   * .port(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+   */
+  public interface SocketAddressProperty {
+    /**
+     * The name of the endpoint, such as `Endpoint 1` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The port of the endpoint, such as `55888` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * A builder for [SocketAddressProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the endpoint, such as `Endpoint 1` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param port The port of the endpoint, such as `55888` .
+       */
+      public fun port(port: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty.Builder
+          =
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty.builder()
+
+      /**
+       * @param name The name of the endpoint, such as `Endpoint 1` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param port The port of the endpoint, such as `55888` .
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty,
+    ) : CdkObject(cdkObject), SocketAddressProperty {
+      /**
+       * The name of the endpoint, such as `Endpoint 1` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The port of the endpoint, such as `55888` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html#cfn-groundstation-dataflowendpointgroup-socketaddress-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SocketAddressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty):
+          SocketAddressProperty = CdkObjectWrappers.wrap(cdkObject) as? SocketAddressProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SocketAddressProperty):
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
     }
   }
 }

@@ -691,8 +691,7 @@ public interface CfnMatchmakingConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps,
   ) : CdkObject(cdkObject), CfnMatchmakingConfigurationProps {
     /**
      * A flag that determines whether a match that was created with this configuration must be

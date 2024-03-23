@@ -23,8 +23,8 @@ import kotlin.String
  * Aspects.of(stack).add(new FunctionVersionUpgrade(LAMBDA_RECOGNIZE_VERSION_PROPS));
  * ```
  */
-public open class FunctionVersionUpgrade internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionVersionUpgrade,
+public open class FunctionVersionUpgrade(
+  cdkObject: software.amazon.awscdk.services.lambda.FunctionVersionUpgrade,
 ) : CdkObject(cdkObject), IAspect {
   public constructor(featureFlag: String) :
       this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag)
@@ -48,6 +48,7 @@ public open class FunctionVersionUpgrade internal constructor(
         FunctionVersionUpgrade = FunctionVersionUpgrade(cdkObject)
 
     internal fun unwrap(wrapped: FunctionVersionUpgrade):
-        software.amazon.awscdk.services.lambda.FunctionVersionUpgrade = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.FunctionVersionUpgrade = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.FunctionVersionUpgrade
   }
 }

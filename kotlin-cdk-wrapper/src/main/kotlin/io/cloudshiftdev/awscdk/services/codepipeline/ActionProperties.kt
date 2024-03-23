@@ -401,7 +401,7 @@ public interface ActionProperties {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.ActionProperties,
+    cdkObject: software.amazon.awscdk.services.codepipeline.ActionProperties,
   ) : CdkObject(cdkObject), ActionProperties {
     /**
      * The account the Action is supposed to live in.

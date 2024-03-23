@@ -19,8 +19,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class RuntimeManagementMode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.RuntimeManagementMode,
+public open class RuntimeManagementMode(
+  cdkObject: software.amazon.awscdk.services.lambda.RuntimeManagementMode,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -52,6 +52,7 @@ public open class RuntimeManagementMode internal constructor(
         RuntimeManagementMode = RuntimeManagementMode(cdkObject)
 
     internal fun unwrap(wrapped: RuntimeManagementMode):
-        software.amazon.awscdk.services.lambda.RuntimeManagementMode = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.RuntimeManagementMode = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.RuntimeManagementMode
   }
 }

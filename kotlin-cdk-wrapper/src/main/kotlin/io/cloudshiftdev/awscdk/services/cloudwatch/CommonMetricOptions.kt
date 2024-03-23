@@ -308,7 +308,7 @@ public interface CommonMetricOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CommonMetricOptions,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CommonMetricOptions,
   ) : CdkObject(cdkObject), CommonMetricOptions {
     /**
      * Account which this metric comes from.

@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-userhierarchygroup.html)
  */
-public open class CfnUserHierarchyGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroup,
+public open class CfnUserHierarchyGroup(
+  cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -253,6 +253,7 @@ public open class CfnUserHierarchyGroup internal constructor(
         CfnUserHierarchyGroup = CfnUserHierarchyGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserHierarchyGroup):
-        software.amazon.awscdk.services.connect.CfnUserHierarchyGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnUserHierarchyGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnUserHierarchyGroup
   }
 }

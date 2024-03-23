@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html)
  */
-public open class CfnClientVpnTargetNetworkAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation,
+public open class CfnClientVpnTargetNetworkAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -166,5 +165,6 @@ public open class CfnClientVpnTargetNetworkAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnClientVpnTargetNetworkAssociation):
         software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation
   }
 }

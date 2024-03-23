@@ -328,7 +328,7 @@ public interface CfnRuleGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroupProps,
+    cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroupProps,
   ) : CdkObject(cdkObject), CfnRuleGroupProps {
     /**
      * The maximum operating resources that this rule group can use.

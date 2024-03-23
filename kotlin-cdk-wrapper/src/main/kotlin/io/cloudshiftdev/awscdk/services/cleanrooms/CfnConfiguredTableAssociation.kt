@@ -43,9 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtableassociation.html)
  */
-public open class CfnConfiguredTableAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation,
+public open class CfnConfiguredTableAssociation(
+  cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -366,5 +365,6 @@ public open class CfnConfiguredTableAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnConfiguredTableAssociation):
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation = wrapped.cdkObject
+        as software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation
   }
 }

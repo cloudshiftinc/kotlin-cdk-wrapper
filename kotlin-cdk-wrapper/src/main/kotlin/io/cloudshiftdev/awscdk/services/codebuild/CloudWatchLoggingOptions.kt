@@ -99,7 +99,7 @@ public interface CloudWatchLoggingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions,
+    cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions,
   ) : CdkObject(cdkObject), CloudWatchLoggingOptions {
     /**
      * The current status of the logs in Amazon CloudWatch Logs for a build project.

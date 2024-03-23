@@ -580,7 +580,7 @@ public interface CfnMetricStreamProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps,
   ) : CdkObject(cdkObject), CfnMetricStreamProps {
     /**
      * If you specify this parameter, the stream sends metrics from all metric namespaces except for

@@ -77,7 +77,7 @@ public interface ApiMappingOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.ApiMappingOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.ApiMappingOptions,
   ) : CdkObject(cdkObject), ApiMappingOptions {
     /**
      * The api path name that callers of the API must provide in the URL after the domain name (e.g.

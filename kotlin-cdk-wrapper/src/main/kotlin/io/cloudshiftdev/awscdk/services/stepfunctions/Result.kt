@@ -26,8 +26,8 @@ import kotlin.collections.Map
  * pass.next(nextState);
  * ```
  */
-public open class Result internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Result,
+public open class Result(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Result,
 ) : CdkObject(cdkObject) {
   /**
    * result of the Pass operation.
@@ -56,6 +56,6 @@ public open class Result internal constructor(
         Result(cdkObject)
 
     internal fun unwrap(wrapped: Result): software.amazon.awscdk.services.stepfunctions.Result =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Result
   }
 }

@@ -27,8 +27,8 @@ import kotlin.Unit
  * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
  * ```
  */
-public open class Port internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Port,
+public open class Port(
+  cdkObject: software.amazon.awscdk.services.ec2.Port,
 ) : CdkObject(cdkObject) {
   public constructor(props: PortProps) :
       this(software.amazon.awscdk.services.ec2.Port(props.let(PortProps::unwrap))
@@ -178,5 +178,6 @@ public open class Port internal constructor(
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.Port): Port = Port(cdkObject)
 
     internal fun unwrap(wrapped: Port): software.amazon.awscdk.services.ec2.Port = wrapped.cdkObject
+        as software.amazon.awscdk.services.ec2.Port
   }
 }

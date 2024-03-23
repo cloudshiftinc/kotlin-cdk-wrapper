@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)
  */
-public open class CfnDNSSEC internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.route53.CfnDNSSEC,
+public open class CfnDNSSEC(
+  cdkObject: software.amazon.awscdk.services.route53.CfnDNSSEC,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -122,6 +122,6 @@ public open class CfnDNSSEC internal constructor(
         CfnDNSSEC(cdkObject)
 
     internal fun unwrap(wrapped: CfnDNSSEC): software.amazon.awscdk.services.route53.CfnDNSSEC =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.route53.CfnDNSSEC
   }
 }

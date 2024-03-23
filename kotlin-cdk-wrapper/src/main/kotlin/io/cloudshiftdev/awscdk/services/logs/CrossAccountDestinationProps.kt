@@ -103,7 +103,7 @@ public interface CrossAccountDestinationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestinationProps,
+    cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestinationProps,
   ) : CdkObject(cdkObject), CrossAccountDestinationProps {
     /**
      * The name of the log destination.

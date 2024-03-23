@@ -107,7 +107,7 @@ public interface CfnReplicationConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps,
   ) : CdkObject(cdkObject), CfnReplicationConfigurationProps {
     /**
      * The replication configuration for a registry.

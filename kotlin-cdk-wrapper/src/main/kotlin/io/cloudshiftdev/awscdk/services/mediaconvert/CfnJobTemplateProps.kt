@@ -553,7 +553,7 @@ public interface CfnJobTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps,
+    cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps,
   ) : CdkObject(cdkObject), CfnJobTemplateProps {
     /**
      * Accelerated transcoding can significantly speed up jobs with long, visually complex content.

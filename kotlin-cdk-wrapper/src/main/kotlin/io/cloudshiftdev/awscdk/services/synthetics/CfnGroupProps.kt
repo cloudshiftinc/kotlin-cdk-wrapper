@@ -130,7 +130,7 @@ public interface CfnGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.synthetics.CfnGroupProps,
+    cdkObject: software.amazon.awscdk.services.synthetics.CfnGroupProps,
   ) : CdkObject(cdkObject), CfnGroupProps {
     /**
      * A name for the group. It can include any Unicode characters.

@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class FunctionCode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
+public abstract class FunctionCode(
+  cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
 ) : CdkObject(cdkObject) {
   /**
    * renders the function code.
@@ -40,7 +40,7 @@ public abstract class FunctionCode internal constructor(
   public open fun render(): String = unwrap(this).render()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
+    cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
   ) : FunctionCode(cdkObject)
 
   public companion object {

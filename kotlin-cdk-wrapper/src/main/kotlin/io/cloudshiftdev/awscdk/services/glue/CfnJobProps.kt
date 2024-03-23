@@ -807,7 +807,7 @@ public interface CfnJobProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.glue.CfnJobProps,
+    cdkObject: software.amazon.awscdk.services.glue.CfnJobProps,
   ) : CdkObject(cdkObject), CfnJobProps {
     /**
      * This parameter is no longer supported. Use `MaxCapacity` instead.

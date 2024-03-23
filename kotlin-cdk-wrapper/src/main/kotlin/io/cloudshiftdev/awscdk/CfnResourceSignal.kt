@@ -103,7 +103,7 @@ public interface CfnResourceSignal {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnResourceSignal,
+    cdkObject: software.amazon.awscdk.CfnResourceSignal,
   ) : CdkObject(cdkObject), CfnResourceSignal {
     /**
      * The number of success signals AWS CloudFormation must receive before it sets the resource

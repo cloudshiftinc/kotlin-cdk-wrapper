@@ -27,11 +27,11 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public abstract class MachineImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.MachineImage,
+public abstract class MachineImage(
+  cdkObject: software.amazon.awscdk.services.ec2.MachineImage,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.MachineImage,
+    cdkObject: software.amazon.awscdk.services.ec2.MachineImage,
   ) : MachineImage(cdkObject)
 
   public companion object {

@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
  */
-public open class CfnUser internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser,
+public open class CfnUser(
+  cdkObject: software.amazon.awscdk.services.transfer.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -909,7 +909,176 @@ public open class CfnUser internal constructor(
         CfnUser(cdkObject)
 
     internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.transfer.CfnUser =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.transfer.CfnUser
+  }
+
+  /**
+   * Represents an object that contains entries and targets for `HomeDirectoryMappings` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.transfer.*;
+   * HomeDirectoryMapEntryProperty homeDirectoryMapEntryProperty =
+   * HomeDirectoryMapEntryProperty.builder()
+   * .entry("entry")
+   * .target("target")
+   * // the properties below are optional
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html)
+   */
+  public interface HomeDirectoryMapEntryProperty {
+    /**
+     * Represents an entry for `HomeDirectoryMappings` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry)
+     */
+    public fun entry(): String
+
+    /**
+     * Represents the map target that is used in a `HomeDirectoryMapEntry` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target)
+     */
+    public fun target(): String
+
+    /**
+     * Specifies the type of mapping.
+     *
+     * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
+     * directory to point to a directory.
+     *
+     *
+     * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
+     * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have a
+     * file target.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [HomeDirectoryMapEntryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param entry Represents an entry for `HomeDirectoryMappings` . 
+       */
+      public fun entry(entry: String)
+
+      /**
+       * @param target Represents the map target that is used in a `HomeDirectoryMapEntry` . 
+       */
+      public fun target(target: String)
+
+      /**
+       * @param type Specifies the type of mapping.
+       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
+       * directory to point to a directory.
+       *
+       *
+       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
+       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
+       * a file target.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.builder()
+
+      /**
+       * @param entry Represents an entry for `HomeDirectoryMappings` . 
+       */
+      override fun entry(entry: String) {
+        cdkBuilder.entry(entry)
+      }
+
+      /**
+       * @param target Represents the map target that is used in a `HomeDirectoryMapEntry` . 
+       */
+      override fun target(target: String) {
+        cdkBuilder.target(target)
+      }
+
+      /**
+       * @param type Specifies the type of mapping.
+       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
+       * directory to point to a directory.
+       *
+       *
+       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
+       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
+       * a file target.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
+    ) : CdkObject(cdkObject), HomeDirectoryMapEntryProperty {
+      /**
+       * Represents an entry for `HomeDirectoryMappings` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry)
+       */
+      override fun entry(): String = unwrap(this).getEntry()
+
+      /**
+       * Represents the map target that is used in a `HomeDirectoryMapEntry` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target)
+       */
+      override fun target(): String = unwrap(this).getTarget()
+
+      /**
+       * Specifies the type of mapping.
+       *
+       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
+       * directory to point to a directory.
+       *
+       *
+       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
+       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
+       * a file target.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HomeDirectoryMapEntryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty):
+          HomeDirectoryMapEntryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HomeDirectoryMapEntryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HomeDirectoryMapEntryProperty):
+          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty
+    }
   }
 
   /**
@@ -1039,7 +1208,7 @@ public open class CfnUser internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
+      cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
     ) : CdkObject(cdkObject), PosixProfileProperty {
       /**
        * The POSIX group ID used for all EFS operations by this user.
@@ -1078,176 +1247,6 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty
-    }
-  }
-
-  /**
-   * Represents an object that contains entries and targets for `HomeDirectoryMappings` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.transfer.*;
-   * HomeDirectoryMapEntryProperty homeDirectoryMapEntryProperty =
-   * HomeDirectoryMapEntryProperty.builder()
-   * .entry("entry")
-   * .target("target")
-   * // the properties below are optional
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html)
-   */
-  public interface HomeDirectoryMapEntryProperty {
-    /**
-     * Represents an entry for `HomeDirectoryMappings` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry)
-     */
-    public fun entry(): String
-
-    /**
-     * Represents the map target that is used in a `HomeDirectoryMapEntry` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target)
-     */
-    public fun target(): String
-
-    /**
-     * Specifies the type of mapping.
-     *
-     * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
-     * directory to point to a directory.
-     *
-     *
-     * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
-     * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have a
-     * file target.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [HomeDirectoryMapEntryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param entry Represents an entry for `HomeDirectoryMappings` . 
-       */
-      public fun entry(entry: String)
-
-      /**
-       * @param target Represents the map target that is used in a `HomeDirectoryMapEntry` . 
-       */
-      public fun target(target: String)
-
-      /**
-       * @param type Specifies the type of mapping.
-       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
-       * directory to point to a directory.
-       *
-       *
-       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
-       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
-       * a file target.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.builder()
-
-      /**
-       * @param entry Represents an entry for `HomeDirectoryMappings` . 
-       */
-      override fun entry(entry: String) {
-        cdkBuilder.entry(entry)
-      }
-
-      /**
-       * @param target Represents the map target that is used in a `HomeDirectoryMapEntry` . 
-       */
-      override fun target(target: String) {
-        cdkBuilder.target(target)
-      }
-
-      /**
-       * @param type Specifies the type of mapping.
-       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
-       * directory to point to a directory.
-       *
-       *
-       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
-       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
-       * a file target.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
-    ) : CdkObject(cdkObject), HomeDirectoryMapEntryProperty {
-      /**
-       * Represents an entry for `HomeDirectoryMappings` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-entry)
-       */
-      override fun entry(): String = unwrap(this).getEntry()
-
-      /**
-       * Represents the map target that is used in a `HomeDirectoryMapEntry` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-target)
-       */
-      override fun target(): String = unwrap(this).getTarget()
-
-      /**
-       * Specifies the type of mapping.
-       *
-       * Set the type to `FILE` if you want the mapping to point to a file, or `DIRECTORY` for the
-       * directory to point to a directory.
-       *
-       *
-       * By default, home directory mappings have a `Type` of `DIRECTORY` when you create a Transfer
-       * Family server. You would need to explicitly set `Type` to `FILE` if you want a mapping to have
-       * a file target.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html#cfn-transfer-user-homedirectorymapentry-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HomeDirectoryMapEntryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty):
-          HomeDirectoryMapEntryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          HomeDirectoryMapEntryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HomeDirectoryMapEntryProperty):
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty
     }
   }
 }

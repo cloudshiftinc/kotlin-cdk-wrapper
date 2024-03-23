@@ -29,9 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class CognitoUserPoolsAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer,
+public open class CognitoUserPoolsAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -211,6 +210,7 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
         CognitoUserPoolsAuthorizer = CognitoUserPoolsAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: CognitoUserPoolsAuthorizer):
-        software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer
   }
 }

@@ -597,7 +597,7 @@ public interface CfnExperimentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.evidently.CfnExperimentProps,
+    cdkObject: software.amazon.awscdk.services.evidently.CfnExperimentProps,
   ) : CdkObject(cdkObject), CfnExperimentProps {
     /**
      * An optional description of the experiment.

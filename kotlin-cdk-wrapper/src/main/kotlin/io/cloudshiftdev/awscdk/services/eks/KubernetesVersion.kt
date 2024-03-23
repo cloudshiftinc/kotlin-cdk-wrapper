@@ -25,8 +25,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar)
  */
-public open class KubernetesVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesVersion,
+public open class KubernetesVersion(
+  cdkObject: software.amazon.awscdk.services.eks.KubernetesVersion,
 ) : CdkObject(cdkObject) {
   /**
    * cluster version number.
@@ -89,6 +89,7 @@ public open class KubernetesVersion internal constructor(
         KubernetesVersion = KubernetesVersion(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesVersion):
-        software.amazon.awscdk.services.eks.KubernetesVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.KubernetesVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.KubernetesVersion
   }
 }

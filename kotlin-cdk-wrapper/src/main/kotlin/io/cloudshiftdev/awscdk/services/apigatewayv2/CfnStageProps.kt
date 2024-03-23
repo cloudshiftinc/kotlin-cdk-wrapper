@@ -398,7 +398,7 @@ public interface CfnStageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStageProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStageProps,
   ) : CdkObject(cdkObject), CfnStageProps {
     /**
      * Settings for logging access in this stage.

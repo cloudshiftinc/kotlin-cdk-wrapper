@@ -31,8 +31,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class ViewerCertificate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificate,
+public open class ViewerCertificate(
+  cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificate,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -81,6 +81,7 @@ public open class ViewerCertificate internal constructor(
         ViewerCertificate = ViewerCertificate(cdkObject)
 
     internal fun unwrap(wrapped: ViewerCertificate):
-        software.amazon.awscdk.services.cloudfront.ViewerCertificate = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.ViewerCertificate = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.ViewerCertificate
   }
 }

@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class TableV2 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.TableV2,
+public open class TableV2(
+  cdkObject: software.amazon.awscdk.services.dynamodb.TableV2,
 ) : TableBaseV2(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -710,6 +710,6 @@ public open class TableV2 internal constructor(
         TableV2(cdkObject)
 
     internal fun unwrap(wrapped: TableV2): software.amazon.awscdk.services.dynamodb.TableV2 =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.dynamodb.TableV2
   }
 }

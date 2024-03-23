@@ -55,7 +55,7 @@ public interface IDatabaseProxy : IResource {
   public fun grantConnect(grantee: IGrantable, dbUser: String): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IDatabaseProxy,
+    cdkObject: software.amazon.awscdk.services.rds.IDatabaseProxy,
   ) : CdkObject(cdkObject), IDatabaseProxy {
     /**
      * Apply the given removal policy to this resource.

@@ -29,8 +29,8 @@ import kotlin.jvm.JvmName
  * AssetManifestBuilder assetManifestBuilder = new AssetManifestBuilder();
  * ```
  */
-public open class AssetManifestBuilder internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.AssetManifestBuilder,
+public open class AssetManifestBuilder(
+  cdkObject: software.amazon.awscdk.AssetManifestBuilder,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.AssetManifestBuilder()
   )
@@ -263,6 +263,6 @@ public open class AssetManifestBuilder internal constructor(
         = AssetManifestBuilder(cdkObject)
 
     internal fun unwrap(wrapped: AssetManifestBuilder): software.amazon.awscdk.AssetManifestBuilder
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.AssetManifestBuilder
   }
 }

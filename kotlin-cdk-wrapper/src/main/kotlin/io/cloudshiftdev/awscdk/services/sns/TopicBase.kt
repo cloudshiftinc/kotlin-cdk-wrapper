@@ -21,8 +21,8 @@ import kotlin.jvm.JvmName
 /**
  * Either a new or imported Topic.
  */
-public abstract class TopicBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.TopicBase,
+public abstract class TopicBase(
+  cdkObject: software.amazon.awscdk.services.sns.TopicBase,
 ) : Resource(cdkObject), ITopic {
   /**
    * Subscribe some endpoint to this topic.
@@ -432,7 +432,7 @@ public abstract class TopicBase internal constructor(
   public override fun topicName(): String = unwrap(this).getTopicName()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.TopicBase,
+    cdkObject: software.amazon.awscdk.services.sns.TopicBase,
   ) : TopicBase(cdkObject)
 
   public companion object {

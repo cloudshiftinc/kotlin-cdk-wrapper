@@ -37,8 +37,8 @@ import kotlin.collections.Map
  * "conditionsKey", conditions));
  * ```
  */
-public open class PrincipalPolicyFragment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.PrincipalPolicyFragment,
+public open class PrincipalPolicyFragment(
+  cdkObject: software.amazon.awscdk.services.iam.PrincipalPolicyFragment,
 ) : CdkObject(cdkObject) {
   public constructor(principalJson: Map<String, List<String>>) :
       this(software.amazon.awscdk.services.iam.PrincipalPolicyFragment(principalJson)
@@ -68,6 +68,7 @@ public open class PrincipalPolicyFragment internal constructor(
         PrincipalPolicyFragment = PrincipalPolicyFragment(cdkObject)
 
     internal fun unwrap(wrapped: PrincipalPolicyFragment):
-        software.amazon.awscdk.services.iam.PrincipalPolicyFragment = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.PrincipalPolicyFragment = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.PrincipalPolicyFragment
   }
 }

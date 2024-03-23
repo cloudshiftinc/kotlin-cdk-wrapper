@@ -87,8 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-allowlist.html)
  */
-public open class CfnAllowList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
+public open class CfnAllowList(
+  cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -447,156 +447,7 @@ public open class CfnAllowList internal constructor(
         CfnAllowList(cdkObject)
 
     internal fun unwrap(wrapped: CfnAllowList): software.amazon.awscdk.services.macie.CfnAllowList =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Specifies the location and name of an Amazon Simple Storage Service ( Amazon S3 ) object that
-   * lists specific, predefined text to ignore when inspecting data sources for sensitive data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.macie.*;
-   * S3WordsListProperty s3WordsListProperty = S3WordsListProperty.builder()
-   * .bucketName("bucketName")
-   * .objectKey("objectKey")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html)
-   */
-  public interface S3WordsListProperty {
-    /**
-     * The full name of the S3 bucket that contains the object.
-     *
-     * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
-     *
-     * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-     * values for the name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * The full name of the S3 object.
-     *
-     * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the name
-     * includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
-     *
-     * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-     * values for the name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-objectkey)
-     */
-    public fun objectKey(): String
-
-    /**
-     * A builder for [S3WordsListProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName The full name of the S3 bucket that contains the object. 
-       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param objectKey The full name of the S3 object. 
-       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
-       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       */
-      public fun objectKey(objectKey: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.Builder =
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.builder()
-
-      /**
-       * @param bucketName The full name of the S3 bucket that contains the object. 
-       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param objectKey The full name of the S3 object. 
-       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
-       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       */
-      override fun objectKey(objectKey: String) {
-        cdkBuilder.objectKey(objectKey)
-      }
-
-      public fun build(): software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
-    ) : CdkObject(cdkObject), S3WordsListProperty {
-      /**
-       * The full name of the S3 bucket that contains the object.
-       *
-       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-
-      /**
-       * The full name of the S3 object.
-       *
-       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
-       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
-       *
-       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
-       * values for the name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-objectkey)
-       */
-      override fun objectKey(): String = unwrap(this).getObjectKey()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3WordsListProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty):
-          S3WordsListProperty = CdkObjectWrappers.wrap(cdkObject) as? S3WordsListProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3WordsListProperty):
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.macie.CfnAllowList
   }
 
   /**
@@ -720,7 +571,7 @@ public open class CfnAllowList internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
     ) : CdkObject(cdkObject), CriteriaProperty {
       /**
        * The regular expression ( *regex* ) that defines the text pattern to ignore.
@@ -754,6 +605,154 @@ public open class CfnAllowList internal constructor(
           software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty
+    }
+  }
+
+  /**
+   * Specifies the location and name of an Amazon Simple Storage Service ( Amazon S3 ) object that
+   * lists specific, predefined text to ignore when inspecting data sources for sensitive data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.macie.*;
+   * S3WordsListProperty s3WordsListProperty = S3WordsListProperty.builder()
+   * .bucketName("bucketName")
+   * .objectKey("objectKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html)
+   */
+  public interface S3WordsListProperty {
+    /**
+     * The full name of the S3 bucket that contains the object.
+     *
+     * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
+     *
+     * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+     * values for the name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * The full name of the S3 object.
+     *
+     * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the name
+     * includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
+     *
+     * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+     * values for the name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-objectkey)
+     */
+    public fun objectKey(): String
+
+    /**
+     * A builder for [S3WordsListProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The full name of the S3 bucket that contains the object. 
+       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param objectKey The full name of the S3 object. 
+       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
+       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       */
+      public fun objectKey(objectKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.Builder =
+          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.builder()
+
+      /**
+       * @param bucketName The full name of the S3 bucket that contains the object. 
+       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param objectKey The full name of the S3 object. 
+       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
+       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       */
+      override fun objectKey(objectKey: String) {
+        cdkBuilder.objectKey(objectKey)
+      }
+
+      public fun build(): software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
+    ) : CdkObject(cdkObject), S3WordsListProperty {
+      /**
+       * The full name of the S3 bucket that contains the object.
+       *
+       * This value correlates to the `Name` field of a bucket's properties in Amazon S3 .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * The full name of the S3 object.
+       *
+       * This value correlates to the `Key` field of an object's properties in Amazon S3 . If the
+       * name includes a path, include the complete path. For example, `AllowLists/Macie/MyList.txt` .
+       *
+       * This value is case sensitive. In addition, don't use wildcard characters or specify partial
+       * values for the name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html#cfn-macie-allowlist-s3wordslist-objectkey)
+       */
+      override fun objectKey(): String = unwrap(this).getObjectKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3WordsListProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty):
+          S3WordsListProperty = CdkObjectWrappers.wrap(cdkObject) as? S3WordsListProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3WordsListProperty):
+          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty
     }
   }
 }

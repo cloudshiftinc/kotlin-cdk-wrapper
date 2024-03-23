@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-api-gateway.html)
  */
-public open class CallApiGatewayRestApiEndpoint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint,
+public open class CallApiGatewayRestApiEndpoint(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -614,6 +613,7 @@ public open class CallApiGatewayRestApiEndpoint internal constructor(
 
     internal fun unwrap(wrapped: CallApiGatewayRestApiEndpoint):
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint
   }
 }

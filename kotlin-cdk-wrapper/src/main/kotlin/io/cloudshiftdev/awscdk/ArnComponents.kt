@@ -212,7 +212,7 @@ public interface ArnComponents {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ArnComponents,
+    cdkObject: software.amazon.awscdk.ArnComponents,
   ) : CdkObject(cdkObject), ArnComponents {
     /**
      * The ID of the AWS account that owns the resource, without the hyphens.

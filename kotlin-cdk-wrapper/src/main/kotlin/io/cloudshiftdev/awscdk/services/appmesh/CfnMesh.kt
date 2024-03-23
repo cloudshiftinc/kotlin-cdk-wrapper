@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html)
  */
-public open class CfnMesh internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
+public open class CfnMesh(
+  cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -358,90 +358,7 @@ public open class CfnMesh internal constructor(
         CfnMesh(cdkObject)
 
     internal fun unwrap(wrapped: CfnMesh): software.amazon.awscdk.services.appmesh.CfnMesh =
-        wrapped.cdkObject
-  }
-
-  /**
-   * An object that represents the service discovery information for a service mesh.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appmesh.*;
-   * MeshServiceDiscoveryProperty meshServiceDiscoveryProperty =
-   * MeshServiceDiscoveryProperty.builder()
-   * .ipPreference("ipPreference")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html)
-   */
-  public interface MeshServiceDiscoveryProperty {
-    /**
-     * The IP version to use to control traffic within the mesh.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html#cfn-appmesh-mesh-meshservicediscovery-ippreference)
-     */
-    public fun ipPreference(): String? = unwrap(this).getIpPreference()
-
-    /**
-     * A builder for [MeshServiceDiscoveryProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipPreference The IP version to use to control traffic within the mesh.
-       */
-      public fun ipPreference(ipPreference: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.Builder =
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.builder()
-
-      /**
-       * @param ipPreference The IP version to use to control traffic within the mesh.
-       */
-      override fun ipPreference(ipPreference: String) {
-        cdkBuilder.ipPreference(ipPreference)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
-    ) : CdkObject(cdkObject), MeshServiceDiscoveryProperty {
-      /**
-       * The IP version to use to control traffic within the mesh.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html#cfn-appmesh-mesh-meshservicediscovery-ippreference)
-       */
-      override fun ipPreference(): String? = unwrap(this).getIpPreference()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MeshServiceDiscoveryProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty):
-          MeshServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MeshServiceDiscoveryProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MeshServiceDiscoveryProperty):
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.appmesh.CfnMesh
   }
 
   /**
@@ -525,7 +442,7 @@ public open class CfnMesh internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
     ) : CdkObject(cdkObject), EgressFilterProperty {
       /**
        * The egress filter type.
@@ -561,6 +478,88 @@ public open class CfnMesh internal constructor(
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty
+    }
+  }
+
+  /**
+   * An object that represents the service discovery information for a service mesh.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appmesh.*;
+   * MeshServiceDiscoveryProperty meshServiceDiscoveryProperty =
+   * MeshServiceDiscoveryProperty.builder()
+   * .ipPreference("ipPreference")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html)
+   */
+  public interface MeshServiceDiscoveryProperty {
+    /**
+     * The IP version to use to control traffic within the mesh.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html#cfn-appmesh-mesh-meshservicediscovery-ippreference)
+     */
+    public fun ipPreference(): String? = unwrap(this).getIpPreference()
+
+    /**
+     * A builder for [MeshServiceDiscoveryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipPreference The IP version to use to control traffic within the mesh.
+       */
+      public fun ipPreference(ipPreference: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.Builder =
+          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.builder()
+
+      /**
+       * @param ipPreference The IP version to use to control traffic within the mesh.
+       */
+      override fun ipPreference(ipPreference: String) {
+        cdkBuilder.ipPreference(ipPreference)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
+    ) : CdkObject(cdkObject), MeshServiceDiscoveryProperty {
+      /**
+       * The IP version to use to control traffic within the mesh.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-meshservicediscovery.html#cfn-appmesh-mesh-meshservicediscovery-ippreference)
+       */
+      override fun ipPreference(): String? = unwrap(this).getIpPreference()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MeshServiceDiscoveryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty):
+          MeshServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MeshServiceDiscoveryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MeshServiceDiscoveryProperty):
+          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty
     }
   }
 
@@ -701,7 +700,7 @@ public open class CfnMesh internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
+      cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
     ) : CdkObject(cdkObject), MeshSpecProperty {
       /**
        * The egress filter rules for the service mesh.

@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html)
  */
-public open class CfnScene internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnScene,
+public open class CfnScene(
+  cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnScene,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -388,6 +388,6 @@ public open class CfnScene internal constructor(
         CfnScene(cdkObject)
 
     internal fun unwrap(wrapped: CfnScene): software.amazon.awscdk.services.iottwinmaker.CfnScene =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iottwinmaker.CfnScene
   }
 }

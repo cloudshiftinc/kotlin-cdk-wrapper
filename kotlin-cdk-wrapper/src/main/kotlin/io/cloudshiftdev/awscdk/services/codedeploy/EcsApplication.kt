@@ -20,8 +20,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class EcsApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
+public open class EcsApplication(
+  cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
 ) : Resource(cdkObject), IEcsApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -121,6 +121,7 @@ public open class EcsApplication internal constructor(
         EcsApplication = EcsApplication(cdkObject)
 
     internal fun unwrap(wrapped: EcsApplication):
-        software.amazon.awscdk.services.codedeploy.EcsApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.EcsApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.EcsApplication
   }
 }

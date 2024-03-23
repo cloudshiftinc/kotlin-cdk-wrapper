@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class AccessPoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.efs.AccessPoint,
+public open class AccessPoint(
+  cdkObject: software.amazon.awscdk.services.efs.AccessPoint,
 ) : Resource(cdkObject), IAccessPoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -303,6 +303,6 @@ public open class AccessPoint internal constructor(
         AccessPoint(cdkObject)
 
     internal fun unwrap(wrapped: AccessPoint): software.amazon.awscdk.services.efs.AccessPoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.efs.AccessPoint
   }
 }

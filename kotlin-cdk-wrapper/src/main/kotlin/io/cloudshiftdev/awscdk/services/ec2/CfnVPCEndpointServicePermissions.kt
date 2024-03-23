@@ -36,9 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html)
  */
-public open class CfnVPCEndpointServicePermissions internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions,
+public open class CfnVPCEndpointServicePermissions(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -213,6 +212,7 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
         CfnVPCEndpointServicePermissions = CfnVPCEndpointServicePermissions(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEndpointServicePermissions):
-        software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions
   }
 }

@@ -41,9 +41,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class S3DeployAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.S3DeployAction,
+public open class S3DeployAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3DeployAction,
 ) : Action(cdkObject) {
   public constructor(props: S3DeployActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.S3DeployAction(props.let(S3DeployActionProps::unwrap))
@@ -358,6 +357,7 @@ public open class S3DeployAction internal constructor(
         S3DeployAction = S3DeployAction(cdkObject)
 
     internal fun unwrap(wrapped: S3DeployAction):
-        software.amazon.awscdk.services.codepipeline.actions.S3DeployAction = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.S3DeployAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.S3DeployAction
   }
 }

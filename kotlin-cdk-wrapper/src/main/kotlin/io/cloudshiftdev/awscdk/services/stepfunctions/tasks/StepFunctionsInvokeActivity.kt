@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class StepFunctionsInvokeActivity internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity,
+public open class StepFunctionsInvokeActivity(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -484,6 +483,7 @@ public open class StepFunctionsInvokeActivity internal constructor(
 
     internal fun unwrap(wrapped: StepFunctionsInvokeActivity):
         software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity
   }
 }

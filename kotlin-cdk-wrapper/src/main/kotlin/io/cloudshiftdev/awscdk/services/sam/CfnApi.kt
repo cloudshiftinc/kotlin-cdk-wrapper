@@ -101,8 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html)
  */
-public open class CfnApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnApi,
+public open class CfnApi(
+  cdkObject: software.amazon.awscdk.services.sam.CfnApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1343,7 +1343,7 @@ public open class CfnApi internal constructor(
         CfnApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnApi): software.amazon.awscdk.services.sam.CfnApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnApi
   }
 
   /**
@@ -1412,7 +1412,7 @@ public open class CfnApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.AccessLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.AccessLogSettingProperty,
     ) : CdkObject(cdkObject), AccessLogSettingProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-accesslogsetting.html#cfn-serverless-api-accesslogsetting-destinationarn)
@@ -1450,188 +1450,130 @@ public open class CfnApi internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Route53ConfigurationProperty route53ConfigurationProperty =
-   * Route53ConfigurationProperty.builder()
-   * .distributedDomainName("distributedDomainName")
-   * .evaluateTargetHealth(false)
-   * .hostedZoneId("hostedZoneId")
-   * .hostedZoneName("hostedZoneName")
-   * .ipV6(false)
+   * Object authorizers;
+   * AuthProperty authProperty = AuthProperty.builder()
+   * .addDefaultAuthorizerToCorsPreflight(false)
+   * .authorizers(authorizers)
+   * .defaultAuthorizer("defaultAuthorizer")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html)
    */
-  public interface Route53ConfigurationProperty {
+  public interface AuthProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-adddefaultauthorizertocorspreflight)
      */
-    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+    public fun addDefaultAuthorizerToCorsPreflight(): Any? =
+        unwrap(this).getAddDefaultAuthorizerToCorsPreflight()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-authorizers)
      */
-    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+    public fun authorizers(): Any? = unwrap(this).getAuthorizers()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-defaultauthorizer)
      */
-    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+    public fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
-     */
-    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
-     */
-    public fun ipV6(): Any? = unwrap(this).getIpV6()
-
-    /**
-     * A builder for [Route53ConfigurationProperty]
+     * A builder for [AuthProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param distributedDomainName the value to be set.
+       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
        */
-      public fun distributedDomainName(distributedDomainName: String)
+      public fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: Boolean)
 
       /**
-       * @param evaluateTargetHealth the value to be set.
+       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
        */
-      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
+      public
+          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: IResolvable)
 
       /**
-       * @param evaluateTargetHealth the value to be set.
+       * @param authorizers the value to be set.
        */
-      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
+      public fun authorizers(authorizers: Any)
 
       /**
-       * @param hostedZoneId the value to be set.
+       * @param defaultAuthorizer the value to be set.
        */
-      public fun hostedZoneId(hostedZoneId: String)
-
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      public fun hostedZoneName(hostedZoneName: String)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: Boolean)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: IResolvable)
+      public fun defaultAuthorizer(defaultAuthorizer: String)
     }
 
     private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.builder()
+      private val cdkBuilder: software.amazon.awscdk.services.sam.CfnApi.AuthProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.AuthProperty.builder()
 
       /**
-       * @param distributedDomainName the value to be set.
+       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
        */
-      override fun distributedDomainName(distributedDomainName: String) {
-        cdkBuilder.distributedDomainName(distributedDomainName)
+      override
+          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: Boolean) {
+        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight)
       }
 
       /**
-       * @param evaluateTargetHealth the value to be set.
+       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
        */
-      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+      override
+          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: IResolvable) {
+        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight.let(IResolvable::unwrap))
       }
 
       /**
-       * @param evaluateTargetHealth the value to be set.
+       * @param authorizers the value to be set.
        */
-      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+      override fun authorizers(authorizers: Any) {
+        cdkBuilder.authorizers(authorizers)
       }
 
       /**
-       * @param hostedZoneId the value to be set.
+       * @param defaultAuthorizer the value to be set.
        */
-      override fun hostedZoneId(hostedZoneId: String) {
-        cdkBuilder.hostedZoneId(hostedZoneId)
+      override fun defaultAuthorizer(defaultAuthorizer: String) {
+        cdkBuilder.defaultAuthorizer(defaultAuthorizer)
       }
 
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      override fun hostedZoneName(hostedZoneName: String) {
-        cdkBuilder.hostedZoneName(hostedZoneName)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: Boolean) {
-        cdkBuilder.ipV6(ipV6)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: IResolvable) {
-        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty =
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.AuthProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty,
-    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.AuthProperty,
+    ) : CdkObject(cdkObject), AuthProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-adddefaultauthorizertocorspreflight)
        */
-      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+      override fun addDefaultAuthorizerToCorsPreflight(): Any? =
+          unwrap(this).getAddDefaultAuthorizerToCorsPreflight()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-authorizers)
        */
-      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+      override fun authorizers(): Any? = unwrap(this).getAuthorizers()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-defaultauthorizer)
        */
-      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
-       */
-      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
-       */
-      override fun ipV6(): Any? = unwrap(this).getIpV6()
+      override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AuthProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty):
-          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Route53ConfigurationProperty ?: Wrapper(cdkObject)
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.AuthProperty):
+          AuthProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: Route53ConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty
+      internal fun unwrap(wrapped: AuthProperty):
+          software.amazon.awscdk.services.sam.CfnApi.AuthProperty = (wrapped as CdkObject).cdkObject
+          as software.amazon.awscdk.services.sam.CfnApi.AuthProperty
     }
   }
 
@@ -1642,95 +1584,342 @@ public open class CfnApi internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
-   * MutualTlsAuthenticationProperty.builder()
-   * .truststoreUri("truststoreUri")
-   * .truststoreVersion("truststoreVersion")
+   * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
+   * .deploymentId("deploymentId")
+   * .percentTraffic(123)
+   * .stageVariableOverrides(Map.of(
+   * "stageVariableOverridesKey", "stageVariableOverrides"))
+   * .useStageCache(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html)
    */
-  public interface MutualTlsAuthenticationProperty {
+  public interface CanarySettingProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-deploymentid)
      */
-    public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+    public fun deploymentId(): String? = unwrap(this).getDeploymentId()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-percenttraffic)
      */
-    public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
 
     /**
-     * A builder for [MutualTlsAuthenticationProperty]
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-stagevariableoverrides)
+     */
+    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-usestagecache)
+     */
+    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+
+    /**
+     * A builder for [CanarySettingProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param truststoreUri the value to be set.
+       * @param deploymentId the value to be set.
        */
-      public fun truststoreUri(truststoreUri: String)
+      public fun deploymentId(deploymentId: String)
 
       /**
-       * @param truststoreVersion the value to be set.
+       * @param percentTraffic the value to be set.
        */
-      public fun truststoreVersion(truststoreVersion: String)
+      public fun percentTraffic(percentTraffic: Number)
+
+      /**
+       * @param stageVariableOverrides the value to be set.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+
+      /**
+       * @param stageVariableOverrides the value to be set.
+       */
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+
+      /**
+       * @param useStageCache the value to be set.
+       */
+      public fun useStageCache(useStageCache: Boolean)
+
+      /**
+       * @param useStageCache the value to be set.
+       */
+      public fun useStageCache(useStageCache: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.builder()
+          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty.builder()
 
       /**
-       * @param truststoreUri the value to be set.
+       * @param deploymentId the value to be set.
        */
-      override fun truststoreUri(truststoreUri: String) {
-        cdkBuilder.truststoreUri(truststoreUri)
+      override fun deploymentId(deploymentId: String) {
+        cdkBuilder.deploymentId(deploymentId)
       }
 
       /**
-       * @param truststoreVersion the value to be set.
+       * @param percentTraffic the value to be set.
        */
-      override fun truststoreVersion(truststoreVersion: String) {
-        cdkBuilder.truststoreVersion(truststoreVersion)
+      override fun percentTraffic(percentTraffic: Number) {
+        cdkBuilder.percentTraffic(percentTraffic)
       }
 
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
-          = cdkBuilder.build()
+      /**
+       * @param stageVariableOverrides the value to be set.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param stageVariableOverrides the value to be set.
+       */
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      }
+
+      /**
+       * @param useStageCache the value to be set.
+       */
+      override fun useStageCache(useStageCache: Boolean) {
+        cdkBuilder.useStageCache(useStageCache)
+      }
+
+      /**
+       * @param useStageCache the value to be set.
+       */
+      override fun useStageCache(useStageCache: IResolvable) {
+        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty,
+    ) : CdkObject(cdkObject), CanarySettingProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-deploymentid)
        */
-      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+      override fun deploymentId(): String? = unwrap(this).getDeploymentId()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-percenttraffic)
        */
-      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-stagevariableoverrides)
+       */
+      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-usestagecache)
+       */
+      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MutualTlsAuthenticationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CanarySettingProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty):
-          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MutualTlsAuthenticationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty):
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty = (wrapped as
+      internal fun unwrap(wrapped: CanarySettingProperty):
+          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * CorsConfigurationProperty corsConfigurationProperty = CorsConfigurationProperty.builder()
+   * .allowOrigin("allowOrigin")
+   * // the properties below are optional
+   * .allowCredentials(false)
+   * .allowHeaders("allowHeaders")
+   * .allowMethods("allowMethods")
+   * .maxAge("maxAge")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html)
+   */
+  public interface CorsConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowcredentials)
+     */
+    public fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowheaders)
+     */
+    public fun allowHeaders(): String? = unwrap(this).getAllowHeaders()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowmethods)
+     */
+    public fun allowMethods(): String? = unwrap(this).getAllowMethods()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-alloworigin)
+     */
+    public fun allowOrigin(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-maxage)
+     */
+    public fun maxAge(): String? = unwrap(this).getMaxAge()
+
+    /**
+     * A builder for [CorsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowCredentials the value to be set.
+       */
+      public fun allowCredentials(allowCredentials: Boolean)
+
+      /**
+       * @param allowCredentials the value to be set.
+       */
+      public fun allowCredentials(allowCredentials: IResolvable)
+
+      /**
+       * @param allowHeaders the value to be set.
+       */
+      public fun allowHeaders(allowHeaders: String)
+
+      /**
+       * @param allowMethods the value to be set.
+       */
+      public fun allowMethods(allowMethods: String)
+
+      /**
+       * @param allowOrigin the value to be set. 
+       */
+      public fun allowOrigin(allowOrigin: String)
+
+      /**
+       * @param maxAge the value to be set.
+       */
+      public fun maxAge(maxAge: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty.builder()
+
+      /**
+       * @param allowCredentials the value to be set.
+       */
+      override fun allowCredentials(allowCredentials: Boolean) {
+        cdkBuilder.allowCredentials(allowCredentials)
+      }
+
+      /**
+       * @param allowCredentials the value to be set.
+       */
+      override fun allowCredentials(allowCredentials: IResolvable) {
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param allowHeaders the value to be set.
+       */
+      override fun allowHeaders(allowHeaders: String) {
+        cdkBuilder.allowHeaders(allowHeaders)
+      }
+
+      /**
+       * @param allowMethods the value to be set.
+       */
+      override fun allowMethods(allowMethods: String) {
+        cdkBuilder.allowMethods(allowMethods)
+      }
+
+      /**
+       * @param allowOrigin the value to be set. 
+       */
+      override fun allowOrigin(allowOrigin: String) {
+        cdkBuilder.allowOrigin(allowOrigin)
+      }
+
+      /**
+       * @param maxAge the value to be set.
+       */
+      override fun maxAge(maxAge: String) {
+        cdkBuilder.maxAge(maxAge)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty,
+    ) : CdkObject(cdkObject), CorsConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowcredentials)
+       */
+      override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowheaders)
+       */
+      override fun allowHeaders(): String? = unwrap(this).getAllowHeaders()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowmethods)
+       */
+      override fun allowMethods(): String? = unwrap(this).getAllowMethods()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-alloworigin)
+       */
+      override fun allowOrigin(): String = unwrap(this).getAllowOrigin()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-maxage)
+       */
+      override fun maxAge(): String? = unwrap(this).getMaxAge()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CorsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty):
+          CorsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CorsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CorsConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
+          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty
     }
   }
 
@@ -1987,8 +2176,7 @@ public open class CfnApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty,
     ) : CdkObject(cdkObject), DomainConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html#cfn-serverless-api-domainconfiguration-basepath)
@@ -2047,6 +2235,404 @@ public open class CfnApi internal constructor(
           software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * EndpointConfigurationProperty endpointConfigurationProperty =
+   * EndpointConfigurationProperty.builder()
+   * .type("type")
+   * .vpcEndpointIds(List.of("vpcEndpointIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html)
+   */
+  public interface EndpointConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
+     */
+    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+
+    /**
+     * A builder for [EndpointConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type the value to be set.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param type the value to be set.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
+        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
+      }
+
+      /**
+       * @param vpcEndpointIds the value to be set.
+       */
+      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
+          vpcEndpointIds(vpcEndpointIds.toList())
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty,
+    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
+       */
+      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty):
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EndpointConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
+   * MutualTlsAuthenticationProperty.builder()
+   * .truststoreUri("truststoreUri")
+   * .truststoreVersion("truststoreVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html)
+   */
+  public interface MutualTlsAuthenticationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+     */
+    public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+     */
+    public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+
+    /**
+     * A builder for [MutualTlsAuthenticationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param truststoreUri the value to be set.
+       */
+      public fun truststoreUri(truststoreUri: String)
+
+      /**
+       * @param truststoreVersion the value to be set.
+       */
+      public fun truststoreVersion(truststoreVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty.builder()
+
+      /**
+       * @param truststoreUri the value to be set.
+       */
+      override fun truststoreUri(truststoreUri: String) {
+        cdkBuilder.truststoreUri(truststoreUri)
+      }
+
+      /**
+       * @param truststoreVersion the value to be set.
+       */
+      override fun truststoreVersion(truststoreVersion: String) {
+        cdkBuilder.truststoreVersion(truststoreVersion)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty,
+    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreuri)
+       */
+      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-mutualtlsauthentication.html#cfn-serverless-api-mutualtlsauthentication-truststoreversion)
+       */
+      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MutualTlsAuthenticationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty):
+          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutualTlsAuthenticationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * Route53ConfigurationProperty route53ConfigurationProperty =
+   * Route53ConfigurationProperty.builder()
+   * .distributedDomainName("distributedDomainName")
+   * .evaluateTargetHealth(false)
+   * .hostedZoneId("hostedZoneId")
+   * .hostedZoneName("hostedZoneName")
+   * .ipV6(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html)
+   */
+  public interface Route53ConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+     */
+    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+     */
+    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+     */
+    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
+     */
+    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
+     */
+    public fun ipV6(): Any? = unwrap(this).getIpV6()
+
+    /**
+     * A builder for [Route53ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      public fun distributedDomainName(distributedDomainName: String)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      public fun hostedZoneId(hostedZoneId: String)
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      public fun hostedZoneName(hostedZoneName: String)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: Boolean)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty.builder()
+
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      override fun distributedDomainName(distributedDomainName: String) {
+        cdkBuilder.distributedDomainName(distributedDomainName)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      override fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+      }
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      override fun hostedZoneName(hostedZoneName: String) {
+        cdkBuilder.hostedZoneName(hostedZoneName)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: Boolean) {
+        cdkBuilder.ipV6(ipV6)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: IResolvable) {
+        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty,
+    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-distributeddomainname)
+       */
+      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-evaluatetargethealth)
+       */
+      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzoneid)
+       */
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-hostedzonename)
+       */
+      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-route53configuration.html#cfn-serverless-api-route53configuration-ipv6)
+       */
+      override fun ipV6(): Any? = unwrap(this).getIpV6()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty):
+          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Route53ConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Route53ConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty
     }
   }
 
@@ -2133,7 +2719,7 @@ public open class CfnApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html#cfn-serverless-api-s3location-bucket)
@@ -2164,596 +2750,6 @@ public open class CfnApi internal constructor(
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Object authorizers;
-   * AuthProperty authProperty = AuthProperty.builder()
-   * .addDefaultAuthorizerToCorsPreflight(false)
-   * .authorizers(authorizers)
-   * .defaultAuthorizer("defaultAuthorizer")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html)
-   */
-  public interface AuthProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-adddefaultauthorizertocorspreflight)
-     */
-    public fun addDefaultAuthorizerToCorsPreflight(): Any? =
-        unwrap(this).getAddDefaultAuthorizerToCorsPreflight()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-authorizers)
-     */
-    public fun authorizers(): Any? = unwrap(this).getAuthorizers()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-defaultauthorizer)
-     */
-    public fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
-
-    /**
-     * A builder for [AuthProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
-       */
-      public fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: Boolean)
-
-      /**
-       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
-       */
-      public
-          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: IResolvable)
-
-      /**
-       * @param authorizers the value to be set.
-       */
-      public fun authorizers(authorizers: Any)
-
-      /**
-       * @param defaultAuthorizer the value to be set.
-       */
-      public fun defaultAuthorizer(defaultAuthorizer: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.sam.CfnApi.AuthProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.AuthProperty.builder()
-
-      /**
-       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
-       */
-      override
-          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: Boolean) {
-        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight)
-      }
-
-      /**
-       * @param addDefaultAuthorizerToCorsPreflight the value to be set.
-       */
-      override
-          fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: IResolvable) {
-        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param authorizers the value to be set.
-       */
-      override fun authorizers(authorizers: Any) {
-        cdkBuilder.authorizers(authorizers)
-      }
-
-      /**
-       * @param defaultAuthorizer the value to be set.
-       */
-      override fun defaultAuthorizer(defaultAuthorizer: String) {
-        cdkBuilder.defaultAuthorizer(defaultAuthorizer)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.AuthProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.AuthProperty,
-    ) : CdkObject(cdkObject), AuthProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-adddefaultauthorizertocorspreflight)
-       */
-      override fun addDefaultAuthorizerToCorsPreflight(): Any? =
-          unwrap(this).getAddDefaultAuthorizerToCorsPreflight()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-authorizers)
-       */
-      override fun authorizers(): Any? = unwrap(this).getAuthorizers()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html#cfn-serverless-api-auth-defaultauthorizer)
-       */
-      override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuthProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.AuthProperty):
-          AuthProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthProperty):
-          software.amazon.awscdk.services.sam.CfnApi.AuthProperty = (wrapped as CdkObject).cdkObject
-          as software.amazon.awscdk.services.sam.CfnApi.AuthProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * EndpointConfigurationProperty endpointConfigurationProperty =
-   * EndpointConfigurationProperty.builder()
-   * .type("type")
-   * .vpcEndpointIds(List.of("vpcEndpointIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html)
-   */
-  public interface EndpointConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
-     */
-    public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-
-    /**
-     * A builder for [EndpointConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type the value to be set.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty.builder()
-
-      /**
-       * @param type the value to be set.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
-        cdkBuilder.vpcEndpointIds(vpcEndpointIds)
-      }
-
-      /**
-       * @param vpcEndpointIds the value to be set.
-       */
-      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
-          vpcEndpointIds(vpcEndpointIds.toList())
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html#cfn-serverless-api-endpointconfiguration-vpcendpointids)
-       */
-      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EndpointConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EndpointConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EndpointConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
-   * .deploymentId("deploymentId")
-   * .percentTraffic(123)
-   * .stageVariableOverrides(Map.of(
-   * "stageVariableOverridesKey", "stageVariableOverrides"))
-   * .useStageCache(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html)
-   */
-  public interface CanarySettingProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-deploymentid)
-     */
-    public fun deploymentId(): String? = unwrap(this).getDeploymentId()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-percenttraffic)
-     */
-    public fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-stagevariableoverrides)
-     */
-    public fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-usestagecache)
-     */
-    public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-
-    /**
-     * A builder for [CanarySettingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deploymentId the value to be set.
-       */
-      public fun deploymentId(deploymentId: String)
-
-      /**
-       * @param percentTraffic the value to be set.
-       */
-      public fun percentTraffic(percentTraffic: Number)
-
-      /**
-       * @param stageVariableOverrides the value to be set.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
-
-      /**
-       * @param stageVariableOverrides the value to be set.
-       */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
-
-      /**
-       * @param useStageCache the value to be set.
-       */
-      public fun useStageCache(useStageCache: Boolean)
-
-      /**
-       * @param useStageCache the value to be set.
-       */
-      public fun useStageCache(useStageCache: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty.builder()
-
-      /**
-       * @param deploymentId the value to be set.
-       */
-      override fun deploymentId(deploymentId: String) {
-        cdkBuilder.deploymentId(deploymentId)
-      }
-
-      /**
-       * @param percentTraffic the value to be set.
-       */
-      override fun percentTraffic(percentTraffic: Number) {
-        cdkBuilder.percentTraffic(percentTraffic)
-      }
-
-      /**
-       * @param stageVariableOverrides the value to be set.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param stageVariableOverrides the value to be set.
-       */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
-      }
-
-      /**
-       * @param useStageCache the value to be set.
-       */
-      override fun useStageCache(useStageCache: Boolean) {
-        cdkBuilder.useStageCache(useStageCache)
-      }
-
-      /**
-       * @param useStageCache the value to be set.
-       */
-      override fun useStageCache(useStageCache: IResolvable) {
-        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty,
-    ) : CdkObject(cdkObject), CanarySettingProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-deploymentid)
-       */
-      override fun deploymentId(): String? = unwrap(this).getDeploymentId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-percenttraffic)
-       */
-      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-stagevariableoverrides)
-       */
-      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html#cfn-serverless-api-canarysetting-usestagecache)
-       */
-      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CanarySettingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty):
-          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CanarySettingProperty):
-          software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * CorsConfigurationProperty corsConfigurationProperty = CorsConfigurationProperty.builder()
-   * .allowOrigin("allowOrigin")
-   * // the properties below are optional
-   * .allowCredentials(false)
-   * .allowHeaders("allowHeaders")
-   * .allowMethods("allowMethods")
-   * .maxAge("maxAge")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html)
-   */
-  public interface CorsConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowcredentials)
-     */
-    public fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowheaders)
-     */
-    public fun allowHeaders(): String? = unwrap(this).getAllowHeaders()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowmethods)
-     */
-    public fun allowMethods(): String? = unwrap(this).getAllowMethods()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-alloworigin)
-     */
-    public fun allowOrigin(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-maxage)
-     */
-    public fun maxAge(): String? = unwrap(this).getMaxAge()
-
-    /**
-     * A builder for [CorsConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowCredentials the value to be set.
-       */
-      public fun allowCredentials(allowCredentials: Boolean)
-
-      /**
-       * @param allowCredentials the value to be set.
-       */
-      public fun allowCredentials(allowCredentials: IResolvable)
-
-      /**
-       * @param allowHeaders the value to be set.
-       */
-      public fun allowHeaders(allowHeaders: String)
-
-      /**
-       * @param allowMethods the value to be set.
-       */
-      public fun allowMethods(allowMethods: String)
-
-      /**
-       * @param allowOrigin the value to be set. 
-       */
-      public fun allowOrigin(allowOrigin: String)
-
-      /**
-       * @param maxAge the value to be set.
-       */
-      public fun maxAge(maxAge: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty.builder()
-
-      /**
-       * @param allowCredentials the value to be set.
-       */
-      override fun allowCredentials(allowCredentials: Boolean) {
-        cdkBuilder.allowCredentials(allowCredentials)
-      }
-
-      /**
-       * @param allowCredentials the value to be set.
-       */
-      override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param allowHeaders the value to be set.
-       */
-      override fun allowHeaders(allowHeaders: String) {
-        cdkBuilder.allowHeaders(allowHeaders)
-      }
-
-      /**
-       * @param allowMethods the value to be set.
-       */
-      override fun allowMethods(allowMethods: String) {
-        cdkBuilder.allowMethods(allowMethods)
-      }
-
-      /**
-       * @param allowOrigin the value to be set. 
-       */
-      override fun allowOrigin(allowOrigin: String) {
-        cdkBuilder.allowOrigin(allowOrigin)
-      }
-
-      /**
-       * @param maxAge the value to be set.
-       */
-      override fun maxAge(maxAge: String) {
-        cdkBuilder.maxAge(maxAge)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty,
-    ) : CdkObject(cdkObject), CorsConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowcredentials)
-       */
-      override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowheaders)
-       */
-      override fun allowHeaders(): String? = unwrap(this).getAllowHeaders()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-allowmethods)
-       */
-      override fun allowMethods(): String? = unwrap(this).getAllowMethods()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-alloworigin)
-       */
-      override fun allowOrigin(): String = unwrap(this).getAllowOrigin()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-corsconfiguration.html#cfn-serverless-api-corsconfiguration-maxage)
-       */
-      override fun maxAge(): String? = unwrap(this).getMaxAge()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CorsConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty):
-          CorsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CorsConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CorsConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty
     }
   }
 }

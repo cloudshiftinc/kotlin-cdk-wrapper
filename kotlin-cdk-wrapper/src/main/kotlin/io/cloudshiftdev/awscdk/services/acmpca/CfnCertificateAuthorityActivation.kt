@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html)
  */
-public open class CfnCertificateAuthorityActivation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation,
+public open class CfnCertificateAuthorityActivation(
+  cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -238,5 +237,6 @@ public open class CfnCertificateAuthorityActivation internal constructor(
 
     internal fun unwrap(wrapped: CfnCertificateAuthorityActivation):
         software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation = wrapped.cdkObject
+        as software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation
   }
 }

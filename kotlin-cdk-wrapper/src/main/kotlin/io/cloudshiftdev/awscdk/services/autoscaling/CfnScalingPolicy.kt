@@ -174,8 +174,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
  */
-public open class CfnScalingPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy,
+public open class CfnScalingPolicy(
+  cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1025,7 +1025,1297 @@ public open class CfnScalingPolicy internal constructor(
         CfnScalingPolicy = CfnScalingPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalingPolicy):
-        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
+  }
+
+  /**
+   * Contains customized metric specification information for a target tracking scaling policy for
+   * Amazon EC2 Auto Scaling.
+   *
+   * To create your customized metric specification:
+   *
+   * * Add values for each required property from CloudWatch. You can use an existing metric, or a
+   * new metric that you create. To use your own metric, you must first publish the metric to
+   * CloudWatch. For more information, see [Publish Custom
+   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html) in
+   * the *Amazon CloudWatch User Guide* .
+   * * Choose a metric that changes proportionally with capacity. The value of the metric should
+   * increase or decrease in inverse proportion to the number of capacity units. That is, the value of
+   * the metric should decrease when capacity increases.
+   *
+   * For more information about CloudWatch, see [Amazon CloudWatch
+   * Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
+   * .
+   *
+   * `CustomizedMetricSpecification` is a property of the [AWS::AutoScaling::ScalingPolicy
+   * TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * CustomizedMetricSpecificationProperty customizedMetricSpecificationProperty =
+   * CustomizedMetricSpecificationProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * .statistic("statistic")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html)
+   */
+  public interface CustomizedMetricSpecificationProperty {
+    /**
+     * The dimensions of the metric.
+     *
+     * Conditional: If you published your metric with dimensions, you must specify the same
+     * dimensions in your scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The name of the metric.
+     *
+     * To get the exact metric name, namespace, and dimensions, inspect the
+     * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+     * object that is returned by a call to
+     * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+     */
+    public fun metricName(): String
+
+    /**
+     * The namespace of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * The statistic of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+     */
+    public fun statistic(): String
+
+    /**
+     * The unit of the metric.
+     *
+     * For a complete list of the units that CloudWatch supports, see the
+     * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+     * data type in the *Amazon CloudWatch API Reference* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * A builder for [CustomizedMetricSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param metricName The name of the metric. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric. 
+       */
+      public fun namespace(namespace: String)
+
+      /**
+       * @param statistic The statistic of the metric. 
+       */
+      public fun statistic(statistic: String)
+
+      /**
+       * @param unit The unit of the metric.
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.builder()
+
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param dimensions The dimensions of the metric.
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      /**
+       * @param metricName The name of the metric. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace of the metric. 
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      /**
+       * @param statistic The statistic of the metric. 
+       */
+      override fun statistic(statistic: String) {
+        cdkBuilder.statistic(statistic)
+      }
+
+      /**
+       * @param unit The unit of the metric.
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
+    ) : CdkObject(cdkObject), CustomizedMetricSpecificationProperty {
+      /**
+       * The dimensions of the metric.
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * The name of the metric.
+       *
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+       */
+      override fun metricName(): String = unwrap(this).getMetricName()
+
+      /**
+       * The namespace of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+       */
+      override fun namespace(): String = unwrap(this).getNamespace()
+
+      /**
+       * The statistic of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+       */
+      override fun statistic(): String = unwrap(this).getStatistic()
+
+      /**
+       * The unit of the metric.
+       *
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomizedMetricSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty):
+          CustomizedMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizedMetricSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomizedMetricSpecificationProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
+    }
+  }
+
+  /**
+   * The metric data to return.
+   *
+   * Also defines whether this call is returning data for one metric only, or whether it is
+   * performing a math expression on the values of returned metric statistics to create a new time
+   * series. A time series is a series of data points, each of which is associated with a timestamp.
+   *
+   * `MetricDataQuery` is a property of the following property types:
+   *
+   * * [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingCustomizedScalingMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html)
+   * * [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingCustomizedLoadMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html)
+   * * [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingCustomizedCapacityMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedcapacitymetric.html)
+   *
+   * Predictive scaling uses the time series data received from CloudWatch to understand how to
+   * schedule capacity based on your historical workload patterns.
+   *
+   * You can call for a single metric or perform math expressions on multiple metrics. Any
+   * expressions used in a metric specification must eventually return a single time series.
+   *
+   * For more information and examples, see [Advanced predictive scaling policy configurations using
+   * custom
+   * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html)
+   * in the *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MetricDataQueryProperty metricDataQueryProperty = MetricDataQueryProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .expression("expression")
+   * .label("label")
+   * .metricStat(MetricStatProperty.builder()
+   * .metric(MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .stat("stat")
+   * // the properties below are optional
+   * .unit("unit")
+   * .build())
+   * .returnData(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
+   */
+  public interface MetricDataQueryProperty {
+    /**
+     * The math expression to perform on the returned data, if this object is performing a math
+     * expression.
+     *
+     * This expression can use the `Id` of the other metrics to refer to those metrics, and can also
+     * use the `Id` of other expressions to use the result of those expressions.
+     *
+     * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+     * `MetricStat` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * A short name that identifies the object's results in the response.
+     *
+     * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
+     * policy. If you are performing math expressions on this set of data, this name represents that
+     * data and can serve as a variable in the mathematical expression. The valid characters are
+     * letters, numbers, and underscores. The first character must be a lowercase letter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-id)
+     */
+    public fun id(): String
+
+    /**
+     * A human-readable label for this metric or expression.
+     *
+     * This is especially useful if this is a math expression, so that you know what the value
+     * represents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-label)
+     */
+    public fun label(): String? = unwrap(this).getLabel()
+
+    /**
+     * Information about the metric data to return.
+     *
+     * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+     * `MetricStat` , but not both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-metricstat)
+     */
+    public fun metricStat(): Any? = unwrap(this).getMetricStat()
+
+    /**
+     * Indicates whether to return the timestamps and raw data values of this metric.
+     *
+     * If you use any math expressions, specify `true` for this value for only the final math
+     * expression that the metric specification is based on. You must specify `false` for `ReturnData`
+     * for all the other metrics and expressions used in the metric specification.
+     *
+     * If you are only retrieving metrics and not performing any math expressions, do not specify
+     * anything for `ReturnData` . This sets it to its default ( `true` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-returndata)
+     */
+    public fun returnData(): Any? = unwrap(this).getReturnData()
+
+    /**
+     * A builder for [MetricDataQueryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression The math expression to perform on the returned data, if this object is
+       * performing a math expression.
+       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
+       * also use the `Id` of other expressions to use the result of those expressions.
+       *
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param id A short name that identifies the object's results in the response. 
+       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
+       * policy. If you are performing math expressions on this set of data, this name represents that
+       * data and can serve as a variable in the mathematical expression. The valid characters are
+       * letters, numbers, and underscores. The first character must be a lowercase letter.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param label A human-readable label for this metric or expression.
+       * This is especially useful if this is a math expression, so that you know what the value
+       * represents.
+       */
+      public fun label(label: String)
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      public fun metricStat(metricStat: IResolvable)
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      public fun metricStat(metricStat: MetricStatProperty)
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
+      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit)
+
+      /**
+       * @param returnData Indicates whether to return the timestamps and raw data values of this
+       * metric.
+       * If you use any math expressions, specify `true` for this value for only the final math
+       * expression that the metric specification is based on. You must specify `false` for
+       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       *
+       * If you are only retrieving metrics and not performing any math expressions, do not specify
+       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       */
+      public fun returnData(returnData: Boolean)
+
+      /**
+       * @param returnData Indicates whether to return the timestamps and raw data values of this
+       * metric.
+       * If you use any math expressions, specify `true` for this value for only the final math
+       * expression that the metric specification is based on. You must specify `false` for
+       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       *
+       * If you are only retrieving metrics and not performing any math expressions, do not specify
+       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       */
+      public fun returnData(returnData: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty.builder()
+
+      /**
+       * @param expression The math expression to perform on the returned data, if this object is
+       * performing a math expression.
+       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
+       * also use the `Id` of other expressions to use the result of those expressions.
+       *
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param id A short name that identifies the object's results in the response. 
+       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
+       * policy. If you are performing math expressions on this set of data, this name represents that
+       * data and can serve as a variable in the mathematical expression. The valid characters are
+       * letters, numbers, and underscores. The first character must be a lowercase letter.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param label A human-readable label for this metric or expression.
+       * This is especially useful if this is a math expression, so that you know what the value
+       * represents.
+       */
+      override fun label(label: String) {
+        cdkBuilder.label(label)
+      }
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      override fun metricStat(metricStat: IResolvable) {
+        cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      override fun metricStat(metricStat: MetricStatProperty) {
+        cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
+      }
+
+      /**
+       * @param metricStat Information about the metric data to return.
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
+      override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
+          metricStat(MetricStatProperty(metricStat))
+
+      /**
+       * @param returnData Indicates whether to return the timestamps and raw data values of this
+       * metric.
+       * If you use any math expressions, specify `true` for this value for only the final math
+       * expression that the metric specification is based on. You must specify `false` for
+       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       *
+       * If you are only retrieving metrics and not performing any math expressions, do not specify
+       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       */
+      override fun returnData(returnData: Boolean) {
+        cdkBuilder.returnData(returnData)
+      }
+
+      /**
+       * @param returnData Indicates whether to return the timestamps and raw data values of this
+       * metric.
+       * If you use any math expressions, specify `true` for this value for only the final math
+       * expression that the metric specification is based on. You must specify `false` for
+       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       *
+       * If you are only retrieving metrics and not performing any math expressions, do not specify
+       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       */
+      override fun returnData(returnData: IResolvable) {
+        cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty,
+    ) : CdkObject(cdkObject), MetricDataQueryProperty {
+      /**
+       * The math expression to perform on the returned data, if this object is performing a math
+       * expression.
+       *
+       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
+       * also use the `Id` of other expressions to use the result of those expressions.
+       *
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-expression)
+       */
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * A short name that identifies the object's results in the response.
+       *
+       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
+       * policy. If you are performing math expressions on this set of data, this name represents that
+       * data and can serve as a variable in the mathematical expression. The valid characters are
+       * letters, numbers, and underscores. The first character must be a lowercase letter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * A human-readable label for this metric or expression.
+       *
+       * This is especially useful if this is a math expression, so that you know what the value
+       * represents.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-label)
+       */
+      override fun label(): String? = unwrap(this).getLabel()
+
+      /**
+       * Information about the metric data to return.
+       *
+       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
+       * `MetricStat` , but not both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-metricstat)
+       */
+      override fun metricStat(): Any? = unwrap(this).getMetricStat()
+
+      /**
+       * Indicates whether to return the timestamps and raw data values of this metric.
+       *
+       * If you use any math expressions, specify `true` for this value for only the final math
+       * expression that the metric specification is based on. You must specify `false` for
+       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       *
+       * If you are only retrieving metrics and not performing any math expressions, do not specify
+       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-returndata)
+       */
+      override fun returnData(): Any? = unwrap(this).getReturnData()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDataQueryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty):
+          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDataQueryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricDataQueryProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty
+    }
+  }
+
+  /**
+   * `MetricDimension` specifies a name/value pair that is part of the identity of a CloudWatch
+   * metric for the `Dimensions` property of the [AWS::AutoScaling::ScalingPolicy
+   * CustomizedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html)
+   * property type. Duplicate dimensions are not allowed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html)
+   */
+  public interface MetricDimensionProperty {
+    /**
+     * The name of the dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
+     */
+    public fun name(): String
+
+    /**
+     * The value of the dimension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [MetricDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the dimension. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value of the dimension. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty.builder()
+
+      /**
+       * @param name The name of the dimension. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value of the dimension. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty,
+    ) : CdkObject(cdkObject), MetricDimensionProperty {
+      /**
+       * The name of the dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The value of the dimension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty):
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricDimensionProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty
+    }
+  }
+
+  /**
+   * Represents a specific metric.
+   *
+   * `Metric` is a property of the [AWS::AutoScaling::ScalingPolicy
+   * MetricStat](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MetricProperty metricProperty = MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html)
+   */
+  public interface MetricProperty {
+    /**
+     * The dimensions for the metric.
+     *
+     * For the list of available dimensions, see the AWS documentation available from the table in
+     * [AWS services that publish CloudWatch
+     * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+     * in the *Amazon CloudWatch User Guide* .
+     *
+     * Conditional: If you published your metric with dimensions, you must specify the same
+     * dimensions in your scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The name of the metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-metricname)
+     */
+    public fun metricName(): String
+
+    /**
+     * The namespace of the metric.
+     *
+     * For more information, see the table in [AWS services that publish CloudWatch
+     * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+     * in the *Amazon CloudWatch User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-namespace)
+     */
+    public fun namespace(): String
+
+    /**
+     * A builder for [MetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param metricName The name of the metric. 
+       */
+      public fun metricName(metricName: String)
+
+      /**
+       * @param namespace The namespace of the metric. 
+       * For more information, see the table in [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.Builder =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.builder()
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param dimensions The dimensions for the metric.
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      /**
+       * @param metricName The name of the metric. 
+       */
+      override fun metricName(metricName: String) {
+        cdkBuilder.metricName(metricName)
+      }
+
+      /**
+       * @param namespace The namespace of the metric. 
+       * For more information, see the table in [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty,
+    ) : CdkObject(cdkObject), MetricProperty {
+      /**
+       * The dimensions for the metric.
+       *
+       * For the list of available dimensions, see the AWS documentation available from the table in
+       * [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * Conditional: If you published your metric with dimensions, you must specify the same
+       * dimensions in your scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * The name of the metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-metricname)
+       */
+      override fun metricName(): String = unwrap(this).getMetricName()
+
+      /**
+       * The namespace of the metric.
+       *
+       * For more information, see the table in [AWS services that publish CloudWatch
+       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-namespace)
+       */
+      override fun namespace(): String = unwrap(this).getNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty):
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty
+    }
+  }
+
+  /**
+   * `MetricStat` is a property of the [AWS::AutoScaling::ScalingPolicy
+   * MetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
+   * property type.
+   *
+   * This structure defines the CloudWatch metric to return, along with the statistic and unit.
+   *
+   * For more information about the CloudWatch terminology below, see [Amazon CloudWatch
+   * concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
+   * in the *Amazon CloudWatch User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * MetricStatProperty metricStatProperty = MetricStatProperty.builder()
+   * .metric(MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .stat("stat")
+   * // the properties below are optional
+   * .unit("unit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html)
+   */
+  public interface MetricStatProperty {
+    /**
+     * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
+     *
+     * To get the exact metric name, namespace, and dimensions, inspect the
+     * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+     * object that is returned by a call to
+     * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-metric)
+     */
+    public fun metric(): Any
+
+    /**
+     * The statistic to return.
+     *
+     * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
+     * see the table in
+     * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
+     * in the *Amazon CloudWatch User Guide* .
+     *
+     * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-stat)
+     */
+    public fun stat(): String
+
+    /**
+     * The unit to use for the returned data points.
+     *
+     * For a complete list of the units that CloudWatch supports, see the
+     * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+     * data type in the *Amazon CloudWatch API Reference* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-unit)
+     */
+    public fun unit(): String? = unwrap(this).getUnit()
+
+    /**
+     * A builder for [MetricStatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      public fun metric(metric: IResolvable)
+
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      public fun metric(metric: MetricProperty)
+
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
+      public fun metric(metric: MetricProperty.Builder.() -> Unit)
+
+      /**
+       * @param stat The statistic to return. 
+       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
+       * see the table in
+       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
+       */
+      public fun stat(stat: String)
+
+      /**
+       * @param unit The unit to use for the returned data points.
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       */
+      public fun unit(unit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.Builder =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.builder()
+
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      override fun metric(metric: IResolvable) {
+        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      override fun metric(metric: MetricProperty) {
+        cdkBuilder.metric(metric.let(MetricProperty::unwrap))
+      }
+
+      /**
+       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
+       * dimensions. 
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
+      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
+          metric(MetricProperty(metric))
+
+      /**
+       * @param stat The statistic to return. 
+       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
+       * see the table in
+       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
+       */
+      override fun stat(stat: String) {
+        cdkBuilder.stat(stat)
+      }
+
+      /**
+       * @param unit The unit to use for the returned data points.
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty,
+    ) : CdkObject(cdkObject), MetricStatProperty {
+      /**
+       * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
+       *
+       * To get the exact metric name, namespace, and dimensions, inspect the
+       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
+       * object that is returned by a call to
+       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-metric)
+       */
+      override fun metric(): Any = unwrap(this).getMetric()
+
+      /**
+       * The statistic to return.
+       *
+       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
+       * see the table in
+       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
+       * in the *Amazon CloudWatch User Guide* .
+       *
+       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-stat)
+       */
+      override fun stat(): String = unwrap(this).getStat()
+
+      /**
+       * The unit to use for the returned data points.
+       *
+       * For a complete list of the units that CloudWatch supports, see the
+       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
+       * data type in the *Amazon CloudWatch API Reference* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-unit)
+       */
+      override fun unit(): String? = unwrap(this).getUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricStatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty):
+          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricStatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetricStatProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty
+    }
   }
 
   /**
@@ -1199,8 +2489,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredefinedMetricSpecificationProperty {
       /**
        * The metric type. The following predefined metrics are available:.
@@ -1639,8 +2928,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty,
     ) : CdkObject(cdkObject), PredictiveScalingConfigurationProperty {
       /**
        * Defines the behavior that should be applied if the forecast capacity approaches or exceeds
@@ -1732,1487 +3020,6 @@ public open class CfnScalingPolicy internal constructor(
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty
-    }
-  }
-
-  /**
-   * Represents a specific metric.
-   *
-   * `Metric` is a property of the [AWS::AutoScaling::ScalingPolicy
-   * MetricStat](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MetricProperty metricProperty = MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html)
-   */
-  public interface MetricProperty {
-    /**
-     * The dimensions for the metric.
-     *
-     * For the list of available dimensions, see the AWS documentation available from the table in
-     * [AWS services that publish CloudWatch
-     * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-     * in the *Amazon CloudWatch User Guide* .
-     *
-     * Conditional: If you published your metric with dimensions, you must specify the same
-     * dimensions in your scaling policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-dimensions)
-     */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
-
-    /**
-     * The name of the metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-metricname)
-     */
-    public fun metricName(): String
-
-    /**
-     * The namespace of the metric.
-     *
-     * For more information, see the table in [AWS services that publish CloudWatch
-     * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-     * in the *Amazon CloudWatch User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-namespace)
-     */
-    public fun namespace(): String
-
-    /**
-     * A builder for [MetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      public fun dimensions(dimensions: List<Any>)
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      public fun dimensions(vararg dimensions: Any)
-
-      /**
-       * @param metricName The name of the metric. 
-       */
-      public fun metricName(metricName: String)
-
-      /**
-       * @param namespace The namespace of the metric. 
-       * For more information, see the table in [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       */
-      public fun namespace(namespace: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.Builder =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.builder()
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
-      }
-
-      /**
-       * @param dimensions The dimensions for the metric.
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
-
-      /**
-       * @param metricName The name of the metric. 
-       */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
-      }
-
-      /**
-       * @param namespace The namespace of the metric. 
-       * For more information, see the table in [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
-      /**
-       * The dimensions for the metric.
-       *
-       * For the list of available dimensions, see the AWS documentation available from the table in
-       * [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-dimensions)
-       */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
-
-      /**
-       * The name of the metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-metricname)
-       */
-      override fun metricName(): String = unwrap(this).getMetricName()
-
-      /**
-       * The namespace of the metric.
-       *
-       * For more information, see the table in [AWS services that publish CloudWatch
-       * metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metric.html#cfn-autoscaling-scalingpolicy-metric-namespace)
-       */
-      override fun namespace(): String = unwrap(this).getNamespace()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty
-    }
-  }
-
-  /**
-   * Contains load metric information for the `PredefinedLoadMetricSpecification` property of the
-   * [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
-   * property type.
-   *
-   *
-   * Does not apply to policies that use a *metric pair* for the metric specification.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * PredictiveScalingPredefinedLoadMetricProperty predictiveScalingPredefinedLoadMetricProperty =
-   * PredictiveScalingPredefinedLoadMetricProperty.builder()
-   * .predefinedMetricType("predefinedMetricType")
-   * // the properties below are optional
-   * .resourceLabel("resourceLabel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html)
-   */
-  public interface PredictiveScalingPredefinedLoadMetricProperty {
-    /**
-     * The metric type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-predefinedmetrictype)
-     */
-    public fun predefinedMetricType(): String
-
-    /**
-     * A label that uniquely identifies a specific Application Load Balancer target group from which
-     * to determine the request count served by your Auto Scaling group.
-     *
-     * You can't specify a resource label unless the target group is attached to the Auto Scaling
-     * group.
-     *
-     * You create the resource label by appending the final portion of the load balancer ARN and the
-     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
-     * format of the resource label is:
-     *
-     * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-     *
-     * Where:
-     *
-     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
-     * ARN.
-     *
-     * To find the ARN for an Application Load Balancer, use the
-     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-     * API operation. To find the ARN for the target group, use the
-     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-     * API operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-resourcelabel)
-     */
-    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
-
-    /**
-     * A builder for [PredictiveScalingPredefinedLoadMetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param predefinedMetricType The metric type. 
-       */
-      public fun predefinedMetricType(predefinedMetricType: String)
-
-      /**
-       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
-       * target group from which to determine the request count served by your Auto Scaling group.
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       */
-      public fun resourceLabel(resourceLabel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.builder()
-
-      /**
-       * @param predefinedMetricType The metric type. 
-       */
-      override fun predefinedMetricType(predefinedMetricType: String) {
-        cdkBuilder.predefinedMetricType(predefinedMetricType)
-      }
-
-      /**
-       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
-       * target group from which to determine the request count served by your Auto Scaling group.
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       */
-      override fun resourceLabel(resourceLabel: String) {
-        cdkBuilder.resourceLabel(resourceLabel)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty,
-    ) : CdkObject(cdkObject), PredictiveScalingPredefinedLoadMetricProperty {
-      /**
-       * The metric type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-predefinedmetrictype)
-       */
-      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
-
-      /**
-       * A label that uniquely identifies a specific Application Load Balancer target group from
-       * which to determine the request count served by your Auto Scaling group.
-       *
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-resourcelabel)
-       */
-      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PredictiveScalingPredefinedLoadMetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty):
-          PredictiveScalingPredefinedLoadMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PredictiveScalingPredefinedLoadMetricProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PredictiveScalingPredefinedLoadMetricProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
-    }
-  }
-
-  /**
-   * `TargetTrackingConfiguration` is a property of the
-   * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
-   * resource that specifies a target tracking scaling policy configuration for Amazon EC2 Auto
-   * Scaling.
-   *
-   * For more information about scaling policies, see [Dynamic
-   * scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in
-   * the *Amazon EC2 Auto Scaling User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
-   * TargetTrackingConfigurationProperty.builder()
-   * .targetValue(123)
-   * // the properties below are optional
-   * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * .statistic("statistic")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .unit("unit")
-   * .build())
-   * .disableScaleIn(false)
-   * .predefinedMetricSpecification(PredefinedMetricSpecificationProperty.builder()
-   * .predefinedMetricType("predefinedMetricType")
-   * // the properties below are optional
-   * .resourceLabel("resourceLabel")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
-   */
-  public interface TargetTrackingConfigurationProperty {
-    /**
-     * A customized metric.
-     *
-     * You must specify either a predefined metric or a customized metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
-     */
-    public fun customizedMetricSpecification(): Any? =
-        unwrap(this).getCustomizedMetricSpecification()
-
-    /**
-     * Indicates whether scaling in by the target tracking scaling policy is disabled.
-     *
-     * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-     * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances from
-     * the Auto Scaling group. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
-     */
-    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-    /**
-     * A predefined metric.
-     *
-     * You must specify either a predefined metric or a customized metric.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
-     */
-    public fun predefinedMetricSpecification(): Any? =
-        unwrap(this).getPredefinedMetricSpecification()
-
-    /**
-     * The target value for the metric.
-     *
-     *
-     * Some metrics are based on a count instead of a percentage, such as the request count for an
-     * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
-     * specifies one of these metrics, specify the target utilization as the optimal average request or
-     * message count per instance during any one-minute interval.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
-     */
-    public fun targetValue(): Number
-
-    /**
-     * A builder for [TargetTrackingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable)
-
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty)
-
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
-      public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
-       * disabled.
-       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
-       * from the Auto Scaling group. The default is `false` .
-       */
-      public fun disableScaleIn(disableScaleIn: Boolean)
-
-      /**
-       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
-       * disabled.
-       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
-       * from the Auto Scaling group. The default is `false` .
-       */
-      public fun disableScaleIn(disableScaleIn: IResolvable)
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable)
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty)
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
-      public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit)
-
-      /**
-       * @param targetValue The target value for the metric. 
-       *
-       * Some metrics are based on a count instead of a percentage, such as the request count for an
-       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
-       * specifies one of these metrics, specify the target utilization as the optimal average request
-       * or message count per instance during any one-minute interval.
-       */
-      public fun targetValue(targetValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty.builder()
-
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      override fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
-        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      override
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
-        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param customizedMetricSpecification A customized metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
-      override
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          customizedMetricSpecification(CustomizedMetricSpecificationProperty(customizedMetricSpecification))
-
-      /**
-       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
-       * disabled.
-       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
-       * from the Auto Scaling group. The default is `false` .
-       */
-      override fun disableScaleIn(disableScaleIn: Boolean) {
-        cdkBuilder.disableScaleIn(disableScaleIn)
-      }
-
-      /**
-       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
-       * disabled.
-       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
-       * from the Auto Scaling group. The default is `false` .
-       */
-      override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      override fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
-        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      override
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
-        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty::unwrap))
-      }
-
-      /**
-       * @param predefinedMetricSpecification A predefined metric.
-       * You must specify either a predefined metric or a customized metric.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
-      override
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit):
-          Unit =
-          predefinedMetricSpecification(PredefinedMetricSpecificationProperty(predefinedMetricSpecification))
-
-      /**
-       * @param targetValue The target value for the metric. 
-       *
-       * Some metrics are based on a count instead of a percentage, such as the request count for an
-       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
-       * specifies one of these metrics, specify the target utilization as the optimal average request
-       * or message count per instance during any one-minute interval.
-       */
-      override fun targetValue(targetValue: Number) {
-        cdkBuilder.targetValue(targetValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
-      /**
-       * A customized metric.
-       *
-       * You must specify either a predefined metric or a customized metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
-       */
-      override fun customizedMetricSpecification(): Any? =
-          unwrap(this).getCustomizedMetricSpecification()
-
-      /**
-       * Indicates whether scaling in by the target tracking scaling policy is disabled.
-       *
-       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
-       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
-       * from the Auto Scaling group. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
-       */
-      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
-
-      /**
-       * A predefined metric.
-       *
-       * You must specify either a predefined metric or a customized metric.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
-       */
-      override fun predefinedMetricSpecification(): Any? =
-          unwrap(this).getPredefinedMetricSpecification()
-
-      /**
-       * The target value for the metric.
-       *
-       *
-       * Some metrics are based on a count instead of a percentage, such as the request count for an
-       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
-       * specifies one of these metrics, specify the target utilization as the optimal average request
-       * or message count per instance during any one-minute interval.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
-       */
-      override fun targetValue(): Number = unwrap(this).getTargetValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TargetTrackingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
-    }
-  }
-
-  /**
-   * `MetricStat` is a property of the [AWS::AutoScaling::ScalingPolicy
-   * MetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
-   * property type.
-   *
-   * This structure defines the CloudWatch metric to return, along with the statistic and unit.
-   *
-   * For more information about the CloudWatch terminology below, see [Amazon CloudWatch
-   * concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
-   * in the *Amazon CloudWatch User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MetricStatProperty metricStatProperty = MetricStatProperty.builder()
-   * .metric(MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .stat("stat")
-   * // the properties below are optional
-   * .unit("unit")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html)
-   */
-  public interface MetricStatProperty {
-    /**
-     * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
-     *
-     * To get the exact metric name, namespace, and dimensions, inspect the
-     * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-     * object that is returned by a call to
-     * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-metric)
-     */
-    public fun metric(): Any
-
-    /**
-     * The statistic to return.
-     *
-     * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
-     * see the table in
-     * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
-     * in the *Amazon CloudWatch User Guide* .
-     *
-     * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-stat)
-     */
-    public fun stat(): String
-
-    /**
-     * The unit to use for the returned data points.
-     *
-     * For a complete list of the units that CloudWatch supports, see the
-     * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-     * data type in the *Amazon CloudWatch API Reference* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * A builder for [MetricStatProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      public fun metric(metric: IResolvable)
-
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      public fun metric(metric: MetricProperty)
-
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
-      public fun metric(metric: MetricProperty.Builder.() -> Unit)
-
-      /**
-       * @param stat The statistic to return. 
-       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
-       * see the table in
-       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
-       */
-      public fun stat(stat: String)
-
-      /**
-       * @param unit The unit to use for the returned data points.
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
-       */
-      public fun unit(unit: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.Builder =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.builder()
-
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      override fun metric(metric: MetricProperty) {
-        cdkBuilder.metric(metric.let(MetricProperty::unwrap))
-      }
-
-      /**
-       * @param metric The CloudWatch metric to return, including the metric name, namespace, and
-       * dimensions. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
-      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
-          metric(MetricProperty(metric))
-
-      /**
-       * @param stat The statistic to return. 
-       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
-       * see the table in
-       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
-       */
-      override fun stat(stat: String) {
-        cdkBuilder.stat(stat)
-      }
-
-      /**
-       * @param unit The unit to use for the returned data points.
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
-       */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty,
-    ) : CdkObject(cdkObject), MetricStatProperty {
-      /**
-       * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
-       *
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-metric)
-       */
-      override fun metric(): Any = unwrap(this).getMetric()
-
-      /**
-       * The statistic to return.
-       *
-       * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
-       * see the table in
-       * [Statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic)
-       * in the *Amazon CloudWatch User Guide* .
-       *
-       * The most commonly used metrics for predictive scaling are `Average` and `Sum` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-stat)
-       */
-      override fun stat(): String = unwrap(this).getStat()
-
-      /**
-       * The unit to use for the returned data points.
-       *
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html#cfn-autoscaling-scalingpolicy-metricstat-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricStatProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty):
-          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricStatProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricStatProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty
-    }
-  }
-
-  /**
-   * `StepAdjustment` specifies a step adjustment for the `StepAdjustments` property of the
-   * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
-   * resource.
-   *
-   * For the following examples, suppose that you have an alarm with a breach threshold of 50:
-   *
-   * * To trigger a step adjustment when the metric is greater than or equal to 50 and less than 60,
-   * specify a lower bound of 0 and an upper bound of 10.
-   * * To trigger a step adjustment when the metric is greater than 40 and less than or equal to 50,
-   * specify a lower bound of -10 and an upper bound of 0.
-   *
-   * There are a few rules for the step adjustments for your step policy:
-   *
-   * * The ranges of your step adjustments can't overlap or have a gap.
-   * * At most one step adjustment can have a null lower bound. If one step adjustment has a
-   * negative lower bound, then there must be a step adjustment with a null lower bound.
-   * * At most one step adjustment can have a null upper bound. If one step adjustment has a
-   * positive upper bound, then there must be a step adjustment with a null upper bound.
-   * * The upper and lower bound can't be null in the same step adjustment.
-   *
-   * For more information, see [Step
-   * adjustments](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-steps)
-   * in the *Amazon EC2 Auto Scaling User Guide* .
-   *
-   * You can find a sample template snippet in the
-   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html#aws-resource-autoscaling-scalingpolicy--examples)
-   * section of the `AWS::AutoScaling::ScalingPolicy` resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * StepAdjustmentProperty stepAdjustmentProperty = StepAdjustmentProperty.builder()
-   * .scalingAdjustment(123)
-   * // the properties below are optional
-   * .metricIntervalLowerBound(123)
-   * .metricIntervalUpperBound(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html)
-   */
-  public interface StepAdjustmentProperty {
-    /**
-     * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
-     *
-     * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
-     * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is exclusive
-     * (the metric must be greater than the threshold plus the lower bound). A null value indicates
-     * negative infinity.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
-     */
-    public fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
-
-    /**
-     * The upper bound for the difference between the alarm threshold and the CloudWatch metric.
-     *
-     * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
-     * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
-     * must be less than or equal to the threshold plus the upper bound). A null value indicates
-     * positive infinity.
-     *
-     * The upper bound must be greater than the lower bound.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
-     */
-    public fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
-
-    /**
-     * The amount by which to scale, based on the specified adjustment type.
-     *
-     * A positive value adds to the current capacity while a negative number removes from the
-     * current capacity. For exact capacity, you must specify a non-negative value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
-     */
-    public fun scalingAdjustment(): Number
-
-    /**
-     * A builder for [StepAdjustmentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricIntervalLowerBound The lower bound for the difference between the alarm
-       * threshold and the CloudWatch metric.
-       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
-       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
-       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
-       * indicates negative infinity.
-       */
-      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number)
-
-      /**
-       * @param metricIntervalUpperBound The upper bound for the difference between the alarm
-       * threshold and the CloudWatch metric.
-       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
-       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
-       * must be less than or equal to the threshold plus the upper bound). A null value indicates
-       * positive infinity.
-       *
-       * The upper bound must be greater than the lower bound.
-       */
-      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number)
-
-      /**
-       * @param scalingAdjustment The amount by which to scale, based on the specified adjustment
-       * type. 
-       * A positive value adds to the current capacity while a negative number removes from the
-       * current capacity. For exact capacity, you must specify a non-negative value.
-       */
-      public fun scalingAdjustment(scalingAdjustment: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty.builder()
-
-      /**
-       * @param metricIntervalLowerBound The lower bound for the difference between the alarm
-       * threshold and the CloudWatch metric.
-       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
-       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
-       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
-       * indicates negative infinity.
-       */
-      override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
-        cdkBuilder.metricIntervalLowerBound(metricIntervalLowerBound)
-      }
-
-      /**
-       * @param metricIntervalUpperBound The upper bound for the difference between the alarm
-       * threshold and the CloudWatch metric.
-       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
-       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
-       * must be less than or equal to the threshold plus the upper bound). A null value indicates
-       * positive infinity.
-       *
-       * The upper bound must be greater than the lower bound.
-       */
-      override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
-        cdkBuilder.metricIntervalUpperBound(metricIntervalUpperBound)
-      }
-
-      /**
-       * @param scalingAdjustment The amount by which to scale, based on the specified adjustment
-       * type. 
-       * A positive value adds to the current capacity while a negative number removes from the
-       * current capacity. For exact capacity, you must specify a non-negative value.
-       */
-      override fun scalingAdjustment(scalingAdjustment: Number) {
-        cdkBuilder.scalingAdjustment(scalingAdjustment)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty,
-    ) : CdkObject(cdkObject), StepAdjustmentProperty {
-      /**
-       * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
-       *
-       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
-       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
-       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
-       * indicates negative infinity.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
-       */
-      override fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
-
-      /**
-       * The upper bound for the difference between the alarm threshold and the CloudWatch metric.
-       *
-       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
-       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
-       * must be less than or equal to the threshold plus the upper bound). A null value indicates
-       * positive infinity.
-       *
-       * The upper bound must be greater than the lower bound.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
-       */
-      override fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
-
-      /**
-       * The amount by which to scale, based on the specified adjustment type.
-       *
-       * A positive value adds to the current capacity while a negative number removes from the
-       * current capacity. For exact capacity, you must specify a non-negative value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
-       */
-      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): StepAdjustmentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty):
-          StepAdjustmentProperty = CdkObjectWrappers.wrap(cdkObject) as? StepAdjustmentProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StepAdjustmentProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty
-    }
-  }
-
-  /**
-   * Contains scaling metric information for the `PredefinedScalingMetricSpecification` property of
-   * the [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
-   * property type.
-   *
-   *
-   * Does not apply to policies that use a *metric pair* for the metric specification.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * PredictiveScalingPredefinedScalingMetricProperty
-   * predictiveScalingPredefinedScalingMetricProperty =
-   * PredictiveScalingPredefinedScalingMetricProperty.builder()
-   * .predefinedMetricType("predefinedMetricType")
-   * // the properties below are optional
-   * .resourceLabel("resourceLabel")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html)
-   */
-  public interface PredictiveScalingPredefinedScalingMetricProperty {
-    /**
-     * The metric type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-predefinedmetrictype)
-     */
-    public fun predefinedMetricType(): String
-
-    /**
-     * A label that uniquely identifies a specific Application Load Balancer target group from which
-     * to determine the average request count served by your Auto Scaling group.
-     *
-     * You can't specify a resource label unless the target group is attached to the Auto Scaling
-     * group.
-     *
-     * You create the resource label by appending the final portion of the load balancer ARN and the
-     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
-     * format of the resource label is:
-     *
-     * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-     *
-     * Where:
-     *
-     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
-     * ARN.
-     *
-     * To find the ARN for an Application Load Balancer, use the
-     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-     * API operation. To find the ARN for the target group, use the
-     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-     * API operation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-resourcelabel)
-     */
-    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
-
-    /**
-     * A builder for [PredictiveScalingPredefinedScalingMetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param predefinedMetricType The metric type. 
-       */
-      public fun predefinedMetricType(predefinedMetricType: String)
-
-      /**
-       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
-       * target group from which to determine the average request count served by your Auto Scaling
-       * group.
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       */
-      public fun resourceLabel(resourceLabel: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty.builder()
-
-      /**
-       * @param predefinedMetricType The metric type. 
-       */
-      override fun predefinedMetricType(predefinedMetricType: String) {
-        cdkBuilder.predefinedMetricType(predefinedMetricType)
-      }
-
-      /**
-       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
-       * target group from which to determine the average request count served by your Auto Scaling
-       * group.
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       */
-      override fun resourceLabel(resourceLabel: String) {
-        cdkBuilder.resourceLabel(resourceLabel)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty,
-    ) : CdkObject(cdkObject), PredictiveScalingPredefinedScalingMetricProperty {
-      /**
-       * The metric type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-predefinedmetrictype)
-       */
-      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
-
-      /**
-       * A label that uniquely identifies a specific Application Load Balancer target group from
-       * which to determine the average request count served by your Auto Scaling group.
-       *
-       * You can't specify a resource label unless the target group is attached to the Auto Scaling
-       * group.
-       *
-       * You create the resource label by appending the final portion of the load balancer ARN and
-       * the final portion of the target group ARN into a single value, separated by a forward slash
-       * (/). The format of the resource label is:
-       *
-       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
-       *
-       * Where:
-       *
-       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
-       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
-       * group ARN.
-       *
-       * To find the ARN for an Application Load Balancer, use the
-       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
-       * API operation. To find the ARN for the target group, use the
-       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
-       * API operation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-resourcelabel)
-       */
-      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PredictiveScalingPredefinedScalingMetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty):
-          PredictiveScalingPredefinedScalingMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PredictiveScalingPredefinedScalingMetricProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PredictiveScalingPredefinedScalingMetricProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
     }
   }
 
@@ -3339,8 +3146,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty,
     ) : CdkObject(cdkObject), PredictiveScalingCustomizedCapacityMetricProperty {
       /**
        * One or more metric data queries to provide the data points for a capacity metric.
@@ -3369,6 +3175,315 @@ public open class CfnScalingPolicy internal constructor(
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty
+    }
+  }
+
+  /**
+   * Contains load metric information for the `CustomizedLoadMetricSpecification` property of the
+   * [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * PredictiveScalingCustomizedLoadMetricProperty predictiveScalingCustomizedLoadMetricProperty =
+   * PredictiveScalingCustomizedLoadMetricProperty.builder()
+   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .expression("expression")
+   * .label("label")
+   * .metricStat(MetricStatProperty.builder()
+   * .metric(MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .stat("stat")
+   * // the properties below are optional
+   * .unit("unit")
+   * .build())
+   * .returnData(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html)
+   */
+  public interface PredictiveScalingCustomizedLoadMetricProperty {
+    /**
+     * One or more metric data queries to provide the data points for a load metric.
+     *
+     * Use multiple metric data queries only if you are performing a math expression on returned
+     * data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric-metricdataqueries)
+     */
+    public fun metricDataQueries(): Any
+
+    /**
+     * A builder for [PredictiveScalingCustomizedLoadMetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(metricDataQueries: IResolvable)
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(vararg metricDataQueries: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.builder()
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
+        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
+        cdkBuilder.metricDataQueries(metricDataQueries)
+      }
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * load metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty,
+    ) : CdkObject(cdkObject), PredictiveScalingCustomizedLoadMetricProperty {
+      /**
+       * One or more metric data queries to provide the data points for a load metric.
+       *
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric-metricdataqueries)
+       */
+      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PredictiveScalingCustomizedLoadMetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty):
+          PredictiveScalingCustomizedLoadMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredictiveScalingCustomizedLoadMetricProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PredictiveScalingCustomizedLoadMetricProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+    }
+  }
+
+  /**
+   * Contains scaling metric information for the `CustomizedScalingMetricSpecification` property of
+   * the [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * PredictiveScalingCustomizedScalingMetricProperty
+   * predictiveScalingCustomizedScalingMetricProperty =
+   * PredictiveScalingCustomizedScalingMetricProperty.builder()
+   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .expression("expression")
+   * .label("label")
+   * .metricStat(MetricStatProperty.builder()
+   * .metric(MetricProperty.builder()
+   * .metricName("metricName")
+   * .namespace("namespace")
+   * // the properties below are optional
+   * .dimensions(List.of(MetricDimensionProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .stat("stat")
+   * // the properties below are optional
+   * .unit("unit")
+   * .build())
+   * .returnData(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html)
+   */
+  public interface PredictiveScalingCustomizedScalingMetricProperty {
+    /**
+     * One or more metric data queries to provide the data points for a scaling metric.
+     *
+     * Use multiple metric data queries only if you are performing a math expression on returned
+     * data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric-metricdataqueries)
+     */
+    public fun metricDataQueries(): Any
+
+    /**
+     * A builder for [PredictiveScalingCustomizedScalingMetricProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(metricDataQueries: IResolvable)
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      public fun metricDataQueries(vararg metricDataQueries: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty.builder()
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
+        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
+        cdkBuilder.metricDataQueries(metricDataQueries)
+      }
+
+      /**
+       * @param metricDataQueries One or more metric data queries to provide the data points for a
+       * scaling metric. 
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       */
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty,
+    ) : CdkObject(cdkObject), PredictiveScalingCustomizedScalingMetricProperty {
+      /**
+       * One or more metric data queries to provide the data points for a scaling metric.
+       *
+       * Use multiple metric data queries only if you are performing a math expression on returned
+       * data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric-metricdataqueries)
+       */
+      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PredictiveScalingCustomizedScalingMetricProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty):
+          PredictiveScalingCustomizedScalingMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredictiveScalingCustomizedScalingMetricProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PredictiveScalingCustomizedScalingMetricProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
     }
   }
 
@@ -3896,8 +4011,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty,
     ) : CdkObject(cdkObject), PredictiveScalingMetricSpecificationProperty {
       /**
        * The customized capacity metric specification.
@@ -3983,10 +4097,14 @@ public open class CfnScalingPolicy internal constructor(
   }
 
   /**
-   * Contains load metric information for the `CustomizedLoadMetricSpecification` property of the
+   * Contains load metric information for the `PredefinedLoadMetricSpecification` property of the
    * [AWS::AutoScaling::ScalingPolicy
    * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
    * property type.
+   *
+   *
+   * Does not apply to policies that use a *metric pair* for the metric specification.
+   *
    *
    * Example:
    *
@@ -3994,146 +4112,192 @@ public open class CfnScalingPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * PredictiveScalingCustomizedLoadMetricProperty predictiveScalingCustomizedLoadMetricProperty =
-   * PredictiveScalingCustomizedLoadMetricProperty.builder()
-   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
-   * .id("id")
+   * PredictiveScalingPredefinedLoadMetricProperty predictiveScalingPredefinedLoadMetricProperty =
+   * PredictiveScalingPredefinedLoadMetricProperty.builder()
+   * .predefinedMetricType("predefinedMetricType")
    * // the properties below are optional
-   * .expression("expression")
-   * .label("label")
-   * .metricStat(MetricStatProperty.builder()
-   * .metric(MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .stat("stat")
-   * // the properties below are optional
-   * .unit("unit")
-   * .build())
-   * .returnData(false)
-   * .build()))
+   * .resourceLabel("resourceLabel")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html)
    */
-  public interface PredictiveScalingCustomizedLoadMetricProperty {
+  public interface PredictiveScalingPredefinedLoadMetricProperty {
     /**
-     * One or more metric data queries to provide the data points for a load metric.
+     * The metric type.
      *
-     * Use multiple metric data queries only if you are performing a math expression on returned
-     * data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric-metricdataqueries)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-predefinedmetrictype)
      */
-    public fun metricDataQueries(): Any
+    public fun predefinedMetricType(): String
 
     /**
-     * A builder for [PredictiveScalingCustomizedLoadMetricProperty]
+     * A label that uniquely identifies a specific Application Load Balancer target group from which
+     * to determine the request count served by your Auto Scaling group.
+     *
+     * You can't specify a resource label unless the target group is attached to the Auto Scaling
+     * group.
+     *
+     * You create the resource label by appending the final portion of the load balancer ARN and the
+     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
+     * format of the resource label is:
+     *
+     * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+     *
+     * Where:
+     *
+     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
+     * ARN.
+     *
+     * To find the ARN for an Application Load Balancer, use the
+     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+     * API operation. To find the ARN for the target group, use the
+     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+     * API operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-resourcelabel)
+     */
+    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+
+    /**
+     * A builder for [PredictiveScalingPredefinedLoadMetricProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
+       * @param predefinedMetricType The metric type. 
        */
-      public fun metricDataQueries(metricDataQueries: IResolvable)
+      public fun predefinedMetricType(predefinedMetricType: String)
 
       /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
+       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
+       * target group from which to determine the request count served by your Auto Scaling group.
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
+       *
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+       *
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
        */
-      public fun metricDataQueries(metricDataQueries: List<Any>)
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      public fun metricDataQueries(vararg metricDataQueries: Any)
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.builder()
 
       /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
+       * @param predefinedMetricType The metric type. 
        */
-      override fun metricDataQueries(metricDataQueries: IResolvable) {
-        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
+      override fun predefinedMetricType(predefinedMetricType: String) {
+        cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
       /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
+       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
+       * target group from which to determine the request count served by your Auto Scaling group.
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
+       *
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+       *
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
        */
-      override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
+      override fun resourceLabel(resourceLabel: String) {
+        cdkBuilder.resourceLabel(resourceLabel)
       }
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * load metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
-          metricDataQueries(metricDataQueries.toList())
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty,
-    ) : CdkObject(cdkObject), PredictiveScalingCustomizedLoadMetricProperty {
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty,
+    ) : CdkObject(cdkObject), PredictiveScalingPredefinedLoadMetricProperty {
       /**
-       * One or more metric data queries to provide the data points for a load metric.
+       * The metric type.
        *
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric-metricdataqueries)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-predefinedmetrictype)
        */
-      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+
+      /**
+       * A label that uniquely identifies a specific Application Load Balancer target group from
+       * which to determine the request count served by your Auto Scaling group.
+       *
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
+       *
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
+       *
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+       *
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric-resourcelabel)
+       */
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          PredictiveScalingCustomizedLoadMetricProperty {
+          PredictiveScalingPredefinedLoadMetricProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty):
-          PredictiveScalingCustomizedLoadMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PredictiveScalingCustomizedLoadMetricProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty):
+          PredictiveScalingPredefinedLoadMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredictiveScalingPredefinedLoadMetricProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PredictiveScalingCustomizedLoadMetricProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+      internal fun unwrap(wrapped: PredictiveScalingPredefinedLoadMetricProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty
     }
   }
 
@@ -4299,8 +4463,7 @@ public open class CfnScalingPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty,
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty,
     ) : CdkObject(cdkObject), PredictiveScalingPredefinedMetricPairProperty {
       /**
        * Indicates which metrics to use.
@@ -4364,31 +4527,14 @@ public open class CfnScalingPolicy internal constructor(
   }
 
   /**
-   * The metric data to return.
+   * Contains scaling metric information for the `PredefinedScalingMetricSpecification` property of
+   * the [AWS::AutoScaling::ScalingPolicy
+   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+   * property type.
    *
-   * Also defines whether this call is returning data for one metric only, or whether it is
-   * performing a math expression on the values of returned metric statistics to create a new time
-   * series. A time series is a series of data points, each of which is associated with a timestamp.
    *
-   * `MetricDataQuery` is a property of the following property types:
+   * Does not apply to policies that use a *metric pair* for the metric specification.
    *
-   * * [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingCustomizedScalingMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html)
-   * * [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingCustomizedLoadMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html)
-   * * [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingCustomizedCapacityMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedcapacitymetric.html)
-   *
-   * Predictive scaling uses the time series data received from CloudWatch to understand how to
-   * schedule capacity based on your historical workload patterns.
-   *
-   * You can call for a single metric or perform math expressions on multiple metrics. Any
-   * expressions used in a metric specification must eventually return a single time series.
-   *
-   * For more information and examples, see [Advanced predictive scaling policy configurations using
-   * custom
-   * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html)
-   * in the *Amazon EC2 Auto Scaling User Guide* .
    *
    * Example:
    *
@@ -4396,377 +4542,226 @@ public open class CfnScalingPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MetricDataQueryProperty metricDataQueryProperty = MetricDataQueryProperty.builder()
-   * .id("id")
+   * PredictiveScalingPredefinedScalingMetricProperty
+   * predictiveScalingPredefinedScalingMetricProperty =
+   * PredictiveScalingPredefinedScalingMetricProperty.builder()
+   * .predefinedMetricType("predefinedMetricType")
    * // the properties below are optional
-   * .expression("expression")
-   * .label("label")
-   * .metricStat(MetricStatProperty.builder()
-   * .metric(MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .stat("stat")
-   * // the properties below are optional
-   * .unit("unit")
-   * .build())
-   * .returnData(false)
+   * .resourceLabel("resourceLabel")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html)
    */
-  public interface MetricDataQueryProperty {
+  public interface PredictiveScalingPredefinedScalingMetricProperty {
     /**
-     * The math expression to perform on the returned data, if this object is performing a math
-     * expression.
+     * The metric type.
      *
-     * This expression can use the `Id` of the other metrics to refer to those metrics, and can also
-     * use the `Id` of other expressions to use the result of those expressions.
-     *
-     * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-     * `MetricStat` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-expression)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-predefinedmetrictype)
      */
-    public fun expression(): String? = unwrap(this).getExpression()
+    public fun predefinedMetricType(): String
 
     /**
-     * A short name that identifies the object's results in the response.
+     * A label that uniquely identifies a specific Application Load Balancer target group from which
+     * to determine the average request count served by your Auto Scaling group.
      *
-     * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
-     * policy. If you are performing math expressions on this set of data, this name represents that
-     * data and can serve as a variable in the mathematical expression. The valid characters are
-     * letters, numbers, and underscores. The first character must be a lowercase letter.
+     * You can't specify a resource label unless the target group is attached to the Auto Scaling
+     * group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-id)
+     * You create the resource label by appending the final portion of the load balancer ARN and the
+     * final portion of the target group ARN into a single value, separated by a forward slash (/). The
+     * format of the resource label is:
+     *
+     * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+     *
+     * Where:
+     *
+     * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+     * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target group
+     * ARN.
+     *
+     * To find the ARN for an Application Load Balancer, use the
+     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+     * API operation. To find the ARN for the target group, use the
+     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+     * API operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-resourcelabel)
      */
-    public fun id(): String
+    public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     /**
-     * A human-readable label for this metric or expression.
-     *
-     * This is especially useful if this is a math expression, so that you know what the value
-     * represents.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-label)
-     */
-    public fun label(): String? = unwrap(this).getLabel()
-
-    /**
-     * Information about the metric data to return.
-     *
-     * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-     * `MetricStat` , but not both.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-metricstat)
-     */
-    public fun metricStat(): Any? = unwrap(this).getMetricStat()
-
-    /**
-     * Indicates whether to return the timestamps and raw data values of this metric.
-     *
-     * If you use any math expressions, specify `true` for this value for only the final math
-     * expression that the metric specification is based on. You must specify `false` for `ReturnData`
-     * for all the other metrics and expressions used in the metric specification.
-     *
-     * If you are only retrieving metrics and not performing any math expressions, do not specify
-     * anything for `ReturnData` . This sets it to its default ( `true` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-returndata)
-     */
-    public fun returnData(): Any? = unwrap(this).getReturnData()
-
-    /**
-     * A builder for [MetricDataQueryProperty]
+     * A builder for [PredictiveScalingPredefinedScalingMetricProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param expression The math expression to perform on the returned data, if this object is
-       * performing a math expression.
-       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
-       * also use the `Id` of other expressions to use the result of those expressions.
+       * @param predefinedMetricType The metric type. 
+       */
+      public fun predefinedMetricType(predefinedMetricType: String)
+
+      /**
+       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
+       * target group from which to determine the average request count served by your Auto Scaling
+       * group.
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
        *
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      public fun expression(expression: String)
-
-      /**
-       * @param id A short name that identifies the object's results in the response. 
-       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
-       * policy. If you are performing math expressions on this set of data, this name represents that
-       * data and can serve as a variable in the mathematical expression. The valid characters are
-       * letters, numbers, and underscores. The first character must be a lowercase letter.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param label A human-readable label for this metric or expression.
-       * This is especially useful if this is a math expression, so that you know what the value
-       * represents.
-       */
-      public fun label(label: String)
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      public fun metricStat(metricStat: IResolvable)
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      public fun metricStat(metricStat: MetricStatProperty)
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
-      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit)
-
-      /**
-       * @param returnData Indicates whether to return the timestamps and raw data values of this
-       * metric.
-       * If you use any math expressions, specify `true` for this value for only the final math
-       * expression that the metric specification is based on. You must specify `false` for
-       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
        *
-       * If you are only retrieving metrics and not performing any math expressions, do not specify
-       * anything for `ReturnData` . This sets it to its default ( `true` ).
-       */
-      public fun returnData(returnData: Boolean)
-
-      /**
-       * @param returnData Indicates whether to return the timestamps and raw data values of this
-       * metric.
-       * If you use any math expressions, specify `true` for this value for only the final math
-       * expression that the metric specification is based on. You must specify `false` for
-       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
        *
-       * If you are only retrieving metrics and not performing any math expressions, do not specify
-       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
        */
-      public fun returnData(returnData: IResolvable)
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty.builder()
 
       /**
-       * @param expression The math expression to perform on the returned data, if this object is
-       * performing a math expression.
-       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
-       * also use the `Id` of other expressions to use the result of those expressions.
+       * @param predefinedMetricType The metric type. 
+       */
+      override fun predefinedMetricType(predefinedMetricType: String) {
+        cdkBuilder.predefinedMetricType(predefinedMetricType)
+      }
+
+      /**
+       * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer
+       * target group from which to determine the average request count served by your Auto Scaling
+       * group.
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
        *
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      override fun expression(expression: String) {
-        cdkBuilder.expression(expression)
-      }
-
-      /**
-       * @param id A short name that identifies the object's results in the response. 
-       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
-       * policy. If you are performing math expressions on this set of data, this name represents that
-       * data and can serve as a variable in the mathematical expression. The valid characters are
-       * letters, numbers, and underscores. The first character must be a lowercase letter.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param label A human-readable label for this metric or expression.
-       * This is especially useful if this is a math expression, so that you know what the value
-       * represents.
-       */
-      override fun label(label: String) {
-        cdkBuilder.label(label)
-      }
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      override fun metricStat(metricStat: IResolvable) {
-        cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      override fun metricStat(metricStat: MetricStatProperty) {
-        cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
-      }
-
-      /**
-       * @param metricStat Information about the metric data to return.
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
-      override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
-          metricStat(MetricStatProperty(metricStat))
-
-      /**
-       * @param returnData Indicates whether to return the timestamps and raw data values of this
-       * metric.
-       * If you use any math expressions, specify `true` for this value for only the final math
-       * expression that the metric specification is based on. You must specify `false` for
-       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
        *
-       * If you are only retrieving metrics and not performing any math expressions, do not specify
-       * anything for `ReturnData` . This sets it to its default ( `true` ).
-       */
-      override fun returnData(returnData: Boolean) {
-        cdkBuilder.returnData(returnData)
-      }
-
-      /**
-       * @param returnData Indicates whether to return the timestamps and raw data values of this
-       * metric.
-       * If you use any math expressions, specify `true` for this value for only the final math
-       * expression that the metric specification is based on. You must specify `false` for
-       * `ReturnData` for all the other metrics and expressions used in the metric specification.
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
        *
-       * If you are only retrieving metrics and not performing any math expressions, do not specify
-       * anything for `ReturnData` . This sets it to its default ( `true` ).
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
        */
-      override fun returnData(returnData: IResolvable) {
-        cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
+      override fun resourceLabel(resourceLabel: String) {
+        cdkBuilder.resourceLabel(resourceLabel)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty,
-    ) : CdkObject(cdkObject), MetricDataQueryProperty {
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty,
+    ) : CdkObject(cdkObject), PredictiveScalingPredefinedScalingMetricProperty {
       /**
-       * The math expression to perform on the returned data, if this object is performing a math
-       * expression.
+       * The metric type.
        *
-       * This expression can use the `Id` of the other metrics to refer to those metrics, and can
-       * also use the `Id` of other expressions to use the result of those expressions.
-       *
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-expression)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-predefinedmetrictype)
        */
-      override fun expression(): String? = unwrap(this).getExpression()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
       /**
-       * A short name that identifies the object's results in the response.
+       * A label that uniquely identifies a specific Application Load Balancer target group from
+       * which to determine the average request count served by your Auto Scaling group.
        *
-       * This name must be unique among all `MetricDataQuery` objects specified for a single scaling
-       * policy. If you are performing math expressions on this set of data, this name represents that
-       * data and can serve as a variable in the mathematical expression. The valid characters are
-       * letters, numbers, and underscores. The first character must be a lowercase letter.
+       * You can't specify a resource label unless the target group is attached to the Auto Scaling
+       * group.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-id)
+       * You create the resource label by appending the final portion of the load balancer ARN and
+       * the final portion of the target group ARN into a single value, separated by a forward slash
+       * (/). The format of the resource label is:
+       *
+       * `app/my-alb/778d41231b141a0f/targetgroup/my-alb-target-group/943f017f100becff` .
+       *
+       * Where:
+       *
+       * * app/<load-balancer-name>/<load-balancer-id> is the final portion of the load balancer ARN
+       * * targetgroup/<target-group-name>/<target-group-id> is the final portion of the target
+       * group ARN.
+       *
+       * To find the ARN for an Application Load Balancer, use the
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operation. To find the ARN for the target group, use the
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * API operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingpredefinedscalingmetric-resourcelabel)
        */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * A human-readable label for this metric or expression.
-       *
-       * This is especially useful if this is a math expression, so that you know what the value
-       * represents.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-label)
-       */
-      override fun label(): String? = unwrap(this).getLabel()
-
-      /**
-       * Information about the metric data to return.
-       *
-       * Conditional: Within each `MetricDataQuery` object, you must specify either `Expression` or
-       * `MetricStat` , but not both.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-metricstat)
-       */
-      override fun metricStat(): Any? = unwrap(this).getMetricStat()
-
-      /**
-       * Indicates whether to return the timestamps and raw data values of this metric.
-       *
-       * If you use any math expressions, specify `true` for this value for only the final math
-       * expression that the metric specification is based on. You must specify `false` for
-       * `ReturnData` for all the other metrics and expressions used in the metric specification.
-       *
-       * If you are only retrieving metrics and not performing any math expressions, do not specify
-       * anything for `ReturnData` . This sets it to its default ( `true` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html#cfn-autoscaling-scalingpolicy-metricdataquery-returndata)
-       */
-      override fun returnData(): Any? = unwrap(this).getReturnData()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDataQueryProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PredictiveScalingPredefinedScalingMetricProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty):
-          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDataQueryProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty):
+          PredictiveScalingPredefinedScalingMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredictiveScalingPredefinedScalingMetricProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MetricDataQueryProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty
+      internal fun unwrap(wrapped: PredictiveScalingPredefinedScalingMetricProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty
     }
   }
 
   /**
-   * Contains customized metric specification information for a target tracking scaling policy for
-   * Amazon EC2 Auto Scaling.
+   * `StepAdjustment` specifies a step adjustment for the `StepAdjustments` property of the
+   * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
+   * resource.
    *
-   * To create your customized metric specification:
+   * For the following examples, suppose that you have an alarm with a breach threshold of 50:
    *
-   * * Add values for each required property from CloudWatch. You can use an existing metric, or a
-   * new metric that you create. To use your own metric, you must first publish the metric to
-   * CloudWatch. For more information, see [Publish Custom
-   * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html) in
-   * the *Amazon CloudWatch User Guide* .
-   * * Choose a metric that changes proportionally with capacity. The value of the metric should
-   * increase or decrease in inverse proportion to the number of capacity units. That is, the value of
-   * the metric should decrease when capacity increases.
+   * * To trigger a step adjustment when the metric is greater than or equal to 50 and less than 60,
+   * specify a lower bound of 0 and an upper bound of 10.
+   * * To trigger a step adjustment when the metric is greater than 40 and less than or equal to 50,
+   * specify a lower bound of -10 and an upper bound of 0.
    *
-   * For more information about CloudWatch, see [Amazon CloudWatch
-   * Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
-   * .
+   * There are a few rules for the step adjustments for your step policy:
    *
-   * `CustomizedMetricSpecification` is a property of the [AWS::AutoScaling::ScalingPolicy
-   * TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
-   * property type.
+   * * The ranges of your step adjustments can't overlap or have a gap.
+   * * At most one step adjustment can have a null lower bound. If one step adjustment has a
+   * negative lower bound, then there must be a step adjustment with a null lower bound.
+   * * At most one step adjustment can have a null upper bound. If one step adjustment has a
+   * positive upper bound, then there must be a step adjustment with a null upper bound.
+   * * The upper and lower bound can't be null in the same step adjustment.
+   *
+   * For more information, see [Step
+   * adjustments](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-steps)
+   * in the *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * You can find a sample template snippet in the
+   * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html#aws-resource-autoscaling-scalingpolicy--examples)
+   * section of the `AWS::AutoScaling::ScalingPolicy` resource.
    *
    * Example:
    *
@@ -4774,8 +4769,215 @@ public open class CfnScalingPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * CustomizedMetricSpecificationProperty customizedMetricSpecificationProperty =
-   * CustomizedMetricSpecificationProperty.builder()
+   * StepAdjustmentProperty stepAdjustmentProperty = StepAdjustmentProperty.builder()
+   * .scalingAdjustment(123)
+   * // the properties below are optional
+   * .metricIntervalLowerBound(123)
+   * .metricIntervalUpperBound(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html)
+   */
+  public interface StepAdjustmentProperty {
+    /**
+     * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
+     *
+     * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
+     * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is exclusive
+     * (the metric must be greater than the threshold plus the lower bound). A null value indicates
+     * negative infinity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
+     */
+    public fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
+
+    /**
+     * The upper bound for the difference between the alarm threshold and the CloudWatch metric.
+     *
+     * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
+     * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
+     * must be less than or equal to the threshold plus the upper bound). A null value indicates
+     * positive infinity.
+     *
+     * The upper bound must be greater than the lower bound.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
+     */
+    public fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
+
+    /**
+     * The amount by which to scale, based on the specified adjustment type.
+     *
+     * A positive value adds to the current capacity while a negative number removes from the
+     * current capacity. For exact capacity, you must specify a non-negative value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
+     */
+    public fun scalingAdjustment(): Number
+
+    /**
+     * A builder for [StepAdjustmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricIntervalLowerBound The lower bound for the difference between the alarm
+       * threshold and the CloudWatch metric.
+       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
+       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
+       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
+       * indicates negative infinity.
+       */
+      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number)
+
+      /**
+       * @param metricIntervalUpperBound The upper bound for the difference between the alarm
+       * threshold and the CloudWatch metric.
+       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
+       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
+       * must be less than or equal to the threshold plus the upper bound). A null value indicates
+       * positive infinity.
+       *
+       * The upper bound must be greater than the lower bound.
+       */
+      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number)
+
+      /**
+       * @param scalingAdjustment The amount by which to scale, based on the specified adjustment
+       * type. 
+       * A positive value adds to the current capacity while a negative number removes from the
+       * current capacity. For exact capacity, you must specify a non-negative value.
+       */
+      public fun scalingAdjustment(scalingAdjustment: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty.builder()
+
+      /**
+       * @param metricIntervalLowerBound The lower bound for the difference between the alarm
+       * threshold and the CloudWatch metric.
+       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
+       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
+       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
+       * indicates negative infinity.
+       */
+      override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
+        cdkBuilder.metricIntervalLowerBound(metricIntervalLowerBound)
+      }
+
+      /**
+       * @param metricIntervalUpperBound The upper bound for the difference between the alarm
+       * threshold and the CloudWatch metric.
+       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
+       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
+       * must be less than or equal to the threshold plus the upper bound). A null value indicates
+       * positive infinity.
+       *
+       * The upper bound must be greater than the lower bound.
+       */
+      override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
+        cdkBuilder.metricIntervalUpperBound(metricIntervalUpperBound)
+      }
+
+      /**
+       * @param scalingAdjustment The amount by which to scale, based on the specified adjustment
+       * type. 
+       * A positive value adds to the current capacity while a negative number removes from the
+       * current capacity. For exact capacity, you must specify a non-negative value.
+       */
+      override fun scalingAdjustment(scalingAdjustment: Number) {
+        cdkBuilder.scalingAdjustment(scalingAdjustment)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty,
+    ) : CdkObject(cdkObject), StepAdjustmentProperty {
+      /**
+       * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
+       *
+       * If the metric value is above the breach threshold, the lower bound is inclusive (the metric
+       * must be greater than or equal to the threshold plus the lower bound). Otherwise, it is
+       * exclusive (the metric must be greater than the threshold plus the lower bound). A null value
+       * indicates negative infinity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervallowerbound)
+       */
+      override fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
+
+      /**
+       * The upper bound for the difference between the alarm threshold and the CloudWatch metric.
+       *
+       * If the metric value is above the breach threshold, the upper bound is exclusive (the metric
+       * must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric
+       * must be less than or equal to the threshold plus the upper bound). A null value indicates
+       * positive infinity.
+       *
+       * The upper bound must be greater than the lower bound.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-metricintervalupperbound)
+       */
+      override fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
+
+      /**
+       * The amount by which to scale, based on the specified adjustment type.
+       *
+       * A positive value adds to the current capacity while a negative number removes from the
+       * current capacity. For exact capacity, you must specify a non-negative value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html#cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment)
+       */
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StepAdjustmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty):
+          StepAdjustmentProperty = CdkObjectWrappers.wrap(cdkObject) as? StepAdjustmentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StepAdjustmentProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty
+    }
+  }
+
+  /**
+   * `TargetTrackingConfiguration` is a property of the
+   * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
+   * resource that specifies a target tracking scaling policy configuration for Amazon EC2 Auto
+   * Scaling.
+   *
+   * For more information about scaling policies, see [Dynamic
+   * scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in
+   * the *Amazon EC2 Auto Scaling User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
+   * TargetTrackingConfigurationProperty.builder()
+   * .targetValue(123)
+   * // the properties below are optional
+   * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
    * .metricName("metricName")
    * .namespace("namespace")
    * .statistic("statistic")
@@ -4785,525 +4987,308 @@ public open class CfnScalingPolicy internal constructor(
    * .value("value")
    * .build()))
    * .unit("unit")
+   * .build())
+   * .disableScaleIn(false)
+   * .predefinedMetricSpecification(PredefinedMetricSpecificationProperty.builder()
+   * .predefinedMetricType("predefinedMetricType")
+   * // the properties below are optional
+   * .resourceLabel("resourceLabel")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
    */
-  public interface CustomizedMetricSpecificationProperty {
+  public interface TargetTrackingConfigurationProperty {
     /**
-     * The dimensions of the metric.
+     * A customized metric.
      *
-     * Conditional: If you published your metric with dimensions, you must specify the same
-     * dimensions in your scaling policy.
+     * You must specify either a predefined metric or a customized metric.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
      */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
+    public fun customizedMetricSpecification(): Any? =
+        unwrap(this).getCustomizedMetricSpecification()
 
     /**
-     * The name of the metric.
+     * Indicates whether scaling in by the target tracking scaling policy is disabled.
      *
-     * To get the exact metric name, namespace, and dimensions, inspect the
-     * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-     * object that is returned by a call to
-     * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-     * .
+     * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+     * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances from
+     * the Auto Scaling group. The default is `false` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
      */
-    public fun metricName(): String
+    public fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
 
     /**
-     * The namespace of the metric.
+     * A predefined metric.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+     * You must specify either a predefined metric or a customized metric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
      */
-    public fun namespace(): String
+    public fun predefinedMetricSpecification(): Any? =
+        unwrap(this).getPredefinedMetricSpecification()
 
     /**
-     * The statistic of the metric.
+     * The target value for the metric.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+     *
+     * Some metrics are based on a count instead of a percentage, such as the request count for an
+     * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
+     * specifies one of these metrics, specify the target utilization as the optimal average request or
+     * message count per instance during any one-minute interval.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
      */
-    public fun statistic(): String
+    public fun targetValue(): Number
 
     /**
-     * The unit of the metric.
-     *
-     * For a complete list of the units that CloudWatch supports, see the
-     * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-     * data type in the *Amazon CloudWatch API Reference* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
-     */
-    public fun unit(): String? = unwrap(this).getUnit()
-
-    /**
-     * A builder for [CustomizedMetricSpecificationProperty]
+     * A builder for [TargetTrackingConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      public fun dimensions(dimensions: IResolvable)
+      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable)
 
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      public fun dimensions(dimensions: List<Any>)
+      public
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty)
 
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      public fun dimensions(vararg dimensions: Any)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
+      public
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit)
 
       /**
-       * @param metricName The name of the metric. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
+       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
+       * disabled.
+       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
+       * from the Auto Scaling group. The default is `false` .
        */
-      public fun metricName(metricName: String)
+      public fun disableScaleIn(disableScaleIn: Boolean)
 
       /**
-       * @param namespace The namespace of the metric. 
+       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
+       * disabled.
+       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
+       * from the Auto Scaling group. The default is `false` .
        */
-      public fun namespace(namespace: String)
+      public fun disableScaleIn(disableScaleIn: IResolvable)
 
       /**
-       * @param statistic The statistic of the metric. 
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      public fun statistic(statistic: String)
+      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable)
 
       /**
-       * @param unit The unit of the metric.
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      public fun unit(unit: String)
+      public
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty)
+
+      /**
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
+      public
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param targetValue The target value for the metric. 
+       *
+       * Some metrics are based on a count instead of a percentage, such as the request count for an
+       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
+       * specifies one of these metrics, specify the target utilization as the optimal average request
+       * or message count per instance during any one-minute interval.
+       */
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.Builder
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.builder()
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty.builder()
 
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      override fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
+        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable::unwrap))
       }
 
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+      override
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
+        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty::unwrap))
       }
 
       /**
-       * @param dimensions The dimensions of the metric.
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * @param customizedMetricSpecification A customized metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
+      override
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          customizedMetricSpecification(CustomizedMetricSpecificationProperty(customizedMetricSpecification))
 
       /**
-       * @param metricName The name of the metric. 
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
+       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
+       * disabled.
+       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
+       * from the Auto Scaling group. The default is `false` .
        */
-      override fun metricName(metricName: String) {
-        cdkBuilder.metricName(metricName)
+      override fun disableScaleIn(disableScaleIn: Boolean) {
+        cdkBuilder.disableScaleIn(disableScaleIn)
       }
 
       /**
-       * @param namespace The namespace of the metric. 
+       * @param disableScaleIn Indicates whether scaling in by the target tracking scaling policy is
+       * disabled.
+       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
+       * from the Auto Scaling group. The default is `false` .
        */
-      override fun namespace(namespace: String) {
-        cdkBuilder.namespace(namespace)
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
       }
 
       /**
-       * @param statistic The statistic of the metric. 
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      override fun statistic(statistic: String) {
-        cdkBuilder.statistic(statistic)
+      override fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
+        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable::unwrap))
       }
 
       /**
-       * @param unit The unit of the metric.
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
        */
-      override fun unit(unit: String) {
-        cdkBuilder.unit(unit)
+      override
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
+        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param predefinedMetricSpecification A predefined metric.
+       * You must specify either a predefined metric or a customized metric.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
+      override
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          predefinedMetricSpecification(PredefinedMetricSpecificationProperty(predefinedMetricSpecification))
+
+      /**
+       * @param targetValue The target value for the metric. 
+       *
+       * Some metrics are based on a count instead of a percentage, such as the request count for an
+       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
+       * specifies one of these metrics, specify the target utilization as the optimal average request
+       * or message count per instance during any one-minute interval.
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
       }
 
       public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), CustomizedMetricSpecificationProperty {
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty,
+    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
       /**
-       * The dimensions of the metric.
+       * A customized metric.
        *
-       * Conditional: If you published your metric with dimensions, you must specify the same
-       * dimensions in your scaling policy.
+       * You must specify either a predefined metric or a customized metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)
        */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun customizedMetricSpecification(): Any? =
+          unwrap(this).getCustomizedMetricSpecification()
 
       /**
-       * The name of the metric.
+       * Indicates whether scaling in by the target tracking scaling policy is disabled.
        *
-       * To get the exact metric name, namespace, and dimensions, inspect the
-       * [Metric](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html)
-       * object that is returned by a call to
-       * [ListMetrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html)
-       * .
+       * If scaling in is disabled, the target tracking scaling policy doesn't remove instances from
+       * the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances
+       * from the Auto Scaling group. The default is `false` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)
        */
-      override fun metricName(): String = unwrap(this).getMetricName()
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
 
       /**
-       * The namespace of the metric.
+       * A predefined metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
+       * You must specify either a predefined metric or a customized metric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)
        */
-      override fun namespace(): String = unwrap(this).getNamespace()
+      override fun predefinedMetricSpecification(): Any? =
+          unwrap(this).getPredefinedMetricSpecification()
 
       /**
-       * The statistic of the metric.
+       * The target value for the metric.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)
+       *
+       * Some metrics are based on a count instead of a percentage, such as the request count for an
+       * Application Load Balancer or the number of messages in an SQS queue. If the scaling policy
+       * specifies one of these metrics, specify the target utilization as the optimal average request
+       * or message count per instance during any one-minute interval.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)
        */
-      override fun statistic(): String = unwrap(this).getStatistic()
-
-      /**
-       * The unit of the metric.
-       *
-       * For a complete list of the units that CloudWatch supports, see the
-       * [MetricDatum](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html)
-       * data type in the *Amazon CloudWatch API Reference* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit)
-       */
-      override fun unit(): String? = unwrap(this).getUnit()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomizedMetricSpecificationProperty {
+          TargetTrackingConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty):
-          CustomizedMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomizedMetricSpecificationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty):
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CustomizedMetricSpecificationProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
+      internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty
-    }
-  }
-
-  /**
-   * Contains scaling metric information for the `CustomizedScalingMetricSpecification` property of
-   * the [AWS::AutoScaling::ScalingPolicy
-   * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * PredictiveScalingCustomizedScalingMetricProperty
-   * predictiveScalingCustomizedScalingMetricProperty =
-   * PredictiveScalingCustomizedScalingMetricProperty.builder()
-   * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .expression("expression")
-   * .label("label")
-   * .metricStat(MetricStatProperty.builder()
-   * .metric(MetricProperty.builder()
-   * .metricName("metricName")
-   * .namespace("namespace")
-   * // the properties below are optional
-   * .dimensions(List.of(MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build()))
-   * .build())
-   * .stat("stat")
-   * // the properties below are optional
-   * .unit("unit")
-   * .build())
-   * .returnData(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html)
-   */
-  public interface PredictiveScalingCustomizedScalingMetricProperty {
-    /**
-     * One or more metric data queries to provide the data points for a scaling metric.
-     *
-     * Use multiple metric data queries only if you are performing a math expression on returned
-     * data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric-metricdataqueries)
-     */
-    public fun metricDataQueries(): Any
-
-    /**
-     * A builder for [PredictiveScalingCustomizedScalingMetricProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      public fun metricDataQueries(metricDataQueries: IResolvable)
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      public fun metricDataQueries(metricDataQueries: List<Any>)
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      public fun metricDataQueries(vararg metricDataQueries: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty.builder()
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      override fun metricDataQueries(metricDataQueries: IResolvable) {
-        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
-      }
-
-      /**
-       * @param metricDataQueries One or more metric data queries to provide the data points for a
-       * scaling metric. 
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       */
-      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
-          metricDataQueries(metricDataQueries.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty,
-    ) : CdkObject(cdkObject), PredictiveScalingCustomizedScalingMetricProperty {
-      /**
-       * One or more metric data queries to provide the data points for a scaling metric.
-       *
-       * Use multiple metric data queries only if you are performing a math expression on returned
-       * data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.html#cfn-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric-metricdataqueries)
-       */
-      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          PredictiveScalingCustomizedScalingMetricProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty):
-          PredictiveScalingCustomizedScalingMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PredictiveScalingCustomizedScalingMetricProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PredictiveScalingCustomizedScalingMetricProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty
-    }
-  }
-
-  /**
-   * `MetricDimension` specifies a name/value pair that is part of the identity of a CloudWatch
-   * metric for the `Dimensions` property of the [AWS::AutoScaling::ScalingPolicy
-   * CustomizedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html)
-   * property type. Duplicate dimensions are not allowed.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
-   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html)
-   */
-  public interface MetricDimensionProperty {
-    /**
-     * The name of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
-     */
-    public fun name(): String
-
-    /**
-     * The value of the dimension.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [MetricDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the dimension. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value of the dimension. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty.Builder
-          =
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty.builder()
-
-      /**
-       * @param name The name of the dimension. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value of the dimension. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
-      /**
-       * The name of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The value of the dimension.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdimension.html#cfn-autoscaling-scalingpolicy-metricdimension-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDimensionProperty):
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty
+          software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty
     }
   }
 }

@@ -119,8 +119,7 @@ public interface CfnSubscriptionDefinitionVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersionProps,
   ) : CdkObject(cdkObject), CfnSubscriptionDefinitionVersionProps {
     /**
      * The ID of the subscription definition associated with this version.

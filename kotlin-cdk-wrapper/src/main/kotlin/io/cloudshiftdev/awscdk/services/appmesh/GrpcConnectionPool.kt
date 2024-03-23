@@ -80,7 +80,7 @@ public interface GrpcConnectionPool {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
   ) : CdkObject(cdkObject), GrpcConnectionPool {
     /**
      * The maximum requests in the pool.

@@ -820,7 +820,7 @@ public interface CfnFileSystemProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.efs.CfnFileSystemProps,
+    cdkObject: software.amazon.awscdk.services.efs.CfnFileSystemProps,
   ) : CdkObject(cdkObject), CfnFileSystemProps {
     /**
      * For One Zone file systems, specify the AWS Availability Zone in which to create the file

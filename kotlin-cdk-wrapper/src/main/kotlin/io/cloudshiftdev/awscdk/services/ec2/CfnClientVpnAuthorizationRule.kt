@@ -40,9 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html)
  */
-public open class CfnClientVpnAuthorizationRule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule,
+public open class CfnClientVpnAuthorizationRule(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -310,6 +309,7 @@ public open class CfnClientVpnAuthorizationRule internal constructor(
         CfnClientVpnAuthorizationRule = CfnClientVpnAuthorizationRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnAuthorizationRule):
-        software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule
   }
 }

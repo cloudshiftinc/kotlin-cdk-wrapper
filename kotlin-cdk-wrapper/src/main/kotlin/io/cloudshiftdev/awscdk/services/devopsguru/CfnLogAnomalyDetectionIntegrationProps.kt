@@ -40,8 +40,7 @@ public interface CfnLogAnomalyDetectionIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegrationProps,
   ) : CdkObject(cdkObject), CfnLogAnomalyDetectionIntegrationProps
 
   public companion object {

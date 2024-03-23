@@ -33,9 +33,8 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
  * .build();
  * ```
  */
-public open class BucketWebsiteTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget,
+public open class BucketWebsiteTarget(
+  cdkObject: software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(bucket: IBucket) :
       this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(bucket.let(IBucket::unwrap))
@@ -66,6 +65,7 @@ public open class BucketWebsiteTarget internal constructor(
         BucketWebsiteTarget = BucketWebsiteTarget(cdkObject)
 
     internal fun unwrap(wrapped: BucketWebsiteTarget):
-        software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget = wrapped.cdkObject
+        software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget
   }
 }

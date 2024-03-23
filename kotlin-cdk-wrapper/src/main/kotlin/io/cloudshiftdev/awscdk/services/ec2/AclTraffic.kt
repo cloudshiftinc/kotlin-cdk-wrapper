@@ -20,8 +20,8 @@ import kotlin.jvm.JvmName
  * AclTraffic aclTraffic = AclTraffic.allTraffic();
  * ```
  */
-public abstract class AclTraffic internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
+public abstract class AclTraffic(
+  cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -30,7 +30,7 @@ public abstract class AclTraffic internal constructor(
       unwrap(this).toTrafficConfig().let(AclTrafficConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
+    cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
   ) : AclTraffic(cdkObject)
 
   public companion object {

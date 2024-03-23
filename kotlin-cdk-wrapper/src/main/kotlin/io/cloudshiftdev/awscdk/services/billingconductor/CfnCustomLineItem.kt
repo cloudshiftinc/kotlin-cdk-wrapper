@@ -71,9 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html)
  */
-public open class CfnCustomLineItem internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.billingconductor.CfnCustomLineItem,
+public open class CfnCustomLineItem(
+  cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -548,15 +547,12 @@ public open class CfnCustomLineItem internal constructor(
         CfnCustomLineItem = CfnCustomLineItem(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomLineItem):
-        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem = wrapped.cdkObject
+        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem = wrapped.cdkObject as
+        software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
   }
 
   /**
-   * A representation of the line item filter for your custom line item.
-   *
-   * You can use line item filters to include or exclude specific resource values from the billing
-   * group's total cost. For example, if you create a custom line item and you want to filter out a
-   * value, such as Savings Plan discounts, you can update `LineItemFilter` to exclude it.
+   * The billing period range in which the custom line item request will be applied.
    *
    * Example:
    *
@@ -564,258 +560,114 @@ public open class CfnCustomLineItem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.billingconductor.*;
-   * LineItemFilterProperty lineItemFilterProperty = LineItemFilterProperty.builder()
-   * .attribute("attribute")
-   * .matchOption("matchOption")
-   * .values(List.of("values"))
+   * BillingPeriodRangeProperty billingPeriodRangeProperty = BillingPeriodRangeProperty.builder()
+   * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
+   * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html)
    */
-  public interface LineItemFilterProperty {
+  public interface BillingPeriodRangeProperty {
     /**
-     * The attribute of the line item filter.
+     * The exclusive end billing period that defines a billing period range where a custom line is
+     * applied.
      *
-     * This specifies what attribute that you can filter on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-attribute)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-exclusiveendbillingperiod)
      */
-    public fun attribute(): String
+    public fun exclusiveEndBillingPeriod(): String? = unwrap(this).getExclusiveEndBillingPeriod()
 
     /**
-     * The match criteria of the line item filter.
+     * The inclusive start billing period that defines a billing period range where a custom line is
+     * applied.
      *
-     * This parameter specifies whether not to include the resource value from the billing group
-     * total cost.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-matchoption)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-inclusivestartbillingperiod)
      */
-    public fun matchOption(): String
+    public fun inclusiveStartBillingPeriod(): String? =
+        unwrap(this).getInclusiveStartBillingPeriod()
 
     /**
-     * The values of the line item filter.
-     *
-     * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-     * discounts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-values)
-     */
-    public fun values(): List<String>
-
-    /**
-     * A builder for [LineItemFilterProperty]
+     * A builder for [BillingPeriodRangeProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attribute The attribute of the line item filter. 
-       * This specifies what attribute that you can filter on.
+       * @param exclusiveEndBillingPeriod The exclusive end billing period that defines a billing
+       * period range where a custom line is applied.
        */
-      public fun attribute(attribute: String)
+      public fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String)
 
       /**
-       * @param matchOption The match criteria of the line item filter. 
-       * This parameter specifies whether not to include the resource value from the billing group
-       * total cost.
+       * @param inclusiveStartBillingPeriod The inclusive start billing period that defines a
+       * billing period range where a custom line is applied.
        */
-      public fun matchOption(matchOption: String)
-
-      /**
-       * @param values The values of the line item filter. 
-       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-       * discounts.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The values of the line item filter. 
-       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-       * discounts.
-       */
-      public fun values(vararg values: String)
+      public fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty.Builder
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty.Builder
           =
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty.builder()
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty.builder()
 
       /**
-       * @param attribute The attribute of the line item filter. 
-       * This specifies what attribute that you can filter on.
+       * @param exclusiveEndBillingPeriod The exclusive end billing period that defines a billing
+       * period range where a custom line is applied.
        */
-      override fun attribute(attribute: String) {
-        cdkBuilder.attribute(attribute)
+      override fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
+        cdkBuilder.exclusiveEndBillingPeriod(exclusiveEndBillingPeriod)
       }
 
       /**
-       * @param matchOption The match criteria of the line item filter. 
-       * This parameter specifies whether not to include the resource value from the billing group
-       * total cost.
+       * @param inclusiveStartBillingPeriod The inclusive start billing period that defines a
+       * billing period range where a custom line is applied.
        */
-      override fun matchOption(matchOption: String) {
-        cdkBuilder.matchOption(matchOption)
+      override fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
+        cdkBuilder.inclusiveStartBillingPeriod(inclusiveStartBillingPeriod)
       }
-
-      /**
-       * @param values The values of the line item filter. 
-       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-       * discounts.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The values of the line item filter. 
-       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-       * discounts.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty,
-    ) : CdkObject(cdkObject), LineItemFilterProperty {
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty,
+    ) : CdkObject(cdkObject), BillingPeriodRangeProperty {
       /**
-       * The attribute of the line item filter.
+       * The exclusive end billing period that defines a billing period range where a custom line is
+       * applied.
        *
-       * This specifies what attribute that you can filter on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-attribute)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-exclusiveendbillingperiod)
        */
-      override fun attribute(): String = unwrap(this).getAttribute()
+      override fun exclusiveEndBillingPeriod(): String? =
+          unwrap(this).getExclusiveEndBillingPeriod()
 
       /**
-       * The match criteria of the line item filter.
+       * The inclusive start billing period that defines a billing period range where a custom line
+       * is applied.
        *
-       * This parameter specifies whether not to include the resource value from the billing group
-       * total cost.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-matchoption)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-inclusivestartbillingperiod)
        */
-      override fun matchOption(): String = unwrap(this).getMatchOption()
-
-      /**
-       * The values of the line item filter.
-       *
-       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
-       * discounts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues()
+      override fun inclusiveStartBillingPeriod(): String? =
+          unwrap(this).getInclusiveStartBillingPeriod()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LineItemFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BillingPeriodRangeProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty):
-          LineItemFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LineItemFilterProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty):
+          BillingPeriodRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BillingPeriodRangeProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LineItemFilterProperty):
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
+      internal fun unwrap(wrapped: BillingPeriodRangeProperty):
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
-    }
-  }
-
-  /**
-   * The charge details of a custom line item.
-   *
-   * It should contain only one of `Flat` or `Percentage` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.billingconductor.*;
-   * CustomLineItemFlatChargeDetailsProperty customLineItemFlatChargeDetailsProperty =
-   * CustomLineItemFlatChargeDetailsProperty.builder()
-   * .chargeValue(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html)
-   */
-  public interface CustomLineItemFlatChargeDetailsProperty {
-    /**
-     * The custom line item's fixed charge value in USD.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html#cfn-billingconductor-customlineitem-customlineitemflatchargedetails-chargevalue)
-     */
-    public fun chargeValue(): Number
-
-    /**
-     * A builder for [CustomLineItemFlatChargeDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param chargeValue The custom line item's fixed charge value in USD. 
-       */
-      public fun chargeValue(chargeValue: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.builder()
-
-      /**
-       * @param chargeValue The custom line item's fixed charge value in USD. 
-       */
-      override fun chargeValue(chargeValue: Number) {
-        cdkBuilder.chargeValue(chargeValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty,
-    ) : CdkObject(cdkObject), CustomLineItemFlatChargeDetailsProperty {
-      /**
-       * The custom line item's fixed charge value in USD.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html#cfn-billingconductor-customlineitem-customlineitemflatchargedetails-chargevalue)
-       */
-      override fun chargeValue(): Number = unwrap(this).getChargeValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          CustomLineItemFlatChargeDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty):
-          CustomLineItemFlatChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomLineItemFlatChargeDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomLineItemFlatChargeDetailsProperty):
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
     }
   }
 
@@ -1042,8 +894,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty,
     ) : CdkObject(cdkObject), CustomLineItemChargeDetailsProperty {
       /**
        * A `CustomLineItemFlatChargeDetails` that describes the charge details of a flat custom line
@@ -1096,7 +947,9 @@ public open class CfnCustomLineItem internal constructor(
   }
 
   /**
-   * The billing period range in which the custom line item request will be applied.
+   * The charge details of a custom line item.
+   *
+   * It should contain only one of `Flat` or `Percentage` .
    *
    * Example:
    *
@@ -1104,115 +957,78 @@ public open class CfnCustomLineItem internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.billingconductor.*;
-   * BillingPeriodRangeProperty billingPeriodRangeProperty = BillingPeriodRangeProperty.builder()
-   * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
-   * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
+   * CustomLineItemFlatChargeDetailsProperty customLineItemFlatChargeDetailsProperty =
+   * CustomLineItemFlatChargeDetailsProperty.builder()
+   * .chargeValue(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html)
    */
-  public interface BillingPeriodRangeProperty {
+  public interface CustomLineItemFlatChargeDetailsProperty {
     /**
-     * The exclusive end billing period that defines a billing period range where a custom line is
-     * applied.
+     * The custom line item's fixed charge value in USD.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-exclusiveendbillingperiod)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html#cfn-billingconductor-customlineitem-customlineitemflatchargedetails-chargevalue)
      */
-    public fun exclusiveEndBillingPeriod(): String? = unwrap(this).getExclusiveEndBillingPeriod()
+    public fun chargeValue(): Number
 
     /**
-     * The inclusive start billing period that defines a billing period range where a custom line is
-     * applied.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-inclusivestartbillingperiod)
-     */
-    public fun inclusiveStartBillingPeriod(): String? =
-        unwrap(this).getInclusiveStartBillingPeriod()
-
-    /**
-     * A builder for [BillingPeriodRangeProperty]
+     * A builder for [CustomLineItemFlatChargeDetailsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param exclusiveEndBillingPeriod The exclusive end billing period that defines a billing
-       * period range where a custom line is applied.
+       * @param chargeValue The custom line item's fixed charge value in USD. 
        */
-      public fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String)
-
-      /**
-       * @param inclusiveStartBillingPeriod The inclusive start billing period that defines a
-       * billing period range where a custom line is applied.
-       */
-      public fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String)
+      public fun chargeValue(chargeValue: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty.Builder
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.Builder
           =
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty.builder()
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.builder()
 
       /**
-       * @param exclusiveEndBillingPeriod The exclusive end billing period that defines a billing
-       * period range where a custom line is applied.
+       * @param chargeValue The custom line item's fixed charge value in USD. 
        */
-      override fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
-        cdkBuilder.exclusiveEndBillingPeriod(exclusiveEndBillingPeriod)
-      }
-
-      /**
-       * @param inclusiveStartBillingPeriod The inclusive start billing period that defines a
-       * billing period range where a custom line is applied.
-       */
-      override fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
-        cdkBuilder.inclusiveStartBillingPeriod(inclusiveStartBillingPeriod)
+      override fun chargeValue(chargeValue: Number) {
+        cdkBuilder.chargeValue(chargeValue)
       }
 
       public fun build():
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty,
-    ) : CdkObject(cdkObject), BillingPeriodRangeProperty {
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty,
+    ) : CdkObject(cdkObject), CustomLineItemFlatChargeDetailsProperty {
       /**
-       * The exclusive end billing period that defines a billing period range where a custom line is
-       * applied.
+       * The custom line item's fixed charge value in USD.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-exclusiveendbillingperiod)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html#cfn-billingconductor-customlineitem-customlineitemflatchargedetails-chargevalue)
        */
-      override fun exclusiveEndBillingPeriod(): String? =
-          unwrap(this).getExclusiveEndBillingPeriod()
-
-      /**
-       * The inclusive start billing period that defines a billing period range where a custom line
-       * is applied.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-billingperiodrange.html#cfn-billingconductor-customlineitem-billingperiodrange-inclusivestartbillingperiod)
-       */
-      override fun inclusiveStartBillingPeriod(): String? =
-          unwrap(this).getInclusiveStartBillingPeriod()
+      override fun chargeValue(): Number = unwrap(this).getChargeValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BillingPeriodRangeProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomLineItemFlatChargeDetailsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty):
-          BillingPeriodRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          BillingPeriodRangeProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty):
+          CustomLineItemFlatChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomLineItemFlatChargeDetailsProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BillingPeriodRangeProperty):
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
+      internal fun unwrap(wrapped: CustomLineItemFlatChargeDetailsProperty):
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
     }
   }
 
@@ -1315,8 +1131,7 @@ public open class CfnCustomLineItem internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty,
     ) : CdkObject(cdkObject), CustomLineItemPercentageChargeDetailsProperty {
       /**
        * A list of resource ARNs to associate to the percentage custom line item.
@@ -1353,6 +1168,186 @@ public open class CfnCustomLineItem internal constructor(
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty
+    }
+  }
+
+  /**
+   * A representation of the line item filter for your custom line item.
+   *
+   * You can use line item filters to include or exclude specific resource values from the billing
+   * group's total cost. For example, if you create a custom line item and you want to filter out a
+   * value, such as Savings Plan discounts, you can update `LineItemFilter` to exclude it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.billingconductor.*;
+   * LineItemFilterProperty lineItemFilterProperty = LineItemFilterProperty.builder()
+   * .attribute("attribute")
+   * .matchOption("matchOption")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html)
+   */
+  public interface LineItemFilterProperty {
+    /**
+     * The attribute of the line item filter.
+     *
+     * This specifies what attribute that you can filter on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * The match criteria of the line item filter.
+     *
+     * This parameter specifies whether not to include the resource value from the billing group
+     * total cost.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-matchoption)
+     */
+    public fun matchOption(): String
+
+    /**
+     * The values of the line item filter.
+     *
+     * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+     * discounts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [LineItemFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attribute The attribute of the line item filter. 
+       * This specifies what attribute that you can filter on.
+       */
+      public fun attribute(attribute: String)
+
+      /**
+       * @param matchOption The match criteria of the line item filter. 
+       * This parameter specifies whether not to include the resource value from the billing group
+       * total cost.
+       */
+      public fun matchOption(matchOption: String)
+
+      /**
+       * @param values The values of the line item filter. 
+       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+       * discounts.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The values of the line item filter. 
+       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+       * discounts.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty.Builder
+          =
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty.builder()
+
+      /**
+       * @param attribute The attribute of the line item filter. 
+       * This specifies what attribute that you can filter on.
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      /**
+       * @param matchOption The match criteria of the line item filter. 
+       * This parameter specifies whether not to include the resource value from the billing group
+       * total cost.
+       */
+      override fun matchOption(matchOption: String) {
+        cdkBuilder.matchOption(matchOption)
+      }
+
+      /**
+       * @param values The values of the line item filter. 
+       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+       * discounts.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The values of the line item filter. 
+       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+       * discounts.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty,
+    ) : CdkObject(cdkObject), LineItemFilterProperty {
+      /**
+       * The attribute of the line item filter.
+       *
+       * This specifies what attribute that you can filter on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+
+      /**
+       * The match criteria of the line item filter.
+       *
+       * This parameter specifies whether not to include the resource value from the billing group
+       * total cost.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-matchoption)
+       */
+      override fun matchOption(): String = unwrap(this).getMatchOption()
+
+      /**
+       * The values of the line item filter.
+       *
+       * This specifies the values to filter on. Currently, you can only exclude Savings Plan
+       * discounts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-lineitemfilter.html#cfn-billingconductor-customlineitem-lineitemfilter-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LineItemFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty):
+          LineItemFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LineItemFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LineItemFilterProperty):
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
     }
   }
 }

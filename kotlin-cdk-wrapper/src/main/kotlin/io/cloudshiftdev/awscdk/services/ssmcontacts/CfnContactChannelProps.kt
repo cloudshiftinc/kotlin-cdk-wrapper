@@ -182,7 +182,7 @@ public interface CfnContactChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps,
+    cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps,
   ) : CdkObject(cdkObject), CfnContactChannelProps {
     /**
      * The details that Incident Manager uses when trying to engage the contact channel.

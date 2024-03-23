@@ -41,9 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ManagedEc2EcsComputeEnvironment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment,
+public open class ManagedEc2EcsComputeEnvironment(
+  cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment,
 ) : Resource(cdkObject), IManagedEc2EcsComputeEnvironment, IManagedComputeEnvironment,
     IComputeEnvironment {
   public constructor(
@@ -1105,6 +1104,7 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
         ManagedEc2EcsComputeEnvironment = ManagedEc2EcsComputeEnvironment(cdkObject)
 
     internal fun unwrap(wrapped: ManagedEc2EcsComputeEnvironment):
-        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment
   }
 }

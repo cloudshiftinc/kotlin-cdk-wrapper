@@ -47,8 +47,8 @@ import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBuck
  * .build();
  * ```
  */
-public open class S3Origin internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3Origin,
+public open class S3Origin(
+  cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3Origin,
 ) : CdkObject(cdkObject), IOrigin {
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket) :
       this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap))
@@ -315,6 +315,7 @@ public open class S3Origin internal constructor(
         S3Origin = S3Origin(cdkObject)
 
     internal fun unwrap(wrapped: S3Origin):
-        software.amazon.awscdk.services.cloudfront.origins.S3Origin = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.origins.S3Origin = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.origins.S3Origin
   }
 }

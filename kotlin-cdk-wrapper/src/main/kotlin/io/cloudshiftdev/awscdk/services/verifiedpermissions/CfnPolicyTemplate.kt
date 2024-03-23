@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policytemplate.html)
  */
-public open class CfnPolicyTemplate internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate,
+public open class CfnPolicyTemplate(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -205,6 +204,7 @@ public open class CfnPolicyTemplate internal constructor(
         CfnPolicyTemplate = CfnPolicyTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyTemplate):
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate
   }
 }

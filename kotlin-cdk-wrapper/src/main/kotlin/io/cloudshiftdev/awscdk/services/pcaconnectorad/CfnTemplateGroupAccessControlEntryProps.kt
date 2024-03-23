@@ -183,8 +183,7 @@ public interface CfnTemplateGroupAccessControlEntryProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps,
+    cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps,
   ) : CdkObject(cdkObject), CfnTemplateGroupAccessControlEntryProps {
     /**
      * Permissions to allow or deny an Active Directory group to enroll or autoenroll certificates

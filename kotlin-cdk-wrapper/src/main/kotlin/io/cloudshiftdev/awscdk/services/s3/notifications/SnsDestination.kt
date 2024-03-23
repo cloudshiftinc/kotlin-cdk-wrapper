@@ -20,8 +20,8 @@ import io.cloudshiftdev.constructs.Construct
  * bucket.addEventNotification(EventType.OBJECT_CREATED, new SnsDestination(topic));
  * ```
  */
-public open class SnsDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
+public open class SnsDestination(
+  cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.s3.notifications.SnsDestination(topic.let(ITopic::unwrap))
@@ -46,6 +46,7 @@ public open class SnsDestination internal constructor(
         SnsDestination = SnsDestination(cdkObject)
 
     internal fun unwrap(wrapped: SnsDestination):
-        software.amazon.awscdk.services.s3.notifications.SnsDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.notifications.SnsDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.notifications.SnsDestination
   }
 }

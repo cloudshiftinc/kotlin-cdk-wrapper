@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html)
  */
-public open class CfnVPCDHCPOptionsAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation,
+public open class CfnVPCDHCPOptionsAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -159,6 +159,7 @@ public open class CfnVPCDHCPOptionsAssociation internal constructor(
         CfnVPCDHCPOptionsAssociation = CfnVPCDHCPOptionsAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCDHCPOptionsAssociation):
-        software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation
   }
 }

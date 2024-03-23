@@ -266,7 +266,7 @@ public interface CfnAPNSChannelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps,
   ) : CdkObject(cdkObject), CfnAPNSChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the APNs channel applies to.

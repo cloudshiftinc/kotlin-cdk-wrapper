@@ -80,7 +80,7 @@ public interface DeploymentCircuitBreaker {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker,
+    cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker,
   ) : CdkObject(cdkObject), DeploymentCircuitBreaker {
     /**
      * Whether to enable the deployment circuit breaker logic.

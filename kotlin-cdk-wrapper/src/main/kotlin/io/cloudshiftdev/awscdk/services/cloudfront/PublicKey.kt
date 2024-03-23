@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class PublicKey internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.PublicKey,
+public open class PublicKey(
+  cdkObject: software.amazon.awscdk.services.cloudfront.PublicKey,
 ) : Resource(cdkObject), IPublicKey {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -162,6 +162,6 @@ public open class PublicKey internal constructor(
         PublicKey(cdkObject)
 
     internal fun unwrap(wrapped: PublicKey): software.amazon.awscdk.services.cloudfront.PublicKey =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.cloudfront.PublicKey
   }
 }

@@ -139,7 +139,7 @@ public interface BottleRocketImageProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImageProps,
+    cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImageProps,
   ) : CdkObject(cdkObject), BottleRocketImageProps {
     /**
      * The CPU architecture.

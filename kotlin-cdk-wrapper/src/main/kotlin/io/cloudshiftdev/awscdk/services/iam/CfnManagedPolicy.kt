@@ -52,8 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
  */
-public open class CfnManagedPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicy,
+public open class CfnManagedPolicy(
+  cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -680,6 +680,7 @@ public open class CfnManagedPolicy internal constructor(
         CfnManagedPolicy = CfnManagedPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnManagedPolicy):
-        software.amazon.awscdk.services.iam.CfnManagedPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnManagedPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnManagedPolicy
   }
 }

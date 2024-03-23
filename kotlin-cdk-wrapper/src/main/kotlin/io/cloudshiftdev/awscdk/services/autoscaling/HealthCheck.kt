@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HealthCheck internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.HealthCheck,
+public open class HealthCheck(
+  cdkObject: software.amazon.awscdk.services.autoscaling.HealthCheck,
 ) : CdkObject(cdkObject) {
   /**
    *
@@ -60,6 +60,7 @@ public open class HealthCheck internal constructor(
         HealthCheck = HealthCheck(cdkObject)
 
     internal fun unwrap(wrapped: HealthCheck):
-        software.amazon.awscdk.services.autoscaling.HealthCheck = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.HealthCheck = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.HealthCheck
   }
 }

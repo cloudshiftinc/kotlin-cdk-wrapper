@@ -30,9 +30,8 @@ import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream
  * .build();
  * ```
  */
-public open class FirehoseLogDestination internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigateway.FirehoseLogDestination,
+public open class FirehoseLogDestination(
+  cdkObject: software.amazon.awscdk.services.apigateway.FirehoseLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
   public constructor(stream: CfnDeliveryStream) :
       this(software.amazon.awscdk.services.apigateway.FirehoseLogDestination(stream.let(CfnDeliveryStream::unwrap))
@@ -51,6 +50,7 @@ public open class FirehoseLogDestination internal constructor(
         FirehoseLogDestination = FirehoseLogDestination(cdkObject)
 
     internal fun unwrap(wrapped: FirehoseLogDestination):
-        software.amazon.awscdk.services.apigateway.FirehoseLogDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.FirehoseLogDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.FirehoseLogDestination
   }
 }

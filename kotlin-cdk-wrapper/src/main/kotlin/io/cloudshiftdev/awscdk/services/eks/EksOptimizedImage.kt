@@ -26,8 +26,8 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public open class EksOptimizedImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImage,
+public open class EksOptimizedImage(
+  cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor() : this(software.amazon.awscdk.services.eks.EksOptimizedImage()
   )
@@ -131,6 +131,7 @@ public open class EksOptimizedImage internal constructor(
         EksOptimizedImage = EksOptimizedImage(cdkObject)
 
     internal fun unwrap(wrapped: EksOptimizedImage):
-        software.amazon.awscdk.services.eks.EksOptimizedImage = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.EksOptimizedImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.EksOptimizedImage
   }
 }

@@ -21,8 +21,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class SamlConsolePrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.SamlConsolePrincipal,
+public open class SamlConsolePrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.SamlConsolePrincipal,
 ) : SamlPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider) :
       this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider::unwrap))
@@ -38,6 +38,7 @@ public open class SamlConsolePrincipal internal constructor(
         SamlConsolePrincipal = SamlConsolePrincipal(cdkObject)
 
     internal fun unwrap(wrapped: SamlConsolePrincipal):
-        software.amazon.awscdk.services.iam.SamlConsolePrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.SamlConsolePrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.SamlConsolePrincipal
   }
 }

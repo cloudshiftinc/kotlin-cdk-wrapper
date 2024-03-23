@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html)
  */
-public open class CfnGroupMembership internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership,
+public open class CfnGroupMembership(
+  cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -267,7 +267,8 @@ public open class CfnGroupMembership internal constructor(
         CfnGroupMembership = CfnGroupMembership(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupMembership):
-        software.amazon.awscdk.services.identitystore.CfnGroupMembership = wrapped.cdkObject
+        software.amazon.awscdk.services.identitystore.CfnGroupMembership = wrapped.cdkObject as
+        software.amazon.awscdk.services.identitystore.CfnGroupMembership
   }
 
   /**
@@ -327,8 +328,7 @@ public open class CfnGroupMembership internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty,
+      cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty,
     ) : CdkObject(cdkObject), MemberIdProperty {
       /**
        * The identifier for a user in the identity store.

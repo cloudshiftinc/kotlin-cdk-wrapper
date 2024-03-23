@@ -128,7 +128,7 @@ public interface CfnPullThroughCacheRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps,
+    cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps,
   ) : CdkObject(cdkObject), CfnPullThroughCacheRuleProps {
     /**
      * The ARN of the Secrets Manager secret associated with the pull through cache rule.

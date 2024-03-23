@@ -19,8 +19,8 @@ import kotlin.collections.Map
  * OpenIdConnectPrincipal principal = new OpenIdConnectPrincipal(provider);
  * ```
  */
-public open class OpenIdConnectPrincipal internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectPrincipal,
+public open class OpenIdConnectPrincipal(
+  cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectPrincipal,
 ) : WebIdentityPrincipal(cdkObject) {
   public constructor(openIdConnectProvider: IOpenIdConnectProvider) :
       this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap))
@@ -42,6 +42,7 @@ public open class OpenIdConnectPrincipal internal constructor(
         OpenIdConnectPrincipal = OpenIdConnectPrincipal(cdkObject)
 
     internal fun unwrap(wrapped: OpenIdConnectPrincipal):
-        software.amazon.awscdk.services.iam.OpenIdConnectPrincipal = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.OpenIdConnectPrincipal = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.OpenIdConnectPrincipal
   }
 }

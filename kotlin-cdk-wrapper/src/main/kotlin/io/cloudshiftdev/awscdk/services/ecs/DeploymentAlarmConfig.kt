@@ -95,7 +95,7 @@ public interface DeploymentAlarmConfig : DeploymentAlarmOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmConfig,
+    cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmConfig,
   ) : CdkObject(cdkObject), DeploymentAlarmConfig {
     /**
      * List of alarm names to monitor during deployments.

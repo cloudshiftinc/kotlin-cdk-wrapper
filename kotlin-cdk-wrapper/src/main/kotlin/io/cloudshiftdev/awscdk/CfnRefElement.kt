@@ -16,8 +16,8 @@ import kotlin.String
  * own, more specific types returned from the .ref attribute. Also, some
  * resources aren't referencable at all (such as BucketPolicies or GatewayAttachments).
  */
-public abstract class CfnRefElement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.CfnRefElement,
+public abstract class CfnRefElement(
+  cdkObject: software.amazon.awscdk.CfnRefElement,
 ) : CfnElement(cdkObject) {
   /**
    * Return a string that will be resolved to a CloudFormation `{ Ref }` for this element.
@@ -28,7 +28,7 @@ public abstract class CfnRefElement internal constructor(
   public open fun ref(): String = unwrap(this).getRef()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnRefElement,
+    cdkObject: software.amazon.awscdk.CfnRefElement,
   ) : CfnRefElement(cdkObject)
 
   public companion object {

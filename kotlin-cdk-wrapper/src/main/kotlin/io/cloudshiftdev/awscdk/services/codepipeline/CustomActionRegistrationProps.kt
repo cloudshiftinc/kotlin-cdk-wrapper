@@ -220,8 +220,7 @@ public interface CustomActionRegistrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps,
+    cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps,
   ) : CdkObject(cdkObject), CustomActionRegistrationProps {
     /**
      * The properties used for customizing the instance of your Action.

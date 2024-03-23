@@ -30,8 +30,8 @@ import kotlin.collections.List
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-paths.html)
  */
-public open class JsonPath internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.JsonPath,
+public open class JsonPath(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.JsonPath,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val DISCARD: String = software.amazon.awscdk.services.stepfunctions.JsonPath.DISCARD
@@ -150,6 +150,6 @@ public open class JsonPath internal constructor(
         JsonPath(cdkObject)
 
     internal fun unwrap(wrapped: JsonPath): software.amazon.awscdk.services.stepfunctions.JsonPath =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.JsonPath
   }
 }

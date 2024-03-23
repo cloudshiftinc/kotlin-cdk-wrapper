@@ -48,9 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html)
  */
-public open class CfnSlackChannelConfiguration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration,
+public open class CfnSlackChannelConfiguration(
+  cdkObject: software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -488,6 +487,7 @@ public open class CfnSlackChannelConfiguration internal constructor(
         CfnSlackChannelConfiguration = CfnSlackChannelConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnSlackChannelConfiguration):
-        software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration
   }
 }

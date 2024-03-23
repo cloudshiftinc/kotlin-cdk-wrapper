@@ -159,8 +159,7 @@ public interface ApplicationListenerRuleProps : BaseApplicationListenerRuleProps
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRuleProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRuleProps,
   ) : CdkObject(cdkObject), ApplicationListenerRuleProps {
     /**
      * Action to perform when requests are received.

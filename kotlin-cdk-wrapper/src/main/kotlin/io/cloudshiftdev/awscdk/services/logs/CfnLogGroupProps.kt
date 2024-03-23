@@ -306,7 +306,7 @@ public interface CfnLogGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.CfnLogGroupProps,
+    cdkObject: software.amazon.awscdk.services.logs.CfnLogGroupProps,
   ) : CdkObject(cdkObject), CfnLogGroupProps {
     /**
      * Creates a data protection policy and assigns it to the log group.

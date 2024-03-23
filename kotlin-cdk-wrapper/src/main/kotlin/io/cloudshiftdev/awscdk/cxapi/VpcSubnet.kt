@@ -113,7 +113,7 @@ public interface VpcSubnet {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.VpcSubnet,
+    cdkObject: software.amazon.awscdk.cxapi.VpcSubnet,
   ) : CdkObject(cdkObject), VpcSubnet {
     /**
      * The code of the availability zone this subnet is in (for example, 'us-west-2a').

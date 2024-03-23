@@ -53,7 +53,7 @@ import kotlin.collections.List
  */
 public interface CfnAssetProps {
   /**
-   * A description for the asset.
+   * The ID of the asset, in UUID format.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetdescription)
    */
@@ -67,7 +67,7 @@ public interface CfnAssetProps {
   public fun assetExternalId(): String? = unwrap(this).getAssetExternalId()
 
   /**
-   * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+   * A list of asset hierarchies that each contain a `hierarchyId` .
    *
    * A hierarchy specifies allowed parent/child asset relationships.
    *
@@ -88,9 +88,7 @@ public interface CfnAssetProps {
   public fun assetModelId(): String
 
   /**
-   * A unique, friendly name for the asset.
-   *
-   * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+   * A friendly name for the asset.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetname)
    */
@@ -123,7 +121,7 @@ public interface CfnAssetProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param assetDescription A description for the asset.
+     * @param assetDescription The ID of the asset, in UUID format.
      */
     public fun assetDescription(assetDescription: String)
 
@@ -133,22 +131,19 @@ public interface CfnAssetProps {
     public fun assetExternalId(assetExternalId: String)
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     public fun assetHierarchies(assetHierarchies: IResolvable)
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     public fun assetHierarchies(assetHierarchies: List<Any>)
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     public fun assetHierarchies(vararg assetHierarchies: Any)
@@ -163,8 +158,7 @@ public interface CfnAssetProps {
     public fun assetModelId(assetModelId: String)
 
     /**
-     * @param assetName A unique, friendly name for the asset. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     * @param assetName A friendly name for the asset. 
      */
     public fun assetName(assetName: String)
 
@@ -211,7 +205,7 @@ public interface CfnAssetProps {
         software.amazon.awscdk.services.iotsitewise.CfnAssetProps.builder()
 
     /**
-     * @param assetDescription A description for the asset.
+     * @param assetDescription The ID of the asset, in UUID format.
      */
     override fun assetDescription(assetDescription: String) {
       cdkBuilder.assetDescription(assetDescription)
@@ -225,8 +219,7 @@ public interface CfnAssetProps {
     }
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     override fun assetHierarchies(assetHierarchies: IResolvable) {
@@ -234,8 +227,7 @@ public interface CfnAssetProps {
     }
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     override fun assetHierarchies(assetHierarchies: List<Any>) {
@@ -243,8 +235,7 @@ public interface CfnAssetProps {
     }
 
     /**
-     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyLogicalId`
-     * .
+     * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` .
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     override fun assetHierarchies(vararg assetHierarchies: Any): Unit =
@@ -262,8 +253,7 @@ public interface CfnAssetProps {
     }
 
     /**
-     * @param assetName A unique, friendly name for the asset. 
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     * @param assetName A friendly name for the asset. 
      */
     override fun assetName(assetName: String) {
       cdkBuilder.assetName(assetName)
@@ -318,10 +308,10 @@ public interface CfnAssetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetProps,
+    cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetProps,
   ) : CdkObject(cdkObject), CfnAssetProps {
     /**
-     * A description for the asset.
+     * The ID of the asset, in UUID format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetdescription)
      */
@@ -335,7 +325,7 @@ public interface CfnAssetProps {
     override fun assetExternalId(): String? = unwrap(this).getAssetExternalId()
 
     /**
-     * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
+     * A list of asset hierarchies that each contain a `hierarchyId` .
      *
      * A hierarchy specifies allowed parent/child asset relationships.
      *
@@ -356,9 +346,7 @@ public interface CfnAssetProps {
     override fun assetModelId(): String = unwrap(this).getAssetModelId()
 
     /**
-     * A unique, friendly name for the asset.
-     *
-     * The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+` .
+     * A friendly name for the asset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetname)
      */

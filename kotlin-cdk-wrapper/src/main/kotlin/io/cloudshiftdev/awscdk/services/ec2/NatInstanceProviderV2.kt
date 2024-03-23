@@ -28,8 +28,8 @@ import kotlin.jvm.JvmName
  * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
  * ```
  */
-public open class NatInstanceProviderV2 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProviderV2,
+public open class NatInstanceProviderV2(
+  cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProviderV2,
 ) : NatProvider(cdkObject), IConnectable {
   public constructor(props: NatInstanceProps) :
       this(software.amazon.awscdk.services.ec2.NatInstanceProviderV2(props.let(NatInstanceProps::unwrap))
@@ -306,6 +306,7 @@ public open class NatInstanceProviderV2 internal constructor(
         NatInstanceProviderV2 = NatInstanceProviderV2(cdkObject)
 
     internal fun unwrap(wrapped: NatInstanceProviderV2):
-        software.amazon.awscdk.services.ec2.NatInstanceProviderV2 = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.NatInstanceProviderV2 = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.NatInstanceProviderV2
   }
 }

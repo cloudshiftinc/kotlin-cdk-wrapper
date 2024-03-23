@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html)
  */
-public open class CfnLocationHDFS internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS,
+public open class CfnLocationHDFS(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -824,7 +824,8 @@ public open class CfnLocationHDFS internal constructor(
         CfnLocationHDFS = CfnLocationHDFS(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationHDFS):
-        software.amazon.awscdk.services.datasync.CfnLocationHDFS = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationHDFS = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationHDFS
   }
 
   /**
@@ -912,8 +913,7 @@ public open class CfnLocationHDFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty,
     ) : CdkObject(cdkObject), NameNodeProperty {
       /**
        * The hostname of the NameNode in the HDFS cluster.
@@ -1049,8 +1049,7 @@ public open class CfnLocationHDFS internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty,
     ) : CdkObject(cdkObject), QopConfigurationProperty {
       /**
        * The data transfer protection setting configured on the HDFS cluster.

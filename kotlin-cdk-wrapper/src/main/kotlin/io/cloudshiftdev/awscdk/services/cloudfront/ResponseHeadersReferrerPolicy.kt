@@ -117,8 +117,7 @@ public interface ResponseHeadersReferrerPolicy {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy,
+    cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy,
   ) : CdkObject(cdkObject), ResponseHeadersReferrerPolicy {
     /**
      * A Boolean that determines whether CloudFront overrides the Referrer-Policy HTTP response

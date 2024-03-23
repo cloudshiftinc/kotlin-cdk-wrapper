@@ -117,8 +117,7 @@ public interface CfnTransitGatewayPeeringProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayPeeringProps {
     /**
      * The ID of the core network.

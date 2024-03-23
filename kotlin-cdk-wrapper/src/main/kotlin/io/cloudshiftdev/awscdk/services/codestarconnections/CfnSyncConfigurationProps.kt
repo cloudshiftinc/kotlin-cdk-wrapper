@@ -173,8 +173,7 @@ public interface CfnSyncConfigurationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps,
+    cdkObject: software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps,
   ) : CdkObject(cdkObject), CfnSyncConfigurationProps {
     /**
      * The branch associated with a specific sync configuration.

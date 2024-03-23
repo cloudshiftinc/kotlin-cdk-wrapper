@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.docdbelastic.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.docdbelastic.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -634,6 +634,7 @@ public open class CfnCluster internal constructor(
         CfnCluster = CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster):
-        software.amazon.awscdk.services.docdbelastic.CfnCluster = wrapped.cdkObject
+        software.amazon.awscdk.services.docdbelastic.CfnCluster = wrapped.cdkObject as
+        software.amazon.awscdk.services.docdbelastic.CfnCluster
   }
 }

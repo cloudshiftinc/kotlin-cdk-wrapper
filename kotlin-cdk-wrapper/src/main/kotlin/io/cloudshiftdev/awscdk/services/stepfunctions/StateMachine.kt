@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class StateMachine internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachine,
+public open class StateMachine(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachine,
 ) : Resource(cdkObject), IStateMachine {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -705,6 +705,7 @@ public open class StateMachine internal constructor(
         StateMachine = StateMachine(cdkObject)
 
     internal fun unwrap(wrapped: StateMachine):
-        software.amazon.awscdk.services.stepfunctions.StateMachine = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.StateMachine = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.StateMachine
   }
 }

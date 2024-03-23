@@ -87,7 +87,7 @@ public interface GraphqlApiAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiAttributes,
+    cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiAttributes,
   ) : CdkObject(cdkObject), GraphqlApiAttributes {
     /**
      * the arn for the GraphQL Api.

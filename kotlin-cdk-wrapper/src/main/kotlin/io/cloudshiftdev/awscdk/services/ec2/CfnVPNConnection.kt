@@ -60,8 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html)
  */
-public open class CfnVPNConnection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection,
+public open class CfnVPNConnection(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -467,7 +467,8 @@ public open class CfnVPNConnection internal constructor(
         CfnVPNConnection = CfnVPNConnection(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNConnection):
-        software.amazon.awscdk.services.ec2.CfnVPNConnection = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnVPNConnection = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnVPNConnection
   }
 
   /**
@@ -595,8 +596,7 @@ public open class CfnVPNConnection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty,
     ) : CdkObject(cdkObject), VpnTunnelOptionsSpecificationProperty {
       /**
        * The pre-shared key (PSK) to establish initial authentication between the virtual private

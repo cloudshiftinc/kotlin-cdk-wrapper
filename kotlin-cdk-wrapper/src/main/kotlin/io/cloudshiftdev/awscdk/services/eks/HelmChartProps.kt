@@ -221,7 +221,7 @@ public interface HelmChartProps : HelmChartOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.HelmChartProps,
+    cdkObject: software.amazon.awscdk.services.eks.HelmChartProps,
   ) : CdkObject(cdkObject), HelmChartProps {
     /**
      * The name of the chart.

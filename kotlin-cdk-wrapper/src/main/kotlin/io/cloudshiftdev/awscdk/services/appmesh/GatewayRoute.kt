@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/gateway-routes.html)
  */
-public open class GatewayRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRoute,
+public open class GatewayRoute(
+  cdkObject: software.amazon.awscdk.services.appmesh.GatewayRoute,
 ) : Resource(cdkObject), IGatewayRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -172,6 +172,6 @@ public open class GatewayRoute internal constructor(
         = GatewayRoute(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRoute): software.amazon.awscdk.services.appmesh.GatewayRoute
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.appmesh.GatewayRoute
   }
 }

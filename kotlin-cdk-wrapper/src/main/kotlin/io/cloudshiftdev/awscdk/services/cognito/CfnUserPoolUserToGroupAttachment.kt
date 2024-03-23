@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html)
  */
-public open class CfnUserPoolUserToGroupAttachment internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment,
+public open class CfnUserPoolUserToGroupAttachment(
+  cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -184,5 +183,6 @@ public open class CfnUserPoolUserToGroupAttachment internal constructor(
 
     internal fun unwrap(wrapped: CfnUserPoolUserToGroupAttachment):
         software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment = wrapped.cdkObject
+        as software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment
   }
 }

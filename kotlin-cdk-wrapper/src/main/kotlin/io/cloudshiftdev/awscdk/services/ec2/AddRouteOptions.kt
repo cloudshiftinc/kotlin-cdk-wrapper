@@ -148,7 +148,7 @@ public interface AddRouteOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AddRouteOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.AddRouteOptions,
   ) : CdkObject(cdkObject), AddRouteOptions {
     /**
      * IPv4 range this route applies to.

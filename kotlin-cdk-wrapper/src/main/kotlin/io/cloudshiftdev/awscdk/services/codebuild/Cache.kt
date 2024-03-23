@@ -37,11 +37,11 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-caching.html)
  */
-public abstract class Cache internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.Cache,
+public abstract class Cache(
+  cdkObject: software.amazon.awscdk.services.codebuild.Cache,
 ) : CdkObject(cdkObject) {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.Cache,
+    cdkObject: software.amazon.awscdk.services.codebuild.Cache,
   ) : Cache(cdkObject)
 
   public companion object {

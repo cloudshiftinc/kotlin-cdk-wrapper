@@ -311,7 +311,7 @@ public interface RepositoryProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryProps,
+    cdkObject: software.amazon.awscdk.services.ecr.RepositoryProps,
   ) : CdkObject(cdkObject), RepositoryProps {
     /**
      * (deprecated) Whether all images should be automatically deleted when the repository is

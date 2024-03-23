@@ -16,7 +16,7 @@ public interface IAlarmRule {
   public fun renderAlarmRule(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule,
   ) : CdkObject(cdkObject), IAlarmRule {
     /**
      * serialized representation of Alarm Rule to be used when building the Composite Alarm

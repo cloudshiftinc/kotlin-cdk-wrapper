@@ -37,8 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * lb.addTarget(new InstanceTarget(instance));
  * ```
  */
-public open class Instance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.Instance,
+public open class Instance(
+  cdkObject: software.amazon.awscdk.services.ec2.Instance,
 ) : Resource(cdkObject), IInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -935,6 +935,6 @@ public open class Instance internal constructor(
         Instance(cdkObject)
 
     internal fun unwrap(wrapped: Instance): software.amazon.awscdk.services.ec2.Instance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.Instance
   }
 }

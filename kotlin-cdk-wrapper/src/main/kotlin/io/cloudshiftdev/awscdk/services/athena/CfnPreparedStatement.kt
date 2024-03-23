@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html)
  */
-public open class CfnPreparedStatement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatement,
+public open class CfnPreparedStatement(
+  cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatement,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -214,6 +214,7 @@ public open class CfnPreparedStatement internal constructor(
         CfnPreparedStatement = CfnPreparedStatement(cdkObject)
 
     internal fun unwrap(wrapped: CfnPreparedStatement):
-        software.amazon.awscdk.services.athena.CfnPreparedStatement = wrapped.cdkObject
+        software.amazon.awscdk.services.athena.CfnPreparedStatement = wrapped.cdkObject as
+        software.amazon.awscdk.services.athena.CfnPreparedStatement
   }
 }

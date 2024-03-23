@@ -73,7 +73,7 @@ public interface DeploymentAlarmOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions,
+    cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions,
   ) : CdkObject(cdkObject), DeploymentAlarmOptions {
     /**
      * Default rollback on alarm.

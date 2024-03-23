@@ -111,11 +111,6 @@ public interface CfnParameterProps {
   /**
    * The type of parameter.
    *
-   *
-   * Although `SecureString` is included in the list of valid values, AWS CloudFormation does *not*
-   * currently support creating `SecureString` parameters.
-   *
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
    */
   public fun type(): String
@@ -191,9 +186,6 @@ public interface CfnParameterProps {
 
     /**
      * @param type The type of parameter. 
-     *
-     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
-     * *not* currently support creating `SecureString` parameters.
      */
     public fun type(type: String)
 
@@ -278,9 +270,6 @@ public interface CfnParameterProps {
 
     /**
      * @param type The type of parameter. 
-     *
-     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
-     * *not* currently support creating `SecureString` parameters.
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -300,7 +289,7 @@ public interface CfnParameterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CfnParameterProps,
+    cdkObject: software.amazon.awscdk.services.ssm.CfnParameterProps,
   ) : CdkObject(cdkObject), CfnParameterProps {
     /**
      * A regular expression used to validate the parameter value.
@@ -376,11 +365,6 @@ public interface CfnParameterProps {
 
     /**
      * The type of parameter.
-     *
-     *
-     * Although `SecureString` is included in the list of valid values, AWS CloudFormation does
-     * *not* currently support creating `SecureString` parameters.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
      */

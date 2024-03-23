@@ -228,7 +228,7 @@ public interface CfnFlowProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowProps,
+    cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowProps,
   ) : CdkObject(cdkObject), CfnFlowProps {
     /**
      * The Availability Zone that you want to create the flow in.

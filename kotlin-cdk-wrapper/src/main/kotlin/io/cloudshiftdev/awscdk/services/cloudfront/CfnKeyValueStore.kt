@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keyvaluestore.html)
  */
-public open class CfnKeyValueStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore,
+public open class CfnKeyValueStore(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -262,7 +262,8 @@ public open class CfnKeyValueStore internal constructor(
         CfnKeyValueStore = CfnKeyValueStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyValueStore):
-        software.amazon.awscdk.services.cloudfront.CfnKeyValueStore = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnKeyValueStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnKeyValueStore
   }
 
   /**
@@ -340,8 +341,7 @@ public open class CfnKeyValueStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty,
     ) : CdkObject(cdkObject), ImportSourceProperty {
       /**
        * The Amazon Resource Name (ARN) of the import source for the key value store.

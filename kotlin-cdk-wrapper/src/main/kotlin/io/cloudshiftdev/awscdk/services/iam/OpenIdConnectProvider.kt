@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html)
  */
-public open class OpenIdConnectProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectProvider,
+public open class OpenIdConnectProvider(
+  cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectProvider,
 ) : Resource(cdkObject), IOpenIdConnectProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -343,6 +343,7 @@ public open class OpenIdConnectProvider internal constructor(
         OpenIdConnectProvider = OpenIdConnectProvider(cdkObject)
 
     internal fun unwrap(wrapped: OpenIdConnectProvider):
-        software.amazon.awscdk.services.iam.OpenIdConnectProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.OpenIdConnectProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.OpenIdConnectProvider
   }
 }

@@ -51,8 +51,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class SubjectAlternativeNames internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames,
+public abstract class SubjectAlternativeNames(
+  cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames,
 ) : CdkObject(cdkObject) {
   /**
    * Returns Subject Alternative Names Matcher based on method type.
@@ -63,7 +63,7 @@ public abstract class SubjectAlternativeNames internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap)).let(SubjectAlternativeNamesMatcherConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames,
+    cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames,
   ) : SubjectAlternativeNames(cdkObject)
 
   public companion object {

@@ -113,7 +113,7 @@ public interface SSMParameterContextQuery {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery,
   ) : CdkObject(cdkObject), SSMParameterContextQuery {
     /**
      * Query account.

@@ -161,7 +161,7 @@ public interface BaseAppsyncFunctionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.BaseAppsyncFunctionProps,
+    cdkObject: software.amazon.awscdk.services.appsync.BaseAppsyncFunctionProps,
   ) : CdkObject(cdkObject), BaseAppsyncFunctionProps {
     /**
      * The function code.

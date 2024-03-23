@@ -59,8 +59,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class InstanceTagSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codedeploy.InstanceTagSet,
+public open class InstanceTagSet(
+  cdkObject: software.amazon.awscdk.services.codedeploy.InstanceTagSet,
 ) : CdkObject(cdkObject) {
   public constructor(instanceTagGroups: Map<String, List<String>>) :
       this(software.amazon.awscdk.services.codedeploy.InstanceTagSet(instanceTagGroups)
@@ -77,6 +77,7 @@ public open class InstanceTagSet internal constructor(
         InstanceTagSet = InstanceTagSet(cdkObject)
 
     internal fun unwrap(wrapped: InstanceTagSet):
-        software.amazon.awscdk.services.codedeploy.InstanceTagSet = wrapped.cdkObject
+        software.amazon.awscdk.services.codedeploy.InstanceTagSet = wrapped.cdkObject as
+        software.amazon.awscdk.services.codedeploy.InstanceTagSet
   }
 }

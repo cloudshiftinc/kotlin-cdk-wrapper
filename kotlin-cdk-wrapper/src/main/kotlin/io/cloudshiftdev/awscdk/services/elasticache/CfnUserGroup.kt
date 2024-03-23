@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)
  */
-public open class CfnUserGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroup,
+public open class CfnUserGroup(
+  cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -290,6 +290,7 @@ public open class CfnUserGroup internal constructor(
         CfnUserGroup = CfnUserGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserGroup):
-        software.amazon.awscdk.services.elasticache.CfnUserGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.elasticache.CfnUserGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticache.CfnUserGroup
   }
 }

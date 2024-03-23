@@ -243,7 +243,7 @@ public interface CfnCoreDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps,
   ) : CdkObject(cdkObject), CfnCoreDefinitionProps {
     /**
      * The core definition version to include when the core definition is created.

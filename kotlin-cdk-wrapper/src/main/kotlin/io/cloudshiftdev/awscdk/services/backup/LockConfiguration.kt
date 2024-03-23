@@ -157,7 +157,7 @@ public interface LockConfiguration {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.backup.LockConfiguration,
+    cdkObject: software.amazon.awscdk.services.backup.LockConfiguration,
   ) : CdkObject(cdkObject), LockConfiguration {
     /**
      * The duration before the lock date.

@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protectiongroup.html)
  */
-public open class CfnProtectionGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroup,
+public open class CfnProtectionGroup(
+  cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -181,11 +181,11 @@ public open class CfnProtectionGroup internal constructor(
      * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and
      * report events.
      *
-     * * Sum - Use the total traffic across the group. This is a good choice for most cases.
+     * * `Sum` - Use the total traffic across the group. This is a good choice for most cases.
      * Examples include Elastic IP addresses for EC2 instances that scale manually or automatically.
-     * * Mean - Use the average of the traffic across the group. This is a good choice for resources
-     * that share traffic uniformly. Examples include accelerators and load balancers.
-     * * Max - Use the highest traffic from each resource. This is useful for resources that don't
+     * * `Mean` - Use the average of the traffic across the group. This is a good choice for
+     * resources that share traffic uniformly. Examples include accelerators and load balancers.
+     * * `Max` - Use the highest traffic from each resource. This is useful for resources that don't
      * share traffic and for resources that share that traffic in a non-uniform way. Examples include
      * Amazon CloudFront distributions and origin resources for CloudFront distributions.
      *
@@ -290,11 +290,11 @@ public open class CfnProtectionGroup internal constructor(
      * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and
      * report events.
      *
-     * * Sum - Use the total traffic across the group. This is a good choice for most cases.
+     * * `Sum` - Use the total traffic across the group. This is a good choice for most cases.
      * Examples include Elastic IP addresses for EC2 instances that scale manually or automatically.
-     * * Mean - Use the average of the traffic across the group. This is a good choice for resources
-     * that share traffic uniformly. Examples include accelerators and load balancers.
-     * * Max - Use the highest traffic from each resource. This is useful for resources that don't
+     * * `Mean` - Use the average of the traffic across the group. This is a good choice for
+     * resources that share traffic uniformly. Examples include accelerators and load balancers.
+     * * `Max` - Use the highest traffic from each resource. This is useful for resources that don't
      * share traffic and for resources that share that traffic in a non-uniform way. Examples include
      * Amazon CloudFront distributions and origin resources for CloudFront distributions.
      *
@@ -420,6 +420,7 @@ public open class CfnProtectionGroup internal constructor(
         CfnProtectionGroup = CfnProtectionGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnProtectionGroup):
-        software.amazon.awscdk.services.shield.CfnProtectionGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.shield.CfnProtectionGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.shield.CfnProtectionGroup
   }
 }

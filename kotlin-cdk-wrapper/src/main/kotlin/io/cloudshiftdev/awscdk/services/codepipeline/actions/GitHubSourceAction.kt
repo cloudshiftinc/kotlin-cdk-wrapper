@@ -32,9 +32,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class GitHubSourceAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction,
+public open class GitHubSourceAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: GitHubSourceActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction(props.let(GitHubSourceActionProps::unwrap))
@@ -292,5 +291,6 @@ public open class GitHubSourceAction internal constructor(
 
     internal fun unwrap(wrapped: GitHubSourceAction):
         software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction = wrapped.cdkObject
+        as software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction
   }
 }

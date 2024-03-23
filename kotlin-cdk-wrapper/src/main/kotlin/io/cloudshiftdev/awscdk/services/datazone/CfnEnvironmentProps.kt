@@ -227,7 +227,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * The description of the environment.

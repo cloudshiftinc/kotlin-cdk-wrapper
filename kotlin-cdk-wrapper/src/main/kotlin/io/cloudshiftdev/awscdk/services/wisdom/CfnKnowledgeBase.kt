@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html)
  */
-public open class CfnKnowledgeBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
+public open class CfnKnowledgeBase(
+  cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,384 +621,8 @@ public open class CfnKnowledgeBase internal constructor(
         CfnKnowledgeBase = CfnKnowledgeBase(cdkObject)
 
     internal fun unwrap(wrapped: CfnKnowledgeBase):
-        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase = wrapped.cdkObject
-  }
-
-  /**
-   * The configuration information for the customer managed key used for encryption.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wisdom.*;
-   * ServerSideEncryptionConfigurationProperty serverSideEncryptionConfigurationProperty =
-   * ServerSideEncryptionConfigurationProperty.builder()
-   * .kmsKeyId("kmsKeyId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html)
-   */
-  public interface ServerSideEncryptionConfigurationProperty {
-    /**
-     * The customer managed key used for encryption.
-     *
-     * This customer managed key must have a policy that allows `kms:CreateGrant` and
-     * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
-     *
-     * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
-     * Connect Wisdom for your
-     * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
-     * information about valid ID values, see [Key identifiers
-     * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html#cfn-wisdom-knowledgebase-serversideencryptionconfiguration-kmskeyid)
-     */
-    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-
-    /**
-     * A builder for [ServerSideEncryptionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param kmsKeyId The customer managed key used for encryption.
-       * This customer managed key must have a policy that allows `kms:CreateGrant` and
-       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
-       *
-       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
-       * Connect Wisdom for your
-       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
-       * information about valid ID values, see [Key identifiers
-       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
-       */
-      public fun kmsKeyId(kmsKeyId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.builder()
-
-      /**
-       * @param kmsKeyId The customer managed key used for encryption.
-       * This customer managed key must have a policy that allows `kms:CreateGrant` and
-       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
-       *
-       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
-       * Connect Wisdom for your
-       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
-       * information about valid ID values, see [Key identifiers
-       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
-       */
-      override fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
-      /**
-       * The customer managed key used for encryption.
-       *
-       * This customer managed key must have a policy that allows `kms:CreateGrant` and
-       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
-       *
-       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
-       * Connect Wisdom for your
-       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
-       * information about valid ID values, see [Key identifiers
-       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html#cfn-wisdom-knowledgebase-serversideencryptionconfiguration-kmskeyid)
-       */
-      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServerSideEncryptionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
-    }
-  }
-
-  /**
-   * Configuration information about the external data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wisdom.*;
-   * SourceConfigurationProperty sourceConfigurationProperty = SourceConfigurationProperty.builder()
-   * .appIntegrations(AppIntegrationsConfigurationProperty.builder()
-   * .appIntegrationArn("appIntegrationArn")
-   * // the properties below are optional
-   * .objectFields(List.of("objectFields"))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html)
-   */
-  public interface SourceConfigurationProperty {
-    /**
-     * Configuration information for Amazon AppIntegrations to automatically ingest content.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations)
-     */
-    public fun appIntegrations(): Any
-
-    /**
-     * A builder for [SourceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      public fun appIntegrations(appIntegrations: IResolvable)
-
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      public fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty)
-
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
-      public
-          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty.builder()
-
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      override fun appIntegrations(appIntegrations: IResolvable) {
-        cdkBuilder.appIntegrations(appIntegrations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      override fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
-        cdkBuilder.appIntegrations(appIntegrations.let(AppIntegrationsConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param appIntegrations Configuration information for Amazon AppIntegrations to
-       * automatically ingest content. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
-      override
-          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit):
-          Unit = appIntegrations(AppIntegrationsConfigurationProperty(appIntegrations))
-
-      public fun build():
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceConfigurationProperty {
-      /**
-       * Configuration information for Amazon AppIntegrations to automatically ingest content.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations)
-       */
-      override fun appIntegrations(): Any = unwrap(this).getAppIntegrations()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty):
-          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SourceConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceConfigurationProperty):
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty
-    }
-  }
-
-  /**
-   * Information about how to render the content.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.wisdom.*;
-   * RenderingConfigurationProperty renderingConfigurationProperty =
-   * RenderingConfigurationProperty.builder()
-   * .templateUri("templateUri")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html)
-   */
-  public interface RenderingConfigurationProperty {
-    /**
-     * A URI template containing exactly one variable in `${variableName}` format.
-     *
-     * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and Zendesk,
-     * the variable must be one of the following:
-     *
-     * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
-     * `IsDeleted`
-     * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
-     * `active`
-     * * Zendesk: `id` , `title` , `updated_at` , or `draft`
-     *
-     * The variable is replaced with the actual value for a piece of content when calling
-     * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html#cfn-wisdom-knowledgebase-renderingconfiguration-templateuri)
-     */
-    public fun templateUri(): String? = unwrap(this).getTemplateUri()
-
-    /**
-     * A builder for [RenderingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param templateUri A URI template containing exactly one variable in `${variableName}`
-       * format.
-       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
-       * Zendesk, the variable must be one of the following:
-       *
-       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
-       * `IsDeleted`
-       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
-       * `active`
-       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
-       *
-       * The variable is replaced with the actual value for a piece of content when calling
-       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
-       * .
-       */
-      public fun templateUri(templateUri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty.builder()
-
-      /**
-       * @param templateUri A URI template containing exactly one variable in `${variableName}`
-       * format.
-       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
-       * Zendesk, the variable must be one of the following:
-       *
-       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
-       * `IsDeleted`
-       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
-       * `active`
-       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
-       *
-       * The variable is replaced with the actual value for a piece of content when calling
-       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
-       * .
-       */
-      override fun templateUri(templateUri: String) {
-        cdkBuilder.templateUri(templateUri)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
-    ) : CdkObject(cdkObject), RenderingConfigurationProperty {
-      /**
-       * A URI template containing exactly one variable in `${variableName}` format.
-       *
-       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
-       * Zendesk, the variable must be one of the following:
-       *
-       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
-       * `IsDeleted`
-       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
-       * `active`
-       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
-       *
-       * The variable is replaced with the actual value for a piece of content when calling
-       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html#cfn-wisdom-knowledgebase-renderingconfiguration-templateuri)
-       */
-      override fun templateUri(): String? = unwrap(this).getTemplateUri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RenderingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty):
-          RenderingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RenderingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RenderingConfigurationProperty):
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty
-    }
+        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase = wrapped.cdkObject as
+        software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
   }
 
   /**
@@ -1259,8 +883,7 @@ public open class CfnKnowledgeBase internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
     ) : CdkObject(cdkObject), AppIntegrationsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AppIntegrations DataIntegration to use for ingesting
@@ -1340,6 +963,380 @@ public open class CfnKnowledgeBase internal constructor(
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about how to render the content.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wisdom.*;
+   * RenderingConfigurationProperty renderingConfigurationProperty =
+   * RenderingConfigurationProperty.builder()
+   * .templateUri("templateUri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html)
+   */
+  public interface RenderingConfigurationProperty {
+    /**
+     * A URI template containing exactly one variable in `${variableName}` format.
+     *
+     * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and Zendesk,
+     * the variable must be one of the following:
+     *
+     * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
+     * `IsDeleted`
+     * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
+     * `active`
+     * * Zendesk: `id` , `title` , `updated_at` , or `draft`
+     *
+     * The variable is replaced with the actual value for a piece of content when calling
+     * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html#cfn-wisdom-knowledgebase-renderingconfiguration-templateuri)
+     */
+    public fun templateUri(): String? = unwrap(this).getTemplateUri()
+
+    /**
+     * A builder for [RenderingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param templateUri A URI template containing exactly one variable in `${variableName}`
+       * format.
+       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
+       * Zendesk, the variable must be one of the following:
+       *
+       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
+       * `IsDeleted`
+       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
+       * `active`
+       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
+       *
+       * The variable is replaced with the actual value for a piece of content when calling
+       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
+       * .
+       */
+      public fun templateUri(templateUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty.builder()
+
+      /**
+       * @param templateUri A URI template containing exactly one variable in `${variableName}`
+       * format.
+       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
+       * Zendesk, the variable must be one of the following:
+       *
+       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
+       * `IsDeleted`
+       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
+       * `active`
+       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
+       *
+       * The variable is replaced with the actual value for a piece of content when calling
+       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
+       * .
+       */
+      override fun templateUri(templateUri: String) {
+        cdkBuilder.templateUri(templateUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
+    ) : CdkObject(cdkObject), RenderingConfigurationProperty {
+      /**
+       * A URI template containing exactly one variable in `${variableName}` format.
+       *
+       * This can only be set for `EXTERNAL` knowledge bases. For Salesforce, ServiceNow, and
+       * Zendesk, the variable must be one of the following:
+       *
+       * * Salesforce: `Id` , `ArticleNumber` , `VersionNumber` , `Title` , `PublishStatus` , or
+       * `IsDeleted`
+       * * ServiceNow: `number` , `short_description` , `sys_mod_count` , `workflow_state` , or
+       * `active`
+       * * Zendesk: `id` , `title` , `updated_at` , or `draft`
+       *
+       * The variable is replaced with the actual value for a piece of content when calling
+       * [GetContent](https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetContent.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html#cfn-wisdom-knowledgebase-renderingconfiguration-templateuri)
+       */
+      override fun templateUri(): String? = unwrap(this).getTemplateUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RenderingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty):
+          RenderingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RenderingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RenderingConfigurationProperty):
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration information for the customer managed key used for encryption.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wisdom.*;
+   * ServerSideEncryptionConfigurationProperty serverSideEncryptionConfigurationProperty =
+   * ServerSideEncryptionConfigurationProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html)
+   */
+  public interface ServerSideEncryptionConfigurationProperty {
+    /**
+     * The customer managed key used for encryption.
+     *
+     * This customer managed key must have a policy that allows `kms:CreateGrant` and
+     * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
+     *
+     * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
+     * Connect Wisdom for your
+     * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
+     * information about valid ID values, see [Key identifiers
+     * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html#cfn-wisdom-knowledgebase-serversideencryptionconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [ServerSideEncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The customer managed key used for encryption.
+       * This customer managed key must have a policy that allows `kms:CreateGrant` and
+       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
+       *
+       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
+       * Connect Wisdom for your
+       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
+       * information about valid ID values, see [Key identifiers
+       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKeyId The customer managed key used for encryption.
+       * This customer managed key must have a policy that allows `kms:CreateGrant` and
+       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
+       *
+       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
+       * Connect Wisdom for your
+       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
+       * information about valid ID values, see [Key identifiers
+       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
+      /**
+       * The customer managed key used for encryption.
+       *
+       * This customer managed key must have a policy that allows `kms:CreateGrant` and
+       * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
+       *
+       * For more information about setting up a customer managed key for Wisdom, see [Enable Amazon
+       * Connect Wisdom for your
+       * instance](https://docs.aws.amazon.com/connect/latest/adminguide/enable-wisdom.html) . For
+       * information about valid ID values, see [Key identifiers
+       * (KeyId)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-serversideencryptionconfiguration.html#cfn-wisdom-knowledgebase-serversideencryptionconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServerSideEncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty):
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration information about the external data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wisdom.*;
+   * SourceConfigurationProperty sourceConfigurationProperty = SourceConfigurationProperty.builder()
+   * .appIntegrations(AppIntegrationsConfigurationProperty.builder()
+   * .appIntegrationArn("appIntegrationArn")
+   * // the properties below are optional
+   * .objectFields(List.of("objectFields"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html)
+   */
+  public interface SourceConfigurationProperty {
+    /**
+     * Configuration information for Amazon AppIntegrations to automatically ingest content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations)
+     */
+    public fun appIntegrations(): Any
+
+    /**
+     * A builder for [SourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      public fun appIntegrations(appIntegrations: IResolvable)
+
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      public fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty)
+
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
+      public
+          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty.builder()
+
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      override fun appIntegrations(appIntegrations: IResolvable) {
+        cdkBuilder.appIntegrations(appIntegrations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      override fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
+        cdkBuilder.appIntegrations(appIntegrations.let(AppIntegrationsConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param appIntegrations Configuration information for Amazon AppIntegrations to
+       * automatically ingest content. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
+      override
+          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit):
+          Unit = appIntegrations(AppIntegrationsConfigurationProperty(appIntegrations))
+
+      public fun build():
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
+    ) : CdkObject(cdkObject), SourceConfigurationProperty {
+      /**
+       * Configuration information for Amazon AppIntegrations to automatically ingest content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations)
+       */
+      override fun appIntegrations(): Any = unwrap(this).getAppIntegrations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty):
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceConfigurationProperty):
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty
     }
   }
 }

@@ -1513,7 +1513,7 @@ public interface CfnUserPoolProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolProps,
+    cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolProps,
   ) : CdkObject(cdkObject), CfnUserPoolProps {
     /**
      * Use this setting to define which verified available method a user can use to recover their

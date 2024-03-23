@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html)
  */
-public open class CfnGCMChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnGCMChannel,
+public open class CfnGCMChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnGCMChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -315,6 +315,7 @@ public open class CfnGCMChannel internal constructor(
         CfnGCMChannel = CfnGCMChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnGCMChannel):
-        software.amazon.awscdk.services.pinpoint.CfnGCMChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnGCMChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnGCMChannel
   }
 }

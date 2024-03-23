@@ -190,9 +190,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html)
  */
-public open class CfnApplicationV2 internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2,
+public open class CfnApplicationV2(
+  cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -767,7 +766,155 @@ public open class CfnApplicationV2 internal constructor(
         CfnApplicationV2 = CfnApplicationV2(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationV2):
-        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2 = wrapped.cdkObject
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2 = wrapped.cdkObject as
+        software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
+  }
+
+  /**
+   * Describes code configuration for an application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * ApplicationCodeConfigurationProperty applicationCodeConfigurationProperty =
+   * ApplicationCodeConfigurationProperty.builder()
+   * .codeContent(CodeContentProperty.builder()
+   * .s3ContentLocation(S3ContentLocationProperty.builder()
+   * .bucketArn("bucketArn")
+   * .fileKey("fileKey")
+   * // the properties below are optional
+   * .objectVersion("objectVersion")
+   * .build())
+   * .textContent("textContent")
+   * .zipFileContent("zipFileContent")
+   * .build())
+   * .codeContentType("codeContentType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html)
+   */
+  public interface ApplicationCodeConfigurationProperty {
+    /**
+     * The location and type of the application code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)
+     */
+    public fun codeContent(): Any
+
+    /**
+     * Specifies whether the code content is in text or zip format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)
+     */
+    public fun codeContentType(): String
+
+    /**
+     * A builder for [ApplicationCodeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      public fun codeContent(codeContent: IResolvable)
+
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      public fun codeContent(codeContent: CodeContentProperty)
+
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ff44823ca2dc4cb3a41b23ae125f3f9fb3045d8197a8ce2f67a28c78eb90062")
+      public fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit)
+
+      /**
+       * @param codeContentType Specifies whether the code content is in text or zip format. 
+       */
+      public fun codeContentType(codeContentType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty.builder()
+
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      override fun codeContent(codeContent: IResolvable) {
+        cdkBuilder.codeContent(codeContent.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      override fun codeContent(codeContent: CodeContentProperty) {
+        cdkBuilder.codeContent(codeContent.let(CodeContentProperty::unwrap))
+      }
+
+      /**
+       * @param codeContent The location and type of the application code. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ff44823ca2dc4cb3a41b23ae125f3f9fb3045d8197a8ce2f67a28c78eb90062")
+      override fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit): Unit =
+          codeContent(CodeContentProperty(codeContent))
+
+      /**
+       * @param codeContentType Specifies whether the code content is in text or zip format. 
+       */
+      override fun codeContentType(codeContentType: String) {
+        cdkBuilder.codeContentType(codeContentType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty,
+    ) : CdkObject(cdkObject), ApplicationCodeConfigurationProperty {
+      /**
+       * The location and type of the application code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)
+       */
+      override fun codeContent(): Any = unwrap(this).getCodeContent()
+
+      /**
+       * Specifies whether the code content is in text or zip format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)
+       */
+      override fun codeContentType(): String = unwrap(this).getCodeContentType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ApplicationCodeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty):
+          ApplicationCodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationCodeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationCodeConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
+    }
   }
 
   /**
@@ -1320,8 +1467,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationConfigurationProperty {
       /**
        * The code location and type parameters for a Managed Service for Apache Flink application.
@@ -1398,9 +1544,7 @@ public open class CfnApplicationV2 internal constructor(
   }
 
   /**
-   * Identifies a Kinesis data stream as the streaming source.
-   *
-   * You provide the stream's Amazon Resource Name (ARN).
+   * Specifies the maintence window parameters for a Kinesis Data Analytics application.
    *
    * Example:
    *
@@ -1408,85 +1552,89 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisStreamsInputProperty kinesisStreamsInputProperty = KinesisStreamsInputProperty.builder()
-   * .resourceArn("resourceArn")
+   * ApplicationMaintenanceConfigurationProperty applicationMaintenanceConfigurationProperty =
+   * ApplicationMaintenanceConfigurationProperty.builder()
+   * .applicationMaintenanceWindowStartTime("applicationMaintenanceWindowStartTime")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html)
    */
-  public interface KinesisStreamsInputProperty {
+  public interface ApplicationMaintenanceConfigurationProperty {
     /**
-     * The ARN of the input Kinesis data stream to read.
+     * Specifies the start time of the maintence window.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
      */
-    public fun resourceArn(): String
+    public fun applicationMaintenanceWindowStartTime(): String
 
     /**
-     * A builder for [KinesisStreamsInputProperty]
+     * A builder for [ApplicationMaintenanceConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resourceArn The ARN of the input Kinesis data stream to read. 
+       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
+       * window. 
        */
-      public fun resourceArn(resourceArn: String)
+      public
+          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty.builder()
 
       /**
-       * @param resourceArn The ARN of the input Kinesis data stream to read. 
+       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
+       * window. 
        */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
+      override
+          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
+        cdkBuilder.applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime)
       }
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty,
+    ) : CdkObject(cdkObject), ApplicationMaintenanceConfigurationProperty {
       /**
-       * The ARN of the input Kinesis data stream to read.
+       * Specifies the start time of the maintence window.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
        */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun applicationMaintenanceWindowStartTime(): String =
+          unwrap(this).getApplicationMaintenanceWindowStartTime()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsInputProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ApplicationMaintenanceConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty):
-          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisStreamsInputProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty):
+          ApplicationMaintenanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationMaintenanceConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: KinesisStreamsInputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+      internal fun unwrap(wrapped: ApplicationMaintenanceConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
     }
   }
 
   /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's input at the time
-   * of creating or updating an application, provides additional mapping information specific to the
-   * record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming
-   * source.
+   * Specifies the method and snapshot to use when restarting an application using previously saved
+   * application state.
    *
    * Example:
    *
@@ -1494,347 +1642,219 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * MappingParametersProperty mappingParametersProperty = MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html)
-   */
-  public interface MappingParametersProperty {
-    /**
-     * Provides additional mapping information when the record format uses delimiters (for example,
-     * CSV).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)
-     */
-    public fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
-
-    /**
-     * Provides additional mapping information when JSON is the record format on the streaming
-     * source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)
-     */
-    public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
-
-    /**
-     * A builder for [MappingParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      public fun csvMappingParameters(csvMappingParameters: IResolvable)
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e03d667539e6d937f0d660ec33db8a3908c3a5028e9965220b600a57f69b002f")
-      public
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a687b0e095f8fc8bed12385c9c5405e169f32fc6bffaf1e990837e29501a83d1")
-      public
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty.builder()
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
-      }
-
-      /**
-       * @param csvMappingParameters Provides additional mapping information when the record format
-       * uses delimiters (for example, CSV).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e03d667539e6d937f0d660ec33db8a3908c3a5028e9965220b600a57f69b002f")
-      override
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
-          Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
-      }
-
-      /**
-       * @param jsonMappingParameters Provides additional mapping information when JSON is the
-       * record format on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a687b0e095f8fc8bed12385c9c5405e169f32fc6bffaf1e990837e29501a83d1")
-      override
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
-          Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty,
-    ) : CdkObject(cdkObject), MappingParametersProperty {
-      /**
-       * Provides additional mapping information when the record format uses delimiters (for
-       * example, CSV).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)
-       */
-      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
-
-      /**
-       * Provides additional mapping information when JSON is the record format on the streaming
-       * source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)
-       */
-      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MappingParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty):
-          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MappingParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MappingParametersProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the record format and
-   * relevant mapping information that should be applied to schematize the records on the stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * RecordFormatProperty recordFormatProperty = RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
+   * ApplicationRestoreConfigurationProperty applicationRestoreConfigurationProperty =
+   * ApplicationRestoreConfigurationProperty.builder()
+   * .applicationRestoreType("applicationRestoreType")
    * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
+   * .snapshotName("snapshotName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html)
    */
-  public interface RecordFormatProperty {
+  public interface ApplicationRestoreConfigurationProperty {
     /**
-     * When you configure application input at the time of creating or updating an application,
-     * provides additional mapping information specific to the record format (such as JSON, CSV, or
-     * record fields delimited by some delimiter) on the streaming source.
+     * Specifies how the application should be restored.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-mappingparameters)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-applicationrestoretype)
      */
-    public fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+    public fun applicationRestoreType(): String
 
     /**
-     * The type of record format.
+     * The identifier of an existing snapshot of application state to use to restart an application.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-recordformattype)
+     * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
+     * `ApplicationRestoreType` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-snapshotname)
      */
-    public fun recordFormatType(): String
+    public fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
     /**
-     * A builder for [RecordFormatProperty]
+     * A builder for [ApplicationRestoreConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       * @param applicationRestoreType Specifies how the application should be restored. 
        */
-      public fun mappingParameters(mappingParameters: IResolvable)
+      public fun applicationRestoreType(applicationRestoreType: String)
 
       /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       * @param snapshotName The identifier of an existing snapshot of application state to use to
+       * restart an application.
+       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
+       * `ApplicationRestoreType` .
        */
-      public fun mappingParameters(mappingParameters: MappingParametersProperty)
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2e4cb691a6553bc1a37ffc0ad89ccdf126254533b6fb37fcc41980962693619f")
-      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
-
-      /**
-       * @param recordFormatType The type of record format. 
-       */
-      public fun recordFormatType(recordFormatType: String)
+      public fun snapshotName(snapshotName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty.builder()
 
       /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       * @param applicationRestoreType Specifies how the application should be restored. 
        */
-      override fun mappingParameters(mappingParameters: IResolvable) {
-        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+      override fun applicationRestoreType(applicationRestoreType: String) {
+        cdkBuilder.applicationRestoreType(applicationRestoreType)
       }
 
       /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       * @param snapshotName The identifier of an existing snapshot of application state to use to
+       * restart an application.
+       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
+       * `ApplicationRestoreType` .
        */
-      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
-        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
-      }
-
-      /**
-       * @param mappingParameters When you configure application input at the time of creating or
-       * updating an application, provides additional mapping information specific to the record format
-       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2e4cb691a6553bc1a37ffc0ad89ccdf126254533b6fb37fcc41980962693619f")
-      override
-          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
-          Unit = mappingParameters(MappingParametersProperty(mappingParameters))
-
-      /**
-       * @param recordFormatType The type of record format. 
-       */
-      override fun recordFormatType(recordFormatType: String) {
-        cdkBuilder.recordFormatType(recordFormatType)
+      override fun snapshotName(snapshotName: String) {
+        cdkBuilder.snapshotName(snapshotName)
       }
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty,
-    ) : CdkObject(cdkObject), RecordFormatProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty,
+    ) : CdkObject(cdkObject), ApplicationRestoreConfigurationProperty {
       /**
-       * When you configure application input at the time of creating or updating an application,
-       * provides additional mapping information specific to the record format (such as JSON, CSV, or
-       * record fields delimited by some delimiter) on the streaming source.
+       * Specifies how the application should be restored.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-mappingparameters)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-applicationrestoretype)
        */
-      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+      override fun applicationRestoreType(): String = unwrap(this).getApplicationRestoreType()
 
       /**
-       * The type of record format.
+       * The identifier of an existing snapshot of application state to use to restart an
+       * application.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-recordformattype)
+       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
+       * `ApplicationRestoreType` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-snapshotname)
        */
-      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
+      override fun snapshotName(): String? = unwrap(this).getSnapshotName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecordFormatProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ApplicationRestoreConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty):
-          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty):
+          ApplicationRestoreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationRestoreConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RecordFormatProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty
+      internal fun unwrap(wrapped: ApplicationRestoreConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * ApplicationSnapshotConfigurationProperty applicationSnapshotConfigurationProperty =
+   * ApplicationSnapshotConfigurationProperty.builder()
+   * .snapshotsEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html)
+   */
+  public interface ApplicationSnapshotConfigurationProperty {
+    /**
+     * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled)
+     */
+    public fun snapshotsEnabled(): Any
+
+    /**
+     * A builder for [ApplicationSnapshotConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+       * Apache Flink application. 
+       */
+      public fun snapshotsEnabled(snapshotsEnabled: Boolean)
+
+      /**
+       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+       * Apache Flink application. 
+       */
+      public fun snapshotsEnabled(snapshotsEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty.builder()
+
+      /**
+       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+       * Apache Flink application. 
+       */
+      override fun snapshotsEnabled(snapshotsEnabled: Boolean) {
+        cdkBuilder.snapshotsEnabled(snapshotsEnabled)
+      }
+
+      /**
+       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
+       * Apache Flink application. 
+       */
+      override fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
+        cdkBuilder.snapshotsEnabled(snapshotsEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty,
+    ) : CdkObject(cdkObject), ApplicationSnapshotConfigurationProperty {
+      /**
+       * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled)
+       */
+      override fun snapshotsEnabled(): Any = unwrap(this).getSnapshotsEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ApplicationSnapshotConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty):
+          ApplicationSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSnapshotConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationSnapshotConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
     }
   }
 
@@ -1929,8 +1949,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty,
     ) : CdkObject(cdkObject), CSVMappingParametersProperty {
       /**
        * The column delimiter.
@@ -1970,7 +1989,10 @@ public open class CfnApplicationV2 internal constructor(
   }
 
   /**
-   * Describes execution properties for a Managed Service for Apache Flink application.
+   * The configuration parameters for the default Amazon Glue database.
+   *
+   * You use this database for SQL queries that you write in a Kinesis Data Analytics Studio
+   * notebook.
    *
    * Example:
    *
@@ -1978,1220 +2000,145 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * EnvironmentPropertiesProperty environmentPropertiesProperty =
-   * EnvironmentPropertiesProperty.builder()
-   * .propertyGroups(List.of(PropertyGroupProperty.builder()
-   * .propertyGroupId("propertyGroupId")
-   * .propertyMap(Map.of(
-   * "propertyMapKey", "propertyMap"))
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html)
-   */
-  public interface EnvironmentPropertiesProperty {
-    /**
-     * Describes the execution property groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)
-     */
-    public fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
-
-    /**
-     * A builder for [EnvironmentPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      public fun propertyGroups(propertyGroups: IResolvable)
-
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      public fun propertyGroups(propertyGroups: List<Any>)
-
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      public fun propertyGroups(vararg propertyGroups: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty.builder()
-
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      override fun propertyGroups(propertyGroups: IResolvable) {
-        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      override fun propertyGroups(propertyGroups: List<Any>) {
-        cdkBuilder.propertyGroups(propertyGroups)
-      }
-
-      /**
-       * @param propertyGroups Describes the execution property groups.
-       */
-      override fun propertyGroups(vararg propertyGroups: Any): Unit =
-          propertyGroups(propertyGroups.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty,
-    ) : CdkObject(cdkObject), EnvironmentPropertiesProperty {
-      /**
-       * Describes the execution property groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)
-       */
-      override fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty):
-          EnvironmentPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EnvironmentPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EnvironmentPropertiesProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
-    }
-  }
-
-  /**
-   * Describes the inputs, outputs, and reference data sources for a SQL-based Managed Service for
-   * Apache Flink application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * SqlApplicationConfigurationProperty sqlApplicationConfigurationProperty =
-   * SqlApplicationConfigurationProperty.builder()
-   * .inputs(List.of(InputProperty.builder()
-   * .inputSchema(InputSchemaProperty.builder()
-   * .recordColumns(List.of(RecordColumnProperty.builder()
-   * .name("name")
-   * .sqlType("sqlType")
-   * // the properties below are optional
-   * .mapping("mapping")
-   * .build()))
-   * .recordFormat(RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
-   * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .recordEncoding("recordEncoding")
-   * .build())
-   * .namePrefix("namePrefix")
-   * // the properties below are optional
-   * .inputParallelism(InputParallelismProperty.builder()
-   * .count(123)
-   * .build())
-   * .inputProcessingConfiguration(InputProcessingConfigurationProperty.builder()
-   * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build())
-   * .build())
-   * .kinesisFirehoseInput(KinesisFirehoseInputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build())
-   * .kinesisStreamsInput(KinesisStreamsInputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build())
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html)
-   */
-  public interface SqlApplicationConfigurationProperty {
-    /**
-     * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
-     * objects describing the input streams used by the application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)
-     */
-    public fun inputs(): Any? = unwrap(this).getInputs()
-
-    /**
-     * A builder for [SqlApplicationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      public fun inputs(inputs: IResolvable)
-
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      public fun inputs(inputs: List<Any>)
-
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      public fun inputs(vararg inputs: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty.builder()
-
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      override fun inputs(inputs: IResolvable) {
-        cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      override fun inputs(inputs: List<Any>) {
-        cdkBuilder.inputs(inputs)
-      }
-
-      /**
-       * @param inputs The array of
-       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
-       * describing the input streams used by the application.
-       */
-      override fun inputs(vararg inputs: Any): Unit = inputs(inputs.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), SqlApplicationConfigurationProperty {
-      /**
-       * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
-       * objects describing the input streams used by the application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)
-       */
-      override fun inputs(): Any? = unwrap(this).getInputs()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          SqlApplicationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty):
-          SqlApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SqlApplicationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SqlApplicationConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
-    }
-  }
-
-  /**
-   * The base location of the Amazon Data Analytics application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * S3ContentBaseLocationProperty s3ContentBaseLocationProperty =
-   * S3ContentBaseLocationProperty.builder()
-   * .bucketArn("bucketArn")
-   * // the properties below are optional
-   * .basePath("basePath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html)
-   */
-  public interface S3ContentBaseLocationProperty {
-    /**
-     * The base path for the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-basepath)
-     */
-    public fun basePath(): String? = unwrap(this).getBasePath()
-
-    /**
-     * The Amazon Resource Name (ARN) of the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-bucketarn)
-     */
-    public fun bucketArn(): String
-
-    /**
-     * A builder for [S3ContentBaseLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param basePath The base path for the S3 bucket.
-       */
-      public fun basePath(basePath: String)
-
-      /**
-       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
-       */
-      public fun bucketArn(bucketArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty.builder()
-
-      /**
-       * @param basePath The base path for the S3 bucket.
-       */
-      override fun basePath(basePath: String) {
-        cdkBuilder.basePath(basePath)
-      }
-
-      /**
-       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
-       */
-      override fun bucketArn(bucketArn: String) {
-        cdkBuilder.bucketArn(bucketArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty,
-    ) : CdkObject(cdkObject), S3ContentBaseLocationProperty {
-      /**
-       * The base path for the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-basepath)
-       */
-      override fun basePath(): String? = unwrap(this).getBasePath()
-
-      /**
-       * The Amazon Resource Name (ARN) of the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-bucketarn)
-       */
-      override fun bucketArn(): String = unwrap(this).getBucketArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ContentBaseLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty):
-          S3ContentBaseLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3ContentBaseLocationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3ContentBaseLocationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
-   * information when JSON is the record format on the streaming source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * JSONMappingParametersProperty jSONMappingParametersProperty =
-   * JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html)
-   */
-  public interface JSONMappingParametersProperty {
-    /**
-     * The path to the top-level parent that contains the records.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath)
-     */
-    public fun recordRowPath(): String
-
-    /**
-     * A builder for [JSONMappingParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordRowPath The path to the top-level parent that contains the records. 
-       */
-      public fun recordRowPath(recordRowPath: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty.builder()
-
-      /**
-       * @param recordRowPath The path to the top-level parent that contains the records. 
-       */
-      override fun recordRowPath(recordRowPath: String) {
-        cdkBuilder.recordRowPath(recordRowPath)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty,
-    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
-      /**
-       * The path to the top-level parent that contains the records.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath)
-       */
-      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): JSONMappingParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty):
-          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          JSONMappingParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JSONMappingParametersProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, identifies a Kinesis Data
-   * Firehose delivery stream as the streaming source.
-   *
-   * You provide the delivery stream's Amazon Resource Name (ARN).
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * KinesisFirehoseInputProperty kinesisFirehoseInputProperty =
-   * KinesisFirehoseInputProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html)
-   */
-  public interface KinesisFirehoseInputProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the delivery stream.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [KinesisFirehoseInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty.builder()
-
-      /**
-       * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the delivery stream.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty):
-          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KinesisFirehoseInputProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisFirehoseInputProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
-    }
-  }
-
-  /**
-   * The information required to deploy a Kinesis Data Analytics Studio notebook as an application
-   * with durable state.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * DeployAsApplicationConfigurationProperty deployAsApplicationConfigurationProperty =
-   * DeployAsApplicationConfigurationProperty.builder()
-   * .s3ContentLocation(S3ContentBaseLocationProperty.builder()
-   * .bucketArn("bucketArn")
-   * // the properties below are optional
-   * .basePath("basePath")
+   * CatalogConfigurationProperty catalogConfigurationProperty =
+   * CatalogConfigurationProperty.builder()
+   * .glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty.builder()
+   * .databaseArn("databaseArn")
    * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html)
    */
-  public interface DeployAsApplicationConfigurationProperty {
+  public interface CatalogConfigurationProperty {
     /**
-     * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
-     * including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that
-     * contains the data, and the version number of the Amazon S3 object that contains the data.
+     * The configuration parameters for the default Amazon Glue database.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-deployasapplicationconfiguration-s3contentlocation)
+     * You use this database for Apache Flink SQL queries and table API transforms that you write in
+     * a Kinesis Data Analytics Studio notebook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html#cfn-kinesisanalyticsv2-application-catalogconfiguration-gluedatacatalogconfiguration)
      */
-    public fun s3ContentLocation(): Any
+    public fun glueDataCatalogConfiguration(): Any? = unwrap(this).getGlueDataCatalogConfiguration()
 
     /**
-     * A builder for [DeployAsApplicationConfigurationProperty]
+     * A builder for [CatalogConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
        */
-      public fun s3ContentLocation(s3ContentLocation: IResolvable)
+      public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable)
 
       /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
-       */
-      public fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty)
-
-      /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f58f0b29b06c8e43d8cfa3e56a43ad26504eb075104826e1262337355c0ade78")
-      public
-          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty.builder()
-
-      /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
-       */
-      override fun s3ContentLocation(s3ContentLocation: IResolvable) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
-       */
-      override fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentBaseLocationProperty::unwrap))
-      }
-
-      /**
-       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
-       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
-       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
-       * object that contains the data. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f58f0b29b06c8e43d8cfa3e56a43ad26504eb075104826e1262337355c0ade78")
-      override
-          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit):
-          Unit = s3ContentLocation(S3ContentBaseLocationProperty(s3ContentLocation))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), DeployAsApplicationConfigurationProperty {
-      /**
-       * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
-       * including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object
-       * that contains the data, and the version number of the Amazon S3 object that contains the data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-deployasapplicationconfiguration-s3contentlocation)
-       */
-      override fun s3ContentLocation(): Any = unwrap(this).getS3ContentLocation()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DeployAsApplicationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty):
-          DeployAsApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DeployAsApplicationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeployAsApplicationConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the maintence window parameters for a Kinesis Data Analytics application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ApplicationMaintenanceConfigurationProperty applicationMaintenanceConfigurationProperty =
-   * ApplicationMaintenanceConfigurationProperty.builder()
-   * .applicationMaintenanceWindowStartTime("applicationMaintenanceWindowStartTime")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html)
-   */
-  public interface ApplicationMaintenanceConfigurationProperty {
-    /**
-     * Specifies the start time of the maintence window.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
-     */
-    public fun applicationMaintenanceWindowStartTime(): String
-
-    /**
-     * A builder for [ApplicationMaintenanceConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
-       * window. 
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
        */
       public
-          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String)
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty)
+
+      /**
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cae6ad8548b6c4eab778d0dc03188fb1040ff9730dc07755031d5d3a52943282")
+      public
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty.builder()
 
       /**
-       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
-       * window. 
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
+       */
+      override fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
        */
       override
-          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
-        cdkBuilder.applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime)
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty) {
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(GlueDataCatalogConfigurationProperty::unwrap))
       }
 
+      /**
+       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
+       * Glue database.
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cae6ad8548b6c4eab778d0dc03188fb1040ff9730dc07755031d5d3a52943282")
+      override
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty(glueDataCatalogConfiguration))
+
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationMaintenanceConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty,
+    ) : CdkObject(cdkObject), CatalogConfigurationProperty {
       /**
-       * Specifies the start time of the maintence window.
+       * The configuration parameters for the default Amazon Glue database.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
+       * You use this database for Apache Flink SQL queries and table API transforms that you write
+       * in a Kinesis Data Analytics Studio notebook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html#cfn-kinesisanalyticsv2-application-catalogconfiguration-gluedatacatalogconfiguration)
        */
-      override fun applicationMaintenanceWindowStartTime(): String =
-          unwrap(this).getApplicationMaintenanceWindowStartTime()
+      override fun glueDataCatalogConfiguration(): Any? =
+          unwrap(this).getGlueDataCatalogConfiguration()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ApplicationMaintenanceConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CatalogConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty):
-          ApplicationMaintenanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationMaintenanceConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty):
+          CatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CatalogConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ApplicationMaintenanceConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
+      internal fun unwrap(wrapped: CatalogConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
     }
   }
 
   /**
-   * The information required to specify a Maven reference.
+   * Describes an application's checkpointing configuration.
    *
-   * You can use Maven references to specify dependency JAR files.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * MavenReferenceProperty mavenReferenceProperty = MavenReferenceProperty.builder()
-   * .artifactId("artifactId")
-   * .groupId("groupId")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html)
-   */
-  public interface MavenReferenceProperty {
-    /**
-     * The artifact ID of the Maven reference.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-artifactid)
-     */
-    public fun artifactId(): String
-
-    /**
-     * The group ID of the Maven reference.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-groupid)
-     */
-    public fun groupId(): String
-
-    /**
-     * The version of the Maven reference.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-version)
-     */
-    public fun version(): String
-
-    /**
-     * A builder for [MavenReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param artifactId The artifact ID of the Maven reference. 
-       */
-      public fun artifactId(artifactId: String)
-
-      /**
-       * @param groupId The group ID of the Maven reference. 
-       */
-      public fun groupId(groupId: String)
-
-      /**
-       * @param version The version of the Maven reference. 
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty.builder()
-
-      /**
-       * @param artifactId The artifact ID of the Maven reference. 
-       */
-      override fun artifactId(artifactId: String) {
-        cdkBuilder.artifactId(artifactId)
-      }
-
-      /**
-       * @param groupId The group ID of the Maven reference. 
-       */
-      override fun groupId(groupId: String) {
-        cdkBuilder.groupId(groupId)
-      }
-
-      /**
-       * @param version The version of the Maven reference. 
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty,
-    ) : CdkObject(cdkObject), MavenReferenceProperty {
-      /**
-       * The artifact ID of the Maven reference.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-artifactid)
-       */
-      override fun artifactId(): String = unwrap(this).getArtifactId()
-
-      /**
-       * The group ID of the Maven reference.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-groupid)
-       */
-      override fun groupId(): String = unwrap(this).getGroupId()
-
-      /**
-       * The version of the Maven reference.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-version)
-       */
-      override fun version(): String = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MavenReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty):
-          MavenReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? MavenReferenceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MavenReferenceProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty
-    }
-  }
-
-  /**
-   * An object that contains the Amazon Resource Name (ARN) of the Amazon Lambda function that is
-   * used to preprocess records in the stream in a SQL-based Managed Service for Apache Flink
-   * application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputLambdaProcessorProperty inputLambdaProcessorProperty =
-   * InputLambdaProcessorProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html)
-   */
-  public interface InputLambdaProcessorProperty {
-    /**
-     * The ARN of the Amazon Lambda function that operates on records in the stream.
-     *
-     *
-     * To specify an earlier version of the Lambda function than the latest, include the Lambda
-     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-     * [Example ARNs: Amazon
-     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html#cfn-kinesisanalyticsv2-application-inputlambdaprocessor-resourcearn)
-     */
-    public fun resourceArn(): String
-
-    /**
-     * A builder for [InputLambdaProcessorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resourceArn The ARN of the Amazon Lambda function that operates on records in the
-       * stream. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      public fun resourceArn(resourceArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty.builder()
-
-      /**
-       * @param resourceArn The ARN of the Amazon Lambda function that operates on records in the
-       * stream. 
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       */
-      override fun resourceArn(resourceArn: String) {
-        cdkBuilder.resourceArn(resourceArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty,
-    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
-      /**
-       * The ARN of the Amazon Lambda function that operates on records in the stream.
-       *
-       *
-       * To specify an earlier version of the Lambda function than the latest, include the Lambda
-       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
-       * [Example ARNs: Amazon
-       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html#cfn-kinesisanalyticsv2-application-inputlambdaprocessor-resourcearn)
-       */
-      override fun resourceArn(): String = unwrap(this).getResourceArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputLambdaProcessorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty):
-          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputLambdaProcessorProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputLambdaProcessorProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
-    }
-  }
-
-  /**
-   * Describes the starting parameters for a Managed Service for Apache Flink application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * FlinkRunConfigurationProperty flinkRunConfigurationProperty =
-   * FlinkRunConfigurationProperty.builder()
-   * .allowNonRestoredState(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html)
-   */
-  public interface FlinkRunConfigurationProperty {
-    /**
-     * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that
-     * cannot be mapped to the new program.
-     *
-     * This will happen if the program is updated between snapshots to remove stateful parameters,
-     * and state data in the snapshot no longer corresponds to valid application data. For more
-     * information, see [Allowing Non-Restored
-     * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-     * in the [Apache Flink
-     * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-     * .
-     *
-     *
-     * This value defaults to `false` . If you update your application without specifying this
-     * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-     * `true` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html#cfn-kinesisanalyticsv2-application-flinkrunconfiguration-allownonrestoredstate)
-     */
-    public fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
-
-    /**
-     * A builder for [FlinkRunConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
-       * is allowed to skip a state that cannot be mapped to the new program.
-       * This will happen if the program is updated between snapshots to remove stateful parameters,
-       * and state data in the snapshot no longer corresponds to valid application data. For more
-       * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-       * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * This value defaults to `false` . If you update your application without specifying this
-       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-       * `true` .
-       */
-      public fun allowNonRestoredState(allowNonRestoredState: Boolean)
-
-      /**
-       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
-       * is allowed to skip a state that cannot be mapped to the new program.
-       * This will happen if the program is updated between snapshots to remove stateful parameters,
-       * and state data in the snapshot no longer corresponds to valid application data. For more
-       * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-       * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * This value defaults to `false` . If you update your application without specifying this
-       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-       * `true` .
-       */
-      public fun allowNonRestoredState(allowNonRestoredState: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty.builder()
-
-      /**
-       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
-       * is allowed to skip a state that cannot be mapped to the new program.
-       * This will happen if the program is updated between snapshots to remove stateful parameters,
-       * and state data in the snapshot no longer corresponds to valid application data. For more
-       * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-       * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * This value defaults to `false` . If you update your application without specifying this
-       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-       * `true` .
-       */
-      override fun allowNonRestoredState(allowNonRestoredState: Boolean) {
-        cdkBuilder.allowNonRestoredState(allowNonRestoredState)
-      }
-
-      /**
-       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
-       * is allowed to skip a state that cannot be mapped to the new program.
-       * This will happen if the program is updated between snapshots to remove stateful parameters,
-       * and state data in the snapshot no longer corresponds to valid application data. For more
-       * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-       * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * This value defaults to `false` . If you update your application without specifying this
-       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-       * `true` .
-       */
-      override fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
-        cdkBuilder.allowNonRestoredState(allowNonRestoredState.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty,
-    ) : CdkObject(cdkObject), FlinkRunConfigurationProperty {
-      /**
-       * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state
-       * that cannot be mapped to the new program.
-       *
-       * This will happen if the program is updated between snapshots to remove stateful parameters,
-       * and state data in the snapshot no longer corresponds to valid application data. For more
-       * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
-       * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * This value defaults to `false` . If you update your application without specifying this
-       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
-       * `true` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html#cfn-kinesisanalyticsv2-application-flinkrunconfiguration-allownonrestoredstate)
-       */
-      override fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FlinkRunConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty):
-          FlinkRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FlinkRunConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FlinkRunConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes parameters for how a Flink-based Kinesis Data Analytics application executes multiple
-   * tasks simultaneously.
-   *
-   * For more information about parallelism, see [Parallel
-   * Execution](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html)
+   * Checkpointing is the process of persisting application state for fault tolerance. For more
+   * information, see [Checkpoints for Fault
+   * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
    * in the [Apache Flink
    * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
    * .
@@ -3202,226 +2149,328 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ParallelismConfigurationProperty parallelismConfigurationProperty =
-   * ParallelismConfigurationProperty.builder()
+   * CheckpointConfigurationProperty checkpointConfigurationProperty =
+   * CheckpointConfigurationProperty.builder()
    * .configurationType("configurationType")
    * // the properties below are optional
-   * .autoScalingEnabled(false)
-   * .parallelism(123)
-   * .parallelismPerKpu(123)
+   * .checkpointingEnabled(false)
+   * .checkpointInterval(123)
+   * .minPauseBetweenCheckpoints(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html)
    */
-  public interface ParallelismConfigurationProperty {
+  public interface CheckpointConfigurationProperty {
     /**
-     * Describes whether the Managed Service for Apache Flink service can increase the parallelism
-     * of the application in response to increased throughput.
+     * Describes the interval in milliseconds between checkpoint operations.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled)
+     *
+     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+     * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
+     * or in application code.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval)
      */
-    public fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
+    public fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
 
     /**
-     * Describes whether the application uses the default parallelism for the Managed Service for
-     * Apache Flink service.
+     * Describes whether checkpointing is enabled for a Managed Service for Apache Flink
+     * application.
      *
-     * You must set this property to `CUSTOM` in order to change your application's
-     * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype)
+     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+     * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+     * API or in application code.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled)
+     */
+    public fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
+
+    /**
+     * Describes whether the application uses Managed Service for Apache Flink' default
+     * checkpointing behavior.
+     *
+     * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
+     * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
+     *
+     *
+     * If this value is set to `DEFAULT` , the application will use the following values, even if
+     * they are set to other values using APIs or application code:
+     *
+     * * *CheckpointingEnabled:* true
+     * * *CheckpointInterval:* 60000
+     * * *MinPauseBetweenCheckpoints:* 5000
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype)
      */
     public fun configurationType(): String
 
     /**
-     * Describes the initial number of parallel tasks that a Java-based Kinesis Data Analytics
-     * application can perform.
+     * Describes the minimum time in milliseconds after a checkpoint operation completes that a new
+     * checkpoint operation can start.
      *
-     * The Kinesis Data Analytics service can increase this number automatically if
-     * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
-     * is set to `true` .
+     * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
+     * otherwise performs continual checkpoint operations. For more information, see [Tuning
+     * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+     * in the [Apache Flink
+     * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+     * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism)
+     *
+     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+     * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
+     * application code.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints)
      */
-    public fun parallelism(): Number? = unwrap(this).getParallelism()
+    public fun minPauseBetweenCheckpoints(): Number? = unwrap(this).getMinPauseBetweenCheckpoints()
 
     /**
-     * Describes the number of parallel tasks that a Java-based Kinesis Data Analytics application
-     * can perform per Kinesis Processing Unit (KPU) used by the application.
-     *
-     * For more information about KPUs, see [Amazon Kinesis Data Analytics
-     * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu)
-     */
-    public fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
-
-    /**
-     * A builder for [ParallelismConfigurationProperty]
+     * A builder for [CheckpointConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
-       * can increase the parallelism of the application in response to increased throughput.
+       * @param checkpointInterval Describes the interval in milliseconds between checkpoint
+       * operations.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
+       * or in application code.
        */
-      public fun autoScalingEnabled(autoScalingEnabled: Boolean)
+      public fun checkpointInterval(checkpointInterval: Number)
 
       /**
-       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
-       * can increase the parallelism of the application in response to increased throughput.
+       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
+       * Service for Apache Flink application.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+       * API or in application code.
        */
-      public fun autoScalingEnabled(autoScalingEnabled: IResolvable)
+      public fun checkpointingEnabled(checkpointingEnabled: Boolean)
 
       /**
-       * @param configurationType Describes whether the application uses the default parallelism for
-       * the Managed Service for Apache Flink service. 
-       * You must set this property to `CUSTOM` in order to change your application's
-       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
+       * Service for Apache Flink application.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+       * API or in application code.
+       */
+      public fun checkpointingEnabled(checkpointingEnabled: IResolvable)
+
+      /**
+       * @param configurationType Describes whether the application uses Managed Service for Apache
+       * Flink' default checkpointing behavior. 
+       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
+       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
+       *
+       *
+       * If this value is set to `DEFAULT` , the application will use the following values, even if
+       * they are set to other values using APIs or application code:
+       *
+       * * *CheckpointingEnabled:* true
+       * * *CheckpointInterval:* 60000
+       * * *MinPauseBetweenCheckpoints:* 5000
        */
       public fun configurationType(configurationType: String)
 
       /**
-       * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
-       * Data Analytics application can perform.
-       * The Kinesis Data Analytics service can increase this number automatically if
-       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
-       * is set to `true` .
+       * @param minPauseBetweenCheckpoints Describes the minimum time in milliseconds after a
+       * checkpoint operation completes that a new checkpoint operation can start.
+       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
+       * otherwise performs continual checkpoint operations. For more information, see [Tuning
+       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
+       * application code.
        */
-      public fun parallelism(parallelism: Number)
-
-      /**
-       * @param parallelismPerKpu Describes the number of parallel tasks that a Java-based Kinesis
-       * Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the
-       * application.
-       * For more information about KPUs, see [Amazon Kinesis Data Analytics
-       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
-       */
-      public fun parallelismPerKpu(parallelismPerKpu: Number)
+      public fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty.builder()
 
       /**
-       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
-       * can increase the parallelism of the application in response to increased throughput.
+       * @param checkpointInterval Describes the interval in milliseconds between checkpoint
+       * operations.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
+       * or in application code.
        */
-      override fun autoScalingEnabled(autoScalingEnabled: Boolean) {
-        cdkBuilder.autoScalingEnabled(autoScalingEnabled)
+      override fun checkpointInterval(checkpointInterval: Number) {
+        cdkBuilder.checkpointInterval(checkpointInterval)
       }
 
       /**
-       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
-       * can increase the parallelism of the application in response to increased throughput.
+       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
+       * Service for Apache Flink application.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+       * API or in application code.
        */
-      override fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
-        cdkBuilder.autoScalingEnabled(autoScalingEnabled.let(IResolvable::unwrap))
+      override fun checkpointingEnabled(checkpointingEnabled: Boolean) {
+        cdkBuilder.checkpointingEnabled(checkpointingEnabled)
       }
 
       /**
-       * @param configurationType Describes whether the application uses the default parallelism for
-       * the Managed Service for Apache Flink service. 
-       * You must set this property to `CUSTOM` in order to change your application's
-       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
+       * Service for Apache Flink application.
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+       * API or in application code.
+       */
+      override fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
+        cdkBuilder.checkpointingEnabled(checkpointingEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurationType Describes whether the application uses Managed Service for Apache
+       * Flink' default checkpointing behavior. 
+       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
+       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
+       *
+       *
+       * If this value is set to `DEFAULT` , the application will use the following values, even if
+       * they are set to other values using APIs or application code:
+       *
+       * * *CheckpointingEnabled:* true
+       * * *CheckpointInterval:* 60000
+       * * *MinPauseBetweenCheckpoints:* 5000
        */
       override fun configurationType(configurationType: String) {
         cdkBuilder.configurationType(configurationType)
       }
 
       /**
-       * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
-       * Data Analytics application can perform.
-       * The Kinesis Data Analytics service can increase this number automatically if
-       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
-       * is set to `true` .
+       * @param minPauseBetweenCheckpoints Describes the minimum time in milliseconds after a
+       * checkpoint operation completes that a new checkpoint operation can start.
+       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
+       * otherwise performs continual checkpoint operations. For more information, see [Tuning
+       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
+       * application code.
        */
-      override fun parallelism(parallelism: Number) {
-        cdkBuilder.parallelism(parallelism)
-      }
-
-      /**
-       * @param parallelismPerKpu Describes the number of parallel tasks that a Java-based Kinesis
-       * Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the
-       * application.
-       * For more information about KPUs, see [Amazon Kinesis Data Analytics
-       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
-       */
-      override fun parallelismPerKpu(parallelismPerKpu: Number) {
-        cdkBuilder.parallelismPerKpu(parallelismPerKpu)
+      override fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number) {
+        cdkBuilder.minPauseBetweenCheckpoints(minPauseBetweenCheckpoints)
       }
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty,
-    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty,
+    ) : CdkObject(cdkObject), CheckpointConfigurationProperty {
       /**
-       * Describes whether the Managed Service for Apache Flink service can increase the parallelism
-       * of the application in response to increased throughput.
+       * Describes the interval in milliseconds between checkpoint operations.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled)
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
+       * or in application code.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval)
        */
-      override fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
+      override fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
 
       /**
-       * Describes whether the application uses the default parallelism for the Managed Service for
-       * Apache Flink service.
+       * Describes whether checkpointing is enabled for a Managed Service for Apache Flink
+       * application.
        *
-       * You must set this property to `CUSTOM` in order to change your application's
-       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype)
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
+       * API or in application code.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled)
+       */
+      override fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
+
+      /**
+       * Describes whether the application uses Managed Service for Apache Flink' default
+       * checkpointing behavior.
+       *
+       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
+       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
+       *
+       *
+       * If this value is set to `DEFAULT` , the application will use the following values, even if
+       * they are set to other values using APIs or application code:
+       *
+       * * *CheckpointingEnabled:* true
+       * * *CheckpointInterval:* 60000
+       * * *MinPauseBetweenCheckpoints:* 5000
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype)
        */
       override fun configurationType(): String = unwrap(this).getConfigurationType()
 
       /**
-       * Describes the initial number of parallel tasks that a Java-based Kinesis Data Analytics
-       * application can perform.
+       * Describes the minimum time in milliseconds after a checkpoint operation completes that a
+       * new checkpoint operation can start.
        *
-       * The Kinesis Data Analytics service can increase this number automatically if
-       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
-       * is set to `true` .
+       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
+       * otherwise performs continual checkpoint operations. For more information, see [Tuning
+       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism)
+       *
+       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
+       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
+       * application code.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints)
        */
-      override fun parallelism(): Number? = unwrap(this).getParallelism()
-
-      /**
-       * Describes the number of parallel tasks that a Java-based Kinesis Data Analytics application
-       * can perform per Kinesis Processing Unit (KPU) used by the application.
-       *
-       * For more information about KPUs, see [Amazon Kinesis Data Analytics
-       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu)
-       */
-      override fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
+      override fun minPauseBetweenCheckpoints(): Number? =
+          unwrap(this).getMinPauseBetweenCheckpoints()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParallelismConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CheckpointConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty):
+          CheckpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CheckpointConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ParallelismConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+      internal fun unwrap(wrapped: CheckpointConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
     }
   }
 
@@ -3561,8 +2610,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty,
     ) : CdkObject(cdkObject), CodeContentProperty {
       /**
        * Information about the Amazon S3 bucket that contains the application code.
@@ -3601,238 +2649,6 @@ public open class CfnApplicationV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty
-    }
-  }
-
-  /**
-   * Describes code configuration for an application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ApplicationCodeConfigurationProperty applicationCodeConfigurationProperty =
-   * ApplicationCodeConfigurationProperty.builder()
-   * .codeContent(CodeContentProperty.builder()
-   * .s3ContentLocation(S3ContentLocationProperty.builder()
-   * .bucketArn("bucketArn")
-   * .fileKey("fileKey")
-   * // the properties below are optional
-   * .objectVersion("objectVersion")
-   * .build())
-   * .textContent("textContent")
-   * .zipFileContent("zipFileContent")
-   * .build())
-   * .codeContentType("codeContentType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html)
-   */
-  public interface ApplicationCodeConfigurationProperty {
-    /**
-     * The location and type of the application code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)
-     */
-    public fun codeContent(): Any
-
-    /**
-     * Specifies whether the code content is in text or zip format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)
-     */
-    public fun codeContentType(): String
-
-    /**
-     * A builder for [ApplicationCodeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      public fun codeContent(codeContent: IResolvable)
-
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      public fun codeContent(codeContent: CodeContentProperty)
-
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ff44823ca2dc4cb3a41b23ae125f3f9fb3045d8197a8ce2f67a28c78eb90062")
-      public fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit)
-
-      /**
-       * @param codeContentType Specifies whether the code content is in text or zip format. 
-       */
-      public fun codeContentType(codeContentType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty.builder()
-
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      override fun codeContent(codeContent: IResolvable) {
-        cdkBuilder.codeContent(codeContent.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      override fun codeContent(codeContent: CodeContentProperty) {
-        cdkBuilder.codeContent(codeContent.let(CodeContentProperty::unwrap))
-      }
-
-      /**
-       * @param codeContent The location and type of the application code. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9ff44823ca2dc4cb3a41b23ae125f3f9fb3045d8197a8ce2f67a28c78eb90062")
-      override fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit): Unit =
-          codeContent(CodeContentProperty(codeContent))
-
-      /**
-       * @param codeContentType Specifies whether the code content is in text or zip format. 
-       */
-      override fun codeContentType(codeContentType: String) {
-        cdkBuilder.codeContentType(codeContentType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationCodeConfigurationProperty {
-      /**
-       * The location and type of the application code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)
-       */
-      override fun codeContent(): Any = unwrap(this).getCodeContent()
-
-      /**
-       * Specifies whether the code content is in text or zip format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration.html#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)
-       */
-      override fun codeContentType(): String = unwrap(this).getCodeContentType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ApplicationCodeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty):
-          ApplicationCodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationCodeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApplicationCodeConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the number of
-   * in-application streams to create for a given streaming source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputParallelismProperty inputParallelismProperty = InputParallelismProperty.builder()
-   * .count(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html)
-   */
-  public interface InputParallelismProperty {
-    /**
-     * The number of in-application streams to create.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html#cfn-kinesisanalyticsv2-application-inputparallelism-count)
-     */
-    public fun count(): Number? = unwrap(this).getCount()
-
-    /**
-     * A builder for [InputParallelismProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param count The number of in-application streams to create.
-       */
-      public fun count(count: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty.builder()
-
-      /**
-       * @param count The number of in-application streams to create.
-       */
-      override fun count(count: Number) {
-        cdkBuilder.count(count)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty,
-    ) : CdkObject(cdkObject), InputParallelismProperty {
-      /**
-       * The number of in-application streams to create.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html#cfn-kinesisanalyticsv2-application-inputparallelism-count)
-       */
-      override fun count(): Number? = unwrap(this).getCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputParallelismProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty):
-          InputParallelismProperty = CdkObjectWrappers.wrap(cdkObject) as? InputParallelismProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputParallelismProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
     }
   }
 
@@ -4003,8 +2819,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CustomArtifactConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CustomArtifactConfigurationProperty,
     ) : CdkObject(cdkObject), CustomArtifactConfigurationProperty {
       /**
        * Set this to either `UDF` or `DEPENDENCY_JAR` .
@@ -4051,9 +2866,8 @@ public open class CfnApplicationV2 internal constructor(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the format of the data
-   * in the streaming source, and how each data element maps to corresponding columns created in the
-   * in-application stream.
+   * The information required to deploy a Kinesis Data Analytics Studio notebook as an application
+   * with durable state.
    *
    * Example:
    *
@@ -4061,354 +2875,138 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputSchemaProperty inputSchemaProperty = InputSchemaProperty.builder()
-   * .recordColumns(List.of(RecordColumnProperty.builder()
-   * .name("name")
-   * .sqlType("sqlType")
-   * // the properties below are optional
-   * .mapping("mapping")
-   * .build()))
-   * .recordFormat(RecordFormatProperty.builder()
-   * .recordFormatType("recordFormatType")
-   * // the properties below are optional
-   * .mappingParameters(MappingParametersProperty.builder()
-   * .csvMappingParameters(CSVMappingParametersProperty.builder()
-   * .recordColumnDelimiter("recordColumnDelimiter")
-   * .recordRowDelimiter("recordRowDelimiter")
-   * .build())
-   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
-   * .recordRowPath("recordRowPath")
-   * .build())
-   * .build())
-   * .build())
-   * // the properties below are optional
-   * .recordEncoding("recordEncoding")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html)
-   */
-  public interface InputSchemaProperty {
-    /**
-     * A list of `RecordColumn` objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)
-     */
-    public fun recordColumns(): Any
-
-    /**
-     * Specifies the encoding of the records in the streaming source.
-     *
-     * For example, UTF-8.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordencoding)
-     */
-    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-    /**
-     * Specifies the format of the records on the streaming source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordformat)
-     */
-    public fun recordFormat(): Any
-
-    /**
-     * A builder for [InputSchemaProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: IResolvable)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(recordColumns: List<Any>)
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      public fun recordColumns(vararg recordColumns: Any)
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      public fun recordEncoding(recordEncoding: String)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: IResolvable)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      public fun recordFormat(recordFormat: RecordFormatProperty)
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0b6c5535c654ded1c710c9da214ce6fa617300a1362bb7176b9cfb28d195a212")
-      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty.builder()
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
-      }
-
-      /**
-       * @param recordColumns A list of `RecordColumn` objects. 
-       */
-      override fun recordColumns(vararg recordColumns: Any): Unit =
-          recordColumns(recordColumns.toList())
-
-      /**
-       * @param recordEncoding Specifies the encoding of the records in the streaming source.
-       * For example, UTF-8.
-       */
-      override fun recordEncoding(recordEncoding: String) {
-        cdkBuilder.recordEncoding(recordEncoding)
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
-      }
-
-      /**
-       * @param recordFormat Specifies the format of the records on the streaming source. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("0b6c5535c654ded1c710c9da214ce6fa617300a1362bb7176b9cfb28d195a212")
-      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
-          recordFormat(RecordFormatProperty(recordFormat))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty,
-    ) : CdkObject(cdkObject), InputSchemaProperty {
-      /**
-       * A list of `RecordColumn` objects.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)
-       */
-      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
-
-      /**
-       * Specifies the encoding of the records in the streaming source.
-       *
-       * For example, UTF-8.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordencoding)
-       */
-      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
-
-      /**
-       * Specifies the format of the records on the streaming source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordformat)
-       */
-      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputSchemaProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty):
-          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSchemaProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputSchemaProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty
-    }
-  }
-
-  /**
-   * The location of an application or a custom artifact.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * S3ContentLocationProperty s3ContentLocationProperty = S3ContentLocationProperty.builder()
+   * DeployAsApplicationConfigurationProperty deployAsApplicationConfigurationProperty =
+   * DeployAsApplicationConfigurationProperty.builder()
+   * .s3ContentLocation(S3ContentBaseLocationProperty.builder()
    * .bucketArn("bucketArn")
-   * .fileKey("fileKey")
    * // the properties below are optional
-   * .objectVersion("objectVersion")
+   * .basePath("basePath")
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html)
    */
-  public interface S3ContentLocationProperty {
+  public interface DeployAsApplicationConfigurationProperty {
     /**
-     * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
+     * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
+     * including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that
+     * contains the data, and the version number of the Amazon S3 object that contains the data.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-deployasapplicationconfiguration-s3contentlocation)
      */
-    public fun bucketArn(): String
+    public fun s3ContentLocation(): Any
 
     /**
-     * The file key for the object containing the application code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey)
-     */
-    public fun fileKey(): String
-
-    /**
-     * The version of the object containing the application code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion)
-     */
-    public fun objectVersion(): String? = unwrap(this).getObjectVersion()
-
-    /**
-     * A builder for [S3ContentLocationProperty]
+     * A builder for [DeployAsApplicationConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucketArn The Amazon Resource Name (ARN) for the S3 bucket containing the
-       * application code. 
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      public fun bucketArn(bucketArn: String)
+      public fun s3ContentLocation(s3ContentLocation: IResolvable)
 
       /**
-       * @param fileKey The file key for the object containing the application code. 
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      public fun fileKey(fileKey: String)
+      public fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty)
 
       /**
-       * @param objectVersion The version of the object containing the application code.
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      public fun objectVersion(objectVersion: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f58f0b29b06c8e43d8cfa3e56a43ad26504eb075104826e1262337355c0ade78")
+      public
+          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty.builder()
 
       /**
-       * @param bucketArn The Amazon Resource Name (ARN) for the S3 bucket containing the
-       * application code. 
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      override fun bucketArn(bucketArn: String) {
-        cdkBuilder.bucketArn(bucketArn)
+      override fun s3ContentLocation(s3ContentLocation: IResolvable) {
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
       }
 
       /**
-       * @param fileKey The file key for the object containing the application code. 
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      override fun fileKey(fileKey: String) {
-        cdkBuilder.fileKey(fileKey)
+      override fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentBaseLocationProperty::unwrap))
       }
 
       /**
-       * @param objectVersion The version of the object containing the application code.
+       * @param s3ContentLocation The description of an Amazon S3 object that contains the Amazon
+       * Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the
+       * name of the Amazon S3 object that contains the data, and the version number of the Amazon S3
+       * object that contains the data. 
        */
-      override fun objectVersion(objectVersion: String) {
-        cdkBuilder.objectVersion(objectVersion)
-      }
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f58f0b29b06c8e43d8cfa3e56a43ad26504eb075104826e1262337355c0ade78")
+      override
+          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit):
+          Unit = s3ContentLocation(S3ContentBaseLocationProperty(s3ContentLocation))
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty,
-    ) : CdkObject(cdkObject), S3ContentLocationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty,
+    ) : CdkObject(cdkObject), DeployAsApplicationConfigurationProperty {
       /**
-       * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
+       * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
+       * including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object
+       * that contains the data, and the version number of the Amazon S3 object that contains the data.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-deployasapplicationconfiguration-s3contentlocation)
        */
-      override fun bucketArn(): String = unwrap(this).getBucketArn()
-
-      /**
-       * The file key for the object containing the application code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey)
-       */
-      override fun fileKey(): String = unwrap(this).getFileKey()
-
-      /**
-       * The version of the object containing the application code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion)
-       */
-      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun s3ContentLocation(): Any = unwrap(this).getS3ContentLocation()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ContentLocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DeployAsApplicationConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty):
-          S3ContentLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3ContentLocationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty):
+          DeployAsApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeployAsApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: S3ContentLocationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+      internal fun unwrap(wrapped: DeployAsApplicationConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.DeployAsApplicationConfigurationProperty
     }
   }
 
   /**
-   * Describes configuration parameters for Amazon CloudWatch logging for a Java-based Kinesis Data
-   * Analytics application.
-   *
-   * For more information about CloudWatch logging, see
-   * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview) .
+   * Describes execution properties for a Managed Service for Apache Flink application.
    *
    * Example:
    *
@@ -4416,160 +3014,419 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * MonitoringConfigurationProperty monitoringConfigurationProperty =
-   * MonitoringConfigurationProperty.builder()
+   * EnvironmentPropertiesProperty environmentPropertiesProperty =
+   * EnvironmentPropertiesProperty.builder()
+   * .propertyGroups(List.of(PropertyGroupProperty.builder()
+   * .propertyGroupId("propertyGroupId")
+   * .propertyMap(Map.of(
+   * "propertyMapKey", "propertyMap"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html)
+   */
+  public interface EnvironmentPropertiesProperty {
+    /**
+     * Describes the execution property groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)
+     */
+    public fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
+
+    /**
+     * A builder for [EnvironmentPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      public fun propertyGroups(propertyGroups: IResolvable)
+
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      public fun propertyGroups(propertyGroups: List<Any>)
+
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      public fun propertyGroups(vararg propertyGroups: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty.builder()
+
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      override fun propertyGroups(propertyGroups: IResolvable) {
+        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      override fun propertyGroups(propertyGroups: List<Any>) {
+        cdkBuilder.propertyGroups(propertyGroups)
+      }
+
+      /**
+       * @param propertyGroups Describes the execution property groups.
+       */
+      override fun propertyGroups(vararg propertyGroups: Any): Unit =
+          propertyGroups(propertyGroups.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty,
+    ) : CdkObject(cdkObject), EnvironmentPropertiesProperty {
+      /**
+       * Describes the execution property groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-environmentproperties.html#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)
+       */
+      override fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty):
+          EnvironmentPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentPropertiesProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
+    }
+  }
+
+  /**
+   * Describes configuration parameters for a Managed Service for Apache Flink application or a
+   * Studio notebook.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * FlinkApplicationConfigurationProperty flinkApplicationConfigurationProperty =
+   * FlinkApplicationConfigurationProperty.builder()
+   * .checkpointConfiguration(CheckpointConfigurationProperty.builder()
+   * .configurationType("configurationType")
+   * // the properties below are optional
+   * .checkpointingEnabled(false)
+   * .checkpointInterval(123)
+   * .minPauseBetweenCheckpoints(123)
+   * .build())
+   * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
    * .configurationType("configurationType")
    * // the properties below are optional
    * .logLevel("logLevel")
    * .metricsLevel("metricsLevel")
+   * .build())
+   * .parallelismConfiguration(ParallelismConfigurationProperty.builder()
+   * .configurationType("configurationType")
+   * // the properties below are optional
+   * .autoScalingEnabled(false)
+   * .parallelism(123)
+   * .parallelismPerKpu(123)
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html)
    */
-  public interface MonitoringConfigurationProperty {
+  public interface FlinkApplicationConfigurationProperty {
     /**
-     * Describes whether to use the default CloudWatch logging configuration for an application.
+     * Describes an application's checkpointing configuration.
      *
-     * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
-     * parameters.
+     * Checkpointing is the process of persisting application state for fault tolerance. For more
+     * information, see [Checkpoints for Fault
+     * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+     * in the [Apache Flink
+     * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+     * .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)
      */
-    public fun configurationType(): String
+    public fun checkpointConfiguration(): Any? = unwrap(this).getCheckpointConfiguration()
 
     /**
-     * Describes the verbosity of the CloudWatch Logs for an application.
+     * Describes configuration parameters for Amazon CloudWatch logging for an application.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)
      */
-    public fun logLevel(): String? = unwrap(this).getLogLevel()
+    public fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
 
     /**
-     * Describes the granularity of the CloudWatch Logs for an application.
+     * Describes parameters for how an application executes multiple tasks simultaneously.
      *
-     * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due to
-     * excessive costs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)
      */
-    public fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
+    public fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
 
     /**
-     * A builder for [MonitoringConfigurationProperty]
+     * A builder for [FlinkApplicationConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param configurationType Describes whether to use the default CloudWatch logging
-       * configuration for an application. 
-       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
-       * parameters.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      public fun configurationType(configurationType: String)
+      public fun checkpointConfiguration(checkpointConfiguration: IResolvable)
 
       /**
-       * @param logLevel Describes the verbosity of the CloudWatch Logs for an application.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      public fun logLevel(logLevel: String)
+      public fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty)
 
       /**
-       * @param metricsLevel Describes the granularity of the CloudWatch Logs for an application.
-       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
-       * to excessive costs.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      public fun metricsLevel(metricsLevel: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44389922c1668ab5939a60e0dd52171e0d91a7ec4724e49b72515f975748642b")
+      public
+          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      public fun monitoringConfiguration(monitoringConfiguration: IResolvable)
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty)
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a145583c3da8ac85deb1a97752d83a8592398a0694fa8bcee953fc5da08f96c7")
+      public
+          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      public fun parallelismConfiguration(parallelismConfiguration: IResolvable)
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      public
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty)
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("22789524881e7159d7ca0c1d82f5c48c6f9ff6a62e2ffc0b73bd2c0e3bee5883")
+      public
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty.builder()
 
       /**
-       * @param configurationType Describes whether to use the default CloudWatch logging
-       * configuration for an application. 
-       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
-       * parameters.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      override fun configurationType(configurationType: String) {
-        cdkBuilder.configurationType(configurationType)
+      override fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
+        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param logLevel Describes the verbosity of the CloudWatch Logs for an application.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      override fun logLevel(logLevel: String) {
-        cdkBuilder.logLevel(logLevel)
+      override
+          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty) {
+        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(CheckpointConfigurationProperty::unwrap))
       }
 
       /**
-       * @param metricsLevel Describes the granularity of the CloudWatch Logs for an application.
-       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
-       * to excessive costs.
+       * @param checkpointConfiguration Describes an application's checkpointing configuration.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        */
-      override fun metricsLevel(metricsLevel: String) {
-        cdkBuilder.metricsLevel(metricsLevel)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44389922c1668ab5939a60e0dd52171e0d91a7ec4724e49b72515f975748642b")
+      override
+          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit):
+          Unit = checkpointConfiguration(CheckpointConfigurationProperty(checkpointConfiguration))
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
       }
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      override
+          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
+       * logging for an application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a145583c3da8ac85deb1a97752d83a8592398a0694fa8bcee953fc5da08f96c7")
+      override
+          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit):
+          Unit = monitoringConfiguration(MonitoringConfigurationProperty(monitoringConfiguration))
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      override fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
+        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      override
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty) {
+        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(ParallelismConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param parallelismConfiguration Describes parameters for how an application executes
+       * multiple tasks simultaneously.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("22789524881e7159d7ca0c1d82f5c48c6f9ff6a62e2ffc0b73bd2c0e3bee5883")
+      override
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          parallelismConfiguration(ParallelismConfigurationProperty(parallelismConfiguration))
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty,
+    ) : CdkObject(cdkObject), FlinkApplicationConfigurationProperty {
       /**
-       * Describes whether to use the default CloudWatch logging configuration for an application.
+       * Describes an application's checkpointing configuration.
        *
-       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
-       * parameters.
+       * Checkpointing is the process of persisting application state for fault tolerance. For more
+       * information, see [Checkpoints for Fault
+       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+       * in the [Apache Flink
+       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)
        */
-      override fun configurationType(): String = unwrap(this).getConfigurationType()
+      override fun checkpointConfiguration(): Any? = unwrap(this).getCheckpointConfiguration()
 
       /**
-       * Describes the verbosity of the CloudWatch Logs for an application.
+       * Describes configuration parameters for Amazon CloudWatch logging for an application.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)
        */
-      override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
 
       /**
-       * Describes the granularity of the CloudWatch Logs for an application.
+       * Describes parameters for how an application executes multiple tasks simultaneously.
        *
-       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
-       * to excessive costs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)
        */
-      override fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
+      override fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FlinkApplicationConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty):
-          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty):
+          FlinkApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlinkApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MonitoringConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+      internal fun unwrap(wrapped: FlinkApplicationConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
     }
   }
 
   /**
-   * Property key-value pairs passed into an application.
+   * Describes the starting parameters for a Managed Service for Apache Flink application.
    *
    * Example:
    *
@@ -4577,119 +3434,593 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
-   * .propertyGroupId("propertyGroupId")
-   * .propertyMap(Map.of(
-   * "propertyMapKey", "propertyMap"))
+   * FlinkRunConfigurationProperty flinkRunConfigurationProperty =
+   * FlinkRunConfigurationProperty.builder()
+   * .allowNonRestoredState(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html)
    */
-  public interface PropertyGroupProperty {
+  public interface FlinkRunConfigurationProperty {
     /**
-     * Describes the key of an application execution property key-value pair.
+     * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that
+     * cannot be mapped to the new program.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid)
+     * This will happen if the program is updated between snapshots to remove stateful parameters,
+     * and state data in the snapshot no longer corresponds to valid application data. For more
+     * information, see [Allowing Non-Restored
+     * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+     * in the [Apache Flink
+     * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+     * .
+     *
+     *
+     * This value defaults to `false` . If you update your application without specifying this
+     * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+     * `true` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html#cfn-kinesisanalyticsv2-application-flinkrunconfiguration-allownonrestoredstate)
      */
-    public fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
+    public fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
 
     /**
-     * Describes the value of an application execution property key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)
-     */
-    public fun propertyMap(): Any? = unwrap(this).getPropertyMap()
-
-    /**
-     * A builder for [PropertyGroupProperty]
+     * A builder for [FlinkRunConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param propertyGroupId Describes the key of an application execution property key-value
-       * pair.
+       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
+       * is allowed to skip a state that cannot be mapped to the new program.
+       * This will happen if the program is updated between snapshots to remove stateful parameters,
+       * and state data in the snapshot no longer corresponds to valid application data. For more
+       * information, see [Allowing Non-Restored
+       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * in the [Apache Flink
+       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * This value defaults to `false` . If you update your application without specifying this
+       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+       * `true` .
        */
-      public fun propertyGroupId(propertyGroupId: String)
+      public fun allowNonRestoredState(allowNonRestoredState: Boolean)
 
       /**
-       * @param propertyMap Describes the value of an application execution property key-value pair.
+       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
+       * is allowed to skip a state that cannot be mapped to the new program.
+       * This will happen if the program is updated between snapshots to remove stateful parameters,
+       * and state data in the snapshot no longer corresponds to valid application data. For more
+       * information, see [Allowing Non-Restored
+       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * in the [Apache Flink
+       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * This value defaults to `false` . If you update your application without specifying this
+       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+       * `true` .
        */
-      public fun propertyMap(propertyMap: IResolvable)
-
-      /**
-       * @param propertyMap Describes the value of an application execution property key-value pair.
-       */
-      public fun propertyMap(propertyMap: Map<String, String>)
+      public fun allowNonRestoredState(allowNonRestoredState: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty.builder()
 
       /**
-       * @param propertyGroupId Describes the key of an application execution property key-value
-       * pair.
+       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
+       * is allowed to skip a state that cannot be mapped to the new program.
+       * This will happen if the program is updated between snapshots to remove stateful parameters,
+       * and state data in the snapshot no longer corresponds to valid application data. For more
+       * information, see [Allowing Non-Restored
+       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * in the [Apache Flink
+       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * This value defaults to `false` . If you update your application without specifying this
+       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+       * `true` .
        */
-      override fun propertyGroupId(propertyGroupId: String) {
-        cdkBuilder.propertyGroupId(propertyGroupId)
+      override fun allowNonRestoredState(allowNonRestoredState: Boolean) {
+        cdkBuilder.allowNonRestoredState(allowNonRestoredState)
       }
 
       /**
-       * @param propertyMap Describes the value of an application execution property key-value pair.
+       * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime
+       * is allowed to skip a state that cannot be mapped to the new program.
+       * This will happen if the program is updated between snapshots to remove stateful parameters,
+       * and state data in the snapshot no longer corresponds to valid application data. For more
+       * information, see [Allowing Non-Restored
+       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * in the [Apache Flink
+       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
+       *
+       *
+       * This value defaults to `false` . If you update your application without specifying this
+       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+       * `true` .
        */
-      override fun propertyMap(propertyMap: IResolvable) {
-        cdkBuilder.propertyMap(propertyMap.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param propertyMap Describes the value of an application execution property key-value pair.
-       */
-      override fun propertyMap(propertyMap: Map<String, String>) {
-        cdkBuilder.propertyMap(propertyMap)
+      override fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
+        cdkBuilder.allowNonRestoredState(allowNonRestoredState.let(IResolvable::unwrap))
       }
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty,
-    ) : CdkObject(cdkObject), PropertyGroupProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty,
+    ) : CdkObject(cdkObject), FlinkRunConfigurationProperty {
       /**
-       * Describes the key of an application execution property key-value pair.
+       * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state
+       * that cannot be mapped to the new program.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid)
-       */
-      override fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
-
-      /**
-       * Describes the value of an application execution property key-value pair.
+       * This will happen if the program is updated between snapshots to remove stateful parameters,
+       * and state data in the snapshot no longer corresponds to valid application data. For more
+       * information, see [Allowing Non-Restored
+       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * in the [Apache Flink
+       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)
+       *
+       * This value defaults to `false` . If you update your application without specifying this
+       * parameter, `AllowNonRestoredState` will be set to `false` , even if it was previously set to
+       * `true` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html#cfn-kinesisanalyticsv2-application-flinkrunconfiguration-allownonrestoredstate)
        */
-      override fun propertyMap(): Any? = unwrap(this).getPropertyMap()
+      override fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PropertyGroupProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FlinkRunConfigurationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty):
-          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty):
+          FlinkRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlinkRunConfigurationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: PropertyGroupProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty
+      internal fun unwrap(wrapped: FlinkRunConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkRunConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration of the Glue Data Catalog that you use for Apache Flink SQL queries and table
+   * API transforms that you write in an application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * GlueDataCatalogConfigurationProperty glueDataCatalogConfigurationProperty =
+   * GlueDataCatalogConfigurationProperty.builder()
+   * .databaseArn("databaseArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html)
+   */
+  public interface GlueDataCatalogConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html#cfn-kinesisanalyticsv2-application-gluedatacatalogconfiguration-databasearn)
+     */
+    public fun databaseArn(): String? = unwrap(this).getDatabaseArn()
+
+    /**
+     * A builder for [GlueDataCatalogConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseArn The Amazon Resource Name (ARN) of the database.
+       */
+      public fun databaseArn(databaseArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty.builder()
+
+      /**
+       * @param databaseArn The Amazon Resource Name (ARN) of the database.
+       */
+      override fun databaseArn(databaseArn: String) {
+        cdkBuilder.databaseArn(databaseArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty,
+    ) : CdkObject(cdkObject), GlueDataCatalogConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html#cfn-kinesisanalyticsv2-application-gluedatacatalogconfiguration-databasearn)
+       */
+      override fun databaseArn(): String? = unwrap(this).getDatabaseArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GlueDataCatalogConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty):
+          GlueDataCatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueDataCatalogConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlueDataCatalogConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
+    }
+  }
+
+  /**
+   * An object that contains the Amazon Resource Name (ARN) of the Amazon Lambda function that is
+   * used to preprocess records in the stream in a SQL-based Managed Service for Apache Flink
+   * application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * InputLambdaProcessorProperty inputLambdaProcessorProperty =
+   * InputLambdaProcessorProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html)
+   */
+  public interface InputLambdaProcessorProperty {
+    /**
+     * The ARN of the Amazon Lambda function that operates on records in the stream.
+     *
+     *
+     * To specify an earlier version of the Lambda function than the latest, include the Lambda
+     * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+     * [Example ARNs: Amazon
+     * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html#cfn-kinesisanalyticsv2-application-inputlambdaprocessor-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [InputLambdaProcessorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The ARN of the Amazon Lambda function that operates on records in the
+       * stream. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty.builder()
+
+      /**
+       * @param resourceArn The ARN of the Amazon Lambda function that operates on records in the
+       * stream. 
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty,
+    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
+      /**
+       * The ARN of the Amazon Lambda function that operates on records in the stream.
+       *
+       *
+       * To specify an earlier version of the Lambda function than the latest, include the Lambda
+       * function version in the Lambda function ARN. For more information about Lambda ARNs, see
+       * [Example ARNs: Amazon
+       * Lambda](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda)
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.html#cfn-kinesisanalyticsv2-application-inputlambdaprocessor-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputLambdaProcessorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty):
+          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputLambdaProcessorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputLambdaProcessorProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, describes the number of
+   * in-application streams to create for a given streaming source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * InputParallelismProperty inputParallelismProperty = InputParallelismProperty.builder()
+   * .count(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html)
+   */
+  public interface InputParallelismProperty {
+    /**
+     * The number of in-application streams to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html#cfn-kinesisanalyticsv2-application-inputparallelism-count)
+     */
+    public fun count(): Number? = unwrap(this).getCount()
+
+    /**
+     * A builder for [InputParallelismProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param count The number of in-application streams to create.
+       */
+      public fun count(count: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty.builder()
+
+      /**
+       * @param count The number of in-application streams to create.
+       */
+      override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty,
+    ) : CdkObject(cdkObject), InputParallelismProperty {
+      /**
+       * The number of in-application streams to create.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputparallelism.html#cfn-kinesisanalyticsv2-application-inputparallelism-count)
+       */
+      override fun count(): Number? = unwrap(this).getCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputParallelismProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty):
+          InputParallelismProperty = CdkObjectWrappers.wrap(cdkObject) as? InputParallelismProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputParallelismProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty
+    }
+  }
+
+  /**
+   * For an SQL-based Amazon Kinesis Data Analytics application, describes a processor that is used
+   * to preprocess the records in the stream before being processed by your application code.
+   *
+   * Currently, the only input processor available is [Amazon
+   * Lambda](https://docs.aws.amazon.com/lambda/) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * InputProcessingConfigurationProperty inputProcessingConfigurationProperty =
+   * InputProcessingConfigurationProperty.builder()
+   * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html)
+   */
+  public interface InputProcessingConfigurationProperty {
+    /**
+     * The
+     * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+     * that is used to preprocess the records in the stream before being processed by your application
+     * code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)
+     */
+    public fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
+
+    /**
+     * A builder for [InputProcessingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      public fun inputLambdaProcessor(inputLambdaProcessor: IResolvable)
+
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      public fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty)
+
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ac7a1ddc265772b8e655485937e0839e4b931a5fa731c9da007d2f57bc3007c")
+      public
+          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty.builder()
+
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty::unwrap))
+      }
+
+      /**
+       * @param inputLambdaProcessor The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6ac7a1ddc265772b8e655485937e0839e4b931a5fa731c9da007d2f57bc3007c")
+      override
+          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit):
+          Unit = inputLambdaProcessor(InputLambdaProcessorProperty(inputLambdaProcessor))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty,
+    ) : CdkObject(cdkObject), InputProcessingConfigurationProperty {
+      /**
+       * The
+       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
+       * that is used to preprocess the records in the stream before being processed by your
+       * application code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)
+       */
+      override fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InputProcessingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty):
+          InputProcessingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputProcessingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputProcessingConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
     }
   }
 
@@ -5115,8 +4446,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProperty,
     ) : CdkObject(cdkObject), InputProperty {
       /**
        * Describes the number of in-application streams to create.
@@ -5196,10 +4526,9 @@ public open class CfnApplicationV2 internal constructor(
   }
 
   /**
-   * The configuration parameters for the default Amazon Glue database.
-   *
-   * You use this database for SQL queries that you write in a Kinesis Data Analytics Studio
-   * notebook.
+   * For a SQL-based Managed Service for Apache Flink application, describes the format of the data
+   * in the streaming source, and how each data element maps to corresponding columns created in the
+   * in-application stream.
    *
    * Example:
    *
@@ -5207,143 +4536,210 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * CatalogConfigurationProperty catalogConfigurationProperty =
-   * CatalogConfigurationProperty.builder()
-   * .glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty.builder()
-   * .databaseArn("databaseArn")
+   * InputSchemaProperty inputSchemaProperty = InputSchemaProperty.builder()
+   * .recordColumns(List.of(RecordColumnProperty.builder()
+   * .name("name")
+   * .sqlType("sqlType")
+   * // the properties below are optional
+   * .mapping("mapping")
+   * .build()))
+   * .recordFormat(RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
    * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .recordEncoding("recordEncoding")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html)
    */
-  public interface CatalogConfigurationProperty {
+  public interface InputSchemaProperty {
     /**
-     * The configuration parameters for the default Amazon Glue database.
+     * A list of `RecordColumn` objects.
      *
-     * You use this database for Apache Flink SQL queries and table API transforms that you write in
-     * a Kinesis Data Analytics Studio notebook.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html#cfn-kinesisanalyticsv2-application-catalogconfiguration-gluedatacatalogconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)
      */
-    public fun glueDataCatalogConfiguration(): Any? = unwrap(this).getGlueDataCatalogConfiguration()
+    public fun recordColumns(): Any
 
     /**
-     * A builder for [CatalogConfigurationProperty]
+     * Specifies the encoding of the records in the streaming source.
+     *
+     * For example, UTF-8.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordencoding)
+     */
+    public fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+    /**
+     * Specifies the format of the records on the streaming source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordformat)
+     */
+    public fun recordFormat(): Any
+
+    /**
+     * A builder for [InputSchemaProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
        */
-      public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable)
+      public fun recordColumns(recordColumns: IResolvable)
 
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
        */
-      public
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty)
+      public fun recordColumns(recordColumns: List<Any>)
 
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      public fun recordColumns(vararg recordColumns: Any)
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      public fun recordEncoding(recordEncoding: String)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: IResolvable)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      public fun recordFormat(recordFormat: RecordFormatProperty)
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cae6ad8548b6c4eab778d0dc03188fb1040ff9730dc07755031d5d3a52943282")
-      public
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit)
+      @JvmName("0b6c5535c654ded1c710c9da214ce6fa617300a1362bb7176b9cfb28d195a212")
+      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty.builder()
 
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
        */
-      override fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
-        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(IResolvable::unwrap))
+      override fun recordColumns(recordColumns: IResolvable) {
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
       }
 
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
        */
-      override
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty) {
-        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(GlueDataCatalogConfigurationProperty::unwrap))
+      override fun recordColumns(recordColumns: List<Any>) {
+        cdkBuilder.recordColumns(recordColumns)
       }
 
       /**
-       * @param glueDataCatalogConfiguration The configuration parameters for the default Amazon
-       * Glue database.
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
+       * @param recordColumns A list of `RecordColumn` objects. 
+       */
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
+
+      /**
+       * @param recordEncoding Specifies the encoding of the records in the streaming source.
+       * For example, UTF-8.
+       */
+      override fun recordEncoding(recordEncoding: String) {
+        cdkBuilder.recordEncoding(recordEncoding)
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: IResolvable) {
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
+       */
+      override fun recordFormat(recordFormat: RecordFormatProperty) {
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+      }
+
+      /**
+       * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cae6ad8548b6c4eab778d0dc03188fb1040ff9730dc07755031d5d3a52943282")
-      override
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty(glueDataCatalogConfiguration))
+      @JvmName("0b6c5535c654ded1c710c9da214ce6fa617300a1362bb7176b9cfb28d195a212")
+      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
+          recordFormat(RecordFormatProperty(recordFormat))
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty,
-    ) : CdkObject(cdkObject), CatalogConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty,
+    ) : CdkObject(cdkObject), InputSchemaProperty {
       /**
-       * The configuration parameters for the default Amazon Glue database.
+       * A list of `RecordColumn` objects.
        *
-       * You use this database for Apache Flink SQL queries and table API transforms that you write
-       * in a Kinesis Data Analytics Studio notebook.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html#cfn-kinesisanalyticsv2-application-catalogconfiguration-gluedatacatalogconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)
        */
-      override fun glueDataCatalogConfiguration(): Any? =
-          unwrap(this).getGlueDataCatalogConfiguration()
+      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
+
+      /**
+       * Specifies the encoding of the records in the streaming source.
+       *
+       * For example, UTF-8.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordencoding)
+       */
+      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+
+      /**
+       * Specifies the format of the records on the streaming source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html#cfn-kinesisanalyticsv2-application-inputschema-recordformat)
+       */
+      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CatalogConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputSchemaProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty):
-          CatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CatalogConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty):
+          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSchemaProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CatalogConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CatalogConfigurationProperty
+      internal fun unwrap(wrapped: InputSchemaProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty
     }
   }
 
   /**
-   * Specifies the method and snapshot to use when restarting an application using previously saved
-   * application state.
+   * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
+   * information when JSON is the record format on the streaming source.
    *
    * Example:
    *
@@ -5351,120 +4747,2166 @@ public open class CfnApplicationV2 internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ApplicationRestoreConfigurationProperty applicationRestoreConfigurationProperty =
-   * ApplicationRestoreConfigurationProperty.builder()
-   * .applicationRestoreType("applicationRestoreType")
-   * // the properties below are optional
-   * .snapshotName("snapshotName")
+   * JSONMappingParametersProperty jSONMappingParametersProperty =
+   * JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html)
    */
-  public interface ApplicationRestoreConfigurationProperty {
+  public interface JSONMappingParametersProperty {
     /**
-     * Specifies how the application should be restored.
+     * The path to the top-level parent that contains the records.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-applicationrestoretype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath)
      */
-    public fun applicationRestoreType(): String
+    public fun recordRowPath(): String
 
     /**
-     * The identifier of an existing snapshot of application state to use to restart an application.
-     *
-     * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
-     * `ApplicationRestoreType` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-snapshotname)
-     */
-    public fun snapshotName(): String? = unwrap(this).getSnapshotName()
-
-    /**
-     * A builder for [ApplicationRestoreConfigurationProperty]
+     * A builder for [JSONMappingParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param applicationRestoreType Specifies how the application should be restored. 
+       * @param recordRowPath The path to the top-level parent that contains the records. 
        */
-      public fun applicationRestoreType(applicationRestoreType: String)
-
-      /**
-       * @param snapshotName The identifier of an existing snapshot of application state to use to
-       * restart an application.
-       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
-       * `ApplicationRestoreType` .
-       */
-      public fun snapshotName(snapshotName: String)
+      public fun recordRowPath(recordRowPath: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty.Builder
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty.Builder
           =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty.builder()
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty.builder()
 
       /**
-       * @param applicationRestoreType Specifies how the application should be restored. 
+       * @param recordRowPath The path to the top-level parent that contains the records. 
        */
-      override fun applicationRestoreType(applicationRestoreType: String) {
-        cdkBuilder.applicationRestoreType(applicationRestoreType)
-      }
-
-      /**
-       * @param snapshotName The identifier of an existing snapshot of application state to use to
-       * restart an application.
-       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
-       * `ApplicationRestoreType` .
-       */
-      override fun snapshotName(snapshotName: String) {
-        cdkBuilder.snapshotName(snapshotName)
+      override fun recordRowPath(recordRowPath: String) {
+        cdkBuilder.recordRowPath(recordRowPath)
       }
 
       public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationRestoreConfigurationProperty {
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty,
+    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
       /**
-       * Specifies how the application should be restored.
+       * The path to the top-level parent that contains the records.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-applicationrestoretype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.html#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath)
        */
-      override fun applicationRestoreType(): String = unwrap(this).getApplicationRestoreType()
-
-      /**
-       * The identifier of an existing snapshot of application state to use to restart an
-       * application.
-       *
-       * The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for the
-       * `ApplicationRestoreType` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html#cfn-kinesisanalyticsv2-application-applicationrestoreconfiguration-snapshotname)
-       */
-      override fun snapshotName(): String? = unwrap(this).getSnapshotName()
+      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ApplicationRestoreConfigurationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JSONMappingParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty):
-          ApplicationRestoreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationRestoreConfigurationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty):
+          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JSONMappingParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ApplicationRestoreConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+      internal fun unwrap(wrapped: JSONMappingParametersProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationRestoreConfigurationProperty
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, identifies a Kinesis Data
+   * Firehose delivery stream as the streaming source.
+   *
+   * You provide the delivery stream's Amazon Resource Name (ARN).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisFirehoseInputProperty kinesisFirehoseInputProperty =
+   * KinesisFirehoseInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html)
+   */
+  public interface KinesisFirehoseInputProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the delivery stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [KinesisFirehoseInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty.builder()
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the delivery stream. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty,
+    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the delivery stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.html#cfn-kinesisanalyticsv2-application-kinesisfirehoseinput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisFirehoseInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty):
+          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisFirehoseInputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty
+    }
+  }
+
+  /**
+   * Identifies a Kinesis data stream as the streaming source.
+   *
+   * You provide the stream's Amazon Resource Name (ARN).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * KinesisStreamsInputProperty kinesisStreamsInputProperty = KinesisStreamsInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html)
+   */
+  public interface KinesisStreamsInputProperty {
+    /**
+     * The ARN of the input Kinesis data stream to read.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * A builder for [KinesisStreamsInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceArn The ARN of the input Kinesis data stream to read. 
+       */
+      public fun resourceArn(resourceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty.builder()
+
+      /**
+       * @param resourceArn The ARN of the input Kinesis data stream to read. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty,
+    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
+      /**
+       * The ARN of the input Kinesis data stream to read.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.html#cfn-kinesisanalyticsv2-application-kinesisstreamsinput-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisStreamsInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty):
+          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamsInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisStreamsInputProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty
+    }
+  }
+
+  /**
+   * When you configure a SQL-based Managed Service for Apache Flink application's input at the time
+   * of creating or updating an application, provides additional mapping information specific to the
+   * record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming
+   * source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * MappingParametersProperty mappingParametersProperty = MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html)
+   */
+  public interface MappingParametersProperty {
+    /**
+     * Provides additional mapping information when the record format uses delimiters (for example,
+     * CSV).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)
+     */
+    public fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+
+    /**
+     * Provides additional mapping information when JSON is the record format on the streaming
+     * source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)
+     */
+    public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+
+    /**
+     * A builder for [MappingParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      public fun csvMappingParameters(csvMappingParameters: IResolvable)
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e03d667539e6d937f0d660ec33db8a3908c3a5028e9965220b600a57f69b002f")
+      public
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a687b0e095f8fc8bed12385c9c5405e169f32fc6bffaf1e990837e29501a83d1")
+      public
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty.builder()
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param csvMappingParameters Provides additional mapping information when the record format
+       * uses delimiters (for example, CSV).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e03d667539e6d937f0d660ec33db8a3908c3a5028e9965220b600a57f69b002f")
+      override
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
+          Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param jsonMappingParameters Provides additional mapping information when JSON is the
+       * record format on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a687b0e095f8fc8bed12385c9c5405e169f32fc6bffaf1e990837e29501a83d1")
+      override
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
+          Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty,
+    ) : CdkObject(cdkObject), MappingParametersProperty {
+      /**
+       * Provides additional mapping information when the record format uses delimiters (for
+       * example, CSV).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)
+       */
+      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+
+      /**
+       * Provides additional mapping information when JSON is the record format on the streaming
+       * source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mappingparameters.html#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)
+       */
+      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MappingParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty):
+          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MappingParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MappingParametersProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty
+    }
+  }
+
+  /**
+   * The information required to specify a Maven reference.
+   *
+   * You can use Maven references to specify dependency JAR files.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * MavenReferenceProperty mavenReferenceProperty = MavenReferenceProperty.builder()
+   * .artifactId("artifactId")
+   * .groupId("groupId")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html)
+   */
+  public interface MavenReferenceProperty {
+    /**
+     * The artifact ID of the Maven reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-artifactid)
+     */
+    public fun artifactId(): String
+
+    /**
+     * The group ID of the Maven reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-groupid)
+     */
+    public fun groupId(): String
+
+    /**
+     * The version of the Maven reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-version)
+     */
+    public fun version(): String
+
+    /**
+     * A builder for [MavenReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param artifactId The artifact ID of the Maven reference. 
+       */
+      public fun artifactId(artifactId: String)
+
+      /**
+       * @param groupId The group ID of the Maven reference. 
+       */
+      public fun groupId(groupId: String)
+
+      /**
+       * @param version The version of the Maven reference. 
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty.builder()
+
+      /**
+       * @param artifactId The artifact ID of the Maven reference. 
+       */
+      override fun artifactId(artifactId: String) {
+        cdkBuilder.artifactId(artifactId)
+      }
+
+      /**
+       * @param groupId The group ID of the Maven reference. 
+       */
+      override fun groupId(groupId: String) {
+        cdkBuilder.groupId(groupId)
+      }
+
+      /**
+       * @param version The version of the Maven reference. 
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty,
+    ) : CdkObject(cdkObject), MavenReferenceProperty {
+      /**
+       * The artifact ID of the Maven reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-artifactid)
+       */
+      override fun artifactId(): String = unwrap(this).getArtifactId()
+
+      /**
+       * The group ID of the Maven reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-groupid)
+       */
+      override fun groupId(): String = unwrap(this).getGroupId()
+
+      /**
+       * The version of the Maven reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-mavenreference.html#cfn-kinesisanalyticsv2-application-mavenreference-version)
+       */
+      override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MavenReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty):
+          MavenReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? MavenReferenceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MavenReferenceProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MavenReferenceProperty
+    }
+  }
+
+  /**
+   * Describes configuration parameters for Amazon CloudWatch logging for a Java-based Kinesis Data
+   * Analytics application.
+   *
+   * For more information about CloudWatch logging, see
+   * [Monitoring](https://docs.aws.amazon.com/managed-flink/latest/java/monitoring-overview) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * MonitoringConfigurationProperty monitoringConfigurationProperty =
+   * MonitoringConfigurationProperty.builder()
+   * .configurationType("configurationType")
+   * // the properties below are optional
+   * .logLevel("logLevel")
+   * .metricsLevel("metricsLevel")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html)
+   */
+  public interface MonitoringConfigurationProperty {
+    /**
+     * Describes whether to use the default CloudWatch logging configuration for an application.
+     *
+     * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
+     * parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype)
+     */
+    public fun configurationType(): String
+
+    /**
+     * Describes the verbosity of the CloudWatch Logs for an application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel)
+     */
+    public fun logLevel(): String? = unwrap(this).getLogLevel()
+
+    /**
+     * Describes the granularity of the CloudWatch Logs for an application.
+     *
+     * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due to
+     * excessive costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel)
+     */
+    public fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
+
+    /**
+     * A builder for [MonitoringConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configurationType Describes whether to use the default CloudWatch logging
+       * configuration for an application. 
+       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
+       * parameters.
+       */
+      public fun configurationType(configurationType: String)
+
+      /**
+       * @param logLevel Describes the verbosity of the CloudWatch Logs for an application.
+       */
+      public fun logLevel(logLevel: String)
+
+      /**
+       * @param metricsLevel Describes the granularity of the CloudWatch Logs for an application.
+       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
+       * to excessive costs.
+       */
+      public fun metricsLevel(metricsLevel: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty.builder()
+
+      /**
+       * @param configurationType Describes whether to use the default CloudWatch logging
+       * configuration for an application. 
+       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
+       * parameters.
+       */
+      override fun configurationType(configurationType: String) {
+        cdkBuilder.configurationType(configurationType)
+      }
+
+      /**
+       * @param logLevel Describes the verbosity of the CloudWatch Logs for an application.
+       */
+      override fun logLevel(logLevel: String) {
+        cdkBuilder.logLevel(logLevel)
+      }
+
+      /**
+       * @param metricsLevel Describes the granularity of the CloudWatch Logs for an application.
+       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
+       * to excessive costs.
+       */
+      override fun metricsLevel(metricsLevel: String) {
+        cdkBuilder.metricsLevel(metricsLevel)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty,
+    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
+      /**
+       * Describes whether to use the default CloudWatch logging configuration for an application.
+       *
+       * You must set this property to `CUSTOM` in order to set the `LogLevel` or `MetricsLevel`
+       * parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-configurationtype)
+       */
+      override fun configurationType(): String = unwrap(this).getConfigurationType()
+
+      /**
+       * Describes the verbosity of the CloudWatch Logs for an application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-loglevel)
+       */
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
+
+      /**
+       * Describes the granularity of the CloudWatch Logs for an application.
+       *
+       * The `Parallelism` level is not recommended for applications with a Parallelism over 64 due
+       * to excessive costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html#cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel)
+       */
+      override fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MonitoringConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty):
+          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MonitoringConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes parameters for how a Flink-based Kinesis Data Analytics application executes multiple
+   * tasks simultaneously.
+   *
+   * For more information about parallelism, see [Parallel
+   * Execution](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html)
+   * in the [Apache Flink
+   * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * ParallelismConfigurationProperty parallelismConfigurationProperty =
+   * ParallelismConfigurationProperty.builder()
+   * .configurationType("configurationType")
+   * // the properties below are optional
+   * .autoScalingEnabled(false)
+   * .parallelism(123)
+   * .parallelismPerKpu(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html)
+   */
+  public interface ParallelismConfigurationProperty {
+    /**
+     * Describes whether the Managed Service for Apache Flink service can increase the parallelism
+     * of the application in response to increased throughput.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled)
+     */
+    public fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
+
+    /**
+     * Describes whether the application uses the default parallelism for the Managed Service for
+     * Apache Flink service.
+     *
+     * You must set this property to `CUSTOM` in order to change your application's
+     * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype)
+     */
+    public fun configurationType(): String
+
+    /**
+     * Describes the initial number of parallel tasks that a Java-based Kinesis Data Analytics
+     * application can perform.
+     *
+     * The Kinesis Data Analytics service can increase this number automatically if
+     * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+     * is set to `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism)
+     */
+    public fun parallelism(): Number? = unwrap(this).getParallelism()
+
+    /**
+     * Describes the number of parallel tasks that a Java-based Kinesis Data Analytics application
+     * can perform per Kinesis Processing Unit (KPU) used by the application.
+     *
+     * For more information about KPUs, see [Amazon Kinesis Data Analytics
+     * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu)
+     */
+    public fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
+
+    /**
+     * A builder for [ParallelismConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
+       * can increase the parallelism of the application in response to increased throughput.
+       */
+      public fun autoScalingEnabled(autoScalingEnabled: Boolean)
+
+      /**
+       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
+       * can increase the parallelism of the application in response to increased throughput.
+       */
+      public fun autoScalingEnabled(autoScalingEnabled: IResolvable)
+
+      /**
+       * @param configurationType Describes whether the application uses the default parallelism for
+       * the Managed Service for Apache Flink service. 
+       * You must set this property to `CUSTOM` in order to change your application's
+       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+       */
+      public fun configurationType(configurationType: String)
+
+      /**
+       * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
+       * Data Analytics application can perform.
+       * The Kinesis Data Analytics service can increase this number automatically if
+       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+       * is set to `true` .
+       */
+      public fun parallelism(parallelism: Number)
+
+      /**
+       * @param parallelismPerKpu Describes the number of parallel tasks that a Java-based Kinesis
+       * Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the
+       * application.
+       * For more information about KPUs, see [Amazon Kinesis Data Analytics
+       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
+       */
+      public fun parallelismPerKpu(parallelismPerKpu: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty.builder()
+
+      /**
+       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
+       * can increase the parallelism of the application in response to increased throughput.
+       */
+      override fun autoScalingEnabled(autoScalingEnabled: Boolean) {
+        cdkBuilder.autoScalingEnabled(autoScalingEnabled)
+      }
+
+      /**
+       * @param autoScalingEnabled Describes whether the Managed Service for Apache Flink service
+       * can increase the parallelism of the application in response to increased throughput.
+       */
+      override fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
+        cdkBuilder.autoScalingEnabled(autoScalingEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param configurationType Describes whether the application uses the default parallelism for
+       * the Managed Service for Apache Flink service. 
+       * You must set this property to `CUSTOM` in order to change your application's
+       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+       */
+      override fun configurationType(configurationType: String) {
+        cdkBuilder.configurationType(configurationType)
+      }
+
+      /**
+       * @param parallelism Describes the initial number of parallel tasks that a Java-based Kinesis
+       * Data Analytics application can perform.
+       * The Kinesis Data Analytics service can increase this number automatically if
+       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+       * is set to `true` .
+       */
+      override fun parallelism(parallelism: Number) {
+        cdkBuilder.parallelism(parallelism)
+      }
+
+      /**
+       * @param parallelismPerKpu Describes the number of parallel tasks that a Java-based Kinesis
+       * Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the
+       * application.
+       * For more information about KPUs, see [Amazon Kinesis Data Analytics
+       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
+       */
+      override fun parallelismPerKpu(parallelismPerKpu: Number) {
+        cdkBuilder.parallelismPerKpu(parallelismPerKpu)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty,
+    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
+      /**
+       * Describes whether the Managed Service for Apache Flink service can increase the parallelism
+       * of the application in response to increased throughput.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-autoscalingenabled)
+       */
+      override fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
+
+      /**
+       * Describes whether the application uses the default parallelism for the Managed Service for
+       * Apache Flink service.
+       *
+       * You must set this property to `CUSTOM` in order to change your application's
+       * `AutoScalingEnabled` , `Parallelism` , or `ParallelismPerKPU` properties.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype)
+       */
+      override fun configurationType(): String = unwrap(this).getConfigurationType()
+
+      /**
+       * Describes the initial number of parallel tasks that a Java-based Kinesis Data Analytics
+       * application can perform.
+       *
+       * The Kinesis Data Analytics service can increase this number automatically if
+       * [ParallelismConfiguration:AutoScalingEnabled](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_ParallelismConfiguration.html#kinesisanalytics-Type-ParallelismConfiguration-AutoScalingEnabled.html)
+       * is set to `true` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism)
+       */
+      override fun parallelism(): Number? = unwrap(this).getParallelism()
+
+      /**
+       * Describes the number of parallel tasks that a Java-based Kinesis Data Analytics application
+       * can perform per Kinesis Processing Unit (KPU) used by the application.
+       *
+       * For more information about KPUs, see [Amazon Kinesis Data Analytics
+       * Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html#cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu)
+       */
+      override fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParallelismConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty):
+          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParallelismConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty
+    }
+  }
+
+  /**
+   * Property key-value pairs passed into an application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
+   * .propertyGroupId("propertyGroupId")
+   * .propertyMap(Map.of(
+   * "propertyMapKey", "propertyMap"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html)
+   */
+  public interface PropertyGroupProperty {
+    /**
+     * Describes the key of an application execution property key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid)
+     */
+    public fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
+
+    /**
+     * Describes the value of an application execution property key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)
+     */
+    public fun propertyMap(): Any? = unwrap(this).getPropertyMap()
+
+    /**
+     * A builder for [PropertyGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param propertyGroupId Describes the key of an application execution property key-value
+       * pair.
+       */
+      public fun propertyGroupId(propertyGroupId: String)
+
+      /**
+       * @param propertyMap Describes the value of an application execution property key-value pair.
+       */
+      public fun propertyMap(propertyMap: IResolvable)
+
+      /**
+       * @param propertyMap Describes the value of an application execution property key-value pair.
+       */
+      public fun propertyMap(propertyMap: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty.builder()
+
+      /**
+       * @param propertyGroupId Describes the key of an application execution property key-value
+       * pair.
+       */
+      override fun propertyGroupId(propertyGroupId: String) {
+        cdkBuilder.propertyGroupId(propertyGroupId)
+      }
+
+      /**
+       * @param propertyMap Describes the value of an application execution property key-value pair.
+       */
+      override fun propertyMap(propertyMap: IResolvable) {
+        cdkBuilder.propertyMap(propertyMap.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param propertyMap Describes the value of an application execution property key-value pair.
+       */
+      override fun propertyMap(propertyMap: Map<String, String>) {
+        cdkBuilder.propertyMap(propertyMap)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty,
+    ) : CdkObject(cdkObject), PropertyGroupProperty {
+      /**
+       * Describes the key of an application execution property key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid)
+       */
+      override fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
+
+      /**
+       * Describes the value of an application execution property key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)
+       */
+      override fun propertyMap(): Any? = unwrap(this).getPropertyMap()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PropertyGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty):
+          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PropertyGroupProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, describes the mapping of each
+   * data element in the streaming source to the corresponding column in the in-application stream.
+   *
+   * Also used to describe the format of the reference data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * RecordColumnProperty recordColumnProperty = RecordColumnProperty.builder()
+   * .name("name")
+   * .sqlType("sqlType")
+   * // the properties below are optional
+   * .mapping("mapping")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html)
+   */
+  public interface RecordColumnProperty {
+    /**
+     * A reference to the data element in the streaming input or the reference data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-mapping)
+     */
+    public fun mapping(): String? = unwrap(this).getMapping()
+
+    /**
+     * The name of the column that is created in the in-application input stream or reference table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-name)
+     */
+    public fun name(): String
+
+    /**
+     * The type of column created in the in-application input stream or reference table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-sqltype)
+     */
+    public fun sqlType(): String
+
+    /**
+     * A builder for [RecordColumnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mapping A reference to the data element in the streaming input or the reference data
+       * source.
+       */
+      public fun mapping(mapping: String)
+
+      /**
+       * @param name The name of the column that is created in the in-application input stream or
+       * reference table. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param sqlType The type of column created in the in-application input stream or reference
+       * table. 
+       */
+      public fun sqlType(sqlType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty.builder()
+
+      /**
+       * @param mapping A reference to the data element in the streaming input or the reference data
+       * source.
+       */
+      override fun mapping(mapping: String) {
+        cdkBuilder.mapping(mapping)
+      }
+
+      /**
+       * @param name The name of the column that is created in the in-application input stream or
+       * reference table. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param sqlType The type of column created in the in-application input stream or reference
+       * table. 
+       */
+      override fun sqlType(sqlType: String) {
+        cdkBuilder.sqlType(sqlType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty,
+    ) : CdkObject(cdkObject), RecordColumnProperty {
+      /**
+       * A reference to the data element in the streaming input or the reference data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-mapping)
+       */
+      override fun mapping(): String? = unwrap(this).getMapping()
+
+      /**
+       * The name of the column that is created in the in-application input stream or reference
+       * table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The type of column created in the in-application input stream or reference table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-sqltype)
+       */
+      override fun sqlType(): String = unwrap(this).getSqlType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordColumnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty):
+          RecordColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordColumnProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordColumnProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty
+    }
+  }
+
+  /**
+   * For a SQL-based Managed Service for Apache Flink application, describes the record format and
+   * relevant mapping information that should be applied to schematize the records on the stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * RecordFormatProperty recordFormatProperty = RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html)
+   */
+  public interface RecordFormatProperty {
+    /**
+     * When you configure application input at the time of creating or updating an application,
+     * provides additional mapping information specific to the record format (such as JSON, CSV, or
+     * record fields delimited by some delimiter) on the streaming source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-mappingparameters)
+     */
+    public fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+
+    /**
+     * The type of record format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-recordformattype)
+     */
+    public fun recordFormatType(): String
+
+    /**
+     * A builder for [RecordFormatProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      public fun mappingParameters(mappingParameters: IResolvable)
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      public fun mappingParameters(mappingParameters: MappingParametersProperty)
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e4cb691a6553bc1a37ffc0ad89ccdf126254533b6fb37fcc41980962693619f")
+      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param recordFormatType The type of record format. 
+       */
+      public fun recordFormatType(recordFormatType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty.builder()
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      override fun mappingParameters(mappingParameters: IResolvable) {
+        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
+        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
+      }
+
+      /**
+       * @param mappingParameters When you configure application input at the time of creating or
+       * updating an application, provides additional mapping information specific to the record format
+       * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e4cb691a6553bc1a37ffc0ad89ccdf126254533b6fb37fcc41980962693619f")
+      override
+          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
+          Unit = mappingParameters(MappingParametersProperty(mappingParameters))
+
+      /**
+       * @param recordFormatType The type of record format. 
+       */
+      override fun recordFormatType(recordFormatType: String) {
+        cdkBuilder.recordFormatType(recordFormatType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty,
+    ) : CdkObject(cdkObject), RecordFormatProperty {
+      /**
+       * When you configure application input at the time of creating or updating an application,
+       * provides additional mapping information specific to the record format (such as JSON, CSV, or
+       * record fields delimited by some delimiter) on the streaming source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-mappingparameters)
+       */
+      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+
+      /**
+       * The type of record format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordformat.html#cfn-kinesisanalyticsv2-application-recordformat-recordformattype)
+       */
+      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordFormatProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty):
+          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordFormatProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty
+    }
+  }
+
+  /**
+   * Describes the starting parameters for an Managed Service for Apache Flink application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * RunConfigurationProperty runConfigurationProperty = RunConfigurationProperty.builder()
+   * .applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty.builder()
+   * .applicationRestoreType("applicationRestoreType")
+   * // the properties below are optional
+   * .snapshotName("snapshotName")
+   * .build())
+   * .flinkRunConfiguration(FlinkRunConfigurationProperty.builder()
+   * .allowNonRestoredState(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html)
+   */
+  public interface RunConfigurationProperty {
+    /**
+     * Describes the restore behavior of a restarting application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-applicationrestoreconfiguration)
+     */
+    public fun applicationRestoreConfiguration(): Any? =
+        unwrap(this).getApplicationRestoreConfiguration()
+
+    /**
+     * Describes the starting parameters for a Managed Service for Apache Flink application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-flinkrunconfiguration)
+     */
+    public fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
+
+    /**
+     * A builder for [RunConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      public fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable)
+
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      public
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty)
+
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84efb69bda14653cae67d9353fc0e242a5fbd1121ce722cb4077d6018882cb4a")
+      public
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      public fun flinkRunConfiguration(flinkRunConfiguration: IResolvable)
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      public fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty)
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5337cf5e1902aa9b86757abe03a52b34802c6138d52004325dce6405a9cf9f8d")
+      public
+          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty.builder()
+
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      override fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
+        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      override
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty) {
+        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(ApplicationRestoreConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
+       * application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("84efb69bda14653cae67d9353fc0e242a5fbd1121ce722cb4077d6018882cb4a")
+      override
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty(applicationRestoreConfiguration))
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      override fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
+        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      override fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
+        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(FlinkRunConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
+       * Apache Flink application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5337cf5e1902aa9b86757abe03a52b34802c6138d52004325dce6405a9cf9f8d")
+      override
+          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit):
+          Unit = flinkRunConfiguration(FlinkRunConfigurationProperty(flinkRunConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty,
+    ) : CdkObject(cdkObject), RunConfigurationProperty {
+      /**
+       * Describes the restore behavior of a restarting application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-applicationrestoreconfiguration)
+       */
+      override fun applicationRestoreConfiguration(): Any? =
+          unwrap(this).getApplicationRestoreConfiguration()
+
+      /**
+       * Describes the starting parameters for a Managed Service for Apache Flink application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-flinkrunconfiguration)
+       */
+      override fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RunConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty):
+          RunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? RunConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RunConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
+    }
+  }
+
+  /**
+   * The base location of the Amazon Data Analytics application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * S3ContentBaseLocationProperty s3ContentBaseLocationProperty =
+   * S3ContentBaseLocationProperty.builder()
+   * .bucketArn("bucketArn")
+   * // the properties below are optional
+   * .basePath("basePath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html)
+   */
+  public interface S3ContentBaseLocationProperty {
+    /**
+     * The base path for the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-basepath)
+     */
+    public fun basePath(): String? = unwrap(this).getBasePath()
+
+    /**
+     * The Amazon Resource Name (ARN) of the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-bucketarn)
+     */
+    public fun bucketArn(): String
+
+    /**
+     * A builder for [S3ContentBaseLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param basePath The base path for the S3 bucket.
+       */
+      public fun basePath(basePath: String)
+
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+       */
+      public fun bucketArn(bucketArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty.builder()
+
+      /**
+       * @param basePath The base path for the S3 bucket.
+       */
+      override fun basePath(basePath: String) {
+        cdkBuilder.basePath(basePath)
+      }
+
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) of the S3 bucket. 
+       */
+      override fun bucketArn(bucketArn: String) {
+        cdkBuilder.bucketArn(bucketArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty,
+    ) : CdkObject(cdkObject), S3ContentBaseLocationProperty {
+      /**
+       * The base path for the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-basepath)
+       */
+      override fun basePath(): String? = unwrap(this).getBasePath()
+
+      /**
+       * The Amazon Resource Name (ARN) of the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentbaselocation.html#cfn-kinesisanalyticsv2-application-s3contentbaselocation-bucketarn)
+       */
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ContentBaseLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty):
+          S3ContentBaseLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ContentBaseLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ContentBaseLocationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentBaseLocationProperty
+    }
+  }
+
+  /**
+   * The location of an application or a custom artifact.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * S3ContentLocationProperty s3ContentLocationProperty = S3ContentLocationProperty.builder()
+   * .bucketArn("bucketArn")
+   * .fileKey("fileKey")
+   * // the properties below are optional
+   * .objectVersion("objectVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html)
+   */
+  public interface S3ContentLocationProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn)
+     */
+    public fun bucketArn(): String
+
+    /**
+     * The file key for the object containing the application code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey)
+     */
+    public fun fileKey(): String
+
+    /**
+     * The version of the object containing the application code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion)
+     */
+    public fun objectVersion(): String? = unwrap(this).getObjectVersion()
+
+    /**
+     * A builder for [S3ContentLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) for the S3 bucket containing the
+       * application code. 
+       */
+      public fun bucketArn(bucketArn: String)
+
+      /**
+       * @param fileKey The file key for the object containing the application code. 
+       */
+      public fun fileKey(fileKey: String)
+
+      /**
+       * @param objectVersion The version of the object containing the application code.
+       */
+      public fun objectVersion(objectVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty.builder()
+
+      /**
+       * @param bucketArn The Amazon Resource Name (ARN) for the S3 bucket containing the
+       * application code. 
+       */
+      override fun bucketArn(bucketArn: String) {
+        cdkBuilder.bucketArn(bucketArn)
+      }
+
+      /**
+       * @param fileKey The file key for the object containing the application code. 
+       */
+      override fun fileKey(fileKey: String) {
+        cdkBuilder.fileKey(fileKey)
+      }
+
+      /**
+       * @param objectVersion The version of the object containing the application code.
+       */
+      override fun objectVersion(objectVersion: String) {
+        cdkBuilder.objectVersion(objectVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty,
+    ) : CdkObject(cdkObject), S3ContentLocationProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn)
+       */
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
+
+      /**
+       * The file key for the object containing the application code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-filekey)
+       */
+      override fun fileKey(): String = unwrap(this).getFileKey()
+
+      /**
+       * The version of the object containing the application code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-s3contentlocation.html#cfn-kinesisanalyticsv2-application-s3contentlocation-objectversion)
+       */
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ContentLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty):
+          S3ContentLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ContentLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ContentLocationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty
+    }
+  }
+
+  /**
+   * Describes the inputs, outputs, and reference data sources for a SQL-based Managed Service for
+   * Apache Flink application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * SqlApplicationConfigurationProperty sqlApplicationConfigurationProperty =
+   * SqlApplicationConfigurationProperty.builder()
+   * .inputs(List.of(InputProperty.builder()
+   * .inputSchema(InputSchemaProperty.builder()
+   * .recordColumns(List.of(RecordColumnProperty.builder()
+   * .name("name")
+   * .sqlType("sqlType")
+   * // the properties below are optional
+   * .mapping("mapping")
+   * .build()))
+   * .recordFormat(RecordFormatProperty.builder()
+   * .recordFormatType("recordFormatType")
+   * // the properties below are optional
+   * .mappingParameters(MappingParametersProperty.builder()
+   * .csvMappingParameters(CSVMappingParametersProperty.builder()
+   * .recordColumnDelimiter("recordColumnDelimiter")
+   * .recordRowDelimiter("recordRowDelimiter")
+   * .build())
+   * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+   * .recordRowPath("recordRowPath")
+   * .build())
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .recordEncoding("recordEncoding")
+   * .build())
+   * .namePrefix("namePrefix")
+   * // the properties below are optional
+   * .inputParallelism(InputParallelismProperty.builder()
+   * .count(123)
+   * .build())
+   * .inputProcessingConfiguration(InputProcessingConfigurationProperty.builder()
+   * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build())
+   * .build())
+   * .kinesisFirehoseInput(KinesisFirehoseInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build())
+   * .kinesisStreamsInput(KinesisStreamsInputProperty.builder()
+   * .resourceArn("resourceArn")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html)
+   */
+  public interface SqlApplicationConfigurationProperty {
+    /**
+     * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
+     * objects describing the input streams used by the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)
+     */
+    public fun inputs(): Any? = unwrap(this).getInputs()
+
+    /**
+     * A builder for [SqlApplicationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      public fun inputs(inputs: IResolvable)
+
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      public fun inputs(inputs: List<Any>)
+
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      public fun inputs(vararg inputs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty.builder()
+
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      override fun inputs(inputs: IResolvable) {
+        cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      override fun inputs(inputs: List<Any>) {
+        cdkBuilder.inputs(inputs)
+      }
+
+      /**
+       * @param inputs The array of
+       * [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html) objects
+       * describing the input streams used by the application.
+       */
+      override fun inputs(vararg inputs: Any): Unit = inputs(inputs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty,
+    ) : CdkObject(cdkObject), SqlApplicationConfigurationProperty {
+      /**
+       * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
+       * objects describing the input streams used by the application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)
+       */
+      override fun inputs(): Any? = unwrap(this).getInputs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SqlApplicationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty):
+          SqlApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlApplicationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SqlApplicationConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the parameters of a VPC used by the application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
+   * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html)
+   */
+  public interface VpcConfigurationProperty {
+    /**
+     * The array of
+     * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+     * IDs used by the VPC configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String>
+
+    /**
+     * The array of [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html)
+     * IDs used by the VPC configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-subnetids)
+     */
+    public fun subnetIds(): List<String>
+
+    /**
+     * A builder for [VpcConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds The array of
+       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+       * IDs used by the VPC configuration. 
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds The array of
+       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+       * IDs used by the VPC configuration. 
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnetIds The array of
+       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
+       * the VPC configuration. 
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds The array of
+       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
+       * the VPC configuration. 
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty.builder()
+
+      /**
+       * @param securityGroupIds The array of
+       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+       * IDs used by the VPC configuration. 
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds The array of
+       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+       * IDs used by the VPC configuration. 
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnetIds The array of
+       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
+       * the VPC configuration. 
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds The array of
+       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
+       * the VPC configuration. 
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty,
+    ) : CdkObject(cdkObject), VpcConfigurationProperty {
+      /**
+       * The array of
+       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
+       * IDs used by the VPC configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
+
+      /**
+       * The array of
+       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
+       * the VPC configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty):
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
     }
   }
 
@@ -5746,8 +7188,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty,
     ) : CdkObject(cdkObject), ZeppelinApplicationConfigurationProperty {
       /**
        * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio
@@ -5798,841 +7239,6 @@ public open class CfnApplicationV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinApplicationConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes an application's checkpointing configuration.
-   *
-   * Checkpointing is the process of persisting application state for fault tolerance. For more
-   * information, see [Checkpoints for Fault
-   * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-   * in the [Apache Flink
-   * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-   * .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * CheckpointConfigurationProperty checkpointConfigurationProperty =
-   * CheckpointConfigurationProperty.builder()
-   * .configurationType("configurationType")
-   * // the properties below are optional
-   * .checkpointingEnabled(false)
-   * .checkpointInterval(123)
-   * .minPauseBetweenCheckpoints(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html)
-   */
-  public interface CheckpointConfigurationProperty {
-    /**
-     * Describes the interval in milliseconds between checkpoint operations.
-     *
-     *
-     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-     * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
-     * or in application code.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval)
-     */
-    public fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
-
-    /**
-     * Describes whether checkpointing is enabled for a Managed Service for Apache Flink
-     * application.
-     *
-     *
-     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-     * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-     * API or in application code.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled)
-     */
-    public fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
-
-    /**
-     * Describes whether the application uses Managed Service for Apache Flink' default
-     * checkpointing behavior.
-     *
-     * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
-     * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
-     *
-     *
-     * If this value is set to `DEFAULT` , the application will use the following values, even if
-     * they are set to other values using APIs or application code:
-     *
-     * * *CheckpointingEnabled:* true
-     * * *CheckpointInterval:* 60000
-     * * *MinPauseBetweenCheckpoints:* 5000
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype)
-     */
-    public fun configurationType(): String
-
-    /**
-     * Describes the minimum time in milliseconds after a checkpoint operation completes that a new
-     * checkpoint operation can start.
-     *
-     * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
-     * otherwise performs continual checkpoint operations. For more information, see [Tuning
-     * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
-     * in the [Apache Flink
-     * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-     * .
-     *
-     *
-     * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-     * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
-     * application code.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints)
-     */
-    public fun minPauseBetweenCheckpoints(): Number? = unwrap(this).getMinPauseBetweenCheckpoints()
-
-    /**
-     * A builder for [CheckpointConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param checkpointInterval Describes the interval in milliseconds between checkpoint
-       * operations.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
-       * or in application code.
-       */
-      public fun checkpointInterval(checkpointInterval: Number)
-
-      /**
-       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
-       * Service for Apache Flink application.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-       * API or in application code.
-       */
-      public fun checkpointingEnabled(checkpointingEnabled: Boolean)
-
-      /**
-       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
-       * Service for Apache Flink application.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-       * API or in application code.
-       */
-      public fun checkpointingEnabled(checkpointingEnabled: IResolvable)
-
-      /**
-       * @param configurationType Describes whether the application uses Managed Service for Apache
-       * Flink' default checkpointing behavior. 
-       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
-       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
-       *
-       *
-       * If this value is set to `DEFAULT` , the application will use the following values, even if
-       * they are set to other values using APIs or application code:
-       *
-       * * *CheckpointingEnabled:* true
-       * * *CheckpointInterval:* 60000
-       * * *MinPauseBetweenCheckpoints:* 5000
-       */
-      public fun configurationType(configurationType: String)
-
-      /**
-       * @param minPauseBetweenCheckpoints Describes the minimum time in milliseconds after a
-       * checkpoint operation completes that a new checkpoint operation can start.
-       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
-       * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
-       * application code.
-       */
-      public fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty.builder()
-
-      /**
-       * @param checkpointInterval Describes the interval in milliseconds between checkpoint
-       * operations.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
-       * or in application code.
-       */
-      override fun checkpointInterval(checkpointInterval: Number) {
-        cdkBuilder.checkpointInterval(checkpointInterval)
-      }
-
-      /**
-       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
-       * Service for Apache Flink application.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-       * API or in application code.
-       */
-      override fun checkpointingEnabled(checkpointingEnabled: Boolean) {
-        cdkBuilder.checkpointingEnabled(checkpointingEnabled)
-      }
-
-      /**
-       * @param checkpointingEnabled Describes whether checkpointing is enabled for a Managed
-       * Service for Apache Flink application.
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-       * API or in application code.
-       */
-      override fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
-        cdkBuilder.checkpointingEnabled(checkpointingEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param configurationType Describes whether the application uses Managed Service for Apache
-       * Flink' default checkpointing behavior. 
-       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
-       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
-       *
-       *
-       * If this value is set to `DEFAULT` , the application will use the following values, even if
-       * they are set to other values using APIs or application code:
-       *
-       * * *CheckpointingEnabled:* true
-       * * *CheckpointInterval:* 60000
-       * * *MinPauseBetweenCheckpoints:* 5000
-       */
-      override fun configurationType(configurationType: String) {
-        cdkBuilder.configurationType(configurationType)
-      }
-
-      /**
-       * @param minPauseBetweenCheckpoints Describes the minimum time in milliseconds after a
-       * checkpoint operation completes that a new checkpoint operation can start.
-       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
-       * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
-       * application code.
-       */
-      override fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number) {
-        cdkBuilder.minPauseBetweenCheckpoints(minPauseBetweenCheckpoints)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty,
-    ) : CdkObject(cdkObject), CheckpointConfigurationProperty {
-      /**
-       * Describes the interval in milliseconds between checkpoint operations.
-       *
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointInterval` value of 60000, even if this value is set to another value using this API
-       * or in application code.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval)
-       */
-      override fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
-
-      /**
-       * Describes whether checkpointing is enabled for a Managed Service for Apache Flink
-       * application.
-       *
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `CheckpointingEnabled` value of `true` , even if this value is set to another value using this
-       * API or in application code.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled)
-       */
-      override fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
-
-      /**
-       * Describes whether the application uses Managed Service for Apache Flink' default
-       * checkpointing behavior.
-       *
-       * You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled` ,
-       * `CheckpointInterval` , or `MinPauseBetweenCheckpoints` parameters.
-       *
-       *
-       * If this value is set to `DEFAULT` , the application will use the following values, even if
-       * they are set to other values using APIs or application code:
-       *
-       * * *CheckpointingEnabled:* true
-       * * *CheckpointInterval:* 60000
-       * * *MinPauseBetweenCheckpoints:* 5000
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype)
-       */
-      override fun configurationType(): String = unwrap(this).getConfigurationType()
-
-      /**
-       * Describes the minimum time in milliseconds after a checkpoint operation completes that a
-       * new checkpoint operation can start.
-       *
-       * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
-       * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       *
-       * If `CheckpointConfiguration.ConfigurationType` is `DEFAULT` , the application will use a
-       * `MinPauseBetweenCheckpoints` value of 5000, even if this value is set using this API or in
-       * application code.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints)
-       */
-      override fun minPauseBetweenCheckpoints(): Number? =
-          unwrap(this).getMinPauseBetweenCheckpoints()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CheckpointConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty):
-          CheckpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CheckpointConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CheckpointConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the starting parameters for an Managed Service for Apache Flink application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * RunConfigurationProperty runConfigurationProperty = RunConfigurationProperty.builder()
-   * .applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty.builder()
-   * .applicationRestoreType("applicationRestoreType")
-   * // the properties below are optional
-   * .snapshotName("snapshotName")
-   * .build())
-   * .flinkRunConfiguration(FlinkRunConfigurationProperty.builder()
-   * .allowNonRestoredState(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html)
-   */
-  public interface RunConfigurationProperty {
-    /**
-     * Describes the restore behavior of a restarting application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-applicationrestoreconfiguration)
-     */
-    public fun applicationRestoreConfiguration(): Any? =
-        unwrap(this).getApplicationRestoreConfiguration()
-
-    /**
-     * Describes the starting parameters for a Managed Service for Apache Flink application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-flinkrunconfiguration)
-     */
-    public fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
-
-    /**
-     * A builder for [RunConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      public fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable)
-
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      public
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty)
-
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84efb69bda14653cae67d9353fc0e242a5fbd1121ce722cb4077d6018882cb4a")
-      public
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      public fun flinkRunConfiguration(flinkRunConfiguration: IResolvable)
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      public fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty)
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5337cf5e1902aa9b86757abe03a52b34802c6138d52004325dce6405a9cf9f8d")
-      public
-          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty.builder()
-
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      override fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
-        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      override
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty) {
-        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(ApplicationRestoreConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param applicationRestoreConfiguration Describes the restore behavior of a restarting
-       * application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("84efb69bda14653cae67d9353fc0e242a5fbd1121ce722cb4077d6018882cb4a")
-      override
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty(applicationRestoreConfiguration))
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      override fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
-        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      override fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
-        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(FlinkRunConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param flinkRunConfiguration Describes the starting parameters for a Managed Service for
-       * Apache Flink application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5337cf5e1902aa9b86757abe03a52b34802c6138d52004325dce6405a9cf9f8d")
-      override
-          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit):
-          Unit = flinkRunConfiguration(FlinkRunConfigurationProperty(flinkRunConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty,
-    ) : CdkObject(cdkObject), RunConfigurationProperty {
-      /**
-       * Describes the restore behavior of a restarting application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-applicationrestoreconfiguration)
-       */
-      override fun applicationRestoreConfiguration(): Any? =
-          unwrap(this).getApplicationRestoreConfiguration()
-
-      /**
-       * Describes the starting parameters for a Managed Service for Apache Flink application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html#cfn-kinesisanalyticsv2-application-runconfiguration-flinkrunconfiguration)
-       */
-      override fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RunConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty):
-          RunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? RunConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RunConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RunConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes the parameters of a VPC used by the application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnetIds(List.of("subnetIds"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html)
-   */
-  public interface VpcConfigurationProperty {
-    /**
-     * The array of
-     * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-     * IDs used by the VPC configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String>
-
-    /**
-     * The array of [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html)
-     * IDs used by the VPC configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-subnetids)
-     */
-    public fun subnetIds(): List<String>
-
-    /**
-     * A builder for [VpcConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds The array of
-       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-       * IDs used by the VPC configuration. 
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds The array of
-       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-       * IDs used by the VPC configuration. 
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnetIds The array of
-       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
-       * the VPC configuration. 
-       */
-      public fun subnetIds(subnetIds: List<String>)
-
-      /**
-       * @param subnetIds The array of
-       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
-       * the VPC configuration. 
-       */
-      public fun subnetIds(vararg subnetIds: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty.builder()
-
-      /**
-       * @param securityGroupIds The array of
-       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-       * IDs used by the VPC configuration. 
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds The array of
-       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-       * IDs used by the VPC configuration. 
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnetIds The array of
-       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
-       * the VPC configuration. 
-       */
-      override fun subnetIds(subnetIds: List<String>) {
-        cdkBuilder.subnetIds(subnetIds)
-      }
-
-      /**
-       * @param subnetIds The array of
-       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
-       * the VPC configuration. 
-       */
-      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty,
-    ) : CdkObject(cdkObject), VpcConfigurationProperty {
-      /**
-       * The array of
-       * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
-       * IDs used by the VPC configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
-
-      /**
-       * The array of
-       * [Subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html) IDs used by
-       * the VPC configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html#cfn-kinesisanalyticsv2-application-vpcconfiguration-subnetids)
-       */
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty):
-          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
-    }
-  }
-
-  /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the mapping of each
-   * data element in the streaming source to the corresponding column in the in-application stream.
-   *
-   * Also used to describe the format of the reference data source.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * RecordColumnProperty recordColumnProperty = RecordColumnProperty.builder()
-   * .name("name")
-   * .sqlType("sqlType")
-   * // the properties below are optional
-   * .mapping("mapping")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html)
-   */
-  public interface RecordColumnProperty {
-    /**
-     * A reference to the data element in the streaming input or the reference data source.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-mapping)
-     */
-    public fun mapping(): String? = unwrap(this).getMapping()
-
-    /**
-     * The name of the column that is created in the in-application input stream or reference table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-name)
-     */
-    public fun name(): String
-
-    /**
-     * The type of column created in the in-application input stream or reference table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-sqltype)
-     */
-    public fun sqlType(): String
-
-    /**
-     * A builder for [RecordColumnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param mapping A reference to the data element in the streaming input or the reference data
-       * source.
-       */
-      public fun mapping(mapping: String)
-
-      /**
-       * @param name The name of the column that is created in the in-application input stream or
-       * reference table. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param sqlType The type of column created in the in-application input stream or reference
-       * table. 
-       */
-      public fun sqlType(sqlType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty.builder()
-
-      /**
-       * @param mapping A reference to the data element in the streaming input or the reference data
-       * source.
-       */
-      override fun mapping(mapping: String) {
-        cdkBuilder.mapping(mapping)
-      }
-
-      /**
-       * @param name The name of the column that is created in the in-application input stream or
-       * reference table. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param sqlType The type of column created in the in-application input stream or reference
-       * table. 
-       */
-      override fun sqlType(sqlType: String) {
-        cdkBuilder.sqlType(sqlType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty,
-    ) : CdkObject(cdkObject), RecordColumnProperty {
-      /**
-       * A reference to the data element in the streaming input or the reference data source.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-mapping)
-       */
-      override fun mapping(): String? = unwrap(this).getMapping()
-
-      /**
-       * The name of the column that is created in the in-application input stream or reference
-       * table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The type of column created in the in-application input stream or reference table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-recordcolumn.html#cfn-kinesisanalyticsv2-application-recordcolumn-sqltype)
-       */
-      override fun sqlType(): String = unwrap(this).getSqlType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecordColumnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty):
-          RecordColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordColumnProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecordColumnProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty
     }
   }
 
@@ -6699,8 +7305,7 @@ public open class CfnApplicationV2 internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty,
     ) : CdkObject(cdkObject), ZeppelinMonitoringConfigurationProperty {
       /**
        * The verbosity of the CloudWatch Logs for an application.
@@ -6728,648 +7333,6 @@ public open class CfnApplicationV2 internal constructor(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ZeppelinMonitoringConfigurationProperty
-    }
-  }
-
-  /**
-   * The configuration of the Glue Data Catalog that you use for Apache Flink SQL queries and table
-   * API transforms that you write in an application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * GlueDataCatalogConfigurationProperty glueDataCatalogConfigurationProperty =
-   * GlueDataCatalogConfigurationProperty.builder()
-   * .databaseArn("databaseArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html)
-   */
-  public interface GlueDataCatalogConfigurationProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html#cfn-kinesisanalyticsv2-application-gluedatacatalogconfiguration-databasearn)
-     */
-    public fun databaseArn(): String? = unwrap(this).getDatabaseArn()
-
-    /**
-     * A builder for [GlueDataCatalogConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param databaseArn The Amazon Resource Name (ARN) of the database.
-       */
-      public fun databaseArn(databaseArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty.builder()
-
-      /**
-       * @param databaseArn The Amazon Resource Name (ARN) of the database.
-       */
-      override fun databaseArn(databaseArn: String) {
-        cdkBuilder.databaseArn(databaseArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty,
-    ) : CdkObject(cdkObject), GlueDataCatalogConfigurationProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-gluedatacatalogconfiguration.html#cfn-kinesisanalyticsv2-application-gluedatacatalogconfiguration-databasearn)
-       */
-      override fun databaseArn(): String? = unwrap(this).getDatabaseArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          GlueDataCatalogConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty):
-          GlueDataCatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GlueDataCatalogConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GlueDataCatalogConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.GlueDataCatalogConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * ApplicationSnapshotConfigurationProperty applicationSnapshotConfigurationProperty =
-   * ApplicationSnapshotConfigurationProperty.builder()
-   * .snapshotsEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html)
-   */
-  public interface ApplicationSnapshotConfigurationProperty {
-    /**
-     * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled)
-     */
-    public fun snapshotsEnabled(): Any
-
-    /**
-     * A builder for [ApplicationSnapshotConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
-       * Apache Flink application. 
-       */
-      public fun snapshotsEnabled(snapshotsEnabled: Boolean)
-
-      /**
-       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
-       * Apache Flink application. 
-       */
-      public fun snapshotsEnabled(snapshotsEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty.builder()
-
-      /**
-       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
-       * Apache Flink application. 
-       */
-      override fun snapshotsEnabled(snapshotsEnabled: Boolean) {
-        cdkBuilder.snapshotsEnabled(snapshotsEnabled)
-      }
-
-      /**
-       * @param snapshotsEnabled Describes whether snapshots are enabled for a Managed Service for
-       * Apache Flink application. 
-       */
-      override fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
-        cdkBuilder.snapshotsEnabled(snapshotsEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationSnapshotConfigurationProperty {
-      /**
-       * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsnapshotconfiguration-snapshotsenabled)
-       */
-      override fun snapshotsEnabled(): Any = unwrap(this).getSnapshotsEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ApplicationSnapshotConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty):
-          ApplicationSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ApplicationSnapshotConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ApplicationSnapshotConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty
-    }
-  }
-
-  /**
-   * For an SQL-based Amazon Kinesis Data Analytics application, describes a processor that is used
-   * to preprocess the records in the stream before being processed by your application code.
-   *
-   * Currently, the only input processor available is [Amazon
-   * Lambda](https://docs.aws.amazon.com/lambda/) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * InputProcessingConfigurationProperty inputProcessingConfigurationProperty =
-   * InputProcessingConfigurationProperty.builder()
-   * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
-   * .resourceArn("resourceArn")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html)
-   */
-  public interface InputProcessingConfigurationProperty {
-    /**
-     * The
-     * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-     * that is used to preprocess the records in the stream before being processed by your application
-     * code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)
-     */
-    public fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
-
-    /**
-     * A builder for [InputProcessingConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      public fun inputLambdaProcessor(inputLambdaProcessor: IResolvable)
-
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      public fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty)
-
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ac7a1ddc265772b8e655485937e0839e4b931a5fa731c9da007d2f57bc3007c")
-      public
-          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty.builder()
-
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty::unwrap))
-      }
-
-      /**
-       * @param inputLambdaProcessor The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6ac7a1ddc265772b8e655485937e0839e4b931a5fa731c9da007d2f57bc3007c")
-      override
-          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit):
-          Unit = inputLambdaProcessor(InputLambdaProcessorProperty(inputLambdaProcessor))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty,
-    ) : CdkObject(cdkObject), InputProcessingConfigurationProperty {
-      /**
-       * The
-       * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
-       * that is used to preprocess the records in the stream before being processed by your
-       * application code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.html#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)
-       */
-      override fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InputProcessingConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty):
-          InputProcessingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InputProcessingConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputProcessingConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty
-    }
-  }
-
-  /**
-   * Describes configuration parameters for a Managed Service for Apache Flink application or a
-   * Studio notebook.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.kinesisanalytics.*;
-   * FlinkApplicationConfigurationProperty flinkApplicationConfigurationProperty =
-   * FlinkApplicationConfigurationProperty.builder()
-   * .checkpointConfiguration(CheckpointConfigurationProperty.builder()
-   * .configurationType("configurationType")
-   * // the properties below are optional
-   * .checkpointingEnabled(false)
-   * .checkpointInterval(123)
-   * .minPauseBetweenCheckpoints(123)
-   * .build())
-   * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
-   * .configurationType("configurationType")
-   * // the properties below are optional
-   * .logLevel("logLevel")
-   * .metricsLevel("metricsLevel")
-   * .build())
-   * .parallelismConfiguration(ParallelismConfigurationProperty.builder()
-   * .configurationType("configurationType")
-   * // the properties below are optional
-   * .autoScalingEnabled(false)
-   * .parallelism(123)
-   * .parallelismPerKpu(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html)
-   */
-  public interface FlinkApplicationConfigurationProperty {
-    /**
-     * Describes an application's checkpointing configuration.
-     *
-     * Checkpointing is the process of persisting application state for fault tolerance. For more
-     * information, see [Checkpoints for Fault
-     * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-     * in the [Apache Flink
-     * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)
-     */
-    public fun checkpointConfiguration(): Any? = unwrap(this).getCheckpointConfiguration()
-
-    /**
-     * Describes configuration parameters for Amazon CloudWatch logging for an application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)
-     */
-    public fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
-
-    /**
-     * Describes parameters for how an application executes multiple tasks simultaneously.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)
-     */
-    public fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
-
-    /**
-     * A builder for [FlinkApplicationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      public fun checkpointConfiguration(checkpointConfiguration: IResolvable)
-
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      public fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty)
-
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44389922c1668ab5939a60e0dd52171e0d91a7ec4724e49b72515f975748642b")
-      public
-          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      public fun monitoringConfiguration(monitoringConfiguration: IResolvable)
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty)
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a145583c3da8ac85deb1a97752d83a8592398a0694fa8bcee953fc5da08f96c7")
-      public
-          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      public fun parallelismConfiguration(parallelismConfiguration: IResolvable)
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      public
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty)
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("22789524881e7159d7ca0c1d82f5c48c6f9ff6a62e2ffc0b73bd2c0e3bee5883")
-      public
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty.builder()
-
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      override fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
-        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      override
-          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty) {
-        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(CheckpointConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param checkpointConfiguration Describes an application's checkpointing configuration.
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44389922c1668ab5939a60e0dd52171e0d91a7ec4724e49b72515f975748642b")
-      override
-          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit):
-          Unit = checkpointConfiguration(CheckpointConfigurationProperty(checkpointConfiguration))
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      override
-          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param monitoringConfiguration Describes configuration parameters for Amazon CloudWatch
-       * logging for an application.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a145583c3da8ac85deb1a97752d83a8592398a0694fa8bcee953fc5da08f96c7")
-      override
-          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit):
-          Unit = monitoringConfiguration(MonitoringConfigurationProperty(monitoringConfiguration))
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      override fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
-        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      override
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty) {
-        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(ParallelismConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param parallelismConfiguration Describes parameters for how an application executes
-       * multiple tasks simultaneously.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("22789524881e7159d7ca0c1d82f5c48c6f9ff6a62e2ffc0b73bd2c0e3bee5883")
-      override
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          parallelismConfiguration(ParallelismConfigurationProperty(parallelismConfiguration))
-
-      public fun build():
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), FlinkApplicationConfigurationProperty {
-      /**
-       * Describes an application's checkpointing configuration.
-       *
-       * Checkpointing is the process of persisting application state for fault tolerance. For more
-       * information, see [Checkpoints for Fault
-       * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
-       * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)
-       */
-      override fun checkpointConfiguration(): Any? = unwrap(this).getCheckpointConfiguration()
-
-      /**
-       * Describes configuration parameters for Amazon CloudWatch logging for an application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)
-       */
-      override fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
-
-      /**
-       * Describes parameters for how an application executes multiple tasks simultaneously.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)
-       */
-      override fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FlinkApplicationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty):
-          FlinkApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FlinkApplicationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FlinkApplicationConfigurationProperty):
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty
     }
   }
 }

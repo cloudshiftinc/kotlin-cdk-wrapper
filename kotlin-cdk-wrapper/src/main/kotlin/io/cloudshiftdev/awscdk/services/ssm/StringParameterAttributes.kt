@@ -225,7 +225,7 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.StringParameterAttributes,
+    cdkObject: software.amazon.awscdk.services.ssm.StringParameterAttributes,
   ) : CdkObject(cdkObject), StringParameterAttributes {
     /**
      * Use a dynamic reference as the representation in CloudFormation template level.

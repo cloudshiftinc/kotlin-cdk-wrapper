@@ -26,8 +26,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class RuleScope internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.RuleScope,
+public open class RuleScope(
+  cdkObject: software.amazon.awscdk.services.config.RuleScope,
 ) : CdkObject(cdkObject) {
   /**
    * tag key applied to resources that will trigger evaluation of a rule.
@@ -74,6 +74,6 @@ public open class RuleScope internal constructor(
         RuleScope(cdkObject)
 
     internal fun unwrap(wrapped: RuleScope): software.amazon.awscdk.services.config.RuleScope =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.config.RuleScope
   }
 }

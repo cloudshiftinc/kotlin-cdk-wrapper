@@ -25,8 +25,13 @@ public enum class InstanceSize(
   XLARGE32(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE32),
   XLARGE48(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE48),
   XLARGE56(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE56),
+  XLARGE96(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE96),
   XLARGE112(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE112),
   METAL(software.amazon.awscdk.services.ec2.InstanceSize.METAL),
+  XLARGE16METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE16METAL),
+  XLARGE24METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE24METAL),
+  XLARGE32METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE32METAL),
+  XLARGE48METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE48METAL),
   ;
 
   public companion object {
@@ -52,8 +57,13 @@ public enum class InstanceSize(
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE32 -> InstanceSize.XLARGE32
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE48 -> InstanceSize.XLARGE48
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE56 -> InstanceSize.XLARGE56
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE96 -> InstanceSize.XLARGE96
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE112 -> InstanceSize.XLARGE112
       software.amazon.awscdk.services.ec2.InstanceSize.METAL -> InstanceSize.METAL
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE16METAL -> InstanceSize.XLARGE16METAL
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE24METAL -> InstanceSize.XLARGE24METAL
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE32METAL -> InstanceSize.XLARGE32METAL
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE48METAL -> InstanceSize.XLARGE48METAL
     }
 
     internal fun unwrap(wrapped: InstanceSize): software.amazon.awscdk.services.ec2.InstanceSize =

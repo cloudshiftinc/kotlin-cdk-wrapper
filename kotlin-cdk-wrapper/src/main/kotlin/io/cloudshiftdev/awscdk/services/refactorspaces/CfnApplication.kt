@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -427,7 +427,8 @@ public open class CfnApplication internal constructor(
         CfnApplication = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication):
-        software.amazon.awscdk.services.refactorspaces.CfnApplication = wrapped.cdkObject
+        software.amazon.awscdk.services.refactorspaces.CfnApplication = wrapped.cdkObject as
+        software.amazon.awscdk.services.refactorspaces.CfnApplication
   }
 
   /**
@@ -540,8 +541,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty,
+      cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty,
     ) : CdkObject(cdkObject), ApiGatewayProxyInputProperty {
       /**
        * The type of endpoint to use for the API Gateway proxy.

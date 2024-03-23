@@ -100,8 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
  */
-public open class CfnMaintenanceWindowTask internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask,
+public open class CfnMaintenanceWindowTask(
+  cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1007,7 +1007,426 @@ public open class CfnMaintenanceWindowTask internal constructor(
         CfnMaintenanceWindowTask = CfnMaintenanceWindowTask(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowTask):
-        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask = wrapped.cdkObject
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask = wrapped.cdkObject as
+        software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
+  }
+
+  /**
+   * Configuration options for sending command output to Amazon CloudWatch Logs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * CloudWatchOutputConfigProperty cloudWatchOutputConfigProperty =
+   * CloudWatchOutputConfigProperty.builder()
+   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+   * .cloudWatchOutputEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html)
+   */
+  public interface CloudWatchOutputConfigProperty {
+    /**
+     * The name of the CloudWatch Logs log group where you want to send command output.
+     *
+     * If you don't specify a group name, AWS Systems Manager automatically creates a log group for
+     * you. The log group uses the following naming format:
+     *
+     * `aws/ssm/ *SystemsManagerDocumentName*`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchloggroupname)
+     */
+    public fun cloudWatchLogGroupName(): String? = unwrap(this).getCloudWatchLogGroupName()
+
+    /**
+     * Enables Systems Manager to send command output to CloudWatch Logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchoutputenabled)
+     */
+    public fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
+
+    /**
+     * A builder for [CloudWatchOutputConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchLogGroupName The name of the CloudWatch Logs log group where you want to
+       * send command output.
+       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
+       * for you. The log group uses the following naming format:
+       *
+       * `aws/ssm/ *SystemsManagerDocumentName*`
+       */
+      public fun cloudWatchLogGroupName(cloudWatchLogGroupName: String)
+
+      /**
+       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
+       * Logs.
+       */
+      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean)
+
+      /**
+       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
+       * Logs.
+       */
+      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.builder()
+
+      /**
+       * @param cloudWatchLogGroupName The name of the CloudWatch Logs log group where you want to
+       * send command output.
+       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
+       * for you. The log group uses the following naming format:
+       *
+       * `aws/ssm/ *SystemsManagerDocumentName*`
+       */
+      override fun cloudWatchLogGroupName(cloudWatchLogGroupName: String) {
+        cdkBuilder.cloudWatchLogGroupName(cloudWatchLogGroupName)
+      }
+
+      /**
+       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
+       * Logs.
+       */
+      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean) {
+        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled)
+      }
+
+      /**
+       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
+       * Logs.
+       */
+      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
+        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
+    ) : CdkObject(cdkObject), CloudWatchOutputConfigProperty {
+      /**
+       * The name of the CloudWatch Logs log group where you want to send command output.
+       *
+       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
+       * for you. The log group uses the following naming format:
+       *
+       * `aws/ssm/ *SystemsManagerDocumentName*`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchloggroupname)
+       */
+      override fun cloudWatchLogGroupName(): String? = unwrap(this).getCloudWatchLogGroupName()
+
+      /**
+       * Enables Systems Manager to send command output to CloudWatch Logs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchoutputenabled)
+       */
+      override fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchOutputConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty):
+          CloudWatchOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchOutputConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchOutputConfigProperty):
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
+    }
+  }
+
+  /**
+   * The `LoggingInfo` property type specifies information about the Amazon S3 bucket to write
+   * instance-level logs to.
+   *
+   * `LoggingInfo` is a property of the
+   * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
+   * resource.
+   *
+   *
+   * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs, instead use
+   * the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+   * structure. For information about how Systems Manager handles these options for the supported
+   * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+   * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+   * .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * LoggingInfoProperty loggingInfoProperty = LoggingInfoProperty.builder()
+   * .region("region")
+   * .s3Bucket("s3Bucket")
+   * // the properties below are optional
+   * .s3Prefix("s3Prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html)
+   */
+  public interface LoggingInfoProperty {
+    /**
+     * The AWS Region where the S3 bucket is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
+     */
+    public fun region(): String
+
+    /**
+     * The name of an S3 bucket where execution logs are stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
+     */
+    public fun s3Bucket(): String
+
+    /**
+     * The Amazon S3 bucket subfolder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
+     */
+    public fun s3Prefix(): String? = unwrap(this).getS3Prefix()
+
+    /**
+     * A builder for [LoggingInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param region The AWS Region where the S3 bucket is located. 
+       */
+      public fun region(region: String)
+
+      /**
+       * @param s3Bucket The name of an S3 bucket where execution logs are stored. 
+       */
+      public fun s3Bucket(s3Bucket: String)
+
+      /**
+       * @param s3Prefix The Amazon S3 bucket subfolder.
+       */
+      public fun s3Prefix(s3Prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.Builder =
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.builder()
+
+      /**
+       * @param region The AWS Region where the S3 bucket is located. 
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      /**
+       * @param s3Bucket The name of an S3 bucket where execution logs are stored. 
+       */
+      override fun s3Bucket(s3Bucket: String) {
+        cdkBuilder.s3Bucket(s3Bucket)
+      }
+
+      /**
+       * @param s3Prefix The Amazon S3 bucket subfolder.
+       */
+      override fun s3Prefix(s3Prefix: String) {
+        cdkBuilder.s3Prefix(s3Prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
+    ) : CdkObject(cdkObject), LoggingInfoProperty {
+      /**
+       * The AWS Region where the S3 bucket is located.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
+       */
+      override fun region(): String = unwrap(this).getRegion()
+
+      /**
+       * The name of an S3 bucket where execution logs are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
+       */
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+
+      /**
+       * The Amazon S3 bucket subfolder.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
+       */
+      override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty):
+          LoggingInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingInfoProperty):
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty
+    }
+  }
+
+  /**
+   * The `MaintenanceWindowAutomationParameters` property type specifies the parameters for an
+   * `AUTOMATION` task type for a maintenance window task in AWS Systems Manager .
+   *
+   * `MaintenanceWindowAutomationParameters` is a property of the
+   * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+   * property type.
+   *
+   * For information about available parameters in Automation runbooks, you can view the content of
+   * the runbook itself in the Systems Manager console. For information, see [View runbook
+   * content](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents-reference-details.html#view-automation-json)
+   * in the *AWS Systems Manager User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * Object parameters;
+   * MaintenanceWindowAutomationParametersProperty maintenanceWindowAutomationParametersProperty =
+   * MaintenanceWindowAutomationParametersProperty.builder()
+   * .documentVersion("documentVersion")
+   * .parameters(parameters)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html)
+   */
+  public interface MaintenanceWindowAutomationParametersProperty {
+    /**
+     * The version of an Automation runbook to use during task execution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
+     */
+    public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+
+    /**
+     * The parameters for the `AUTOMATION` type task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [MaintenanceWindowAutomationParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param documentVersion The version of an Automation runbook to use during task execution.
+       */
+      public fun documentVersion(documentVersion: String)
+
+      /**
+       * @param parameters The parameters for the `AUTOMATION` type task.
+       */
+      public fun parameters(parameters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.builder()
+
+      /**
+       * @param documentVersion The version of an Automation runbook to use during task execution.
+       */
+      override fun documentVersion(documentVersion: String) {
+        cdkBuilder.documentVersion(documentVersion)
+      }
+
+      /**
+       * @param parameters The parameters for the `AUTOMATION` type task.
+       */
+      override fun parameters(parameters: Any) {
+        cdkBuilder.parameters(parameters)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
+    ) : CdkObject(cdkObject), MaintenanceWindowAutomationParametersProperty {
+      /**
+       * The version of an Automation runbook to use during task execution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
+       */
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+
+      /**
+       * The parameters for the `AUTOMATION` type task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MaintenanceWindowAutomationParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty):
+          MaintenanceWindowAutomationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowAutomationParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceWindowAutomationParametersProperty):
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
+    }
   }
 
   /**
@@ -1148,8 +1567,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowLambdaParametersProperty {
       /**
        * Client-specific information to pass to the AWS Lambda function that you're invoking.
@@ -1618,8 +2036,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
     ) : CdkObject(cdkObject), MaintenanceWindowRunCommandParametersProperty {
       /**
        * Configuration options for sending command output to Amazon CloudWatch Logs.
@@ -1737,6 +2154,123 @@ public open class CfnMaintenanceWindowTask internal constructor(
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty
+    }
+  }
+
+  /**
+   * The `MaintenanceWindowStepFunctionsParameters` property type specifies the parameters for the
+   * execution of a `STEP_FUNCTIONS` task in a Systems Manager maintenance window.
+   *
+   * `MaintenanceWindowStepFunctionsParameters` is a property of the
+   * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+   * property type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ssm.*;
+   * MaintenanceWindowStepFunctionsParametersProperty
+   * maintenanceWindowStepFunctionsParametersProperty =
+   * MaintenanceWindowStepFunctionsParametersProperty.builder()
+   * .input("input")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html)
+   */
+  public interface MaintenanceWindowStepFunctionsParametersProperty {
+    /**
+     * The inputs for the `STEP_FUNCTIONS` task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
+     */
+    public fun input(): String? = unwrap(this).getInput()
+
+    /**
+     * The name of the `STEP_FUNCTIONS` task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [MaintenanceWindowStepFunctionsParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param input The inputs for the `STEP_FUNCTIONS` task.
+       */
+      public fun input(input: String)
+
+      /**
+       * @param name The name of the `STEP_FUNCTIONS` task.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.builder()
+
+      /**
+       * @param input The inputs for the `STEP_FUNCTIONS` task.
+       */
+      override fun input(input: String) {
+        cdkBuilder.input(input)
+      }
+
+      /**
+       * @param name The name of the `STEP_FUNCTIONS` task.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
+    ) : CdkObject(cdkObject), MaintenanceWindowStepFunctionsParametersProperty {
+      /**
+       * The inputs for the `STEP_FUNCTIONS` task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
+       */
+      override fun input(): String? = unwrap(this).getInput()
+
+      /**
+       * The name of the `STEP_FUNCTIONS` task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MaintenanceWindowStepFunctionsParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty):
+          MaintenanceWindowStepFunctionsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowStepFunctionsParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceWindowStepFunctionsParametersProperty):
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
     }
   }
 
@@ -1894,8 +2428,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
     ) : CdkObject(cdkObject), NotificationConfigProperty {
       /**
        * An Amazon Resource Name (ARN) for an Amazon Simple Notification Service (Amazon SNS) topic.
@@ -2100,8 +2633,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
     ) : CdkObject(cdkObject), TargetProperty {
       /**
        * User-defined criteria for sending commands that target instances that meet the criteria.
@@ -2146,394 +2678,6 @@ public open class CfnMaintenanceWindowTask internal constructor(
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty
-    }
-  }
-
-  /**
-   * The `MaintenanceWindowAutomationParameters` property type specifies the parameters for an
-   * `AUTOMATION` task type for a maintenance window task in AWS Systems Manager .
-   *
-   * `MaintenanceWindowAutomationParameters` is a property of the
-   * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
-   * property type.
-   *
-   * For information about available parameters in Automation runbooks, you can view the content of
-   * the runbook itself in the Systems Manager console. For information, see [View runbook
-   * content](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents-reference-details.html#view-automation-json)
-   * in the *AWS Systems Manager User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * Object parameters;
-   * MaintenanceWindowAutomationParametersProperty maintenanceWindowAutomationParametersProperty =
-   * MaintenanceWindowAutomationParametersProperty.builder()
-   * .documentVersion("documentVersion")
-   * .parameters(parameters)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html)
-   */
-  public interface MaintenanceWindowAutomationParametersProperty {
-    /**
-     * The version of an Automation runbook to use during task execution.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
-     */
-    public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
-
-    /**
-     * The parameters for the `AUTOMATION` type task.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * A builder for [MaintenanceWindowAutomationParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param documentVersion The version of an Automation runbook to use during task execution.
-       */
-      public fun documentVersion(documentVersion: String)
-
-      /**
-       * @param parameters The parameters for the `AUTOMATION` type task.
-       */
-      public fun parameters(parameters: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.builder()
-
-      /**
-       * @param documentVersion The version of an Automation runbook to use during task execution.
-       */
-      override fun documentVersion(documentVersion: String) {
-        cdkBuilder.documentVersion(documentVersion)
-      }
-
-      /**
-       * @param parameters The parameters for the `AUTOMATION` type task.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowAutomationParametersProperty {
-      /**
-       * The version of an Automation runbook to use during task execution.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion)
-       */
-      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
-
-      /**
-       * The parameters for the `AUTOMATION` type task.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MaintenanceWindowAutomationParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty):
-          MaintenanceWindowAutomationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaintenanceWindowAutomationParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaintenanceWindowAutomationParametersProperty):
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
-    }
-  }
-
-  /**
-   * The `MaintenanceWindowStepFunctionsParameters` property type specifies the parameters for the
-   * execution of a `STEP_FUNCTIONS` task in a Systems Manager maintenance window.
-   *
-   * `MaintenanceWindowStepFunctionsParameters` is a property of the
-   * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
-   * property type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * MaintenanceWindowStepFunctionsParametersProperty
-   * maintenanceWindowStepFunctionsParametersProperty =
-   * MaintenanceWindowStepFunctionsParametersProperty.builder()
-   * .input("input")
-   * .name("name")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html)
-   */
-  public interface MaintenanceWindowStepFunctionsParametersProperty {
-    /**
-     * The inputs for the `STEP_FUNCTIONS` task.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
-     */
-    public fun input(): String? = unwrap(this).getInput()
-
-    /**
-     * The name of the `STEP_FUNCTIONS` task.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [MaintenanceWindowStepFunctionsParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param input The inputs for the `STEP_FUNCTIONS` task.
-       */
-      public fun input(input: String)
-
-      /**
-       * @param name The name of the `STEP_FUNCTIONS` task.
-       */
-      public fun name(name: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.builder()
-
-      /**
-       * @param input The inputs for the `STEP_FUNCTIONS` task.
-       */
-      override fun input(input: String) {
-        cdkBuilder.input(input)
-      }
-
-      /**
-       * @param name The name of the `STEP_FUNCTIONS` task.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowStepFunctionsParametersProperty {
-      /**
-       * The inputs for the `STEP_FUNCTIONS` task.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input)
-       */
-      override fun input(): String? = unwrap(this).getInput()
-
-      /**
-       * The name of the `STEP_FUNCTIONS` task.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MaintenanceWindowStepFunctionsParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty):
-          MaintenanceWindowStepFunctionsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MaintenanceWindowStepFunctionsParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MaintenanceWindowStepFunctionsParametersProperty):
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
-    }
-  }
-
-  /**
-   * Configuration options for sending command output to Amazon CloudWatch Logs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * CloudWatchOutputConfigProperty cloudWatchOutputConfigProperty =
-   * CloudWatchOutputConfigProperty.builder()
-   * .cloudWatchLogGroupName("cloudWatchLogGroupName")
-   * .cloudWatchOutputEnabled(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html)
-   */
-  public interface CloudWatchOutputConfigProperty {
-    /**
-     * The name of the CloudWatch Logs log group where you want to send command output.
-     *
-     * If you don't specify a group name, AWS Systems Manager automatically creates a log group for
-     * you. The log group uses the following naming format:
-     *
-     * `aws/ssm/ *SystemsManagerDocumentName*`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchloggroupname)
-     */
-    public fun cloudWatchLogGroupName(): String? = unwrap(this).getCloudWatchLogGroupName()
-
-    /**
-     * Enables Systems Manager to send command output to CloudWatch Logs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchoutputenabled)
-     */
-    public fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
-
-    /**
-     * A builder for [CloudWatchOutputConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cloudWatchLogGroupName The name of the CloudWatch Logs log group where you want to
-       * send command output.
-       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
-       * for you. The log group uses the following naming format:
-       *
-       * `aws/ssm/ *SystemsManagerDocumentName*`
-       */
-      public fun cloudWatchLogGroupName(cloudWatchLogGroupName: String)
-
-      /**
-       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
-       * Logs.
-       */
-      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean)
-
-      /**
-       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
-       * Logs.
-       */
-      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.builder()
-
-      /**
-       * @param cloudWatchLogGroupName The name of the CloudWatch Logs log group where you want to
-       * send command output.
-       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
-       * for you. The log group uses the following naming format:
-       *
-       * `aws/ssm/ *SystemsManagerDocumentName*`
-       */
-      override fun cloudWatchLogGroupName(cloudWatchLogGroupName: String) {
-        cdkBuilder.cloudWatchLogGroupName(cloudWatchLogGroupName)
-      }
-
-      /**
-       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
-       * Logs.
-       */
-      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean) {
-        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled)
-      }
-
-      /**
-       * @param cloudWatchOutputEnabled Enables Systems Manager to send command output to CloudWatch
-       * Logs.
-       */
-      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
-        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
-    ) : CdkObject(cdkObject), CloudWatchOutputConfigProperty {
-      /**
-       * The name of the CloudWatch Logs log group where you want to send command output.
-       *
-       * If you don't specify a group name, AWS Systems Manager automatically creates a log group
-       * for you. The log group uses the following naming format:
-       *
-       * `aws/ssm/ *SystemsManagerDocumentName*`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchloggroupname)
-       */
-      override fun cloudWatchLogGroupName(): String? = unwrap(this).getCloudWatchLogGroupName()
-
-      /**
-       * Enables Systems Manager to send command output to CloudWatch Logs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html#cfn-ssm-maintenancewindowtask-cloudwatchoutputconfig-cloudwatchoutputenabled)
-       */
-      override fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchOutputConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty):
-          CloudWatchOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CloudWatchOutputConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CloudWatchOutputConfigProperty):
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
     }
   }
 
@@ -2833,8 +2977,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
+      cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
     ) : CdkObject(cdkObject), TaskInvocationParametersProperty {
       /**
        * The parameters for an `AUTOMATION` task type.
@@ -2884,157 +3027,6 @@ public open class CfnMaintenanceWindowTask internal constructor(
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty
-    }
-  }
-
-  /**
-   * The `LoggingInfo` property type specifies information about the Amazon S3 bucket to write
-   * instance-level logs to.
-   *
-   * `LoggingInfo` is a property of the
-   * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
-   * resource.
-   *
-   *
-   * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs, instead use
-   * the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
-   * structure. For information about how Systems Manager handles these options for the supported
-   * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
-   * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
-   * .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ssm.*;
-   * LoggingInfoProperty loggingInfoProperty = LoggingInfoProperty.builder()
-   * .region("region")
-   * .s3Bucket("s3Bucket")
-   * // the properties below are optional
-   * .s3Prefix("s3Prefix")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html)
-   */
-  public interface LoggingInfoProperty {
-    /**
-     * The AWS Region where the S3 bucket is located.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
-     */
-    public fun region(): String
-
-    /**
-     * The name of an S3 bucket where execution logs are stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
-     */
-    public fun s3Bucket(): String
-
-    /**
-     * The Amazon S3 bucket subfolder.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
-     */
-    public fun s3Prefix(): String? = unwrap(this).getS3Prefix()
-
-    /**
-     * A builder for [LoggingInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param region The AWS Region where the S3 bucket is located. 
-       */
-      public fun region(region: String)
-
-      /**
-       * @param s3Bucket The name of an S3 bucket where execution logs are stored. 
-       */
-      public fun s3Bucket(s3Bucket: String)
-
-      /**
-       * @param s3Prefix The Amazon S3 bucket subfolder.
-       */
-      public fun s3Prefix(s3Prefix: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.Builder =
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.builder()
-
-      /**
-       * @param region The AWS Region where the S3 bucket is located. 
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
-
-      /**
-       * @param s3Bucket The name of an S3 bucket where execution logs are stored. 
-       */
-      override fun s3Bucket(s3Bucket: String) {
-        cdkBuilder.s3Bucket(s3Bucket)
-      }
-
-      /**
-       * @param s3Prefix The Amazon S3 bucket subfolder.
-       */
-      override fun s3Prefix(s3Prefix: String) {
-        cdkBuilder.s3Prefix(s3Prefix)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
-    ) : CdkObject(cdkObject), LoggingInfoProperty {
-      /**
-       * The AWS Region where the S3 bucket is located.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region)
-       */
-      override fun region(): String = unwrap(this).getRegion()
-
-      /**
-       * The name of an S3 bucket where execution logs are stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket)
-       */
-      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
-
-      /**
-       * The Amazon S3 bucket subfolder.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix)
-       */
-      override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty):
-          LoggingInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingInfoProperty):
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty
     }
   }
 }

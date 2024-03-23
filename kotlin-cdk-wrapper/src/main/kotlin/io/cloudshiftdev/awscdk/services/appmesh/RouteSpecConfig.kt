@@ -404,7 +404,7 @@ public interface RouteSpecConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpecConfig,
+    cdkObject: software.amazon.awscdk.services.appmesh.RouteSpecConfig,
   ) : CdkObject(cdkObject), RouteSpecConfig {
     /**
      * The spec for a grpc route.

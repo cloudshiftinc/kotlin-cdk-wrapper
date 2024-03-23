@@ -462,8 +462,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign.html)
  */
-public open class CfnCampaign internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign,
+public open class CfnCampaign(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1580,7 +1580,115 @@ public open class CfnCampaign internal constructor(
         = CfnCampaign(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaign): software.amazon.awscdk.services.pinpoint.CfnCampaign
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.pinpoint.CfnCampaign
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * AttributeDimensionProperty attributeDimensionProperty = AttributeDimensionProperty.builder()
+   * .attributeType("attributeType")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html)
+   */
+  public interface AttributeDimensionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype)
+     */
+    public fun attributeType(): String? = unwrap(this).getAttributeType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [AttributeDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeType the value to be set.
+       */
+      public fun attributeType(attributeType: String)
+
+      /**
+       * @param values the value to be set.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values the value to be set.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty.builder()
+
+      /**
+       * @param attributeType the value to be set.
+       */
+      override fun attributeType(attributeType: String) {
+        cdkBuilder.attributeType(attributeType)
+      }
+
+      /**
+       * @param values the value to be set.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values the value to be set.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty,
+    ) : CdkObject(cdkObject), AttributeDimensionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype)
+       */
+      override fun attributeType(): String? = unwrap(this).getAttributeType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty):
+          AttributeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeDimensionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributeDimensionProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty
+    }
   }
 
   /**
@@ -1643,8 +1751,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty,
     ) : CdkObject(cdkObject), CampaignCustomMessageProperty {
       /**
        * The raw, JSON-formatted string to use as the payload for the message.
@@ -1671,620 +1778,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty
-    }
-  }
-
-  /**
-   * Specifies settings for invoking an Lambda function that customizes a segment for a campaign.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * CampaignHookProperty campaignHookProperty = CampaignHookProperty.builder()
-   * .lambdaFunctionName("lambdaFunctionName")
-   * .mode("mode")
-   * .webUrl("webUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html)
-   */
-  public interface CampaignHookProperty {
-    /**
-     * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes to
-     * customize a segment for a campaign.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-lambdafunctionname)
-     */
-    public fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
-
-    /**
-     * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
-     *
-     * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-     * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-     * custom channel. This functionality is not supported anymore. To send a campaign through a custom
-     * channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of the
-     * campaign.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-weburl)
-     */
-    public fun webUrl(): String? = unwrap(this).getWebUrl()
-
-    /**
-     * A builder for [CampaignHookProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
-       * that Amazon Pinpoint invokes to customize a segment for a campaign.
-       */
-      public fun lambdaFunctionName(lambdaFunctionName: String)
-
-      /**
-       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
-       * values are:.
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
-       * HTTPS.
-       */
-      public fun webUrl(webUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty.builder()
-
-      /**
-       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
-       * that Amazon Pinpoint invokes to customize a segment for a campaign.
-       */
-      override fun lambdaFunctionName(lambdaFunctionName: String) {
-        cdkBuilder.lambdaFunctionName(lambdaFunctionName)
-      }
-
-      /**
-       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
-       * values are:.
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
-       * HTTPS.
-       */
-      override fun webUrl(webUrl: String) {
-        cdkBuilder.webUrl(webUrl)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty,
-    ) : CdkObject(cdkObject), CampaignHookProperty {
-      /**
-       * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
-       * to customize a segment for a campaign.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-lambdafunctionname)
-       */
-      override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
-
-      /**
-       * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
-       *
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-mode)
-       */
-      override fun mode(): String? = unwrap(this).getMode()
-
-      /**
-       * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-weburl)
-       */
-      override fun webUrl(): String? = unwrap(this).getWebUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignHookProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty):
-          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as? CampaignHookProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CampaignHookProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration of main body text of the in-app message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * InAppMessageBodyConfigProperty inAppMessageBodyConfigProperty =
-   * InAppMessageBodyConfigProperty.builder()
-   * .alignment("alignment")
-   * .body("body")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html)
-   */
-  public interface InAppMessageBodyConfigProperty {
-    /**
-     * The text alignment of the main body text of the message.
-     *
-     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-alignment)
-     */
-    public fun alignment(): String? = unwrap(this).getAlignment()
-
-    /**
-     * The main body text of the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-body)
-     */
-    public fun body(): String? = unwrap(this).getBody()
-
-    /**
-     * The color of the body text, expressed as a string consisting of a hex color code (such as
-     * "#000000" for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [InAppMessageBodyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alignment The text alignment of the main body text of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      public fun alignment(alignment: String)
-
-      /**
-       * @param body The main body text of the message.
-       */
-      public fun body(body: String)
-
-      /**
-       * @param textColor The color of the body text, expressed as a string consisting of a hex
-       * color code (such as "#000000" for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty.builder()
-
-      /**
-       * @param alignment The text alignment of the main body text of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      override fun alignment(alignment: String) {
-        cdkBuilder.alignment(alignment)
-      }
-
-      /**
-       * @param body The main body text of the message.
-       */
-      override fun body(body: String) {
-        cdkBuilder.body(body)
-      }
-
-      /**
-       * @param textColor The color of the body text, expressed as a string consisting of a hex
-       * color code (such as "#000000" for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty,
-    ) : CdkObject(cdkObject), InAppMessageBodyConfigProperty {
-      /**
-       * The text alignment of the main body text of the message.
-       *
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-alignment)
-       */
-      override fun alignment(): String? = unwrap(this).getAlignment()
-
-      /**
-       * The main body text of the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-body)
-       */
-      override fun body(): String? = unwrap(this).getBody()
-
-      /**
-       * The color of the body text, expressed as a string consisting of a hex color code (such as
-       * "#000000" for black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageBodyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty):
-          InAppMessageBodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InAppMessageBodyConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InAppMessageBodyConfigProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the name and version of the message template to use for the message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * TemplateProperty templateProperty = TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html)
-   */
-  public interface TemplateProperty {
-    /**
-     * The name of the message template to use for the message.
-     *
-     * If specified, this value must match the name of an existing message template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The unique identifier for the version of the message template to use for the message.
-     *
-     * If specified, this value must match the identifier for an existing template version. To
-     * retrieve a list of versions and version identifiers for a template, use the [Template
-     * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
-     * resource.
-     *
-     * If you don't specify a value for this property, Amazon Pinpoint uses the *active version* of
-     * the template. The *active version* is typically the version of a template that's been most
-     * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
-     * latest version of a template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [TemplateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the message template to use for the message.
-       * If specified, this value must match the name of an existing message template.
-       */
-      public fun name(name: String)
-
-      /**
-       * @param version The unique identifier for the version of the message template to use for the
-       * message.
-       * If specified, this value must match the identifier for an existing template version. To
-       * retrieve a list of versions and version identifiers for a template, use the [Template
-       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
-       * resource.
-       *
-       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
-       * of the template. The *active version* is typically the version of a template that's been most
-       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
-       * latest version of a template.
-       */
-      public fun version(version: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty.builder()
-
-      /**
-       * @param name The name of the message template to use for the message.
-       * If specified, this value must match the name of an existing message template.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param version The unique identifier for the version of the message template to use for the
-       * message.
-       * If specified, this value must match the identifier for an existing template version. To
-       * retrieve a list of versions and version identifiers for a template, use the [Template
-       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
-       * resource.
-       *
-       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
-       * of the template. The *active version* is typically the version of a template that's been most
-       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
-       * latest version of a template.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty,
-    ) : CdkObject(cdkObject), TemplateProperty {
-      /**
-       * The name of the message template to use for the message.
-       *
-       * If specified, this value must match the name of an existing message template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The unique identifier for the version of the message template to use for the message.
-       *
-       * If specified, this value must match the identifier for an existing template version. To
-       * retrieve a list of versions and version identifiers for a template, use the [Template
-       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
-       * resource.
-       *
-       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
-       * of the template. The *active version* is typically the version of a template that's been most
-       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
-       * latest version of a template.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty):
-          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? TemplateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TemplateProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration and content of the header or title text of the in-app message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * InAppMessageHeaderConfigProperty inAppMessageHeaderConfigProperty =
-   * InAppMessageHeaderConfigProperty.builder()
-   * .alignment("alignment")
-   * .header("header")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html)
-   */
-  public interface InAppMessageHeaderConfigProperty {
-    /**
-     * The text alignment of the title of the message.
-     *
-     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-alignment)
-     */
-    public fun alignment(): String? = unwrap(this).getAlignment()
-
-    /**
-     * The header or title text of the in-app message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-header)
-     */
-    public fun `header`(): String? = unwrap(this).getHeader()
-
-    /**
-     * The color of the body text, expressed as a string consisting of a hex color code (such as
-     * "#000000" for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [InAppMessageHeaderConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alignment The text alignment of the title of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      public fun alignment(alignment: String)
-
-      /**
-       * @param header The header or title text of the in-app message.
-       */
-      public fun `header`(`header`: String)
-
-      /**
-       * @param textColor The color of the body text, expressed as a string consisting of a hex
-       * color code (such as "#000000" for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty.builder()
-
-      /**
-       * @param alignment The text alignment of the title of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      override fun alignment(alignment: String) {
-        cdkBuilder.alignment(alignment)
-      }
-
-      /**
-       * @param header The header or title text of the in-app message.
-       */
-      override fun `header`(`header`: String) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param textColor The color of the body text, expressed as a string consisting of a hex
-       * color code (such as "#000000" for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty,
-    ) : CdkObject(cdkObject), InAppMessageHeaderConfigProperty {
-      /**
-       * The text alignment of the title of the message.
-       *
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-alignment)
-       */
-      override fun alignment(): String? = unwrap(this).getAlignment()
-
-      /**
-       * The header or title text of the in-app message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-header)
-       */
-      override fun `header`(): String? = unwrap(this).getHeader()
-
-      /**
-       * The color of the body text, expressed as a string consisting of a hex color code (such as
-       * "#000000" for black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageHeaderConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty):
-          InAppMessageHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InAppMessageHeaderConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InAppMessageHeaderConfigProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty
     }
   }
 
@@ -2415,8 +1908,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty,
     ) : CdkObject(cdkObject), CampaignEmailMessageProperty {
       /**
        * The body of the email for recipients whose email clients don't render HTML content.
@@ -2466,6 +1958,324 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty
+    }
+  }
+
+  /**
+   * Specifies the settings for events that cause a campaign to be sent.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * CampaignEventFilterProperty campaignEventFilterProperty = CampaignEventFilterProperty.builder()
+   * .dimensions(EventDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .eventType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .metrics(metrics)
+   * .build())
+   * .filterType("filterType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html)
+   */
+  public interface CampaignEventFilterProperty {
+    /**
+     * The dimension settings of the event filter for the campaign.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The type of event that causes the campaign to be sent.
+     *
+     * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT` ,
+     * sends the campaign when an endpoint event (Events resource) occurs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-filtertype)
+     */
+    public fun filterType(): String? = unwrap(this).getFilterType()
+
+    /**
+     * A builder for [CampaignEventFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      public fun dimensions(dimensions: EventDimensionsProperty)
+
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0f3a6f301fe266dc628fdb1708f34abc9d1ea5d13b72d4ef29cea10dbf50010")
+      public fun dimensions(dimensions: EventDimensionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param filterType The type of event that causes the campaign to be sent.
+       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
+       * , sends the campaign when an endpoint event (Events resource) occurs.
+       */
+      public fun filterType(filterType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty.builder()
+
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      override fun dimensions(dimensions: EventDimensionsProperty) {
+        cdkBuilder.dimensions(dimensions.let(EventDimensionsProperty::unwrap))
+      }
+
+      /**
+       * @param dimensions The dimension settings of the event filter for the campaign.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0f3a6f301fe266dc628fdb1708f34abc9d1ea5d13b72d4ef29cea10dbf50010")
+      override fun dimensions(dimensions: EventDimensionsProperty.Builder.() -> Unit): Unit =
+          dimensions(EventDimensionsProperty(dimensions))
+
+      /**
+       * @param filterType The type of event that causes the campaign to be sent.
+       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
+       * , sends the campaign when an endpoint event (Events resource) occurs.
+       */
+      override fun filterType(filterType: String) {
+        cdkBuilder.filterType(filterType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty,
+    ) : CdkObject(cdkObject), CampaignEventFilterProperty {
+      /**
+       * The dimension settings of the event filter for the campaign.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * The type of event that causes the campaign to be sent.
+       *
+       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
+       * , sends the campaign when an endpoint event (Events resource) occurs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-filtertype)
+       */
+      override fun filterType(): String? = unwrap(this).getFilterType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignEventFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty):
+          CampaignEventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CampaignEventFilterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CampaignEventFilterProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty
+    }
+  }
+
+  /**
+   * Specifies settings for invoking an Lambda function that customizes a segment for a campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * CampaignHookProperty campaignHookProperty = CampaignHookProperty.builder()
+   * .lambdaFunctionName("lambdaFunctionName")
+   * .mode("mode")
+   * .webUrl("webUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html)
+   */
+  public interface CampaignHookProperty {
+    /**
+     * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes to
+     * customize a segment for a campaign.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-lambdafunctionname)
+     */
+    public fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
+
+    /**
+     * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
+     *
+     * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+     * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+     * custom channel. This functionality is not supported anymore. To send a campaign through a custom
+     * channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of the
+     * campaign.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-weburl)
+     */
+    public fun webUrl(): String? = unwrap(this).getWebUrl()
+
+    /**
+     * A builder for [CampaignHookProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
+       * that Amazon Pinpoint invokes to customize a segment for a campaign.
+       */
+      public fun lambdaFunctionName(lambdaFunctionName: String)
+
+      /**
+       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
+       * values are:.
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
+       * HTTPS.
+       */
+      public fun webUrl(webUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty.builder()
+
+      /**
+       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
+       * that Amazon Pinpoint invokes to customize a segment for a campaign.
+       */
+      override fun lambdaFunctionName(lambdaFunctionName: String) {
+        cdkBuilder.lambdaFunctionName(lambdaFunctionName)
+      }
+
+      /**
+       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
+       * values are:.
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
+       * HTTPS.
+       */
+      override fun webUrl(webUrl: String) {
+        cdkBuilder.webUrl(webUrl)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty,
+    ) : CdkObject(cdkObject), CampaignHookProperty {
+      /**
+       * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
+       * to customize a segment for a campaign.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-lambdafunctionname)
+       */
+      override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
+
+      /**
+       * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
+       *
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+
+      /**
+       * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignhook.html#cfn-pinpoint-campaign-campaignhook-weburl)
+       */
+      override fun webUrl(): String? = unwrap(this).getWebUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignHookProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty):
+          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as? CampaignHookProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CampaignHookProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty
     }
   }
 
@@ -2683,8 +2493,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty,
     ) : CdkObject(cdkObject), CampaignInAppMessageProperty {
       /**
        * An array that contains configurtion information about the in-app message for the campaign,
@@ -2734,232 +2543,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty
-    }
-  }
-
-  /**
-   * Specifies the limits on the messages that a campaign can send.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * LimitsProperty limitsProperty = LimitsProperty.builder()
-   * .daily(123)
-   * .maximumDuration(123)
-   * .messagesPerSecond(123)
-   * .session(123)
-   * .total(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html)
-   */
-  public interface LimitsProperty {
-    /**
-     * The maximum number of messages that a campaign can send to a single endpoint during a 24-hour
-     * period.
-     *
-     * The maximum value is 100.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-daily)
-     */
-    public fun daily(): Number? = unwrap(this).getDaily()
-
-    /**
-     * The maximum amount of time, in seconds, that a campaign can attempt to deliver a message
-     * after the scheduled start time for the campaign.
-     *
-     * The minimum value is 60 seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-maximumduration)
-     */
-    public fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
-
-    /**
-     * The maximum number of messages that a campaign can send each second.
-     *
-     * The minimum value is 1. The maximum value is 20,000.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-messagespersecond)
-     */
-    public fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
-
-    /**
-     * The maximum number of messages that the campaign can send per user session.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-session)
-     */
-    public fun session(): Number? = unwrap(this).getSession()
-
-    /**
-     * The maximum number of messages that a campaign can send to a single endpoint during the
-     * course of the campaign.
-     *
-     * The maximum value is 100.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-total)
-     */
-    public fun total(): Number? = unwrap(this).getTotal()
-
-    /**
-     * A builder for [LimitsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param daily The maximum number of messages that a campaign can send to a single endpoint
-       * during a 24-hour period.
-       * The maximum value is 100.
-       */
-      public fun daily(daily: Number)
-
-      /**
-       * @param maximumDuration The maximum amount of time, in seconds, that a campaign can attempt
-       * to deliver a message after the scheduled start time for the campaign.
-       * The minimum value is 60 seconds.
-       */
-      public fun maximumDuration(maximumDuration: Number)
-
-      /**
-       * @param messagesPerSecond The maximum number of messages that a campaign can send each
-       * second.
-       * The minimum value is 1. The maximum value is 20,000.
-       */
-      public fun messagesPerSecond(messagesPerSecond: Number)
-
-      /**
-       * @param session The maximum number of messages that the campaign can send per user session.
-       */
-      public fun session(session: Number)
-
-      /**
-       * @param total The maximum number of messages that a campaign can send to a single endpoint
-       * during the course of the campaign.
-       * The maximum value is 100.
-       */
-      public fun total(total: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty.builder()
-
-      /**
-       * @param daily The maximum number of messages that a campaign can send to a single endpoint
-       * during a 24-hour period.
-       * The maximum value is 100.
-       */
-      override fun daily(daily: Number) {
-        cdkBuilder.daily(daily)
-      }
-
-      /**
-       * @param maximumDuration The maximum amount of time, in seconds, that a campaign can attempt
-       * to deliver a message after the scheduled start time for the campaign.
-       * The minimum value is 60 seconds.
-       */
-      override fun maximumDuration(maximumDuration: Number) {
-        cdkBuilder.maximumDuration(maximumDuration)
-      }
-
-      /**
-       * @param messagesPerSecond The maximum number of messages that a campaign can send each
-       * second.
-       * The minimum value is 1. The maximum value is 20,000.
-       */
-      override fun messagesPerSecond(messagesPerSecond: Number) {
-        cdkBuilder.messagesPerSecond(messagesPerSecond)
-      }
-
-      /**
-       * @param session The maximum number of messages that the campaign can send per user session.
-       */
-      override fun session(session: Number) {
-        cdkBuilder.session(session)
-      }
-
-      /**
-       * @param total The maximum number of messages that a campaign can send to a single endpoint
-       * during the course of the campaign.
-       * The maximum value is 100.
-       */
-      override fun total(total: Number) {
-        cdkBuilder.total(total)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty,
-    ) : CdkObject(cdkObject), LimitsProperty {
-      /**
-       * The maximum number of messages that a campaign can send to a single endpoint during a
-       * 24-hour period.
-       *
-       * The maximum value is 100.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-daily)
-       */
-      override fun daily(): Number? = unwrap(this).getDaily()
-
-      /**
-       * The maximum amount of time, in seconds, that a campaign can attempt to deliver a message
-       * after the scheduled start time for the campaign.
-       *
-       * The minimum value is 60 seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-maximumduration)
-       */
-      override fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
-
-      /**
-       * The maximum number of messages that a campaign can send each second.
-       *
-       * The minimum value is 1. The maximum value is 20,000.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-messagespersecond)
-       */
-      override fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
-
-      /**
-       * The maximum number of messages that the campaign can send per user session.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-session)
-       */
-      override fun session(): Number? = unwrap(this).getSession()
-
-      /**
-       * The maximum number of messages that a campaign can send to a single endpoint during the
-       * course of the campaign.
-       *
-       * The maximum value is 100.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-total)
-       */
-      override fun total(): Number? = unwrap(this).getTotal()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LimitsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty):
-          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as? LimitsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LimitsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty
     }
   }
 
@@ -3156,8 +2739,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty,
     ) : CdkObject(cdkObject), CampaignSmsMessageProperty {
       /**
        * The body of the SMS message.
@@ -3231,280 +2813,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty
-    }
-  }
-
-  /**
-   * Specifies the start and end times that define a time range when messages aren't sent to
-   * endpoints.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * QuietTimeProperty quietTimeProperty = QuietTimeProperty.builder()
-   * .end("end")
-   * .start("start")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html)
-   */
-  public interface QuietTimeProperty {
-    /**
-     * The specific time when quiet time ends.
-     *
-     * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-     * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-     * AM, or `14:30` to represent 2:30 PM.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-end)
-     */
-    public fun end(): String
-
-    /**
-     * The specific time when quiet time begins.
-     *
-     * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-     * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-     * AM, or `14:30` to represent 2:30 PM.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-start)
-     */
-    public fun start(): String
-
-    /**
-     * A builder for [QuietTimeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param end The specific time when quiet time ends. 
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       */
-      public fun end(end: String)
-
-      /**
-       * @param start The specific time when quiet time begins. 
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       */
-      public fun start(start: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty.builder()
-
-      /**
-       * @param end The specific time when quiet time ends. 
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       */
-      override fun end(end: String) {
-        cdkBuilder.end(end)
-      }
-
-      /**
-       * @param start The specific time when quiet time begins. 
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       */
-      override fun start(start: String) {
-        cdkBuilder.start(start)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty,
-    ) : CdkObject(cdkObject), QuietTimeProperty {
-      /**
-       * The specific time when quiet time ends.
-       *
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-end)
-       */
-      override fun end(): String = unwrap(this).getEnd()
-
-      /**
-       * The specific time when quiet time begins.
-       *
-       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
-       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
-       * AM, or `14:30` to represent 2:30 PM.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-start)
-       */
-      override fun start(): String = unwrap(this).getStart()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): QuietTimeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty):
-          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? QuietTimeProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: QuietTimeProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration of a button with settings that are specific to a certain device
-   * type.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * OverrideButtonConfigurationProperty overrideButtonConfigurationProperty =
-   * OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html)
-   */
-  public interface OverrideButtonConfigurationProperty {
-    /**
-     * The action that occurs when a recipient chooses a button in an in-app message.
-     *
-     * You can specify one of the following:
-     *
-     * * `LINK` – A link to a web destination.
-     * * `DEEP_LINK` – A link to a specific page in an application.
-     * * `CLOSE` – Dismisses the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-buttonaction)
-     */
-    public fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-    /**
-     * The destination (such as a URL) for a button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-link)
-     */
-    public fun link(): String? = unwrap(this).getLink()
-
-    /**
-     * A builder for [OverrideButtonConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      public fun buttonAction(buttonAction: String)
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      public fun link(link: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty.builder()
-
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      override fun buttonAction(buttonAction: String) {
-        cdkBuilder.buttonAction(buttonAction)
-      }
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      override fun link(link: String) {
-        cdkBuilder.link(link)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty,
-    ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
-      /**
-       * The action that occurs when a recipient chooses a button in an in-app message.
-       *
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-buttonaction)
-       */
-      override fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-      /**
-       * The destination (such as a URL) for a button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-link)
-       */
-      override fun link(): String? = unwrap(this).getLink()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          OverrideButtonConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty):
-          OverrideButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          OverrideButtonConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OverrideButtonConfigurationProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty
     }
   }
 
@@ -3625,8 +2933,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty,
     ) : CdkObject(cdkObject), CustomDeliveryConfigurationProperty {
       /**
        * The destination to send the campaign or treatment to. This value can be one of the
@@ -3668,6 +2975,956 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the default behavior for a button that appears in an in-app message.
+   *
+   * You can optionally add button configurations that specifically apply to iOS, Android, or web
+   * browser users.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * DefaultButtonConfigurationProperty defaultButtonConfigurationProperty =
+   * DefaultButtonConfigurationProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .borderRadius(123)
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .text("text")
+   * .textColor("textColor")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html)
+   */
+  public interface DefaultButtonConfigurationProperty {
+    /**
+     * The background color of a button, expressed as a hex color code (such as #000000 for black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-backgroundcolor)
+     */
+    public fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+
+    /**
+     * The border radius of a button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-borderradius)
+     */
+    public fun borderRadius(): Number? = unwrap(this).getBorderRadius()
+
+    /**
+     * The action that occurs when a recipient chooses a button in an in-app message.
+     *
+     * You can specify one of the following:
+     *
+     * * `LINK` – A link to a web destination.
+     * * `DEEP_LINK` – A link to a specific page in an application.
+     * * `CLOSE` – Dismisses the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-buttonaction)
+     */
+    public fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+    /**
+     * The destination (such as a URL) for a button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-link)
+     */
+    public fun link(): String? = unwrap(this).getLink()
+
+    /**
+     * The text that appears on a button in an in-app message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-text)
+     */
+    public fun text(): String? = unwrap(this).getText()
+
+    /**
+     * The color of the body text in a button, expressed as a hex color code (such as #000000 for
+     * black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-textcolor)
+     */
+    public fun textColor(): String? = unwrap(this).getTextColor()
+
+    /**
+     * A builder for [DefaultButtonConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param backgroundColor The background color of a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      public fun backgroundColor(backgroundColor: String)
+
+      /**
+       * @param borderRadius The border radius of a button.
+       */
+      public fun borderRadius(borderRadius: Number)
+
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      public fun buttonAction(buttonAction: String)
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      public fun link(link: String)
+
+      /**
+       * @param text The text that appears on a button in an in-app message.
+       */
+      public fun text(text: String)
+
+      /**
+       * @param textColor The color of the body text in a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      public fun textColor(textColor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty.builder()
+
+      /**
+       * @param backgroundColor The background color of a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      override fun backgroundColor(backgroundColor: String) {
+        cdkBuilder.backgroundColor(backgroundColor)
+      }
+
+      /**
+       * @param borderRadius The border radius of a button.
+       */
+      override fun borderRadius(borderRadius: Number) {
+        cdkBuilder.borderRadius(borderRadius)
+      }
+
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      override fun buttonAction(buttonAction: String) {
+        cdkBuilder.buttonAction(buttonAction)
+      }
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      override fun link(link: String) {
+        cdkBuilder.link(link)
+      }
+
+      /**
+       * @param text The text that appears on a button in an in-app message.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      /**
+       * @param textColor The color of the body text in a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty,
+    ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
+      /**
+       * The background color of a button, expressed as a hex color code (such as #000000 for
+       * black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-backgroundcolor)
+       */
+      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+
+      /**
+       * The border radius of a button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-borderradius)
+       */
+      override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
+
+      /**
+       * The action that occurs when a recipient chooses a button in an in-app message.
+       *
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-buttonaction)
+       */
+      override fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+      /**
+       * The destination (such as a URL) for a button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-link)
+       */
+      override fun link(): String? = unwrap(this).getLink()
+
+      /**
+       * The text that appears on a button in an in-app message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-text)
+       */
+      override fun text(): String? = unwrap(this).getText()
+
+      /**
+       * The color of the body text in a button, expressed as a hex color code (such as #000000 for
+       * black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-textcolor)
+       */
+      override fun textColor(): String? = unwrap(this).getTextColor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DefaultButtonConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty):
+          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultButtonConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the dimensions for an event filter that determines when a campaign is sent or a
+   * journey activity is performed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * EventDimensionsProperty eventDimensionsProperty = EventDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .eventType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .metrics(metrics)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html)
+   */
+  public interface EventDimensionsProperty {
+    /**
+     * One or more custom attributes that your application reports to Amazon Pinpoint.
+     *
+     * You can use these attributes as selection criteria when you create an event filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-attributes)
+     */
+    public fun attributes(): Any? = unwrap(this).getAttributes()
+
+    /**
+     * The name of the event that causes the campaign to be sent or the journey activity to be
+     * performed.
+     *
+     * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+     * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+     * application. For information about standard events, see [Streaming Amazon Pinpoint
+     * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+     * *Amazon Pinpoint Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-eventtype)
+     */
+    public fun eventType(): Any? = unwrap(this).getEventType()
+
+    /**
+     * One or more custom metrics that your application reports to Amazon Pinpoint .
+     *
+     * You can use these metrics as selection criteria when you create an event filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-metrics)
+     */
+    public fun metrics(): Any? = unwrap(this).getMetrics()
+
+    /**
+     * A builder for [EventDimensionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes One or more custom attributes that your application reports to Amazon
+       * Pinpoint.
+       * You can use these attributes as selection criteria when you create an event filter.
+       */
+      public fun attributes(attributes: Any)
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      public fun eventType(eventType: IResolvable)
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      public fun eventType(eventType: SetDimensionProperty)
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ad61458427c18700e49dfcab48c055c5a8f5777142f0c45e28da4d72b94e7b2")
+      public fun eventType(eventType: SetDimensionProperty.Builder.() -> Unit)
+
+      /**
+       * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint
+       * .
+       * You can use these metrics as selection criteria when you create an event filter.
+       */
+      public fun metrics(metrics: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty.builder()
+
+      /**
+       * @param attributes One or more custom attributes that your application reports to Amazon
+       * Pinpoint.
+       * You can use these attributes as selection criteria when you create an event filter.
+       */
+      override fun attributes(attributes: Any) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      override fun eventType(eventType: IResolvable) {
+        cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      override fun eventType(eventType: SetDimensionProperty) {
+        cdkBuilder.eventType(eventType.let(SetDimensionProperty::unwrap))
+      }
+
+      /**
+       * @param eventType The name of the event that causes the campaign to be sent or the journey
+       * activity to be performed.
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5ad61458427c18700e49dfcab48c055c5a8f5777142f0c45e28da4d72b94e7b2")
+      override fun eventType(eventType: SetDimensionProperty.Builder.() -> Unit): Unit =
+          eventType(SetDimensionProperty(eventType))
+
+      /**
+       * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint
+       * .
+       * You can use these metrics as selection criteria when you create an event filter.
+       */
+      override fun metrics(metrics: Any) {
+        cdkBuilder.metrics(metrics)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty,
+    ) : CdkObject(cdkObject), EventDimensionsProperty {
+      /**
+       * One or more custom attributes that your application reports to Amazon Pinpoint.
+       *
+       * You can use these attributes as selection criteria when you create an event filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-attributes)
+       */
+      override fun attributes(): Any? = unwrap(this).getAttributes()
+
+      /**
+       * The name of the event that causes the campaign to be sent or the journey activity to be
+       * performed.
+       *
+       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
+       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
+       * application. For information about standard events, see [Streaming Amazon Pinpoint
+       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
+       * *Amazon Pinpoint Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-eventtype)
+       */
+      override fun eventType(): Any? = unwrap(this).getEventType()
+
+      /**
+       * One or more custom metrics that your application reports to Amazon Pinpoint .
+       *
+       * You can use these metrics as selection criteria when you create an event filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-metrics)
+       */
+      override fun metrics(): Any? = unwrap(this).getMetrics()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventDimensionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty):
+          EventDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EventDimensionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventDimensionsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of main body text of the in-app message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * InAppMessageBodyConfigProperty inAppMessageBodyConfigProperty =
+   * InAppMessageBodyConfigProperty.builder()
+   * .alignment("alignment")
+   * .body("body")
+   * .textColor("textColor")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html)
+   */
+  public interface InAppMessageBodyConfigProperty {
+    /**
+     * The text alignment of the main body text of the message.
+     *
+     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-alignment)
+     */
+    public fun alignment(): String? = unwrap(this).getAlignment()
+
+    /**
+     * The main body text of the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-body)
+     */
+    public fun body(): String? = unwrap(this).getBody()
+
+    /**
+     * The color of the body text, expressed as a string consisting of a hex color code (such as
+     * "#000000" for black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-textcolor)
+     */
+    public fun textColor(): String? = unwrap(this).getTextColor()
+
+    /**
+     * A builder for [InAppMessageBodyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alignment The text alignment of the main body text of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      public fun alignment(alignment: String)
+
+      /**
+       * @param body The main body text of the message.
+       */
+      public fun body(body: String)
+
+      /**
+       * @param textColor The color of the body text, expressed as a string consisting of a hex
+       * color code (such as "#000000" for black).
+       */
+      public fun textColor(textColor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty.builder()
+
+      /**
+       * @param alignment The text alignment of the main body text of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      override fun alignment(alignment: String) {
+        cdkBuilder.alignment(alignment)
+      }
+
+      /**
+       * @param body The main body text of the message.
+       */
+      override fun body(body: String) {
+        cdkBuilder.body(body)
+      }
+
+      /**
+       * @param textColor The color of the body text, expressed as a string consisting of a hex
+       * color code (such as "#000000" for black).
+       */
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty,
+    ) : CdkObject(cdkObject), InAppMessageBodyConfigProperty {
+      /**
+       * The text alignment of the main body text of the message.
+       *
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-alignment)
+       */
+      override fun alignment(): String? = unwrap(this).getAlignment()
+
+      /**
+       * The main body text of the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-body)
+       */
+      override fun body(): String? = unwrap(this).getBody()
+
+      /**
+       * The color of the body text, expressed as a string consisting of a hex color code (such as
+       * "#000000" for black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html#cfn-pinpoint-campaign-inappmessagebodyconfig-textcolor)
+       */
+      override fun textColor(): String? = unwrap(this).getTextColor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageBodyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty):
+          InAppMessageBodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InAppMessageBodyConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InAppMessageBodyConfigProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of a button that appears in an in-app message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * InAppMessageButtonProperty inAppMessageButtonProperty = InAppMessageButtonProperty.builder()
+   * .android(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .borderRadius(123)
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .text("text")
+   * .textColor("textColor")
+   * .build())
+   * .ios(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .web(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html)
+   */
+  public interface InAppMessageButtonProperty {
+    /**
+     * An object that defines the default behavior for a button in in-app messages sent to Android.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-android)
+     */
+    public fun android(): Any? = unwrap(this).getAndroid()
+
+    /**
+     * An object that defines the default behavior for a button in an in-app message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-defaultconfig)
+     */
+    public fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+
+    /**
+     * An object that defines the default behavior for a button in in-app messages sent to iOS
+     * devices.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-ios)
+     */
+    public fun ios(): Any? = unwrap(this).getIos()
+
+    /**
+     * An object that defines the default behavior for a button in in-app messages for web
+     * applications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-web)
+     */
+    public fun web(): Any? = unwrap(this).getWeb()
+
+    /**
+     * A builder for [InAppMessageButtonProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      public fun android(android: IResolvable)
+
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      public fun android(android: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("058ce32e75dc1667aceae9a99fdd7bfab75b4c75e058a4837f4b87ffcd1dc8ea")
+      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      public fun defaultConfig(defaultConfig: IResolvable)
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty)
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d830591080dc59c997606cbe8ea557e1bd23cb2175235dcd2f55dc172e6b13e9")
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      public fun ios(ios: IResolvable)
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      public fun ios(ios: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cc04855492fdca7573fff426b65031ca8422486ee46f5c785fd481e7b8cd6057")
+      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      public fun web(web: IResolvable)
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      public fun web(web: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4153d67a4dac1b6feee87a75636eab3e4b5e003927c798376742aa365262a5e7")
+      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty.builder()
+
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      override fun android(android: IResolvable) {
+        cdkBuilder.android(android.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      override fun android(android: OverrideButtonConfigurationProperty) {
+        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param android An object that defines the default behavior for a button in in-app messages
+       * sent to Android.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("058ce32e75dc1667aceae9a99fdd7bfab75b4c75e058a4837f4b87ffcd1dc8ea")
+      override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          android(OverrideButtonConfigurationProperty(android))
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      override fun defaultConfig(defaultConfig: IResolvable) {
+        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
+        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param defaultConfig An object that defines the default behavior for a button in an in-app
+       * message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d830591080dc59c997606cbe8ea557e1bd23cb2175235dcd2f55dc172e6b13e9")
+      override
+          fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit):
+          Unit = defaultConfig(DefaultButtonConfigurationProperty(defaultConfig))
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      override fun ios(ios: IResolvable) {
+        cdkBuilder.ios(ios.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      override fun ios(ios: OverrideButtonConfigurationProperty) {
+        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param ios An object that defines the default behavior for a button in in-app messages sent
+       * to iOS devices.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cc04855492fdca7573fff426b65031ca8422486ee46f5c785fd481e7b8cd6057")
+      override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          ios(OverrideButtonConfigurationProperty(ios))
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      override fun web(web: IResolvable) {
+        cdkBuilder.web(web.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      override fun web(web: OverrideButtonConfigurationProperty) {
+        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param web An object that defines the default behavior for a button in in-app messages for
+       * web applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4153d67a4dac1b6feee87a75636eab3e4b5e003927c798376742aa365262a5e7")
+      override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          web(OverrideButtonConfigurationProperty(web))
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty,
+    ) : CdkObject(cdkObject), InAppMessageButtonProperty {
+      /**
+       * An object that defines the default behavior for a button in in-app messages sent to
+       * Android.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-android)
+       */
+      override fun android(): Any? = unwrap(this).getAndroid()
+
+      /**
+       * An object that defines the default behavior for a button in an in-app message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-defaultconfig)
+       */
+      override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+
+      /**
+       * An object that defines the default behavior for a button in in-app messages sent to iOS
+       * devices.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-ios)
+       */
+      override fun ios(): Any? = unwrap(this).getIos()
+
+      /**
+       * An object that defines the default behavior for a button in in-app messages for web
+       * applications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-web)
+       */
+      override fun web(): Any? = unwrap(this).getWeb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageButtonProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty):
+          InAppMessageButtonProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InAppMessageButtonProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InAppMessageButtonProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty
     }
   }
 
@@ -4011,8 +4268,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty,
     ) : CdkObject(cdkObject), InAppMessageContentProperty {
       /**
        * The background color for an in-app message banner, expressed as a hex color code (such as
@@ -4079,7 +4335,7 @@ public open class CfnCampaign internal constructor(
   }
 
   /**
-   * Specifies the schedule settings for a campaign.
+   * Specifies the configuration and content of the header or title text of the in-app message.
    *
    * Example:
    *
@@ -4087,472 +4343,146 @@ public open class CfnCampaign internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
-   * .endTime("endTime")
-   * .eventFilter(CampaignEventFilterProperty.builder()
-   * .dimensions(EventDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .eventType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .metrics(metrics)
-   * .build())
-   * .filterType("filterType")
-   * .build())
-   * .frequency("frequency")
-   * .isLocalTime(false)
-   * .quietTime(QuietTimeProperty.builder()
-   * .end("end")
-   * .start("start")
-   * .build())
-   * .startTime("startTime")
-   * .timeZone("timeZone")
+   * InAppMessageHeaderConfigProperty inAppMessageHeaderConfigProperty =
+   * InAppMessageHeaderConfigProperty.builder()
+   * .alignment("alignment")
+   * .header("header")
+   * .textColor("textColor")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html)
    */
-  public interface ScheduleProperty {
+  public interface InAppMessageHeaderConfigProperty {
     /**
-     * The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+     * The text alignment of the title of the message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-endtime)
+     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-alignment)
      */
-    public fun endTime(): String? = unwrap(this).getEndTime()
+    public fun alignment(): String? = unwrap(this).getAlignment()
 
     /**
-     * The type of event that causes the campaign to be sent, if the value of the `Frequency`
-     * property is `EVENT` .
+     * The header or title text of the in-app message.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-eventfilter)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-header)
      */
-    public fun eventFilter(): Any? = unwrap(this).getEventFilter()
+    public fun `header`(): String? = unwrap(this).getHeader()
 
     /**
-     * Specifies how often the campaign is sent or whether the campaign is sent in response to a
-     * specific event.
+     * The color of the body text, expressed as a string consisting of a hex color code (such as
+     * "#000000" for black).
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-frequency)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-textcolor)
      */
-    public fun frequency(): String? = unwrap(this).getFrequency()
+    public fun textColor(): String? = unwrap(this).getTextColor()
 
     /**
-     * Specifies whether the start and end times for the campaign schedule use each recipient's
-     * local time.
-     *
-     * To base the schedule on each recipient's local time, set this value to `true` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-islocaltime)
-     */
-    public fun isLocalTime(): Any? = unwrap(this).getIsLocalTime()
-
-    /**
-     * The default quiet time for the campaign.
-     *
-     * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-     * all the following conditions are met:
-     *
-     * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-     * * The current time in the endpoint's time zone is later than or equal to the time specified
-     * by the `QuietTime.Start` property for the campaign.
-     * * The current time in the endpoint's time zone is earlier than or equal to the time specified
-     * by the `QuietTime.End` property for the campaign.
-     *
-     * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-     * campaign, even if quiet time is enabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-quiettime)
-     */
-    public fun quietTime(): Any? = unwrap(this).getQuietTime()
-
-    /**
-     * The scheduled time when the campaign began or will begin.
-     *
-     * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in ISO
-     * 8601 format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-starttime)
-     */
-    public fun startTime(): String? = unwrap(this).getStartTime()
-
-    /**
-     * The starting UTC offset for the campaign schedule, if the value of the `IsLocalTime` property
-     * is `true` .
-     *
-     * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
-     * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
-     * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09, UTC-10,`
-     * and `UTC-11` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-timezone)
-     */
-    public fun timeZone(): String? = unwrap(this).getTimeZone()
-
-    /**
-     * A builder for [ScheduleProperty]
+     * A builder for [InAppMessageHeaderConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endTime The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       * @param alignment The text alignment of the title of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
        */
-      public fun endTime(endTime: String)
+      public fun alignment(alignment: String)
 
       /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
+       * @param header The header or title text of the in-app message.
        */
-      public fun eventFilter(eventFilter: IResolvable)
+      public fun `header`(`header`: String)
 
       /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
+       * @param textColor The color of the body text, expressed as a string consisting of a hex
+       * color code (such as "#000000" for black).
        */
-      public fun eventFilter(eventFilter: CampaignEventFilterProperty)
-
-      /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c3dd06595209b007103242bf8e198785fdacfc7f080bcd9bcc9133d99b014137")
-      public fun eventFilter(eventFilter: CampaignEventFilterProperty.Builder.() -> Unit)
-
-      /**
-       * @param frequency Specifies how often the campaign is sent or whether the campaign is sent
-       * in response to a specific event.
-       */
-      public fun frequency(frequency: String)
-
-      /**
-       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
-       * each recipient's local time.
-       * To base the schedule on each recipient's local time, set this value to `true` .
-       */
-      public fun isLocalTime(isLocalTime: Boolean)
-
-      /**
-       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
-       * each recipient's local time.
-       * To base the schedule on each recipient's local time, set this value to `true` .
-       */
-      public fun isLocalTime(isLocalTime: IResolvable)
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      public fun quietTime(quietTime: IResolvable)
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      public fun quietTime(quietTime: QuietTimeProperty)
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ed81d35fd706191dfa298b7a8c2139b5e0327d8a6782d2b5b3d8bdba3b83b51d")
-      public fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit)
-
-      /**
-       * @param startTime The scheduled time when the campaign began or will begin.
-       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
-       * ISO 8601 format.
-       */
-      public fun startTime(startTime: String)
-
-      /**
-       * @param timeZone The starting UTC offset for the campaign schedule, if the value of the
-       * `IsLocalTime` property is `true` .
-       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
-       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
-       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
-       * UTC-10,` and `UTC-11` .
-       */
-      public fun timeZone(timeZone: String)
+      public fun textColor(textColor: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty.builder()
 
       /**
-       * @param endTime The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       * @param alignment The text alignment of the title of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
        */
-      override fun endTime(endTime: String) {
-        cdkBuilder.endTime(endTime)
+      override fun alignment(alignment: String) {
+        cdkBuilder.alignment(alignment)
       }
 
       /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
+       * @param header The header or title text of the in-app message.
        */
-      override fun eventFilter(eventFilter: IResolvable) {
-        cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
+      override fun `header`(`header`: String) {
+        cdkBuilder.`header`(`header`)
       }
 
       /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
+       * @param textColor The color of the body text, expressed as a string consisting of a hex
+       * color code (such as "#000000" for black).
        */
-      override fun eventFilter(eventFilter: CampaignEventFilterProperty) {
-        cdkBuilder.eventFilter(eventFilter.let(CampaignEventFilterProperty::unwrap))
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
       }
 
-      /**
-       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
-       * the `Frequency` property is `EVENT` .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c3dd06595209b007103242bf8e198785fdacfc7f080bcd9bcc9133d99b014137")
-      override fun eventFilter(eventFilter: CampaignEventFilterProperty.Builder.() -> Unit): Unit =
-          eventFilter(CampaignEventFilterProperty(eventFilter))
-
-      /**
-       * @param frequency Specifies how often the campaign is sent or whether the campaign is sent
-       * in response to a specific event.
-       */
-      override fun frequency(frequency: String) {
-        cdkBuilder.frequency(frequency)
-      }
-
-      /**
-       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
-       * each recipient's local time.
-       * To base the schedule on each recipient's local time, set this value to `true` .
-       */
-      override fun isLocalTime(isLocalTime: Boolean) {
-        cdkBuilder.isLocalTime(isLocalTime)
-      }
-
-      /**
-       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
-       * each recipient's local time.
-       * To base the schedule on each recipient's local time, set this value to `true` .
-       */
-      override fun isLocalTime(isLocalTime: IResolvable) {
-        cdkBuilder.isLocalTime(isLocalTime.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      override fun quietTime(quietTime: IResolvable) {
-        cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      override fun quietTime(quietTime: QuietTimeProperty) {
-        cdkBuilder.quietTime(quietTime.let(QuietTimeProperty::unwrap))
-      }
-
-      /**
-       * @param quietTime The default quiet time for the campaign.
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ed81d35fd706191dfa298b7a8c2139b5e0327d8a6782d2b5b3d8bdba3b83b51d")
-      override fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit): Unit =
-          quietTime(QuietTimeProperty(quietTime))
-
-      /**
-       * @param startTime The scheduled time when the campaign began or will begin.
-       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
-       * ISO 8601 format.
-       */
-      override fun startTime(startTime: String) {
-        cdkBuilder.startTime(startTime)
-      }
-
-      /**
-       * @param timeZone The starting UTC offset for the campaign schedule, if the value of the
-       * `IsLocalTime` property is `true` .
-       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
-       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
-       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
-       * UTC-10,` and `UTC-11` .
-       */
-      override fun timeZone(timeZone: String) {
-        cdkBuilder.timeZone(timeZone)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty =
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty,
+    ) : CdkObject(cdkObject), InAppMessageHeaderConfigProperty {
       /**
-       * The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       * The text alignment of the title of the message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-endtime)
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-alignment)
        */
-      override fun endTime(): String? = unwrap(this).getEndTime()
+      override fun alignment(): String? = unwrap(this).getAlignment()
 
       /**
-       * The type of event that causes the campaign to be sent, if the value of the `Frequency`
-       * property is `EVENT` .
+       * The header or title text of the in-app message.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-eventfilter)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-header)
        */
-      override fun eventFilter(): Any? = unwrap(this).getEventFilter()
+      override fun `header`(): String? = unwrap(this).getHeader()
 
       /**
-       * Specifies how often the campaign is sent or whether the campaign is sent in response to a
-       * specific event.
+       * The color of the body text, expressed as a string consisting of a hex color code (such as
+       * "#000000" for black).
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-frequency)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html#cfn-pinpoint-campaign-inappmessageheaderconfig-textcolor)
        */
-      override fun frequency(): String? = unwrap(this).getFrequency()
-
-      /**
-       * Specifies whether the start and end times for the campaign schedule use each recipient's
-       * local time.
-       *
-       * To base the schedule on each recipient's local time, set this value to `true` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-islocaltime)
-       */
-      override fun isLocalTime(): Any? = unwrap(this).getIsLocalTime()
-
-      /**
-       * The default quiet time for the campaign.
-       *
-       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
-       * all the following conditions are met:
-       *
-       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
-       * * The current time in the endpoint's time zone is later than or equal to the time specified
-       * by the `QuietTime.Start` property for the campaign.
-       * * The current time in the endpoint's time zone is earlier than or equal to the time
-       * specified by the `QuietTime.End` property for the campaign.
-       *
-       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
-       * campaign, even if quiet time is enabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-quiettime)
-       */
-      override fun quietTime(): Any? = unwrap(this).getQuietTime()
-
-      /**
-       * The scheduled time when the campaign began or will begin.
-       *
-       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
-       * ISO 8601 format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-starttime)
-       */
-      override fun startTime(): String? = unwrap(this).getStartTime()
-
-      /**
-       * The starting UTC offset for the campaign schedule, if the value of the `IsLocalTime`
-       * property is `true` .
-       *
-       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
-       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
-       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
-       * UTC-10,` and `UTC-11` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-timezone)
-       */
-      override fun timeZone(): String? = unwrap(this).getTimeZone()
+      override fun textColor(): String? = unwrap(this).getTextColor()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageHeaderConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty):
+          InAppMessageHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InAppMessageHeaderConfigProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ScheduleProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty
+      internal fun unwrap(wrapped: InAppMessageHeaderConfigProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty
     }
   }
 
   /**
-   * Specifies the settings for a campaign treatment.
-   *
-   * A *treatment* is a variation of a campaign that's used for A/B testing of a campaign.
+   * Specifies the limits on the messages that a campaign can send.
    *
    * Example:
    *
@@ -4560,578 +4490,220 @@ public open class CfnCampaign internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object customConfig;
-   * Object metrics;
-   * WriteTreatmentResourceProperty writeTreatmentResourceProperty =
-   * WriteTreatmentResourceProperty.builder()
-   * .customDeliveryConfiguration(CustomDeliveryConfigurationProperty.builder()
-   * .deliveryUri("deliveryUri")
-   * .endpointTypes(List.of("endpointTypes"))
-   * .build())
-   * .messageConfiguration(MessageConfigurationProperty.builder()
-   * .admMessage(MessageProperty.builder()
-   * .action("action")
-   * .body("body")
-   * .imageIconUrl("imageIconUrl")
-   * .imageSmallIconUrl("imageSmallIconUrl")
-   * .imageUrl("imageUrl")
-   * .jsonBody("jsonBody")
-   * .mediaUrl("mediaUrl")
-   * .rawContent("rawContent")
-   * .silentPush(false)
-   * .timeToLive(123)
-   * .title("title")
-   * .url("url")
-   * .build())
-   * .apnsMessage(MessageProperty.builder()
-   * .action("action")
-   * .body("body")
-   * .imageIconUrl("imageIconUrl")
-   * .imageSmallIconUrl("imageSmallIconUrl")
-   * .imageUrl("imageUrl")
-   * .jsonBody("jsonBody")
-   * .mediaUrl("mediaUrl")
-   * .rawContent("rawContent")
-   * .silentPush(false)
-   * .timeToLive(123)
-   * .title("title")
-   * .url("url")
-   * .build())
-   * .baiduMessage(MessageProperty.builder()
-   * .action("action")
-   * .body("body")
-   * .imageIconUrl("imageIconUrl")
-   * .imageSmallIconUrl("imageSmallIconUrl")
-   * .imageUrl("imageUrl")
-   * .jsonBody("jsonBody")
-   * .mediaUrl("mediaUrl")
-   * .rawContent("rawContent")
-   * .silentPush(false)
-   * .timeToLive(123)
-   * .title("title")
-   * .url("url")
-   * .build())
-   * .customMessage(CampaignCustomMessageProperty.builder()
-   * .data("data")
-   * .build())
-   * .defaultMessage(MessageProperty.builder()
-   * .action("action")
-   * .body("body")
-   * .imageIconUrl("imageIconUrl")
-   * .imageSmallIconUrl("imageSmallIconUrl")
-   * .imageUrl("imageUrl")
-   * .jsonBody("jsonBody")
-   * .mediaUrl("mediaUrl")
-   * .rawContent("rawContent")
-   * .silentPush(false)
-   * .timeToLive(123)
-   * .title("title")
-   * .url("url")
-   * .build())
-   * .emailMessage(CampaignEmailMessageProperty.builder()
-   * .body("body")
-   * .fromAddress("fromAddress")
-   * .htmlBody("htmlBody")
-   * .title("title")
-   * .build())
-   * .gcmMessage(MessageProperty.builder()
-   * .action("action")
-   * .body("body")
-   * .imageIconUrl("imageIconUrl")
-   * .imageSmallIconUrl("imageSmallIconUrl")
-   * .imageUrl("imageUrl")
-   * .jsonBody("jsonBody")
-   * .mediaUrl("mediaUrl")
-   * .rawContent("rawContent")
-   * .silentPush(false)
-   * .timeToLive(123)
-   * .title("title")
-   * .url("url")
-   * .build())
-   * .inAppMessage(CampaignInAppMessageProperty.builder()
-   * .content(List.of(InAppMessageContentProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .bodyConfig(InAppMessageBodyConfigProperty.builder()
-   * .alignment("alignment")
-   * .body("body")
-   * .textColor("textColor")
-   * .build())
-   * .headerConfig(InAppMessageHeaderConfigProperty.builder()
-   * .alignment("alignment")
-   * .header("header")
-   * .textColor("textColor")
-   * .build())
-   * .imageUrl("imageUrl")
-   * .primaryBtn(InAppMessageButtonProperty.builder()
-   * .android(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .borderRadius(123)
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .text("text")
-   * .textColor("textColor")
-   * .build())
-   * .ios(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .web(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .build())
-   * .secondaryBtn(InAppMessageButtonProperty.builder()
-   * .android(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .borderRadius(123)
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .text("text")
-   * .textColor("textColor")
-   * .build())
-   * .ios(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .web(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .build())
-   * .build()))
-   * .customConfig(customConfig)
-   * .layout("layout")
-   * .build())
-   * .smsMessage(CampaignSmsMessageProperty.builder()
-   * .body("body")
-   * .entityId("entityId")
-   * .messageType("messageType")
-   * .originationNumber("originationNumber")
-   * .senderId("senderId")
-   * .templateId("templateId")
-   * .build())
-   * .build())
-   * .schedule(ScheduleProperty.builder()
-   * .endTime("endTime")
-   * .eventFilter(CampaignEventFilterProperty.builder()
-   * .dimensions(EventDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .eventType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .metrics(metrics)
-   * .build())
-   * .filterType("filterType")
-   * .build())
-   * .frequency("frequency")
-   * .isLocalTime(false)
-   * .quietTime(QuietTimeProperty.builder()
-   * .end("end")
-   * .start("start")
-   * .build())
-   * .startTime("startTime")
-   * .timeZone("timeZone")
-   * .build())
-   * .sizePercent(123)
-   * .templateConfiguration(TemplateConfigurationProperty.builder()
-   * .emailTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .pushTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .smsTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .voiceTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .build())
-   * .treatmentDescription("treatmentDescription")
-   * .treatmentName("treatmentName")
+   * LimitsProperty limitsProperty = LimitsProperty.builder()
+   * .daily(123)
+   * .maximumDuration(123)
+   * .messagesPerSecond(123)
+   * .session(123)
+   * .total(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html)
    */
-  public interface WriteTreatmentResourceProperty {
+  public interface LimitsProperty {
     /**
-     * The delivery configuration settings for sending the treatment through a custom channel.
+     * The maximum number of messages that a campaign can send to a single endpoint during a 24-hour
+     * period.
      *
-     * This object is required if the `MessageConfiguration` object for the treatment specifies a
-     * `CustomMessage` object.
+     * The maximum value is 100.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-customdeliveryconfiguration)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-daily)
      */
-    public fun customDeliveryConfiguration(): Any? = unwrap(this).getCustomDeliveryConfiguration()
+    public fun daily(): Number? = unwrap(this).getDaily()
 
     /**
-     * The message configuration settings for the treatment.
+     * The maximum amount of time, in seconds, that a campaign can attempt to deliver a message
+     * after the scheduled start time for the campaign.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)
+     * The minimum value is 60 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-maximumduration)
      */
-    public fun messageConfiguration(): Any? = unwrap(this).getMessageConfiguration()
+    public fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
 
     /**
-     * The schedule settings for the treatment.
+     * The maximum number of messages that a campaign can send each second.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-schedule)
+     * The minimum value is 1. The maximum value is 20,000.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-messagespersecond)
      */
-    public fun schedule(): Any? = unwrap(this).getSchedule()
+    public fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
 
     /**
-     * The allocated percentage of users (segment members) to send the treatment to.
+     * The maximum number of messages that the campaign can send per user session.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-session)
      */
-    public fun sizePercent(): Number? = unwrap(this).getSizePercent()
+    public fun session(): Number? = unwrap(this).getSession()
 
     /**
-     * The message template to use for the treatment.
+     * The maximum number of messages that a campaign can send to a single endpoint during the
+     * course of the campaign.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-templateconfiguration)
+     * The maximum value is 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-total)
      */
-    public fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+    public fun total(): Number? = unwrap(this).getTotal()
 
     /**
-     * A custom description of the treatment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)
-     */
-    public fun treatmentDescription(): String? = unwrap(this).getTreatmentDescription()
-
-    /**
-     * A custom name for the treatment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)
-     */
-    public fun treatmentName(): String? = unwrap(this).getTreatmentName()
-
-    /**
-     * A builder for [WriteTreatmentResourceProperty]
+     * A builder for [LimitsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param daily The maximum number of messages that a campaign can send to a single endpoint
+       * during a 24-hour period.
+       * The maximum value is 100.
        */
-      public fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable)
+      public fun daily(daily: Number)
 
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param maximumDuration The maximum amount of time, in seconds, that a campaign can attempt
+       * to deliver a message after the scheduled start time for the campaign.
+       * The minimum value is 60 seconds.
        */
-      public
-          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty)
+      public fun maximumDuration(maximumDuration: Number)
 
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param messagesPerSecond The maximum number of messages that a campaign can send each
+       * second.
+       * The minimum value is 1. The maximum value is 20,000.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44ba8164fd0c47cc6686cea43cfdeec281f6cb2b341733d79c9173d2de53f94f")
-      public
-          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty.Builder.() -> Unit)
+      public fun messagesPerSecond(messagesPerSecond: Number)
 
       /**
-       * @param messageConfiguration The message configuration settings for the treatment.
+       * @param session The maximum number of messages that the campaign can send per user session.
        */
-      public fun messageConfiguration(messageConfiguration: IResolvable)
+      public fun session(session: Number)
 
       /**
-       * @param messageConfiguration The message configuration settings for the treatment.
+       * @param total The maximum number of messages that a campaign can send to a single endpoint
+       * during the course of the campaign.
+       * The maximum value is 100.
        */
-      public fun messageConfiguration(messageConfiguration: MessageConfigurationProperty)
-
-      /**
-       * @param messageConfiguration The message configuration settings for the treatment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4d1b1cde2528cc290d0880568ecd116a092a6e4b0621cbf1e6e21071423adcce")
-      public
-          fun messageConfiguration(messageConfiguration: MessageConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      public fun schedule(schedule: IResolvable)
-
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      public fun schedule(schedule: ScheduleProperty)
-
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("177b9b9a3d674ff696e32c1995acca5da423036cbb0d0a05e43ed835928a21c7")
-      public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
-
-      /**
-       * @param sizePercent The allocated percentage of users (segment members) to send the
-       * treatment to.
-       */
-      public fun sizePercent(sizePercent: Number)
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      public fun templateConfiguration(templateConfiguration: IResolvable)
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      public fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty)
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("247644848b7c974023ecedc4fa133c31bc6fabb30dbd8a7c579e4513592ce44f")
-      public
-          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param treatmentDescription A custom description of the treatment.
-       */
-      public fun treatmentDescription(treatmentDescription: String)
-
-      /**
-       * @param treatmentName A custom name for the treatment.
-       */
-      public fun treatmentName(treatmentName: String)
+      public fun total(total: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty.builder()
 
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param daily The maximum number of messages that a campaign can send to a single endpoint
+       * during a 24-hour period.
+       * The maximum value is 100.
        */
-      override fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
-        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable::unwrap))
+      override fun daily(daily: Number) {
+        cdkBuilder.daily(daily)
       }
 
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param maximumDuration The maximum amount of time, in seconds, that a campaign can attempt
+       * to deliver a message after the scheduled start time for the campaign.
+       * The minimum value is 60 seconds.
        */
-      override
-          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty) {
-        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty::unwrap))
+      override fun maximumDuration(maximumDuration: Number) {
+        cdkBuilder.maximumDuration(maximumDuration)
       }
 
       /**
-       * @param customDeliveryConfiguration The delivery configuration settings for sending the
-       * treatment through a custom channel.
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * @param messagesPerSecond The maximum number of messages that a campaign can send each
+       * second.
+       * The minimum value is 1. The maximum value is 20,000.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44ba8164fd0c47cc6686cea43cfdeec281f6cb2b341733d79c9173d2de53f94f")
-      override
-          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty.Builder.() -> Unit):
-          Unit =
-          customDeliveryConfiguration(CustomDeliveryConfigurationProperty(customDeliveryConfiguration))
-
-      /**
-       * @param messageConfiguration The message configuration settings for the treatment.
-       */
-      override fun messageConfiguration(messageConfiguration: IResolvable) {
-        cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable::unwrap))
+      override fun messagesPerSecond(messagesPerSecond: Number) {
+        cdkBuilder.messagesPerSecond(messagesPerSecond)
       }
 
       /**
-       * @param messageConfiguration The message configuration settings for the treatment.
+       * @param session The maximum number of messages that the campaign can send per user session.
        */
-      override fun messageConfiguration(messageConfiguration: MessageConfigurationProperty) {
-        cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty::unwrap))
+      override fun session(session: Number) {
+        cdkBuilder.session(session)
       }
 
       /**
-       * @param messageConfiguration The message configuration settings for the treatment.
+       * @param total The maximum number of messages that a campaign can send to a single endpoint
+       * during the course of the campaign.
+       * The maximum value is 100.
        */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4d1b1cde2528cc290d0880568ecd116a092a6e4b0621cbf1e6e21071423adcce")
-      override
-          fun messageConfiguration(messageConfiguration: MessageConfigurationProperty.Builder.() -> Unit):
-          Unit = messageConfiguration(MessageConfigurationProperty(messageConfiguration))
-
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      override fun schedule(schedule: IResolvable) {
-        cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      override fun total(total: Number) {
+        cdkBuilder.total(total)
       }
 
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      override fun schedule(schedule: ScheduleProperty) {
-        cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
-      }
-
-      /**
-       * @param schedule The schedule settings for the treatment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("177b9b9a3d674ff696e32c1995acca5da423036cbb0d0a05e43ed835928a21c7")
-      override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
-          schedule(ScheduleProperty(schedule))
-
-      /**
-       * @param sizePercent The allocated percentage of users (segment members) to send the
-       * treatment to.
-       */
-      override fun sizePercent(sizePercent: Number) {
-        cdkBuilder.sizePercent(sizePercent)
-      }
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      override fun templateConfiguration(templateConfiguration: IResolvable) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param templateConfiguration The message template to use for the treatment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("247644848b7c974023ecedc4fa133c31bc6fabb30dbd8a7c579e4513592ce44f")
-      override
-          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit):
-          Unit = templateConfiguration(TemplateConfigurationProperty(templateConfiguration))
-
-      /**
-       * @param treatmentDescription A custom description of the treatment.
-       */
-      override fun treatmentDescription(treatmentDescription: String) {
-        cdkBuilder.treatmentDescription(treatmentDescription)
-      }
-
-      /**
-       * @param treatmentName A custom name for the treatment.
-       */
-      override fun treatmentName(treatmentName: String) {
-        cdkBuilder.treatmentName(treatmentName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty =
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty,
-    ) : CdkObject(cdkObject), WriteTreatmentResourceProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty,
+    ) : CdkObject(cdkObject), LimitsProperty {
       /**
-       * The delivery configuration settings for sending the treatment through a custom channel.
+       * The maximum number of messages that a campaign can send to a single endpoint during a
+       * 24-hour period.
        *
-       * This object is required if the `MessageConfiguration` object for the treatment specifies a
-       * `CustomMessage` object.
+       * The maximum value is 100.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-customdeliveryconfiguration)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-daily)
        */
-      override fun customDeliveryConfiguration(): Any? =
-          unwrap(this).getCustomDeliveryConfiguration()
+      override fun daily(): Number? = unwrap(this).getDaily()
 
       /**
-       * The message configuration settings for the treatment.
+       * The maximum amount of time, in seconds, that a campaign can attempt to deliver a message
+       * after the scheduled start time for the campaign.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)
+       * The minimum value is 60 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-maximumduration)
        */
-      override fun messageConfiguration(): Any? = unwrap(this).getMessageConfiguration()
+      override fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
 
       /**
-       * The schedule settings for the treatment.
+       * The maximum number of messages that a campaign can send each second.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-schedule)
+       * The minimum value is 1. The maximum value is 20,000.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-messagespersecond)
        */
-      override fun schedule(): Any? = unwrap(this).getSchedule()
+      override fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
 
       /**
-       * The allocated percentage of users (segment members) to send the treatment to.
+       * The maximum number of messages that the campaign can send per user session.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-session)
        */
-      override fun sizePercent(): Number? = unwrap(this).getSizePercent()
+      override fun session(): Number? = unwrap(this).getSession()
 
       /**
-       * The message template to use for the treatment.
+       * The maximum number of messages that a campaign can send to a single endpoint during the
+       * course of the campaign.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-templateconfiguration)
-       */
-      override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
-
-      /**
-       * A custom description of the treatment.
+       * The maximum value is 100.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html#cfn-pinpoint-campaign-limits-total)
        */
-      override fun treatmentDescription(): String? = unwrap(this).getTreatmentDescription()
-
-      /**
-       * A custom name for the treatment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)
-       */
-      override fun treatmentName(): String? = unwrap(this).getTreatmentName()
+      override fun total(): Number? = unwrap(this).getTotal()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): WriteTreatmentResourceProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LimitsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty):
-          WriteTreatmentResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          WriteTreatmentResourceProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty):
+          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as? LimitsProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: WriteTreatmentResourceProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty
+      internal fun unwrap(wrapped: LimitsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty
     }
   }
 
@@ -5851,8 +5423,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty,
     ) : CdkObject(cdkObject), MessageConfigurationProperty {
       /**
        * The message that the campaign sends through the ADM (Amazon Device Messaging) channel.
@@ -5954,1186 +5525,6 @@ public open class CfnCampaign internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the dimensions for an event filter that determines when a campaign is sent or a
-   * journey activity is performed.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * EventDimensionsProperty eventDimensionsProperty = EventDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .eventType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .metrics(metrics)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html)
-   */
-  public interface EventDimensionsProperty {
-    /**
-     * One or more custom attributes that your application reports to Amazon Pinpoint.
-     *
-     * You can use these attributes as selection criteria when you create an event filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-attributes)
-     */
-    public fun attributes(): Any? = unwrap(this).getAttributes()
-
-    /**
-     * The name of the event that causes the campaign to be sent or the journey activity to be
-     * performed.
-     *
-     * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-     * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-     * application. For information about standard events, see [Streaming Amazon Pinpoint
-     * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-     * *Amazon Pinpoint Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-eventtype)
-     */
-    public fun eventType(): Any? = unwrap(this).getEventType()
-
-    /**
-     * One or more custom metrics that your application reports to Amazon Pinpoint .
-     *
-     * You can use these metrics as selection criteria when you create an event filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-metrics)
-     */
-    public fun metrics(): Any? = unwrap(this).getMetrics()
-
-    /**
-     * A builder for [EventDimensionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributes One or more custom attributes that your application reports to Amazon
-       * Pinpoint.
-       * You can use these attributes as selection criteria when you create an event filter.
-       */
-      public fun attributes(attributes: Any)
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      public fun eventType(eventType: IResolvable)
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      public fun eventType(eventType: SetDimensionProperty)
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ad61458427c18700e49dfcab48c055c5a8f5777142f0c45e28da4d72b94e7b2")
-      public fun eventType(eventType: SetDimensionProperty.Builder.() -> Unit)
-
-      /**
-       * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint
-       * .
-       * You can use these metrics as selection criteria when you create an event filter.
-       */
-      public fun metrics(metrics: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty.builder()
-
-      /**
-       * @param attributes One or more custom attributes that your application reports to Amazon
-       * Pinpoint.
-       * You can use these attributes as selection criteria when you create an event filter.
-       */
-      override fun attributes(attributes: Any) {
-        cdkBuilder.attributes(attributes)
-      }
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      override fun eventType(eventType: IResolvable) {
-        cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      override fun eventType(eventType: SetDimensionProperty) {
-        cdkBuilder.eventType(eventType.let(SetDimensionProperty::unwrap))
-      }
-
-      /**
-       * @param eventType The name of the event that causes the campaign to be sent or the journey
-       * activity to be performed.
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5ad61458427c18700e49dfcab48c055c5a8f5777142f0c45e28da4d72b94e7b2")
-      override fun eventType(eventType: SetDimensionProperty.Builder.() -> Unit): Unit =
-          eventType(SetDimensionProperty(eventType))
-
-      /**
-       * @param metrics One or more custom metrics that your application reports to Amazon Pinpoint
-       * .
-       * You can use these metrics as selection criteria when you create an event filter.
-       */
-      override fun metrics(metrics: Any) {
-        cdkBuilder.metrics(metrics)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty,
-    ) : CdkObject(cdkObject), EventDimensionsProperty {
-      /**
-       * One or more custom attributes that your application reports to Amazon Pinpoint.
-       *
-       * You can use these attributes as selection criteria when you create an event filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-attributes)
-       */
-      override fun attributes(): Any? = unwrap(this).getAttributes()
-
-      /**
-       * The name of the event that causes the campaign to be sent or the journey activity to be
-       * performed.
-       *
-       * This can be a standard event that Amazon Pinpoint generates, such as `_email.delivered` or
-       * `_custom.delivered` . For campaigns, this can also be a custom event that's specific to your
-       * application. For information about standard events, see [Streaming Amazon Pinpoint
-       * Events](https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html) in the
-       * *Amazon Pinpoint Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-eventtype)
-       */
-      override fun eventType(): Any? = unwrap(this).getEventType()
-
-      /**
-       * One or more custom metrics that your application reports to Amazon Pinpoint .
-       *
-       * You can use these metrics as selection criteria when you create an event filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html#cfn-pinpoint-campaign-eventdimensions-metrics)
-       */
-      override fun metrics(): Any? = unwrap(this).getMetrics()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventDimensionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty):
-          EventDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EventDimensionsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventDimensionsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty
-    }
-  }
-
-  /**
-   * Specifies the dimension type and values for a segment dimension.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * SetDimensionProperty setDimensionProperty = SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html)
-   */
-  public interface SetDimensionProperty {
-    /**
-     * The type of segment dimension to use.
-     *
-     * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
-     * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-dimensiontype)
-     */
-    public fun dimensionType(): String? = unwrap(this).getDimensionType()
-
-    /**
-     * The criteria values to use for the segment dimension.
-     *
-     * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-     * from the segment if their values match the criteria values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-values)
-     */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-
-    /**
-     * A builder for [SetDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensionType The type of segment dimension to use.
-       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
-       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
-       */
-      public fun dimensionType(dimensionType: String)
-
-      /**
-       * @param values The criteria values to use for the segment dimension.
-       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-       * from the segment if their values match the criteria values.
-       */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values The criteria values to use for the segment dimension.
-       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-       * from the segment if their values match the criteria values.
-       */
-      public fun values(vararg values: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty.builder()
-
-      /**
-       * @param dimensionType The type of segment dimension to use.
-       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
-       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
-       */
-      override fun dimensionType(dimensionType: String) {
-        cdkBuilder.dimensionType(dimensionType)
-      }
-
-      /**
-       * @param values The criteria values to use for the segment dimension.
-       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-       * from the segment if their values match the criteria values.
-       */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
-      }
-
-      /**
-       * @param values The criteria values to use for the segment dimension.
-       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-       * from the segment if their values match the criteria values.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty,
-    ) : CdkObject(cdkObject), SetDimensionProperty {
-      /**
-       * The type of segment dimension to use.
-       *
-       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
-       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-dimensiontype)
-       */
-      override fun dimensionType(): String? = unwrap(this).getDimensionType()
-
-      /**
-       * The criteria values to use for the segment dimension.
-       *
-       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
-       * from the segment if their values match the criteria values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-values)
-       */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SetDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty):
-          SetDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? SetDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SetDimensionProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty
-    }
-  }
-
-  /**
-   * Specifies the message template to use for the message, for each type of channel.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * TemplateConfigurationProperty templateConfigurationProperty =
-   * TemplateConfigurationProperty.builder()
-   * .emailTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .pushTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .smsTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .voiceTemplate(TemplateProperty.builder()
-   * .name("name")
-   * .version("version")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html)
-   */
-  public interface TemplateConfigurationProperty {
-    /**
-     * The email template to use for the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-emailtemplate)
-     */
-    public fun emailTemplate(): Any? = unwrap(this).getEmailTemplate()
-
-    /**
-     * The push notification template to use for the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-pushtemplate)
-     */
-    public fun pushTemplate(): Any? = unwrap(this).getPushTemplate()
-
-    /**
-     * The SMS template to use for the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-smstemplate)
-     */
-    public fun smsTemplate(): Any? = unwrap(this).getSmsTemplate()
-
-    /**
-     * The voice template to use for the message.
-     *
-     * This object isn't supported for campaigns.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-voicetemplate)
-     */
-    public fun voiceTemplate(): Any? = unwrap(this).getVoiceTemplate()
-
-    /**
-     * A builder for [TemplateConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      public fun emailTemplate(emailTemplate: IResolvable)
-
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      public fun emailTemplate(emailTemplate: TemplateProperty)
-
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("842fa1af0f31eea2a4e19f627af3f2e53f87fec05ec016f69cbf49d68e8aa2ea")
-      public fun emailTemplate(emailTemplate: TemplateProperty.Builder.() -> Unit)
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      public fun pushTemplate(pushTemplate: IResolvable)
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      public fun pushTemplate(pushTemplate: TemplateProperty)
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("656da5de3c8e03c8eb5892b28fab018dd4d74ff09d50a56f5edcff565992c0ae")
-      public fun pushTemplate(pushTemplate: TemplateProperty.Builder.() -> Unit)
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      public fun smsTemplate(smsTemplate: IResolvable)
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      public fun smsTemplate(smsTemplate: TemplateProperty)
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("df53a266a2d1d0eb0501aec4f0b01cbea6c65d43dab0f9d25440837e1a028453")
-      public fun smsTemplate(smsTemplate: TemplateProperty.Builder.() -> Unit)
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      public fun voiceTemplate(voiceTemplate: IResolvable)
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      public fun voiceTemplate(voiceTemplate: TemplateProperty)
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("773aebfddece0f54dab162d31414f65d973191a5c268ca0e84d9fcd984c7f133")
-      public fun voiceTemplate(voiceTemplate: TemplateProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty.builder()
-
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      override fun emailTemplate(emailTemplate: IResolvable) {
-        cdkBuilder.emailTemplate(emailTemplate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      override fun emailTemplate(emailTemplate: TemplateProperty) {
-        cdkBuilder.emailTemplate(emailTemplate.let(TemplateProperty::unwrap))
-      }
-
-      /**
-       * @param emailTemplate The email template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("842fa1af0f31eea2a4e19f627af3f2e53f87fec05ec016f69cbf49d68e8aa2ea")
-      override fun emailTemplate(emailTemplate: TemplateProperty.Builder.() -> Unit): Unit =
-          emailTemplate(TemplateProperty(emailTemplate))
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      override fun pushTemplate(pushTemplate: IResolvable) {
-        cdkBuilder.pushTemplate(pushTemplate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      override fun pushTemplate(pushTemplate: TemplateProperty) {
-        cdkBuilder.pushTemplate(pushTemplate.let(TemplateProperty::unwrap))
-      }
-
-      /**
-       * @param pushTemplate The push notification template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("656da5de3c8e03c8eb5892b28fab018dd4d74ff09d50a56f5edcff565992c0ae")
-      override fun pushTemplate(pushTemplate: TemplateProperty.Builder.() -> Unit): Unit =
-          pushTemplate(TemplateProperty(pushTemplate))
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      override fun smsTemplate(smsTemplate: IResolvable) {
-        cdkBuilder.smsTemplate(smsTemplate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      override fun smsTemplate(smsTemplate: TemplateProperty) {
-        cdkBuilder.smsTemplate(smsTemplate.let(TemplateProperty::unwrap))
-      }
-
-      /**
-       * @param smsTemplate The SMS template to use for the message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("df53a266a2d1d0eb0501aec4f0b01cbea6c65d43dab0f9d25440837e1a028453")
-      override fun smsTemplate(smsTemplate: TemplateProperty.Builder.() -> Unit): Unit =
-          smsTemplate(TemplateProperty(smsTemplate))
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      override fun voiceTemplate(voiceTemplate: IResolvable) {
-        cdkBuilder.voiceTemplate(voiceTemplate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      override fun voiceTemplate(voiceTemplate: TemplateProperty) {
-        cdkBuilder.voiceTemplate(voiceTemplate.let(TemplateProperty::unwrap))
-      }
-
-      /**
-       * @param voiceTemplate The voice template to use for the message.
-       * This object isn't supported for campaigns.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("773aebfddece0f54dab162d31414f65d973191a5c268ca0e84d9fcd984c7f133")
-      override fun voiceTemplate(voiceTemplate: TemplateProperty.Builder.() -> Unit): Unit =
-          voiceTemplate(TemplateProperty(voiceTemplate))
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty,
-    ) : CdkObject(cdkObject), TemplateConfigurationProperty {
-      /**
-       * The email template to use for the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-emailtemplate)
-       */
-      override fun emailTemplate(): Any? = unwrap(this).getEmailTemplate()
-
-      /**
-       * The push notification template to use for the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-pushtemplate)
-       */
-      override fun pushTemplate(): Any? = unwrap(this).getPushTemplate()
-
-      /**
-       * The SMS template to use for the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-smstemplate)
-       */
-      override fun smsTemplate(): Any? = unwrap(this).getSmsTemplate()
-
-      /**
-       * The voice template to use for the message.
-       *
-       * This object isn't supported for campaigns.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-voicetemplate)
-       */
-      override fun voiceTemplate(): Any? = unwrap(this).getVoiceTemplate()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty):
-          TemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TemplateConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TemplateConfigurationProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the settings for events that cause a campaign to be sent.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * CampaignEventFilterProperty campaignEventFilterProperty = CampaignEventFilterProperty.builder()
-   * .dimensions(EventDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .eventType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .metrics(metrics)
-   * .build())
-   * .filterType("filterType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html)
-   */
-  public interface CampaignEventFilterProperty {
-    /**
-     * The dimension settings of the event filter for the campaign.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-dimensions)
-     */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
-
-    /**
-     * The type of event that causes the campaign to be sent.
-     *
-     * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT` ,
-     * sends the campaign when an endpoint event (Events resource) occurs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-filtertype)
-     */
-    public fun filterType(): String? = unwrap(this).getFilterType()
-
-    /**
-     * A builder for [CampaignEventFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      public fun dimensions(dimensions: EventDimensionsProperty)
-
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0f3a6f301fe266dc628fdb1708f34abc9d1ea5d13b72d4ef29cea10dbf50010")
-      public fun dimensions(dimensions: EventDimensionsProperty.Builder.() -> Unit)
-
-      /**
-       * @param filterType The type of event that causes the campaign to be sent.
-       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
-       * , sends the campaign when an endpoint event (Events resource) occurs.
-       */
-      public fun filterType(filterType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty.builder()
-
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      override fun dimensions(dimensions: EventDimensionsProperty) {
-        cdkBuilder.dimensions(dimensions.let(EventDimensionsProperty::unwrap))
-      }
-
-      /**
-       * @param dimensions The dimension settings of the event filter for the campaign.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a0f3a6f301fe266dc628fdb1708f34abc9d1ea5d13b72d4ef29cea10dbf50010")
-      override fun dimensions(dimensions: EventDimensionsProperty.Builder.() -> Unit): Unit =
-          dimensions(EventDimensionsProperty(dimensions))
-
-      /**
-       * @param filterType The type of event that causes the campaign to be sent.
-       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
-       * , sends the campaign when an endpoint event (Events resource) occurs.
-       */
-      override fun filterType(filterType: String) {
-        cdkBuilder.filterType(filterType)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty,
-    ) : CdkObject(cdkObject), CampaignEventFilterProperty {
-      /**
-       * The dimension settings of the event filter for the campaign.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-dimensions)
-       */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
-
-      /**
-       * The type of event that causes the campaign to be sent.
-       *
-       * Valid values are: `SYSTEM` , sends the campaign when a system event occurs; and, `ENDPOINT`
-       * , sends the campaign when an endpoint event (Events resource) occurs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html#cfn-pinpoint-campaign-campaigneventfilter-filtertype)
-       */
-      override fun filterType(): String? = unwrap(this).getFilterType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignEventFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty):
-          CampaignEventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CampaignEventFilterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CampaignEventFilterProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty
-    }
-  }
-
-  /**
-   * Specifies the default behavior for a button that appears in an in-app message.
-   *
-   * You can optionally add button configurations that specifically apply to iOS, Android, or web
-   * browser users.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * DefaultButtonConfigurationProperty defaultButtonConfigurationProperty =
-   * DefaultButtonConfigurationProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .borderRadius(123)
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .text("text")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html)
-   */
-  public interface DefaultButtonConfigurationProperty {
-    /**
-     * The background color of a button, expressed as a hex color code (such as #000000 for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-backgroundcolor)
-     */
-    public fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
-
-    /**
-     * The border radius of a button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-borderradius)
-     */
-    public fun borderRadius(): Number? = unwrap(this).getBorderRadius()
-
-    /**
-     * The action that occurs when a recipient chooses a button in an in-app message.
-     *
-     * You can specify one of the following:
-     *
-     * * `LINK` – A link to a web destination.
-     * * `DEEP_LINK` – A link to a specific page in an application.
-     * * `CLOSE` – Dismisses the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-buttonaction)
-     */
-    public fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-    /**
-     * The destination (such as a URL) for a button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-link)
-     */
-    public fun link(): String? = unwrap(this).getLink()
-
-    /**
-     * The text that appears on a button in an in-app message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-text)
-     */
-    public fun text(): String? = unwrap(this).getText()
-
-    /**
-     * The color of the body text in a button, expressed as a hex color code (such as #000000 for
-     * black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [DefaultButtonConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param backgroundColor The background color of a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      public fun backgroundColor(backgroundColor: String)
-
-      /**
-       * @param borderRadius The border radius of a button.
-       */
-      public fun borderRadius(borderRadius: Number)
-
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      public fun buttonAction(buttonAction: String)
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      public fun link(link: String)
-
-      /**
-       * @param text The text that appears on a button in an in-app message.
-       */
-      public fun text(text: String)
-
-      /**
-       * @param textColor The color of the body text in a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty.builder()
-
-      /**
-       * @param backgroundColor The background color of a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      override fun backgroundColor(backgroundColor: String) {
-        cdkBuilder.backgroundColor(backgroundColor)
-      }
-
-      /**
-       * @param borderRadius The border radius of a button.
-       */
-      override fun borderRadius(borderRadius: Number) {
-        cdkBuilder.borderRadius(borderRadius)
-      }
-
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      override fun buttonAction(buttonAction: String) {
-        cdkBuilder.buttonAction(buttonAction)
-      }
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      override fun link(link: String) {
-        cdkBuilder.link(link)
-      }
-
-      /**
-       * @param text The text that appears on a button in an in-app message.
-       */
-      override fun text(text: String) {
-        cdkBuilder.text(text)
-      }
-
-      /**
-       * @param textColor The color of the body text in a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty,
-    ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
-      /**
-       * The background color of a button, expressed as a hex color code (such as #000000 for
-       * black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-backgroundcolor)
-       */
-      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
-
-      /**
-       * The border radius of a button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-borderradius)
-       */
-      override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
-
-      /**
-       * The action that occurs when a recipient chooses a button in an in-app message.
-       *
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-buttonaction)
-       */
-      override fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-      /**
-       * The destination (such as a URL) for a button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-link)
-       */
-      override fun link(): String? = unwrap(this).getLink()
-
-      /**
-       * The text that appears on a button in an in-app message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-text)
-       */
-      override fun text(): String? = unwrap(this).getText()
-
-      /**
-       * The color of the body text in a button, expressed as a hex color code (such as #000000 for
-       * black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html#cfn-pinpoint-campaign-defaultbuttonconfiguration-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultButtonConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty):
-          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultButtonConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
-   * .comparisonOperator("comparisonOperator")
-   * .value(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html)
-   */
-  public interface MetricDimensionProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-comparisonoperator)
-     */
-    public fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-value)
-     */
-    public fun `value`(): Number? = unwrap(this).getValue()
-
-    /**
-     * A builder for [MetricDimensionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comparisonOperator the value to be set.
-       */
-      public fun comparisonOperator(comparisonOperator: String)
-
-      /**
-       * @param value the value to be set.
-       */
-      public fun `value`(`value`: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty.builder()
-
-      /**
-       * @param comparisonOperator the value to be set.
-       */
-      override fun comparisonOperator(comparisonOperator: String) {
-        cdkBuilder.comparisonOperator(comparisonOperator)
-      }
-
-      /**
-       * @param value the value to be set.
-       */
-      override fun `value`(`value`: Number) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-comparisonoperator)
-       */
-      override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-value)
-       */
-      override fun `value`(): Number? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MetricDimensionProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty
     }
   }
 
@@ -7499,7 +5890,7 @@ public open class CfnCampaign internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty,
     ) : CdkObject(cdkObject), MessageProperty {
       /**
        * The action to occur if a recipient taps the push notification. Valid values are:.
@@ -7637,110 +6028,100 @@ public open class CfnCampaign internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * AttributeDimensionProperty attributeDimensionProperty = AttributeDimensionProperty.builder()
-   * .attributeType("attributeType")
-   * .values(List.of("values"))
+   * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+   * .comparisonOperator("comparisonOperator")
+   * .value(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html)
    */
-  public interface AttributeDimensionProperty {
+  public interface MetricDimensionProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-comparisonoperator)
      */
-    public fun attributeType(): String? = unwrap(this).getAttributeType()
+    public fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-values)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-value)
      */
-    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    public fun `value`(): Number? = unwrap(this).getValue()
 
     /**
-     * A builder for [AttributeDimensionProperty]
+     * A builder for [MetricDimensionProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeType the value to be set.
+       * @param comparisonOperator the value to be set.
        */
-      public fun attributeType(attributeType: String)
+      public fun comparisonOperator(comparisonOperator: String)
 
       /**
-       * @param values the value to be set.
+       * @param value the value to be set.
        */
-      public fun values(values: List<String>)
-
-      /**
-       * @param values the value to be set.
-       */
-      public fun values(vararg values: String)
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty.builder()
 
       /**
-       * @param attributeType the value to be set.
+       * @param comparisonOperator the value to be set.
        */
-      override fun attributeType(attributeType: String) {
-        cdkBuilder.attributeType(attributeType)
+      override fun comparisonOperator(comparisonOperator: String) {
+        cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
       /**
-       * @param values the value to be set.
+       * @param value the value to be set.
        */
-      override fun values(values: List<String>) {
-        cdkBuilder.values(values)
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
       }
-
-      /**
-       * @param values the value to be set.
-       */
-      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty,
-    ) : CdkObject(cdkObject), AttributeDimensionProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty,
+    ) : CdkObject(cdkObject), MetricDimensionProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-attributetype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-comparisonoperator)
        */
-      override fun attributeType(): String? = unwrap(this).getAttributeType()
+      override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html#cfn-pinpoint-campaign-attributedimension-values)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html#cfn-pinpoint-campaign-metricdimension-value)
        */
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeDimensionProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetricDimensionProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty):
-          AttributeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AttributeDimensionProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty):
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AttributeDimensionProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty
+      internal fun unwrap(wrapped: MetricDimensionProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty
     }
   }
 
   /**
-   * Specifies the configuration of a button that appears in an in-app message.
+   * Specifies the configuration of a button with settings that are specific to a certain device
+   * type.
    *
    * Example:
    *
@@ -7748,7 +6129,1442 @@ public open class CfnCampaign internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * InAppMessageButtonProperty inAppMessageButtonProperty = InAppMessageButtonProperty.builder()
+   * OverrideButtonConfigurationProperty overrideButtonConfigurationProperty =
+   * OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html)
+   */
+  public interface OverrideButtonConfigurationProperty {
+    /**
+     * The action that occurs when a recipient chooses a button in an in-app message.
+     *
+     * You can specify one of the following:
+     *
+     * * `LINK` – A link to a web destination.
+     * * `DEEP_LINK` – A link to a specific page in an application.
+     * * `CLOSE` – Dismisses the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-buttonaction)
+     */
+    public fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+    /**
+     * The destination (such as a URL) for a button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-link)
+     */
+    public fun link(): String? = unwrap(this).getLink()
+
+    /**
+     * A builder for [OverrideButtonConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      public fun buttonAction(buttonAction: String)
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      public fun link(link: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty.builder()
+
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      override fun buttonAction(buttonAction: String) {
+        cdkBuilder.buttonAction(buttonAction)
+      }
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      override fun link(link: String) {
+        cdkBuilder.link(link)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty,
+    ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
+      /**
+       * The action that occurs when a recipient chooses a button in an in-app message.
+       *
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-buttonaction)
+       */
+      override fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+      /**
+       * The destination (such as a URL) for a button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-overridebuttonconfiguration.html#cfn-pinpoint-campaign-overridebuttonconfiguration-link)
+       */
+      override fun link(): String? = unwrap(this).getLink()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OverrideButtonConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty):
+          OverrideButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OverrideButtonConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OverrideButtonConfigurationProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the start and end times that define a time range when messages aren't sent to
+   * endpoints.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * QuietTimeProperty quietTimeProperty = QuietTimeProperty.builder()
+   * .end("end")
+   * .start("start")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html)
+   */
+  public interface QuietTimeProperty {
+    /**
+     * The specific time when quiet time ends.
+     *
+     * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+     * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+     * AM, or `14:30` to represent 2:30 PM.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-end)
+     */
+    public fun end(): String
+
+    /**
+     * The specific time when quiet time begins.
+     *
+     * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+     * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+     * AM, or `14:30` to represent 2:30 PM.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-start)
+     */
+    public fun start(): String
+
+    /**
+     * A builder for [QuietTimeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param end The specific time when quiet time ends. 
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       */
+      public fun end(end: String)
+
+      /**
+       * @param start The specific time when quiet time begins. 
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       */
+      public fun start(start: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty.builder()
+
+      /**
+       * @param end The specific time when quiet time ends. 
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       */
+      override fun end(end: String) {
+        cdkBuilder.end(end)
+      }
+
+      /**
+       * @param start The specific time when quiet time begins. 
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       */
+      override fun start(start: String) {
+        cdkBuilder.start(start)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty,
+    ) : CdkObject(cdkObject), QuietTimeProperty {
+      /**
+       * The specific time when quiet time ends.
+       *
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-end)
+       */
+      override fun end(): String = unwrap(this).getEnd()
+
+      /**
+       * The specific time when quiet time begins.
+       *
+       * This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a
+       * leading zero, if applicable) and MM is the minutes. For example, use `02:30` to represent 2:30
+       * AM, or `14:30` to represent 2:30 PM.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html#cfn-pinpoint-campaign-quiettime-start)
+       */
+      override fun start(): String = unwrap(this).getStart()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QuietTimeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty):
+          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? QuietTimeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QuietTimeProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty
+    }
+  }
+
+  /**
+   * Specifies the schedule settings for a campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+   * .endTime("endTime")
+   * .eventFilter(CampaignEventFilterProperty.builder()
+   * .dimensions(EventDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .eventType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .metrics(metrics)
+   * .build())
+   * .filterType("filterType")
+   * .build())
+   * .frequency("frequency")
+   * .isLocalTime(false)
+   * .quietTime(QuietTimeProperty.builder()
+   * .end("end")
+   * .start("start")
+   * .build())
+   * .startTime("startTime")
+   * .timeZone("timeZone")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html)
+   */
+  public interface ScheduleProperty {
+    /**
+     * The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-endtime)
+     */
+    public fun endTime(): String? = unwrap(this).getEndTime()
+
+    /**
+     * The type of event that causes the campaign to be sent, if the value of the `Frequency`
+     * property is `EVENT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-eventfilter)
+     */
+    public fun eventFilter(): Any? = unwrap(this).getEventFilter()
+
+    /**
+     * Specifies how often the campaign is sent or whether the campaign is sent in response to a
+     * specific event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-frequency)
+     */
+    public fun frequency(): String? = unwrap(this).getFrequency()
+
+    /**
+     * Specifies whether the start and end times for the campaign schedule use each recipient's
+     * local time.
+     *
+     * To base the schedule on each recipient's local time, set this value to `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-islocaltime)
+     */
+    public fun isLocalTime(): Any? = unwrap(this).getIsLocalTime()
+
+    /**
+     * The default quiet time for the campaign.
+     *
+     * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+     * all the following conditions are met:
+     *
+     * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+     * * The current time in the endpoint's time zone is later than or equal to the time specified
+     * by the `QuietTime.Start` property for the campaign.
+     * * The current time in the endpoint's time zone is earlier than or equal to the time specified
+     * by the `QuietTime.End` property for the campaign.
+     *
+     * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+     * campaign, even if quiet time is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-quiettime)
+     */
+    public fun quietTime(): Any? = unwrap(this).getQuietTime()
+
+    /**
+     * The scheduled time when the campaign began or will begin.
+     *
+     * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in ISO
+     * 8601 format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-starttime)
+     */
+    public fun startTime(): String? = unwrap(this).getStartTime()
+
+    /**
+     * The starting UTC offset for the campaign schedule, if the value of the `IsLocalTime` property
+     * is `true` .
+     *
+     * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
+     * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
+     * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09, UTC-10,`
+     * and `UTC-11` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-timezone)
+     */
+    public fun timeZone(): String? = unwrap(this).getTimeZone()
+
+    /**
+     * A builder for [ScheduleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endTime The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       */
+      public fun endTime(endTime: String)
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      public fun eventFilter(eventFilter: IResolvable)
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      public fun eventFilter(eventFilter: CampaignEventFilterProperty)
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c3dd06595209b007103242bf8e198785fdacfc7f080bcd9bcc9133d99b014137")
+      public fun eventFilter(eventFilter: CampaignEventFilterProperty.Builder.() -> Unit)
+
+      /**
+       * @param frequency Specifies how often the campaign is sent or whether the campaign is sent
+       * in response to a specific event.
+       */
+      public fun frequency(frequency: String)
+
+      /**
+       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
+       * each recipient's local time.
+       * To base the schedule on each recipient's local time, set this value to `true` .
+       */
+      public fun isLocalTime(isLocalTime: Boolean)
+
+      /**
+       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
+       * each recipient's local time.
+       * To base the schedule on each recipient's local time, set this value to `true` .
+       */
+      public fun isLocalTime(isLocalTime: IResolvable)
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      public fun quietTime(quietTime: IResolvable)
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      public fun quietTime(quietTime: QuietTimeProperty)
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed81d35fd706191dfa298b7a8c2139b5e0327d8a6782d2b5b3d8bdba3b83b51d")
+      public fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit)
+
+      /**
+       * @param startTime The scheduled time when the campaign began or will begin.
+       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
+       * ISO 8601 format.
+       */
+      public fun startTime(startTime: String)
+
+      /**
+       * @param timeZone The starting UTC offset for the campaign schedule, if the value of the
+       * `IsLocalTime` property is `true` .
+       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
+       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
+       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
+       * UTC-10,` and `UTC-11` .
+       */
+      public fun timeZone(timeZone: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty.builder()
+
+      /**
+       * @param endTime The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       */
+      override fun endTime(endTime: String) {
+        cdkBuilder.endTime(endTime)
+      }
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      override fun eventFilter(eventFilter: IResolvable) {
+        cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      override fun eventFilter(eventFilter: CampaignEventFilterProperty) {
+        cdkBuilder.eventFilter(eventFilter.let(CampaignEventFilterProperty::unwrap))
+      }
+
+      /**
+       * @param eventFilter The type of event that causes the campaign to be sent, if the value of
+       * the `Frequency` property is `EVENT` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c3dd06595209b007103242bf8e198785fdacfc7f080bcd9bcc9133d99b014137")
+      override fun eventFilter(eventFilter: CampaignEventFilterProperty.Builder.() -> Unit): Unit =
+          eventFilter(CampaignEventFilterProperty(eventFilter))
+
+      /**
+       * @param frequency Specifies how often the campaign is sent or whether the campaign is sent
+       * in response to a specific event.
+       */
+      override fun frequency(frequency: String) {
+        cdkBuilder.frequency(frequency)
+      }
+
+      /**
+       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
+       * each recipient's local time.
+       * To base the schedule on each recipient's local time, set this value to `true` .
+       */
+      override fun isLocalTime(isLocalTime: Boolean) {
+        cdkBuilder.isLocalTime(isLocalTime)
+      }
+
+      /**
+       * @param isLocalTime Specifies whether the start and end times for the campaign schedule use
+       * each recipient's local time.
+       * To base the schedule on each recipient's local time, set this value to `true` .
+       */
+      override fun isLocalTime(isLocalTime: IResolvable) {
+        cdkBuilder.isLocalTime(isLocalTime.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      override fun quietTime(quietTime: IResolvable) {
+        cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      override fun quietTime(quietTime: QuietTimeProperty) {
+        cdkBuilder.quietTime(quietTime.let(QuietTimeProperty::unwrap))
+      }
+
+      /**
+       * @param quietTime The default quiet time for the campaign.
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed81d35fd706191dfa298b7a8c2139b5e0327d8a6782d2b5b3d8bdba3b83b51d")
+      override fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit): Unit =
+          quietTime(QuietTimeProperty(quietTime))
+
+      /**
+       * @param startTime The scheduled time when the campaign began or will begin.
+       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
+       * ISO 8601 format.
+       */
+      override fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+      }
+
+      /**
+       * @param timeZone The starting UTC offset for the campaign schedule, if the value of the
+       * `IsLocalTime` property is `true` .
+       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
+       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
+       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
+       * UTC-10,` and `UTC-11` .
+       */
+      override fun timeZone(timeZone: String) {
+        cdkBuilder.timeZone(timeZone)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty,
+    ) : CdkObject(cdkObject), ScheduleProperty {
+      /**
+       * The scheduled time, in ISO 8601 format, when the campaign ended or will end.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-endtime)
+       */
+      override fun endTime(): String? = unwrap(this).getEndTime()
+
+      /**
+       * The type of event that causes the campaign to be sent, if the value of the `Frequency`
+       * property is `EVENT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-eventfilter)
+       */
+      override fun eventFilter(): Any? = unwrap(this).getEventFilter()
+
+      /**
+       * Specifies how often the campaign is sent or whether the campaign is sent in response to a
+       * specific event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-frequency)
+       */
+      override fun frequency(): String? = unwrap(this).getFrequency()
+
+      /**
+       * Specifies whether the start and end times for the campaign schedule use each recipient's
+       * local time.
+       *
+       * To base the schedule on each recipient's local time, set this value to `true` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-islocaltime)
+       */
+      override fun isLocalTime(): Any? = unwrap(this).getIsLocalTime()
+
+      /**
+       * The default quiet time for the campaign.
+       *
+       * Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if
+       * all the following conditions are met:
+       *
+       * * The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value.
+       * * The current time in the endpoint's time zone is later than or equal to the time specified
+       * by the `QuietTime.Start` property for the campaign.
+       * * The current time in the endpoint's time zone is earlier than or equal to the time
+       * specified by the `QuietTime.End` property for the campaign.
+       *
+       * If any of the preceding conditions isn't met, the endpoint will receive messages from the
+       * campaign, even if quiet time is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-quiettime)
+       */
+      override fun quietTime(): Any? = unwrap(this).getQuietTime()
+
+      /**
+       * The scheduled time when the campaign began or will begin.
+       *
+       * Valid values are: `IMMEDIATE` , to start the campaign immediately; or, a specific time in
+       * ISO 8601 format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-starttime)
+       */
+      override fun startTime(): String? = unwrap(this).getStartTime()
+
+      /**
+       * The starting UTC offset for the campaign schedule, if the value of the `IsLocalTime`
+       * property is `true` .
+       *
+       * Valid values are: `UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05,
+       * UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30,
+       * UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09,
+       * UTC-10,` and `UTC-11` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html#cfn-pinpoint-campaign-schedule-timezone)
+       */
+      override fun timeZone(): String? = unwrap(this).getTimeZone()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScheduleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty):
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScheduleProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty
+    }
+  }
+
+  /**
+   * Specifies the dimension type and values for a segment dimension.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * SetDimensionProperty setDimensionProperty = SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html)
+   */
+  public interface SetDimensionProperty {
+    /**
+     * The type of segment dimension to use.
+     *
+     * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
+     * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-dimensiontype)
+     */
+    public fun dimensionType(): String? = unwrap(this).getDimensionType()
+
+    /**
+     * The criteria values to use for the segment dimension.
+     *
+     * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+     * from the segment if their values match the criteria values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [SetDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionType The type of segment dimension to use.
+       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
+       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
+       */
+      public fun dimensionType(dimensionType: String)
+
+      /**
+       * @param values The criteria values to use for the segment dimension.
+       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+       * from the segment if their values match the criteria values.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The criteria values to use for the segment dimension.
+       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+       * from the segment if their values match the criteria values.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty.builder()
+
+      /**
+       * @param dimensionType The type of segment dimension to use.
+       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
+       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
+       */
+      override fun dimensionType(dimensionType: String) {
+        cdkBuilder.dimensionType(dimensionType)
+      }
+
+      /**
+       * @param values The criteria values to use for the segment dimension.
+       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+       * from the segment if their values match the criteria values.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The criteria values to use for the segment dimension.
+       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+       * from the segment if their values match the criteria values.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty,
+    ) : CdkObject(cdkObject), SetDimensionProperty {
+      /**
+       * The type of segment dimension to use.
+       *
+       * Valid values are: `INCLUSIVE` , endpoints that match the criteria are included in the
+       * segment; and, `EXCLUSIVE` , endpoints that match the criteria are excluded from the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-dimensiontype)
+       */
+      override fun dimensionType(): String? = unwrap(this).getDimensionType()
+
+      /**
+       * The criteria values to use for the segment dimension.
+       *
+       * Depending on the value of the `DimensionType` property, endpoints are included or excluded
+       * from the segment if their values match the criteria values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html#cfn-pinpoint-campaign-setdimension-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SetDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty):
+          SetDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? SetDimensionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SetDimensionProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty
+    }
+  }
+
+  /**
+   * Specifies the message template to use for the message, for each type of channel.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * TemplateConfigurationProperty templateConfigurationProperty =
+   * TemplateConfigurationProperty.builder()
+   * .emailTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .pushTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .smsTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .voiceTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html)
+   */
+  public interface TemplateConfigurationProperty {
+    /**
+     * The email template to use for the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-emailtemplate)
+     */
+    public fun emailTemplate(): Any? = unwrap(this).getEmailTemplate()
+
+    /**
+     * The push notification template to use for the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-pushtemplate)
+     */
+    public fun pushTemplate(): Any? = unwrap(this).getPushTemplate()
+
+    /**
+     * The SMS template to use for the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-smstemplate)
+     */
+    public fun smsTemplate(): Any? = unwrap(this).getSmsTemplate()
+
+    /**
+     * The voice template to use for the message.
+     *
+     * This object isn't supported for campaigns.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-voicetemplate)
+     */
+    public fun voiceTemplate(): Any? = unwrap(this).getVoiceTemplate()
+
+    /**
+     * A builder for [TemplateConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      public fun emailTemplate(emailTemplate: IResolvable)
+
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      public fun emailTemplate(emailTemplate: TemplateProperty)
+
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("842fa1af0f31eea2a4e19f627af3f2e53f87fec05ec016f69cbf49d68e8aa2ea")
+      public fun emailTemplate(emailTemplate: TemplateProperty.Builder.() -> Unit)
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      public fun pushTemplate(pushTemplate: IResolvable)
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      public fun pushTemplate(pushTemplate: TemplateProperty)
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("656da5de3c8e03c8eb5892b28fab018dd4d74ff09d50a56f5edcff565992c0ae")
+      public fun pushTemplate(pushTemplate: TemplateProperty.Builder.() -> Unit)
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      public fun smsTemplate(smsTemplate: IResolvable)
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      public fun smsTemplate(smsTemplate: TemplateProperty)
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("df53a266a2d1d0eb0501aec4f0b01cbea6c65d43dab0f9d25440837e1a028453")
+      public fun smsTemplate(smsTemplate: TemplateProperty.Builder.() -> Unit)
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      public fun voiceTemplate(voiceTemplate: IResolvable)
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      public fun voiceTemplate(voiceTemplate: TemplateProperty)
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("773aebfddece0f54dab162d31414f65d973191a5c268ca0e84d9fcd984c7f133")
+      public fun voiceTemplate(voiceTemplate: TemplateProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty.builder()
+
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      override fun emailTemplate(emailTemplate: IResolvable) {
+        cdkBuilder.emailTemplate(emailTemplate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      override fun emailTemplate(emailTemplate: TemplateProperty) {
+        cdkBuilder.emailTemplate(emailTemplate.let(TemplateProperty::unwrap))
+      }
+
+      /**
+       * @param emailTemplate The email template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("842fa1af0f31eea2a4e19f627af3f2e53f87fec05ec016f69cbf49d68e8aa2ea")
+      override fun emailTemplate(emailTemplate: TemplateProperty.Builder.() -> Unit): Unit =
+          emailTemplate(TemplateProperty(emailTemplate))
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      override fun pushTemplate(pushTemplate: IResolvable) {
+        cdkBuilder.pushTemplate(pushTemplate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      override fun pushTemplate(pushTemplate: TemplateProperty) {
+        cdkBuilder.pushTemplate(pushTemplate.let(TemplateProperty::unwrap))
+      }
+
+      /**
+       * @param pushTemplate The push notification template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("656da5de3c8e03c8eb5892b28fab018dd4d74ff09d50a56f5edcff565992c0ae")
+      override fun pushTemplate(pushTemplate: TemplateProperty.Builder.() -> Unit): Unit =
+          pushTemplate(TemplateProperty(pushTemplate))
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      override fun smsTemplate(smsTemplate: IResolvable) {
+        cdkBuilder.smsTemplate(smsTemplate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      override fun smsTemplate(smsTemplate: TemplateProperty) {
+        cdkBuilder.smsTemplate(smsTemplate.let(TemplateProperty::unwrap))
+      }
+
+      /**
+       * @param smsTemplate The SMS template to use for the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("df53a266a2d1d0eb0501aec4f0b01cbea6c65d43dab0f9d25440837e1a028453")
+      override fun smsTemplate(smsTemplate: TemplateProperty.Builder.() -> Unit): Unit =
+          smsTemplate(TemplateProperty(smsTemplate))
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      override fun voiceTemplate(voiceTemplate: IResolvable) {
+        cdkBuilder.voiceTemplate(voiceTemplate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      override fun voiceTemplate(voiceTemplate: TemplateProperty) {
+        cdkBuilder.voiceTemplate(voiceTemplate.let(TemplateProperty::unwrap))
+      }
+
+      /**
+       * @param voiceTemplate The voice template to use for the message.
+       * This object isn't supported for campaigns.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("773aebfddece0f54dab162d31414f65d973191a5c268ca0e84d9fcd984c7f133")
+      override fun voiceTemplate(voiceTemplate: TemplateProperty.Builder.() -> Unit): Unit =
+          voiceTemplate(TemplateProperty(voiceTemplate))
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty,
+    ) : CdkObject(cdkObject), TemplateConfigurationProperty {
+      /**
+       * The email template to use for the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-emailtemplate)
+       */
+      override fun emailTemplate(): Any? = unwrap(this).getEmailTemplate()
+
+      /**
+       * The push notification template to use for the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-pushtemplate)
+       */
+      override fun pushTemplate(): Any? = unwrap(this).getPushTemplate()
+
+      /**
+       * The SMS template to use for the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-smstemplate)
+       */
+      override fun smsTemplate(): Any? = unwrap(this).getSmsTemplate()
+
+      /**
+       * The voice template to use for the message.
+       *
+       * This object isn't supported for campaigns.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html#cfn-pinpoint-campaign-templateconfiguration-voicetemplate)
+       */
+      override fun voiceTemplate(): Any? = unwrap(this).getVoiceTemplate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty):
+          TemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TemplateConfigurationProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the name and version of the message template to use for the message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * TemplateProperty templateProperty = TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html)
+   */
+  public interface TemplateProperty {
+    /**
+     * The name of the message template to use for the message.
+     *
+     * If specified, this value must match the name of an existing message template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The unique identifier for the version of the message template to use for the message.
+     *
+     * If specified, this value must match the identifier for an existing template version. To
+     * retrieve a list of versions and version identifiers for a template, use the [Template
+     * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
+     * resource.
+     *
+     * If you don't specify a value for this property, Amazon Pinpoint uses the *active version* of
+     * the template. The *active version* is typically the version of a template that's been most
+     * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
+     * latest version of a template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [TemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the message template to use for the message.
+       * If specified, this value must match the name of an existing message template.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param version The unique identifier for the version of the message template to use for the
+       * message.
+       * If specified, this value must match the identifier for an existing template version. To
+       * retrieve a list of versions and version identifiers for a template, use the [Template
+       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
+       * resource.
+       *
+       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
+       * of the template. The *active version* is typically the version of a template that's been most
+       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
+       * latest version of a template.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty.builder()
+
+      /**
+       * @param name The name of the message template to use for the message.
+       * If specified, this value must match the name of an existing message template.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param version The unique identifier for the version of the message template to use for the
+       * message.
+       * If specified, this value must match the identifier for an existing template version. To
+       * retrieve a list of versions and version identifiers for a template, use the [Template
+       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
+       * resource.
+       *
+       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
+       * of the template. The *active version* is typically the version of a template that's been most
+       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
+       * latest version of a template.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty,
+    ) : CdkObject(cdkObject), TemplateProperty {
+      /**
+       * The name of the message template to use for the message.
+       *
+       * If specified, this value must match the name of an existing message template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The unique identifier for the version of the message template to use for the message.
+       *
+       * If specified, this value must match the identifier for an existing template version. To
+       * retrieve a list of versions and version identifiers for a template, use the [Template
+       * Versions](https://docs.aws.amazon.com/pinpoint/latest/apireference/templates-template-name-template-type-versions.html)
+       * resource.
+       *
+       * If you don't specify a value for this property, Amazon Pinpoint uses the *active version*
+       * of the template. The *active version* is typically the version of a template that's been most
+       * recently reviewed and approved for use, depending on your workflow. It isn't necessarily the
+       * latest version of a template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html#cfn-pinpoint-campaign-template-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty):
+          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? TemplateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TemplateProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty
+    }
+  }
+
+  /**
+   * Specifies the settings for a campaign treatment.
+   *
+   * A *treatment* is a variation of a campaign that's used for A/B testing of a campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object customConfig;
+   * Object metrics;
+   * WriteTreatmentResourceProperty writeTreatmentResourceProperty =
+   * WriteTreatmentResourceProperty.builder()
+   * .customDeliveryConfiguration(CustomDeliveryConfigurationProperty.builder()
+   * .deliveryUri("deliveryUri")
+   * .endpointTypes(List.of("endpointTypes"))
+   * .build())
+   * .messageConfiguration(MessageConfigurationProperty.builder()
+   * .admMessage(MessageProperty.builder()
+   * .action("action")
+   * .body("body")
+   * .imageIconUrl("imageIconUrl")
+   * .imageSmallIconUrl("imageSmallIconUrl")
+   * .imageUrl("imageUrl")
+   * .jsonBody("jsonBody")
+   * .mediaUrl("mediaUrl")
+   * .rawContent("rawContent")
+   * .silentPush(false)
+   * .timeToLive(123)
+   * .title("title")
+   * .url("url")
+   * .build())
+   * .apnsMessage(MessageProperty.builder()
+   * .action("action")
+   * .body("body")
+   * .imageIconUrl("imageIconUrl")
+   * .imageSmallIconUrl("imageSmallIconUrl")
+   * .imageUrl("imageUrl")
+   * .jsonBody("jsonBody")
+   * .mediaUrl("mediaUrl")
+   * .rawContent("rawContent")
+   * .silentPush(false)
+   * .timeToLive(123)
+   * .title("title")
+   * .url("url")
+   * .build())
+   * .baiduMessage(MessageProperty.builder()
+   * .action("action")
+   * .body("body")
+   * .imageIconUrl("imageIconUrl")
+   * .imageSmallIconUrl("imageSmallIconUrl")
+   * .imageUrl("imageUrl")
+   * .jsonBody("jsonBody")
+   * .mediaUrl("mediaUrl")
+   * .rawContent("rawContent")
+   * .silentPush(false)
+   * .timeToLive(123)
+   * .title("title")
+   * .url("url")
+   * .build())
+   * .customMessage(CampaignCustomMessageProperty.builder()
+   * .data("data")
+   * .build())
+   * .defaultMessage(MessageProperty.builder()
+   * .action("action")
+   * .body("body")
+   * .imageIconUrl("imageIconUrl")
+   * .imageSmallIconUrl("imageSmallIconUrl")
+   * .imageUrl("imageUrl")
+   * .jsonBody("jsonBody")
+   * .mediaUrl("mediaUrl")
+   * .rawContent("rawContent")
+   * .silentPush(false)
+   * .timeToLive(123)
+   * .title("title")
+   * .url("url")
+   * .build())
+   * .emailMessage(CampaignEmailMessageProperty.builder()
+   * .body("body")
+   * .fromAddress("fromAddress")
+   * .htmlBody("htmlBody")
+   * .title("title")
+   * .build())
+   * .gcmMessage(MessageProperty.builder()
+   * .action("action")
+   * .body("body")
+   * .imageIconUrl("imageIconUrl")
+   * .imageSmallIconUrl("imageSmallIconUrl")
+   * .imageUrl("imageUrl")
+   * .jsonBody("jsonBody")
+   * .mediaUrl("mediaUrl")
+   * .rawContent("rawContent")
+   * .silentPush(false)
+   * .timeToLive(123)
+   * .title("title")
+   * .url("url")
+   * .build())
+   * .inAppMessage(CampaignInAppMessageProperty.builder()
+   * .content(List.of(InAppMessageContentProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .bodyConfig(InAppMessageBodyConfigProperty.builder()
+   * .alignment("alignment")
+   * .body("body")
+   * .textColor("textColor")
+   * .build())
+   * .headerConfig(InAppMessageHeaderConfigProperty.builder()
+   * .alignment("alignment")
+   * .header("header")
+   * .textColor("textColor")
+   * .build())
+   * .imageUrl("imageUrl")
+   * .primaryBtn(InAppMessageButtonProperty.builder()
    * .android(OverrideButtonConfigurationProperty.builder()
    * .buttonAction("buttonAction")
    * .link("link")
@@ -7769,290 +7585,453 @@ public open class CfnCampaign internal constructor(
    * .buttonAction("buttonAction")
    * .link("link")
    * .build())
+   * .build())
+   * .secondaryBtn(InAppMessageButtonProperty.builder()
+   * .android(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .borderRadius(123)
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .text("text")
+   * .textColor("textColor")
+   * .build())
+   * .ios(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .web(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .build())
+   * .build()))
+   * .customConfig(customConfig)
+   * .layout("layout")
+   * .build())
+   * .smsMessage(CampaignSmsMessageProperty.builder()
+   * .body("body")
+   * .entityId("entityId")
+   * .messageType("messageType")
+   * .originationNumber("originationNumber")
+   * .senderId("senderId")
+   * .templateId("templateId")
+   * .build())
+   * .build())
+   * .schedule(ScheduleProperty.builder()
+   * .endTime("endTime")
+   * .eventFilter(CampaignEventFilterProperty.builder()
+   * .dimensions(EventDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .eventType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .metrics(metrics)
+   * .build())
+   * .filterType("filterType")
+   * .build())
+   * .frequency("frequency")
+   * .isLocalTime(false)
+   * .quietTime(QuietTimeProperty.builder()
+   * .end("end")
+   * .start("start")
+   * .build())
+   * .startTime("startTime")
+   * .timeZone("timeZone")
+   * .build())
+   * .sizePercent(123)
+   * .templateConfiguration(TemplateConfigurationProperty.builder()
+   * .emailTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .pushTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .smsTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .voiceTemplate(TemplateProperty.builder()
+   * .name("name")
+   * .version("version")
+   * .build())
+   * .build())
+   * .treatmentDescription("treatmentDescription")
+   * .treatmentName("treatmentName")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html)
    */
-  public interface InAppMessageButtonProperty {
+  public interface WriteTreatmentResourceProperty {
     /**
-     * An object that defines the default behavior for a button in in-app messages sent to Android.
+     * The delivery configuration settings for sending the treatment through a custom channel.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-android)
+     * This object is required if the `MessageConfiguration` object for the treatment specifies a
+     * `CustomMessage` object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-customdeliveryconfiguration)
      */
-    public fun android(): Any? = unwrap(this).getAndroid()
+    public fun customDeliveryConfiguration(): Any? = unwrap(this).getCustomDeliveryConfiguration()
 
     /**
-     * An object that defines the default behavior for a button in an in-app message.
+     * The message configuration settings for the treatment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-defaultconfig)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)
      */
-    public fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+    public fun messageConfiguration(): Any? = unwrap(this).getMessageConfiguration()
 
     /**
-     * An object that defines the default behavior for a button in in-app messages sent to iOS
-     * devices.
+     * The schedule settings for the treatment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-ios)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-schedule)
      */
-    public fun ios(): Any? = unwrap(this).getIos()
+    public fun schedule(): Any? = unwrap(this).getSchedule()
 
     /**
-     * An object that defines the default behavior for a button in in-app messages for web
-     * applications.
+     * The allocated percentage of users (segment members) to send the treatment to.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-web)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)
      */
-    public fun web(): Any? = unwrap(this).getWeb()
+    public fun sizePercent(): Number? = unwrap(this).getSizePercent()
 
     /**
-     * A builder for [InAppMessageButtonProperty]
+     * The message template to use for the treatment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-templateconfiguration)
+     */
+    public fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+
+    /**
+     * A custom description of the treatment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)
+     */
+    public fun treatmentDescription(): String? = unwrap(this).getTreatmentDescription()
+
+    /**
+     * A custom name for the treatment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)
+     */
+    public fun treatmentName(): String? = unwrap(this).getTreatmentName()
+
+    /**
+     * A builder for [WriteTreatmentResourceProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
-      public fun android(android: IResolvable)
+      public fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable)
 
       /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
-      public fun android(android: OverrideButtonConfigurationProperty)
+      public
+          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty)
 
       /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("058ce32e75dc1667aceae9a99fdd7bfab75b4c75e058a4837f4b87ffcd1dc8ea")
-      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+      @JvmName("44ba8164fd0c47cc6686cea43cfdeec281f6cb2b341733d79c9173d2de53f94f")
+      public
+          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
-      public fun defaultConfig(defaultConfig: IResolvable)
+      public fun messageConfiguration(messageConfiguration: IResolvable)
 
       /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
-      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty)
+      public fun messageConfiguration(messageConfiguration: MessageConfigurationProperty)
 
       /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d830591080dc59c997606cbe8ea557e1bd23cb2175235dcd2f55dc172e6b13e9")
-      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit)
+      @JvmName("4d1b1cde2528cc290d0880568ecd116a092a6e4b0621cbf1e6e21071423adcce")
+      public
+          fun messageConfiguration(messageConfiguration: MessageConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
+       * @param schedule The schedule settings for the treatment.
        */
-      public fun ios(ios: IResolvable)
+      public fun schedule(schedule: IResolvable)
 
       /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
+       * @param schedule The schedule settings for the treatment.
        */
-      public fun ios(ios: OverrideButtonConfigurationProperty)
+      public fun schedule(schedule: ScheduleProperty)
 
       /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
+       * @param schedule The schedule settings for the treatment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cc04855492fdca7573fff426b65031ca8422486ee46f5c785fd481e7b8cd6057")
-      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+      @JvmName("177b9b9a3d674ff696e32c1995acca5da423036cbb0d0a05e43ed835928a21c7")
+      public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param sizePercent The allocated percentage of users (segment members) to send the
+       * treatment to.
        */
-      public fun web(web: IResolvable)
+      public fun sizePercent(sizePercent: Number)
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param templateConfiguration The message template to use for the treatment.
        */
-      public fun web(web: OverrideButtonConfigurationProperty)
+      public fun templateConfiguration(templateConfiguration: IResolvable)
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param templateConfiguration The message template to use for the treatment.
+       */
+      public fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty)
+
+      /**
+       * @param templateConfiguration The message template to use for the treatment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4153d67a4dac1b6feee87a75636eab3e4b5e003927c798376742aa365262a5e7")
-      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+      @JvmName("247644848b7c974023ecedc4fa133c31bc6fabb30dbd8a7c579e4513592ce44f")
+      public
+          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param treatmentDescription A custom description of the treatment.
+       */
+      public fun treatmentDescription(treatmentDescription: String)
+
+      /**
+       * @param treatmentName A custom name for the treatment.
+       */
+      public fun treatmentName(treatmentName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty.builder()
 
       /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
-      override fun android(android: IResolvable) {
-        cdkBuilder.android(android.let(IResolvable::unwrap))
+      override fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
+        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
-      override fun android(android: OverrideButtonConfigurationProperty) {
-        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param android An object that defines the default behavior for a button in in-app messages
-       * sent to Android.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("058ce32e75dc1667aceae9a99fdd7bfab75b4c75e058a4837f4b87ffcd1dc8ea")
-      override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          android(OverrideButtonConfigurationProperty(android))
-
-      /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
-       */
-      override fun defaultConfig(defaultConfig: IResolvable) {
-        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
-       */
-      override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
-        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param defaultConfig An object that defines the default behavior for a button in an in-app
-       * message.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d830591080dc59c997606cbe8ea557e1bd23cb2175235dcd2f55dc172e6b13e9")
       override
-          fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit):
-          Unit = defaultConfig(DefaultButtonConfigurationProperty(defaultConfig))
-
-      /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
-       */
-      override fun ios(ios: IResolvable) {
-        cdkBuilder.ios(ios.let(IResolvable::unwrap))
+          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty) {
+        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty::unwrap))
       }
 
       /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
-       */
-      override fun ios(ios: OverrideButtonConfigurationProperty) {
-        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param ios An object that defines the default behavior for a button in in-app messages sent
-       * to iOS devices.
+       * @param customDeliveryConfiguration The delivery configuration settings for sending the
+       * treatment through a custom channel.
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("cc04855492fdca7573fff426b65031ca8422486ee46f5c785fd481e7b8cd6057")
-      override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          ios(OverrideButtonConfigurationProperty(ios))
+      @JvmName("44ba8164fd0c47cc6686cea43cfdeec281f6cb2b341733d79c9173d2de53f94f")
+      override
+          fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          customDeliveryConfiguration(CustomDeliveryConfigurationProperty(customDeliveryConfiguration))
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
-      override fun web(web: IResolvable) {
-        cdkBuilder.web(web.let(IResolvable::unwrap))
+      override fun messageConfiguration(messageConfiguration: IResolvable) {
+        cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
-      override fun web(web: OverrideButtonConfigurationProperty) {
-        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
+      override fun messageConfiguration(messageConfiguration: MessageConfigurationProperty) {
+        cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty::unwrap))
       }
 
       /**
-       * @param web An object that defines the default behavior for a button in in-app messages for
-       * web applications.
+       * @param messageConfiguration The message configuration settings for the treatment.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4153d67a4dac1b6feee87a75636eab3e4b5e003927c798376742aa365262a5e7")
-      override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          web(OverrideButtonConfigurationProperty(web))
+      @JvmName("4d1b1cde2528cc290d0880568ecd116a092a6e4b0621cbf1e6e21071423adcce")
+      override
+          fun messageConfiguration(messageConfiguration: MessageConfigurationProperty.Builder.() -> Unit):
+          Unit = messageConfiguration(MessageConfigurationProperty(messageConfiguration))
+
+      /**
+       * @param schedule The schedule settings for the treatment.
+       */
+      override fun schedule(schedule: IResolvable) {
+        cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param schedule The schedule settings for the treatment.
+       */
+      override fun schedule(schedule: ScheduleProperty) {
+        cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+      }
+
+      /**
+       * @param schedule The schedule settings for the treatment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("177b9b9a3d674ff696e32c1995acca5da423036cbb0d0a05e43ed835928a21c7")
+      override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
+          schedule(ScheduleProperty(schedule))
+
+      /**
+       * @param sizePercent The allocated percentage of users (segment members) to send the
+       * treatment to.
+       */
+      override fun sizePercent(sizePercent: Number) {
+        cdkBuilder.sizePercent(sizePercent)
+      }
+
+      /**
+       * @param templateConfiguration The message template to use for the treatment.
+       */
+      override fun templateConfiguration(templateConfiguration: IResolvable) {
+        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param templateConfiguration The message template to use for the treatment.
+       */
+      override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
+        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param templateConfiguration The message template to use for the treatment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("247644848b7c974023ecedc4fa133c31bc6fabb30dbd8a7c579e4513592ce44f")
+      override
+          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit):
+          Unit = templateConfiguration(TemplateConfigurationProperty(templateConfiguration))
+
+      /**
+       * @param treatmentDescription A custom description of the treatment.
+       */
+      override fun treatmentDescription(treatmentDescription: String) {
+        cdkBuilder.treatmentDescription(treatmentDescription)
+      }
+
+      /**
+       * @param treatmentName A custom name for the treatment.
+       */
+      override fun treatmentName(treatmentName: String) {
+        cdkBuilder.treatmentName(treatmentName)
+      }
 
       public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty =
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty,
-    ) : CdkObject(cdkObject), InAppMessageButtonProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty,
+    ) : CdkObject(cdkObject), WriteTreatmentResourceProperty {
       /**
-       * An object that defines the default behavior for a button in in-app messages sent to
-       * Android.
+       * The delivery configuration settings for sending the treatment through a custom channel.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-android)
+       * This object is required if the `MessageConfiguration` object for the treatment specifies a
+       * `CustomMessage` object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-customdeliveryconfiguration)
        */
-      override fun android(): Any? = unwrap(this).getAndroid()
+      override fun customDeliveryConfiguration(): Any? =
+          unwrap(this).getCustomDeliveryConfiguration()
 
       /**
-       * An object that defines the default behavior for a button in an in-app message.
+       * The message configuration settings for the treatment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-defaultconfig)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)
        */
-      override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+      override fun messageConfiguration(): Any? = unwrap(this).getMessageConfiguration()
 
       /**
-       * An object that defines the default behavior for a button in in-app messages sent to iOS
-       * devices.
+       * The schedule settings for the treatment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-ios)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-schedule)
        */
-      override fun ios(): Any? = unwrap(this).getIos()
+      override fun schedule(): Any? = unwrap(this).getSchedule()
 
       /**
-       * An object that defines the default behavior for a button in in-app messages for web
-       * applications.
+       * The allocated percentage of users (segment members) to send the treatment to.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html#cfn-pinpoint-campaign-inappmessagebutton-web)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)
        */
-      override fun web(): Any? = unwrap(this).getWeb()
+      override fun sizePercent(): Number? = unwrap(this).getSizePercent()
+
+      /**
+       * The message template to use for the treatment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-templateconfiguration)
+       */
+      override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+
+      /**
+       * A custom description of the treatment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)
+       */
+      override fun treatmentDescription(): String? = unwrap(this).getTreatmentDescription()
+
+      /**
+       * A custom name for the treatment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-writetreatmentresource.html#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)
+       */
+      override fun treatmentName(): String? = unwrap(this).getTreatmentName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InAppMessageButtonProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WriteTreatmentResourceProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty):
-          InAppMessageButtonProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InAppMessageButtonProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty):
+          WriteTreatmentResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WriteTreatmentResourceProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InAppMessageButtonProperty):
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty
+      internal fun unwrap(wrapped: WriteTreatmentResourceProperty):
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty
     }
   }
 }

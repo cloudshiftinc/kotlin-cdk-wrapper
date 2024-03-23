@@ -63,8 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * table.grantWriteData(sm);
  * ```
  */
-public open class CustomState internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CustomState,
+public open class CustomState(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.CustomState,
 ) : State(cdkObject), IChainable, INextable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -223,6 +223,7 @@ public open class CustomState internal constructor(
         CustomState = CustomState(cdkObject)
 
     internal fun unwrap(wrapped: CustomState):
-        software.amazon.awscdk.services.stepfunctions.CustomState = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.CustomState = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.CustomState
   }
 }

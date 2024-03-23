@@ -188,7 +188,7 @@ public interface CfnKeyPairProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnKeyPairProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnKeyPairProps,
   ) : CdkObject(cdkObject), CfnKeyPairProps {
     /**
      * The format of the key pair.

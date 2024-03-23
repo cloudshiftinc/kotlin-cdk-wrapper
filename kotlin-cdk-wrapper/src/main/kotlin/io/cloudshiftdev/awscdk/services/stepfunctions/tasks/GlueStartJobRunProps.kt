@@ -358,8 +358,7 @@ public interface GlueStartJobRunProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRunProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRunProps,
   ) : CdkObject(cdkObject), GlueStartJobRunProps {
     /**
      * The job arguments specifically for this run.

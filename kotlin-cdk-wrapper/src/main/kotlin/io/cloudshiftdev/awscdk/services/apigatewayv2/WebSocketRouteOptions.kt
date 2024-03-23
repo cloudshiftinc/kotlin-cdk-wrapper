@@ -104,7 +104,7 @@ public interface WebSocketRouteOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions,
   ) : CdkObject(cdkObject), WebSocketRouteOptions {
     /**
      * The authorize to this route.

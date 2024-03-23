@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)
  */
-public open class CfnDomain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomain,
+public open class CfnDomain(
+  cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -283,6 +283,6 @@ public open class CfnDomain internal constructor(
         = CfnDomain(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomain): software.amazon.awscdk.services.codeartifact.CfnDomain
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.codeartifact.CfnDomain
   }
 }

@@ -62,7 +62,7 @@ public interface Ec2HealthCheckOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions,
   ) : CdkObject(cdkObject), Ec2HealthCheckOptions {
     /**
      * Specified the time Auto Scaling waits before checking the health status of an EC2 instance

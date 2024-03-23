@@ -257,7 +257,7 @@ public interface WebSocketIntegrationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps,
   ) : CdkObject(cdkObject), WebSocketIntegrationProps {
     /**
      * Specifies the IAM role required for the integration.

@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)
  */
-public open class CfnPrompt internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnPrompt,
+public open class CfnPrompt(
+  cdkObject: software.amazon.awscdk.services.connect.CfnPrompt,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -294,6 +294,6 @@ public open class CfnPrompt internal constructor(
         CfnPrompt(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrompt): software.amazon.awscdk.services.connect.CfnPrompt =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.connect.CfnPrompt
   }
 }

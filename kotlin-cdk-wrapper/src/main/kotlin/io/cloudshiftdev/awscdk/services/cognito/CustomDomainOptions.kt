@@ -86,7 +86,7 @@ public interface CustomDomainOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.CustomDomainOptions,
+    cdkObject: software.amazon.awscdk.services.cognito.CustomDomainOptions,
   ) : CdkObject(cdkObject), CustomDomainOptions {
     /**
      * The certificate to associate with this domain.

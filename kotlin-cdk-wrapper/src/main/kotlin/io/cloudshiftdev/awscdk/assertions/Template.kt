@@ -27,8 +27,8 @@ import kotlin.jvm.JvmName
  * Template template = Template.fromStack(stack);
  * ```
  */
-public open class Template internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.assertions.Template,
+public open class Template(
+  cdkObject: software.amazon.awscdk.assertions.Template,
 ) : CdkObject(cdkObject) {
   /**
    * Assert that all resources of the given type contain the given definition in the CloudFormation
@@ -320,6 +320,6 @@ public open class Template internal constructor(
         Template(cdkObject)
 
     internal fun unwrap(wrapped: Template): software.amazon.awscdk.assertions.Template =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.assertions.Template
   }
 }

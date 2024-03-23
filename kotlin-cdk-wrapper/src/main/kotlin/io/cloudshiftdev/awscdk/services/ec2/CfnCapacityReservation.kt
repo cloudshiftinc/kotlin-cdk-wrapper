@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html)
  */
-public open class CfnCapacityReservation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation,
+public open class CfnCapacityReservation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -780,7 +780,8 @@ public open class CfnCapacityReservation internal constructor(
         CfnCapacityReservation = CfnCapacityReservation(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservation):
-        software.amazon.awscdk.services.ec2.CfnCapacityReservation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnCapacityReservation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnCapacityReservation
   }
 
   /**
@@ -878,8 +879,7 @@ public open class CfnCapacityReservation internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty,
     ) : CdkObject(cdkObject), TagSpecificationProperty {
       /**
        * The type of resource to tag.

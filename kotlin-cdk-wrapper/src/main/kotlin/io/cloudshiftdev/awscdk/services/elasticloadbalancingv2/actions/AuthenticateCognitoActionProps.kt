@@ -312,8 +312,7 @@ public interface AuthenticateCognitoActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps,
   ) : CdkObject(cdkObject), AuthenticateCognitoActionProps {
     /**
      * Allow HTTPS outbound traffic to communicate with the IdP.

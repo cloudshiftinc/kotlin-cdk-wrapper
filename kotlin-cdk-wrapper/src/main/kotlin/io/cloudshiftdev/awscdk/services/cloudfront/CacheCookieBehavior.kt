@@ -35,8 +35,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class CacheCookieBehavior internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CacheCookieBehavior,
+public open class CacheCookieBehavior(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CacheCookieBehavior,
 ) : CdkObject(cdkObject) {
   /**
    * The behavior of cookies: allow all, none, an allow list, or a deny list.
@@ -65,6 +65,7 @@ public open class CacheCookieBehavior internal constructor(
         CacheCookieBehavior = CacheCookieBehavior(cdkObject)
 
     internal fun unwrap(wrapped: CacheCookieBehavior):
-        software.amazon.awscdk.services.cloudfront.CacheCookieBehavior = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CacheCookieBehavior = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CacheCookieBehavior
   }
 }

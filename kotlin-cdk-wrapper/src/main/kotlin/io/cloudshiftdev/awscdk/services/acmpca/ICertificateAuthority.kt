@@ -21,7 +21,7 @@ public interface ICertificateAuthority : IResource {
   public fun certificateAuthorityArn(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.acmpca.ICertificateAuthority,
+    cdkObject: software.amazon.awscdk.services.acmpca.ICertificateAuthority,
   ) : CdkObject(cdkObject), ICertificateAuthority {
     /**
      * Apply the given removal policy to this resource.

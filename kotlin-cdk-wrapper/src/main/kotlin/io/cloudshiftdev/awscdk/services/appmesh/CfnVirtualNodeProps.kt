@@ -446,7 +446,7 @@ public interface CfnVirtualNodeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNodeProps,
+    cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNodeProps,
   ) : CdkObject(cdkObject), CfnVirtualNodeProps {
     /**
      * The name of the service mesh to create the virtual node in.

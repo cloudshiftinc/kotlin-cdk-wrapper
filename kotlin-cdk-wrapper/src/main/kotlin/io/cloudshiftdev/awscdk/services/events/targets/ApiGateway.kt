@@ -51,8 +51,8 @@ import software.amazon.awscdk.services.apigateway.RestApi as AmazonAwscdkService
  * .build());
  * ```
  */
-public open class ApiGateway internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
+public open class ApiGateway(
+  cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi) :
       this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApi::unwrap))
@@ -414,6 +414,7 @@ public open class ApiGateway internal constructor(
         ApiGateway = ApiGateway(cdkObject)
 
     internal fun unwrap(wrapped: ApiGateway):
-        software.amazon.awscdk.services.events.targets.ApiGateway = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.ApiGateway = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.ApiGateway
   }
 }

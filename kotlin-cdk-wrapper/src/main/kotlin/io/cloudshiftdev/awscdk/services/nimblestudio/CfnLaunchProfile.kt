@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)
  */
-public open class CfnLaunchProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile,
+public open class CfnLaunchProfile(
+  cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -547,176 +547,8 @@ public open class CfnLaunchProfile internal constructor(
         CfnLaunchProfile = CfnLaunchProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchProfile):
-        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile = wrapped.cdkObject
-  }
-
-  /**
-   * Custom volume configuration for the root volumes that are attached to streaming sessions.
-   *
-   * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * VolumeConfigurationProperty volumeConfigurationProperty = VolumeConfigurationProperty.builder()
-   * .iops(123)
-   * .size(123)
-   * .throughput(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html)
-   */
-  public interface VolumeConfigurationProperty {
-    /**
-     * The number of I/O operations per second for the root volume that is attached to streaming
-     * session.
-     *
-     * Default: - 3000
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
-     */
-    public fun iops(): Number? = unwrap(this).getIops()
-
-    /**
-     * The size of the root volume that is attached to the streaming session.
-     *
-     * The root volume size is measured in GiBs.
-     *
-     * Default: - 500
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
-     */
-    public fun size(): Number? = unwrap(this).getSize()
-
-    /**
-     * The throughput to provision for the root volume that is attached to the streaming session.
-     *
-     * The throughput is measured in MiB/s.
-     *
-     * Default: - 125
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
-     */
-    public fun throughput(): Number? = unwrap(this).getThroughput()
-
-    /**
-     * A builder for [VolumeConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param iops The number of I/O operations per second for the root volume that is attached to
-       * streaming session.
-       */
-      public fun iops(iops: Number)
-
-      /**
-       * @param size The size of the root volume that is attached to the streaming session.
-       * The root volume size is measured in GiBs.
-       */
-      public fun size(size: Number)
-
-      /**
-       * @param throughput The throughput to provision for the root volume that is attached to the
-       * streaming session.
-       * The throughput is measured in MiB/s.
-       */
-      public fun throughput(throughput: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty.builder()
-
-      /**
-       * @param iops The number of I/O operations per second for the root volume that is attached to
-       * streaming session.
-       */
-      override fun iops(iops: Number) {
-        cdkBuilder.iops(iops)
-      }
-
-      /**
-       * @param size The size of the root volume that is attached to the streaming session.
-       * The root volume size is measured in GiBs.
-       */
-      override fun size(size: Number) {
-        cdkBuilder.size(size)
-      }
-
-      /**
-       * @param throughput The throughput to provision for the root volume that is attached to the
-       * streaming session.
-       * The throughput is measured in MiB/s.
-       */
-      override fun throughput(throughput: Number) {
-        cdkBuilder.throughput(throughput)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), VolumeConfigurationProperty {
-      /**
-       * The number of I/O operations per second for the root volume that is attached to streaming
-       * session.
-       *
-       * Default: - 3000
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
-       */
-      override fun iops(): Number? = unwrap(this).getIops()
-
-      /**
-       * The size of the root volume that is attached to the streaming session.
-       *
-       * The root volume size is measured in GiBs.
-       *
-       * Default: - 500
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
-       */
-      override fun size(): Number? = unwrap(this).getSize()
-
-      /**
-       * The throughput to provision for the root volume that is attached to the streaming session.
-       *
-       * The throughput is measured in MiB/s.
-       *
-       * Default: - 125
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
-       */
-      override fun throughput(): Number? = unwrap(this).getThroughput()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty):
-          VolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          VolumeConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VolumeConfigurationProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
-    }
+        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
   }
 
   /**
@@ -1198,8 +1030,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty,
     ) : CdkObject(cdkObject), StreamConfigurationProperty {
       /**
        * Indicates if a streaming session created from this launch profile should be terminated
@@ -1334,7 +1165,7 @@ public open class CfnLaunchProfile internal constructor(
   }
 
   /**
-   * The upload storage root location (folder) on streaming workstations where files are uploaded.
+   * Configures how streaming sessions are backed up when launched from this launch profile.
    *
    * Example:
    *
@@ -1342,106 +1173,127 @@ public open class CfnLaunchProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * StreamingSessionStorageRootProperty streamingSessionStorageRootProperty =
-   * StreamingSessionStorageRootProperty.builder()
-   * .linux("linux")
-   * .windows("windows")
+   * StreamConfigurationSessionBackupProperty streamConfigurationSessionBackupProperty =
+   * StreamConfigurationSessionBackupProperty.builder()
+   * .maxBackupsToRetain(123)
+   * .mode("mode")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html)
    */
-  public interface StreamingSessionStorageRootProperty {
+  public interface StreamConfigurationSessionBackupProperty {
     /**
-     * The folder path in Linux workstations where files are uploaded.
+     * The maximum number of backups that each streaming session created from this launch profile
+     * can have.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-linux)
+     * Default: - 0
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
      */
-    public fun linux(): String? = unwrap(this).getLinux()
+    public fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
 
     /**
-     * The folder path in Windows workstations where files are uploaded.
+     * Specifies how artists sessions are backed up.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-windows)
+     * Configures backups for streaming sessions launched with this launch profile. The default
+     * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
+     * value to `AUTOMATIC` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-mode)
      */
-    public fun windows(): String? = unwrap(this).getWindows()
+    public fun mode(): String? = unwrap(this).getMode()
 
     /**
-     * A builder for [StreamingSessionStorageRootProperty]
+     * A builder for [StreamConfigurationSessionBackupProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param linux The folder path in Linux workstations where files are uploaded.
+       * @param maxBackupsToRetain The maximum number of backups that each streaming session created
+       * from this launch profile can have.
        */
-      public fun linux(linux: String)
+      public fun maxBackupsToRetain(maxBackupsToRetain: Number)
 
       /**
-       * @param windows The folder path in Windows workstations where files are uploaded.
+       * @param mode Specifies how artists sessions are backed up.
+       * Configures backups for streaming sessions launched with this launch profile. The default
+       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
+       * value to `AUTOMATIC` .
        */
-      public fun windows(windows: String)
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty.Builder
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty.Builder
           =
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty.builder()
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty.builder()
 
       /**
-       * @param linux The folder path in Linux workstations where files are uploaded.
+       * @param maxBackupsToRetain The maximum number of backups that each streaming session created
+       * from this launch profile can have.
        */
-      override fun linux(linux: String) {
-        cdkBuilder.linux(linux)
+      override fun maxBackupsToRetain(maxBackupsToRetain: Number) {
+        cdkBuilder.maxBackupsToRetain(maxBackupsToRetain)
       }
 
       /**
-       * @param windows The folder path in Windows workstations where files are uploaded.
+       * @param mode Specifies how artists sessions are backed up.
+       * Configures backups for streaming sessions launched with this launch profile. The default
+       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
+       * value to `AUTOMATIC` .
        */
-      override fun windows(windows: String) {
-        cdkBuilder.windows(windows)
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
       }
 
       public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty,
-    ) : CdkObject(cdkObject), StreamingSessionStorageRootProperty {
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty,
+    ) : CdkObject(cdkObject), StreamConfigurationSessionBackupProperty {
       /**
-       * The folder path in Linux workstations where files are uploaded.
+       * The maximum number of backups that each streaming session created from this launch profile
+       * can have.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-linux)
+       * Default: - 0
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
        */
-      override fun linux(): String? = unwrap(this).getLinux()
+      override fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
 
       /**
-       * The folder path in Windows workstations where files are uploaded.
+       * Specifies how artists sessions are backed up.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-windows)
+       * Configures backups for streaming sessions launched with this launch profile. The default
+       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
+       * value to `AUTOMATIC` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-mode)
        */
-      override fun windows(): String? = unwrap(this).getWindows()
+      override fun mode(): String? = unwrap(this).getMode()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          StreamingSessionStorageRootProperty {
+          StreamConfigurationSessionBackupProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty):
-          StreamingSessionStorageRootProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StreamingSessionStorageRootProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty):
+          StreamConfigurationSessionBackupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamConfigurationSessionBackupProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StreamingSessionStorageRootProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
+      internal fun unwrap(wrapped: StreamConfigurationSessionBackupProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
     }
   }
 
@@ -1567,8 +1419,7 @@ public open class CfnLaunchProfile internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
     ) : CdkObject(cdkObject), StreamConfigurationSessionStorageProperty {
       /**
        * Allows artists to upload files to their workstations.
@@ -1607,7 +1458,7 @@ public open class CfnLaunchProfile internal constructor(
   }
 
   /**
-   * Configures how streaming sessions are backed up when launched from this launch profile.
+   * The upload storage root location (folder) on streaming workstations where files are uploaded.
    *
    * Example:
    *
@@ -1615,128 +1466,273 @@ public open class CfnLaunchProfile internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
-   * StreamConfigurationSessionBackupProperty streamConfigurationSessionBackupProperty =
-   * StreamConfigurationSessionBackupProperty.builder()
-   * .maxBackupsToRetain(123)
-   * .mode("mode")
+   * StreamingSessionStorageRootProperty streamingSessionStorageRootProperty =
+   * StreamingSessionStorageRootProperty.builder()
+   * .linux("linux")
+   * .windows("windows")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html)
    */
-  public interface StreamConfigurationSessionBackupProperty {
+  public interface StreamingSessionStorageRootProperty {
     /**
-     * The maximum number of backups that each streaming session created from this launch profile
-     * can have.
+     * The folder path in Linux workstations where files are uploaded.
      *
-     * Default: - 0
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-linux)
      */
-    public fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
+    public fun linux(): String? = unwrap(this).getLinux()
 
     /**
-     * Specifies how artists sessions are backed up.
+     * The folder path in Windows workstations where files are uploaded.
      *
-     * Configures backups for streaming sessions launched with this launch profile. The default
-     * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
-     * value to `AUTOMATIC` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-mode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-windows)
      */
-    public fun mode(): String? = unwrap(this).getMode()
+    public fun windows(): String? = unwrap(this).getWindows()
 
     /**
-     * A builder for [StreamConfigurationSessionBackupProperty]
+     * A builder for [StreamingSessionStorageRootProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxBackupsToRetain The maximum number of backups that each streaming session created
-       * from this launch profile can have.
+       * @param linux The folder path in Linux workstations where files are uploaded.
        */
-      public fun maxBackupsToRetain(maxBackupsToRetain: Number)
+      public fun linux(linux: String)
 
       /**
-       * @param mode Specifies how artists sessions are backed up.
-       * Configures backups for streaming sessions launched with this launch profile. The default
-       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
-       * value to `AUTOMATIC` .
+       * @param windows The folder path in Windows workstations where files are uploaded.
        */
-      public fun mode(mode: String)
+      public fun windows(windows: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty.Builder
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty.Builder
           =
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty.builder()
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty.builder()
 
       /**
-       * @param maxBackupsToRetain The maximum number of backups that each streaming session created
-       * from this launch profile can have.
+       * @param linux The folder path in Linux workstations where files are uploaded.
        */
-      override fun maxBackupsToRetain(maxBackupsToRetain: Number) {
-        cdkBuilder.maxBackupsToRetain(maxBackupsToRetain)
+      override fun linux(linux: String) {
+        cdkBuilder.linux(linux)
       }
 
       /**
-       * @param mode Specifies how artists sessions are backed up.
-       * Configures backups for streaming sessions launched with this launch profile. The default
-       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
-       * value to `AUTOMATIC` .
+       * @param windows The folder path in Windows workstations where files are uploaded.
        */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
+      override fun windows(windows: String) {
+        cdkBuilder.windows(windows)
       }
 
       public fun build():
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty,
-    ) : CdkObject(cdkObject), StreamConfigurationSessionBackupProperty {
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty,
+    ) : CdkObject(cdkObject), StreamingSessionStorageRootProperty {
       /**
-       * The maximum number of backups that each streaming session created from this launch profile
-       * can have.
+       * The folder path in Linux workstations where files are uploaded.
        *
-       * Default: - 0
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-linux)
        */
-      override fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
+      override fun linux(): String? = unwrap(this).getLinux()
 
       /**
-       * Specifies how artists sessions are backed up.
+       * The folder path in Windows workstations where files are uploaded.
        *
-       * Configures backups for streaming sessions launched with this launch profile. The default
-       * value is `DEACTIVATED` , which means that backups are deactivated. To allow backups, set this
-       * value to `AUTOMATIC` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-mode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html#cfn-nimblestudio-launchprofile-streamingsessionstorageroot-windows)
        */
-      override fun mode(): String? = unwrap(this).getMode()
+      override fun windows(): String? = unwrap(this).getWindows()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          StreamConfigurationSessionBackupProperty {
+          StreamingSessionStorageRootProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty):
-          StreamConfigurationSessionBackupProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          StreamConfigurationSessionBackupProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty):
+          StreamingSessionStorageRootProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingSessionStorageRootProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: StreamConfigurationSessionBackupProperty):
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
+      internal fun unwrap(wrapped: StreamingSessionStorageRootProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
+    }
+  }
+
+  /**
+   * Custom volume configuration for the root volumes that are attached to streaming sessions.
+   *
+   * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.nimblestudio.*;
+   * VolumeConfigurationProperty volumeConfigurationProperty = VolumeConfigurationProperty.builder()
+   * .iops(123)
+   * .size(123)
+   * .throughput(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html)
+   */
+  public interface VolumeConfigurationProperty {
+    /**
+     * The number of I/O operations per second for the root volume that is attached to streaming
+     * session.
+     *
+     * Default: - 3000
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The size of the root volume that is attached to the streaming session.
+     *
+     * The root volume size is measured in GiBs.
+     *
+     * Default: - 500
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
+     */
+    public fun size(): Number? = unwrap(this).getSize()
+
+    /**
+     * The throughput to provision for the root volume that is attached to the streaming session.
+     *
+     * The throughput is measured in MiB/s.
+     *
+     * Default: - 125
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
+     */
+    public fun throughput(): Number? = unwrap(this).getThroughput()
+
+    /**
+     * A builder for [VolumeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iops The number of I/O operations per second for the root volume that is attached to
+       * streaming session.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param size The size of the root volume that is attached to the streaming session.
+       * The root volume size is measured in GiBs.
+       */
+      public fun size(size: Number)
+
+      /**
+       * @param throughput The throughput to provision for the root volume that is attached to the
+       * streaming session.
+       * The throughput is measured in MiB/s.
+       */
+      public fun throughput(throughput: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty.builder()
+
+      /**
+       * @param iops The number of I/O operations per second for the root volume that is attached to
+       * streaming session.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param size The size of the root volume that is attached to the streaming session.
+       * The root volume size is measured in GiBs.
+       */
+      override fun size(size: Number) {
+        cdkBuilder.size(size)
+      }
+
+      /**
+       * @param throughput The throughput to provision for the root volume that is attached to the
+       * streaming session.
+       * The throughput is measured in MiB/s.
+       */
+      override fun throughput(throughput: Number) {
+        cdkBuilder.throughput(throughput)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty,
+    ) : CdkObject(cdkObject), VolumeConfigurationProperty {
+      /**
+       * The number of I/O operations per second for the root volume that is attached to streaming
+       * session.
+       *
+       * Default: - 3000
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * The size of the root volume that is attached to the streaming session.
+       *
+       * The root volume size is measured in GiBs.
+       *
+       * Default: - 500
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
+       */
+      override fun size(): Number? = unwrap(this).getSize()
+
+      /**
+       * The throughput to provision for the root volume that is attached to the streaming session.
+       *
+       * The throughput is measured in MiB/s.
+       *
+       * Default: - 125
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
+       */
+      override fun throughput(): Number? = unwrap(this).getThroughput()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty):
+          VolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VolumeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VolumeConfigurationProperty):
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
     }
   }
 }

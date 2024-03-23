@@ -62,8 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html)
  */
-public open class CfnFlowOutput internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput,
+public open class CfnFlowOutput(
+  cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -732,7 +732,8 @@ public open class CfnFlowOutput internal constructor(
         CfnFlowOutput = CfnFlowOutput(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowOutput):
-        software.amazon.awscdk.services.mediaconnect.CfnFlowOutput = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconnect.CfnFlowOutput = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
   }
 
   /**
@@ -870,8 +871,7 @@ public open class CfnFlowOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty,
     ) : CdkObject(cdkObject), EncryptionProperty {
       /**
        * The type of algorithm that is used for static key encryption (such as aes128, aes192, or
@@ -984,8 +984,7 @@ public open class CfnFlowOutput internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty,
     ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.

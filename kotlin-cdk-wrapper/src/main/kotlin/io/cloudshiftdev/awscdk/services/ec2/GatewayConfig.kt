@@ -72,7 +72,7 @@ public interface GatewayConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.GatewayConfig,
+    cdkObject: software.amazon.awscdk.services.ec2.GatewayConfig,
   ) : CdkObject(cdkObject), GatewayConfig {
     /**
      * Availability Zone.

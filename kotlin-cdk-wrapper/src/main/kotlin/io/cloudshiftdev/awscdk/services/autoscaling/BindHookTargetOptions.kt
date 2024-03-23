@@ -90,7 +90,7 @@ public interface BindHookTargetOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions,
+    cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions,
   ) : CdkObject(cdkObject), BindHookTargetOptions {
     /**
      * The lifecycle hook to attach to.

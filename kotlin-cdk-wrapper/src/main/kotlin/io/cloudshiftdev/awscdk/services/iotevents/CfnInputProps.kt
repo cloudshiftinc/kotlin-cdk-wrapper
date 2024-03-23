@@ -185,7 +185,7 @@ public interface CfnInputProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotevents.CfnInputProps,
+    cdkObject: software.amazon.awscdk.services.iotevents.CfnInputProps,
   ) : CdkObject(cdkObject), CfnInputProps {
     /**
      * The definition of the input.

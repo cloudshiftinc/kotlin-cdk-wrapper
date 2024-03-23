@@ -30,9 +30,8 @@ import kotlin.jvm.JvmName
  * FunctionHook functionHook = new FunctionHook(function_, key);
  * ```
  */
-public open class FunctionHook internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
+public open class FunctionHook(
+  cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(fn: IFunction) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction::unwrap))
@@ -78,6 +77,7 @@ public open class FunctionHook internal constructor(
         FunctionHook = FunctionHook(cdkObject)
 
     internal fun unwrap(wrapped: FunctionHook):
-        software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook = wrapped.cdkObject
+        software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook = wrapped.cdkObject as
+        software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook
   }
 }

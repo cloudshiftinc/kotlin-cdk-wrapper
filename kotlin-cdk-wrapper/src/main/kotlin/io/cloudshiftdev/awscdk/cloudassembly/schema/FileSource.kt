@@ -116,7 +116,7 @@ public interface FileSource {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.FileSource,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.FileSource,
   ) : CdkObject(cdkObject), FileSource {
     /**
      * External command which will produce the file asset to upload.

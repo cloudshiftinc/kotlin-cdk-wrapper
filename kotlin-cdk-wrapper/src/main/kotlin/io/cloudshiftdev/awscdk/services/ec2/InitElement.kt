@@ -23,8 +23,8 @@ import kotlin.String
  * .build()));
  * ```
  */
-public abstract class InitElement internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitElement,
+public abstract class InitElement(
+  cdkObject: software.amazon.awscdk.services.ec2.InitElement,
 ) : CdkObject(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -32,7 +32,7 @@ public abstract class InitElement internal constructor(
   public open fun elementType(): String = unwrap(this).getElementType()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitElement,
+    cdkObject: software.amazon.awscdk.services.ec2.InitElement,
   ) : InitElement(cdkObject)
 
   public companion object {

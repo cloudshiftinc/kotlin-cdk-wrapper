@@ -30,9 +30,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  * fn.addEventSource(new SqsEventSource(queue));
  * ```
  */
-public open class SqsEventSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.lambda.eventsources.SqsEventSource,
+public open class SqsEventSource(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
@@ -281,6 +280,7 @@ public open class SqsEventSource internal constructor(
         SqsEventSource = SqsEventSource(cdkObject)
 
     internal fun unwrap(wrapped: SqsEventSource):
-        software.amazon.awscdk.services.lambda.eventsources.SqsEventSource = wrapped.cdkObject
+        software.amazon.awscdk.services.lambda.eventsources.SqsEventSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.lambda.eventsources.SqsEventSource
   }
 }

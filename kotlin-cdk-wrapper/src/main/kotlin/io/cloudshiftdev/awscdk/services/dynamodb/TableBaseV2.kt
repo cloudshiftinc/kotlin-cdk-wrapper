@@ -19,8 +19,8 @@ import kotlin.jvm.JvmName
 /**
  * Base class for a DynamoDB table.
  */
-public abstract class TableBaseV2 internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dynamodb.TableBaseV2,
+public abstract class TableBaseV2(
+  cdkObject: software.amazon.awscdk.services.dynamodb.TableBaseV2,
 ) : Resource(cdkObject), ITableV2 {
   /**
    * The KMS encryption key for the table.
@@ -569,7 +569,7 @@ public abstract class TableBaseV2 internal constructor(
   public override fun tableStreamArn(): String? = unwrap(this).getTableStreamArn()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableBaseV2,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TableBaseV2,
   ) : TableBaseV2(cdkObject)
 
   public companion object {

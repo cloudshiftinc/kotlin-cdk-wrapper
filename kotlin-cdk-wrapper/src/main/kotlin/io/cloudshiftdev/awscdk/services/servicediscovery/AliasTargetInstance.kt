@@ -33,9 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class AliasTargetInstance internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicediscovery.AliasTargetInstance,
+public open class AliasTargetInstance(
+  cdkObject: software.amazon.awscdk.services.servicediscovery.AliasTargetInstance,
 ) : InstanceBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -174,6 +173,7 @@ public open class AliasTargetInstance internal constructor(
         AliasTargetInstance = AliasTargetInstance(cdkObject)
 
     internal fun unwrap(wrapped: AliasTargetInstance):
-        software.amazon.awscdk.services.servicediscovery.AliasTargetInstance = wrapped.cdkObject
+        software.amazon.awscdk.services.servicediscovery.AliasTargetInstance = wrapped.cdkObject as
+        software.amazon.awscdk.services.servicediscovery.AliasTargetInstance
   }
 }

@@ -35,9 +35,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 as
  * .build();
  * ```
  */
-public open class LoadBalancerV2Origin internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin,
+public open class LoadBalancerV2Origin(
+  cdkObject: software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin,
 ) : HttpOrigin(cdkObject) {
   public constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2)
       :
@@ -443,5 +442,6 @@ public open class LoadBalancerV2Origin internal constructor(
 
     internal fun unwrap(wrapped: LoadBalancerV2Origin):
         software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin = wrapped.cdkObject
+        as software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin
   }
 }

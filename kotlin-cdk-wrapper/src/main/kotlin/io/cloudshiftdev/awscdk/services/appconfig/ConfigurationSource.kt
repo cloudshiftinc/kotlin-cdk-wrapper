@@ -29,8 +29,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class ConfigurationSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
+public abstract class ConfigurationSource(
+  cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
 ) : CdkObject(cdkObject) {
   /**
    * The KMS Key that encrypts the configuration.
@@ -49,7 +49,7 @@ public abstract class ConfigurationSource internal constructor(
       unwrap(this).getType().let(ConfigurationSourceType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
+    cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
   ) : ConfigurationSource(cdkObject)
 
   public companion object {

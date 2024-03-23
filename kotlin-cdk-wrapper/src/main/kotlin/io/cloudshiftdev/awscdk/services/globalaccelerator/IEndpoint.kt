@@ -26,7 +26,7 @@ public interface IEndpoint {
   public fun renderEndpointConfiguration(): Any
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
+    cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
   ) : CdkObject(cdkObject), IEndpoint {
     /**
      * The region where the endpoint is located.

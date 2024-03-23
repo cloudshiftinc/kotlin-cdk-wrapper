@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)
  */
-public open class CfnRecordingConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
+public open class CfnRecordingConfiguration(
+  cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -627,7 +627,406 @@ public open class CfnRecordingConfiguration internal constructor(
         CfnRecordingConfiguration = CfnRecordingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordingConfiguration):
-        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
+  }
+
+  /**
+   * The DestinationConfiguration property type describes the location where recorded videos will be
+   * stored.
+   *
+   * Each member represents a type of destination configuration. For recording, you define one and
+   * only one type of destination configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ivs.*;
+   * DestinationConfigurationProperty destinationConfigurationProperty =
+   * DestinationConfigurationProperty.builder()
+   * .s3(S3DestinationConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html)
+   */
+  public interface DestinationConfigurationProperty {
+    /**
+     * An S3 destination configuration where recorded videos will be stored.
+     *
+     * See the
+     * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+     * property type for more information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration-s3)
+     */
+    public fun s3(): Any? = unwrap(this).getS3()
+
+    /**
+     * A builder for [DestinationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      public fun s3(s3: IResolvable)
+
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      public fun s3(s3: S3DestinationConfigurationProperty)
+
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
+      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty.builder()
+
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      override fun s3(s3: S3DestinationConfigurationProperty) {
+        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param s3 An S3 destination configuration where recorded videos will be stored.
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
+      override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
+          s3(S3DestinationConfigurationProperty(s3))
+
+      public fun build():
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
+    ) : CdkObject(cdkObject), DestinationConfigurationProperty {
+      /**
+       * An S3 destination configuration where recorded videos will be stored.
+       *
+       * See the
+       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+       * property type for more information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration-s3)
+       */
+      override fun s3(): Any? = unwrap(this).getS3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty):
+          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationConfigurationProperty):
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
+    }
+  }
+
+  /**
+   * The RenditionConfiguration property type describes which renditions should be recorded for a
+   * stream.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ivs.*;
+   * RenditionConfigurationProperty renditionConfigurationProperty =
+   * RenditionConfigurationProperty.builder()
+   * .renditions(List.of("renditions"))
+   * .renditionSelection("renditionSelection")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html)
+   */
+  public interface RenditionConfigurationProperty {
+    /**
+     * The set of renditions are recorded for a stream.
+     *
+     * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
+     * renditions can be specified in the `renditions` field. Default: `ALL` .
+     *
+     * Default: - "ALL"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditionselection)
+     */
+    public fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
+
+    /**
+     * A list of which renditions are recorded for a stream, if `renditionSelection` is `CUSTOM` ;
+     *
+     * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+     * available during the stream. If a selected rendition is unavailable, the best available
+     * rendition is recorded. For details on the resolution dimensions of each rendition, see
+     * [Auto-Record to Amazon
+     * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditions)
+     */
+    public fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
+
+    /**
+     * A builder for [RenditionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param renditionSelection The set of renditions are recorded for a stream.
+       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
+       * renditions can be specified in the `renditions` field. Default: `ALL` .
+       */
+      public fun renditionSelection(renditionSelection: String)
+
+      /**
+       * @param renditions A list of which renditions are recorded for a stream, if
+       * `renditionSelection` is `CUSTOM` ;.
+       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+       * available during the stream. If a selected rendition is unavailable, the best available
+       * rendition is recorded. For details on the resolution dimensions of each rendition, see
+       * [Auto-Record to Amazon
+       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+       */
+      public fun renditions(renditions: List<String>)
+
+      /**
+       * @param renditions A list of which renditions are recorded for a stream, if
+       * `renditionSelection` is `CUSTOM` ;.
+       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+       * available during the stream. If a selected rendition is unavailable, the best available
+       * rendition is recorded. For details on the resolution dimensions of each rendition, see
+       * [Auto-Record to Amazon
+       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+       */
+      public fun renditions(vararg renditions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty.builder()
+
+      /**
+       * @param renditionSelection The set of renditions are recorded for a stream.
+       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
+       * renditions can be specified in the `renditions` field. Default: `ALL` .
+       */
+      override fun renditionSelection(renditionSelection: String) {
+        cdkBuilder.renditionSelection(renditionSelection)
+      }
+
+      /**
+       * @param renditions A list of which renditions are recorded for a stream, if
+       * `renditionSelection` is `CUSTOM` ;.
+       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+       * available during the stream. If a selected rendition is unavailable, the best available
+       * rendition is recorded. For details on the resolution dimensions of each rendition, see
+       * [Auto-Record to Amazon
+       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+       */
+      override fun renditions(renditions: List<String>) {
+        cdkBuilder.renditions(renditions)
+      }
+
+      /**
+       * @param renditions A list of which renditions are recorded for a stream, if
+       * `renditionSelection` is `CUSTOM` ;.
+       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+       * available during the stream. If a selected rendition is unavailable, the best available
+       * rendition is recorded. For details on the resolution dimensions of each rendition, see
+       * [Auto-Record to Amazon
+       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+       */
+      override fun renditions(vararg renditions: String): Unit = renditions(renditions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
+    ) : CdkObject(cdkObject), RenditionConfigurationProperty {
+      /**
+       * The set of renditions are recorded for a stream.
+       *
+       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
+       * renditions can be specified in the `renditions` field. Default: `ALL` .
+       *
+       * Default: - "ALL"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditionselection)
+       */
+      override fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
+
+      /**
+       * A list of which renditions are recorded for a stream, if `renditionSelection` is `CUSTOM` ;
+       *
+       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
+       * available during the stream. If a selected rendition is unavailable, the best available
+       * rendition is recorded. For details on the resolution dimensions of each rendition, see
+       * [Auto-Record to Amazon
+       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditions)
+       */
+      override fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RenditionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty):
+          RenditionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RenditionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RenditionConfigurationProperty):
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
+    }
+  }
+
+  /**
+   * The S3DestinationConfiguration property type describes an S3 location where recorded videos
+   * will be stored.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ivs.*;
+   * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
+   * S3DestinationConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
+   */
+  public interface S3DestinationConfigurationProperty {
+    /**
+     * Location (S3 bucket name) where recorded videos will be stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html#cfn-ivs-recordingconfiguration-s3destinationconfiguration-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * A builder for [S3DestinationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName Location (S3 bucket name) where recorded videos will be stored. 
+       */
+      public fun bucketName(bucketName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty.builder()
+
+      /**
+       * @param bucketName Location (S3 bucket name) where recorded videos will be stored. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
+    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
+      /**
+       * Location (S3 bucket name) where recorded videos will be stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html#cfn-ivs-recordingconfiguration-s3destinationconfiguration-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          S3DestinationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty):
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
+    }
   }
 
   /**
@@ -865,8 +1264,7 @@ public open class CfnRecordingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
     ) : CdkObject(cdkObject), ThumbnailConfigurationProperty {
       /**
        * Thumbnail recording mode. Valid values:.
@@ -951,407 +1349,6 @@ public open class CfnRecordingConfiguration internal constructor(
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty
-    }
-  }
-
-  /**
-   * The RenditionConfiguration property type describes which renditions should be recorded for a
-   * stream.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ivs.*;
-   * RenditionConfigurationProperty renditionConfigurationProperty =
-   * RenditionConfigurationProperty.builder()
-   * .renditions(List.of("renditions"))
-   * .renditionSelection("renditionSelection")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html)
-   */
-  public interface RenditionConfigurationProperty {
-    /**
-     * The set of renditions are recorded for a stream.
-     *
-     * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
-     * renditions can be specified in the `renditions` field. Default: `ALL` .
-     *
-     * Default: - "ALL"
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditionselection)
-     */
-    public fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
-
-    /**
-     * A list of which renditions are recorded for a stream, if `renditionSelection` is `CUSTOM` ;
-     *
-     * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-     * available during the stream. If a selected rendition is unavailable, the best available
-     * rendition is recorded. For details on the resolution dimensions of each rendition, see
-     * [Auto-Record to Amazon
-     * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditions)
-     */
-    public fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
-
-    /**
-     * A builder for [RenditionConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param renditionSelection The set of renditions are recorded for a stream.
-       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
-       * renditions can be specified in the `renditions` field. Default: `ALL` .
-       */
-      public fun renditionSelection(renditionSelection: String)
-
-      /**
-       * @param renditions A list of which renditions are recorded for a stream, if
-       * `renditionSelection` is `CUSTOM` ;.
-       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-       * available during the stream. If a selected rendition is unavailable, the best available
-       * rendition is recorded. For details on the resolution dimensions of each rendition, see
-       * [Auto-Record to Amazon
-       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-       */
-      public fun renditions(renditions: List<String>)
-
-      /**
-       * @param renditions A list of which renditions are recorded for a stream, if
-       * `renditionSelection` is `CUSTOM` ;.
-       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-       * available during the stream. If a selected rendition is unavailable, the best available
-       * rendition is recorded. For details on the resolution dimensions of each rendition, see
-       * [Auto-Record to Amazon
-       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-       */
-      public fun renditions(vararg renditions: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty.builder()
-
-      /**
-       * @param renditionSelection The set of renditions are recorded for a stream.
-       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
-       * renditions can be specified in the `renditions` field. Default: `ALL` .
-       */
-      override fun renditionSelection(renditionSelection: String) {
-        cdkBuilder.renditionSelection(renditionSelection)
-      }
-
-      /**
-       * @param renditions A list of which renditions are recorded for a stream, if
-       * `renditionSelection` is `CUSTOM` ;.
-       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-       * available during the stream. If a selected rendition is unavailable, the best available
-       * rendition is recorded. For details on the resolution dimensions of each rendition, see
-       * [Auto-Record to Amazon
-       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-       */
-      override fun renditions(renditions: List<String>) {
-        cdkBuilder.renditions(renditions)
-      }
-
-      /**
-       * @param renditions A list of which renditions are recorded for a stream, if
-       * `renditionSelection` is `CUSTOM` ;.
-       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-       * available during the stream. If a selected rendition is unavailable, the best available
-       * rendition is recorded. For details on the resolution dimensions of each rendition, see
-       * [Auto-Record to Amazon
-       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-       */
-      override fun renditions(vararg renditions: String): Unit = renditions(renditions.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
-    ) : CdkObject(cdkObject), RenditionConfigurationProperty {
-      /**
-       * The set of renditions are recorded for a stream.
-       *
-       * For `BASIC` channels, the `CUSTOM` value has no effect. If `CUSTOM` is specified, a set of
-       * renditions can be specified in the `renditions` field. Default: `ALL` .
-       *
-       * Default: - "ALL"
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditionselection)
-       */
-      override fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
-
-      /**
-       * A list of which renditions are recorded for a stream, if `renditionSelection` is `CUSTOM` ;
-       *
-       * otherwise, this field is irrelevant. The selected renditions are recorded if they are
-       * available during the stream. If a selected rendition is unavailable, the best available
-       * rendition is recorded. For details on the resolution dimensions of each rendition, see
-       * [Auto-Record to Amazon
-       * S3](https://docs.aws.amazon.com//ivs/latest/LowLatencyUserGuide/record-to-s3.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-renditionconfiguration.html#cfn-ivs-recordingconfiguration-renditionconfiguration-renditions)
-       */
-      override fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RenditionConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty):
-          RenditionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RenditionConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RenditionConfigurationProperty):
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
-    }
-  }
-
-  /**
-   * The S3DestinationConfiguration property type describes an S3 location where recorded videos
-   * will be stored.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ivs.*;
-   * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
-   * S3DestinationConfigurationProperty.builder()
-   * .bucketName("bucketName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-   */
-  public interface S3DestinationConfigurationProperty {
-    /**
-     * Location (S3 bucket name) where recorded videos will be stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html#cfn-ivs-recordingconfiguration-s3destinationconfiguration-bucketname)
-     */
-    public fun bucketName(): String
-
-    /**
-     * A builder for [S3DestinationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucketName Location (S3 bucket name) where recorded videos will be stored. 
-       */
-      public fun bucketName(bucketName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty.builder()
-
-      /**
-       * @param bucketName Location (S3 bucket name) where recorded videos will be stored. 
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
-      /**
-       * Location (S3 bucket name) where recorded videos will be stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html#cfn-ivs-recordingconfiguration-s3destinationconfiguration-bucketname)
-       */
-      override fun bucketName(): String = unwrap(this).getBucketName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          S3DestinationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
-    }
-  }
-
-  /**
-   * The DestinationConfiguration property type describes the location where recorded videos will be
-   * stored.
-   *
-   * Each member represents a type of destination configuration. For recording, you define one and
-   * only one type of destination configuration.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ivs.*;
-   * DestinationConfigurationProperty destinationConfigurationProperty =
-   * DestinationConfigurationProperty.builder()
-   * .s3(S3DestinationConfigurationProperty.builder()
-   * .bucketName("bucketName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html)
-   */
-  public interface DestinationConfigurationProperty {
-    /**
-     * An S3 destination configuration where recorded videos will be stored.
-     *
-     * See the
-     * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-     * property type for more information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration-s3)
-     */
-    public fun s3(): Any? = unwrap(this).getS3()
-
-    /**
-     * A builder for [DestinationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      public fun s3(s3: IResolvable)
-
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      public fun s3(s3: S3DestinationConfigurationProperty)
-
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
-      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty.builder()
-
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      override fun s3(s3: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param s3 An S3 destination configuration where recorded videos will be stored.
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
-      override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
-          s3(S3DestinationConfigurationProperty(s3))
-
-      public fun build():
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), DestinationConfigurationProperty {
-      /**
-       * An S3 destination configuration where recorded videos will be stored.
-       *
-       * See the
-       * [S3DestinationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-s3destinationconfiguration.html)
-       * property type for more information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration-s3)
-       */
-      override fun s3(): Any? = unwrap(this).getS3()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty):
-          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DestinationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DestinationConfigurationProperty):
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty
     }
   }
 }

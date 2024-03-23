@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)
  */
-public open class CfnPartnerAccount internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
+public open class CfnPartnerAccount(
+  cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -569,11 +569,12 @@ public open class CfnPartnerAccount internal constructor(
         CfnPartnerAccount = CfnPartnerAccount(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartnerAccount):
-        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount = wrapped.cdkObject
+        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount = wrapped.cdkObject as
+        software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
   }
 
   /**
-   * Sidewalk update.
+   * Information about a Sidewalk account.
    *
    * Example:
    *
@@ -581,78 +582,98 @@ public open class CfnPartnerAccount internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * SidewalkUpdateAccountProperty sidewalkUpdateAccountProperty =
-   * SidewalkUpdateAccountProperty.builder()
+   * SidewalkAccountInfoProperty sidewalkAccountInfoProperty = SidewalkAccountInfoProperty.builder()
    * .appServerPrivateKey("appServerPrivateKey")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html)
    */
-  public interface SidewalkUpdateAccountProperty {
+  public interface SidewalkAccountInfoProperty {
     /**
-     * The new Sidewalk application server private key.
+     * The Sidewalk application server private key.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html#cfn-iotwireless-partneraccount-sidewalkupdateaccount-appserverprivatekey)
+     * The application server private key is a secret key, which you should handle in a similar way
+     * as you would an application password. You can protect the application server private key by
+     * storing the value in the AWS Secrets Manager and use the
+     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+     * to reference this value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html#cfn-iotwireless-partneraccount-sidewalkaccountinfo-appserverprivatekey)
      */
-    public fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
+    public fun appServerPrivateKey(): String
 
     /**
-     * A builder for [SidewalkUpdateAccountProperty]
+     * A builder for [SidewalkAccountInfoProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param appServerPrivateKey The new Sidewalk application server private key.
+       * @param appServerPrivateKey The Sidewalk application server private key. 
+       * The application server private key is a secret key, which you should handle in a similar
+       * way as you would an application password. You can protect the application server private key
+       * by storing the value in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
        */
       public fun appServerPrivateKey(appServerPrivateKey: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty.Builder
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty.Builder
           =
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty.builder()
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty.builder()
 
       /**
-       * @param appServerPrivateKey The new Sidewalk application server private key.
+       * @param appServerPrivateKey The Sidewalk application server private key. 
+       * The application server private key is a secret key, which you should handle in a similar
+       * way as you would an application password. You can protect the application server private key
+       * by storing the value in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
        */
       override fun appServerPrivateKey(appServerPrivateKey: String) {
         cdkBuilder.appServerPrivateKey(appServerPrivateKey)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty,
-    ) : CdkObject(cdkObject), SidewalkUpdateAccountProperty {
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty,
+    ) : CdkObject(cdkObject), SidewalkAccountInfoProperty {
       /**
-       * The new Sidewalk application server private key.
+       * The Sidewalk application server private key.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html#cfn-iotwireless-partneraccount-sidewalkupdateaccount-appserverprivatekey)
+       * The application server private key is a secret key, which you should handle in a similar
+       * way as you would an application password. You can protect the application server private key
+       * by storing the value in the AWS Secrets Manager and use the
+       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+       * to reference this value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html#cfn-iotwireless-partneraccount-sidewalkaccountinfo-appserverprivatekey)
        */
-      override fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
+      override fun appServerPrivateKey(): String = unwrap(this).getAppServerPrivateKey()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SidewalkUpdateAccountProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SidewalkAccountInfoProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty):
-          SidewalkUpdateAccountProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SidewalkUpdateAccountProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty):
+          SidewalkAccountInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SidewalkAccountInfoProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SidewalkUpdateAccountProperty):
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
+      internal fun unwrap(wrapped: SidewalkAccountInfoProperty):
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
     }
   }
 
@@ -751,8 +772,7 @@ public open class CfnPartnerAccount internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty,
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty,
     ) : CdkObject(cdkObject), SidewalkAccountInfoWithFingerprintProperty {
       /**
        * The Sidewalk Amazon ID.
@@ -796,7 +816,7 @@ public open class CfnPartnerAccount internal constructor(
   }
 
   /**
-   * Information about a Sidewalk account.
+   * Sidewalk update.
    *
    * Example:
    *
@@ -804,99 +824,77 @@ public open class CfnPartnerAccount internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.iotwireless.*;
-   * SidewalkAccountInfoProperty sidewalkAccountInfoProperty = SidewalkAccountInfoProperty.builder()
+   * SidewalkUpdateAccountProperty sidewalkUpdateAccountProperty =
+   * SidewalkUpdateAccountProperty.builder()
    * .appServerPrivateKey("appServerPrivateKey")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html)
    */
-  public interface SidewalkAccountInfoProperty {
+  public interface SidewalkUpdateAccountProperty {
     /**
-     * The Sidewalk application server private key.
+     * The new Sidewalk application server private key.
      *
-     * The application server private key is a secret key, which you should handle in a similar way
-     * as you would an application password. You can protect the application server private key by
-     * storing the value in the AWS Secrets Manager and use the
-     * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-     * to reference this value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html#cfn-iotwireless-partneraccount-sidewalkaccountinfo-appserverprivatekey)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html#cfn-iotwireless-partneraccount-sidewalkupdateaccount-appserverprivatekey)
      */
-    public fun appServerPrivateKey(): String
+    public fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
 
     /**
-     * A builder for [SidewalkAccountInfoProperty]
+     * A builder for [SidewalkUpdateAccountProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param appServerPrivateKey The Sidewalk application server private key. 
-       * The application server private key is a secret key, which you should handle in a similar
-       * way as you would an application password. You can protect the application server private key
-       * by storing the value in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
+       * @param appServerPrivateKey The new Sidewalk application server private key.
        */
       public fun appServerPrivateKey(appServerPrivateKey: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty.Builder
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty.Builder
           =
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty.builder()
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty.builder()
 
       /**
-       * @param appServerPrivateKey The Sidewalk application server private key. 
-       * The application server private key is a secret key, which you should handle in a similar
-       * way as you would an application password. You can protect the application server private key
-       * by storing the value in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
+       * @param appServerPrivateKey The new Sidewalk application server private key.
        */
       override fun appServerPrivateKey(appServerPrivateKey: String) {
         cdkBuilder.appServerPrivateKey(appServerPrivateKey)
       }
 
       public fun build():
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty,
-    ) : CdkObject(cdkObject), SidewalkAccountInfoProperty {
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty,
+    ) : CdkObject(cdkObject), SidewalkUpdateAccountProperty {
       /**
-       * The Sidewalk application server private key.
+       * The new Sidewalk application server private key.
        *
-       * The application server private key is a secret key, which you should handle in a similar
-       * way as you would an application password. You can protect the application server private key
-       * by storing the value in the AWS Secrets Manager and use the
-       * [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
-       * to reference this value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html#cfn-iotwireless-partneraccount-sidewalkaccountinfo-appserverprivatekey)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html#cfn-iotwireless-partneraccount-sidewalkupdateaccount-appserverprivatekey)
        */
-      override fun appServerPrivateKey(): String = unwrap(this).getAppServerPrivateKey()
+      override fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SidewalkAccountInfoProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SidewalkUpdateAccountProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty):
-          SidewalkAccountInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SidewalkAccountInfoProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty):
+          SidewalkUpdateAccountProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SidewalkUpdateAccountProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SidewalkAccountInfoProperty):
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
+      internal fun unwrap(wrapped: SidewalkUpdateAccountProperty):
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty
+          software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
     }
   }
 }

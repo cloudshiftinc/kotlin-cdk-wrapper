@@ -340,8 +340,7 @@ public interface CfnMatchingWorkflowProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps,
+    cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps,
   ) : CdkObject(cdkObject), CfnMatchingWorkflowProps {
     /**
      * A description of the workflow.

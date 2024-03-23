@@ -14,8 +14,8 @@ import kotlin.String
  *
  * References are recorded.
  */
-public abstract class Reference internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Reference,
+public abstract class Reference(
+  cdkObject: software.amazon.awscdk.Reference,
 ) : Intrinsic(cdkObject) {
   /**
    *
@@ -28,7 +28,7 @@ public abstract class Reference internal constructor(
   public open fun target(): IConstruct = unwrap(this).getTarget().let(IConstruct::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.Reference,
+    cdkObject: software.amazon.awscdk.Reference,
   ) : Reference(cdkObject)
 
   public companion object {

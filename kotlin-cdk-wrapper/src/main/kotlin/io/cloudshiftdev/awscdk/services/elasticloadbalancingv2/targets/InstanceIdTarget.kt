@@ -26,9 +26,8 @@ import kotlin.String
  * InstanceIdTarget instanceIdTarget = new InstanceIdTarget("instanceId", 123);
  * ```
  */
-public open class InstanceIdTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
+public open class InstanceIdTarget(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
   public constructor(instanceId: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId)
@@ -70,6 +69,7 @@ public open class InstanceIdTarget internal constructor(
 
     internal fun unwrap(wrapped: InstanceIdTarget):
         software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget
   }
 }

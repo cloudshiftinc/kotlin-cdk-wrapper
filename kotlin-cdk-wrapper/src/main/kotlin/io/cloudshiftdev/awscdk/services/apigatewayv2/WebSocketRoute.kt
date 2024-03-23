@@ -33,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class WebSocketRoute internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRoute,
+public open class WebSocketRoute(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRoute,
 ) : Resource(cdkObject), IWebSocketRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -216,6 +216,7 @@ public open class WebSocketRoute internal constructor(
         WebSocketRoute = WebSocketRoute(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRoute):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketRoute = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.WebSocketRoute = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketRoute
   }
 }

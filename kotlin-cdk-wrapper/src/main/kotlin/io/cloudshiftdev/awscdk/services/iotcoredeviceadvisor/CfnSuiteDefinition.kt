@@ -47,9 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html)
  */
-public open class CfnSuiteDefinition internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
+public open class CfnSuiteDefinition(
+  cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -295,6 +294,118 @@ public open class CfnSuiteDefinition internal constructor(
 
     internal fun unwrap(wrapped: CfnSuiteDefinition):
         software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition = wrapped.cdkObject
+        as software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
+  }
+
+  /**
+   * Information of a test device.
+   *
+   * A thing ARN, certificate ARN or device role ARN is required.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotcoredeviceadvisor.*;
+   * DeviceUnderTestProperty deviceUnderTestProperty = DeviceUnderTestProperty.builder()
+   * .certificateArn("certificateArn")
+   * .thingArn("thingArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html)
+   */
+  public interface DeviceUnderTestProperty {
+    /**
+     * Lists device's certificate ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * Lists device's thing ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-thingarn)
+     */
+    public fun thingArn(): String? = unwrap(this).getThingArn()
+
+    /**
+     * A builder for [DeviceUnderTestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn Lists device's certificate ARN.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param thingArn Lists device's thing ARN.
+       */
+      public fun thingArn(thingArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty.Builder
+          =
+          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty.builder()
+
+      /**
+       * @param certificateArn Lists device's certificate ARN.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param thingArn Lists device's thing ARN.
+       */
+      override fun thingArn(thingArn: String) {
+        cdkBuilder.thingArn(thingArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
+    ) : CdkObject(cdkObject), DeviceUnderTestProperty {
+      /**
+       * Lists device's certificate ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * Lists device's thing ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-thingarn)
+       */
+      override fun thingArn(): String? = unwrap(this).getThingArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceUnderTestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty):
+          DeviceUnderTestProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceUnderTestProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceUnderTestProperty):
+          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
+    }
   }
 
   /**
@@ -503,8 +614,7 @@ public open class CfnSuiteDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
     ) : CdkObject(cdkObject), SuiteDefinitionConfigurationProperty {
       /**
        * Gets the device permission ARN.
@@ -571,118 +681,6 @@ public open class CfnSuiteDefinition internal constructor(
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty
-    }
-  }
-
-  /**
-   * Information of a test device.
-   *
-   * A thing ARN, certificate ARN or device role ARN is required.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.iotcoredeviceadvisor.*;
-   * DeviceUnderTestProperty deviceUnderTestProperty = DeviceUnderTestProperty.builder()
-   * .certificateArn("certificateArn")
-   * .thingArn("thingArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html)
-   */
-  public interface DeviceUnderTestProperty {
-    /**
-     * Lists device's certificate ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-certificatearn)
-     */
-    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-    /**
-     * Lists device's thing ARN.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-thingarn)
-     */
-    public fun thingArn(): String? = unwrap(this).getThingArn()
-
-    /**
-     * A builder for [DeviceUnderTestProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateArn Lists device's certificate ARN.
-       */
-      public fun certificateArn(certificateArn: String)
-
-      /**
-       * @param thingArn Lists device's thing ARN.
-       */
-      public fun thingArn(thingArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty.Builder
-          =
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty.builder()
-
-      /**
-       * @param certificateArn Lists device's certificate ARN.
-       */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
-      }
-
-      /**
-       * @param thingArn Lists device's thing ARN.
-       */
-      override fun thingArn(thingArn: String) {
-        cdkBuilder.thingArn(thingArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
-    ) : CdkObject(cdkObject), DeviceUnderTestProperty {
-      /**
-       * Lists device's certificate ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-certificatearn)
-       */
-      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-      /**
-       * Lists device's thing ARN.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest.html#cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-thingarn)
-       */
-      override fun thingArn(): String? = unwrap(this).getThingArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeviceUnderTestProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty):
-          DeviceUnderTestProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceUnderTestProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeviceUnderTestProperty):
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty
     }
   }
 }

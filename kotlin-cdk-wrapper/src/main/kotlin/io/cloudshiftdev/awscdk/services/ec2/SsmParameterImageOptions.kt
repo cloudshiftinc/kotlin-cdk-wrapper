@@ -181,7 +181,7 @@ public interface SsmParameterImageOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SsmParameterImageOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.SsmParameterImageOptions,
   ) : CdkObject(cdkObject), SsmParameterImageOptions {
     /**
      * Whether the AMI ID is cached to be stable between deployments.

@@ -77,8 +77,7 @@ public interface BaseTrafficShiftingConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
+    cdkObject: software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
   ) : CdkObject(cdkObject), BaseTrafficShiftingConfigProps {
     /**
      * The amount of time between traffic shifts.

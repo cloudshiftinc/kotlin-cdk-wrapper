@@ -550,7 +550,7 @@ public interface CfnContainerRecipeProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps,
+    cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps,
   ) : CdkObject(cdkObject), CfnContainerRecipeProps {
     /**
      * Build and test components that are included in the container recipe.

@@ -190,7 +190,7 @@ public interface BuildEnvironment {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironment,
+    cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironment,
   ) : CdkObject(cdkObject), BuildEnvironment {
     /**
      * The image used for the builds.

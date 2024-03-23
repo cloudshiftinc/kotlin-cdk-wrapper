@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html)
  */
-public open class CfnBillingGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
+public open class CfnBillingGroup(
+  cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -297,7 +297,8 @@ public open class CfnBillingGroup internal constructor(
         CfnBillingGroup = CfnBillingGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnBillingGroup):
-        software.amazon.awscdk.services.iot.CfnBillingGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.iot.CfnBillingGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.iot.CfnBillingGroup
   }
 
   /**
@@ -355,8 +356,7 @@ public open class CfnBillingGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty,
     ) : CdkObject(cdkObject), BillingGroupPropertiesProperty {
       /**
        * The description of the billing group.

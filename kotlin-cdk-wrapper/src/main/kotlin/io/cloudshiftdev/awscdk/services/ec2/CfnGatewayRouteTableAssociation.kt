@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html)
  */
-public open class CfnGatewayRouteTableAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation,
+public open class CfnGatewayRouteTableAssociation(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -163,6 +162,7 @@ public open class CfnGatewayRouteTableAssociation internal constructor(
         CfnGatewayRouteTableAssociation = CfnGatewayRouteTableAssociation(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayRouteTableAssociation):
-        software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation
   }
 }

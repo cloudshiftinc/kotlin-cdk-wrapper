@@ -144,7 +144,7 @@ public interface LogConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.LogConfig,
+    cdkObject: software.amazon.awscdk.services.appsync.LogConfig,
   ) : CdkObject(cdkObject), LogConfig {
     /**
      * exclude verbose content.

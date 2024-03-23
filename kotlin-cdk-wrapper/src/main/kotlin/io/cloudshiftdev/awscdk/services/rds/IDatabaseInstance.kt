@@ -340,7 +340,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
   public fun onEvent(id: String, options: OnEventOptions.Builder.() -> Unit): Rule
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.IDatabaseInstance,
+    cdkObject: software.amazon.awscdk.services.rds.IDatabaseInstance,
   ) : CdkObject(cdkObject), IDatabaseInstance {
     /**
      * Add a new db proxy to this instance.

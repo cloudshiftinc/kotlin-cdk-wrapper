@@ -187,8 +187,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html)
  */
-public open class CfnFilter internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
+public open class CfnFilter(
+  cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -427,11 +427,11 @@ public open class CfnFilter internal constructor(
         CfnFilter(cdkObject)
 
     internal fun unwrap(wrapped: CfnFilter): software.amazon.awscdk.services.inspectorv2.CfnFilter =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.inspectorv2.CfnFilter
   }
 
   /**
-   * An object that describes the details of a number filter.
+   * Contains details on the time range used to filter findings.
    *
    * Example:
    *
@@ -439,102 +439,101 @@ public open class CfnFilter internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * NumberFilterProperty numberFilterProperty = NumberFilterProperty.builder()
-   * .lowerInclusive(123)
-   * .upperInclusive(123)
+   * DateFilterProperty dateFilterProperty = DateFilterProperty.builder()
+   * .endInclusive(123)
+   * .startInclusive(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html)
    */
-  public interface NumberFilterProperty {
+  public interface DateFilterProperty {
     /**
-     * The lowest number to be included in the filter.
+     * A timestamp representing the end of the time period filtered on.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-lowerinclusive)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-endinclusive)
      */
-    public fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
+    public fun endInclusive(): Number? = unwrap(this).getEndInclusive()
 
     /**
-     * The highest number to be included in the filter.
+     * A timestamp representing the start of the time period filtered on.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-upperinclusive)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-startinclusive)
      */
-    public fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
+    public fun startInclusive(): Number? = unwrap(this).getStartInclusive()
 
     /**
-     * A builder for [NumberFilterProperty]
+     * A builder for [DateFilterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param lowerInclusive The lowest number to be included in the filter.
+       * @param endInclusive A timestamp representing the end of the time period filtered on.
        */
-      public fun lowerInclusive(lowerInclusive: Number)
+      public fun endInclusive(endInclusive: Number)
 
       /**
-       * @param upperInclusive The highest number to be included in the filter.
+       * @param startInclusive A timestamp representing the start of the time period filtered on.
        */
-      public fun upperInclusive(upperInclusive: Number)
+      public fun startInclusive(startInclusive: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.Builder =
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.builder()
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.Builder =
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.builder()
 
       /**
-       * @param lowerInclusive The lowest number to be included in the filter.
+       * @param endInclusive A timestamp representing the end of the time period filtered on.
        */
-      override fun lowerInclusive(lowerInclusive: Number) {
-        cdkBuilder.lowerInclusive(lowerInclusive)
+      override fun endInclusive(endInclusive: Number) {
+        cdkBuilder.endInclusive(endInclusive)
       }
 
       /**
-       * @param upperInclusive The highest number to be included in the filter.
+       * @param startInclusive A timestamp representing the start of the time period filtered on.
        */
-      override fun upperInclusive(upperInclusive: Number) {
-        cdkBuilder.upperInclusive(upperInclusive)
+      override fun startInclusive(startInclusive: Number) {
+        cdkBuilder.startInclusive(startInclusive)
       }
 
-      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty
-          = cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty,
-    ) : CdkObject(cdkObject), NumberFilterProperty {
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty,
+    ) : CdkObject(cdkObject), DateFilterProperty {
       /**
-       * The lowest number to be included in the filter.
+       * A timestamp representing the end of the time period filtered on.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-lowerinclusive)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-endinclusive)
        */
-      override fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
+      override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
 
       /**
-       * The highest number to be included in the filter.
+       * A timestamp representing the start of the time period filtered on.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-upperinclusive)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-startinclusive)
        */
-      override fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
+      override fun startInclusive(): Number? = unwrap(this).getStartInclusive()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NumberFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DateFilterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty):
-          NumberFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? NumberFilterProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty):
+          DateFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? DateFilterProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: NumberFilterProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty = (wrapped as
+      internal fun unwrap(wrapped: DateFilterProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty
     }
   }
 
@@ -2067,8 +2066,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty,
     ) : CdkObject(cdkObject), FilterCriteriaProperty {
       /**
        * Details of the AWS account IDs used to filter findings.
@@ -2307,7 +2305,7 @@ public open class CfnFilter internal constructor(
   }
 
   /**
-   * Contains details on the time range used to filter findings.
+   * An object that describes details of a map filter.
    *
    * Example:
    *
@@ -2315,102 +2313,236 @@ public open class CfnFilter internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * DateFilterProperty dateFilterProperty = DateFilterProperty.builder()
-   * .endInclusive(123)
-   * .startInclusive(123)
+   * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
+   * .comparison("comparison")
+   * // the properties below are optional
+   * .key("key")
+   * .value("value")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html)
    */
-  public interface DateFilterProperty {
+  public interface MapFilterProperty {
     /**
-     * A timestamp representing the end of the time period filtered on.
+     * The operator to use when comparing values in the filter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-endinclusive)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-comparison)
      */
-    public fun endInclusive(): Number? = unwrap(this).getEndInclusive()
+    public fun comparison(): String
 
     /**
-     * A timestamp representing the start of the time period filtered on.
+     * The tag key used in the filter.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-startinclusive)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-key)
      */
-    public fun startInclusive(): Number? = unwrap(this).getStartInclusive()
+    public fun key(): String? = unwrap(this).getKey()
 
     /**
-     * A builder for [DateFilterProperty]
+     * The tag value used in the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [MapFilterProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endInclusive A timestamp representing the end of the time period filtered on.
+       * @param comparison The operator to use when comparing values in the filter. 
        */
-      public fun endInclusive(endInclusive: Number)
+      public fun comparison(comparison: String)
 
       /**
-       * @param startInclusive A timestamp representing the start of the time period filtered on.
+       * @param key The tag key used in the filter.
        */
-      public fun startInclusive(startInclusive: Number)
+      public fun key(key: String)
+
+      /**
+       * @param value The tag value used in the filter.
+       */
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.Builder =
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.builder()
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.Builder =
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.builder()
 
       /**
-       * @param endInclusive A timestamp representing the end of the time period filtered on.
+       * @param comparison The operator to use when comparing values in the filter. 
        */
-      override fun endInclusive(endInclusive: Number) {
-        cdkBuilder.endInclusive(endInclusive)
+      override fun comparison(comparison: String) {
+        cdkBuilder.comparison(comparison)
       }
 
       /**
-       * @param startInclusive A timestamp representing the start of the time period filtered on.
+       * @param key The tag key used in the filter.
        */
-      override fun startInclusive(startInclusive: Number) {
-        cdkBuilder.startInclusive(startInclusive)
+      override fun key(key: String) {
+        cdkBuilder.key(key)
       }
 
-      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty =
+      /**
+       * @param value The tag value used in the filter.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty,
-    ) : CdkObject(cdkObject), DateFilterProperty {
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty,
+    ) : CdkObject(cdkObject), MapFilterProperty {
       /**
-       * A timestamp representing the end of the time period filtered on.
+       * The operator to use when comparing values in the filter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-endinclusive)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-comparison)
        */
-      override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
+      override fun comparison(): String = unwrap(this).getComparison()
 
       /**
-       * A timestamp representing the start of the time period filtered on.
+       * The tag key used in the filter.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html#cfn-inspectorv2-filter-datefilter-startinclusive)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-key)
        */
-      override fun startInclusive(): Number? = unwrap(this).getStartInclusive()
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The tag value used in the filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DateFilterProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MapFilterProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty):
-          DateFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? DateFilterProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty):
+          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DateFilterProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty = (wrapped as
+      internal fun unwrap(wrapped: MapFilterProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty
+    }
+  }
+
+  /**
+   * An object that describes the details of a number filter.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
+   * NumberFilterProperty numberFilterProperty = NumberFilterProperty.builder()
+   * .lowerInclusive(123)
+   * .upperInclusive(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html)
+   */
+  public interface NumberFilterProperty {
+    /**
+     * The lowest number to be included in the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-lowerinclusive)
+     */
+    public fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
+
+    /**
+     * The highest number to be included in the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-upperinclusive)
+     */
+    public fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
+
+    /**
+     * A builder for [NumberFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lowerInclusive The lowest number to be included in the filter.
+       */
+      public fun lowerInclusive(lowerInclusive: Number)
+
+      /**
+       * @param upperInclusive The highest number to be included in the filter.
+       */
+      public fun upperInclusive(upperInclusive: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.Builder =
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.builder()
+
+      /**
+       * @param lowerInclusive The lowest number to be included in the filter.
+       */
+      override fun lowerInclusive(lowerInclusive: Number) {
+        cdkBuilder.lowerInclusive(lowerInclusive)
+      }
+
+      /**
+       * @param upperInclusive The highest number to be included in the filter.
+       */
+      override fun upperInclusive(upperInclusive: Number) {
+        cdkBuilder.upperInclusive(upperInclusive)
+      }
+
+      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty,
+    ) : CdkObject(cdkObject), NumberFilterProperty {
+      /**
+       * The lowest number to be included in the filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-lowerinclusive)
+       */
+      override fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
+
+      /**
+       * The highest number to be included in the filter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html#cfn-inspectorv2-filter-numberfilter-upperinclusive)
+       */
+      override fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NumberFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty):
+          NumberFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? NumberFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NumberFilterProperty):
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty
     }
   }
 
@@ -2759,8 +2891,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty,
     ) : CdkObject(cdkObject), PackageFilterProperty {
       /**
        * An object that contains details on the package architecture type to filter on.
@@ -2896,8 +3027,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty,
     ) : CdkObject(cdkObject), PortRangeFilterProperty {
       /**
        * The port number the port range begins at.
@@ -3004,8 +3134,7 @@ public open class CfnFilter internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty,
+      cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty,
     ) : CdkObject(cdkObject), StringFilterProperty {
       /**
        * The operator to use when comparing values in the filter.
@@ -3037,142 +3166,6 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty
-    }
-  }
-
-  /**
-   * An object that describes details of a map filter.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
-   * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
-   * .comparison("comparison")
-   * // the properties below are optional
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html)
-   */
-  public interface MapFilterProperty {
-    /**
-     * The operator to use when comparing values in the filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-comparison)
-     */
-    public fun comparison(): String
-
-    /**
-     * The tag key used in the filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * The tag value used in the filter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [MapFilterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comparison The operator to use when comparing values in the filter. 
-       */
-      public fun comparison(comparison: String)
-
-      /**
-       * @param key The tag key used in the filter.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The tag value used in the filter.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.Builder =
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.builder()
-
-      /**
-       * @param comparison The operator to use when comparing values in the filter. 
-       */
-      override fun comparison(comparison: String) {
-        cdkBuilder.comparison(comparison)
-      }
-
-      /**
-       * @param key The tag key used in the filter.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The tag value used in the filter.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty,
-    ) : CdkObject(cdkObject), MapFilterProperty {
-      /**
-       * The operator to use when comparing values in the filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-comparison)
-       */
-      override fun comparison(): String = unwrap(this).getComparison()
-
-      /**
-       * The tag key used in the filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * The tag value used in the filter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html#cfn-inspectorv2-filter-mapfilter-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MapFilterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty):
-          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MapFilterProperty):
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty
     }
   }
 }

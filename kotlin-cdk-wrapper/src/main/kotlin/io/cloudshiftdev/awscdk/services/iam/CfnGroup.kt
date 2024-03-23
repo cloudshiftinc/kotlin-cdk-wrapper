@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-group.html)
  */
-public open class CfnGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnGroup,
+public open class CfnGroup(
+  cdkObject: software.amazon.awscdk.services.iam.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -500,7 +500,7 @@ public open class CfnGroup internal constructor(
         CfnGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroup): software.amazon.awscdk.services.iam.CfnGroup =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iam.CfnGroup
   }
 
   /**
@@ -581,7 +581,7 @@ public open class CfnGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty,
+      cdkObject: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty,
     ) : CdkObject(cdkObject), PolicyProperty {
       /**
        * The policy document.

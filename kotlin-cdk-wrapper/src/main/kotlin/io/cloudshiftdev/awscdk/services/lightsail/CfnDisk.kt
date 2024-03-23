@@ -57,8 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html)
  */
-public open class CfnDisk internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
+public open class CfnDisk(
+  cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -554,117 +554,7 @@ public open class CfnDisk internal constructor(
         CfnDisk(cdkObject)
 
     internal fun unwrap(wrapped: CfnDisk): software.amazon.awscdk.services.lightsail.CfnDisk =
-        wrapped.cdkObject
-  }
-
-  /**
-   * `AutoSnapshotAddOn` is a property of the
-   * [AddOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html)
-   * property. It describes the automatic snapshot add-on for a disk.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.lightsail.*;
-   * AutoSnapshotAddOnProperty autoSnapshotAddOnProperty = AutoSnapshotAddOnProperty.builder()
-   * .snapshotTimeOfDay("snapshotTimeOfDay")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html)
-   */
-  public interface AutoSnapshotAddOnProperty {
-    /**
-     * The daily time when an automatic snapshot will be created.
-     *
-     * Constraints:
-     *
-     * * Must be in `HH:00` format, and in an hourly increment.
-     * * Specified in Coordinated Universal Time (UTC).
-     * * The snapshot will be automatically created between the time specified and up to 45 minutes
-     * after.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
-     */
-    public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
-
-    /**
-     * A builder for [AutoSnapshotAddOnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       */
-      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.builder()
-
-      /**
-       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       */
-      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
-        cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
-    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
-      /**
-       * The daily time when an automatic snapshot will be created.
-       *
-       * Constraints:
-       *
-       * * Must be in `HH:00` format, and in an hourly increment.
-       * * Specified in Coordinated Universal Time (UTC).
-       * * The snapshot will be automatically created between the time specified and up to 45
-       * minutes after.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
-       */
-      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty):
-          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AutoSnapshotAddOnProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.lightsail.CfnDisk
   }
 
   /**
@@ -812,7 +702,7 @@ public open class CfnDisk internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
     ) : CdkObject(cdkObject), AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
@@ -855,6 +745,115 @@ public open class CfnDisk internal constructor(
       internal fun unwrap(wrapped: AddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty
+    }
+  }
+
+  /**
+   * `AutoSnapshotAddOn` is a property of the
+   * [AddOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html)
+   * property. It describes the automatic snapshot add-on for a disk.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lightsail.*;
+   * AutoSnapshotAddOnProperty autoSnapshotAddOnProperty = AutoSnapshotAddOnProperty.builder()
+   * .snapshotTimeOfDay("snapshotTimeOfDay")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html)
+   */
+  public interface AutoSnapshotAddOnProperty {
+    /**
+     * The daily time when an automatic snapshot will be created.
+     *
+     * Constraints:
+     *
+     * * Must be in `HH:00` format, and in an hourly increment.
+     * * Specified in Coordinated Universal Time (UTC).
+     * * The snapshot will be automatically created between the time specified and up to 45 minutes
+     * after.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
+     */
+    public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+
+    /**
+     * A builder for [AutoSnapshotAddOnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.builder()
+
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
+        cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
+    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
+      /**
+       * The daily time when an automatic snapshot will be created.
+       *
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
+       */
+      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty):
+          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoSnapshotAddOnProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty
     }
   }
 
@@ -930,7 +929,7 @@ public open class CfnDisk internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
+      cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
     ) : CdkObject(cdkObject), LocationProperty {
       /**
        * The Availability Zone where the disk is located.

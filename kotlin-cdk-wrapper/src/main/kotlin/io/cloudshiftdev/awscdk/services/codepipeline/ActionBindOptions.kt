@@ -76,7 +76,7 @@ public interface ActionBindOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.ActionBindOptions,
+    cdkObject: software.amazon.awscdk.services.codepipeline.ActionBindOptions,
   ) : CdkObject(cdkObject), ActionBindOptions {
     /**
      *

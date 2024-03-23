@@ -119,7 +119,7 @@ public interface FileCopyOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.FileCopyOptions,
+    cdkObject: software.amazon.awscdk.FileCopyOptions,
   ) : CdkObject(cdkObject), FileCopyOptions {
     /**
      * File paths matching the patterns will be excluded.

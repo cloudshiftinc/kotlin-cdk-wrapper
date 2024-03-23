@@ -12,8 +12,8 @@ import kotlin.collections.Map
 /**
  * Helper functions to work with structures containing fields.
  */
-public open class FieldUtils internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.FieldUtils,
+public open class FieldUtils(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.FieldUtils,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun containsTaskToken(): Boolean =
@@ -38,6 +38,7 @@ public open class FieldUtils internal constructor(
         FieldUtils = FieldUtils(cdkObject)
 
     internal fun unwrap(wrapped: FieldUtils):
-        software.amazon.awscdk.services.stepfunctions.FieldUtils = wrapped.cdkObject
+        software.amazon.awscdk.services.stepfunctions.FieldUtils = wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.FieldUtils
   }
 }

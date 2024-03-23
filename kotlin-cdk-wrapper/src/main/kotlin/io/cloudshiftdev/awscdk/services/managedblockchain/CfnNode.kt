@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html)
  */
-public open class CfnNode internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode,
+public open class CfnNode(
+  cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -282,7 +282,7 @@ public open class CfnNode internal constructor(
         = CfnNode(cdkObject)
 
     internal fun unwrap(wrapped: CfnNode): software.amazon.awscdk.services.managedblockchain.CfnNode
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.managedblockchain.CfnNode
   }
 
   /**
@@ -363,8 +363,7 @@ public open class CfnNode internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty,
     ) : CdkObject(cdkObject), NodeConfigurationProperty {
       /**
        * The Availability Zone in which the node exists.

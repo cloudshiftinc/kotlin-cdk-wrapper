@@ -54,8 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
  */
-public open class CfnResourceShare internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ram.CfnResourceShare,
+public open class CfnResourceShare(
+  cdkObject: software.amazon.awscdk.services.ram.CfnResourceShare,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -621,6 +621,7 @@ public open class CfnResourceShare internal constructor(
         CfnResourceShare = CfnResourceShare(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceShare):
-        software.amazon.awscdk.services.ram.CfnResourceShare = wrapped.cdkObject
+        software.amazon.awscdk.services.ram.CfnResourceShare = wrapped.cdkObject as
+        software.amazon.awscdk.services.ram.CfnResourceShare
   }
 }

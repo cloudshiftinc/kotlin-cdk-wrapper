@@ -34,9 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html)
  */
-public open class CfnLaunchNotificationConstraint internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint,
+public open class CfnLaunchNotificationConstraint(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -287,6 +286,7 @@ public open class CfnLaunchNotificationConstraint internal constructor(
 
     internal fun unwrap(wrapped: CfnLaunchNotificationConstraint):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint
   }
 }

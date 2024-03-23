@@ -153,7 +153,7 @@ public interface FailProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.FailProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.FailProps,
   ) : CdkObject(cdkObject), FailProps {
     /**
      * A description for the cause of the failure.

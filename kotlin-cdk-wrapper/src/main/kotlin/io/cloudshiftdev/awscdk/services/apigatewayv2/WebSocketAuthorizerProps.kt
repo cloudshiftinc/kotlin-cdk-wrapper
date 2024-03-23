@@ -152,7 +152,7 @@ public interface WebSocketAuthorizerProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps,
   ) : CdkObject(cdkObject), WebSocketAuthorizerProps {
     /**
      * Name of the authorizer.

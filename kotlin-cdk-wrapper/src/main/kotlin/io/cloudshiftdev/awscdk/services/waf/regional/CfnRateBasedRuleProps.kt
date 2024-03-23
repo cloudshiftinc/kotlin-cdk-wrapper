@@ -222,7 +222,7 @@ public interface CfnRateBasedRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps,
+    cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps,
   ) : CdkObject(cdkObject), CfnRateBasedRuleProps {
     /**
      * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` ,

@@ -213,8 +213,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html)
  */
-public open class CfnDBInstance internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
+public open class CfnDBInstance(
+  cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -542,14 +542,24 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
-   * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-   * instance classes are available in all AWS Regions, or for all database engines.
+   * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+   * instance classes are available in all AWS Regions , or for all database engines. For the full list
+   * of DB instance classes, and availability for your engine, see [DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
+   * the *Amazon RDS User Guide* or [Aurora DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+   * in the *Amazon Aurora User Guide* .
    */
   public open fun dbInstanceClass(): String? = unwrap(this).getDbInstanceClass()
 
   /**
-   * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-   * instance classes are available in all AWS Regions, or for all database engines.
+   * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+   * instance classes are available in all AWS Regions , or for all database engines. For the full list
+   * of DB instance classes, and availability for your engine, see [DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
+   * the *Amazon RDS User Guide* or [Aurora DB instance
+   * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+   * in the *Amazon Aurora User Guide* .
    */
   public open fun dbInstanceClass(`value`: String) {
     unwrap(this).setDbInstanceClass(`value`)
@@ -1365,12 +1375,12 @@ public open class CfnDBInstance internal constructor(
   }
 
   /**
-   * Specifies the storage type to be associated with the DB instance.
+   * The storage type to associate with the DB instance.
    */
   public open fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
-   * Specifies the storage type to be associated with the DB instance.
+   * The storage type to associate with the DB instance.
    */
   public open fun storageType(`value`: String) {
     unwrap(this).setStorageType(`value`)
@@ -1936,19 +1946,23 @@ public open class CfnDBInstance internal constructor(
     public fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String)
 
     /**
-     * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-     * instance classes are available in all AWS Regions, or for all database engines.
-     *
-     * For the full list of DB instance classes, and availability for your engine, see [DB Instance
-     * Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
-     * the *Amazon RDS User Guide.* For more information about DB instance class pricing and AWS Region
-     * support for DB instance classes, see [Amazon RDS
-     * Pricing](https://docs.aws.amazon.com/rds/pricing/) .
+     * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+     * instance classes are available in all AWS Regions , or for all database engines. For the full
+     * list of DB instance classes, and availability for your engine, see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbinstanceclass)
-     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example,
-     * `db.m4.large` . Not all DB instance classes are available in all AWS Regions, or for all
-     * database engines. 
+     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example
+     * `db.m5.large` . Not all DB instance classes are available in all AWS Regions , or for all
+     * database engines. For the full list of DB instance classes, and availability for your engine,
+     * see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* . 
      */
     public fun dbInstanceClass(dbInstanceClass: String)
 
@@ -3551,27 +3565,20 @@ public open class CfnDBInstance internal constructor(
     public fun storageThroughput(storageThroughput: Number)
 
     /**
-     * Specifies the storage type to be associated with the DB instance.
+     * The storage type to associate with the DB instance.
      *
-     * Valid values: `gp2 | gp3 | io1 | standard`
+     * If you specify `io1` , `io2` , or `gp3` , you must also include a value for the `Iops`
+     * parameter.
      *
-     * The `standard` value is also known as magnetic.
+     * This setting doesn't apply to Amazon Aurora DB instances. Storage is managed by the DB
+     * cluster.
      *
-     * If you specify `io1` or `gp3` , you must also include a value for the `Iops` parameter.
+     * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`
-     *
-     * For more information, see [Amazon RDS DB Instance
-     * Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the
-     * *Amazon RDS User Guide* .
-     *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Aurora data is stored in the cluster volume, which is a single, virtual
-     * volume that uses solid state drives (SSDs).
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
-     * @param storageType Specifies the storage type to be associated with the DB instance. 
+     * @param storageType The storage type to associate with the DB instance. 
      */
     public fun storageType(storageType: String)
 
@@ -4244,19 +4251,23 @@ public open class CfnDBInstance internal constructor(
     }
 
     /**
-     * The compute and memory capacity of the DB instance, for example, `db.m4.large` . Not all DB
-     * instance classes are available in all AWS Regions, or for all database engines.
-     *
-     * For the full list of DB instance classes, and availability for your engine, see [DB Instance
-     * Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in
-     * the *Amazon RDS User Guide.* For more information about DB instance class pricing and AWS Region
-     * support for DB instance classes, see [Amazon RDS
-     * Pricing](https://docs.aws.amazon.com/rds/pricing/) .
+     * The compute and memory capacity of the DB instance, for example `db.m5.large` . Not all DB
+     * instance classes are available in all AWS Regions , or for all database engines. For the full
+     * list of DB instance classes, and availability for your engine, see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbinstanceclass)
-     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example,
-     * `db.m4.large` . Not all DB instance classes are available in all AWS Regions, or for all
-     * database engines. 
+     * @param dbInstanceClass The compute and memory capacity of the DB instance, for example
+     * `db.m5.large` . Not all DB instance classes are available in all AWS Regions , or for all
+     * database engines. For the full list of DB instance classes, and availability for your engine,
+     * see [DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon RDS User Guide* or [Aurora DB instance
+     * classes](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html)
+     * in the *Amazon Aurora User Guide* . 
      */
     override fun dbInstanceClass(dbInstanceClass: String) {
       cdkBuilder.dbInstanceClass(dbInstanceClass)
@@ -5995,27 +6006,20 @@ public open class CfnDBInstance internal constructor(
     }
 
     /**
-     * Specifies the storage type to be associated with the DB instance.
+     * The storage type to associate with the DB instance.
      *
-     * Valid values: `gp2 | gp3 | io1 | standard`
+     * If you specify `io1` , `io2` , or `gp3` , you must also include a value for the `Iops`
+     * parameter.
      *
-     * The `standard` value is also known as magnetic.
+     * This setting doesn't apply to Amazon Aurora DB instances. Storage is managed by the DB
+     * cluster.
      *
-     * If you specify `io1` or `gp3` , you must also include a value for the `Iops` parameter.
+     * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`
-     *
-     * For more information, see [Amazon RDS DB Instance
-     * Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the
-     * *Amazon RDS User Guide* .
-     *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Aurora data is stored in the cluster volume, which is a single, virtual
-     * volume that uses solid state drives (SSDs).
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
-     * @param storageType Specifies the storage type to be associated with the DB instance. 
+     * @param storageType The storage type to associate with the DB instance. 
      */
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
@@ -6242,7 +6246,123 @@ public open class CfnDBInstance internal constructor(
         CfnDBInstance(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBInstance): software.amazon.awscdk.services.rds.CfnDBInstance =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.CfnDBInstance
+  }
+
+  /**
+   * Returns the details of the DB instance’s server certificate.
+   *
+   * For more information, see [Using SSL/TLS to encrypt a connection to a DB
+   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
+   * *Amazon RDS User Guide* and [Using SSL/TLS to encrypt a connection to a DB
+   * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html) in
+   * the *Amazon Aurora User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rds.*;
+   * CertificateDetailsProperty certificateDetailsProperty = CertificateDetailsProperty.builder()
+   * .caIdentifier("caIdentifier")
+   * .validTill("validTill")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html)
+   */
+  public interface CertificateDetailsProperty {
+    /**
+     * The CA identifier of the CA certificate used for the DB instance's server certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+     */
+    public fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+
+    /**
+     * The expiration date of the DB instance’s server certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+     */
+    public fun validTill(): String? = unwrap(this).getValidTill()
+
+    /**
+     * A builder for [CertificateDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
+       * server certificate.
+       */
+      public fun caIdentifier(caIdentifier: String)
+
+      /**
+       * @param validTill The expiration date of the DB instance’s server certificate.
+       */
+      public fun validTill(validTill: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.builder()
+
+      /**
+       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
+       * server certificate.
+       */
+      override fun caIdentifier(caIdentifier: String) {
+        cdkBuilder.caIdentifier(caIdentifier)
+      }
+
+      /**
+       * @param validTill The expiration date of the DB instance’s server certificate.
+       */
+      override fun validTill(validTill: String) {
+        cdkBuilder.validTill(validTill)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
+    ) : CdkObject(cdkObject), CertificateDetailsProperty {
+      /**
+       * The CA identifier of the CA certificate used for the DB instance's server certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
+       */
+      override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+
+      /**
+       * The expiration date of the DB instance’s server certificate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
+       */
+      override fun validTill(): String? = unwrap(this).getValidTill()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
+          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertificateDetailsProperty):
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty
+    }
   }
 
   /**
@@ -6338,8 +6458,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty,
     ) : CdkObject(cdkObject), DBInstanceRoleProperty {
       /**
        * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
@@ -6483,7 +6602,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty,
     ) : CdkObject(cdkObject), EndpointProperty {
       /**
        * Specifies the DNS address of the DB instance.
@@ -6521,238 +6640,6 @@ public open class CfnDBInstance internal constructor(
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty
-    }
-  }
-
-  /**
-   * Returns the details of the DB instance’s server certificate.
-   *
-   * For more information, see [Using SSL/TLS to encrypt a connection to a DB
-   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
-   * *Amazon RDS User Guide* and [Using SSL/TLS to encrypt a connection to a DB
-   * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html) in
-   * the *Amazon Aurora User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rds.*;
-   * CertificateDetailsProperty certificateDetailsProperty = CertificateDetailsProperty.builder()
-   * .caIdentifier("caIdentifier")
-   * .validTill("validTill")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html)
-   */
-  public interface CertificateDetailsProperty {
-    /**
-     * The CA identifier of the CA certificate used for the DB instance's server certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
-     */
-    public fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
-
-    /**
-     * The expiration date of the DB instance’s server certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
-     */
-    public fun validTill(): String? = unwrap(this).getValidTill()
-
-    /**
-     * A builder for [CertificateDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
-       * server certificate.
-       */
-      public fun caIdentifier(caIdentifier: String)
-
-      /**
-       * @param validTill The expiration date of the DB instance’s server certificate.
-       */
-      public fun validTill(validTill: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.builder()
-
-      /**
-       * @param caIdentifier The CA identifier of the CA certificate used for the DB instance's
-       * server certificate.
-       */
-      override fun caIdentifier(caIdentifier: String) {
-        cdkBuilder.caIdentifier(caIdentifier)
-      }
-
-      /**
-       * @param validTill The expiration date of the DB instance’s server certificate.
-       */
-      override fun validTill(validTill: String) {
-        cdkBuilder.validTill(validTill)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
-    ) : CdkObject(cdkObject), CertificateDetailsProperty {
-      /**
-       * The CA identifier of the CA certificate used for the DB instance's server certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-caidentifier)
-       */
-      override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
-
-      /**
-       * The expiration date of the DB instance’s server certificate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-certificatedetails.html#cfn-rds-dbinstance-certificatedetails-validtill)
-       */
-      override fun validTill(): String? = unwrap(this).getValidTill()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CertificateDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
-          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CertificateDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CertificateDetailsProperty):
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty
-    }
-  }
-
-  /**
-   * The `ProcessorFeature` property type specifies the processor features of a DB instance class
-   * status.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.rds.*;
-   * ProcessorFeatureProperty processorFeatureProperty = ProcessorFeatureProperty.builder()
-   * .name("name")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html)
-   */
-  public interface ProcessorFeatureProperty {
-    /**
-     * The name of the processor feature.
-     *
-     * Valid names are `coreCount` and `threadsPerCore` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * The value of a processor feature name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ProcessorFeatureProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the processor feature.
-       * Valid names are `coreCount` and `threadsPerCore` .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param value The value of a processor feature name.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.Builder =
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.builder()
-
-      /**
-       * @param name The name of the processor feature.
-       * Valid names are `coreCount` and `threadsPerCore` .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param value The value of a processor feature name.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build(): software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty,
-    ) : CdkObject(cdkObject), ProcessorFeatureProperty {
-      /**
-       * The name of the processor feature.
-       *
-       * Valid names are `coreCount` and `threadsPerCore` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The value of a processor feature name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProcessorFeatureProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty):
-          ProcessorFeatureProperty = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatureProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProcessorFeatureProperty):
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty
     }
   }
 
@@ -6835,8 +6722,7 @@ public open class CfnDBInstance internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
     ) : CdkObject(cdkObject), MasterUserSecretProperty {
       /**
        * The AWS KMS key identifier that is used to encrypt the secret.
@@ -6868,6 +6754,120 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty
+    }
+  }
+
+  /**
+   * The `ProcessorFeature` property type specifies the processor features of a DB instance class
+   * status.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rds.*;
+   * ProcessorFeatureProperty processorFeatureProperty = ProcessorFeatureProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html)
+   */
+  public interface ProcessorFeatureProperty {
+    /**
+     * The name of the processor feature.
+     *
+     * Valid names are `coreCount` and `threadsPerCore` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The value of a processor feature name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ProcessorFeatureProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the processor feature.
+       * Valid names are `coreCount` and `threadsPerCore` .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value The value of a processor feature name.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.Builder =
+          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.builder()
+
+      /**
+       * @param name The name of the processor feature.
+       * Valid names are `coreCount` and `threadsPerCore` .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value The value of a processor feature name.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty,
+    ) : CdkObject(cdkObject), ProcessorFeatureProperty {
+      /**
+       * The name of the processor feature.
+       *
+       * Valid names are `coreCount` and `threadsPerCore` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The value of a processor feature name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html#cfn-rds-dbinstance-processorfeature-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProcessorFeatureProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty):
+          ProcessorFeatureProperty = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatureProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProcessorFeatureProperty):
+          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty
     }
   }
 }

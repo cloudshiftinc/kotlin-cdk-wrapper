@@ -205,7 +205,7 @@ public interface RedirectOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions,
   ) : CdkObject(cdkObject), RedirectOptions {
     /**
      * The hostname.

@@ -226,7 +226,7 @@ public interface CfnIPAMProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMProps,
   ) : CdkObject(cdkObject), CfnIPAMProps {
     /**
      * The description for the IPAM.

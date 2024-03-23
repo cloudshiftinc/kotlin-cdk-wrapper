@@ -19,8 +19,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html)
  */
-public open class FoundationModel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel,
+public open class FoundationModel(
+  cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel,
 ) : CdkObject(cdkObject), IModel {
   /**
    * The foundation model ARN.
@@ -51,6 +51,7 @@ public open class FoundationModel internal constructor(
         FoundationModel = FoundationModel(cdkObject)
 
     internal fun unwrap(wrapped: FoundationModel):
-        software.amazon.awscdk.services.bedrock.FoundationModel = wrapped.cdkObject
+        software.amazon.awscdk.services.bedrock.FoundationModel = wrapped.cdkObject as
+        software.amazon.awscdk.services.bedrock.FoundationModel
   }
 }

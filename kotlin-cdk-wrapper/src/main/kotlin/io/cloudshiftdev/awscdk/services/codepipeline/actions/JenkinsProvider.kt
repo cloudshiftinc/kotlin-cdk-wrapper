@@ -25,9 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation]( #import)
  */
-public open class JenkinsProvider internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider,
+public open class JenkinsProvider(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider,
 ) : BaseJenkinsProvider(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -233,6 +232,7 @@ public open class JenkinsProvider internal constructor(
         JenkinsProvider = JenkinsProvider(cdkObject)
 
     internal fun unwrap(wrapped: JenkinsProvider):
-        software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider
   }
 }

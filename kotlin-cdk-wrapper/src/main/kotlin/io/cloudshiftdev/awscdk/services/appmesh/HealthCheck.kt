@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class HealthCheck internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
+public abstract class HealthCheck(
+  cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the AccessLog type is initialized.
@@ -68,7 +68,7 @@ public abstract class HealthCheck internal constructor(
       HealthCheckConfig = bind(scope, HealthCheckBindOptions(options))
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
+    cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
   ) : HealthCheck(cdkObject)
 
   public companion object {

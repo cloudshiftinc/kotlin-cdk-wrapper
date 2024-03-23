@@ -71,7 +71,7 @@ public interface Alarms {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms,
+    cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms,
   ) : CdkObject(cdkObject), Alarms {
     /**
      *

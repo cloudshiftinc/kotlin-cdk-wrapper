@@ -37,9 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html)
  */
-public open class CfnTransitGatewayMulticastGroupSource internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource,
+public open class CfnTransitGatewayMulticastGroupSource(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -243,6 +242,7 @@ public open class CfnTransitGatewayMulticastGroupSource internal constructor(
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastGroupSource):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource
   }
 }

@@ -57,8 +57,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class IpAddresses internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.IpAddresses,
+public open class IpAddresses(
+  cdkObject: software.amazon.awscdk.services.ec2.IpAddresses,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun awsIpamAllocation(props: AwsIpamProps): IIpAddresses =
@@ -76,6 +76,6 @@ public open class IpAddresses internal constructor(
         IpAddresses(cdkObject)
 
     internal fun unwrap(wrapped: IpAddresses): software.amazon.awscdk.services.ec2.IpAddresses =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.IpAddresses
   }
 }

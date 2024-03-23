@@ -59,8 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)
  */
-public open class CfnReportGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup,
+public open class CfnReportGroup(
+  cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -440,7 +440,8 @@ public open class CfnReportGroup internal constructor(
         CfnReportGroup = CfnReportGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportGroup):
-        software.amazon.awscdk.services.codebuild.CfnReportGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.CfnReportGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.CfnReportGroup
   }
 
   /**
@@ -567,8 +568,7 @@ public open class CfnReportGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty,
     ) : CdkObject(cdkObject), ReportExportConfigProperty {
       /**
        * The export configuration type. Valid values are:.
@@ -796,8 +796,7 @@ public open class CfnReportGroup internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty,
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty,
     ) : CdkObject(cdkObject), S3ReportExportConfigProperty {
       /**
        * The name of the S3 bucket where the raw data of a report are exported.

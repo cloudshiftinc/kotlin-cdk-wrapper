@@ -31,8 +31,8 @@ import kotlin.Any
  * new LambdaAction(version));
  * ```
  */
-public open class LambdaAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.LambdaAction,
+public open class LambdaAction(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.actions.LambdaAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(lambdaFunction: Any) :
       this(software.amazon.awscdk.services.cloudwatch.actions.LambdaAction(lambdaFunction)
@@ -54,6 +54,7 @@ public open class LambdaAction internal constructor(
         LambdaAction = LambdaAction(cdkObject)
 
     internal fun unwrap(wrapped: LambdaAction):
-        software.amazon.awscdk.services.cloudwatch.actions.LambdaAction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.actions.LambdaAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.actions.LambdaAction
   }
 }

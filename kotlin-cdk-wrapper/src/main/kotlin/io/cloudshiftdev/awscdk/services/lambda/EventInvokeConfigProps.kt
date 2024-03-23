@@ -143,7 +143,7 @@ public interface EventInvokeConfigProps : EventInvokeConfigOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigProps,
+    cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigProps,
   ) : CdkObject(cdkObject), EventInvokeConfigProps {
     /**
      * The Lambda function.

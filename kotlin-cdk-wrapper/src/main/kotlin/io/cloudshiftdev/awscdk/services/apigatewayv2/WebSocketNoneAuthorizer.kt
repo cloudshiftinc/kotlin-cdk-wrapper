@@ -18,9 +18,8 @@ import kotlin.jvm.JvmName
  * WebSocketNoneAuthorizer webSocketNoneAuthorizer = new WebSocketNoneAuthorizer();
  * ```
  */
-public open class WebSocketNoneAuthorizer internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer,
+public open class WebSocketNoneAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
   public constructor() : this(software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer()
   )
@@ -50,6 +49,7 @@ public open class WebSocketNoneAuthorizer internal constructor(
         WebSocketNoneAuthorizer = WebSocketNoneAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketNoneAuthorizer):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer
   }
 }

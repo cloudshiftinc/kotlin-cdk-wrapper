@@ -56,7 +56,7 @@ public interface TreeArtifactProperties {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
+    cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
   ) : CdkObject(cdkObject), TreeArtifactProperties {
     /**
      * Filename of the tree artifact.

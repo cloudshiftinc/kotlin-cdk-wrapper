@@ -229,7 +229,7 @@ public interface Channel {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Channel,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Channel,
   ) : CdkObject(cdkObject), Channel {
     /**
      * Name of the channel.

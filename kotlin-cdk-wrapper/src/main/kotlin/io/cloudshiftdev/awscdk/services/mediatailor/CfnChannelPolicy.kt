@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channelpolicy.html)
  */
-public open class CfnChannelPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelPolicy,
+public open class CfnChannelPolicy(
+  cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -158,6 +158,7 @@ public open class CfnChannelPolicy internal constructor(
         CfnChannelPolicy = CfnChannelPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannelPolicy):
-        software.amazon.awscdk.services.mediatailor.CfnChannelPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.mediatailor.CfnChannelPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediatailor.CfnChannelPolicy
   }
 }

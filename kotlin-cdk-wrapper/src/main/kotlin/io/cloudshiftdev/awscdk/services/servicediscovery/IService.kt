@@ -51,7 +51,7 @@ public interface IService : IResource {
   public fun serviceName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.servicediscovery.IService,
+    cdkObject: software.amazon.awscdk.services.servicediscovery.IService,
   ) : CdkObject(cdkObject), IService {
     /**
      * Apply the given removal policy to this resource.

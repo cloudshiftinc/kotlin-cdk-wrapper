@@ -36,8 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html)
  */
-public open class CfnMaster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnMaster,
+public open class CfnMaster(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnMaster,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -195,6 +195,6 @@ public open class CfnMaster internal constructor(
         CfnMaster(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaster): software.amazon.awscdk.services.guardduty.CfnMaster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.guardduty.CfnMaster
   }
 }

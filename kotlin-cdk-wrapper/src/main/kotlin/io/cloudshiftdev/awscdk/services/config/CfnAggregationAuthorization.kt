@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html)
  */
-public open class CfnAggregationAuthorization internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.config.CfnAggregationAuthorization,
+public open class CfnAggregationAuthorization(
+  cdkObject: software.amazon.awscdk.services.config.CfnAggregationAuthorization,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -228,6 +227,7 @@ public open class CfnAggregationAuthorization internal constructor(
         CfnAggregationAuthorization = CfnAggregationAuthorization(cdkObject)
 
     internal fun unwrap(wrapped: CfnAggregationAuthorization):
-        software.amazon.awscdk.services.config.CfnAggregationAuthorization = wrapped.cdkObject
+        software.amazon.awscdk.services.config.CfnAggregationAuthorization = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.CfnAggregationAuthorization
   }
 }

@@ -122,7 +122,7 @@ public interface ScratchSpace {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ScratchSpace,
+    cdkObject: software.amazon.awscdk.services.ecs.ScratchSpace,
   ) : CdkObject(cdkObject), ScratchSpace {
     /**
      * The path on the container to mount the scratch volume at.

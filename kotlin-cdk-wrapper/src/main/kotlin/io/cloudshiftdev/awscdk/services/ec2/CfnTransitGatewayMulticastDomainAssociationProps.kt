@@ -105,8 +105,7 @@ public interface CfnTransitGatewayMulticastDomainAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociationProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociationProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayMulticastDomainAssociationProps {
     /**
      * The IDs of the subnets to associate with the transit gateway multicast domain.

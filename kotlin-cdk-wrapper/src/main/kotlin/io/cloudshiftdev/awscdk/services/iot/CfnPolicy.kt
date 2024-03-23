@@ -43,8 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iot.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.iot.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -224,6 +224,6 @@ public open class CfnPolicy internal constructor(
         CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy): software.amazon.awscdk.services.iot.CfnPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.iot.CfnPolicy
   }
 }

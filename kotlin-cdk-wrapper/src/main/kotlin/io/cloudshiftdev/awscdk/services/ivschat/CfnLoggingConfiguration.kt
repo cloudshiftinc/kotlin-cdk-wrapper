@@ -58,8 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html)
  */
-public open class CfnLoggingConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration,
+public open class CfnLoggingConfiguration(
+  cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -354,7 +354,8 @@ public open class CfnLoggingConfiguration internal constructor(
         CfnLoggingConfiguration = CfnLoggingConfiguration(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggingConfiguration):
-        software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration = wrapped.cdkObject
+        software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration = wrapped.cdkObject as
+        software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
   }
 
   /**
@@ -415,8 +416,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty,
     ) : CdkObject(cdkObject), CloudWatchLogsDestinationConfigurationProperty {
       /**
        * Name of the Amazon Cloudwatch Logs destination where chat activity will be logged.
@@ -442,94 +442,6 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty
-    }
-  }
-
-  /**
-   * The FirehoseDestinationConfiguration property type specifies a Kinesis Firehose location where
-   * chat logs will be stored.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.ivschat.*;
-   * FirehoseDestinationConfigurationProperty firehoseDestinationConfigurationProperty =
-   * FirehoseDestinationConfigurationProperty.builder()
-   * .deliveryStreamName("deliveryStreamName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html)
-   */
-  public interface FirehoseDestinationConfigurationProperty {
-    /**
-     * Name of the Amazon Kinesis Firehose delivery stream where chat activity will be logged.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html#cfn-ivschat-loggingconfiguration-firehosedestinationconfiguration-deliverystreamname)
-     */
-    public fun deliveryStreamName(): String
-
-    /**
-     * A builder for [FirehoseDestinationConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
-       * activity will be logged. 
-       */
-      public fun deliveryStreamName(deliveryStreamName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
-
-      /**
-       * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
-       * activity will be logged. 
-       */
-      override fun deliveryStreamName(deliveryStreamName: String) {
-        cdkBuilder.deliveryStreamName(deliveryStreamName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), FirehoseDestinationConfigurationProperty {
-      /**
-       * Name of the Amazon Kinesis Firehose delivery stream where chat activity will be logged.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html#cfn-ivschat-loggingconfiguration-firehosedestinationconfiguration-deliverystreamname)
-       */
-      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          FirehoseDestinationConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty):
-          FirehoseDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FirehoseDestinationConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FirehoseDestinationConfigurationProperty):
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
     }
   }
 
@@ -732,8 +644,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), DestinationConfigurationProperty {
       /**
        * An Amazon CloudWatch Logs destination configuration where chat activity will be logged.
@@ -773,6 +684,93 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty
+    }
+  }
+
+  /**
+   * The FirehoseDestinationConfiguration property type specifies a Kinesis Firehose location where
+   * chat logs will be stored.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ivschat.*;
+   * FirehoseDestinationConfigurationProperty firehoseDestinationConfigurationProperty =
+   * FirehoseDestinationConfigurationProperty.builder()
+   * .deliveryStreamName("deliveryStreamName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html)
+   */
+  public interface FirehoseDestinationConfigurationProperty {
+    /**
+     * Name of the Amazon Kinesis Firehose delivery stream where chat activity will be logged.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html#cfn-ivschat-loggingconfiguration-firehosedestinationconfiguration-deliverystreamname)
+     */
+    public fun deliveryStreamName(): String
+
+    /**
+     * A builder for [FirehoseDestinationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
+       * activity will be logged. 
+       */
+      public fun deliveryStreamName(deliveryStreamName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
+
+      /**
+       * @param deliveryStreamName Name of the Amazon Kinesis Firehose delivery stream where chat
+       * activity will be logged. 
+       */
+      override fun deliveryStreamName(deliveryStreamName: String) {
+        cdkBuilder.deliveryStreamName(deliveryStreamName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty,
+    ) : CdkObject(cdkObject), FirehoseDestinationConfigurationProperty {
+      /**
+       * Name of the Amazon Kinesis Firehose delivery stream where chat activity will be logged.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-firehosedestinationconfiguration.html#cfn-ivschat-loggingconfiguration-firehosedestinationconfiguration-deliverystreamname)
+       */
+      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FirehoseDestinationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty):
+          FirehoseDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FirehoseDestinationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FirehoseDestinationConfigurationProperty):
+          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
     }
   }
 
@@ -832,8 +830,7 @@ public open class CfnLoggingConfiguration internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty,
     ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
       /**
        * Name of the Amazon S3 bucket where chat activity will be logged.

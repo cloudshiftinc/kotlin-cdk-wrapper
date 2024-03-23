@@ -516,7 +516,7 @@ public interface CfnPushTemplateProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplateProps,
+    cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplateProps,
   ) : CdkObject(cdkObject), CfnPushTemplateProps {
     /**
      * The message template to use for the ADM (Amazon Device Messaging) channel.

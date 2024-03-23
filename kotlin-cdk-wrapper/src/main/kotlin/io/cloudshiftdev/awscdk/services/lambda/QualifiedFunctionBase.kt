@@ -14,8 +14,8 @@ import kotlin.jvm.JvmName
 /**
  *
  */
-public abstract class QualifiedFunctionBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
+public abstract class QualifiedFunctionBase(
+  cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
 ) : FunctionBase(cdkObject) {
   /**
    * Configures options for asynchronous invocation.
@@ -82,7 +82,7 @@ public abstract class QualifiedFunctionBase internal constructor(
       unwrap(this).getResourceArnsForGrantInvoke()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
+    cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
   ) : QualifiedFunctionBase(cdkObject)
 
   public companion object {

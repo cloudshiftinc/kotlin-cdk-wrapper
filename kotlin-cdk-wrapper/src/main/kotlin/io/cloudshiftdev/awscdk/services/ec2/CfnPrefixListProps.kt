@@ -191,7 +191,7 @@ public interface CfnPrefixListProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixListProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixListProps,
   ) : CdkObject(cdkObject), CfnPrefixListProps {
     /**
      * The IP address type.

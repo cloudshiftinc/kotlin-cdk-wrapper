@@ -30,8 +30,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class QueryString internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.QueryString,
+public open class QueryString(
+  cdkObject: software.amazon.awscdk.services.logs.QueryString,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.logs.QueryString()
   )
@@ -370,6 +370,6 @@ public open class QueryString internal constructor(
         QueryString(cdkObject)
 
     internal fun unwrap(wrapped: QueryString): software.amazon.awscdk.services.logs.QueryString =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.logs.QueryString
   }
 }

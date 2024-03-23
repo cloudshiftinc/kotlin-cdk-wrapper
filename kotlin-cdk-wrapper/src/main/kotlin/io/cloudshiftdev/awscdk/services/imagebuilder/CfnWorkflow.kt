@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-workflow.html)
  */
-public open class CfnWorkflow internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflow,
+public open class CfnWorkflow(
+  cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -437,6 +437,7 @@ public open class CfnWorkflow internal constructor(
         CfnWorkflow = CfnWorkflow(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflow):
-        software.amazon.awscdk.services.imagebuilder.CfnWorkflow = wrapped.cdkObject
+        software.amazon.awscdk.services.imagebuilder.CfnWorkflow = wrapped.cdkObject as
+        software.amazon.awscdk.services.imagebuilder.CfnWorkflow
   }
 }

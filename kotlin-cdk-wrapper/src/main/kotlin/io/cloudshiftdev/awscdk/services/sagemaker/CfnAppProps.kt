@@ -231,7 +231,7 @@ public interface CfnAppProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppProps,
+    cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppProps,
   ) : CdkObject(cdkObject), CfnAppProps {
     /**
      * The name of the app.

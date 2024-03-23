@@ -68,8 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
  */
-public open class CfnCoreDefinition internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition,
+public open class CfnCoreDefinition(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -395,7 +395,143 @@ public open class CfnCoreDefinition internal constructor(
         CfnCoreDefinition = CfnCoreDefinition(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreDefinition):
-        software.amazon.awscdk.services.greengrass.CfnCoreDefinition = wrapped.cdkObject
+        software.amazon.awscdk.services.greengrass.CfnCoreDefinition = wrapped.cdkObject as
+        software.amazon.awscdk.services.greengrass.CfnCoreDefinition
+  }
+
+  /**
+   * A core definition version contains a Greengrass
+   * [core](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)
+   * .
+   *
+   *
+   * After you create a core definition version that contains the core you want to deploy, you must
+   * add it to your group version. For more information, see
+   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+   * .
+   *
+   *
+   * In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the
+   * `InitialVersion` property in the
+   * [`AWS::Greengrass::CoreDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.greengrass.*;
+   * CoreDefinitionVersionProperty coreDefinitionVersionProperty =
+   * CoreDefinitionVersionProperty.builder()
+   * .cores(List.of(CoreProperty.builder()
+   * .certificateArn("certificateArn")
+   * .id("id")
+   * .thingArn("thingArn")
+   * // the properties below are optional
+   * .syncShadow(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html)
+   */
+  public interface CoreDefinitionVersionProperty {
+    /**
+     * The Greengrass core in this version.
+     *
+     * Currently, the `Cores` property for a core definition version can contain only one core.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html#cfn-greengrass-coredefinition-coredefinitionversion-cores)
+     */
+    public fun cores(): Any
+
+    /**
+     * A builder for [CoreDefinitionVersionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      public fun cores(cores: IResolvable)
+
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      public fun cores(cores: List<Any>)
+
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      public fun cores(vararg cores: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty.Builder
+          =
+          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty.builder()
+
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      override fun cores(cores: IResolvable) {
+        cdkBuilder.cores(cores.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      override fun cores(cores: List<Any>) {
+        cdkBuilder.cores(cores)
+      }
+
+      /**
+       * @param cores The Greengrass core in this version. 
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       */
+      override fun cores(vararg cores: Any): Unit = cores(cores.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty,
+    ) : CdkObject(cdkObject), CoreDefinitionVersionProperty {
+      /**
+       * The Greengrass core in this version.
+       *
+       * Currently, the `Cores` property for a core definition version can contain only one core.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html#cfn-greengrass-coredefinition-coredefinitionversion-cores)
+       */
+      override fun cores(): Any = unwrap(this).getCores()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CoreDefinitionVersionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty):
+          CoreDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CoreDefinitionVersionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CoreDefinitionVersionProperty):
+          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
+    }
   }
 
   /**
@@ -559,8 +695,7 @@ public open class CfnCoreDefinition internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty,
     ) : CdkObject(cdkObject), CoreProperty {
       /**
        * The Amazon Resource Name (ARN) of the device certificate for the core.
@@ -613,142 +748,6 @@ public open class CfnCoreDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty
-    }
-  }
-
-  /**
-   * A core definition version contains a Greengrass
-   * [core](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-core.html)
-   * .
-   *
-   *
-   * After you create a core definition version that contains the core you want to deploy, you must
-   * add it to your group version. For more information, see
-   * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
-   * .
-   *
-   *
-   * In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the
-   * `InitialVersion` property in the
-   * [`AWS::Greengrass::CoreDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
-   * resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.greengrass.*;
-   * CoreDefinitionVersionProperty coreDefinitionVersionProperty =
-   * CoreDefinitionVersionProperty.builder()
-   * .cores(List.of(CoreProperty.builder()
-   * .certificateArn("certificateArn")
-   * .id("id")
-   * .thingArn("thingArn")
-   * // the properties below are optional
-   * .syncShadow(false)
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html)
-   */
-  public interface CoreDefinitionVersionProperty {
-    /**
-     * The Greengrass core in this version.
-     *
-     * Currently, the `Cores` property for a core definition version can contain only one core.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html#cfn-greengrass-coredefinition-coredefinitionversion-cores)
-     */
-    public fun cores(): Any
-
-    /**
-     * A builder for [CoreDefinitionVersionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      public fun cores(cores: IResolvable)
-
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      public fun cores(cores: List<Any>)
-
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      public fun cores(vararg cores: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty.builder()
-
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      override fun cores(cores: IResolvable) {
-        cdkBuilder.cores(cores.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      override fun cores(cores: List<Any>) {
-        cdkBuilder.cores(cores)
-      }
-
-      /**
-       * @param cores The Greengrass core in this version. 
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       */
-      override fun cores(vararg cores: Any): Unit = cores(cores.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), CoreDefinitionVersionProperty {
-      /**
-       * The Greengrass core in this version.
-       *
-       * Currently, the `Cores` property for a core definition version can contain only one core.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinition-coredefinitionversion.html#cfn-greengrass-coredefinition-coredefinitionversion-cores)
-       */
-      override fun cores(): Any = unwrap(this).getCores()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CoreDefinitionVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty):
-          CoreDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CoreDefinitionVersionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CoreDefinitionVersionProperty):
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty
     }
   }
 }

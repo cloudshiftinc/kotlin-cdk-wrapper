@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html)
  */
-public open class CfnInferenceComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
+public open class CfnInferenceComponent(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -545,7 +545,350 @@ public open class CfnInferenceComponent internal constructor(
         CfnInferenceComponent = CfnInferenceComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceComponent):
-        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent = wrapped.cdkObject
+        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.sagemaker.CfnInferenceComponent
+  }
+
+  /**
+   * Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted in
+   * this
+   * [ProductionVariant](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html)
+   * .
+   *
+   * If you used the `registry/repository[:tag]` form to specify the image path of the primary
+   * container when you created the model hosted in this `ProductionVariant` , the path resolves to a
+   * path of the form `registry/repository[&#64;digest]` . A digest is a hash value that identifies a
+   * specific version of an image. For information about Amazon ECR paths, see [Pulling an
+   * Image](https://docs.aws.amazon.com//AmazonECR/latest/userguide/docker-pull-ecr-image.html) in the
+   * *Amazon ECR User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * DeployedImageProperty deployedImageProperty = DeployedImageProperty.builder()
+   * .resolutionTime("resolutionTime")
+   * .resolvedImage("resolvedImage")
+   * .specifiedImage("specifiedImage")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html)
+   */
+  public interface DeployedImageProperty {
+    /**
+     * The date and time when the image path for the model resolved to the `ResolvedImage`.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolutiontime)
+     */
+    public fun resolutionTime(): String? = unwrap(this).getResolutionTime()
+
+    /**
+     * The specific digest path of the image hosted in this `ProductionVariant` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolvedimage)
+     */
+    public fun resolvedImage(): String? = unwrap(this).getResolvedImage()
+
+    /**
+     * The image path you specified when you created the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-specifiedimage)
+     */
+    public fun specifiedImage(): String? = unwrap(this).getSpecifiedImage()
+
+    /**
+     * A builder for [DeployedImageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resolutionTime The date and time when the image path for the model resolved to the
+       * `ResolvedImage`.
+       */
+      public fun resolutionTime(resolutionTime: String)
+
+      /**
+       * @param resolvedImage The specific digest path of the image hosted in this
+       * `ProductionVariant` .
+       */
+      public fun resolvedImage(resolvedImage: String)
+
+      /**
+       * @param specifiedImage The image path you specified when you created the model.
+       */
+      public fun specifiedImage(specifiedImage: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty.builder()
+
+      /**
+       * @param resolutionTime The date and time when the image path for the model resolved to the
+       * `ResolvedImage`.
+       */
+      override fun resolutionTime(resolutionTime: String) {
+        cdkBuilder.resolutionTime(resolutionTime)
+      }
+
+      /**
+       * @param resolvedImage The specific digest path of the image hosted in this
+       * `ProductionVariant` .
+       */
+      override fun resolvedImage(resolvedImage: String) {
+        cdkBuilder.resolvedImage(resolvedImage)
+      }
+
+      /**
+       * @param specifiedImage The image path you specified when you created the model.
+       */
+      override fun specifiedImage(specifiedImage: String) {
+        cdkBuilder.specifiedImage(specifiedImage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty,
+    ) : CdkObject(cdkObject), DeployedImageProperty {
+      /**
+       * The date and time when the image path for the model resolved to the `ResolvedImage`.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolutiontime)
+       */
+      override fun resolutionTime(): String? = unwrap(this).getResolutionTime()
+
+      /**
+       * The specific digest path of the image hosted in this `ProductionVariant` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolvedimage)
+       */
+      override fun resolvedImage(): String? = unwrap(this).getResolvedImage()
+
+      /**
+       * The image path you specified when you created the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-specifiedimage)
+       */
+      override fun specifiedImage(): String? = unwrap(this).getSpecifiedImage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeployedImageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty):
+          DeployedImageProperty = CdkObjectWrappers.wrap(cdkObject) as? DeployedImageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeployedImageProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty
+    }
+  }
+
+  /**
+   * Defines the compute resources to allocate to run a model that you assign to an inference
+   * component.
+   *
+   * These resources include CPU cores, accelerators, and memory.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * InferenceComponentComputeResourceRequirementsProperty
+   * inferenceComponentComputeResourceRequirementsProperty =
+   * InferenceComponentComputeResourceRequirementsProperty.builder()
+   * .maxMemoryRequiredInMb(123)
+   * .minMemoryRequiredInMb(123)
+   * .numberOfAcceleratorDevicesRequired(123)
+   * .numberOfCpuCoresRequired(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html)
+   */
+  public interface InferenceComponentComputeResourceRequirementsProperty {
+    /**
+     * The maximum MB of memory to allocate to run a model that you assign to an inference
+     * component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-maxmemoryrequiredinmb)
+     */
+    public fun maxMemoryRequiredInMb(): Number? = unwrap(this).getMaxMemoryRequiredInMb()
+
+    /**
+     * The minimum MB of memory to allocate to run a model that you assign to an inference
+     * component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-minmemoryrequiredinmb)
+     */
+    public fun minMemoryRequiredInMb(): Number? = unwrap(this).getMinMemoryRequiredInMb()
+
+    /**
+     * The number of accelerators to allocate to run a model that you assign to an inference
+     * component.
+     *
+     * Accelerators include GPUs and AWS Inferentia.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofacceleratordevicesrequired)
+     */
+    public fun numberOfAcceleratorDevicesRequired(): Number? =
+        unwrap(this).getNumberOfAcceleratorDevicesRequired()
+
+    /**
+     * The number of CPU cores to allocate to run a model that you assign to an inference component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofcpucoresrequired)
+     */
+    public fun numberOfCpuCoresRequired(): Number? = unwrap(this).getNumberOfCpuCoresRequired()
+
+    /**
+     * A builder for [InferenceComponentComputeResourceRequirementsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxMemoryRequiredInMb The maximum MB of memory to allocate to run a model that you
+       * assign to an inference component.
+       */
+      public fun maxMemoryRequiredInMb(maxMemoryRequiredInMb: Number)
+
+      /**
+       * @param minMemoryRequiredInMb The minimum MB of memory to allocate to run a model that you
+       * assign to an inference component.
+       */
+      public fun minMemoryRequiredInMb(minMemoryRequiredInMb: Number)
+
+      /**
+       * @param numberOfAcceleratorDevicesRequired The number of accelerators to allocate to run a
+       * model that you assign to an inference component.
+       * Accelerators include GPUs and AWS Inferentia.
+       */
+      public fun numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired: Number)
+
+      /**
+       * @param numberOfCpuCoresRequired The number of CPU cores to allocate to run a model that you
+       * assign to an inference component.
+       */
+      public fun numberOfCpuCoresRequired(numberOfCpuCoresRequired: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty.builder()
+
+      /**
+       * @param maxMemoryRequiredInMb The maximum MB of memory to allocate to run a model that you
+       * assign to an inference component.
+       */
+      override fun maxMemoryRequiredInMb(maxMemoryRequiredInMb: Number) {
+        cdkBuilder.maxMemoryRequiredInMb(maxMemoryRequiredInMb)
+      }
+
+      /**
+       * @param minMemoryRequiredInMb The minimum MB of memory to allocate to run a model that you
+       * assign to an inference component.
+       */
+      override fun minMemoryRequiredInMb(minMemoryRequiredInMb: Number) {
+        cdkBuilder.minMemoryRequiredInMb(minMemoryRequiredInMb)
+      }
+
+      /**
+       * @param numberOfAcceleratorDevicesRequired The number of accelerators to allocate to run a
+       * model that you assign to an inference component.
+       * Accelerators include GPUs and AWS Inferentia.
+       */
+      override fun numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired: Number) {
+        cdkBuilder.numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired)
+      }
+
+      /**
+       * @param numberOfCpuCoresRequired The number of CPU cores to allocate to run a model that you
+       * assign to an inference component.
+       */
+      override fun numberOfCpuCoresRequired(numberOfCpuCoresRequired: Number) {
+        cdkBuilder.numberOfCpuCoresRequired(numberOfCpuCoresRequired)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty,
+    ) : CdkObject(cdkObject), InferenceComponentComputeResourceRequirementsProperty {
+      /**
+       * The maximum MB of memory to allocate to run a model that you assign to an inference
+       * component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-maxmemoryrequiredinmb)
+       */
+      override fun maxMemoryRequiredInMb(): Number? = unwrap(this).getMaxMemoryRequiredInMb()
+
+      /**
+       * The minimum MB of memory to allocate to run a model that you assign to an inference
+       * component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-minmemoryrequiredinmb)
+       */
+      override fun minMemoryRequiredInMb(): Number? = unwrap(this).getMinMemoryRequiredInMb()
+
+      /**
+       * The number of accelerators to allocate to run a model that you assign to an inference
+       * component.
+       *
+       * Accelerators include GPUs and AWS Inferentia.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofacceleratordevicesrequired)
+       */
+      override fun numberOfAcceleratorDevicesRequired(): Number? =
+          unwrap(this).getNumberOfAcceleratorDevicesRequired()
+
+      /**
+       * The number of CPU cores to allocate to run a model that you assign to an inference
+       * component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofcpucoresrequired)
+       */
+      override fun numberOfCpuCoresRequired(): Number? = unwrap(this).getNumberOfCpuCoresRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InferenceComponentComputeResourceRequirementsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty):
+          InferenceComponentComputeResourceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? InferenceComponentComputeResourceRequirementsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceComponentComputeResourceRequirementsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
+    }
   }
 
   /**
@@ -727,8 +1070,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceComponentContainerSpecificationProperty {
       /**
        * The Amazon S3 path where the model artifacts, which result from model training, are stored.
@@ -779,152 +1121,6 @@ public open class CfnInferenceComponent internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty
-    }
-  }
-
-  /**
-   * Settings that take effect while the model container starts up.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * InferenceComponentStartupParametersProperty inferenceComponentStartupParametersProperty =
-   * InferenceComponentStartupParametersProperty.builder()
-   * .containerStartupHealthCheckTimeoutInSeconds(123)
-   * .modelDataDownloadTimeoutInSeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html)
-   */
-  public interface InferenceComponentStartupParametersProperty {
-    /**
-     * The timeout value, in seconds, for your inference container to pass health check by Amazon S3
-     * Hosting.
-     *
-     * For more information about health check, see [How Your Container Should Respond to Health
-     * Check (Ping)
-     * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-containerstartuphealthchecktimeoutinseconds)
-     */
-    public fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
-        unwrap(this).getContainerStartupHealthCheckTimeoutInSeconds()
-
-    /**
-     * The timeout value, in seconds, to download and extract the model that you want to host from
-     * Amazon S3 to the individual inference instance associated with this inference component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-modeldatadownloadtimeoutinseconds)
-     */
-    public fun modelDataDownloadTimeoutInSeconds(): Number? =
-        unwrap(this).getModelDataDownloadTimeoutInSeconds()
-
-    /**
-     * A builder for [InferenceComponentStartupParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerStartupHealthCheckTimeoutInSeconds The timeout value, in seconds, for your
-       * inference container to pass health check by Amazon S3 Hosting.
-       * For more information about health check, see [How Your Container Should Respond to Health
-       * Check (Ping)
-       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
-       * .
-       */
-      public
-          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number)
-
-      /**
-       * @param modelDataDownloadTimeoutInSeconds The timeout value, in seconds, to download and
-       * extract the model that you want to host from Amazon S3 to the individual inference instance
-       * associated with this inference component.
-       */
-      public fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty.builder()
-
-      /**
-       * @param containerStartupHealthCheckTimeoutInSeconds The timeout value, in seconds, for your
-       * inference container to pass health check by Amazon S3 Hosting.
-       * For more information about health check, see [How Your Container Should Respond to Health
-       * Check (Ping)
-       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
-       * .
-       */
-      override
-          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number) {
-        cdkBuilder.containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds)
-      }
-
-      /**
-       * @param modelDataDownloadTimeoutInSeconds The timeout value, in seconds, to download and
-       * extract the model that you want to host from Amazon S3 to the individual inference instance
-       * associated with this inference component.
-       */
-      override fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
-        cdkBuilder.modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty,
-    ) : CdkObject(cdkObject), InferenceComponentStartupParametersProperty {
-      /**
-       * The timeout value, in seconds, for your inference container to pass health check by Amazon
-       * S3 Hosting.
-       *
-       * For more information about health check, see [How Your Container Should Respond to Health
-       * Check (Ping)
-       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-containerstartuphealthchecktimeoutinseconds)
-       */
-      override fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
-          unwrap(this).getContainerStartupHealthCheckTimeoutInSeconds()
-
-      /**
-       * The timeout value, in seconds, to download and extract the model that you want to host from
-       * Amazon S3 to the individual inference instance associated with this inference component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-modeldatadownloadtimeoutinseconds)
-       */
-      override fun modelDataDownloadTimeoutInSeconds(): Number? =
-          unwrap(this).getModelDataDownloadTimeoutInSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          InferenceComponentStartupParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty):
-          InferenceComponentStartupParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          InferenceComponentStartupParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InferenceComponentStartupParametersProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
     }
   }
 
@@ -1034,8 +1230,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty,
     ) : CdkObject(cdkObject), InferenceComponentRuntimeConfigProperty {
       /**
        * The number of runtime copies of the model container to deploy with the inference component.
@@ -1323,8 +1518,7 @@ public open class CfnInferenceComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty,
     ) : CdkObject(cdkObject), InferenceComponentSpecificationProperty {
       /**
        * The compute resources allocated to run the model assigned to the inference component.
@@ -1378,10 +1572,7 @@ public open class CfnInferenceComponent internal constructor(
   }
 
   /**
-   * Defines the compute resources to allocate to run a model that you assign to an inference
-   * component.
-   *
-   * These resources include CPU cores, accelerators, and memory.
+   * Settings that take effect while the model container starts up.
    *
    * Example:
    *
@@ -1389,335 +1580,139 @@ public open class CfnInferenceComponent internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * InferenceComponentComputeResourceRequirementsProperty
-   * inferenceComponentComputeResourceRequirementsProperty =
-   * InferenceComponentComputeResourceRequirementsProperty.builder()
-   * .maxMemoryRequiredInMb(123)
-   * .minMemoryRequiredInMb(123)
-   * .numberOfAcceleratorDevicesRequired(123)
-   * .numberOfCpuCoresRequired(123)
+   * InferenceComponentStartupParametersProperty inferenceComponentStartupParametersProperty =
+   * InferenceComponentStartupParametersProperty.builder()
+   * .containerStartupHealthCheckTimeoutInSeconds(123)
+   * .modelDataDownloadTimeoutInSeconds(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html)
    */
-  public interface InferenceComponentComputeResourceRequirementsProperty {
+  public interface InferenceComponentStartupParametersProperty {
     /**
-     * The maximum MB of memory to allocate to run a model that you assign to an inference
-     * component.
+     * The timeout value, in seconds, for your inference container to pass health check by Amazon S3
+     * Hosting.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-maxmemoryrequiredinmb)
+     * For more information about health check, see [How Your Container Should Respond to Health
+     * Check (Ping)
+     * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-containerstartuphealthchecktimeoutinseconds)
      */
-    public fun maxMemoryRequiredInMb(): Number? = unwrap(this).getMaxMemoryRequiredInMb()
+    public fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
+        unwrap(this).getContainerStartupHealthCheckTimeoutInSeconds()
 
     /**
-     * The minimum MB of memory to allocate to run a model that you assign to an inference
-     * component.
+     * The timeout value, in seconds, to download and extract the model that you want to host from
+     * Amazon S3 to the individual inference instance associated with this inference component.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-minmemoryrequiredinmb)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-modeldatadownloadtimeoutinseconds)
      */
-    public fun minMemoryRequiredInMb(): Number? = unwrap(this).getMinMemoryRequiredInMb()
+    public fun modelDataDownloadTimeoutInSeconds(): Number? =
+        unwrap(this).getModelDataDownloadTimeoutInSeconds()
 
     /**
-     * The number of accelerators to allocate to run a model that you assign to an inference
-     * component.
-     *
-     * Accelerators include GPUs and AWS Inferentia.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofacceleratordevicesrequired)
-     */
-    public fun numberOfAcceleratorDevicesRequired(): Number? =
-        unwrap(this).getNumberOfAcceleratorDevicesRequired()
-
-    /**
-     * The number of CPU cores to allocate to run a model that you assign to an inference component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofcpucoresrequired)
-     */
-    public fun numberOfCpuCoresRequired(): Number? = unwrap(this).getNumberOfCpuCoresRequired()
-
-    /**
-     * A builder for [InferenceComponentComputeResourceRequirementsProperty]
+     * A builder for [InferenceComponentStartupParametersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxMemoryRequiredInMb The maximum MB of memory to allocate to run a model that you
-       * assign to an inference component.
+       * @param containerStartupHealthCheckTimeoutInSeconds The timeout value, in seconds, for your
+       * inference container to pass health check by Amazon S3 Hosting.
+       * For more information about health check, see [How Your Container Should Respond to Health
+       * Check (Ping)
+       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
+       * .
        */
-      public fun maxMemoryRequiredInMb(maxMemoryRequiredInMb: Number)
+      public
+          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number)
 
       /**
-       * @param minMemoryRequiredInMb The minimum MB of memory to allocate to run a model that you
-       * assign to an inference component.
+       * @param modelDataDownloadTimeoutInSeconds The timeout value, in seconds, to download and
+       * extract the model that you want to host from Amazon S3 to the individual inference instance
+       * associated with this inference component.
        */
-      public fun minMemoryRequiredInMb(minMemoryRequiredInMb: Number)
-
-      /**
-       * @param numberOfAcceleratorDevicesRequired The number of accelerators to allocate to run a
-       * model that you assign to an inference component.
-       * Accelerators include GPUs and AWS Inferentia.
-       */
-      public fun numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired: Number)
-
-      /**
-       * @param numberOfCpuCoresRequired The number of CPU cores to allocate to run a model that you
-       * assign to an inference component.
-       */
-      public fun numberOfCpuCoresRequired(numberOfCpuCoresRequired: Number)
+      public fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty.Builder
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty.Builder
           =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty.builder()
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty.builder()
 
       /**
-       * @param maxMemoryRequiredInMb The maximum MB of memory to allocate to run a model that you
-       * assign to an inference component.
+       * @param containerStartupHealthCheckTimeoutInSeconds The timeout value, in seconds, for your
+       * inference container to pass health check by Amazon S3 Hosting.
+       * For more information about health check, see [How Your Container Should Respond to Health
+       * Check (Ping)
+       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
+       * .
        */
-      override fun maxMemoryRequiredInMb(maxMemoryRequiredInMb: Number) {
-        cdkBuilder.maxMemoryRequiredInMb(maxMemoryRequiredInMb)
+      override
+          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number) {
+        cdkBuilder.containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds)
       }
 
       /**
-       * @param minMemoryRequiredInMb The minimum MB of memory to allocate to run a model that you
-       * assign to an inference component.
+       * @param modelDataDownloadTimeoutInSeconds The timeout value, in seconds, to download and
+       * extract the model that you want to host from Amazon S3 to the individual inference instance
+       * associated with this inference component.
        */
-      override fun minMemoryRequiredInMb(minMemoryRequiredInMb: Number) {
-        cdkBuilder.minMemoryRequiredInMb(minMemoryRequiredInMb)
-      }
-
-      /**
-       * @param numberOfAcceleratorDevicesRequired The number of accelerators to allocate to run a
-       * model that you assign to an inference component.
-       * Accelerators include GPUs and AWS Inferentia.
-       */
-      override fun numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired: Number) {
-        cdkBuilder.numberOfAcceleratorDevicesRequired(numberOfAcceleratorDevicesRequired)
-      }
-
-      /**
-       * @param numberOfCpuCoresRequired The number of CPU cores to allocate to run a model that you
-       * assign to an inference component.
-       */
-      override fun numberOfCpuCoresRequired(numberOfCpuCoresRequired: Number) {
-        cdkBuilder.numberOfCpuCoresRequired(numberOfCpuCoresRequired)
+      override fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
+        cdkBuilder.modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds)
       }
 
       public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty,
-    ) : CdkObject(cdkObject), InferenceComponentComputeResourceRequirementsProperty {
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty,
+    ) : CdkObject(cdkObject), InferenceComponentStartupParametersProperty {
       /**
-       * The maximum MB of memory to allocate to run a model that you assign to an inference
-       * component.
+       * The timeout value, in seconds, for your inference container to pass health check by Amazon
+       * S3 Hosting.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-maxmemoryrequiredinmb)
+       * For more information about health check, see [How Your Container Should Respond to Health
+       * Check (Ping)
+       * Requests](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-containerstartuphealthchecktimeoutinseconds)
        */
-      override fun maxMemoryRequiredInMb(): Number? = unwrap(this).getMaxMemoryRequiredInMb()
+      override fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
+          unwrap(this).getContainerStartupHealthCheckTimeoutInSeconds()
 
       /**
-       * The minimum MB of memory to allocate to run a model that you assign to an inference
-       * component.
+       * The timeout value, in seconds, to download and extract the model that you want to host from
+       * Amazon S3 to the individual inference instance associated with this inference component.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-minmemoryrequiredinmb)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentstartupparameters.html#cfn-sagemaker-inferencecomponent-inferencecomponentstartupparameters-modeldatadownloadtimeoutinseconds)
        */
-      override fun minMemoryRequiredInMb(): Number? = unwrap(this).getMinMemoryRequiredInMb()
-
-      /**
-       * The number of accelerators to allocate to run a model that you assign to an inference
-       * component.
-       *
-       * Accelerators include GPUs and AWS Inferentia.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofacceleratordevicesrequired)
-       */
-      override fun numberOfAcceleratorDevicesRequired(): Number? =
-          unwrap(this).getNumberOfAcceleratorDevicesRequired()
-
-      /**
-       * The number of CPU cores to allocate to run a model that you assign to an inference
-       * component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements.html#cfn-sagemaker-inferencecomponent-inferencecomponentcomputeresourcerequirements-numberofcpucoresrequired)
-       */
-      override fun numberOfCpuCoresRequired(): Number? = unwrap(this).getNumberOfCpuCoresRequired()
+      override fun modelDataDownloadTimeoutInSeconds(): Number? =
+          unwrap(this).getModelDataDownloadTimeoutInSeconds()
     }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
-          InferenceComponentComputeResourceRequirementsProperty {
+          InferenceComponentStartupParametersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty):
-          InferenceComponentComputeResourceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject)
-          as? InferenceComponentComputeResourceRequirementsProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty):
+          InferenceComponentStartupParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentStartupParametersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InferenceComponentComputeResourceRequirementsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
+      internal fun unwrap(wrapped: InferenceComponentStartupParametersProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
           = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
-    }
-  }
-
-  /**
-   * Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted in
-   * this
-   * [ProductionVariant](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html)
-   * .
-   *
-   * If you used the `registry/repository[:tag]` form to specify the image path of the primary
-   * container when you created the model hosted in this `ProductionVariant` , the path resolves to a
-   * path of the form `registry/repository[&#64;digest]` . A digest is a hash value that identifies a
-   * specific version of an image. For information about Amazon ECR paths, see [Pulling an
-   * Image](https://docs.aws.amazon.com//AmazonECR/latest/userguide/docker-pull-ecr-image.html) in the
-   * *Amazon ECR User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * DeployedImageProperty deployedImageProperty = DeployedImageProperty.builder()
-   * .resolutionTime("resolutionTime")
-   * .resolvedImage("resolvedImage")
-   * .specifiedImage("specifiedImage")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html)
-   */
-  public interface DeployedImageProperty {
-    /**
-     * The date and time when the image path for the model resolved to the `ResolvedImage`.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolutiontime)
-     */
-    public fun resolutionTime(): String? = unwrap(this).getResolutionTime()
-
-    /**
-     * The specific digest path of the image hosted in this `ProductionVariant` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolvedimage)
-     */
-    public fun resolvedImage(): String? = unwrap(this).getResolvedImage()
-
-    /**
-     * The image path you specified when you created the model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-specifiedimage)
-     */
-    public fun specifiedImage(): String? = unwrap(this).getSpecifiedImage()
-
-    /**
-     * A builder for [DeployedImageProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param resolutionTime The date and time when the image path for the model resolved to the
-       * `ResolvedImage`.
-       */
-      public fun resolutionTime(resolutionTime: String)
-
-      /**
-       * @param resolvedImage The specific digest path of the image hosted in this
-       * `ProductionVariant` .
-       */
-      public fun resolvedImage(resolvedImage: String)
-
-      /**
-       * @param specifiedImage The image path you specified when you created the model.
-       */
-      public fun specifiedImage(specifiedImage: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty.builder()
-
-      /**
-       * @param resolutionTime The date and time when the image path for the model resolved to the
-       * `ResolvedImage`.
-       */
-      override fun resolutionTime(resolutionTime: String) {
-        cdkBuilder.resolutionTime(resolutionTime)
-      }
-
-      /**
-       * @param resolvedImage The specific digest path of the image hosted in this
-       * `ProductionVariant` .
-       */
-      override fun resolvedImage(resolvedImage: String) {
-        cdkBuilder.resolvedImage(resolvedImage)
-      }
-
-      /**
-       * @param specifiedImage The image path you specified when you created the model.
-       */
-      override fun specifiedImage(specifiedImage: String) {
-        cdkBuilder.specifiedImage(specifiedImage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty,
-    ) : CdkObject(cdkObject), DeployedImageProperty {
-      /**
-       * The date and time when the image path for the model resolved to the `ResolvedImage`.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolutiontime)
-       */
-      override fun resolutionTime(): String? = unwrap(this).getResolutionTime()
-
-      /**
-       * The specific digest path of the image hosted in this `ProductionVariant` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-resolvedimage)
-       */
-      override fun resolvedImage(): String? = unwrap(this).getResolvedImage()
-
-      /**
-       * The image path you specified when you created the model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-deployedimage.html#cfn-sagemaker-inferencecomponent-deployedimage-specifiedimage)
-       */
-      override fun specifiedImage(): String? = unwrap(this).getSpecifiedImage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeployedImageProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty):
-          DeployedImageProperty = CdkObjectWrappers.wrap(cdkObject) as? DeployedImageProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DeployedImageProperty):
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
     }
   }
 }

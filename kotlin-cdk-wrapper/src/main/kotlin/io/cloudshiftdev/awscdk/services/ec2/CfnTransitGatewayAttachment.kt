@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayattachment.html)
  */
-public open class CfnTransitGatewayAttachment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment,
+public open class CfnTransitGatewayAttachment(
+  cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -336,7 +336,8 @@ public open class CfnTransitGatewayAttachment internal constructor(
         CfnTransitGatewayAttachment = CfnTransitGatewayAttachment(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayAttachment):
-        software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment = wrapped.cdkObject
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment = wrapped.cdkObject as
+        software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment
   }
 
   /**
@@ -495,8 +496,7 @@ public open class CfnTransitGatewayAttachment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.OptionsProperty,
+      cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.OptionsProperty,
     ) : CdkObject(cdkObject), OptionsProperty {
       /**
        * Enable or disable appliance mode support.

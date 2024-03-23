@@ -155,7 +155,7 @@ public interface CfnStackUserAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps,
+    cdkObject: software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps,
   ) : CdkObject(cdkObject), CfnStackUserAssociationProps {
     /**
      * The authentication type for the user who is associated with the stack.

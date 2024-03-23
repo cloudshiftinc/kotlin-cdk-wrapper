@@ -23,8 +23,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public abstract class LambdaValidator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator,
+public abstract class LambdaValidator(
+  cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator,
 ) : CdkObject(cdkObject), IValidator {
   /**
    * The content of the validator.
@@ -37,7 +37,7 @@ public abstract class LambdaValidator internal constructor(
   public override fun type(): ValidatorType = unwrap(this).getType().let(ValidatorType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator,
+    cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator,
   ) : LambdaValidator(cdkObject)
 
   public companion object {

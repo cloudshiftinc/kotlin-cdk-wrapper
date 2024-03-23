@@ -21,8 +21,8 @@ import kotlin.String
  *
  * [Documentation](https://docs.docker.com/build/buildkit/)
  */
-public open class DockerBuildSecret internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.DockerBuildSecret,
+public open class DockerBuildSecret(
+  cdkObject: software.amazon.awscdk.DockerBuildSecret,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.DockerBuildSecret()
   )
@@ -34,6 +34,6 @@ public open class DockerBuildSecret internal constructor(
         DockerBuildSecret(cdkObject)
 
     internal fun unwrap(wrapped: DockerBuildSecret): software.amazon.awscdk.DockerBuildSecret =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.DockerBuildSecret
   }
 }

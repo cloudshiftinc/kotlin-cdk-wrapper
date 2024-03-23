@@ -476,7 +476,7 @@ public interface CfnInstanceGroupConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps,
   ) : CdkObject(cdkObject), CfnInstanceGroupConfigProps {
     /**
      * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .

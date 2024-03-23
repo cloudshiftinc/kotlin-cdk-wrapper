@@ -26,7 +26,7 @@ public interface IRealtimeLogConfig : IResource {
   public fun realtimeLogConfigName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig,
   ) : CdkObject(cdkObject), IRealtimeLogConfig {
     /**
      * Apply the given removal policy to this resource.

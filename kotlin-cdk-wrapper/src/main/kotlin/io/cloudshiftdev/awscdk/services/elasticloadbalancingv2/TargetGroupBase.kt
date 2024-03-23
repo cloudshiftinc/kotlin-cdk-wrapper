@@ -14,9 +14,8 @@ import kotlin.jvm.JvmName
 /**
  * Define the target of a load balancer.
  */
-public abstract class TargetGroupBase internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
+public abstract class TargetGroupBase(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
 ) : Construct(cdkObject), ITargetGroup {
   /**
    * Set a non-standard attribute on the target group.
@@ -124,7 +123,7 @@ public abstract class TargetGroupBase internal constructor(
   public override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
   ) : TargetGroupBase(cdkObject)
 
   public companion object {

@@ -324,8 +324,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html)
  */
-public open class CfnEndpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
+public open class CfnEndpoint(
+  cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -2977,19 +2977,19 @@ public open class CfnEndpoint internal constructor(
         CfnEndpoint(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpoint): software.amazon.awscdk.services.dms.CfnEndpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.dms.CfnEndpoint
   }
 
   /**
-   * Provides information that defines a MySQL endpoint.
+   * Provides information that defines a DocumentDB endpoint.
    *
    * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For information about other available settings,
-   * see [Extra connection attributes when using MySQL as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
-   * and [Extra connection attributes when using a MySQL-compatible database as a target for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.MySQL.html#CHAP_Target.MySQL.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
+   * transaction and control table data information. For more information about other available
+   * settings, see [Using extra connections attributes with Amazon DocumentDB as a
+   * source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.DocumentDB.html#CHAP_Source.DocumentDB.ECAs)
+   * and [Using Amazon DocumentDB as a target for AWS Database Migration
+   * Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DocumentDB.html) in the *AWS
+   * Database Migration Service User Guide* .
    *
    * Example:
    *
@@ -2997,88 +2997,54 @@ public open class CfnEndpoint internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dms.*;
-   * MySqlSettingsProperty mySqlSettingsProperty = MySqlSettingsProperty.builder()
-   * .afterConnectScript("afterConnectScript")
-   * .cleanSourceMetadataOnMismatch(false)
-   * .eventsPollInterval(123)
-   * .maxFileSize(123)
-   * .parallelLoadThreads(123)
+   * DocDbSettingsProperty docDbSettingsProperty = DocDbSettingsProperty.builder()
+   * .docsToInvestigate(123)
+   * .extractDocId(false)
+   * .nestingLevel("nestingLevel")
    * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
    * .secretsManagerSecretId("secretsManagerSecretId")
-   * .serverTimezone("serverTimezone")
-   * .targetDbType("targetDbType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html)
    */
-  public interface MySqlSettingsProperty {
+  public interface DocDbSettingsProperty {
     /**
-     * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+     * Indicates the number of documents to preview to determine the document organization.
      *
-     * The migration task continues running regardless if the SQL statement succeeds or fails.
+     * Use this setting when `NestingLevel` is set to `"one"` .
      *
-     * For this parameter, provide the code of the script itself, not the name of a file containing
-     * the script.
+     * Must be a positive value greater than `0` . Default value is `1000` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-afterconnectscript)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-docstoinvestigate)
      */
-    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+    public fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
 
     /**
-     * Cleans and recreates table metadata information on the replication instance when a mismatch
-     * occurs.
+     * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
      *
-     * For example, in a situation where running an alter DDL on the table could result in different
-     * information about the table cached in the replication instance.
+     * Default value is `"false"` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-cleansourcemetadataonmismatch)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-extractdocid)
      */
-    public fun cleanSourceMetadataOnMismatch(): Any? =
-        unwrap(this).getCleanSourceMetadataOnMismatch()
+    public fun extractDocId(): Any? = unwrap(this).getExtractDocId()
 
     /**
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     * Specifies either document or table mode.
      *
-     * The default is five seconds.
+     * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+     * table mode.
      *
-     * Example: `eventsPollInterval=5;`
-     *
-     * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-eventspollinterval)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-nestinglevel)
      */
-    public fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
-
-    /**
-     * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
-     * MySQL-compatible database.
-     *
-     * Example: `maxFileSize=512`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * Improves performance when loading data into the MySQL-compatible target database.
-     *
-     * Specifies how many threads to use to load the data into the MySQL-compatible target database.
-     * Setting a large number of threads can have an adverse effect on database performance, because a
-     * separate connection is required for each thread. The default is one.
-     *
-     * Example: `parallelLoadThreads=1`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-parallelloadthreads)
-     */
-    public fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+    public fun nestingLevel(): String? = unwrap(this).getNestingLevel()
 
     /**
      * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
      * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
      *
      * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+     * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
      *
      *
      * You can specify one of two sets of values for these permissions. You can specify the values
@@ -3092,109 +3058,60 @@ public open class CfnEndpoint internal constructor(
      * in the *AWS Database Migration Service User Guide* .
      *
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanageraccessrolearn)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanageraccessrolearn)
      */
     public fun secretsManagerAccessRoleArn(): String? =
         unwrap(this).getSecretsManagerAccessRoleArn()
 
     /**
      * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * MySQL endpoint connection details.
+     * DocumentDB endpoint connection details.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanagersecretid)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanagersecretid)
      */
     public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
     /**
-     * Specifies the time zone for the source MySQL database.
-     *
-     * Example: `serverTimezone=US/Pacific;`
-     *
-     * Note: Do not enclose time zones in single quotes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-servertimezone)
-     */
-    public fun serverTimezone(): String? = unwrap(this).getServerTimezone()
-
-    /**
-     * Specifies where to migrate source tables on the target, either to a single database or
-     * multiple databases.
-     *
-     * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
-     * parameter of the `Endpoint` object.
-     *
-     * Example: `targetDbType=MULTIPLE_DATABASES`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-targetdbtype)
-     */
-    public fun targetDbType(): String? = unwrap(this).getTargetDbType()
-
-    /**
-     * A builder for [MySqlSettingsProperty]
+     * A builder for [DocDbSettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
-       * the endpoint.
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       * @param docsToInvestigate Indicates the number of documents to preview to determine the
+       * document organization.
+       * Use this setting when `NestingLevel` is set to `"one"` .
        *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
+       * Must be a positive value greater than `0` . Default value is `1000` .
        */
-      public fun afterConnectScript(afterConnectScript: String)
+      public fun docsToInvestigate(docsToInvestigate: Number)
 
       /**
-       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * For example, in a situation where running an alter DDL on the table could result in
-       * different information about the table cached in the replication instance.
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
        */
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
+      public fun extractDocId(extractDocId: Boolean)
 
       /**
-       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * For example, in a situation where running an alter DDL on the table could result in
-       * different information about the table cached in the replication instance.
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
        */
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
+      public fun extractDocId(extractDocId: IResolvable)
 
       /**
-       * @param eventsPollInterval Specifies how often to check the binary log for new
-       * changes/events when the database is idle.
-       * The default is five seconds.
-       *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       * @param nestingLevel Specifies either document or table mode.
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
        */
-      public fun eventsPollInterval(eventsPollInterval: Number)
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to a MySQL-compatible database.
-       * Example: `maxFileSize=512`
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
-       * target database.
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       */
-      public fun parallelLoadThreads(parallelLoadThreads: Number)
+      public fun nestingLevel(nestingLevel: String)
 
       /**
        * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
        * specifies AWS DMS as the trusted entity and grants the required permissions to access the
        * value in `SecretsManagerSecret` .
        * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
        *
        *
        * You can specify one of two sets of values for these permissions. You can specify the values
@@ -3211,99 +3128,52 @@ public open class CfnEndpoint internal constructor(
 
       /**
        * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       * `SecretsManagerSecret` that contains the DocumentDB endpoint connection details.
        */
       public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param serverTimezone Specifies the time zone for the source MySQL database.
-       * Example: `serverTimezone=US/Pacific;`
-       *
-       * Note: Do not enclose time zones in single quotes.
-       */
-      public fun serverTimezone(serverTimezone: String)
-
-      /**
-       * @param targetDbType Specifies where to migrate source tables on the target, either to a
-       * single database or multiple databases.
-       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
-       * parameter of the `Endpoint` object.
-       *
-       * Example: `targetDbType=MULTIPLE_DATABASES`
-       */
-      public fun targetDbType(targetDbType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.builder()
+          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.builder()
 
       /**
-       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
-       * the endpoint.
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       * @param docsToInvestigate Indicates the number of documents to preview to determine the
+       * document organization.
+       * Use this setting when `NestingLevel` is set to `"one"` .
        *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
+       * Must be a positive value greater than `0` . Default value is `1000` .
        */
-      override fun afterConnectScript(afterConnectScript: String) {
-        cdkBuilder.afterConnectScript(afterConnectScript)
+      override fun docsToInvestigate(docsToInvestigate: Number) {
+        cdkBuilder.docsToInvestigate(docsToInvestigate)
       }
 
       /**
-       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * For example, in a situation where running an alter DDL on the table could result in
-       * different information about the table cached in the replication instance.
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
        */
-      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
+      override fun extractDocId(extractDocId: Boolean) {
+        cdkBuilder.extractDocId(extractDocId)
       }
 
       /**
-       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * For example, in a situation where running an alter DDL on the table could result in
-       * different information about the table cached in the replication instance.
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
        */
-      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
+      override fun extractDocId(extractDocId: IResolvable) {
+        cdkBuilder.extractDocId(extractDocId.let(IResolvable::unwrap))
       }
 
       /**
-       * @param eventsPollInterval Specifies how often to check the binary log for new
-       * changes/events when the database is idle.
-       * The default is five seconds.
-       *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       * @param nestingLevel Specifies either document or table mode.
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
        */
-      override fun eventsPollInterval(eventsPollInterval: Number) {
-        cdkBuilder.eventsPollInterval(eventsPollInterval)
-      }
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to a MySQL-compatible database.
-       * Example: `maxFileSize=512`
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
-       * target database.
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       */
-      override fun parallelLoadThreads(parallelLoadThreads: Number) {
-        cdkBuilder.parallelLoadThreads(parallelLoadThreads)
+      override fun nestingLevel(nestingLevel: String) {
+        cdkBuilder.nestingLevel(nestingLevel)
       }
 
       /**
@@ -3311,7 +3181,7 @@ public open class CfnEndpoint internal constructor(
        * specifies AWS DMS as the trusted entity and grants the required permissions to access the
        * value in `SecretsManagerSecret` .
        * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
        *
        *
        * You can specify one of two sets of values for these permissions. You can specify the values
@@ -3330,108 +3200,55 @@ public open class CfnEndpoint internal constructor(
 
       /**
        * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       * `SecretsManagerSecret` that contains the DocumentDB endpoint connection details.
        */
       override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      /**
-       * @param serverTimezone Specifies the time zone for the source MySQL database.
-       * Example: `serverTimezone=US/Pacific;`
-       *
-       * Note: Do not enclose time zones in single quotes.
-       */
-      override fun serverTimezone(serverTimezone: String) {
-        cdkBuilder.serverTimezone(serverTimezone)
-      }
-
-      /**
-       * @param targetDbType Specifies where to migrate source tables on the target, either to a
-       * single database or multiple databases.
-       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
-       * parameter of the `Endpoint` object.
-       *
-       * Example: `targetDbType=MULTIPLE_DATABASES`
-       */
-      override fun targetDbType(targetDbType: String) {
-        cdkBuilder.targetDbType(targetDbType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty =
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
-    ) : CdkObject(cdkObject), MySqlSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
+    ) : CdkObject(cdkObject), DocDbSettingsProperty {
       /**
-       * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+       * Indicates the number of documents to preview to determine the document organization.
        *
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       * Use this setting when `NestingLevel` is set to `"one"` .
        *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
+       * Must be a positive value greater than `0` . Default value is `1000` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-afterconnectscript)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-docstoinvestigate)
        */
-      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+      override fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
 
       /**
-       * Cleans and recreates table metadata information on the replication instance when a mismatch
-       * occurs.
+       * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
        *
-       * For example, in a situation where running an alter DDL on the table could result in
-       * different information about the table cached in the replication instance.
+       * Default value is `"false"` .
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-cleansourcemetadataonmismatch)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-extractdocid)
        */
-      override fun cleanSourceMetadataOnMismatch(): Any? =
-          unwrap(this).getCleanSourceMetadataOnMismatch()
+      override fun extractDocId(): Any? = unwrap(this).getExtractDocId()
 
       /**
-       * Specifies how often to check the binary log for new changes/events when the database is
-       * idle.
+       * Specifies either document or table mode.
        *
-       * The default is five seconds.
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
        *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-eventspollinterval)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-nestinglevel)
        */
-      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
-
-      /**
-       * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
-       * MySQL-compatible database.
-       *
-       * Example: `maxFileSize=512`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * Improves performance when loading data into the MySQL-compatible target database.
-       *
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-parallelloadthreads)
-       */
-      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
 
       /**
        * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
        * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
        *
        * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
        *
        *
        * You can specify one of two sets of values for these permissions. You can specify the values
@@ -3445,59 +3262,35 @@ public open class CfnEndpoint internal constructor(
        * in the *AWS Database Migration Service User Guide* .
        *
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanageraccessrolearn)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanageraccessrolearn)
        */
       override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
       /**
        * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * MySQL endpoint connection details.
+       * DocumentDB endpoint connection details.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanagersecretid)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanagersecretid)
        */
       override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * Specifies the time zone for the source MySQL database.
-       *
-       * Example: `serverTimezone=US/Pacific;`
-       *
-       * Note: Do not enclose time zones in single quotes.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-servertimezone)
-       */
-      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
-
-      /**
-       * Specifies where to migrate source tables on the target, either to a single database or
-       * multiple databases.
-       *
-       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
-       * parameter of the `Endpoint` object.
-       *
-       * Example: `targetDbType=MULTIPLE_DATABASES`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-targetdbtype)
-       */
-      override fun targetDbType(): String? = unwrap(this).getTargetDbType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MySqlSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DocDbSettingsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty):
-          MySqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlSettingsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty):
+          DocDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DocDbSettingsProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: MySqlSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty = (wrapped as
+      internal fun unwrap(wrapped: DocDbSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty
+          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty
     }
   }
 
@@ -3566,8 +3359,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
     ) : CdkObject(cdkObject), DynamoDbSettingsProperty {
       /**
        * The Amazon Resource Name (ARN) used by the service to access the IAM role.
@@ -3594,6 +3386,1278 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines an OpenSearch endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about the available settings,
+   * see [Extra connection attributes when using OpenSearch as a target for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * ElasticsearchSettingsProperty elasticsearchSettingsProperty =
+   * ElasticsearchSettingsProperty.builder()
+   * .endpointUri("endpointUri")
+   * .errorRetryDuration(123)
+   * .fullLoadErrorPercentage(123)
+   * .serviceAccessRoleArn("serviceAccessRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html)
+   */
+  public interface ElasticsearchSettingsProperty {
+    /**
+     * The endpoint for the OpenSearch cluster.
+     *
+     * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-endpointuri)
+     */
+    public fun endpointUri(): String? = unwrap(this).getEndpointUri()
+
+    /**
+     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch
+     * cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration)
+     */
+    public fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+
+    /**
+     * The maximum percentage of records that can fail to be written before a full load operation
+     * stops.
+     *
+     * To avoid early failure, this counter is only effective after 1,000 records are transferred.
+     * OpenSearch also has the concept of error monitoring during the last 10 minutes of an Observation
+     * Window. If transfer of all records fail in the last 10 minutes, the full load operation stops.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage)
+     */
+    public fun fullLoadErrorPercentage(): Number? = unwrap(this).getFullLoadErrorPercentage()
+
+    /**
+     * The Amazon Resource Name (ARN) used by the service to access the IAM role.
+     *
+     * The role must allow the `iam:PassRole` action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn)
+     */
+    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+    /**
+     * A builder for [ElasticsearchSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointUri The endpoint for the OpenSearch cluster.
+       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
+       */
+      public fun endpointUri(endpointUri: String)
+
+      /**
+       * @param errorRetryDuration The maximum number of seconds for which DMS retries failed API
+       * requests to the OpenSearch cluster.
+       */
+      public fun errorRetryDuration(errorRetryDuration: Number)
+
+      /**
+       * @param fullLoadErrorPercentage The maximum percentage of records that can fail to be
+       * written before a full load operation stops.
+       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
+       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
+       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
+       * operation stops.
+       */
+      public fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number)
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) used by the service to access
+       * the IAM role.
+       * The role must allow the `iam:PassRole` action.
+       */
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.builder()
+
+      /**
+       * @param endpointUri The endpoint for the OpenSearch cluster.
+       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
+       */
+      override fun endpointUri(endpointUri: String) {
+        cdkBuilder.endpointUri(endpointUri)
+      }
+
+      /**
+       * @param errorRetryDuration The maximum number of seconds for which DMS retries failed API
+       * requests to the OpenSearch cluster.
+       */
+      override fun errorRetryDuration(errorRetryDuration: Number) {
+        cdkBuilder.errorRetryDuration(errorRetryDuration)
+      }
+
+      /**
+       * @param fullLoadErrorPercentage The maximum percentage of records that can fail to be
+       * written before a full load operation stops.
+       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
+       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
+       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
+       * operation stops.
+       */
+      override fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number) {
+        cdkBuilder.fullLoadErrorPercentage(fullLoadErrorPercentage)
+      }
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) used by the service to access
+       * the IAM role.
+       * The role must allow the `iam:PassRole` action.
+       */
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
+    ) : CdkObject(cdkObject), ElasticsearchSettingsProperty {
+      /**
+       * The endpoint for the OpenSearch cluster.
+       *
+       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-endpointuri)
+       */
+      override fun endpointUri(): String? = unwrap(this).getEndpointUri()
+
+      /**
+       * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch
+       * cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration)
+       */
+      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+
+      /**
+       * The maximum percentage of records that can fail to be written before a full load operation
+       * stops.
+       *
+       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
+       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
+       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
+       * operation stops.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage)
+       */
+      override fun fullLoadErrorPercentage(): Number? = unwrap(this).getFullLoadErrorPercentage()
+
+      /**
+       * The Amazon Resource Name (ARN) used by the service to access the IAM role.
+       *
+       * The role must allow the `iam:PassRole` action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn)
+       */
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticsearchSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty):
+          ElasticsearchSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticsearchSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticsearchSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a GCP MySQL endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. These settings are much the same as the settings
+   * for any MySQL-compatible endpoint. For more information, see [Extra connection attributes when
+   * using MySQL as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * GcpMySQLSettingsProperty gcpMySQLSettingsProperty = GcpMySQLSettingsProperty.builder()
+   * .afterConnectScript("afterConnectScript")
+   * .cleanSourceMetadataOnMismatch(false)
+   * .databaseName("databaseName")
+   * .eventsPollInterval(123)
+   * .maxFileSize(123)
+   * .parallelLoadThreads(123)
+   * .password("password")
+   * .port(123)
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .serverName("serverName")
+   * .serverTimezone("serverTimezone")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html)
+   */
+  public interface GcpMySQLSettingsProperty {
+    /**
+     * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+     *
+     * The migration task continues running regardless if the SQL statement succeeds or fails.
+     *
+     * For this parameter, provide the code of the script itself, not the name of a file containing
+     * the script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-afterconnectscript)
+     */
+    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+    /**
+     * Adjusts the behavior of AWS DMS when migrating from an SQL Server source database that is
+     * hosted as part of an Always On availability group cluster.
+     *
+     * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+     * set this attribute to `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-cleansourcemetadataonmismatch)
+     */
+    public fun cleanSourceMetadataOnMismatch(): Any? =
+        unwrap(this).getCleanSourceMetadataOnMismatch()
+
+    /**
+     * Database name for the endpoint.
+     *
+     * For a MySQL source or target endpoint, don't explicitly specify the database using the
+     * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
+     * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
+     * tables to this single database. For MySQL endpoints, you specify the database only when you
+     * specify the schema in the table-mapping rules of the AWS DMS task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     *
+     * The default is five seconds.
+     *
+     * Example: `eventsPollInterval=5;`
+     *
+     * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-eventspollinterval)
+     */
+    public fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+
+    /**
+     * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
+     * MySQL-compatible database.
+     *
+     * Example: `maxFileSize=512`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * Improves performance when loading data into the MySQL-compatible target database.
+     *
+     * Specifies how many threads to use to load the data into the MySQL-compatible target database.
+     * Setting a large number of threads can have an adverse effect on database performance, because a
+     * separate connection is required for each thread. The default is one.
+     *
+     * Example: `parallelLoadThreads=1`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-parallelloadthreads)
+     */
+    public fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+
+    /**
+     * Endpoint connection password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-password)
+     */
+    public fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * The port used by the endpoint database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret.` The
+     * role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the AWS
+     * Secrets Manager secret that allows access to the MySQL endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
+     * [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * MySQL endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * The MySQL host name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servername)
+     */
+    public fun serverName(): String? = unwrap(this).getServerName()
+
+    /**
+     * Specifies the time zone for the source MySQL database. Don't enclose time zones in single
+     * quotation marks.
+     *
+     * Example: `serverTimezone=US/Pacific;`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servertimezone)
+     */
+    public fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+
+    /**
+     * Endpoint connection user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-username)
+     */
+    public fun username(): String? = unwrap(this).getUsername()
+
+    /**
+     * A builder for [GcpMySQLSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
+       * the endpoint.
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       */
+      public fun afterConnectScript(afterConnectScript: String)
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
+       * SQL Server source database that is hosted as part of an Always On availability group cluster.
+       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+       * set this attribute to `false` .
+       */
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
+       * SQL Server source database that is hosted as part of an Always On availability group cluster.
+       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+       * set this attribute to `false` .
+       */
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
+
+      /**
+       * @param databaseName Database name for the endpoint.
+       * For a MySQL source or target endpoint, don't explicitly specify the database using the
+       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
+       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
+       * tables to this single database. For MySQL endpoints, you specify the database only when you
+       * specify the schema in the table-mapping rules of the AWS DMS task.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param eventsPollInterval Specifies how often to check the binary log for new
+       * changes/events when the database is idle.
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       */
+      public fun eventsPollInterval(eventsPollInterval: Number)
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to a MySQL-compatible database.
+       * Example: `maxFileSize=512`
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
+       * target database.
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       */
+      public fun parallelLoadThreads(parallelLoadThreads: Number)
+
+      /**
+       * @param password Endpoint connection password.
+       */
+      public fun password(password: String)
+
+      /**
+       * @param port The port used by the endpoint database.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret.` The role must allow the `iam:PassRole` action.
+       * `SecretsManagerSecret` has the value of the AWS Secrets Manager secret that allows access to
+       * the MySQL endpoint.
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
+       * [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param serverName The MySQL host name.
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param serverTimezone Specifies the time zone for the source MySQL database. Don't enclose
+       * time zones in single quotation marks.
+       * Example: `serverTimezone=US/Pacific;`
+       */
+      public fun serverTimezone(serverTimezone: String)
+
+      /**
+       * @param username Endpoint connection user name.
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.builder()
+
+      /**
+       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
+       * the endpoint.
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       */
+      override fun afterConnectScript(afterConnectScript: String) {
+        cdkBuilder.afterConnectScript(afterConnectScript)
+      }
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
+       * SQL Server source database that is hosted as part of an Always On availability group cluster.
+       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+       * set this attribute to `false` .
+       */
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
+      }
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
+       * SQL Server source database that is hosted as part of an Always On availability group cluster.
+       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+       * set this attribute to `false` .
+       */
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param databaseName Database name for the endpoint.
+       * For a MySQL source or target endpoint, don't explicitly specify the database using the
+       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
+       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
+       * tables to this single database. For MySQL endpoints, you specify the database only when you
+       * specify the schema in the table-mapping rules of the AWS DMS task.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param eventsPollInterval Specifies how often to check the binary log for new
+       * changes/events when the database is idle.
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       */
+      override fun eventsPollInterval(eventsPollInterval: Number) {
+        cdkBuilder.eventsPollInterval(eventsPollInterval)
+      }
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to a MySQL-compatible database.
+       * Example: `maxFileSize=512`
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
+       * target database.
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       */
+      override fun parallelLoadThreads(parallelLoadThreads: Number) {
+        cdkBuilder.parallelLoadThreads(parallelLoadThreads)
+      }
+
+      /**
+       * @param password Endpoint connection password.
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param port The port used by the endpoint database.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret.` The role must allow the `iam:PassRole` action.
+       * `SecretsManagerSecret` has the value of the AWS Secrets Manager secret that allows access to
+       * the MySQL endpoint.
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
+       * [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param serverName The MySQL host name.
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param serverTimezone Specifies the time zone for the source MySQL database. Don't enclose
+       * time zones in single quotation marks.
+       * Example: `serverTimezone=US/Pacific;`
+       */
+      override fun serverTimezone(serverTimezone: String) {
+        cdkBuilder.serverTimezone(serverTimezone)
+      }
+
+      /**
+       * @param username Endpoint connection user name.
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
+    ) : CdkObject(cdkObject), GcpMySQLSettingsProperty {
+      /**
+       * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+       *
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-afterconnectscript)
+       */
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+      /**
+       * Adjusts the behavior of AWS DMS when migrating from an SQL Server source database that is
+       * hosted as part of an Always On availability group cluster.
+       *
+       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
+       * set this attribute to `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-cleansourcemetadataonmismatch)
+       */
+      override fun cleanSourceMetadataOnMismatch(): Any? =
+          unwrap(this).getCleanSourceMetadataOnMismatch()
+
+      /**
+       * Database name for the endpoint.
+       *
+       * For a MySQL source or target endpoint, don't explicitly specify the database using the
+       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
+       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
+       * tables to this single database. For MySQL endpoints, you specify the database only when you
+       * specify the schema in the table-mapping rules of the AWS DMS task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * Specifies how often to check the binary log for new changes/events when the database is
+       * idle.
+       *
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-eventspollinterval)
+       */
+      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+
+      /**
+       * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
+       * MySQL-compatible database.
+       *
+       * Example: `maxFileSize=512`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * Improves performance when loading data into the MySQL-compatible target database.
+       *
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-parallelloadthreads)
+       */
+      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+
+      /**
+       * Endpoint connection password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-password)
+       */
+      override fun password(): String? = unwrap(this).getPassword()
+
+      /**
+       * The port used by the endpoint database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret.` The
+       * role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the AWS
+       * Secrets Manager secret that allows access to the MySQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
+       * [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * MySQL endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * The MySQL host name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servername)
+       */
+      override fun serverName(): String? = unwrap(this).getServerName()
+
+      /**
+       * Specifies the time zone for the source MySQL database. Don't enclose time zones in single
+       * quotation marks.
+       *
+       * Example: `serverTimezone=US/Pacific;`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servertimezone)
+       */
+      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+
+      /**
+       * Endpoint connection user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-username)
+       */
+      override fun username(): String? = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GcpMySQLSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty):
+          GcpMySQLSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? GcpMySQLSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GcpMySQLSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines an IBMDB2 endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about other available
+   * settings, see [Extra connection attributes when using Db2 LUW as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.DB2.html#CHAP_Source.DB2.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * IbmDb2SettingsProperty ibmDb2SettingsProperty = IbmDb2SettingsProperty.builder()
+   * .currentLsn("currentLsn")
+   * .keepCsvFiles(false)
+   * .loadTimeout(123)
+   * .maxFileSize(123)
+   * .maxKBytesPerRead(123)
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .setDataCaptureChanges(false)
+   * .writeBufferSize(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html)
+   */
+  public interface IbmDb2SettingsProperty {
+    /**
+     * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
+     * you want the replication to start.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-currentlsn)
+     */
+    public fun currentLsn(): String? = unwrap(this).getCurrentLsn()
+
+    /**
+     * If true, AWS DMS saves any .csv files to the Db2 LUW target that were used to replicate data.
+     * DMS uses these files for analysis and troubleshooting.
+     *
+     * The default value is false.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-keepcsvfiles)
+     */
+    public fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
+
+    /**
+     * The amount of time (in milliseconds) before AWS DMS times out operations performed by DMS on
+     * the Db2 target.
+     *
+     * The default value is 1200 (20 minutes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-loadtimeout)
+     */
+    public fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+
+    /**
+     * Specifies the maximum size (in KB) of .csv files used to transfer data to Db2 LUW.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * Maximum number of bytes per read, as a NUMBER value.
+     *
+     * The default is 64 KB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxkbytesperread)
+     */
+    public fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe AWS
+     * Secrets Manager secret that allows access to the Db2 LUW endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * IBMDB2 endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * Enables ongoing replication (CDC) as a BOOLEAN value.
+     *
+     * The default is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-setdatacapturechanges)
+     */
+    public fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
+
+    /**
+     * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
+     * local disk on the DMS replication instance. The default value is 1024 (1 MB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-writebuffersize)
+     */
+    public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+
+    /**
+     * A builder for [IbmDb2SettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param currentLsn For ongoing replication (CDC), use CurrentLSN to specify a log sequence
+       * number (LSN) where you want the replication to start.
+       */
+      public fun currentLsn(currentLsn: String)
+
+      /**
+       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
+       * The default is true.
+       */
+      public fun dataCaptureChanges(setDataCaptureChanges: Boolean)
+
+      /**
+       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
+       * The default is true.
+       */
+      public fun dataCaptureChanges(setDataCaptureChanges: IResolvable)
+
+      /**
+       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+       * used to replicate data. DMS uses these files for analysis and troubleshooting.
+       * The default value is false.
+       */
+      public fun keepCsvFiles(keepCsvFiles: Boolean)
+
+      /**
+       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+       * used to replicate data. DMS uses these files for analysis and troubleshooting.
+       * The default value is false.
+       */
+      public fun keepCsvFiles(keepCsvFiles: IResolvable)
+
+      /**
+       * @param loadTimeout The amount of time (in milliseconds) before AWS DMS times out operations
+       * performed by DMS on the Db2 target.
+       * The default value is 1200 (20 minutes).
+       */
+      public fun loadTimeout(loadTimeout: Number)
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of .csv files used to transfer data
+       * to Db2 LUW.
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param maxKBytesPerRead Maximum number of bytes per read, as a NUMBER value.
+       * The default is 64 KB.
+       */
+      public fun maxKBytesPerRead(maxKBytesPerRead: Number)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
+       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the IBMDB2 endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
+       * generating .csv files on the local disk on the DMS replication instance. The default value is
+       * 1024 (1 MB).
+       */
+      public fun writeBufferSize(writeBufferSize: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.builder()
+
+      /**
+       * @param currentLsn For ongoing replication (CDC), use CurrentLSN to specify a log sequence
+       * number (LSN) where you want the replication to start.
+       */
+      override fun currentLsn(currentLsn: String) {
+        cdkBuilder.currentLsn(currentLsn)
+      }
+
+      /**
+       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
+       * The default is true.
+       */
+      override fun dataCaptureChanges(setDataCaptureChanges: Boolean) {
+        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges)
+      }
+
+      /**
+       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
+       * The default is true.
+       */
+      override fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
+        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+       * used to replicate data. DMS uses these files for analysis and troubleshooting.
+       * The default value is false.
+       */
+      override fun keepCsvFiles(keepCsvFiles: Boolean) {
+        cdkBuilder.keepCsvFiles(keepCsvFiles)
+      }
+
+      /**
+       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
+       * used to replicate data. DMS uses these files for analysis and troubleshooting.
+       * The default value is false.
+       */
+      override fun keepCsvFiles(keepCsvFiles: IResolvable) {
+        cdkBuilder.keepCsvFiles(keepCsvFiles.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param loadTimeout The amount of time (in milliseconds) before AWS DMS times out operations
+       * performed by DMS on the Db2 target.
+       * The default value is 1200 (20 minutes).
+       */
+      override fun loadTimeout(loadTimeout: Number) {
+        cdkBuilder.loadTimeout(loadTimeout)
+      }
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of .csv files used to transfer data
+       * to Db2 LUW.
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param maxKBytesPerRead Maximum number of bytes per read, as a NUMBER value.
+       * The default is 64 KB.
+       */
+      override fun maxKBytesPerRead(maxKBytesPerRead: Number) {
+        cdkBuilder.maxKBytesPerRead(maxKBytesPerRead)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
+       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the IBMDB2 endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
+       * generating .csv files on the local disk on the DMS replication instance. The default value is
+       * 1024 (1 MB).
+       */
+      override fun writeBufferSize(writeBufferSize: Number) {
+        cdkBuilder.writeBufferSize(writeBufferSize)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
+    ) : CdkObject(cdkObject), IbmDb2SettingsProperty {
+      /**
+       * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
+       * you want the replication to start.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-currentlsn)
+       */
+      override fun currentLsn(): String? = unwrap(this).getCurrentLsn()
+
+      /**
+       * If true, AWS DMS saves any .csv files to the Db2 LUW target that were used to replicate
+       * data. DMS uses these files for analysis and troubleshooting.
+       *
+       * The default value is false.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-keepcsvfiles)
+       */
+      override fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
+
+      /**
+       * The amount of time (in milliseconds) before AWS DMS times out operations performed by DMS
+       * on the Db2 target.
+       *
+       * The default value is 1200 (20 minutes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-loadtimeout)
+       */
+      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+
+      /**
+       * Specifies the maximum size (in KB) of .csv files used to transfer data to Db2 LUW.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * Maximum number of bytes per read, as a NUMBER value.
+       *
+       * The default is 64 KB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxkbytesperread)
+       */
+      override fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
+       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * IBMDB2 endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * Enables ongoing replication (CDC) as a BOOLEAN value.
+       *
+       * The default is true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-setdatacapturechanges)
+       */
+      override fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
+
+      /**
+       * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
+       * local disk on the DMS replication instance. The default value is 1024 (1 MB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-writebuffersize)
+       */
+      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IbmDb2SettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty):
+          IbmDb2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? IbmDb2SettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IbmDb2SettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty
     }
   }
 
@@ -4258,7 +5322,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
     ) : CdkObject(cdkObject), KafkaSettingsProperty {
       /**
        * A comma-separated list of one or more broker locations in your Kafka cluster that host your
@@ -4454,6 +5518,2833 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that describes an Amazon Kinesis Data Stream endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about other available
+   * settings, see [Using object mapping to migrate data to a Kinesis data
+   * stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * KinesisSettingsProperty kinesisSettingsProperty = KinesisSettingsProperty.builder()
+   * .includeControlDetails(false)
+   * .includeNullAndEmpty(false)
+   * .includePartitionValue(false)
+   * .includeTableAlterOperations(false)
+   * .includeTransactionDetails(false)
+   * .messageFormat("messageFormat")
+   * .noHexPrefix(false)
+   * .partitionIncludeSchemaTable(false)
+   * .serviceAccessRoleArn("serviceAccessRoleArn")
+   * .streamArn("streamArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html)
+   */
+  public interface KinesisSettingsProperty {
+    /**
+     * Shows detailed control information for table definition, column definition, and table and
+     * column changes in the Kinesis message output.
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includecontroldetails)
+     */
+    public fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
+
+    /**
+     * Include NULL and empty columns for records migrated to the endpoint.
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includenullandempty)
+     */
+    public fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
+
+    /**
+     * Shows the partition value within the Kinesis message output, unless the partition type is
+     * `schema-table-type` .
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includepartitionvalue)
+     */
+    public fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
+
+    /**
+     * Includes any data definition language (DDL) operations that change the table in the control
+     * data, such as `rename-table` , `drop-table` , `add-column` , `drop-column` , and `rename-column`
+     * .
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetablealteroperations)
+     */
+    public fun includeTableAlterOperations(): Any? = unwrap(this).getIncludeTableAlterOperations()
+
+    /**
+     * Provides detailed transaction information from the source database.
+     *
+     * This information includes a commit timestamp, a log position, and values for `transaction_id`
+     * , previous `transaction_id` , and `transaction_record_id` (the record offset within a
+     * transaction). The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetransactiondetails)
+     */
+    public fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
+
+    /**
+     * The output format for the records created on the endpoint.
+     *
+     * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat)
+     */
+    public fun messageFormat(): String? = unwrap(this).getMessageFormat()
+
+    /**
+     * Set this optional parameter to `true` to avoid adding a '0x' prefix to raw data in
+     * hexadecimal format.
+     *
+     * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+     * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix` endpoint
+     * setting to enable migration of RAW data type columns without adding the '0x' prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-nohexprefix)
+     */
+    public fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
+
+    /**
+     * Prefixes schema and table names to partition values, when the partition type is
+     * `primary-key-type` .
+     *
+     * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+     * SysBench schema has thousands of tables and each table has only limited range for a primary key.
+     * In this case, the same primary key is sent from thousands of tables to the same shard, which
+     * causes throttling. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-partitionincludeschematable)
+     */
+    public fun partitionIncludeSchemaTable(): Any? = unwrap(this).getPartitionIncludeSchemaTable()
+
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that AWS DMS uses to write to the Kinesis
+     * data stream.
+     *
+     * The role must allow the `iam:PassRole` action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn)
+     */
+    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+    /**
+     * The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn)
+     */
+    public fun streamArn(): String? = unwrap(this).getStreamArn()
+
+    /**
+     * A builder for [KinesisSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param includeControlDetails Shows detailed control information for table definition,
+       * column definition, and table and column changes in the Kinesis message output.
+       * The default is `false` .
+       */
+      public fun includeControlDetails(includeControlDetails: Boolean)
+
+      /**
+       * @param includeControlDetails Shows detailed control information for table definition,
+       * column definition, and table and column changes in the Kinesis message output.
+       * The default is `false` .
+       */
+      public fun includeControlDetails(includeControlDetails: IResolvable)
+
+      /**
+       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
+       * endpoint.
+       * The default is `false` .
+       */
+      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean)
+
+      /**
+       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
+       * endpoint.
+       * The default is `false` .
+       */
+      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable)
+
+      /**
+       * @param includePartitionValue Shows the partition value within the Kinesis message output,
+       * unless the partition type is `schema-table-type` .
+       * The default is `false` .
+       */
+      public fun includePartitionValue(includePartitionValue: Boolean)
+
+      /**
+       * @param includePartitionValue Shows the partition value within the Kinesis message output,
+       * unless the partition type is `schema-table-type` .
+       * The default is `false` .
+       */
+      public fun includePartitionValue(includePartitionValue: IResolvable)
+
+      /**
+       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
+       * that change the table in the control data, such as `rename-table` , `drop-table` ,
+       * `add-column` , `drop-column` , and `rename-column` .
+       * The default is `false` .
+       */
+      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean)
+
+      /**
+       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
+       * that change the table in the control data, such as `rename-table` , `drop-table` ,
+       * `add-column` , `drop-column` , and `rename-column` .
+       * The default is `false` .
+       */
+      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable)
+
+      /**
+       * @param includeTransactionDetails Provides detailed transaction information from the source
+       * database.
+       * This information includes a commit timestamp, a log position, and values for
+       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
+       * within a transaction). The default is `false` .
+       */
+      public fun includeTransactionDetails(includeTransactionDetails: Boolean)
+
+      /**
+       * @param includeTransactionDetails Provides detailed transaction information from the source
+       * database.
+       * This information includes a commit timestamp, a log position, and values for
+       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
+       * within a transaction). The default is `false` .
+       */
+      public fun includeTransactionDetails(includeTransactionDetails: IResolvable)
+
+      /**
+       * @param messageFormat The output format for the records created on the endpoint.
+       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+       */
+      public fun messageFormat(messageFormat: String)
+
+      /**
+       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
+       * raw data in hexadecimal format.
+       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
+       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
+       */
+      public fun noHexPrefix(noHexPrefix: Boolean)
+
+      /**
+       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
+       * raw data in hexadecimal format.
+       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
+       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
+       */
+      public fun noHexPrefix(noHexPrefix: IResolvable)
+
+      /**
+       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
+       * when the partition type is `primary-key-type` .
+       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+       * SysBench schema has thousands of tables and each table has only limited range for a primary
+       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
+       * which causes throttling. The default is `false` .
+       */
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean)
+
+      /**
+       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
+       * when the partition type is `primary-key-type` .
+       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+       * SysBench schema has thousands of tables and each table has only limited range for a primary
+       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
+       * which causes throttling. The default is `false` .
+       */
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable)
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) for the IAM role that AWS DMS
+       * uses to write to the Kinesis data stream.
+       * The role must allow the `iam:PassRole` action.
+       */
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
+
+      /**
+       * @param streamArn The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams
+       * endpoint.
+       */
+      public fun streamArn(streamArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.builder()
+
+      /**
+       * @param includeControlDetails Shows detailed control information for table definition,
+       * column definition, and table and column changes in the Kinesis message output.
+       * The default is `false` .
+       */
+      override fun includeControlDetails(includeControlDetails: Boolean) {
+        cdkBuilder.includeControlDetails(includeControlDetails)
+      }
+
+      /**
+       * @param includeControlDetails Shows detailed control information for table definition,
+       * column definition, and table and column changes in the Kinesis message output.
+       * The default is `false` .
+       */
+      override fun includeControlDetails(includeControlDetails: IResolvable) {
+        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
+       * endpoint.
+       * The default is `false` .
+       */
+      override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
+        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty)
+      }
+
+      /**
+       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
+       * endpoint.
+       * The default is `false` .
+       */
+      override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
+        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includePartitionValue Shows the partition value within the Kinesis message output,
+       * unless the partition type is `schema-table-type` .
+       * The default is `false` .
+       */
+      override fun includePartitionValue(includePartitionValue: Boolean) {
+        cdkBuilder.includePartitionValue(includePartitionValue)
+      }
+
+      /**
+       * @param includePartitionValue Shows the partition value within the Kinesis message output,
+       * unless the partition type is `schema-table-type` .
+       * The default is `false` .
+       */
+      override fun includePartitionValue(includePartitionValue: IResolvable) {
+        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
+       * that change the table in the control data, such as `rename-table` , `drop-table` ,
+       * `add-column` , `drop-column` , and `rename-column` .
+       * The default is `false` .
+       */
+      override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
+        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations)
+      }
+
+      /**
+       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
+       * that change the table in the control data, such as `rename-table` , `drop-table` ,
+       * `add-column` , `drop-column` , and `rename-column` .
+       * The default is `false` .
+       */
+      override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
+        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param includeTransactionDetails Provides detailed transaction information from the source
+       * database.
+       * This information includes a commit timestamp, a log position, and values for
+       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
+       * within a transaction). The default is `false` .
+       */
+      override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
+        cdkBuilder.includeTransactionDetails(includeTransactionDetails)
+      }
+
+      /**
+       * @param includeTransactionDetails Provides detailed transaction information from the source
+       * database.
+       * This information includes a commit timestamp, a log position, and values for
+       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
+       * within a transaction). The default is `false` .
+       */
+      override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
+        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param messageFormat The output format for the records created on the endpoint.
+       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+       */
+      override fun messageFormat(messageFormat: String) {
+        cdkBuilder.messageFormat(messageFormat)
+      }
+
+      /**
+       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
+       * raw data in hexadecimal format.
+       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
+       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
+       */
+      override fun noHexPrefix(noHexPrefix: Boolean) {
+        cdkBuilder.noHexPrefix(noHexPrefix)
+      }
+
+      /**
+       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
+       * raw data in hexadecimal format.
+       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
+       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
+       */
+      override fun noHexPrefix(noHexPrefix: IResolvable) {
+        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
+       * when the partition type is `primary-key-type` .
+       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+       * SysBench schema has thousands of tables and each table has only limited range for a primary
+       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
+       * which causes throttling. The default is `false` .
+       */
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
+        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable)
+      }
+
+      /**
+       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
+       * when the partition type is `primary-key-type` .
+       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+       * SysBench schema has thousands of tables and each table has only limited range for a primary
+       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
+       * which causes throttling. The default is `false` .
+       */
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
+        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) for the IAM role that AWS DMS
+       * uses to write to the Kinesis data stream.
+       * The role must allow the `iam:PassRole` action.
+       */
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
+      }
+
+      /**
+       * @param streamArn The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams
+       * endpoint.
+       */
+      override fun streamArn(streamArn: String) {
+        cdkBuilder.streamArn(streamArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
+    ) : CdkObject(cdkObject), KinesisSettingsProperty {
+      /**
+       * Shows detailed control information for table definition, column definition, and table and
+       * column changes in the Kinesis message output.
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includecontroldetails)
+       */
+      override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
+
+      /**
+       * Include NULL and empty columns for records migrated to the endpoint.
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includenullandempty)
+       */
+      override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
+
+      /**
+       * Shows the partition value within the Kinesis message output, unless the partition type is
+       * `schema-table-type` .
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includepartitionvalue)
+       */
+      override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
+
+      /**
+       * Includes any data definition language (DDL) operations that change the table in the control
+       * data, such as `rename-table` , `drop-table` , `add-column` , `drop-column` , and
+       * `rename-column` .
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetablealteroperations)
+       */
+      override fun includeTableAlterOperations(): Any? =
+          unwrap(this).getIncludeTableAlterOperations()
+
+      /**
+       * Provides detailed transaction information from the source database.
+       *
+       * This information includes a commit timestamp, a log position, and values for
+       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
+       * within a transaction). The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetransactiondetails)
+       */
+      override fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
+
+      /**
+       * The output format for the records created on the endpoint.
+       *
+       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat)
+       */
+      override fun messageFormat(): String? = unwrap(this).getMessageFormat()
+
+      /**
+       * Set this optional parameter to `true` to avoid adding a '0x' prefix to raw data in
+       * hexadecimal format.
+       *
+       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
+       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
+       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-nohexprefix)
+       */
+      override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
+
+      /**
+       * Prefixes schema and table names to partition values, when the partition type is
+       * `primary-key-type` .
+       *
+       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
+       * SysBench schema has thousands of tables and each table has only limited range for a primary
+       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
+       * which causes throttling. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-partitionincludeschematable)
+       */
+      override fun partitionIncludeSchemaTable(): Any? =
+          unwrap(this).getPartitionIncludeSchemaTable()
+
+      /**
+       * The Amazon Resource Name (ARN) for the IAM role that AWS DMS uses to write to the Kinesis
+       * data stream.
+       *
+       * The role must allow the `iam:PassRole` action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn)
+       */
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+      /**
+       * The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn)
+       */
+      override fun streamArn(): String? = unwrap(this).getStreamArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty):
+          KinesisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? KinesisSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KinesisSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a Microsoft SQL Server endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For information about other available settings,
+   * see [Extra connection attributes when using SQL Server as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.ConnectionAttrib)
+   * and [Extra connection attributes when using SQL Server as a target for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.SQLServer.html#CHAP_Target.SQLServer.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * MicrosoftSqlServerSettingsProperty microsoftSqlServerSettingsProperty =
+   * MicrosoftSqlServerSettingsProperty.builder()
+   * .bcpPacketSize(123)
+   * .controlTablesFileGroup("controlTablesFileGroup")
+   * .databaseName("databaseName")
+   * .forceLobLookup(false)
+   * .password("password")
+   * .port(123)
+   * .querySingleAlwaysOnNode(false)
+   * .readBackupOnly(false)
+   * .safeguardPolicy("safeguardPolicy")
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .serverName("serverName")
+   * .tlogAccessMode("tlogAccessMode")
+   * .trimSpaceInChar(false)
+   * .useBcpFullLoad(false)
+   * .username("username")
+   * .useThirdPartyBackupDevice(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html)
+   */
+  public interface MicrosoftSqlServerSettingsProperty {
+    /**
+     * The maximum size of the packets (in bytes) used to transfer data using BCP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize)
+     */
+    public fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
+
+    /**
+     * Specifies a file group for the AWS DMS internal tables.
+     *
+     * When the replication task starts, all the internal AWS DMS control tables (awsdms_
+     * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup)
+     */
+    public fun controlTablesFileGroup(): String? = unwrap(this).getControlTablesFileGroup()
+
+    /**
+     * Database name for the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * Forces LOB lookup on inline LOB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup)
+     */
+    public fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
+
+    /**
+     * Endpoint connection password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-password)
+     */
+    public fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * Endpoint TCP port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * Cleans and recreates table metadata information on the replication instance when a mismatch
+     * occurs.
+     *
+     * An example is a situation where running an alter DDL statement on a table might result in
+     * different information about the table cached in the replication instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode)
+     */
+    public fun querySingleAlwaysOnNode(): Any? = unwrap(this).getQuerySingleAlwaysOnNode()
+
+    /**
+     * When this attribute is set to `Y` , AWS DMS only reads changes from transaction log backups
+     * and doesn't read from the active transaction log file during ongoing replication.
+     *
+     * Setting this parameter to `Y` enables you to control active transaction log file growth
+     * during full load and ongoing replication tasks. However, it can add some source latency to
+     * ongoing replication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly)
+     */
+    public fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
+
+    /**
+     * Use this attribute to minimize the need to access the backup log and enable AWS DMS to
+     * prevent truncation using one of the following two methods.
+     *
+     * *Start transactions in the database:* This is the default method. When this method is used,
+     * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
+     * transaction is open, changes that appear after the transaction started aren't truncated. If you
+     * need Microsoft Replication to be enabled in your database, then you must choose this method.
+     *
+     * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS reads
+     * the changes and then uses sp_repldone to mark the TLOG transactions as ready for truncation.
+     * Although this method doesn't involve any transactional activities, it can only be used when
+     * Microsoft Replication isn't running. Also, when using this method, only one AWS DMS task can
+     * access the database at any given time. Therefore, if you need to run parallel AWS DMS tasks
+     * against the same database, use the default method.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy)
+     */
+    public fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+     * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * MicrosoftSQLServer endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * Fully qualified domain name of the endpoint.
+     *
+     * For an Amazon RDS SQL Server instance, this is the output of
+     * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
+     * , in the
+     * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
+     * .Address` field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-servername)
+     */
+    public fun serverName(): String? = unwrap(this).getServerName()
+
+    /**
+     * Indicates the mode used to fetch CDC data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode)
+     */
+    public fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
+
+    /**
+     * Use the `TrimSpaceInChar` source endpoint setting to right-trim data on CHAR and NCHAR data
+     * types during migration.
+     *
+     * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar)
+     */
+    public fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
+
+    /**
+     * Use this to attribute to transfer data for full-load operations using BCP.
+     *
+     * When the target table contains an identity column that does not exist in the source table,
+     * you must disable the use BCP for loading table option.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload)
+     */
+    public fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
+
+    /**
+     * When this attribute is set to `Y` , DMS processes third-party transaction log backups if they
+     * are created in native format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice)
+     */
+    public fun useThirdPartyBackupDevice(): Any? = unwrap(this).getUseThirdPartyBackupDevice()
+
+    /**
+     * Endpoint connection user name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-username)
+     */
+    public fun username(): String? = unwrap(this).getUsername()
+
+    /**
+     * A builder for [MicrosoftSqlServerSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bcpPacketSize The maximum size of the packets (in bytes) used to transfer data using
+       * BCP.
+       */
+      public fun bcpPacketSize(bcpPacketSize: Number)
+
+      /**
+       * @param controlTablesFileGroup Specifies a file group for the AWS DMS internal tables.
+       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
+       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
+       */
+      public fun controlTablesFileGroup(controlTablesFileGroup: String)
+
+      /**
+       * @param databaseName Database name for the endpoint.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param forceLobLookup Forces LOB lookup on inline LOB.
+       */
+      public fun forceLobLookup(forceLobLookup: Boolean)
+
+      /**
+       * @param forceLobLookup Forces LOB lookup on inline LOB.
+       */
+      public fun forceLobLookup(forceLobLookup: IResolvable)
+
+      /**
+       * @param password Endpoint connection password.
+       */
+      public fun password(password: String)
+
+      /**
+       * @param port Endpoint TCP port.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * An example is a situation where running an alter DDL statement on a table might result in
+       * different information about the table cached in the replication instance.
+       */
+      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean)
+
+      /**
+       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * An example is a situation where running an alter DDL statement on a table might result in
+       * different information about the table cached in the replication instance.
+       */
+      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable)
+
+      /**
+       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
+       * transaction log backups and doesn't read from the active transaction log file during ongoing
+       * replication.
+       * Setting this parameter to `Y` enables you to control active transaction log file growth
+       * during full load and ongoing replication tasks. However, it can add some source latency to
+       * ongoing replication.
+       */
+      public fun readBackupOnly(readBackupOnly: Boolean)
+
+      /**
+       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
+       * transaction log backups and doesn't read from the active transaction log file during ongoing
+       * replication.
+       * Setting this parameter to `Y` enables you to control active transaction log file growth
+       * during full load and ongoing replication tasks. However, it can add some source latency to
+       * ongoing replication.
+       */
+      public fun readBackupOnly(readBackupOnly: IResolvable)
+
+      /**
+       * @param safeguardPolicy Use this attribute to minimize the need to access the backup log and
+       * enable AWS DMS to prevent truncation using one of the following two methods.
+       * *Start transactions in the database:* This is the default method. When this method is used,
+       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
+       * transaction is open, changes that appear after the transaction started aren't truncated. If
+       * you need Microsoft Replication to be enabled in your database, then you must choose this
+       * method.
+       *
+       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
+       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
+       * truncation. Although this method doesn't involve any transactional activities, it can only be
+       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
+       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
+       * tasks against the same database, use the default method.
+       */
+      public fun safeguardPolicy(safeguardPolicy: String)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MicrosoftSQLServer endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param serverName Fully qualified domain name of the endpoint.
+       * For an Amazon RDS SQL Server instance, this is the output of
+       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
+       * , in the
+       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
+       * .Address` field.
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param tlogAccessMode Indicates the mode used to fetch CDC data.
+       */
+      public fun tlogAccessMode(tlogAccessMode: String)
+
+      /**
+       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+       * on CHAR and NCHAR data types during migration.
+       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+       */
+      public fun trimSpaceInChar(trimSpaceInChar: Boolean)
+
+      /**
+       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+       * on CHAR and NCHAR data types during migration.
+       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+       */
+      public fun trimSpaceInChar(trimSpaceInChar: IResolvable)
+
+      /**
+       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
+       * BCP.
+       * When the target table contains an identity column that does not exist in the source table,
+       * you must disable the use BCP for loading table option.
+       */
+      public fun useBcpFullLoad(useBcpFullLoad: Boolean)
+
+      /**
+       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
+       * BCP.
+       * When the target table contains an identity column that does not exist in the source table,
+       * you must disable the use BCP for loading table option.
+       */
+      public fun useBcpFullLoad(useBcpFullLoad: IResolvable)
+
+      /**
+       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
+       * third-party transaction log backups if they are created in native format.
+       */
+      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean)
+
+      /**
+       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
+       * third-party transaction log backups if they are created in native format.
+       */
+      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable)
+
+      /**
+       * @param username Endpoint connection user name.
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty.builder()
+
+      /**
+       * @param bcpPacketSize The maximum size of the packets (in bytes) used to transfer data using
+       * BCP.
+       */
+      override fun bcpPacketSize(bcpPacketSize: Number) {
+        cdkBuilder.bcpPacketSize(bcpPacketSize)
+      }
+
+      /**
+       * @param controlTablesFileGroup Specifies a file group for the AWS DMS internal tables.
+       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
+       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
+       */
+      override fun controlTablesFileGroup(controlTablesFileGroup: String) {
+        cdkBuilder.controlTablesFileGroup(controlTablesFileGroup)
+      }
+
+      /**
+       * @param databaseName Database name for the endpoint.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param forceLobLookup Forces LOB lookup on inline LOB.
+       */
+      override fun forceLobLookup(forceLobLookup: Boolean) {
+        cdkBuilder.forceLobLookup(forceLobLookup)
+      }
+
+      /**
+       * @param forceLobLookup Forces LOB lookup on inline LOB.
+       */
+      override fun forceLobLookup(forceLobLookup: IResolvable) {
+        cdkBuilder.forceLobLookup(forceLobLookup.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param password Endpoint connection password.
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param port Endpoint TCP port.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * An example is a situation where running an alter DDL statement on a table might result in
+       * different information about the table cached in the replication instance.
+       */
+      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean) {
+        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode)
+      }
+
+      /**
+       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * An example is a situation where running an alter DDL statement on a table might result in
+       * different information about the table cached in the replication instance.
+       */
+      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
+        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
+       * transaction log backups and doesn't read from the active transaction log file during ongoing
+       * replication.
+       * Setting this parameter to `Y` enables you to control active transaction log file growth
+       * during full load and ongoing replication tasks. However, it can add some source latency to
+       * ongoing replication.
+       */
+      override fun readBackupOnly(readBackupOnly: Boolean) {
+        cdkBuilder.readBackupOnly(readBackupOnly)
+      }
+
+      /**
+       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
+       * transaction log backups and doesn't read from the active transaction log file during ongoing
+       * replication.
+       * Setting this parameter to `Y` enables you to control active transaction log file growth
+       * during full load and ongoing replication tasks. However, it can add some source latency to
+       * ongoing replication.
+       */
+      override fun readBackupOnly(readBackupOnly: IResolvable) {
+        cdkBuilder.readBackupOnly(readBackupOnly.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param safeguardPolicy Use this attribute to minimize the need to access the backup log and
+       * enable AWS DMS to prevent truncation using one of the following two methods.
+       * *Start transactions in the database:* This is the default method. When this method is used,
+       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
+       * transaction is open, changes that appear after the transaction started aren't truncated. If
+       * you need Microsoft Replication to be enabled in your database, then you must choose this
+       * method.
+       *
+       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
+       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
+       * truncation. Although this method doesn't involve any transactional activities, it can only be
+       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
+       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
+       * tasks against the same database, use the default method.
+       */
+      override fun safeguardPolicy(safeguardPolicy: String) {
+        cdkBuilder.safeguardPolicy(safeguardPolicy)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MicrosoftSQLServer endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param serverName Fully qualified domain name of the endpoint.
+       * For an Amazon RDS SQL Server instance, this is the output of
+       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
+       * , in the
+       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
+       * .Address` field.
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param tlogAccessMode Indicates the mode used to fetch CDC data.
+       */
+      override fun tlogAccessMode(tlogAccessMode: String) {
+        cdkBuilder.tlogAccessMode(tlogAccessMode)
+      }
+
+      /**
+       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+       * on CHAR and NCHAR data types during migration.
+       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+       */
+      override fun trimSpaceInChar(trimSpaceInChar: Boolean) {
+        cdkBuilder.trimSpaceInChar(trimSpaceInChar)
+      }
+
+      /**
+       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
+       * on CHAR and NCHAR data types during migration.
+       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+       */
+      override fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
+        cdkBuilder.trimSpaceInChar(trimSpaceInChar.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
+       * BCP.
+       * When the target table contains an identity column that does not exist in the source table,
+       * you must disable the use BCP for loading table option.
+       */
+      override fun useBcpFullLoad(useBcpFullLoad: Boolean) {
+        cdkBuilder.useBcpFullLoad(useBcpFullLoad)
+      }
+
+      /**
+       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
+       * BCP.
+       * When the target table contains an identity column that does not exist in the source table,
+       * you must disable the use BCP for loading table option.
+       */
+      override fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
+        cdkBuilder.useBcpFullLoad(useBcpFullLoad.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
+       * third-party transaction log backups if they are created in native format.
+       */
+      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean) {
+        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice)
+      }
+
+      /**
+       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
+       * third-party transaction log backups if they are created in native format.
+       */
+      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
+        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param username Endpoint connection user name.
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
+    ) : CdkObject(cdkObject), MicrosoftSqlServerSettingsProperty {
+      /**
+       * The maximum size of the packets (in bytes) used to transfer data using BCP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize)
+       */
+      override fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
+
+      /**
+       * Specifies a file group for the AWS DMS internal tables.
+       *
+       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
+       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup)
+       */
+      override fun controlTablesFileGroup(): String? = unwrap(this).getControlTablesFileGroup()
+
+      /**
+       * Database name for the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * Forces LOB lookup on inline LOB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup)
+       */
+      override fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
+
+      /**
+       * Endpoint connection password.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-password)
+       */
+      override fun password(): String? = unwrap(this).getPassword()
+
+      /**
+       * Endpoint TCP port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * Cleans and recreates table metadata information on the replication instance when a mismatch
+       * occurs.
+       *
+       * An example is a situation where running an alter DDL statement on a table might result in
+       * different information about the table cached in the replication instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode)
+       */
+      override fun querySingleAlwaysOnNode(): Any? = unwrap(this).getQuerySingleAlwaysOnNode()
+
+      /**
+       * When this attribute is set to `Y` , AWS DMS only reads changes from transaction log backups
+       * and doesn't read from the active transaction log file during ongoing replication.
+       *
+       * Setting this parameter to `Y` enables you to control active transaction log file growth
+       * during full load and ongoing replication tasks. However, it can add some source latency to
+       * ongoing replication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly)
+       */
+      override fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
+
+      /**
+       * Use this attribute to minimize the need to access the backup log and enable AWS DMS to
+       * prevent truncation using one of the following two methods.
+       *
+       * *Start transactions in the database:* This is the default method. When this method is used,
+       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
+       * transaction is open, changes that appear after the transaction started aren't truncated. If
+       * you need Microsoft Replication to be enabled in your database, then you must choose this
+       * method.
+       *
+       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
+       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
+       * truncation. Although this method doesn't involve any transactional activities, it can only be
+       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
+       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
+       * tasks against the same database, use the default method.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy)
+       */
+      override fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * MicrosoftSQLServer endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * Fully qualified domain name of the endpoint.
+       *
+       * For an Amazon RDS SQL Server instance, this is the output of
+       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
+       * , in the
+       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
+       * .Address` field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-servername)
+       */
+      override fun serverName(): String? = unwrap(this).getServerName()
+
+      /**
+       * Indicates the mode used to fetch CDC data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode)
+       */
+      override fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
+
+      /**
+       * Use the `TrimSpaceInChar` source endpoint setting to right-trim data on CHAR and NCHAR data
+       * types during migration.
+       *
+       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar)
+       */
+      override fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
+
+      /**
+       * Use this to attribute to transfer data for full-load operations using BCP.
+       *
+       * When the target table contains an identity column that does not exist in the source table,
+       * you must disable the use BCP for loading table option.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload)
+       */
+      override fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
+
+      /**
+       * When this attribute is set to `Y` , DMS processes third-party transaction log backups if
+       * they are created in native format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice)
+       */
+      override fun useThirdPartyBackupDevice(): Any? = unwrap(this).getUseThirdPartyBackupDevice()
+
+      /**
+       * Endpoint connection user name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-username)
+       */
+      override fun username(): String? = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MicrosoftSqlServerSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty):
+          MicrosoftSqlServerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MicrosoftSqlServerSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MicrosoftSqlServerSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a MongoDB endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about other available
+   * settings, see [Endpoint configuration settings when using MongoDB as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * MongoDbSettingsProperty mongoDbSettingsProperty = MongoDbSettingsProperty.builder()
+   * .authMechanism("authMechanism")
+   * .authSource("authSource")
+   * .authType("authType")
+   * .databaseName("databaseName")
+   * .docsToInvestigate("docsToInvestigate")
+   * .extractDocId("extractDocId")
+   * .nestingLevel("nestingLevel")
+   * .password("password")
+   * .port(123)
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .serverName("serverName")
+   * .username("username")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html)
+   */
+  public interface MongoDbSettingsProperty {
+    /**
+     * The authentication mechanism you use to access the MongoDB source endpoint.
+     *
+     * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+     * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+     * is set to `"no"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
+     */
+    public fun authMechanism(): String? = unwrap(this).getAuthMechanism()
+
+    /**
+     * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
+     *
+     * The default is `"admin"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
+     */
+    public fun authSource(): String? = unwrap(this).getAuthSource()
+
+    /**
+     * The authentication type you use to access the MongoDB source endpoint.
+     *
+     * When set to `"no"` , user name and password parameters are not used and can be empty.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
+     */
+    public fun authType(): String? = unwrap(this).getAuthType()
+
+    /**
+     * The database name on the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * Indicates the number of documents to preview to determine the document organization.
+     *
+     * Use this setting when `NestingLevel` is set to `"one"` .
+     *
+     * Must be a positive value greater than `0` . Default value is `1000` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
+     */
+    public fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
+
+    /**
+     * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
+     *
+     * Default value is `"false"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
+     */
+    public fun extractDocId(): String? = unwrap(this).getExtractDocId()
+
+    /**
+     * Specifies either document or table mode.
+     *
+     * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+     * table mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
+     */
+    public fun nestingLevel(): String? = unwrap(this).getNestingLevel()
+
+    /**
+     * The password for the user account you use to access the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
+     */
+    public fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * The port value for the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+     * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * MongoDB endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * The name of the server on the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
+     */
+    public fun serverName(): String? = unwrap(this).getServerName()
+
+    /**
+     * The user name you use to access the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
+     */
+    public fun username(): String? = unwrap(this).getUsername()
+
+    /**
+     * A builder for [MongoDbSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authMechanism The authentication mechanism you use to access the MongoDB source
+       * endpoint.
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       */
+      public fun authMechanism(authMechanism: String)
+
+      /**
+       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
+       * to `"no"` .
+       * The default is `"admin"` .
+       */
+      public fun authSource(authSource: String)
+
+      /**
+       * @param authType The authentication type you use to access the MongoDB source endpoint.
+       * When set to `"no"` , user name and password parameters are not used and can be empty.
+       */
+      public fun authType(authType: String)
+
+      /**
+       * @param databaseName The database name on the MongoDB source endpoint.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param docsToInvestigate Indicates the number of documents to preview to determine the
+       * document organization.
+       * Use this setting when `NestingLevel` is set to `"one"` .
+       *
+       * Must be a positive value greater than `0` . Default value is `1000` .
+       */
+      public fun docsToInvestigate(docsToInvestigate: String)
+
+      /**
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
+       */
+      public fun extractDocId(extractDocId: String)
+
+      /**
+       * @param nestingLevel Specifies either document or table mode.
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
+       */
+      public fun nestingLevel(nestingLevel: String)
+
+      /**
+       * @param password The password for the user account you use to access the MongoDB source
+       * endpoint.
+       */
+      public fun password(password: String)
+
+      /**
+       * @param port The port value for the MongoDB source endpoint.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MongoDB endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param serverName The name of the server on the MongoDB source endpoint.
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param username The user name you use to access the MongoDB source endpoint.
+       */
+      public fun username(username: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.builder()
+
+      /**
+       * @param authMechanism The authentication mechanism you use to access the MongoDB source
+       * endpoint.
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       */
+      override fun authMechanism(authMechanism: String) {
+        cdkBuilder.authMechanism(authMechanism)
+      }
+
+      /**
+       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
+       * to `"no"` .
+       * The default is `"admin"` .
+       */
+      override fun authSource(authSource: String) {
+        cdkBuilder.authSource(authSource)
+      }
+
+      /**
+       * @param authType The authentication type you use to access the MongoDB source endpoint.
+       * When set to `"no"` , user name and password parameters are not used and can be empty.
+       */
+      override fun authType(authType: String) {
+        cdkBuilder.authType(authType)
+      }
+
+      /**
+       * @param databaseName The database name on the MongoDB source endpoint.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param docsToInvestigate Indicates the number of documents to preview to determine the
+       * document organization.
+       * Use this setting when `NestingLevel` is set to `"one"` .
+       *
+       * Must be a positive value greater than `0` . Default value is `1000` .
+       */
+      override fun docsToInvestigate(docsToInvestigate: String) {
+        cdkBuilder.docsToInvestigate(docsToInvestigate)
+      }
+
+      /**
+       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
+       * to `"none"` .
+       * Default value is `"false"` .
+       */
+      override fun extractDocId(extractDocId: String) {
+        cdkBuilder.extractDocId(extractDocId)
+      }
+
+      /**
+       * @param nestingLevel Specifies either document or table mode.
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
+       */
+      override fun nestingLevel(nestingLevel: String) {
+        cdkBuilder.nestingLevel(nestingLevel)
+      }
+
+      /**
+       * @param password The password for the user account you use to access the MongoDB source
+       * endpoint.
+       */
+      override fun password(password: String) {
+        cdkBuilder.password(password)
+      }
+
+      /**
+       * @param port The port value for the MongoDB source endpoint.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MongoDB endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param serverName The name of the server on the MongoDB source endpoint.
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param username The user name you use to access the MongoDB source endpoint.
+       */
+      override fun username(username: String) {
+        cdkBuilder.username(username)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
+    ) : CdkObject(cdkObject), MongoDbSettingsProperty {
+      /**
+       * The authentication mechanism you use to access the MongoDB source endpoint.
+       *
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
+       */
+      override fun authMechanism(): String? = unwrap(this).getAuthMechanism()
+
+      /**
+       * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
+       *
+       * The default is `"admin"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
+       */
+      override fun authSource(): String? = unwrap(this).getAuthSource()
+
+      /**
+       * The authentication type you use to access the MongoDB source endpoint.
+       *
+       * When set to `"no"` , user name and password parameters are not used and can be empty.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
+       */
+      override fun authType(): String? = unwrap(this).getAuthType()
+
+      /**
+       * The database name on the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * Indicates the number of documents to preview to determine the document organization.
+       *
+       * Use this setting when `NestingLevel` is set to `"one"` .
+       *
+       * Must be a positive value greater than `0` . Default value is `1000` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
+       */
+      override fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
+
+      /**
+       * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
+       *
+       * Default value is `"false"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
+       */
+      override fun extractDocId(): String? = unwrap(this).getExtractDocId()
+
+      /**
+       * Specifies either document or table mode.
+       *
+       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
+       * table mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
+       */
+      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
+
+      /**
+       * The password for the user account you use to access the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
+       */
+      override fun password(): String? = unwrap(this).getPassword()
+
+      /**
+       * The port value for the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * MongoDB endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * The name of the server on the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
+       */
+      override fun serverName(): String? = unwrap(this).getServerName()
+
+      /**
+       * The user name you use to access the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
+       */
+      override fun username(): String? = unwrap(this).getUsername()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDbSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty):
+          MongoDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDbSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MongoDbSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a MySQL endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For information about other available settings,
+   * see [Extra connection attributes when using MySQL as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
+   * and [Extra connection attributes when using a MySQL-compatible database as a target for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.MySQL.html#CHAP_Target.MySQL.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * MySqlSettingsProperty mySqlSettingsProperty = MySqlSettingsProperty.builder()
+   * .afterConnectScript("afterConnectScript")
+   * .cleanSourceMetadataOnMismatch(false)
+   * .eventsPollInterval(123)
+   * .maxFileSize(123)
+   * .parallelLoadThreads(123)
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .serverTimezone("serverTimezone")
+   * .targetDbType("targetDbType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html)
+   */
+  public interface MySqlSettingsProperty {
+    /**
+     * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+     *
+     * The migration task continues running regardless if the SQL statement succeeds or fails.
+     *
+     * For this parameter, provide the code of the script itself, not the name of a file containing
+     * the script.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-afterconnectscript)
+     */
+    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+    /**
+     * Cleans and recreates table metadata information on the replication instance when a mismatch
+     * occurs.
+     *
+     * For example, in a situation where running an alter DDL on the table could result in different
+     * information about the table cached in the replication instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-cleansourcemetadataonmismatch)
+     */
+    public fun cleanSourceMetadataOnMismatch(): Any? =
+        unwrap(this).getCleanSourceMetadataOnMismatch()
+
+    /**
+     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     *
+     * The default is five seconds.
+     *
+     * Example: `eventsPollInterval=5;`
+     *
+     * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-eventspollinterval)
+     */
+    public fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+
+    /**
+     * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
+     * MySQL-compatible database.
+     *
+     * Example: `maxFileSize=512`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * Improves performance when loading data into the MySQL-compatible target database.
+     *
+     * Specifies how many threads to use to load the data into the MySQL-compatible target database.
+     * Setting a large number of threads can have an adverse effect on database performance, because a
+     * separate connection is required for each thread. The default is one.
+     *
+     * Example: `parallelLoadThreads=1`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-parallelloadthreads)
+     */
+    public fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+     * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * MySQL endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * Specifies the time zone for the source MySQL database.
+     *
+     * Example: `serverTimezone=US/Pacific;`
+     *
+     * Note: Do not enclose time zones in single quotes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-servertimezone)
+     */
+    public fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+
+    /**
+     * Specifies where to migrate source tables on the target, either to a single database or
+     * multiple databases.
+     *
+     * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
+     * parameter of the `Endpoint` object.
+     *
+     * Example: `targetDbType=MULTIPLE_DATABASES`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-targetdbtype)
+     */
+    public fun targetDbType(): String? = unwrap(this).getTargetDbType()
+
+    /**
+     * A builder for [MySqlSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
+       * the endpoint.
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       */
+      public fun afterConnectScript(afterConnectScript: String)
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * For example, in a situation where running an alter DDL on the table could result in
+       * different information about the table cached in the replication instance.
+       */
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * For example, in a situation where running an alter DDL on the table could result in
+       * different information about the table cached in the replication instance.
+       */
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
+
+      /**
+       * @param eventsPollInterval Specifies how often to check the binary log for new
+       * changes/events when the database is idle.
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       */
+      public fun eventsPollInterval(eventsPollInterval: Number)
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to a MySQL-compatible database.
+       * Example: `maxFileSize=512`
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
+       * target database.
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       */
+      public fun parallelLoadThreads(parallelLoadThreads: Number)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param serverTimezone Specifies the time zone for the source MySQL database.
+       * Example: `serverTimezone=US/Pacific;`
+       *
+       * Note: Do not enclose time zones in single quotes.
+       */
+      public fun serverTimezone(serverTimezone: String)
+
+      /**
+       * @param targetDbType Specifies where to migrate source tables on the target, either to a
+       * single database or multiple databases.
+       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
+       * parameter of the `Endpoint` object.
+       *
+       * Example: `targetDbType=MULTIPLE_DATABASES`
+       */
+      public fun targetDbType(targetDbType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.builder()
+
+      /**
+       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
+       * the endpoint.
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       */
+      override fun afterConnectScript(afterConnectScript: String) {
+        cdkBuilder.afterConnectScript(afterConnectScript)
+      }
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * For example, in a situation where running an alter DDL on the table could result in
+       * different information about the table cached in the replication instance.
+       */
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
+      }
+
+      /**
+       * @param cleanSourceMetadataOnMismatch Cleans and recreates table metadata information on the
+       * replication instance when a mismatch occurs.
+       * For example, in a situation where running an alter DDL on the table could result in
+       * different information about the table cached in the replication instance.
+       */
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param eventsPollInterval Specifies how often to check the binary log for new
+       * changes/events when the database is idle.
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       */
+      override fun eventsPollInterval(eventsPollInterval: Number) {
+        cdkBuilder.eventsPollInterval(eventsPollInterval)
+      }
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to a MySQL-compatible database.
+       * Example: `maxFileSize=512`
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
+       * target database.
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       */
+      override fun parallelLoadThreads(parallelLoadThreads: Number) {
+        cdkBuilder.parallelLoadThreads(parallelLoadThreads)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param serverTimezone Specifies the time zone for the source MySQL database.
+       * Example: `serverTimezone=US/Pacific;`
+       *
+       * Note: Do not enclose time zones in single quotes.
+       */
+      override fun serverTimezone(serverTimezone: String) {
+        cdkBuilder.serverTimezone(serverTimezone)
+      }
+
+      /**
+       * @param targetDbType Specifies where to migrate source tables on the target, either to a
+       * single database or multiple databases.
+       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
+       * parameter of the `Endpoint` object.
+       *
+       * Example: `targetDbType=MULTIPLE_DATABASES`
+       */
+      override fun targetDbType(targetDbType: String) {
+        cdkBuilder.targetDbType(targetDbType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
+    ) : CdkObject(cdkObject), MySqlSettingsProperty {
+      /**
+       * Specifies a script to run immediately after AWS DMS connects to the endpoint.
+       *
+       * The migration task continues running regardless if the SQL statement succeeds or fails.
+       *
+       * For this parameter, provide the code of the script itself, not the name of a file
+       * containing the script.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-afterconnectscript)
+       */
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+      /**
+       * Cleans and recreates table metadata information on the replication instance when a mismatch
+       * occurs.
+       *
+       * For example, in a situation where running an alter DDL on the table could result in
+       * different information about the table cached in the replication instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-cleansourcemetadataonmismatch)
+       */
+      override fun cleanSourceMetadataOnMismatch(): Any? =
+          unwrap(this).getCleanSourceMetadataOnMismatch()
+
+      /**
+       * Specifies how often to check the binary log for new changes/events when the database is
+       * idle.
+       *
+       * The default is five seconds.
+       *
+       * Example: `eventsPollInterval=5;`
+       *
+       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-eventspollinterval)
+       */
+      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+
+      /**
+       * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
+       * MySQL-compatible database.
+       *
+       * Example: `maxFileSize=512`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * Improves performance when loading data into the MySQL-compatible target database.
+       *
+       * Specifies how many threads to use to load the data into the MySQL-compatible target
+       * database. Setting a large number of threads can have an adverse effect on database
+       * performance, because a separate connection is required for each thread. The default is one.
+       *
+       * Example: `parallelLoadThreads=1`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-parallelloadthreads)
+       */
+      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the MySQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * MySQL endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * Specifies the time zone for the source MySQL database.
+       *
+       * Example: `serverTimezone=US/Pacific;`
+       *
+       * Note: Do not enclose time zones in single quotes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-servertimezone)
+       */
+      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+
+      /**
+       * Specifies where to migrate source tables on the target, either to a single database or
+       * multiple databases.
+       *
+       * If you specify `SPECIFIC_DATABASE` , specify the database name using the `DatabaseName`
+       * parameter of the `Endpoint` object.
+       *
+       * Example: `targetDbType=MULTIPLE_DATABASES`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html#cfn-dms-endpoint-mysqlsettings-targetdbtype)
+       */
+      override fun targetDbType(): String? = unwrap(this).getTargetDbType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MySqlSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty):
+          MySqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MySqlSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines an Amazon Neptune endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about the available settings,
+   * see [Specifying endpoint settings for Amazon Neptune as a
+   * target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * NeptuneSettingsProperty neptuneSettingsProperty = NeptuneSettingsProperty.builder()
+   * .errorRetryDuration(123)
+   * .iamAuthEnabled(false)
+   * .maxFileSize(123)
+   * .maxRetryCount(123)
+   * .s3BucketFolder("s3BucketFolder")
+   * .s3BucketName("s3BucketName")
+   * .serviceAccessRoleArn("serviceAccessRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html)
+   */
+  public interface NeptuneSettingsProperty {
+    /**
+     * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data to
+     * the Neptune target database before raising an error.
+     *
+     * The default is 250.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-errorretryduration)
+     */
+    public fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+
+    /**
+     * If you want IAM authorization enabled for this endpoint, set this parameter to `true` .
+     *
+     * Then attach the appropriate IAM policy document to your service role specified by
+     * `ServiceAccessRoleArn` . The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-iamauthenabled)
+     */
+    public fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
+
+    /**
+     * The maximum size in kilobytes of migrated graph data stored in a .csv file before AWS DMS
+     * bulk-loads the data to the Neptune target database. The default is 1,048,576 KB. If the bulk
+     * load is successful, AWS DMS clears the bucket, ready to store the next batch of migrated graph
+     * data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * The number of times for AWS DMS to retry a bulk load of migrated graph data to the Neptune
+     * target database before raising an error.
+     *
+     * The default is 5.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxretrycount)
+     */
+    public fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
+
+    /**
+     * A folder path where you want AWS DMS to store migrated graph data in the S3 bucket specified
+     * by `S3BucketName`.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketfolder)
+     */
+    public fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
+
+    /**
+     * The name of the Amazon S3 bucket where AWS DMS can temporarily store migrated graph data in
+     * .csv files before bulk-loading it to the Neptune target database. AWS DMS maps the SQL source
+     * data to graph data before storing it in these .csv files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketname)
+     */
+    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the service role that you created for the Neptune target
+     * endpoint.
+     *
+     * The role must allow the `iam:PassRole` action.
+     *
+     * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
+     * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn)
+     */
+    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+    /**
+     * A builder for [NeptuneSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param errorRetryDuration The number of milliseconds for AWS DMS to wait to retry a
+       * bulk-load of migrated graph data to the Neptune target database before raising an error.
+       * The default is 250.
+       */
+      public fun errorRetryDuration(errorRetryDuration: Number)
+
+      /**
+       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
+       * parameter to `true` .
+       * Then attach the appropriate IAM policy document to your service role specified by
+       * `ServiceAccessRoleArn` . The default is `false` .
+       */
+      public fun iamAuthEnabled(iamAuthEnabled: Boolean)
+
+      /**
+       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
+       * parameter to `true` .
+       * Then attach the appropriate IAM policy document to your service role specified by
+       * `ServiceAccessRoleArn` . The default is `false` .
+       */
+      public fun iamAuthEnabled(iamAuthEnabled: IResolvable)
+
+      /**
+       * @param maxFileSize The maximum size in kilobytes of migrated graph data stored in a .csv
+       * file before AWS DMS bulk-loads the data to the Neptune target database. The default is
+       * 1,048,576 KB. If the bulk load is successful, AWS DMS clears the bucket, ready to store the
+       * next batch of migrated graph data.
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param maxRetryCount The number of times for AWS DMS to retry a bulk load of migrated graph
+       * data to the Neptune target database before raising an error.
+       * The default is 5.
+       */
+      public fun maxRetryCount(maxRetryCount: Number)
+
+      /**
+       * @param s3BucketFolder A folder path where you want AWS DMS to store migrated graph data in
+       * the S3 bucket specified by `S3BucketName`.
+       */
+      public fun s3BucketFolder(s3BucketFolder: String)
+
+      /**
+       * @param s3BucketName The name of the Amazon S3 bucket where AWS DMS can temporarily store
+       * migrated graph data in .csv files before bulk-loading it to the Neptune target database. AWS
+       * DMS maps the SQL source data to graph data before storing it in these .csv files.
+       */
+      public fun s3BucketName(s3BucketName: String)
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the service role that you
+       * created for the Neptune target endpoint.
+       * The role must allow the `iam:PassRole` action.
+       *
+       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
+       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.builder()
+
+      /**
+       * @param errorRetryDuration The number of milliseconds for AWS DMS to wait to retry a
+       * bulk-load of migrated graph data to the Neptune target database before raising an error.
+       * The default is 250.
+       */
+      override fun errorRetryDuration(errorRetryDuration: Number) {
+        cdkBuilder.errorRetryDuration(errorRetryDuration)
+      }
+
+      /**
+       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
+       * parameter to `true` .
+       * Then attach the appropriate IAM policy document to your service role specified by
+       * `ServiceAccessRoleArn` . The default is `false` .
+       */
+      override fun iamAuthEnabled(iamAuthEnabled: Boolean) {
+        cdkBuilder.iamAuthEnabled(iamAuthEnabled)
+      }
+
+      /**
+       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
+       * parameter to `true` .
+       * Then attach the appropriate IAM policy document to your service role specified by
+       * `ServiceAccessRoleArn` . The default is `false` .
+       */
+      override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
+        cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxFileSize The maximum size in kilobytes of migrated graph data stored in a .csv
+       * file before AWS DMS bulk-loads the data to the Neptune target database. The default is
+       * 1,048,576 KB. If the bulk load is successful, AWS DMS clears the bucket, ready to store the
+       * next batch of migrated graph data.
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param maxRetryCount The number of times for AWS DMS to retry a bulk load of migrated graph
+       * data to the Neptune target database before raising an error.
+       * The default is 5.
+       */
+      override fun maxRetryCount(maxRetryCount: Number) {
+        cdkBuilder.maxRetryCount(maxRetryCount)
+      }
+
+      /**
+       * @param s3BucketFolder A folder path where you want AWS DMS to store migrated graph data in
+       * the S3 bucket specified by `S3BucketName`.
+       */
+      override fun s3BucketFolder(s3BucketFolder: String) {
+        cdkBuilder.s3BucketFolder(s3BucketFolder)
+      }
+
+      /**
+       * @param s3BucketName The name of the Amazon S3 bucket where AWS DMS can temporarily store
+       * migrated graph data in .csv files before bulk-loading it to the Neptune target database. AWS
+       * DMS maps the SQL source data to graph data before storing it in these .csv files.
+       */
+      override fun s3BucketName(s3BucketName: String) {
+        cdkBuilder.s3BucketName(s3BucketName)
+      }
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the service role that you
+       * created for the Neptune target endpoint.
+       * The role must allow the `iam:PassRole` action.
+       *
+       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
+       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
+    ) : CdkObject(cdkObject), NeptuneSettingsProperty {
+      /**
+       * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data
+       * to the Neptune target database before raising an error.
+       *
+       * The default is 250.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-errorretryduration)
+       */
+      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+
+      /**
+       * If you want IAM authorization enabled for this endpoint, set this parameter to `true` .
+       *
+       * Then attach the appropriate IAM policy document to your service role specified by
+       * `ServiceAccessRoleArn` . The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-iamauthenabled)
+       */
+      override fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
+
+      /**
+       * The maximum size in kilobytes of migrated graph data stored in a .csv file before AWS DMS
+       * bulk-loads the data to the Neptune target database. The default is 1,048,576 KB. If the bulk
+       * load is successful, AWS DMS clears the bucket, ready to store the next batch of migrated graph
+       * data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * The number of times for AWS DMS to retry a bulk load of migrated graph data to the Neptune
+       * target database before raising an error.
+       *
+       * The default is 5.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxretrycount)
+       */
+      override fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
+
+      /**
+       * A folder path where you want AWS DMS to store migrated graph data in the S3 bucket
+       * specified by `S3BucketName`.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketfolder)
+       */
+      override fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
+
+      /**
+       * The name of the Amazon S3 bucket where AWS DMS can temporarily store migrated graph data in
+       * .csv files before bulk-loading it to the Neptune target database. AWS DMS maps the SQL source
+       * data to graph data before storing it in these .csv files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketname)
+       */
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+
+      /**
+       * The Amazon Resource Name (ARN) of the service role that you created for the Neptune target
+       * endpoint.
+       *
+       * The role must allow the `iam:PassRole` action.
+       *
+       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
+       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn)
+       */
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NeptuneSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty):
+          NeptuneSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? NeptuneSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NeptuneSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty
     }
   }
 
@@ -6130,8 +10021,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
     ) : CdkObject(cdkObject), OracleSettingsProperty {
       /**
        * Set this attribute to `false` in order to use the Binary Reader to capture change data for
@@ -6594,6 +10484,2489 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a PostgreSQL endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For information about other available settings,
+   * see [Extra connection attributes when using PostgreSQL as a source for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib)
+   * and [Extra connection attributes when using PostgreSQL as a target for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.PostgreSQL.html#CHAP_Target.PostgreSQL.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
+   * .afterConnectScript("afterConnectScript")
+   * .babelfishDatabaseName("babelfishDatabaseName")
+   * .captureDdls(false)
+   * .databaseMode("databaseMode")
+   * .ddlArtifactsSchema("ddlArtifactsSchema")
+   * .executeTimeout(123)
+   * .failTasksOnLobTruncation(false)
+   * .heartbeatEnable(false)
+   * .heartbeatFrequency(123)
+   * .heartbeatSchema("heartbeatSchema")
+   * .mapBooleanAsBoolean(false)
+   * .maxFileSize(123)
+   * .pluginName("pluginName")
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .slotName("slotName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html)
+   */
+  public interface PostgreSqlSettingsProperty {
+    /**
+     * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
+     * and user triggers to reduce the time it takes to bulk load data.
+     *
+     * Example: `afterConnectScript=SET session_replication_role='replica'`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-afterconnectscript)
+     */
+    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+    /**
+     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename)
+     */
+    public fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
+
+    /**
+     * To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL database when the
+     * task starts.
+     *
+     * You can later remove these artifacts.
+     *
+     * If this value is set to `N` , you don't have to create tables or triggers on the source
+     * database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
+     */
+    public fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
+
+    /**
+     * Specifies the default behavior of the replication's handling of PostgreSQL- compatible
+     * endpoints that require some additional configuration, such as Babelfish endpoints.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-databasemode)
+     */
+    public fun databaseMode(): String? = unwrap(this).getDatabaseMode()
+
+    /**
+     * The schema in which the operational DDL database artifacts are created.
+     *
+     * Example: `ddlArtifactsSchema=xyzddlschema;`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema)
+     */
+    public fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
+
+    /**
+     * Sets the client statement timeout for the PostgreSQL instance, in seconds. The default value
+     * is 60 seconds.
+     *
+     * Example: `executeTimeout=100;`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-executetimeout)
+     */
+    public fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
+
+    /**
+     * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
+     * greater than the specified `LobMaxSize` .
+     *
+     * If task is set to Limited LOB mode and this option is set to true, the task fails instead of
+     * truncating the LOB data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation)
+     */
+    public fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
+
+    /**
+     * The write-ahead log (WAL) heartbeat feature mimics a dummy transaction.
+     *
+     * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+     * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+     * moving and prevents storage full scenarios.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
+     */
+    public fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
+
+    /**
+     * Sets the WAL heartbeat frequency (in minutes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
+     */
+    public fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
+
+    /**
+     * Sets the schema in which the heartbeat artifacts are created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
+     */
+    public fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
+
+    /**
+     * When true, lets PostgreSQL migrate the boolean type as boolean.
+     *
+     * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on both
+     * the source and target endpoints for it to take effect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
+     */
+    public fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+
+    /**
+     * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
+     *
+     * Example: `maxFileSize=512`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * Specifies the plugin to use to create a replication slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
+     */
+    public fun pluginName(): String? = unwrap(this).getPluginName()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+     * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * PostgreSQL endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * Sets the name of a previously created logical replication slot for a change data capture
+     * (CDC) load of the PostgreSQL source instance.
+     *
+     * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this attribute
+     * also makes it possible to use native CDC start points. DMS verifies that the specified logical
+     * replication slot exists before starting the CDC load task. It also verifies that the task was
+     * created with a valid setting of `CdcStartPosition` . If the specified slot doesn't exist or the
+     * task doesn't have a valid `CdcStartPosition` setting, DMS raises an error.
+     *
+     * For more information about setting the `CdcStartPosition` request parameter, see [Determining
+     * a CDC native start
+     * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
+     * in the *AWS Database Migration Service User Guide* . For more information about using
+     * `CdcStartPosition` , see
+     * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
+     * ,
+     * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
+     * , and
+     * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-slotname)
+     */
+    public fun slotName(): String? = unwrap(this).getSlotName()
+
+    /**
+     * A builder for [PostgreSqlSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param afterConnectScript For use with change data capture (CDC) only, this attribute has
+       * AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.
+       * Example: `afterConnectScript=SET session_replication_role='replica'`
+       */
+      public fun afterConnectScript(afterConnectScript: String)
+
+      /**
+       * @param babelfishDatabaseName The Babelfish for Aurora PostgreSQL database name for the
+       * endpoint.
+       */
+      public fun babelfishDatabaseName(babelfishDatabaseName: String)
+
+      /**
+       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
+       * PostgreSQL database when the task starts.
+       * You can later remove these artifacts.
+       *
+       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * database.
+       */
+      public fun captureDdls(captureDdls: Boolean)
+
+      /**
+       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
+       * PostgreSQL database when the task starts.
+       * You can later remove these artifacts.
+       *
+       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * database.
+       */
+      public fun captureDdls(captureDdls: IResolvable)
+
+      /**
+       * @param databaseMode Specifies the default behavior of the replication's handling of
+       * PostgreSQL- compatible endpoints that require some additional configuration, such as Babelfish
+       * endpoints.
+       */
+      public fun databaseMode(databaseMode: String)
+
+      /**
+       * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
+       * created.
+       * Example: `ddlArtifactsSchema=xyzddlschema;`
+       */
+      public fun ddlArtifactsSchema(ddlArtifactsSchema: String)
+
+      /**
+       * @param executeTimeout Sets the client statement timeout for the PostgreSQL instance, in
+       * seconds. The default value is 60 seconds.
+       * Example: `executeTimeout=100;`
+       */
+      public fun executeTimeout(executeTimeout: Number)
+
+      /**
+       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
+       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
+       * of truncating the LOB data.
+       */
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean)
+
+      /**
+       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
+       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
+       * of truncating the LOB data.
+       */
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable)
+
+      /**
+       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
+       * transaction.
+       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+       * moving and prevents storage full scenarios.
+       */
+      public fun heartbeatEnable(heartbeatEnable: Boolean)
+
+      /**
+       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
+       * transaction.
+       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+       * moving and prevents storage full scenarios.
+       */
+      public fun heartbeatEnable(heartbeatEnable: IResolvable)
+
+      /**
+       * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
+       */
+      public fun heartbeatFrequency(heartbeatFrequency: Number)
+
+      /**
+       * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
+       */
+      public fun heartbeatSchema(heartbeatSchema: String)
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
+       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
+       * both the source and target endpoints for it to take effect.
+       */
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
+       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
+       * both the source and target endpoints for it to take effect.
+       */
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to PostgreSQL.
+       * Example: `maxFileSize=512`
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param pluginName Specifies the plugin to use to create a replication slot.
+       */
+      public fun pluginName(pluginName: String)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the PostgreSQL endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param slotName Sets the name of a previously created logical replication slot for a change
+       * data capture (CDC) load of the PostgreSQL source instance.
+       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
+       * attribute also makes it possible to use native CDC start points. DMS verifies that the
+       * specified logical replication slot exists before starting the CDC load task. It also verifies
+       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
+       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
+       * error.
+       *
+       * For more information about setting the `CdcStartPosition` request parameter, see
+       * [Determining a CDC native start
+       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
+       * in the *AWS Database Migration Service User Guide* . For more information about using
+       * `CdcStartPosition` , see
+       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
+       * ,
+       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
+       * , and
+       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
+       * .
+       */
+      public fun slotName(slotName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.builder()
+
+      /**
+       * @param afterConnectScript For use with change data capture (CDC) only, this attribute has
+       * AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.
+       * Example: `afterConnectScript=SET session_replication_role='replica'`
+       */
+      override fun afterConnectScript(afterConnectScript: String) {
+        cdkBuilder.afterConnectScript(afterConnectScript)
+      }
+
+      /**
+       * @param babelfishDatabaseName The Babelfish for Aurora PostgreSQL database name for the
+       * endpoint.
+       */
+      override fun babelfishDatabaseName(babelfishDatabaseName: String) {
+        cdkBuilder.babelfishDatabaseName(babelfishDatabaseName)
+      }
+
+      /**
+       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
+       * PostgreSQL database when the task starts.
+       * You can later remove these artifacts.
+       *
+       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * database.
+       */
+      override fun captureDdls(captureDdls: Boolean) {
+        cdkBuilder.captureDdls(captureDdls)
+      }
+
+      /**
+       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
+       * PostgreSQL database when the task starts.
+       * You can later remove these artifacts.
+       *
+       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * database.
+       */
+      override fun captureDdls(captureDdls: IResolvable) {
+        cdkBuilder.captureDdls(captureDdls.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param databaseMode Specifies the default behavior of the replication's handling of
+       * PostgreSQL- compatible endpoints that require some additional configuration, such as Babelfish
+       * endpoints.
+       */
+      override fun databaseMode(databaseMode: String) {
+        cdkBuilder.databaseMode(databaseMode)
+      }
+
+      /**
+       * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
+       * created.
+       * Example: `ddlArtifactsSchema=xyzddlschema;`
+       */
+      override fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
+        cdkBuilder.ddlArtifactsSchema(ddlArtifactsSchema)
+      }
+
+      /**
+       * @param executeTimeout Sets the client statement timeout for the PostgreSQL instance, in
+       * seconds. The default value is 60 seconds.
+       * Example: `executeTimeout=100;`
+       */
+      override fun executeTimeout(executeTimeout: Number) {
+        cdkBuilder.executeTimeout(executeTimeout)
+      }
+
+      /**
+       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
+       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
+       * of truncating the LOB data.
+       */
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
+        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation)
+      }
+
+      /**
+       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
+       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
+       * of truncating the LOB data.
+       */
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
+        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
+       * transaction.
+       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+       * moving and prevents storage full scenarios.
+       */
+      override fun heartbeatEnable(heartbeatEnable: Boolean) {
+        cdkBuilder.heartbeatEnable(heartbeatEnable)
+      }
+
+      /**
+       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
+       * transaction.
+       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+       * moving and prevents storage full scenarios.
+       */
+      override fun heartbeatEnable(heartbeatEnable: IResolvable) {
+        cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
+       */
+      override fun heartbeatFrequency(heartbeatFrequency: Number) {
+        cdkBuilder.heartbeatFrequency(heartbeatFrequency)
+      }
+
+      /**
+       * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
+       */
+      override fun heartbeatSchema(heartbeatSchema: String) {
+        cdkBuilder.heartbeatSchema(heartbeatSchema)
+      }
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
+       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
+       * both the source and target endpoints for it to take effect.
+       */
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
+      }
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
+       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
+       * both the source and target endpoints for it to take effect.
+       */
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
+       * data to PostgreSQL.
+       * Example: `maxFileSize=512`
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param pluginName Specifies the plugin to use to create a replication slot.
+       */
+      override fun pluginName(pluginName: String) {
+        cdkBuilder.pluginName(pluginName)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the PostgreSQL endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param slotName Sets the name of a previously created logical replication slot for a change
+       * data capture (CDC) load of the PostgreSQL source instance.
+       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
+       * attribute also makes it possible to use native CDC start points. DMS verifies that the
+       * specified logical replication slot exists before starting the CDC load task. It also verifies
+       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
+       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
+       * error.
+       *
+       * For more information about setting the `CdcStartPosition` request parameter, see
+       * [Determining a CDC native start
+       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
+       * in the *AWS Database Migration Service User Guide* . For more information about using
+       * `CdcStartPosition` , see
+       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
+       * ,
+       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
+       * , and
+       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
+       * .
+       */
+      override fun slotName(slotName: String) {
+        cdkBuilder.slotName(slotName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
+    ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
+      /**
+       * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
+       * and user triggers to reduce the time it takes to bulk load data.
+       *
+       * Example: `afterConnectScript=SET session_replication_role='replica'`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-afterconnectscript)
+       */
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+      /**
+       * The Babelfish for Aurora PostgreSQL database name for the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename)
+       */
+      override fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
+
+      /**
+       * To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL database when
+       * the task starts.
+       *
+       * You can later remove these artifacts.
+       *
+       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
+       */
+      override fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
+
+      /**
+       * Specifies the default behavior of the replication's handling of PostgreSQL- compatible
+       * endpoints that require some additional configuration, such as Babelfish endpoints.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-databasemode)
+       */
+      override fun databaseMode(): String? = unwrap(this).getDatabaseMode()
+
+      /**
+       * The schema in which the operational DDL database artifacts are created.
+       *
+       * Example: `ddlArtifactsSchema=xyzddlschema;`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema)
+       */
+      override fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
+
+      /**
+       * Sets the client statement timeout for the PostgreSQL instance, in seconds. The default
+       * value is 60 seconds.
+       *
+       * Example: `executeTimeout=100;`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-executetimeout)
+       */
+      override fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
+
+      /**
+       * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
+       * greater than the specified `LobMaxSize` .
+       *
+       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
+       * of truncating the LOB data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation)
+       */
+      override fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
+
+      /**
+       * The write-ahead log (WAL) heartbeat feature mimics a dummy transaction.
+       *
+       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
+       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
+       * moving and prevents storage full scenarios.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
+       */
+      override fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
+
+      /**
+       * Sets the WAL heartbeat frequency (in minutes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
+       */
+      override fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
+
+      /**
+       * Sets the schema in which the heartbeat artifacts are created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
+       */
+      override fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
+
+      /**
+       * When true, lets PostgreSQL migrate the boolean type as boolean.
+       *
+       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
+       * both the source and target endpoints for it to take effect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
+       */
+      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+
+      /**
+       * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
+       *
+       * Example: `maxFileSize=512`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * Specifies the plugin to use to create a replication slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
+       */
+      override fun pluginName(): String? = unwrap(this).getPluginName()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * PostgreSQL endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * Sets the name of a previously created logical replication slot for a change data capture
+       * (CDC) load of the PostgreSQL source instance.
+       *
+       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
+       * attribute also makes it possible to use native CDC start points. DMS verifies that the
+       * specified logical replication slot exists before starting the CDC load task. It also verifies
+       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
+       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
+       * error.
+       *
+       * For more information about setting the `CdcStartPosition` request parameter, see
+       * [Determining a CDC native start
+       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
+       * in the *AWS Database Migration Service User Guide* . For more information about using
+       * `CdcStartPosition` , see
+       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
+       * ,
+       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
+       * , and
+       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-slotname)
+       */
+      override fun slotName(): String? = unwrap(this).getSlotName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PostgreSqlSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty):
+          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostgreSqlSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a Redis target endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For information about other available settings,
+   * see [Specifying endpoint settings for Redis as a
+   * target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redis.html#CHAP_Target.Redis.EndpointSettings)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * RedisSettingsProperty redisSettingsProperty = RedisSettingsProperty.builder()
+   * .authPassword("authPassword")
+   * .authType("authType")
+   * .authUserName("authUserName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslCaCertificateArn("sslCaCertificateArn")
+   * .sslSecurityProtocol("sslSecurityProtocol")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html)
+   */
+  public interface RedisSettingsProperty {
+    /**
+     * The password provided with the `auth-role` and `auth-token` options of the `AuthType` setting
+     * for a Redis target endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authpassword)
+     */
+    public fun authPassword(): String? = unwrap(this).getAuthPassword()
+
+    /**
+     * The type of authentication to perform when connecting to a Redis target.
+     *
+     * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires an
+     * `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
+     * `AuthPassword` values to be provided.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authtype)
+     */
+    public fun authType(): String? = unwrap(this).getAuthType()
+
+    /**
+     * The user name provided with the `auth-role` option of the `AuthType` setting for a Redis
+     * target endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authusername)
+     */
+    public fun authUserName(): String? = unwrap(this).getAuthUserName()
+
+    /**
+     * Transmission Control Protocol (TCP) port for the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * Fully qualified domain name of the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-servername)
+     */
+    public fun serverName(): String? = unwrap(this).getServerName()
+
+    /**
+     * The Amazon Resource Name (ARN) for the certificate authority (CA) that DMS uses to connect to
+     * your Redis target endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslcacertificatearn)
+     */
+    public fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
+
+    /**
+     * The connection to a Redis target endpoint using Transport Layer Security (TLS).
+     *
+     * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` . The
+     * `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an Amazon
+     * Resource Name (ARN) for an SSL certificate authority (CA) using the `SslCaCertificateArn`
+     * setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
+     *
+     * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for traffic
+     * between endpoint and database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslsecurityprotocol)
+     */
+    public fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
+
+    /**
+     * A builder for [RedisSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authPassword The password provided with the `auth-role` and `auth-token` options of
+       * the `AuthType` setting for a Redis target endpoint.
+       */
+      public fun authPassword(authPassword: String)
+
+      /**
+       * @param authType The type of authentication to perform when connecting to a Redis target.
+       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
+       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
+       * `AuthPassword` values to be provided.
+       */
+      public fun authType(authType: String)
+
+      /**
+       * @param authUserName The user name provided with the `auth-role` option of the `AuthType`
+       * setting for a Redis target endpoint.
+       */
+      public fun authUserName(authUserName: String)
+
+      /**
+       * @param port Transmission Control Protocol (TCP) port for the endpoint.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName Fully qualified domain name of the endpoint.
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the certificate authority
+       * (CA) that DMS uses to connect to your Redis target endpoint.
+       */
+      public fun sslCaCertificateArn(sslCaCertificateArn: String)
+
+      /**
+       * @param sslSecurityProtocol The connection to a Redis target endpoint using Transport Layer
+       * Security (TLS).
+       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
+       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
+       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
+       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
+       *
+       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
+       * traffic between endpoint and database.
+       */
+      public fun sslSecurityProtocol(sslSecurityProtocol: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.builder()
+
+      /**
+       * @param authPassword The password provided with the `auth-role` and `auth-token` options of
+       * the `AuthType` setting for a Redis target endpoint.
+       */
+      override fun authPassword(authPassword: String) {
+        cdkBuilder.authPassword(authPassword)
+      }
+
+      /**
+       * @param authType The type of authentication to perform when connecting to a Redis target.
+       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
+       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
+       * `AuthPassword` values to be provided.
+       */
+      override fun authType(authType: String) {
+        cdkBuilder.authType(authType)
+      }
+
+      /**
+       * @param authUserName The user name provided with the `auth-role` option of the `AuthType`
+       * setting for a Redis target endpoint.
+       */
+      override fun authUserName(authUserName: String) {
+        cdkBuilder.authUserName(authUserName)
+      }
+
+      /**
+       * @param port Transmission Control Protocol (TCP) port for the endpoint.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName Fully qualified domain name of the endpoint.
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the certificate authority
+       * (CA) that DMS uses to connect to your Redis target endpoint.
+       */
+      override fun sslCaCertificateArn(sslCaCertificateArn: String) {
+        cdkBuilder.sslCaCertificateArn(sslCaCertificateArn)
+      }
+
+      /**
+       * @param sslSecurityProtocol The connection to a Redis target endpoint using Transport Layer
+       * Security (TLS).
+       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
+       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
+       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
+       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
+       *
+       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
+       * traffic between endpoint and database.
+       */
+      override fun sslSecurityProtocol(sslSecurityProtocol: String) {
+        cdkBuilder.sslSecurityProtocol(sslSecurityProtocol)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
+    ) : CdkObject(cdkObject), RedisSettingsProperty {
+      /**
+       * The password provided with the `auth-role` and `auth-token` options of the `AuthType`
+       * setting for a Redis target endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authpassword)
+       */
+      override fun authPassword(): String? = unwrap(this).getAuthPassword()
+
+      /**
+       * The type of authentication to perform when connecting to a Redis target.
+       *
+       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
+       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
+       * `AuthPassword` values to be provided.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authtype)
+       */
+      override fun authType(): String? = unwrap(this).getAuthType()
+
+      /**
+       * The user name provided with the `auth-role` option of the `AuthType` setting for a Redis
+       * target endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authusername)
+       */
+      override fun authUserName(): String? = unwrap(this).getAuthUserName()
+
+      /**
+       * Transmission Control Protocol (TCP) port for the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * Fully qualified domain name of the endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-servername)
+       */
+      override fun serverName(): String? = unwrap(this).getServerName()
+
+      /**
+       * The Amazon Resource Name (ARN) for the certificate authority (CA) that DMS uses to connect
+       * to your Redis target endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslcacertificatearn)
+       */
+      override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
+
+      /**
+       * The connection to a Redis target endpoint using Transport Layer Security (TLS).
+       *
+       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
+       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
+       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
+       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
+       *
+       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
+       * traffic between endpoint and database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslsecurityprotocol)
+       */
+      override fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedisSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty):
+          RedisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedisSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedisSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines an Amazon Redshift endpoint.
+   *
+   * This information includes the output format of records applied to the endpoint and details of
+   * transaction and control table data information. For more information about other available
+   * settings, see [Extra connection attributes when using Amazon Redshift as a target for AWS
+   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redshift.html#CHAP_Target.Redshift.ConnectionAttrib)
+   * in the *AWS Database Migration Service User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * RedshiftSettingsProperty redshiftSettingsProperty = RedshiftSettingsProperty.builder()
+   * .acceptAnyDate(false)
+   * .afterConnectScript("afterConnectScript")
+   * .bucketFolder("bucketFolder")
+   * .bucketName("bucketName")
+   * .caseSensitiveNames(false)
+   * .compUpdate(false)
+   * .connectionTimeout(123)
+   * .dateFormat("dateFormat")
+   * .emptyAsNull(false)
+   * .encryptionMode("encryptionMode")
+   * .explicitIds(false)
+   * .fileTransferUploadStreams(123)
+   * .loadTimeout(123)
+   * .mapBooleanAsBoolean(false)
+   * .maxFileSize(123)
+   * .removeQuotes(false)
+   * .replaceChars("replaceChars")
+   * .replaceInvalidChars("replaceInvalidChars")
+   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+   * .secretsManagerSecretId("secretsManagerSecretId")
+   * .serverSideEncryptionKmsKeyId("serverSideEncryptionKmsKeyId")
+   * .serviceAccessRoleArn("serviceAccessRoleArn")
+   * .timeFormat("timeFormat")
+   * .trimBlanks(false)
+   * .truncateColumns(false)
+   * .writeBufferSize(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html)
+   */
+  public interface RedshiftSettingsProperty {
+    /**
+     * A value that indicates to allow any date format, including invalid formats such as 00/00/00
+     * 00:00:00, to be loaded without generating an error.
+     *
+     * You can choose `true` or `false` (the default).
+     *
+     * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with the
+     * DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+     * specification, Amazon Redshift inserts a NULL value into that field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-acceptanydate)
+     */
+    public fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
+
+    /**
+     * Code to run after connecting.
+     *
+     * This parameter should contain the code itself, not the name of a file containing the code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-afterconnectscript)
+     */
+    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+    /**
+     * An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded to
+     * the target Redshift cluster.
+     *
+     * For full load mode, AWS DMS converts source records into .csv files and loads them to the
+     * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
+     * to the target table. The files are deleted once the `COPY` operation has finished. For more
+     * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
+     * *Amazon Redshift Database Developer Guide* .
+     *
+     * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the .csv
+     * files to this *BucketFolder/NetChangesTableID* path.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketfolder)
+     */
+    public fun bucketFolder(): String? = unwrap(this).getBucketFolder()
+
+    /**
+     * The name of the intermediate S3 bucket used to store .csv files before uploading data to
+     * Redshift.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketname)
+     */
+    public fun bucketName(): String? = unwrap(this).getBucketName()
+
+    /**
+     * If Amazon Redshift is configured to support case sensitive schema names, set
+     * `CaseSensitiveNames` to `true` .
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-casesensitivenames)
+     */
+    public fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
+
+    /**
+     * If you set `CompUpdate` to `true` Amazon Redshift applies automatic compression if the table
+     * is empty.
+     *
+     * This applies even if the table columns already have encodings other than `RAW` . If you set
+     * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings aren't
+     * changed. The default is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-compupdate)
+     */
+    public fun compUpdate(): Any? = unwrap(this).getCompUpdate()
+
+    /**
+     * A value that sets the amount of time to wait (in milliseconds) before timing out, beginning
+     * from when you initially establish a connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-connectiontimeout)
+     */
+    public fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
+
+    /**
+     * The date format that you are using.
+     *
+     * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
+     * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
+     * `auto` recognizes most strings, even some that aren't supported when you use a date format
+     * string.
+     *
+     * If your date and time values use formats different from each other, set this to `auto` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-dateformat)
+     */
+    public fun dateFormat(): String? = unwrap(this).getDateFormat()
+
+    /**
+     * A value that specifies whether AWS DMS should migrate empty CHAR and VARCHAR fields as NULL.
+     *
+     * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-emptyasnull)
+     */
+    public fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
+
+    /**
+     * The type of server-side encryption that you want to use for your data.
+     *
+     * This encryption type is part of the endpoint settings or the extra connections attributes for
+     * Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
+     *
+     *
+     * For the `ModifyEndpoint` operation, you can change the existing value of the `EncryptionMode`
+     * parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing value from `SSE_S3` to
+     * `SSE_KMS` .
+     *
+     *
+     * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy that
+     * allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-encryptionmode)
+     */
+    public fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+
+    /**
+     * This setting is only valid for a full-load migration task.
+     *
+     * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+     * auto-generated values with explicit values loaded from the source data files used to populate
+     * the tables. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-explicitids)
+     */
+    public fun explicitIds(): Any? = unwrap(this).getExplicitIds()
+
+    /**
+     * The number of threads used to upload a single file.
+     *
+     * This parameter accepts a value from 1 through 64. It defaults to 10.
+     *
+     * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
+     * Multipart Upload. For more information, see [Multipart upload
+     * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
+     *
+     * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams)
+     */
+    public fun fileTransferUploadStreams(): Number? = unwrap(this).getFileTransferUploadStreams()
+
+    /**
+     * The amount of time to wait (in milliseconds) before timing out of operations performed by AWS
+     * DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-loadtimeout)
+     */
+    public fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+
+    /**
+     * When true, lets Redshift migrate the boolean type as boolean.
+     *
+     * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+     * the source and target endpoints for it to take effect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean)
+     */
+    public fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+
+    /**
+     * The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer data
+     * to Amazon Redshift. It defaults to 1048576KB (1 GB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-maxfilesize)
+     */
+    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+    /**
+     * A value that specifies to remove surrounding quotation marks from strings in the incoming
+     * data.
+     *
+     * All characters within the quotation marks, including delimiters, are retained. Choose `true`
+     * to remove quotation marks. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-removequotes)
+     */
+    public fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
+
+    /**
+     * A value that specifies to replaces the invalid characters specified in `ReplaceInvalidChars`
+     * , substituting the specified characters instead.
+     *
+     * The default is `"?"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replacechars)
+     */
+    public fun replaceChars(): String? = unwrap(this).getReplaceChars()
+
+    /**
+     * A list of characters that you want to replace.
+     *
+     * Use with `ReplaceChars` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replaceinvalidchars)
+     */
+    public fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
+
+    /**
+     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+     *
+     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+     * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
+     *
+     *
+     * You can specify one of two sets of values for these permissions. You can specify the values
+     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+     *
+     * For more information on creating this `SecretsManagerSecret` , the corresponding
+     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
+     * see [Using secrets to access AWS Database Migration Service
+     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+     * in the *AWS Database Migration Service User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanageraccessrolearn)
+     */
+    public fun secretsManagerAccessRoleArn(): String? =
+        unwrap(this).getSecretsManagerAccessRoleArn()
+
+    /**
+     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+     * Amazon Redshift endpoint connection details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanagersecretid)
+     */
+    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+    /**
+     * The AWS KMS key ID.
+     *
+     * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
+     * use needs an attached policy that enables IAM user permissions and allows use of the key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serversideencryptionkmskeyid)
+     */
+    public fun serverSideEncryptionKmsKeyId(): String? =
+        unwrap(this).getServerSideEncryptionKmsKeyId()
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that has access to the Amazon Redshift
+     * service.
+     *
+     * The role must allow the `iam:PassRole` action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serviceaccessrolearn)
+     */
+    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+    /**
+     * The time format that you want to use.
+     *
+     * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
+     * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
+     * aren't supported when you use a time format string.
+     *
+     * If your date and time values use formats different from each other, set this parameter to
+     * `auto` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-timeformat)
+     */
+    public fun timeFormat(): String? = unwrap(this).getTimeFormat()
+
+    /**
+     * A value that specifies to remove the trailing white space characters from a VARCHAR string.
+     *
+     * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+     * unneeded white space. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-trimblanks)
+     */
+    public fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
+
+    /**
+     * A value that specifies to truncate data in columns to the appropriate number of characters,
+     * so that the data fits in the column.
+     *
+     * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a size
+     * of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-truncatecolumns)
+     */
+    public fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
+
+    /**
+     * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
+     * local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-writebuffersize)
+     */
+    public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+
+    /**
+     * A builder for [RedshiftSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
+       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
+       * You can choose `true` or `false` (the default).
+       *
+       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
+       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+       * specification, Amazon Redshift inserts a NULL value into that field.
+       */
+      public fun acceptAnyDate(acceptAnyDate: Boolean)
+
+      /**
+       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
+       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
+       * You can choose `true` or `false` (the default).
+       *
+       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
+       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+       * specification, Amazon Redshift inserts a NULL value into that field.
+       */
+      public fun acceptAnyDate(acceptAnyDate: IResolvable)
+
+      /**
+       * @param afterConnectScript Code to run after connecting.
+       * This parameter should contain the code itself, not the name of a file containing the code.
+       */
+      public fun afterConnectScript(afterConnectScript: String)
+
+      /**
+       * @param bucketFolder An S3 folder where the comma-separated-value (.csv) files are stored
+       * before being uploaded to the target Redshift cluster.
+       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
+       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
+       * to the target table. The files are deleted once the `COPY` operation has finished. For more
+       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
+       * *Amazon Redshift Database Developer Guide* .
+       *
+       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
+       * .csv files to this *BucketFolder/NetChangesTableID* path.
+       */
+      public fun bucketFolder(bucketFolder: String)
+
+      /**
+       * @param bucketName The name of the intermediate S3 bucket used to store .csv files before
+       * uploading data to Redshift.
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
+       * names, set `CaseSensitiveNames` to `true` .
+       * The default is `false` .
+       */
+      public fun caseSensitiveNames(caseSensitiveNames: Boolean)
+
+      /**
+       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
+       * names, set `CaseSensitiveNames` to `true` .
+       * The default is `false` .
+       */
+      public fun caseSensitiveNames(caseSensitiveNames: IResolvable)
+
+      /**
+       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
+       * compression if the table is empty.
+       * This applies even if the table columns already have encodings other than `RAW` . If you set
+       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
+       * aren't changed. The default is `true` .
+       */
+      public fun compUpdate(compUpdate: Boolean)
+
+      /**
+       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
+       * compression if the table is empty.
+       * This applies even if the table columns already have encodings other than `RAW` . If you set
+       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
+       * aren't changed. The default is `true` .
+       */
+      public fun compUpdate(compUpdate: IResolvable)
+
+      /**
+       * @param connectionTimeout A value that sets the amount of time to wait (in milliseconds)
+       * before timing out, beginning from when you initially establish a connection.
+       */
+      public fun connectionTimeout(connectionTimeout: Number)
+
+      /**
+       * @param dateFormat The date format that you are using.
+       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
+       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
+       * `auto` recognizes most strings, even some that aren't supported when you use a date format
+       * string.
+       *
+       * If your date and time values use formats different from each other, set this to `auto` .
+       */
+      public fun dateFormat(dateFormat: String)
+
+      /**
+       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
+       * VARCHAR fields as NULL.
+       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+       */
+      public fun emptyAsNull(emptyAsNull: Boolean)
+
+      /**
+       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
+       * VARCHAR fields as NULL.
+       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+       */
+      public fun emptyAsNull(emptyAsNull: IResolvable)
+
+      /**
+       * @param encryptionMode The type of server-side encryption that you want to use for your
+       * data.
+       * This encryption type is part of the endpoint settings or the extra connections attributes
+       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
+       *
+       *
+       * For the `ModifyEndpoint` operation, you can change the existing value of the
+       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
+       * value from `SSE_S3` to `SSE_KMS` .
+       *
+       *
+       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
+       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
+       */
+      public fun encryptionMode(encryptionMode: String)
+
+      /**
+       * @param explicitIds This setting is only valid for a full-load migration task.
+       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+       * auto-generated values with explicit values loaded from the source data files used to populate
+       * the tables. The default is `false` .
+       */
+      public fun explicitIds(explicitIds: Boolean)
+
+      /**
+       * @param explicitIds This setting is only valid for a full-load migration task.
+       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+       * auto-generated values with explicit values loaded from the source data files used to populate
+       * the tables. The default is `false` .
+       */
+      public fun explicitIds(explicitIds: IResolvable)
+
+      /**
+       * @param fileTransferUploadStreams The number of threads used to upload a single file.
+       * This parameter accepts a value from 1 through 64. It defaults to 10.
+       *
+       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
+       * Multipart Upload. For more information, see [Multipart upload
+       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
+       *
+       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
+       */
+      public fun fileTransferUploadStreams(fileTransferUploadStreams: Number)
+
+      /**
+       * @param loadTimeout The amount of time to wait (in milliseconds) before timing out of
+       * operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE,
+       * and UPDATE.
+       */
+      public fun loadTimeout(loadTimeout: Number)
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
+       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+       * the source and target endpoints for it to take effect.
+       */
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
+       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+       * the source and target endpoints for it to take effect.
+       */
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
+
+      /**
+       * @param maxFileSize The maximum size (in KB) of any .csv file used to load data on an S3
+       * bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).
+       */
+      public fun maxFileSize(maxFileSize: Number)
+
+      /**
+       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
+       * strings in the incoming data.
+       * All characters within the quotation marks, including delimiters, are retained. Choose
+       * `true` to remove quotation marks. The default is `false` .
+       */
+      public fun removeQuotes(removeQuotes: Boolean)
+
+      /**
+       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
+       * strings in the incoming data.
+       * All characters within the quotation marks, including delimiters, are retained. Choose
+       * `true` to remove quotation marks. The default is `false` .
+       */
+      public fun removeQuotes(removeQuotes: IResolvable)
+
+      /**
+       * @param replaceChars A value that specifies to replaces the invalid characters specified in
+       * `ReplaceInvalidChars` , substituting the specified characters instead.
+       * The default is `"?"` .
+       */
+      public fun replaceChars(replaceChars: String)
+
+      /**
+       * @param replaceInvalidChars A list of characters that you want to replace.
+       * Use with `ReplaceChars` .
+       */
+      public fun replaceInvalidChars(replaceInvalidChars: String)
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the Amazon Redshift endpoint connection details.
+       */
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      /**
+       * @param serverSideEncryptionKmsKeyId The AWS KMS key ID.
+       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
+       * use needs an attached policy that enables IAM user permissions and allows use of the key.
+       */
+      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String)
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the IAM role that has access
+       * to the Amazon Redshift service.
+       * The role must allow the `iam:PassRole` action.
+       */
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
+
+      /**
+       * @param timeFormat The time format that you want to use.
+       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
+       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
+       * aren't supported when you use a time format string.
+       *
+       * If your date and time values use formats different from each other, set this parameter to
+       * `auto` .
+       */
+      public fun timeFormat(timeFormat: String)
+
+      /**
+       * @param trimBlanks A value that specifies to remove the trailing white space characters from
+       * a VARCHAR string.
+       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+       * unneeded white space. The default is `false` .
+       */
+      public fun trimBlanks(trimBlanks: Boolean)
+
+      /**
+       * @param trimBlanks A value that specifies to remove the trailing white space characters from
+       * a VARCHAR string.
+       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+       * unneeded white space. The default is `false` .
+       */
+      public fun trimBlanks(trimBlanks: IResolvable)
+
+      /**
+       * @param truncateColumns A value that specifies to truncate data in columns to the
+       * appropriate number of characters, so that the data fits in the column.
+       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
+       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+       */
+      public fun truncateColumns(truncateColumns: Boolean)
+
+      /**
+       * @param truncateColumns A value that specifies to truncate data in columns to the
+       * appropriate number of characters, so that the data fits in the column.
+       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
+       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+       */
+      public fun truncateColumns(truncateColumns: IResolvable)
+
+      /**
+       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
+       * generating .csv files on the local disk at the DMS replication instance. The default value is
+       * 1000 (buffer size is 1000KB).
+       */
+      public fun writeBufferSize(writeBufferSize: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.builder()
+
+      /**
+       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
+       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
+       * You can choose `true` or `false` (the default).
+       *
+       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
+       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+       * specification, Amazon Redshift inserts a NULL value into that field.
+       */
+      override fun acceptAnyDate(acceptAnyDate: Boolean) {
+        cdkBuilder.acceptAnyDate(acceptAnyDate)
+      }
+
+      /**
+       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
+       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
+       * You can choose `true` or `false` (the default).
+       *
+       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
+       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+       * specification, Amazon Redshift inserts a NULL value into that field.
+       */
+      override fun acceptAnyDate(acceptAnyDate: IResolvable) {
+        cdkBuilder.acceptAnyDate(acceptAnyDate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param afterConnectScript Code to run after connecting.
+       * This parameter should contain the code itself, not the name of a file containing the code.
+       */
+      override fun afterConnectScript(afterConnectScript: String) {
+        cdkBuilder.afterConnectScript(afterConnectScript)
+      }
+
+      /**
+       * @param bucketFolder An S3 folder where the comma-separated-value (.csv) files are stored
+       * before being uploaded to the target Redshift cluster.
+       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
+       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
+       * to the target table. The files are deleted once the `COPY` operation has finished. For more
+       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
+       * *Amazon Redshift Database Developer Guide* .
+       *
+       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
+       * .csv files to this *BucketFolder/NetChangesTableID* path.
+       */
+      override fun bucketFolder(bucketFolder: String) {
+        cdkBuilder.bucketFolder(bucketFolder)
+      }
+
+      /**
+       * @param bucketName The name of the intermediate S3 bucket used to store .csv files before
+       * uploading data to Redshift.
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
+       * names, set `CaseSensitiveNames` to `true` .
+       * The default is `false` .
+       */
+      override fun caseSensitiveNames(caseSensitiveNames: Boolean) {
+        cdkBuilder.caseSensitiveNames(caseSensitiveNames)
+      }
+
+      /**
+       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
+       * names, set `CaseSensitiveNames` to `true` .
+       * The default is `false` .
+       */
+      override fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
+        cdkBuilder.caseSensitiveNames(caseSensitiveNames.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
+       * compression if the table is empty.
+       * This applies even if the table columns already have encodings other than `RAW` . If you set
+       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
+       * aren't changed. The default is `true` .
+       */
+      override fun compUpdate(compUpdate: Boolean) {
+        cdkBuilder.compUpdate(compUpdate)
+      }
+
+      /**
+       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
+       * compression if the table is empty.
+       * This applies even if the table columns already have encodings other than `RAW` . If you set
+       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
+       * aren't changed. The default is `true` .
+       */
+      override fun compUpdate(compUpdate: IResolvable) {
+        cdkBuilder.compUpdate(compUpdate.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param connectionTimeout A value that sets the amount of time to wait (in milliseconds)
+       * before timing out, beginning from when you initially establish a connection.
+       */
+      override fun connectionTimeout(connectionTimeout: Number) {
+        cdkBuilder.connectionTimeout(connectionTimeout)
+      }
+
+      /**
+       * @param dateFormat The date format that you are using.
+       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
+       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
+       * `auto` recognizes most strings, even some that aren't supported when you use a date format
+       * string.
+       *
+       * If your date and time values use formats different from each other, set this to `auto` .
+       */
+      override fun dateFormat(dateFormat: String) {
+        cdkBuilder.dateFormat(dateFormat)
+      }
+
+      /**
+       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
+       * VARCHAR fields as NULL.
+       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+       */
+      override fun emptyAsNull(emptyAsNull: Boolean) {
+        cdkBuilder.emptyAsNull(emptyAsNull)
+      }
+
+      /**
+       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
+       * VARCHAR fields as NULL.
+       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+       */
+      override fun emptyAsNull(emptyAsNull: IResolvable) {
+        cdkBuilder.emptyAsNull(emptyAsNull.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param encryptionMode The type of server-side encryption that you want to use for your
+       * data.
+       * This encryption type is part of the endpoint settings or the extra connections attributes
+       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
+       *
+       *
+       * For the `ModifyEndpoint` operation, you can change the existing value of the
+       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
+       * value from `SSE_S3` to `SSE_KMS` .
+       *
+       *
+       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
+       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
+       */
+      override fun encryptionMode(encryptionMode: String) {
+        cdkBuilder.encryptionMode(encryptionMode)
+      }
+
+      /**
+       * @param explicitIds This setting is only valid for a full-load migration task.
+       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+       * auto-generated values with explicit values loaded from the source data files used to populate
+       * the tables. The default is `false` .
+       */
+      override fun explicitIds(explicitIds: Boolean) {
+        cdkBuilder.explicitIds(explicitIds)
+      }
+
+      /**
+       * @param explicitIds This setting is only valid for a full-load migration task.
+       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+       * auto-generated values with explicit values loaded from the source data files used to populate
+       * the tables. The default is `false` .
+       */
+      override fun explicitIds(explicitIds: IResolvable) {
+        cdkBuilder.explicitIds(explicitIds.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fileTransferUploadStreams The number of threads used to upload a single file.
+       * This parameter accepts a value from 1 through 64. It defaults to 10.
+       *
+       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
+       * Multipart Upload. For more information, see [Multipart upload
+       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
+       *
+       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
+       */
+      override fun fileTransferUploadStreams(fileTransferUploadStreams: Number) {
+        cdkBuilder.fileTransferUploadStreams(fileTransferUploadStreams)
+      }
+
+      /**
+       * @param loadTimeout The amount of time to wait (in milliseconds) before timing out of
+       * operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE,
+       * and UPDATE.
+       */
+      override fun loadTimeout(loadTimeout: Number) {
+        cdkBuilder.loadTimeout(loadTimeout)
+      }
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
+       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+       * the source and target endpoints for it to take effect.
+       */
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
+      }
+
+      /**
+       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
+       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+       * the source and target endpoints for it to take effect.
+       */
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param maxFileSize The maximum size (in KB) of any .csv file used to load data on an S3
+       * bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).
+       */
+      override fun maxFileSize(maxFileSize: Number) {
+        cdkBuilder.maxFileSize(maxFileSize)
+      }
+
+      /**
+       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
+       * strings in the incoming data.
+       * All characters within the quotation marks, including delimiters, are retained. Choose
+       * `true` to remove quotation marks. The default is `false` .
+       */
+      override fun removeQuotes(removeQuotes: Boolean) {
+        cdkBuilder.removeQuotes(removeQuotes)
+      }
+
+      /**
+       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
+       * strings in the incoming data.
+       * All characters within the quotation marks, including delimiters, are retained. Choose
+       * `true` to remove quotation marks. The default is `false` .
+       */
+      override fun removeQuotes(removeQuotes: IResolvable) {
+        cdkBuilder.removeQuotes(removeQuotes.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param replaceChars A value that specifies to replaces the invalid characters specified in
+       * `ReplaceInvalidChars` , substituting the specified characters instead.
+       * The default is `"?"` .
+       */
+      override fun replaceChars(replaceChars: String) {
+        cdkBuilder.replaceChars(replaceChars)
+      }
+
+      /**
+       * @param replaceInvalidChars A list of characters that you want to replace.
+       * Use with `ReplaceChars` .
+       */
+      override fun replaceInvalidChars(replaceInvalidChars: String) {
+        cdkBuilder.replaceInvalidChars(replaceInvalidChars)
+      }
+
+      /**
+       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
+       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
+       * value in `SecretsManagerSecret` .
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       */
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
+      }
+
+      /**
+       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
+       * `SecretsManagerSecret` that contains the Amazon Redshift endpoint connection details.
+       */
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
+      }
+
+      /**
+       * @param serverSideEncryptionKmsKeyId The AWS KMS key ID.
+       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
+       * use needs an attached policy that enables IAM user permissions and allows use of the key.
+       */
+      override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
+        cdkBuilder.serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId)
+      }
+
+      /**
+       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the IAM role that has access
+       * to the Amazon Redshift service.
+       * The role must allow the `iam:PassRole` action.
+       */
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
+      }
+
+      /**
+       * @param timeFormat The time format that you want to use.
+       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
+       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
+       * aren't supported when you use a time format string.
+       *
+       * If your date and time values use formats different from each other, set this parameter to
+       * `auto` .
+       */
+      override fun timeFormat(timeFormat: String) {
+        cdkBuilder.timeFormat(timeFormat)
+      }
+
+      /**
+       * @param trimBlanks A value that specifies to remove the trailing white space characters from
+       * a VARCHAR string.
+       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+       * unneeded white space. The default is `false` .
+       */
+      override fun trimBlanks(trimBlanks: Boolean) {
+        cdkBuilder.trimBlanks(trimBlanks)
+      }
+
+      /**
+       * @param trimBlanks A value that specifies to remove the trailing white space characters from
+       * a VARCHAR string.
+       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+       * unneeded white space. The default is `false` .
+       */
+      override fun trimBlanks(trimBlanks: IResolvable) {
+        cdkBuilder.trimBlanks(trimBlanks.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param truncateColumns A value that specifies to truncate data in columns to the
+       * appropriate number of characters, so that the data fits in the column.
+       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
+       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+       */
+      override fun truncateColumns(truncateColumns: Boolean) {
+        cdkBuilder.truncateColumns(truncateColumns)
+      }
+
+      /**
+       * @param truncateColumns A value that specifies to truncate data in columns to the
+       * appropriate number of characters, so that the data fits in the column.
+       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
+       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+       */
+      override fun truncateColumns(truncateColumns: IResolvable) {
+        cdkBuilder.truncateColumns(truncateColumns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
+       * generating .csv files on the local disk at the DMS replication instance. The default value is
+       * 1000 (buffer size is 1000KB).
+       */
+      override fun writeBufferSize(writeBufferSize: Number) {
+        cdkBuilder.writeBufferSize(writeBufferSize)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
+    ) : CdkObject(cdkObject), RedshiftSettingsProperty {
+      /**
+       * A value that indicates to allow any date format, including invalid formats such as 00/00/00
+       * 00:00:00, to be loaded without generating an error.
+       *
+       * You can choose `true` or `false` (the default).
+       *
+       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
+       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
+       * specification, Amazon Redshift inserts a NULL value into that field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-acceptanydate)
+       */
+      override fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
+
+      /**
+       * Code to run after connecting.
+       *
+       * This parameter should contain the code itself, not the name of a file containing the code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-afterconnectscript)
+       */
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+
+      /**
+       * An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded
+       * to the target Redshift cluster.
+       *
+       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
+       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
+       * to the target table. The files are deleted once the `COPY` operation has finished. For more
+       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
+       * *Amazon Redshift Database Developer Guide* .
+       *
+       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
+       * .csv files to this *BucketFolder/NetChangesTableID* path.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketfolder)
+       */
+      override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
+
+      /**
+       * The name of the intermediate S3 bucket used to store .csv files before uploading data to
+       * Redshift.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketname)
+       */
+      override fun bucketName(): String? = unwrap(this).getBucketName()
+
+      /**
+       * If Amazon Redshift is configured to support case sensitive schema names, set
+       * `CaseSensitiveNames` to `true` .
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-casesensitivenames)
+       */
+      override fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
+
+      /**
+       * If you set `CompUpdate` to `true` Amazon Redshift applies automatic compression if the
+       * table is empty.
+       *
+       * This applies even if the table columns already have encodings other than `RAW` . If you set
+       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
+       * aren't changed. The default is `true` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-compupdate)
+       */
+      override fun compUpdate(): Any? = unwrap(this).getCompUpdate()
+
+      /**
+       * A value that sets the amount of time to wait (in milliseconds) before timing out, beginning
+       * from when you initially establish a connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-connectiontimeout)
+       */
+      override fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
+
+      /**
+       * The date format that you are using.
+       *
+       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
+       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
+       * `auto` recognizes most strings, even some that aren't supported when you use a date format
+       * string.
+       *
+       * If your date and time values use formats different from each other, set this to `auto` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-dateformat)
+       */
+      override fun dateFormat(): String? = unwrap(this).getDateFormat()
+
+      /**
+       * A value that specifies whether AWS DMS should migrate empty CHAR and VARCHAR fields as
+       * NULL.
+       *
+       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-emptyasnull)
+       */
+      override fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
+
+      /**
+       * The type of server-side encryption that you want to use for your data.
+       *
+       * This encryption type is part of the endpoint settings or the extra connections attributes
+       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
+       *
+       *
+       * For the `ModifyEndpoint` operation, you can change the existing value of the
+       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
+       * value from `SSE_S3` to `SSE_KMS` .
+       *
+       *
+       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
+       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-encryptionmode)
+       */
+      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+
+      /**
+       * This setting is only valid for a full-load migration task.
+       *
+       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
+       * auto-generated values with explicit values loaded from the source data files used to populate
+       * the tables. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-explicitids)
+       */
+      override fun explicitIds(): Any? = unwrap(this).getExplicitIds()
+
+      /**
+       * The number of threads used to upload a single file.
+       *
+       * This parameter accepts a value from 1 through 64. It defaults to 10.
+       *
+       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
+       * Multipart Upload. For more information, see [Multipart upload
+       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
+       *
+       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams)
+       */
+      override fun fileTransferUploadStreams(): Number? =
+          unwrap(this).getFileTransferUploadStreams()
+
+      /**
+       * The amount of time to wait (in milliseconds) before timing out of operations performed by
+       * AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-loadtimeout)
+       */
+      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+
+      /**
+       * When true, lets Redshift migrate the boolean type as boolean.
+       *
+       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
+       * the source and target endpoints for it to take effect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean)
+       */
+      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+
+      /**
+       * The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer
+       * data to Amazon Redshift. It defaults to 1048576KB (1 GB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-maxfilesize)
+       */
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+
+      /**
+       * A value that specifies to remove surrounding quotation marks from strings in the incoming
+       * data.
+       *
+       * All characters within the quotation marks, including delimiters, are retained. Choose
+       * `true` to remove quotation marks. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-removequotes)
+       */
+      override fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
+
+      /**
+       * A value that specifies to replaces the invalid characters specified in
+       * `ReplaceInvalidChars` , substituting the specified characters instead.
+       *
+       * The default is `"?"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replacechars)
+       */
+      override fun replaceChars(): String? = unwrap(this).getReplaceChars()
+
+      /**
+       * A list of characters that you want to replace.
+       *
+       * Use with `ReplaceChars` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replaceinvalidchars)
+       */
+      override fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
+       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
+       *
+       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
+       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
+       *
+       *
+       * You can specify one of two sets of values for these permissions. You can specify the values
+       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
+       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
+       *
+       * For more information on creating this `SecretsManagerSecret` , the corresponding
+       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
+       * it, see [Using secrets to access AWS Database Migration Service
+       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
+       * in the *AWS Database Migration Service User Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanageraccessrolearn)
+       */
+      override fun secretsManagerAccessRoleArn(): String? =
+          unwrap(this).getSecretsManagerAccessRoleArn()
+
+      /**
+       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
+       * Amazon Redshift endpoint connection details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanagersecretid)
+       */
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
+
+      /**
+       * The AWS KMS key ID.
+       *
+       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
+       * use needs an attached policy that enables IAM user permissions and allows use of the key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serversideencryptionkmskeyid)
+       */
+      override fun serverSideEncryptionKmsKeyId(): String? =
+          unwrap(this).getServerSideEncryptionKmsKeyId()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role that has access to the Amazon Redshift
+       * service.
+       *
+       * The role must allow the `iam:PassRole` action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serviceaccessrolearn)
+       */
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+
+      /**
+       * The time format that you want to use.
+       *
+       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
+       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
+       * aren't supported when you use a time format string.
+       *
+       * If your date and time values use formats different from each other, set this parameter to
+       * `auto` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-timeformat)
+       */
+      override fun timeFormat(): String? = unwrap(this).getTimeFormat()
+
+      /**
+       * A value that specifies to remove the trailing white space characters from a VARCHAR string.
+       *
+       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
+       * unneeded white space. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-trimblanks)
+       */
+      override fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
+
+      /**
+       * A value that specifies to truncate data in columns to the appropriate number of characters,
+       * so that the data fits in the column.
+       *
+       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
+       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-truncatecolumns)
+       */
+      override fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
+
+      /**
+       * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
+       * local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-writebuffersize)
+       */
+      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty):
+          RedshiftSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty
     }
   }
 
@@ -8795,7 +15168,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
     ) : CdkObject(cdkObject), S3SettingsProperty {
       /**
        * An optional parameter that, when set to `true` or `y` , you can use to add column name
@@ -9572,8 +15945,7 @@ public open class CfnEndpoint internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
     ) : CdkObject(cdkObject), SybaseSettingsProperty {
       /**
        * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
@@ -9623,6390 +15995,6 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a Microsoft SQL Server endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For information about other available settings,
-   * see [Extra connection attributes when using SQL Server as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.ConnectionAttrib)
-   * and [Extra connection attributes when using SQL Server as a target for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.SQLServer.html#CHAP_Target.SQLServer.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * MicrosoftSqlServerSettingsProperty microsoftSqlServerSettingsProperty =
-   * MicrosoftSqlServerSettingsProperty.builder()
-   * .bcpPacketSize(123)
-   * .controlTablesFileGroup("controlTablesFileGroup")
-   * .databaseName("databaseName")
-   * .forceLobLookup(false)
-   * .password("password")
-   * .port(123)
-   * .querySingleAlwaysOnNode(false)
-   * .readBackupOnly(false)
-   * .safeguardPolicy("safeguardPolicy")
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .serverName("serverName")
-   * .tlogAccessMode("tlogAccessMode")
-   * .trimSpaceInChar(false)
-   * .useBcpFullLoad(false)
-   * .username("username")
-   * .useThirdPartyBackupDevice(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html)
-   */
-  public interface MicrosoftSqlServerSettingsProperty {
-    /**
-     * The maximum size of the packets (in bytes) used to transfer data using BCP.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize)
-     */
-    public fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
-
-    /**
-     * Specifies a file group for the AWS DMS internal tables.
-     *
-     * When the replication task starts, all the internal AWS DMS control tables (awsdms_
-     * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup)
-     */
-    public fun controlTablesFileGroup(): String? = unwrap(this).getControlTablesFileGroup()
-
-    /**
-     * Database name for the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * Forces LOB lookup on inline LOB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup)
-     */
-    public fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
-
-    /**
-     * Endpoint connection password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-password)
-     */
-    public fun password(): String? = unwrap(this).getPassword()
-
-    /**
-     * Endpoint TCP port.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * Cleans and recreates table metadata information on the replication instance when a mismatch
-     * occurs.
-     *
-     * An example is a situation where running an alter DDL statement on a table might result in
-     * different information about the table cached in the replication instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode)
-     */
-    public fun querySingleAlwaysOnNode(): Any? = unwrap(this).getQuerySingleAlwaysOnNode()
-
-    /**
-     * When this attribute is set to `Y` , AWS DMS only reads changes from transaction log backups
-     * and doesn't read from the active transaction log file during ongoing replication.
-     *
-     * Setting this parameter to `Y` enables you to control active transaction log file growth
-     * during full load and ongoing replication tasks. However, it can add some source latency to
-     * ongoing replication.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly)
-     */
-    public fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
-
-    /**
-     * Use this attribute to minimize the need to access the backup log and enable AWS DMS to
-     * prevent truncation using one of the following two methods.
-     *
-     * *Start transactions in the database:* This is the default method. When this method is used,
-     * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
-     * transaction is open, changes that appear after the transaction started aren't truncated. If you
-     * need Microsoft Replication to be enabled in your database, then you must choose this method.
-     *
-     * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS reads
-     * the changes and then uses sp_repldone to mark the TLOG transactions as ready for truncation.
-     * Although this method doesn't involve any transactional activities, it can only be used when
-     * Microsoft Replication isn't running. Also, when using this method, only one AWS DMS task can
-     * access the database at any given time. Therefore, if you need to run parallel AWS DMS tasks
-     * against the same database, use the default method.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy)
-     */
-    public fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * MicrosoftSQLServer endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * Fully qualified domain name of the endpoint.
-     *
-     * For an Amazon RDS SQL Server instance, this is the output of
-     * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-     * , in the
-     * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-     * .Address` field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-servername)
-     */
-    public fun serverName(): String? = unwrap(this).getServerName()
-
-    /**
-     * Indicates the mode used to fetch CDC data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode)
-     */
-    public fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
-
-    /**
-     * Use the `TrimSpaceInChar` source endpoint setting to right-trim data on CHAR and NCHAR data
-     * types during migration.
-     *
-     * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar)
-     */
-    public fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
-
-    /**
-     * Use this to attribute to transfer data for full-load operations using BCP.
-     *
-     * When the target table contains an identity column that does not exist in the source table,
-     * you must disable the use BCP for loading table option.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload)
-     */
-    public fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
-
-    /**
-     * When this attribute is set to `Y` , DMS processes third-party transaction log backups if they
-     * are created in native format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice)
-     */
-    public fun useThirdPartyBackupDevice(): Any? = unwrap(this).getUseThirdPartyBackupDevice()
-
-    /**
-     * Endpoint connection user name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-username)
-     */
-    public fun username(): String? = unwrap(this).getUsername()
-
-    /**
-     * A builder for [MicrosoftSqlServerSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bcpPacketSize The maximum size of the packets (in bytes) used to transfer data using
-       * BCP.
-       */
-      public fun bcpPacketSize(bcpPacketSize: Number)
-
-      /**
-       * @param controlTablesFileGroup Specifies a file group for the AWS DMS internal tables.
-       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
-       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
-       */
-      public fun controlTablesFileGroup(controlTablesFileGroup: String)
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param forceLobLookup Forces LOB lookup on inline LOB.
-       */
-      public fun forceLobLookup(forceLobLookup: Boolean)
-
-      /**
-       * @param forceLobLookup Forces LOB lookup on inline LOB.
-       */
-      public fun forceLobLookup(forceLobLookup: IResolvable)
-
-      /**
-       * @param password Endpoint connection password.
-       */
-      public fun password(password: String)
-
-      /**
-       * @param port Endpoint TCP port.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * An example is a situation where running an alter DDL statement on a table might result in
-       * different information about the table cached in the replication instance.
-       */
-      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean)
-
-      /**
-       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * An example is a situation where running an alter DDL statement on a table might result in
-       * different information about the table cached in the replication instance.
-       */
-      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable)
-
-      /**
-       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
-       * transaction log backups and doesn't read from the active transaction log file during ongoing
-       * replication.
-       * Setting this parameter to `Y` enables you to control active transaction log file growth
-       * during full load and ongoing replication tasks. However, it can add some source latency to
-       * ongoing replication.
-       */
-      public fun readBackupOnly(readBackupOnly: Boolean)
-
-      /**
-       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
-       * transaction log backups and doesn't read from the active transaction log file during ongoing
-       * replication.
-       * Setting this parameter to `Y` enables you to control active transaction log file growth
-       * during full load and ongoing replication tasks. However, it can add some source latency to
-       * ongoing replication.
-       */
-      public fun readBackupOnly(readBackupOnly: IResolvable)
-
-      /**
-       * @param safeguardPolicy Use this attribute to minimize the need to access the backup log and
-       * enable AWS DMS to prevent truncation using one of the following two methods.
-       * *Start transactions in the database:* This is the default method. When this method is used,
-       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
-       * transaction is open, changes that appear after the transaction started aren't truncated. If
-       * you need Microsoft Replication to be enabled in your database, then you must choose this
-       * method.
-       *
-       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
-       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
-       * truncation. Although this method doesn't involve any transactional activities, it can only be
-       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
-       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
-       * tasks against the same database, use the default method.
-       */
-      public fun safeguardPolicy(safeguardPolicy: String)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MicrosoftSQLServer endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param serverName Fully qualified domain name of the endpoint.
-       * For an Amazon RDS SQL Server instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       */
-      public fun serverName(serverName: String)
-
-      /**
-       * @param tlogAccessMode Indicates the mode used to fetch CDC data.
-       */
-      public fun tlogAccessMode(tlogAccessMode: String)
-
-      /**
-       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
-       * on CHAR and NCHAR data types during migration.
-       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-       */
-      public fun trimSpaceInChar(trimSpaceInChar: Boolean)
-
-      /**
-       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
-       * on CHAR and NCHAR data types during migration.
-       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-       */
-      public fun trimSpaceInChar(trimSpaceInChar: IResolvable)
-
-      /**
-       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
-       * BCP.
-       * When the target table contains an identity column that does not exist in the source table,
-       * you must disable the use BCP for loading table option.
-       */
-      public fun useBcpFullLoad(useBcpFullLoad: Boolean)
-
-      /**
-       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
-       * BCP.
-       * When the target table contains an identity column that does not exist in the source table,
-       * you must disable the use BCP for loading table option.
-       */
-      public fun useBcpFullLoad(useBcpFullLoad: IResolvable)
-
-      /**
-       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
-       * third-party transaction log backups if they are created in native format.
-       */
-      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean)
-
-      /**
-       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
-       * third-party transaction log backups if they are created in native format.
-       */
-      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable)
-
-      /**
-       * @param username Endpoint connection user name.
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty.Builder
-          =
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty.builder()
-
-      /**
-       * @param bcpPacketSize The maximum size of the packets (in bytes) used to transfer data using
-       * BCP.
-       */
-      override fun bcpPacketSize(bcpPacketSize: Number) {
-        cdkBuilder.bcpPacketSize(bcpPacketSize)
-      }
-
-      /**
-       * @param controlTablesFileGroup Specifies a file group for the AWS DMS internal tables.
-       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
-       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
-       */
-      override fun controlTablesFileGroup(controlTablesFileGroup: String) {
-        cdkBuilder.controlTablesFileGroup(controlTablesFileGroup)
-      }
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param forceLobLookup Forces LOB lookup on inline LOB.
-       */
-      override fun forceLobLookup(forceLobLookup: Boolean) {
-        cdkBuilder.forceLobLookup(forceLobLookup)
-      }
-
-      /**
-       * @param forceLobLookup Forces LOB lookup on inline LOB.
-       */
-      override fun forceLobLookup(forceLobLookup: IResolvable) {
-        cdkBuilder.forceLobLookup(forceLobLookup.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param password Endpoint connection password.
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param port Endpoint TCP port.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * An example is a situation where running an alter DDL statement on a table might result in
-       * different information about the table cached in the replication instance.
-       */
-      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean) {
-        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode)
-      }
-
-      /**
-       * @param querySingleAlwaysOnNode Cleans and recreates table metadata information on the
-       * replication instance when a mismatch occurs.
-       * An example is a situation where running an alter DDL statement on a table might result in
-       * different information about the table cached in the replication instance.
-       */
-      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
-        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
-       * transaction log backups and doesn't read from the active transaction log file during ongoing
-       * replication.
-       * Setting this parameter to `Y` enables you to control active transaction log file growth
-       * during full load and ongoing replication tasks. However, it can add some source latency to
-       * ongoing replication.
-       */
-      override fun readBackupOnly(readBackupOnly: Boolean) {
-        cdkBuilder.readBackupOnly(readBackupOnly)
-      }
-
-      /**
-       * @param readBackupOnly When this attribute is set to `Y` , AWS DMS only reads changes from
-       * transaction log backups and doesn't read from the active transaction log file during ongoing
-       * replication.
-       * Setting this parameter to `Y` enables you to control active transaction log file growth
-       * during full load and ongoing replication tasks. However, it can add some source latency to
-       * ongoing replication.
-       */
-      override fun readBackupOnly(readBackupOnly: IResolvable) {
-        cdkBuilder.readBackupOnly(readBackupOnly.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param safeguardPolicy Use this attribute to minimize the need to access the backup log and
-       * enable AWS DMS to prevent truncation using one of the following two methods.
-       * *Start transactions in the database:* This is the default method. When this method is used,
-       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
-       * transaction is open, changes that appear after the transaction started aren't truncated. If
-       * you need Microsoft Replication to be enabled in your database, then you must choose this
-       * method.
-       *
-       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
-       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
-       * truncation. Although this method doesn't involve any transactional activities, it can only be
-       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
-       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
-       * tasks against the same database, use the default method.
-       */
-      override fun safeguardPolicy(safeguardPolicy: String) {
-        cdkBuilder.safeguardPolicy(safeguardPolicy)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MicrosoftSQLServer endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param serverName Fully qualified domain name of the endpoint.
-       * For an Amazon RDS SQL Server instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       */
-      override fun serverName(serverName: String) {
-        cdkBuilder.serverName(serverName)
-      }
-
-      /**
-       * @param tlogAccessMode Indicates the mode used to fetch CDC data.
-       */
-      override fun tlogAccessMode(tlogAccessMode: String) {
-        cdkBuilder.tlogAccessMode(tlogAccessMode)
-      }
-
-      /**
-       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
-       * on CHAR and NCHAR data types during migration.
-       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-       */
-      override fun trimSpaceInChar(trimSpaceInChar: Boolean) {
-        cdkBuilder.trimSpaceInChar(trimSpaceInChar)
-      }
-
-      /**
-       * @param trimSpaceInChar Use the `TrimSpaceInChar` source endpoint setting to right-trim data
-       * on CHAR and NCHAR data types during migration.
-       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-       */
-      override fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
-        cdkBuilder.trimSpaceInChar(trimSpaceInChar.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
-       * BCP.
-       * When the target table contains an identity column that does not exist in the source table,
-       * you must disable the use BCP for loading table option.
-       */
-      override fun useBcpFullLoad(useBcpFullLoad: Boolean) {
-        cdkBuilder.useBcpFullLoad(useBcpFullLoad)
-      }
-
-      /**
-       * @param useBcpFullLoad Use this to attribute to transfer data for full-load operations using
-       * BCP.
-       * When the target table contains an identity column that does not exist in the source table,
-       * you must disable the use BCP for loading table option.
-       */
-      override fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
-        cdkBuilder.useBcpFullLoad(useBcpFullLoad.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
-       * third-party transaction log backups if they are created in native format.
-       */
-      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean) {
-        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice)
-      }
-
-      /**
-       * @param useThirdPartyBackupDevice When this attribute is set to `Y` , DMS processes
-       * third-party transaction log backups if they are created in native format.
-       */
-      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
-        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param username Endpoint connection user name.
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
-    ) : CdkObject(cdkObject), MicrosoftSqlServerSettingsProperty {
-      /**
-       * The maximum size of the packets (in bytes) used to transfer data using BCP.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-bcppacketsize)
-       */
-      override fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
-
-      /**
-       * Specifies a file group for the AWS DMS internal tables.
-       *
-       * When the replication task starts, all the internal AWS DMS control tables (awsdms_
-       * apply_exception, awsdms_apply, awsdms_changes) are created for the specified file group.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-controltablesfilegroup)
-       */
-      override fun controlTablesFileGroup(): String? = unwrap(this).getControlTablesFileGroup()
-
-      /**
-       * Database name for the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * Forces LOB lookup on inline LOB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-forceloblookup)
-       */
-      override fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
-
-      /**
-       * Endpoint connection password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-password)
-       */
-      override fun password(): String? = unwrap(this).getPassword()
-
-      /**
-       * Endpoint TCP port.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * Cleans and recreates table metadata information on the replication instance when a mismatch
-       * occurs.
-       *
-       * An example is a situation where running an alter DDL statement on a table might result in
-       * different information about the table cached in the replication instance.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-querysinglealwaysonnode)
-       */
-      override fun querySingleAlwaysOnNode(): Any? = unwrap(this).getQuerySingleAlwaysOnNode()
-
-      /**
-       * When this attribute is set to `Y` , AWS DMS only reads changes from transaction log backups
-       * and doesn't read from the active transaction log file during ongoing replication.
-       *
-       * Setting this parameter to `Y` enables you to control active transaction log file growth
-       * during full load and ongoing replication tasks. However, it can add some source latency to
-       * ongoing replication.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-readbackuponly)
-       */
-      override fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
-
-      /**
-       * Use this attribute to minimize the need to access the backup log and enable AWS DMS to
-       * prevent truncation using one of the following two methods.
-       *
-       * *Start transactions in the database:* This is the default method. When this method is used,
-       * AWS DMS prevents TLOG truncation by mimicking a transaction in the database. As long as such a
-       * transaction is open, changes that appear after the transaction started aren't truncated. If
-       * you need Microsoft Replication to be enabled in your database, then you must choose this
-       * method.
-       *
-       * *Exclusively use sp_repldone within a single task* : When this method is used, AWS DMS
-       * reads the changes and then uses sp_repldone to mark the TLOG transactions as ready for
-       * truncation. Although this method doesn't involve any transactional activities, it can only be
-       * used when Microsoft Replication isn't running. Also, when using this method, only one AWS DMS
-       * task can access the database at any given time. Therefore, if you need to run parallel AWS DMS
-       * tasks against the same database, use the default method.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-safeguardpolicy)
-       */
-      override fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the SQL Server endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * MicrosoftSQLServer endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * Fully qualified domain name of the endpoint.
-       *
-       * For an Amazon RDS SQL Server instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-servername)
-       */
-      override fun serverName(): String? = unwrap(this).getServerName()
-
-      /**
-       * Indicates the mode used to fetch CDC data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-tlogaccessmode)
-       */
-      override fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
-
-      /**
-       * Use the `TrimSpaceInChar` source endpoint setting to right-trim data on CHAR and NCHAR data
-       * types during migration.
-       *
-       * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-trimspaceinchar)
-       */
-      override fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
-
-      /**
-       * Use this to attribute to transfer data for full-load operations using BCP.
-       *
-       * When the target table contains an identity column that does not exist in the source table,
-       * you must disable the use BCP for loading table option.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usebcpfullload)
-       */
-      override fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
-
-      /**
-       * When this attribute is set to `Y` , DMS processes third-party transaction log backups if
-       * they are created in native format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-usethirdpartybackupdevice)
-       */
-      override fun useThirdPartyBackupDevice(): Any? = unwrap(this).getUseThirdPartyBackupDevice()
-
-      /**
-       * Endpoint connection user name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html#cfn-dms-endpoint-microsoftsqlserversettings-username)
-       */
-      override fun username(): String? = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MicrosoftSqlServerSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty):
-          MicrosoftSqlServerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MicrosoftSqlServerSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MicrosoftSqlServerSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines an IBMDB2 endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about other available
-   * settings, see [Extra connection attributes when using Db2 LUW as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.DB2.html#CHAP_Source.DB2.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * IbmDb2SettingsProperty ibmDb2SettingsProperty = IbmDb2SettingsProperty.builder()
-   * .currentLsn("currentLsn")
-   * .keepCsvFiles(false)
-   * .loadTimeout(123)
-   * .maxFileSize(123)
-   * .maxKBytesPerRead(123)
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .setDataCaptureChanges(false)
-   * .writeBufferSize(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html)
-   */
-  public interface IbmDb2SettingsProperty {
-    /**
-     * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
-     * you want the replication to start.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-currentlsn)
-     */
-    public fun currentLsn(): String? = unwrap(this).getCurrentLsn()
-
-    /**
-     * If true, AWS DMS saves any .csv files to the Db2 LUW target that were used to replicate data.
-     * DMS uses these files for analysis and troubleshooting.
-     *
-     * The default value is false.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-keepcsvfiles)
-     */
-    public fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
-
-    /**
-     * The amount of time (in milliseconds) before AWS DMS times out operations performed by DMS on
-     * the Db2 target.
-     *
-     * The default value is 1200 (20 minutes).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-loadtimeout)
-     */
-    public fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
-
-    /**
-     * Specifies the maximum size (in KB) of .csv files used to transfer data to Db2 LUW.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * Maximum number of bytes per read, as a NUMBER value.
-     *
-     * The default is 64 KB.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxkbytesperread)
-     */
-    public fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe AWS
-     * Secrets Manager secret that allows access to the Db2 LUW endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * IBMDB2 endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * Enables ongoing replication (CDC) as a BOOLEAN value.
-     *
-     * The default is true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-setdatacapturechanges)
-     */
-    public fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
-
-    /**
-     * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
-     * local disk on the DMS replication instance. The default value is 1024 (1 MB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-writebuffersize)
-     */
-    public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
-
-    /**
-     * A builder for [IbmDb2SettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param currentLsn For ongoing replication (CDC), use CurrentLSN to specify a log sequence
-       * number (LSN) where you want the replication to start.
-       */
-      public fun currentLsn(currentLsn: String)
-
-      /**
-       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
-       * The default is true.
-       */
-      public fun dataCaptureChanges(setDataCaptureChanges: Boolean)
-
-      /**
-       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
-       * The default is true.
-       */
-      public fun dataCaptureChanges(setDataCaptureChanges: IResolvable)
-
-      /**
-       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
-       * used to replicate data. DMS uses these files for analysis and troubleshooting.
-       * The default value is false.
-       */
-      public fun keepCsvFiles(keepCsvFiles: Boolean)
-
-      /**
-       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
-       * used to replicate data. DMS uses these files for analysis and troubleshooting.
-       * The default value is false.
-       */
-      public fun keepCsvFiles(keepCsvFiles: IResolvable)
-
-      /**
-       * @param loadTimeout The amount of time (in milliseconds) before AWS DMS times out operations
-       * performed by DMS on the Db2 target.
-       * The default value is 1200 (20 minutes).
-       */
-      public fun loadTimeout(loadTimeout: Number)
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of .csv files used to transfer data
-       * to Db2 LUW.
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param maxKBytesPerRead Maximum number of bytes per read, as a NUMBER value.
-       * The default is 64 KB.
-       */
-      public fun maxKBytesPerRead(maxKBytesPerRead: Number)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
-       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the IBMDB2 endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
-       * generating .csv files on the local disk on the DMS replication instance. The default value is
-       * 1024 (1 MB).
-       */
-      public fun writeBufferSize(writeBufferSize: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.builder()
-
-      /**
-       * @param currentLsn For ongoing replication (CDC), use CurrentLSN to specify a log sequence
-       * number (LSN) where you want the replication to start.
-       */
-      override fun currentLsn(currentLsn: String) {
-        cdkBuilder.currentLsn(currentLsn)
-      }
-
-      /**
-       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
-       * The default is true.
-       */
-      override fun dataCaptureChanges(setDataCaptureChanges: Boolean) {
-        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges)
-      }
-
-      /**
-       * @param setDataCaptureChanges Enables ongoing replication (CDC) as a BOOLEAN value.
-       * The default is true.
-       */
-      override fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
-        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
-       * used to replicate data. DMS uses these files for analysis and troubleshooting.
-       * The default value is false.
-       */
-      override fun keepCsvFiles(keepCsvFiles: Boolean) {
-        cdkBuilder.keepCsvFiles(keepCsvFiles)
-      }
-
-      /**
-       * @param keepCsvFiles If true, AWS DMS saves any .csv files to the Db2 LUW target that were
-       * used to replicate data. DMS uses these files for analysis and troubleshooting.
-       * The default value is false.
-       */
-      override fun keepCsvFiles(keepCsvFiles: IResolvable) {
-        cdkBuilder.keepCsvFiles(keepCsvFiles.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param loadTimeout The amount of time (in milliseconds) before AWS DMS times out operations
-       * performed by DMS on the Db2 target.
-       * The default value is 1200 (20 minutes).
-       */
-      override fun loadTimeout(loadTimeout: Number) {
-        cdkBuilder.loadTimeout(loadTimeout)
-      }
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of .csv files used to transfer data
-       * to Db2 LUW.
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param maxKBytesPerRead Maximum number of bytes per read, as a NUMBER value.
-       * The default is 64 KB.
-       */
-      override fun maxKBytesPerRead(maxKBytesPerRead: Number) {
-        cdkBuilder.maxKBytesPerRead(maxKBytesPerRead)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
-       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the IBMDB2 endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
-       * generating .csv files on the local disk on the DMS replication instance. The default value is
-       * 1024 (1 MB).
-       */
-      override fun writeBufferSize(writeBufferSize: Number) {
-        cdkBuilder.writeBufferSize(writeBufferSize)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
-    ) : CdkObject(cdkObject), IbmDb2SettingsProperty {
-      /**
-       * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
-       * you want the replication to start.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-currentlsn)
-       */
-      override fun currentLsn(): String? = unwrap(this).getCurrentLsn()
-
-      /**
-       * If true, AWS DMS saves any .csv files to the Db2 LUW target that were used to replicate
-       * data. DMS uses these files for analysis and troubleshooting.
-       *
-       * The default value is false.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-keepcsvfiles)
-       */
-      override fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
-
-      /**
-       * The amount of time (in milliseconds) before AWS DMS times out operations performed by DMS
-       * on the Db2 target.
-       *
-       * The default value is 1200 (20 minutes).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-loadtimeout)
-       */
-      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
-
-      /**
-       * Specifies the maximum size (in KB) of .csv files used to transfer data to Db2 LUW.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * Maximum number of bytes per read, as a NUMBER value.
-       *
-       * The default is 64 KB.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-maxkbytesperread)
-       */
-      override fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value ofthe
-       * AWS Secrets Manager secret that allows access to the Db2 LUW endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * IBMDB2 endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * Enables ongoing replication (CDC) as a BOOLEAN value.
-       *
-       * The default is true.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-setdatacapturechanges)
-       */
-      override fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
-
-      /**
-       * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
-       * local disk on the DMS replication instance. The default value is 1024 (1 MB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html#cfn-dms-endpoint-ibmdb2settings-writebuffersize)
-       */
-      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): IbmDb2SettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty):
-          IbmDb2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? IbmDb2SettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: IbmDb2SettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a DocumentDB endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about other available
-   * settings, see [Using extra connections attributes with Amazon DocumentDB as a
-   * source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.DocumentDB.html#CHAP_Source.DocumentDB.ECAs)
-   * and [Using Amazon DocumentDB as a target for AWS Database Migration
-   * Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DocumentDB.html) in the *AWS
-   * Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * DocDbSettingsProperty docDbSettingsProperty = DocDbSettingsProperty.builder()
-   * .docsToInvestigate(123)
-   * .extractDocId(false)
-   * .nestingLevel("nestingLevel")
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html)
-   */
-  public interface DocDbSettingsProperty {
-    /**
-     * Indicates the number of documents to preview to determine the document organization.
-     *
-     * Use this setting when `NestingLevel` is set to `"one"` .
-     *
-     * Must be a positive value greater than `0` . Default value is `1000` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-docstoinvestigate)
-     */
-    public fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
-
-    /**
-     * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
-     *
-     * Default value is `"false"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-extractdocid)
-     */
-    public fun extractDocId(): Any? = unwrap(this).getExtractDocId()
-
-    /**
-     * Specifies either document or table mode.
-     *
-     * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-     * table mode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-nestinglevel)
-     */
-    public fun nestingLevel(): String? = unwrap(this).getNestingLevel()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * DocumentDB endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * A builder for [DocDbSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param docsToInvestigate Indicates the number of documents to preview to determine the
-       * document organization.
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       */
-      public fun docsToInvestigate(docsToInvestigate: Number)
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      public fun extractDocId(extractDocId: Boolean)
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      public fun extractDocId(extractDocId: IResolvable)
-
-      /**
-       * @param nestingLevel Specifies either document or table mode.
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       */
-      public fun nestingLevel(nestingLevel: String)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the DocumentDB endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.builder()
-
-      /**
-       * @param docsToInvestigate Indicates the number of documents to preview to determine the
-       * document organization.
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       */
-      override fun docsToInvestigate(docsToInvestigate: Number) {
-        cdkBuilder.docsToInvestigate(docsToInvestigate)
-      }
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      override fun extractDocId(extractDocId: Boolean) {
-        cdkBuilder.extractDocId(extractDocId)
-      }
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      override fun extractDocId(extractDocId: IResolvable) {
-        cdkBuilder.extractDocId(extractDocId.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param nestingLevel Specifies either document or table mode.
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       */
-      override fun nestingLevel(nestingLevel: String) {
-        cdkBuilder.nestingLevel(nestingLevel)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the DocumentDB endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
-    ) : CdkObject(cdkObject), DocDbSettingsProperty {
-      /**
-       * Indicates the number of documents to preview to determine the document organization.
-       *
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-docstoinvestigate)
-       */
-      override fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
-
-      /**
-       * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
-       *
-       * Default value is `"false"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-extractdocid)
-       */
-      override fun extractDocId(): Any? = unwrap(this).getExtractDocId()
-
-      /**
-       * Specifies either document or table mode.
-       *
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-nestinglevel)
-       */
-      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the DocumentDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * DocumentDB endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-docdbsettings.html#cfn-dms-endpoint-docdbsettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DocDbSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty):
-          DocDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DocDbSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DocDbSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines an Amazon Redshift endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about other available
-   * settings, see [Extra connection attributes when using Amazon Redshift as a target for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redshift.html#CHAP_Target.Redshift.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * RedshiftSettingsProperty redshiftSettingsProperty = RedshiftSettingsProperty.builder()
-   * .acceptAnyDate(false)
-   * .afterConnectScript("afterConnectScript")
-   * .bucketFolder("bucketFolder")
-   * .bucketName("bucketName")
-   * .caseSensitiveNames(false)
-   * .compUpdate(false)
-   * .connectionTimeout(123)
-   * .dateFormat("dateFormat")
-   * .emptyAsNull(false)
-   * .encryptionMode("encryptionMode")
-   * .explicitIds(false)
-   * .fileTransferUploadStreams(123)
-   * .loadTimeout(123)
-   * .mapBooleanAsBoolean(false)
-   * .maxFileSize(123)
-   * .removeQuotes(false)
-   * .replaceChars("replaceChars")
-   * .replaceInvalidChars("replaceInvalidChars")
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .serverSideEncryptionKmsKeyId("serverSideEncryptionKmsKeyId")
-   * .serviceAccessRoleArn("serviceAccessRoleArn")
-   * .timeFormat("timeFormat")
-   * .trimBlanks(false)
-   * .truncateColumns(false)
-   * .writeBufferSize(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html)
-   */
-  public interface RedshiftSettingsProperty {
-    /**
-     * A value that indicates to allow any date format, including invalid formats such as 00/00/00
-     * 00:00:00, to be loaded without generating an error.
-     *
-     * You can choose `true` or `false` (the default).
-     *
-     * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with the
-     * DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-     * specification, Amazon Redshift inserts a NULL value into that field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-acceptanydate)
-     */
-    public fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
-
-    /**
-     * Code to run after connecting.
-     *
-     * This parameter should contain the code itself, not the name of a file containing the code.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-afterconnectscript)
-     */
-    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-    /**
-     * An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded to
-     * the target Redshift cluster.
-     *
-     * For full load mode, AWS DMS converts source records into .csv files and loads them to the
-     * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
-     * to the target table. The files are deleted once the `COPY` operation has finished. For more
-     * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
-     * *Amazon Redshift Database Developer Guide* .
-     *
-     * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the .csv
-     * files to this *BucketFolder/NetChangesTableID* path.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketfolder)
-     */
-    public fun bucketFolder(): String? = unwrap(this).getBucketFolder()
-
-    /**
-     * The name of the intermediate S3 bucket used to store .csv files before uploading data to
-     * Redshift.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketname)
-     */
-    public fun bucketName(): String? = unwrap(this).getBucketName()
-
-    /**
-     * If Amazon Redshift is configured to support case sensitive schema names, set
-     * `CaseSensitiveNames` to `true` .
-     *
-     * The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-casesensitivenames)
-     */
-    public fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
-
-    /**
-     * If you set `CompUpdate` to `true` Amazon Redshift applies automatic compression if the table
-     * is empty.
-     *
-     * This applies even if the table columns already have encodings other than `RAW` . If you set
-     * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings aren't
-     * changed. The default is `true` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-compupdate)
-     */
-    public fun compUpdate(): Any? = unwrap(this).getCompUpdate()
-
-    /**
-     * A value that sets the amount of time to wait (in milliseconds) before timing out, beginning
-     * from when you initially establish a connection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-connectiontimeout)
-     */
-    public fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
-
-    /**
-     * The date format that you are using.
-     *
-     * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
-     * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
-     * `auto` recognizes most strings, even some that aren't supported when you use a date format
-     * string.
-     *
-     * If your date and time values use formats different from each other, set this to `auto` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-dateformat)
-     */
-    public fun dateFormat(): String? = unwrap(this).getDateFormat()
-
-    /**
-     * A value that specifies whether AWS DMS should migrate empty CHAR and VARCHAR fields as NULL.
-     *
-     * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-emptyasnull)
-     */
-    public fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
-
-    /**
-     * The type of server-side encryption that you want to use for your data.
-     *
-     * This encryption type is part of the endpoint settings or the extra connections attributes for
-     * Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
-     *
-     *
-     * For the `ModifyEndpoint` operation, you can change the existing value of the `EncryptionMode`
-     * parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing value from `SSE_S3` to
-     * `SSE_KMS` .
-     *
-     *
-     * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy that
-     * allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-encryptionmode)
-     */
-    public fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
-
-    /**
-     * This setting is only valid for a full-load migration task.
-     *
-     * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-     * auto-generated values with explicit values loaded from the source data files used to populate
-     * the tables. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-explicitids)
-     */
-    public fun explicitIds(): Any? = unwrap(this).getExplicitIds()
-
-    /**
-     * The number of threads used to upload a single file.
-     *
-     * This parameter accepts a value from 1 through 64. It defaults to 10.
-     *
-     * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
-     * Multipart Upload. For more information, see [Multipart upload
-     * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
-     *
-     * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams)
-     */
-    public fun fileTransferUploadStreams(): Number? = unwrap(this).getFileTransferUploadStreams()
-
-    /**
-     * The amount of time to wait (in milliseconds) before timing out of operations performed by AWS
-     * DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-loadtimeout)
-     */
-    public fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
-
-    /**
-     * When true, lets Redshift migrate the boolean type as boolean.
-     *
-     * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-     * the source and target endpoints for it to take effect.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean)
-     */
-    public fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
-
-    /**
-     * The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer data
-     * to Amazon Redshift. It defaults to 1048576KB (1 GB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * A value that specifies to remove surrounding quotation marks from strings in the incoming
-     * data.
-     *
-     * All characters within the quotation marks, including delimiters, are retained. Choose `true`
-     * to remove quotation marks. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-removequotes)
-     */
-    public fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
-
-    /**
-     * A value that specifies to replaces the invalid characters specified in `ReplaceInvalidChars`
-     * , substituting the specified characters instead.
-     *
-     * The default is `"?"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replacechars)
-     */
-    public fun replaceChars(): String? = unwrap(this).getReplaceChars()
-
-    /**
-     * A list of characters that you want to replace.
-     *
-     * Use with `ReplaceChars` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replaceinvalidchars)
-     */
-    public fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * Amazon Redshift endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * The AWS KMS key ID.
-     *
-     * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
-     * use needs an attached policy that enables IAM user permissions and allows use of the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serversideencryptionkmskeyid)
-     */
-    public fun serverSideEncryptionKmsKeyId(): String? =
-        unwrap(this).getServerSideEncryptionKmsKeyId()
-
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role that has access to the Amazon Redshift
-     * service.
-     *
-     * The role must allow the `iam:PassRole` action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serviceaccessrolearn)
-     */
-    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-    /**
-     * The time format that you want to use.
-     *
-     * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
-     * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
-     * aren't supported when you use a time format string.
-     *
-     * If your date and time values use formats different from each other, set this parameter to
-     * `auto` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-timeformat)
-     */
-    public fun timeFormat(): String? = unwrap(this).getTimeFormat()
-
-    /**
-     * A value that specifies to remove the trailing white space characters from a VARCHAR string.
-     *
-     * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-     * unneeded white space. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-trimblanks)
-     */
-    public fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
-
-    /**
-     * A value that specifies to truncate data in columns to the appropriate number of characters,
-     * so that the data fits in the column.
-     *
-     * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a size
-     * of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-truncatecolumns)
-     */
-    public fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
-
-    /**
-     * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
-     * local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-writebuffersize)
-     */
-    public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
-
-    /**
-     * A builder for [RedshiftSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
-       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
-       * You can choose `true` or `false` (the default).
-       *
-       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
-       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-       * specification, Amazon Redshift inserts a NULL value into that field.
-       */
-      public fun acceptAnyDate(acceptAnyDate: Boolean)
-
-      /**
-       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
-       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
-       * You can choose `true` or `false` (the default).
-       *
-       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
-       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-       * specification, Amazon Redshift inserts a NULL value into that field.
-       */
-      public fun acceptAnyDate(acceptAnyDate: IResolvable)
-
-      /**
-       * @param afterConnectScript Code to run after connecting.
-       * This parameter should contain the code itself, not the name of a file containing the code.
-       */
-      public fun afterConnectScript(afterConnectScript: String)
-
-      /**
-       * @param bucketFolder An S3 folder where the comma-separated-value (.csv) files are stored
-       * before being uploaded to the target Redshift cluster.
-       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
-       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
-       * to the target table. The files are deleted once the `COPY` operation has finished. For more
-       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
-       * *Amazon Redshift Database Developer Guide* .
-       *
-       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
-       * .csv files to this *BucketFolder/NetChangesTableID* path.
-       */
-      public fun bucketFolder(bucketFolder: String)
-
-      /**
-       * @param bucketName The name of the intermediate S3 bucket used to store .csv files before
-       * uploading data to Redshift.
-       */
-      public fun bucketName(bucketName: String)
-
-      /**
-       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
-       * names, set `CaseSensitiveNames` to `true` .
-       * The default is `false` .
-       */
-      public fun caseSensitiveNames(caseSensitiveNames: Boolean)
-
-      /**
-       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
-       * names, set `CaseSensitiveNames` to `true` .
-       * The default is `false` .
-       */
-      public fun caseSensitiveNames(caseSensitiveNames: IResolvable)
-
-      /**
-       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
-       * compression if the table is empty.
-       * This applies even if the table columns already have encodings other than `RAW` . If you set
-       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
-       * aren't changed. The default is `true` .
-       */
-      public fun compUpdate(compUpdate: Boolean)
-
-      /**
-       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
-       * compression if the table is empty.
-       * This applies even if the table columns already have encodings other than `RAW` . If you set
-       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
-       * aren't changed. The default is `true` .
-       */
-      public fun compUpdate(compUpdate: IResolvable)
-
-      /**
-       * @param connectionTimeout A value that sets the amount of time to wait (in milliseconds)
-       * before timing out, beginning from when you initially establish a connection.
-       */
-      public fun connectionTimeout(connectionTimeout: Number)
-
-      /**
-       * @param dateFormat The date format that you are using.
-       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
-       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
-       * `auto` recognizes most strings, even some that aren't supported when you use a date format
-       * string.
-       *
-       * If your date and time values use formats different from each other, set this to `auto` .
-       */
-      public fun dateFormat(dateFormat: String)
-
-      /**
-       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
-       * VARCHAR fields as NULL.
-       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-       */
-      public fun emptyAsNull(emptyAsNull: Boolean)
-
-      /**
-       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
-       * VARCHAR fields as NULL.
-       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-       */
-      public fun emptyAsNull(emptyAsNull: IResolvable)
-
-      /**
-       * @param encryptionMode The type of server-side encryption that you want to use for your
-       * data.
-       * This encryption type is part of the endpoint settings or the extra connections attributes
-       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
-       *
-       *
-       * For the `ModifyEndpoint` operation, you can change the existing value of the
-       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
-       * value from `SSE_S3` to `SSE_KMS` .
-       *
-       *
-       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
-       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
-       */
-      public fun encryptionMode(encryptionMode: String)
-
-      /**
-       * @param explicitIds This setting is only valid for a full-load migration task.
-       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-       * auto-generated values with explicit values loaded from the source data files used to populate
-       * the tables. The default is `false` .
-       */
-      public fun explicitIds(explicitIds: Boolean)
-
-      /**
-       * @param explicitIds This setting is only valid for a full-load migration task.
-       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-       * auto-generated values with explicit values loaded from the source data files used to populate
-       * the tables. The default is `false` .
-       */
-      public fun explicitIds(explicitIds: IResolvable)
-
-      /**
-       * @param fileTransferUploadStreams The number of threads used to upload a single file.
-       * This parameter accepts a value from 1 through 64. It defaults to 10.
-       *
-       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
-       * Multipart Upload. For more information, see [Multipart upload
-       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
-       *
-       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
-       */
-      public fun fileTransferUploadStreams(fileTransferUploadStreams: Number)
-
-      /**
-       * @param loadTimeout The amount of time to wait (in milliseconds) before timing out of
-       * operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE,
-       * and UPDATE.
-       */
-      public fun loadTimeout(loadTimeout: Number)
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
-       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-       * the source and target endpoints for it to take effect.
-       */
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
-       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-       * the source and target endpoints for it to take effect.
-       */
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
-
-      /**
-       * @param maxFileSize The maximum size (in KB) of any .csv file used to load data on an S3
-       * bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
-       * strings in the incoming data.
-       * All characters within the quotation marks, including delimiters, are retained. Choose
-       * `true` to remove quotation marks. The default is `false` .
-       */
-      public fun removeQuotes(removeQuotes: Boolean)
-
-      /**
-       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
-       * strings in the incoming data.
-       * All characters within the quotation marks, including delimiters, are retained. Choose
-       * `true` to remove quotation marks. The default is `false` .
-       */
-      public fun removeQuotes(removeQuotes: IResolvable)
-
-      /**
-       * @param replaceChars A value that specifies to replaces the invalid characters specified in
-       * `ReplaceInvalidChars` , substituting the specified characters instead.
-       * The default is `"?"` .
-       */
-      public fun replaceChars(replaceChars: String)
-
-      /**
-       * @param replaceInvalidChars A list of characters that you want to replace.
-       * Use with `ReplaceChars` .
-       */
-      public fun replaceInvalidChars(replaceInvalidChars: String)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the Amazon Redshift endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param serverSideEncryptionKmsKeyId The AWS KMS key ID.
-       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
-       * use needs an attached policy that enables IAM user permissions and allows use of the key.
-       */
-      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String)
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the IAM role that has access
-       * to the Amazon Redshift service.
-       * The role must allow the `iam:PassRole` action.
-       */
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
-
-      /**
-       * @param timeFormat The time format that you want to use.
-       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
-       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
-       * aren't supported when you use a time format string.
-       *
-       * If your date and time values use formats different from each other, set this parameter to
-       * `auto` .
-       */
-      public fun timeFormat(timeFormat: String)
-
-      /**
-       * @param trimBlanks A value that specifies to remove the trailing white space characters from
-       * a VARCHAR string.
-       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-       * unneeded white space. The default is `false` .
-       */
-      public fun trimBlanks(trimBlanks: Boolean)
-
-      /**
-       * @param trimBlanks A value that specifies to remove the trailing white space characters from
-       * a VARCHAR string.
-       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-       * unneeded white space. The default is `false` .
-       */
-      public fun trimBlanks(trimBlanks: IResolvable)
-
-      /**
-       * @param truncateColumns A value that specifies to truncate data in columns to the
-       * appropriate number of characters, so that the data fits in the column.
-       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
-       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-       */
-      public fun truncateColumns(truncateColumns: Boolean)
-
-      /**
-       * @param truncateColumns A value that specifies to truncate data in columns to the
-       * appropriate number of characters, so that the data fits in the column.
-       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
-       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-       */
-      public fun truncateColumns(truncateColumns: IResolvable)
-
-      /**
-       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
-       * generating .csv files on the local disk at the DMS replication instance. The default value is
-       * 1000 (buffer size is 1000KB).
-       */
-      public fun writeBufferSize(writeBufferSize: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.builder()
-
-      /**
-       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
-       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
-       * You can choose `true` or `false` (the default).
-       *
-       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
-       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-       * specification, Amazon Redshift inserts a NULL value into that field.
-       */
-      override fun acceptAnyDate(acceptAnyDate: Boolean) {
-        cdkBuilder.acceptAnyDate(acceptAnyDate)
-      }
-
-      /**
-       * @param acceptAnyDate A value that indicates to allow any date format, including invalid
-       * formats such as 00/00/00 00:00:00, to be loaded without generating an error.
-       * You can choose `true` or `false` (the default).
-       *
-       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
-       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-       * specification, Amazon Redshift inserts a NULL value into that field.
-       */
-      override fun acceptAnyDate(acceptAnyDate: IResolvable) {
-        cdkBuilder.acceptAnyDate(acceptAnyDate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param afterConnectScript Code to run after connecting.
-       * This parameter should contain the code itself, not the name of a file containing the code.
-       */
-      override fun afterConnectScript(afterConnectScript: String) {
-        cdkBuilder.afterConnectScript(afterConnectScript)
-      }
-
-      /**
-       * @param bucketFolder An S3 folder where the comma-separated-value (.csv) files are stored
-       * before being uploaded to the target Redshift cluster.
-       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
-       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
-       * to the target table. The files are deleted once the `COPY` operation has finished. For more
-       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
-       * *Amazon Redshift Database Developer Guide* .
-       *
-       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
-       * .csv files to this *BucketFolder/NetChangesTableID* path.
-       */
-      override fun bucketFolder(bucketFolder: String) {
-        cdkBuilder.bucketFolder(bucketFolder)
-      }
-
-      /**
-       * @param bucketName The name of the intermediate S3 bucket used to store .csv files before
-       * uploading data to Redshift.
-       */
-      override fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-      }
-
-      /**
-       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
-       * names, set `CaseSensitiveNames` to `true` .
-       * The default is `false` .
-       */
-      override fun caseSensitiveNames(caseSensitiveNames: Boolean) {
-        cdkBuilder.caseSensitiveNames(caseSensitiveNames)
-      }
-
-      /**
-       * @param caseSensitiveNames If Amazon Redshift is configured to support case sensitive schema
-       * names, set `CaseSensitiveNames` to `true` .
-       * The default is `false` .
-       */
-      override fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
-        cdkBuilder.caseSensitiveNames(caseSensitiveNames.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
-       * compression if the table is empty.
-       * This applies even if the table columns already have encodings other than `RAW` . If you set
-       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
-       * aren't changed. The default is `true` .
-       */
-      override fun compUpdate(compUpdate: Boolean) {
-        cdkBuilder.compUpdate(compUpdate)
-      }
-
-      /**
-       * @param compUpdate If you set `CompUpdate` to `true` Amazon Redshift applies automatic
-       * compression if the table is empty.
-       * This applies even if the table columns already have encodings other than `RAW` . If you set
-       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
-       * aren't changed. The default is `true` .
-       */
-      override fun compUpdate(compUpdate: IResolvable) {
-        cdkBuilder.compUpdate(compUpdate.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param connectionTimeout A value that sets the amount of time to wait (in milliseconds)
-       * before timing out, beginning from when you initially establish a connection.
-       */
-      override fun connectionTimeout(connectionTimeout: Number) {
-        cdkBuilder.connectionTimeout(connectionTimeout)
-      }
-
-      /**
-       * @param dateFormat The date format that you are using.
-       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
-       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
-       * `auto` recognizes most strings, even some that aren't supported when you use a date format
-       * string.
-       *
-       * If your date and time values use formats different from each other, set this to `auto` .
-       */
-      override fun dateFormat(dateFormat: String) {
-        cdkBuilder.dateFormat(dateFormat)
-      }
-
-      /**
-       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
-       * VARCHAR fields as NULL.
-       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-       */
-      override fun emptyAsNull(emptyAsNull: Boolean) {
-        cdkBuilder.emptyAsNull(emptyAsNull)
-      }
-
-      /**
-       * @param emptyAsNull A value that specifies whether AWS DMS should migrate empty CHAR and
-       * VARCHAR fields as NULL.
-       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-       */
-      override fun emptyAsNull(emptyAsNull: IResolvable) {
-        cdkBuilder.emptyAsNull(emptyAsNull.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param encryptionMode The type of server-side encryption that you want to use for your
-       * data.
-       * This encryption type is part of the endpoint settings or the extra connections attributes
-       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
-       *
-       *
-       * For the `ModifyEndpoint` operation, you can change the existing value of the
-       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
-       * value from `SSE_S3` to `SSE_KMS` .
-       *
-       *
-       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
-       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
-       */
-      override fun encryptionMode(encryptionMode: String) {
-        cdkBuilder.encryptionMode(encryptionMode)
-      }
-
-      /**
-       * @param explicitIds This setting is only valid for a full-load migration task.
-       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-       * auto-generated values with explicit values loaded from the source data files used to populate
-       * the tables. The default is `false` .
-       */
-      override fun explicitIds(explicitIds: Boolean) {
-        cdkBuilder.explicitIds(explicitIds)
-      }
-
-      /**
-       * @param explicitIds This setting is only valid for a full-load migration task.
-       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-       * auto-generated values with explicit values loaded from the source data files used to populate
-       * the tables. The default is `false` .
-       */
-      override fun explicitIds(explicitIds: IResolvable) {
-        cdkBuilder.explicitIds(explicitIds.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fileTransferUploadStreams The number of threads used to upload a single file.
-       * This parameter accepts a value from 1 through 64. It defaults to 10.
-       *
-       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
-       * Multipart Upload. For more information, see [Multipart upload
-       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
-       *
-       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
-       */
-      override fun fileTransferUploadStreams(fileTransferUploadStreams: Number) {
-        cdkBuilder.fileTransferUploadStreams(fileTransferUploadStreams)
-      }
-
-      /**
-       * @param loadTimeout The amount of time to wait (in milliseconds) before timing out of
-       * operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE,
-       * and UPDATE.
-       */
-      override fun loadTimeout(loadTimeout: Number) {
-        cdkBuilder.loadTimeout(loadTimeout)
-      }
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
-       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-       * the source and target endpoints for it to take effect.
-       */
-      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
-      }
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets Redshift migrate the boolean type as boolean.
-       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-       * the source and target endpoints for it to take effect.
-       */
-      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxFileSize The maximum size (in KB) of any .csv file used to load data on an S3
-       * bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
-       * strings in the incoming data.
-       * All characters within the quotation marks, including delimiters, are retained. Choose
-       * `true` to remove quotation marks. The default is `false` .
-       */
-      override fun removeQuotes(removeQuotes: Boolean) {
-        cdkBuilder.removeQuotes(removeQuotes)
-      }
-
-      /**
-       * @param removeQuotes A value that specifies to remove surrounding quotation marks from
-       * strings in the incoming data.
-       * All characters within the quotation marks, including delimiters, are retained. Choose
-       * `true` to remove quotation marks. The default is `false` .
-       */
-      override fun removeQuotes(removeQuotes: IResolvable) {
-        cdkBuilder.removeQuotes(removeQuotes.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param replaceChars A value that specifies to replaces the invalid characters specified in
-       * `ReplaceInvalidChars` , substituting the specified characters instead.
-       * The default is `"?"` .
-       */
-      override fun replaceChars(replaceChars: String) {
-        cdkBuilder.replaceChars(replaceChars)
-      }
-
-      /**
-       * @param replaceInvalidChars A list of characters that you want to replace.
-       * Use with `ReplaceChars` .
-       */
-      override fun replaceInvalidChars(replaceInvalidChars: String) {
-        cdkBuilder.replaceInvalidChars(replaceInvalidChars)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the Amazon Redshift endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param serverSideEncryptionKmsKeyId The AWS KMS key ID.
-       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
-       * use needs an attached policy that enables IAM user permissions and allows use of the key.
-       */
-      override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
-        cdkBuilder.serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId)
-      }
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the IAM role that has access
-       * to the Amazon Redshift service.
-       * The role must allow the `iam:PassRole` action.
-       */
-      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
-      }
-
-      /**
-       * @param timeFormat The time format that you want to use.
-       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
-       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
-       * aren't supported when you use a time format string.
-       *
-       * If your date and time values use formats different from each other, set this parameter to
-       * `auto` .
-       */
-      override fun timeFormat(timeFormat: String) {
-        cdkBuilder.timeFormat(timeFormat)
-      }
-
-      /**
-       * @param trimBlanks A value that specifies to remove the trailing white space characters from
-       * a VARCHAR string.
-       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-       * unneeded white space. The default is `false` .
-       */
-      override fun trimBlanks(trimBlanks: Boolean) {
-        cdkBuilder.trimBlanks(trimBlanks)
-      }
-
-      /**
-       * @param trimBlanks A value that specifies to remove the trailing white space characters from
-       * a VARCHAR string.
-       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-       * unneeded white space. The default is `false` .
-       */
-      override fun trimBlanks(trimBlanks: IResolvable) {
-        cdkBuilder.trimBlanks(trimBlanks.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param truncateColumns A value that specifies to truncate data in columns to the
-       * appropriate number of characters, so that the data fits in the column.
-       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
-       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-       */
-      override fun truncateColumns(truncateColumns: Boolean) {
-        cdkBuilder.truncateColumns(truncateColumns)
-      }
-
-      /**
-       * @param truncateColumns A value that specifies to truncate data in columns to the
-       * appropriate number of characters, so that the data fits in the column.
-       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
-       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-       */
-      override fun truncateColumns(truncateColumns: IResolvable) {
-        cdkBuilder.truncateColumns(truncateColumns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param writeBufferSize The size (in KB) of the in-memory file write buffer used when
-       * generating .csv files on the local disk at the DMS replication instance. The default value is
-       * 1000 (buffer size is 1000KB).
-       */
-      override fun writeBufferSize(writeBufferSize: Number) {
-        cdkBuilder.writeBufferSize(writeBufferSize)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
-    ) : CdkObject(cdkObject), RedshiftSettingsProperty {
-      /**
-       * A value that indicates to allow any date format, including invalid formats such as 00/00/00
-       * 00:00:00, to be loaded without generating an error.
-       *
-       * You can choose `true` or `false` (the default).
-       *
-       * This parameter applies only to TIMESTAMP and DATE columns. Always use ACCEPTANYDATE with
-       * the DATEFORMAT parameter. If the date format for the data doesn't match the DATEFORMAT
-       * specification, Amazon Redshift inserts a NULL value into that field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-acceptanydate)
-       */
-      override fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
-
-      /**
-       * Code to run after connecting.
-       *
-       * This parameter should contain the code itself, not the name of a file containing the code.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-afterconnectscript)
-       */
-      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-      /**
-       * An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded
-       * to the target Redshift cluster.
-       *
-       * For full load mode, AWS DMS converts source records into .csv files and loads them to the
-       * *BucketFolder/TableID* path. AWS DMS uses the Redshift `COPY` command to upload the .csv files
-       * to the target table. The files are deleted once the `COPY` operation has finished. For more
-       * information, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the
-       * *Amazon Redshift Database Developer Guide* .
-       *
-       * For change-data-capture (CDC) mode, AWS DMS creates a *NetChanges* table, and loads the
-       * .csv files to this *BucketFolder/NetChangesTableID* path.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketfolder)
-       */
-      override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
-
-      /**
-       * The name of the intermediate S3 bucket used to store .csv files before uploading data to
-       * Redshift.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-bucketname)
-       */
-      override fun bucketName(): String? = unwrap(this).getBucketName()
-
-      /**
-       * If Amazon Redshift is configured to support case sensitive schema names, set
-       * `CaseSensitiveNames` to `true` .
-       *
-       * The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-casesensitivenames)
-       */
-      override fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
-
-      /**
-       * If you set `CompUpdate` to `true` Amazon Redshift applies automatic compression if the
-       * table is empty.
-       *
-       * This applies even if the table columns already have encodings other than `RAW` . If you set
-       * `CompUpdate` to `false` , automatic compression is disabled and existing column encodings
-       * aren't changed. The default is `true` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-compupdate)
-       */
-      override fun compUpdate(): Any? = unwrap(this).getCompUpdate()
-
-      /**
-       * A value that sets the amount of time to wait (in milliseconds) before timing out, beginning
-       * from when you initially establish a connection.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-connectiontimeout)
-       */
-      override fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
-
-      /**
-       * The date format that you are using.
-       *
-       * Valid values are `auto` (case-sensitive), your date format string enclosed in quotes, or
-       * NULL. If this parameter is left unset (NULL), it defaults to a format of 'YYYY-MM-DD'. Using
-       * `auto` recognizes most strings, even some that aren't supported when you use a date format
-       * string.
-       *
-       * If your date and time values use formats different from each other, set this to `auto` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-dateformat)
-       */
-      override fun dateFormat(): String? = unwrap(this).getDateFormat()
-
-      /**
-       * A value that specifies whether AWS DMS should migrate empty CHAR and VARCHAR fields as
-       * NULL.
-       *
-       * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-emptyasnull)
-       */
-      override fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
-
-      /**
-       * The type of server-side encryption that you want to use for your data.
-       *
-       * This encryption type is part of the endpoint settings or the extra connections attributes
-       * for Amazon S3. You can choose either `SSE_S3` (the default) or `SSE_KMS` .
-       *
-       *
-       * For the `ModifyEndpoint` operation, you can change the existing value of the
-       * `EncryptionMode` parameter from `SSE_KMS` to `SSE_S3` . But you can’t change the existing
-       * value from `SSE_S3` to `SSE_KMS` .
-       *
-       *
-       * To use `SSE_S3` , create an AWS Identity and Access Management (IAM) role with a policy
-       * that allows `"arn:aws:s3:::*"` to use the following actions: `"s3:PutObject", "s3:ListBucket"`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-encryptionmode)
-       */
-      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
-
-      /**
-       * This setting is only valid for a full-load migration task.
-       *
-       * Set `ExplicitIds` to `true` to have tables with `IDENTITY` columns override their
-       * auto-generated values with explicit values loaded from the source data files used to populate
-       * the tables. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-explicitids)
-       */
-      override fun explicitIds(): Any? = unwrap(this).getExplicitIds()
-
-      /**
-       * The number of threads used to upload a single file.
-       *
-       * This parameter accepts a value from 1 through 64. It defaults to 10.
-       *
-       * The number of parallel streams used to upload a single .csv file to an S3 bucket using S3
-       * Multipart Upload. For more information, see [Multipart upload
-       * overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html) .
-       *
-       * `FileTransferUploadStreams` accepts a value from 1 through 64. It defaults to 10.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams)
-       */
-      override fun fileTransferUploadStreams(): Number? =
-          unwrap(this).getFileTransferUploadStreams()
-
-      /**
-       * The amount of time to wait (in milliseconds) before timing out of operations performed by
-       * AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-loadtimeout)
-       */
-      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
-
-      /**
-       * When true, lets Redshift migrate the boolean type as boolean.
-       *
-       * By default, Redshift migrates booleans as `varchar(1)` . You must set this setting on both
-       * the source and target endpoints for it to take effect.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean)
-       */
-      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
-
-      /**
-       * The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer
-       * data to Amazon Redshift. It defaults to 1048576KB (1 GB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * A value that specifies to remove surrounding quotation marks from strings in the incoming
-       * data.
-       *
-       * All characters within the quotation marks, including delimiters, are retained. Choose
-       * `true` to remove quotation marks. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-removequotes)
-       */
-      override fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
-
-      /**
-       * A value that specifies to replaces the invalid characters specified in
-       * `ReplaceInvalidChars` , substituting the specified characters instead.
-       *
-       * The default is `"?"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replacechars)
-       */
-      override fun replaceChars(): String? = unwrap(this).getReplaceChars()
-
-      /**
-       * A list of characters that you want to replace.
-       *
-       * Use with `ReplaceChars` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-replaceinvalidchars)
-       */
-      override fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the Amazon Redshift endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * Amazon Redshift endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * The AWS KMS key ID.
-       *
-       * If you are using `SSE_KMS` for the `EncryptionMode` , provide this key ID. The key that you
-       * use needs an attached policy that enables IAM user permissions and allows use of the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serversideencryptionkmskeyid)
-       */
-      override fun serverSideEncryptionKmsKeyId(): String? =
-          unwrap(this).getServerSideEncryptionKmsKeyId()
-
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role that has access to the Amazon Redshift
-       * service.
-       *
-       * The role must allow the `iam:PassRole` action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-serviceaccessrolearn)
-       */
-      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-      /**
-       * The time format that you want to use.
-       *
-       * Valid values are `auto` (case-sensitive), `'timeformat_string'` , `'epochsecs'` , or
-       * `'epochmillisecs'` . It defaults to 10. Using `auto` recognizes most strings, even some that
-       * aren't supported when you use a time format string.
-       *
-       * If your date and time values use formats different from each other, set this parameter to
-       * `auto` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-timeformat)
-       */
-      override fun timeFormat(): String? = unwrap(this).getTimeFormat()
-
-      /**
-       * A value that specifies to remove the trailing white space characters from a VARCHAR string.
-       *
-       * This parameter applies only to columns with a VARCHAR data type. Choose `true` to remove
-       * unneeded white space. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-trimblanks)
-       */
-      override fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
-
-      /**
-       * A value that specifies to truncate data in columns to the appropriate number of characters,
-       * so that the data fits in the column.
-       *
-       * This parameter applies only to columns with a VARCHAR or CHAR data type, and rows with a
-       * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-truncatecolumns)
-       */
-      override fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
-
-      /**
-       * The size (in KB) of the in-memory file write buffer used when generating .csv files on the
-       * local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html#cfn-dms-endpoint-redshiftsettings-writebuffersize)
-       */
-      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty):
-          RedshiftSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftSettingsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedshiftSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a MongoDB endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about other available
-   * settings, see [Endpoint configuration settings when using MongoDB as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * MongoDbSettingsProperty mongoDbSettingsProperty = MongoDbSettingsProperty.builder()
-   * .authMechanism("authMechanism")
-   * .authSource("authSource")
-   * .authType("authType")
-   * .databaseName("databaseName")
-   * .docsToInvestigate("docsToInvestigate")
-   * .extractDocId("extractDocId")
-   * .nestingLevel("nestingLevel")
-   * .password("password")
-   * .port(123)
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .serverName("serverName")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html)
-   */
-  public interface MongoDbSettingsProperty {
-    /**
-     * The authentication mechanism you use to access the MongoDB source endpoint.
-     *
-     * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
-     * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
-     * is set to `"no"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
-     */
-    public fun authMechanism(): String? = unwrap(this).getAuthMechanism()
-
-    /**
-     * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
-     *
-     * The default is `"admin"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
-     */
-    public fun authSource(): String? = unwrap(this).getAuthSource()
-
-    /**
-     * The authentication type you use to access the MongoDB source endpoint.
-     *
-     * When set to `"no"` , user name and password parameters are not used and can be empty.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
-     */
-    public fun authType(): String? = unwrap(this).getAuthType()
-
-    /**
-     * The database name on the MongoDB source endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * Indicates the number of documents to preview to determine the document organization.
-     *
-     * Use this setting when `NestingLevel` is set to `"one"` .
-     *
-     * Must be a positive value greater than `0` . Default value is `1000` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
-     */
-    public fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
-
-    /**
-     * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
-     *
-     * Default value is `"false"` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
-     */
-    public fun extractDocId(): String? = unwrap(this).getExtractDocId()
-
-    /**
-     * Specifies either document or table mode.
-     *
-     * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-     * table mode.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
-     */
-    public fun nestingLevel(): String? = unwrap(this).getNestingLevel()
-
-    /**
-     * The password for the user account you use to access the MongoDB source endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
-     */
-    public fun password(): String? = unwrap(this).getPassword()
-
-    /**
-     * The port value for the MongoDB source endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * MongoDB endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * The name of the server on the MongoDB source endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
-     */
-    public fun serverName(): String? = unwrap(this).getServerName()
-
-    /**
-     * The user name you use to access the MongoDB source endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
-     */
-    public fun username(): String? = unwrap(this).getUsername()
-
-    /**
-     * A builder for [MongoDbSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authMechanism The authentication mechanism you use to access the MongoDB source
-       * endpoint.
-       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
-       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
-       * is set to `"no"` .
-       */
-      public fun authMechanism(authMechanism: String)
-
-      /**
-       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
-       * to `"no"` .
-       * The default is `"admin"` .
-       */
-      public fun authSource(authSource: String)
-
-      /**
-       * @param authType The authentication type you use to access the MongoDB source endpoint.
-       * When set to `"no"` , user name and password parameters are not used and can be empty.
-       */
-      public fun authType(authType: String)
-
-      /**
-       * @param databaseName The database name on the MongoDB source endpoint.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param docsToInvestigate Indicates the number of documents to preview to determine the
-       * document organization.
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       */
-      public fun docsToInvestigate(docsToInvestigate: String)
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      public fun extractDocId(extractDocId: String)
-
-      /**
-       * @param nestingLevel Specifies either document or table mode.
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       */
-      public fun nestingLevel(nestingLevel: String)
-
-      /**
-       * @param password The password for the user account you use to access the MongoDB source
-       * endpoint.
-       */
-      public fun password(password: String)
-
-      /**
-       * @param port The port value for the MongoDB source endpoint.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MongoDB endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param serverName The name of the server on the MongoDB source endpoint.
-       */
-      public fun serverName(serverName: String)
-
-      /**
-       * @param username The user name you use to access the MongoDB source endpoint.
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.builder()
-
-      /**
-       * @param authMechanism The authentication mechanism you use to access the MongoDB source
-       * endpoint.
-       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
-       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
-       * is set to `"no"` .
-       */
-      override fun authMechanism(authMechanism: String) {
-        cdkBuilder.authMechanism(authMechanism)
-      }
-
-      /**
-       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
-       * to `"no"` .
-       * The default is `"admin"` .
-       */
-      override fun authSource(authSource: String) {
-        cdkBuilder.authSource(authSource)
-      }
-
-      /**
-       * @param authType The authentication type you use to access the MongoDB source endpoint.
-       * When set to `"no"` , user name and password parameters are not used and can be empty.
-       */
-      override fun authType(authType: String) {
-        cdkBuilder.authType(authType)
-      }
-
-      /**
-       * @param databaseName The database name on the MongoDB source endpoint.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param docsToInvestigate Indicates the number of documents to preview to determine the
-       * document organization.
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       */
-      override fun docsToInvestigate(docsToInvestigate: String) {
-        cdkBuilder.docsToInvestigate(docsToInvestigate)
-      }
-
-      /**
-       * @param extractDocId Specifies the document ID. Use this setting when `NestingLevel` is set
-       * to `"none"` .
-       * Default value is `"false"` .
-       */
-      override fun extractDocId(extractDocId: String) {
-        cdkBuilder.extractDocId(extractDocId)
-      }
-
-      /**
-       * @param nestingLevel Specifies either document or table mode.
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       */
-      override fun nestingLevel(nestingLevel: String) {
-        cdkBuilder.nestingLevel(nestingLevel)
-      }
-
-      /**
-       * @param password The password for the user account you use to access the MongoDB source
-       * endpoint.
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param port The port value for the MongoDB source endpoint.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MongoDB endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param serverName The name of the server on the MongoDB source endpoint.
-       */
-      override fun serverName(serverName: String) {
-        cdkBuilder.serverName(serverName)
-      }
-
-      /**
-       * @param username The user name you use to access the MongoDB source endpoint.
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
-    ) : CdkObject(cdkObject), MongoDbSettingsProperty {
-      /**
-       * The authentication mechanism you use to access the MongoDB source endpoint.
-       *
-       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
-       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
-       * is set to `"no"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authmechanism)
-       */
-      override fun authMechanism(): String? = unwrap(this).getAuthMechanism()
-
-      /**
-       * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
-       *
-       * The default is `"admin"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authsource)
-       */
-      override fun authSource(): String? = unwrap(this).getAuthSource()
-
-      /**
-       * The authentication type you use to access the MongoDB source endpoint.
-       *
-       * When set to `"no"` , user name and password parameters are not used and can be empty.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-authtype)
-       */
-      override fun authType(): String? = unwrap(this).getAuthType()
-
-      /**
-       * The database name on the MongoDB source endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * Indicates the number of documents to preview to determine the document organization.
-       *
-       * Use this setting when `NestingLevel` is set to `"one"` .
-       *
-       * Must be a positive value greater than `0` . Default value is `1000` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-docstoinvestigate)
-       */
-      override fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
-
-      /**
-       * Specifies the document ID. Use this setting when `NestingLevel` is set to `"none"` .
-       *
-       * Default value is `"false"` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-extractdocid)
-       */
-      override fun extractDocId(): String? = unwrap(this).getExtractDocId()
-
-      /**
-       * Specifies either document or table mode.
-       *
-       * Default value is `"none"` . Specify `"none"` to use document mode. Specify `"one"` to use
-       * table mode.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-nestinglevel)
-       */
-      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
-
-      /**
-       * The password for the user account you use to access the MongoDB source endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-password)
-       */
-      override fun password(): String? = unwrap(this).getPassword()
-
-      /**
-       * The port value for the MongoDB source endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the MongoDB endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * MongoDB endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * The name of the server on the MongoDB source endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-servername)
-       */
-      override fun serverName(): String? = unwrap(this).getServerName()
-
-      /**
-       * The user name you use to access the MongoDB source endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html#cfn-dms-endpoint-mongodbsettings-username)
-       */
-      override fun username(): String? = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDbSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty):
-          MongoDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDbSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MongoDbSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a PostgreSQL endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For information about other available settings,
-   * see [Extra connection attributes when using PostgreSQL as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib)
-   * and [Extra connection attributes when using PostgreSQL as a target for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.PostgreSQL.html#CHAP_Target.PostgreSQL.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
-   * .afterConnectScript("afterConnectScript")
-   * .babelfishDatabaseName("babelfishDatabaseName")
-   * .captureDdls(false)
-   * .databaseMode("databaseMode")
-   * .ddlArtifactsSchema("ddlArtifactsSchema")
-   * .executeTimeout(123)
-   * .failTasksOnLobTruncation(false)
-   * .heartbeatEnable(false)
-   * .heartbeatFrequency(123)
-   * .heartbeatSchema("heartbeatSchema")
-   * .mapBooleanAsBoolean(false)
-   * .maxFileSize(123)
-   * .pluginName("pluginName")
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .slotName("slotName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html)
-   */
-  public interface PostgreSqlSettingsProperty {
-    /**
-     * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
-     * and user triggers to reduce the time it takes to bulk load data.
-     *
-     * Example: `afterConnectScript=SET session_replication_role='replica'`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-afterconnectscript)
-     */
-    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-    /**
-     * The Babelfish for Aurora PostgreSQL database name for the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename)
-     */
-    public fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
-
-    /**
-     * To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL database when the
-     * task starts.
-     *
-     * You can later remove these artifacts.
-     *
-     * If this value is set to `N` , you don't have to create tables or triggers on the source
-     * database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
-     */
-    public fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
-
-    /**
-     * Specifies the default behavior of the replication's handling of PostgreSQL- compatible
-     * endpoints that require some additional configuration, such as Babelfish endpoints.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-databasemode)
-     */
-    public fun databaseMode(): String? = unwrap(this).getDatabaseMode()
-
-    /**
-     * The schema in which the operational DDL database artifacts are created.
-     *
-     * Example: `ddlArtifactsSchema=xyzddlschema;`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema)
-     */
-    public fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
-
-    /**
-     * Sets the client statement timeout for the PostgreSQL instance, in seconds. The default value
-     * is 60 seconds.
-     *
-     * Example: `executeTimeout=100;`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-executetimeout)
-     */
-    public fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
-
-    /**
-     * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
-     * greater than the specified `LobMaxSize` .
-     *
-     * If task is set to Limited LOB mode and this option is set to true, the task fails instead of
-     * truncating the LOB data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation)
-     */
-    public fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
-
-    /**
-     * The write-ahead log (WAL) heartbeat feature mimics a dummy transaction.
-     *
-     * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-     * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-     * moving and prevents storage full scenarios.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
-     */
-    public fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
-
-    /**
-     * Sets the WAL heartbeat frequency (in minutes).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
-     */
-    public fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
-
-    /**
-     * Sets the schema in which the heartbeat artifacts are created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
-     */
-    public fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
-
-    /**
-     * When true, lets PostgreSQL migrate the boolean type as boolean.
-     *
-     * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on both
-     * the source and target endpoints for it to take effect.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
-     */
-    public fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
-
-    /**
-     * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
-     *
-     * Example: `maxFileSize=512`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * Specifies the plugin to use to create a replication slot.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
-     */
-    public fun pluginName(): String? = unwrap(this).getPluginName()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-     *
-     * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-     * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access it,
-     * see [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * PostgreSQL endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * Sets the name of a previously created logical replication slot for a change data capture
-     * (CDC) load of the PostgreSQL source instance.
-     *
-     * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this attribute
-     * also makes it possible to use native CDC start points. DMS verifies that the specified logical
-     * replication slot exists before starting the CDC load task. It also verifies that the task was
-     * created with a valid setting of `CdcStartPosition` . If the specified slot doesn't exist or the
-     * task doesn't have a valid `CdcStartPosition` setting, DMS raises an error.
-     *
-     * For more information about setting the `CdcStartPosition` request parameter, see [Determining
-     * a CDC native start
-     * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
-     * in the *AWS Database Migration Service User Guide* . For more information about using
-     * `CdcStartPosition` , see
-     * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
-     * ,
-     * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
-     * , and
-     * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-slotname)
-     */
-    public fun slotName(): String? = unwrap(this).getSlotName()
-
-    /**
-     * A builder for [PostgreSqlSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param afterConnectScript For use with change data capture (CDC) only, this attribute has
-       * AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.
-       * Example: `afterConnectScript=SET session_replication_role='replica'`
-       */
-      public fun afterConnectScript(afterConnectScript: String)
-
-      /**
-       * @param babelfishDatabaseName The Babelfish for Aurora PostgreSQL database name for the
-       * endpoint.
-       */
-      public fun babelfishDatabaseName(babelfishDatabaseName: String)
-
-      /**
-       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
-       * PostgreSQL database when the task starts.
-       * You can later remove these artifacts.
-       *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
-       * database.
-       */
-      public fun captureDdls(captureDdls: Boolean)
-
-      /**
-       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
-       * PostgreSQL database when the task starts.
-       * You can later remove these artifacts.
-       *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
-       * database.
-       */
-      public fun captureDdls(captureDdls: IResolvable)
-
-      /**
-       * @param databaseMode Specifies the default behavior of the replication's handling of
-       * PostgreSQL- compatible endpoints that require some additional configuration, such as Babelfish
-       * endpoints.
-       */
-      public fun databaseMode(databaseMode: String)
-
-      /**
-       * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
-       * created.
-       * Example: `ddlArtifactsSchema=xyzddlschema;`
-       */
-      public fun ddlArtifactsSchema(ddlArtifactsSchema: String)
-
-      /**
-       * @param executeTimeout Sets the client statement timeout for the PostgreSQL instance, in
-       * seconds. The default value is 60 seconds.
-       * Example: `executeTimeout=100;`
-       */
-      public fun executeTimeout(executeTimeout: Number)
-
-      /**
-       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
-       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
-       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
-       * of truncating the LOB data.
-       */
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean)
-
-      /**
-       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
-       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
-       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
-       * of truncating the LOB data.
-       */
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable)
-
-      /**
-       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
-       * transaction.
-       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-       * moving and prevents storage full scenarios.
-       */
-      public fun heartbeatEnable(heartbeatEnable: Boolean)
-
-      /**
-       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
-       * transaction.
-       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-       * moving and prevents storage full scenarios.
-       */
-      public fun heartbeatEnable(heartbeatEnable: IResolvable)
-
-      /**
-       * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
-       */
-      public fun heartbeatFrequency(heartbeatFrequency: Number)
-
-      /**
-       * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
-       */
-      public fun heartbeatSchema(heartbeatSchema: String)
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
-       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
-       * both the source and target endpoints for it to take effect.
-       */
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
-       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
-       * both the source and target endpoints for it to take effect.
-       */
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to PostgreSQL.
-       * Example: `maxFileSize=512`
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param pluginName Specifies the plugin to use to create a replication slot.
-       */
-      public fun pluginName(pluginName: String)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the PostgreSQL endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param slotName Sets the name of a previously created logical replication slot for a change
-       * data capture (CDC) load of the PostgreSQL source instance.
-       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
-       * attribute also makes it possible to use native CDC start points. DMS verifies that the
-       * specified logical replication slot exists before starting the CDC load task. It also verifies
-       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
-       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
-       * error.
-       *
-       * For more information about setting the `CdcStartPosition` request parameter, see
-       * [Determining a CDC native start
-       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
-       * in the *AWS Database Migration Service User Guide* . For more information about using
-       * `CdcStartPosition` , see
-       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
-       * ,
-       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
-       * , and
-       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
-       * .
-       */
-      public fun slotName(slotName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.builder()
-
-      /**
-       * @param afterConnectScript For use with change data capture (CDC) only, this attribute has
-       * AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.
-       * Example: `afterConnectScript=SET session_replication_role='replica'`
-       */
-      override fun afterConnectScript(afterConnectScript: String) {
-        cdkBuilder.afterConnectScript(afterConnectScript)
-      }
-
-      /**
-       * @param babelfishDatabaseName The Babelfish for Aurora PostgreSQL database name for the
-       * endpoint.
-       */
-      override fun babelfishDatabaseName(babelfishDatabaseName: String) {
-        cdkBuilder.babelfishDatabaseName(babelfishDatabaseName)
-      }
-
-      /**
-       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
-       * PostgreSQL database when the task starts.
-       * You can later remove these artifacts.
-       *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
-       * database.
-       */
-      override fun captureDdls(captureDdls: Boolean) {
-        cdkBuilder.captureDdls(captureDdls)
-      }
-
-      /**
-       * @param captureDdls To capture DDL events, AWS DMS creates various artifacts in the
-       * PostgreSQL database when the task starts.
-       * You can later remove these artifacts.
-       *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
-       * database.
-       */
-      override fun captureDdls(captureDdls: IResolvable) {
-        cdkBuilder.captureDdls(captureDdls.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param databaseMode Specifies the default behavior of the replication's handling of
-       * PostgreSQL- compatible endpoints that require some additional configuration, such as Babelfish
-       * endpoints.
-       */
-      override fun databaseMode(databaseMode: String) {
-        cdkBuilder.databaseMode(databaseMode)
-      }
-
-      /**
-       * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
-       * created.
-       * Example: `ddlArtifactsSchema=xyzddlschema;`
-       */
-      override fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
-        cdkBuilder.ddlArtifactsSchema(ddlArtifactsSchema)
-      }
-
-      /**
-       * @param executeTimeout Sets the client statement timeout for the PostgreSQL instance, in
-       * seconds. The default value is 60 seconds.
-       * Example: `executeTimeout=100;`
-       */
-      override fun executeTimeout(executeTimeout: Number) {
-        cdkBuilder.executeTimeout(executeTimeout)
-      }
-
-      /**
-       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
-       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
-       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
-       * of truncating the LOB data.
-       */
-      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
-        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation)
-      }
-
-      /**
-       * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
-       * the actual size of a LOB column is greater than the specified `LobMaxSize` .
-       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
-       * of truncating the LOB data.
-       */
-      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
-        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
-       * transaction.
-       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-       * moving and prevents storage full scenarios.
-       */
-      override fun heartbeatEnable(heartbeatEnable: Boolean) {
-        cdkBuilder.heartbeatEnable(heartbeatEnable)
-      }
-
-      /**
-       * @param heartbeatEnable The write-ahead log (WAL) heartbeat feature mimics a dummy
-       * transaction.
-       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-       * moving and prevents storage full scenarios.
-       */
-      override fun heartbeatEnable(heartbeatEnable: IResolvable) {
-        cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
-       */
-      override fun heartbeatFrequency(heartbeatFrequency: Number) {
-        cdkBuilder.heartbeatFrequency(heartbeatFrequency)
-      }
-
-      /**
-       * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
-       */
-      override fun heartbeatSchema(heartbeatSchema: String) {
-        cdkBuilder.heartbeatSchema(heartbeatSchema)
-      }
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
-       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
-       * both the source and target endpoints for it to take effect.
-       */
-      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
-      }
-
-      /**
-       * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
-       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
-       * both the source and target endpoints for it to take effect.
-       */
-      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to PostgreSQL.
-       * Example: `maxFileSize=512`
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param pluginName Specifies the plugin to use to create a replication slot.
-       */
-      override fun pluginName(pluginName: String) {
-        cdkBuilder.pluginName(pluginName)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret` .
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the PostgreSQL endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param slotName Sets the name of a previously created logical replication slot for a change
-       * data capture (CDC) load of the PostgreSQL source instance.
-       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
-       * attribute also makes it possible to use native CDC start points. DMS verifies that the
-       * specified logical replication slot exists before starting the CDC load task. It also verifies
-       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
-       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
-       * error.
-       *
-       * For more information about setting the `CdcStartPosition` request parameter, see
-       * [Determining a CDC native start
-       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
-       * in the *AWS Database Migration Service User Guide* . For more information about using
-       * `CdcStartPosition` , see
-       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
-       * ,
-       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
-       * , and
-       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
-       * .
-       */
-      override fun slotName(slotName: String) {
-        cdkBuilder.slotName(slotName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
-    ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
-      /**
-       * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
-       * and user triggers to reduce the time it takes to bulk load data.
-       *
-       * Example: `afterConnectScript=SET session_replication_role='replica'`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-afterconnectscript)
-       */
-      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-      /**
-       * The Babelfish for Aurora PostgreSQL database name for the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-babelfishdatabasename)
-       */
-      override fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
-
-      /**
-       * To capture DDL events, AWS DMS creates various artifacts in the PostgreSQL database when
-       * the task starts.
-       *
-       * You can later remove these artifacts.
-       *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
-       * database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
-       */
-      override fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
-
-      /**
-       * Specifies the default behavior of the replication's handling of PostgreSQL- compatible
-       * endpoints that require some additional configuration, such as Babelfish endpoints.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-databasemode)
-       */
-      override fun databaseMode(): String? = unwrap(this).getDatabaseMode()
-
-      /**
-       * The schema in which the operational DDL database artifacts are created.
-       *
-       * Example: `ddlArtifactsSchema=xyzddlschema;`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-ddlartifactsschema)
-       */
-      override fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
-
-      /**
-       * Sets the client statement timeout for the PostgreSQL instance, in seconds. The default
-       * value is 60 seconds.
-       *
-       * Example: `executeTimeout=100;`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-executetimeout)
-       */
-      override fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
-
-      /**
-       * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
-       * greater than the specified `LobMaxSize` .
-       *
-       * If task is set to Limited LOB mode and this option is set to true, the task fails instead
-       * of truncating the LOB data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-failtasksonlobtruncation)
-       */
-      override fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
-
-      /**
-       * The write-ahead log (WAL) heartbeat feature mimics a dummy transaction.
-       *
-       * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
-       * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
-       * moving and prevents storage full scenarios.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
-       */
-      override fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
-
-      /**
-       * Sets the WAL heartbeat frequency (in minutes).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
-       */
-      override fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
-
-      /**
-       * Sets the schema in which the heartbeat artifacts are created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
-       */
-      override fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
-
-      /**
-       * When true, lets PostgreSQL migrate the boolean type as boolean.
-       *
-       * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
-       * both the source and target endpoints for it to take effect.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
-       */
-      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
-
-      /**
-       * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
-       *
-       * Example: `maxFileSize=512`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * Specifies the plugin to use to create a replication slot.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
-       */
-      override fun pluginName(): String? = unwrap(this).getPluginName()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret` .
-       *
-       * The role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the
-       * AWS Secrets Manager secret that allows access to the PostgreSQL endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` that is required to access
-       * it, see [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * PostgreSQL endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * Sets the name of a previously created logical replication slot for a change data capture
-       * (CDC) load of the PostgreSQL source instance.
-       *
-       * When used with the `CdcStartPosition` request parameter for the AWS DMS API , this
-       * attribute also makes it possible to use native CDC start points. DMS verifies that the
-       * specified logical replication slot exists before starting the CDC load task. It also verifies
-       * that the task was created with a valid setting of `CdcStartPosition` . If the specified slot
-       * doesn't exist or the task doesn't have a valid `CdcStartPosition` setting, DMS raises an
-       * error.
-       *
-       * For more information about setting the `CdcStartPosition` request parameter, see
-       * [Determining a CDC native start
-       * point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native)
-       * in the *AWS Database Migration Service User Guide* . For more information about using
-       * `CdcStartPosition` , see
-       * [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html)
-       * ,
-       * [StartReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html)
-       * , and
-       * [ModifyReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html)
-       * .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-slotname)
-       */
-      override fun slotName(): String? = unwrap(this).getSlotName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PostgreSqlSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty):
-          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PostgreSqlSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines an Amazon Neptune endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about the available settings,
-   * see [Specifying endpoint settings for Amazon Neptune as a
-   * target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * NeptuneSettingsProperty neptuneSettingsProperty = NeptuneSettingsProperty.builder()
-   * .errorRetryDuration(123)
-   * .iamAuthEnabled(false)
-   * .maxFileSize(123)
-   * .maxRetryCount(123)
-   * .s3BucketFolder("s3BucketFolder")
-   * .s3BucketName("s3BucketName")
-   * .serviceAccessRoleArn("serviceAccessRoleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html)
-   */
-  public interface NeptuneSettingsProperty {
-    /**
-     * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data to
-     * the Neptune target database before raising an error.
-     *
-     * The default is 250.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-errorretryduration)
-     */
-    public fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
-
-    /**
-     * If you want IAM authorization enabled for this endpoint, set this parameter to `true` .
-     *
-     * Then attach the appropriate IAM policy document to your service role specified by
-     * `ServiceAccessRoleArn` . The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-iamauthenabled)
-     */
-    public fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
-
-    /**
-     * The maximum size in kilobytes of migrated graph data stored in a .csv file before AWS DMS
-     * bulk-loads the data to the Neptune target database. The default is 1,048,576 KB. If the bulk
-     * load is successful, AWS DMS clears the bucket, ready to store the next batch of migrated graph
-     * data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * The number of times for AWS DMS to retry a bulk load of migrated graph data to the Neptune
-     * target database before raising an error.
-     *
-     * The default is 5.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxretrycount)
-     */
-    public fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
-
-    /**
-     * A folder path where you want AWS DMS to store migrated graph data in the S3 bucket specified
-     * by `S3BucketName`.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketfolder)
-     */
-    public fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
-
-    /**
-     * The name of the Amazon S3 bucket where AWS DMS can temporarily store migrated graph data in
-     * .csv files before bulk-loading it to the Neptune target database. AWS DMS maps the SQL source
-     * data to graph data before storing it in these .csv files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketname)
-     */
-    public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-    /**
-     * The Amazon Resource Name (ARN) of the service role that you created for the Neptune target
-     * endpoint.
-     *
-     * The role must allow the `iam:PassRole` action.
-     *
-     * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
-     * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn)
-     */
-    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-    /**
-     * A builder for [NeptuneSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param errorRetryDuration The number of milliseconds for AWS DMS to wait to retry a
-       * bulk-load of migrated graph data to the Neptune target database before raising an error.
-       * The default is 250.
-       */
-      public fun errorRetryDuration(errorRetryDuration: Number)
-
-      /**
-       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
-       * parameter to `true` .
-       * Then attach the appropriate IAM policy document to your service role specified by
-       * `ServiceAccessRoleArn` . The default is `false` .
-       */
-      public fun iamAuthEnabled(iamAuthEnabled: Boolean)
-
-      /**
-       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
-       * parameter to `true` .
-       * Then attach the appropriate IAM policy document to your service role specified by
-       * `ServiceAccessRoleArn` . The default is `false` .
-       */
-      public fun iamAuthEnabled(iamAuthEnabled: IResolvable)
-
-      /**
-       * @param maxFileSize The maximum size in kilobytes of migrated graph data stored in a .csv
-       * file before AWS DMS bulk-loads the data to the Neptune target database. The default is
-       * 1,048,576 KB. If the bulk load is successful, AWS DMS clears the bucket, ready to store the
-       * next batch of migrated graph data.
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param maxRetryCount The number of times for AWS DMS to retry a bulk load of migrated graph
-       * data to the Neptune target database before raising an error.
-       * The default is 5.
-       */
-      public fun maxRetryCount(maxRetryCount: Number)
-
-      /**
-       * @param s3BucketFolder A folder path where you want AWS DMS to store migrated graph data in
-       * the S3 bucket specified by `S3BucketName`.
-       */
-      public fun s3BucketFolder(s3BucketFolder: String)
-
-      /**
-       * @param s3BucketName The name of the Amazon S3 bucket where AWS DMS can temporarily store
-       * migrated graph data in .csv files before bulk-loading it to the Neptune target database. AWS
-       * DMS maps the SQL source data to graph data before storing it in these .csv files.
-       */
-      public fun s3BucketName(s3BucketName: String)
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the service role that you
-       * created for the Neptune target endpoint.
-       * The role must allow the `iam:PassRole` action.
-       *
-       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
-       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.builder()
-
-      /**
-       * @param errorRetryDuration The number of milliseconds for AWS DMS to wait to retry a
-       * bulk-load of migrated graph data to the Neptune target database before raising an error.
-       * The default is 250.
-       */
-      override fun errorRetryDuration(errorRetryDuration: Number) {
-        cdkBuilder.errorRetryDuration(errorRetryDuration)
-      }
-
-      /**
-       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
-       * parameter to `true` .
-       * Then attach the appropriate IAM policy document to your service role specified by
-       * `ServiceAccessRoleArn` . The default is `false` .
-       */
-      override fun iamAuthEnabled(iamAuthEnabled: Boolean) {
-        cdkBuilder.iamAuthEnabled(iamAuthEnabled)
-      }
-
-      /**
-       * @param iamAuthEnabled If you want IAM authorization enabled for this endpoint, set this
-       * parameter to `true` .
-       * Then attach the appropriate IAM policy document to your service role specified by
-       * `ServiceAccessRoleArn` . The default is `false` .
-       */
-      override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
-        cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param maxFileSize The maximum size in kilobytes of migrated graph data stored in a .csv
-       * file before AWS DMS bulk-loads the data to the Neptune target database. The default is
-       * 1,048,576 KB. If the bulk load is successful, AWS DMS clears the bucket, ready to store the
-       * next batch of migrated graph data.
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param maxRetryCount The number of times for AWS DMS to retry a bulk load of migrated graph
-       * data to the Neptune target database before raising an error.
-       * The default is 5.
-       */
-      override fun maxRetryCount(maxRetryCount: Number) {
-        cdkBuilder.maxRetryCount(maxRetryCount)
-      }
-
-      /**
-       * @param s3BucketFolder A folder path where you want AWS DMS to store migrated graph data in
-       * the S3 bucket specified by `S3BucketName`.
-       */
-      override fun s3BucketFolder(s3BucketFolder: String) {
-        cdkBuilder.s3BucketFolder(s3BucketFolder)
-      }
-
-      /**
-       * @param s3BucketName The name of the Amazon S3 bucket where AWS DMS can temporarily store
-       * migrated graph data in .csv files before bulk-loading it to the Neptune target database. AWS
-       * DMS maps the SQL source data to graph data before storing it in these .csv files.
-       */
-      override fun s3BucketName(s3BucketName: String) {
-        cdkBuilder.s3BucketName(s3BucketName)
-      }
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) of the service role that you
-       * created for the Neptune target endpoint.
-       * The role must allow the `iam:PassRole` action.
-       *
-       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
-       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
-    ) : CdkObject(cdkObject), NeptuneSettingsProperty {
-      /**
-       * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data
-       * to the Neptune target database before raising an error.
-       *
-       * The default is 250.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-errorretryduration)
-       */
-      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
-
-      /**
-       * If you want IAM authorization enabled for this endpoint, set this parameter to `true` .
-       *
-       * Then attach the appropriate IAM policy document to your service role specified by
-       * `ServiceAccessRoleArn` . The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-iamauthenabled)
-       */
-      override fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
-
-      /**
-       * The maximum size in kilobytes of migrated graph data stored in a .csv file before AWS DMS
-       * bulk-loads the data to the Neptune target database. The default is 1,048,576 KB. If the bulk
-       * load is successful, AWS DMS clears the bucket, ready to store the next batch of migrated graph
-       * data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * The number of times for AWS DMS to retry a bulk load of migrated graph data to the Neptune
-       * target database before raising an error.
-       *
-       * The default is 5.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-maxretrycount)
-       */
-      override fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
-
-      /**
-       * A folder path where you want AWS DMS to store migrated graph data in the S3 bucket
-       * specified by `S3BucketName`.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketfolder)
-       */
-      override fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
-
-      /**
-       * The name of the Amazon S3 bucket where AWS DMS can temporarily store migrated graph data in
-       * .csv files before bulk-loading it to the Neptune target database. AWS DMS maps the SQL source
-       * data to graph data before storing it in these .csv files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-s3bucketname)
-       */
-      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
-
-      /**
-       * The Amazon Resource Name (ARN) of the service role that you created for the Neptune target
-       * endpoint.
-       *
-       * The role must allow the `iam:PassRole` action.
-       *
-       * For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a
-       * Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-neptunesettings.html#cfn-dms-endpoint-neptunesettings-serviceaccessrolearn)
-       */
-      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): NeptuneSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty):
-          NeptuneSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? NeptuneSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: NeptuneSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that describes an Amazon Kinesis Data Stream endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about other available
-   * settings, see [Using object mapping to migrate data to a Kinesis data
-   * stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * KinesisSettingsProperty kinesisSettingsProperty = KinesisSettingsProperty.builder()
-   * .includeControlDetails(false)
-   * .includeNullAndEmpty(false)
-   * .includePartitionValue(false)
-   * .includeTableAlterOperations(false)
-   * .includeTransactionDetails(false)
-   * .messageFormat("messageFormat")
-   * .noHexPrefix(false)
-   * .partitionIncludeSchemaTable(false)
-   * .serviceAccessRoleArn("serviceAccessRoleArn")
-   * .streamArn("streamArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html)
-   */
-  public interface KinesisSettingsProperty {
-    /**
-     * Shows detailed control information for table definition, column definition, and table and
-     * column changes in the Kinesis message output.
-     *
-     * The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includecontroldetails)
-     */
-    public fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
-
-    /**
-     * Include NULL and empty columns for records migrated to the endpoint.
-     *
-     * The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includenullandempty)
-     */
-    public fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
-
-    /**
-     * Shows the partition value within the Kinesis message output, unless the partition type is
-     * `schema-table-type` .
-     *
-     * The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includepartitionvalue)
-     */
-    public fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
-
-    /**
-     * Includes any data definition language (DDL) operations that change the table in the control
-     * data, such as `rename-table` , `drop-table` , `add-column` , `drop-column` , and `rename-column`
-     * .
-     *
-     * The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetablealteroperations)
-     */
-    public fun includeTableAlterOperations(): Any? = unwrap(this).getIncludeTableAlterOperations()
-
-    /**
-     * Provides detailed transaction information from the source database.
-     *
-     * This information includes a commit timestamp, a log position, and values for `transaction_id`
-     * , previous `transaction_id` , and `transaction_record_id` (the record offset within a
-     * transaction). The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetransactiondetails)
-     */
-    public fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
-
-    /**
-     * The output format for the records created on the endpoint.
-     *
-     * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat)
-     */
-    public fun messageFormat(): String? = unwrap(this).getMessageFormat()
-
-    /**
-     * Set this optional parameter to `true` to avoid adding a '0x' prefix to raw data in
-     * hexadecimal format.
-     *
-     * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-     * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix` endpoint
-     * setting to enable migration of RAW data type columns without adding the '0x' prefix.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-nohexprefix)
-     */
-    public fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
-
-    /**
-     * Prefixes schema and table names to partition values, when the partition type is
-     * `primary-key-type` .
-     *
-     * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-     * SysBench schema has thousands of tables and each table has only limited range for a primary key.
-     * In this case, the same primary key is sent from thousands of tables to the same shard, which
-     * causes throttling. The default is `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-partitionincludeschematable)
-     */
-    public fun partitionIncludeSchemaTable(): Any? = unwrap(this).getPartitionIncludeSchemaTable()
-
-    /**
-     * The Amazon Resource Name (ARN) for the IAM role that AWS DMS uses to write to the Kinesis
-     * data stream.
-     *
-     * The role must allow the `iam:PassRole` action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn)
-     */
-    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-    /**
-     * The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn)
-     */
-    public fun streamArn(): String? = unwrap(this).getStreamArn()
-
-    /**
-     * A builder for [KinesisSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param includeControlDetails Shows detailed control information for table definition,
-       * column definition, and table and column changes in the Kinesis message output.
-       * The default is `false` .
-       */
-      public fun includeControlDetails(includeControlDetails: Boolean)
-
-      /**
-       * @param includeControlDetails Shows detailed control information for table definition,
-       * column definition, and table and column changes in the Kinesis message output.
-       * The default is `false` .
-       */
-      public fun includeControlDetails(includeControlDetails: IResolvable)
-
-      /**
-       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
-       * endpoint.
-       * The default is `false` .
-       */
-      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean)
-
-      /**
-       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
-       * endpoint.
-       * The default is `false` .
-       */
-      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable)
-
-      /**
-       * @param includePartitionValue Shows the partition value within the Kinesis message output,
-       * unless the partition type is `schema-table-type` .
-       * The default is `false` .
-       */
-      public fun includePartitionValue(includePartitionValue: Boolean)
-
-      /**
-       * @param includePartitionValue Shows the partition value within the Kinesis message output,
-       * unless the partition type is `schema-table-type` .
-       * The default is `false` .
-       */
-      public fun includePartitionValue(includePartitionValue: IResolvable)
-
-      /**
-       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
-       * that change the table in the control data, such as `rename-table` , `drop-table` ,
-       * `add-column` , `drop-column` , and `rename-column` .
-       * The default is `false` .
-       */
-      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean)
-
-      /**
-       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
-       * that change the table in the control data, such as `rename-table` , `drop-table` ,
-       * `add-column` , `drop-column` , and `rename-column` .
-       * The default is `false` .
-       */
-      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable)
-
-      /**
-       * @param includeTransactionDetails Provides detailed transaction information from the source
-       * database.
-       * This information includes a commit timestamp, a log position, and values for
-       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
-       * within a transaction). The default is `false` .
-       */
-      public fun includeTransactionDetails(includeTransactionDetails: Boolean)
-
-      /**
-       * @param includeTransactionDetails Provides detailed transaction information from the source
-       * database.
-       * This information includes a commit timestamp, a log position, and values for
-       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
-       * within a transaction). The default is `false` .
-       */
-      public fun includeTransactionDetails(includeTransactionDetails: IResolvable)
-
-      /**
-       * @param messageFormat The output format for the records created on the endpoint.
-       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
-       */
-      public fun messageFormat(messageFormat: String)
-
-      /**
-       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
-       * raw data in hexadecimal format.
-       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
-       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
-       */
-      public fun noHexPrefix(noHexPrefix: Boolean)
-
-      /**
-       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
-       * raw data in hexadecimal format.
-       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
-       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
-       */
-      public fun noHexPrefix(noHexPrefix: IResolvable)
-
-      /**
-       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
-       * when the partition type is `primary-key-type` .
-       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-       * SysBench schema has thousands of tables and each table has only limited range for a primary
-       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
-       * which causes throttling. The default is `false` .
-       */
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean)
-
-      /**
-       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
-       * when the partition type is `primary-key-type` .
-       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-       * SysBench schema has thousands of tables and each table has only limited range for a primary
-       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
-       * which causes throttling. The default is `false` .
-       */
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable)
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) for the IAM role that AWS DMS
-       * uses to write to the Kinesis data stream.
-       * The role must allow the `iam:PassRole` action.
-       */
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
-
-      /**
-       * @param streamArn The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams
-       * endpoint.
-       */
-      public fun streamArn(streamArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.builder()
-
-      /**
-       * @param includeControlDetails Shows detailed control information for table definition,
-       * column definition, and table and column changes in the Kinesis message output.
-       * The default is `false` .
-       */
-      override fun includeControlDetails(includeControlDetails: Boolean) {
-        cdkBuilder.includeControlDetails(includeControlDetails)
-      }
-
-      /**
-       * @param includeControlDetails Shows detailed control information for table definition,
-       * column definition, and table and column changes in the Kinesis message output.
-       * The default is `false` .
-       */
-      override fun includeControlDetails(includeControlDetails: IResolvable) {
-        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
-       * endpoint.
-       * The default is `false` .
-       */
-      override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
-        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty)
-      }
-
-      /**
-       * @param includeNullAndEmpty Include NULL and empty columns for records migrated to the
-       * endpoint.
-       * The default is `false` .
-       */
-      override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
-        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includePartitionValue Shows the partition value within the Kinesis message output,
-       * unless the partition type is `schema-table-type` .
-       * The default is `false` .
-       */
-      override fun includePartitionValue(includePartitionValue: Boolean) {
-        cdkBuilder.includePartitionValue(includePartitionValue)
-      }
-
-      /**
-       * @param includePartitionValue Shows the partition value within the Kinesis message output,
-       * unless the partition type is `schema-table-type` .
-       * The default is `false` .
-       */
-      override fun includePartitionValue(includePartitionValue: IResolvable) {
-        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
-       * that change the table in the control data, such as `rename-table` , `drop-table` ,
-       * `add-column` , `drop-column` , and `rename-column` .
-       * The default is `false` .
-       */
-      override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
-        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations)
-      }
-
-      /**
-       * @param includeTableAlterOperations Includes any data definition language (DDL) operations
-       * that change the table in the control data, such as `rename-table` , `drop-table` ,
-       * `add-column` , `drop-column` , and `rename-column` .
-       * The default is `false` .
-       */
-      override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
-        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param includeTransactionDetails Provides detailed transaction information from the source
-       * database.
-       * This information includes a commit timestamp, a log position, and values for
-       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
-       * within a transaction). The default is `false` .
-       */
-      override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
-        cdkBuilder.includeTransactionDetails(includeTransactionDetails)
-      }
-
-      /**
-       * @param includeTransactionDetails Provides detailed transaction information from the source
-       * database.
-       * This information includes a commit timestamp, a log position, and values for
-       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
-       * within a transaction). The default is `false` .
-       */
-      override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
-        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param messageFormat The output format for the records created on the endpoint.
-       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
-       */
-      override fun messageFormat(messageFormat: String) {
-        cdkBuilder.messageFormat(messageFormat)
-      }
-
-      /**
-       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
-       * raw data in hexadecimal format.
-       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
-       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
-       */
-      override fun noHexPrefix(noHexPrefix: Boolean) {
-        cdkBuilder.noHexPrefix(noHexPrefix)
-      }
-
-      /**
-       * @param noHexPrefix Set this optional parameter to `true` to avoid adding a '0x' prefix to
-       * raw data in hexadecimal format.
-       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
-       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
-       */
-      override fun noHexPrefix(noHexPrefix: IResolvable) {
-        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
-       * when the partition type is `primary-key-type` .
-       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-       * SysBench schema has thousands of tables and each table has only limited range for a primary
-       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
-       * which causes throttling. The default is `false` .
-       */
-      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
-        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable)
-      }
-
-      /**
-       * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values,
-       * when the partition type is `primary-key-type` .
-       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-       * SysBench schema has thousands of tables and each table has only limited range for a primary
-       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
-       * which causes throttling. The default is `false` .
-       */
-      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
-        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) for the IAM role that AWS DMS
-       * uses to write to the Kinesis data stream.
-       * The role must allow the `iam:PassRole` action.
-       */
-      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
-      }
-
-      /**
-       * @param streamArn The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams
-       * endpoint.
-       */
-      override fun streamArn(streamArn: String) {
-        cdkBuilder.streamArn(streamArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
-    ) : CdkObject(cdkObject), KinesisSettingsProperty {
-      /**
-       * Shows detailed control information for table definition, column definition, and table and
-       * column changes in the Kinesis message output.
-       *
-       * The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includecontroldetails)
-       */
-      override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
-
-      /**
-       * Include NULL and empty columns for records migrated to the endpoint.
-       *
-       * The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includenullandempty)
-       */
-      override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
-
-      /**
-       * Shows the partition value within the Kinesis message output, unless the partition type is
-       * `schema-table-type` .
-       *
-       * The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includepartitionvalue)
-       */
-      override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
-
-      /**
-       * Includes any data definition language (DDL) operations that change the table in the control
-       * data, such as `rename-table` , `drop-table` , `add-column` , `drop-column` , and
-       * `rename-column` .
-       *
-       * The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetablealteroperations)
-       */
-      override fun includeTableAlterOperations(): Any? =
-          unwrap(this).getIncludeTableAlterOperations()
-
-      /**
-       * Provides detailed transaction information from the source database.
-       *
-       * This information includes a commit timestamp, a log position, and values for
-       * `transaction_id` , previous `transaction_id` , and `transaction_record_id` (the record offset
-       * within a transaction). The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-includetransactiondetails)
-       */
-      override fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
-
-      /**
-       * The output format for the records created on the endpoint.
-       *
-       * The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-messageformat)
-       */
-      override fun messageFormat(): String? = unwrap(this).getMessageFormat()
-
-      /**
-       * Set this optional parameter to `true` to avoid adding a '0x' prefix to raw data in
-       * hexadecimal format.
-       *
-       * For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal
-       * format moving from an Oracle source to an Amazon Kinesis target. Use the `NoHexPrefix`
-       * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-nohexprefix)
-       */
-      override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
-
-      /**
-       * Prefixes schema and table names to partition values, when the partition type is
-       * `primary-key-type` .
-       *
-       * Doing this increases data distribution among Kinesis shards. For example, suppose that a
-       * SysBench schema has thousands of tables and each table has only limited range for a primary
-       * key. In this case, the same primary key is sent from thousands of tables to the same shard,
-       * which causes throttling. The default is `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-partitionincludeschematable)
-       */
-      override fun partitionIncludeSchemaTable(): Any? =
-          unwrap(this).getPartitionIncludeSchemaTable()
-
-      /**
-       * The Amazon Resource Name (ARN) for the IAM role that AWS DMS uses to write to the Kinesis
-       * data stream.
-       *
-       * The role must allow the `iam:PassRole` action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-serviceaccessrolearn)
-       */
-      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-      /**
-       * The Amazon Resource Name (ARN) for the Amazon Kinesis Data Streams endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html#cfn-dms-endpoint-kinesissettings-streamarn)
-       */
-      override fun streamArn(): String? = unwrap(this).getStreamArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KinesisSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty):
-          KinesisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? KinesisSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KinesisSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines an OpenSearch endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For more information about the available settings,
-   * see [Extra connection attributes when using OpenSearch as a target for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * ElasticsearchSettingsProperty elasticsearchSettingsProperty =
-   * ElasticsearchSettingsProperty.builder()
-   * .endpointUri("endpointUri")
-   * .errorRetryDuration(123)
-   * .fullLoadErrorPercentage(123)
-   * .serviceAccessRoleArn("serviceAccessRoleArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html)
-   */
-  public interface ElasticsearchSettingsProperty {
-    /**
-     * The endpoint for the OpenSearch cluster.
-     *
-     * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-endpointuri)
-     */
-    public fun endpointUri(): String? = unwrap(this).getEndpointUri()
-
-    /**
-     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch
-     * cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration)
-     */
-    public fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
-
-    /**
-     * The maximum percentage of records that can fail to be written before a full load operation
-     * stops.
-     *
-     * To avoid early failure, this counter is only effective after 1,000 records are transferred.
-     * OpenSearch also has the concept of error monitoring during the last 10 minutes of an Observation
-     * Window. If transfer of all records fail in the last 10 minutes, the full load operation stops.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage)
-     */
-    public fun fullLoadErrorPercentage(): Number? = unwrap(this).getFullLoadErrorPercentage()
-
-    /**
-     * The Amazon Resource Name (ARN) used by the service to access the IAM role.
-     *
-     * The role must allow the `iam:PassRole` action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn)
-     */
-    public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-
-    /**
-     * A builder for [ElasticsearchSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param endpointUri The endpoint for the OpenSearch cluster.
-       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
-       */
-      public fun endpointUri(endpointUri: String)
-
-      /**
-       * @param errorRetryDuration The maximum number of seconds for which DMS retries failed API
-       * requests to the OpenSearch cluster.
-       */
-      public fun errorRetryDuration(errorRetryDuration: Number)
-
-      /**
-       * @param fullLoadErrorPercentage The maximum percentage of records that can fail to be
-       * written before a full load operation stops.
-       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
-       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
-       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
-       * operation stops.
-       */
-      public fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number)
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) used by the service to access
-       * the IAM role.
-       * The role must allow the `iam:PassRole` action.
-       */
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.builder()
-
-      /**
-       * @param endpointUri The endpoint for the OpenSearch cluster.
-       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
-       */
-      override fun endpointUri(endpointUri: String) {
-        cdkBuilder.endpointUri(endpointUri)
-      }
-
-      /**
-       * @param errorRetryDuration The maximum number of seconds for which DMS retries failed API
-       * requests to the OpenSearch cluster.
-       */
-      override fun errorRetryDuration(errorRetryDuration: Number) {
-        cdkBuilder.errorRetryDuration(errorRetryDuration)
-      }
-
-      /**
-       * @param fullLoadErrorPercentage The maximum percentage of records that can fail to be
-       * written before a full load operation stops.
-       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
-       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
-       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
-       * operation stops.
-       */
-      override fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number) {
-        cdkBuilder.fullLoadErrorPercentage(fullLoadErrorPercentage)
-      }
-
-      /**
-       * @param serviceAccessRoleArn The Amazon Resource Name (ARN) used by the service to access
-       * the IAM role.
-       * The role must allow the `iam:PassRole` action.
-       */
-      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-        cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
-    ) : CdkObject(cdkObject), ElasticsearchSettingsProperty {
-      /**
-       * The endpoint for the OpenSearch cluster.
-       *
-       * AWS DMS uses HTTPS if a transport protocol (either HTTP or HTTPS) isn't specified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-endpointuri)
-       */
-      override fun endpointUri(): String? = unwrap(this).getEndpointUri()
-
-      /**
-       * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch
-       * cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-errorretryduration)
-       */
-      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
-
-      /**
-       * The maximum percentage of records that can fail to be written before a full load operation
-       * stops.
-       *
-       * To avoid early failure, this counter is only effective after 1,000 records are transferred.
-       * OpenSearch also has the concept of error monitoring during the last 10 minutes of an
-       * Observation Window. If transfer of all records fail in the last 10 minutes, the full load
-       * operation stops.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage)
-       */
-      override fun fullLoadErrorPercentage(): Number? = unwrap(this).getFullLoadErrorPercentage()
-
-      /**
-       * The Amazon Resource Name (ARN) used by the service to access the IAM role.
-       *
-       * The role must allow the `iam:PassRole` action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html#cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn)
-       */
-      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticsearchSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty):
-          ElasticsearchSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ElasticsearchSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ElasticsearchSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a Redis target endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. For information about other available settings,
-   * see [Specifying endpoint settings for Redis as a
-   * target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redis.html#CHAP_Target.Redis.EndpointSettings)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * RedisSettingsProperty redisSettingsProperty = RedisSettingsProperty.builder()
-   * .authPassword("authPassword")
-   * .authType("authType")
-   * .authUserName("authUserName")
-   * .port(123)
-   * .serverName("serverName")
-   * .sslCaCertificateArn("sslCaCertificateArn")
-   * .sslSecurityProtocol("sslSecurityProtocol")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html)
-   */
-  public interface RedisSettingsProperty {
-    /**
-     * The password provided with the `auth-role` and `auth-token` options of the `AuthType` setting
-     * for a Redis target endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authpassword)
-     */
-    public fun authPassword(): String? = unwrap(this).getAuthPassword()
-
-    /**
-     * The type of authentication to perform when connecting to a Redis target.
-     *
-     * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires an
-     * `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
-     * `AuthPassword` values to be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authtype)
-     */
-    public fun authType(): String? = unwrap(this).getAuthType()
-
-    /**
-     * The user name provided with the `auth-role` option of the `AuthType` setting for a Redis
-     * target endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authusername)
-     */
-    public fun authUserName(): String? = unwrap(this).getAuthUserName()
-
-    /**
-     * Transmission Control Protocol (TCP) port for the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * Fully qualified domain name of the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-servername)
-     */
-    public fun serverName(): String? = unwrap(this).getServerName()
-
-    /**
-     * The Amazon Resource Name (ARN) for the certificate authority (CA) that DMS uses to connect to
-     * your Redis target endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslcacertificatearn)
-     */
-    public fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
-
-    /**
-     * The connection to a Redis target endpoint using Transport Layer Security (TLS).
-     *
-     * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` . The
-     * `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an Amazon
-     * Resource Name (ARN) for an SSL certificate authority (CA) using the `SslCaCertificateArn`
-     * setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
-     *
-     * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for traffic
-     * between endpoint and database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslsecurityprotocol)
-     */
-    public fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
-
-    /**
-     * A builder for [RedisSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authPassword The password provided with the `auth-role` and `auth-token` options of
-       * the `AuthType` setting for a Redis target endpoint.
-       */
-      public fun authPassword(authPassword: String)
-
-      /**
-       * @param authType The type of authentication to perform when connecting to a Redis target.
-       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
-       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
-       * `AuthPassword` values to be provided.
-       */
-      public fun authType(authType: String)
-
-      /**
-       * @param authUserName The user name provided with the `auth-role` option of the `AuthType`
-       * setting for a Redis target endpoint.
-       */
-      public fun authUserName(authUserName: String)
-
-      /**
-       * @param port Transmission Control Protocol (TCP) port for the endpoint.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param serverName Fully qualified domain name of the endpoint.
-       */
-      public fun serverName(serverName: String)
-
-      /**
-       * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the certificate authority
-       * (CA) that DMS uses to connect to your Redis target endpoint.
-       */
-      public fun sslCaCertificateArn(sslCaCertificateArn: String)
-
-      /**
-       * @param sslSecurityProtocol The connection to a Redis target endpoint using Transport Layer
-       * Security (TLS).
-       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
-       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
-       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
-       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
-       *
-       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
-       * traffic between endpoint and database.
-       */
-      public fun sslSecurityProtocol(sslSecurityProtocol: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.builder()
-
-      /**
-       * @param authPassword The password provided with the `auth-role` and `auth-token` options of
-       * the `AuthType` setting for a Redis target endpoint.
-       */
-      override fun authPassword(authPassword: String) {
-        cdkBuilder.authPassword(authPassword)
-      }
-
-      /**
-       * @param authType The type of authentication to perform when connecting to a Redis target.
-       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
-       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
-       * `AuthPassword` values to be provided.
-       */
-      override fun authType(authType: String) {
-        cdkBuilder.authType(authType)
-      }
-
-      /**
-       * @param authUserName The user name provided with the `auth-role` option of the `AuthType`
-       * setting for a Redis target endpoint.
-       */
-      override fun authUserName(authUserName: String) {
-        cdkBuilder.authUserName(authUserName)
-      }
-
-      /**
-       * @param port Transmission Control Protocol (TCP) port for the endpoint.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param serverName Fully qualified domain name of the endpoint.
-       */
-      override fun serverName(serverName: String) {
-        cdkBuilder.serverName(serverName)
-      }
-
-      /**
-       * @param sslCaCertificateArn The Amazon Resource Name (ARN) for the certificate authority
-       * (CA) that DMS uses to connect to your Redis target endpoint.
-       */
-      override fun sslCaCertificateArn(sslCaCertificateArn: String) {
-        cdkBuilder.sslCaCertificateArn(sslCaCertificateArn)
-      }
-
-      /**
-       * @param sslSecurityProtocol The connection to a Redis target endpoint using Transport Layer
-       * Security (TLS).
-       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
-       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
-       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
-       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
-       *
-       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
-       * traffic between endpoint and database.
-       */
-      override fun sslSecurityProtocol(sslSecurityProtocol: String) {
-        cdkBuilder.sslSecurityProtocol(sslSecurityProtocol)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
-    ) : CdkObject(cdkObject), RedisSettingsProperty {
-      /**
-       * The password provided with the `auth-role` and `auth-token` options of the `AuthType`
-       * setting for a Redis target endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authpassword)
-       */
-      override fun authPassword(): String? = unwrap(this).getAuthPassword()
-
-      /**
-       * The type of authentication to perform when connecting to a Redis target.
-       *
-       * Options include `none` , `auth-token` , and `auth-role` . The `auth-token` option requires
-       * an `AuthPassword` value to be provided. The `auth-role` option requires `AuthUserName` and
-       * `AuthPassword` values to be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authtype)
-       */
-      override fun authType(): String? = unwrap(this).getAuthType()
-
-      /**
-       * The user name provided with the `auth-role` option of the `AuthType` setting for a Redis
-       * target endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-authusername)
-       */
-      override fun authUserName(): String? = unwrap(this).getAuthUserName()
-
-      /**
-       * Transmission Control Protocol (TCP) port for the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * Fully qualified domain name of the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-servername)
-       */
-      override fun serverName(): String? = unwrap(this).getServerName()
-
-      /**
-       * The Amazon Resource Name (ARN) for the certificate authority (CA) that DMS uses to connect
-       * to your Redis target endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslcacertificatearn)
-       */
-      override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
-
-      /**
-       * The connection to a Redis target endpoint using Transport Layer Security (TLS).
-       *
-       * Valid values include `plaintext` and `ssl-encryption` . The default is `ssl-encryption` .
-       * The `ssl-encryption` option makes an encrypted connection. Optionally, you can identify an
-       * Amazon Resource Name (ARN) for an SSL certificate authority (CA) using the
-       * `SslCaCertificateArn` setting. If an ARN isn't given for a CA, DMS uses the Amazon root CA.
-       *
-       * The `plaintext` option doesn't provide Transport Layer Security (TLS) encryption for
-       * traffic between endpoint and database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html#cfn-dms-endpoint-redissettings-sslsecurityprotocol)
-       */
-      override fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RedisSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty):
-          RedisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedisSettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RedisSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty
-    }
-  }
-
-  /**
-   * Provides information that defines a GCP MySQL endpoint.
-   *
-   * This information includes the output format of records applied to the endpoint and details of
-   * transaction and control table data information. These settings are much the same as the settings
-   * for any MySQL-compatible endpoint. For more information, see [Extra connection attributes when
-   * using MySQL as a source for AWS
-   * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
-   * in the *AWS Database Migration Service User Guide* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * GcpMySQLSettingsProperty gcpMySQLSettingsProperty = GcpMySQLSettingsProperty.builder()
-   * .afterConnectScript("afterConnectScript")
-   * .cleanSourceMetadataOnMismatch(false)
-   * .databaseName("databaseName")
-   * .eventsPollInterval(123)
-   * .maxFileSize(123)
-   * .parallelLoadThreads(123)
-   * .password("password")
-   * .port(123)
-   * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
-   * .secretsManagerSecretId("secretsManagerSecretId")
-   * .serverName("serverName")
-   * .serverTimezone("serverTimezone")
-   * .username("username")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html)
-   */
-  public interface GcpMySQLSettingsProperty {
-    /**
-     * Specifies a script to run immediately after AWS DMS connects to the endpoint.
-     *
-     * The migration task continues running regardless if the SQL statement succeeds or fails.
-     *
-     * For this parameter, provide the code of the script itself, not the name of a file containing
-     * the script.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-afterconnectscript)
-     */
-    public fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-    /**
-     * Adjusts the behavior of AWS DMS when migrating from an SQL Server source database that is
-     * hosted as part of an Always On availability group cluster.
-     *
-     * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-     * set this attribute to `false` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-cleansourcemetadataonmismatch)
-     */
-    public fun cleanSourceMetadataOnMismatch(): Any? =
-        unwrap(this).getCleanSourceMetadataOnMismatch()
-
-    /**
-     * Database name for the endpoint.
-     *
-     * For a MySQL source or target endpoint, don't explicitly specify the database using the
-     * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
-     * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
-     * tables to this single database. For MySQL endpoints, you specify the database only when you
-     * specify the schema in the table-mapping rules of the AWS DMS task.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
-     *
-     * The default is five seconds.
-     *
-     * Example: `eventsPollInterval=5;`
-     *
-     * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-eventspollinterval)
-     */
-    public fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
-
-    /**
-     * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
-     * MySQL-compatible database.
-     *
-     * Example: `maxFileSize=512`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-maxfilesize)
-     */
-    public fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-    /**
-     * Improves performance when loading data into the MySQL-compatible target database.
-     *
-     * Specifies how many threads to use to load the data into the MySQL-compatible target database.
-     * Setting a large number of threads can have an adverse effect on database performance, because a
-     * separate connection is required for each thread. The default is one.
-     *
-     * Example: `parallelLoadThreads=1`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-parallelloadthreads)
-     */
-    public fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
-
-    /**
-     * Endpoint connection password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-password)
-     */
-    public fun password(): String? = unwrap(this).getPassword()
-
-    /**
-     * The port used by the endpoint database.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-     * entity and grants the required permissions to access the value in `SecretsManagerSecret.` The
-     * role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the AWS
-     * Secrets Manager secret that allows access to the MySQL endpoint.
-     *
-     *
-     * You can specify one of two sets of values for these permissions. You can specify the values
-     * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-     * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-     *
-     * For more information on creating this `SecretsManagerSecret` , the corresponding
-     * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
-     * [Using secrets to access AWS Database Migration Service
-     * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-     * in the *AWS Database Migration Service User Guide* .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanageraccessrolearn)
-     */
-    public fun secretsManagerAccessRoleArn(): String? =
-        unwrap(this).getSecretsManagerAccessRoleArn()
-
-    /**
-     * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-     * MySQL endpoint connection details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanagersecretid)
-     */
-    public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-    /**
-     * The MySQL host name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servername)
-     */
-    public fun serverName(): String? = unwrap(this).getServerName()
-
-    /**
-     * Specifies the time zone for the source MySQL database. Don't enclose time zones in single
-     * quotation marks.
-     *
-     * Example: `serverTimezone=US/Pacific;`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servertimezone)
-     */
-    public fun serverTimezone(): String? = unwrap(this).getServerTimezone()
-
-    /**
-     * Endpoint connection user name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-username)
-     */
-    public fun username(): String? = unwrap(this).getUsername()
-
-    /**
-     * A builder for [GcpMySQLSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
-       * the endpoint.
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
-       *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
-       */
-      public fun afterConnectScript(afterConnectScript: String)
-
-      /**
-       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
-       * SQL Server source database that is hosted as part of an Always On availability group cluster.
-       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-       * set this attribute to `false` .
-       */
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
-
-      /**
-       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
-       * SQL Server source database that is hosted as part of an Always On availability group cluster.
-       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-       * set this attribute to `false` .
-       */
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       * For a MySQL source or target endpoint, don't explicitly specify the database using the
-       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
-       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
-       * tables to this single database. For MySQL endpoints, you specify the database only when you
-       * specify the schema in the table-mapping rules of the AWS DMS task.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param eventsPollInterval Specifies how often to check the binary log for new
-       * changes/events when the database is idle.
-       * The default is five seconds.
-       *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-       */
-      public fun eventsPollInterval(eventsPollInterval: Number)
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to a MySQL-compatible database.
-       * Example: `maxFileSize=512`
-       */
-      public fun maxFileSize(maxFileSize: Number)
-
-      /**
-       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
-       * target database.
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       */
-      public fun parallelLoadThreads(parallelLoadThreads: Number)
-
-      /**
-       * @param password Endpoint connection password.
-       */
-      public fun password(password: String)
-
-      /**
-       * @param port The port used by the endpoint database.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret.` The role must allow the `iam:PassRole` action.
-       * `SecretsManagerSecret` has the value of the AWS Secrets Manager secret that allows access to
-       * the MySQL endpoint.
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
-       * [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
-       */
-      public fun secretsManagerSecretId(secretsManagerSecretId: String)
-
-      /**
-       * @param serverName The MySQL host name.
-       */
-      public fun serverName(serverName: String)
-
-      /**
-       * @param serverTimezone Specifies the time zone for the source MySQL database. Don't enclose
-       * time zones in single quotation marks.
-       * Example: `serverTimezone=US/Pacific;`
-       */
-      public fun serverTimezone(serverTimezone: String)
-
-      /**
-       * @param username Endpoint connection user name.
-       */
-      public fun username(username: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.builder()
-
-      /**
-       * @param afterConnectScript Specifies a script to run immediately after AWS DMS connects to
-       * the endpoint.
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
-       *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
-       */
-      override fun afterConnectScript(afterConnectScript: String) {
-        cdkBuilder.afterConnectScript(afterConnectScript)
-      }
-
-      /**
-       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
-       * SQL Server source database that is hosted as part of an Always On availability group cluster.
-       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-       * set this attribute to `false` .
-       */
-      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
-      }
-
-      /**
-       * @param cleanSourceMetadataOnMismatch Adjusts the behavior of AWS DMS when migrating from an
-       * SQL Server source database that is hosted as part of an Always On availability group cluster.
-       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-       * set this attribute to `false` .
-       */
-      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       * For a MySQL source or target endpoint, don't explicitly specify the database using the
-       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
-       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
-       * tables to this single database. For MySQL endpoints, you specify the database only when you
-       * specify the schema in the table-mapping rules of the AWS DMS task.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param eventsPollInterval Specifies how often to check the binary log for new
-       * changes/events when the database is idle.
-       * The default is five seconds.
-       *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-       */
-      override fun eventsPollInterval(eventsPollInterval: Number) {
-        cdkBuilder.eventsPollInterval(eventsPollInterval)
-      }
-
-      /**
-       * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
-       * data to a MySQL-compatible database.
-       * Example: `maxFileSize=512`
-       */
-      override fun maxFileSize(maxFileSize: Number) {
-        cdkBuilder.maxFileSize(maxFileSize)
-      }
-
-      /**
-       * @param parallelLoadThreads Improves performance when loading data into the MySQL-compatible
-       * target database.
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       */
-      override fun parallelLoadThreads(parallelLoadThreads: Number) {
-        cdkBuilder.parallelLoadThreads(parallelLoadThreads)
-      }
-
-      /**
-       * @param password Endpoint connection password.
-       */
-      override fun password(password: String) {
-        cdkBuilder.password(password)
-      }
-
-      /**
-       * @param port The port used by the endpoint database.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param secretsManagerAccessRoleArn The full Amazon Resource Name (ARN) of the IAM role that
-       * specifies AWS DMS as the trusted entity and grants the required permissions to access the
-       * value in `SecretsManagerSecret.` The role must allow the `iam:PassRole` action.
-       * `SecretsManagerSecret` has the value of the AWS Secrets Manager secret that allows access to
-       * the MySQL endpoint.
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
-       * [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       */
-      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-        cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
-      }
-
-      /**
-       * @param secretsManagerSecretId The full ARN, partial ARN, or display name of the
-       * `SecretsManagerSecret` that contains the MySQL endpoint connection details.
-       */
-      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
-        cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
-      }
-
-      /**
-       * @param serverName The MySQL host name.
-       */
-      override fun serverName(serverName: String) {
-        cdkBuilder.serverName(serverName)
-      }
-
-      /**
-       * @param serverTimezone Specifies the time zone for the source MySQL database. Don't enclose
-       * time zones in single quotation marks.
-       * Example: `serverTimezone=US/Pacific;`
-       */
-      override fun serverTimezone(serverTimezone: String) {
-        cdkBuilder.serverTimezone(serverTimezone)
-      }
-
-      /**
-       * @param username Endpoint connection user name.
-       */
-      override fun username(username: String) {
-        cdkBuilder.username(username)
-      }
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
-    ) : CdkObject(cdkObject), GcpMySQLSettingsProperty {
-      /**
-       * Specifies a script to run immediately after AWS DMS connects to the endpoint.
-       *
-       * The migration task continues running regardless if the SQL statement succeeds or fails.
-       *
-       * For this parameter, provide the code of the script itself, not the name of a file
-       * containing the script.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-afterconnectscript)
-       */
-      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
-
-      /**
-       * Adjusts the behavior of AWS DMS when migrating from an SQL Server source database that is
-       * hosted as part of an Always On availability group cluster.
-       *
-       * If you need AWS DMS to poll all the nodes in the Always On cluster for transaction backups,
-       * set this attribute to `false` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-cleansourcemetadataonmismatch)
-       */
-      override fun cleanSourceMetadataOnMismatch(): Any? =
-          unwrap(this).getCleanSourceMetadataOnMismatch()
-
-      /**
-       * Database name for the endpoint.
-       *
-       * For a MySQL source or target endpoint, don't explicitly specify the database using the
-       * `DatabaseName` request parameter on either the `CreateEndpoint` or `ModifyEndpoint` API call.
-       * Specifying `DatabaseName` when you create or modify a MySQL endpoint replicates all the task
-       * tables to this single database. For MySQL endpoints, you specify the database only when you
-       * specify the schema in the table-mapping rules of the AWS DMS task.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * Specifies how often to check the binary log for new changes/events when the database is
-       * idle.
-       *
-       * The default is five seconds.
-       *
-       * Example: `eventsPollInterval=5;`
-       *
-       * In the example, AWS DMS checks for changes in the binary logs every five seconds.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-eventspollinterval)
-       */
-      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
-
-      /**
-       * Specifies the maximum size (in KB) of any .csv file used to transfer data to a
-       * MySQL-compatible database.
-       *
-       * Example: `maxFileSize=512`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-maxfilesize)
-       */
-      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
-
-      /**
-       * Improves performance when loading data into the MySQL-compatible target database.
-       *
-       * Specifies how many threads to use to load the data into the MySQL-compatible target
-       * database. Setting a large number of threads can have an adverse effect on database
-       * performance, because a separate connection is required for each thread. The default is one.
-       *
-       * Example: `parallelLoadThreads=1`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-parallelloadthreads)
-       */
-      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
-
-      /**
-       * Endpoint connection password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-password)
-       */
-      override fun password(): String? = unwrap(this).getPassword()
-
-      /**
-       * The port used by the endpoint database.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
-       * entity and grants the required permissions to access the value in `SecretsManagerSecret.` The
-       * role must allow the `iam:PassRole` action. `SecretsManagerSecret` has the value of the AWS
-       * Secrets Manager secret that allows access to the MySQL endpoint.
-       *
-       *
-       * You can specify one of two sets of values for these permissions. You can specify the values
-       * for this setting and `SecretsManagerSecretId` . Or you can specify clear-text values for
-       * `UserName` , `Password` , `ServerName` , and `Port` . You can't specify both.
-       *
-       * For more information on creating this `SecretsManagerSecret` , the corresponding
-       * `SecretsManagerAccessRoleArn` , and the `SecretsManagerSecretId` required to access it, see
-       * [Using secrets to access AWS Database Migration Service
-       * resources](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#security-iam-secretsmanager)
-       * in the *AWS Database Migration Service User Guide* .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanageraccessrolearn)
-       */
-      override fun secretsManagerAccessRoleArn(): String? =
-          unwrap(this).getSecretsManagerAccessRoleArn()
-
-      /**
-       * The full ARN, partial ARN, or display name of the `SecretsManagerSecret` that contains the
-       * MySQL endpoint connection details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-secretsmanagersecretid)
-       */
-      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
-
-      /**
-       * The MySQL host name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servername)
-       */
-      override fun serverName(): String? = unwrap(this).getServerName()
-
-      /**
-       * Specifies the time zone for the source MySQL database. Don't enclose time zones in single
-       * quotation marks.
-       *
-       * Example: `serverTimezone=US/Pacific;`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-servertimezone)
-       */
-      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
-
-      /**
-       * Endpoint connection user name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html#cfn-dms-endpoint-gcpmysqlsettings-username)
-       */
-      override fun username(): String? = unwrap(this).getUsername()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GcpMySQLSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty):
-          GcpMySQLSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? GcpMySQLSettingsProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GcpMySQLSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty
     }
   }
 }

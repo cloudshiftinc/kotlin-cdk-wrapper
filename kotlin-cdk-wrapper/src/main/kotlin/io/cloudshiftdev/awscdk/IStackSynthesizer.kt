@@ -84,7 +84,7 @@ public interface IStackSynthesizer {
   public fun synthesize(session: ISynthesisSession)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IStackSynthesizer,
+    cdkObject: software.amazon.awscdk.IStackSynthesizer,
   ) : CdkObject(cdkObject), IStackSynthesizer {
     /**
      * Register a Docker Image Asset.

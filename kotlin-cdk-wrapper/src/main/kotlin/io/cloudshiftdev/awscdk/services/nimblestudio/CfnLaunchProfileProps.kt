@@ -327,7 +327,7 @@ public interface CfnLaunchProfileProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps,
+    cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps,
   ) : CdkObject(cdkObject), CfnLaunchProfileProps {
     /**
      * A human-readable description of the launch profile.

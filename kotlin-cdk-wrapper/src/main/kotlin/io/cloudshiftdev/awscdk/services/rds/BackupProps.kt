@@ -97,7 +97,7 @@ public interface BackupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.BackupProps,
+    cdkObject: software.amazon.awscdk.services.rds.BackupProps,
   ) : CdkObject(cdkObject), BackupProps {
     /**
      * A daily time range in 24-hours UTC format in which backups preferably execute.

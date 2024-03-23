@@ -43,8 +43,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public abstract class LoggingFormat internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormat,
+public abstract class LoggingFormat(
+  cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormat,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the Access Log Format is initialized.
@@ -55,7 +55,7 @@ public abstract class LoggingFormat internal constructor(
   public open fun bind(): LoggingFormatConfig = unwrap(this).bind().let(LoggingFormatConfig::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormat,
+    cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormat,
   ) : LoggingFormat(cdkObject)
 
   public companion object {

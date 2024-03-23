@@ -43,7 +43,7 @@ import kotlin.collections.List
  */
 public interface ICfnConditionExpression : IResolvable {
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ICfnConditionExpression,
+    cdkObject: software.amazon.awscdk.ICfnConditionExpression,
   ) : CdkObject(cdkObject), ICfnConditionExpression {
     /**
      * The creation stack of this resolvable which will be appended to errors thrown during

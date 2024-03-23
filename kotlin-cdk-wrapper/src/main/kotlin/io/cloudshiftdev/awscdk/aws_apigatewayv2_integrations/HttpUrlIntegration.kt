@@ -35,9 +35,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HttpUrlIntegration internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration,
+public open class HttpUrlIntegration(
+  cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration,
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, url: String) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration(id, url)
@@ -156,5 +155,6 @@ public open class HttpUrlIntegration internal constructor(
 
     internal fun unwrap(wrapped: HttpUrlIntegration):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration = wrapped.cdkObject
+        as software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration
   }
 }

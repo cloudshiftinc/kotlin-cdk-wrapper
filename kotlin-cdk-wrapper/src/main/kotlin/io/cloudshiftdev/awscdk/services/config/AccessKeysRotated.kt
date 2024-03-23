@@ -25,8 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html)
  */
-public open class AccessKeysRotated internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.config.AccessKeysRotated,
+public open class AccessKeysRotated(
+  cdkObject: software.amazon.awscdk.services.config.AccessKeysRotated,
 ) : ManagedRule(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -204,6 +204,7 @@ public open class AccessKeysRotated internal constructor(
         AccessKeysRotated = AccessKeysRotated(cdkObject)
 
     internal fun unwrap(wrapped: AccessKeysRotated):
-        software.amazon.awscdk.services.config.AccessKeysRotated = wrapped.cdkObject
+        software.amazon.awscdk.services.config.AccessKeysRotated = wrapped.cdkObject as
+        software.amazon.awscdk.services.config.AccessKeysRotated
   }
 }

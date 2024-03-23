@@ -283,7 +283,7 @@ public interface IEksContainerDefinition : IConstruct {
   public fun volumes(): List<EksVolume>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.IEksContainerDefinition,
+    cdkObject: software.amazon.awscdk.services.batch.IEksContainerDefinition,
   ) : CdkObject(cdkObject), IEksContainerDefinition {
     /**
      * Mount a Volume to this container.

@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)
  */
-public open class CfnLocationFSxLustre internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxLustre,
+public open class CfnLocationFSxLustre(
+  cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxLustre,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -324,6 +324,7 @@ public open class CfnLocationFSxLustre internal constructor(
         CfnLocationFSxLustre = CfnLocationFSxLustre(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxLustre):
-        software.amazon.awscdk.services.datasync.CfnLocationFSxLustre = wrapped.cdkObject
+        software.amazon.awscdk.services.datasync.CfnLocationFSxLustre = wrapped.cdkObject as
+        software.amazon.awscdk.services.datasync.CfnLocationFSxLustre
   }
 }

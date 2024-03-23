@@ -184,7 +184,7 @@ public interface CfnStepProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnStepProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnStepProps,
   ) : CdkObject(cdkObject), CfnStepProps {
     /**
      * This specifies what action to take when the cluster step fails.

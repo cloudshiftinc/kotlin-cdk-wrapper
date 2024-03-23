@@ -77,9 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)
  */
-public open class CfnSafetyRule internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
+public open class CfnSafetyRule(
+  cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -684,14 +683,18 @@ public open class CfnSafetyRule internal constructor(
         CfnSafetyRule = CfnSafetyRule(cdkObject)
 
     internal fun unwrap(wrapped: CfnSafetyRule):
-        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule = wrapped.cdkObject
+        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
   }
 
   /**
-   * The rule configuration for an assertion rule.
+   * An assertion rule enforces that, when you change a routing control state, that the criteria
+   * that you set in the rule configuration is met.
    *
-   * That is, the criteria that you set for specific assertion controls (routing controls) that
-   * specify how many controls must be enabled after a transaction completes.
+   * Otherwise, the change to the routing control is not accepted. For example, the criteria might
+   * be that at least one routing control state is `On` after the transaction so that traffic continues
+   * to flow to at least one cell for the application. This ensures that you avoid a fail-open
+   * scenario.
    *
    * Example:
    *
@@ -699,161 +702,142 @@ public open class CfnSafetyRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.route53recoverycontrol.*;
-   * RuleConfigProperty ruleConfigProperty = RuleConfigProperty.builder()
-   * .inverted(false)
-   * .threshold(123)
-   * .type("type")
+   * AssertionRuleProperty assertionRuleProperty = AssertionRuleProperty.builder()
+   * .assertedControls(List.of("assertedControls"))
+   * .waitPeriodMs(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html)
    */
-  public interface RuleConfigProperty {
+  public interface AssertionRuleProperty {
     /**
-     * Logical negation of the rule.
+     * The routing controls that are part of transactions that are evaluated to determine if a
+     * request to change a routing control state is allowed.
      *
-     * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+     * For example, you might include three routing controls, one for each of three AWS Regions.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-inverted)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-assertedcontrols)
      */
-    public fun inverted(): Any
+    public fun assertedControls(): List<String>
 
     /**
-     * The value of N, when you specify an `ATLEAST` rule type.
+     * An evaluation period, in milliseconds (ms), during which any request against the target
+     * routing controls will fail.
      *
-     * That is, `Threshold` is the number of controls that must be set when you specify an `ATLEAST`
-     * type.
+     * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
+     * choose a custom value.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-threshold)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-waitperiodms)
      */
-    public fun threshold(): Number
+    public fun waitPeriodMs(): Number
 
     /**
-     * A rule can be one of the following: `ATLEAST` , `AND` , or `OR` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [RuleConfigProperty]
+     * A builder for [AssertionRuleProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param inverted Logical negation of the rule. 
-       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+       * @param assertedControls The routing controls that are part of transactions that are
+       * evaluated to determine if a request to change a routing control state is allowed. 
+       * For example, you might include three routing controls, one for each of three AWS Regions.
        */
-      public fun inverted(inverted: Boolean)
+      public fun assertedControls(assertedControls: List<String>)
 
       /**
-       * @param inverted Logical negation of the rule. 
-       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+       * @param assertedControls The routing controls that are part of transactions that are
+       * evaluated to determine if a request to change a routing control state is allowed. 
+       * For example, you might include three routing controls, one for each of three AWS Regions.
        */
-      public fun inverted(inverted: IResolvable)
+      public fun assertedControls(vararg assertedControls: String)
 
       /**
-       * @param threshold The value of N, when you specify an `ATLEAST` rule type. 
-       * That is, `Threshold` is the number of controls that must be set when you specify an
-       * `ATLEAST` type.
+       * @param waitPeriodMs An evaluation period, in milliseconds (ms), during which any request
+       * against the target routing controls will fail. 
+       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
+       * choose a custom value.
        */
-      public fun threshold(threshold: Number)
-
-      /**
-       * @param type A rule can be one of the following: `ATLEAST` , `AND` , or `OR` . 
-       */
-      public fun type(type: String)
+      public fun waitPeriodMs(waitPeriodMs: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty.Builder
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty.Builder
           =
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty.builder()
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty.builder()
 
       /**
-       * @param inverted Logical negation of the rule. 
-       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+       * @param assertedControls The routing controls that are part of transactions that are
+       * evaluated to determine if a request to change a routing control state is allowed. 
+       * For example, you might include three routing controls, one for each of three AWS Regions.
        */
-      override fun inverted(inverted: Boolean) {
-        cdkBuilder.inverted(inverted)
+      override fun assertedControls(assertedControls: List<String>) {
+        cdkBuilder.assertedControls(assertedControls)
       }
 
       /**
-       * @param inverted Logical negation of the rule. 
-       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+       * @param assertedControls The routing controls that are part of transactions that are
+       * evaluated to determine if a request to change a routing control state is allowed. 
+       * For example, you might include three routing controls, one for each of three AWS Regions.
        */
-      override fun inverted(inverted: IResolvable) {
-        cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
-      }
+      override fun assertedControls(vararg assertedControls: String): Unit =
+          assertedControls(assertedControls.toList())
 
       /**
-       * @param threshold The value of N, when you specify an `ATLEAST` rule type. 
-       * That is, `Threshold` is the number of controls that must be set when you specify an
-       * `ATLEAST` type.
+       * @param waitPeriodMs An evaluation period, in milliseconds (ms), during which any request
+       * against the target routing controls will fail. 
+       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
+       * choose a custom value.
        */
-      override fun threshold(threshold: Number) {
-        cdkBuilder.threshold(threshold)
-      }
-
-      /**
-       * @param type A rule can be one of the following: `ATLEAST` , `AND` , or `OR` . 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
+      override fun waitPeriodMs(waitPeriodMs: Number) {
+        cdkBuilder.waitPeriodMs(waitPeriodMs)
       }
 
       public fun build():
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
-    ) : CdkObject(cdkObject), RuleConfigProperty {
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
+    ) : CdkObject(cdkObject), AssertionRuleProperty {
       /**
-       * Logical negation of the rule.
+       * The routing controls that are part of transactions that are evaluated to determine if a
+       * request to change a routing control state is allowed.
        *
-       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
+       * For example, you might include three routing controls, one for each of three AWS Regions.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-inverted)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-assertedcontrols)
        */
-      override fun inverted(): Any = unwrap(this).getInverted()
+      override fun assertedControls(): List<String> = unwrap(this).getAssertedControls()
 
       /**
-       * The value of N, when you specify an `ATLEAST` rule type.
+       * An evaluation period, in milliseconds (ms), during which any request against the target
+       * routing controls will fail.
        *
-       * That is, `Threshold` is the number of controls that must be set when you specify an
-       * `ATLEAST` type.
+       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
+       * choose a custom value.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-threshold)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-waitperiodms)
        */
-      override fun threshold(): Number = unwrap(this).getThreshold()
-
-      /**
-       * A rule can be one of the following: `ATLEAST` , `AND` , or `OR` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-type)
-       */
-      override fun type(): String = unwrap(this).getType()
+      override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssertionRuleProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty):
-          RuleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleConfigProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty):
+          AssertionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AssertionRuleProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RuleConfigProperty):
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty
+      internal fun unwrap(wrapped: AssertionRuleProperty):
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
     }
   }
 
@@ -1033,8 +1017,7 @@ public open class CfnSafetyRule internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
     ) : CdkObject(cdkObject), GatingRuleProperty {
       /**
        * An array of gating routing control Amazon Resource Names (ARNs).
@@ -1091,13 +1074,10 @@ public open class CfnSafetyRule internal constructor(
   }
 
   /**
-   * An assertion rule enforces that, when you change a routing control state, that the criteria
-   * that you set in the rule configuration is met.
+   * The rule configuration for an assertion rule.
    *
-   * Otherwise, the change to the routing control is not accepted. For example, the criteria might
-   * be that at least one routing control state is `On` after the transaction so that traffic continues
-   * to flow to at least one cell for the application. This ensures that you avoid a fail-open
-   * scenario.
+   * That is, the criteria that you set for specific assertion controls (routing controls) that
+   * specify how many controls must be enabled after a transaction completes.
    *
    * Example:
    *
@@ -1105,143 +1085,160 @@ public open class CfnSafetyRule internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.route53recoverycontrol.*;
-   * AssertionRuleProperty assertionRuleProperty = AssertionRuleProperty.builder()
-   * .assertedControls(List.of("assertedControls"))
-   * .waitPeriodMs(123)
+   * RuleConfigProperty ruleConfigProperty = RuleConfigProperty.builder()
+   * .inverted(false)
+   * .threshold(123)
+   * .type("type")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html)
    */
-  public interface AssertionRuleProperty {
+  public interface RuleConfigProperty {
     /**
-     * The routing controls that are part of transactions that are evaluated to determine if a
-     * request to change a routing control state is allowed.
+     * Logical negation of the rule.
      *
-     * For example, you might include three routing controls, one for each of three AWS Regions.
+     * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-assertedcontrols)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-inverted)
      */
-    public fun assertedControls(): List<String>
+    public fun inverted(): Any
 
     /**
-     * An evaluation period, in milliseconds (ms), during which any request against the target
-     * routing controls will fail.
+     * The value of N, when you specify an `ATLEAST` rule type.
      *
-     * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
-     * choose a custom value.
+     * That is, `Threshold` is the number of controls that must be set when you specify an `ATLEAST`
+     * type.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-waitperiodms)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-threshold)
      */
-    public fun waitPeriodMs(): Number
+    public fun threshold(): Number
 
     /**
-     * A builder for [AssertionRuleProperty]
+     * A rule can be one of the following: `ATLEAST` , `AND` , or `OR` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [RuleConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param assertedControls The routing controls that are part of transactions that are
-       * evaluated to determine if a request to change a routing control state is allowed. 
-       * For example, you might include three routing controls, one for each of three AWS Regions.
+       * @param inverted Logical negation of the rule. 
+       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        */
-      public fun assertedControls(assertedControls: List<String>)
+      public fun inverted(inverted: Boolean)
 
       /**
-       * @param assertedControls The routing controls that are part of transactions that are
-       * evaluated to determine if a request to change a routing control state is allowed. 
-       * For example, you might include three routing controls, one for each of three AWS Regions.
+       * @param inverted Logical negation of the rule. 
+       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        */
-      public fun assertedControls(vararg assertedControls: String)
+      public fun inverted(inverted: IResolvable)
 
       /**
-       * @param waitPeriodMs An evaluation period, in milliseconds (ms), during which any request
-       * against the target routing controls will fail. 
-       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
-       * choose a custom value.
+       * @param threshold The value of N, when you specify an `ATLEAST` rule type. 
+       * That is, `Threshold` is the number of controls that must be set when you specify an
+       * `ATLEAST` type.
        */
-      public fun waitPeriodMs(waitPeriodMs: Number)
+      public fun threshold(threshold: Number)
+
+      /**
+       * @param type A rule can be one of the following: `ATLEAST` , `AND` , or `OR` . 
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty.Builder
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty.Builder
           =
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty.builder()
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty.builder()
 
       /**
-       * @param assertedControls The routing controls that are part of transactions that are
-       * evaluated to determine if a request to change a routing control state is allowed. 
-       * For example, you might include three routing controls, one for each of three AWS Regions.
+       * @param inverted Logical negation of the rule. 
+       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        */
-      override fun assertedControls(assertedControls: List<String>) {
-        cdkBuilder.assertedControls(assertedControls)
+      override fun inverted(inverted: Boolean) {
+        cdkBuilder.inverted(inverted)
       }
 
       /**
-       * @param assertedControls The routing controls that are part of transactions that are
-       * evaluated to determine if a request to change a routing control state is allowed. 
-       * For example, you might include three routing controls, one for each of three AWS Regions.
+       * @param inverted Logical negation of the rule. 
+       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        */
-      override fun assertedControls(vararg assertedControls: String): Unit =
-          assertedControls(assertedControls.toList())
+      override fun inverted(inverted: IResolvable) {
+        cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
+      }
 
       /**
-       * @param waitPeriodMs An evaluation period, in milliseconds (ms), during which any request
-       * against the target routing controls will fail. 
-       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
-       * choose a custom value.
+       * @param threshold The value of N, when you specify an `ATLEAST` rule type. 
+       * That is, `Threshold` is the number of controls that must be set when you specify an
+       * `ATLEAST` type.
        */
-      override fun waitPeriodMs(waitPeriodMs: Number) {
-        cdkBuilder.waitPeriodMs(waitPeriodMs)
+      override fun threshold(threshold: Number) {
+        cdkBuilder.threshold(threshold)
+      }
+
+      /**
+       * @param type A rule can be one of the following: `ATLEAST` , `AND` , or `OR` . 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
-    ) : CdkObject(cdkObject), AssertionRuleProperty {
+      cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
+    ) : CdkObject(cdkObject), RuleConfigProperty {
       /**
-       * The routing controls that are part of transactions that are evaluated to determine if a
-       * request to change a routing control state is allowed.
+       * Logical negation of the rule.
        *
-       * For example, you might include three routing controls, one for each of three AWS Regions.
+       * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-assertedcontrols)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-inverted)
        */
-      override fun assertedControls(): List<String> = unwrap(this).getAssertedControls()
+      override fun inverted(): Any = unwrap(this).getInverted()
 
       /**
-       * An evaluation period, in milliseconds (ms), during which any request against the target
-       * routing controls will fail.
+       * The value of N, when you specify an `ATLEAST` rule type.
        *
-       * This helps prevent flapping of state. The wait period is 5000 ms by default, but you can
-       * choose a custom value.
+       * That is, `Threshold` is the number of controls that must be set when you specify an
+       * `ATLEAST` type.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-assertionrule.html#cfn-route53recoverycontrol-safetyrule-assertionrule-waitperiodms)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-threshold)
        */
-      override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
+      override fun threshold(): Number = unwrap(this).getThreshold()
+
+      /**
+       * A rule can be one of the following: `ATLEAST` , `AND` , or `OR` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html#cfn-route53recoverycontrol-safetyrule-ruleconfig-type)
+       */
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AssertionRuleProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty):
-          AssertionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AssertionRuleProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty):
+          RuleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleConfigProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AssertionRuleProperty):
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty
+      internal fun unwrap(wrapped: RuleConfigProperty):
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty
     }
   }
 }

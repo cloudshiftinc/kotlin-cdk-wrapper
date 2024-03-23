@@ -232,7 +232,7 @@ public interface CfnRegexPatternSetProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wafv2.CfnRegexPatternSetProps,
+    cdkObject: software.amazon.awscdk.services.wafv2.CfnRegexPatternSetProps,
   ) : CdkObject(cdkObject), CfnRegexPatternSetProps {
     /**
      * A description of the set that helps with identification.

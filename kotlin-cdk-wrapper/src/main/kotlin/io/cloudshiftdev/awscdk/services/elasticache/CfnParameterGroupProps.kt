@@ -204,7 +204,7 @@ public interface CfnParameterGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroupProps,
+    cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroupProps,
   ) : CdkObject(cdkObject), CfnParameterGroupProps {
     /**
      * The name of the cache parameter group family that this cache parameter group is compatible

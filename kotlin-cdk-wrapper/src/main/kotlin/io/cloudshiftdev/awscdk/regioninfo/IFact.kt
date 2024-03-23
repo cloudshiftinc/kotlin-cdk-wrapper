@@ -28,7 +28,7 @@ public interface IFact {
   public fun `value`(): String? = unwrap(this).getValue()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.regioninfo.IFact,
+    cdkObject: software.amazon.awscdk.regioninfo.IFact,
   ) : CdkObject(cdkObject), IFact {
     /**
      * The name of this fact.

@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html)
  */
-public open class CfnOIDCProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProvider,
+public open class CfnOIDCProvider(
+  cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -404,6 +404,7 @@ public open class CfnOIDCProvider internal constructor(
         CfnOIDCProvider = CfnOIDCProvider(cdkObject)
 
     internal fun unwrap(wrapped: CfnOIDCProvider):
-        software.amazon.awscdk.services.iam.CfnOIDCProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.iam.CfnOIDCProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.iam.CfnOIDCProvider
   }
 }

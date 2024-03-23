@@ -91,8 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html)
  */
-public open class CfnHttpApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi,
+public open class CfnHttpApi(
+  cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -959,7 +959,7 @@ public open class CfnHttpApi internal constructor(
         CfnHttpApi(cdkObject)
 
     internal fun unwrap(wrapped: CfnHttpApi): software.amazon.awscdk.services.sam.CfnHttpApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi
   }
 
   /**
@@ -1028,8 +1028,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty,
     ) : CdkObject(cdkObject), AccessLogSettingProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-accesslogsetting.html#cfn-serverless-httpapi-accesslogsetting-destinationarn)
@@ -1057,415 +1056,6 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Route53ConfigurationProperty route53ConfigurationProperty =
-   * Route53ConfigurationProperty.builder()
-   * .distributedDomainName("distributedDomainName")
-   * .evaluateTargetHealth(false)
-   * .hostedZoneId("hostedZoneId")
-   * .hostedZoneName("hostedZoneName")
-   * .ipV6(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html)
-   */
-  public interface Route53ConfigurationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-distributeddomainname)
-     */
-    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-evaluatetargethealth)
-     */
-    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzoneid)
-     */
-    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzonename)
-     */
-    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-ipv6)
-     */
-    public fun ipV6(): Any? = unwrap(this).getIpV6()
-
-    /**
-     * A builder for [Route53ConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param distributedDomainName the value to be set.
-       */
-      public fun distributedDomainName(distributedDomainName: String)
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
-
-      /**
-       * @param hostedZoneId the value to be set.
-       */
-      public fun hostedZoneId(hostedZoneId: String)
-
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      public fun hostedZoneName(hostedZoneName: String)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: Boolean)
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      public fun ipV6(ipV6: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.builder()
-
-      /**
-       * @param distributedDomainName the value to be set.
-       */
-      override fun distributedDomainName(distributedDomainName: String) {
-        cdkBuilder.distributedDomainName(distributedDomainName)
-      }
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-      }
-
-      /**
-       * @param evaluateTargetHealth the value to be set.
-       */
-      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param hostedZoneId the value to be set.
-       */
-      override fun hostedZoneId(hostedZoneId: String) {
-        cdkBuilder.hostedZoneId(hostedZoneId)
-      }
-
-      /**
-       * @param hostedZoneName the value to be set.
-       */
-      override fun hostedZoneName(hostedZoneName: String) {
-        cdkBuilder.hostedZoneName(hostedZoneName)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: Boolean) {
-        cdkBuilder.ipV6(ipV6)
-      }
-
-      /**
-       * @param ipV6 the value to be set.
-       */
-      override fun ipV6(ipV6: IResolvable) {
-        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty,
-    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-distributeddomainname)
-       */
-      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-evaluatetargethealth)
-       */
-      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzoneid)
-       */
-      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzonename)
-       */
-      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-ipv6)
-       */
-      override fun ipV6(): Any? = unwrap(this).getIpV6()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty):
-          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          Route53ConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: Route53ConfigurationProperty):
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * Object authorizers;
-   * HttpApiAuthProperty httpApiAuthProperty = HttpApiAuthProperty.builder()
-   * .authorizers(authorizers)
-   * .defaultAuthorizer("defaultAuthorizer")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html)
-   */
-  public interface HttpApiAuthProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-authorizers)
-     */
-    public fun authorizers(): Any? = unwrap(this).getAuthorizers()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-defaultauthorizer)
-     */
-    public fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
-
-    /**
-     * A builder for [HttpApiAuthProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param authorizers the value to be set.
-       */
-      public fun authorizers(authorizers: Any)
-
-      /**
-       * @param defaultAuthorizer the value to be set.
-       */
-      public fun defaultAuthorizer(defaultAuthorizer: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.builder()
-
-      /**
-       * @param authorizers the value to be set.
-       */
-      override fun authorizers(authorizers: Any) {
-        cdkBuilder.authorizers(authorizers)
-      }
-
-      /**
-       * @param defaultAuthorizer the value to be set.
-       */
-      override fun defaultAuthorizer(defaultAuthorizer: String) {
-        cdkBuilder.defaultAuthorizer(defaultAuthorizer)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty,
-    ) : CdkObject(cdkObject), HttpApiAuthProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-authorizers)
-       */
-      override fun authorizers(): Any? = unwrap(this).getAuthorizers()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-defaultauthorizer)
-       */
-      override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HttpApiAuthProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty):
-          HttpApiAuthProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpApiAuthProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HttpApiAuthProperty):
-          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sam.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .bucket("bucket")
-   * .key("key")
-   * .version(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-key)
-     */
-    public fun key(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-version)
-     */
-    public fun version(): Number
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket the value to be set. 
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param key the value to be set. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param version the value to be set. 
-       */
-      public fun version(version: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.builder()
-
-      /**
-       * @param bucket the value to be set. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param key the value to be set. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param version the value to be set. 
-       */
-      override fun version(version: Number) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-version)
-       */
-      override fun version(): Number = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty
     }
   }
 
@@ -1665,8 +1255,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty,
     ) : CdkObject(cdkObject), CorsConfigurationObjectProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-corsconfigurationobject.html#cfn-serverless-httpapi-corsconfigurationobject-allowcredentials)
@@ -1724,186 +1313,93 @@ public open class CfnHttpApi internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sam.*;
-   * RouteSettingsProperty routeSettingsProperty = RouteSettingsProperty.builder()
-   * .dataTraceEnabled(false)
-   * .detailedMetricsEnabled(false)
-   * .loggingLevel("loggingLevel")
-   * .throttlingBurstLimit(123)
-   * .throttlingRateLimit(123)
+   * Object authorizers;
+   * HttpApiAuthProperty httpApiAuthProperty = HttpApiAuthProperty.builder()
+   * .authorizers(authorizers)
+   * .defaultAuthorizer("defaultAuthorizer")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html)
    */
-  public interface RouteSettingsProperty {
+  public interface HttpApiAuthProperty {
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-datatraceenabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-authorizers)
      */
-    public fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+    public fun authorizers(): Any? = unwrap(this).getAuthorizers()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-detailedmetricsenabled)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-defaultauthorizer)
      */
-    public fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
+    public fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-logginglevel)
-     */
-    public fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingburstlimit)
-     */
-    public fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingratelimit)
-     */
-    public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
-
-    /**
-     * A builder for [RouteSettingsProperty]
+     * A builder for [HttpApiAuthProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dataTraceEnabled the value to be set.
+       * @param authorizers the value to be set.
        */
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
+      public fun authorizers(authorizers: Any)
 
       /**
-       * @param dataTraceEnabled the value to be set.
+       * @param defaultAuthorizer the value to be set.
        */
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
-
-      /**
-       * @param detailedMetricsEnabled the value to be set.
-       */
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
-
-      /**
-       * @param detailedMetricsEnabled the value to be set.
-       */
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable)
-
-      /**
-       * @param loggingLevel the value to be set.
-       */
-      public fun loggingLevel(loggingLevel: String)
-
-      /**
-       * @param throttlingBurstLimit the value to be set.
-       */
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
-
-      /**
-       * @param throttlingRateLimit the value to be set.
-       */
-      public fun throttlingRateLimit(throttlingRateLimit: Number)
+      public fun defaultAuthorizer(defaultAuthorizer: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.Builder =
-          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.builder()
+          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.builder()
 
       /**
-       * @param dataTraceEnabled the value to be set.
+       * @param authorizers the value to be set.
        */
-      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled)
+      override fun authorizers(authorizers: Any) {
+        cdkBuilder.authorizers(authorizers)
       }
 
       /**
-       * @param dataTraceEnabled the value to be set.
+       * @param defaultAuthorizer the value to be set.
        */
-      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+      override fun defaultAuthorizer(defaultAuthorizer: String) {
+        cdkBuilder.defaultAuthorizer(defaultAuthorizer)
       }
 
-      /**
-       * @param detailedMetricsEnabled the value to be set.
-       */
-      override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
-      }
-
-      /**
-       * @param detailedMetricsEnabled the value to be set.
-       */
-      override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param loggingLevel the value to be set.
-       */
-      override fun loggingLevel(loggingLevel: String) {
-        cdkBuilder.loggingLevel(loggingLevel)
-      }
-
-      /**
-       * @param throttlingBurstLimit the value to be set.
-       */
-      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-        cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
-      }
-
-      /**
-       * @param throttlingRateLimit the value to be set.
-       */
-      override fun throttlingRateLimit(throttlingRateLimit: Number) {
-        cdkBuilder.throttlingRateLimit(throttlingRateLimit)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty =
+      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty,
-    ) : CdkObject(cdkObject), RouteSettingsProperty {
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty,
+    ) : CdkObject(cdkObject), HttpApiAuthProperty {
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-datatraceenabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-authorizers)
        */
-      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+      override fun authorizers(): Any? = unwrap(this).getAuthorizers()
 
       /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-detailedmetricsenabled)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html#cfn-serverless-httpapi-httpapiauth-defaultauthorizer)
        */
-      override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-logginglevel)
-       */
-      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingburstlimit)
-       */
-      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingratelimit)
-       */
-      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+      override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RouteSettingsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HttpApiAuthProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty):
-          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RouteSettingsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty):
+          HttpApiAuthProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpApiAuthProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: RouteSettingsProperty):
-          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty
+      internal fun unwrap(wrapped: HttpApiAuthProperty):
+          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty
     }
   }
 
@@ -2133,8 +1629,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty,
     ) : CdkObject(cdkObject), HttpApiDomainConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapidomainconfiguration.html#cfn-serverless-httpapi-httpapidomainconfiguration-basepath)
@@ -2271,8 +1766,7 @@ public open class CfnHttpApi internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty,
     ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-mutualtlsauthentication.html#cfn-serverless-httpapi-mutualtlsauthentication-truststoreuri)
@@ -2300,6 +1794,507 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * Route53ConfigurationProperty route53ConfigurationProperty =
+   * Route53ConfigurationProperty.builder()
+   * .distributedDomainName("distributedDomainName")
+   * .evaluateTargetHealth(false)
+   * .hostedZoneId("hostedZoneId")
+   * .hostedZoneName("hostedZoneName")
+   * .ipV6(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html)
+   */
+  public interface Route53ConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-distributeddomainname)
+     */
+    public fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-evaluatetargethealth)
+     */
+    public fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzoneid)
+     */
+    public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzonename)
+     */
+    public fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-ipv6)
+     */
+    public fun ipV6(): Any? = unwrap(this).getIpV6()
+
+    /**
+     * A builder for [Route53ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      public fun distributedDomainName(distributedDomainName: String)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      public fun hostedZoneId(hostedZoneId: String)
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      public fun hostedZoneName(hostedZoneName: String)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: Boolean)
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      public fun ipV6(ipV6: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.builder()
+
+      /**
+       * @param distributedDomainName the value to be set.
+       */
+      override fun distributedDomainName(distributedDomainName: String) {
+        cdkBuilder.distributedDomainName(distributedDomainName)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+      }
+
+      /**
+       * @param evaluateTargetHealth the value to be set.
+       */
+      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param hostedZoneId the value to be set.
+       */
+      override fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+      }
+
+      /**
+       * @param hostedZoneName the value to be set.
+       */
+      override fun hostedZoneName(hostedZoneName: String) {
+        cdkBuilder.hostedZoneName(hostedZoneName)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: Boolean) {
+        cdkBuilder.ipV6(ipV6)
+      }
+
+      /**
+       * @param ipV6 the value to be set.
+       */
+      override fun ipV6(ipV6: IResolvable) {
+        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty,
+    ) : CdkObject(cdkObject), Route53ConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-distributeddomainname)
+       */
+      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-evaluatetargethealth)
+       */
+      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzoneid)
+       */
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-hostedzonename)
+       */
+      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html#cfn-serverless-httpapi-route53configuration-ipv6)
+       */
+      override fun ipV6(): Any? = unwrap(this).getIpV6()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Route53ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty):
+          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Route53ConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Route53ConfigurationProperty):
+          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * RouteSettingsProperty routeSettingsProperty = RouteSettingsProperty.builder()
+   * .dataTraceEnabled(false)
+   * .detailedMetricsEnabled(false)
+   * .loggingLevel("loggingLevel")
+   * .throttlingBurstLimit(123)
+   * .throttlingRateLimit(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html)
+   */
+  public interface RouteSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-datatraceenabled)
+     */
+    public fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-detailedmetricsenabled)
+     */
+    public fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-logginglevel)
+     */
+    public fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingburstlimit)
+     */
+    public fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingratelimit)
+     */
+    public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+
+    /**
+     * A builder for [RouteSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataTraceEnabled the value to be set.
+       */
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
+
+      /**
+       * @param dataTraceEnabled the value to be set.
+       */
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
+
+      /**
+       * @param detailedMetricsEnabled the value to be set.
+       */
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
+
+      /**
+       * @param detailedMetricsEnabled the value to be set.
+       */
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable)
+
+      /**
+       * @param loggingLevel the value to be set.
+       */
+      public fun loggingLevel(loggingLevel: String)
+
+      /**
+       * @param throttlingBurstLimit the value to be set.
+       */
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
+
+      /**
+       * @param throttlingRateLimit the value to be set.
+       */
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.builder()
+
+      /**
+       * @param dataTraceEnabled the value to be set.
+       */
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled)
+      }
+
+      /**
+       * @param dataTraceEnabled the value to be set.
+       */
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param detailedMetricsEnabled the value to be set.
+       */
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
+      }
+
+      /**
+       * @param detailedMetricsEnabled the value to be set.
+       */
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param loggingLevel the value to be set.
+       */
+      override fun loggingLevel(loggingLevel: String) {
+        cdkBuilder.loggingLevel(loggingLevel)
+      }
+
+      /**
+       * @param throttlingBurstLimit the value to be set.
+       */
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+        cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
+      }
+
+      /**
+       * @param throttlingRateLimit the value to be set.
+       */
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
+        cdkBuilder.throttlingRateLimit(throttlingRateLimit)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty,
+    ) : CdkObject(cdkObject), RouteSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-datatraceenabled)
+       */
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-detailedmetricsenabled)
+       */
+      override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-logginglevel)
+       */
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingburstlimit)
+       */
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-routesettings.html#cfn-serverless-httpapi-routesettings-throttlingratelimit)
+       */
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RouteSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty):
+          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RouteSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RouteSettingsProperty):
+          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sam.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .bucket("bucket")
+   * .key("key")
+   * .version(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-key)
+     */
+    public fun key(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-version)
+     */
+    public fun version(): Number
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket the value to be set. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param key the value to be set. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param version the value to be set. 
+       */
+      public fun version(version: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.builder()
+
+      /**
+       * @param bucket the value to be set. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param key the value to be set. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param version the value to be set. 
+       */
+      override fun version(version: Number) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-s3location.html#cfn-serverless-httpapi-s3location-version)
+       */
+      override fun version(): Number = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty
     }
   }
 }

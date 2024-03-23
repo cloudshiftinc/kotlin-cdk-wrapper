@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html)
  */
-public open class CfnTableOptimizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer,
+public open class CfnTableOptimizer(
+  cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -318,7 +318,8 @@ public open class CfnTableOptimizer internal constructor(
         CfnTableOptimizer = CfnTableOptimizer(cdkObject)
 
     internal fun unwrap(wrapped: CfnTableOptimizer):
-        software.amazon.awscdk.services.glue.CfnTableOptimizer = wrapped.cdkObject
+        software.amazon.awscdk.services.glue.CfnTableOptimizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.glue.CfnTableOptimizer
   }
 
   /**
@@ -411,8 +412,7 @@ public open class CfnTableOptimizer internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty,
     ) : CdkObject(cdkObject), TableOptimizerConfigurationProperty {
       /**
        * Whether the table optimization is enabled.

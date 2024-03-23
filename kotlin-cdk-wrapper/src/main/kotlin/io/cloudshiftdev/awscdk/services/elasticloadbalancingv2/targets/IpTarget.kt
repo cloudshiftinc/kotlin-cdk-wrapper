@@ -31,9 +31,8 @@ import kotlin.String
  * IpTarget ipTarget = new IpTarget("ipAddress", 123, "availabilityZone");
  * ```
  */
-public open class IpTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget,
+public open class IpTarget(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
   public constructor(ipAddress: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress)
@@ -82,5 +81,6 @@ public open class IpTarget internal constructor(
 
     internal fun unwrap(wrapped: IpTarget):
         software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget = wrapped.cdkObject
+        as software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget
   }
 }

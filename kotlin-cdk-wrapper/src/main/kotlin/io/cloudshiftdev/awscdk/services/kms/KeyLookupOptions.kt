@@ -59,7 +59,7 @@ public interface KeyLookupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions,
+    cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions,
   ) : CdkObject(cdkObject), KeyLookupOptions {
     /**
      * The alias name of the Key.

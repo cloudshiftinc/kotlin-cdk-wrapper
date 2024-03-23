@@ -39,9 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspointpolicy.html)
  */
-public open class CfnMultiRegionAccessPointPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy,
+public open class CfnMultiRegionAccessPointPolicy(
+  cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -175,7 +174,8 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
         CfnMultiRegionAccessPointPolicy = CfnMultiRegionAccessPointPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiRegionAccessPointPolicy):
-        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy
   }
 
   /**
@@ -238,8 +238,7 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty,
+      cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty,
     ) : CdkObject(cdkObject), PolicyStatusProperty {
       /**
        * The policy status for this bucket.

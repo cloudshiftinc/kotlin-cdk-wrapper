@@ -18,8 +18,8 @@ import kotlin.String
  * fn.addLayers(new AwsCliLayer(this, "AwsCliLayer"));
  * ```
  */
-public open class AwsCliLayer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer,
+public open class AwsCliLayer(
+  cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
       this(software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer(scope.let(Construct::unwrap), id)
@@ -30,6 +30,6 @@ public open class AwsCliLayer internal constructor(
         = AwsCliLayer(cdkObject)
 
     internal fun unwrap(wrapped: AwsCliLayer): software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer
   }
 }

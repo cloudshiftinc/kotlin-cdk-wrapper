@@ -118,9 +118,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-responseheaderspolicy.html)
  */
-public open class CfnResponseHeadersPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy,
+public open class CfnResponseHeadersPolicy(
+  cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -286,15 +285,16 @@ public open class CfnResponseHeadersPolicy internal constructor(
         CfnResponseHeadersPolicy = CfnResponseHeadersPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnResponseHeadersPolicy):
-        software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
   }
 
   /**
-   * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the
-   * header's value.
+   * A list of HTTP header names that CloudFront includes as values for the
+   * `Access-Control-Allow-Headers` HTTP response header.
    *
-   * For more information about the `X-Frame-Options` HTTP response header, see
-   * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+   * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+   * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
    * in the MDN Web Docs.
    *
    * Example:
@@ -303,144 +303,96 @@ public open class CfnResponseHeadersPolicy internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * FrameOptionsProperty frameOptionsProperty = FrameOptionsProperty.builder()
-   * .frameOption("frameOption")
-   * .override(false)
+   * AccessControlAllowHeadersProperty accessControlAllowHeadersProperty =
+   * AccessControlAllowHeadersProperty.builder()
+   * .items(List.of("items"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html)
    */
-  public interface FrameOptionsProperty {
+  public interface AccessControlAllowHeadersProperty {
     /**
-     * The value of the `X-Frame-Options` HTTP response header. Valid values are `DENY` and
-     * `SAMEORIGIN` .
+     * The list of HTTP header names.
      *
-     * For more information about these values, see
-     * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-     * in the MDN Web Docs.
+     * You can specify `*` to allow all headers.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-frameoption)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolallowheaders-items)
      */
-    public fun frameOption(): String
+    public fun items(): List<String>
 
     /**
-     * A Boolean that determines whether CloudFront overrides the `X-Frame-Options` HTTP response
-     * header received from the origin with the one specified in this response headers policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-override)
-     */
-    public fun `override`(): Any
-
-    /**
-     * A builder for [FrameOptionsProperty]
+     * A builder for [AccessControlAllowHeadersProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param frameOption The value of the `X-Frame-Options` HTTP response header. Valid values
-       * are `DENY` and `SAMEORIGIN` . 
-       * For more information about these values, see
-       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-       * in the MDN Web Docs.
+       * @param items The list of HTTP header names. 
+       * You can specify `*` to allow all headers.
        */
-      public fun frameOption(frameOption: String)
+      public fun items(items: List<String>)
 
       /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
+       * @param items The list of HTTP header names. 
+       * You can specify `*` to allow all headers.
        */
-      public fun `override`(`override`: Boolean)
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      public fun `override`(`override`: IResolvable)
+      public fun items(vararg items: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty.Builder
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.Builder
           =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty.builder()
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.builder()
 
       /**
-       * @param frameOption The value of the `X-Frame-Options` HTTP response header. Valid values
-       * are `DENY` and `SAMEORIGIN` . 
-       * For more information about these values, see
-       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-       * in the MDN Web Docs.
+       * @param items The list of HTTP header names. 
+       * You can specify `*` to allow all headers.
        */
-      override fun frameOption(frameOption: String) {
-        cdkBuilder.frameOption(frameOption)
+      override fun items(items: List<String>) {
+        cdkBuilder.items(items)
       }
 
       /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
+       * @param items The list of HTTP header names. 
+       * You can specify `*` to allow all headers.
        */
-      override fun `override`(`override`: Boolean) {
-        cdkBuilder.`override`(`override`)
-      }
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
-      }
+      override fun items(vararg items: String): Unit = items(items.toList())
 
       public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty,
-    ) : CdkObject(cdkObject), FrameOptionsProperty {
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty,
+    ) : CdkObject(cdkObject), AccessControlAllowHeadersProperty {
       /**
-       * The value of the `X-Frame-Options` HTTP response header. Valid values are `DENY` and
-       * `SAMEORIGIN` .
+       * The list of HTTP header names.
        *
-       * For more information about these values, see
-       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-       * in the MDN Web Docs.
+       * You can specify `*` to allow all headers.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-frameoption)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolallowheaders-items)
        */
-      override fun frameOption(): String = unwrap(this).getFrameOption()
-
-      /**
-       * A Boolean that determines whether CloudFront overrides the `X-Frame-Options` HTTP response
-       * header received from the origin with the one specified in this response headers policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-override)
-       */
-      override fun `override`(): Any = unwrap(this).getOverride()
+      override fun items(): List<String> = unwrap(this).getItems()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FrameOptionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AccessControlAllowHeadersProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty):
-          FrameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? FrameOptionsProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty):
+          AccessControlAllowHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlAllowHeadersProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: FrameOptionsProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty
+      internal fun unwrap(wrapped: AccessControlAllowHeadersProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
     }
   }
 
@@ -565,8 +517,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty,
     ) : CdkObject(cdkObject), AccessControlAllowMethodsProperty {
       /**
        * The list of HTTP methods. Valid values are:.
@@ -603,6 +554,1072 @@ public open class CfnResponseHeadersPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty
+    }
+  }
+
+  /**
+   * A list of origins (domain names) that CloudFront can use as the value for the
+   * `Access-Control-Allow-Origin` HTTP response header.
+   *
+   * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+   * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * AccessControlAllowOriginsProperty accessControlAllowOriginsProperty =
+   * AccessControlAllowOriginsProperty.builder()
+   * .items(List.of("items"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html)
+   */
+  public interface AccessControlAllowOriginsProperty {
+    /**
+     * The list of origins (domain names).
+     *
+     * You can specify `*` to allow all origins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html#cfn-cloudfront-responseheaderspolicy-accesscontrolalloworigins-items)
+     */
+    public fun items(): List<String>
+
+    /**
+     * A builder for [AccessControlAllowOriginsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param items The list of origins (domain names). 
+       * You can specify `*` to allow all origins.
+       */
+      public fun items(items: List<String>)
+
+      /**
+       * @param items The list of origins (domain names). 
+       * You can specify `*` to allow all origins.
+       */
+      public fun items(vararg items: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty.builder()
+
+      /**
+       * @param items The list of origins (domain names). 
+       * You can specify `*` to allow all origins.
+       */
+      override fun items(items: List<String>) {
+        cdkBuilder.items(items)
+      }
+
+      /**
+       * @param items The list of origins (domain names). 
+       * You can specify `*` to allow all origins.
+       */
+      override fun items(vararg items: String): Unit = items(items.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty,
+    ) : CdkObject(cdkObject), AccessControlAllowOriginsProperty {
+      /**
+       * The list of origins (domain names).
+       *
+       * You can specify `*` to allow all origins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html#cfn-cloudfront-responseheaderspolicy-accesscontrolalloworigins-items)
+       */
+      override fun items(): List<String> = unwrap(this).getItems()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AccessControlAllowOriginsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty):
+          AccessControlAllowOriginsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlAllowOriginsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessControlAllowOriginsProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
+    }
+  }
+
+  /**
+   * A list of HTTP headers that CloudFront includes as values for the
+   * `Access-Control-Expose-Headers` HTTP response header.
+   *
+   * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+   * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * AccessControlExposeHeadersProperty accessControlExposeHeadersProperty =
+   * AccessControlExposeHeadersProperty.builder()
+   * .items(List.of("items"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html)
+   */
+  public interface AccessControlExposeHeadersProperty {
+    /**
+     * The list of HTTP headers.
+     *
+     * You can specify `*` to expose all headers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolexposeheaders-items)
+     */
+    public fun items(): List<String>
+
+    /**
+     * A builder for [AccessControlExposeHeadersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param items The list of HTTP headers. 
+       * You can specify `*` to expose all headers.
+       */
+      public fun items(items: List<String>)
+
+      /**
+       * @param items The list of HTTP headers. 
+       * You can specify `*` to expose all headers.
+       */
+      public fun items(vararg items: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty.builder()
+
+      /**
+       * @param items The list of HTTP headers. 
+       * You can specify `*` to expose all headers.
+       */
+      override fun items(items: List<String>) {
+        cdkBuilder.items(items)
+      }
+
+      /**
+       * @param items The list of HTTP headers. 
+       * You can specify `*` to expose all headers.
+       */
+      override fun items(vararg items: String): Unit = items(items.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty,
+    ) : CdkObject(cdkObject), AccessControlExposeHeadersProperty {
+      /**
+       * The list of HTTP headers.
+       *
+       * You can specify `*` to expose all headers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolexposeheaders-items)
+       */
+      override fun items(): List<String> = unwrap(this).getItems()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AccessControlExposeHeadersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty):
+          AccessControlExposeHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlExposeHeadersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AccessControlExposeHeadersProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
+    }
+  }
+
+  /**
+   * The policy directives and their values that CloudFront includes as values for the
+   * `Content-Security-Policy` HTTP response header.
+   *
+   * For more information about the `Content-Security-Policy` HTTP response header, see
+   * [Content-Security-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * ContentSecurityPolicyProperty contentSecurityPolicyProperty =
+   * ContentSecurityPolicyProperty.builder()
+   * .contentSecurityPolicy("contentSecurityPolicy")
+   * .override(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html)
+   */
+  public interface ContentSecurityPolicyProperty {
+    /**
+     * The policy directives and their values that CloudFront includes as values for the
+     * `Content-Security-Policy` HTTP response header.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-contentsecuritypolicy)
+     */
+    public fun contentSecurityPolicy(): String
+
+    /**
+     * A Boolean that determines whether CloudFront overrides the `Content-Security-Policy` HTTP
+     * response header received from the origin with the one specified in this response headers policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-override)
+     */
+    public fun `override`(): Any
+
+    /**
+     * A builder for [ContentSecurityPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param contentSecurityPolicy The policy directives and their values that CloudFront
+       * includes as values for the `Content-Security-Policy` HTTP response header. 
+       */
+      public fun contentSecurityPolicy(contentSecurityPolicy: String)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      public fun `override`(`override`: Boolean)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      public fun `override`(`override`: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty.builder()
+
+      /**
+       * @param contentSecurityPolicy The policy directives and their values that CloudFront
+       * includes as values for the `Content-Security-Policy` HTTP response header. 
+       */
+      override fun contentSecurityPolicy(contentSecurityPolicy: String) {
+        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      override fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      override fun `override`(`override`: IResolvable) {
+        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty,
+    ) : CdkObject(cdkObject), ContentSecurityPolicyProperty {
+      /**
+       * The policy directives and their values that CloudFront includes as values for the
+       * `Content-Security-Policy` HTTP response header.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-contentsecuritypolicy)
+       */
+      override fun contentSecurityPolicy(): String = unwrap(this).getContentSecurityPolicy()
+
+      /**
+       * A Boolean that determines whether CloudFront overrides the `Content-Security-Policy` HTTP
+       * response header received from the origin with the one specified in this response headers
+       * policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-override)
+       */
+      override fun `override`(): Any = unwrap(this).getOverride()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContentSecurityPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty):
+          ContentSecurityPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContentSecurityPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContentSecurityPolicyProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
+    }
+  }
+
+  /**
+   * Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with
+   * its value set to `nosniff` .
+   *
+   * For more information about the `X-Content-Type-Options` HTTP response header, see
+   * [X-Content-Type-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * ContentTypeOptionsProperty contentTypeOptionsProperty = ContentTypeOptionsProperty.builder()
+   * .override(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html)
+   */
+  public interface ContentTypeOptionsProperty {
+    /**
+     * A Boolean that determines whether CloudFront overrides the `X-Content-Type-Options` HTTP
+     * response header received from the origin with the one specified in this response headers policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html#cfn-cloudfront-responseheaderspolicy-contenttypeoptions-override)
+     */
+    public fun `override`(): Any
+
+    /**
+     * A builder for [ContentTypeOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      public fun `override`(`override`: Boolean)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      public fun `override`(`override`: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty.builder()
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      override fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
+       * in this response headers policy. 
+       */
+      override fun `override`(`override`: IResolvable) {
+        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty,
+    ) : CdkObject(cdkObject), ContentTypeOptionsProperty {
+      /**
+       * A Boolean that determines whether CloudFront overrides the `X-Content-Type-Options` HTTP
+       * response header received from the origin with the one specified in this response headers
+       * policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html#cfn-cloudfront-responseheaderspolicy-contenttypeoptions-override)
+       */
+      override fun `override`(): Any = unwrap(this).getOverride()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContentTypeOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty):
+          ContentTypeOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContentTypeOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContentTypeOptionsProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
+    }
+  }
+
+  /**
+   * A configuration for a set of HTTP response headers that are used for cross-origin resource
+   * sharing (CORS).
+   *
+   * CloudFront adds these headers to HTTP responses that it sends for CORS requests that match a
+   * cache behavior associated with this response headers policy.
+   *
+   * For more information about CORS, see [Cross-Origin Resource Sharing
+   * (CORS)](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) in the
+   * MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * CorsConfigProperty corsConfigProperty = CorsConfigProperty.builder()
+   * .accessControlAllowCredentials(false)
+   * .accessControlAllowHeaders(AccessControlAllowHeadersProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlAllowMethods(AccessControlAllowMethodsProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlAllowOrigins(AccessControlAllowOriginsProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .originOverride(false)
+   * // the properties below are optional
+   * .accessControlExposeHeaders(AccessControlExposeHeadersProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlMaxAgeSec(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html)
+   */
+  public interface CorsConfigProperty {
+    /**
+     * A Boolean that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP
+     * response header.
+     *
+     * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+     * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowcredentials)
+     */
+    public fun accessControlAllowCredentials(): Any
+
+    /**
+     * A list of HTTP header names that CloudFront includes as values for the
+     * `Access-Control-Allow-Headers` HTTP response header.
+     *
+     * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+     * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowheaders)
+     */
+    public fun accessControlAllowHeaders(): Any
+
+    /**
+     * A list of HTTP methods that CloudFront includes as values for the
+     * `Access-Control-Allow-Methods` HTTP response header.
+     *
+     * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+     * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowmethods)
+     */
+    public fun accessControlAllowMethods(): Any
+
+    /**
+     * A list of origins (domain names) that CloudFront can use as the value for the
+     * `Access-Control-Allow-Origin` HTTP response header.
+     *
+     * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+     * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolalloworigins)
+     */
+    public fun accessControlAllowOrigins(): Any
+
+    /**
+     * A list of HTTP headers that CloudFront includes as values for the
+     * `Access-Control-Expose-Headers` HTTP response header.
+     *
+     * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+     * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolexposeheaders)
+     */
+    public fun accessControlExposeHeaders(): Any? = unwrap(this).getAccessControlExposeHeaders()
+
+    /**
+     * A number that CloudFront uses as the value for the `Access-Control-Max-Age` HTTP response
+     * header.
+     *
+     * For more information about the `Access-Control-Max-Age` HTTP response header, see
+     * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolmaxagesec)
+     */
+    public fun accessControlMaxAgeSec(): Number? = unwrap(this).getAccessControlMaxAgeSec()
+
+    /**
+     * A Boolean that determines whether CloudFront overrides HTTP response headers received from
+     * the origin with the ones specified in this response headers policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-originoverride)
+     */
+    public fun originOverride(): Any
+
+    /**
+     * A builder for [CorsConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
+       * `Access-Control-Allow-Credentials` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlAllowCredentials(accessControlAllowCredentials: Boolean)
+
+      /**
+       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
+       * `Access-Control-Allow-Credentials` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlAllowCredentials(accessControlAllowCredentials: IResolvable)
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlAllowHeaders(accessControlAllowHeaders: IResolvable)
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      public
+          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty)
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3bcde99d4105a597f432e2c2ed6c5d4fc2fbc8a6147c06fa73267c62f585ea13")
+      public
+          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty.Builder.() -> Unit)
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlAllowMethods(accessControlAllowMethods: IResolvable)
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      public
+          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty)
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2b680abc572b1934f4cdf2bf54e34f8816cbb88b5222d2b111bcb6dd11f87a5b")
+      public
+          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty.Builder.() -> Unit)
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlAllowOrigins(accessControlAllowOrigins: IResolvable)
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      public
+          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty)
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("444a95bdbc2520e95344520931fcf2ac8cb4045c5967fd889c4981e7806275f9")
+      public
+          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty.Builder.() -> Unit)
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlExposeHeaders(accessControlExposeHeaders: IResolvable)
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      public
+          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty)
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c8372b795594c49a504376dbb0e2762eb84886ac7ed2fc07745d334ae728355")
+      public
+          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty.Builder.() -> Unit)
+
+      /**
+       * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the
+       * `Access-Control-Max-Age` HTTP response header.
+       * For more information about the `Access-Control-Max-Age` HTTP response header, see
+       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+       * in the MDN Web Docs.
+       */
+      public fun accessControlMaxAgeSec(accessControlMaxAgeSec: Number)
+
+      /**
+       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
+       * headers received from the origin with the ones specified in this response headers policy. 
+       */
+      public fun originOverride(originOverride: Boolean)
+
+      /**
+       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
+       * headers received from the origin with the ones specified in this response headers policy. 
+       */
+      public fun originOverride(originOverride: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty.builder()
+
+      /**
+       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
+       * `Access-Control-Allow-Credentials` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlAllowCredentials(accessControlAllowCredentials: Boolean) {
+        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials)
+      }
+
+      /**
+       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
+       * `Access-Control-Allow-Credentials` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlAllowCredentials(accessControlAllowCredentials: IResolvable) {
+        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlAllowHeaders(accessControlAllowHeaders: IResolvable) {
+        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      override
+          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty) {
+        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(AccessControlAllowHeadersProperty::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
+       * values for the `Access-Control-Allow-Headers` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3bcde99d4105a597f432e2c2ed6c5d4fc2fbc8a6147c06fa73267c62f585ea13")
+      override
+          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty.Builder.() -> Unit):
+          Unit =
+          accessControlAllowHeaders(AccessControlAllowHeadersProperty(accessControlAllowHeaders))
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlAllowMethods(accessControlAllowMethods: IResolvable) {
+        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      override
+          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty) {
+        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(AccessControlAllowMethodsProperty::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
+       * for the `Access-Control-Allow-Methods` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2b680abc572b1934f4cdf2bf54e34f8816cbb88b5222d2b111bcb6dd11f87a5b")
+      override
+          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty.Builder.() -> Unit):
+          Unit =
+          accessControlAllowMethods(AccessControlAllowMethodsProperty(accessControlAllowMethods))
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlAllowOrigins(accessControlAllowOrigins: IResolvable) {
+        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      override
+          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty) {
+        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(AccessControlAllowOriginsProperty::unwrap))
+      }
+
+      /**
+       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
+       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("444a95bdbc2520e95344520931fcf2ac8cb4045c5967fd889c4981e7806275f9")
+      override
+          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty.Builder.() -> Unit):
+          Unit =
+          accessControlAllowOrigins(AccessControlAllowOriginsProperty(accessControlAllowOrigins))
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlExposeHeaders(accessControlExposeHeaders: IResolvable) {
+        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      override
+          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty) {
+        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(AccessControlExposeHeadersProperty::unwrap))
+      }
+
+      /**
+       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
+       * for the `Access-Control-Expose-Headers` HTTP response header.
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9c8372b795594c49a504376dbb0e2762eb84886ac7ed2fc07745d334ae728355")
+      override
+          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty.Builder.() -> Unit):
+          Unit =
+          accessControlExposeHeaders(AccessControlExposeHeadersProperty(accessControlExposeHeaders))
+
+      /**
+       * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the
+       * `Access-Control-Max-Age` HTTP response header.
+       * For more information about the `Access-Control-Max-Age` HTTP response header, see
+       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+       * in the MDN Web Docs.
+       */
+      override fun accessControlMaxAgeSec(accessControlMaxAgeSec: Number) {
+        cdkBuilder.accessControlMaxAgeSec(accessControlMaxAgeSec)
+      }
+
+      /**
+       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
+       * headers received from the origin with the ones specified in this response headers policy. 
+       */
+      override fun originOverride(originOverride: Boolean) {
+        cdkBuilder.originOverride(originOverride)
+      }
+
+      /**
+       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
+       * headers received from the origin with the ones specified in this response headers policy. 
+       */
+      override fun originOverride(originOverride: IResolvable) {
+        cdkBuilder.originOverride(originOverride.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty,
+    ) : CdkObject(cdkObject), CorsConfigProperty {
+      /**
+       * A Boolean that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP
+       * response header.
+       *
+       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
+       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowcredentials)
+       */
+      override fun accessControlAllowCredentials(): Any =
+          unwrap(this).getAccessControlAllowCredentials()
+
+      /**
+       * A list of HTTP header names that CloudFront includes as values for the
+       * `Access-Control-Allow-Headers` HTTP response header.
+       *
+       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
+       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowheaders)
+       */
+      override fun accessControlAllowHeaders(): Any = unwrap(this).getAccessControlAllowHeaders()
+
+      /**
+       * A list of HTTP methods that CloudFront includes as values for the
+       * `Access-Control-Allow-Methods` HTTP response header.
+       *
+       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowmethods)
+       */
+      override fun accessControlAllowMethods(): Any = unwrap(this).getAccessControlAllowMethods()
+
+      /**
+       * A list of origins (domain names) that CloudFront can use as the value for the
+       * `Access-Control-Allow-Origin` HTTP response header.
+       *
+       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
+       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolalloworigins)
+       */
+      override fun accessControlAllowOrigins(): Any = unwrap(this).getAccessControlAllowOrigins()
+
+      /**
+       * A list of HTTP headers that CloudFront includes as values for the
+       * `Access-Control-Expose-Headers` HTTP response header.
+       *
+       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
+       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolexposeheaders)
+       */
+      override fun accessControlExposeHeaders(): Any? = unwrap(this).getAccessControlExposeHeaders()
+
+      /**
+       * A number that CloudFront uses as the value for the `Access-Control-Max-Age` HTTP response
+       * header.
+       *
+       * For more information about the `Access-Control-Max-Age` HTTP response header, see
+       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolmaxagesec)
+       */
+      override fun accessControlMaxAgeSec(): Number? = unwrap(this).getAccessControlMaxAgeSec()
+
+      /**
+       * A Boolean that determines whether CloudFront overrides HTTP response headers received from
+       * the origin with the ones specified in this response headers policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-originoverride)
+       */
+      override fun originOverride(): Any = unwrap(this).getOriginOverride()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CorsConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty):
+          CorsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CorsConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty
     }
   }
 
@@ -720,8 +1737,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty,
     ) : CdkObject(cdkObject), CustomHeaderProperty {
       /**
        * The HTTP response header name.
@@ -761,6 +1777,1146 @@ public open class CfnResponseHeadersPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty
+    }
+  }
+
+  /**
+   * A list of HTTP response header names and their values.
+   *
+   * CloudFront includes these headers in HTTP responses that it sends for requests that match a
+   * cache behavior that's associated with this response headers policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * CustomHeadersConfigProperty customHeadersConfigProperty = CustomHeadersConfigProperty.builder()
+   * .items(List.of(CustomHeaderProperty.builder()
+   * .header("header")
+   * .override(false)
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html)
+   */
+  public interface CustomHeadersConfigProperty {
+    /**
+     * The list of HTTP response headers and their values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html#cfn-cloudfront-responseheaderspolicy-customheadersconfig-items)
+     */
+    public fun items(): Any
+
+    /**
+     * A builder for [CustomHeadersConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      public fun items(items: IResolvable)
+
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      public fun items(items: List<Any>)
+
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      public fun items(vararg items: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty.builder()
+
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      override fun items(items: IResolvable) {
+        cdkBuilder.items(items.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      override fun items(items: List<Any>) {
+        cdkBuilder.items(items)
+      }
+
+      /**
+       * @param items The list of HTTP response headers and their values. 
+       */
+      override fun items(vararg items: Any): Unit = items(items.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty,
+    ) : CdkObject(cdkObject), CustomHeadersConfigProperty {
+      /**
+       * The list of HTTP response headers and their values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html#cfn-cloudfront-responseheaderspolicy-customheadersconfig-items)
+       */
+      override fun items(): Any = unwrap(this).getItems()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomHeadersConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty):
+          CustomHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomHeadersConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomHeadersConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
+    }
+  }
+
+  /**
+   * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the
+   * header's value.
+   *
+   * For more information about the `X-Frame-Options` HTTP response header, see
+   * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * FrameOptionsProperty frameOptionsProperty = FrameOptionsProperty.builder()
+   * .frameOption("frameOption")
+   * .override(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html)
+   */
+  public interface FrameOptionsProperty {
+    /**
+     * The value of the `X-Frame-Options` HTTP response header. Valid values are `DENY` and
+     * `SAMEORIGIN` .
+     *
+     * For more information about these values, see
+     * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-frameoption)
+     */
+    public fun frameOption(): String
+
+    /**
+     * A Boolean that determines whether CloudFront overrides the `X-Frame-Options` HTTP response
+     * header received from the origin with the one specified in this response headers policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-override)
+     */
+    public fun `override`(): Any
+
+    /**
+     * A builder for [FrameOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param frameOption The value of the `X-Frame-Options` HTTP response header. Valid values
+       * are `DENY` and `SAMEORIGIN` . 
+       * For more information about these values, see
+       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+       * in the MDN Web Docs.
+       */
+      public fun frameOption(frameOption: String)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      public fun `override`(`override`: Boolean)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      public fun `override`(`override`: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty.builder()
+
+      /**
+       * @param frameOption The value of the `X-Frame-Options` HTTP response header. Valid values
+       * are `DENY` and `SAMEORIGIN` . 
+       * For more information about these values, see
+       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+       * in the MDN Web Docs.
+       */
+      override fun frameOption(frameOption: String) {
+        cdkBuilder.frameOption(frameOption)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      override fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `X-Frame-Options` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      override fun `override`(`override`: IResolvable) {
+        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty,
+    ) : CdkObject(cdkObject), FrameOptionsProperty {
+      /**
+       * The value of the `X-Frame-Options` HTTP response header. Valid values are `DENY` and
+       * `SAMEORIGIN` .
+       *
+       * For more information about these values, see
+       * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-frameoption)
+       */
+      override fun frameOption(): String = unwrap(this).getFrameOption()
+
+      /**
+       * A Boolean that determines whether CloudFront overrides the `X-Frame-Options` HTTP response
+       * header received from the origin with the one specified in this response headers policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html#cfn-cloudfront-responseheaderspolicy-frameoptions-override)
+       */
+      override fun `override`(): Any = unwrap(this).getOverride()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FrameOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty):
+          FrameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? FrameOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FrameOptionsProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty
+    }
+  }
+
+  /**
+   * Determines whether CloudFront includes the `Referrer-Policy` HTTP response header and the
+   * header's value.
+   *
+   * For more information about the `Referrer-Policy` HTTP response header, see
+   * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+   * in the MDN Web Docs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * ReferrerPolicyProperty referrerPolicyProperty = ReferrerPolicyProperty.builder()
+   * .override(false)
+   * .referrerPolicy("referrerPolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html)
+   */
+  public interface ReferrerPolicyProperty {
+    /**
+     * A Boolean that determines whether CloudFront overrides the `Referrer-Policy` HTTP response
+     * header received from the origin with the one specified in this response headers policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-override)
+     */
+    public fun `override`(): Any
+
+    /**
+     * The value of the `Referrer-Policy` HTTP response header. Valid values are:.
+     *
+     * * `no-referrer`
+     * * `no-referrer-when-downgrade`
+     * * `origin`
+     * * `origin-when-cross-origin`
+     * * `same-origin`
+     * * `strict-origin`
+     * * `strict-origin-when-cross-origin`
+     * * `unsafe-url`
+     *
+     * For more information about these values, see
+     * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+     * in the MDN Web Docs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-referrerpolicy)
+     */
+    public fun referrerPolicy(): String
+
+    /**
+     * A builder for [ReferrerPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      public fun `override`(`override`: Boolean)
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      public fun `override`(`override`: IResolvable)
+
+      /**
+       * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid values
+       * are:. 
+       * * `no-referrer`
+       * * `no-referrer-when-downgrade`
+       * * `origin`
+       * * `origin-when-cross-origin`
+       * * `same-origin`
+       * * `strict-origin`
+       * * `strict-origin-when-cross-origin`
+       * * `unsafe-url`
+       *
+       * For more information about these values, see
+       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+       * in the MDN Web Docs.
+       */
+      public fun referrerPolicy(referrerPolicy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty.builder()
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      override fun `override`(`override`: Boolean) {
+        cdkBuilder.`override`(`override`)
+      }
+
+      /**
+       * @param override A Boolean that determines whether CloudFront overrides the
+       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
+       * response headers policy. 
+       */
+      override fun `override`(`override`: IResolvable) {
+        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid values
+       * are:. 
+       * * `no-referrer`
+       * * `no-referrer-when-downgrade`
+       * * `origin`
+       * * `origin-when-cross-origin`
+       * * `same-origin`
+       * * `strict-origin`
+       * * `strict-origin-when-cross-origin`
+       * * `unsafe-url`
+       *
+       * For more information about these values, see
+       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+       * in the MDN Web Docs.
+       */
+      override fun referrerPolicy(referrerPolicy: String) {
+        cdkBuilder.referrerPolicy(referrerPolicy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty,
+    ) : CdkObject(cdkObject), ReferrerPolicyProperty {
+      /**
+       * A Boolean that determines whether CloudFront overrides the `Referrer-Policy` HTTP response
+       * header received from the origin with the one specified in this response headers policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-override)
+       */
+      override fun `override`(): Any = unwrap(this).getOverride()
+
+      /**
+       * The value of the `Referrer-Policy` HTTP response header. Valid values are:.
+       *
+       * * `no-referrer`
+       * * `no-referrer-when-downgrade`
+       * * `origin`
+       * * `origin-when-cross-origin`
+       * * `same-origin`
+       * * `strict-origin`
+       * * `strict-origin-when-cross-origin`
+       * * `unsafe-url`
+       *
+       * For more information about these values, see
+       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+       * in the MDN Web Docs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-referrerpolicy)
+       */
+      override fun referrerPolicy(): String = unwrap(this).getReferrerPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReferrerPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty):
+          ReferrerPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferrerPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReferrerPolicyProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
+    }
+  }
+
+  /**
+   * The name of an HTTP header that CloudFront removes from HTTP responses to requests that match
+   * the cache behavior that this response headers policy is attached to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * RemoveHeaderProperty removeHeaderProperty = RemoveHeaderProperty.builder()
+   * .header("header")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html)
+   */
+  public interface RemoveHeaderProperty {
+    /**
+     * The HTTP header name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html#cfn-cloudfront-responseheaderspolicy-removeheader-header)
+     */
+    public fun `header`(): String
+
+    /**
+     * A builder for [RemoveHeaderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param header The HTTP header name. 
+       */
+      public fun `header`(`header`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty.builder()
+
+      /**
+       * @param header The HTTP header name. 
+       */
+      override fun `header`(`header`: String) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty,
+    ) : CdkObject(cdkObject), RemoveHeaderProperty {
+      /**
+       * The HTTP header name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html#cfn-cloudfront-responseheaderspolicy-removeheader-header)
+       */
+      override fun `header`(): String = unwrap(this).getHeader()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveHeaderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty):
+          RemoveHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? RemoveHeaderProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemoveHeaderProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty
+    }
+  }
+
+  /**
+   * A list of HTTP header names that CloudFront removes from HTTP responses to requests that match
+   * the cache behavior that this response headers policy is attached to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * RemoveHeadersConfigProperty removeHeadersConfigProperty = RemoveHeadersConfigProperty.builder()
+   * .items(List.of(RemoveHeaderProperty.builder()
+   * .header("header")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html)
+   */
+  public interface RemoveHeadersConfigProperty {
+    /**
+     * The list of HTTP header names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html#cfn-cloudfront-responseheaderspolicy-removeheadersconfig-items)
+     */
+    public fun items(): Any
+
+    /**
+     * A builder for [RemoveHeadersConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      public fun items(items: IResolvable)
+
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      public fun items(items: List<Any>)
+
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      public fun items(vararg items: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.builder()
+
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      override fun items(items: IResolvable) {
+        cdkBuilder.items(items.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      override fun items(items: List<Any>) {
+        cdkBuilder.items(items)
+      }
+
+      /**
+       * @param items The list of HTTP header names. 
+       */
+      override fun items(vararg items: Any): Unit = items(items.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty,
+    ) : CdkObject(cdkObject), RemoveHeadersConfigProperty {
+      /**
+       * The list of HTTP header names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html#cfn-cloudfront-responseheaderspolicy-removeheadersconfig-items)
+       */
+      override fun items(): Any = unwrap(this).getItems()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveHeadersConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty):
+          RemoveHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RemoveHeadersConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemoveHeadersConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
+    }
+  }
+
+  /**
+   * A response headers policy configuration.
+   *
+   * A response headers policy configuration contains metadata about the response headers policy,
+   * and configurations for sets of HTTP response headers.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * ResponseHeadersPolicyConfigProperty responseHeadersPolicyConfigProperty =
+   * ResponseHeadersPolicyConfigProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .comment("comment")
+   * .corsConfig(CorsConfigProperty.builder()
+   * .accessControlAllowCredentials(false)
+   * .accessControlAllowHeaders(AccessControlAllowHeadersProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlAllowMethods(AccessControlAllowMethodsProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlAllowOrigins(AccessControlAllowOriginsProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .originOverride(false)
+   * // the properties below are optional
+   * .accessControlExposeHeaders(AccessControlExposeHeadersProperty.builder()
+   * .items(List.of("items"))
+   * .build())
+   * .accessControlMaxAgeSec(123)
+   * .build())
+   * .customHeadersConfig(CustomHeadersConfigProperty.builder()
+   * .items(List.of(CustomHeaderProperty.builder()
+   * .header("header")
+   * .override(false)
+   * .value("value")
+   * .build()))
+   * .build())
+   * .removeHeadersConfig(RemoveHeadersConfigProperty.builder()
+   * .items(List.of(RemoveHeaderProperty.builder()
+   * .header("header")
+   * .build()))
+   * .build())
+   * .securityHeadersConfig(SecurityHeadersConfigProperty.builder()
+   * .contentSecurityPolicy(ContentSecurityPolicyProperty.builder()
+   * .contentSecurityPolicy("contentSecurityPolicy")
+   * .override(false)
+   * .build())
+   * .contentTypeOptions(ContentTypeOptionsProperty.builder()
+   * .override(false)
+   * .build())
+   * .frameOptions(FrameOptionsProperty.builder()
+   * .frameOption("frameOption")
+   * .override(false)
+   * .build())
+   * .referrerPolicy(ReferrerPolicyProperty.builder()
+   * .override(false)
+   * .referrerPolicy("referrerPolicy")
+   * .build())
+   * .strictTransportSecurity(StrictTransportSecurityProperty.builder()
+   * .accessControlMaxAgeSec(123)
+   * .override(false)
+   * // the properties below are optional
+   * .includeSubdomains(false)
+   * .preload(false)
+   * .build())
+   * .xssProtection(XSSProtectionProperty.builder()
+   * .override(false)
+   * .protection(false)
+   * // the properties below are optional
+   * .modeBlock(false)
+   * .reportUri("reportUri")
+   * .build())
+   * .build())
+   * .serverTimingHeadersConfig(ServerTimingHeadersConfigProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .samplingRate(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html)
+   */
+  public interface ResponseHeadersPolicyConfigProperty {
+    /**
+     * A comment to describe the response headers policy.
+     *
+     * The comment cannot be longer than 128 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-comment)
+     */
+    public fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * A configuration for a set of HTTP response headers that are used for cross-origin resource
+     * sharing (CORS).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-corsconfig)
+     */
+    public fun corsConfig(): Any? = unwrap(this).getCorsConfig()
+
+    /**
+     * A configuration for a set of custom HTTP response headers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig)
+     */
+    public fun customHeadersConfig(): Any? = unwrap(this).getCustomHeadersConfig()
+
+    /**
+     * A name to identify the response headers policy.
+     *
+     * The name must be unique for response headers policies in this AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name)
+     */
+    public fun name(): String
+
+    /**
+     * A configuration for a set of HTTP headers to remove from the HTTP response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig)
+     */
+    public fun removeHeadersConfig(): Any? = unwrap(this).getRemoveHeadersConfig()
+
+    /**
+     * A configuration for a set of security-related HTTP response headers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)
+     */
+    public fun securityHeadersConfig(): Any? = unwrap(this).getSecurityHeadersConfig()
+
+    /**
+     * A configuration for enabling the `Server-Timing` header in HTTP responses sent from
+     * CloudFront.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig)
+     */
+    public fun serverTimingHeadersConfig(): Any? = unwrap(this).getServerTimingHeadersConfig()
+
+    /**
+     * A builder for [ResponseHeadersPolicyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comment A comment to describe the response headers policy.
+       * The comment cannot be longer than 128 characters.
+       */
+      public fun comment(comment: String)
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      public fun corsConfig(corsConfig: IResolvable)
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      public fun corsConfig(corsConfig: CorsConfigProperty)
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d9a3bed57ef421e819b18d210af15e22c39e9ce5a2c26ea5f666831538c0dddb")
+      public fun corsConfig(corsConfig: CorsConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      public fun customHeadersConfig(customHeadersConfig: IResolvable)
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      public fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty)
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f939a3337362614a1fa52773bdecf03e5e8f12aeb6872e583c00f92c0a70e1a0")
+      public
+          fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param name A name to identify the response headers policy. 
+       * The name must be unique for response headers policies in this AWS account .
+       */
+      public fun name(name: String)
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      public fun removeHeadersConfig(removeHeadersConfig: IResolvable)
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      public fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty)
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9f027ac414d9aa7f3a962ec1e494f1d195c397f2bd170517c9309f84218568d")
+      public
+          fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      public fun securityHeadersConfig(securityHeadersConfig: IResolvable)
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      public fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty)
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ec350537ed8704161521a2a0ea42d6d39495942dee0591bb00700be0b7556d8e")
+      public
+          fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      public fun serverTimingHeadersConfig(serverTimingHeadersConfig: IResolvable)
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      public
+          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty)
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("613d322e21df88d714eab3ef3bc3763263ef620308e0ee79809f3cd7def609ca")
+      public
+          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty.builder()
+
+      /**
+       * @param comment A comment to describe the response headers policy.
+       * The comment cannot be longer than 128 characters.
+       */
+      override fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+      }
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      override fun corsConfig(corsConfig: IResolvable) {
+        cdkBuilder.corsConfig(corsConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      override fun corsConfig(corsConfig: CorsConfigProperty) {
+        cdkBuilder.corsConfig(corsConfig.let(CorsConfigProperty::unwrap))
+      }
+
+      /**
+       * @param corsConfig A configuration for a set of HTTP response headers that are used for
+       * cross-origin resource sharing (CORS).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d9a3bed57ef421e819b18d210af15e22c39e9ce5a2c26ea5f666831538c0dddb")
+      override fun corsConfig(corsConfig: CorsConfigProperty.Builder.() -> Unit): Unit =
+          corsConfig(CorsConfigProperty(corsConfig))
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      override fun customHeadersConfig(customHeadersConfig: IResolvable) {
+        cdkBuilder.customHeadersConfig(customHeadersConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      override fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty) {
+        cdkBuilder.customHeadersConfig(customHeadersConfig.let(CustomHeadersConfigProperty::unwrap))
+      }
+
+      /**
+       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f939a3337362614a1fa52773bdecf03e5e8f12aeb6872e583c00f92c0a70e1a0")
+      override
+          fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty.Builder.() -> Unit):
+          Unit = customHeadersConfig(CustomHeadersConfigProperty(customHeadersConfig))
+
+      /**
+       * @param name A name to identify the response headers policy. 
+       * The name must be unique for response headers policies in this AWS account .
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      override fun removeHeadersConfig(removeHeadersConfig: IResolvable) {
+        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      override fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty) {
+        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(RemoveHeadersConfigProperty::unwrap))
+      }
+
+      /**
+       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
+       * HTTP response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9f027ac414d9aa7f3a962ec1e494f1d195c397f2bd170517c9309f84218568d")
+      override
+          fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty.Builder.() -> Unit):
+          Unit = removeHeadersConfig(RemoveHeadersConfigProperty(removeHeadersConfig))
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      override fun securityHeadersConfig(securityHeadersConfig: IResolvable) {
+        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      override fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty) {
+        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(SecurityHeadersConfigProperty::unwrap))
+      }
+
+      /**
+       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
+       * headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ec350537ed8704161521a2a0ea42d6d39495942dee0591bb00700be0b7556d8e")
+      override
+          fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty.Builder.() -> Unit):
+          Unit = securityHeadersConfig(SecurityHeadersConfigProperty(securityHeadersConfig))
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      override fun serverTimingHeadersConfig(serverTimingHeadersConfig: IResolvable) {
+        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      override
+          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty) {
+        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(ServerTimingHeadersConfigProperty::unwrap))
+      }
+
+      /**
+       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
+       * HTTP responses sent from CloudFront.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("613d322e21df88d714eab3ef3bc3763263ef620308e0ee79809f3cd7def609ca")
+      override
+          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty.Builder.() -> Unit):
+          Unit =
+          serverTimingHeadersConfig(ServerTimingHeadersConfigProperty(serverTimingHeadersConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty,
+    ) : CdkObject(cdkObject), ResponseHeadersPolicyConfigProperty {
+      /**
+       * A comment to describe the response headers policy.
+       *
+       * The comment cannot be longer than 128 characters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-comment)
+       */
+      override fun comment(): String? = unwrap(this).getComment()
+
+      /**
+       * A configuration for a set of HTTP response headers that are used for cross-origin resource
+       * sharing (CORS).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-corsconfig)
+       */
+      override fun corsConfig(): Any? = unwrap(this).getCorsConfig()
+
+      /**
+       * A configuration for a set of custom HTTP response headers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig)
+       */
+      override fun customHeadersConfig(): Any? = unwrap(this).getCustomHeadersConfig()
+
+      /**
+       * A name to identify the response headers policy.
+       *
+       * The name must be unique for response headers policies in this AWS account .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * A configuration for a set of HTTP headers to remove from the HTTP response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig)
+       */
+      override fun removeHeadersConfig(): Any? = unwrap(this).getRemoveHeadersConfig()
+
+      /**
+       * A configuration for a set of security-related HTTP response headers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)
+       */
+      override fun securityHeadersConfig(): Any? = unwrap(this).getSecurityHeadersConfig()
+
+      /**
+       * A configuration for enabling the `Server-Timing` header in HTTP responses sent from
+       * CloudFront.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig)
+       */
+      override fun serverTimingHeadersConfig(): Any? = unwrap(this).getServerTimingHeadersConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ResponseHeadersPolicyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty):
+          ResponseHeadersPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResponseHeadersPolicyConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResponseHeadersPolicyConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
     }
   }
 
@@ -1309,8 +3465,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty,
     ) : CdkObject(cdkObject), SecurityHeadersConfigProperty {
       /**
        * The policy directives and their values that CloudFront includes as values for the
@@ -1403,801 +3558,6 @@ public open class CfnResponseHeadersPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty
-    }
-  }
-
-  /**
-   * Determines whether CloudFront includes the `Referrer-Policy` HTTP response header and the
-   * header's value.
-   *
-   * For more information about the `Referrer-Policy` HTTP response header, see
-   * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * ReferrerPolicyProperty referrerPolicyProperty = ReferrerPolicyProperty.builder()
-   * .override(false)
-   * .referrerPolicy("referrerPolicy")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html)
-   */
-  public interface ReferrerPolicyProperty {
-    /**
-     * A Boolean that determines whether CloudFront overrides the `Referrer-Policy` HTTP response
-     * header received from the origin with the one specified in this response headers policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-override)
-     */
-    public fun `override`(): Any
-
-    /**
-     * The value of the `Referrer-Policy` HTTP response header. Valid values are:.
-     *
-     * * `no-referrer`
-     * * `no-referrer-when-downgrade`
-     * * `origin`
-     * * `origin-when-cross-origin`
-     * * `same-origin`
-     * * `strict-origin`
-     * * `strict-origin-when-cross-origin`
-     * * `unsafe-url`
-     *
-     * For more information about these values, see
-     * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-referrerpolicy)
-     */
-    public fun referrerPolicy(): String
-
-    /**
-     * A builder for [ReferrerPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      public fun `override`(`override`: Boolean)
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      public fun `override`(`override`: IResolvable)
-
-      /**
-       * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid values
-       * are:. 
-       * * `no-referrer`
-       * * `no-referrer-when-downgrade`
-       * * `origin`
-       * * `origin-when-cross-origin`
-       * * `same-origin`
-       * * `strict-origin`
-       * * `strict-origin-when-cross-origin`
-       * * `unsafe-url`
-       *
-       * For more information about these values, see
-       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-       * in the MDN Web Docs.
-       */
-      public fun referrerPolicy(referrerPolicy: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty.builder()
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      override fun `override`(`override`: Boolean) {
-        cdkBuilder.`override`(`override`)
-      }
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Referrer-Policy` HTTP response header received from the origin with the one specified in this
-       * response headers policy. 
-       */
-      override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid values
-       * are:. 
-       * * `no-referrer`
-       * * `no-referrer-when-downgrade`
-       * * `origin`
-       * * `origin-when-cross-origin`
-       * * `same-origin`
-       * * `strict-origin`
-       * * `strict-origin-when-cross-origin`
-       * * `unsafe-url`
-       *
-       * For more information about these values, see
-       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-       * in the MDN Web Docs.
-       */
-      override fun referrerPolicy(referrerPolicy: String) {
-        cdkBuilder.referrerPolicy(referrerPolicy)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty,
-    ) : CdkObject(cdkObject), ReferrerPolicyProperty {
-      /**
-       * A Boolean that determines whether CloudFront overrides the `Referrer-Policy` HTTP response
-       * header received from the origin with the one specified in this response headers policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-override)
-       */
-      override fun `override`(): Any = unwrap(this).getOverride()
-
-      /**
-       * The value of the `Referrer-Policy` HTTP response header. Valid values are:.
-       *
-       * * `no-referrer`
-       * * `no-referrer-when-downgrade`
-       * * `origin`
-       * * `origin-when-cross-origin`
-       * * `same-origin`
-       * * `strict-origin`
-       * * `strict-origin-when-cross-origin`
-       * * `unsafe-url`
-       *
-       * For more information about these values, see
-       * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html#cfn-cloudfront-responseheaderspolicy-referrerpolicy-referrerpolicy)
-       */
-      override fun referrerPolicy(): String = unwrap(this).getReferrerPolicy()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ReferrerPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty):
-          ReferrerPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferrerPolicyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ReferrerPolicyProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
-    }
-  }
-
-  /**
-   * A list of origins (domain names) that CloudFront can use as the value for the
-   * `Access-Control-Allow-Origin` HTTP response header.
-   *
-   * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-   * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * AccessControlAllowOriginsProperty accessControlAllowOriginsProperty =
-   * AccessControlAllowOriginsProperty.builder()
-   * .items(List.of("items"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html)
-   */
-  public interface AccessControlAllowOriginsProperty {
-    /**
-     * The list of origins (domain names).
-     *
-     * You can specify `*` to allow all origins.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html#cfn-cloudfront-responseheaderspolicy-accesscontrolalloworigins-items)
-     */
-    public fun items(): List<String>
-
-    /**
-     * A builder for [AccessControlAllowOriginsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param items The list of origins (domain names). 
-       * You can specify `*` to allow all origins.
-       */
-      public fun items(items: List<String>)
-
-      /**
-       * @param items The list of origins (domain names). 
-       * You can specify `*` to allow all origins.
-       */
-      public fun items(vararg items: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty.builder()
-
-      /**
-       * @param items The list of origins (domain names). 
-       * You can specify `*` to allow all origins.
-       */
-      override fun items(items: List<String>) {
-        cdkBuilder.items(items)
-      }
-
-      /**
-       * @param items The list of origins (domain names). 
-       * You can specify `*` to allow all origins.
-       */
-      override fun items(vararg items: String): Unit = items(items.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty,
-    ) : CdkObject(cdkObject), AccessControlAllowOriginsProperty {
-      /**
-       * The list of origins (domain names).
-       *
-       * You can specify `*` to allow all origins.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolalloworigins.html#cfn-cloudfront-responseheaderspolicy-accesscontrolalloworigins-items)
-       */
-      override fun items(): List<String> = unwrap(this).getItems()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AccessControlAllowOriginsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty):
-          AccessControlAllowOriginsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessControlAllowOriginsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessControlAllowOriginsProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
-    }
-  }
-
-  /**
-   * A response headers policy configuration.
-   *
-   * A response headers policy configuration contains metadata about the response headers policy,
-   * and configurations for sets of HTTP response headers.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * ResponseHeadersPolicyConfigProperty responseHeadersPolicyConfigProperty =
-   * ResponseHeadersPolicyConfigProperty.builder()
-   * .name("name")
-   * // the properties below are optional
-   * .comment("comment")
-   * .corsConfig(CorsConfigProperty.builder()
-   * .accessControlAllowCredentials(false)
-   * .accessControlAllowHeaders(AccessControlAllowHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlAllowMethods(AccessControlAllowMethodsProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlAllowOrigins(AccessControlAllowOriginsProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .originOverride(false)
-   * // the properties below are optional
-   * .accessControlExposeHeaders(AccessControlExposeHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlMaxAgeSec(123)
-   * .build())
-   * .customHeadersConfig(CustomHeadersConfigProperty.builder()
-   * .items(List.of(CustomHeaderProperty.builder()
-   * .header("header")
-   * .override(false)
-   * .value("value")
-   * .build()))
-   * .build())
-   * .removeHeadersConfig(RemoveHeadersConfigProperty.builder()
-   * .items(List.of(RemoveHeaderProperty.builder()
-   * .header("header")
-   * .build()))
-   * .build())
-   * .securityHeadersConfig(SecurityHeadersConfigProperty.builder()
-   * .contentSecurityPolicy(ContentSecurityPolicyProperty.builder()
-   * .contentSecurityPolicy("contentSecurityPolicy")
-   * .override(false)
-   * .build())
-   * .contentTypeOptions(ContentTypeOptionsProperty.builder()
-   * .override(false)
-   * .build())
-   * .frameOptions(FrameOptionsProperty.builder()
-   * .frameOption("frameOption")
-   * .override(false)
-   * .build())
-   * .referrerPolicy(ReferrerPolicyProperty.builder()
-   * .override(false)
-   * .referrerPolicy("referrerPolicy")
-   * .build())
-   * .strictTransportSecurity(StrictTransportSecurityProperty.builder()
-   * .accessControlMaxAgeSec(123)
-   * .override(false)
-   * // the properties below are optional
-   * .includeSubdomains(false)
-   * .preload(false)
-   * .build())
-   * .xssProtection(XSSProtectionProperty.builder()
-   * .override(false)
-   * .protection(false)
-   * // the properties below are optional
-   * .modeBlock(false)
-   * .reportUri("reportUri")
-   * .build())
-   * .build())
-   * .serverTimingHeadersConfig(ServerTimingHeadersConfigProperty.builder()
-   * .enabled(false)
-   * // the properties below are optional
-   * .samplingRate(123)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html)
-   */
-  public interface ResponseHeadersPolicyConfigProperty {
-    /**
-     * A comment to describe the response headers policy.
-     *
-     * The comment cannot be longer than 128 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * A configuration for a set of HTTP response headers that are used for cross-origin resource
-     * sharing (CORS).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-corsconfig)
-     */
-    public fun corsConfig(): Any? = unwrap(this).getCorsConfig()
-
-    /**
-     * A configuration for a set of custom HTTP response headers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig)
-     */
-    public fun customHeadersConfig(): Any? = unwrap(this).getCustomHeadersConfig()
-
-    /**
-     * A name to identify the response headers policy.
-     *
-     * The name must be unique for response headers policies in this AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name)
-     */
-    public fun name(): String
-
-    /**
-     * A configuration for a set of HTTP headers to remove from the HTTP response.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig)
-     */
-    public fun removeHeadersConfig(): Any? = unwrap(this).getRemoveHeadersConfig()
-
-    /**
-     * A configuration for a set of security-related HTTP response headers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)
-     */
-    public fun securityHeadersConfig(): Any? = unwrap(this).getSecurityHeadersConfig()
-
-    /**
-     * A configuration for enabling the `Server-Timing` header in HTTP responses sent from
-     * CloudFront.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig)
-     */
-    public fun serverTimingHeadersConfig(): Any? = unwrap(this).getServerTimingHeadersConfig()
-
-    /**
-     * A builder for [ResponseHeadersPolicyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comment A comment to describe the response headers policy.
-       * The comment cannot be longer than 128 characters.
-       */
-      public fun comment(comment: String)
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      public fun corsConfig(corsConfig: IResolvable)
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      public fun corsConfig(corsConfig: CorsConfigProperty)
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d9a3bed57ef421e819b18d210af15e22c39e9ce5a2c26ea5f666831538c0dddb")
-      public fun corsConfig(corsConfig: CorsConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      public fun customHeadersConfig(customHeadersConfig: IResolvable)
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      public fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty)
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f939a3337362614a1fa52773bdecf03e5e8f12aeb6872e583c00f92c0a70e1a0")
-      public
-          fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param name A name to identify the response headers policy. 
-       * The name must be unique for response headers policies in this AWS account .
-       */
-      public fun name(name: String)
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      public fun removeHeadersConfig(removeHeadersConfig: IResolvable)
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      public fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty)
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b9f027ac414d9aa7f3a962ec1e494f1d195c397f2bd170517c9309f84218568d")
-      public
-          fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      public fun securityHeadersConfig(securityHeadersConfig: IResolvable)
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      public fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty)
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ec350537ed8704161521a2a0ea42d6d39495942dee0591bb00700be0b7556d8e")
-      public
-          fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      public fun serverTimingHeadersConfig(serverTimingHeadersConfig: IResolvable)
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      public
-          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty)
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("613d322e21df88d714eab3ef3bc3763263ef620308e0ee79809f3cd7def609ca")
-      public
-          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty.builder()
-
-      /**
-       * @param comment A comment to describe the response headers policy.
-       * The comment cannot be longer than 128 characters.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      override fun corsConfig(corsConfig: IResolvable) {
-        cdkBuilder.corsConfig(corsConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      override fun corsConfig(corsConfig: CorsConfigProperty) {
-        cdkBuilder.corsConfig(corsConfig.let(CorsConfigProperty::unwrap))
-      }
-
-      /**
-       * @param corsConfig A configuration for a set of HTTP response headers that are used for
-       * cross-origin resource sharing (CORS).
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d9a3bed57ef421e819b18d210af15e22c39e9ce5a2c26ea5f666831538c0dddb")
-      override fun corsConfig(corsConfig: CorsConfigProperty.Builder.() -> Unit): Unit =
-          corsConfig(CorsConfigProperty(corsConfig))
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      override fun customHeadersConfig(customHeadersConfig: IResolvable) {
-        cdkBuilder.customHeadersConfig(customHeadersConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      override fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty) {
-        cdkBuilder.customHeadersConfig(customHeadersConfig.let(CustomHeadersConfigProperty::unwrap))
-      }
-
-      /**
-       * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f939a3337362614a1fa52773bdecf03e5e8f12aeb6872e583c00f92c0a70e1a0")
-      override
-          fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty.Builder.() -> Unit):
-          Unit = customHeadersConfig(CustomHeadersConfigProperty(customHeadersConfig))
-
-      /**
-       * @param name A name to identify the response headers policy. 
-       * The name must be unique for response headers policies in this AWS account .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      override fun removeHeadersConfig(removeHeadersConfig: IResolvable) {
-        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      override fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty) {
-        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(RemoveHeadersConfigProperty::unwrap))
-      }
-
-      /**
-       * @param removeHeadersConfig A configuration for a set of HTTP headers to remove from the
-       * HTTP response.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b9f027ac414d9aa7f3a962ec1e494f1d195c397f2bd170517c9309f84218568d")
-      override
-          fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty.Builder.() -> Unit):
-          Unit = removeHeadersConfig(RemoveHeadersConfigProperty(removeHeadersConfig))
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      override fun securityHeadersConfig(securityHeadersConfig: IResolvable) {
-        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      override fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty) {
-        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(SecurityHeadersConfigProperty::unwrap))
-      }
-
-      /**
-       * @param securityHeadersConfig A configuration for a set of security-related HTTP response
-       * headers.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ec350537ed8704161521a2a0ea42d6d39495942dee0591bb00700be0b7556d8e")
-      override
-          fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty.Builder.() -> Unit):
-          Unit = securityHeadersConfig(SecurityHeadersConfigProperty(securityHeadersConfig))
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      override fun serverTimingHeadersConfig(serverTimingHeadersConfig: IResolvable) {
-        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      override
-          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty) {
-        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(ServerTimingHeadersConfigProperty::unwrap))
-      }
-
-      /**
-       * @param serverTimingHeadersConfig A configuration for enabling the `Server-Timing` header in
-       * HTTP responses sent from CloudFront.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("613d322e21df88d714eab3ef3bc3763263ef620308e0ee79809f3cd7def609ca")
-      override
-          fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty.Builder.() -> Unit):
-          Unit =
-          serverTimingHeadersConfig(ServerTimingHeadersConfigProperty(serverTimingHeadersConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty,
-    ) : CdkObject(cdkObject), ResponseHeadersPolicyConfigProperty {
-      /**
-       * A comment to describe the response headers policy.
-       *
-       * The comment cannot be longer than 128 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
-
-      /**
-       * A configuration for a set of HTTP response headers that are used for cross-origin resource
-       * sharing (CORS).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-corsconfig)
-       */
-      override fun corsConfig(): Any? = unwrap(this).getCorsConfig()
-
-      /**
-       * A configuration for a set of custom HTTP response headers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig)
-       */
-      override fun customHeadersConfig(): Any? = unwrap(this).getCustomHeadersConfig()
-
-      /**
-       * A name to identify the response headers policy.
-       *
-       * The name must be unique for response headers policies in this AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * A configuration for a set of HTTP headers to remove from the HTTP response.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig)
-       */
-      override fun removeHeadersConfig(): Any? = unwrap(this).getRemoveHeadersConfig()
-
-      /**
-       * A configuration for a set of security-related HTTP response headers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)
-       */
-      override fun securityHeadersConfig(): Any? = unwrap(this).getSecurityHeadersConfig()
-
-      /**
-       * A configuration for enabling the `Server-Timing` header in HTTP responses sent from
-       * CloudFront.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig.html#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig)
-       */
-      override fun serverTimingHeadersConfig(): Any? = unwrap(this).getServerTimingHeadersConfig()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ResponseHeadersPolicyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty):
-          ResponseHeadersPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ResponseHeadersPolicyConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ResponseHeadersPolicyConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
     }
   }
 
@@ -2318,8 +3678,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty,
     ) : CdkObject(cdkObject), ServerTimingHeadersConfigProperty {
       /**
        * A Boolean that determines whether CloudFront adds the `Server-Timing` header to HTTP
@@ -2543,8 +3902,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty,
     ) : CdkObject(cdkObject), StrictTransportSecurityProperty {
       /**
        * A number that CloudFront uses as the value for the `max-age` directive in the
@@ -2595,1270 +3953,6 @@ public open class CfnResponseHeadersPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty
-    }
-  }
-
-  /**
-   * A configuration for a set of HTTP response headers that are used for cross-origin resource
-   * sharing (CORS).
-   *
-   * CloudFront adds these headers to HTTP responses that it sends for CORS requests that match a
-   * cache behavior associated with this response headers policy.
-   *
-   * For more information about CORS, see [Cross-Origin Resource Sharing
-   * (CORS)](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) in the
-   * MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * CorsConfigProperty corsConfigProperty = CorsConfigProperty.builder()
-   * .accessControlAllowCredentials(false)
-   * .accessControlAllowHeaders(AccessControlAllowHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlAllowMethods(AccessControlAllowMethodsProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlAllowOrigins(AccessControlAllowOriginsProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .originOverride(false)
-   * // the properties below are optional
-   * .accessControlExposeHeaders(AccessControlExposeHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build())
-   * .accessControlMaxAgeSec(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html)
-   */
-  public interface CorsConfigProperty {
-    /**
-     * A Boolean that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP
-     * response header.
-     *
-     * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-     * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowcredentials)
-     */
-    public fun accessControlAllowCredentials(): Any
-
-    /**
-     * A list of HTTP header names that CloudFront includes as values for the
-     * `Access-Control-Allow-Headers` HTTP response header.
-     *
-     * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-     * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowheaders)
-     */
-    public fun accessControlAllowHeaders(): Any
-
-    /**
-     * A list of HTTP methods that CloudFront includes as values for the
-     * `Access-Control-Allow-Methods` HTTP response header.
-     *
-     * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-     * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowmethods)
-     */
-    public fun accessControlAllowMethods(): Any
-
-    /**
-     * A list of origins (domain names) that CloudFront can use as the value for the
-     * `Access-Control-Allow-Origin` HTTP response header.
-     *
-     * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-     * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolalloworigins)
-     */
-    public fun accessControlAllowOrigins(): Any
-
-    /**
-     * A list of HTTP headers that CloudFront includes as values for the
-     * `Access-Control-Expose-Headers` HTTP response header.
-     *
-     * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-     * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolexposeheaders)
-     */
-    public fun accessControlExposeHeaders(): Any? = unwrap(this).getAccessControlExposeHeaders()
-
-    /**
-     * A number that CloudFront uses as the value for the `Access-Control-Max-Age` HTTP response
-     * header.
-     *
-     * For more information about the `Access-Control-Max-Age` HTTP response header, see
-     * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-     * in the MDN Web Docs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolmaxagesec)
-     */
-    public fun accessControlMaxAgeSec(): Number? = unwrap(this).getAccessControlMaxAgeSec()
-
-    /**
-     * A Boolean that determines whether CloudFront overrides HTTP response headers received from
-     * the origin with the ones specified in this response headers policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-originoverride)
-     */
-    public fun originOverride(): Any
-
-    /**
-     * A builder for [CorsConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
-       * `Access-Control-Allow-Credentials` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlAllowCredentials(accessControlAllowCredentials: Boolean)
-
-      /**
-       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
-       * `Access-Control-Allow-Credentials` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlAllowCredentials(accessControlAllowCredentials: IResolvable)
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlAllowHeaders(accessControlAllowHeaders: IResolvable)
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      public
-          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty)
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3bcde99d4105a597f432e2c2ed6c5d4fc2fbc8a6147c06fa73267c62f585ea13")
-      public
-          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty.Builder.() -> Unit)
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlAllowMethods(accessControlAllowMethods: IResolvable)
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      public
-          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty)
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b680abc572b1934f4cdf2bf54e34f8816cbb88b5222d2b111bcb6dd11f87a5b")
-      public
-          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty.Builder.() -> Unit)
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlAllowOrigins(accessControlAllowOrigins: IResolvable)
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      public
-          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty)
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("444a95bdbc2520e95344520931fcf2ac8cb4045c5967fd889c4981e7806275f9")
-      public
-          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty.Builder.() -> Unit)
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlExposeHeaders(accessControlExposeHeaders: IResolvable)
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      public
-          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty)
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c8372b795594c49a504376dbb0e2762eb84886ac7ed2fc07745d334ae728355")
-      public
-          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty.Builder.() -> Unit)
-
-      /**
-       * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the
-       * `Access-Control-Max-Age` HTTP response header.
-       * For more information about the `Access-Control-Max-Age` HTTP response header, see
-       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-       * in the MDN Web Docs.
-       */
-      public fun accessControlMaxAgeSec(accessControlMaxAgeSec: Number)
-
-      /**
-       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
-       * headers received from the origin with the ones specified in this response headers policy. 
-       */
-      public fun originOverride(originOverride: Boolean)
-
-      /**
-       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
-       * headers received from the origin with the ones specified in this response headers policy. 
-       */
-      public fun originOverride(originOverride: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty.builder()
-
-      /**
-       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
-       * `Access-Control-Allow-Credentials` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlAllowCredentials(accessControlAllowCredentials: Boolean) {
-        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials)
-      }
-
-      /**
-       * @param accessControlAllowCredentials A Boolean that CloudFront uses as the value for the
-       * `Access-Control-Allow-Credentials` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlAllowCredentials(accessControlAllowCredentials: IResolvable) {
-        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlAllowHeaders(accessControlAllowHeaders: IResolvable) {
-        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      override
-          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty) {
-        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(AccessControlAllowHeadersProperty::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowHeaders A list of HTTP header names that CloudFront includes as
-       * values for the `Access-Control-Allow-Headers` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3bcde99d4105a597f432e2c2ed6c5d4fc2fbc8a6147c06fa73267c62f585ea13")
-      override
-          fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty.Builder.() -> Unit):
-          Unit =
-          accessControlAllowHeaders(AccessControlAllowHeadersProperty(accessControlAllowHeaders))
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlAllowMethods(accessControlAllowMethods: IResolvable) {
-        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      override
-          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty) {
-        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(AccessControlAllowMethodsProperty::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
-       * for the `Access-Control-Allow-Methods` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b680abc572b1934f4cdf2bf54e34f8816cbb88b5222d2b111bcb6dd11f87a5b")
-      override
-          fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty.Builder.() -> Unit):
-          Unit =
-          accessControlAllowMethods(AccessControlAllowMethodsProperty(accessControlAllowMethods))
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlAllowOrigins(accessControlAllowOrigins: IResolvable) {
-        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      override
-          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty) {
-        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(AccessControlAllowOriginsProperty::unwrap))
-      }
-
-      /**
-       * @param accessControlAllowOrigins A list of origins (domain names) that CloudFront can use
-       * as the value for the `Access-Control-Allow-Origin` HTTP response header. 
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("444a95bdbc2520e95344520931fcf2ac8cb4045c5967fd889c4981e7806275f9")
-      override
-          fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty.Builder.() -> Unit):
-          Unit =
-          accessControlAllowOrigins(AccessControlAllowOriginsProperty(accessControlAllowOrigins))
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlExposeHeaders(accessControlExposeHeaders: IResolvable) {
-        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      override
-          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty) {
-        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(AccessControlExposeHeadersProperty::unwrap))
-      }
-
-      /**
-       * @param accessControlExposeHeaders A list of HTTP headers that CloudFront includes as values
-       * for the `Access-Control-Expose-Headers` HTTP response header.
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9c8372b795594c49a504376dbb0e2762eb84886ac7ed2fc07745d334ae728355")
-      override
-          fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty.Builder.() -> Unit):
-          Unit =
-          accessControlExposeHeaders(AccessControlExposeHeadersProperty(accessControlExposeHeaders))
-
-      /**
-       * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the
-       * `Access-Control-Max-Age` HTTP response header.
-       * For more information about the `Access-Control-Max-Age` HTTP response header, see
-       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-       * in the MDN Web Docs.
-       */
-      override fun accessControlMaxAgeSec(accessControlMaxAgeSec: Number) {
-        cdkBuilder.accessControlMaxAgeSec(accessControlMaxAgeSec)
-      }
-
-      /**
-       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
-       * headers received from the origin with the ones specified in this response headers policy. 
-       */
-      override fun originOverride(originOverride: Boolean) {
-        cdkBuilder.originOverride(originOverride)
-      }
-
-      /**
-       * @param originOverride A Boolean that determines whether CloudFront overrides HTTP response
-       * headers received from the origin with the ones specified in this response headers policy. 
-       */
-      override fun originOverride(originOverride: IResolvable) {
-        cdkBuilder.originOverride(originOverride.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty,
-    ) : CdkObject(cdkObject), CorsConfigProperty {
-      /**
-       * A Boolean that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP
-       * response header.
-       *
-       * For more information about the `Access-Control-Allow-Credentials` HTTP response header, see
-       * [Access-Control-Allow-Credentials](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowcredentials)
-       */
-      override fun accessControlAllowCredentials(): Any =
-          unwrap(this).getAccessControlAllowCredentials()
-
-      /**
-       * A list of HTTP header names that CloudFront includes as values for the
-       * `Access-Control-Allow-Headers` HTTP response header.
-       *
-       * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-       * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowheaders)
-       */
-      override fun accessControlAllowHeaders(): Any = unwrap(this).getAccessControlAllowHeaders()
-
-      /**
-       * A list of HTTP methods that CloudFront includes as values for the
-       * `Access-Control-Allow-Methods` HTTP response header.
-       *
-       * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
-       * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolallowmethods)
-       */
-      override fun accessControlAllowMethods(): Any = unwrap(this).getAccessControlAllowMethods()
-
-      /**
-       * A list of origins (domain names) that CloudFront can use as the value for the
-       * `Access-Control-Allow-Origin` HTTP response header.
-       *
-       * For more information about the `Access-Control-Allow-Origin` HTTP response header, see
-       * [Access-Control-Allow-Origin](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolalloworigins)
-       */
-      override fun accessControlAllowOrigins(): Any = unwrap(this).getAccessControlAllowOrigins()
-
-      /**
-       * A list of HTTP headers that CloudFront includes as values for the
-       * `Access-Control-Expose-Headers` HTTP response header.
-       *
-       * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-       * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolexposeheaders)
-       */
-      override fun accessControlExposeHeaders(): Any? = unwrap(this).getAccessControlExposeHeaders()
-
-      /**
-       * A number that CloudFront uses as the value for the `Access-Control-Max-Age` HTTP response
-       * header.
-       *
-       * For more information about the `Access-Control-Max-Age` HTTP response header, see
-       * [Access-Control-Max-Age](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-       * in the MDN Web Docs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-accesscontrolmaxagesec)
-       */
-      override fun accessControlMaxAgeSec(): Number? = unwrap(this).getAccessControlMaxAgeSec()
-
-      /**
-       * A Boolean that determines whether CloudFront overrides HTTP response headers received from
-       * the origin with the ones specified in this response headers policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html#cfn-cloudfront-responseheaderspolicy-corsconfig-originoverride)
-       */
-      override fun originOverride(): Any = unwrap(this).getOriginOverride()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CorsConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty):
-          CorsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CorsConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty
-    }
-  }
-
-  /**
-   * The name of an HTTP header that CloudFront removes from HTTP responses to requests that match
-   * the cache behavior that this response headers policy is attached to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * RemoveHeaderProperty removeHeaderProperty = RemoveHeaderProperty.builder()
-   * .header("header")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html)
-   */
-  public interface RemoveHeaderProperty {
-    /**
-     * The HTTP header name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html#cfn-cloudfront-responseheaderspolicy-removeheader-header)
-     */
-    public fun `header`(): String
-
-    /**
-     * A builder for [RemoveHeaderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param header The HTTP header name. 
-       */
-      public fun `header`(`header`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty.builder()
-
-      /**
-       * @param header The HTTP header name. 
-       */
-      override fun `header`(`header`: String) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty,
-    ) : CdkObject(cdkObject), RemoveHeaderProperty {
-      /**
-       * The HTTP header name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheader.html#cfn-cloudfront-responseheaderspolicy-removeheader-header)
-       */
-      override fun `header`(): String = unwrap(this).getHeader()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveHeaderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty):
-          RemoveHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? RemoveHeaderProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RemoveHeaderProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty
-    }
-  }
-
-  /**
-   * A list of HTTP response header names and their values.
-   *
-   * CloudFront includes these headers in HTTP responses that it sends for requests that match a
-   * cache behavior that's associated with this response headers policy.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * CustomHeadersConfigProperty customHeadersConfigProperty = CustomHeadersConfigProperty.builder()
-   * .items(List.of(CustomHeaderProperty.builder()
-   * .header("header")
-   * .override(false)
-   * .value("value")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html)
-   */
-  public interface CustomHeadersConfigProperty {
-    /**
-     * The list of HTTP response headers and their values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html#cfn-cloudfront-responseheaderspolicy-customheadersconfig-items)
-     */
-    public fun items(): Any
-
-    /**
-     * A builder for [CustomHeadersConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      public fun items(items: IResolvable)
-
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      public fun items(items: List<Any>)
-
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      public fun items(vararg items: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty.builder()
-
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
-      }
-
-      /**
-       * @param items The list of HTTP response headers and their values. 
-       */
-      override fun items(vararg items: Any): Unit = items(items.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty,
-    ) : CdkObject(cdkObject), CustomHeadersConfigProperty {
-      /**
-       * The list of HTTP response headers and their values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html#cfn-cloudfront-responseheaderspolicy-customheadersconfig-items)
-       */
-      override fun items(): Any = unwrap(this).getItems()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomHeadersConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty):
-          CustomHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CustomHeadersConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CustomHeadersConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
-    }
-  }
-
-  /**
-   * A list of HTTP header names that CloudFront removes from HTTP responses to requests that match
-   * the cache behavior that this response headers policy is attached to.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * RemoveHeadersConfigProperty removeHeadersConfigProperty = RemoveHeadersConfigProperty.builder()
-   * .items(List.of(RemoveHeaderProperty.builder()
-   * .header("header")
-   * .build()))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html)
-   */
-  public interface RemoveHeadersConfigProperty {
-    /**
-     * The list of HTTP header names.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html#cfn-cloudfront-responseheaderspolicy-removeheadersconfig-items)
-     */
-    public fun items(): Any
-
-    /**
-     * A builder for [RemoveHeadersConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      public fun items(items: IResolvable)
-
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      public fun items(items: List<Any>)
-
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      public fun items(vararg items: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.builder()
-
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
-      }
-
-      /**
-       * @param items The list of HTTP header names. 
-       */
-      override fun items(vararg items: Any): Unit = items(items.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty,
-    ) : CdkObject(cdkObject), RemoveHeadersConfigProperty {
-      /**
-       * The list of HTTP header names.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html#cfn-cloudfront-responseheaderspolicy-removeheadersconfig-items)
-       */
-      override fun items(): Any = unwrap(this).getItems()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RemoveHeadersConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty):
-          RemoveHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RemoveHeadersConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RemoveHeadersConfigProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
-    }
-  }
-
-  /**
-   * The policy directives and their values that CloudFront includes as values for the
-   * `Content-Security-Policy` HTTP response header.
-   *
-   * For more information about the `Content-Security-Policy` HTTP response header, see
-   * [Content-Security-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * ContentSecurityPolicyProperty contentSecurityPolicyProperty =
-   * ContentSecurityPolicyProperty.builder()
-   * .contentSecurityPolicy("contentSecurityPolicy")
-   * .override(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html)
-   */
-  public interface ContentSecurityPolicyProperty {
-    /**
-     * The policy directives and their values that CloudFront includes as values for the
-     * `Content-Security-Policy` HTTP response header.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-contentsecuritypolicy)
-     */
-    public fun contentSecurityPolicy(): String
-
-    /**
-     * A Boolean that determines whether CloudFront overrides the `Content-Security-Policy` HTTP
-     * response header received from the origin with the one specified in this response headers policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-override)
-     */
-    public fun `override`(): Any
-
-    /**
-     * A builder for [ContentSecurityPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param contentSecurityPolicy The policy directives and their values that CloudFront
-       * includes as values for the `Content-Security-Policy` HTTP response header. 
-       */
-      public fun contentSecurityPolicy(contentSecurityPolicy: String)
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      public fun `override`(`override`: Boolean)
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      public fun `override`(`override`: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty.builder()
-
-      /**
-       * @param contentSecurityPolicy The policy directives and their values that CloudFront
-       * includes as values for the `Content-Security-Policy` HTTP response header. 
-       */
-      override fun contentSecurityPolicy(contentSecurityPolicy: String) {
-        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
-      }
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      override fun `override`(`override`: Boolean) {
-        cdkBuilder.`override`(`override`)
-      }
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `Content-Security-Policy` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty,
-    ) : CdkObject(cdkObject), ContentSecurityPolicyProperty {
-      /**
-       * The policy directives and their values that CloudFront includes as values for the
-       * `Content-Security-Policy` HTTP response header.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-contentsecuritypolicy)
-       */
-      override fun contentSecurityPolicy(): String = unwrap(this).getContentSecurityPolicy()
-
-      /**
-       * A Boolean that determines whether CloudFront overrides the `Content-Security-Policy` HTTP
-       * response header received from the origin with the one specified in this response headers
-       * policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contentsecuritypolicy.html#cfn-cloudfront-responseheaderspolicy-contentsecuritypolicy-override)
-       */
-      override fun `override`(): Any = unwrap(this).getOverride()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContentSecurityPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty):
-          ContentSecurityPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContentSecurityPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContentSecurityPolicyProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
-    }
-  }
-
-  /**
-   * A list of HTTP header names that CloudFront includes as values for the
-   * `Access-Control-Allow-Headers` HTTP response header.
-   *
-   * For more information about the `Access-Control-Allow-Headers` HTTP response header, see
-   * [Access-Control-Allow-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * AccessControlAllowHeadersProperty accessControlAllowHeadersProperty =
-   * AccessControlAllowHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html)
-   */
-  public interface AccessControlAllowHeadersProperty {
-    /**
-     * The list of HTTP header names.
-     *
-     * You can specify `*` to allow all headers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolallowheaders-items)
-     */
-    public fun items(): List<String>
-
-    /**
-     * A builder for [AccessControlAllowHeadersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param items The list of HTTP header names. 
-       * You can specify `*` to allow all headers.
-       */
-      public fun items(items: List<String>)
-
-      /**
-       * @param items The list of HTTP header names. 
-       * You can specify `*` to allow all headers.
-       */
-      public fun items(vararg items: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty.builder()
-
-      /**
-       * @param items The list of HTTP header names. 
-       * You can specify `*` to allow all headers.
-       */
-      override fun items(items: List<String>) {
-        cdkBuilder.items(items)
-      }
-
-      /**
-       * @param items The list of HTTP header names. 
-       * You can specify `*` to allow all headers.
-       */
-      override fun items(vararg items: String): Unit = items(items.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty,
-    ) : CdkObject(cdkObject), AccessControlAllowHeadersProperty {
-      /**
-       * The list of HTTP header names.
-       *
-       * You can specify `*` to allow all headers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolallowheaders-items)
-       */
-      override fun items(): List<String> = unwrap(this).getItems()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AccessControlAllowHeadersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty):
-          AccessControlAllowHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessControlAllowHeadersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessControlAllowHeadersProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
-    }
-  }
-
-  /**
-   * A list of HTTP headers that CloudFront includes as values for the
-   * `Access-Control-Expose-Headers` HTTP response header.
-   *
-   * For more information about the `Access-Control-Expose-Headers` HTTP response header, see
-   * [Access-Control-Expose-Headers](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * AccessControlExposeHeadersProperty accessControlExposeHeadersProperty =
-   * AccessControlExposeHeadersProperty.builder()
-   * .items(List.of("items"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html)
-   */
-  public interface AccessControlExposeHeadersProperty {
-    /**
-     * The list of HTTP headers.
-     *
-     * You can specify `*` to expose all headers.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolexposeheaders-items)
-     */
-    public fun items(): List<String>
-
-    /**
-     * A builder for [AccessControlExposeHeadersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param items The list of HTTP headers. 
-       * You can specify `*` to expose all headers.
-       */
-      public fun items(items: List<String>)
-
-      /**
-       * @param items The list of HTTP headers. 
-       * You can specify `*` to expose all headers.
-       */
-      public fun items(vararg items: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty.builder()
-
-      /**
-       * @param items The list of HTTP headers. 
-       * You can specify `*` to expose all headers.
-       */
-      override fun items(items: List<String>) {
-        cdkBuilder.items(items)
-      }
-
-      /**
-       * @param items The list of HTTP headers. 
-       * You can specify `*` to expose all headers.
-       */
-      override fun items(vararg items: String): Unit = items(items.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty,
-    ) : CdkObject(cdkObject), AccessControlExposeHeadersProperty {
-      /**
-       * The list of HTTP headers.
-       *
-       * You can specify `*` to expose all headers.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolexposeheaders.html#cfn-cloudfront-responseheaderspolicy-accesscontrolexposeheaders-items)
-       */
-      override fun items(): List<String> = unwrap(this).getItems()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AccessControlExposeHeadersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty):
-          AccessControlExposeHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AccessControlExposeHeadersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AccessControlExposeHeadersProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
     }
   }
 
@@ -4102,8 +4196,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty,
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty,
     ) : CdkObject(cdkObject), XSSProtectionProperty {
       /**
        * A Boolean that determines whether CloudFront includes the `mode=block` directive in the
@@ -4169,117 +4262,6 @@ public open class CfnResponseHeadersPolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty
-    }
-  }
-
-  /**
-   * Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with
-   * its value set to `nosniff` .
-   *
-   * For more information about the `X-Content-Type-Options` HTTP response header, see
-   * [X-Content-Type-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-   * in the MDN Web Docs.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * ContentTypeOptionsProperty contentTypeOptionsProperty = ContentTypeOptionsProperty.builder()
-   * .override(false)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html)
-   */
-  public interface ContentTypeOptionsProperty {
-    /**
-     * A Boolean that determines whether CloudFront overrides the `X-Content-Type-Options` HTTP
-     * response header received from the origin with the one specified in this response headers policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html#cfn-cloudfront-responseheaderspolicy-contenttypeoptions-override)
-     */
-    public fun `override`(): Any
-
-    /**
-     * A builder for [ContentTypeOptionsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      public fun `override`(`override`: Boolean)
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      public fun `override`(`override`: IResolvable)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty.Builder
-          =
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty.builder()
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      override fun `override`(`override`: Boolean) {
-        cdkBuilder.`override`(`override`)
-      }
-
-      /**
-       * @param override A Boolean that determines whether CloudFront overrides the
-       * `X-Content-Type-Options` HTTP response header received from the origin with the one specified
-       * in this response headers policy. 
-       */
-      override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty,
-    ) : CdkObject(cdkObject), ContentTypeOptionsProperty {
-      /**
-       * A Boolean that determines whether CloudFront overrides the `X-Content-Type-Options` HTTP
-       * response header received from the origin with the one specified in this response headers
-       * policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-contenttypeoptions.html#cfn-cloudfront-responseheaderspolicy-contenttypeoptions-override)
-       */
-      override fun `override`(): Any = unwrap(this).getOverride()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContentTypeOptionsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty):
-          ContentTypeOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ContentTypeOptionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContentTypeOptionsProperty):
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty
     }
   }
 }

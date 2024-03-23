@@ -21,8 +21,8 @@ import io.cloudshiftdev.constructs.Construct
  * alarm.addAlarmAction(new SnsAction(topic));
  * ```
  */
-public open class SnsAction internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
+public open class SnsAction(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(topic.let(ITopic::unwrap))
@@ -43,6 +43,7 @@ public open class SnsAction internal constructor(
         SnsAction = SnsAction(cdkObject)
 
     internal fun unwrap(wrapped: SnsAction):
-        software.amazon.awscdk.services.cloudwatch.actions.SnsAction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.actions.SnsAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.actions.SnsAction
   }
 }

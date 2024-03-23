@@ -179,7 +179,7 @@ public interface GrpcGatewayListenerOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayListenerOptions,
+    cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayListenerOptions,
   ) : CdkObject(cdkObject), GrpcGatewayListenerOptions {
     /**
      * Connection pool for http listeners.

@@ -75,8 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html)
  */
-public open class CfnReplicator internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
+public open class CfnReplicator(
+  cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -495,7 +495,7 @@ public open class CfnReplicator internal constructor(
         CfnReplicator(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicator): software.amazon.awscdk.services.msk.CfnReplicator =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.msk.CfnReplicator
   }
 
   /**
@@ -550,8 +550,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty,
     ) : CdkObject(cdkObject), AmazonMskClusterProperty {
       /**
        * The ARN of an Amazon MSK cluster.
@@ -580,270 +579,240 @@ public open class CfnReplicator internal constructor(
   }
 
   /**
+   * Configuration relating to consumer group replication.
+   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.msk.*;
-   * TopicReplicationProperty topicReplicationProperty = TopicReplicationProperty.builder()
-   * .topicsToReplicate(List.of("topicsToReplicate"))
+   * ConsumerGroupReplicationProperty consumerGroupReplicationProperty =
+   * ConsumerGroupReplicationProperty.builder()
+   * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
    * // the properties below are optional
-   * .copyAccessControlListsForTopics(false)
-   * .copyTopicConfigurations(false)
-   * .detectAndCopyNewTopics(false)
-   * .topicsToExclude(List.of("topicsToExclude"))
+   * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
+   * .detectAndCopyNewConsumerGroups(false)
+   * .synchroniseConsumerGroupOffsets(false)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html)
    */
-  public interface TopicReplicationProperty {
+  public interface ConsumerGroupReplicationProperty {
     /**
-     * Whether to periodically configure remote topic ACLs to match their corresponding upstream
-     * topics.
+     * List of regular expression patterns indicating the consumer groups that should not be
+     * replicated.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copyaccesscontrollistsfortopics)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoexclude)
      */
-    public fun copyAccessControlListsForTopics(): Any? =
-        unwrap(this).getCopyAccessControlListsForTopics()
+    public fun consumerGroupsToExclude(): List<String> = unwrap(this).getConsumerGroupsToExclude()
+        ?: emptyList()
 
     /**
-     * Whether to periodically configure remote topics to match their corresponding upstream topics.
+     * List of regular expression patterns indicating the consumer groups to copy.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copytopicconfigurations)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoreplicate)
      */
-    public fun copyTopicConfigurations(): Any? = unwrap(this).getCopyTopicConfigurations()
+    public fun consumerGroupsToReplicate(): List<String>
 
     /**
-     * Whether to periodically check for new topics and partitions.
+     * Whether to periodically check for new consumer groups.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
      */
-    public fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
+    public fun detectAndCopyNewConsumerGroups(): Any? =
+        unwrap(this).getDetectAndCopyNewConsumerGroups()
 
     /**
-     * List of regular expression patterns indicating the topics that should not be replicated.
+     * Whether to periodically write the translated offsets to __consumer_offsets topic in target
+     * cluster.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoexclude)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
      */
-    public fun topicsToExclude(): List<String> = unwrap(this).getTopicsToExclude() ?: emptyList()
+    public fun synchroniseConsumerGroupOffsets(): Any? =
+        unwrap(this).getSynchroniseConsumerGroupOffsets()
 
     /**
-     * List of regular expression patterns indicating the topics to copy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoreplicate)
-     */
-    public fun topicsToReplicate(): List<String>
-
-    /**
-     * A builder for [TopicReplicationProperty]
+     * A builder for [ConsumerGroupReplicationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
-       * to match their corresponding upstream topics.
+       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
+       * groups that should not be replicated.
        */
-      public fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: Boolean)
+      public fun consumerGroupsToExclude(consumerGroupsToExclude: List<String>)
 
       /**
-       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
-       * to match their corresponding upstream topics.
+       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
+       * groups that should not be replicated.
        */
-      public fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: IResolvable)
+      public fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String)
 
       /**
-       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
-       * their corresponding upstream topics.
+       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
+       * consumer groups to copy. 
        */
-      public fun copyTopicConfigurations(copyTopicConfigurations: Boolean)
+      public fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>)
 
       /**
-       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
-       * their corresponding upstream topics.
+       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
+       * consumer groups to copy. 
        */
-      public fun copyTopicConfigurations(copyTopicConfigurations: IResolvable)
+      public fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String)
 
       /**
-       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
+       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
+       * groups.
        */
-      public fun detectAndCopyNewTopics(detectAndCopyNewTopics: Boolean)
+      public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean)
 
       /**
-       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
+       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
+       * groups.
        */
-      public fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable)
+      public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable)
 
       /**
-       * @param topicsToExclude List of regular expression patterns indicating the topics that
-       * should not be replicated.
+       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
+       * to __consumer_offsets topic in target cluster.
        */
-      public fun topicsToExclude(topicsToExclude: List<String>)
+      public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean)
 
       /**
-       * @param topicsToExclude List of regular expression patterns indicating the topics that
-       * should not be replicated.
+       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
+       * to __consumer_offsets topic in target cluster.
        */
-      public fun topicsToExclude(vararg topicsToExclude: String)
-
-      /**
-       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
-       * 
-       */
-      public fun topicsToReplicate(topicsToReplicate: List<String>)
-
-      /**
-       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
-       * 
-       */
-      public fun topicsToReplicate(vararg topicsToReplicate: String)
+      public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty.Builder =
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty.builder()
+          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty.Builder
+          =
+          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty.builder()
 
       /**
-       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
-       * to match their corresponding upstream topics.
+       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
+       * groups that should not be replicated.
        */
-      override fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: Boolean) {
-        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics)
+      override fun consumerGroupsToExclude(consumerGroupsToExclude: List<String>) {
+        cdkBuilder.consumerGroupsToExclude(consumerGroupsToExclude)
       }
 
       /**
-       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
-       * to match their corresponding upstream topics.
+       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
+       * groups that should not be replicated.
        */
-      override fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: IResolvable) {
-        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics.let(IResolvable::unwrap))
+      override fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String): Unit =
+          consumerGroupsToExclude(consumerGroupsToExclude.toList())
+
+      /**
+       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
+       * consumer groups to copy. 
+       */
+      override fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>) {
+        cdkBuilder.consumerGroupsToReplicate(consumerGroupsToReplicate)
       }
 
       /**
-       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
-       * their corresponding upstream topics.
+       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
+       * consumer groups to copy. 
        */
-      override fun copyTopicConfigurations(copyTopicConfigurations: Boolean) {
-        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations)
+      override fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String): Unit =
+          consumerGroupsToReplicate(consumerGroupsToReplicate.toList())
+
+      /**
+       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
+       * groups.
+       */
+      override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean) {
+        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups)
       }
 
       /**
-       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
-       * their corresponding upstream topics.
+       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
+       * groups.
        */
-      override fun copyTopicConfigurations(copyTopicConfigurations: IResolvable) {
-        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations.let(IResolvable::unwrap))
+      override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable) {
+        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups.let(IResolvable::unwrap))
       }
 
       /**
-       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
+       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
+       * to __consumer_offsets topic in target cluster.
        */
-      override fun detectAndCopyNewTopics(detectAndCopyNewTopics: Boolean) {
-        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics)
+      override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean) {
+        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets)
       }
 
       /**
-       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
+       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
+       * to __consumer_offsets topic in target cluster.
        */
-      override fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable) {
-        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics.let(IResolvable::unwrap))
+      override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable) {
+        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets.let(IResolvable::unwrap))
       }
 
-      /**
-       * @param topicsToExclude List of regular expression patterns indicating the topics that
-       * should not be replicated.
-       */
-      override fun topicsToExclude(topicsToExclude: List<String>) {
-        cdkBuilder.topicsToExclude(topicsToExclude)
-      }
-
-      /**
-       * @param topicsToExclude List of regular expression patterns indicating the topics that
-       * should not be replicated.
-       */
-      override fun topicsToExclude(vararg topicsToExclude: String): Unit =
-          topicsToExclude(topicsToExclude.toList())
-
-      /**
-       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
-       * 
-       */
-      override fun topicsToReplicate(topicsToReplicate: List<String>) {
-        cdkBuilder.topicsToReplicate(topicsToReplicate)
-      }
-
-      /**
-       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
-       * 
-       */
-      override fun topicsToReplicate(vararg topicsToReplicate: String): Unit =
-          topicsToReplicate(topicsToReplicate.toList())
-
-      public fun build(): software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty
-          = cdkBuilder.build()
+      public fun build():
+          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty,
-    ) : CdkObject(cdkObject), TopicReplicationProperty {
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty,
+    ) : CdkObject(cdkObject), ConsumerGroupReplicationProperty {
       /**
-       * Whether to periodically configure remote topic ACLs to match their corresponding upstream
-       * topics.
+       * List of regular expression patterns indicating the consumer groups that should not be
+       * replicated.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copyaccesscontrollistsfortopics)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoexclude)
        */
-      override fun copyAccessControlListsForTopics(): Any? =
-          unwrap(this).getCopyAccessControlListsForTopics()
+      override fun consumerGroupsToExclude(): List<String> =
+          unwrap(this).getConsumerGroupsToExclude() ?: emptyList()
 
       /**
-       * Whether to periodically configure remote topics to match their corresponding upstream
-       * topics.
+       * List of regular expression patterns indicating the consumer groups to copy.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copytopicconfigurations)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoreplicate)
        */
-      override fun copyTopicConfigurations(): Any? = unwrap(this).getCopyTopicConfigurations()
+      override fun consumerGroupsToReplicate(): List<String> =
+          unwrap(this).getConsumerGroupsToReplicate()
 
       /**
-       * Whether to periodically check for new topics and partitions.
+       * Whether to periodically check for new consumer groups.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
        */
-      override fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
+      override fun detectAndCopyNewConsumerGroups(): Any? =
+          unwrap(this).getDetectAndCopyNewConsumerGroups()
 
       /**
-       * List of regular expression patterns indicating the topics that should not be replicated.
+       * Whether to periodically write the translated offsets to __consumer_offsets topic in target
+       * cluster.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoexclude)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
        */
-      override fun topicsToExclude(): List<String> = unwrap(this).getTopicsToExclude() ?:
-          emptyList()
-
-      /**
-       * List of regular expression patterns indicating the topics to copy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoreplicate)
-       */
-      override fun topicsToReplicate(): List<String> = unwrap(this).getTopicsToReplicate()
+      override fun synchroniseConsumerGroupOffsets(): Any? =
+          unwrap(this).getSynchroniseConsumerGroupOffsets()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TopicReplicationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConsumerGroupReplicationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty):
-          TopicReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicReplicationProperty
-          ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty):
+          ConsumerGroupReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConsumerGroupReplicationProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: TopicReplicationProperty):
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty
+      internal fun unwrap(wrapped: ConsumerGroupReplicationProperty):
+          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty
     }
   }
 
@@ -966,8 +935,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty,
     ) : CdkObject(cdkObject), KafkaClusterClientVpcConfigProperty {
       /**
        * The AWS security groups to associate with the elastic network interfaces in order to
@@ -1148,8 +1116,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty,
     ) : CdkObject(cdkObject), KafkaClusterProperty {
       /**
        * Details of an Amazon MSK cluster.
@@ -1388,8 +1355,7 @@ public open class CfnReplicator internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty,
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty,
     ) : CdkObject(cdkObject), ReplicationInfoProperty {
       /**
        * Configuration relating to consumer group replication.
@@ -1444,241 +1410,269 @@ public open class CfnReplicator internal constructor(
   }
 
   /**
-   * Configuration relating to consumer group replication.
-   *
    * Example:
    *
    * ```
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.msk.*;
-   * ConsumerGroupReplicationProperty consumerGroupReplicationProperty =
-   * ConsumerGroupReplicationProperty.builder()
-   * .consumerGroupsToReplicate(List.of("consumerGroupsToReplicate"))
+   * TopicReplicationProperty topicReplicationProperty = TopicReplicationProperty.builder()
+   * .topicsToReplicate(List.of("topicsToReplicate"))
    * // the properties below are optional
-   * .consumerGroupsToExclude(List.of("consumerGroupsToExclude"))
-   * .detectAndCopyNewConsumerGroups(false)
-   * .synchroniseConsumerGroupOffsets(false)
+   * .copyAccessControlListsForTopics(false)
+   * .copyTopicConfigurations(false)
+   * .detectAndCopyNewTopics(false)
+   * .topicsToExclude(List.of("topicsToExclude"))
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html)
    */
-  public interface ConsumerGroupReplicationProperty {
+  public interface TopicReplicationProperty {
     /**
-     * List of regular expression patterns indicating the consumer groups that should not be
-     * replicated.
+     * Whether to periodically configure remote topic ACLs to match their corresponding upstream
+     * topics.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoexclude)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copyaccesscontrollistsfortopics)
      */
-    public fun consumerGroupsToExclude(): List<String> = unwrap(this).getConsumerGroupsToExclude()
-        ?: emptyList()
+    public fun copyAccessControlListsForTopics(): Any? =
+        unwrap(this).getCopyAccessControlListsForTopics()
 
     /**
-     * List of regular expression patterns indicating the consumer groups to copy.
+     * Whether to periodically configure remote topics to match their corresponding upstream topics.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoreplicate)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copytopicconfigurations)
      */
-    public fun consumerGroupsToReplicate(): List<String>
+    public fun copyTopicConfigurations(): Any? = unwrap(this).getCopyTopicConfigurations()
 
     /**
-     * Whether to periodically check for new consumer groups.
+     * Whether to periodically check for new topics and partitions.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
      */
-    public fun detectAndCopyNewConsumerGroups(): Any? =
-        unwrap(this).getDetectAndCopyNewConsumerGroups()
+    public fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
 
     /**
-     * Whether to periodically write the translated offsets to __consumer_offsets topic in target
-     * cluster.
+     * List of regular expression patterns indicating the topics that should not be replicated.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoexclude)
      */
-    public fun synchroniseConsumerGroupOffsets(): Any? =
-        unwrap(this).getSynchroniseConsumerGroupOffsets()
+    public fun topicsToExclude(): List<String> = unwrap(this).getTopicsToExclude() ?: emptyList()
 
     /**
-     * A builder for [ConsumerGroupReplicationProperty]
+     * List of regular expression patterns indicating the topics to copy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoreplicate)
+     */
+    public fun topicsToReplicate(): List<String>
+
+    /**
+     * A builder for [TopicReplicationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
-       * groups that should not be replicated.
+       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
+       * to match their corresponding upstream topics.
        */
-      public fun consumerGroupsToExclude(consumerGroupsToExclude: List<String>)
+      public fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: Boolean)
 
       /**
-       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
-       * groups that should not be replicated.
+       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
+       * to match their corresponding upstream topics.
        */
-      public fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String)
+      public fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: IResolvable)
 
       /**
-       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
-       * consumer groups to copy. 
+       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
+       * their corresponding upstream topics.
        */
-      public fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>)
+      public fun copyTopicConfigurations(copyTopicConfigurations: Boolean)
 
       /**
-       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
-       * consumer groups to copy. 
+       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
+       * their corresponding upstream topics.
        */
-      public fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String)
+      public fun copyTopicConfigurations(copyTopicConfigurations: IResolvable)
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
-      public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean)
+      public fun detectAndCopyNewTopics(detectAndCopyNewTopics: Boolean)
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
-      public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable)
+      public fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable)
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param topicsToExclude List of regular expression patterns indicating the topics that
+       * should not be replicated.
        */
-      public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean)
+      public fun topicsToExclude(topicsToExclude: List<String>)
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param topicsToExclude List of regular expression patterns indicating the topics that
+       * should not be replicated.
        */
-      public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable)
+      public fun topicsToExclude(vararg topicsToExclude: String)
+
+      /**
+       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
+       * 
+       */
+      public fun topicsToReplicate(topicsToReplicate: List<String>)
+
+      /**
+       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
+       * 
+       */
+      public fun topicsToReplicate(vararg topicsToReplicate: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty.Builder
-          =
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty.builder()
+          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty.Builder =
+          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty.builder()
 
       /**
-       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
-       * groups that should not be replicated.
+       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
+       * to match their corresponding upstream topics.
        */
-      override fun consumerGroupsToExclude(consumerGroupsToExclude: List<String>) {
-        cdkBuilder.consumerGroupsToExclude(consumerGroupsToExclude)
+      override fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: Boolean) {
+        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics)
       }
 
       /**
-       * @param consumerGroupsToExclude List of regular expression patterns indicating the consumer
-       * groups that should not be replicated.
+       * @param copyAccessControlListsForTopics Whether to periodically configure remote topic ACLs
+       * to match their corresponding upstream topics.
        */
-      override fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String): Unit =
-          consumerGroupsToExclude(consumerGroupsToExclude.toList())
-
-      /**
-       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
-       * consumer groups to copy. 
-       */
-      override fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>) {
-        cdkBuilder.consumerGroupsToReplicate(consumerGroupsToReplicate)
+      override fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: IResolvable) {
+        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics.let(IResolvable::unwrap))
       }
 
       /**
-       * @param consumerGroupsToReplicate List of regular expression patterns indicating the
-       * consumer groups to copy. 
+       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
+       * their corresponding upstream topics.
        */
-      override fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String): Unit =
-          consumerGroupsToReplicate(consumerGroupsToReplicate.toList())
-
-      /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
-       */
-      override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean) {
-        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups)
+      override fun copyTopicConfigurations(copyTopicConfigurations: Boolean) {
+        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations)
       }
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param copyTopicConfigurations Whether to periodically configure remote topics to match
+       * their corresponding upstream topics.
        */
-      override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable) {
-        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups.let(IResolvable::unwrap))
+      override fun copyTopicConfigurations(copyTopicConfigurations: IResolvable) {
+        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations.let(IResolvable::unwrap))
       }
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
-      override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean) {
-        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets)
+      override fun detectAndCopyNewTopics(detectAndCopyNewTopics: Boolean) {
+        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics)
       }
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
-      override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable) {
-        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets.let(IResolvable::unwrap))
+      override fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable) {
+        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics.let(IResolvable::unwrap))
       }
 
-      public fun build():
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty =
-          cdkBuilder.build()
+      /**
+       * @param topicsToExclude List of regular expression patterns indicating the topics that
+       * should not be replicated.
+       */
+      override fun topicsToExclude(topicsToExclude: List<String>) {
+        cdkBuilder.topicsToExclude(topicsToExclude)
+      }
+
+      /**
+       * @param topicsToExclude List of regular expression patterns indicating the topics that
+       * should not be replicated.
+       */
+      override fun topicsToExclude(vararg topicsToExclude: String): Unit =
+          topicsToExclude(topicsToExclude.toList())
+
+      /**
+       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
+       * 
+       */
+      override fun topicsToReplicate(topicsToReplicate: List<String>) {
+        cdkBuilder.topicsToReplicate(topicsToReplicate)
+      }
+
+      /**
+       * @param topicsToReplicate List of regular expression patterns indicating the topics to copy.
+       * 
+       */
+      override fun topicsToReplicate(vararg topicsToReplicate: String): Unit =
+          topicsToReplicate(topicsToReplicate.toList())
+
+      public fun build(): software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty,
-    ) : CdkObject(cdkObject), ConsumerGroupReplicationProperty {
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty,
+    ) : CdkObject(cdkObject), TopicReplicationProperty {
       /**
-       * List of regular expression patterns indicating the consumer groups that should not be
-       * replicated.
+       * Whether to periodically configure remote topic ACLs to match their corresponding upstream
+       * topics.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoexclude)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copyaccesscontrollistsfortopics)
        */
-      override fun consumerGroupsToExclude(): List<String> =
-          unwrap(this).getConsumerGroupsToExclude() ?: emptyList()
+      override fun copyAccessControlListsForTopics(): Any? =
+          unwrap(this).getCopyAccessControlListsForTopics()
 
       /**
-       * List of regular expression patterns indicating the consumer groups to copy.
+       * Whether to periodically configure remote topics to match their corresponding upstream
+       * topics.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-consumergroupstoreplicate)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-copytopicconfigurations)
        */
-      override fun consumerGroupsToReplicate(): List<String> =
-          unwrap(this).getConsumerGroupsToReplicate()
+      override fun copyTopicConfigurations(): Any? = unwrap(this).getCopyTopicConfigurations()
 
       /**
-       * Whether to periodically check for new consumer groups.
+       * Whether to periodically check for new topics and partitions.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
        */
-      override fun detectAndCopyNewConsumerGroups(): Any? =
-          unwrap(this).getDetectAndCopyNewConsumerGroups()
+      override fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
 
       /**
-       * Whether to periodically write the translated offsets to __consumer_offsets topic in target
-       * cluster.
+       * List of regular expression patterns indicating the topics that should not be replicated.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoexclude)
        */
-      override fun synchroniseConsumerGroupOffsets(): Any? =
-          unwrap(this).getSynchroniseConsumerGroupOffsets()
+      override fun topicsToExclude(): List<String> = unwrap(this).getTopicsToExclude() ?:
+          emptyList()
+
+      /**
+       * List of regular expression patterns indicating the topics to copy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicstoreplicate)
+       */
+      override fun topicsToReplicate(): List<String> = unwrap(this).getTopicsToReplicate()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConsumerGroupReplicationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TopicReplicationProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty):
-          ConsumerGroupReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConsumerGroupReplicationProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty):
+          TopicReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicReplicationProperty
+          ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: ConsumerGroupReplicationProperty):
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty
+      internal fun unwrap(wrapped: TopicReplicationProperty):
+          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty
     }
   }
 }

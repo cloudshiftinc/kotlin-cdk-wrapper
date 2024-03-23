@@ -369,8 +369,7 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps,
   ) : CdkObject(cdkObject), EcsFargateContainerDefinitionProps {
     /**
      * Indicates whether the job has a public IP address.

@@ -21,9 +21,8 @@ import kotlin.String
  * new SsmIncidentAction("ResponsePlanName"));
  * ```
  */
-public open class SsmIncidentAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction,
+public open class SsmIncidentAction(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(responsePlanName: String) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction(responsePlanName)
@@ -46,6 +45,7 @@ public open class SsmIncidentAction internal constructor(
         SsmIncidentAction = SsmIncidentAction(cdkObject)
 
     internal fun unwrap(wrapped: SsmIncidentAction):
-        software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction
   }
 }

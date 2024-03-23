@@ -620,6 +620,8 @@ public interface CfnClusterProps {
   /**
    * The name of the cluster.
    *
+   * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
    */
   public fun name(): String
@@ -952,6 +954,7 @@ public interface CfnClusterProps {
 
     /**
      * @param name The name of the cluster. 
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
      */
     public fun name(name: String)
 
@@ -1356,6 +1359,7 @@ public interface CfnClusterProps {
 
     /**
      * @param name The name of the cluster. 
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -1513,7 +1517,7 @@ public interface CfnClusterProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.emr.CfnClusterProps,
+    cdkObject: software.amazon.awscdk.services.emr.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
     /**
      * A JSON string for selecting additional features.
@@ -1665,6 +1669,8 @@ public interface CfnClusterProps {
 
     /**
      * The name of the cluster.
+     *
+     * This parameter can't contain the characters &lt;, &gt;, $, |, or ` (backtick).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-name)
      */

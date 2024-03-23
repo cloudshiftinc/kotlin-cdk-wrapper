@@ -84,7 +84,7 @@ public interface CfnAuthPolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps,
   ) : CdkObject(cdkObject), CfnAuthPolicyProps {
     /**
      * The auth policy.

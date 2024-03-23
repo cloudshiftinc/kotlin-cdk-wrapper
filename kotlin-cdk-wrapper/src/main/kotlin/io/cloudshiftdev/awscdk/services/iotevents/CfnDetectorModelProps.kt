@@ -256,7 +256,7 @@ public interface CfnDetectorModelProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModelProps,
+    cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModelProps,
   ) : CdkObject(cdkObject), CfnDetectorModelProps {
     /**
      * Information that defines how a detector operates.

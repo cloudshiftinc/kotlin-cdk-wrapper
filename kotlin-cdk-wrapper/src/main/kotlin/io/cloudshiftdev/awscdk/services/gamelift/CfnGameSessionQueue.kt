@@ -66,8 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)
  */
-public open class CfnGameSessionQueue internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
+public open class CfnGameSessionQueue(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -815,7 +815,421 @@ public open class CfnGameSessionQueue internal constructor(
         CfnGameSessionQueue = CfnGameSessionQueue(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameSessionQueue):
-        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue = wrapped.cdkObject
+        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue = wrapped.cdkObject as
+        software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * DestinationProperty destinationProperty = DestinationProperty.builder()
+   * .destinationArn("destinationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html)
+   */
+  public interface DestinationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * A builder for [DestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationArn the value to be set.
+       */
+      public fun destinationArn(destinationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.Builder =
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.builder()
+
+      /**
+       * @param destinationArn the value to be set.
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
+    ) : CdkObject(cdkObject), DestinationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty):
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DestinationProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty
+    }
+  }
+
+  /**
+   * A list of fleet locations where a game session queue can place new game sessions.
+   *
+   * You can use a filter to temporarily turn off placements for specific locations. For queues that
+   * have multi-location fleets, you can use a filter configuration allow placement with some, but not
+   * all of these locations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * FilterConfigurationProperty filterConfigurationProperty = FilterConfigurationProperty.builder()
+   * .allowedLocations(List.of("allowedLocations"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html)
+   */
+  public interface FilterConfigurationProperty {
+    /**
+     * A list of locations to allow game session placement in, in the form of AWS Region codes such
+     * as `us-west-2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html#cfn-gamelift-gamesessionqueue-filterconfiguration-allowedlocations)
+     */
+    public fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?: emptyList()
+
+    /**
+     * A builder for [FilterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allowedLocations A list of locations to allow game session placement in, in the form
+       * of AWS Region codes such as `us-west-2` .
+       */
+      public fun allowedLocations(allowedLocations: List<String>)
+
+      /**
+       * @param allowedLocations A list of locations to allow game session placement in, in the form
+       * of AWS Region codes such as `us-west-2` .
+       */
+      public fun allowedLocations(vararg allowedLocations: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty.builder()
+
+      /**
+       * @param allowedLocations A list of locations to allow game session placement in, in the form
+       * of AWS Region codes such as `us-west-2` .
+       */
+      override fun allowedLocations(allowedLocations: List<String>) {
+        cdkBuilder.allowedLocations(allowedLocations)
+      }
+
+      /**
+       * @param allowedLocations A list of locations to allow game session placement in, in the form
+       * of AWS Region codes such as `us-west-2` .
+       */
+      override fun allowedLocations(vararg allowedLocations: String): Unit =
+          allowedLocations(allowedLocations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
+    ) : CdkObject(cdkObject), FilterConfigurationProperty {
+      /**
+       * A list of locations to allow game session placement in, in the form of AWS Region codes
+       * such as `us-west-2` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html#cfn-gamelift-gamesessionqueue-filterconfiguration-allowedlocations)
+       */
+      override fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty):
+          FilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FilterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterConfigurationProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty
+    }
+  }
+
+  /**
+   * A fleet or alias designated in a game session queue.
+   *
+   * Queues fulfill requests for new game sessions by placing a new game session on any of the
+   * queue's destinations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * GameSessionQueueDestinationProperty gameSessionQueueDestinationProperty =
+   * GameSessionQueueDestinationProperty.builder()
+   * .destinationArn("destinationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html)
+   */
+  public interface GameSessionQueueDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
+     *
+     * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
+     * across all Regions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html#cfn-gamelift-gamesessionqueue-gamesessionqueuedestination-destinationarn)
+     */
+    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
+
+    /**
+     * A builder for [GameSessionQueueDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet
+       * alias.
+       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
+       * across all Regions.
+       */
+      public fun destinationArn(destinationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty.builder()
+
+      /**
+       * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet
+       * alias.
+       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
+       * across all Regions.
+       */
+      override fun destinationArn(destinationArn: String) {
+        cdkBuilder.destinationArn(destinationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
+    ) : CdkObject(cdkObject), GameSessionQueueDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
+       *
+       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
+       * across all Regions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html#cfn-gamelift-gamesessionqueue-gamesessionqueuedestination-destinationarn)
+       */
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GameSessionQueueDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty):
+          GameSessionQueueDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GameSessionQueueDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GameSessionQueueDestinationProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
+    }
+  }
+
+  /**
+   * The queue setting that determines the highest latency allowed for individual players when
+   * placing a game session.
+   *
+   * When a latency policy is in force, a game session cannot be placed with any fleet in a Region
+   * where a player reports latency higher than the cap. Latency policies are only enforced when the
+   * placement request contains player latency information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.gamelift.*;
+   * PlayerLatencyPolicyProperty playerLatencyPolicyProperty = PlayerLatencyPolicyProperty.builder()
+   * .maximumIndividualPlayerLatencyMilliseconds(123)
+   * .policyDurationSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html)
+   */
+  public interface PlayerLatencyPolicyProperty {
+    /**
+     * The maximum latency value that is allowed for any player, in milliseconds.
+     *
+     * All policies must have a value set for this property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds)
+     */
+    public fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
+        unwrap(this).getMaximumIndividualPlayerLatencyMilliseconds()
+
+    /**
+     * The length of time, in seconds, that the policy is enforced while placing a new game session.
+     *
+     * A null value for this property means that the policy is enforced until the queue times out.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds)
+     */
+    public fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
+
+    /**
+     * A builder for [PlayerLatencyPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumIndividualPlayerLatencyMilliseconds The maximum latency value that is allowed
+       * for any player, in milliseconds.
+       * All policies must have a value set for this property.
+       */
+      public
+          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number)
+
+      /**
+       * @param policyDurationSeconds The length of time, in seconds, that the policy is enforced
+       * while placing a new game session.
+       * A null value for this property means that the policy is enforced until the queue times out.
+       */
+      public fun policyDurationSeconds(policyDurationSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty.builder()
+
+      /**
+       * @param maximumIndividualPlayerLatencyMilliseconds The maximum latency value that is allowed
+       * for any player, in milliseconds.
+       * All policies must have a value set for this property.
+       */
+      override
+          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number) {
+        cdkBuilder.maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds)
+      }
+
+      /**
+       * @param policyDurationSeconds The length of time, in seconds, that the policy is enforced
+       * while placing a new game session.
+       * A null value for this property means that the policy is enforced until the queue times out.
+       */
+      override fun policyDurationSeconds(policyDurationSeconds: Number) {
+        cdkBuilder.policyDurationSeconds(policyDurationSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
+    ) : CdkObject(cdkObject), PlayerLatencyPolicyProperty {
+      /**
+       * The maximum latency value that is allowed for any player, in milliseconds.
+       *
+       * All policies must have a value set for this property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds)
+       */
+      override fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
+          unwrap(this).getMaximumIndividualPlayerLatencyMilliseconds()
+
+      /**
+       * The length of time, in seconds, that the policy is enforced while placing a new game
+       * session.
+       *
+       * A null value for this property means that the policy is enforced until the queue times out.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds)
+       */
+      override fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlayerLatencyPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty):
+          PlayerLatencyPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlayerLatencyPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlayerLatencyPolicyProperty):
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty
+    }
   }
 
   /**
@@ -1008,8 +1422,7 @@ public open class CfnGameSessionQueue internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
     ) : CdkObject(cdkObject), PriorityConfigurationProperty {
       /**
        * The prioritization order to use for fleet locations, when the `PriorityOrder` property
@@ -1057,423 +1470,6 @@ public open class CfnGameSessionQueue internal constructor(
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty
-    }
-  }
-
-  /**
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * DestinationProperty destinationProperty = DestinationProperty.builder()
-   * .destinationArn("destinationArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html)
-   */
-  public interface DestinationProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * A builder for [DestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationArn the value to be set.
-       */
-      public fun destinationArn(destinationArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.Builder =
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.builder()
-
-      /**
-       * @param destinationArn the value to be set.
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty):
-          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DestinationProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty
-    }
-  }
-
-  /**
-   * The queue setting that determines the highest latency allowed for individual players when
-   * placing a game session.
-   *
-   * When a latency policy is in force, a game session cannot be placed with any fleet in a Region
-   * where a player reports latency higher than the cap. Latency policies are only enforced when the
-   * placement request contains player latency information.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * PlayerLatencyPolicyProperty playerLatencyPolicyProperty = PlayerLatencyPolicyProperty.builder()
-   * .maximumIndividualPlayerLatencyMilliseconds(123)
-   * .policyDurationSeconds(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html)
-   */
-  public interface PlayerLatencyPolicyProperty {
-    /**
-     * The maximum latency value that is allowed for any player, in milliseconds.
-     *
-     * All policies must have a value set for this property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds)
-     */
-    public fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
-        unwrap(this).getMaximumIndividualPlayerLatencyMilliseconds()
-
-    /**
-     * The length of time, in seconds, that the policy is enforced while placing a new game session.
-     *
-     * A null value for this property means that the policy is enforced until the queue times out.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds)
-     */
-    public fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
-
-    /**
-     * A builder for [PlayerLatencyPolicyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maximumIndividualPlayerLatencyMilliseconds The maximum latency value that is allowed
-       * for any player, in milliseconds.
-       * All policies must have a value set for this property.
-       */
-      public
-          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number)
-
-      /**
-       * @param policyDurationSeconds The length of time, in seconds, that the policy is enforced
-       * while placing a new game session.
-       * A null value for this property means that the policy is enforced until the queue times out.
-       */
-      public fun policyDurationSeconds(policyDurationSeconds: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty.builder()
-
-      /**
-       * @param maximumIndividualPlayerLatencyMilliseconds The maximum latency value that is allowed
-       * for any player, in milliseconds.
-       * All policies must have a value set for this property.
-       */
-      override
-          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number) {
-        cdkBuilder.maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds)
-      }
-
-      /**
-       * @param policyDurationSeconds The length of time, in seconds, that the policy is enforced
-       * while placing a new game session.
-       * A null value for this property means that the policy is enforced until the queue times out.
-       */
-      override fun policyDurationSeconds(policyDurationSeconds: Number) {
-        cdkBuilder.policyDurationSeconds(policyDurationSeconds)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
-    ) : CdkObject(cdkObject), PlayerLatencyPolicyProperty {
-      /**
-       * The maximum latency value that is allowed for any player, in milliseconds.
-       *
-       * All policies must have a value set for this property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds)
-       */
-      override fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
-          unwrap(this).getMaximumIndividualPlayerLatencyMilliseconds()
-
-      /**
-       * The length of time, in seconds, that the policy is enforced while placing a new game
-       * session.
-       *
-       * A null value for this property means that the policy is enforced until the queue times out.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds)
-       */
-      override fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PlayerLatencyPolicyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty):
-          PlayerLatencyPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PlayerLatencyPolicyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PlayerLatencyPolicyProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty
-    }
-  }
-
-  /**
-   * A list of fleet locations where a game session queue can place new game sessions.
-   *
-   * You can use a filter to temporarily turn off placements for specific locations. For queues that
-   * have multi-location fleets, you can use a filter configuration allow placement with some, but not
-   * all of these locations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * FilterConfigurationProperty filterConfigurationProperty = FilterConfigurationProperty.builder()
-   * .allowedLocations(List.of("allowedLocations"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html)
-   */
-  public interface FilterConfigurationProperty {
-    /**
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such
-     * as `us-west-2` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html#cfn-gamelift-gamesessionqueue-filterconfiguration-allowedlocations)
-     */
-    public fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?: emptyList()
-
-    /**
-     * A builder for [FilterConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param allowedLocations A list of locations to allow game session placement in, in the form
-       * of AWS Region codes such as `us-west-2` .
-       */
-      public fun allowedLocations(allowedLocations: List<String>)
-
-      /**
-       * @param allowedLocations A list of locations to allow game session placement in, in the form
-       * of AWS Region codes such as `us-west-2` .
-       */
-      public fun allowedLocations(vararg allowedLocations: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty.builder()
-
-      /**
-       * @param allowedLocations A list of locations to allow game session placement in, in the form
-       * of AWS Region codes such as `us-west-2` .
-       */
-      override fun allowedLocations(allowedLocations: List<String>) {
-        cdkBuilder.allowedLocations(allowedLocations)
-      }
-
-      /**
-       * @param allowedLocations A list of locations to allow game session placement in, in the form
-       * of AWS Region codes such as `us-west-2` .
-       */
-      override fun allowedLocations(vararg allowedLocations: String): Unit =
-          allowedLocations(allowedLocations.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
-    ) : CdkObject(cdkObject), FilterConfigurationProperty {
-      /**
-       * A list of locations to allow game session placement in, in the form of AWS Region codes
-       * such as `us-west-2` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html#cfn-gamelift-gamesessionqueue-filterconfiguration-allowedlocations)
-       */
-      override fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?:
-          emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FilterConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty):
-          FilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FilterConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FilterConfigurationProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty
-    }
-  }
-
-  /**
-   * A fleet or alias designated in a game session queue.
-   *
-   * Queues fulfill requests for new game sessions by placing a new game session on any of the
-   * queue's destinations.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.gamelift.*;
-   * GameSessionQueueDestinationProperty gameSessionQueueDestinationProperty =
-   * GameSessionQueueDestinationProperty.builder()
-   * .destinationArn("destinationArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html)
-   */
-  public interface GameSessionQueueDestinationProperty {
-    /**
-     * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
-     *
-     * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
-     * across all Regions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html#cfn-gamelift-gamesessionqueue-gamesessionqueuedestination-destinationarn)
-     */
-    public fun destinationArn(): String? = unwrap(this).getDestinationArn()
-
-    /**
-     * A builder for [GameSessionQueueDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet
-       * alias.
-       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
-       * across all Regions.
-       */
-      public fun destinationArn(destinationArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty.builder()
-
-      /**
-       * @param destinationArn The Amazon Resource Name (ARN) that is assigned to fleet or fleet
-       * alias.
-       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
-       * across all Regions.
-       */
-      override fun destinationArn(destinationArn: String) {
-        cdkBuilder.destinationArn(destinationArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
-    ) : CdkObject(cdkObject), GameSessionQueueDestinationProperty {
-      /**
-       * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
-       *
-       * ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier
-       * across all Regions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-gamesessionqueuedestination.html#cfn-gamelift-gamesessionqueue-gamesessionqueuedestination-destinationarn)
-       */
-      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          GameSessionQueueDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty):
-          GameSessionQueueDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          GameSessionQueueDestinationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GameSessionQueueDestinationProperty):
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty
     }
   }
 }

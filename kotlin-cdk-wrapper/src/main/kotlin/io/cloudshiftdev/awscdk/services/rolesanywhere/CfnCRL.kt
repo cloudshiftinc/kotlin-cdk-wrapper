@@ -42,8 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html)
  */
-public open class CfnCRL internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRL,
+public open class CfnCRL(
+  cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRL,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -288,6 +288,6 @@ public open class CfnCRL internal constructor(
         CfnCRL(cdkObject)
 
     internal fun unwrap(wrapped: CfnCRL): software.amazon.awscdk.services.rolesanywhere.CfnCRL =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rolesanywhere.CfnCRL
   }
 }

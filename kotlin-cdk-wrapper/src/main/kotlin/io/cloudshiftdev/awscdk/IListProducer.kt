@@ -19,7 +19,7 @@ public interface IListProducer {
   public fun produce(context: IResolveContext): List<String>
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.IListProducer,
+    cdkObject: software.amazon.awscdk.IListProducer,
   ) : CdkObject(cdkObject), IListProducer {
     /**
      * Produce the list value.

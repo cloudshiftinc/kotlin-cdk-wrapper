@@ -20,8 +20,8 @@ import kotlin.String
  * Endpoint endpoint = new Endpoint("address", 123);
  * ```
  */
-public open class Endpoint internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.Endpoint,
+public open class Endpoint(
+  cdkObject: software.amazon.awscdk.services.rds.Endpoint,
 ) : CdkObject(cdkObject) {
   public constructor(address: String, port: Number) :
       this(software.amazon.awscdk.services.rds.Endpoint(address, port)
@@ -47,6 +47,6 @@ public open class Endpoint internal constructor(
         Endpoint(cdkObject)
 
     internal fun unwrap(wrapped: Endpoint): software.amazon.awscdk.services.rds.Endpoint =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.rds.Endpoint
   }
 }

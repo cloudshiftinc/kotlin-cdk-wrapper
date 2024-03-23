@@ -16,8 +16,7 @@ public interface IListenerCertificate {
   public fun certificateArn(): String
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
   ) : CdkObject(cdkObject), IListenerCertificate {
     /**
      * The ARN of the certificate to use.

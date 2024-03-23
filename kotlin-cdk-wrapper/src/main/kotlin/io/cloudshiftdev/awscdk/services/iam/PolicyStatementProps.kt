@@ -307,7 +307,7 @@ public interface PolicyStatementProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.PolicyStatementProps,
+    cdkObject: software.amazon.awscdk.services.iam.PolicyStatementProps,
   ) : CdkObject(cdkObject), PolicyStatementProps {
     /**
      * List of actions to add to the statement.

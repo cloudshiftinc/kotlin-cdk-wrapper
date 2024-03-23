@@ -50,8 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html)
  */
-public open class CfnApplication internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.m2.CfnApplication,
+public open class CfnApplication(
+  cdkObject: software.amazon.awscdk.services.m2.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -436,7 +436,7 @@ public open class CfnApplication internal constructor(
         = CfnApplication(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplication): software.amazon.awscdk.services.m2.CfnApplication
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.m2.CfnApplication
   }
 
   /**
@@ -520,7 +520,7 @@ public open class CfnApplication internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty,
     ) : CdkObject(cdkObject), DefinitionProperty {
       /**
        * The content of the application definition.

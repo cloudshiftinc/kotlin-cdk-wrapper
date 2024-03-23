@@ -117,7 +117,7 @@ public interface EfsFileSystemLocationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.EfsFileSystemLocationProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.EfsFileSystemLocationProps,
   ) : CdkObject(cdkObject), EfsFileSystemLocationProps {
     /**
      * The name used to access a file system created by Amazon EFS.

@@ -72,7 +72,7 @@ public interface SystemControl {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.SystemControl,
+    cdkObject: software.amazon.awscdk.services.ecs.SystemControl,
   ) : CdkObject(cdkObject), SystemControl {
     /**
      * The namespaced kernel parameter for which to set a value.

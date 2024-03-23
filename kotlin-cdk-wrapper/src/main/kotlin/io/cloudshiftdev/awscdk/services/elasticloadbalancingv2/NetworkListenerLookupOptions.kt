@@ -99,8 +99,7 @@ public interface NetworkListenerLookupOptions : BaseListenerLookupOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions,
   ) : CdkObject(cdkObject), NetworkListenerLookupOptions {
     /**
      * Filter listeners by listener port.

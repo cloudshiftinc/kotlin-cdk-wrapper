@@ -22,8 +22,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class EventBridgeDestination internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
+public open class EventBridgeDestination(
+  cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(bus: IEventBus) :
       this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(bus.let(IEventBus::unwrap))
@@ -44,6 +44,7 @@ public open class EventBridgeDestination internal constructor(
         EventBridgeDestination = EventBridgeDestination(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgeDestination):
-        software.amazon.awscdk.services.appconfig.EventBridgeDestination = wrapped.cdkObject
+        software.amazon.awscdk.services.appconfig.EventBridgeDestination = wrapped.cdkObject as
+        software.amazon.awscdk.services.appconfig.EventBridgeDestination
   }
 }

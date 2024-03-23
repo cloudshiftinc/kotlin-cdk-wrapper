@@ -376,7 +376,7 @@ public interface CfnKnowledgeBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps,
+    cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps,
   ) : CdkObject(cdkObject), CfnKnowledgeBaseProps {
     /**
      * The description.

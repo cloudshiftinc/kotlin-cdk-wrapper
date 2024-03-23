@@ -16,9 +16,8 @@ import kotlin.String
  * .build();
  * ```
  */
-public open class WebSocketApiKeySelectionExpression internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression,
+public open class WebSocketApiKeySelectionExpression(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression,
 ) : CdkObject(cdkObject) {
   public constructor(customApiKeySelector: String) :
       this(software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression(customApiKeySelector)
@@ -42,6 +41,7 @@ public open class WebSocketApiKeySelectionExpression internal constructor(
 
     internal fun unwrap(wrapped: WebSocketApiKeySelectionExpression):
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression
   }
 }

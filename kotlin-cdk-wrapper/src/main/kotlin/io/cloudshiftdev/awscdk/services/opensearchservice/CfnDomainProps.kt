@@ -1262,7 +1262,7 @@ public interface CfnDomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomainProps,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
     /**
      * An AWS Identity and Access Management ( IAM ) policy document that specifies who can access

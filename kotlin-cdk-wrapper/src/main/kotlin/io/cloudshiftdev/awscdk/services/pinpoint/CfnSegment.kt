@@ -155,8 +155,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-segment.html)
  */
-public open class CfnSegment internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
+public open class CfnSegment(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -543,353 +543,7 @@ public open class CfnSegment internal constructor(
         CfnSegment(cdkObject)
 
     internal fun unwrap(wrapped: CfnSegment): software.amazon.awscdk.services.pinpoint.CfnSegment =
-        wrapped.cdkObject
-  }
-
-  /**
-   * An array that defines the set of segment criteria to evaluate when handling segment groups for
-   * the segment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * Object userAttributes;
-   * GroupsProperty groupsProperty = GroupsProperty.builder()
-   * .dimensions(List.of(SegmentDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .behavior(BehaviorProperty.builder()
-   * .recency(RecencyProperty.builder()
-   * .duration("duration")
-   * .recencyType("recencyType")
-   * .build())
-   * .build())
-   * .demographic(DemographicProperty.builder()
-   * .appVersion(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .channel(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .deviceType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .make(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .model(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .platform(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .build())
-   * .location(LocationProperty.builder()
-   * .country(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .gpsPoint(GPSPointProperty.builder()
-   * .coordinates(CoordinatesProperty.builder()
-   * .latitude(123)
-   * .longitude(123)
-   * .build())
-   * .rangeInKilometers(123)
-   * .build())
-   * .build())
-   * .metrics(metrics)
-   * .userAttributes(userAttributes)
-   * .build()))
-   * .sourceSegments(List.of(SourceSegmentsProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .version(123)
-   * .build()))
-   * .sourceType("sourceType")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html)
-   */
-  public interface GroupsProperty {
-    /**
-     * An array that defines the dimensions to include or exclude from the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-dimensions)
-     */
-    public fun dimensions(): Any? = unwrap(this).getDimensions()
-
-    /**
-     * The base segment to build the segment on.
-     *
-     * A base segment, also called a *source segment* , defines the initial population of endpoints
-     * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment
-     * by using the dimensions that you specify.
-     *
-     * You can specify more than one dimensional segment or only one imported segment. If you
-     * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-     * console indicates the size of the imported segment without any filters applied to it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcesegments)
-     */
-    public fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
-
-    /**
-     * Specifies how to handle multiple base segments for the segment.
-     *
-     * For example, if you specify three base segments for the segment, whether the resulting
-     * segment is based on all, any, or none of the base segments.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcetype)
-     */
-    public fun sourceType(): String? = unwrap(this).getSourceType()
-
-    /**
-     * Specifies how to handle multiple dimensions for the segment.
-     *
-     * For example, if you specify three dimensions for the segment, whether the resulting segment
-     * includes endpoints that match all, any, or none of the dimensions.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [GroupsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      public fun dimensions(dimensions: IResolvable)
-
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      public fun dimensions(dimensions: List<Any>)
-
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      public fun dimensions(vararg dimensions: Any)
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      public fun sourceSegments(sourceSegments: IResolvable)
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      public fun sourceSegments(sourceSegments: List<Any>)
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      public fun sourceSegments(vararg sourceSegments: Any)
-
-      /**
-       * @param sourceType Specifies how to handle multiple base segments for the segment.
-       * For example, if you specify three base segments for the segment, whether the resulting
-       * segment is based on all, any, or none of the base segments.
-       */
-      public fun sourceType(sourceType: String)
-
-      /**
-       * @param type Specifies how to handle multiple dimensions for the segment.
-       * For example, if you specify three dimensions for the segment, whether the resulting segment
-       * includes endpoints that match all, any, or none of the dimensions.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.builder()
-
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
-      }
-
-      /**
-       * @param dimensions An array that defines the dimensions to include or exclude from the
-       * segment.
-       */
-      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      override fun sourceSegments(sourceSegments: IResolvable) {
-        cdkBuilder.sourceSegments(sourceSegments.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      override fun sourceSegments(sourceSegments: List<Any>) {
-        cdkBuilder.sourceSegments(sourceSegments)
-      }
-
-      /**
-       * @param sourceSegments The base segment to build the segment on.
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       */
-      override fun sourceSegments(vararg sourceSegments: Any): Unit =
-          sourceSegments(sourceSegments.toList())
-
-      /**
-       * @param sourceType Specifies how to handle multiple base segments for the segment.
-       * For example, if you specify three base segments for the segment, whether the resulting
-       * segment is based on all, any, or none of the base segments.
-       */
-      override fun sourceType(sourceType: String) {
-        cdkBuilder.sourceType(sourceType)
-      }
-
-      /**
-       * @param type Specifies how to handle multiple dimensions for the segment.
-       * For example, if you specify three dimensions for the segment, whether the resulting segment
-       * includes endpoints that match all, any, or none of the dimensions.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
-    ) : CdkObject(cdkObject), GroupsProperty {
-      /**
-       * An array that defines the dimensions to include or exclude from the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-dimensions)
-       */
-      override fun dimensions(): Any? = unwrap(this).getDimensions()
-
-      /**
-       * The base segment to build the segment on.
-       *
-       * A base segment, also called a *source segment* , defines the initial population of
-       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
-       * base segment by using the dimensions that you specify.
-       *
-       * You can specify more than one dimensional segment or only one imported segment. If you
-       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
-       * console indicates the size of the imported segment without any filters applied to it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcesegments)
-       */
-      override fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
-
-      /**
-       * Specifies how to handle multiple base segments for the segment.
-       *
-       * For example, if you specify three base segments for the segment, whether the resulting
-       * segment is based on all, any, or none of the base segments.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcetype)
-       */
-      override fun sourceType(): String? = unwrap(this).getSourceType()
-
-      /**
-       * Specifies how to handle multiple dimensions for the segment.
-       *
-       * For example, if you specify three dimensions for the segment, whether the resulting segment
-       * includes endpoints that match all, any, or none of the dimensions.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GroupsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty):
-          GroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GroupsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.pinpoint.CfnSegment
   }
 
   /**
@@ -969,8 +623,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
     ) : CdkObject(cdkObject), AttributeDimensionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-attributedimension.html#cfn-pinpoint-segment-attributedimension-attributetype)
@@ -1002,7 +655,8 @@ public open class CfnSegment internal constructor(
   }
 
   /**
-   * Specifies the dimension settings for a segment.
+   * Specifies behavior-based criteria for the segment, such as how recently users have used your
+   * app.
    *
    * Example:
    *
@@ -1010,582 +664,109 @@ public open class CfnSegment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * Object userAttributes;
-   * SegmentDimensionsProperty segmentDimensionsProperty = SegmentDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .behavior(BehaviorProperty.builder()
+   * BehaviorProperty behaviorProperty = BehaviorProperty.builder()
    * .recency(RecencyProperty.builder()
    * .duration("duration")
    * .recencyType("recencyType")
    * .build())
-   * .build())
-   * .demographic(DemographicProperty.builder()
-   * .appVersion(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .channel(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .deviceType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .make(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .model(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .platform(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .build())
-   * .location(LocationProperty.builder()
-   * .country(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .gpsPoint(GPSPointProperty.builder()
-   * .coordinates(CoordinatesProperty.builder()
-   * .latitude(123)
-   * .longitude(123)
-   * .build())
-   * .rangeInKilometers(123)
-   * .build())
-   * .build())
-   * .metrics(metrics)
-   * .userAttributes(userAttributes)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html)
    */
-  public interface SegmentDimensionsProperty {
+  public interface BehaviorProperty {
     /**
-     * One or more custom attributes to use as criteria for the segment.
+     * Specifies how recently segment members were active.
      *
-     * For more information see
-     * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-attributes)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html#cfn-pinpoint-segment-behavior-recency)
      */
-    public fun attributes(): Any? = unwrap(this).getAttributes()
+    public fun recency(): Any? = unwrap(this).getRecency()
 
     /**
-     * The behavior-based criteria, such as how recently users have used your app, for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-behavior)
-     */
-    public fun behavior(): Any? = unwrap(this).getBehavior()
-
-    /**
-     * The demographic-based criteria, such as device platform, for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-demographic)
-     */
-    public fun demographic(): Any? = unwrap(this).getDemographic()
-
-    /**
-     * The location-based criteria, such as region or GPS coordinates, for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-location)
-     */
-    public fun location(): Any? = unwrap(this).getLocation()
-
-    /**
-     * One or more custom metrics to use as criteria for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-metrics)
-     */
-    public fun metrics(): Any? = unwrap(this).getMetrics()
-
-    /**
-     * One or more custom user attributes to use as criteria for the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-userattributes)
-     */
-    public fun userAttributes(): Any? = unwrap(this).getUserAttributes()
-
-    /**
-     * A builder for [SegmentDimensionsProperty]
+     * A builder for [BehaviorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributes One or more custom attributes to use as criteria for the segment.
-       * For more information see
-       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+       * @param recency Specifies how recently segment members were active.
        */
-      public fun attributes(attributes: Any)
+      public fun recency(recency: IResolvable)
 
       /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
+       * @param recency Specifies how recently segment members were active.
        */
-      public fun behavior(behavior: IResolvable)
+      public fun recency(recency: RecencyProperty)
 
       /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
-       */
-      public fun behavior(behavior: BehaviorProperty)
-
-      /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
+       * @param recency Specifies how recently segment members were active.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
-      public fun behavior(behavior: BehaviorProperty.Builder.() -> Unit)
-
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      public fun demographic(demographic: IResolvable)
-
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      public fun demographic(demographic: DemographicProperty)
-
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
-      public fun demographic(demographic: DemographicProperty.Builder.() -> Unit)
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      public fun location(location: IResolvable)
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      public fun location(location: LocationProperty)
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
-      public fun location(location: LocationProperty.Builder.() -> Unit)
-
-      /**
-       * @param metrics One or more custom metrics to use as criteria for the segment.
-       */
-      public fun metrics(metrics: Any)
-
-      /**
-       * @param userAttributes One or more custom user attributes to use as criteria for the
-       * segment.
-       */
-      public fun userAttributes(userAttributes: Any)
+      @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
+      public fun recency(recency: RecencyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.builder()
 
       /**
-       * @param attributes One or more custom attributes to use as criteria for the segment.
-       * For more information see
-       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+       * @param recency Specifies how recently segment members were active.
        */
-      override fun attributes(attributes: Any) {
-        cdkBuilder.attributes(attributes)
+      override fun recency(recency: IResolvable) {
+        cdkBuilder.recency(recency.let(IResolvable::unwrap))
       }
 
       /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
+       * @param recency Specifies how recently segment members were active.
        */
-      override fun behavior(behavior: IResolvable) {
-        cdkBuilder.behavior(behavior.let(IResolvable::unwrap))
+      override fun recency(recency: RecencyProperty) {
+        cdkBuilder.recency(recency.let(RecencyProperty::unwrap))
       }
 
       /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
-       */
-      override fun behavior(behavior: BehaviorProperty) {
-        cdkBuilder.behavior(behavior.let(BehaviorProperty::unwrap))
-      }
-
-      /**
-       * @param behavior The behavior-based criteria, such as how recently users have used your app,
-       * for the segment.
+       * @param recency Specifies how recently segment members were active.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
-      override fun behavior(behavior: BehaviorProperty.Builder.() -> Unit): Unit =
-          behavior(BehaviorProperty(behavior))
+      @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
+      override fun recency(recency: RecencyProperty.Builder.() -> Unit): Unit =
+          recency(RecencyProperty(recency))
 
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      override fun demographic(demographic: IResolvable) {
-        cdkBuilder.demographic(demographic.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      override fun demographic(demographic: DemographicProperty) {
-        cdkBuilder.demographic(demographic.let(DemographicProperty::unwrap))
-      }
-
-      /**
-       * @param demographic The demographic-based criteria, such as device platform, for the
-       * segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
-      override fun demographic(demographic: DemographicProperty.Builder.() -> Unit): Unit =
-          demographic(DemographicProperty(demographic))
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      override fun location(location: IResolvable) {
-        cdkBuilder.location(location.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      override fun location(location: LocationProperty) {
-        cdkBuilder.location(location.let(LocationProperty::unwrap))
-      }
-
-      /**
-       * @param location The location-based criteria, such as region or GPS coordinates, for the
-       * segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
-      override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
-          location(LocationProperty(location))
-
-      /**
-       * @param metrics One or more custom metrics to use as criteria for the segment.
-       */
-      override fun metrics(metrics: Any) {
-        cdkBuilder.metrics(metrics)
-      }
-
-      /**
-       * @param userAttributes One or more custom user attributes to use as criteria for the
-       * segment.
-       */
-      override fun userAttributes(userAttributes: Any) {
-        cdkBuilder.userAttributes(userAttributes)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty =
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
-    ) : CdkObject(cdkObject), SegmentDimensionsProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
+    ) : CdkObject(cdkObject), BehaviorProperty {
       /**
-       * One or more custom attributes to use as criteria for the segment.
+       * Specifies how recently segment members were active.
        *
-       * For more information see
-       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-attributes)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html#cfn-pinpoint-segment-behavior-recency)
        */
-      override fun attributes(): Any? = unwrap(this).getAttributes()
-
-      /**
-       * The behavior-based criteria, such as how recently users have used your app, for the
-       * segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-behavior)
-       */
-      override fun behavior(): Any? = unwrap(this).getBehavior()
-
-      /**
-       * The demographic-based criteria, such as device platform, for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-demographic)
-       */
-      override fun demographic(): Any? = unwrap(this).getDemographic()
-
-      /**
-       * The location-based criteria, such as region or GPS coordinates, for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-location)
-       */
-      override fun location(): Any? = unwrap(this).getLocation()
-
-      /**
-       * One or more custom metrics to use as criteria for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-metrics)
-       */
-      override fun metrics(): Any? = unwrap(this).getMetrics()
-
-      /**
-       * One or more custom user attributes to use as criteria for the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-userattributes)
-       */
-      override fun userAttributes(): Any? = unwrap(this).getUserAttributes()
+      override fun recency(): Any? = unwrap(this).getRecency()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentDimensionsProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BehaviorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty):
-          SegmentDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          SegmentDimensionsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SegmentDimensionsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty
-    }
-  }
-
-  /**
-   * Specifies the set of segment criteria to evaluate when handling segment groups for the segment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * Object attributes;
-   * Object metrics;
-   * Object userAttributes;
-   * SegmentGroupsProperty segmentGroupsProperty = SegmentGroupsProperty.builder()
-   * .groups(List.of(GroupsProperty.builder()
-   * .dimensions(List.of(SegmentDimensionsProperty.builder()
-   * .attributes(attributes)
-   * .behavior(BehaviorProperty.builder()
-   * .recency(RecencyProperty.builder()
-   * .duration("duration")
-   * .recencyType("recencyType")
-   * .build())
-   * .build())
-   * .demographic(DemographicProperty.builder()
-   * .appVersion(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .channel(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .deviceType(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .make(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .model(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .platform(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .build())
-   * .location(LocationProperty.builder()
-   * .country(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .gpsPoint(GPSPointProperty.builder()
-   * .coordinates(CoordinatesProperty.builder()
-   * .latitude(123)
-   * .longitude(123)
-   * .build())
-   * .rangeInKilometers(123)
-   * .build())
-   * .build())
-   * .metrics(metrics)
-   * .userAttributes(userAttributes)
-   * .build()))
-   * .sourceSegments(List.of(SourceSegmentsProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .version(123)
-   * .build()))
-   * .sourceType("sourceType")
-   * .type("type")
-   * .build()))
-   * .include("include")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html)
-   */
-  public interface SegmentGroupsProperty {
-    /**
-     * Specifies the set of segment criteria to evaluate when handling segment groups for the
-     * segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-groups)
-     */
-    public fun groups(): Any? = unwrap(this).getGroups()
-
-    /**
-     * Specifies how to handle multiple segment groups for the segment.
-     *
-     * For example, if the segment includes three segment groups, whether the resulting segment
-     * includes endpoints that match all, any, or none of the segment groups.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-include)
-     */
-    public fun include(): String? = unwrap(this).getInclude()
-
-    /**
-     * A builder for [SegmentGroupsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      public fun groups(groups: IResolvable)
-
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      public fun groups(groups: List<Any>)
-
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      public fun groups(vararg groups: Any)
-
-      /**
-       * @param include Specifies how to handle multiple segment groups for the segment.
-       * For example, if the segment includes three segment groups, whether the resulting segment
-       * includes endpoints that match all, any, or none of the segment groups.
-       */
-      public fun include(include: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.builder()
-
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      override fun groups(groups: IResolvable) {
-        cdkBuilder.groups(groups.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      override fun groups(groups: List<Any>) {
-        cdkBuilder.groups(groups)
-      }
-
-      /**
-       * @param groups Specifies the set of segment criteria to evaluate when handling segment
-       * groups for the segment.
-       */
-      override fun groups(vararg groups: Any): Unit = groups(groups.toList())
-
-      /**
-       * @param include Specifies how to handle multiple segment groups for the segment.
-       * For example, if the segment includes three segment groups, whether the resulting segment
-       * includes endpoints that match all, any, or none of the segment groups.
-       */
-      override fun include(include: String) {
-        cdkBuilder.include(include)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
-    ) : CdkObject(cdkObject), SegmentGroupsProperty {
-      /**
-       * Specifies the set of segment criteria to evaluate when handling segment groups for the
-       * segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-groups)
-       */
-      override fun groups(): Any? = unwrap(this).getGroups()
-
-      /**
-       * Specifies how to handle multiple segment groups for the segment.
-       *
-       * For example, if the segment includes three segment groups, whether the resulting segment
-       * includes endpoints that match all, any, or none of the segment groups.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-include)
-       */
-      override fun include(): String? = unwrap(this).getInclude()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentGroupsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty):
-          SegmentGroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentGroupsProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty):
+          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: SegmentGroupsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty = (wrapped as
+      internal fun unwrap(wrapped: BehaviorProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty
+          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty
     }
   }
 
   /**
-   * Specifies location-based criteria, such as region or GPS coordinates, for the segment.
+   * Specifies the GPS coordinates of a location.
    *
    * Example:
    *
@@ -1593,418 +774,101 @@ public open class CfnSegment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * LocationProperty locationProperty = LocationProperty.builder()
-   * .country(SetDimensionProperty.builder()
-   * .dimensionType("dimensionType")
-   * .values(List.of("values"))
-   * .build())
-   * .gpsPoint(GPSPointProperty.builder()
-   * .coordinates(CoordinatesProperty.builder()
+   * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
    * .latitude(123)
    * .longitude(123)
-   * .build())
-   * .rangeInKilometers(123)
-   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html)
    */
-  public interface LocationProperty {
+  public interface CoordinatesProperty {
     /**
-     * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+     * The latitude coordinate of the location.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-country)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-latitude)
      */
-    public fun country(): Any? = unwrap(this).getCountry()
+    public fun latitude(): Number
 
     /**
-     * The GPS point dimension for the segment.
+     * The longitude coordinate of the location.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-gpspoint)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-longitude)
      */
-    public fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
+    public fun longitude(): Number
 
     /**
-     * A builder for [LocationProperty]
+     * A builder for [CoordinatesProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       * @param latitude The latitude coordinate of the location. 
        */
-      public fun country(country: IResolvable)
+      public fun latitude(latitude: Number)
 
       /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       * @param longitude The longitude coordinate of the location. 
        */
-      public fun country(country: SetDimensionProperty)
-
-      /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
-      public fun country(country: SetDimensionProperty.Builder.() -> Unit)
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      public fun gpsPoint(gpsPoint: IResolvable)
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      public fun gpsPoint(gpsPoint: GPSPointProperty)
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
-      public fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit)
+      public fun longitude(longitude: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.builder()
 
       /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       * @param latitude The latitude coordinate of the location. 
        */
-      override fun country(country: IResolvable) {
-        cdkBuilder.country(country.let(IResolvable::unwrap))
+      override fun latitude(latitude: Number) {
+        cdkBuilder.latitude(latitude)
       }
 
       /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       * @param longitude The longitude coordinate of the location. 
        */
-      override fun country(country: SetDimensionProperty) {
-        cdkBuilder.country(country.let(SetDimensionProperty::unwrap))
+      override fun longitude(longitude: Number) {
+        cdkBuilder.longitude(longitude)
       }
 
-      /**
-       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
-      override fun country(country: SetDimensionProperty.Builder.() -> Unit): Unit =
-          country(SetDimensionProperty(country))
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      override fun gpsPoint(gpsPoint: IResolvable) {
-        cdkBuilder.gpsPoint(gpsPoint.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      override fun gpsPoint(gpsPoint: GPSPointProperty) {
-        cdkBuilder.gpsPoint(gpsPoint.let(GPSPointProperty::unwrap))
-      }
-
-      /**
-       * @param gpsPoint The GPS point dimension for the segment.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
-      override fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit): Unit =
-          gpsPoint(GPSPointProperty(gpsPoint))
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty =
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
+    ) : CdkObject(cdkObject), CoordinatesProperty {
       /**
-       * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       * The latitude coordinate of the location.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-country)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-latitude)
        */
-      override fun country(): Any? = unwrap(this).getCountry()
+      override fun latitude(): Number = unwrap(this).getLatitude()
 
       /**
-       * The GPS point dimension for the segment.
+       * The longitude coordinate of the location.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-gpspoint)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-longitude)
        */
-      override fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
+      override fun longitude(): Number = unwrap(this).getLongitude()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CoordinatesProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty):
-          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty):
+          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: LocationProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty = (wrapped as
+      internal fun unwrap(wrapped: CoordinatesProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty
-    }
-  }
-
-  /**
-   * Specifies the GPS coordinates of the endpoint location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * GPSPointProperty gPSPointProperty = GPSPointProperty.builder()
-   * .coordinates(CoordinatesProperty.builder()
-   * .latitude(123)
-   * .longitude(123)
-   * .build())
-   * .rangeInKilometers(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html)
-   */
-  public interface GPSPointProperty {
-    /**
-     * The GPS coordinates to measure distance from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-coordinates)
-     */
-    public fun coordinates(): Any
-
-    /**
-     * The range, in kilometers, from the GPS coordinates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-rangeinkilometers)
-     */
-    public fun rangeInKilometers(): Number
-
-    /**
-     * A builder for [GPSPointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      public fun coordinates(coordinates: IResolvable)
-
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      public fun coordinates(coordinates: CoordinatesProperty)
-
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
-      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
-
-      /**
-       * @param rangeInKilometers The range, in kilometers, from the GPS coordinates. 
-       */
-      public fun rangeInKilometers(rangeInKilometers: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.builder()
-
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      override fun coordinates(coordinates: IResolvable) {
-        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      override fun coordinates(coordinates: CoordinatesProperty) {
-        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
-      }
-
-      /**
-       * @param coordinates The GPS coordinates to measure distance from. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
-      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
-          coordinates(CoordinatesProperty(coordinates))
-
-      /**
-       * @param rangeInKilometers The range, in kilometers, from the GPS coordinates. 
-       */
-      override fun rangeInKilometers(rangeInKilometers: Number) {
-        cdkBuilder.rangeInKilometers(rangeInKilometers)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
-    ) : CdkObject(cdkObject), GPSPointProperty {
-      /**
-       * The GPS coordinates to measure distance from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-coordinates)
-       */
-      override fun coordinates(): Any = unwrap(this).getCoordinates()
-
-      /**
-       * The range, in kilometers, from the GPS coordinates.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-rangeinkilometers)
-       */
-      override fun rangeInKilometers(): Number = unwrap(this).getRangeInKilometers()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): GPSPointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty):
-          GPSPointProperty = CdkObjectWrappers.wrap(cdkObject) as? GPSPointProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: GPSPointProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty
-    }
-  }
-
-  /**
-   * Specifies the base segment to build the segment on.
-   *
-   * A base segment, also called a *source segment* , defines the initial population of endpoints
-   * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment by
-   * using the dimensions that you specify.
-   *
-   * You can specify more than one dimensional segment or only one imported segment. If you specify
-   * an imported segment, the segment size estimate that displays on the Amazon Pinpoint console
-   * indicates the size of the imported segment without any filters applied to it.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * SourceSegmentsProperty sourceSegmentsProperty = SourceSegmentsProperty.builder()
-   * .id("id")
-   * // the properties below are optional
-   * .version(123)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html)
-   */
-  public interface SourceSegmentsProperty {
-    /**
-     * The unique identifier for the source segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-id)
-     */
-    public fun id(): String
-
-    /**
-     * The version number of the source segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-version)
-     */
-    public fun version(): Number? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [SourceSegmentsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param id The unique identifier for the source segment. 
-       */
-      public fun id(id: String)
-
-      /**
-       * @param version The version number of the source segment.
-       */
-      public fun version(version: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.builder()
-
-      /**
-       * @param id The unique identifier for the source segment. 
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
-
-      /**
-       * @param version The version number of the source segment.
-       */
-      override fun version(version: Number) {
-        cdkBuilder.version(version)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
-    ) : CdkObject(cdkObject), SourceSegmentsProperty {
-      /**
-       * The unique identifier for the source segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-id)
-       */
-      override fun id(): String = unwrap(this).getId()
-
-      /**
-       * The version number of the source segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-version)
-       */
-      override fun version(): Number? = unwrap(this).getVersion()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SourceSegmentsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty):
-          SourceSegmentsProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceSegmentsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SourceSegmentsProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty
+          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty
     }
   }
 
@@ -2340,8 +1204,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
     ) : CdkObject(cdkObject), DemographicProperty {
       /**
        * The app version criteria for the segment.
@@ -2405,8 +1268,7 @@ public open class CfnSegment internal constructor(
   }
 
   /**
-   * Specifies behavior-based criteria for the segment, such as how recently users have used your
-   * app.
+   * Specifies the GPS coordinates of the endpoint location.
    *
    * Example:
    *
@@ -2414,104 +1276,1362 @@ public open class CfnSegment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * BehaviorProperty behaviorProperty = BehaviorProperty.builder()
-   * .recency(RecencyProperty.builder()
-   * .duration("duration")
-   * .recencyType("recencyType")
+   * GPSPointProperty gPSPointProperty = GPSPointProperty.builder()
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude(123)
+   * .longitude(123)
    * .build())
+   * .rangeInKilometers(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html)
    */
-  public interface BehaviorProperty {
+  public interface GPSPointProperty {
     /**
-     * Specifies how recently segment members were active.
+     * The GPS coordinates to measure distance from.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html#cfn-pinpoint-segment-behavior-recency)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-coordinates)
      */
-    public fun recency(): Any? = unwrap(this).getRecency()
+    public fun coordinates(): Any
 
     /**
-     * A builder for [BehaviorProperty]
+     * The range, in kilometers, from the GPS coordinates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-rangeinkilometers)
+     */
+    public fun rangeInKilometers(): Number
+
+    /**
+     * A builder for [GPSPointProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
-      public fun recency(recency: IResolvable)
+      public fun coordinates(coordinates: IResolvable)
 
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
-      public fun recency(recency: RecencyProperty)
+      public fun coordinates(coordinates: CoordinatesProperty)
 
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
-      public fun recency(recency: RecencyProperty.Builder.() -> Unit)
+      @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
+      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
+
+      /**
+       * @param rangeInKilometers The range, in kilometers, from the GPS coordinates. 
+       */
+      public fun rangeInKilometers(rangeInKilometers: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.builder()
 
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
-      override fun recency(recency: IResolvable) {
-        cdkBuilder.recency(recency.let(IResolvable::unwrap))
+      override fun coordinates(coordinates: IResolvable) {
+        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
       }
 
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
-      override fun recency(recency: RecencyProperty) {
-        cdkBuilder.recency(recency.let(RecencyProperty::unwrap))
+      override fun coordinates(coordinates: CoordinatesProperty) {
+        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
       }
 
       /**
-       * @param recency Specifies how recently segment members were active.
+       * @param coordinates The GPS coordinates to measure distance from. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
-      override fun recency(recency: RecencyProperty.Builder.() -> Unit): Unit =
-          recency(RecencyProperty(recency))
+      @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
+      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
+          coordinates(CoordinatesProperty(coordinates))
 
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty =
+      /**
+       * @param rangeInKilometers The range, in kilometers, from the GPS coordinates. 
+       */
+      override fun rangeInKilometers(rangeInKilometers: Number) {
+        cdkBuilder.rangeInKilometers(rangeInKilometers)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
-    ) : CdkObject(cdkObject), BehaviorProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
+    ) : CdkObject(cdkObject), GPSPointProperty {
       /**
-       * Specifies how recently segment members were active.
+       * The GPS coordinates to measure distance from.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-behavior.html#cfn-pinpoint-segment-behavior-recency)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-coordinates)
        */
-      override fun recency(): Any? = unwrap(this).getRecency()
+      override fun coordinates(): Any = unwrap(this).getCoordinates()
+
+      /**
+       * The range, in kilometers, from the GPS coordinates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-gpspoint.html#cfn-pinpoint-segment-gpspoint-rangeinkilometers)
+       */
+      override fun rangeInKilometers(): Number = unwrap(this).getRangeInKilometers()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BehaviorProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GPSPointProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty):
-          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty):
+          GPSPointProperty = CdkObjectWrappers.wrap(cdkObject) as? GPSPointProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: BehaviorProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty = (wrapped as
+      internal fun unwrap(wrapped: GPSPointProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty
+    }
+  }
+
+  /**
+   * An array that defines the set of segment criteria to evaluate when handling segment groups for
+   * the segment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * Object userAttributes;
+   * GroupsProperty groupsProperty = GroupsProperty.builder()
+   * .dimensions(List.of(SegmentDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .behavior(BehaviorProperty.builder()
+   * .recency(RecencyProperty.builder()
+   * .duration("duration")
+   * .recencyType("recencyType")
+   * .build())
+   * .build())
+   * .demographic(DemographicProperty.builder()
+   * .appVersion(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .channel(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .deviceType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .make(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .model(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .platform(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .build())
+   * .location(LocationProperty.builder()
+   * .country(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .gpsPoint(GPSPointProperty.builder()
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude(123)
+   * .longitude(123)
+   * .build())
+   * .rangeInKilometers(123)
+   * .build())
+   * .build())
+   * .metrics(metrics)
+   * .userAttributes(userAttributes)
+   * .build()))
+   * .sourceSegments(List.of(SourceSegmentsProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .version(123)
+   * .build()))
+   * .sourceType("sourceType")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html)
+   */
+  public interface GroupsProperty {
+    /**
+     * An array that defines the dimensions to include or exclude from the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * The base segment to build the segment on.
+     *
+     * A base segment, also called a *source segment* , defines the initial population of endpoints
+     * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment
+     * by using the dimensions that you specify.
+     *
+     * You can specify more than one dimensional segment or only one imported segment. If you
+     * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+     * console indicates the size of the imported segment without any filters applied to it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcesegments)
+     */
+    public fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
+
+    /**
+     * Specifies how to handle multiple base segments for the segment.
+     *
+     * For example, if you specify three base segments for the segment, whether the resulting
+     * segment is based on all, any, or none of the base segments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcetype)
+     */
+    public fun sourceType(): String? = unwrap(this).getSourceType()
+
+    /**
+     * Specifies how to handle multiple dimensions for the segment.
+     *
+     * For example, if you specify three dimensions for the segment, whether the resulting segment
+     * includes endpoints that match all, any, or none of the dimensions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [GroupsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      public fun dimensions(dimensions: List<Any>)
+
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      public fun dimensions(vararg dimensions: Any)
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      public fun sourceSegments(sourceSegments: IResolvable)
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      public fun sourceSegments(sourceSegments: List<Any>)
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      public fun sourceSegments(vararg sourceSegments: Any)
+
+      /**
+       * @param sourceType Specifies how to handle multiple base segments for the segment.
+       * For example, if you specify three base segments for the segment, whether the resulting
+       * segment is based on all, any, or none of the base segments.
+       */
+      public fun sourceType(sourceType: String)
+
+      /**
+       * @param type Specifies how to handle multiple dimensions for the segment.
+       * For example, if you specify three dimensions for the segment, whether the resulting segment
+       * includes endpoints that match all, any, or none of the dimensions.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.builder()
+
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      override fun dimensions(dimensions: List<Any>) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param dimensions An array that defines the dimensions to include or exclude from the
+       * segment.
+       */
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      override fun sourceSegments(sourceSegments: IResolvable) {
+        cdkBuilder.sourceSegments(sourceSegments.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      override fun sourceSegments(sourceSegments: List<Any>) {
+        cdkBuilder.sourceSegments(sourceSegments)
+      }
+
+      /**
+       * @param sourceSegments The base segment to build the segment on.
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       */
+      override fun sourceSegments(vararg sourceSegments: Any): Unit =
+          sourceSegments(sourceSegments.toList())
+
+      /**
+       * @param sourceType Specifies how to handle multiple base segments for the segment.
+       * For example, if you specify three base segments for the segment, whether the resulting
+       * segment is based on all, any, or none of the base segments.
+       */
+      override fun sourceType(sourceType: String) {
+        cdkBuilder.sourceType(sourceType)
+      }
+
+      /**
+       * @param type Specifies how to handle multiple dimensions for the segment.
+       * For example, if you specify three dimensions for the segment, whether the resulting segment
+       * includes endpoints that match all, any, or none of the dimensions.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
+    ) : CdkObject(cdkObject), GroupsProperty {
+      /**
+       * An array that defines the dimensions to include or exclude from the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * The base segment to build the segment on.
+       *
+       * A base segment, also called a *source segment* , defines the initial population of
+       * endpoints for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the
+       * base segment by using the dimensions that you specify.
+       *
+       * You can specify more than one dimensional segment or only one imported segment. If you
+       * specify an imported segment, the segment size estimate that displays on the Amazon Pinpoint
+       * console indicates the size of the imported segment without any filters applied to it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcesegments)
+       */
+      override fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
+
+      /**
+       * Specifies how to handle multiple base segments for the segment.
+       *
+       * For example, if you specify three base segments for the segment, whether the resulting
+       * segment is based on all, any, or none of the base segments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-sourcetype)
+       */
+      override fun sourceType(): String? = unwrap(this).getSourceType()
+
+      /**
+       * Specifies how to handle multiple dimensions for the segment.
+       *
+       * For example, if you specify three dimensions for the segment, whether the resulting segment
+       * includes endpoints that match all, any, or none of the dimensions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-groups.html#cfn-pinpoint-segment-groups-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GroupsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty):
+          GroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GroupsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty
+    }
+  }
+
+  /**
+   * Specifies location-based criteria, such as region or GPS coordinates, for the segment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * LocationProperty locationProperty = LocationProperty.builder()
+   * .country(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .gpsPoint(GPSPointProperty.builder()
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude(123)
+   * .longitude(123)
+   * .build())
+   * .rangeInKilometers(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html)
+   */
+  public interface LocationProperty {
+    /**
+     * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-country)
+     */
+    public fun country(): Any? = unwrap(this).getCountry()
+
+    /**
+     * The GPS point dimension for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-gpspoint)
+     */
+    public fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
+
+    /**
+     * A builder for [LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      public fun country(country: IResolvable)
+
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      public fun country(country: SetDimensionProperty)
+
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
+      public fun country(country: SetDimensionProperty.Builder.() -> Unit)
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      public fun gpsPoint(gpsPoint: IResolvable)
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      public fun gpsPoint(gpsPoint: GPSPointProperty)
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
+      public fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.builder()
+
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      override fun country(country: IResolvable) {
+        cdkBuilder.country(country.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      override fun country(country: SetDimensionProperty) {
+        cdkBuilder.country(country.let(SetDimensionProperty::unwrap))
+      }
+
+      /**
+       * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
+      override fun country(country: SetDimensionProperty.Builder.() -> Unit): Unit =
+          country(SetDimensionProperty(country))
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      override fun gpsPoint(gpsPoint: IResolvable) {
+        cdkBuilder.gpsPoint(gpsPoint.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      override fun gpsPoint(gpsPoint: GPSPointProperty) {
+        cdkBuilder.gpsPoint(gpsPoint.let(GPSPointProperty::unwrap))
+      }
+
+      /**
+       * @param gpsPoint The GPS point dimension for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
+      override fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit): Unit =
+          gpsPoint(GPSPointProperty(gpsPoint))
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
+    ) : CdkObject(cdkObject), LocationProperty {
+      /**
+       * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-country)
+       */
+      override fun country(): Any? = unwrap(this).getCountry()
+
+      /**
+       * The GPS point dimension for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html#cfn-pinpoint-segment-location-gpspoint)
+       */
+      override fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty):
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LocationProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty
+    }
+  }
+
+  /**
+   * Specifies how recently segment members were active.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * RecencyProperty recencyProperty = RecencyProperty.builder()
+   * .duration("duration")
+   * .recencyType("recencyType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html)
+   */
+  public interface RecencyProperty {
+    /**
+     * The duration to use when determining which users have been active or inactive with your app.
+     *
+     * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-duration)
+     */
+    public fun duration(): String
+
+    /**
+     * The type of recency dimension to use for the segment.
+     *
+     * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
+     * users who have used your app within the specified duration are included in the segment. If the
+     * value is `INACTIVE` , the segment includes users who haven't used your app within the specified
+     * duration are included in the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-recencytype)
+     */
+    public fun recencyType(): String
+
+    /**
+     * A builder for [RecencyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param duration The duration to use when determining which users have been active or
+       * inactive with your app. 
+       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
+       */
+      public fun duration(duration: String)
+
+      /**
+       * @param recencyType The type of recency dimension to use for the segment. 
+       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
+       * users who have used your app within the specified duration are included in the segment. If the
+       * value is `INACTIVE` , the segment includes users who haven't used your app within the
+       * specified duration are included in the segment.
+       */
+      public fun recencyType(recencyType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.builder()
+
+      /**
+       * @param duration The duration to use when determining which users have been active or
+       * inactive with your app. 
+       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
+       */
+      override fun duration(duration: String) {
+        cdkBuilder.duration(duration)
+      }
+
+      /**
+       * @param recencyType The type of recency dimension to use for the segment. 
+       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
+       * users who have used your app within the specified duration are included in the segment. If the
+       * value is `INACTIVE` , the segment includes users who haven't used your app within the
+       * specified duration are included in the segment.
+       */
+      override fun recencyType(recencyType: String) {
+        cdkBuilder.recencyType(recencyType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
+    ) : CdkObject(cdkObject), RecencyProperty {
+      /**
+       * The duration to use when determining which users have been active or inactive with your
+       * app.
+       *
+       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-duration)
+       */
+      override fun duration(): String = unwrap(this).getDuration()
+
+      /**
+       * The type of recency dimension to use for the segment.
+       *
+       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
+       * users who have used your app within the specified duration are included in the segment. If the
+       * value is `INACTIVE` , the segment includes users who haven't used your app within the
+       * specified duration are included in the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-recencytype)
+       */
+      override fun recencyType(): String = unwrap(this).getRecencyType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecencyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty):
+          RecencyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecencyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecencyProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty
+    }
+  }
+
+  /**
+   * Specifies the dimension settings for a segment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * Object userAttributes;
+   * SegmentDimensionsProperty segmentDimensionsProperty = SegmentDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .behavior(BehaviorProperty.builder()
+   * .recency(RecencyProperty.builder()
+   * .duration("duration")
+   * .recencyType("recencyType")
+   * .build())
+   * .build())
+   * .demographic(DemographicProperty.builder()
+   * .appVersion(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .channel(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .deviceType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .make(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .model(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .platform(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .build())
+   * .location(LocationProperty.builder()
+   * .country(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .gpsPoint(GPSPointProperty.builder()
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude(123)
+   * .longitude(123)
+   * .build())
+   * .rangeInKilometers(123)
+   * .build())
+   * .build())
+   * .metrics(metrics)
+   * .userAttributes(userAttributes)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html)
+   */
+  public interface SegmentDimensionsProperty {
+    /**
+     * One or more custom attributes to use as criteria for the segment.
+     *
+     * For more information see
+     * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-attributes)
+     */
+    public fun attributes(): Any? = unwrap(this).getAttributes()
+
+    /**
+     * The behavior-based criteria, such as how recently users have used your app, for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-behavior)
+     */
+    public fun behavior(): Any? = unwrap(this).getBehavior()
+
+    /**
+     * The demographic-based criteria, such as device platform, for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-demographic)
+     */
+    public fun demographic(): Any? = unwrap(this).getDemographic()
+
+    /**
+     * The location-based criteria, such as region or GPS coordinates, for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-location)
+     */
+    public fun location(): Any? = unwrap(this).getLocation()
+
+    /**
+     * One or more custom metrics to use as criteria for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-metrics)
+     */
+    public fun metrics(): Any? = unwrap(this).getMetrics()
+
+    /**
+     * One or more custom user attributes to use as criteria for the segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-userattributes)
+     */
+    public fun userAttributes(): Any? = unwrap(this).getUserAttributes()
+
+    /**
+     * A builder for [SegmentDimensionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributes One or more custom attributes to use as criteria for the segment.
+       * For more information see
+       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+       */
+      public fun attributes(attributes: Any)
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      public fun behavior(behavior: IResolvable)
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      public fun behavior(behavior: BehaviorProperty)
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
+      public fun behavior(behavior: BehaviorProperty.Builder.() -> Unit)
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      public fun demographic(demographic: IResolvable)
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      public fun demographic(demographic: DemographicProperty)
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
+      public fun demographic(demographic: DemographicProperty.Builder.() -> Unit)
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      public fun location(location: IResolvable)
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      public fun location(location: LocationProperty)
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
+      public fun location(location: LocationProperty.Builder.() -> Unit)
+
+      /**
+       * @param metrics One or more custom metrics to use as criteria for the segment.
+       */
+      public fun metrics(metrics: Any)
+
+      /**
+       * @param userAttributes One or more custom user attributes to use as criteria for the
+       * segment.
+       */
+      public fun userAttributes(userAttributes: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.builder()
+
+      /**
+       * @param attributes One or more custom attributes to use as criteria for the segment.
+       * For more information see
+       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+       */
+      override fun attributes(attributes: Any) {
+        cdkBuilder.attributes(attributes)
+      }
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      override fun behavior(behavior: IResolvable) {
+        cdkBuilder.behavior(behavior.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      override fun behavior(behavior: BehaviorProperty) {
+        cdkBuilder.behavior(behavior.let(BehaviorProperty::unwrap))
+      }
+
+      /**
+       * @param behavior The behavior-based criteria, such as how recently users have used your app,
+       * for the segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
+      override fun behavior(behavior: BehaviorProperty.Builder.() -> Unit): Unit =
+          behavior(BehaviorProperty(behavior))
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      override fun demographic(demographic: IResolvable) {
+        cdkBuilder.demographic(demographic.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      override fun demographic(demographic: DemographicProperty) {
+        cdkBuilder.demographic(demographic.let(DemographicProperty::unwrap))
+      }
+
+      /**
+       * @param demographic The demographic-based criteria, such as device platform, for the
+       * segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
+      override fun demographic(demographic: DemographicProperty.Builder.() -> Unit): Unit =
+          demographic(DemographicProperty(demographic))
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      override fun location(location: IResolvable) {
+        cdkBuilder.location(location.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      override fun location(location: LocationProperty) {
+        cdkBuilder.location(location.let(LocationProperty::unwrap))
+      }
+
+      /**
+       * @param location The location-based criteria, such as region or GPS coordinates, for the
+       * segment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
+      override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+          location(LocationProperty(location))
+
+      /**
+       * @param metrics One or more custom metrics to use as criteria for the segment.
+       */
+      override fun metrics(metrics: Any) {
+        cdkBuilder.metrics(metrics)
+      }
+
+      /**
+       * @param userAttributes One or more custom user attributes to use as criteria for the
+       * segment.
+       */
+      override fun userAttributes(userAttributes: Any) {
+        cdkBuilder.userAttributes(userAttributes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
+    ) : CdkObject(cdkObject), SegmentDimensionsProperty {
+      /**
+       * One or more custom attributes to use as criteria for the segment.
+       *
+       * For more information see
+       * [AttributeDimension](https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-segments.html#apps-application-id-segments-model-attributedimension)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-attributes)
+       */
+      override fun attributes(): Any? = unwrap(this).getAttributes()
+
+      /**
+       * The behavior-based criteria, such as how recently users have used your app, for the
+       * segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-behavior)
+       */
+      override fun behavior(): Any? = unwrap(this).getBehavior()
+
+      /**
+       * The demographic-based criteria, such as device platform, for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-demographic)
+       */
+      override fun demographic(): Any? = unwrap(this).getDemographic()
+
+      /**
+       * The location-based criteria, such as region or GPS coordinates, for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-location)
+       */
+      override fun location(): Any? = unwrap(this).getLocation()
+
+      /**
+       * One or more custom metrics to use as criteria for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-metrics)
+       */
+      override fun metrics(): Any? = unwrap(this).getMetrics()
+
+      /**
+       * One or more custom user attributes to use as criteria for the segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html#cfn-pinpoint-segment-segmentdimensions-userattributes)
+       */
+      override fun userAttributes(): Any? = unwrap(this).getUserAttributes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentDimensionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty):
+          SegmentDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SegmentDimensionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SegmentDimensionsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty
+    }
+  }
+
+  /**
+   * Specifies the set of segment criteria to evaluate when handling segment groups for the segment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * Object attributes;
+   * Object metrics;
+   * Object userAttributes;
+   * SegmentGroupsProperty segmentGroupsProperty = SegmentGroupsProperty.builder()
+   * .groups(List.of(GroupsProperty.builder()
+   * .dimensions(List.of(SegmentDimensionsProperty.builder()
+   * .attributes(attributes)
+   * .behavior(BehaviorProperty.builder()
+   * .recency(RecencyProperty.builder()
+   * .duration("duration")
+   * .recencyType("recencyType")
+   * .build())
+   * .build())
+   * .demographic(DemographicProperty.builder()
+   * .appVersion(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .channel(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .deviceType(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .make(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .model(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .platform(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .build())
+   * .location(LocationProperty.builder()
+   * .country(SetDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .gpsPoint(GPSPointProperty.builder()
+   * .coordinates(CoordinatesProperty.builder()
+   * .latitude(123)
+   * .longitude(123)
+   * .build())
+   * .rangeInKilometers(123)
+   * .build())
+   * .build())
+   * .metrics(metrics)
+   * .userAttributes(userAttributes)
+   * .build()))
+   * .sourceSegments(List.of(SourceSegmentsProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .version(123)
+   * .build()))
+   * .sourceType("sourceType")
+   * .type("type")
+   * .build()))
+   * .include("include")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html)
+   */
+  public interface SegmentGroupsProperty {
+    /**
+     * Specifies the set of segment criteria to evaluate when handling segment groups for the
+     * segment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-groups)
+     */
+    public fun groups(): Any? = unwrap(this).getGroups()
+
+    /**
+     * Specifies how to handle multiple segment groups for the segment.
+     *
+     * For example, if the segment includes three segment groups, whether the resulting segment
+     * includes endpoints that match all, any, or none of the segment groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-include)
+     */
+    public fun include(): String? = unwrap(this).getInclude()
+
+    /**
+     * A builder for [SegmentGroupsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      public fun groups(groups: IResolvable)
+
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      public fun groups(groups: List<Any>)
+
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      public fun groups(vararg groups: Any)
+
+      /**
+       * @param include Specifies how to handle multiple segment groups for the segment.
+       * For example, if the segment includes three segment groups, whether the resulting segment
+       * includes endpoints that match all, any, or none of the segment groups.
+       */
+      public fun include(include: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.builder()
+
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      override fun groups(groups: IResolvable) {
+        cdkBuilder.groups(groups.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      override fun groups(groups: List<Any>) {
+        cdkBuilder.groups(groups)
+      }
+
+      /**
+       * @param groups Specifies the set of segment criteria to evaluate when handling segment
+       * groups for the segment.
+       */
+      override fun groups(vararg groups: Any): Unit = groups(groups.toList())
+
+      /**
+       * @param include Specifies how to handle multiple segment groups for the segment.
+       * For example, if the segment includes three segment groups, whether the resulting segment
+       * includes endpoints that match all, any, or none of the segment groups.
+       */
+      override fun include(include: String) {
+        cdkBuilder.include(include)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
+    ) : CdkObject(cdkObject), SegmentGroupsProperty {
+      /**
+       * Specifies the set of segment criteria to evaluate when handling segment groups for the
+       * segment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-groups)
+       */
+      override fun groups(): Any? = unwrap(this).getGroups()
+
+      /**
+       * Specifies how to handle multiple segment groups for the segment.
+       *
+       * For example, if the segment includes three segment groups, whether the resulting segment
+       * includes endpoints that match all, any, or none of the segment groups.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentgroups.html#cfn-pinpoint-segment-segmentgroups-include)
+       */
+      override fun include(): String? = unwrap(this).getInclude()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentGroupsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty):
+          SegmentGroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentGroupsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SegmentGroupsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty
     }
   }
 
@@ -2615,8 +2735,7 @@ public open class CfnSegment internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
     ) : CdkObject(cdkObject), SetDimensionProperty {
       /**
        * The type of segment dimension to use.
@@ -2658,7 +2777,15 @@ public open class CfnSegment internal constructor(
   }
 
   /**
-   * Specifies the GPS coordinates of a location.
+   * Specifies the base segment to build the segment on.
+   *
+   * A base segment, also called a *source segment* , defines the initial population of endpoints
+   * for a segment. When you add dimensions to the segment, Amazon Pinpoint filters the base segment by
+   * using the dimensions that you specify.
+   *
+   * You can specify more than one dimensional segment or only one imported segment. If you specify
+   * an imported segment, the segment size estimate that displays on the Amazon Pinpoint console
+   * indicates the size of the imported segment without any filters applied to it.
    *
    * Example:
    *
@@ -2666,236 +2793,102 @@ public open class CfnSegment internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
-   * .latitude(123)
-   * .longitude(123)
+   * SourceSegmentsProperty sourceSegmentsProperty = SourceSegmentsProperty.builder()
+   * .id("id")
+   * // the properties below are optional
+   * .version(123)
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html)
    */
-  public interface CoordinatesProperty {
+  public interface SourceSegmentsProperty {
     /**
-     * The latitude coordinate of the location.
+     * The unique identifier for the source segment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-latitude)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-id)
      */
-    public fun latitude(): Number
+    public fun id(): String
 
     /**
-     * The longitude coordinate of the location.
+     * The version number of the source segment.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-longitude)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-version)
      */
-    public fun longitude(): Number
+    public fun version(): Number? = unwrap(this).getVersion()
 
     /**
-     * A builder for [CoordinatesProperty]
+     * A builder for [SourceSegmentsProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param latitude The latitude coordinate of the location. 
+       * @param id The unique identifier for the source segment. 
        */
-      public fun latitude(latitude: Number)
+      public fun id(id: String)
 
       /**
-       * @param longitude The longitude coordinate of the location. 
+       * @param version The version number of the source segment.
        */
-      public fun longitude(longitude: Number)
+      public fun version(version: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.builder()
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.builder()
 
       /**
-       * @param latitude The latitude coordinate of the location. 
+       * @param id The unique identifier for the source segment. 
        */
-      override fun latitude(latitude: Number) {
-        cdkBuilder.latitude(latitude)
+      override fun id(id: String) {
+        cdkBuilder.id(id)
       }
 
       /**
-       * @param longitude The longitude coordinate of the location. 
+       * @param version The version number of the source segment.
        */
-      override fun longitude(longitude: Number) {
-        cdkBuilder.longitude(longitude)
+      override fun version(version: Number) {
+        cdkBuilder.version(version)
       }
 
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty =
-          cdkBuilder.build()
+      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
-    ) : CdkObject(cdkObject), CoordinatesProperty {
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
+    ) : CdkObject(cdkObject), SourceSegmentsProperty {
       /**
-       * The latitude coordinate of the location.
+       * The unique identifier for the source segment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-latitude)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-id)
        */
-      override fun latitude(): Number = unwrap(this).getLatitude()
+      override fun id(): String = unwrap(this).getId()
 
       /**
-       * The longitude coordinate of the location.
+       * The version number of the source segment.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html#cfn-pinpoint-segment-coordinates-longitude)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-sourcesegments.html#cfn-pinpoint-segment-sourcesegments-version)
        */
-      override fun longitude(): Number = unwrap(this).getLongitude()
+      override fun version(): Number? = unwrap(this).getVersion()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CoordinatesProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceSegmentsProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty):
-          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty):
+          SourceSegmentsProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceSegmentsProperty ?:
           Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: CoordinatesProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty = (wrapped as
+      internal fun unwrap(wrapped: SourceSegmentsProperty):
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty = (wrapped as
           CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty
-    }
-  }
-
-  /**
-   * Specifies how recently segment members were active.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * RecencyProperty recencyProperty = RecencyProperty.builder()
-   * .duration("duration")
-   * .recencyType("recencyType")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html)
-   */
-  public interface RecencyProperty {
-    /**
-     * The duration to use when determining which users have been active or inactive with your app.
-     *
-     * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-duration)
-     */
-    public fun duration(): String
-
-    /**
-     * The type of recency dimension to use for the segment.
-     *
-     * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
-     * users who have used your app within the specified duration are included in the segment. If the
-     * value is `INACTIVE` , the segment includes users who haven't used your app within the specified
-     * duration are included in the segment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-recencytype)
-     */
-    public fun recencyType(): String
-
-    /**
-     * A builder for [RecencyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param duration The duration to use when determining which users have been active or
-       * inactive with your app. 
-       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
-       */
-      public fun duration(duration: String)
-
-      /**
-       * @param recencyType The type of recency dimension to use for the segment. 
-       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
-       * users who have used your app within the specified duration are included in the segment. If the
-       * value is `INACTIVE` , the segment includes users who haven't used your app within the
-       * specified duration are included in the segment.
-       */
-      public fun recencyType(recencyType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.builder()
-
-      /**
-       * @param duration The duration to use when determining which users have been active or
-       * inactive with your app. 
-       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
-       */
-      override fun duration(duration: String) {
-        cdkBuilder.duration(duration)
-      }
-
-      /**
-       * @param recencyType The type of recency dimension to use for the segment. 
-       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
-       * users who have used your app within the specified duration are included in the segment. If the
-       * value is `INACTIVE` , the segment includes users who haven't used your app within the
-       * specified duration are included in the segment.
-       */
-      override fun recencyType(recencyType: String) {
-        cdkBuilder.recencyType(recencyType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
-    ) : CdkObject(cdkObject), RecencyProperty {
-      /**
-       * The duration to use when determining which users have been active or inactive with your
-       * app.
-       *
-       * Possible values: `HR_24` | `DAY_7` | `DAY_14` | `DAY_30` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-duration)
-       */
-      override fun duration(): String = unwrap(this).getDuration()
-
-      /**
-       * The type of recency dimension to use for the segment.
-       *
-       * Valid values are: `ACTIVE` and `INACTIVE` . If the value is `ACTIVE` , the segment includes
-       * users who have used your app within the specified duration are included in the segment. If the
-       * value is `INACTIVE` , the segment includes users who haven't used your app within the
-       * specified duration are included in the segment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html#cfn-pinpoint-segment-recency-recencytype)
-       */
-      override fun recencyType(): String = unwrap(this).getRecencyType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RecencyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty):
-          RecencyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecencyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RecencyProperty):
-          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty
+          software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty
     }
   }
 }

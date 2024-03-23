@@ -35,8 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-component.html)
  */
-public open class CfnComponent internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent,
+public open class CfnComponent(
+  cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -806,3597 +806,8 @@ public open class CfnComponent internal constructor(
         CfnComponent = CfnComponent(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponent):
-        software.amazon.awscdk.services.amplifyuibuilder.CfnComponent = wrapped.cdkObject
-  }
-
-  /**
-   * Represents the state configuration when an action modifies a property of another element within
-   * the same component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentPropertyProperty componentPropertyProperty_;
-   * MutationActionSetStateParameterProperty mutationActionSetStateParameterProperty =
-   * MutationActionSetStateParameterProperty.builder()
-   * .componentName("componentName")
-   * .property("property")
-   * .set(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html)
-   */
-  public interface MutationActionSetStateParameterProperty {
-    /**
-     * The name of the component that is being modified.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-componentname)
-     */
-    public fun componentName(): String
-
-    /**
-     * The name of the component property to apply the state configuration to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-property)
-     */
-    public fun `property`(): String
-
-    /**
-     * The state configuration to assign to the property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-set)
-     */
-    public fun `set`(): Any
-
-    /**
-     * A builder for [MutationActionSetStateParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param componentName The name of the component that is being modified. 
-       */
-      public fun componentName(componentName: String)
-
-      /**
-       * @param property The name of the component property to apply the state configuration to. 
-       */
-      public fun `property`(`property`: String)
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      public fun `set`(`set`: IResolvable)
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      public fun `set`(`set`: ComponentPropertyProperty)
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
-      public fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty.builder()
-
-      /**
-       * @param componentName The name of the component that is being modified. 
-       */
-      override fun componentName(componentName: String) {
-        cdkBuilder.componentName(componentName)
-      }
-
-      /**
-       * @param property The name of the component property to apply the state configuration to. 
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      override fun `set`(`set`: IResolvable) {
-        cdkBuilder.`set`(`set`.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      override fun `set`(`set`: ComponentPropertyProperty) {
-        cdkBuilder.`set`(`set`.let(ComponentPropertyProperty::unwrap))
-      }
-
-      /**
-       * @param set The state configuration to assign to the property. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
-      override fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit): Unit =
-          `set`(ComponentPropertyProperty(`set`))
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty,
-    ) : CdkObject(cdkObject), MutationActionSetStateParameterProperty {
-      /**
-       * The name of the component that is being modified.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-componentname)
-       */
-      override fun componentName(): String = unwrap(this).getComponentName()
-
-      /**
-       * The name of the component property to apply the state configuration to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-property)
-       */
-      override fun `property`(): String = unwrap(this).getProperty()
-
-      /**
-       * The state configuration to assign to the property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-set)
-       */
-      override fun `set`(): Any = unwrap(this).getSet()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          MutationActionSetStateParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty):
-          MutationActionSetStateParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          MutationActionSetStateParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MutationActionSetStateParameterProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
-    }
-  }
-
-  /**
-   * The `ComponentChild` property specifies a nested UI configuration within a parent `Component` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentChildProperty componentChildProperty_;
-   * ComponentPropertyProperty componentPropertyProperty_;
-   * ComponentChildProperty componentChildProperty = ComponentChildProperty.builder()
-   * .componentType("componentType")
-   * .name("name")
-   * .properties(Map.of(
-   * "propertiesKey", ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build()))
-   * // the properties below are optional
-   * .children(List.of(componentChildProperty_))
-   * .events(Map.of(
-   * "eventsKey", ComponentEventProperty.builder()
-   * .action("action")
-   * .bindingEvent("bindingEvent")
-   * .parameters(ActionParametersProperty.builder()
-   * .anchor(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .fields(Map.of(
-   * "fieldsKey", ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build()))
-   * .global(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .id(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .model("model")
-   * .state(MutationActionSetStateParameterProperty.builder()
-   * .componentName("componentName")
-   * .property("property")
-   * .set(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build())
-   * .target(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .type(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .url(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build())
-   * .build()))
-   * .sourceId("sourceId")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html)
-   */
-  public interface ComponentChildProperty {
-    /**
-     * The list of `ComponentChild` instances for this component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-children)
-     */
-    public fun children(): Any? = unwrap(this).getChildren()
-
-    /**
-     * The type of the child component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-componenttype)
-     */
-    public fun componentType(): String
-
-    /**
-     * Describes the events that can be raised on the child component.
-     *
-     * Use for the workflow feature in Amplify Studio that allows you to bind events and actions to
-     * components.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-events)
-     */
-    public fun events(): Any? = unwrap(this).getEvents()
-
-    /**
-     * The name of the child component.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-name)
-     */
-    public fun name(): String
-
-    /**
-     * Describes the properties of the child component.
-     *
-     * You can't specify `tags` as a valid property for `properties` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-properties)
-     */
-    public fun properties(): Any
-
-    /**
-     * The unique ID of the child component in its original source system, such as Figma.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-sourceid)
-     */
-    public fun sourceId(): String? = unwrap(this).getSourceId()
-
-    /**
-     * A builder for [ComponentChildProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      public fun children(children: IResolvable)
-
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      public fun children(children: List<Any>)
-
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      public fun children(vararg children: Any)
-
-      /**
-       * @param componentType The type of the child component. 
-       */
-      public fun componentType(componentType: String)
-
-      /**
-       * @param events Describes the events that can be raised on the child component.
-       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
-       * to components.
-       */
-      public fun events(events: IResolvable)
-
-      /**
-       * @param events Describes the events that can be raised on the child component.
-       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
-       * to components.
-       */
-      public fun events(events: Map<String, Any>)
-
-      /**
-       * @param name The name of the child component. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param properties Describes the properties of the child component. 
-       * You can't specify `tags` as a valid property for `properties` .
-       */
-      public fun properties(properties: IResolvable)
-
-      /**
-       * @param properties Describes the properties of the child component. 
-       * You can't specify `tags` as a valid property for `properties` .
-       */
-      public fun properties(properties: Map<String, Any>)
-
-      /**
-       * @param sourceId The unique ID of the child component in its original source system, such as
-       * Figma.
-       */
-      public fun sourceId(sourceId: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty.builder()
-
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      override fun children(children: IResolvable) {
-        cdkBuilder.children(children.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      override fun children(children: List<Any>) {
-        cdkBuilder.children(children)
-      }
-
-      /**
-       * @param children The list of `ComponentChild` instances for this component.
-       */
-      override fun children(vararg children: Any): Unit = children(children.toList())
-
-      /**
-       * @param componentType The type of the child component. 
-       */
-      override fun componentType(componentType: String) {
-        cdkBuilder.componentType(componentType)
-      }
-
-      /**
-       * @param events Describes the events that can be raised on the child component.
-       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
-       * to components.
-       */
-      override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param events Describes the events that can be raised on the child component.
-       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
-       * to components.
-       */
-      override fun events(events: Map<String, Any>) {
-        cdkBuilder.events(events)
-      }
-
-      /**
-       * @param name The name of the child component. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param properties Describes the properties of the child component. 
-       * You can't specify `tags` as a valid property for `properties` .
-       */
-      override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param properties Describes the properties of the child component. 
-       * You can't specify `tags` as a valid property for `properties` .
-       */
-      override fun properties(properties: Map<String, Any>) {
-        cdkBuilder.properties(properties)
-      }
-
-      /**
-       * @param sourceId The unique ID of the child component in its original source system, such as
-       * Figma.
-       */
-      override fun sourceId(sourceId: String) {
-        cdkBuilder.sourceId(sourceId)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty,
-    ) : CdkObject(cdkObject), ComponentChildProperty {
-      /**
-       * The list of `ComponentChild` instances for this component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-children)
-       */
-      override fun children(): Any? = unwrap(this).getChildren()
-
-      /**
-       * The type of the child component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-componenttype)
-       */
-      override fun componentType(): String = unwrap(this).getComponentType()
-
-      /**
-       * Describes the events that can be raised on the child component.
-       *
-       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
-       * to components.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-events)
-       */
-      override fun events(): Any? = unwrap(this).getEvents()
-
-      /**
-       * The name of the child component.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Describes the properties of the child component.
-       *
-       * You can't specify `tags` as a valid property for `properties` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-properties)
-       */
-      override fun properties(): Any = unwrap(this).getProperties()
-
-      /**
-       * The unique ID of the child component in its original source system, such as Figma.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-sourceid)
-       */
-      override fun sourceId(): String? = unwrap(this).getSourceId()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentChildProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty):
-          ComponentChildProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentChildProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentChildProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty
-    }
-  }
-
-  /**
-   * Describes how to bind a component property to form data.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * FormBindingElementProperty formBindingElementProperty = FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html)
-   */
-  public interface FormBindingElementProperty {
-    /**
-     * The name of the component to retrieve a value from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-element)
-     */
-    public fun element(): String
-
-    /**
-     * The property to retrieve a value from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-property)
-     */
-    public fun `property`(): String
-
-    /**
-     * A builder for [FormBindingElementProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param element The name of the component to retrieve a value from. 
-       */
-      public fun element(element: String)
-
-      /**
-       * @param property The property to retrieve a value from. 
-       */
-      public fun `property`(`property`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty.builder()
-
-      /**
-       * @param element The name of the component to retrieve a value from. 
-       */
-      override fun element(element: String) {
-        cdkBuilder.element(element)
-      }
-
-      /**
-       * @param property The property to retrieve a value from. 
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty,
-    ) : CdkObject(cdkObject), FormBindingElementProperty {
-      /**
-       * The name of the component to retrieve a value from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-element)
-       */
-      override fun element(): String = unwrap(this).getElement()
-
-      /**
-       * The property to retrieve a value from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-property)
-       */
-      override fun `property`(): String = unwrap(this).getProperty()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): FormBindingElementProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty):
-          FormBindingElementProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          FormBindingElementProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FormBindingElementProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty
-    }
-  }
-
-  /**
-   * The `ComponentEvent` property specifies the configuration of an event.
-   *
-   * You can bind an event and a corresponding action to a `Component` or a `ComponentChild` . A
-   * button click is an example of an event.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentPropertyProperty componentPropertyProperty_;
-   * ComponentEventProperty componentEventProperty = ComponentEventProperty.builder()
-   * .action("action")
-   * .bindingEvent("bindingEvent")
-   * .parameters(ActionParametersProperty.builder()
-   * .anchor(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .fields(Map.of(
-   * "fieldsKey", ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build()))
-   * .global(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .id(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .model("model")
-   * .state(MutationActionSetStateParameterProperty.builder()
-   * .componentName("componentName")
-   * .property("property")
-   * .set(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build())
-   * .target(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .type(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .url(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html)
-   */
-  public interface ComponentEventProperty {
-    /**
-     * The action to perform when a specific event is raised.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-action)
-     */
-    public fun action(): String? = unwrap(this).getAction()
-
-    /**
-     * Binds an event to an action on a component.
-     *
-     * When you specify a `bindingEvent` , the event is called when the action is performed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-bindingevent)
-     */
-    public fun bindingEvent(): String? = unwrap(this).getBindingEvent()
-
-    /**
-     * Describes information about the action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * A builder for [ComponentEventProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param action The action to perform when a specific event is raised.
-       */
-      public fun action(action: String)
-
-      /**
-       * @param bindingEvent Binds an event to an action on a component.
-       * When you specify a `bindingEvent` , the event is called when the action is performed.
-       */
-      public fun bindingEvent(bindingEvent: String)
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      public fun parameters(parameters: IResolvable)
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      public fun parameters(parameters: ActionParametersProperty)
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
-      public fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty.builder()
-
-      /**
-       * @param action The action to perform when a specific event is raised.
-       */
-      override fun action(action: String) {
-        cdkBuilder.action(action)
-      }
-
-      /**
-       * @param bindingEvent Binds an event to an action on a component.
-       * When you specify a `bindingEvent` , the event is called when the action is performed.
-       */
-      override fun bindingEvent(bindingEvent: String) {
-        cdkBuilder.bindingEvent(bindingEvent)
-      }
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      override fun parameters(parameters: ActionParametersProperty) {
-        cdkBuilder.parameters(parameters.let(ActionParametersProperty::unwrap))
-      }
-
-      /**
-       * @param parameters Describes information about the action.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
-      override fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit): Unit =
-          parameters(ActionParametersProperty(parameters))
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty,
-    ) : CdkObject(cdkObject), ComponentEventProperty {
-      /**
-       * The action to perform when a specific event is raised.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-action)
-       */
-      override fun action(): String? = unwrap(this).getAction()
-
-      /**
-       * Binds an event to an action on a component.
-       *
-       * When you specify a `bindingEvent` , the event is called when the action is performed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-bindingevent)
-       */
-      override fun bindingEvent(): String? = unwrap(this).getBindingEvent()
-
-      /**
-       * Describes information about the action.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentEventProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty):
-          ComponentEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentEventProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentEventProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty
-    }
-  }
-
-  /**
-   * The `ComponentProperty` property specifies the configuration for all of a component's
-   * properties.
-   *
-   * Use `ComponentProperty` to specify the values to render or bind by default.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentPropertyProperty componentPropertyProperty_;
-   * ComponentPropertyProperty componentPropertyProperty = ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(ComponentConditionPropertyProperty.builder()
-   * .else(componentPropertyProperty_)
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(componentPropertyProperty_)
-   * .build())
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html)
-   */
-  public interface ComponentPropertyProperty {
-    /**
-     * The information to bind the component property to data at runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)
-     */
-    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-    /**
-     * The information to bind the component property to form data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindings)
-     */
-    public fun bindings(): Any? = unwrap(this).getBindings()
-
-    /**
-     * The information to bind the component property to data at runtime.
-     *
-     * Use this for collection components.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)
-     */
-    public fun collectionBindingProperties(): Any? = unwrap(this).getCollectionBindingProperties()
-
-    /**
-     * The name of the component that is affected by an event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-componentname)
-     */
-    public fun componentName(): String? = unwrap(this).getComponentName()
-
-    /**
-     * A list of component properties to concatenate to create the value to assign to this component
-     * property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-concat)
-     */
-    public fun concat(): Any? = unwrap(this).getConcat()
-
-    /**
-     * The conditional expression to use to assign a value to the component property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-condition)
-     */
-    public fun condition(): Any? = unwrap(this).getCondition()
-
-    /**
-     * Specifies whether the user configured the property in Amplify Studio after importing it.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-configured)
-     */
-    public fun configured(): Any? = unwrap(this).getConfigured()
-
-    /**
-     * The default value to assign to the component property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-defaultvalue)
-     */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-    /**
-     * An event that occurs in your app.
-     *
-     * Use this for workflow data binding.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-event)
-     */
-    public fun event(): String? = unwrap(this).getEvent()
-
-    /**
-     * The default value assigned to the property when the component is imported into an app.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-importedvalue)
-     */
-    public fun importedValue(): String? = unwrap(this).getImportedValue()
-
-    /**
-     * The data model to use to assign a value to the component property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-model)
-     */
-    public fun model(): String? = unwrap(this).getModel()
-
-    /**
-     * The name of the component's property that is affected by an event.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-property)
-     */
-    public fun `property`(): String? = unwrap(this).getProperty()
-
-    /**
-     * The component type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * An authenticated user attribute to use to assign a value to the component property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-userattribute)
-     */
-    public fun userAttribute(): String? = unwrap(this).getUserAttribute()
-
-    /**
-     * The value to assign to the component property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * A builder for [ComponentPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: IResolvable)
-
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty)
-
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
-      public
-          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param bindings The information to bind the component property to form data.
-       */
-      public fun bindings(bindings: IResolvable)
-
-      /**
-       * @param bindings The information to bind the component property to form data.
-       */
-      public fun bindings(bindings: Map<String, Any>)
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      public fun collectionBindingProperties(collectionBindingProperties: IResolvable)
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      public
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty)
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
-      public
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param componentName The name of the component that is affected by an event.
-       */
-      public fun componentName(componentName: String)
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      public fun concat(concat: IResolvable)
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      public fun concat(concat: List<Any>)
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      public fun concat(vararg concat: Any)
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      public fun condition(condition: IResolvable)
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      public fun condition(condition: ComponentConditionPropertyProperty)
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
-      public fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit)
-
-      /**
-       * @param configured Specifies whether the user configured the property in Amplify Studio
-       * after importing it.
-       */
-      public fun configured(configured: Boolean)
-
-      /**
-       * @param configured Specifies whether the user configured the property in Amplify Studio
-       * after importing it.
-       */
-      public fun configured(configured: IResolvable)
-
-      /**
-       * @param defaultValue The default value to assign to the component property.
-       */
-      public fun defaultValue(defaultValue: String)
-
-      /**
-       * @param event An event that occurs in your app.
-       * Use this for workflow data binding.
-       */
-      public fun event(event: String)
-
-      /**
-       * @param importedValue The default value assigned to the property when the component is
-       * imported into an app.
-       */
-      public fun importedValue(importedValue: String)
-
-      /**
-       * @param model The data model to use to assign a value to the component property.
-       */
-      public fun model(model: String)
-
-      /**
-       * @param property The name of the component's property that is affected by an event.
-       */
-      public fun `property`(`property`: String)
-
-      /**
-       * @param type The component type.
-       */
-      public fun type(type: String)
-
-      /**
-       * @param userAttribute An authenticated user attribute to use to assign a value to the
-       * component property.
-       */
-      public fun userAttribute(userAttribute: String)
-
-      /**
-       * @param value The value to assign to the component property.
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty.builder()
-
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      override
-          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param bindingProperties The information to bind the component property to data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
-      override
-          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
-          Unit = bindingProperties(ComponentPropertyBindingPropertiesProperty(bindingProperties))
-
-      /**
-       * @param bindings The information to bind the component property to form data.
-       */
-      override fun bindings(bindings: IResolvable) {
-        cdkBuilder.bindings(bindings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindings The information to bind the component property to form data.
-       */
-      override fun bindings(bindings: Map<String, Any>) {
-        cdkBuilder.bindings(bindings)
-      }
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      override fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
-        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      override
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty) {
-        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param collectionBindingProperties The information to bind the component property to data
-       * at runtime.
-       * Use this for collection components.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
-      override
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
-          Unit =
-          collectionBindingProperties(ComponentPropertyBindingPropertiesProperty(collectionBindingProperties))
-
-      /**
-       * @param componentName The name of the component that is affected by an event.
-       */
-      override fun componentName(componentName: String) {
-        cdkBuilder.componentName(componentName)
-      }
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      override fun concat(concat: IResolvable) {
-        cdkBuilder.concat(concat.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      override fun concat(concat: List<Any>) {
-        cdkBuilder.concat(concat)
-      }
-
-      /**
-       * @param concat A list of component properties to concatenate to create the value to assign
-       * to this component property.
-       */
-      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      override fun condition(condition: IResolvable) {
-        cdkBuilder.condition(condition.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      override fun condition(condition: ComponentConditionPropertyProperty) {
-        cdkBuilder.condition(condition.let(ComponentConditionPropertyProperty::unwrap))
-      }
-
-      /**
-       * @param condition The conditional expression to use to assign a value to the component
-       * property.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
-      override fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit): Unit
-          = condition(ComponentConditionPropertyProperty(condition))
-
-      /**
-       * @param configured Specifies whether the user configured the property in Amplify Studio
-       * after importing it.
-       */
-      override fun configured(configured: Boolean) {
-        cdkBuilder.configured(configured)
-      }
-
-      /**
-       * @param configured Specifies whether the user configured the property in Amplify Studio
-       * after importing it.
-       */
-      override fun configured(configured: IResolvable) {
-        cdkBuilder.configured(configured.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param defaultValue The default value to assign to the component property.
-       */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
-      }
-
-      /**
-       * @param event An event that occurs in your app.
-       * Use this for workflow data binding.
-       */
-      override fun event(event: String) {
-        cdkBuilder.event(event)
-      }
-
-      /**
-       * @param importedValue The default value assigned to the property when the component is
-       * imported into an app.
-       */
-      override fun importedValue(importedValue: String) {
-        cdkBuilder.importedValue(importedValue)
-      }
-
-      /**
-       * @param model The data model to use to assign a value to the component property.
-       */
-      override fun model(model: String) {
-        cdkBuilder.model(model)
-      }
-
-      /**
-       * @param property The name of the component's property that is affected by an event.
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      /**
-       * @param type The component type.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      /**
-       * @param userAttribute An authenticated user attribute to use to assign a value to the
-       * component property.
-       */
-      override fun userAttribute(userAttribute: String) {
-        cdkBuilder.userAttribute(userAttribute)
-      }
-
-      /**
-       * @param value The value to assign to the component property.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty,
-    ) : CdkObject(cdkObject), ComponentPropertyProperty {
-      /**
-       * The information to bind the component property to data at runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)
-       */
-      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-      /**
-       * The information to bind the component property to form data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindings)
-       */
-      override fun bindings(): Any? = unwrap(this).getBindings()
-
-      /**
-       * The information to bind the component property to data at runtime.
-       *
-       * Use this for collection components.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)
-       */
-      override fun collectionBindingProperties(): Any? =
-          unwrap(this).getCollectionBindingProperties()
-
-      /**
-       * The name of the component that is affected by an event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-componentname)
-       */
-      override fun componentName(): String? = unwrap(this).getComponentName()
-
-      /**
-       * A list of component properties to concatenate to create the value to assign to this
-       * component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-concat)
-       */
-      override fun concat(): Any? = unwrap(this).getConcat()
-
-      /**
-       * The conditional expression to use to assign a value to the component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-condition)
-       */
-      override fun condition(): Any? = unwrap(this).getCondition()
-
-      /**
-       * Specifies whether the user configured the property in Amplify Studio after importing it.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-configured)
-       */
-      override fun configured(): Any? = unwrap(this).getConfigured()
-
-      /**
-       * The default value to assign to the component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-defaultvalue)
-       */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-      /**
-       * An event that occurs in your app.
-       *
-       * Use this for workflow data binding.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-event)
-       */
-      override fun event(): String? = unwrap(this).getEvent()
-
-      /**
-       * The default value assigned to the property when the component is imported into an app.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-importedvalue)
-       */
-      override fun importedValue(): String? = unwrap(this).getImportedValue()
-
-      /**
-       * The data model to use to assign a value to the component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-model)
-       */
-      override fun model(): String? = unwrap(this).getModel()
-
-      /**
-       * The name of the component's property that is affected by an event.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-property)
-       */
-      override fun `property`(): String? = unwrap(this).getProperty()
-
-      /**
-       * The component type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-
-      /**
-       * An authenticated user attribute to use to assign a value to the component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-userattribute)
-       */
-      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
-
-      /**
-       * The value to assign to the component property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty):
-          ComponentPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentPropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentPropertyProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty
-    }
-  }
-
-  /**
-   * The `ComponentBindingPropertiesValueProperties` property specifies the data binding
-   * configuration for a specific property using data stored in AWS .
-   *
-   * For AWS connected properties, you can bind a property to data stored in an Amazon S3 bucket, an
-   * Amplify DataStore model or an authenticated user attribute.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * PredicateProperty predicateProperty_;
-   * ComponentBindingPropertiesValuePropertiesProperty
-   * componentBindingPropertiesValuePropertiesProperty =
-   * ComponentBindingPropertiesValuePropertiesProperty.builder()
-   * .bucket("bucket")
-   * .defaultValue("defaultValue")
-   * .field("field")
-   * .key("key")
-   * .model("model")
-   * .predicates(List.of(PredicateProperty.builder()
-   * .and(List.of(predicateProperty_))
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .or(List.of(predicateProperty_))
-   * .build()))
-   * .slotName("slotName")
-   * .userAttribute("userAttribute")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html)
-   */
-  public interface ComponentBindingPropertiesValuePropertiesProperty {
-    /**
-     * An Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-bucket)
-     */
-    public fun bucket(): String? = unwrap(this).getBucket()
-
-    /**
-     * The default value to assign to the property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-defaultvalue)
-     */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-    /**
-     * The field to bind the data to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The storage key for an Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
-
-    /**
-     * An Amplify DataStore model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-model)
-     */
-    public fun model(): String? = unwrap(this).getModel()
-
-    /**
-     * A list of predicates for binding a component's properties to data.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-predicates)
-     */
-    public fun predicates(): Any? = unwrap(this).getPredicates()
-
-    /**
-     * The name of a component slot.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-slotname)
-     */
-    public fun slotName(): String? = unwrap(this).getSlotName()
-
-    /**
-     * An authenticated user attribute.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-userattribute)
-     */
-    public fun userAttribute(): String? = unwrap(this).getUserAttribute()
-
-    /**
-     * A builder for [ComponentBindingPropertiesValuePropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket An Amazon S3 bucket.
-       */
-      public fun bucket(bucket: String)
-
-      /**
-       * @param defaultValue The default value to assign to the property.
-       */
-      public fun defaultValue(defaultValue: String)
-
-      /**
-       * @param field The field to bind the data to.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param key The storage key for an Amazon S3 bucket.
-       */
-      public fun key(key: String)
-
-      /**
-       * @param model An Amplify DataStore model.
-       */
-      public fun model(model: String)
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      public fun predicates(predicates: IResolvable)
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      public fun predicates(predicates: List<Any>)
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      public fun predicates(vararg predicates: Any)
-
-      /**
-       * @param slotName The name of a component slot.
-       */
-      public fun slotName(slotName: String)
-
-      /**
-       * @param userAttribute An authenticated user attribute.
-       */
-      public fun userAttribute(userAttribute: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.builder()
-
-      /**
-       * @param bucket An Amazon S3 bucket.
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
-
-      /**
-       * @param defaultValue The default value to assign to the property.
-       */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
-      }
-
-      /**
-       * @param field The field to bind the data to.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param key The storage key for an Amazon S3 bucket.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param model An Amplify DataStore model.
-       */
-      override fun model(model: String) {
-        cdkBuilder.model(model)
-      }
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      override fun predicates(predicates: IResolvable) {
-        cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      override fun predicates(predicates: List<Any>) {
-        cdkBuilder.predicates(predicates)
-      }
-
-      /**
-       * @param predicates A list of predicates for binding a component's properties to data.
-       */
-      override fun predicates(vararg predicates: Any): Unit = predicates(predicates.toList())
-
-      /**
-       * @param slotName The name of a component slot.
-       */
-      override fun slotName(slotName: String) {
-        cdkBuilder.slotName(slotName)
-      }
-
-      /**
-       * @param userAttribute An authenticated user attribute.
-       */
-      override fun userAttribute(userAttribute: String) {
-        cdkBuilder.userAttribute(userAttribute)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty,
-    ) : CdkObject(cdkObject), ComponentBindingPropertiesValuePropertiesProperty {
-      /**
-       * An Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-bucket)
-       */
-      override fun bucket(): String? = unwrap(this).getBucket()
-
-      /**
-       * The default value to assign to the property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-defaultvalue)
-       */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-      /**
-       * The field to bind the data to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The storage key for an Amazon S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
-
-      /**
-       * An Amplify DataStore model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-model)
-       */
-      override fun model(): String? = unwrap(this).getModel()
-
-      /**
-       * A list of predicates for binding a component's properties to data.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-predicates)
-       */
-      override fun predicates(): Any? = unwrap(this).getPredicates()
-
-      /**
-       * The name of a component slot.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-slotname)
-       */
-      override fun slotName(): String? = unwrap(this).getSlotName()
-
-      /**
-       * An authenticated user attribute.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-userattribute)
-       */
-      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentBindingPropertiesValuePropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty):
-          ComponentBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentBindingPropertiesValuePropertiesProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
-    }
-  }
-
-  /**
-   * The `SortProperty` property specifies how to sort the data that you bind to a component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * SortPropertyProperty sortPropertyProperty = SortPropertyProperty.builder()
-   * .direction("direction")
-   * .field("field")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html)
-   */
-  public interface SortPropertyProperty {
-    /**
-     * The direction of the sort, either ascending or descending.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-direction)
-     */
-    public fun direction(): String
-
-    /**
-     * The field to perform the sort on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-field)
-     */
-    public fun `field`(): String
-
-    /**
-     * A builder for [SortPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param direction The direction of the sort, either ascending or descending. 
-       */
-      public fun direction(direction: String)
-
-      /**
-       * @param field The field to perform the sort on. 
-       */
-      public fun `field`(`field`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty.builder()
-
-      /**
-       * @param direction The direction of the sort, either ascending or descending. 
-       */
-      override fun direction(direction: String) {
-        cdkBuilder.direction(direction)
-      }
-
-      /**
-       * @param field The field to perform the sort on. 
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty,
-    ) : CdkObject(cdkObject), SortPropertyProperty {
-      /**
-       * The direction of the sort, either ascending or descending.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-direction)
-       */
-      override fun direction(): String = unwrap(this).getDirection()
-
-      /**
-       * The field to perform the sort on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-field)
-       */
-      override fun `field`(): String = unwrap(this).getField()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SortPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty):
-          SortPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? SortPropertyProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SortPropertyProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty
-    }
-  }
-
-  /**
-   * The `ComponentConditionProperty` property specifies a conditional expression for setting a
-   * component property.
-   *
-   * Use `ComponentConditionProperty` to set a property to different values conditionally, based on
-   * the value of another property.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentConditionPropertyProperty componentConditionPropertyProperty_;
-   * ComponentPropertyProperty componentPropertyProperty_;
-   * ComponentConditionPropertyProperty componentConditionPropertyProperty =
-   * ComponentConditionPropertyProperty.builder()
-   * .else(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(componentConditionPropertyProperty_)
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .property("property")
-   * .then(ComponentPropertyProperty.builder()
-   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .bindings(Map.of(
-   * "bindingsKey", FormBindingElementProperty.builder()
-   * .element("element")
-   * .property("property")
-   * .build()))
-   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build())
-   * .componentName("componentName")
-   * .concat(List.of(componentPropertyProperty_))
-   * .condition(componentConditionPropertyProperty_)
-   * .configured(false)
-   * .defaultValue("defaultValue")
-   * .event("event")
-   * .importedValue("importedValue")
-   * .model("model")
-   * .property("property")
-   * .type("type")
-   * .userAttribute("userAttribute")
-   * .value("value")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html)
-   */
-  public interface ComponentConditionPropertyProperty {
-    /**
-     * The value to assign to the property if the condition is not met.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-else)
-     */
-    public fun elseValue(): Any? = unwrap(this).getElseValue()
-
-    /**
-     * The name of a field.
-     *
-     * Specify this when the property is a data model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The value of the property to evaluate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operand)
-     */
-    public fun operand(): String? = unwrap(this).getOperand()
-
-    /**
-     * The type of the property to evaluate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype)
-     */
-    public fun operandType(): String? = unwrap(this).getOperandType()
-
-    /**
-     * The operator to use to perform the evaluation, such as `eq` to represent equals.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operator)
-     */
-    public fun `operator`(): String? = unwrap(this).getOperator()
-
-    /**
-     * The name of the conditional property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-property)
-     */
-    public fun `property`(): String? = unwrap(this).getProperty()
-
-    /**
-     * The value to assign to the property if the condition is met.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-then)
-     */
-    public fun then(): Any? = unwrap(this).getThen()
-
-    /**
-     * A builder for [ComponentConditionPropertyProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      public fun elseValue(elseValue: IResolvable)
-
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      public fun elseValue(elseValue: ComponentPropertyProperty)
-
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
-      public fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit)
-
-      /**
-       * @param field The name of a field.
-       * Specify this when the property is a data model.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param operand The value of the property to evaluate.
-       */
-      public fun operand(operand: String)
-
-      /**
-       * @param operandType The type of the property to evaluate.
-       */
-      public fun operandType(operandType: String)
-
-      /**
-       * @param operator The operator to use to perform the evaluation, such as `eq` to represent
-       * equals.
-       */
-      public fun `operator`(`operator`: String)
-
-      /**
-       * @param property The name of the conditional property.
-       */
-      public fun `property`(`property`: String)
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      public fun then(then: IResolvable)
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      public fun then(then: ComponentPropertyProperty)
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
-      public fun then(then: ComponentPropertyProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty.builder()
-
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      override fun elseValue(elseValue: IResolvable) {
-        cdkBuilder.elseValue(elseValue.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      override fun elseValue(elseValue: ComponentPropertyProperty) {
-        cdkBuilder.elseValue(elseValue.let(ComponentPropertyProperty::unwrap))
-      }
-
-      /**
-       * @param elseValue The value to assign to the property if the condition is not met.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
-      override fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit): Unit =
-          elseValue(ComponentPropertyProperty(elseValue))
-
-      /**
-       * @param field The name of a field.
-       * Specify this when the property is a data model.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param operand The value of the property to evaluate.
-       */
-      override fun operand(operand: String) {
-        cdkBuilder.operand(operand)
-      }
-
-      /**
-       * @param operandType The type of the property to evaluate.
-       */
-      override fun operandType(operandType: String) {
-        cdkBuilder.operandType(operandType)
-      }
-
-      /**
-       * @param operator The operator to use to perform the evaluation, such as `eq` to represent
-       * equals.
-       */
-      override fun `operator`(`operator`: String) {
-        cdkBuilder.`operator`(`operator`)
-      }
-
-      /**
-       * @param property The name of the conditional property.
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      override fun then(then: IResolvable) {
-        cdkBuilder.then(then.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      override fun then(then: ComponentPropertyProperty) {
-        cdkBuilder.then(then.let(ComponentPropertyProperty::unwrap))
-      }
-
-      /**
-       * @param then The value to assign to the property if the condition is met.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
-      override fun then(then: ComponentPropertyProperty.Builder.() -> Unit): Unit =
-          then(ComponentPropertyProperty(then))
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty,
-    ) : CdkObject(cdkObject), ComponentConditionPropertyProperty {
-      /**
-       * The value to assign to the property if the condition is not met.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-else)
-       */
-      override fun elseValue(): Any? = unwrap(this).getElseValue()
-
-      /**
-       * The name of a field.
-       *
-       * Specify this when the property is a data model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The value of the property to evaluate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operand)
-       */
-      override fun operand(): String? = unwrap(this).getOperand()
-
-      /**
-       * The type of the property to evaluate.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype)
-       */
-      override fun operandType(): String? = unwrap(this).getOperandType()
-
-      /**
-       * The operator to use to perform the evaluation, such as `eq` to represent equals.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operator)
-       */
-      override fun `operator`(): String? = unwrap(this).getOperator()
-
-      /**
-       * The name of the conditional property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-property)
-       */
-      override fun `property`(): String? = unwrap(this).getProperty()
-
-      /**
-       * The value to assign to the property if the condition is met.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-then)
-       */
-      override fun then(): Any? = unwrap(this).getThen()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentConditionPropertyProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty):
-          ComponentConditionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentConditionPropertyProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentConditionPropertyProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
-    }
-  }
-
-  /**
-   * The `ComponentBindingPropertiesValue` property specifies the data binding configuration for a
-   * component at runtime.
-   *
-   * You can use `ComponentBindingPropertiesValue` to add exposed properties to a component to allow
-   * different values to be entered when a component is reused in different places in an app.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * PredicateProperty predicateProperty_;
-   * ComponentBindingPropertiesValueProperty componentBindingPropertiesValueProperty =
-   * ComponentBindingPropertiesValueProperty.builder()
-   * .bindingProperties(ComponentBindingPropertiesValuePropertiesProperty.builder()
-   * .bucket("bucket")
-   * .defaultValue("defaultValue")
-   * .field("field")
-   * .key("key")
-   * .model("model")
-   * .predicates(List.of(PredicateProperty.builder()
-   * .and(List.of(predicateProperty_))
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .or(List.of(predicateProperty_))
-   * .build()))
-   * .slotName("slotName")
-   * .userAttribute("userAttribute")
-   * .build())
-   * .defaultValue("defaultValue")
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html)
-   */
-  public interface ComponentBindingPropertiesValueProperty {
-    /**
-     * Describes the properties to customize with data at runtime.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-bindingproperties)
-     */
-    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-    /**
-     * The default value of the property.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-defaultvalue)
-     */
-    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-    /**
-     * The property type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ComponentBindingPropertiesValueProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      public fun bindingProperties(bindingProperties: IResolvable)
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      public
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty)
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
-      public
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
-
-      /**
-       * @param defaultValue The default value of the property.
-       */
-      public fun defaultValue(defaultValue: String)
-
-      /**
-       * @param type The property type.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty.builder()
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      override
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(ComponentBindingPropertiesValuePropertiesProperty::unwrap))
-      }
-
-      /**
-       * @param bindingProperties Describes the properties to customize with data at runtime.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
-      override
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
-          Unit =
-          bindingProperties(ComponentBindingPropertiesValuePropertiesProperty(bindingProperties))
-
-      /**
-       * @param defaultValue The default value of the property.
-       */
-      override fun defaultValue(defaultValue: String) {
-        cdkBuilder.defaultValue(defaultValue)
-      }
-
-      /**
-       * @param type The property type.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty,
-    ) : CdkObject(cdkObject), ComponentBindingPropertiesValueProperty {
-      /**
-       * Describes the properties to customize with data at runtime.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-bindingproperties)
-       */
-      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
-
-      /**
-       * The default value of the property.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-defaultvalue)
-       */
-      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
-
-      /**
-       * The property type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentBindingPropertiesValueProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty):
-          ComponentBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentBindingPropertiesValueProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentBindingPropertiesValueProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
-    }
-  }
-
-  /**
-   * The `Predicate` property specifies information for generating Amplify DataStore queries.
-   *
-   * Use `Predicate` to retrieve a subset of the data in a collection.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * PredicateProperty predicateProperty_;
-   * PredicateProperty predicateProperty = PredicateProperty.builder()
-   * .and(List.of(predicateProperty_))
-   * .field("field")
-   * .operand("operand")
-   * .operandType("operandType")
-   * .operator("operator")
-   * .or(List.of(predicateProperty_))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html)
-   */
-  public interface PredicateProperty {
-    /**
-     * A list of predicates to combine logically.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-and)
-     */
-    public fun and(): Any? = unwrap(this).getAnd()
-
-    /**
-     * The field to query.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The value to use when performing the evaluation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operand)
-     */
-    public fun operand(): String? = unwrap(this).getOperand()
-
-    /**
-     * The type of value to use when performing the evaluation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operandtype)
-     */
-    public fun operandType(): String? = unwrap(this).getOperandType()
-
-    /**
-     * The operator to use to perform the evaluation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operator)
-     */
-    public fun `operator`(): String? = unwrap(this).getOperator()
-
-    /**
-     * A list of predicates to combine logically.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-or)
-     */
-    public fun or(): Any? = unwrap(this).getOr()
-
-    /**
-     * A builder for [PredicateProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      public fun and(and: IResolvable)
-
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      public fun and(and: List<Any>)
-
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      public fun and(vararg and: Any)
-
-      /**
-       * @param field The field to query.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param operand The value to use when performing the evaluation.
-       */
-      public fun operand(operand: String)
-
-      /**
-       * @param operandType The type of value to use when performing the evaluation.
-       */
-      public fun operandType(operandType: String)
-
-      /**
-       * @param operator The operator to use to perform the evaluation.
-       */
-      public fun `operator`(`operator`: String)
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      public fun or(or: IResolvable)
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      public fun or(or: List<Any>)
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      public fun or(vararg or: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.Builder =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.builder()
-
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      override fun and(and: IResolvable) {
-        cdkBuilder.and(and.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      override fun and(and: List<Any>) {
-        cdkBuilder.and(and)
-      }
-
-      /**
-       * @param and A list of predicates to combine logically.
-       */
-      override fun and(vararg and: Any): Unit = and(and.toList())
-
-      /**
-       * @param field The field to query.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param operand The value to use when performing the evaluation.
-       */
-      override fun operand(operand: String) {
-        cdkBuilder.operand(operand)
-      }
-
-      /**
-       * @param operandType The type of value to use when performing the evaluation.
-       */
-      override fun operandType(operandType: String) {
-        cdkBuilder.operandType(operandType)
-      }
-
-      /**
-       * @param operator The operator to use to perform the evaluation.
-       */
-      override fun `operator`(`operator`: String) {
-        cdkBuilder.`operator`(`operator`)
-      }
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      override fun or(or: IResolvable) {
-        cdkBuilder.or(or.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      override fun or(or: List<Any>) {
-        cdkBuilder.or(or)
-      }
-
-      /**
-       * @param or A list of predicates to combine logically.
-       */
-      override fun or(vararg or: Any): Unit = or(or.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty,
-    ) : CdkObject(cdkObject), PredicateProperty {
-      /**
-       * A list of predicates to combine logically.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-and)
-       */
-      override fun and(): Any? = unwrap(this).getAnd()
-
-      /**
-       * The field to query.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The value to use when performing the evaluation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operand)
-       */
-      override fun operand(): String? = unwrap(this).getOperand()
-
-      /**
-       * The type of value to use when performing the evaluation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operandtype)
-       */
-      override fun operandType(): String? = unwrap(this).getOperandType()
-
-      /**
-       * The operator to use to perform the evaluation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operator)
-       */
-      override fun `operator`(): String? = unwrap(this).getOperator()
-
-      /**
-       * A list of predicates to combine logically.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-or)
-       */
-      override fun or(): Any? = unwrap(this).getOr()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PredicateProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty):
-          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PredicateProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty
-    }
-  }
-
-  /**
-   * The `ComponentPropertyBindingProperties` property specifies a component property to associate
-   * with a binding property.
-   *
-   * This enables exposed properties on the top level component to propagate data to the component's
-   * property values.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * ComponentPropertyBindingPropertiesProperty componentPropertyBindingPropertiesProperty =
-   * ComponentPropertyBindingPropertiesProperty.builder()
-   * .property("property")
-   * // the properties below are optional
-   * .field("field")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html)
-   */
-  public interface ComponentPropertyBindingPropertiesProperty {
-    /**
-     * The data field to bind the property to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-field)
-     */
-    public fun `field`(): String? = unwrap(this).getField()
-
-    /**
-     * The component property to bind to the data field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-property)
-     */
-    public fun `property`(): String
-
-    /**
-     * A builder for [ComponentPropertyBindingPropertiesProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param field The data field to bind the property to.
-       */
-      public fun `field`(`field`: String)
-
-      /**
-       * @param property The component property to bind to the data field. 
-       */
-      public fun `property`(`property`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
-
-      /**
-       * @param field The data field to bind the property to.
-       */
-      override fun `field`(`field`: String) {
-        cdkBuilder.`field`(`field`)
-      }
-
-      /**
-       * @param property The component property to bind to the data field. 
-       */
-      override fun `property`(`property`: String) {
-        cdkBuilder.`property`(`property`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty,
-    ) : CdkObject(cdkObject), ComponentPropertyBindingPropertiesProperty {
-      /**
-       * The data field to bind the property to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-field)
-       */
-      override fun `field`(): String? = unwrap(this).getField()
-
-      /**
-       * The component property to bind to the data field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-property)
-       */
-      override fun `property`(): String = unwrap(this).getProperty()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ComponentPropertyBindingPropertiesProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty):
-          ComponentPropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ComponentPropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentPropertyBindingPropertiesProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
-    }
-  }
-
-  /**
-   * The `ComponentVariant` property specifies the style configuration of a unique variation of a
-   * main component.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
-   * Object overrides;
-   * ComponentVariantProperty componentVariantProperty = ComponentVariantProperty.builder()
-   * .overrides(overrides)
-   * .variantValues(Map.of(
-   * "variantValuesKey", "variantValues"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html)
-   */
-  public interface ComponentVariantProperty {
-    /**
-     * The properties of the component variant that can be overriden when customizing an instance of
-     * the component.
-     *
-     * You can't specify `tags` as a valid property for `overrides` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-overrides)
-     */
-    public fun overrides(): Any? = unwrap(this).getOverrides()
-
-    /**
-     * The combination of variants that comprise this variant.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-variantvalues)
-     */
-    public fun variantValues(): Any? = unwrap(this).getVariantValues()
-
-    /**
-     * A builder for [ComponentVariantProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param overrides The properties of the component variant that can be overriden when
-       * customizing an instance of the component.
-       * You can't specify `tags` as a valid property for `overrides` .
-       */
-      public fun overrides(overrides: Any)
-
-      /**
-       * @param variantValues The combination of variants that comprise this variant.
-       */
-      public fun variantValues(variantValues: IResolvable)
-
-      /**
-       * @param variantValues The combination of variants that comprise this variant.
-       */
-      public fun variantValues(variantValues: Map<String, String>)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty.Builder
-          =
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty.builder()
-
-      /**
-       * @param overrides The properties of the component variant that can be overriden when
-       * customizing an instance of the component.
-       * You can't specify `tags` as a valid property for `overrides` .
-       */
-      override fun overrides(overrides: Any) {
-        cdkBuilder.overrides(overrides)
-      }
-
-      /**
-       * @param variantValues The combination of variants that comprise this variant.
-       */
-      override fun variantValues(variantValues: IResolvable) {
-        cdkBuilder.variantValues(variantValues.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param variantValues The combination of variants that comprise this variant.
-       */
-      override fun variantValues(variantValues: Map<String, String>) {
-        cdkBuilder.variantValues(variantValues)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty,
-    ) : CdkObject(cdkObject), ComponentVariantProperty {
-      /**
-       * The properties of the component variant that can be overriden when customizing an instance
-       * of the component.
-       *
-       * You can't specify `tags` as a valid property for `overrides` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-overrides)
-       */
-      override fun overrides(): Any? = unwrap(this).getOverrides()
-
-      /**
-       * The combination of variants that comprise this variant.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-variantvalues)
-       */
-      override fun variantValues(): Any? = unwrap(this).getVariantValues()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentVariantProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty):
-          ComponentVariantProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentVariantProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ComponentVariantProperty):
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty
-    }
+        software.amazon.awscdk.services.amplifyuibuilder.CfnComponent = wrapped.cdkObject as
+        software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
   }
 
   /**
@@ -5158,8 +1569,7 @@ public open class CfnComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty,
     ) : CdkObject(cdkObject), ActionParametersProperty {
       /**
        * The HTML anchor link to the location to open.
@@ -5253,6 +1663,1510 @@ public open class CfnComponent internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty
+    }
+  }
+
+  /**
+   * The `ComponentBindingPropertiesValueProperties` property specifies the data binding
+   * configuration for a specific property using data stored in AWS .
+   *
+   * For AWS connected properties, you can bind a property to data stored in an Amazon S3 bucket, an
+   * Amplify DataStore model or an authenticated user attribute.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * PredicateProperty predicateProperty_;
+   * ComponentBindingPropertiesValuePropertiesProperty
+   * componentBindingPropertiesValuePropertiesProperty =
+   * ComponentBindingPropertiesValuePropertiesProperty.builder()
+   * .bucket("bucket")
+   * .defaultValue("defaultValue")
+   * .field("field")
+   * .key("key")
+   * .model("model")
+   * .predicates(List.of(PredicateProperty.builder()
+   * .and(List.of(predicateProperty_))
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .or(List.of(predicateProperty_))
+   * .build()))
+   * .slotName("slotName")
+   * .userAttribute("userAttribute")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html)
+   */
+  public interface ComponentBindingPropertiesValuePropertiesProperty {
+    /**
+     * An Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-bucket)
+     */
+    public fun bucket(): String? = unwrap(this).getBucket()
+
+    /**
+     * The default value to assign to the property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * The field to bind the data to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The storage key for an Amazon S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * An Amplify DataStore model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-model)
+     */
+    public fun model(): String? = unwrap(this).getModel()
+
+    /**
+     * A list of predicates for binding a component's properties to data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-predicates)
+     */
+    public fun predicates(): Any? = unwrap(this).getPredicates()
+
+    /**
+     * The name of a component slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-slotname)
+     */
+    public fun slotName(): String? = unwrap(this).getSlotName()
+
+    /**
+     * An authenticated user attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-userattribute)
+     */
+    public fun userAttribute(): String? = unwrap(this).getUserAttribute()
+
+    /**
+     * A builder for [ComponentBindingPropertiesValuePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket An Amazon S3 bucket.
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param defaultValue The default value to assign to the property.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param field The field to bind the data to.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param key The storage key for an Amazon S3 bucket.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param model An Amplify DataStore model.
+       */
+      public fun model(model: String)
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      public fun predicates(predicates: IResolvable)
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      public fun predicates(predicates: List<Any>)
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      public fun predicates(vararg predicates: Any)
+
+      /**
+       * @param slotName The name of a component slot.
+       */
+      public fun slotName(slotName: String)
+
+      /**
+       * @param userAttribute An authenticated user attribute.
+       */
+      public fun userAttribute(userAttribute: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.builder()
+
+      /**
+       * @param bucket An Amazon S3 bucket.
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param defaultValue The default value to assign to the property.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param field The field to bind the data to.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param key The storage key for an Amazon S3 bucket.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param model An Amplify DataStore model.
+       */
+      override fun model(model: String) {
+        cdkBuilder.model(model)
+      }
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      override fun predicates(predicates: IResolvable) {
+        cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      override fun predicates(predicates: List<Any>) {
+        cdkBuilder.predicates(predicates)
+      }
+
+      /**
+       * @param predicates A list of predicates for binding a component's properties to data.
+       */
+      override fun predicates(vararg predicates: Any): Unit = predicates(predicates.toList())
+
+      /**
+       * @param slotName The name of a component slot.
+       */
+      override fun slotName(slotName: String) {
+        cdkBuilder.slotName(slotName)
+      }
+
+      /**
+       * @param userAttribute An authenticated user attribute.
+       */
+      override fun userAttribute(userAttribute: String) {
+        cdkBuilder.userAttribute(userAttribute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty,
+    ) : CdkObject(cdkObject), ComponentBindingPropertiesValuePropertiesProperty {
+      /**
+       * An Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-bucket)
+       */
+      override fun bucket(): String? = unwrap(this).getBucket()
+
+      /**
+       * The default value to assign to the property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * The field to bind the data to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The storage key for an Amazon S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * An Amplify DataStore model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-model)
+       */
+      override fun model(): String? = unwrap(this).getModel()
+
+      /**
+       * A list of predicates for binding a component's properties to data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-predicates)
+       */
+      override fun predicates(): Any? = unwrap(this).getPredicates()
+
+      /**
+       * The name of a component slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-slotname)
+       */
+      override fun slotName(): String? = unwrap(this).getSlotName()
+
+      /**
+       * An authenticated user attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalueproperties-userattribute)
+       */
+      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentBindingPropertiesValuePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty):
+          ComponentBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentBindingPropertiesValuePropertiesProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
+    }
+  }
+
+  /**
+   * The `ComponentBindingPropertiesValue` property specifies the data binding configuration for a
+   * component at runtime.
+   *
+   * You can use `ComponentBindingPropertiesValue` to add exposed properties to a component to allow
+   * different values to be entered when a component is reused in different places in an app.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * PredicateProperty predicateProperty_;
+   * ComponentBindingPropertiesValueProperty componentBindingPropertiesValueProperty =
+   * ComponentBindingPropertiesValueProperty.builder()
+   * .bindingProperties(ComponentBindingPropertiesValuePropertiesProperty.builder()
+   * .bucket("bucket")
+   * .defaultValue("defaultValue")
+   * .field("field")
+   * .key("key")
+   * .model("model")
+   * .predicates(List.of(PredicateProperty.builder()
+   * .and(List.of(predicateProperty_))
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .or(List.of(predicateProperty_))
+   * .build()))
+   * .slotName("slotName")
+   * .userAttribute("userAttribute")
+   * .build())
+   * .defaultValue("defaultValue")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html)
+   */
+  public interface ComponentBindingPropertiesValueProperty {
+    /**
+     * Describes the properties to customize with data at runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-bindingproperties)
+     */
+    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+    /**
+     * The default value of the property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * The property type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ComponentBindingPropertiesValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: IResolvable)
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      public
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty)
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
+      public
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param defaultValue The default value of the property.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param type The property type.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty.builder()
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: IResolvable) {
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      override
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty) {
+        cdkBuilder.bindingProperties(bindingProperties.let(ComponentBindingPropertiesValuePropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param bindingProperties Describes the properties to customize with data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
+      override
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
+          Unit =
+          bindingProperties(ComponentBindingPropertiesValuePropertiesProperty(bindingProperties))
+
+      /**
+       * @param defaultValue The default value of the property.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param type The property type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty,
+    ) : CdkObject(cdkObject), ComponentBindingPropertiesValueProperty {
+      /**
+       * Describes the properties to customize with data at runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-bindingproperties)
+       */
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+      /**
+       * The default value of the property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * The property type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.html#cfn-amplifyuibuilder-component-componentbindingpropertiesvalue-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentBindingPropertiesValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty):
+          ComponentBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentBindingPropertiesValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentBindingPropertiesValueProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
+    }
+  }
+
+  /**
+   * The `ComponentChild` property specifies a nested UI configuration within a parent `Component` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentChildProperty componentChildProperty_;
+   * ComponentPropertyProperty componentPropertyProperty_;
+   * ComponentChildProperty componentChildProperty = ComponentChildProperty.builder()
+   * .componentType("componentType")
+   * .name("name")
+   * .properties(Map.of(
+   * "propertiesKey", ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build()))
+   * // the properties below are optional
+   * .children(List.of(componentChildProperty_))
+   * .events(Map.of(
+   * "eventsKey", ComponentEventProperty.builder()
+   * .action("action")
+   * .bindingEvent("bindingEvent")
+   * .parameters(ActionParametersProperty.builder()
+   * .anchor(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .fields(Map.of(
+   * "fieldsKey", ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build()))
+   * .global(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .id(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .model("model")
+   * .state(MutationActionSetStateParameterProperty.builder()
+   * .componentName("componentName")
+   * .property("property")
+   * .set(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build())
+   * .target(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .type(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .url(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build())
+   * .build()))
+   * .sourceId("sourceId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html)
+   */
+  public interface ComponentChildProperty {
+    /**
+     * The list of `ComponentChild` instances for this component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-children)
+     */
+    public fun children(): Any? = unwrap(this).getChildren()
+
+    /**
+     * The type of the child component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-componenttype)
+     */
+    public fun componentType(): String
+
+    /**
+     * Describes the events that can be raised on the child component.
+     *
+     * Use for the workflow feature in Amplify Studio that allows you to bind events and actions to
+     * components.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-events)
+     */
+    public fun events(): Any? = unwrap(this).getEvents()
+
+    /**
+     * The name of the child component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-name)
+     */
+    public fun name(): String
+
+    /**
+     * Describes the properties of the child component.
+     *
+     * You can't specify `tags` as a valid property for `properties` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-properties)
+     */
+    public fun properties(): Any
+
+    /**
+     * The unique ID of the child component in its original source system, such as Figma.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-sourceid)
+     */
+    public fun sourceId(): String? = unwrap(this).getSourceId()
+
+    /**
+     * A builder for [ComponentChildProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      public fun children(children: IResolvable)
+
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      public fun children(children: List<Any>)
+
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      public fun children(vararg children: Any)
+
+      /**
+       * @param componentType The type of the child component. 
+       */
+      public fun componentType(componentType: String)
+
+      /**
+       * @param events Describes the events that can be raised on the child component.
+       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
+       * to components.
+       */
+      public fun events(events: IResolvable)
+
+      /**
+       * @param events Describes the events that can be raised on the child component.
+       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
+       * to components.
+       */
+      public fun events(events: Map<String, Any>)
+
+      /**
+       * @param name The name of the child component. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param properties Describes the properties of the child component. 
+       * You can't specify `tags` as a valid property for `properties` .
+       */
+      public fun properties(properties: IResolvable)
+
+      /**
+       * @param properties Describes the properties of the child component. 
+       * You can't specify `tags` as a valid property for `properties` .
+       */
+      public fun properties(properties: Map<String, Any>)
+
+      /**
+       * @param sourceId The unique ID of the child component in its original source system, such as
+       * Figma.
+       */
+      public fun sourceId(sourceId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty.builder()
+
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      override fun children(children: IResolvable) {
+        cdkBuilder.children(children.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      override fun children(children: List<Any>) {
+        cdkBuilder.children(children)
+      }
+
+      /**
+       * @param children The list of `ComponentChild` instances for this component.
+       */
+      override fun children(vararg children: Any): Unit = children(children.toList())
+
+      /**
+       * @param componentType The type of the child component. 
+       */
+      override fun componentType(componentType: String) {
+        cdkBuilder.componentType(componentType)
+      }
+
+      /**
+       * @param events Describes the events that can be raised on the child component.
+       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
+       * to components.
+       */
+      override fun events(events: IResolvable) {
+        cdkBuilder.events(events.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param events Describes the events that can be raised on the child component.
+       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
+       * to components.
+       */
+      override fun events(events: Map<String, Any>) {
+        cdkBuilder.events(events)
+      }
+
+      /**
+       * @param name The name of the child component. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param properties Describes the properties of the child component. 
+       * You can't specify `tags` as a valid property for `properties` .
+       */
+      override fun properties(properties: IResolvable) {
+        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param properties Describes the properties of the child component. 
+       * You can't specify `tags` as a valid property for `properties` .
+       */
+      override fun properties(properties: Map<String, Any>) {
+        cdkBuilder.properties(properties)
+      }
+
+      /**
+       * @param sourceId The unique ID of the child component in its original source system, such as
+       * Figma.
+       */
+      override fun sourceId(sourceId: String) {
+        cdkBuilder.sourceId(sourceId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty,
+    ) : CdkObject(cdkObject), ComponentChildProperty {
+      /**
+       * The list of `ComponentChild` instances for this component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-children)
+       */
+      override fun children(): Any? = unwrap(this).getChildren()
+
+      /**
+       * The type of the child component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-componenttype)
+       */
+      override fun componentType(): String = unwrap(this).getComponentType()
+
+      /**
+       * Describes the events that can be raised on the child component.
+       *
+       * Use for the workflow feature in Amplify Studio that allows you to bind events and actions
+       * to components.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-events)
+       */
+      override fun events(): Any? = unwrap(this).getEvents()
+
+      /**
+       * The name of the child component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Describes the properties of the child component.
+       *
+       * You can't specify `tags` as a valid property for `properties` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-properties)
+       */
+      override fun properties(): Any = unwrap(this).getProperties()
+
+      /**
+       * The unique ID of the child component in its original source system, such as Figma.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentchild.html#cfn-amplifyuibuilder-component-componentchild-sourceid)
+       */
+      override fun sourceId(): String? = unwrap(this).getSourceId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentChildProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty):
+          ComponentChildProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentChildProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentChildProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty
+    }
+  }
+
+  /**
+   * The `ComponentConditionProperty` property specifies a conditional expression for setting a
+   * component property.
+   *
+   * Use `ComponentConditionProperty` to set a property to different values conditionally, based on
+   * the value of another property.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentConditionPropertyProperty componentConditionPropertyProperty_;
+   * ComponentPropertyProperty componentPropertyProperty_;
+   * ComponentConditionPropertyProperty componentConditionPropertyProperty =
+   * ComponentConditionPropertyProperty.builder()
+   * .else(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(componentConditionPropertyProperty_)
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(componentConditionPropertyProperty_)
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html)
+   */
+  public interface ComponentConditionPropertyProperty {
+    /**
+     * The value to assign to the property if the condition is not met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-else)
+     */
+    public fun elseValue(): Any? = unwrap(this).getElseValue()
+
+    /**
+     * The name of a field.
+     *
+     * Specify this when the property is a data model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The value of the property to evaluate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operand)
+     */
+    public fun operand(): String? = unwrap(this).getOperand()
+
+    /**
+     * The type of the property to evaluate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype)
+     */
+    public fun operandType(): String? = unwrap(this).getOperandType()
+
+    /**
+     * The operator to use to perform the evaluation, such as `eq` to represent equals.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operator)
+     */
+    public fun `operator`(): String? = unwrap(this).getOperator()
+
+    /**
+     * The name of the conditional property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-property)
+     */
+    public fun `property`(): String? = unwrap(this).getProperty()
+
+    /**
+     * The value to assign to the property if the condition is met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-then)
+     */
+    public fun then(): Any? = unwrap(this).getThen()
+
+    /**
+     * A builder for [ComponentConditionPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      public fun elseValue(elseValue: IResolvable)
+
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      public fun elseValue(elseValue: ComponentPropertyProperty)
+
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
+      public fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit)
+
+      /**
+       * @param field The name of a field.
+       * Specify this when the property is a data model.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param operand The value of the property to evaluate.
+       */
+      public fun operand(operand: String)
+
+      /**
+       * @param operandType The type of the property to evaluate.
+       */
+      public fun operandType(operandType: String)
+
+      /**
+       * @param operator The operator to use to perform the evaluation, such as `eq` to represent
+       * equals.
+       */
+      public fun `operator`(`operator`: String)
+
+      /**
+       * @param property The name of the conditional property.
+       */
+      public fun `property`(`property`: String)
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      public fun then(then: IResolvable)
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      public fun then(then: ComponentPropertyProperty)
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
+      public fun then(then: ComponentPropertyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty.builder()
+
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      override fun elseValue(elseValue: IResolvable) {
+        cdkBuilder.elseValue(elseValue.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      override fun elseValue(elseValue: ComponentPropertyProperty) {
+        cdkBuilder.elseValue(elseValue.let(ComponentPropertyProperty::unwrap))
+      }
+
+      /**
+       * @param elseValue The value to assign to the property if the condition is not met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
+      override fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+          elseValue(ComponentPropertyProperty(elseValue))
+
+      /**
+       * @param field The name of a field.
+       * Specify this when the property is a data model.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param operand The value of the property to evaluate.
+       */
+      override fun operand(operand: String) {
+        cdkBuilder.operand(operand)
+      }
+
+      /**
+       * @param operandType The type of the property to evaluate.
+       */
+      override fun operandType(operandType: String) {
+        cdkBuilder.operandType(operandType)
+      }
+
+      /**
+       * @param operator The operator to use to perform the evaluation, such as `eq` to represent
+       * equals.
+       */
+      override fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+      }
+
+      /**
+       * @param property The name of the conditional property.
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      override fun then(then: IResolvable) {
+        cdkBuilder.then(then.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      override fun then(then: ComponentPropertyProperty) {
+        cdkBuilder.then(then.let(ComponentPropertyProperty::unwrap))
+      }
+
+      /**
+       * @param then The value to assign to the property if the condition is met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
+      override fun then(then: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+          then(ComponentPropertyProperty(then))
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty,
+    ) : CdkObject(cdkObject), ComponentConditionPropertyProperty {
+      /**
+       * The value to assign to the property if the condition is not met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-else)
+       */
+      override fun elseValue(): Any? = unwrap(this).getElseValue()
+
+      /**
+       * The name of a field.
+       *
+       * Specify this when the property is a data model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The value of the property to evaluate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operand)
+       */
+      override fun operand(): String? = unwrap(this).getOperand()
+
+      /**
+       * The type of the property to evaluate.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype)
+       */
+      override fun operandType(): String? = unwrap(this).getOperandType()
+
+      /**
+       * The operator to use to perform the evaluation, such as `eq` to represent equals.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-operator)
+       */
+      override fun `operator`(): String? = unwrap(this).getOperator()
+
+      /**
+       * The name of the conditional property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-property)
+       */
+      override fun `property`(): String? = unwrap(this).getProperty()
+
+      /**
+       * The value to assign to the property if the condition is met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentconditionproperty.html#cfn-amplifyuibuilder-component-componentconditionproperty-then)
+       */
+      override fun then(): Any? = unwrap(this).getThen()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentConditionPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty):
+          ComponentConditionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConditionPropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentConditionPropertyProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
     }
   }
 
@@ -5461,8 +3375,7 @@ public open class CfnComponent internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty,
     ) : CdkObject(cdkObject), ComponentDataConfigurationProperty {
       /**
        * A list of IDs to use to bind data to a component.
@@ -5514,6 +3427,2080 @@ public open class CfnComponent internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty
+    }
+  }
+
+  /**
+   * The `ComponentEvent` property specifies the configuration of an event.
+   *
+   * You can bind an event and a corresponding action to a `Component` or a `ComponentChild` . A
+   * button click is an example of an event.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentPropertyProperty componentPropertyProperty_;
+   * ComponentEventProperty componentEventProperty = ComponentEventProperty.builder()
+   * .action("action")
+   * .bindingEvent("bindingEvent")
+   * .parameters(ActionParametersProperty.builder()
+   * .anchor(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .fields(Map.of(
+   * "fieldsKey", ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build()))
+   * .global(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .id(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .model("model")
+   * .state(MutationActionSetStateParameterProperty.builder()
+   * .componentName("componentName")
+   * .property("property")
+   * .set(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build())
+   * .target(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .type(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .url(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html)
+   */
+  public interface ComponentEventProperty {
+    /**
+     * The action to perform when a specific event is raised.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-action)
+     */
+    public fun action(): String? = unwrap(this).getAction()
+
+    /**
+     * Binds an event to an action on a component.
+     *
+     * When you specify a `bindingEvent` , the event is called when the action is performed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-bindingevent)
+     */
+    public fun bindingEvent(): String? = unwrap(this).getBindingEvent()
+
+    /**
+     * Describes information about the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [ComponentEventProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action to perform when a specific event is raised.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param bindingEvent Binds an event to an action on a component.
+       * When you specify a `bindingEvent` , the event is called when the action is performed.
+       */
+      public fun bindingEvent(bindingEvent: String)
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      public fun parameters(parameters: ActionParametersProperty)
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
+      public fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty.builder()
+
+      /**
+       * @param action The action to perform when a specific event is raised.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param bindingEvent Binds an event to an action on a component.
+       * When you specify a `bindingEvent` , the event is called when the action is performed.
+       */
+      override fun bindingEvent(bindingEvent: String) {
+        cdkBuilder.bindingEvent(bindingEvent)
+      }
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      override fun parameters(parameters: ActionParametersProperty) {
+        cdkBuilder.parameters(parameters.let(ActionParametersProperty::unwrap))
+      }
+
+      /**
+       * @param parameters Describes information about the action.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
+      override fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit): Unit =
+          parameters(ActionParametersProperty(parameters))
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty,
+    ) : CdkObject(cdkObject), ComponentEventProperty {
+      /**
+       * The action to perform when a specific event is raised.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-action)
+       */
+      override fun action(): String? = unwrap(this).getAction()
+
+      /**
+       * Binds an event to an action on a component.
+       *
+       * When you specify a `bindingEvent` , the event is called when the action is performed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-bindingevent)
+       */
+      override fun bindingEvent(): String? = unwrap(this).getBindingEvent()
+
+      /**
+       * Describes information about the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentevent.html#cfn-amplifyuibuilder-component-componentevent-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentEventProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty):
+          ComponentEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentEventProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentEventProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty
+    }
+  }
+
+  /**
+   * The `ComponentPropertyBindingProperties` property specifies a component property to associate
+   * with a binding property.
+   *
+   * This enables exposed properties on the top level component to propagate data to the component's
+   * property values.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentPropertyBindingPropertiesProperty componentPropertyBindingPropertiesProperty =
+   * ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html)
+   */
+  public interface ComponentPropertyBindingPropertiesProperty {
+    /**
+     * The data field to bind the property to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The component property to bind to the data field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-property)
+     */
+    public fun `property`(): String
+
+    /**
+     * A builder for [ComponentPropertyBindingPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param field The data field to bind the property to.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param property The component property to bind to the data field. 
+       */
+      public fun `property`(`property`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
+
+      /**
+       * @param field The data field to bind the property to.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param property The component property to bind to the data field. 
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty,
+    ) : CdkObject(cdkObject), ComponentPropertyBindingPropertiesProperty {
+      /**
+       * The data field to bind the property to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The component property to bind to the data field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.html#cfn-amplifyuibuilder-component-componentpropertybindingproperties-property)
+       */
+      override fun `property`(): String = unwrap(this).getProperty()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ComponentPropertyBindingPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty):
+          ComponentPropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentPropertyBindingPropertiesProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
+    }
+  }
+
+  /**
+   * The `ComponentProperty` property specifies the configuration for all of a component's
+   * properties.
+   *
+   * Use `ComponentProperty` to specify the values to render or bind by default.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentPropertyProperty componentPropertyProperty_;
+   * ComponentPropertyProperty componentPropertyProperty = ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html)
+   */
+  public interface ComponentPropertyProperty {
+    /**
+     * The information to bind the component property to data at runtime.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)
+     */
+    public fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+    /**
+     * The information to bind the component property to form data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindings)
+     */
+    public fun bindings(): Any? = unwrap(this).getBindings()
+
+    /**
+     * The information to bind the component property to data at runtime.
+     *
+     * Use this for collection components.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)
+     */
+    public fun collectionBindingProperties(): Any? = unwrap(this).getCollectionBindingProperties()
+
+    /**
+     * The name of the component that is affected by an event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-componentname)
+     */
+    public fun componentName(): String? = unwrap(this).getComponentName()
+
+    /**
+     * A list of component properties to concatenate to create the value to assign to this component
+     * property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-concat)
+     */
+    public fun concat(): Any? = unwrap(this).getConcat()
+
+    /**
+     * The conditional expression to use to assign a value to the component property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-condition)
+     */
+    public fun condition(): Any? = unwrap(this).getCondition()
+
+    /**
+     * Specifies whether the user configured the property in Amplify Studio after importing it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-configured)
+     */
+    public fun configured(): Any? = unwrap(this).getConfigured()
+
+    /**
+     * The default value to assign to the component property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * An event that occurs in your app.
+     *
+     * Use this for workflow data binding.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-event)
+     */
+    public fun event(): String? = unwrap(this).getEvent()
+
+    /**
+     * The default value assigned to the property when the component is imported into an app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-importedvalue)
+     */
+    public fun importedValue(): String? = unwrap(this).getImportedValue()
+
+    /**
+     * The data model to use to assign a value to the component property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-model)
+     */
+    public fun model(): String? = unwrap(this).getModel()
+
+    /**
+     * The name of the component's property that is affected by an event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-property)
+     */
+    public fun `property`(): String? = unwrap(this).getProperty()
+
+    /**
+     * The component type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * An authenticated user attribute to use to assign a value to the component property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-userattribute)
+     */
+    public fun userAttribute(): String? = unwrap(this).getUserAttribute()
+
+    /**
+     * The value to assign to the component property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ComponentPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: IResolvable)
+
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      public fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty)
+
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
+      public
+          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param bindings The information to bind the component property to form data.
+       */
+      public fun bindings(bindings: IResolvable)
+
+      /**
+       * @param bindings The information to bind the component property to form data.
+       */
+      public fun bindings(bindings: Map<String, Any>)
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      public fun collectionBindingProperties(collectionBindingProperties: IResolvable)
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      public
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty)
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
+      public
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param componentName The name of the component that is affected by an event.
+       */
+      public fun componentName(componentName: String)
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      public fun concat(concat: IResolvable)
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      public fun concat(concat: List<Any>)
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      public fun concat(vararg concat: Any)
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      public fun condition(condition: IResolvable)
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      public fun condition(condition: ComponentConditionPropertyProperty)
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
+      public fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit)
+
+      /**
+       * @param configured Specifies whether the user configured the property in Amplify Studio
+       * after importing it.
+       */
+      public fun configured(configured: Boolean)
+
+      /**
+       * @param configured Specifies whether the user configured the property in Amplify Studio
+       * after importing it.
+       */
+      public fun configured(configured: IResolvable)
+
+      /**
+       * @param defaultValue The default value to assign to the component property.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param event An event that occurs in your app.
+       * Use this for workflow data binding.
+       */
+      public fun event(event: String)
+
+      /**
+       * @param importedValue The default value assigned to the property when the component is
+       * imported into an app.
+       */
+      public fun importedValue(importedValue: String)
+
+      /**
+       * @param model The data model to use to assign a value to the component property.
+       */
+      public fun model(model: String)
+
+      /**
+       * @param property The name of the component's property that is affected by an event.
+       */
+      public fun `property`(`property`: String)
+
+      /**
+       * @param type The component type.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param userAttribute An authenticated user attribute to use to assign a value to the
+       * component property.
+       */
+      public fun userAttribute(userAttribute: String)
+
+      /**
+       * @param value The value to assign to the component property.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty.builder()
+
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      override fun bindingProperties(bindingProperties: IResolvable) {
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      override
+          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty) {
+        cdkBuilder.bindingProperties(bindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param bindingProperties The information to bind the component property to data at runtime.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
+      override
+          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
+          Unit = bindingProperties(ComponentPropertyBindingPropertiesProperty(bindingProperties))
+
+      /**
+       * @param bindings The information to bind the component property to form data.
+       */
+      override fun bindings(bindings: IResolvable) {
+        cdkBuilder.bindings(bindings.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param bindings The information to bind the component property to form data.
+       */
+      override fun bindings(bindings: Map<String, Any>) {
+        cdkBuilder.bindings(bindings)
+      }
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      override fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
+        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      override
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty) {
+        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
+      }
+
+      /**
+       * @param collectionBindingProperties The information to bind the component property to data
+       * at runtime.
+       * Use this for collection components.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
+      override
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          collectionBindingProperties(ComponentPropertyBindingPropertiesProperty(collectionBindingProperties))
+
+      /**
+       * @param componentName The name of the component that is affected by an event.
+       */
+      override fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+      }
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      override fun concat(concat: IResolvable) {
+        cdkBuilder.concat(concat.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      override fun concat(concat: List<Any>) {
+        cdkBuilder.concat(concat)
+      }
+
+      /**
+       * @param concat A list of component properties to concatenate to create the value to assign
+       * to this component property.
+       */
+      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      override fun condition(condition: IResolvable) {
+        cdkBuilder.condition(condition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      override fun condition(condition: ComponentConditionPropertyProperty) {
+        cdkBuilder.condition(condition.let(ComponentConditionPropertyProperty::unwrap))
+      }
+
+      /**
+       * @param condition The conditional expression to use to assign a value to the component
+       * property.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
+      override fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit): Unit
+          = condition(ComponentConditionPropertyProperty(condition))
+
+      /**
+       * @param configured Specifies whether the user configured the property in Amplify Studio
+       * after importing it.
+       */
+      override fun configured(configured: Boolean) {
+        cdkBuilder.configured(configured)
+      }
+
+      /**
+       * @param configured Specifies whether the user configured the property in Amplify Studio
+       * after importing it.
+       */
+      override fun configured(configured: IResolvable) {
+        cdkBuilder.configured(configured.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultValue The default value to assign to the component property.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param event An event that occurs in your app.
+       * Use this for workflow data binding.
+       */
+      override fun event(event: String) {
+        cdkBuilder.event(event)
+      }
+
+      /**
+       * @param importedValue The default value assigned to the property when the component is
+       * imported into an app.
+       */
+      override fun importedValue(importedValue: String) {
+        cdkBuilder.importedValue(importedValue)
+      }
+
+      /**
+       * @param model The data model to use to assign a value to the component property.
+       */
+      override fun model(model: String) {
+        cdkBuilder.model(model)
+      }
+
+      /**
+       * @param property The name of the component's property that is affected by an event.
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      /**
+       * @param type The component type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param userAttribute An authenticated user attribute to use to assign a value to the
+       * component property.
+       */
+      override fun userAttribute(userAttribute: String) {
+        cdkBuilder.userAttribute(userAttribute)
+      }
+
+      /**
+       * @param value The value to assign to the component property.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty,
+    ) : CdkObject(cdkObject), ComponentPropertyProperty {
+      /**
+       * The information to bind the component property to data at runtime.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)
+       */
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+
+      /**
+       * The information to bind the component property to form data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-bindings)
+       */
+      override fun bindings(): Any? = unwrap(this).getBindings()
+
+      /**
+       * The information to bind the component property to data at runtime.
+       *
+       * Use this for collection components.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)
+       */
+      override fun collectionBindingProperties(): Any? =
+          unwrap(this).getCollectionBindingProperties()
+
+      /**
+       * The name of the component that is affected by an event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-componentname)
+       */
+      override fun componentName(): String? = unwrap(this).getComponentName()
+
+      /**
+       * A list of component properties to concatenate to create the value to assign to this
+       * component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-concat)
+       */
+      override fun concat(): Any? = unwrap(this).getConcat()
+
+      /**
+       * The conditional expression to use to assign a value to the component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-condition)
+       */
+      override fun condition(): Any? = unwrap(this).getCondition()
+
+      /**
+       * Specifies whether the user configured the property in Amplify Studio after importing it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-configured)
+       */
+      override fun configured(): Any? = unwrap(this).getConfigured()
+
+      /**
+       * The default value to assign to the component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * An event that occurs in your app.
+       *
+       * Use this for workflow data binding.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-event)
+       */
+      override fun event(): String? = unwrap(this).getEvent()
+
+      /**
+       * The default value assigned to the property when the component is imported into an app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-importedvalue)
+       */
+      override fun importedValue(): String? = unwrap(this).getImportedValue()
+
+      /**
+       * The data model to use to assign a value to the component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-model)
+       */
+      override fun model(): String? = unwrap(this).getModel()
+
+      /**
+       * The name of the component's property that is affected by an event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-property)
+       */
+      override fun `property`(): String? = unwrap(this).getProperty()
+
+      /**
+       * The component type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * An authenticated user attribute to use to assign a value to the component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-userattribute)
+       */
+      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
+
+      /**
+       * The value to assign to the component property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html#cfn-amplifyuibuilder-component-componentproperty-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty):
+          ComponentPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPropertyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentPropertyProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty
+    }
+  }
+
+  /**
+   * The `ComponentVariant` property specifies the style configuration of a unique variation of a
+   * main component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * Object overrides;
+   * ComponentVariantProperty componentVariantProperty = ComponentVariantProperty.builder()
+   * .overrides(overrides)
+   * .variantValues(Map.of(
+   * "variantValuesKey", "variantValues"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html)
+   */
+  public interface ComponentVariantProperty {
+    /**
+     * The properties of the component variant that can be overriden when customizing an instance of
+     * the component.
+     *
+     * You can't specify `tags` as a valid property for `overrides` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-overrides)
+     */
+    public fun overrides(): Any? = unwrap(this).getOverrides()
+
+    /**
+     * The combination of variants that comprise this variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-variantvalues)
+     */
+    public fun variantValues(): Any? = unwrap(this).getVariantValues()
+
+    /**
+     * A builder for [ComponentVariantProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param overrides The properties of the component variant that can be overriden when
+       * customizing an instance of the component.
+       * You can't specify `tags` as a valid property for `overrides` .
+       */
+      public fun overrides(overrides: Any)
+
+      /**
+       * @param variantValues The combination of variants that comprise this variant.
+       */
+      public fun variantValues(variantValues: IResolvable)
+
+      /**
+       * @param variantValues The combination of variants that comprise this variant.
+       */
+      public fun variantValues(variantValues: Map<String, String>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty.builder()
+
+      /**
+       * @param overrides The properties of the component variant that can be overriden when
+       * customizing an instance of the component.
+       * You can't specify `tags` as a valid property for `overrides` .
+       */
+      override fun overrides(overrides: Any) {
+        cdkBuilder.overrides(overrides)
+      }
+
+      /**
+       * @param variantValues The combination of variants that comprise this variant.
+       */
+      override fun variantValues(variantValues: IResolvable) {
+        cdkBuilder.variantValues(variantValues.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param variantValues The combination of variants that comprise this variant.
+       */
+      override fun variantValues(variantValues: Map<String, String>) {
+        cdkBuilder.variantValues(variantValues)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty,
+    ) : CdkObject(cdkObject), ComponentVariantProperty {
+      /**
+       * The properties of the component variant that can be overriden when customizing an instance
+       * of the component.
+       *
+       * You can't specify `tags` as a valid property for `overrides` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-overrides)
+       */
+      override fun overrides(): Any? = unwrap(this).getOverrides()
+
+      /**
+       * The combination of variants that comprise this variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentvariant.html#cfn-amplifyuibuilder-component-componentvariant-variantvalues)
+       */
+      override fun variantValues(): Any? = unwrap(this).getVariantValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentVariantProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty):
+          ComponentVariantProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentVariantProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentVariantProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty
+    }
+  }
+
+  /**
+   * Describes how to bind a component property to form data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * FormBindingElementProperty formBindingElementProperty = FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html)
+   */
+  public interface FormBindingElementProperty {
+    /**
+     * The name of the component to retrieve a value from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-element)
+     */
+    public fun element(): String
+
+    /**
+     * The property to retrieve a value from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-property)
+     */
+    public fun `property`(): String
+
+    /**
+     * A builder for [FormBindingElementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param element The name of the component to retrieve a value from. 
+       */
+      public fun element(element: String)
+
+      /**
+       * @param property The property to retrieve a value from. 
+       */
+      public fun `property`(`property`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty.builder()
+
+      /**
+       * @param element The name of the component to retrieve a value from. 
+       */
+      override fun element(element: String) {
+        cdkBuilder.element(element)
+      }
+
+      /**
+       * @param property The property to retrieve a value from. 
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty,
+    ) : CdkObject(cdkObject), FormBindingElementProperty {
+      /**
+       * The name of the component to retrieve a value from.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-element)
+       */
+      override fun element(): String = unwrap(this).getElement()
+
+      /**
+       * The property to retrieve a value from.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-formbindingelement.html#cfn-amplifyuibuilder-component-formbindingelement-property)
+       */
+      override fun `property`(): String = unwrap(this).getProperty()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormBindingElementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty):
+          FormBindingElementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormBindingElementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormBindingElementProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty
+    }
+  }
+
+  /**
+   * Represents the state configuration when an action modifies a property of another element within
+   * the same component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * ComponentPropertyProperty componentPropertyProperty_;
+   * MutationActionSetStateParameterProperty mutationActionSetStateParameterProperty =
+   * MutationActionSetStateParameterProperty.builder()
+   * .componentName("componentName")
+   * .property("property")
+   * .set(ComponentPropertyProperty.builder()
+   * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .bindings(Map.of(
+   * "bindingsKey", FormBindingElementProperty.builder()
+   * .element("element")
+   * .property("property")
+   * .build()))
+   * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+   * .property("property")
+   * // the properties below are optional
+   * .field("field")
+   * .build())
+   * .componentName("componentName")
+   * .concat(List.of(componentPropertyProperty_))
+   * .condition(ComponentConditionPropertyProperty.builder()
+   * .else(componentPropertyProperty_)
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .property("property")
+   * .then(componentPropertyProperty_)
+   * .build())
+   * .configured(false)
+   * .defaultValue("defaultValue")
+   * .event("event")
+   * .importedValue("importedValue")
+   * .model("model")
+   * .property("property")
+   * .type("type")
+   * .userAttribute("userAttribute")
+   * .value("value")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html)
+   */
+  public interface MutationActionSetStateParameterProperty {
+    /**
+     * The name of the component that is being modified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-componentname)
+     */
+    public fun componentName(): String
+
+    /**
+     * The name of the component property to apply the state configuration to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-property)
+     */
+    public fun `property`(): String
+
+    /**
+     * The state configuration to assign to the property.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-set)
+     */
+    public fun `set`(): Any
+
+    /**
+     * A builder for [MutationActionSetStateParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentName The name of the component that is being modified. 
+       */
+      public fun componentName(componentName: String)
+
+      /**
+       * @param property The name of the component property to apply the state configuration to. 
+       */
+      public fun `property`(`property`: String)
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      public fun `set`(`set`: IResolvable)
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      public fun `set`(`set`: ComponentPropertyProperty)
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
+      public fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty.builder()
+
+      /**
+       * @param componentName The name of the component that is being modified. 
+       */
+      override fun componentName(componentName: String) {
+        cdkBuilder.componentName(componentName)
+      }
+
+      /**
+       * @param property The name of the component property to apply the state configuration to. 
+       */
+      override fun `property`(`property`: String) {
+        cdkBuilder.`property`(`property`)
+      }
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      override fun `set`(`set`: IResolvable) {
+        cdkBuilder.`set`(`set`.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      override fun `set`(`set`: ComponentPropertyProperty) {
+        cdkBuilder.`set`(`set`.let(ComponentPropertyProperty::unwrap))
+      }
+
+      /**
+       * @param set The state configuration to assign to the property. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
+      override fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+          `set`(ComponentPropertyProperty(`set`))
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty,
+    ) : CdkObject(cdkObject), MutationActionSetStateParameterProperty {
+      /**
+       * The name of the component that is being modified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-componentname)
+       */
+      override fun componentName(): String = unwrap(this).getComponentName()
+
+      /**
+       * The name of the component property to apply the state configuration to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-property)
+       */
+      override fun `property`(): String = unwrap(this).getProperty()
+
+      /**
+       * The state configuration to assign to the property.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter.html#cfn-amplifyuibuilder-component-mutationactionsetstateparameter-set)
+       */
+      override fun `set`(): Any = unwrap(this).getSet()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MutationActionSetStateParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty):
+          MutationActionSetStateParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutationActionSetStateParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MutationActionSetStateParameterProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
+    }
+  }
+
+  /**
+   * The `Predicate` property specifies information for generating Amplify DataStore queries.
+   *
+   * Use `Predicate` to retrieve a subset of the data in a collection.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * PredicateProperty predicateProperty_;
+   * PredicateProperty predicateProperty = PredicateProperty.builder()
+   * .and(List.of(predicateProperty_))
+   * .field("field")
+   * .operand("operand")
+   * .operandType("operandType")
+   * .operator("operator")
+   * .or(List.of(predicateProperty_))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html)
+   */
+  public interface PredicateProperty {
+    /**
+     * A list of predicates to combine logically.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-and)
+     */
+    public fun and(): Any? = unwrap(this).getAnd()
+
+    /**
+     * The field to query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-field)
+     */
+    public fun `field`(): String? = unwrap(this).getField()
+
+    /**
+     * The value to use when performing the evaluation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operand)
+     */
+    public fun operand(): String? = unwrap(this).getOperand()
+
+    /**
+     * The type of value to use when performing the evaluation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operandtype)
+     */
+    public fun operandType(): String? = unwrap(this).getOperandType()
+
+    /**
+     * The operator to use to perform the evaluation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operator)
+     */
+    public fun `operator`(): String? = unwrap(this).getOperator()
+
+    /**
+     * A list of predicates to combine logically.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-or)
+     */
+    public fun or(): Any? = unwrap(this).getOr()
+
+    /**
+     * A builder for [PredicateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      public fun and(and: IResolvable)
+
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      public fun and(and: List<Any>)
+
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      public fun and(vararg and: Any)
+
+      /**
+       * @param field The field to query.
+       */
+      public fun `field`(`field`: String)
+
+      /**
+       * @param operand The value to use when performing the evaluation.
+       */
+      public fun operand(operand: String)
+
+      /**
+       * @param operandType The type of value to use when performing the evaluation.
+       */
+      public fun operandType(operandType: String)
+
+      /**
+       * @param operator The operator to use to perform the evaluation.
+       */
+      public fun `operator`(`operator`: String)
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      public fun or(or: IResolvable)
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      public fun or(or: List<Any>)
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      public fun or(vararg or: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.Builder =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.builder()
+
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      override fun and(and: IResolvable) {
+        cdkBuilder.and(and.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      override fun and(and: List<Any>) {
+        cdkBuilder.and(and)
+      }
+
+      /**
+       * @param and A list of predicates to combine logically.
+       */
+      override fun and(vararg and: Any): Unit = and(and.toList())
+
+      /**
+       * @param field The field to query.
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      /**
+       * @param operand The value to use when performing the evaluation.
+       */
+      override fun operand(operand: String) {
+        cdkBuilder.operand(operand)
+      }
+
+      /**
+       * @param operandType The type of value to use when performing the evaluation.
+       */
+      override fun operandType(operandType: String) {
+        cdkBuilder.operandType(operandType)
+      }
+
+      /**
+       * @param operator The operator to use to perform the evaluation.
+       */
+      override fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+      }
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      override fun or(or: IResolvable) {
+        cdkBuilder.or(or.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      override fun or(or: List<Any>) {
+        cdkBuilder.or(or)
+      }
+
+      /**
+       * @param or A list of predicates to combine logically.
+       */
+      override fun or(vararg or: Any): Unit = or(or.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty,
+    ) : CdkObject(cdkObject), PredicateProperty {
+      /**
+       * A list of predicates to combine logically.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-and)
+       */
+      override fun and(): Any? = unwrap(this).getAnd()
+
+      /**
+       * The field to query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-field)
+       */
+      override fun `field`(): String? = unwrap(this).getField()
+
+      /**
+       * The value to use when performing the evaluation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operand)
+       */
+      override fun operand(): String? = unwrap(this).getOperand()
+
+      /**
+       * The type of value to use when performing the evaluation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operandtype)
+       */
+      override fun operandType(): String? = unwrap(this).getOperandType()
+
+      /**
+       * The operator to use to perform the evaluation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-operator)
+       */
+      override fun `operator`(): String? = unwrap(this).getOperator()
+
+      /**
+       * A list of predicates to combine logically.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html#cfn-amplifyuibuilder-component-predicate-or)
+       */
+      override fun or(): Any? = unwrap(this).getOr()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PredicateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty):
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PredicateProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty
+    }
+  }
+
+  /**
+   * The `SortProperty` property specifies how to sort the data that you bind to a component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplifyuibuilder.*;
+   * SortPropertyProperty sortPropertyProperty = SortPropertyProperty.builder()
+   * .direction("direction")
+   * .field("field")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html)
+   */
+  public interface SortPropertyProperty {
+    /**
+     * The direction of the sort, either ascending or descending.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-direction)
+     */
+    public fun direction(): String
+
+    /**
+     * The field to perform the sort on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-field)
+     */
+    public fun `field`(): String
+
+    /**
+     * A builder for [SortPropertyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param direction The direction of the sort, either ascending or descending. 
+       */
+      public fun direction(direction: String)
+
+      /**
+       * @param field The field to perform the sort on. 
+       */
+      public fun `field`(`field`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty.Builder
+          =
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty.builder()
+
+      /**
+       * @param direction The direction of the sort, either ascending or descending. 
+       */
+      override fun direction(direction: String) {
+        cdkBuilder.direction(direction)
+      }
+
+      /**
+       * @param field The field to perform the sort on. 
+       */
+      override fun `field`(`field`: String) {
+        cdkBuilder.`field`(`field`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty,
+    ) : CdkObject(cdkObject), SortPropertyProperty {
+      /**
+       * The direction of the sort, either ascending or descending.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-direction)
+       */
+      override fun direction(): String = unwrap(this).getDirection()
+
+      /**
+       * The field to perform the sort on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-sortproperty.html#cfn-amplifyuibuilder-component-sortproperty-field)
+       */
+      override fun `field`(): String = unwrap(this).getField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SortPropertyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty):
+          SortPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? SortPropertyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SortPropertyProperty):
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty
     }
   }
 }

@@ -57,7 +57,7 @@ public interface LinuxUserDataOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions,
   ) : CdkObject(cdkObject), LinuxUserDataOptions {
     /**
      * Shebang for the UserData script.

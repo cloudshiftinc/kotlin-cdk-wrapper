@@ -92,7 +92,7 @@ public interface OriginFailoverConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig,
+    cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig,
   ) : CdkObject(cdkObject), OriginFailoverConfig {
     /**
      * The origin to use as the fallback origin.

@@ -21,9 +21,8 @@ import kotlin.String
  * AlbArnTarget albArnTarget = new AlbArnTarget("albArn", 123);
  * ```
  */
-public open class AlbArnTarget internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget,
+public open class AlbArnTarget(
+  cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget,
 ) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
   public constructor(albArn: String, port: Number) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget(albArn, port)
@@ -48,6 +47,7 @@ public open class AlbArnTarget internal constructor(
 
     internal fun unwrap(wrapped: AlbArnTarget):
         software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget
   }
 }

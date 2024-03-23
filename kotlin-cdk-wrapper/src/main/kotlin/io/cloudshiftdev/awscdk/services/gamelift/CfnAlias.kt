@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html)
  */
-public open class CfnAlias internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias,
+public open class CfnAlias(
+  cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -270,7 +270,7 @@ public open class CfnAlias internal constructor(
         CfnAlias(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlias): software.amazon.awscdk.services.gamelift.CfnAlias =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.gamelift.CfnAlias
   }
 
   /**
@@ -396,8 +396,7 @@ public open class CfnAlias internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty,
+      cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty,
     ) : CdkObject(cdkObject), RoutingStrategyProperty {
       /**
        * A unique identifier for a fleet that the alias points to.

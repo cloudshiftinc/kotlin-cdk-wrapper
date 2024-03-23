@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/en_us/eks/latest/userguide/add-user-role.html)
  */
-public open class AwsAuth internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.AwsAuth,
+public open class AwsAuth(
+  cdkObject: software.amazon.awscdk.services.eks.AwsAuth,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -170,6 +170,6 @@ public open class AwsAuth internal constructor(
         AwsAuth(cdkObject)
 
     internal fun unwrap(wrapped: AwsAuth): software.amazon.awscdk.services.eks.AwsAuth =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.AwsAuth
   }
 }

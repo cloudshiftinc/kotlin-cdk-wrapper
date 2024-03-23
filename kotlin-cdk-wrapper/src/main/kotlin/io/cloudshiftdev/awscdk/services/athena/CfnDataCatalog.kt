@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html)
  */
-public open class CfnDataCatalog internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalog,
+public open class CfnDataCatalog(
+  cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -435,6 +435,7 @@ public open class CfnDataCatalog internal constructor(
         CfnDataCatalog = CfnDataCatalog(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCatalog):
-        software.amazon.awscdk.services.athena.CfnDataCatalog = wrapped.cdkObject
+        software.amazon.awscdk.services.athena.CfnDataCatalog = wrapped.cdkObject as
+        software.amazon.awscdk.services.athena.CfnDataCatalog
   }
 }

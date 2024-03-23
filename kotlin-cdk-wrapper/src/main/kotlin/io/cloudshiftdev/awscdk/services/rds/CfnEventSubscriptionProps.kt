@@ -400,7 +400,7 @@ public interface CfnEventSubscriptionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.CfnEventSubscriptionProps,
+    cdkObject: software.amazon.awscdk.services.rds.CfnEventSubscriptionProps,
   ) : CdkObject(cdkObject), CfnEventSubscriptionProps {
     /**
      * Specifies whether to activate the subscription.

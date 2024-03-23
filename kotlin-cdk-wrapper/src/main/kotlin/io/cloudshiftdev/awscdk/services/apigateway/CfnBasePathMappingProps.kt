@@ -142,7 +142,7 @@ public interface CfnBasePathMappingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps,
+    cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps,
   ) : CdkObject(cdkObject), CfnBasePathMappingProps {
     /**
      * The base path name that callers of the API must provide as part of the URL after the domain

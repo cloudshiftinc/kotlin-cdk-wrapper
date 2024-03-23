@@ -30,8 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class TokenAuthorizer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigateway.TokenAuthorizer,
+public open class TokenAuthorizer(
+  cdkObject: software.amazon.awscdk.services.apigateway.TokenAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -257,6 +257,7 @@ public open class TokenAuthorizer internal constructor(
         TokenAuthorizer = TokenAuthorizer(cdkObject)
 
     internal fun unwrap(wrapped: TokenAuthorizer):
-        software.amazon.awscdk.services.apigateway.TokenAuthorizer = wrapped.cdkObject
+        software.amazon.awscdk.services.apigateway.TokenAuthorizer = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigateway.TokenAuthorizer
   }
 }

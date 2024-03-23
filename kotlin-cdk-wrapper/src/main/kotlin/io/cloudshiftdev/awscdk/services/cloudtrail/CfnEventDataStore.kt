@@ -69,8 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)
  */
-public open class CfnEventDataStore internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
+public open class CfnEventDataStore(
+  cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -1225,11 +1225,41 @@ public open class CfnEventDataStore internal constructor(
         CfnEventDataStore = CfnEventDataStore(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventDataStore):
-        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
   }
 
   /**
-   * A JSON string that contains a list of Insights types that are logged on an event data store.
+   * Advanced event selectors let you create fine-grained selectors for CloudTrail management and
+   * data events.
+   *
+   * They help you control costs by logging only those events that are important to you. For more
+   * information about advanced event selectors, see [Logging management
+   * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
+   * and [Logging data
+   * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+   * in the *AWS CloudTrail User Guide* .
+   *
+   * You cannot apply both event selectors and advanced event selectors to a trail.
+   *
+   * *Supported CloudTrail event record fields for management events*
+   *
+   * * `eventCategory` (required)
+   * * `eventSource`
+   * * `readOnly`
+   *
+   * *Supported CloudTrail event record fields for data events*
+   *
+   * * `eventCategory` (required)
+   * * `resources.type` (required)
+   * * `readOnly`
+   * * `eventName`
+   * * `resources.ARN`
+   *
+   *
+   * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
+   * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
+   *
    *
    * Example:
    *
@@ -1237,103 +1267,141 @@ public open class CfnEventDataStore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
-   * InsightSelectorProperty insightSelectorProperty = InsightSelectorProperty.builder()
-   * .insightType("insightType")
+   * AdvancedEventSelectorProperty advancedEventSelectorProperty =
+   * AdvancedEventSelectorProperty.builder()
+   * .fieldSelectors(List.of(AdvancedFieldSelectorProperty.builder()
+   * .field("field")
+   * // the properties below are optional
+   * .endsWith(List.of("endsWith"))
+   * .equalTo(List.of("equalTo"))
+   * .notEndsWith(List.of("notEndsWith"))
+   * .notEquals(List.of("notEquals"))
+   * .notStartsWith(List.of("notStartsWith"))
+   * .startsWith(List.of("startsWith"))
+   * .build()))
+   * // the properties below are optional
+   * .name("name")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html)
    */
-  public interface InsightSelectorProperty {
+  public interface AdvancedEventSelectorProperty {
     /**
-     * The type of Insights events to log on an event data store. `ApiCallRateInsight` and
-     * `ApiErrorRateInsight` are valid Insight types.
+     * Contains all selector statements in an advanced event selector.
      *
-     * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
-     * aggregated per minute against a baseline API call volume.
-     *
-     * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
-     * codes. The error is shown if the API call is unsuccessful.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html#cfn-cloudtrail-eventdatastore-insightselector-insighttype)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-fieldselectors)
      */
-    public fun insightType(): String? = unwrap(this).getInsightType()
+    public fun fieldSelectors(): Any
 
     /**
-     * A builder for [InsightSelectorProperty]
+     * An optional, descriptive name for an advanced event selector, such as "Log data events for
+     * only two S3 buckets".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [AdvancedEventSelectorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param insightType The type of Insights events to log on an event data store.
-       * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
-       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
-       * aggregated per minute against a baseline API call volume.
-       *
-       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
-       * codes. The error is shown if the API call is unsuccessful.
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
-      public fun insightType(insightType: String)
+      public fun fieldSelectors(fieldSelectors: IResolvable)
+
+      /**
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       */
+      public fun fieldSelectors(fieldSelectors: List<Any>)
+
+      /**
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       */
+      public fun fieldSelectors(vararg fieldSelectors: Any)
+
+      /**
+       * @param name An optional, descriptive name for an advanced event selector, such as "Log data
+       * events for only two S3 buckets".
+       */
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty.Builder
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty.Builder
           =
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty.builder()
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty.builder()
 
       /**
-       * @param insightType The type of Insights events to log on an event data store.
-       * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
-       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
-       * aggregated per minute against a baseline API call volume.
-       *
-       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
-       * codes. The error is shown if the API call is unsuccessful.
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
-      override fun insightType(insightType: String) {
-        cdkBuilder.insightType(insightType)
+      override fun fieldSelectors(fieldSelectors: IResolvable) {
+        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       */
+      override fun fieldSelectors(fieldSelectors: List<Any>) {
+        cdkBuilder.fieldSelectors(fieldSelectors)
+      }
+
+      /**
+       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       */
+      override fun fieldSelectors(vararg fieldSelectors: Any): Unit =
+          fieldSelectors(fieldSelectors.toList())
+
+      /**
+       * @param name An optional, descriptive name for an advanced event selector, such as "Log data
+       * events for only two S3 buckets".
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
       }
 
       public fun build():
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
-          cdkBuilder.build()
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
+          = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
-    ) : CdkObject(cdkObject), InsightSelectorProperty {
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
+    ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
       /**
-       * The type of Insights events to log on an event data store. `ApiCallRateInsight` and
-       * `ApiErrorRateInsight` are valid Insight types.
+       * Contains all selector statements in an advanced event selector.
        *
-       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
-       * aggregated per minute against a baseline API call volume.
-       *
-       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
-       * codes. The error is shown if the API call is unsuccessful.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html#cfn-cloudtrail-eventdatastore-insightselector-insighttype)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-fieldselectors)
        */
-      override fun insightType(): String? = unwrap(this).getInsightType()
+      override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
+
+      /**
+       * An optional, descriptive name for an advanced event selector, such as "Log data events for
+       * only two S3 buckets".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): InsightSelectorProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdvancedEventSelectorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty):
-          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? InsightSelectorProperty ?:
-          Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty):
+          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedEventSelectorProperty ?: Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: InsightSelectorProperty):
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty
+      internal fun unwrap(wrapped: AdvancedEventSelectorProperty):
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
     }
   }
 
@@ -2948,8 +3016,7 @@ public open class CfnEventDataStore internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
     ) : CdkObject(cdkObject), AdvancedFieldSelectorProperty {
       /**
        * An operator that includes events that match the last few characters of the event record
@@ -3475,36 +3542,7 @@ public open class CfnEventDataStore internal constructor(
   }
 
   /**
-   * Advanced event selectors let you create fine-grained selectors for CloudTrail management and
-   * data events.
-   *
-   * They help you control costs by logging only those events that are important to you. For more
-   * information about advanced event selectors, see [Logging management
-   * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html)
-   * and [Logging data
-   * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
-   * in the *AWS CloudTrail User Guide* .
-   *
-   * You cannot apply both event selectors and advanced event selectors to a trail.
-   *
-   * *Supported CloudTrail event record fields for management events*
-   *
-   * * `eventCategory` (required)
-   * * `eventSource`
-   * * `readOnly`
-   *
-   * *Supported CloudTrail event record fields for data events*
-   *
-   * * `eventCategory` (required)
-   * * `resources.type` (required)
-   * * `readOnly`
-   * * `eventName`
-   * * `resources.ARN`
-   *
-   *
-   * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
-   * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
-   *
+   * A JSON string that contains a list of Insights types that are logged on an event data store.
    *
    * Example:
    *
@@ -3512,142 +3550,102 @@ public open class CfnEventDataStore internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
-   * AdvancedEventSelectorProperty advancedEventSelectorProperty =
-   * AdvancedEventSelectorProperty.builder()
-   * .fieldSelectors(List.of(AdvancedFieldSelectorProperty.builder()
-   * .field("field")
-   * // the properties below are optional
-   * .endsWith(List.of("endsWith"))
-   * .equalTo(List.of("equalTo"))
-   * .notEndsWith(List.of("notEndsWith"))
-   * .notEquals(List.of("notEquals"))
-   * .notStartsWith(List.of("notStartsWith"))
-   * .startsWith(List.of("startsWith"))
-   * .build()))
-   * // the properties below are optional
-   * .name("name")
+   * InsightSelectorProperty insightSelectorProperty = InsightSelectorProperty.builder()
+   * .insightType("insightType")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html)
    */
-  public interface AdvancedEventSelectorProperty {
+  public interface InsightSelectorProperty {
     /**
-     * Contains all selector statements in an advanced event selector.
+     * The type of Insights events to log on an event data store. `ApiCallRateInsight` and
+     * `ApiErrorRateInsight` are valid Insight types.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-fieldselectors)
+     * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+     * aggregated per minute against a baseline API call volume.
+     *
+     * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+     * codes. The error is shown if the API call is unsuccessful.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html#cfn-cloudtrail-eventdatastore-insightselector-insighttype)
      */
-    public fun fieldSelectors(): Any
+    public fun insightType(): String? = unwrap(this).getInsightType()
 
     /**
-     * An optional, descriptive name for an advanced event selector, such as "Log data events for
-     * only two S3 buckets".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [AdvancedEventSelectorProperty]
+     * A builder for [InsightSelectorProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       * @param insightType The type of Insights events to log on an event data store.
+       * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
+       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+       * aggregated per minute against a baseline API call volume.
+       *
+       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+       * codes. The error is shown if the API call is unsuccessful.
        */
-      public fun fieldSelectors(fieldSelectors: IResolvable)
-
-      /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-       */
-      public fun fieldSelectors(fieldSelectors: List<Any>)
-
-      /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-       */
-      public fun fieldSelectors(vararg fieldSelectors: Any)
-
-      /**
-       * @param name An optional, descriptive name for an advanced event selector, such as "Log data
-       * events for only two S3 buckets".
-       */
-      public fun name(name: String)
+      public fun insightType(insightType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty.Builder
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty.Builder
           =
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty.builder()
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty.builder()
 
       /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
+       * @param insightType The type of Insights events to log on an event data store.
+       * `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types.
+       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+       * aggregated per minute against a baseline API call volume.
+       *
+       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+       * codes. The error is shown if the API call is unsuccessful.
        */
-      override fun fieldSelectors(fieldSelectors: IResolvable) {
-        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-       */
-      override fun fieldSelectors(fieldSelectors: List<Any>) {
-        cdkBuilder.fieldSelectors(fieldSelectors)
-      }
-
-      /**
-       * @param fieldSelectors Contains all selector statements in an advanced event selector. 
-       */
-      override fun fieldSelectors(vararg fieldSelectors: Any): Unit =
-          fieldSelectors(fieldSelectors.toList())
-
-      /**
-       * @param name An optional, descriptive name for an advanced event selector, such as "Log data
-       * events for only two S3 buckets".
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
+      override fun insightType(insightType: String) {
+        cdkBuilder.insightType(insightType)
       }
 
       public fun build():
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
-          = cdkBuilder.build()
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
+          cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
-    ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
+    ) : CdkObject(cdkObject), InsightSelectorProperty {
       /**
-       * Contains all selector statements in an advanced event selector.
+       * The type of Insights events to log on an event data store. `ApiCallRateInsight` and
+       * `ApiErrorRateInsight` are valid Insight types.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-fieldselectors)
-       */
-      override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
-
-      /**
-       * An optional, descriptive name for an advanced event selector, such as "Log data events for
-       * only two S3 buckets".
+       * The `ApiCallRateInsight` Insights type analyzes write-only management API calls that are
+       * aggregated per minute against a baseline API call volume.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html#cfn-cloudtrail-eventdatastore-advancedeventselector-name)
+       * The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error
+       * codes. The error is shown if the API call is unsuccessful.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-insightselector.html#cfn-cloudtrail-eventdatastore-insightselector-insighttype)
        */
-      override fun name(): String? = unwrap(this).getName()
+      override fun insightType(): String? = unwrap(this).getInsightType()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): AdvancedEventSelectorProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InsightSelectorProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty):
-          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          AdvancedEventSelectorProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty):
+          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? InsightSelectorProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: AdvancedEventSelectorProperty):
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty
+      internal fun unwrap(wrapped: InsightSelectorProperty):
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty
     }
   }
 }

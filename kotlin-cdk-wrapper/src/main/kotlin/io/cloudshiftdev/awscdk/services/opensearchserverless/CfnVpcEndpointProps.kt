@@ -148,8 +148,7 @@ public interface CfnVpcEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps,
+    cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps,
   ) : CdkObject(cdkObject), CfnVpcEndpointProps {
     /**
      * The name of the endpoint.

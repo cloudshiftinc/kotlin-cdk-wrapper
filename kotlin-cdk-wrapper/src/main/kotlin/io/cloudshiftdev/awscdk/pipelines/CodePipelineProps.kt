@@ -778,7 +778,7 @@ public interface CodePipelineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineProps,
+    cdkObject: software.amazon.awscdk.pipelines.CodePipelineProps,
   ) : CdkObject(cdkObject), CodePipelineProps {
     /**
      * An existing S3 Bucket to use for storing the pipeline's artifact.

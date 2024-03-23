@@ -56,9 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html)
  */
-public open class CfnConnectorDefinitionVersion internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion,
+public open class CfnConnectorDefinitionVersion(
+  cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -259,6 +258,7 @@ public open class CfnConnectorDefinitionVersion internal constructor(
 
     internal fun unwrap(wrapped: CfnConnectorDefinitionVersion):
         software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion = wrapped.cdkObject
+        as software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion
   }
 
   /**
@@ -387,8 +387,7 @@ public open class CfnConnectorDefinitionVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty,
+      cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty,
     ) : CdkObject(cdkObject), ConnectorProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector.

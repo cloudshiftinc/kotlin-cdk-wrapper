@@ -96,7 +96,7 @@ public interface TaintSpec {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.eks.TaintSpec,
+    cdkObject: software.amazon.awscdk.services.eks.TaintSpec,
   ) : CdkObject(cdkObject), TaintSpec {
     /**
      * Effect type.

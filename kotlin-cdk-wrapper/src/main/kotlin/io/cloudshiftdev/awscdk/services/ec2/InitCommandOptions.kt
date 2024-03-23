@@ -217,7 +217,7 @@ public interface InitCommandOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitCommandOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.InitCommandOptions,
   ) : CdkObject(cdkObject), InitCommandOptions {
     /**
      * The working directory.

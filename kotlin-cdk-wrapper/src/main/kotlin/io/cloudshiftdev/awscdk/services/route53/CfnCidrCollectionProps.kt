@@ -108,7 +108,7 @@ public interface CfnCidrCollectionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollectionProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollectionProps,
   ) : CdkObject(cdkObject), CfnCidrCollectionProps {
     /**
      * A complex type that contains information about the list of CIDR locations.

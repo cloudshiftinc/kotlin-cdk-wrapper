@@ -32,9 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html)
  */
-public open class CfnPortfolioPrincipalAssociation internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation,
+public open class CfnPortfolioPrincipalAssociation(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -236,6 +235,7 @@ public open class CfnPortfolioPrincipalAssociation internal constructor(
 
     internal fun unwrap(wrapped: CfnPortfolioPrincipalAssociation):
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation
   }
 }

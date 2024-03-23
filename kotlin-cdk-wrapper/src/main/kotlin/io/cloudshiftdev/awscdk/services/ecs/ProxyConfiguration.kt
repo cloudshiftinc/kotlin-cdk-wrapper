@@ -9,8 +9,8 @@ import io.cloudshiftdev.constructs.Construct
 /**
  * The base class for proxy configurations.
  */
-public abstract class ProxyConfiguration internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
+public abstract class ProxyConfiguration(
+  cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
 ) : CdkObject(cdkObject) {
   /**
    * Called when the proxy configuration is configured on a task definition.
@@ -23,7 +23,7 @@ public abstract class ProxyConfiguration internal constructor(
       taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
+    cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
   ) : ProxyConfiguration(cdkObject)
 
   public companion object {

@@ -110,7 +110,7 @@ public interface CommonStringParameterAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ssm.CommonStringParameterAttributes,
+    cdkObject: software.amazon.awscdk.services.ssm.CommonStringParameterAttributes,
   ) : CdkObject(cdkObject), CommonStringParameterAttributes {
     /**
      * The name of the parameter store value.

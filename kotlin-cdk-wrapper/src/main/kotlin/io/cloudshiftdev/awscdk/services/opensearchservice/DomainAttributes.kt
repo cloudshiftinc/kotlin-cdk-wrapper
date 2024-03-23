@@ -73,7 +73,7 @@ public interface DomainAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.DomainAttributes,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.DomainAttributes,
   ) : CdkObject(cdkObject), DomainAttributes {
     /**
      * The ARN of the Amazon OpenSearch Service domain.

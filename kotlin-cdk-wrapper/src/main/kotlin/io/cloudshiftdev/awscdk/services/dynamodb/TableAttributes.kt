@@ -265,7 +265,7 @@ public interface TableAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableAttributes,
+    cdkObject: software.amazon.awscdk.services.dynamodb.TableAttributes,
   ) : CdkObject(cdkObject), TableAttributes {
     /**
      * KMS encryption key, if this table uses a customer-managed encryption key.

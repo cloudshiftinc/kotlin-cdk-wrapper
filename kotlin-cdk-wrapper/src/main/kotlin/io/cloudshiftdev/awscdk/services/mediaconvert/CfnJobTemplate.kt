@@ -64,8 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html)
  */
-public open class CfnJobTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate,
+public open class CfnJobTemplate(
+  cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -750,7 +750,8 @@ public open class CfnJobTemplate internal constructor(
         CfnJobTemplate = CfnJobTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobTemplate):
-        software.amazon.awscdk.services.mediaconvert.CfnJobTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.mediaconvert.CfnJobTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.mediaconvert.CfnJobTemplate
   }
 
   /**
@@ -815,8 +816,7 @@ public open class CfnJobTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty,
     ) : CdkObject(cdkObject), AccelerationSettingsProperty {
       /**
        * Specify the conditions when the service will run your job with accelerated transcoding.
@@ -973,8 +973,7 @@ public open class CfnJobTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty,
+      cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty,
     ) : CdkObject(cdkObject), HopDestinationProperty {
       /**
        * Optional.

@@ -25,8 +25,8 @@ import kotlin.collections.Map
  * "MyParameter has to be m1.small");
  * ```
  */
-public open class Fn internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Fn,
+public open class Fn(
+  cdkObject: software.amazon.awscdk.Fn,
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun att(logicalNameOfResource: String, attributeName: String): IResolvable =
@@ -151,6 +151,7 @@ public open class Fn internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Fn): Fn = Fn(cdkObject)
 
-    internal fun unwrap(wrapped: Fn): software.amazon.awscdk.Fn = wrapped.cdkObject
+    internal fun unwrap(wrapped: Fn): software.amazon.awscdk.Fn = wrapped.cdkObject as
+        software.amazon.awscdk.Fn
   }
 }

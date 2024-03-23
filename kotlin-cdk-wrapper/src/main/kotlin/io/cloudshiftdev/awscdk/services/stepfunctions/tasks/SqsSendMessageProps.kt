@@ -386,7 +386,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps,
   ) : CdkObject(cdkObject), SqsSendMessageProps {
     /**
      * An optional description for this state.

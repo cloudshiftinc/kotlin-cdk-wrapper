@@ -42,7 +42,7 @@ public interface INetworkAcl : IResource {
   public fun networkAclId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.INetworkAcl,
+    cdkObject: software.amazon.awscdk.services.ec2.INetworkAcl,
   ) : CdkObject(cdkObject), INetworkAcl {
     /**
      * Add a new entry to the ACL.

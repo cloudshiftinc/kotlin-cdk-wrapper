@@ -85,7 +85,7 @@ public interface SecurityGroupContextResponse {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.cxapi.SecurityGroupContextResponse,
+    cdkObject: software.amazon.awscdk.cxapi.SecurityGroupContextResponse,
   ) : CdkObject(cdkObject), SecurityGroupContextResponse {
     /**
      * Whether the security group allows all outbound traffic.

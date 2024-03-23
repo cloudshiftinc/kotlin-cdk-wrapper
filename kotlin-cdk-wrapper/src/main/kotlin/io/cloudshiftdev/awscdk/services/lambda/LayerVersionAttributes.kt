@@ -88,7 +88,7 @@ public interface LayerVersionAttributes {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.LayerVersionAttributes,
+    cdkObject: software.amazon.awscdk.services.lambda.LayerVersionAttributes,
   ) : CdkObject(cdkObject), LayerVersionAttributes {
     /**
      * The list of compatible runtimes with this Layer.

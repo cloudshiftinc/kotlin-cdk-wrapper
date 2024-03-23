@@ -41,8 +41,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class MathExpression internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpression,
+public open class MathExpression(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpression,
 ) : CdkObject(cdkObject), IMetric {
   public constructor(props: MathExpressionProps) :
       this(software.amazon.awscdk.services.cloudwatch.MathExpression(props.let(MathExpressionProps::unwrap))
@@ -399,6 +399,7 @@ public open class MathExpression internal constructor(
         MathExpression = MathExpression(cdkObject)
 
     internal fun unwrap(wrapped: MathExpression):
-        software.amazon.awscdk.services.cloudwatch.MathExpression = wrapped.cdkObject
+        software.amazon.awscdk.services.cloudwatch.MathExpression = wrapped.cdkObject as
+        software.amazon.awscdk.services.cloudwatch.MathExpression
   }
 }

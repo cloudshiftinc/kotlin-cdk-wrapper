@@ -33,9 +33,8 @@ import kotlin.Unit
  * .build());
  * ```
  */
-public open class StepFunctionInvokeAction internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction,
+public open class StepFunctionInvokeAction(
+  cdkObject: software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction,
 ) : Action(cdkObject) {
   public constructor(props: StepFunctionsInvokeActionProps) :
       this(software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction(props.let(StepFunctionsInvokeActionProps::unwrap))
@@ -266,6 +265,7 @@ public open class StepFunctionInvokeAction internal constructor(
 
     internal fun unwrap(wrapped: StepFunctionInvokeAction):
         software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction
   }
 }

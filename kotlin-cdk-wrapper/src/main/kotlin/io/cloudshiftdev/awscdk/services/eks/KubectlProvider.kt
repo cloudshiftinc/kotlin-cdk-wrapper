@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build());
  * ```
  */
-public open class KubectlProvider internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.KubectlProvider,
+public open class KubectlProvider(
+  cdkObject: software.amazon.awscdk.services.eks.KubectlProvider,
 ) : NestedStack(cdkObject), IKubectlProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -135,6 +135,7 @@ public open class KubectlProvider internal constructor(
         KubectlProvider = KubectlProvider(cdkObject)
 
     internal fun unwrap(wrapped: KubectlProvider):
-        software.amazon.awscdk.services.eks.KubectlProvider = wrapped.cdkObject
+        software.amazon.awscdk.services.eks.KubectlProvider = wrapped.cdkObject as
+        software.amazon.awscdk.services.eks.KubectlProvider
   }
 }

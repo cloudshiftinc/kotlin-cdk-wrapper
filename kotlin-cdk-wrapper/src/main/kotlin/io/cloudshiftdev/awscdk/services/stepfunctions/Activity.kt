@@ -27,8 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * activity.grant(role, "states:SendTaskSuccess");
  * ```
  */
-public open class Activity internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Activity,
+public open class Activity(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Activity,
 ) : Resource(cdkObject), IActivity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -454,6 +454,6 @@ public open class Activity internal constructor(
         Activity(cdkObject)
 
     internal fun unwrap(wrapped: Activity): software.amazon.awscdk.services.stepfunctions.Activity =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Activity
   }
 }

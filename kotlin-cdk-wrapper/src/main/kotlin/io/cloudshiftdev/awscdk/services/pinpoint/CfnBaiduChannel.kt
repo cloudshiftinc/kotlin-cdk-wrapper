@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-baiduchannel.html)
  */
-public open class CfnBaiduChannel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannel,
+public open class CfnBaiduChannel(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannel,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -273,6 +273,7 @@ public open class CfnBaiduChannel internal constructor(
         CfnBaiduChannel = CfnBaiduChannel(cdkObject)
 
     internal fun unwrap(wrapped: CfnBaiduChannel):
-        software.amazon.awscdk.services.pinpoint.CfnBaiduChannel = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnBaiduChannel = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnBaiduChannel
   }
 }

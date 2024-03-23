@@ -84,6 +84,17 @@ public interface DomainProps {
       unwrap(this).getCognitoDashboardsAuth()?.let(CognitoOptions::wrap)
 
   /**
+   * Whether to enable or disable cold storage on the domain.
+   *
+   * You must enable UltraWarm storage to enable cold storage.
+   *
+   * Default: - undefined
+   *
+   * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+   */
+  public fun coldStorageEnabled(): Boolean? = unwrap(this).getColdStorageEnabled()
+
+  /**
    * To configure a custom domain configure these options.
    *
    * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
@@ -370,6 +381,12 @@ public interface DomainProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f7b0909f0598e484969e326b739d47118b07ab6ec85c8226ca4af46f560057a7")
     public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit)
+
+    /**
+     * @param coldStorageEnabled Whether to enable or disable cold storage on the domain.
+     * You must enable UltraWarm storage to enable cold storage.
+     */
+    public fun coldStorageEnabled(coldStorageEnabled: Boolean)
 
     /**
      * @param customEndpoint To configure a custom domain configure these options.
@@ -681,6 +698,14 @@ public interface DomainProps {
         Unit = cognitoDashboardsAuth(CognitoOptions(cognitoDashboardsAuth))
 
     /**
+     * @param coldStorageEnabled Whether to enable or disable cold storage on the domain.
+     * You must enable UltraWarm storage to enable cold storage.
+     */
+    override fun coldStorageEnabled(coldStorageEnabled: Boolean) {
+      cdkBuilder.coldStorageEnabled(coldStorageEnabled)
+    }
+
+    /**
      * @param customEndpoint To configure a custom domain configure these options.
      * If you specify a Route53 hosted zone it will create a CNAME record and use DNS validation for
      * the certificate
@@ -978,7 +1003,7 @@ public interface DomainProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.opensearchservice.DomainProps,
+    cdkObject: software.amazon.awscdk.services.opensearchservice.DomainProps,
   ) : CdkObject(cdkObject), DomainProps {
     /**
      * Domain access policies.
@@ -1025,6 +1050,17 @@ public interface DomainProps {
      */
     override fun cognitoDashboardsAuth(): CognitoOptions? =
         unwrap(this).getCognitoDashboardsAuth()?.let(CognitoOptions::wrap)
+
+    /**
+     * Whether to enable or disable cold storage on the domain.
+     *
+     * You must enable UltraWarm storage to enable cold storage.
+     *
+     * Default: - undefined
+     *
+     * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+     */
+    override fun coldStorageEnabled(): Boolean? = unwrap(this).getColdStorageEnabled()
 
     /**
      * To configure a custom domain configure these options.

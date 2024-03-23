@@ -410,7 +410,7 @@ public interface CfnReplicationConfigProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfigProps,
+    cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfigProps,
   ) : CdkObject(cdkObject), CfnReplicationConfigProps {
     /**
      * Configuration parameters for provisioning an AWS DMS Serverless replication.

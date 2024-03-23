@@ -82,7 +82,7 @@ public interface CfnResourcePolicyProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourcePolicyProps,
+    cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
     /**
      * The Amazon Resource Name (ARN) of the service network or service.

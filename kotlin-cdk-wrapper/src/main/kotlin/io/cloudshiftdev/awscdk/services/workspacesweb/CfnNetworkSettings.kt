@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-networksettings.html)
  */
-public open class CfnNetworkSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings,
+public open class CfnNetworkSettings(
+  cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -361,6 +361,7 @@ public open class CfnNetworkSettings internal constructor(
         CfnNetworkSettings = CfnNetworkSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkSettings):
-        software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings
   }
 }

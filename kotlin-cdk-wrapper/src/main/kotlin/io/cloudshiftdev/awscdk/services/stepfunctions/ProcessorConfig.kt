@@ -85,7 +85,7 @@ public interface ProcessorConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.ProcessorConfig,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.ProcessorConfig,
   ) : CdkObject(cdkObject), ProcessorConfig {
     /**
      * Specifies the execution type for the Map workflow.

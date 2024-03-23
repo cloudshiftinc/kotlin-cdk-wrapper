@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html)
  */
-public open class CfnPublicRepository internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository,
+public open class CfnPublicRepository(
+  cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -313,7 +313,8 @@ public open class CfnPublicRepository internal constructor(
         CfnPublicRepository = CfnPublicRepository(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicRepository):
-        software.amazon.awscdk.services.ecr.CfnPublicRepository = wrapped.cdkObject
+        software.amazon.awscdk.services.ecr.CfnPublicRepository = wrapped.cdkObject as
+        software.amazon.awscdk.services.ecr.CfnPublicRepository
   }
 
   /**
@@ -485,8 +486,7 @@ public open class CfnPublicRepository internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty,
+      cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty,
     ) : CdkObject(cdkObject), RepositoryCatalogDataProperty {
       /**
        * The longform description of the contents of the repository.

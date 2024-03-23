@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html)
  */
-public open class CfnCollection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rekognition.CfnCollection,
+public open class CfnCollection(
+  cdkObject: software.amazon.awscdk.services.rekognition.CfnCollection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -193,6 +193,7 @@ public open class CfnCollection internal constructor(
         CfnCollection = CfnCollection(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollection):
-        software.amazon.awscdk.services.rekognition.CfnCollection = wrapped.cdkObject
+        software.amazon.awscdk.services.rekognition.CfnCollection = wrapped.cdkObject as
+        software.amazon.awscdk.services.rekognition.CfnCollection
   }
 }

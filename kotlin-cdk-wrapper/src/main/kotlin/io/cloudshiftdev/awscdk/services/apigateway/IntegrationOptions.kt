@@ -461,7 +461,7 @@ public interface IntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.IntegrationOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.IntegrationOptions,
   ) : CdkObject(cdkObject), IntegrationOptions {
     /**
      * A list of request parameters whose values are to be cached.

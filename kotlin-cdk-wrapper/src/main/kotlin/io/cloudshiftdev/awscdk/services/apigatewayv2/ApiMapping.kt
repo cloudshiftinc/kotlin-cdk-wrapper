@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class ApiMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMapping,
+public open class ApiMapping(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMapping,
 ) : Resource(cdkObject), IApiMapping {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -191,6 +191,7 @@ public open class ApiMapping internal constructor(
         ApiMapping = ApiMapping(cdkObject)
 
     internal fun unwrap(wrapped: ApiMapping):
-        software.amazon.awscdk.services.apigatewayv2.ApiMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.ApiMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.ApiMapping
   }
 }

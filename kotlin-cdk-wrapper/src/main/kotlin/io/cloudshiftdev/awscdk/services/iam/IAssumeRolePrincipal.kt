@@ -42,7 +42,7 @@ public interface IAssumeRolePrincipal : IPrincipal {
   public fun addToAssumeRolePolicy(document: PolicyDocument.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IAssumeRolePrincipal,
+    cdkObject: software.amazon.awscdk.services.iam.IAssumeRolePrincipal,
   ) : CdkObject(cdkObject), IAssumeRolePrincipal {
     /**
      * Add the principal to the AssumeRolePolicyDocument.

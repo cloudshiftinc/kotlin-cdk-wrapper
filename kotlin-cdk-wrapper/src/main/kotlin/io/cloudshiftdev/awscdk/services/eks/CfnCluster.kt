@@ -121,8 +121,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)
  */
-public open class CfnCluster internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster,
+public open class CfnCluster(
+  cdkObject: software.amazon.awscdk.services.eks.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1039,7 +1039,7 @@ public open class CfnCluster internal constructor(
         CfnCluster(cdkObject)
 
     internal fun unwrap(wrapped: CfnCluster): software.amazon.awscdk.services.eks.CfnCluster =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnCluster
   }
 
   /**
@@ -1152,7 +1152,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
     ) : CdkObject(cdkObject), AccessConfigProperty {
       /**
        * The desired authentication mode for the cluster.
@@ -1192,102 +1192,6 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty
-    }
-  }
-
-  /**
-   * The placement configuration for all the control plane instances of your local Amazon EKS
-   * cluster on an AWS Outpost.
-   *
-   * For more information, see [Capacity
-   * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-   * in the Amazon EKS User Guide.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * ControlPlanePlacementProperty controlPlanePlacementProperty =
-   * ControlPlanePlacementProperty.builder()
-   * .groupName("groupName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html)
-   */
-  public interface ControlPlanePlacementProperty {
-    /**
-     * The name of the placement group for the Kubernetes control plane instances.
-     *
-     * This property is only used for a local cluster on an AWS Outpost.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html#cfn-eks-cluster-controlplaneplacement-groupname)
-     */
-    public fun groupName(): String? = unwrap(this).getGroupName()
-
-    /**
-     * A builder for [ControlPlanePlacementProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param groupName The name of the placement group for the Kubernetes control plane
-       * instances.
-       * This property is only used for a local cluster on an AWS Outpost.
-       */
-      public fun groupName(groupName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.builder()
-
-      /**
-       * @param groupName The name of the placement group for the Kubernetes control plane
-       * instances.
-       * This property is only used for a local cluster on an AWS Outpost.
-       */
-      override fun groupName(groupName: String) {
-        cdkBuilder.groupName(groupName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
-    ) : CdkObject(cdkObject), ControlPlanePlacementProperty {
-      /**
-       * The name of the placement group for the Kubernetes control plane instances.
-       *
-       * This property is only used for a local cluster on an AWS Outpost.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html#cfn-eks-cluster-controlplaneplacement-groupname)
-       */
-      override fun groupName(): String? = unwrap(this).getGroupName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ControlPlanePlacementProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty):
-          ControlPlanePlacementProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ControlPlanePlacementProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ControlPlanePlacementProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty
     }
   }
 
@@ -1403,7 +1307,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
     ) : CdkObject(cdkObject), ClusterLoggingProperty {
       /**
        * The enabled control plane logs for your cluster. All log types are disabled if the array is
@@ -1434,6 +1338,1099 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty
+    }
+  }
+
+  /**
+   * The placement configuration for all the control plane instances of your local Amazon EKS
+   * cluster on an AWS Outpost.
+   *
+   * For more information, see [Capacity
+   * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+   * in the Amazon EKS User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * ControlPlanePlacementProperty controlPlanePlacementProperty =
+   * ControlPlanePlacementProperty.builder()
+   * .groupName("groupName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html)
+   */
+  public interface ControlPlanePlacementProperty {
+    /**
+     * The name of the placement group for the Kubernetes control plane instances.
+     *
+     * This property is only used for a local cluster on an AWS Outpost.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html#cfn-eks-cluster-controlplaneplacement-groupname)
+     */
+    public fun groupName(): String? = unwrap(this).getGroupName()
+
+    /**
+     * A builder for [ControlPlanePlacementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupName The name of the placement group for the Kubernetes control plane
+       * instances.
+       * This property is only used for a local cluster on an AWS Outpost.
+       */
+      public fun groupName(groupName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.builder()
+
+      /**
+       * @param groupName The name of the placement group for the Kubernetes control plane
+       * instances.
+       * This property is only used for a local cluster on an AWS Outpost.
+       */
+      override fun groupName(groupName: String) {
+        cdkBuilder.groupName(groupName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
+    ) : CdkObject(cdkObject), ControlPlanePlacementProperty {
+      /**
+       * The name of the placement group for the Kubernetes control plane instances.
+       *
+       * This property is only used for a local cluster on an AWS Outpost.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html#cfn-eks-cluster-controlplaneplacement-groupname)
+       */
+      override fun groupName(): String? = unwrap(this).getGroupName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ControlPlanePlacementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty):
+          ControlPlanePlacementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ControlPlanePlacementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ControlPlanePlacementProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty
+    }
+  }
+
+  /**
+   * The encryption configuration for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
+   * .provider(ProviderProperty.builder()
+   * .keyArn("keyArn")
+   * .build())
+   * .resources(List.of("resources"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html)
+   */
+  public interface EncryptionConfigProperty {
+    /**
+     * The encryption provider for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider)
+     */
+    public fun provider(): Any? = unwrap(this).getProvider()
+
+    /**
+     * Specifies the resources to be encrypted.
+     *
+     * The only supported value is `secrets` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources)
+     */
+    public fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+
+    /**
+     * A builder for [EncryptionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      public fun provider(provider: IResolvable)
+
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      public fun provider(provider: ProviderProperty)
+
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
+      public fun provider(provider: ProviderProperty.Builder.() -> Unit)
+
+      /**
+       * @param resources Specifies the resources to be encrypted.
+       * The only supported value is `secrets` .
+       */
+      public fun resources(resources: List<String>)
+
+      /**
+       * @param resources Specifies the resources to be encrypted.
+       * The only supported value is `secrets` .
+       */
+      public fun resources(vararg resources: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.builder()
+
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      override fun provider(provider: IResolvable) {
+        cdkBuilder.provider(provider.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      override fun provider(provider: ProviderProperty) {
+        cdkBuilder.provider(provider.let(ProviderProperty::unwrap))
+      }
+
+      /**
+       * @param provider The encryption provider for the cluster.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
+      override fun provider(provider: ProviderProperty.Builder.() -> Unit): Unit =
+          provider(ProviderProperty(provider))
+
+      /**
+       * @param resources Specifies the resources to be encrypted.
+       * The only supported value is `secrets` .
+       */
+      override fun resources(resources: List<String>) {
+        cdkBuilder.resources(resources)
+      }
+
+      /**
+       * @param resources Specifies the resources to be encrypted.
+       * The only supported value is `secrets` .
+       */
+      override fun resources(vararg resources: String): Unit = resources(resources.toList())
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
+    ) : CdkObject(cdkObject), EncryptionConfigProperty {
+      /**
+       * The encryption provider for the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider)
+       */
+      override fun provider(): Any? = unwrap(this).getProvider()
+
+      /**
+       * Specifies the resources to be encrypted.
+       *
+       * The only supported value is `secrets` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources)
+       */
+      override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty):
+          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty
+    }
+  }
+
+  /**
+   * The Kubernetes network configuration for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * KubernetesNetworkConfigProperty kubernetesNetworkConfigProperty =
+   * KubernetesNetworkConfigProperty.builder()
+   * .ipFamily("ipFamily")
+   * .serviceIpv4Cidr("serviceIpv4Cidr")
+   * .serviceIpv6Cidr("serviceIpv6Cidr")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)
+   */
+  public interface KubernetesNetworkConfigProperty {
+    /**
+     * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
+     *
+     * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
+     * when you create a cluster and can't change this value once the cluster is created. If you
+     * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both `IPv4`
+     * and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China Regions.
+     *
+     * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or later
+     * of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets the
+     * requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
+     * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS User
+     * Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+     * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from the
+     * subnet's `IPv6` CIDR.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-ipfamily)
+     */
+    public fun ipFamily(): String? = unwrap(this).getIpFamily()
+
+    /**
+     * Don't specify a value if you select `ipv6` for *ipFamily* .
+     *
+     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block,
+     * Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR blocks. We
+     * recommend that you specify a block that does not overlap with resources in other networks that
+     * are peered or connected to your VPC. The block must meet the following requirements:
+     *
+     * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` , or
+     * `192.168.0.0/16` .
+     * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+     * * Between `/24` and `/12` .
+     *
+     *
+     * You can only specify a custom CIDR block when you create a cluster. You can't change this
+     * value after the cluster is created.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr)
+     */
+    public fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
+
+    /**
+     * The CIDR block that Kubernetes pod and service IP addresses are assigned from if you created
+     * a 1.21 or later cluster with version 1.10.1 or later of the Amazon VPC CNI add-on and specified
+     * `ipv6` for *ipFamily* when you created the cluster. Kubernetes assigns service addresses from
+     * the unique local address range ( `fc00::/7` ) because you can't specify a custom IPv6 CIDR block
+     * when you create the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr)
+     */
+    public fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
+
+    /**
+     * A builder for [KubernetesNetworkConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
+       * addresses.
+       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
+       * when you create a cluster and can't change this value once the cluster is created. If you
+       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
+       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
+       * Regions.
+       *
+       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
+       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
+       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
+       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
+       * the subnet's `IPv6` CIDR.
+       */
+      public fun ipFamily(ipFamily: String)
+
+      /**
+       * @param serviceIpv4Cidr Don't specify a value if you select `ipv6` for *ipFamily* .
+       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
+       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
+       * blocks. We recommend that you specify a block that does not overlap with resources in other
+       * networks that are peered or connected to your VPC. The block must meet the following
+       * requirements:
+       *
+       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
+       * or `192.168.0.0/16` .
+       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+       * * Between `/24` and `/12` .
+       *
+       *
+       * You can only specify a custom CIDR block when you create a cluster. You can't change this
+       * value after the cluster is created.
+       */
+      public fun serviceIpv4Cidr(serviceIpv4Cidr: String)
+
+      /**
+       * @param serviceIpv6Cidr The CIDR block that Kubernetes pod and service IP addresses are
+       * assigned from if you created a 1.21 or later cluster with version 1.10.1 or later of the
+       * Amazon VPC CNI add-on and specified `ipv6` for *ipFamily* when you created the cluster.
+       * Kubernetes assigns service addresses from the unique local address range ( `fc00::/7` )
+       * because you can't specify a custom IPv6 CIDR block when you create the cluster.
+       */
+      public fun serviceIpv6Cidr(serviceIpv6Cidr: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.builder()
+
+      /**
+       * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
+       * addresses.
+       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
+       * when you create a cluster and can't change this value once the cluster is created. If you
+       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
+       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
+       * Regions.
+       *
+       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
+       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
+       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
+       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
+       * the subnet's `IPv6` CIDR.
+       */
+      override fun ipFamily(ipFamily: String) {
+        cdkBuilder.ipFamily(ipFamily)
+      }
+
+      /**
+       * @param serviceIpv4Cidr Don't specify a value if you select `ipv6` for *ipFamily* .
+       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
+       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
+       * blocks. We recommend that you specify a block that does not overlap with resources in other
+       * networks that are peered or connected to your VPC. The block must meet the following
+       * requirements:
+       *
+       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
+       * or `192.168.0.0/16` .
+       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+       * * Between `/24` and `/12` .
+       *
+       *
+       * You can only specify a custom CIDR block when you create a cluster. You can't change this
+       * value after the cluster is created.
+       */
+      override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
+        cdkBuilder.serviceIpv4Cidr(serviceIpv4Cidr)
+      }
+
+      /**
+       * @param serviceIpv6Cidr The CIDR block that Kubernetes pod and service IP addresses are
+       * assigned from if you created a 1.21 or later cluster with version 1.10.1 or later of the
+       * Amazon VPC CNI add-on and specified `ipv6` for *ipFamily* when you created the cluster.
+       * Kubernetes assigns service addresses from the unique local address range ( `fc00::/7` )
+       * because you can't specify a custom IPv6 CIDR block when you create the cluster.
+       */
+      override fun serviceIpv6Cidr(serviceIpv6Cidr: String) {
+        cdkBuilder.serviceIpv6Cidr(serviceIpv6Cidr)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
+    ) : CdkObject(cdkObject), KubernetesNetworkConfigProperty {
+      /**
+       * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
+       *
+       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
+       * when you create a cluster and can't change this value once the cluster is created. If you
+       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
+       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
+       * Regions.
+       *
+       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
+       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
+       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
+       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
+       * the subnet's `IPv6` CIDR.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-ipfamily)
+       */
+      override fun ipFamily(): String? = unwrap(this).getIpFamily()
+
+      /**
+       * Don't specify a value if you select `ipv6` for *ipFamily* .
+       *
+       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
+       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
+       * blocks. We recommend that you specify a block that does not overlap with resources in other
+       * networks that are peered or connected to your VPC. The block must meet the following
+       * requirements:
+       *
+       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
+       * or `192.168.0.0/16` .
+       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
+       * * Between `/24` and `/12` .
+       *
+       *
+       * You can only specify a custom CIDR block when you create a cluster. You can't change this
+       * value after the cluster is created.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr)
+       */
+      override fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
+
+      /**
+       * The CIDR block that Kubernetes pod and service IP addresses are assigned from if you
+       * created a 1.21 or later cluster with version 1.10.1 or later of the Amazon VPC CNI add-on and
+       * specified `ipv6` for *ipFamily* when you created the cluster. Kubernetes assigns service
+       * addresses from the unique local address range ( `fc00::/7` ) because you can't specify a
+       * custom IPv6 CIDR block when you create the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr)
+       */
+      override fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): KubernetesNetworkConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty):
+          KubernetesNetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KubernetesNetworkConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KubernetesNetworkConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty
+    }
+  }
+
+  /**
+   * Enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch
+   * Logs.
+   *
+   * By default, cluster control plane logs aren't exported to CloudWatch Logs. For more
+   * information, see [Amazon EKS Cluster control plane
+   * logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the **Amazon
+   * EKS User Guide** .
+   *
+   *
+   * When updating a resource, you must include this `Logging` property if the previous
+   * CloudFormation template of the resource had it. &gt; CloudWatch Logs ingestion, archive storage,
+   * and data scanning rates apply to exported control plane logs. For more information, see
+   * [CloudWatch Pricing](https://docs.aws.amazon.com/cloudwatch/pricing/) .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * LoggingProperty loggingProperty = LoggingProperty.builder()
+   * .clusterLogging(ClusterLoggingProperty.builder()
+   * .enabledTypes(List.of(LoggingTypeConfigProperty.builder()
+   * .type("type")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html)
+   */
+  public interface LoggingProperty {
+    /**
+     * The cluster control plane logging configuration for your cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html#cfn-eks-cluster-logging-clusterlogging)
+     */
+    public fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
+
+    /**
+     * A builder for [LoggingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      public fun clusterLogging(clusterLogging: IResolvable)
+
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      public fun clusterLogging(clusterLogging: ClusterLoggingProperty)
+
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
+      public fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.Builder
+          = software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.builder()
+
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      override fun clusterLogging(clusterLogging: IResolvable) {
+        cdkBuilder.clusterLogging(clusterLogging.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      override fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
+        cdkBuilder.clusterLogging(clusterLogging.let(ClusterLoggingProperty::unwrap))
+      }
+
+      /**
+       * @param clusterLogging The cluster control plane logging configuration for your cluster.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
+      override fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit): Unit =
+          clusterLogging(ClusterLoggingProperty(clusterLogging))
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
+    ) : CdkObject(cdkObject), LoggingProperty {
+      /**
+       * The cluster control plane logging configuration for your cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html#cfn-eks-cluster-logging-clusterlogging)
+       */
+      override fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty):
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty
+    }
+  }
+
+  /**
+   * The enabled logging type.
+   *
+   * For a list of the valid logging types, see the [`types` property of
+   * `LogSetup`](https://docs.aws.amazon.com/eks/latest/APIReference/API_LogSetup.html#AmazonEKS-Type-LogSetup-types)
+   * in the *Amazon EKS API Reference* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * LoggingTypeConfigProperty loggingTypeConfigProperty = LoggingTypeConfigProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html)
+   */
+  public interface LoggingTypeConfigProperty {
+    /**
+     * The name of the log type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html#cfn-eks-cluster-loggingtypeconfig-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [LoggingTypeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The name of the log type.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.builder()
+
+      /**
+       * @param type The name of the log type.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
+    ) : CdkObject(cdkObject), LoggingTypeConfigProperty {
+      /**
+       * The name of the log type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html#cfn-eks-cluster-loggingtypeconfig-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingTypeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty):
+          LoggingTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingTypeConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoggingTypeConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty
+    }
+  }
+
+  /**
+   * The configuration of your local Amazon EKS cluster on an AWS Outpost.
+   *
+   * Before creating a cluster on an Outpost, review [Creating a local cluster on an
+   * Outpost](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-local-cluster-create.html)
+   * in the *Amazon EKS User Guide* . This API isn't available for Amazon EKS clusters on the AWS
+   * cloud.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * OutpostConfigProperty outpostConfigProperty = OutpostConfigProperty.builder()
+   * .controlPlaneInstanceType("controlPlaneInstanceType")
+   * .outpostArns(List.of("outpostArns"))
+   * // the properties below are optional
+   * .controlPlanePlacement(ControlPlanePlacementProperty.builder()
+   * .groupName("groupName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html)
+   */
+  public interface OutpostConfigProperty {
+    /**
+     * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
+     * Outposts.
+     *
+     * Choose an instance type based on the number of nodes that your cluster will have. For more
+     * information, see [Capacity
+     * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+     * in the *Amazon EKS User Guide* .
+     *
+     * The instance type that you specify is used for all Kubernetes control plane instances. The
+     * instance type can't be changed after cluster creation. The control plane is not automatically
+     * scaled by Amazon EKS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneinstancetype)
+     */
+    public fun controlPlaneInstanceType(): String
+
+    /**
+     * An object representing the placement configuration for all the control plane instances of
+     * your local Amazon EKS cluster on an AWS Outpost.
+     *
+     * For more information, see [Capacity
+     * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+     * in the *Amazon EKS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneplacement)
+     */
+    public fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
+
+    /**
+     * The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts.
+     *
+     * Only a single Outpost ARN is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-outpostarns)
+     */
+    public fun outpostArns(): List<String>
+
+    /**
+     * A builder for [OutpostConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param controlPlaneInstanceType The Amazon EC2 instance type that you want to use for your
+       * local Amazon EKS cluster on Outposts. 
+       * Choose an instance type based on the number of nodes that your cluster will have. For more
+       * information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       *
+       * The instance type that you specify is used for all Kubernetes control plane instances. The
+       * instance type can't be changed after cluster creation. The control plane is not automatically
+       * scaled by Amazon EKS.
+       */
+      public fun controlPlaneInstanceType(controlPlaneInstanceType: String)
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      public fun controlPlanePlacement(controlPlanePlacement: IResolvable)
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      public fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty)
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
+      public
+          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit)
+
+      /**
+       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
+       * cluster on Outposts. 
+       * Only a single Outpost ARN is supported.
+       */
+      public fun outpostArns(outpostArns: List<String>)
+
+      /**
+       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
+       * cluster on Outposts. 
+       * Only a single Outpost ARN is supported.
+       */
+      public fun outpostArns(vararg outpostArns: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.builder()
+
+      /**
+       * @param controlPlaneInstanceType The Amazon EC2 instance type that you want to use for your
+       * local Amazon EKS cluster on Outposts. 
+       * Choose an instance type based on the number of nodes that your cluster will have. For more
+       * information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       *
+       * The instance type that you specify is used for all Kubernetes control plane instances. The
+       * instance type can't be changed after cluster creation. The control plane is not automatically
+       * scaled by Amazon EKS.
+       */
+      override fun controlPlaneInstanceType(controlPlaneInstanceType: String) {
+        cdkBuilder.controlPlaneInstanceType(controlPlaneInstanceType)
+      }
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      override fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
+        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      override fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
+        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(ControlPlanePlacementProperty::unwrap))
+      }
+
+      /**
+       * @param controlPlanePlacement An object representing the placement configuration for all the
+       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
+      override
+          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit):
+          Unit = controlPlanePlacement(ControlPlanePlacementProperty(controlPlanePlacement))
+
+      /**
+       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
+       * cluster on Outposts. 
+       * Only a single Outpost ARN is supported.
+       */
+      override fun outpostArns(outpostArns: List<String>) {
+        cdkBuilder.outpostArns(outpostArns)
+      }
+
+      /**
+       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
+       * cluster on Outposts. 
+       * Only a single Outpost ARN is supported.
+       */
+      override fun outpostArns(vararg outpostArns: String): Unit = outpostArns(outpostArns.toList())
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
+    ) : CdkObject(cdkObject), OutpostConfigProperty {
+      /**
+       * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
+       * Outposts.
+       *
+       * Choose an instance type based on the number of nodes that your cluster will have. For more
+       * information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       *
+       * The instance type that you specify is used for all Kubernetes control plane instances. The
+       * instance type can't be changed after cluster creation. The control plane is not automatically
+       * scaled by Amazon EKS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneinstancetype)
+       */
+      override fun controlPlaneInstanceType(): String = unwrap(this).getControlPlaneInstanceType()
+
+      /**
+       * An object representing the placement configuration for all the control plane instances of
+       * your local Amazon EKS cluster on an AWS Outpost.
+       *
+       * For more information, see [Capacity
+       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+       * in the *Amazon EKS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneplacement)
+       */
+      override fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
+
+      /**
+       * The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts.
+       *
+       * Only a single Outpost ARN is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-outpostarns)
+       */
+      override fun outpostArns(): List<String> = unwrap(this).getOutpostArns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutpostConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty):
+          OutpostConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OutpostConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutpostConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty
+    }
+  }
+
+  /**
+   * Identifies the AWS Key Management Service ( AWS KMS ) key used to encrypt the secrets.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * ProviderProperty providerProperty = ProviderProperty.builder()
+   * .keyArn("keyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html)
+   */
+  public interface ProviderProperty {
+    /**
+     * Amazon Resource Name (ARN) or alias of the KMS key.
+     *
+     * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
+     * key was created in a different account, the [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
+     * must have access to the KMS key. For more information, see [Allowing users in other accounts to
+     * use a KMS
+     * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
+     * in the *AWS Key Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html#cfn-eks-cluster-provider-keyarn)
+     */
+    public fun keyArn(): String? = unwrap(this).getKeyArn()
+
+    /**
+     * A builder for [ProviderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key.
+       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
+       * key was created in a different account, the [IAM
+       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
+       * must have access to the KMS key. For more information, see [Allowing users in other accounts
+       * to use a KMS
+       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       */
+      public fun keyArn(keyArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.builder()
+
+      /**
+       * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key.
+       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
+       * key was created in a different account, the [IAM
+       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
+       * must have access to the KMS key. For more information, see [Allowing users in other accounts
+       * to use a KMS
+       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       */
+      override fun keyArn(keyArn: String) {
+        cdkBuilder.keyArn(keyArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
+    ) : CdkObject(cdkObject), ProviderProperty {
+      /**
+       * Amazon Resource Name (ARN) or alias of the KMS key.
+       *
+       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
+       * key was created in a different account, the [IAM
+       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
+       * must have access to the KMS key. For more information, see [Allowing users in other accounts
+       * to use a KMS
+       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
+       * in the *AWS Key Management Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html#cfn-eks-cluster-provider-keyarn)
+       */
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProviderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty):
+          ProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? ProviderProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProviderProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty
     }
   }
 
@@ -1800,8 +2797,7 @@ public open class CfnCluster internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
     ) : CdkObject(cdkObject), ResourcesVpcConfigProperty {
       /**
        * Set this value to `true` to enable private access for your cluster's Kubernetes API server
@@ -1893,1007 +2889,6 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty
-    }
-  }
-
-  /**
-   * Identifies the AWS Key Management Service ( AWS KMS ) key used to encrypt the secrets.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * ProviderProperty providerProperty = ProviderProperty.builder()
-   * .keyArn("keyArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html)
-   */
-  public interface ProviderProperty {
-    /**
-     * Amazon Resource Name (ARN) or alias of the KMS key.
-     *
-     * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
-     * key was created in a different account, the [IAM
-     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
-     * must have access to the KMS key. For more information, see [Allowing users in other accounts to
-     * use a KMS
-     * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
-     * in the *AWS Key Management Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html#cfn-eks-cluster-provider-keyarn)
-     */
-    public fun keyArn(): String? = unwrap(this).getKeyArn()
-
-    /**
-     * A builder for [ProviderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key.
-       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
-       * key was created in a different account, the [IAM
-       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
-       * must have access to the KMS key. For more information, see [Allowing users in other accounts
-       * to use a KMS
-       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       */
-      public fun keyArn(keyArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.builder()
-
-      /**
-       * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key.
-       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
-       * key was created in a different account, the [IAM
-       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
-       * must have access to the KMS key. For more information, see [Allowing users in other accounts
-       * to use a KMS
-       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       */
-      override fun keyArn(keyArn: String) {
-        cdkBuilder.keyArn(keyArn)
-      }
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
-    ) : CdkObject(cdkObject), ProviderProperty {
-      /**
-       * Amazon Resource Name (ARN) or alias of the KMS key.
-       *
-       * The KMS key must be symmetric and created in the same AWS Region as the cluster. If the KMS
-       * key was created in a different account, the [IAM
-       * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html)
-       * must have access to the KMS key. For more information, see [Allowing users in other accounts
-       * to use a KMS
-       * key](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html)
-       * in the *AWS Key Management Service Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html#cfn-eks-cluster-provider-keyarn)
-       */
-      override fun keyArn(): String? = unwrap(this).getKeyArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProviderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty):
-          ProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? ProviderProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProviderProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty
-    }
-  }
-
-  /**
-   * Enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch
-   * Logs.
-   *
-   * By default, cluster control plane logs aren't exported to CloudWatch Logs. For more
-   * information, see [Amazon EKS Cluster control plane
-   * logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the **Amazon
-   * EKS User Guide** .
-   *
-   *
-   * When updating a resource, you must include this `Logging` property if the previous
-   * CloudFormation template of the resource had it. &gt; CloudWatch Logs ingestion, archive storage,
-   * and data scanning rates apply to exported control plane logs. For more information, see
-   * [CloudWatch Pricing](https://docs.aws.amazon.com/cloudwatch/pricing/) .
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * LoggingProperty loggingProperty = LoggingProperty.builder()
-   * .clusterLogging(ClusterLoggingProperty.builder()
-   * .enabledTypes(List.of(LoggingTypeConfigProperty.builder()
-   * .type("type")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html)
-   */
-  public interface LoggingProperty {
-    /**
-     * The cluster control plane logging configuration for your cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html#cfn-eks-cluster-logging-clusterlogging)
-     */
-    public fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
-
-    /**
-     * A builder for [LoggingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      public fun clusterLogging(clusterLogging: IResolvable)
-
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      public fun clusterLogging(clusterLogging: ClusterLoggingProperty)
-
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
-      public fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.Builder
-          = software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.builder()
-
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      override fun clusterLogging(clusterLogging: IResolvable) {
-        cdkBuilder.clusterLogging(clusterLogging.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      override fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
-        cdkBuilder.clusterLogging(clusterLogging.let(ClusterLoggingProperty::unwrap))
-      }
-
-      /**
-       * @param clusterLogging The cluster control plane logging configuration for your cluster.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
-      override fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit): Unit =
-          clusterLogging(ClusterLoggingProperty(clusterLogging))
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
-      /**
-       * The cluster control plane logging configuration for your cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html#cfn-eks-cluster-logging-clusterlogging)
-       */
-      override fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty = (wrapped as
-          CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty
-    }
-  }
-
-  /**
-   * The configuration of your local Amazon EKS cluster on an AWS Outpost.
-   *
-   * Before creating a cluster on an Outpost, review [Creating a local cluster on an
-   * Outpost](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-local-cluster-create.html)
-   * in the *Amazon EKS User Guide* . This API isn't available for Amazon EKS clusters on the AWS
-   * cloud.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * OutpostConfigProperty outpostConfigProperty = OutpostConfigProperty.builder()
-   * .controlPlaneInstanceType("controlPlaneInstanceType")
-   * .outpostArns(List.of("outpostArns"))
-   * // the properties below are optional
-   * .controlPlanePlacement(ControlPlanePlacementProperty.builder()
-   * .groupName("groupName")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html)
-   */
-  public interface OutpostConfigProperty {
-    /**
-     * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
-     * Outposts.
-     *
-     * Choose an instance type based on the number of nodes that your cluster will have. For more
-     * information, see [Capacity
-     * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-     * in the *Amazon EKS User Guide* .
-     *
-     * The instance type that you specify is used for all Kubernetes control plane instances. The
-     * instance type can't be changed after cluster creation. The control plane is not automatically
-     * scaled by Amazon EKS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneinstancetype)
-     */
-    public fun controlPlaneInstanceType(): String
-
-    /**
-     * An object representing the placement configuration for all the control plane instances of
-     * your local Amazon EKS cluster on an AWS Outpost.
-     *
-     * For more information, see [Capacity
-     * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-     * in the *Amazon EKS User Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneplacement)
-     */
-    public fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
-
-    /**
-     * The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts.
-     *
-     * Only a single Outpost ARN is supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-outpostarns)
-     */
-    public fun outpostArns(): List<String>
-
-    /**
-     * A builder for [OutpostConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param controlPlaneInstanceType The Amazon EC2 instance type that you want to use for your
-       * local Amazon EKS cluster on Outposts. 
-       * Choose an instance type based on the number of nodes that your cluster will have. For more
-       * information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       *
-       * The instance type that you specify is used for all Kubernetes control plane instances. The
-       * instance type can't be changed after cluster creation. The control plane is not automatically
-       * scaled by Amazon EKS.
-       */
-      public fun controlPlaneInstanceType(controlPlaneInstanceType: String)
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      public fun controlPlanePlacement(controlPlanePlacement: IResolvable)
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      public fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty)
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
-      public
-          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit)
-
-      /**
-       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
-       * cluster on Outposts. 
-       * Only a single Outpost ARN is supported.
-       */
-      public fun outpostArns(outpostArns: List<String>)
-
-      /**
-       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
-       * cluster on Outposts. 
-       * Only a single Outpost ARN is supported.
-       */
-      public fun outpostArns(vararg outpostArns: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.builder()
-
-      /**
-       * @param controlPlaneInstanceType The Amazon EC2 instance type that you want to use for your
-       * local Amazon EKS cluster on Outposts. 
-       * Choose an instance type based on the number of nodes that your cluster will have. For more
-       * information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       *
-       * The instance type that you specify is used for all Kubernetes control plane instances. The
-       * instance type can't be changed after cluster creation. The control plane is not automatically
-       * scaled by Amazon EKS.
-       */
-      override fun controlPlaneInstanceType(controlPlaneInstanceType: String) {
-        cdkBuilder.controlPlaneInstanceType(controlPlaneInstanceType)
-      }
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      override fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
-        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      override fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
-        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(ControlPlanePlacementProperty::unwrap))
-      }
-
-      /**
-       * @param controlPlanePlacement An object representing the placement configuration for all the
-       * control plane instances of your local Amazon EKS cluster on an AWS Outpost.
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
-      override
-          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit):
-          Unit = controlPlanePlacement(ControlPlanePlacementProperty(controlPlanePlacement))
-
-      /**
-       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
-       * cluster on Outposts. 
-       * Only a single Outpost ARN is supported.
-       */
-      override fun outpostArns(outpostArns: List<String>) {
-        cdkBuilder.outpostArns(outpostArns)
-      }
-
-      /**
-       * @param outpostArns The ARN of the Outpost that you want to use for your local Amazon EKS
-       * cluster on Outposts. 
-       * Only a single Outpost ARN is supported.
-       */
-      override fun outpostArns(vararg outpostArns: String): Unit = outpostArns(outpostArns.toList())
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
-    ) : CdkObject(cdkObject), OutpostConfigProperty {
-      /**
-       * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
-       * Outposts.
-       *
-       * Choose an instance type based on the number of nodes that your cluster will have. For more
-       * information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       *
-       * The instance type that you specify is used for all Kubernetes control plane instances. The
-       * instance type can't be changed after cluster creation. The control plane is not automatically
-       * scaled by Amazon EKS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneinstancetype)
-       */
-      override fun controlPlaneInstanceType(): String = unwrap(this).getControlPlaneInstanceType()
-
-      /**
-       * An object representing the placement configuration for all the control plane instances of
-       * your local Amazon EKS cluster on an AWS Outpost.
-       *
-       * For more information, see [Capacity
-       * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-       * in the *Amazon EKS User Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-controlplaneplacement)
-       */
-      override fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
-
-      /**
-       * The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts.
-       *
-       * Only a single Outpost ARN is supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html#cfn-eks-cluster-outpostconfig-outpostarns)
-       */
-      override fun outpostArns(): List<String> = unwrap(this).getOutpostArns()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): OutpostConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty):
-          OutpostConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OutpostConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: OutpostConfigProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty
-    }
-  }
-
-  /**
-   * The Kubernetes network configuration for the cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * KubernetesNetworkConfigProperty kubernetesNetworkConfigProperty =
-   * KubernetesNetworkConfigProperty.builder()
-   * .ipFamily("ipFamily")
-   * .serviceIpv4Cidr("serviceIpv4Cidr")
-   * .serviceIpv6Cidr("serviceIpv6Cidr")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)
-   */
-  public interface KubernetesNetworkConfigProperty {
-    /**
-     * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
-     *
-     * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
-     * when you create a cluster and can't change this value once the cluster is created. If you
-     * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both `IPv4`
-     * and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China Regions.
-     *
-     * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or later
-     * of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets the
-     * requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-     * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS User
-     * Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
-     * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from the
-     * subnet's `IPv6` CIDR.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-ipfamily)
-     */
-    public fun ipFamily(): String? = unwrap(this).getIpFamily()
-
-    /**
-     * Don't specify a value if you select `ipv6` for *ipFamily* .
-     *
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block,
-     * Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR blocks. We
-     * recommend that you specify a block that does not overlap with resources in other networks that
-     * are peered or connected to your VPC. The block must meet the following requirements:
-     *
-     * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` , or
-     * `192.168.0.0/16` .
-     * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-     * * Between `/24` and `/12` .
-     *
-     *
-     * You can only specify a custom CIDR block when you create a cluster. You can't change this
-     * value after the cluster is created.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr)
-     */
-    public fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
-
-    /**
-     * The CIDR block that Kubernetes pod and service IP addresses are assigned from if you created
-     * a 1.21 or later cluster with version 1.10.1 or later of the Amazon VPC CNI add-on and specified
-     * `ipv6` for *ipFamily* when you created the cluster. Kubernetes assigns service addresses from
-     * the unique local address range ( `fc00::/7` ) because you can't specify a custom IPv6 CIDR block
-     * when you create the cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr)
-     */
-    public fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
-
-    /**
-     * A builder for [KubernetesNetworkConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
-       * addresses.
-       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
-       * when you create a cluster and can't change this value once the cluster is created. If you
-       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
-       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
-       * Regions.
-       *
-       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
-       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
-       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
-       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
-       * the subnet's `IPv6` CIDR.
-       */
-      public fun ipFamily(ipFamily: String)
-
-      /**
-       * @param serviceIpv4Cidr Don't specify a value if you select `ipv6` for *ipFamily* .
-       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
-       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
-       * blocks. We recommend that you specify a block that does not overlap with resources in other
-       * networks that are peered or connected to your VPC. The block must meet the following
-       * requirements:
-       *
-       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
-       * or `192.168.0.0/16` .
-       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-       * * Between `/24` and `/12` .
-       *
-       *
-       * You can only specify a custom CIDR block when you create a cluster. You can't change this
-       * value after the cluster is created.
-       */
-      public fun serviceIpv4Cidr(serviceIpv4Cidr: String)
-
-      /**
-       * @param serviceIpv6Cidr The CIDR block that Kubernetes pod and service IP addresses are
-       * assigned from if you created a 1.21 or later cluster with version 1.10.1 or later of the
-       * Amazon VPC CNI add-on and specified `ipv6` for *ipFamily* when you created the cluster.
-       * Kubernetes assigns service addresses from the unique local address range ( `fc00::/7` )
-       * because you can't specify a custom IPv6 CIDR block when you create the cluster.
-       */
-      public fun serviceIpv6Cidr(serviceIpv6Cidr: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.builder()
-
-      /**
-       * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
-       * addresses.
-       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
-       * when you create a cluster and can't change this value once the cluster is created. If you
-       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
-       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
-       * Regions.
-       *
-       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
-       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
-       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
-       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
-       * the subnet's `IPv6` CIDR.
-       */
-      override fun ipFamily(ipFamily: String) {
-        cdkBuilder.ipFamily(ipFamily)
-      }
-
-      /**
-       * @param serviceIpv4Cidr Don't specify a value if you select `ipv6` for *ipFamily* .
-       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
-       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
-       * blocks. We recommend that you specify a block that does not overlap with resources in other
-       * networks that are peered or connected to your VPC. The block must meet the following
-       * requirements:
-       *
-       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
-       * or `192.168.0.0/16` .
-       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-       * * Between `/24` and `/12` .
-       *
-       *
-       * You can only specify a custom CIDR block when you create a cluster. You can't change this
-       * value after the cluster is created.
-       */
-      override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
-        cdkBuilder.serviceIpv4Cidr(serviceIpv4Cidr)
-      }
-
-      /**
-       * @param serviceIpv6Cidr The CIDR block that Kubernetes pod and service IP addresses are
-       * assigned from if you created a 1.21 or later cluster with version 1.10.1 or later of the
-       * Amazon VPC CNI add-on and specified `ipv6` for *ipFamily* when you created the cluster.
-       * Kubernetes assigns service addresses from the unique local address range ( `fc00::/7` )
-       * because you can't specify a custom IPv6 CIDR block when you create the cluster.
-       */
-      override fun serviceIpv6Cidr(serviceIpv6Cidr: String) {
-        cdkBuilder.serviceIpv6Cidr(serviceIpv6Cidr)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
-    ) : CdkObject(cdkObject), KubernetesNetworkConfigProperty {
-      /**
-       * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
-       *
-       * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
-       * when you create a cluster and can't change this value once the cluster is created. If you
-       * specify `ipv6` , the VPC and subnets that you specify for cluster creation must have both
-       * `IPv4` and `IPv6` CIDR blocks assigned to them. You can't specify `ipv6` for clusters in China
-       * Regions.
-       *
-       * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
-       * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
-       * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
-       * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
-       * the subnet's `IPv6` CIDR.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-ipfamily)
-       */
-      override fun ipFamily(): String? = unwrap(this).getIpFamily()
-
-      /**
-       * Don't specify a value if you select `ipv6` for *ipFamily* .
-       *
-       * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a
-       * block, Kubernetes assigns addresses from either the `10.100.0.0/16` or `172.20.0.0/16` CIDR
-       * blocks. We recommend that you specify a block that does not overlap with resources in other
-       * networks that are peered or connected to your VPC. The block must meet the following
-       * requirements:
-       *
-       * * Within one of the following private IP address blocks: `10.0.0.0/8` , `172.16.0.0/12` ,
-       * or `192.168.0.0/16` .
-       * * Doesn't overlap with any CIDR block assigned to the VPC that you selected for VPC.
-       * * Between `/24` and `/12` .
-       *
-       *
-       * You can only specify a custom CIDR block when you create a cluster. You can't change this
-       * value after the cluster is created.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr)
-       */
-      override fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
-
-      /**
-       * The CIDR block that Kubernetes pod and service IP addresses are assigned from if you
-       * created a 1.21 or later cluster with version 1.10.1 or later of the Amazon VPC CNI add-on and
-       * specified `ipv6` for *ipFamily* when you created the cluster. Kubernetes assigns service
-       * addresses from the unique local address range ( `fc00::/7` ) because you can't specify a
-       * custom IPv6 CIDR block when you create the cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv6cidr)
-       */
-      override fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): KubernetesNetworkConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty):
-          KubernetesNetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          KubernetesNetworkConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: KubernetesNetworkConfigProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty
-    }
-  }
-
-  /**
-   * The enabled logging type.
-   *
-   * For a list of the valid logging types, see the [`types` property of
-   * `LogSetup`](https://docs.aws.amazon.com/eks/latest/APIReference/API_LogSetup.html#AmazonEKS-Type-LogSetup-types)
-   * in the *Amazon EKS API Reference* .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * LoggingTypeConfigProperty loggingTypeConfigProperty = LoggingTypeConfigProperty.builder()
-   * .type("type")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html)
-   */
-  public interface LoggingTypeConfigProperty {
-    /**
-     * The name of the log type.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html#cfn-eks-cluster-loggingtypeconfig-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [LoggingTypeConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param type The name of the log type.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.builder()
-
-      /**
-       * @param type The name of the log type.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
-    ) : CdkObject(cdkObject), LoggingTypeConfigProperty {
-      /**
-       * The name of the log type.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html#cfn-eks-cluster-loggingtypeconfig-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggingTypeConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty):
-          LoggingTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          LoggingTypeConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggingTypeConfigProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty
-    }
-  }
-
-  /**
-   * The encryption configuration for the cluster.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.eks.*;
-   * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
-   * .provider(ProviderProperty.builder()
-   * .keyArn("keyArn")
-   * .build())
-   * .resources(List.of("resources"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html)
-   */
-  public interface EncryptionConfigProperty {
-    /**
-     * The encryption provider for the cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider)
-     */
-    public fun provider(): Any? = unwrap(this).getProvider()
-
-    /**
-     * Specifies the resources to be encrypted.
-     *
-     * The only supported value is `secrets` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources)
-     */
-    public fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
-
-    /**
-     * A builder for [EncryptionConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      public fun provider(provider: IResolvable)
-
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      public fun provider(provider: ProviderProperty)
-
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
-      public fun provider(provider: ProviderProperty.Builder.() -> Unit)
-
-      /**
-       * @param resources Specifies the resources to be encrypted.
-       * The only supported value is `secrets` .
-       */
-      public fun resources(resources: List<String>)
-
-      /**
-       * @param resources Specifies the resources to be encrypted.
-       * The only supported value is `secrets` .
-       */
-      public fun resources(vararg resources: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.Builder =
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.builder()
-
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      override fun provider(provider: IResolvable) {
-        cdkBuilder.provider(provider.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      override fun provider(provider: ProviderProperty) {
-        cdkBuilder.provider(provider.let(ProviderProperty::unwrap))
-      }
-
-      /**
-       * @param provider The encryption provider for the cluster.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
-      override fun provider(provider: ProviderProperty.Builder.() -> Unit): Unit =
-          provider(ProviderProperty(provider))
-
-      /**
-       * @param resources Specifies the resources to be encrypted.
-       * The only supported value is `secrets` .
-       */
-      override fun resources(resources: List<String>) {
-        cdkBuilder.resources(resources)
-      }
-
-      /**
-       * @param resources Specifies the resources to be encrypted.
-       * The only supported value is `secrets` .
-       */
-      override fun resources(vararg resources: String): Unit = resources(resources.toList())
-
-      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigProperty {
-      /**
-       * The encryption provider for the cluster.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider)
-       */
-      override fun provider(): Any? = unwrap(this).getProvider()
-
-      /**
-       * Specifies the resources to be encrypted.
-       *
-       * The only supported value is `secrets` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources)
-       */
-      override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty):
-          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EncryptionConfigProperty):
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty
     }
   }
 }

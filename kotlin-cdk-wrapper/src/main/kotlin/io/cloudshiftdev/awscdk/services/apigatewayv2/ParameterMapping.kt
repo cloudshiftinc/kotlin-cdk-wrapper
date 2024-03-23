@@ -27,8 +27,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public open class ParameterMapping internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ParameterMapping,
+public open class ParameterMapping(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.ParameterMapping,
 ) : CdkObject(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.apigatewayv2.ParameterMapping()
   )
@@ -118,6 +118,7 @@ public open class ParameterMapping internal constructor(
         ParameterMapping = ParameterMapping(cdkObject)
 
     internal fun unwrap(wrapped: ParameterMapping):
-        software.amazon.awscdk.services.apigatewayv2.ParameterMapping = wrapped.cdkObject
+        software.amazon.awscdk.services.apigatewayv2.ParameterMapping = wrapped.cdkObject as
+        software.amazon.awscdk.services.apigatewayv2.ParameterMapping
   }
 }

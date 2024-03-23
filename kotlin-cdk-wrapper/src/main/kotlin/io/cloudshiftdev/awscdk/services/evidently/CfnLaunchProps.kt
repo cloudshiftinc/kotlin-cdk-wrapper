@@ -475,7 +475,7 @@ public interface CfnLaunchProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.evidently.CfnLaunchProps,
+    cdkObject: software.amazon.awscdk.services.evidently.CfnLaunchProps,
   ) : CdkObject(cdkObject), CfnLaunchProps {
     /**
      * An optional description for the launch.

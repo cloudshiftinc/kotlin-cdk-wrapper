@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html)
  */
-public open class CfnParameterGroup internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroup,
+public open class CfnParameterGroup(
+  cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -211,6 +211,7 @@ public open class CfnParameterGroup internal constructor(
         CfnParameterGroup = CfnParameterGroup(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameterGroup):
-        software.amazon.awscdk.services.dax.CfnParameterGroup = wrapped.cdkObject
+        software.amazon.awscdk.services.dax.CfnParameterGroup = wrapped.cdkObject as
+        software.amazon.awscdk.services.dax.CfnParameterGroup
   }
 }

@@ -23,8 +23,8 @@ import io.cloudshiftdev.awscdk.services.sns.ITopic
  * SnsDlq snsDlq = new SnsDlq(topic);
  * ```
  */
-public open class SnsDlq internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
+public open class SnsDlq(
+  cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(topic.let(ITopic::unwrap))
@@ -45,6 +45,6 @@ public open class SnsDlq internal constructor(
         = SnsDlq(cdkObject)
 
     internal fun unwrap(wrapped: SnsDlq): software.amazon.awscdk.services.lambda.eventsources.SnsDlq
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.lambda.eventsources.SnsDlq
   }
 }

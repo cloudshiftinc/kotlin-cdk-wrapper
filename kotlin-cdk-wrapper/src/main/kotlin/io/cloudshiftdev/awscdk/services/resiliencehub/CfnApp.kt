@@ -84,8 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html)
  */
-public open class CfnApp internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp,
+public open class CfnApp(
+  cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1072,7 +1072,426 @@ public open class CfnApp internal constructor(
         CfnApp(cdkObject)
 
     internal fun unwrap(wrapped: CfnApp): software.amazon.awscdk.services.resiliencehub.CfnApp =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.resiliencehub.CfnApp
+  }
+
+  /**
+   * Indicates an event you would like to subscribe and get notification for.
+   *
+   * Currently, AWS Resilience Hub supports notifications only for *Drift detected* and *Scheduled
+   * assessment failure* events.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resiliencehub.*;
+   * EventSubscriptionProperty eventSubscriptionProperty = EventSubscriptionProperty.builder()
+   * .eventType("eventType")
+   * .name("name")
+   * // the properties below are optional
+   * .snsTopicArn("snsTopicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html)
+   */
+  public interface EventSubscriptionProperty {
+    /**
+     * The type of event you would like to subscribe and get notification for.
+     *
+     * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
+     * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-eventtype)
+     */
+    public fun eventType(): String
+
+    /**
+     * Unique name to identify an event subscription.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-name)
+     */
+    public fun name(): String
+
+    /**
+     * Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic.
+     *
+     * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
+     * information about ARNs, see [Amazon Resource Names
+     * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS
+     * General Reference* guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-snstopicarn)
+     */
+    public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+
+    /**
+     * A builder for [EventSubscriptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eventType The type of event you would like to subscribe and get notification for. 
+       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
+       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
+       */
+      public fun eventType(eventType: String)
+
+      /**
+       * @param name Unique name to identify an event subscription. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param snsTopicArn Amazon Resource Name (ARN) of the Amazon Simple Notification Service
+       * topic.
+       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
+       * information about ARNs, see [Amazon Resource Names
+       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
+       * *AWS General Reference* guide.
+       */
+      public fun snsTopicArn(snsTopicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.Builder =
+          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.builder()
+
+      /**
+       * @param eventType The type of event you would like to subscribe and get notification for. 
+       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
+       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
+       */
+      override fun eventType(eventType: String) {
+        cdkBuilder.eventType(eventType)
+      }
+
+      /**
+       * @param name Unique name to identify an event subscription. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param snsTopicArn Amazon Resource Name (ARN) of the Amazon Simple Notification Service
+       * topic.
+       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
+       * information about ARNs, see [Amazon Resource Names
+       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
+       * *AWS General Reference* guide.
+       */
+      override fun snsTopicArn(snsTopicArn: String) {
+        cdkBuilder.snsTopicArn(snsTopicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
+    ) : CdkObject(cdkObject), EventSubscriptionProperty {
+      /**
+       * The type of event you would like to subscribe and get notification for.
+       *
+       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
+       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-eventtype)
+       */
+      override fun eventType(): String = unwrap(this).getEventType()
+
+      /**
+       * Unique name to identify an event subscription.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic.
+       *
+       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
+       * information about ARNs, see [Amazon Resource Names
+       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
+       * *AWS General Reference* guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-snstopicarn)
+       */
+      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventSubscriptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty):
+          EventSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventSubscriptionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventSubscriptionProperty):
+          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty
+    }
+  }
+
+  /**
+   * Defines the roles and credentials that AWS Resilience Hub would use while creating the
+   * application, importing its resources, and running an assessment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.resiliencehub.*;
+   * PermissionModelProperty permissionModelProperty = PermissionModelProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
+   * .invokerRoleName("invokerRoleName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html)
+   */
+  public interface PermissionModelProperty {
+    /**
+     * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
+     *
+     * These ARNs are used for querying purposes while importing resources and assessing your
+     * application.
+     *
+     *
+     * * These ARNs are required only when your resources are in other accounts and you have
+     * different role name in these accounts. Else, the invoker role name will be used in the other
+     * accounts.
+     * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+     * in the primary account.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-crossaccountrolearns)
+     */
+    public fun crossAccountRoleArns(): List<String> = unwrap(this).getCrossAccountRoleArns() ?:
+        emptyList()
+
+    /**
+     * Existing AWS IAM role name in the primary AWS account that will be assumed by AWS Resilience
+     * Hub Service Principle to obtain a read-only access to your application resources while running
+     * an assessment.
+     *
+     *
+     * * You must have `iam:passRole` permission for this role while creating or updating the
+     * application.
+     * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-invokerrolename)
+     */
+    public fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
+
+    /**
+     * Defines how AWS Resilience Hub scans your resources.
+     *
+     * It can scan for the resources by using a pre-existing role in your AWS account, or by using
+     * the credentials of the current IAM user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [PermissionModelProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
+       * in other accounts.
+       * These ARNs are used for querying purposes while importing resources and assessing your
+       * application.
+       *
+       *
+       * * These ARNs are required only when your resources are in other accounts and you have
+       * different role name in these accounts. Else, the invoker role name will be used in the other
+       * accounts.
+       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+       * in the primary account.
+       */
+      public fun crossAccountRoleArns(crossAccountRoleArns: List<String>)
+
+      /**
+       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
+       * in other accounts.
+       * These ARNs are used for querying purposes while importing resources and assessing your
+       * application.
+       *
+       *
+       * * These ARNs are required only when your resources are in other accounts and you have
+       * different role name in these accounts. Else, the invoker role name will be used in the other
+       * accounts.
+       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+       * in the primary account.
+       */
+      public fun crossAccountRoleArns(vararg crossAccountRoleArns: String)
+
+      /**
+       * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
+       * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
+       * application resources while running an assessment.
+       *
+       * * You must have `iam:passRole` permission for this role while creating or updating the
+       * application.
+       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
+       */
+      public fun invokerRoleName(invokerRoleName: String)
+
+      /**
+       * @param type Defines how AWS Resilience Hub scans your resources. 
+       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
+       * the credentials of the current IAM user.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.Builder =
+          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.builder()
+
+      /**
+       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
+       * in other accounts.
+       * These ARNs are used for querying purposes while importing resources and assessing your
+       * application.
+       *
+       *
+       * * These ARNs are required only when your resources are in other accounts and you have
+       * different role name in these accounts. Else, the invoker role name will be used in the other
+       * accounts.
+       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+       * in the primary account.
+       */
+      override fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
+        cdkBuilder.crossAccountRoleArns(crossAccountRoleArns)
+      }
+
+      /**
+       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
+       * in other accounts.
+       * These ARNs are used for querying purposes while importing resources and assessing your
+       * application.
+       *
+       *
+       * * These ARNs are required only when your resources are in other accounts and you have
+       * different role name in these accounts. Else, the invoker role name will be used in the other
+       * accounts.
+       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+       * in the primary account.
+       */
+      override fun crossAccountRoleArns(vararg crossAccountRoleArns: String): Unit =
+          crossAccountRoleArns(crossAccountRoleArns.toList())
+
+      /**
+       * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
+       * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
+       * application resources while running an assessment.
+       *
+       * * You must have `iam:passRole` permission for this role while creating or updating the
+       * application.
+       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
+       */
+      override fun invokerRoleName(invokerRoleName: String) {
+        cdkBuilder.invokerRoleName(invokerRoleName)
+      }
+
+      /**
+       * @param type Defines how AWS Resilience Hub scans your resources. 
+       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
+       * the credentials of the current IAM user.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
+    ) : CdkObject(cdkObject), PermissionModelProperty {
+      /**
+       * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
+       *
+       * These ARNs are used for querying purposes while importing resources and assessing your
+       * application.
+       *
+       *
+       * * These ARNs are required only when your resources are in other accounts and you have
+       * different role name in these accounts. Else, the invoker role name will be used in the other
+       * accounts.
+       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
+       * in the primary account.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-crossaccountrolearns)
+       */
+      override fun crossAccountRoleArns(): List<String> = unwrap(this).getCrossAccountRoleArns() ?:
+          emptyList()
+
+      /**
+       * Existing AWS IAM role name in the primary AWS account that will be assumed by AWS
+       * Resilience Hub Service Principle to obtain a read-only access to your application resources
+       * while running an assessment.
+       *
+       *
+       * * You must have `iam:passRole` permission for this role while creating or updating the
+       * application.
+       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-invokerrolename)
+       */
+      override fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
+
+      /**
+       * Defines how AWS Resilience Hub scans your resources.
+       *
+       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
+       * the credentials of the current IAM user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PermissionModelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty):
+          PermissionModelProperty = CdkObjectWrappers.wrap(cdkObject) as? PermissionModelProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PermissionModelProperty):
+          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty
+    }
   }
 
   /**
@@ -1274,8 +1693,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
     ) : CdkObject(cdkObject), PhysicalResourceIdProperty {
       /**
        * The AWS account that owns the physical resource.
@@ -1350,257 +1768,6 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty
-    }
-  }
-
-  /**
-   * Defines the roles and credentials that AWS Resilience Hub would use while creating the
-   * application, importing its resources, and running an assessment.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resiliencehub.*;
-   * PermissionModelProperty permissionModelProperty = PermissionModelProperty.builder()
-   * .type("type")
-   * // the properties below are optional
-   * .crossAccountRoleArns(List.of("crossAccountRoleArns"))
-   * .invokerRoleName("invokerRoleName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html)
-   */
-  public interface PermissionModelProperty {
-    /**
-     * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
-     *
-     * These ARNs are used for querying purposes while importing resources and assessing your
-     * application.
-     *
-     *
-     * * These ARNs are required only when your resources are in other accounts and you have
-     * different role name in these accounts. Else, the invoker role name will be used in the other
-     * accounts.
-     * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-     * in the primary account.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-crossaccountrolearns)
-     */
-    public fun crossAccountRoleArns(): List<String> = unwrap(this).getCrossAccountRoleArns() ?:
-        emptyList()
-
-    /**
-     * Existing AWS IAM role name in the primary AWS account that will be assumed by AWS Resilience
-     * Hub Service Principle to obtain a read-only access to your application resources while running
-     * an assessment.
-     *
-     *
-     * * You must have `iam:passRole` permission for this role while creating or updating the
-     * application.
-     * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-invokerrolename)
-     */
-    public fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
-
-    /**
-     * Defines how AWS Resilience Hub scans your resources.
-     *
-     * It can scan for the resources by using a pre-existing role in your AWS account, or by using
-     * the credentials of the current IAM user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [PermissionModelProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
-       * in other accounts.
-       * These ARNs are used for querying purposes while importing resources and assessing your
-       * application.
-       *
-       *
-       * * These ARNs are required only when your resources are in other accounts and you have
-       * different role name in these accounts. Else, the invoker role name will be used in the other
-       * accounts.
-       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-       * in the primary account.
-       */
-      public fun crossAccountRoleArns(crossAccountRoleArns: List<String>)
-
-      /**
-       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
-       * in other accounts.
-       * These ARNs are used for querying purposes while importing resources and assessing your
-       * application.
-       *
-       *
-       * * These ARNs are required only when your resources are in other accounts and you have
-       * different role name in these accounts. Else, the invoker role name will be used in the other
-       * accounts.
-       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-       * in the primary account.
-       */
-      public fun crossAccountRoleArns(vararg crossAccountRoleArns: String)
-
-      /**
-       * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
-       * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
-       * application resources while running an assessment.
-       *
-       * * You must have `iam:passRole` permission for this role while creating or updating the
-       * application.
-       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
-       */
-      public fun invokerRoleName(invokerRoleName: String)
-
-      /**
-       * @param type Defines how AWS Resilience Hub scans your resources. 
-       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
-       * the credentials of the current IAM user.
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.Builder =
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.builder()
-
-      /**
-       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
-       * in other accounts.
-       * These ARNs are used for querying purposes while importing resources and assessing your
-       * application.
-       *
-       *
-       * * These ARNs are required only when your resources are in other accounts and you have
-       * different role name in these accounts. Else, the invoker role name will be used in the other
-       * accounts.
-       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-       * in the primary account.
-       */
-      override fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
-        cdkBuilder.crossAccountRoleArns(crossAccountRoleArns)
-      }
-
-      /**
-       * @param crossAccountRoleArns Defines a list of role Amazon Resource Names (ARNs) to be used
-       * in other accounts.
-       * These ARNs are used for querying purposes while importing resources and assessing your
-       * application.
-       *
-       *
-       * * These ARNs are required only when your resources are in other accounts and you have
-       * different role name in these accounts. Else, the invoker role name will be used in the other
-       * accounts.
-       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-       * in the primary account.
-       */
-      override fun crossAccountRoleArns(vararg crossAccountRoleArns: String): Unit =
-          crossAccountRoleArns(crossAccountRoleArns.toList())
-
-      /**
-       * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
-       * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
-       * application resources while running an assessment.
-       *
-       * * You must have `iam:passRole` permission for this role while creating or updating the
-       * application.
-       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
-       */
-      override fun invokerRoleName(invokerRoleName: String) {
-        cdkBuilder.invokerRoleName(invokerRoleName)
-      }
-
-      /**
-       * @param type Defines how AWS Resilience Hub scans your resources. 
-       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
-       * the credentials of the current IAM user.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
-    ) : CdkObject(cdkObject), PermissionModelProperty {
-      /**
-       * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
-       *
-       * These ARNs are used for querying purposes while importing resources and assessing your
-       * application.
-       *
-       *
-       * * These ARNs are required only when your resources are in other accounts and you have
-       * different role name in these accounts. Else, the invoker role name will be used in the other
-       * accounts.
-       * * These roles must have a trust policy with `iam:AssumeRole` permission to the invoker role
-       * in the primary account.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-crossaccountrolearns)
-       */
-      override fun crossAccountRoleArns(): List<String> = unwrap(this).getCrossAccountRoleArns() ?:
-          emptyList()
-
-      /**
-       * Existing AWS IAM role name in the primary AWS account that will be assumed by AWS
-       * Resilience Hub Service Principle to obtain a read-only access to your application resources
-       * while running an assessment.
-       *
-       *
-       * * You must have `iam:passRole` permission for this role while creating or updating the
-       * application.
-       * * Currently, `invokerRoleName` accepts only `[A-Za-z0-9_+=,.&#64;-]` characters.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-invokerrolename)
-       */
-      override fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
-
-      /**
-       * Defines how AWS Resilience Hub scans your resources.
-       *
-       * It can scan for the resources by using a pre-existing role in your AWS account, or by using
-       * the credentials of the current IAM user.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-permissionmodel.html#cfn-resiliencehub-app-permissionmodel-type)
-       */
-      override fun type(): String = unwrap(this).getType()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PermissionModelProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty):
-          PermissionModelProperty = CdkObjectWrappers.wrap(cdkObject) as? PermissionModelProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PermissionModelProperty):
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty
     }
   }
 
@@ -1812,8 +1979,7 @@ public open class CfnApp internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
+      cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
     ) : CdkObject(cdkObject), ResourceMappingProperty {
       /**
        * Name of the Amazon Elastic Kubernetes Service cluster and namespace that this resource is
@@ -1880,176 +2046,6 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty
-    }
-  }
-
-  /**
-   * Indicates an event you would like to subscribe and get notification for.
-   *
-   * Currently, AWS Resilience Hub supports notifications only for *Drift detected* and *Scheduled
-   * assessment failure* events.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.resiliencehub.*;
-   * EventSubscriptionProperty eventSubscriptionProperty = EventSubscriptionProperty.builder()
-   * .eventType("eventType")
-   * .name("name")
-   * // the properties below are optional
-   * .snsTopicArn("snsTopicArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html)
-   */
-  public interface EventSubscriptionProperty {
-    /**
-     * The type of event you would like to subscribe and get notification for.
-     *
-     * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
-     * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-eventtype)
-     */
-    public fun eventType(): String
-
-    /**
-     * Unique name to identify an event subscription.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-name)
-     */
-    public fun name(): String
-
-    /**
-     * Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic.
-     *
-     * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
-     * information about ARNs, see [Amazon Resource Names
-     * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS
-     * General Reference* guide.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-snstopicarn)
-     */
-    public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
-
-    /**
-     * A builder for [EventSubscriptionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param eventType The type of event you would like to subscribe and get notification for. 
-       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
-       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
-       */
-      public fun eventType(eventType: String)
-
-      /**
-       * @param name Unique name to identify an event subscription. 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param snsTopicArn Amazon Resource Name (ARN) of the Amazon Simple Notification Service
-       * topic.
-       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
-       * information about ARNs, see [Amazon Resource Names
-       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
-       * *AWS General Reference* guide.
-       */
-      public fun snsTopicArn(snsTopicArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.Builder =
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.builder()
-
-      /**
-       * @param eventType The type of event you would like to subscribe and get notification for. 
-       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
-       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
-       */
-      override fun eventType(eventType: String) {
-        cdkBuilder.eventType(eventType)
-      }
-
-      /**
-       * @param name Unique name to identify an event subscription. 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param snsTopicArn Amazon Resource Name (ARN) of the Amazon Simple Notification Service
-       * topic.
-       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
-       * information about ARNs, see [Amazon Resource Names
-       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
-       * *AWS General Reference* guide.
-       */
-      override fun snsTopicArn(snsTopicArn: String) {
-        cdkBuilder.snsTopicArn(snsTopicArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
-    ) : CdkObject(cdkObject), EventSubscriptionProperty {
-      /**
-       * The type of event you would like to subscribe and get notification for.
-       *
-       * Currently, AWS Resilience Hub supports notifications only for *Drift detected* (
-       * `DriftDetected` ) and *Scheduled assessment failure* ( `ScheduledAssessmentFailure` ) events.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-eventtype)
-       */
-      override fun eventType(): String = unwrap(this).getEventType()
-
-      /**
-       * Unique name to identify an event subscription.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic.
-       *
-       * The format for this ARN is: `arn:partition:sns:region:account:topic-name` . For more
-       * information about ARNs, see [Amazon Resource Names
-       * (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the
-       * *AWS General Reference* guide.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-eventsubscription.html#cfn-resiliencehub-app-eventsubscription-snstopicarn)
-       */
-      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): EventSubscriptionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty):
-          EventSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          EventSubscriptionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EventSubscriptionProperty):
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty
     }
   }
 }

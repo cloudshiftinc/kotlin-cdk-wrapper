@@ -487,7 +487,7 @@ public interface Behavior {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.Behavior,
+    cdkObject: software.amazon.awscdk.services.cloudfront.Behavior,
   ) : CdkObject(cdkObject), Behavior {
     /**
      * The method this CloudFront distribution responds do.

@@ -64,7 +64,7 @@ public interface AuroraMysqlClusterEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps,
   ) : CdkObject(cdkObject), AuroraMysqlClusterEngineProps {
     /**
      * The version of the Aurora MySQL cluster engine.

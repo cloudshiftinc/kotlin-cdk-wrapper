@@ -220,7 +220,7 @@ public interface CustomResourceProviderOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CustomResourceProviderOptions,
+    cdkObject: software.amazon.awscdk.CustomResourceProviderOptions,
   ) : CdkObject(cdkObject), CustomResourceProviderOptions {
     /**
      * A description of the function.

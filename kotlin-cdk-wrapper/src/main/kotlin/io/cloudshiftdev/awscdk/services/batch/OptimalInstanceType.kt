@@ -19,8 +19,8 @@ import io.cloudshiftdev.awscdk.services.ec2.InstanceType
  * OptimalInstanceType optimalInstanceType = new OptimalInstanceType();
  * ```
  */
-public open class OptimalInstanceType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.batch.OptimalInstanceType,
+public open class OptimalInstanceType(
+  cdkObject: software.amazon.awscdk.services.batch.OptimalInstanceType,
 ) : InstanceType(cdkObject) {
   public constructor() : this(software.amazon.awscdk.services.batch.OptimalInstanceType()
   )
@@ -30,6 +30,7 @@ public open class OptimalInstanceType internal constructor(
         OptimalInstanceType = OptimalInstanceType(cdkObject)
 
     internal fun unwrap(wrapped: OptimalInstanceType):
-        software.amazon.awscdk.services.batch.OptimalInstanceType = wrapped.cdkObject
+        software.amazon.awscdk.services.batch.OptimalInstanceType = wrapped.cdkObject as
+        software.amazon.awscdk.services.batch.OptimalInstanceType
   }
 }

@@ -42,8 +42,8 @@ import kotlin.jvm.JvmName
  *
  * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
  */
-public open class WindowsBuildImage internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.codebuild.WindowsBuildImage,
+public open class WindowsBuildImage(
+  cdkObject: software.amazon.awscdk.services.codebuild.WindowsBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
@@ -185,6 +185,7 @@ public open class WindowsBuildImage internal constructor(
         WindowsBuildImage = WindowsBuildImage(cdkObject)
 
     internal fun unwrap(wrapped: WindowsBuildImage):
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage = wrapped.cdkObject
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage = wrapped.cdkObject as
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage
   }
 }

@@ -37,8 +37,8 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public open class AwsApi internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.AwsApi,
+public open class AwsApi(
+  cdkObject: software.amazon.awscdk.services.events.targets.AwsApi,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(props: AwsApiProps) :
       this(software.amazon.awscdk.services.events.targets.AwsApi(props.let(AwsApiProps::unwrap))
@@ -253,6 +253,6 @@ public open class AwsApi internal constructor(
         AwsApi(cdkObject)
 
     internal fun unwrap(wrapped: AwsApi): software.amazon.awscdk.services.events.targets.AwsApi =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.events.targets.AwsApi
   }
 }

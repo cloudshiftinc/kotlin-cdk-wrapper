@@ -56,8 +56,7 @@ public interface AddNetworkActionProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
   ) : CdkObject(cdkObject), AddNetworkActionProps {
     /**
      * Action to perform.

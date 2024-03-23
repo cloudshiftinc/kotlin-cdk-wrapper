@@ -319,7 +319,7 @@ public interface CfnIdentityProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentityProps,
+    cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentityProps,
   ) : CdkObject(cdkObject), CfnIdentityProps {
     /**
      * For domain identities, this attribute is used to enable or disable DomainKeys Identified Mail

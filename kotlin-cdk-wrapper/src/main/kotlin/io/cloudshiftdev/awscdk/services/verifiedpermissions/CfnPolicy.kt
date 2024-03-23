@@ -80,8 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policy.html)
  */
-public open class CfnPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy,
+public open class CfnPolicy(
+  cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -289,7 +289,8 @@ public open class CfnPolicy internal constructor(
         CfnPolicy = CfnPolicy(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicy):
-        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy = wrapped.cdkObject
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy = wrapped.cdkObject as
+        software.amazon.awscdk.services.verifiedpermissions.CfnPolicy
   }
 
   /**
@@ -374,8 +375,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
     ) : CdkObject(cdkObject), EntityIdentifierProperty {
       /**
        * The identifier of an entity.
@@ -411,249 +411,6 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty
-    }
-  }
-
-  /**
-   * A structure that describes a policy created by instantiating a policy template.
-   *
-   *
-   * You can't directly update a template-linked policy. You must update the associated policy
-   * template instead.
-   *
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
-   * TemplateLinkedPolicyDefinitionProperty templateLinkedPolicyDefinitionProperty =
-   * TemplateLinkedPolicyDefinitionProperty.builder()
-   * .policyTemplateId("policyTemplateId")
-   * // the properties below are optional
-   * .principal(EntityIdentifierProperty.builder()
-   * .entityId("entityId")
-   * .entityType("entityType")
-   * .build())
-   * .resource(EntityIdentifierProperty.builder()
-   * .entityId("entityId")
-   * .entityType("entityType")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html)
-   */
-  public interface TemplateLinkedPolicyDefinitionProperty {
-    /**
-     * The unique identifier of the policy template used to create this policy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-policytemplateid)
-     */
-    public fun policyTemplateId(): String
-
-    /**
-     * The principal associated with this template-linked policy.
-     *
-     * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-     * policy template when it evaluates an authorization request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-principal)
-     */
-    public fun principal(): Any? = unwrap(this).getPrincipal()
-
-    /**
-     * The resource associated with this template-linked policy.
-     *
-     * Verified Permissions substitutes this resource for the `?resource` placeholder in the policy
-     * template when it evaluates an authorization request.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-resource)
-     */
-    public fun resource(): Any? = unwrap(this).getResource()
-
-    /**
-     * A builder for [TemplateLinkedPolicyDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param policyTemplateId The unique identifier of the policy template used to create this
-       * policy. 
-       */
-      public fun policyTemplateId(policyTemplateId: String)
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      public fun principal(principal: IResolvable)
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      public fun principal(principal: EntityIdentifierProperty)
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
-      public fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit)
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      public fun resource(resource: IResolvable)
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      public fun resource(resource: EntityIdentifierProperty)
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
-      public fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty.Builder
-          =
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty.builder()
-
-      /**
-       * @param policyTemplateId The unique identifier of the policy template used to create this
-       * policy. 
-       */
-      override fun policyTemplateId(policyTemplateId: String) {
-        cdkBuilder.policyTemplateId(policyTemplateId)
-      }
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      override fun principal(principal: IResolvable) {
-        cdkBuilder.principal(principal.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      override fun principal(principal: EntityIdentifierProperty) {
-        cdkBuilder.principal(principal.let(EntityIdentifierProperty::unwrap))
-      }
-
-      /**
-       * @param principal The principal associated with this template-linked policy.
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
-      override fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit): Unit =
-          principal(EntityIdentifierProperty(principal))
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      override fun resource(resource: IResolvable) {
-        cdkBuilder.resource(resource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      override fun resource(resource: EntityIdentifierProperty) {
-        cdkBuilder.resource(resource.let(EntityIdentifierProperty::unwrap))
-      }
-
-      /**
-       * @param resource The resource associated with this template-linked policy.
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
-      override fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit): Unit =
-          resource(EntityIdentifierProperty(resource))
-
-      public fun build():
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
-    ) : CdkObject(cdkObject), TemplateLinkedPolicyDefinitionProperty {
-      /**
-       * The unique identifier of the policy template used to create this policy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-policytemplateid)
-       */
-      override fun policyTemplateId(): String = unwrap(this).getPolicyTemplateId()
-
-      /**
-       * The principal associated with this template-linked policy.
-       *
-       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
-       * policy template when it evaluates an authorization request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-principal)
-       */
-      override fun principal(): Any? = unwrap(this).getPrincipal()
-
-      /**
-       * The resource associated with this template-linked policy.
-       *
-       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
-       * policy template when it evaluates an authorization request.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-resource)
-       */
-      override fun resource(): Any? = unwrap(this).getResource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TemplateLinkedPolicyDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty):
-          TemplateLinkedPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          TemplateLinkedPolicyDefinitionProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TemplateLinkedPolicyDefinitionProperty):
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
     }
   }
 
@@ -852,8 +609,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
     ) : CdkObject(cdkObject), PolicyDefinitionProperty {
       /**
        * A structure that describes a static policy.
@@ -973,8 +729,7 @@ public open class CfnPolicy internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
     ) : CdkObject(cdkObject), StaticPolicyDefinitionProperty {
       /**
        * The description of the static policy.
@@ -1006,6 +761,248 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty
+    }
+  }
+
+  /**
+   * A structure that describes a policy created by instantiating a policy template.
+   *
+   *
+   * You can't directly update a template-linked policy. You must update the associated policy
+   * template instead.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * TemplateLinkedPolicyDefinitionProperty templateLinkedPolicyDefinitionProperty =
+   * TemplateLinkedPolicyDefinitionProperty.builder()
+   * .policyTemplateId("policyTemplateId")
+   * // the properties below are optional
+   * .principal(EntityIdentifierProperty.builder()
+   * .entityId("entityId")
+   * .entityType("entityType")
+   * .build())
+   * .resource(EntityIdentifierProperty.builder()
+   * .entityId("entityId")
+   * .entityType("entityType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html)
+   */
+  public interface TemplateLinkedPolicyDefinitionProperty {
+    /**
+     * The unique identifier of the policy template used to create this policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-policytemplateid)
+     */
+    public fun policyTemplateId(): String
+
+    /**
+     * The principal associated with this template-linked policy.
+     *
+     * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+     * policy template when it evaluates an authorization request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-principal)
+     */
+    public fun principal(): Any? = unwrap(this).getPrincipal()
+
+    /**
+     * The resource associated with this template-linked policy.
+     *
+     * Verified Permissions substitutes this resource for the `?resource` placeholder in the policy
+     * template when it evaluates an authorization request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-resource)
+     */
+    public fun resource(): Any? = unwrap(this).getResource()
+
+    /**
+     * A builder for [TemplateLinkedPolicyDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyTemplateId The unique identifier of the policy template used to create this
+       * policy. 
+       */
+      public fun policyTemplateId(policyTemplateId: String)
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      public fun principal(principal: IResolvable)
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      public fun principal(principal: EntityIdentifierProperty)
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
+      public fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit)
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      public fun resource(resource: IResolvable)
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      public fun resource(resource: EntityIdentifierProperty)
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
+      public fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty.builder()
+
+      /**
+       * @param policyTemplateId The unique identifier of the policy template used to create this
+       * policy. 
+       */
+      override fun policyTemplateId(policyTemplateId: String) {
+        cdkBuilder.policyTemplateId(policyTemplateId)
+      }
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      override fun principal(principal: IResolvable) {
+        cdkBuilder.principal(principal.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      override fun principal(principal: EntityIdentifierProperty) {
+        cdkBuilder.principal(principal.let(EntityIdentifierProperty::unwrap))
+      }
+
+      /**
+       * @param principal The principal associated with this template-linked policy.
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
+      override fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit): Unit =
+          principal(EntityIdentifierProperty(principal))
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      override fun resource(resource: IResolvable) {
+        cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      override fun resource(resource: EntityIdentifierProperty) {
+        cdkBuilder.resource(resource.let(EntityIdentifierProperty::unwrap))
+      }
+
+      /**
+       * @param resource The resource associated with this template-linked policy.
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
+      override fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit): Unit =
+          resource(EntityIdentifierProperty(resource))
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
+    ) : CdkObject(cdkObject), TemplateLinkedPolicyDefinitionProperty {
+      /**
+       * The unique identifier of the policy template used to create this policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-policytemplateid)
+       */
+      override fun policyTemplateId(): String = unwrap(this).getPolicyTemplateId()
+
+      /**
+       * The principal associated with this template-linked policy.
+       *
+       * Verified Permissions substitutes this principal for the `?principal` placeholder in the
+       * policy template when it evaluates an authorization request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-principal)
+       */
+      override fun principal(): Any? = unwrap(this).getPrincipal()
+
+      /**
+       * The resource associated with this template-linked policy.
+       *
+       * Verified Permissions substitutes this resource for the `?resource` placeholder in the
+       * policy template when it evaluates an authorization request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policy-templatelinkedpolicydefinition.html#cfn-verifiedpermissions-policy-templatelinkedpolicydefinition-resource)
+       */
+      override fun resource(): Any? = unwrap(this).getResource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TemplateLinkedPolicyDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty):
+          TemplateLinkedPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateLinkedPolicyDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TemplateLinkedPolicyDefinitionProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
     }
   }
 }

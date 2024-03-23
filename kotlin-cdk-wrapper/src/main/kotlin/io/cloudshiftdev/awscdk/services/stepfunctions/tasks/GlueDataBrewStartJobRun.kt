@@ -30,9 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-databrew.html)
  */
-public open class GlueDataBrewStartJobRun internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun,
+public open class GlueDataBrewStartJobRun(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun,
 ) : TaskStateBase(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -455,6 +454,7 @@ public open class GlueDataBrewStartJobRun internal constructor(
 
     internal fun unwrap(wrapped: GlueDataBrewStartJobRun):
         software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun
   }
 }

@@ -16,7 +16,7 @@ public interface IMappingValue {
   public fun `value`(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IMappingValue,
+    cdkObject: software.amazon.awscdk.services.apigatewayv2.IMappingValue,
   ) : CdkObject(cdkObject), IMappingValue {
     /**
      * Represents a Mapping Value.

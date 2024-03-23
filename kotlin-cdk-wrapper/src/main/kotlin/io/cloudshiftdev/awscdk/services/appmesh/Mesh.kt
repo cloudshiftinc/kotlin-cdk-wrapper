@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html)
  */
-public open class Mesh internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appmesh.Mesh,
+public open class Mesh(
+  cdkObject: software.amazon.awscdk.services.appmesh.Mesh,
 ) : Resource(cdkObject), IMesh {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -287,6 +287,6 @@ public open class Mesh internal constructor(
         Mesh(cdkObject)
 
     internal fun unwrap(wrapped: Mesh): software.amazon.awscdk.services.appmesh.Mesh =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.appmesh.Mesh
   }
 }

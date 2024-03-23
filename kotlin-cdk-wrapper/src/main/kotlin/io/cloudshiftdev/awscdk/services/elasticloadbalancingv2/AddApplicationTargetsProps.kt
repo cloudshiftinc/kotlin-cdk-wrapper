@@ -422,8 +422,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps,
   ) : CdkObject(cdkObject), AddApplicationTargetsProps {
     /**
      * Rule applies if matches the conditions.

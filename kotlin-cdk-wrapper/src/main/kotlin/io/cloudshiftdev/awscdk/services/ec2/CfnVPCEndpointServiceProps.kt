@@ -216,7 +216,7 @@ public interface CfnVPCEndpointServiceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServiceProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServiceProps,
   ) : CdkObject(cdkObject), CfnVPCEndpointServiceProps {
     /**
      * Indicates whether requests from service consumers to create an endpoint to your service must

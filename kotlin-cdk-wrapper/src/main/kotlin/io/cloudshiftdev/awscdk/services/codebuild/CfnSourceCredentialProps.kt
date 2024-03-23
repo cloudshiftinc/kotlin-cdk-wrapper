@@ -137,7 +137,7 @@ public interface CfnSourceCredentialProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredentialProps,
+    cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredentialProps,
   ) : CdkObject(cdkObject), CfnSourceCredentialProps {
     /**
      * The type of authentication used by the credentials.

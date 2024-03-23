@@ -210,7 +210,7 @@ public interface FlowLogDestinationConfig {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig,
+    cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig,
   ) : CdkObject(cdkObject), FlowLogDestinationConfig {
     /**
      * The ARN of Kinesis Data Firehose delivery stream to publish the flow logs to.

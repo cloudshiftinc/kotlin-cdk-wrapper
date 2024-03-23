@@ -277,7 +277,7 @@ public interface CfnEndpointProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.CfnEndpointProps,
+    cdkObject: software.amazon.awscdk.services.events.CfnEndpointProps,
   ) : CdkObject(cdkObject), CfnEndpointProps {
     /**
      * A description for the endpoint.

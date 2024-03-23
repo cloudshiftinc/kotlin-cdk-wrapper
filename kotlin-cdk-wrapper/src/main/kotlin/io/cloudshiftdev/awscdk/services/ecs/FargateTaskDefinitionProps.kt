@@ -387,7 +387,7 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps,
+    cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps,
   ) : CdkObject(cdkObject), FargateTaskDefinitionProps {
     /**
      * The number of cpu units used by the task.

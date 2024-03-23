@@ -16,7 +16,7 @@ public interface IResponseHeadersPolicy {
   public fun responseHeadersPolicyId(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy,
   ) : CdkObject(cdkObject), IResponseHeadersPolicy {
     /**
      * The ID of the response headers policy.

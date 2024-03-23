@@ -36,8 +36,8 @@ import kotlin.jvm.JvmName
  * map.itemProcessor(definition);
  * ```
  */
-public open class Chain internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Chain,
+public open class Chain(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Chain,
 ) : CdkObject(cdkObject), IChainable {
   /**
    * The chainable end state(s) of this chain.
@@ -133,6 +133,6 @@ public open class Chain internal constructor(
         Chain(cdkObject)
 
     internal fun unwrap(wrapped: Chain): software.amazon.awscdk.services.stepfunctions.Chain =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Chain
   }
 }

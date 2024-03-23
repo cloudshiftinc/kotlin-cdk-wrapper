@@ -33,8 +33,8 @@ import software.amazon.awscdk.services.codepipeline.IPipeline as AmazonAwscdkSer
  * rule.addTarget(new CodePipeline(pipeline));
  * ```
  */
-public open class CodePipeline internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.events.targets.CodePipeline,
+public open class CodePipeline(
+  cdkObject: software.amazon.awscdk.services.events.targets.CodePipeline,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline) :
       this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline::unwrap))
@@ -223,6 +223,7 @@ public open class CodePipeline internal constructor(
         CodePipeline = CodePipeline(cdkObject)
 
     internal fun unwrap(wrapped: CodePipeline):
-        software.amazon.awscdk.services.events.targets.CodePipeline = wrapped.cdkObject
+        software.amazon.awscdk.services.events.targets.CodePipeline = wrapped.cdkObject as
+        software.amazon.awscdk.services.events.targets.CodePipeline
   }
 }

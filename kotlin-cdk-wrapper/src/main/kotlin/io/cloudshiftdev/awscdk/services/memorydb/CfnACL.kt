@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html)
  */
-public open class CfnACL internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnACL,
+public open class CfnACL(
+  cdkObject: software.amazon.awscdk.services.memorydb.CfnACL,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -268,6 +268,6 @@ public open class CfnACL internal constructor(
         CfnACL(cdkObject)
 
     internal fun unwrap(wrapped: CfnACL): software.amazon.awscdk.services.memorydb.CfnACL =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.memorydb.CfnACL
   }
 }

@@ -186,7 +186,7 @@ public interface CfnVodSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSourceProps,
+    cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSourceProps,
   ) : CdkObject(cdkObject), CfnVodSourceProps {
     /**
      * The HTTP package configurations for the VOD source.

@@ -228,7 +228,7 @@ public interface CfnRecordSetGroupProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroupProps,
+    cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroupProps,
   ) : CdkObject(cdkObject), CfnRecordSetGroupProps {
     /**
      * *Optional:* Any comments you want to include about a change batch request.

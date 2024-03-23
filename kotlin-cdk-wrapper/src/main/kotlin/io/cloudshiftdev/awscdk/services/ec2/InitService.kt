@@ -23,8 +23,8 @@ import kotlin.jvm.JvmName
  * .build()));
  * ```
  */
-public open class InitService internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ec2.InitService,
+public open class InitService(
+  cdkObject: software.amazon.awscdk.services.ec2.InitService,
 ) : InitElement(cdkObject) {
   /**
    * Returns the init element type for this element.
@@ -61,6 +61,6 @@ public open class InitService internal constructor(
         InitService(cdkObject)
 
     internal fun unwrap(wrapped: InitService): software.amazon.awscdk.services.ec2.InitService =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.ec2.InitService
   }
 }

@@ -230,7 +230,7 @@ public interface InterfaceVpcEndpointOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions,
+    cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions,
   ) : CdkObject(cdkObject), InterfaceVpcEndpointOptions {
     /**
      * Limit to only those availability zones where the endpoint service can be created.

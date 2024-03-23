@@ -56,8 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html)
  */
-public open class CfnApplicationSettings internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
+public open class CfnApplicationSettings(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -606,7 +606,175 @@ public open class CfnApplicationSettings internal constructor(
         CfnApplicationSettings = CfnApplicationSettings(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationSettings):
-        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
+  }
+
+  /**
+   * Specifies the Lambda function to use by default as a code hook for campaigns in the
+   * application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * CampaignHookProperty campaignHookProperty = CampaignHookProperty.builder()
+   * .lambdaFunctionName("lambdaFunctionName")
+   * .mode("mode")
+   * .webUrl("webUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html)
+   */
+  public interface CampaignHookProperty {
+    /**
+     * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes to
+     * send messages for campaigns in the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-lambdafunctionname)
+     */
+    public fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
+
+    /**
+     * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
+     *
+     * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+     * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+     * custom channel. This functionality is not supported anymore. To send a campaign through a custom
+     * channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of the
+     * campaign.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-weburl)
+     */
+    public fun webUrl(): String? = unwrap(this).getWebUrl()
+
+    /**
+     * A builder for [CampaignHookProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
+       * that Amazon Pinpoint invokes to send messages for campaigns in the application.
+       */
+      public fun lambdaFunctionName(lambdaFunctionName: String)
+
+      /**
+       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
+       * values are:.
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       */
+      public fun mode(mode: String)
+
+      /**
+       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
+       * HTTPS.
+       */
+      public fun webUrl(webUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty.builder()
+
+      /**
+       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
+       * that Amazon Pinpoint invokes to send messages for campaigns in the application.
+       */
+      override fun lambdaFunctionName(lambdaFunctionName: String) {
+        cdkBuilder.lambdaFunctionName(lambdaFunctionName)
+      }
+
+      /**
+       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
+       * values are:.
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      /**
+       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
+       * HTTPS.
+       */
+      override fun webUrl(webUrl: String) {
+        cdkBuilder.webUrl(webUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
+    ) : CdkObject(cdkObject), CampaignHookProperty {
+      /**
+       * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
+       * to send messages for campaigns in the application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-lambdafunctionname)
+       */
+      override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
+
+      /**
+       * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
+       *
+       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
+       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
+       * custom channel. This functionality is not supported anymore. To send a campaign through a
+       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
+       * the campaign.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+
+      /**
+       * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-weburl)
+       */
+      override fun webUrl(): String? = unwrap(this).getWebUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignHookProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty):
+          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as? CampaignHookProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CampaignHookProperty):
+          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty
+    }
   }
 
   /**
@@ -749,8 +917,7 @@ public open class CfnApplicationSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
     ) : CdkObject(cdkObject), LimitsProperty {
       /**
        * The maximum number of messages that a campaign can send to a single endpoint during a
@@ -807,174 +974,6 @@ public open class CfnApplicationSettings internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty
-    }
-  }
-
-  /**
-   * Specifies the Lambda function to use by default as a code hook for campaigns in the
-   * application.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * CampaignHookProperty campaignHookProperty = CampaignHookProperty.builder()
-   * .lambdaFunctionName("lambdaFunctionName")
-   * .mode("mode")
-   * .webUrl("webUrl")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html)
-   */
-  public interface CampaignHookProperty {
-    /**
-     * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes to
-     * send messages for campaigns in the application.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-lambdafunctionname)
-     */
-    public fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
-
-    /**
-     * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
-     *
-     * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-     * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-     * custom channel. This functionality is not supported anymore. To send a campaign through a custom
-     * channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of the
-     * campaign.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-mode)
-     */
-    public fun mode(): String? = unwrap(this).getMode()
-
-    /**
-     * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-weburl)
-     */
-    public fun webUrl(): String? = unwrap(this).getWebUrl()
-
-    /**
-     * A builder for [CampaignHookProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
-       * that Amazon Pinpoint invokes to send messages for campaigns in the application.
-       */
-      public fun lambdaFunctionName(lambdaFunctionName: String)
-
-      /**
-       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
-       * values are:.
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       */
-      public fun mode(mode: String)
-
-      /**
-       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
-       * HTTPS.
-       */
-      public fun webUrl(webUrl: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty.builder()
-
-      /**
-       * @param lambdaFunctionName The name or Amazon Resource Name (ARN) of the Lambda function
-       * that Amazon Pinpoint invokes to send messages for campaigns in the application.
-       */
-      override fun lambdaFunctionName(lambdaFunctionName: String) {
-        cdkBuilder.lambdaFunctionName(lambdaFunctionName)
-      }
-
-      /**
-       * @param mode The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible
-       * values are:.
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
-      }
-
-      /**
-       * @param webUrl The web URL that Amazon Pinpoint calls to invoke the Lambda function over
-       * HTTPS.
-       */
-      override fun webUrl(webUrl: String) {
-        cdkBuilder.webUrl(webUrl)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
-    ) : CdkObject(cdkObject), CampaignHookProperty {
-      /**
-       * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
-       * to send messages for campaigns in the application.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-lambdafunctionname)
-       */
-      override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
-
-      /**
-       * The mode that Amazon Pinpoint uses to invoke the Lambda function. Possible values are:.
-       *
-       * * `FILTER` - Invoke the function to customize the segment that's used by a campaign.
-       * * `DELIVERY` - (Deprecated) Previously, invoked the function to send a campaign through a
-       * custom channel. This functionality is not supported anymore. To send a campaign through a
-       * custom channel, use the `CustomDeliveryConfiguration` and `CampaignCustomMessage` objects of
-       * the campaign.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-mode)
-       */
-      override fun mode(): String? = unwrap(this).getMode()
-
-      /**
-       * The web URL that Amazon Pinpoint calls to invoke the Lambda function over HTTPS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html#cfn-pinpoint-applicationsettings-campaignhook-weburl)
-       */
-      override fun webUrl(): String? = unwrap(this).getWebUrl()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CampaignHookProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty):
-          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as? CampaignHookProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CampaignHookProperty):
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty
     }
   }
 
@@ -1073,8 +1072,7 @@ public open class CfnApplicationSettings internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
     ) : CdkObject(cdkObject), QuietTimeProperty {
       /**
        * The specific time when quiet time ends.

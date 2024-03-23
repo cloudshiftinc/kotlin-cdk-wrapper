@@ -20,8 +20,8 @@ import kotlin.String
  * FilterPattern.numberValue("$.latency", "&gt;", 1000)));
  * ```
  */
-public abstract class JsonPattern internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
+public abstract class JsonPattern(
+  cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
 ) : CdkObject(cdkObject), IFilterPattern {
   /**
    *
@@ -34,7 +34,7 @@ public abstract class JsonPattern internal constructor(
   public override fun logPatternString(): String = unwrap(this).getLogPatternString()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
+    cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
   ) : JsonPattern(cdkObject)
 
   public companion object {

@@ -105,8 +105,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-inapptemplate.html)
  */
-public open class CfnInAppTemplate internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate,
+public open class CfnInAppTemplate(
+  cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -457,7 +457,900 @@ public open class CfnInAppTemplate internal constructor(
         CfnInAppTemplate = CfnInAppTemplate(cdkObject)
 
     internal fun unwrap(wrapped: CfnInAppTemplate):
-        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate = wrapped.cdkObject
+        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate = wrapped.cdkObject as
+        software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
+  }
+
+  /**
+   * Specifies the configuration of the main body text of the in-app message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * BodyConfigProperty bodyConfigProperty = BodyConfigProperty.builder()
+   * .alignment("alignment")
+   * .body("body")
+   * .textColor("textColor")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html)
+   */
+  public interface BodyConfigProperty {
+    /**
+     * The text alignment of the main body text of the message.
+     *
+     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-alignment)
+     */
+    public fun alignment(): String? = unwrap(this).getAlignment()
+
+    /**
+     * The main body text of the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-body)
+     */
+    public fun body(): String? = unwrap(this).getBody()
+
+    /**
+     * The color of the body text, expressed as a hex color code (such as #000000 for black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-textcolor)
+     */
+    public fun textColor(): String? = unwrap(this).getTextColor()
+
+    /**
+     * A builder for [BodyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alignment The text alignment of the main body text of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      public fun alignment(alignment: String)
+
+      /**
+       * @param body The main body text of the message.
+       */
+      public fun body(body: String)
+
+      /**
+       * @param textColor The color of the body text, expressed as a hex color code (such as #000000
+       * for black).
+       */
+      public fun textColor(textColor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.builder()
+
+      /**
+       * @param alignment The text alignment of the main body text of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      override fun alignment(alignment: String) {
+        cdkBuilder.alignment(alignment)
+      }
+
+      /**
+       * @param body The main body text of the message.
+       */
+      override fun body(body: String) {
+        cdkBuilder.body(body)
+      }
+
+      /**
+       * @param textColor The color of the body text, expressed as a hex color code (such as #000000
+       * for black).
+       */
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
+    ) : CdkObject(cdkObject), BodyConfigProperty {
+      /**
+       * The text alignment of the main body text of the message.
+       *
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-alignment)
+       */
+      override fun alignment(): String? = unwrap(this).getAlignment()
+
+      /**
+       * The main body text of the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-body)
+       */
+      override fun body(): String? = unwrap(this).getBody()
+
+      /**
+       * The color of the body text, expressed as a hex color code (such as #000000 for black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-textcolor)
+       */
+      override fun textColor(): String? = unwrap(this).getTextColor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BodyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty):
+          BodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BodyConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BodyConfigProperty):
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the behavior of buttons that appear in an in-app message template.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * ButtonConfigProperty buttonConfigProperty = ButtonConfigProperty.builder()
+   * .android(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .borderRadius(123)
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .text("text")
+   * .textColor("textColor")
+   * .build())
+   * .ios(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .web(OverrideButtonConfigurationProperty.builder()
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html)
+   */
+  public interface ButtonConfigProperty {
+    /**
+     * Optional button configuration to use for in-app messages sent to Android devices.
+     *
+     * This button configuration overrides the default button configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-android)
+     */
+    public fun android(): Any? = unwrap(this).getAndroid()
+
+    /**
+     * Specifies the default behavior of a button that appears in an in-app message.
+     *
+     * You can optionally add button configurations that specifically apply to iOS, Android, or web
+     * browser users.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-defaultconfig)
+     */
+    public fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+
+    /**
+     * Optional button configuration to use for in-app messages sent to iOS devices.
+     *
+     * This button configuration overrides the default button configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-ios)
+     */
+    public fun ios(): Any? = unwrap(this).getIos()
+
+    /**
+     * Optional button configuration to use for in-app messages sent to web applications.
+     *
+     * This button configuration overrides the default button configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-web)
+     */
+    public fun web(): Any? = unwrap(this).getWeb()
+
+    /**
+     * A builder for [ButtonConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun android(android: IResolvable)
+
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun android(android: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
+      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      public fun defaultConfig(defaultConfig: IResolvable)
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty)
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun ios(ios: IResolvable)
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun ios(ios: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
+      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun web(web: IResolvable)
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      public fun web(web: OverrideButtonConfigurationProperty)
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
+      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.builder()
+
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun android(android: IResolvable) {
+        cdkBuilder.android(android.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun android(android: OverrideButtonConfigurationProperty) {
+        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param android Optional button configuration to use for in-app messages sent to Android
+       * devices.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
+      override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          android(OverrideButtonConfigurationProperty(android))
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      override fun defaultConfig(defaultConfig: IResolvable) {
+        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
+        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
+       * message.
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
+      override
+          fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit):
+          Unit = defaultConfig(DefaultButtonConfigurationProperty(defaultConfig))
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun ios(ios: IResolvable) {
+        cdkBuilder.ios(ios.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun ios(ios: OverrideButtonConfigurationProperty) {
+        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
+      override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          ios(OverrideButtonConfigurationProperty(ios))
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun web(web: IResolvable) {
+        cdkBuilder.web(web.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      override fun web(web: OverrideButtonConfigurationProperty) {
+        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param web Optional button configuration to use for in-app messages sent to web
+       * applications.
+       * This button configuration overrides the default button configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
+      override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          web(OverrideButtonConfigurationProperty(web))
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
+    ) : CdkObject(cdkObject), ButtonConfigProperty {
+      /**
+       * Optional button configuration to use for in-app messages sent to Android devices.
+       *
+       * This button configuration overrides the default button configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-android)
+       */
+      override fun android(): Any? = unwrap(this).getAndroid()
+
+      /**
+       * Specifies the default behavior of a button that appears in an in-app message.
+       *
+       * You can optionally add button configurations that specifically apply to iOS, Android, or
+       * web browser users.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-defaultconfig)
+       */
+      override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+
+      /**
+       * Optional button configuration to use for in-app messages sent to iOS devices.
+       *
+       * This button configuration overrides the default button configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-ios)
+       */
+      override fun ios(): Any? = unwrap(this).getIos()
+
+      /**
+       * Optional button configuration to use for in-app messages sent to web applications.
+       *
+       * This button configuration overrides the default button configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-web)
+       */
+      override fun web(): Any? = unwrap(this).getWeb()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ButtonConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty):
+          ButtonConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ButtonConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ButtonConfigProperty):
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the default behavior of a button that appears in an in-app message.
+   *
+   * You can optionally add button configurations that specifically apply to iOS, Android, or web
+   * browser users.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * DefaultButtonConfigurationProperty defaultButtonConfigurationProperty =
+   * DefaultButtonConfigurationProperty.builder()
+   * .backgroundColor("backgroundColor")
+   * .borderRadius(123)
+   * .buttonAction("buttonAction")
+   * .link("link")
+   * .text("text")
+   * .textColor("textColor")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html)
+   */
+  public interface DefaultButtonConfigurationProperty {
+    /**
+     * The background color of a button, expressed as a hex color code (such as #000000 for black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-backgroundcolor)
+     */
+    public fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+
+    /**
+     * The border radius of a button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-borderradius)
+     */
+    public fun borderRadius(): Number? = unwrap(this).getBorderRadius()
+
+    /**
+     * The action that occurs when a recipient chooses a button in an in-app message.
+     *
+     * You can specify one of the following:
+     *
+     * * `LINK` – A link to a web destination.
+     * * `DEEP_LINK` – A link to a specific page in an application.
+     * * `CLOSE` – Dismisses the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-buttonaction)
+     */
+    public fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+    /**
+     * The destination (such as a URL) for a button.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-link)
+     */
+    public fun link(): String? = unwrap(this).getLink()
+
+    /**
+     * The text that appears on a button in an in-app message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-text)
+     */
+    public fun text(): String? = unwrap(this).getText()
+
+    /**
+     * The color of the body text in a button, expressed as a hex color code (such as #000000 for
+     * black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-textcolor)
+     */
+    public fun textColor(): String? = unwrap(this).getTextColor()
+
+    /**
+     * A builder for [DefaultButtonConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param backgroundColor The background color of a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      public fun backgroundColor(backgroundColor: String)
+
+      /**
+       * @param borderRadius The border radius of a button.
+       */
+      public fun borderRadius(borderRadius: Number)
+
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      public fun buttonAction(buttonAction: String)
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      public fun link(link: String)
+
+      /**
+       * @param text The text that appears on a button in an in-app message.
+       */
+      public fun text(text: String)
+
+      /**
+       * @param textColor The color of the body text in a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      public fun textColor(textColor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty.builder()
+
+      /**
+       * @param backgroundColor The background color of a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      override fun backgroundColor(backgroundColor: String) {
+        cdkBuilder.backgroundColor(backgroundColor)
+      }
+
+      /**
+       * @param borderRadius The border radius of a button.
+       */
+      override fun borderRadius(borderRadius: Number) {
+        cdkBuilder.borderRadius(borderRadius)
+      }
+
+      /**
+       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
+       * message.
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       */
+      override fun buttonAction(buttonAction: String) {
+        cdkBuilder.buttonAction(buttonAction)
+      }
+
+      /**
+       * @param link The destination (such as a URL) for a button.
+       */
+      override fun link(link: String) {
+        cdkBuilder.link(link)
+      }
+
+      /**
+       * @param text The text that appears on a button in an in-app message.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      /**
+       * @param textColor The color of the body text in a button, expressed as a hex color code
+       * (such as #000000 for black).
+       */
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
+    ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
+      /**
+       * The background color of a button, expressed as a hex color code (such as #000000 for
+       * black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-backgroundcolor)
+       */
+      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+
+      /**
+       * The border radius of a button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-borderradius)
+       */
+      override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
+
+      /**
+       * The action that occurs when a recipient chooses a button in an in-app message.
+       *
+       * You can specify one of the following:
+       *
+       * * `LINK` – A link to a web destination.
+       * * `DEEP_LINK` – A link to a specific page in an application.
+       * * `CLOSE` – Dismisses the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-buttonaction)
+       */
+      override fun buttonAction(): String? = unwrap(this).getButtonAction()
+
+      /**
+       * The destination (such as a URL) for a button.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-link)
+       */
+      override fun link(): String? = unwrap(this).getLink()
+
+      /**
+       * The text that appears on a button in an in-app message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-text)
+       */
+      override fun text(): String? = unwrap(this).getText()
+
+      /**
+       * The color of the body text in a button, expressed as a hex color code (such as #000000 for
+       * black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-textcolor)
+       */
+      override fun textColor(): String? = unwrap(this).getTextColor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DefaultButtonConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty):
+          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultButtonConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration and content of the header or title text of the in-app message.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+   * HeaderConfigProperty headerConfigProperty = HeaderConfigProperty.builder()
+   * .alignment("alignment")
+   * .header("header")
+   * .textColor("textColor")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html)
+   */
+  public interface HeaderConfigProperty {
+    /**
+     * The text alignment of the title of the message.
+     *
+     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-alignment)
+     */
+    public fun alignment(): String? = unwrap(this).getAlignment()
+
+    /**
+     * The title text of the in-app message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-header)
+     */
+    public fun `header`(): String? = unwrap(this).getHeader()
+
+    /**
+     * The color of the title text, expressed as a hex color code (such as #000000 for black).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-textcolor)
+     */
+    public fun textColor(): String? = unwrap(this).getTextColor()
+
+    /**
+     * A builder for [HeaderConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alignment The text alignment of the title of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      public fun alignment(alignment: String)
+
+      /**
+       * @param header The title text of the in-app message.
+       */
+      public fun `header`(`header`: String)
+
+      /**
+       * @param textColor The color of the title text, expressed as a hex color code (such as
+       * #000000 for black).
+       */
+      public fun textColor(textColor: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.Builder =
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.builder()
+
+      /**
+       * @param alignment The text alignment of the title of the message.
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       */
+      override fun alignment(alignment: String) {
+        cdkBuilder.alignment(alignment)
+      }
+
+      /**
+       * @param header The title text of the in-app message.
+       */
+      override fun `header`(`header`: String) {
+        cdkBuilder.`header`(`header`)
+      }
+
+      /**
+       * @param textColor The color of the title text, expressed as a hex color code (such as
+       * #000000 for black).
+       */
+      override fun textColor(textColor: String) {
+        cdkBuilder.textColor(textColor)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
+    ) : CdkObject(cdkObject), HeaderConfigProperty {
+      /**
+       * The text alignment of the title of the message.
+       *
+       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-alignment)
+       */
+      override fun alignment(): String? = unwrap(this).getAlignment()
+
+      /**
+       * The title text of the in-app message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-header)
+       */
+      override fun `header`(): String? = unwrap(this).getHeader()
+
+      /**
+       * The color of the title text, expressed as a hex color code (such as #000000 for black).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-textcolor)
+       */
+      override fun textColor(): String? = unwrap(this).getTextColor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty):
+          HeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HeaderConfigProperty):
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty
+    }
   }
 
   /**
@@ -804,8 +1697,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
     ) : CdkObject(cdkObject), InAppMessageContentProperty {
       /**
        * The background color for an in-app message banner, expressed as a hex color code (such as
@@ -870,404 +1762,6 @@ public open class CfnInAppTemplate internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration of the main body text of the in-app message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * BodyConfigProperty bodyConfigProperty = BodyConfigProperty.builder()
-   * .alignment("alignment")
-   * .body("body")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html)
-   */
-  public interface BodyConfigProperty {
-    /**
-     * The text alignment of the main body text of the message.
-     *
-     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-alignment)
-     */
-    public fun alignment(): String? = unwrap(this).getAlignment()
-
-    /**
-     * The main body text of the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-body)
-     */
-    public fun body(): String? = unwrap(this).getBody()
-
-    /**
-     * The color of the body text, expressed as a hex color code (such as #000000 for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [BodyConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alignment The text alignment of the main body text of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      public fun alignment(alignment: String)
-
-      /**
-       * @param body The main body text of the message.
-       */
-      public fun body(body: String)
-
-      /**
-       * @param textColor The color of the body text, expressed as a hex color code (such as #000000
-       * for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.builder()
-
-      /**
-       * @param alignment The text alignment of the main body text of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      override fun alignment(alignment: String) {
-        cdkBuilder.alignment(alignment)
-      }
-
-      /**
-       * @param body The main body text of the message.
-       */
-      override fun body(body: String) {
-        cdkBuilder.body(body)
-      }
-
-      /**
-       * @param textColor The color of the body text, expressed as a hex color code (such as #000000
-       * for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
-    ) : CdkObject(cdkObject), BodyConfigProperty {
-      /**
-       * The text alignment of the main body text of the message.
-       *
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-alignment)
-       */
-      override fun alignment(): String? = unwrap(this).getAlignment()
-
-      /**
-       * The main body text of the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-body)
-       */
-      override fun body(): String? = unwrap(this).getBody()
-
-      /**
-       * The color of the body text, expressed as a hex color code (such as #000000 for black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html#cfn-pinpoint-inapptemplate-bodyconfig-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): BodyConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty):
-          BodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BodyConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: BodyConfigProperty):
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the default behavior of a button that appears in an in-app message.
-   *
-   * You can optionally add button configurations that specifically apply to iOS, Android, or web
-   * browser users.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * DefaultButtonConfigurationProperty defaultButtonConfigurationProperty =
-   * DefaultButtonConfigurationProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .borderRadius(123)
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .text("text")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html)
-   */
-  public interface DefaultButtonConfigurationProperty {
-    /**
-     * The background color of a button, expressed as a hex color code (such as #000000 for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-backgroundcolor)
-     */
-    public fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
-
-    /**
-     * The border radius of a button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-borderradius)
-     */
-    public fun borderRadius(): Number? = unwrap(this).getBorderRadius()
-
-    /**
-     * The action that occurs when a recipient chooses a button in an in-app message.
-     *
-     * You can specify one of the following:
-     *
-     * * `LINK` – A link to a web destination.
-     * * `DEEP_LINK` – A link to a specific page in an application.
-     * * `CLOSE` – Dismisses the message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-buttonaction)
-     */
-    public fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-    /**
-     * The destination (such as a URL) for a button.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-link)
-     */
-    public fun link(): String? = unwrap(this).getLink()
-
-    /**
-     * The text that appears on a button in an in-app message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-text)
-     */
-    public fun text(): String? = unwrap(this).getText()
-
-    /**
-     * The color of the body text in a button, expressed as a hex color code (such as #000000 for
-     * black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [DefaultButtonConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param backgroundColor The background color of a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      public fun backgroundColor(backgroundColor: String)
-
-      /**
-       * @param borderRadius The border radius of a button.
-       */
-      public fun borderRadius(borderRadius: Number)
-
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      public fun buttonAction(buttonAction: String)
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      public fun link(link: String)
-
-      /**
-       * @param text The text that appears on a button in an in-app message.
-       */
-      public fun text(text: String)
-
-      /**
-       * @param textColor The color of the body text in a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty.builder()
-
-      /**
-       * @param backgroundColor The background color of a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      override fun backgroundColor(backgroundColor: String) {
-        cdkBuilder.backgroundColor(backgroundColor)
-      }
-
-      /**
-       * @param borderRadius The border radius of a button.
-       */
-      override fun borderRadius(borderRadius: Number) {
-        cdkBuilder.borderRadius(borderRadius)
-      }
-
-      /**
-       * @param buttonAction The action that occurs when a recipient chooses a button in an in-app
-       * message.
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       */
-      override fun buttonAction(buttonAction: String) {
-        cdkBuilder.buttonAction(buttonAction)
-      }
-
-      /**
-       * @param link The destination (such as a URL) for a button.
-       */
-      override fun link(link: String) {
-        cdkBuilder.link(link)
-      }
-
-      /**
-       * @param text The text that appears on a button in an in-app message.
-       */
-      override fun text(text: String) {
-        cdkBuilder.text(text)
-      }
-
-      /**
-       * @param textColor The color of the body text in a button, expressed as a hex color code
-       * (such as #000000 for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
-    ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
-      /**
-       * The background color of a button, expressed as a hex color code (such as #000000 for
-       * black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-backgroundcolor)
-       */
-      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
-
-      /**
-       * The border radius of a button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-borderradius)
-       */
-      override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
-
-      /**
-       * The action that occurs when a recipient chooses a button in an in-app message.
-       *
-       * You can specify one of the following:
-       *
-       * * `LINK` – A link to a web destination.
-       * * `DEEP_LINK` – A link to a specific page in an application.
-       * * `CLOSE` – Dismisses the message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-buttonaction)
-       */
-      override fun buttonAction(): String? = unwrap(this).getButtonAction()
-
-      /**
-       * The destination (such as a URL) for a button.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-link)
-       */
-      override fun link(): String? = unwrap(this).getLink()
-
-      /**
-       * The text that appears on a button in an in-app message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-text)
-       */
-      override fun text(): String? = unwrap(this).getText()
-
-      /**
-       * The color of the body text in a button, expressed as a hex color code (such as #000000 for
-       * black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-defaultbuttonconfiguration.html#cfn-pinpoint-inapptemplate-defaultbuttonconfiguration-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DefaultButtonConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty):
-          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DefaultButtonConfigurationProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
     }
   }
 
@@ -1365,8 +1859,7 @@ public open class CfnInAppTemplate internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
     ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
       /**
        * The action that occurs when a recipient chooses a button in an in-app message.
@@ -1405,504 +1898,6 @@ public open class CfnInAppTemplate internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the configuration and content of the header or title text of the in-app message.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * HeaderConfigProperty headerConfigProperty = HeaderConfigProperty.builder()
-   * .alignment("alignment")
-   * .header("header")
-   * .textColor("textColor")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html)
-   */
-  public interface HeaderConfigProperty {
-    /**
-     * The text alignment of the title of the message.
-     *
-     * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-alignment)
-     */
-    public fun alignment(): String? = unwrap(this).getAlignment()
-
-    /**
-     * The title text of the in-app message.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-header)
-     */
-    public fun `header`(): String? = unwrap(this).getHeader()
-
-    /**
-     * The color of the title text, expressed as a hex color code (such as #000000 for black).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-textcolor)
-     */
-    public fun textColor(): String? = unwrap(this).getTextColor()
-
-    /**
-     * A builder for [HeaderConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param alignment The text alignment of the title of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      public fun alignment(alignment: String)
-
-      /**
-       * @param header The title text of the in-app message.
-       */
-      public fun `header`(`header`: String)
-
-      /**
-       * @param textColor The color of the title text, expressed as a hex color code (such as
-       * #000000 for black).
-       */
-      public fun textColor(textColor: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.builder()
-
-      /**
-       * @param alignment The text alignment of the title of the message.
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       */
-      override fun alignment(alignment: String) {
-        cdkBuilder.alignment(alignment)
-      }
-
-      /**
-       * @param header The title text of the in-app message.
-       */
-      override fun `header`(`header`: String) {
-        cdkBuilder.`header`(`header`)
-      }
-
-      /**
-       * @param textColor The color of the title text, expressed as a hex color code (such as
-       * #000000 for black).
-       */
-      override fun textColor(textColor: String) {
-        cdkBuilder.textColor(textColor)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
-    ) : CdkObject(cdkObject), HeaderConfigProperty {
-      /**
-       * The text alignment of the title of the message.
-       *
-       * Acceptable values: `LEFT` , `CENTER` , `RIGHT` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-alignment)
-       */
-      override fun alignment(): String? = unwrap(this).getAlignment()
-
-      /**
-       * The title text of the in-app message.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-header)
-       */
-      override fun `header`(): String? = unwrap(this).getHeader()
-
-      /**
-       * The color of the title text, expressed as a hex color code (such as #000000 for black).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-headerconfig.html#cfn-pinpoint-inapptemplate-headerconfig-textcolor)
-       */
-      override fun textColor(): String? = unwrap(this).getTextColor()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): HeaderConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty):
-          HeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HeaderConfigProperty):
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the behavior of buttons that appear in an in-app message template.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.pinpoint.*;
-   * ButtonConfigProperty buttonConfigProperty = ButtonConfigProperty.builder()
-   * .android(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .defaultConfig(DefaultButtonConfigurationProperty.builder()
-   * .backgroundColor("backgroundColor")
-   * .borderRadius(123)
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .text("text")
-   * .textColor("textColor")
-   * .build())
-   * .ios(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .web(OverrideButtonConfigurationProperty.builder()
-   * .buttonAction("buttonAction")
-   * .link("link")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html)
-   */
-  public interface ButtonConfigProperty {
-    /**
-     * Optional button configuration to use for in-app messages sent to Android devices.
-     *
-     * This button configuration overrides the default button configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-android)
-     */
-    public fun android(): Any? = unwrap(this).getAndroid()
-
-    /**
-     * Specifies the default behavior of a button that appears in an in-app message.
-     *
-     * You can optionally add button configurations that specifically apply to iOS, Android, or web
-     * browser users.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-defaultconfig)
-     */
-    public fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
-
-    /**
-     * Optional button configuration to use for in-app messages sent to iOS devices.
-     *
-     * This button configuration overrides the default button configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-ios)
-     */
-    public fun ios(): Any? = unwrap(this).getIos()
-
-    /**
-     * Optional button configuration to use for in-app messages sent to web applications.
-     *
-     * This button configuration overrides the default button configuration.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-web)
-     */
-    public fun web(): Any? = unwrap(this).getWeb()
-
-    /**
-     * A builder for [ButtonConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun android(android: IResolvable)
-
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun android(android: OverrideButtonConfigurationProperty)
-
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
-      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      public fun defaultConfig(defaultConfig: IResolvable)
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty)
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
-      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun ios(ios: IResolvable)
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun ios(ios: OverrideButtonConfigurationProperty)
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
-      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit)
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun web(web: IResolvable)
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      public fun web(web: OverrideButtonConfigurationProperty)
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
-      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.Builder =
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.builder()
-
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun android(android: IResolvable) {
-        cdkBuilder.android(android.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun android(android: OverrideButtonConfigurationProperty) {
-        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param android Optional button configuration to use for in-app messages sent to Android
-       * devices.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
-      override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          android(OverrideButtonConfigurationProperty(android))
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      override fun defaultConfig(defaultConfig: IResolvable) {
-        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
-        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param defaultConfig Specifies the default behavior of a button that appears in an in-app
-       * message.
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
-      override
-          fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit):
-          Unit = defaultConfig(DefaultButtonConfigurationProperty(defaultConfig))
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun ios(ios: IResolvable) {
-        cdkBuilder.ios(ios.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun ios(ios: OverrideButtonConfigurationProperty) {
-        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param ios Optional button configuration to use for in-app messages sent to iOS devices.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
-      override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          ios(OverrideButtonConfigurationProperty(ios))
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun web(web: IResolvable) {
-        cdkBuilder.web(web.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      override fun web(web: OverrideButtonConfigurationProperty) {
-        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
-      }
-
-      /**
-       * @param web Optional button configuration to use for in-app messages sent to web
-       * applications.
-       * This button configuration overrides the default button configuration.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
-      override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
-          web(OverrideButtonConfigurationProperty(web))
-
-      public fun build():
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
-    ) : CdkObject(cdkObject), ButtonConfigProperty {
-      /**
-       * Optional button configuration to use for in-app messages sent to Android devices.
-       *
-       * This button configuration overrides the default button configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-android)
-       */
-      override fun android(): Any? = unwrap(this).getAndroid()
-
-      /**
-       * Specifies the default behavior of a button that appears in an in-app message.
-       *
-       * You can optionally add button configurations that specifically apply to iOS, Android, or
-       * web browser users.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-defaultconfig)
-       */
-      override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
-
-      /**
-       * Optional button configuration to use for in-app messages sent to iOS devices.
-       *
-       * This button configuration overrides the default button configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-ios)
-       */
-      override fun ios(): Any? = unwrap(this).getIos()
-
-      /**
-       * Optional button configuration to use for in-app messages sent to web applications.
-       *
-       * This button configuration overrides the default button configuration.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-buttonconfig.html#cfn-pinpoint-inapptemplate-buttonconfig-web)
-       */
-      override fun web(): Any? = unwrap(this).getWeb()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ButtonConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty):
-          ButtonConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ButtonConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ButtonConfigProperty):
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty
     }
   }
 }

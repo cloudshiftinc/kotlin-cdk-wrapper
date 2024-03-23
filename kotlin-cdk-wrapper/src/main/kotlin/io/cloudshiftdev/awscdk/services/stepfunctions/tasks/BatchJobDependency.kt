@@ -78,7 +78,7 @@ public interface BatchJobDependency {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency,
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency,
   ) : CdkObject(cdkObject), BatchJobDependency {
     /**
      * The job ID of the AWS Batch job associated with this dependency.

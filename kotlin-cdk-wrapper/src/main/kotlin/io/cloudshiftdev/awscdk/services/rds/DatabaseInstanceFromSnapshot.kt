@@ -51,8 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class DatabaseInstanceFromSnapshot internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot,
+public open class DatabaseInstanceFromSnapshot(
+  cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot,
 ) : DatabaseInstanceBase(cdkObject), IDatabaseInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1637,6 +1637,7 @@ public open class DatabaseInstanceFromSnapshot internal constructor(
         DatabaseInstanceFromSnapshot = DatabaseInstanceFromSnapshot(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceFromSnapshot):
-        software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot
   }
 }

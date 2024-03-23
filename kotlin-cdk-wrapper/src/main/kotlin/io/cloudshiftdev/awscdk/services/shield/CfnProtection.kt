@@ -92,8 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-shield-protection.html)
  */
-public open class CfnProtection internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
+public open class CfnProtection(
+  cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -553,7 +553,175 @@ public open class CfnProtection internal constructor(
         CfnProtection = CfnProtection(cdkObject)
 
     internal fun unwrap(wrapped: CfnProtection):
-        software.amazon.awscdk.services.shield.CfnProtection = wrapped.cdkObject
+        software.amazon.awscdk.services.shield.CfnProtection = wrapped.cdkObject as
+        software.amazon.awscdk.services.shield.CfnProtection
+  }
+
+  /**
+   * Specifies the action setting that Shield Advanced should use in the AWS WAF rules that it
+   * creates on behalf of the protected resource in response to DDoS attacks.
+   *
+   * You specify this as part of the configuration for the automatic application layer DDoS
+   * mitigation feature, when you enable or update automatic mitigation. Shield Advanced creates the
+   * AWS WAF rules in a Shield Advanced-managed rule group, inside the web ACL that you have associated
+   * with the resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.shield.*;
+   * Object block;
+   * Object count;
+   * ActionProperty actionProperty = ActionProperty.builder()
+   * .block(block)
+   * .count(count)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html)
+   */
+  public interface ActionProperty {
+    /**
+     * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
+     * action.
+     *
+     * You must specify exactly one action, either `Block` or `Count` .
+     *
+     * Example JSON: `{ "Block": {} }`
+     *
+     * Example YAML: `Block: {}`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-block)
+     */
+    public fun block(): Any? = unwrap(this).getBlock()
+
+    /**
+     * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Count`
+     * action.
+     *
+     * You must specify exactly one action, either `Block` or `Count` .
+     *
+     * Example JSON: `{ "Count": {} }`
+     *
+     * Example YAML: `Count: {}`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-count)
+     */
+    public fun count(): Any? = unwrap(this).getCount()
+
+    /**
+     * A builder for [ActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param block Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
+       * WAF `Block` action.
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Block": {} }`
+       *
+       * Example YAML: `Block: {}`
+       */
+      public fun block(block: Any)
+
+      /**
+       * @param count Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
+       * WAF `Count` action.
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Count": {} }`
+       *
+       * Example YAML: `Count: {}`
+       */
+      public fun count(count: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.Builder =
+          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.builder()
+
+      /**
+       * @param block Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
+       * WAF `Block` action.
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Block": {} }`
+       *
+       * Example YAML: `Block: {}`
+       */
+      override fun block(block: Any) {
+        cdkBuilder.block(block)
+      }
+
+      /**
+       * @param count Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
+       * WAF `Count` action.
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Count": {} }`
+       *
+       * Example YAML: `Count: {}`
+       */
+      override fun count(count: Any) {
+        cdkBuilder.count(count)
+      }
+
+      public fun build(): software.amazon.awscdk.services.shield.CfnProtection.ActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
+    ) : CdkObject(cdkObject), ActionProperty {
+      /**
+       * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
+       * action.
+       *
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Block": {} }`
+       *
+       * Example YAML: `Block: {}`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-block)
+       */
+      override fun block(): Any? = unwrap(this).getBlock()
+
+      /**
+       * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Count`
+       * action.
+       *
+       * You must specify exactly one action, either `Block` or `Count` .
+       *
+       * Example JSON: `{ "Count": {} }`
+       *
+       * Example YAML: `Count: {}`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-count)
+       */
+      override fun count(): Any? = unwrap(this).getCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty):
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ActionProperty):
+          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty
+    }
   }
 
   /**
@@ -709,8 +877,7 @@ public open class CfnProtection internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
+      cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
     ) : CdkObject(cdkObject), ApplicationLayerAutomaticResponseConfigurationProperty {
       /**
        * Specifies the action setting that Shield Advanced should use in the AWS WAF rules that it
@@ -750,173 +917,6 @@ public open class CfnProtection internal constructor(
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty
-    }
-  }
-
-  /**
-   * Specifies the action setting that Shield Advanced should use in the AWS WAF rules that it
-   * creates on behalf of the protected resource in response to DDoS attacks.
-   *
-   * You specify this as part of the configuration for the automatic application layer DDoS
-   * mitigation feature, when you enable or update automatic mitigation. Shield Advanced creates the
-   * AWS WAF rules in a Shield Advanced-managed rule group, inside the web ACL that you have associated
-   * with the resource.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.shield.*;
-   * Object block;
-   * Object count;
-   * ActionProperty actionProperty = ActionProperty.builder()
-   * .block(block)
-   * .count(count)
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html)
-   */
-  public interface ActionProperty {
-    /**
-     * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
-     * action.
-     *
-     * You must specify exactly one action, either `Block` or `Count` .
-     *
-     * Example JSON: `{ "Block": {} }`
-     *
-     * Example YAML: `Block: {}`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-block)
-     */
-    public fun block(): Any? = unwrap(this).getBlock()
-
-    /**
-     * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Count`
-     * action.
-     *
-     * You must specify exactly one action, either `Block` or `Count` .
-     *
-     * Example JSON: `{ "Count": {} }`
-     *
-     * Example YAML: `Count: {}`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-count)
-     */
-    public fun count(): Any? = unwrap(this).getCount()
-
-    /**
-     * A builder for [ActionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param block Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
-       * WAF `Block` action.
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Block": {} }`
-       *
-       * Example YAML: `Block: {}`
-       */
-      public fun block(block: Any)
-
-      /**
-       * @param count Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
-       * WAF `Count` action.
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Count": {} }`
-       *
-       * Example YAML: `Count: {}`
-       */
-      public fun count(count: Any)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.Builder =
-          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.builder()
-
-      /**
-       * @param block Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
-       * WAF `Block` action.
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Block": {} }`
-       *
-       * Example YAML: `Block: {}`
-       */
-      override fun block(block: Any) {
-        cdkBuilder.block(block)
-      }
-
-      /**
-       * @param count Specifies that Shield Advanced should configure its AWS WAF rules with the AWS
-       * WAF `Count` action.
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Count": {} }`
-       *
-       * Example YAML: `Count: {}`
-       */
-      override fun count(count: Any) {
-        cdkBuilder.count(count)
-      }
-
-      public fun build(): software.amazon.awscdk.services.shield.CfnProtection.ActionProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
-      /**
-       * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
-       * action.
-       *
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Block": {} }`
-       *
-       * Example YAML: `Block: {}`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-block)
-       */
-      override fun block(): Any? = unwrap(this).getBlock()
-
-      /**
-       * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Count`
-       * action.
-       *
-       * You must specify exactly one action, either `Block` or `Count` .
-       *
-       * Example JSON: `{ "Count": {} }`
-       *
-       * Example YAML: `Count: {}`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-shield-protection-action.html#cfn-shield-protection-action-count)
-       */
-      override fun count(): Any? = unwrap(this).getCount()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ActionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ActionProperty):
-          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.shield.CfnProtection.ActionProperty
     }
   }
 }

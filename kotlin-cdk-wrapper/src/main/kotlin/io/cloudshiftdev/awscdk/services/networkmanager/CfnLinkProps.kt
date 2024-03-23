@@ -240,7 +240,7 @@ public interface CfnLinkProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnLinkProps,
+    cdkObject: software.amazon.awscdk.services.networkmanager.CfnLinkProps,
   ) : CdkObject(cdkObject), CfnLinkProps {
     /**
      * The bandwidth for the link.

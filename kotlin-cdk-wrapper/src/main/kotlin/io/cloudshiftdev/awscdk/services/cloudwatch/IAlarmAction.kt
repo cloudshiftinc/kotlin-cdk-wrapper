@@ -19,7 +19,7 @@ public interface IAlarmAction {
   public fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
   ) : CdkObject(cdkObject), IAlarmAction {
     /**
      * Return the properties required to send alarm actions to this CloudWatch alarm.

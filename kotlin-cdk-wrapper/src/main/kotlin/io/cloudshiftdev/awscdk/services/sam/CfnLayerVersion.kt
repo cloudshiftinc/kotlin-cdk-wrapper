@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-layerversion.html)
  */
-public open class CfnLayerVersion internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion,
+public open class CfnLayerVersion(
+  cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -351,7 +351,8 @@ public open class CfnLayerVersion internal constructor(
         CfnLayerVersion = CfnLayerVersion(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersion):
-        software.amazon.awscdk.services.sam.CfnLayerVersion = wrapped.cdkObject
+        software.amazon.awscdk.services.sam.CfnLayerVersion = wrapped.cdkObject as
+        software.amazon.awscdk.services.sam.CfnLayerVersion
   }
 
   /**
@@ -439,8 +440,7 @@ public open class CfnLayerVersion internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty,
+      cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty,
     ) : CdkObject(cdkObject), S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-layerversion-s3location.html#cfn-serverless-layerversion-s3location-bucket)

@@ -59,8 +59,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public abstract class Credentials internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.Credentials,
+public abstract class Credentials(
+  cdkObject: software.amazon.awscdk.services.rds.Credentials,
 ) : CdkObject(cdkObject) {
   /**
    * KMS encryption key to encrypt the generated secret.
@@ -124,7 +124,7 @@ public abstract class Credentials internal constructor(
   public open fun usernameAsString(): Boolean? = unwrap(this).getUsernameAsString()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.Credentials,
+    cdkObject: software.amazon.awscdk.services.rds.Credentials,
   ) : Credentials(cdkObject)
 
   public companion object {

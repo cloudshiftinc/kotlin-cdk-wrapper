@@ -18,8 +18,8 @@ import kotlin.String
  * fn.addLayers(new KubectlLayer(this, "KubectlLayer"));
  * ```
  */
-public open class KubectlLayer internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
+public open class KubectlLayer(
+  cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
       this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(scope.let(Construct::unwrap), id)
@@ -30,6 +30,7 @@ public open class KubectlLayer internal constructor(
         KubectlLayer = KubectlLayer(cdkObject)
 
     internal fun unwrap(wrapped: KubectlLayer):
-        software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer = wrapped.cdkObject
+        software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer = wrapped.cdkObject as
+        software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer
   }
 }

@@ -322,7 +322,7 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions,
+    cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions,
   ) : CdkObject(cdkObject), SagemakerIntegrationOptions {
     /**
      * A list of request parameters whose values are to be cached.

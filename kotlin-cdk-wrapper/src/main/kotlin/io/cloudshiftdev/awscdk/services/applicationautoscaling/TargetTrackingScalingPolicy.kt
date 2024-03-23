@@ -38,9 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class TargetTrackingScalingPolicy internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy,
+public open class TargetTrackingScalingPolicy(
+  cdkObject: software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -332,6 +331,7 @@ public open class TargetTrackingScalingPolicy internal constructor(
 
     internal fun unwrap(wrapped: TargetTrackingScalingPolicy):
         software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy =
-        wrapped.cdkObject
+        wrapped.cdkObject as
+        software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy
   }
 }

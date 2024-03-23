@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingplan.html)
  */
-public open class CfnPricingPlan internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlan,
+public open class CfnPricingPlan(
+  cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -290,6 +290,7 @@ public open class CfnPricingPlan internal constructor(
         CfnPricingPlan = CfnPricingPlan(cdkObject)
 
     internal fun unwrap(wrapped: CfnPricingPlan):
-        software.amazon.awscdk.services.billingconductor.CfnPricingPlan = wrapped.cdkObject
+        software.amazon.awscdk.services.billingconductor.CfnPricingPlan = wrapped.cdkObject as
+        software.amazon.awscdk.services.billingconductor.CfnPricingPlan
   }
 }

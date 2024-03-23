@@ -28,8 +28,8 @@ import kotlin.collections.List
  * .build();
  * ```
  */
-public open class Tag internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.Tag,
+public open class Tag(
+  cdkObject: software.amazon.awscdk.Tag,
 ) : CdkObject(cdkObject), IAspect {
   public constructor(key: String, `value`: String) : this(software.amazon.awscdk.Tag(key, `value`)
   )
@@ -261,6 +261,7 @@ public open class Tag internal constructor(
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Tag): Tag = Tag(cdkObject)
 
-    internal fun unwrap(wrapped: Tag): software.amazon.awscdk.Tag = wrapped.cdkObject
+    internal fun unwrap(wrapped: Tag): software.amazon.awscdk.Tag = wrapped.cdkObject as
+        software.amazon.awscdk.Tag
   }
 }

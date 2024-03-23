@@ -871,7 +871,7 @@ public interface CfnEnvironmentProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironmentProps,
+    cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironmentProps,
   ) : CdkObject(cdkObject), CfnEnvironmentProps {
     /**
      * A list of key-value pairs containing the Airflow configuration options for your environment.

@@ -142,8 +142,7 @@ public interface BaseScalableAttributeProps : EnableScalingProps {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps,
+    cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps,
   ) : CdkObject(cdkObject), BaseScalableAttributeProps {
     /**
      * Scalable dimension of the attribute.

@@ -29,9 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html)
  */
-public open class CfnResolverConfig internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.route53resolver.CfnResolverConfig,
+public open class CfnResolverConfig(
+  cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -179,6 +178,7 @@ public open class CfnResolverConfig internal constructor(
         CfnResolverConfig = CfnResolverConfig(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverConfig):
-        software.amazon.awscdk.services.route53resolver.CfnResolverConfig = wrapped.cdkObject
+        software.amazon.awscdk.services.route53resolver.CfnResolverConfig = wrapped.cdkObject as
+        software.amazon.awscdk.services.route53resolver.CfnResolverConfig
   }
 }

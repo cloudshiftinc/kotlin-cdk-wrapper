@@ -18,8 +18,8 @@ import kotlin.String
  * StackOutputsMap stackOutputsMap = new StackOutputsMap(pipelineBase);
  * ```
  */
-public open class StackOutputsMap internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
+public open class StackOutputsMap(
+  cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
 ) : CdkObject(cdkObject) {
   public constructor(pipeline: PipelineBase) :
       this(software.amazon.awscdk.pipelines.StackOutputsMap(pipeline.let(PipelineBase::unwrap))
@@ -38,6 +38,6 @@ public open class StackOutputsMap internal constructor(
         = StackOutputsMap(cdkObject)
 
     internal fun unwrap(wrapped: StackOutputsMap): software.amazon.awscdk.pipelines.StackOutputsMap
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.pipelines.StackOutputsMap
   }
 }

@@ -59,7 +59,7 @@ public interface CfnVersionProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
    *
    * **Name formats** - *Function name* - `MyFunction` .
    *
@@ -110,7 +110,7 @@ public interface CfnVersionProps {
     public fun description(description: String)
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* - `MyFunction` .
      *
      * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -188,7 +188,7 @@ public interface CfnVersionProps {
     }
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
      * **Name formats** - *Function name* - `MyFunction` .
      *
      * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
@@ -258,7 +258,7 @@ public interface CfnVersionProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.CfnVersionProps,
+    cdkObject: software.amazon.awscdk.services.lambda.CfnVersionProps,
   ) : CdkObject(cdkObject), CfnVersionProps {
     /**
      * Only publish a version if the hash value matches the value that's specified.
@@ -280,7 +280,7 @@ public interface CfnVersionProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
      *
      * **Name formats** - *Function name* - `MyFunction` .
      *

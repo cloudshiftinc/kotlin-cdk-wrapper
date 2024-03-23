@@ -46,8 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html)
  */
-public open class CfnIPSet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnIPSet,
+public open class CfnIPSet(
+  cdkObject: software.amazon.awscdk.services.guardduty.CfnIPSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -374,6 +374,6 @@ public open class CfnIPSet internal constructor(
         CfnIPSet(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPSet): software.amazon.awscdk.services.guardduty.CfnIPSet =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.guardduty.CfnIPSet
   }
 }

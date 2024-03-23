@@ -34,8 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * alb.getListeners()[0]).build();
  * ```
  */
-public open class VpcLink internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLink,
+public open class VpcLink(
+  cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLink,
 ) : Resource(cdkObject), IVpcLink {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -245,6 +245,6 @@ public open class VpcLink internal constructor(
         VpcLink(cdkObject)
 
     internal fun unwrap(wrapped: VpcLink): software.amazon.awscdk.services.apigatewayv2.VpcLink =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.apigatewayv2.VpcLink
   }
 }

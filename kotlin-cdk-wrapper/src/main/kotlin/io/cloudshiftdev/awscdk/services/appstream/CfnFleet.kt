@@ -44,8 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)
  */
-public open class CfnFleet internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet,
+public open class CfnFleet(
+  cdkObject: software.amazon.awscdk.services.appstream.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -1392,114 +1392,7 @@ public open class CfnFleet internal constructor(
         CfnFleet(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.appstream.CfnFleet =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Describes the S3 location.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
-   * .s3Bucket("s3Bucket")
-   * .s3Key("s3Key")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html)
-   */
-  public interface S3LocationProperty {
-    /**
-     * The S3 bucket of the S3 object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3bucket)
-     */
-    public fun s3Bucket(): String
-
-    /**
-     * The S3 key of the S3 object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3key)
-     */
-    public fun s3Key(): String
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Bucket The S3 bucket of the S3 object. 
-       */
-      public fun s3Bucket(s3Bucket: String)
-
-      /**
-       * @param s3Key The S3 key of the S3 object. 
-       */
-      public fun s3Key(s3Key: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.builder()
-
-      /**
-       * @param s3Bucket The S3 bucket of the S3 object. 
-       */
-      override fun s3Bucket(s3Bucket: String) {
-        cdkBuilder.s3Bucket(s3Bucket)
-      }
-
-      /**
-       * @param s3Key The S3 key of the S3 object. 
-       */
-      override fun s3Key(s3Key: String) {
-        cdkBuilder.s3Key(s3Key)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
-      /**
-       * The S3 bucket of the S3 object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3bucket)
-       */
-      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
-
-      /**
-       * The S3 key of the S3 object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3key)
-       */
-      override fun s3Key(): String = unwrap(this).getS3Key()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.appstream.CfnFleet
   }
 
   /**
@@ -1592,8 +1485,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
     ) : CdkObject(cdkObject), ComputeCapacityProperty {
       /**
        * The desired number of streaming instances.
@@ -1631,6 +1523,228 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty
+    }
+  }
+
+  /**
+   * The name of the directory and organizational unit (OU) to use to join a fleet to a Microsoft
+   * Active Directory domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * DomainJoinInfoProperty domainJoinInfoProperty = DomainJoinInfoProperty.builder()
+   * .directoryName("directoryName")
+   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html)
+   */
+  public interface DomainJoinInfoProperty {
+    /**
+     * The fully qualified name of the directory (for example, corp.example.com).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-directoryname)
+     */
+    public fun directoryName(): String? = unwrap(this).getDirectoryName()
+
+    /**
+     * The distinguished name of the organizational unit for computer accounts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname)
+     */
+    public fun organizationalUnitDistinguishedName(): String? =
+        unwrap(this).getOrganizationalUnitDistinguishedName()
+
+    /**
+     * A builder for [DomainJoinInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param directoryName The fully qualified name of the directory (for example,
+       * corp.example.com).
+       */
+      public fun directoryName(directoryName: String)
+
+      /**
+       * @param organizationalUnitDistinguishedName The distinguished name of the organizational
+       * unit for computer accounts.
+       */
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.Builder =
+          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.builder()
+
+      /**
+       * @param directoryName The fully qualified name of the directory (for example,
+       * corp.example.com).
+       */
+      override fun directoryName(directoryName: String) {
+        cdkBuilder.directoryName(directoryName)
+      }
+
+      /**
+       * @param organizationalUnitDistinguishedName The distinguished name of the organizational
+       * unit for computer accounts.
+       */
+      override
+          fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
+        cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
+    ) : CdkObject(cdkObject), DomainJoinInfoProperty {
+      /**
+       * The fully qualified name of the directory (for example, corp.example.com).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-directoryname)
+       */
+      override fun directoryName(): String? = unwrap(this).getDirectoryName()
+
+      /**
+       * The distinguished name of the organizational unit for computer accounts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname)
+       */
+      override fun organizationalUnitDistinguishedName(): String? =
+          unwrap(this).getOrganizationalUnitDistinguishedName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DomainJoinInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty):
+          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? DomainJoinInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DomainJoinInfoProperty):
+          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty
+    }
+  }
+
+  /**
+   * Describes the S3 location.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appstream.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .s3Bucket("s3Bucket")
+   * .s3Key("s3Key")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * The S3 bucket of the S3 object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3bucket)
+     */
+    public fun s3Bucket(): String
+
+    /**
+     * The S3 key of the S3 object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3key)
+     */
+    public fun s3Key(): String
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Bucket The S3 bucket of the S3 object. 
+       */
+      public fun s3Bucket(s3Bucket: String)
+
+      /**
+       * @param s3Key The S3 key of the S3 object. 
+       */
+      public fun s3Key(s3Key: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.builder()
+
+      /**
+       * @param s3Bucket The S3 bucket of the S3 object. 
+       */
+      override fun s3Bucket(s3Bucket: String) {
+        cdkBuilder.s3Bucket(s3Bucket)
+      }
+
+      /**
+       * @param s3Key The S3 key of the S3 object. 
+       */
+      override fun s3Key(s3Key: String) {
+        cdkBuilder.s3Key(s3Key)
+      }
+
+      public fun build(): software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
+    ) : CdkObject(cdkObject), S3LocationProperty {
+      /**
+       * The S3 bucket of the S3 object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3bucket)
+       */
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+
+      /**
+       * The S3 key of the S3 object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-s3location.html#cfn-appstream-fleet-s3location-s3key)
+       */
+      override fun s3Key(): String = unwrap(this).getS3Key()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty
     }
   }
 
@@ -1738,7 +1852,7 @@ public open class CfnFleet internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
+      cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
     ) : CdkObject(cdkObject), VpcConfigProperty {
       /**
        * The identifiers of the security groups for the fleet.
@@ -1774,122 +1888,6 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty
-    }
-  }
-
-  /**
-   * The name of the directory and organizational unit (OU) to use to join a fleet to a Microsoft
-   * Active Directory domain.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.appstream.*;
-   * DomainJoinInfoProperty domainJoinInfoProperty = DomainJoinInfoProperty.builder()
-   * .directoryName("directoryName")
-   * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html)
-   */
-  public interface DomainJoinInfoProperty {
-    /**
-     * The fully qualified name of the directory (for example, corp.example.com).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-directoryname)
-     */
-    public fun directoryName(): String? = unwrap(this).getDirectoryName()
-
-    /**
-     * The distinguished name of the organizational unit for computer accounts.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname)
-     */
-    public fun organizationalUnitDistinguishedName(): String? =
-        unwrap(this).getOrganizationalUnitDistinguishedName()
-
-    /**
-     * A builder for [DomainJoinInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param directoryName The fully qualified name of the directory (for example,
-       * corp.example.com).
-       */
-      public fun directoryName(directoryName: String)
-
-      /**
-       * @param organizationalUnitDistinguishedName The distinguished name of the organizational
-       * unit for computer accounts.
-       */
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.Builder =
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.builder()
-
-      /**
-       * @param directoryName The fully qualified name of the directory (for example,
-       * corp.example.com).
-       */
-      override fun directoryName(directoryName: String) {
-        cdkBuilder.directoryName(directoryName)
-      }
-
-      /**
-       * @param organizationalUnitDistinguishedName The distinguished name of the organizational
-       * unit for computer accounts.
-       */
-      override
-          fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-        cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
-      }
-
-      public fun build(): software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
-    ) : CdkObject(cdkObject), DomainJoinInfoProperty {
-      /**
-       * The fully qualified name of the directory (for example, corp.example.com).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-directoryname)
-       */
-      override fun directoryName(): String? = unwrap(this).getDirectoryName()
-
-      /**
-       * The distinguished name of the organizational unit for computer accounts.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html#cfn-appstream-fleet-domainjoininfo-organizationalunitdistinguishedname)
-       */
-      override fun organizationalUnitDistinguishedName(): String? =
-          unwrap(this).getOrganizationalUnitDistinguishedName()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): DomainJoinInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty):
-          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? DomainJoinInfoProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DomainJoinInfoProperty):
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty
     }
   }
 }

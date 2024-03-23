@@ -800,7 +800,7 @@ public interface CfnDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.kendra.CfnDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.kendra.CfnDataSourceProps,
   ) : CdkObject(cdkObject), CfnDataSourceProps {
     /**
      * Configuration information for altering document metadata and content during the document

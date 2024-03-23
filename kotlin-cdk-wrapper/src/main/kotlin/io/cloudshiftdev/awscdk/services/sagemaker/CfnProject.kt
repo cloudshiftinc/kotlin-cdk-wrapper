@@ -49,8 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html)
  */
-public open class CfnProject internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
+public open class CfnProject(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -431,7 +431,290 @@ public open class CfnProject internal constructor(
         CfnProject(cdkObject)
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.sagemaker.CfnProject =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnProject
+  }
+
+  /**
+   * A key value pair used when you provision a project as a service catalog product.
+   *
+   * For information, see [What is AWS Service
+   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ProvisioningParameterProperty provisioningParameterProperty =
+   * ProvisioningParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html)
+   */
+  public interface ProvisioningParameterProperty {
+    /**
+     * The key that identifies a provisioning parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the provisioning parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ProvisioningParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key that identifies a provisioning parameter. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the provisioning parameter. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty.builder()
+
+      /**
+       * @param key The key that identifies a provisioning parameter. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the provisioning parameter. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
+    ) : CdkObject(cdkObject), ProvisioningParameterProperty {
+      /**
+       * The key that identifies a provisioning parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the provisioning parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisioningParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty):
+          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisioningParameterProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty
+    }
+  }
+
+  /**
+   * Details of a provisioned service catalog product.
+   *
+   * For information about service catalog, see [What is AWS Service
+   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ServiceCatalogProvisionedProductDetailsProperty serviceCatalogProvisionedProductDetailsProperty
+   * = ServiceCatalogProvisionedProductDetailsProperty.builder()
+   * .provisionedProductId("provisionedProductId")
+   * .provisionedProductStatusMessage("provisionedProductStatusMessage")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html)
+   */
+  public interface ServiceCatalogProvisionedProductDetailsProperty {
+    /**
+     * The ID of the provisioned product.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductid)
+     */
+    public fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
+
+    /**
+     * The current status of the product.
+     *
+     * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
+     * succeeded and completed.
+     * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results. Wait
+     * for an AVAILABLE status before performing operations.
+     * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
+     * requested operation but is not exactly what was requested. For example, a request to update to a
+     * new version failed and the stack rolled back to the current version.
+     * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is not
+     * running. For example, CloudFormation received a parameter value that was not valid and could not
+     * launch the stack.
+     * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
+     * new product, but resources have not yet been created. After reviewing the list of resources to
+     * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductstatusmessage)
+     */
+    public fun provisionedProductStatusMessage(): String? =
+        unwrap(this).getProvisionedProductStatusMessage()
+
+    /**
+     * A builder for [ServiceCatalogProvisionedProductDetailsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param provisionedProductId The ID of the provisioned product.
+       */
+      public fun provisionedProductId(provisionedProductId: String)
+
+      /**
+       * @param provisionedProductStatusMessage The current status of the product.
+       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
+       * succeeded and completed.
+       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
+       * Wait for an AVAILABLE status before performing operations.
+       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
+       * requested operation but is not exactly what was requested. For example, a request to update to
+       * a new version failed and the stack rolled back to the current version.
+       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
+       * not running. For example, CloudFormation received a parameter value that was not valid and
+       * could not launch the stack.
+       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
+       * new product, but resources have not yet been created. After reviewing the list of resources to
+       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
+       */
+      public fun provisionedProductStatusMessage(provisionedProductStatusMessage: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty.builder()
+
+      /**
+       * @param provisionedProductId The ID of the provisioned product.
+       */
+      override fun provisionedProductId(provisionedProductId: String) {
+        cdkBuilder.provisionedProductId(provisionedProductId)
+      }
+
+      /**
+       * @param provisionedProductStatusMessage The current status of the product.
+       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
+       * succeeded and completed.
+       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
+       * Wait for an AVAILABLE status before performing operations.
+       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
+       * requested operation but is not exactly what was requested. For example, a request to update to
+       * a new version failed and the stack rolled back to the current version.
+       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
+       * not running. For example, CloudFormation received a parameter value that was not valid and
+       * could not launch the stack.
+       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
+       * new product, but resources have not yet been created. After reviewing the list of resources to
+       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
+       */
+      override fun provisionedProductStatusMessage(provisionedProductStatusMessage: String) {
+        cdkBuilder.provisionedProductStatusMessage(provisionedProductStatusMessage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
+    ) : CdkObject(cdkObject), ServiceCatalogProvisionedProductDetailsProperty {
+      /**
+       * The ID of the provisioned product.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductid)
+       */
+      override fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
+
+      /**
+       * The current status of the product.
+       *
+       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
+       * succeeded and completed.
+       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
+       * Wait for an AVAILABLE status before performing operations.
+       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
+       * requested operation but is not exactly what was requested. For example, a request to update to
+       * a new version failed and the stack rolled back to the current version.
+       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
+       * not running. For example, CloudFormation received a parameter value that was not valid and
+       * could not launch the stack.
+       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
+       * new product, but resources have not yet been created. After reviewing the list of resources to
+       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductstatusmessage)
+       */
+      override fun provisionedProductStatusMessage(): String? =
+          unwrap(this).getProvisionedProductStatusMessage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceCatalogProvisionedProductDetailsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty):
+          ServiceCatalogProvisionedProductDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceCatalogProvisionedProductDetailsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceCatalogProvisionedProductDetailsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
+    }
   }
 
   /**
@@ -592,8 +875,7 @@ public open class CfnProject internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
     ) : CdkObject(cdkObject), ServiceCatalogProvisioningDetailsProperty {
       /**
        * The path identifier of the product.
@@ -643,291 +925,6 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
-    }
-  }
-
-  /**
-   * A key value pair used when you provision a project as a service catalog product.
-   *
-   * For information, see [What is AWS Service
-   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ProvisioningParameterProperty provisioningParameterProperty =
-   * ProvisioningParameterProperty.builder()
-   * .key("key")
-   * .value("value")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html)
-   */
-  public interface ProvisioningParameterProperty {
-    /**
-     * The key that identifies a provisioning parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-key)
-     */
-    public fun key(): String
-
-    /**
-     * The value of the provisioning parameter.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-value)
-     */
-    public fun `value`(): String
-
-    /**
-     * A builder for [ProvisioningParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The key that identifies a provisioning parameter. 
-       */
-      public fun key(key: String)
-
-      /**
-       * @param value The value of the provisioning parameter. 
-       */
-      public fun `value`(`value`: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty.builder()
-
-      /**
-       * @param key The key that identifies a provisioning parameter. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
-
-      /**
-       * @param value The value of the provisioning parameter. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
-    ) : CdkObject(cdkObject), ProvisioningParameterProperty {
-      /**
-       * The key that identifies a provisioning parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value of the provisioning parameter.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-provisioningparameter.html#cfn-sagemaker-project-provisioningparameter-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ProvisioningParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty):
-          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ProvisioningParameterProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ProvisioningParameterProperty):
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
-          (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty
-    }
-  }
-
-  /**
-   * Details of a provisioned service catalog product.
-   *
-   * For information about service catalog, see [What is AWS Service
-   * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ServiceCatalogProvisionedProductDetailsProperty serviceCatalogProvisionedProductDetailsProperty
-   * = ServiceCatalogProvisionedProductDetailsProperty.builder()
-   * .provisionedProductId("provisionedProductId")
-   * .provisionedProductStatusMessage("provisionedProductStatusMessage")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html)
-   */
-  public interface ServiceCatalogProvisionedProductDetailsProperty {
-    /**
-     * The ID of the provisioned product.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductid)
-     */
-    public fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
-
-    /**
-     * The current status of the product.
-     *
-     * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
-     * succeeded and completed.
-     * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results. Wait
-     * for an AVAILABLE status before performing operations.
-     * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
-     * requested operation but is not exactly what was requested. For example, a request to update to a
-     * new version failed and the stack rolled back to the current version.
-     * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is not
-     * running. For example, CloudFormation received a parameter value that was not valid and could not
-     * launch the stack.
-     * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
-     * new product, but resources have not yet been created. After reviewing the list of resources to
-     * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductstatusmessage)
-     */
-    public fun provisionedProductStatusMessage(): String? =
-        unwrap(this).getProvisionedProductStatusMessage()
-
-    /**
-     * A builder for [ServiceCatalogProvisionedProductDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param provisionedProductId The ID of the provisioned product.
-       */
-      public fun provisionedProductId(provisionedProductId: String)
-
-      /**
-       * @param provisionedProductStatusMessage The current status of the product.
-       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
-       * succeeded and completed.
-       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
-       * Wait for an AVAILABLE status before performing operations.
-       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
-       * requested operation but is not exactly what was requested. For example, a request to update to
-       * a new version failed and the stack rolled back to the current version.
-       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
-       * not running. For example, CloudFormation received a parameter value that was not valid and
-       * could not launch the stack.
-       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
-       * new product, but resources have not yet been created. After reviewing the list of resources to
-       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
-       */
-      public fun provisionedProductStatusMessage(provisionedProductStatusMessage: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty.builder()
-
-      /**
-       * @param provisionedProductId The ID of the provisioned product.
-       */
-      override fun provisionedProductId(provisionedProductId: String) {
-        cdkBuilder.provisionedProductId(provisionedProductId)
-      }
-
-      /**
-       * @param provisionedProductStatusMessage The current status of the product.
-       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
-       * succeeded and completed.
-       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
-       * Wait for an AVAILABLE status before performing operations.
-       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
-       * requested operation but is not exactly what was requested. For example, a request to update to
-       * a new version failed and the stack rolled back to the current version.
-       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
-       * not running. For example, CloudFormation received a parameter value that was not valid and
-       * could not launch the stack.
-       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
-       * new product, but resources have not yet been created. After reviewing the list of resources to
-       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
-       */
-      override fun provisionedProductStatusMessage(provisionedProductStatusMessage: String) {
-        cdkBuilder.provisionedProductStatusMessage(provisionedProductStatusMessage)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
-    ) : CdkObject(cdkObject), ServiceCatalogProvisionedProductDetailsProperty {
-      /**
-       * The ID of the provisioned product.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductid)
-       */
-      override fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
-
-      /**
-       * The current status of the product.
-       *
-       * * `AVAILABLE` - Stable state, ready to perform any operation. The most recent operation
-       * succeeded and completed.
-       * * `UNDER_CHANGE` - Transitive state. Operations performed might not have valid results.
-       * Wait for an AVAILABLE status before performing operations.
-       * * `TAINTED` - Stable state, ready to perform any operation. The stack has completed the
-       * requested operation but is not exactly what was requested. For example, a request to update to
-       * a new version failed and the stack rolled back to the current version.
-       * * `ERROR` - An unexpected error occurred. The provisioned product exists but the stack is
-       * not running. For example, CloudFormation received a parameter value that was not valid and
-       * could not launch the stack.
-       * * `PLAN_IN_PROGRESS` - Transitive state. The plan operations were performed to provision a
-       * new product, but resources have not yet been created. After reviewing the list of resources to
-       * be created, execute the plan. Wait for an AVAILABLE status before performing operations.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html#cfn-sagemaker-project-servicecatalogprovisionedproductdetails-provisionedproductstatusmessage)
-       */
-      override fun provisionedProductStatusMessage(): String? =
-          unwrap(this).getProvisionedProductStatusMessage()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ServiceCatalogProvisionedProductDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty):
-          ServiceCatalogProvisionedProductDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ServiceCatalogProvisionedProductDetailsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ServiceCatalogProvisionedProductDetailsProperty):
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty
     }
   }
 }

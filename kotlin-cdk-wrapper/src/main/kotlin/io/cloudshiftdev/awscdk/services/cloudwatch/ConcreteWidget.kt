@@ -15,8 +15,8 @@ import kotlin.collections.Map
  *
  * This is in contrast to other widgets which exist for layout purposes.
  */
-public abstract class ConcreteWidget internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
+public abstract class ConcreteWidget(
+  cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
 ) : CdkObject(cdkObject), IWidget {
   /**
    * The amount of vertical grid units the widget will take up.
@@ -54,7 +54,7 @@ public abstract class ConcreteWidget internal constructor(
   public override fun width(): Number = unwrap(this).getWidth()
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
   ) : ConcreteWidget(cdkObject)
 
   public companion object {

@@ -38,8 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * * use `OpenSearchDataSource`
  */
-public open class ElasticsearchDataSource internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSource,
+public open class ElasticsearchDataSource(
+  cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSource,
 ) : BackedDataSource(cdkObject) {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
@@ -188,6 +188,7 @@ public open class ElasticsearchDataSource internal constructor(
         ElasticsearchDataSource = ElasticsearchDataSource(cdkObject)
 
     internal fun unwrap(wrapped: ElasticsearchDataSource):
-        software.amazon.awscdk.services.appsync.ElasticsearchDataSource = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.ElasticsearchDataSource = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.ElasticsearchDataSource
   }
 }

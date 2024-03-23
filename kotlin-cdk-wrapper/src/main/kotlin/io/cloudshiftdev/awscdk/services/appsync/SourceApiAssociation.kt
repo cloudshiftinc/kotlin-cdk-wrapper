@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  */
-public open class SourceApiAssociation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociation,
+public open class SourceApiAssociation(
+  cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociation,
 ) : Resource(cdkObject), ISourceApiAssociation {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -227,6 +227,7 @@ public open class SourceApiAssociation internal constructor(
         SourceApiAssociation = SourceApiAssociation(cdkObject)
 
     internal fun unwrap(wrapped: SourceApiAssociation):
-        software.amazon.awscdk.services.appsync.SourceApiAssociation = wrapped.cdkObject
+        software.amazon.awscdk.services.appsync.SourceApiAssociation = wrapped.cdkObject as
+        software.amazon.awscdk.services.appsync.SourceApiAssociation
   }
 }

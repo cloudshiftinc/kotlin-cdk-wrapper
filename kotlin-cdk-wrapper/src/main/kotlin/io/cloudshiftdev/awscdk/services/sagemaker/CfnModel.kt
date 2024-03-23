@@ -115,8 +115,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html)
  */
-public open class CfnModel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
+public open class CfnModel(
+  cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -881,781 +881,7 @@ public open class CfnModel internal constructor(
         CfnModel(cdkObject)
 
     internal fun unwrap(wrapped: CfnModel): software.amazon.awscdk.services.sagemaker.CfnModel =
-        wrapped.cdkObject
-  }
-
-  /**
-   * Specifies additional configuration for hosting multi-model endpoints.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * MultiModelConfigProperty multiModelConfigProperty = MultiModelConfigProperty.builder()
-   * .modelCacheSetting("modelCacheSetting")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html)
-   */
-  public interface MultiModelConfigProperty {
-    /**
-     * Whether to cache models for a multi-model endpoint.
-     *
-     * By default, multi-model endpoints cache models so that a model does not have to be loaded
-     * into memory each time it is invoked. Some use cases do not benefit from model caching. For
-     * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
-     * endpoint might perform better if you disable model caching. To disable model caching, set the
-     * value of this parameter to Disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html#cfn-sagemaker-model-multimodelconfig-modelcachesetting)
-     */
-    public fun modelCacheSetting(): String? = unwrap(this).getModelCacheSetting()
-
-    /**
-     * A builder for [MultiModelConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param modelCacheSetting Whether to cache models for a multi-model endpoint.
-       * By default, multi-model endpoints cache models so that a model does not have to be loaded
-       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
-       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
-       * endpoint might perform better if you disable model caching. To disable model caching, set the
-       * value of this parameter to Disabled.
-       */
-      public fun modelCacheSetting(modelCacheSetting: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty.builder()
-
-      /**
-       * @param modelCacheSetting Whether to cache models for a multi-model endpoint.
-       * By default, multi-model endpoints cache models so that a model does not have to be loaded
-       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
-       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
-       * endpoint might perform better if you disable model caching. To disable model caching, set the
-       * value of this parameter to Disabled.
-       */
-      override fun modelCacheSetting(modelCacheSetting: String) {
-        cdkBuilder.modelCacheSetting(modelCacheSetting)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty,
-    ) : CdkObject(cdkObject), MultiModelConfigProperty {
-      /**
-       * Whether to cache models for a multi-model endpoint.
-       *
-       * By default, multi-model endpoints cache models so that a model does not have to be loaded
-       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
-       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
-       * endpoint might perform better if you disable model caching. To disable model caching, set the
-       * value of this parameter to Disabled.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html#cfn-sagemaker-model-multimodelconfig-modelcachesetting)
-       */
-      override fun modelCacheSetting(): String? = unwrap(this).getModelCacheSetting()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): MultiModelConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty):
-          MultiModelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? MultiModelConfigProperty
-          ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MultiModelConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty
-    }
-  }
-
-  /**
-   * Specifies the location of ML model data to deploy.
-   *
-   * If specified, you must specify one and only one of the available data sources.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * ModelDataSourceProperty modelDataSourceProperty = ModelDataSourceProperty.builder()
-   * .s3DataSource(S3DataSourceProperty.builder()
-   * .compressionType("compressionType")
-   * .s3DataType("s3DataType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .modelAccessConfig(ModelAccessConfigProperty.builder()
-   * .acceptEula(false)
-   * .build())
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html)
-   */
-  public interface ModelDataSourceProperty {
-    /**
-     * Specifies the S3 location of ML model data to deploy.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html#cfn-sagemaker-model-modeldatasource-s3datasource)
-     */
-    public fun s3DataSource(): Any
-
-    /**
-     * A builder for [ModelDataSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      public fun s3DataSource(s3DataSource: IResolvable)
-
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      public fun s3DataSource(s3DataSource: S3DataSourceProperty)
-
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9666c7b9ff26a4a412d5a4183267d59e440c3892268204f9dcced0caf0067e1f")
-      public fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty.builder()
-
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      override fun s3DataSource(s3DataSource: IResolvable) {
-        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
-        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
-      }
-
-      /**
-       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9666c7b9ff26a4a412d5a4183267d59e440c3892268204f9dcced0caf0067e1f")
-      override fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit): Unit =
-          s3DataSource(S3DataSourceProperty(s3DataSource))
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty,
-    ) : CdkObject(cdkObject), ModelDataSourceProperty {
-      /**
-       * Specifies the S3 location of ML model data to deploy.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html#cfn-sagemaker-model-modeldatasource-s3datasource)
-       */
-      override fun s3DataSource(): Any = unwrap(this).getS3DataSource()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ModelDataSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty):
-          ModelDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ModelDataSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty
-    }
-  }
-
-  /**
-   * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
-   * compute resources have access to.
-   *
-   * You can control access to and from your resources by configuring a VPC. For more information,
-   * see [Give SageMaker Access to Resources in your Amazon
-   * VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html)
-   */
-  public interface VpcConfigProperty {
-    /**
-     * The VPC security group IDs, in the form `sg-xxxxxxxx` .
-     *
-     * Specify the security groups for the VPC that is specified in the `Subnets` field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String>
-
-    /**
-     * The ID of the subnets in the VPC to which you want to connect your training job or model.
-     *
-     * For information about the availability of specific instance types, see [Supported Instance
-     * Types and Availability
-     * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets)
-     */
-    public fun subnets(): List<String>
-
-    /**
-     * A builder for [VpcConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty.builder()
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
-       * job or model. 
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
-      /**
-       * The VPC security group IDs, in the form `sg-xxxxxxxx` .
-       *
-       * Specify the security groups for the VPC that is specified in the `Subnets` field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
-
-      /**
-       * The ID of the subnets in the VPC to which you want to connect your training job or model.
-       *
-       * For information about the availability of specific instance types, see [Supported Instance
-       * Types and Availability
-       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty
-    }
-  }
-
-  /**
-   * Describes the S3 data source.
-   *
-   * Your input bucket must be in the same AWS region as your training job.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
-   * .compressionType("compressionType")
-   * .s3DataType("s3DataType")
-   * .s3Uri("s3Uri")
-   * // the properties below are optional
-   * .modelAccessConfig(ModelAccessConfigProperty.builder()
-   * .acceptEula(false)
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html)
-   */
-  public interface S3DataSourceProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
-     */
-    public fun compressionType(): String
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
-     */
-    public fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
-
-    /**
-     * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
-     *
-     * SageMaker uses all objects that match the specified key name prefix for model training.
-     *
-     * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-     * containing a list of object keys that you want SageMaker to use for model training.
-     *
-     * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-     * manifest file in JSON lines format. This file contains the data you want to use for model
-     * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
-     */
-    public fun s3DataType(): String
-
-    /**
-     * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
-     * or a manifest.
-     *
-     * For example:
-     *
-     * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-     * * A manifest might look like this: `s3://bucketname/example.manifest`
-     *
-     * A manifest is an S3 object which is a JSON file consisting of an array of elements. The first
-     * element is a prefix which is followed by one or more suffixes. SageMaker appends the suffix
-     * elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a valid
-     * non-empty `S3Uri` that precludes users from specifying a manifest whose individual `S3Uri` is
-     * sourced from different S3 buckets.
-     *
-     * The following code example shows a valid manifest format:
-     *
-     * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-     *
-     * `"relative/path/to/custdata-1",`
-     *
-     * `"relative/path/custdata-2",`
-     *
-     * `...`
-     *
-     * `"relative/path/custdata-N"`
-     *
-     * `]`
-     *
-     * This JSON is equivalent to the following `S3Uri` list:
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-     *
-     * `...`
-     *
-     * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-     *
-     * The complete set of `S3Uri` in this manifest is the input data for the channel for this data
-     * source. The object that each `S3Uri` points to must be readable by the IAM role that SageMaker
-     * uses to perform tasks on your behalf.
-     *
-     * Your input bucket must be located in same AWS region as your training job.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3uri)
-     */
-    public fun s3Uri(): String
-
-    /**
-     * A builder for [S3DataSourceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param compressionType the value to be set. 
-       */
-      public fun compressionType(compressionType: String)
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      public fun modelAccessConfig(modelAccessConfig: IResolvable)
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty)
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1d89505c81977147be9ffaf680ecf6e6297222407045d3477357064c885b2e7f")
-      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       */
-      public fun s3DataType(s3DataType: String)
-
-      /**
-       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
-       * key name prefix or a manifest. 
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       */
-      public fun s3Uri(s3Uri: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty.builder()
-
-      /**
-       * @param compressionType the value to be set. 
-       */
-      override fun compressionType(compressionType: String) {
-        cdkBuilder.compressionType(compressionType)
-      }
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      override fun modelAccessConfig(modelAccessConfig: IResolvable) {
-        cdkBuilder.modelAccessConfig(modelAccessConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      override fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty) {
-        cdkBuilder.modelAccessConfig(modelAccessConfig.let(ModelAccessConfigProperty::unwrap))
-      }
-
-      /**
-       * @param modelAccessConfig the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1d89505c81977147be9ffaf680ecf6e6297222407045d3477357064c885b2e7f")
-      override
-          fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit):
-          Unit = modelAccessConfig(ModelAccessConfigProperty(modelAccessConfig))
-
-      /**
-       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       */
-      override fun s3DataType(s3DataType: String) {
-        cdkBuilder.s3DataType(s3DataType)
-      }
-
-      /**
-       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
-       * key name prefix or a manifest. 
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       */
-      override fun s3Uri(s3Uri: String) {
-        cdkBuilder.s3Uri(s3Uri)
-      }
-
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty,
-    ) : CdkObject(cdkObject), S3DataSourceProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
-       */
-      override fun compressionType(): String = unwrap(this).getCompressionType()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
-       */
-      override fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
-
-      /**
-       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
-       *
-       * SageMaker uses all objects that match the specified key name prefix for model training.
-       *
-       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
-       * containing a list of object keys that you want SageMaker to use for model training.
-       *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
-       * manifest file in JSON lines format. This file contains the data you want to use for model
-       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
-       */
-      override fun s3DataType(): String = unwrap(this).getS3DataType()
-
-      /**
-       * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
-       * or a manifest.
-       *
-       * For example:
-       *
-       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
-       * * A manifest might look like this: `s3://bucketname/example.manifest`
-       *
-       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
-       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
-       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
-       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
-       * `S3Uri` is sourced from different S3 buckets.
-       *
-       * The following code example shows a valid manifest format:
-       *
-       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
-       *
-       * `"relative/path/to/custdata-1",`
-       *
-       * `"relative/path/custdata-2",`
-       *
-       * `...`
-       *
-       * `"relative/path/custdata-N"`
-       *
-       * `]`
-       *
-       * This JSON is equivalent to the following `S3Uri` list:
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
-       *
-       * `...`
-       *
-       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
-       *
-       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
-       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
-       * SageMaker uses to perform tasks on your behalf.
-       *
-       * Your input bucket must be located in same AWS region as your training job.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3uri)
-       */
-      override fun s3Uri(): String = unwrap(this).getS3Uri()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3DataSourceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty):
-          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3DataSourceProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty
-    }
+        wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnModel
   }
 
   /**
@@ -2234,8 +1460,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty,
     ) : CdkObject(cdkObject), ContainerDefinitionProperty {
       /**
        * This parameter is ignored for models that contain only a `PrimaryContainer` .
@@ -2536,8 +1761,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty,
     ) : CdkObject(cdkObject), ImageConfigProperty {
       /**
        * Set this to one of the following values:.
@@ -2642,8 +1866,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty,
     ) : CdkObject(cdkObject), InferenceExecutionConfigProperty {
       /**
        * How containers in a multi-container are run. The following values are valid.
@@ -2671,120 +1894,6 @@ public open class CfnModel internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty
-    }
-  }
-
-  /**
-   * Specifies an authentication configuration for the private docker registry where your model
-   * image is hosted.
-   *
-   * Specify a value for this property only if you specified `Vpc` as the value for the
-   * `RepositoryAccessMode` field of the `ImageConfig` object that you passed to a call to
-   * `CreateModel` and the private Docker registry where the model image is hosted requires
-   * authentication.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
-   * RepositoryAuthConfigProperty repositoryAuthConfigProperty =
-   * RepositoryAuthConfigProperty.builder()
-   * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html)
-   */
-  public interface RepositoryAuthConfigProperty {
-    /**
-     * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
-     * authenticate to the private Docker registry where your model image is hosted.
-     *
-     * For information about how to create an AWS Lambda function, see [Create a Lambda function
-     * with the
-     * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
-     * the *AWS Lambda Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html#cfn-sagemaker-model-repositoryauthconfig-repositorycredentialsproviderarn)
-     */
-    public fun repositoryCredentialsProviderArn(): String
-
-    /**
-     * A builder for [RepositoryAuthConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param repositoryCredentialsProviderArn The Amazon Resource Name (ARN) of an AWS Lambda
-       * function that provides credentials to authenticate to the private Docker registry where your
-       * model image is hosted. 
-       * For information about how to create an AWS Lambda function, see [Create a Lambda function
-       * with the
-       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
-       * the *AWS Lambda Developer Guide* .
-       */
-      public fun repositoryCredentialsProviderArn(repositoryCredentialsProviderArn: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty.builder()
-
-      /**
-       * @param repositoryCredentialsProviderArn The Amazon Resource Name (ARN) of an AWS Lambda
-       * function that provides credentials to authenticate to the private Docker registry where your
-       * model image is hosted. 
-       * For information about how to create an AWS Lambda function, see [Create a Lambda function
-       * with the
-       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
-       * the *AWS Lambda Developer Guide* .
-       */
-      override fun repositoryCredentialsProviderArn(repositoryCredentialsProviderArn: String) {
-        cdkBuilder.repositoryCredentialsProviderArn(repositoryCredentialsProviderArn)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty,
-    ) : CdkObject(cdkObject), RepositoryAuthConfigProperty {
-      /**
-       * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
-       * authenticate to the private Docker registry where your model image is hosted.
-       *
-       * For information about how to create an AWS Lambda function, see [Create a Lambda function
-       * with the
-       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
-       * the *AWS Lambda Developer Guide* .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html#cfn-sagemaker-model-repositoryauthconfig-repositorycredentialsproviderarn)
-       */
-      override fun repositoryCredentialsProviderArn(): String =
-          unwrap(this).getRepositoryCredentialsProviderArn()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): RepositoryAuthConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty):
-          RepositoryAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          RepositoryAuthConfigProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RepositoryAuthConfigProperty):
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty
     }
   }
 
@@ -2885,8 +1994,7 @@ public open class CfnModel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty,
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty,
     ) : CdkObject(cdkObject), ModelAccessConfigProperty {
       /**
        * Specifies agreement to the model end-user license agreement (EULA).
@@ -2916,6 +2024,890 @@ public open class CfnModel internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the location of ML model data to deploy.
+   *
+   * If specified, you must specify one and only one of the available data sources.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelDataSourceProperty modelDataSourceProperty = ModelDataSourceProperty.builder()
+   * .s3DataSource(S3DataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html)
+   */
+  public interface ModelDataSourceProperty {
+    /**
+     * Specifies the S3 location of ML model data to deploy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html#cfn-sagemaker-model-modeldatasource-s3datasource)
+     */
+    public fun s3DataSource(): Any
+
+    /**
+     * A builder for [ModelDataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      public fun s3DataSource(s3DataSource: IResolvable)
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      public fun s3DataSource(s3DataSource: S3DataSourceProperty)
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9666c7b9ff26a4a412d5a4183267d59e440c3892268204f9dcced0caf0067e1f")
+      public fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty.builder()
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      override fun s3DataSource(s3DataSource: IResolvable) {
+        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
+        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
+      }
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9666c7b9ff26a4a412d5a4183267d59e440c3892268204f9dcced0caf0067e1f")
+      override fun s3DataSource(s3DataSource: S3DataSourceProperty.Builder.() -> Unit): Unit =
+          s3DataSource(S3DataSourceProperty(s3DataSource))
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty,
+    ) : CdkObject(cdkObject), ModelDataSourceProperty {
+      /**
+       * Specifies the S3 location of ML model data to deploy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-modeldatasource.html#cfn-sagemaker-model-modeldatasource-s3datasource)
+       */
+      override fun s3DataSource(): Any = unwrap(this).getS3DataSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelDataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty):
+          ModelDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelDataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty
+    }
+  }
+
+  /**
+   * Specifies additional configuration for hosting multi-model endpoints.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * MultiModelConfigProperty multiModelConfigProperty = MultiModelConfigProperty.builder()
+   * .modelCacheSetting("modelCacheSetting")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html)
+   */
+  public interface MultiModelConfigProperty {
+    /**
+     * Whether to cache models for a multi-model endpoint.
+     *
+     * By default, multi-model endpoints cache models so that a model does not have to be loaded
+     * into memory each time it is invoked. Some use cases do not benefit from model caching. For
+     * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
+     * endpoint might perform better if you disable model caching. To disable model caching, set the
+     * value of this parameter to Disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html#cfn-sagemaker-model-multimodelconfig-modelcachesetting)
+     */
+    public fun modelCacheSetting(): String? = unwrap(this).getModelCacheSetting()
+
+    /**
+     * A builder for [MultiModelConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param modelCacheSetting Whether to cache models for a multi-model endpoint.
+       * By default, multi-model endpoints cache models so that a model does not have to be loaded
+       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
+       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
+       * endpoint might perform better if you disable model caching. To disable model caching, set the
+       * value of this parameter to Disabled.
+       */
+      public fun modelCacheSetting(modelCacheSetting: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty.builder()
+
+      /**
+       * @param modelCacheSetting Whether to cache models for a multi-model endpoint.
+       * By default, multi-model endpoints cache models so that a model does not have to be loaded
+       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
+       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
+       * endpoint might perform better if you disable model caching. To disable model caching, set the
+       * value of this parameter to Disabled.
+       */
+      override fun modelCacheSetting(modelCacheSetting: String) {
+        cdkBuilder.modelCacheSetting(modelCacheSetting)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty,
+    ) : CdkObject(cdkObject), MultiModelConfigProperty {
+      /**
+       * Whether to cache models for a multi-model endpoint.
+       *
+       * By default, multi-model endpoints cache models so that a model does not have to be loaded
+       * into memory each time it is invoked. Some use cases do not benefit from model caching. For
+       * example, if an endpoint hosts a large number of models that are each invoked infrequently, the
+       * endpoint might perform better if you disable model caching. To disable model caching, set the
+       * value of this parameter to Disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html#cfn-sagemaker-model-multimodelconfig-modelcachesetting)
+       */
+      override fun modelCacheSetting(): String? = unwrap(this).getModelCacheSetting()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiModelConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty):
+          MultiModelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? MultiModelConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiModelConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty
+    }
+  }
+
+  /**
+   * Specifies an authentication configuration for the private docker registry where your model
+   * image is hosted.
+   *
+   * Specify a value for this property only if you specified `Vpc` as the value for the
+   * `RepositoryAccessMode` field of the `ImageConfig` object that you passed to a call to
+   * `CreateModel` and the private Docker registry where the model image is hosted requires
+   * authentication.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * RepositoryAuthConfigProperty repositoryAuthConfigProperty =
+   * RepositoryAuthConfigProperty.builder()
+   * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html)
+   */
+  public interface RepositoryAuthConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
+     * authenticate to the private Docker registry where your model image is hosted.
+     *
+     * For information about how to create an AWS Lambda function, see [Create a Lambda function
+     * with the
+     * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
+     * the *AWS Lambda Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html#cfn-sagemaker-model-repositoryauthconfig-repositorycredentialsproviderarn)
+     */
+    public fun repositoryCredentialsProviderArn(): String
+
+    /**
+     * A builder for [RepositoryAuthConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param repositoryCredentialsProviderArn The Amazon Resource Name (ARN) of an AWS Lambda
+       * function that provides credentials to authenticate to the private Docker registry where your
+       * model image is hosted. 
+       * For information about how to create an AWS Lambda function, see [Create a Lambda function
+       * with the
+       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
+       * the *AWS Lambda Developer Guide* .
+       */
+      public fun repositoryCredentialsProviderArn(repositoryCredentialsProviderArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty.builder()
+
+      /**
+       * @param repositoryCredentialsProviderArn The Amazon Resource Name (ARN) of an AWS Lambda
+       * function that provides credentials to authenticate to the private Docker registry where your
+       * model image is hosted. 
+       * For information about how to create an AWS Lambda function, see [Create a Lambda function
+       * with the
+       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
+       * the *AWS Lambda Developer Guide* .
+       */
+      override fun repositoryCredentialsProviderArn(repositoryCredentialsProviderArn: String) {
+        cdkBuilder.repositoryCredentialsProviderArn(repositoryCredentialsProviderArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty,
+    ) : CdkObject(cdkObject), RepositoryAuthConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
+       * authenticate to the private Docker registry where your model image is hosted.
+       *
+       * For information about how to create an AWS Lambda function, see [Create a Lambda function
+       * with the
+       * console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html) in
+       * the *AWS Lambda Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html#cfn-sagemaker-model-repositoryauthconfig-repositorycredentialsproviderarn)
+       */
+      override fun repositoryCredentialsProviderArn(): String =
+          unwrap(this).getRepositoryCredentialsProviderArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RepositoryAuthConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty):
+          RepositoryAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryAuthConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RepositoryAuthConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty
+    }
+  }
+
+  /**
+   * Describes the S3 data source.
+   *
+   * Your input bucket must be in the same AWS region as your training job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html)
+   */
+  public interface S3DataSourceProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
+     */
+    public fun compressionType(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
+     */
+    public fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
+
+    /**
+     * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
+     *
+     * SageMaker uses all objects that match the specified key name prefix for model training.
+     *
+     * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+     * containing a list of object keys that you want SageMaker to use for model training.
+     *
+     * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+     * manifest file in JSON lines format. This file contains the data you want to use for model
+     * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
+     */
+    public fun s3DataType(): String
+
+    /**
+     * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
+     * or a manifest.
+     *
+     * For example:
+     *
+     * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+     * * A manifest might look like this: `s3://bucketname/example.manifest`
+     *
+     * A manifest is an S3 object which is a JSON file consisting of an array of elements. The first
+     * element is a prefix which is followed by one or more suffixes. SageMaker appends the suffix
+     * elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a valid
+     * non-empty `S3Uri` that precludes users from specifying a manifest whose individual `S3Uri` is
+     * sourced from different S3 buckets.
+     *
+     * The following code example shows a valid manifest format:
+     *
+     * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+     *
+     * `"relative/path/to/custdata-1",`
+     *
+     * `"relative/path/custdata-2",`
+     *
+     * `...`
+     *
+     * `"relative/path/custdata-N"`
+     *
+     * `]`
+     *
+     * This JSON is equivalent to the following `S3Uri` list:
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+     *
+     * `...`
+     *
+     * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+     *
+     * The complete set of `S3Uri` in this manifest is the input data for the channel for this data
+     * source. The object that each `S3Uri` points to must be readable by the IAM role that SageMaker
+     * uses to perform tasks on your behalf.
+     *
+     * Your input bucket must be located in same AWS region as your training job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [S3DataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param compressionType the value to be set. 
+       */
+      public fun compressionType(compressionType: String)
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      public fun modelAccessConfig(modelAccessConfig: IResolvable)
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty)
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d89505c81977147be9ffaf680ecf6e6297222407045d3477357064c885b2e7f")
+      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       */
+      public fun s3DataType(s3DataType: String)
+
+      /**
+       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
+       * key name prefix or a manifest. 
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty.builder()
+
+      /**
+       * @param compressionType the value to be set. 
+       */
+      override fun compressionType(compressionType: String) {
+        cdkBuilder.compressionType(compressionType)
+      }
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      override fun modelAccessConfig(modelAccessConfig: IResolvable) {
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      override fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty) {
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(ModelAccessConfigProperty::unwrap))
+      }
+
+      /**
+       * @param modelAccessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d89505c81977147be9ffaf680ecf6e6297222407045d3477357064c885b2e7f")
+      override
+          fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit):
+          Unit = modelAccessConfig(ModelAccessConfigProperty(modelAccessConfig))
+
+      /**
+       * @param s3DataType If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. 
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       */
+      override fun s3DataType(s3DataType: String) {
+        cdkBuilder.s3DataType(s3DataType)
+      }
+
+      /**
+       * @param s3Uri Depending on the value specified for the `S3DataType` , identifies either a
+       * key name prefix or a manifest. 
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty,
+    ) : CdkObject(cdkObject), S3DataSourceProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
+       */
+      override fun compressionType(): String = unwrap(this).getCompressionType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
+       */
+      override fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
+
+      /**
+       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
+       *
+       * SageMaker uses all objects that match the specified key name prefix for model training.
+       *
+       * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
+       * containing a list of object keys that you want SageMaker to use for model training.
+       *
+       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * manifest file in JSON lines format. This file contains the data you want to use for model
+       * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
+       */
+      override fun s3DataType(): String = unwrap(this).getS3DataType()
+
+      /**
+       * Depending on the value specified for the `S3DataType` , identifies either a key name prefix
+       * or a manifest.
+       *
+       * For example:
+       *
+       * * A key name prefix might look like this: `s3://bucketname/exampleprefix/`
+       * * A manifest might look like this: `s3://bucketname/example.manifest`
+       *
+       * A manifest is an S3 object which is a JSON file consisting of an array of elements. The
+       * first element is a prefix which is followed by one or more suffixes. SageMaker appends the
+       * suffix elements to the prefix to get a full set of `S3Uri` . Note that the prefix must be a
+       * valid non-empty `S3Uri` that precludes users from specifying a manifest whose individual
+       * `S3Uri` is sourced from different S3 buckets.
+       *
+       * The following code example shows a valid manifest format:
+       *
+       * `[ {"prefix": "s3://customer_bucket/some/prefix/"},`
+       *
+       * `"relative/path/to/custdata-1",`
+       *
+       * `"relative/path/custdata-2",`
+       *
+       * `...`
+       *
+       * `"relative/path/custdata-N"`
+       *
+       * `]`
+       *
+       * This JSON is equivalent to the following `S3Uri` list:
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/to/custdata-1`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-2`
+       *
+       * `...`
+       *
+       * `s3://customer_bucket/some/prefix/relative/path/custdata-N`
+       *
+       * The complete set of `S3Uri` in this manifest is the input data for the channel for this
+       * data source. The object that each `S3Uri` points to must be readable by the IAM role that
+       * SageMaker uses to perform tasks on your behalf.
+       *
+       * Your input bucket must be located in same AWS region as your training job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3DataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty):
+          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3DataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty
+    }
+  }
+
+  /**
+   * Specifies an Amazon Virtual Private Cloud (VPC) that your SageMaker jobs, hosted models, and
+   * compute resources have access to.
+   *
+   * You can control access to and from your resources by configuring a VPC. For more information,
+   * see [Give SageMaker Access to Resources in your Amazon
+   * VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-give-access.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * The VPC security group IDs, in the form `sg-xxxxxxxx` .
+     *
+     * Specify the security groups for the VPC that is specified in the `Subnets` field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String>
+
+    /**
+     * The ID of the subnets in the VPC to which you want to connect your training job or model.
+     *
+     * For information about the availability of specific instance types, see [Supported Instance
+     * Types and Availability
+     * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets)
+     */
+    public fun subnets(): List<String>
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      public fun subnets(vararg subnets: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds The VPC security group IDs, in the form `sg-xxxxxxxx` . 
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The ID of the subnets in the VPC to which you want to connect your training
+       * job or model. 
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * The VPC security group IDs, in the form `sg-xxxxxxxx` .
+       *
+       * Specify the security groups for the VPC that is specified in the `Subnets` field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
+
+      /**
+       * The ID of the subnets in the VPC to which you want to connect your training job or model.
+       *
+       * For information about the availability of specific instance types, see [Supported Instance
+       * Types and Availability
+       * Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty
     }
   }
 }

@@ -1154,7 +1154,7 @@ public interface BundlingOptions : DockerRunOptions {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.nodejs.BundlingOptions,
+    cdkObject: software.amazon.awscdk.services.lambda.nodejs.BundlingOptions,
   ) : CdkObject(cdkObject), BundlingOptions {
     /**
      * Specify a custom hash for this asset.

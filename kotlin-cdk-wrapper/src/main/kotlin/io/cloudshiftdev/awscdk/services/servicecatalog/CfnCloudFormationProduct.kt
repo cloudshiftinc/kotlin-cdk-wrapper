@@ -72,9 +72,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)
  */
-public open class CfnCloudFormationProduct internal constructor(
-  internal override val cdkObject:
-      software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct,
+public open class CfnCloudFormationProduct(
+  cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -794,6 +793,297 @@ public open class CfnCloudFormationProduct internal constructor(
 
     internal fun unwrap(wrapped: CfnCloudFormationProduct):
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct = wrapped.cdkObject
+        as software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
+  }
+
+  /**
+   * The subtype containing details about the Codestar connection `Type` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+   * CodeStarParametersProperty codeStarParametersProperty = CodeStarParametersProperty.builder()
+   * .artifactPath("artifactPath")
+   * .branch("branch")
+   * .connectionArn("connectionArn")
+   * .repository("repository")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html)
+   */
+  public interface CodeStarParametersProperty {
+    /**
+     * The absolute path wehre the artifact resides within the repo and branch, formatted as
+     * "folder/file.json.".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-artifactpath)
+     */
+    public fun artifactPath(): String
+
+    /**
+     * The specific branch where the artifact resides.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-branch)
+     */
+    public fun branch(): String
+
+    /**
+     * The CodeStar ARN, which is the connection between AWS Service Catalog and the external
+     * repository.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-connectionarn)
+     */
+    public fun connectionArn(): String
+
+    /**
+     * The specific repository where the product’s artifact-to-be-synced resides, formatted as
+     * "Account/Repo.".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-repository)
+     */
+    public fun repository(): String
+
+    /**
+     * A builder for [CodeStarParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param artifactPath The absolute path wehre the artifact resides within the repo and
+       * branch, formatted as "folder/file.json.". 
+       */
+      public fun artifactPath(artifactPath: String)
+
+      /**
+       * @param branch The specific branch where the artifact resides. 
+       */
+      public fun branch(branch: String)
+
+      /**
+       * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog
+       * and the external repository. 
+       */
+      public fun connectionArn(connectionArn: String)
+
+      /**
+       * @param repository The specific repository where the product’s artifact-to-be-synced
+       * resides, formatted as "Account/Repo.". 
+       */
+      public fun repository(repository: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty.builder()
+
+      /**
+       * @param artifactPath The absolute path wehre the artifact resides within the repo and
+       * branch, formatted as "folder/file.json.". 
+       */
+      override fun artifactPath(artifactPath: String) {
+        cdkBuilder.artifactPath(artifactPath)
+      }
+
+      /**
+       * @param branch The specific branch where the artifact resides. 
+       */
+      override fun branch(branch: String) {
+        cdkBuilder.branch(branch)
+      }
+
+      /**
+       * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog
+       * and the external repository. 
+       */
+      override fun connectionArn(connectionArn: String) {
+        cdkBuilder.connectionArn(connectionArn)
+      }
+
+      /**
+       * @param repository The specific repository where the product’s artifact-to-be-synced
+       * resides, formatted as "Account/Repo.". 
+       */
+      override fun repository(repository: String) {
+        cdkBuilder.repository(repository)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
+    ) : CdkObject(cdkObject), CodeStarParametersProperty {
+      /**
+       * The absolute path wehre the artifact resides within the repo and branch, formatted as
+       * "folder/file.json.".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-artifactpath)
+       */
+      override fun artifactPath(): String = unwrap(this).getArtifactPath()
+
+      /**
+       * The specific branch where the artifact resides.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-branch)
+       */
+      override fun branch(): String = unwrap(this).getBranch()
+
+      /**
+       * The CodeStar ARN, which is the connection between AWS Service Catalog and the external
+       * repository.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-connectionarn)
+       */
+      override fun connectionArn(): String = unwrap(this).getConnectionArn()
+
+      /**
+       * The specific repository where the product’s artifact-to-be-synced resides, formatted as
+       * "Account/Repo.".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-repository)
+       */
+      override fun repository(): String = unwrap(this).getRepository()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeStarParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty):
+          CodeStarParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeStarParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CodeStarParametersProperty):
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
+    }
+  }
+
+  /**
+   * Provides connection details.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+   * ConnectionParametersProperty connectionParametersProperty =
+   * ConnectionParametersProperty.builder()
+   * .codeStar(CodeStarParametersProperty.builder()
+   * .artifactPath("artifactPath")
+   * .branch("branch")
+   * .connectionArn("connectionArn")
+   * .repository("repository")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html)
+   */
+  public interface ConnectionParametersProperty {
+    /**
+     * Provides `ConnectionType` details.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html#cfn-servicecatalog-cloudformationproduct-connectionparameters-codestar)
+     */
+    public fun codeStar(): Any? = unwrap(this).getCodeStar()
+
+    /**
+     * A builder for [ConnectionParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      public fun codeStar(codeStar: IResolvable)
+
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      public fun codeStar(codeStar: CodeStarParametersProperty)
+
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
+      public fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty.builder()
+
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      override fun codeStar(codeStar: IResolvable) {
+        cdkBuilder.codeStar(codeStar.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      override fun codeStar(codeStar: CodeStarParametersProperty) {
+        cdkBuilder.codeStar(codeStar.let(CodeStarParametersProperty::unwrap))
+      }
+
+      /**
+       * @param codeStar Provides `ConnectionType` details.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
+      override fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit): Unit =
+          codeStar(CodeStarParametersProperty(codeStar))
+
+      public fun build():
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
+    ) : CdkObject(cdkObject), ConnectionParametersProperty {
+      /**
+       * Provides `ConnectionType` details.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html#cfn-servicecatalog-cloudformationproduct-connectionparameters-codestar)
+       */
+      override fun codeStar(): Any? = unwrap(this).getCodeStar()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty):
+          ConnectionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectionParametersProperty):
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
+    }
   }
 
   /**
@@ -1004,8 +1294,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
     ) : CdkObject(cdkObject), ProvisioningArtifactPropertiesProperty {
       /**
        * The description of the provisioning artifact, including how it differs from the previous
@@ -1080,298 +1369,6 @@ public open class CfnCloudFormationProduct internal constructor(
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
-    }
-  }
-
-  /**
-   * The subtype containing details about the Codestar connection `Type` .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
-   * CodeStarParametersProperty codeStarParametersProperty = CodeStarParametersProperty.builder()
-   * .artifactPath("artifactPath")
-   * .branch("branch")
-   * .connectionArn("connectionArn")
-   * .repository("repository")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html)
-   */
-  public interface CodeStarParametersProperty {
-    /**
-     * The absolute path wehre the artifact resides within the repo and branch, formatted as
-     * "folder/file.json.".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-artifactpath)
-     */
-    public fun artifactPath(): String
-
-    /**
-     * The specific branch where the artifact resides.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-branch)
-     */
-    public fun branch(): String
-
-    /**
-     * The CodeStar ARN, which is the connection between AWS Service Catalog and the external
-     * repository.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-connectionarn)
-     */
-    public fun connectionArn(): String
-
-    /**
-     * The specific repository where the product’s artifact-to-be-synced resides, formatted as
-     * "Account/Repo.".
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-repository)
-     */
-    public fun repository(): String
-
-    /**
-     * A builder for [CodeStarParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param artifactPath The absolute path wehre the artifact resides within the repo and
-       * branch, formatted as "folder/file.json.". 
-       */
-      public fun artifactPath(artifactPath: String)
-
-      /**
-       * @param branch The specific branch where the artifact resides. 
-       */
-      public fun branch(branch: String)
-
-      /**
-       * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog
-       * and the external repository. 
-       */
-      public fun connectionArn(connectionArn: String)
-
-      /**
-       * @param repository The specific repository where the product’s artifact-to-be-synced
-       * resides, formatted as "Account/Repo.". 
-       */
-      public fun repository(repository: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty.builder()
-
-      /**
-       * @param artifactPath The absolute path wehre the artifact resides within the repo and
-       * branch, formatted as "folder/file.json.". 
-       */
-      override fun artifactPath(artifactPath: String) {
-        cdkBuilder.artifactPath(artifactPath)
-      }
-
-      /**
-       * @param branch The specific branch where the artifact resides. 
-       */
-      override fun branch(branch: String) {
-        cdkBuilder.branch(branch)
-      }
-
-      /**
-       * @param connectionArn The CodeStar ARN, which is the connection between AWS Service Catalog
-       * and the external repository. 
-       */
-      override fun connectionArn(connectionArn: String) {
-        cdkBuilder.connectionArn(connectionArn)
-      }
-
-      /**
-       * @param repository The specific repository where the product’s artifact-to-be-synced
-       * resides, formatted as "Account/Repo.". 
-       */
-      override fun repository(repository: String) {
-        cdkBuilder.repository(repository)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
-    ) : CdkObject(cdkObject), CodeStarParametersProperty {
-      /**
-       * The absolute path wehre the artifact resides within the repo and branch, formatted as
-       * "folder/file.json.".
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-artifactpath)
-       */
-      override fun artifactPath(): String = unwrap(this).getArtifactPath()
-
-      /**
-       * The specific branch where the artifact resides.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-branch)
-       */
-      override fun branch(): String = unwrap(this).getBranch()
-
-      /**
-       * The CodeStar ARN, which is the connection between AWS Service Catalog and the external
-       * repository.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-connectionarn)
-       */
-      override fun connectionArn(): String = unwrap(this).getConnectionArn()
-
-      /**
-       * The specific repository where the product’s artifact-to-be-synced resides, formatted as
-       * "Account/Repo.".
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html#cfn-servicecatalog-cloudformationproduct-codestarparameters-repository)
-       */
-      override fun repository(): String = unwrap(this).getRepository()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): CodeStarParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty):
-          CodeStarParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          CodeStarParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: CodeStarParametersProperty):
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
-    }
-  }
-
-  /**
-   * Provides connection details.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
-   * ConnectionParametersProperty connectionParametersProperty =
-   * ConnectionParametersProperty.builder()
-   * .codeStar(CodeStarParametersProperty.builder()
-   * .artifactPath("artifactPath")
-   * .branch("branch")
-   * .connectionArn("connectionArn")
-   * .repository("repository")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html)
-   */
-  public interface ConnectionParametersProperty {
-    /**
-     * Provides `ConnectionType` details.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html#cfn-servicecatalog-cloudformationproduct-connectionparameters-codestar)
-     */
-    public fun codeStar(): Any? = unwrap(this).getCodeStar()
-
-    /**
-     * A builder for [ConnectionParametersProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      public fun codeStar(codeStar: IResolvable)
-
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      public fun codeStar(codeStar: CodeStarParametersProperty)
-
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
-      public fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty.Builder
-          =
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty.builder()
-
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      override fun codeStar(codeStar: IResolvable) {
-        cdkBuilder.codeStar(codeStar.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      override fun codeStar(codeStar: CodeStarParametersProperty) {
-        cdkBuilder.codeStar(codeStar.let(CodeStarParametersProperty::unwrap))
-      }
-
-      /**
-       * @param codeStar Provides `ConnectionType` details.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
-      override fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit): Unit =
-          codeStar(CodeStarParametersProperty(codeStar))
-
-      public fun build():
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
-    ) : CdkObject(cdkObject), ConnectionParametersProperty {
-      /**
-       * Provides `ConnectionType` details.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-connectionparameters.html#cfn-servicecatalog-cloudformationproduct-connectionparameters-codestar)
-       */
-      override fun codeStar(): Any? = unwrap(this).getCodeStar()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectionParametersProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty):
-          ConnectionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          ConnectionParametersProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConnectionParametersProperty):
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
     }
   }
 
@@ -1489,8 +1486,7 @@ public open class CfnCloudFormationProduct internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
+      cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
     ) : CdkObject(cdkObject), SourceConnectionProperty {
       /**
        * The connection details based on the connection `Type` .

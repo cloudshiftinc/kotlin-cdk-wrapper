@@ -135,7 +135,7 @@ public interface SearchComponents {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.SearchComponents,
+    cdkObject: software.amazon.awscdk.services.cloudwatch.SearchComponents,
   ) : CdkObject(cdkObject), SearchComponents {
     /**
      * The list of dimensions to be used in the search expression.

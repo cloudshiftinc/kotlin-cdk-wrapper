@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html)
  */
-public open class CfnSecurityProfile internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfile,
+public open class CfnSecurityProfile(
+  cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -484,6 +484,7 @@ public open class CfnSecurityProfile internal constructor(
         CfnSecurityProfile = CfnSecurityProfile(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityProfile):
-        software.amazon.awscdk.services.connect.CfnSecurityProfile = wrapped.cdkObject
+        software.amazon.awscdk.services.connect.CfnSecurityProfile = wrapped.cdkObject as
+        software.amazon.awscdk.services.connect.CfnSecurityProfile
   }
 }

@@ -467,7 +467,7 @@ public interface CfnFlowLogProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLogProps,
+    cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLogProps,
   ) : CdkObject(cdkObject), CfnFlowLogProps {
     /**
      * The ARN of the IAM role that allows the service to publish flow logs across accounts.

@@ -58,8 +58,7 @@ public interface LambdaDestinationOptions {
   }
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions,
+    cdkObject: software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions,
   ) : CdkObject(cdkObject), LambdaDestinationOptions {
     /**
      * Whether or not to add Lambda Permissions.

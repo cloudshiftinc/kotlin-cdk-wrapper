@@ -65,8 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * }
  * ```
  */
-public open class Parallel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Parallel,
+public open class Parallel(
+  cdkObject: software.amazon.awscdk.services.stepfunctions.Parallel,
 ) : State(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -383,6 +383,6 @@ public open class Parallel internal constructor(
         Parallel(cdkObject)
 
     internal fun unwrap(wrapped: Parallel): software.amazon.awscdk.services.stepfunctions.Parallel =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.services.stepfunctions.Parallel
   }
 }

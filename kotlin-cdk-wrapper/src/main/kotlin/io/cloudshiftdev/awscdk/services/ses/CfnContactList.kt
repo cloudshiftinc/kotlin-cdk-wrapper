@@ -47,8 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)
  */
-public open class CfnContactList internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
+public open class CfnContactList(
+  cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
@@ -318,7 +318,7 @@ public open class CfnContactList internal constructor(
         = CfnContactList(cdkObject)
 
     internal fun unwrap(wrapped: CfnContactList): software.amazon.awscdk.services.ses.CfnContactList
-        = wrapped.cdkObject
+        = wrapped.cdkObject as software.amazon.awscdk.services.ses.CfnContactList
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnContactList internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty,
+      cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty,
     ) : CdkObject(cdkObject), TopicProperty {
       /**
        * The default subscription status to be applied to a contact if the contact has not noted

@@ -85,8 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html)
  */
-public open class CfnFlywheel internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel,
+public open class CfnFlywheel(
+  cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -545,415 +545,8 @@ public open class CfnFlywheel internal constructor(
         CfnFlywheel = CfnFlywheel(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlywheel):
-        software.amazon.awscdk.services.comprehend.CfnFlywheel = wrapped.cdkObject
-  }
-
-  /**
-   * Configuration about the model associated with a flywheel.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * TaskConfigProperty taskConfigProperty = TaskConfigProperty.builder()
-   * .languageCode("languageCode")
-   * // the properties below are optional
-   * .documentClassificationConfig(DocumentClassificationConfigProperty.builder()
-   * .mode("mode")
-   * // the properties below are optional
-   * .labels(List.of("labels"))
-   * .build())
-   * .entityRecognitionConfig(EntityRecognitionConfigProperty.builder()
-   * .entityTypes(List.of(EntityTypesListItemProperty.builder()
-   * .type("type")
-   * .build()))
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html)
-   */
-  public interface TaskConfigProperty {
-    /**
-     * Configuration required for a document classification model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-documentclassificationconfig)
-     */
-    public fun documentClassificationConfig(): Any? = unwrap(this).getDocumentClassificationConfig()
-
-    /**
-     * Configuration required for an entity recognition model.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-entityrecognitionconfig)
-     */
-    public fun entityRecognitionConfig(): Any? = unwrap(this).getEntityRecognitionConfig()
-
-    /**
-     * Language code for the language that the model supports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-languagecode)
-     */
-    public fun languageCode(): String
-
-    /**
-     * A builder for [TaskConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      public fun documentClassificationConfig(documentClassificationConfig: IResolvable)
-
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      public
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty)
-
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
-      public
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      public fun entityRecognitionConfig(entityRecognitionConfig: IResolvable)
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      public fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty)
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
-      public
-          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param languageCode Language code for the language that the model supports. 
-       */
-      public fun languageCode(languageCode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.Builder =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.builder()
-
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      override fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
-        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      override
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty) {
-        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(DocumentClassificationConfigProperty::unwrap))
-      }
-
-      /**
-       * @param documentClassificationConfig Configuration required for a document classification
-       * model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
-      override
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit):
-          Unit =
-          documentClassificationConfig(DocumentClassificationConfigProperty(documentClassificationConfig))
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      override fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
-        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      override
-          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty) {
-        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(EntityRecognitionConfigProperty::unwrap))
-      }
-
-      /**
-       * @param entityRecognitionConfig Configuration required for an entity recognition model.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
-      override
-          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit):
-          Unit = entityRecognitionConfig(EntityRecognitionConfigProperty(entityRecognitionConfig))
-
-      /**
-       * @param languageCode Language code for the language that the model supports. 
-       */
-      override fun languageCode(languageCode: String) {
-        cdkBuilder.languageCode(languageCode)
-      }
-
-      public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
-    ) : CdkObject(cdkObject), TaskConfigProperty {
-      /**
-       * Configuration required for a document classification model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-documentclassificationconfig)
-       */
-      override fun documentClassificationConfig(): Any? =
-          unwrap(this).getDocumentClassificationConfig()
-
-      /**
-       * Configuration required for an entity recognition model.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-entityrecognitionconfig)
-       */
-      override fun entityRecognitionConfig(): Any? = unwrap(this).getEntityRecognitionConfig()
-
-      /**
-       * Language code for the language that the model supports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-languagecode)
-       */
-      override fun languageCode(): String = unwrap(this).getLanguageCode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): TaskConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty):
-          TaskConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TaskConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty
-    }
-  }
-
-  /**
-   * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
-   * resources you are using for the job.
-   *
-   * For more information, see [Amazon
-   * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
-   * .securityGroupIds(List.of("securityGroupIds"))
-   * .subnets(List.of("subnets"))
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html)
-   */
-  public interface VpcConfigProperty {
-    /**
-     * The ID number for a security group on an instance of your private VPC.
-     *
-     * Security groups on your VPC function serve as a virtual firewall to control inbound and
-     * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-     * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information,
-     * see [Security Groups for your
-     * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-securitygroupids)
-     */
-    public fun securityGroupIds(): List<String>
-
-    /**
-     * The ID for each subnet being used in your private VPC.
-     *
-     * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a
-     * given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-     * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-     * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-subnets)
-     */
-    public fun subnets(): List<String>
-
-    /**
-     * A builder for [VpcConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param securityGroupIds The ID number for a security group on an instance of your private
-       * VPC. 
-       * Security groups on your VPC function serve as a virtual firewall to control inbound and
-       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
-       * information, see [Security Groups for your
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-       */
-      public fun securityGroupIds(securityGroupIds: List<String>)
-
-      /**
-       * @param securityGroupIds The ID number for a security group on an instance of your private
-       * VPC. 
-       * Security groups on your VPC function serve as a virtual firewall to control inbound and
-       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
-       * information, see [Security Groups for your
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-       */
-      public fun securityGroupIds(vararg securityGroupIds: String)
-
-      /**
-       * @param subnets The ID for each subnet being used in your private VPC. 
-       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
-       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-       */
-      public fun subnets(subnets: List<String>)
-
-      /**
-       * @param subnets The ID for each subnet being used in your private VPC. 
-       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
-       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-       */
-      public fun subnets(vararg subnets: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.Builder =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.builder()
-
-      /**
-       * @param securityGroupIds The ID number for a security group on an instance of your private
-       * VPC. 
-       * Security groups on your VPC function serve as a virtual firewall to control inbound and
-       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
-       * information, see [Security Groups for your
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-       */
-      override fun securityGroupIds(securityGroupIds: List<String>) {
-        cdkBuilder.securityGroupIds(securityGroupIds)
-      }
-
-      /**
-       * @param securityGroupIds The ID number for a security group on an instance of your private
-       * VPC. 
-       * Security groups on your VPC function serve as a virtual firewall to control inbound and
-       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
-       * information, see [Security Groups for your
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-       */
-      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-          securityGroupIds(securityGroupIds.toList())
-
-      /**
-       * @param subnets The ID for each subnet being used in your private VPC. 
-       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
-       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-       */
-      override fun subnets(subnets: List<String>) {
-        cdkBuilder.subnets(subnets)
-      }
-
-      /**
-       * @param subnets The ID for each subnet being used in your private VPC. 
-       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
-       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-       */
-      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
-
-      public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
-      /**
-       * The ID number for a security group on an instance of your private VPC.
-       *
-       * Security groups on your VPC function serve as a virtual firewall to control inbound and
-       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
-       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
-       * information, see [Security Groups for your
-       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-securitygroupids)
-       */
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
-
-      /**
-       * The ID for each subnet being used in your private VPC.
-       *
-       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
-       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
-       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
-       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-subnets)
-       */
-      override fun subnets(): List<String> = unwrap(this).getSubnets()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VpcConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty
-    }
+        software.amazon.awscdk.services.comprehend.CfnFlywheel = wrapped.cdkObject as
+        software.amazon.awscdk.services.comprehend.CfnFlywheel
   }
 
   /**
@@ -1144,8 +737,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
     ) : CdkObject(cdkObject), DataSecurityConfigProperty {
       /**
        * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
@@ -1201,6 +793,130 @@ public open class CfnFlywheel internal constructor(
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty
+    }
+  }
+
+  /**
+   * Configuration required for a document classification model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * DocumentClassificationConfigProperty documentClassificationConfigProperty =
+   * DocumentClassificationConfigProperty.builder()
+   * .mode("mode")
+   * // the properties below are optional
+   * .labels(List.of("labels"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html)
+   */
+  public interface DocumentClassificationConfigProperty {
+    /**
+     * One or more labels to associate with the custom classifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+     */
+    public fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+
+    /**
+     * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+     */
+    public fun mode(): String
+
+    /**
+     * A builder for [DocumentClassificationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      public fun labels(labels: List<String>)
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      public fun labels(vararg labels: String)
+
+      /**
+       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
+       * `MULTI_LABEL` . 
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.builder()
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      override fun labels(labels: List<String>) {
+        cdkBuilder.labels(labels)
+      }
+
+      /**
+       * @param labels One or more labels to associate with the custom classifier.
+       */
+      override fun labels(vararg labels: String): Unit = labels(labels.toList())
+
+      /**
+       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
+       * `MULTI_LABEL` . 
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
+    ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
+      /**
+       * One or more labels to associate with the custom classifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+       */
+      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+
+      /**
+       * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+       */
+      override fun mode(): String = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DocumentClassificationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty):
+          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassificationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DocumentClassificationConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
     }
   }
 
@@ -1283,8 +999,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
     ) : CdkObject(cdkObject), EntityRecognitionConfigProperty {
       /**
        * Up to 25 entity types that the model is trained to recognize.
@@ -1380,8 +1095,7 @@ public open class CfnFlywheel internal constructor(
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
     ) : CdkObject(cdkObject), EntityTypesListItemProperty {
       /**
        * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
@@ -1415,7 +1129,7 @@ public open class CfnFlywheel internal constructor(
   }
 
   /**
-   * Configuration required for a document classification model.
+   * Configuration about the model associated with a flywheel.
    *
    * Example:
    *
@@ -1423,119 +1137,400 @@ public open class CfnFlywheel internal constructor(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.comprehend.*;
-   * DocumentClassificationConfigProperty documentClassificationConfigProperty =
-   * DocumentClassificationConfigProperty.builder()
+   * TaskConfigProperty taskConfigProperty = TaskConfigProperty.builder()
+   * .languageCode("languageCode")
+   * // the properties below are optional
+   * .documentClassificationConfig(DocumentClassificationConfigProperty.builder()
    * .mode("mode")
    * // the properties below are optional
    * .labels(List.of("labels"))
+   * .build())
+   * .entityRecognitionConfig(EntityRecognitionConfigProperty.builder()
+   * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+   * .type("type")
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html)
    */
-  public interface DocumentClassificationConfigProperty {
+  public interface TaskConfigProperty {
     /**
-     * One or more labels to associate with the custom classifier.
+     * Configuration required for a document classification model.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-documentclassificationconfig)
      */
-    public fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+    public fun documentClassificationConfig(): Any? = unwrap(this).getDocumentClassificationConfig()
 
     /**
-     * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+     * Configuration required for an entity recognition model.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-entityrecognitionconfig)
      */
-    public fun mode(): String
+    public fun entityRecognitionConfig(): Any? = unwrap(this).getEntityRecognitionConfig()
 
     /**
-     * A builder for [DocumentClassificationConfigProperty]
+     * Language code for the language that the model supports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-languagecode)
+     */
+    public fun languageCode(): String
+
+    /**
+     * A builder for [TaskConfigProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param labels One or more labels to associate with the custom classifier.
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
        */
-      public fun labels(labels: List<String>)
+      public fun documentClassificationConfig(documentClassificationConfig: IResolvable)
 
       /**
-       * @param labels One or more labels to associate with the custom classifier.
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
        */
-      public fun labels(vararg labels: String)
+      public
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty)
 
       /**
-       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
-       * `MULTI_LABEL` . 
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
        */
-      public fun mode(mode: String)
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
+      public
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      public fun entityRecognitionConfig(entityRecognitionConfig: IResolvable)
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      public fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty)
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
+      public
+          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param languageCode Language code for the language that the model supports. 
+       */
+      public fun languageCode(languageCode: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.builder()
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.Builder =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.builder()
 
       /**
-       * @param labels One or more labels to associate with the custom classifier.
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
        */
-      override fun labels(labels: List<String>) {
-        cdkBuilder.labels(labels)
+      override fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
+        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(IResolvable::unwrap))
       }
 
       /**
-       * @param labels One or more labels to associate with the custom classifier.
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
        */
-      override fun labels(vararg labels: String): Unit = labels(labels.toList())
-
-      /**
-       * @param mode Classification mode indicates whether the documents are `MULTI_CLASS` or
-       * `MULTI_LABEL` . 
-       */
-      override fun mode(mode: String) {
-        cdkBuilder.mode(mode)
+      override
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty) {
+        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(DocumentClassificationConfigProperty::unwrap))
       }
 
-      public fun build():
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+      /**
+       * @param documentClassificationConfig Configuration required for a document classification
+       * model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
+      override
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit):
+          Unit =
+          documentClassificationConfig(DocumentClassificationConfigProperty(documentClassificationConfig))
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      override fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
+        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      override
+          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty) {
+        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(EntityRecognitionConfigProperty::unwrap))
+      }
+
+      /**
+       * @param entityRecognitionConfig Configuration required for an entity recognition model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
+      override
+          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit):
+          Unit = entityRecognitionConfig(EntityRecognitionConfigProperty(entityRecognitionConfig))
+
+      /**
+       * @param languageCode Language code for the language that the model supports. 
+       */
+      override fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
+      }
+
+      public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
-      override val cdkObject:
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
-    ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
+    ) : CdkObject(cdkObject), TaskConfigProperty {
       /**
-       * One or more labels to associate with the custom classifier.
+       * Configuration required for a document classification model.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-labels)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-documentclassificationconfig)
        */
-      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+      override fun documentClassificationConfig(): Any? =
+          unwrap(this).getDocumentClassificationConfig()
 
       /**
-       * Classification mode indicates whether the documents are `MULTI_CLASS` or `MULTI_LABEL` .
+       * Configuration required for an entity recognition model.
        *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html#cfn-comprehend-flywheel-documentclassificationconfig-mode)
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-entityrecognitionconfig)
        */
-      override fun mode(): String = unwrap(this).getMode()
+      override fun entityRecognitionConfig(): Any? = unwrap(this).getEntityRecognitionConfig()
+
+      /**
+       * Language code for the language that the model supports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html#cfn-comprehend-flywheel-taskconfig-languagecode)
+       */
+      override fun languageCode(): String = unwrap(this).getLanguageCode()
     }
 
     public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          DocumentClassificationConfigProperty {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TaskConfigProperty {
         val builderImpl = BuilderImpl()
         return Wrapper(builderImpl.apply(block).build())
       }
 
       internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty):
-          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          DocumentClassificationConfigProperty ?: Wrapper(cdkObject)
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty):
+          TaskConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskConfigProperty ?:
+          Wrapper(cdkObject)
 
-      internal fun unwrap(wrapped: DocumentClassificationConfigProperty):
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
-          = (wrapped as CdkObject).cdkObject as
-          software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty
+      internal fun unwrap(wrapped: TaskConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty
+    }
+  }
+
+  /**
+   * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
+   * resources you are using for the job.
+   *
+   * For more information, see [Amazon
+   * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.comprehend.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * The ID number for a security group on an instance of your private VPC.
+     *
+     * Security groups on your VPC function serve as a virtual firewall to control inbound and
+     * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+     * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information,
+     * see [Security Groups for your
+     * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String>
+
+    /**
+     * The ID for each subnet being used in your private VPC.
+     *
+     * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a
+     * given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+     * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+     * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-subnets)
+     */
+    public fun subnets(): List<String>
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds The ID number for a security group on an instance of your private
+       * VPC. 
+       * Security groups on your VPC function serve as a virtual firewall to control inbound and
+       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
+       * information, see [Security Groups for your
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds The ID number for a security group on an instance of your private
+       * VPC. 
+       * Security groups on your VPC function serve as a virtual firewall to control inbound and
+       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
+       * information, see [Security Groups for your
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnets The ID for each subnet being used in your private VPC. 
+       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
+       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets The ID for each subnet being used in your private VPC. 
+       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
+       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+       */
+      public fun subnets(vararg subnets: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroupIds The ID number for a security group on an instance of your private
+       * VPC. 
+       * Security groups on your VPC function serve as a virtual firewall to control inbound and
+       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
+       * information, see [Security Groups for your
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds The ID number for a security group on an instance of your private
+       * VPC. 
+       * Security groups on your VPC function serve as a virtual firewall to control inbound and
+       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
+       * information, see [Security Groups for your
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets The ID for each subnet being used in your private VPC. 
+       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
+       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets The ID for each subnet being used in your private VPC. 
+       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
+       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
+    ) : CdkObject(cdkObject), VpcConfigProperty {
+      /**
+       * The ID number for a security group on an instance of your private VPC.
+       *
+       * Security groups on your VPC function serve as a virtual firewall to control inbound and
+       * outbound traffic and provides security for the resources that you’ll be accessing on the VPC.
+       * This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more
+       * information, see [Security Groups for your
+       * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
+
+      /**
+       * The ID for each subnet being used in your private VPC.
+       *
+       * This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to
+       * a given availability zone in the VPC’s Region. This ID number is preceded by "subnet-", for
+       * instance: "subnet-04ccf456919e69055". For more information, see [VPCs and
+       * Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html#cfn-comprehend-flywheel-vpcconfig-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty
     }
   }
 }

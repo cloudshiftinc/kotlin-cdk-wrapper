@@ -21,8 +21,8 @@ import kotlin.String
  * InstanceType.PROVISIONED);
  * ```
  */
-public open class ClusterInstanceType internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceType,
+public open class ClusterInstanceType(
+  cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceType,
 ) : CdkObject(cdkObject) {
   public constructor(instanceType: String, type: InstanceType) :
       this(software.amazon.awscdk.services.rds.ClusterInstanceType(instanceType,
@@ -49,6 +49,7 @@ public open class ClusterInstanceType internal constructor(
         ClusterInstanceType = ClusterInstanceType(cdkObject)
 
     internal fun unwrap(wrapped: ClusterInstanceType):
-        software.amazon.awscdk.services.rds.ClusterInstanceType = wrapped.cdkObject
+        software.amazon.awscdk.services.rds.ClusterInstanceType = wrapped.cdkObject as
+        software.amazon.awscdk.services.rds.ClusterInstanceType
   }
 }

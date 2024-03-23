@@ -128,7 +128,7 @@ public interface CfnThingProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iot.CfnThingProps,
+    cdkObject: software.amazon.awscdk.services.iot.CfnThingProps,
   ) : CdkObject(cdkObject), CfnThingProps {
     /**
      * A string that contains up to three key value pairs.

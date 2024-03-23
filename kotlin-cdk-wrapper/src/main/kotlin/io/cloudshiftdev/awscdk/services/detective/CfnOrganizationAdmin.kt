@@ -32,8 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
  */
-public open class CfnOrganizationAdmin internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.detective.CfnOrganizationAdmin,
+public open class CfnOrganizationAdmin(
+  cdkObject: software.amazon.awscdk.services.detective.CfnOrganizationAdmin,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
@@ -135,6 +135,7 @@ public open class CfnOrganizationAdmin internal constructor(
         CfnOrganizationAdmin = CfnOrganizationAdmin(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationAdmin):
-        software.amazon.awscdk.services.detective.CfnOrganizationAdmin = wrapped.cdkObject
+        software.amazon.awscdk.services.detective.CfnOrganizationAdmin = wrapped.cdkObject as
+        software.amazon.awscdk.services.detective.CfnOrganizationAdmin
   }
 }

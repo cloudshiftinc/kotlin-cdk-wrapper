@@ -28,8 +28,8 @@ import kotlin.collections.Map
  * .build());
  * ```
  */
-public abstract class FilterOrPolicy internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
+public abstract class FilterOrPolicy(
+  cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
 ) : CdkObject(cdkObject) {
   /**
    * Check if instance is `Filter` type.
@@ -47,7 +47,7 @@ public abstract class FilterOrPolicy internal constructor(
   public open fun type(): FilterOrPolicyType = unwrap(this).getType().let(FilterOrPolicyType::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
+    cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
   ) : FilterOrPolicy(cdkObject)
 
   public companion object {

@@ -160,7 +160,7 @@ public interface DynamoDbDataSourceProps : BackedDataSourceProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps,
+    cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps,
   ) : CdkObject(cdkObject), DynamoDbDataSourceProps {
     /**
      * The API to attach this data source to.

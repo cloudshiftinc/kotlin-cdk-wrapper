@@ -21,8 +21,8 @@ import kotlin.jvm.JvmName
  * .build());
  * ```
  */
-public open class HostedRotation internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.HostedRotation,
+public open class HostedRotation(
+  cdkObject: software.amazon.awscdk.services.secretsmanager.HostedRotation,
 ) : CdkObject(cdkObject), IConnectable {
   /**
    * Binds this hosted rotation to a secret.
@@ -179,6 +179,7 @@ public open class HostedRotation internal constructor(
         HostedRotation = HostedRotation(cdkObject)
 
     internal fun unwrap(wrapped: HostedRotation):
-        software.amazon.awscdk.services.secretsmanager.HostedRotation = wrapped.cdkObject
+        software.amazon.awscdk.services.secretsmanager.HostedRotation = wrapped.cdkObject as
+        software.amazon.awscdk.services.secretsmanager.HostedRotation
   }
 }

@@ -49,7 +49,7 @@ public interface IRole : IIdentity {
   public fun roleName(): String
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.IRole,
+    cdkObject: software.amazon.awscdk.services.iam.IRole,
   ) : CdkObject(cdkObject), IRole {
     /**
      * Attaches a managed policy to this principal.

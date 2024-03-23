@@ -18,8 +18,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
  * TokenComparison tokenComparison = TokenComparison.BOTH_UNRESOLVED;
  * ```
  */
-public open class TokenComparison internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.TokenComparison,
+public open class TokenComparison(
+  cdkObject: software.amazon.awscdk.TokenComparison,
 ) : CdkObject(cdkObject) {
   public companion object {
     public val BOTH_UNRESOLVED: TokenComparison =
@@ -38,6 +38,6 @@ public open class TokenComparison internal constructor(
         TokenComparison(cdkObject)
 
     internal fun unwrap(wrapped: TokenComparison): software.amazon.awscdk.TokenComparison =
-        wrapped.cdkObject
+        wrapped.cdkObject as software.amazon.awscdk.TokenComparison
   }
 }

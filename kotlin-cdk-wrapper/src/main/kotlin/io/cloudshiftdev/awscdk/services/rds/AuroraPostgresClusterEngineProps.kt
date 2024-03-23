@@ -66,7 +66,7 @@ public interface AuroraPostgresClusterEngineProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps,
+    cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps,
   ) : CdkObject(cdkObject), AuroraPostgresClusterEngineProps {
     /**
      * The version of the Aurora PostgreSQL cluster engine.

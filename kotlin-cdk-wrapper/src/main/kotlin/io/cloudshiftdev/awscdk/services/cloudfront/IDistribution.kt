@@ -43,7 +43,7 @@ public interface IDistribution : IResource {
   public fun grantCreateInvalidation(identity: IGrantable): Grant
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IDistribution,
+    cdkObject: software.amazon.awscdk.services.cloudfront.IDistribution,
   ) : CdkObject(cdkObject), IDistribution {
     /**
      * Apply the given removal policy to this resource.

@@ -26,8 +26,8 @@ import kotlin.jvm.JvmName
  * when `buildPipeline()` is called, or when `app.synth()` is called (whichever
  * happens first).
  */
-public abstract class PipelineBase internal constructor(
-  internal override val cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
+public abstract class PipelineBase(
+  cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
 ) : Construct(cdkObject) {
   /**
    * Deploy a single Stage by itself.
@@ -160,7 +160,7 @@ public abstract class PipelineBase internal constructor(
   public open fun waves(): List<Wave> = unwrap(this).getWaves().map(Wave::wrap)
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
+    cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
   ) : PipelineBase(cdkObject)
 
   public companion object {

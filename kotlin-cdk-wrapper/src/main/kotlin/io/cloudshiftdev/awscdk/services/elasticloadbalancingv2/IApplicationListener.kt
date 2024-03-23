@@ -146,8 +146,7 @@ public interface IApplicationListener : IListener, IConnectable {
   public fun registerConnectable(connectable: IConnectable, portRange: Port.Builder.() -> Unit)
 
   private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener,
+    cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener,
   ) : CdkObject(cdkObject), IApplicationListener {
     /**
      * Perform the given action on incoming requests.

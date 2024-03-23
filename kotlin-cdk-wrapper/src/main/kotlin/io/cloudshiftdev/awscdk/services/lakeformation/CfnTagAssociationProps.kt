@@ -196,7 +196,7 @@ public interface CfnTagAssociationProps {
   }
 
   private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociationProps,
+    cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociationProps,
   ) : CdkObject(cdkObject), CfnTagAssociationProps {
     /**
      * A structure containing an LF-tag key-value pair.
